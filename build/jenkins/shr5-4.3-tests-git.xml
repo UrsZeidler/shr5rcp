@@ -55,7 +55,7 @@ junit -l de.urszeidler.shr5.model.tests/etc/Shr5ManagementAllTests.launch -o ${W
       <params>-Dqualifier.replacement.*=generator:buildTimestamp
 -Dgenerator.buildTimestamp.format=&apos;b&apos;yyyyMMdd-HHmm
 </params>
-      <targetPlatformName>emf-client-4.3-target</targetPlatformName>
+      <targetPlatformName>emf-client-4.3-target-git</targetPlatformName>
       <userTemp></userTemp>
       <userOutput></userOutput>
       <userCommand></userCommand>

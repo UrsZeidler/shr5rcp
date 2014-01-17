@@ -62,7 +62,7 @@ perform -D target.os=linux -D target.ws=gtk -D target.arch=x86_64 de.urszeidler.
       <params>-Dqualifier.replacement.*=generator:buildTimestamp
 -Dgenerator.buildTimestamp.format=&apos;b&apos;yyyyMMdd-HHmm
 </params>
-      <targetPlatformName>emf-client-4.3-target</targetPlatformName>
+      <targetPlatformName>emf-client-4.3-target-git</targetPlatformName>
       <userTemp></userTemp>
       <userOutput></userOutput>
       <userCommand></userCommand>
