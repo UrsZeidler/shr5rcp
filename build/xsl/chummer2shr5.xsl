@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output method="xml" indent="yes" encoding="UTF-8" />
+	<xsl:strip-space elements="*" />
+	<xsl:param name="path" select="'/home/urs/chummer2/Chummer2/data'" />
+	<xsl:variable name="powers"
+		select="document(concat($path,'/powers.xml'),/)" />
+	<xsl:variable name="armors"
+		select="document(concat($path,'/armor.xml'),/)" />
+	<xsl:variable name="weapons"
+		select="document(concat($path,'/weapons.xml'),/)" />
+	<xsl:variable name="ranges"
+		select="document(concat($path,'/ranges.xml'),/)" />
+	<xsl:variable name="skills"
+		select="document(concat($path,'/skills.xml'),/)" />
+	<xsl:variable name="gears" select="document(concat($path,'/gear.xml'),/)" />
+	<xsl:variable name="metatypes"
+		select="document(concat($path,'/metatypes.xml'),/)" />
+	<xsl:variable name="cyberwares"
+		select="document(concat($path,'/cyberware.xml'),/)" />
+	<xsl:variable name="spells"
+		select="document(concat($path,'/spells.xml'),/)" />
+	<xsl:variable name="qualities"
+		select="document(concat($path,'/qualities.xml'),/)" />
+	<xsl:variable name="biowares"
+		select="document(concat($path,'/bioware.xml'),/)" />
+	<xsl:variable name="vehicles"
+		select="document(concat($path,'/vehicles.xml'),/)" />
+	<xsl:variable name="shr5CharacterBuilder"
+		select="document(concat($path,'/priorities.xml'),/)" />
+	<xsl:variable name="lifestyle"
+		select="document(concat($path,'/lifestyles.xml'),/)" />
+	<xsl:template match="/">
+		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
+			xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" name="all">
+			<entries xsi:type="shr5:ShrList" name="Sourcebooks">
+				<entries xsi:type="shr5:SourceBook" name="Grundregelwerk"
+					startShrTime="2013-12-13T17:51:44.000+0100" endShrTime="2013-12-13T17:51:44.000+0100" />
+			</entries>
+			<xsl:for-each select="$ranges">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$metatypes">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$skills">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$weapons">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$gears">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$cyberwares">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$powers">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$armors">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$spells">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$qualities">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$biowares">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$vehicles">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$lifestyle">
+				<xsl:apply-templates mode="lifestyle" select="node()" />
+			</xsl:for-each>
+			<xsl:for-each select="$shr5CharacterBuilder">
+				<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+		</shr5:ShrList>
+	</xsl:template>
+	<xsl:template match="categories|version|accessories|grades|modcategories" />
+	<xsl:template match="priority|mods|limits" />
+	<xsl:template mode="lifestyle"
+		match="safehousecosts|version|qualities|comforts|entertainments|necessities|neighborhoods|securities|costs" />
+	<xsl:template match="ranges">
+		<entries xsi:type="shr5:ShrList" name="Reichtweiten">
+			<xsl:apply-templates />
+		</entries>
+	</xsl:template>
+	<xsl:template mode="lifestyle" match="lifestyles">
+		<entries xsi:type="shr5:ShrList" name="lifestyles">
+			<xsl:apply-templates mode="lifestyle" />
+		</entries>
+	</xsl:template>
+	<xsl:template
+		match="gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles">
+		<entries xsi:type="shr5:ShrList">
+			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
+			<xsl:apply-templates />
+		</entries>
+	</xsl:template>
+	<!-- the generator -->
+	<xsl:template match="priority" mode="gen" />
+	<xsl:template match="bonus" mode="gen" />
+	<!-- <xsl:template match="specials" mode="gen" /> -->
+	<xsl:template match="priorities">
+		<entries xsi:type="shr5:ShrList" name="generators">
+			<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system."
+				karmaToResourceFactor="5000" karmaToMagicFactor="5" karmaPoints="25"
+				knowlegeSkillFactor="2" numberOfMaxAttributes="1">
+				<xsl:attribute name="srcBook">//@entries.0/@entries.0</xsl:attribute>
+				<xsl:apply-templates mode="gen" />
+				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
+					<selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+				</priorities>
+				<instructions key="new"
+					value="Select the categories and the group." />
+				<instructions key="readyForCreation"
+					value="All has been set, you can create the character now." />
+				<instructions key="personaCreated"
+					value="The character is created spend all the values." />
+				<instructions key="commited"
+					value="The character is finshed and commited." />
+
+				<xsl:call-template name="advancements" />
+			</entries>
+			<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator">
+				<instructions key="new" value="Choose the basic Concept" />
+				<instructions key="readyForCreation"
+					value="All has been set, you can create the character now." />
+				<instructions key="personaCreated"
+					value="The character is created you can comit any time." />
+				<instructions key="commited"
+					value="The character is finshed and commited." />
+				<xsl:call-template name="advancements" />
+			</entries>
+			<entries xsi:type="shr5mngt:FreeStyleGenerator" generator="//@entries.16/@entries.1"
+				characterName="Free Style Generator" />
+			<entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" />
+			<entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" />
+			<entries xsi:type="shr5mngt:CharacterGroup" name="player group" />
+			<entries xsi:type="shr5mngt:CharacterGroup" name="non player group" />
+		</entries>
+	</xsl:template>
+	<xsl:template match="resource" mode="gen">
+		<priorities xsi:type="shr5mngt:Resourcen">
+			<xsl:attribute name="categorieName"><xsl:value-of select="priority/text()" /></xsl:attribute>
+			<xsl:attribute name="resource"><xsl:value-of select="nuyen/text()" /></xsl:attribute>
+		</priorities>
+	</xsl:template>
+	<xsl:template match="skill" mode="gen">
+		<priorities xsi:type="shr5mngt:Skill">
+			<xsl:attribute name="categorieName"><xsl:value-of select="priority/text()" /></xsl:attribute>
+			<xsl:attribute name="skillPoints">
+			<xsl:value-of select="substring-before(points/text(),'/')" />
+			</xsl:attribute>
+			<xsl:attribute name="groupPoints">
+			<xsl:value-of select="substring-after(points/text(),'/')" />
+			</xsl:attribute>
+		</priorities>
+	</xsl:template>
+	<xsl:template match="attribute" mode="gen">
+		<priorities xsi:type="shr5mngt:Attributes">
+			<xsl:attribute name="categorieName"><xsl:value-of select="priority/text()" /></xsl:attribute>
+			<xsl:attribute name="attibutePoints"><xsl:value-of select="points/text()" /></xsl:attribute>
+		</priorities>
+	</xsl:template>
+	<xsl:template match="priorities/metatypes/metatype/metatypes/metatype"
+		mode="gen">
+		<priorities xsi:type="shr5mngt:MetaType">
+			<xsl:attribute name="categorieName"><xsl:value-of
+				select="../../priority/text()" /></xsl:attribute>
+			<xsl:attribute name="specialPoints"><xsl:value-of select="points/text()" /></xsl:attribute>
+			<xsl:variable name="posid" select="id/text()" />
+			<choosableTypes>
+				<xsl:for-each select="$metatypes">
+					<xsl:for-each select="chummer/metatypes/*">
+						<xsl:if test="id/text()=$posid">
+							<xsl:variable name="pos" select="position()-1" />
+							<xsl:attribute name="href"><xsl:value-of
+								select="concat('#//@entries.2/@entries.',$pos)" /></xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+			</choosableTypes>
+		</priorities>
+	</xsl:template>
+	<xsl:template
+		match="priorities/specials/special/magician|priorities/specials/special/mysticadept"
+		mode="gen">
+		<xsl:variable name="typename" select="name()" />
+		<priorities xsi:type="shr5mngt:Spellcaster">
+			<xsl:attribute name="categorieName"><xsl:value-of select="../priority/text()" /></xsl:attribute>
+			<xsl:attribute name="magic"><xsl:value-of select="mag/text()" /></xsl:attribute>
+			<xsl:attribute name="spellPoints"><xsl:value-of select="spells/text()" /></xsl:attribute>
+			<xsl:call-template name="skill-options" />
+			<xsl:if test="$typename='magician'">
+				<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier" />
+			</xsl:if>
+			<xsl:if test="$typename='mysticadept'">
+				<selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept" />
+			</xsl:if>
+		</priorities>
+	</xsl:template>
+	<xsl:template
+		match="priorities/specials/special/adept|priorities/specials/special/aspected"
+		mode="gen">
+		<xsl:variable name="typename" select="name()" />
+		<priorities xsi:type="shr5mngt:Adept">
+			<xsl:attribute name="categorieName"><xsl:value-of select="../priority/text()" /></xsl:attribute>
+			<xsl:attribute name="magic"><xsl:value-of select="mag/text()" /></xsl:attribute>
+			<xsl:call-template name="skill-options" />
+			<xsl:if test="$typename='adept'">
+				<selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept" />
+			</xsl:if>
+			<xsl:if test="$typename='aspected'">
+				<selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier" />
+			</xsl:if>
+		</priorities>
+	</xsl:template>
+	<xsl:template match="priorities/specials/special/technomancer"
+		mode="gen">
+		<priorities xsi:type="shr5mngt:Technomancer">
+			<xsl:attribute name="categorieName"><xsl:value-of select="../priority/text()" /></xsl:attribute>
+			<xsl:attribute name="complexForms"><xsl:value-of select="forms/text()" /></xsl:attribute>
+			<xsl:attribute name="resonanz"><xsl:value-of select="res/text()" /></xsl:attribute>
+			<xsl:call-template name="skill-options" />
+			<selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer" />
+		</priorities>
+	</xsl:template>
+	<!-- vehicle -->
+	<xsl:template name="advancements">
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="5">
+			<type href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="2">
+			<type href="http://urszeidler.de/shr5/1.0#//Fertigkeit" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="1">
+			<type href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="1">
+			<type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="5">
+			<type href="http://urszeidler.de/shr5/1.0#//Zauber" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="5">
+			<type href="http://urszeidler.de/shr5/1.0#//PersonaKomplexForm" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="5">
+			<type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute" />
+		</characterAdvancements>
+
+	</xsl:template>
+	<xsl:template name="vehicle">
+		<xsl:param name="typeName" />
+		<entries>
+			<xsl:attribute name="xsi:type"><xsl:value-of
+				select="concat('shr5:',$typeName)" /></xsl:attribute>
+
+			<xsl:attribute name="fahrzeugTyp"><xsl:value-of select="category/text()" /></xsl:attribute>
+			<xsl:call-template name="gegenstand-basis" />
+		</entries>
+	</xsl:template>
+	<!-- basic named templates -->
+	<xsl:template name="beschreibbar">
+		<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
+		<xsl:if test="string-length(doc/text())!=0">
+			<xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" /></xsl:attribute>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template name="quelle">
+		<xsl:if test="number(page/text())">
+			<xsl:attribute name="page"><xsl:value-of select="number(page/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:attribute name="srcBook">//@entries.0/@entries.0</xsl:attribute>
+	</xsl:template>
+	<xsl:template name="gegenstand-basis">
+		<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
+		<xsl:if test="number(cost/text())">
+			<xsl:attribute name="wert"><xsl:value-of select="number(cost/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" /></xsl:attribute>
+	</xsl:template>
+	<xsl:template name="skill-options">
+		<xsl:if test="number(skills/qty/text())">
+			<xsl:attribute name="skillNumber"><xsl:value-of select="skills/qty/text()" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(skills/rating/text())">
+			<xsl:attribute name="skillValue"><xsl:value-of
+				select="skills/rating/text()" /></xsl:attribute>
+		</xsl:if>
+	</xsl:template>
+
+
+	<xsl:template name="waffe">
+		<xsl:attribute name="schadenscode"><xsl:value-of select="damage/text()" /></xsl:attribute>
+		<xsl:if test="number(accuracy/text())">
+			<xsl:attribute name="praezision"><xsl:value-of select="accuracy/text()" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(ap/text())">
+			<xsl:attribute name="durchschlagsKraft"><xsl:value-of select="number(ap/text())" /></xsl:attribute>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template name="fw-mode">
+		<xsl:param name="list" />
+		<xsl:variable name="first" select="substring-before($list, '/')" />
+		<xsl:variable name="remaining" select="substring-after($list, '/')" />
+		<xsl:choose>
+			<xsl:when test="$first='FA'">
+				<modie>AM</modie>
+			</xsl:when>
+			<xsl:when test="$first='BF'">
+				<modie>SM</modie>
+			</xsl:when>
+			<xsl:when test="$first='SA'">
+				<modie>HM</modie>
+			</xsl:when>
+			<xsl:when test="$first='SS'">
+				<modie>EM</modie>
+			</xsl:when>
+		</xsl:choose>
+		<xsl:if test="$remaining">
+			<xsl:call-template name="fw-mode">
+				<xsl:with-param name="list" select="$remaining" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template name="mods">
+		<xsl:for-each select="bonus/*">
+			<xsl:choose>
+				<xsl:when test="name()='initiativedice'">
+					<mods>
+						<xsl:if test="number(text())">
+							<xsl:attribute name="wert">
+				<xsl:value-of select="number(text())" />
+				</xsl:attribute>
+						</xsl:if>
+						<attribut>
+							<xsl:attribute name="href">
+							<xsl:value-of
+								select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel'" />
+					</xsl:attribute>
+						</attribut>
+					</mods>
+				</xsl:when>
+				<xsl:when test="name()='armor' or  name()='armorvalue' ">
+					<mods>
+						<xsl:if test="number(text())">
+							<xsl:attribute name="wert">
+				<xsl:value-of select="number(text())" />
+				</xsl:attribute>
+						</xsl:if>
+						<attribut>
+							<xsl:attribute name="href">
+							<xsl:value-of
+								select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
+					</xsl:attribute>
+						</attribut>
+					</mods>
+				</xsl:when>
+				<xsl:when test="name()='specificattribute'">
+					<mods>
+						<xsl:attribute name="wert">
+				<xsl:value-of select="number(val/text())" />
+				</xsl:attribute>
+						<attribut>
+							<xsl:attribute name="href">
+			<xsl:call-template name="MATCH">
+         <xsl:with-param name="matchingName" select="name/text()" />
+      </xsl:call-template>
+					</xsl:attribute>
+						</attribut>
+					</mods>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:for-each>
+	</xsl:template>
+	<xsl:template name="skill">
+		<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
+		<attribut>
+			<xsl:attribute name="href">
+			<xsl:call-template name="MATCH">
+         <xsl:with-param name="matchingName" select="attribute/text()" />
+      </xsl:call-template>
+		</xsl:attribute>
+		</attribut>
+	</xsl:template>
+	<!-- matcher for the references of the modificators -->
+	<xsl:template name="MATCH">
+		<xsl:param name="matchingName" />
+		<xsl:choose>
+			<xsl:when test="$matchingName='AGI'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='BOD'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='STR'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='REA'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='INT'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='CHA'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='WIL'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='LOG'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='MAG'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" />
+			</xsl:when>
+			<xsl:when test="$matchingName='RES'">
+				<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" />
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
+	<!-- lifestyle -->
+	<xsl:template match="//lifestyle" mode="lifestyle">
+		<entries xsi:type="shr5:Lifestyle">
+			<xsl:call-template name="gegenstand-basis" />
+		</entries>
+	</xsl:template>
+	<!-- metatype -->
+	<xsl:template match="//metatype">
+		<entries xsi:type="shr5:Spezies">
+			<xsl:if test="number(bodmin/text())">
+				<xsl:attribute name="konstitutionMin"><xsl:value-of
+					select="number(bodmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(bodmax/text())">
+				<xsl:attribute name="konstitutionMax"><xsl:value-of
+					select="number(bodmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(agimin/text())">
+				<xsl:attribute name="geschicklichkeitMin"><xsl:value-of
+					select="number(agimin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(agimax/text())">
+				<xsl:attribute name="geschicklichkeitMax"><xsl:value-of
+					select="number(agimax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(reamax/text())">
+				<xsl:attribute name="reaktionMax"><xsl:value-of
+					select="number(reamax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(reamin/text())">
+				<xsl:attribute name="reaktionMin"><xsl:value-of
+					select="number(reamin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(strmax/text())">
+				<xsl:attribute name="staerkeMax"><xsl:value-of
+					select="number(strmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(strmin/text())">
+				<xsl:attribute name="staerkeMin"><xsl:value-of
+					select="number(strmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(chamax/text())">
+				<xsl:attribute name="charismaMax"><xsl:value-of
+					select="number(chamax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(chamin/text())">
+				<xsl:attribute name="charismaMin"><xsl:value-of
+					select="number(chamin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(wilmax/text())">
+				<xsl:attribute name="willenskraftMax"><xsl:value-of
+					select="number(wilmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(wilmin/text())">
+				<xsl:attribute name="willenskraftMin"><xsl:value-of
+					select="number(wilmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(intmax/text())">
+				<xsl:attribute name="intuitionMax"><xsl:value-of
+					select="number(intmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(intmin/text())">
+				<xsl:attribute name="intuitionMin"><xsl:value-of
+					select="number(intmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(logmax/text())">
+				<xsl:attribute name="logikMax"><xsl:value-of
+					select="number(logmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(logmin/text())">
+				<xsl:attribute name="logikMin"><xsl:value-of
+					select="number(logmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(edgmax/text())">
+				<xsl:attribute name="edgeMax"><xsl:value-of
+					select="number(edgmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(edgmin/text())">
+				<xsl:attribute name="edgeMin"><xsl:value-of
+					select="number(edgmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(resmax/text())">
+				<xsl:attribute name="resonanzMax"><xsl:value-of
+					select="number(resmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(resmin/text())">
+				<xsl:attribute name="resonanzMin"><xsl:value-of
+					select="number(resmin/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(essmax/text())">
+				<xsl:attribute name="essenzMax"><xsl:value-of
+					select="number(essmax/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(essmin/text())">
+				<xsl:attribute name="essenzMin"><xsl:value-of
+					select="number(essmin/text())" /></xsl:attribute>
+			</xsl:if>
+
+
+			<xsl:if test="number(run/text())">
+				<xsl:attribute name="rennen"><xsl:value-of select="number(run/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(walk/text())">
+				<xsl:attribute name="laufen"><xsl:value-of
+					select="number(walk/text())" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(sprint/text())">
+				<xsl:attribute name="sprinten"><xsl:value-of
+					select="number(sprint/text())" /></xsl:attribute>
+			</xsl:if>
+
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="mods" />
+		</entries>
+	</xsl:template>
+	<!-- zauber -->
+	<xsl:template match="//spell">
+		<entries xsi:type="shr5:Zauber">
+			<xsl:attribute name="merkmale"><xsl:value-of select="descriptor/text()" /></xsl:attribute>
+			<xsl:attribute name="kategorie"><xsl:value-of select="category/text()" /></xsl:attribute>
+			<xsl:attribute name="schaden"><xsl:value-of select="damage/text()" /></xsl:attribute>
+			<xsl:attribute name="entzug"><xsl:value-of select="dv/text()" /></xsl:attribute>
+			<xsl:choose>
+				<xsl:when test="range/text()='LOS'">
+					<xsl:attribute name="reichweite">Blickfeld</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="range/text()='T'">
+					<xsl:attribute name="reichweite">Beruehrung</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="range/text()='T'">
+					<xsl:attribute name="reichweite">Beruehrung</xsl:attribute>
+				</xsl:when>
+			</xsl:choose>
+			<xsl:choose>
+				<xsl:when test="type/text()='M'">
+					<xsl:attribute name="art">Mana</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="type/text()='P'">
+					<xsl:attribute name="art">Physisch</xsl:attribute>
+				</xsl:when>
+			</xsl:choose>
+			<xsl:choose>
+				<xsl:when test="duration/text()='I'">
+					<xsl:attribute name="dauer">Sofort</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="duration/text()='S'">
+					<xsl:attribute name="dauer">Aufrechterhalten</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="duration/text()='P'">
+					<xsl:attribute name="dauer">Permanent</xsl:attribute>
+				</xsl:when>
+			</xsl:choose>
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+		</entries>
+
+	</xsl:template>
+	<!-- kikraft -->
+	<xsl:template match="//power">
+		<xsl:if test="string-length(skillgroup/text())=0">
+			<entries xsi:type="shr5:KiKraft">
+				<xsl:if test="number(points/text())">
+					<xsl:attribute name="kraftpunkte">
+				<xsl:value-of select="number(points/text())*-100" />
+				</xsl:attribute>
+				</xsl:if>
+				<xsl:call-template name="beschreibbar" />
+				<xsl:call-template name="mods" />
+
+			</entries>
+		</xsl:if>
+	</xsl:template>
+	<!-- quallity -->
+	<xsl:template match="//quality">
+		<entries xsi:type="shr5:PersonaEigenschaft">
+			<xsl:if test="number(cost/text())">
+				<xsl:attribute name="karmaKosten">
+				<xsl:value-of select="number(cost/text())" />
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+			<xsl:call-template name="mods" />
+
+		</entries>
+	</xsl:template>
+	<!-- skill -->
+	<xsl:template match="//skill">
+		<xsl:if test="string-length(skillgroup/text())=0">
+			<xsl:choose>
+				<xsl:when test="category/text()='Language'">
+					<entries xsi:type="shr5:Sprachfertigkeit">
+						<xsl:call-template name="skill" />
+					</entries>
+				</xsl:when>
+				<xsl:when
+					test="category/text()!='Language' and name(..)='knowledgeskills' ">
+					<entries xsi:type="shr5:Wissensfertigkeit">
+						<xsl:call-template name="skill" />
+					</entries>
+				</xsl:when>
+				<xsl:otherwise>
+					<entries xsi:type="shr5:Fertigkeit">
+						<xsl:call-template name="skill" />
+					</entries>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="skillgroups/name">
+		<entries xsi:type="shr5:FertigkeitsGruppe">
+			<xsl:attribute name="name"><xsl:value-of select="text()" /></xsl:attribute>
+			<xsl:variable name="name" select="text()" />
+			<xsl:for-each select="$skills">
+				<xsl:for-each select="chummer/skills/*">
+					<xsl:if test="skillgroup/text()=$name">
+						<fertigkeiten xsi:type="shr5:Fertigkeit">
+							<xsl:call-template name="skill" />
+						</fertigkeiten>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:for-each>
+		</entries>
+	</xsl:template>
+	<!-- the ranges -->
+	<xsl:template match="//range">
+		<entries xsi:type="shr5:Reichweite">
+			<xsl:attribute name="name"><xsl:value-of select="category/text()" /></xsl:attribute>
+			<xsl:if test="number(min/text())">
+				<xsl:attribute name="min"><xsl:value-of select="min/text()" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(short/text())">
+				<xsl:attribute name="kurz"><xsl:value-of select="short/text()" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(medium/text())">
+				<xsl:attribute name="mittel"><xsl:value-of select="medium/text()" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(long/text())">
+				<xsl:attribute name="weit"><xsl:value-of select="long/text()" /></xsl:attribute>
+			</xsl:if>
+			<xsl:if test="number(extreme/text())">
+				<xsl:attribute name="extrem"><xsl:value-of select="extreme/text()" /></xsl:attribute>
+			</xsl:if>
+		</entries>
+	</xsl:template>
+	<xsl:template match="//cyberware">
+		<entries xsi:type="shr5:Cyberware">
+			<xsl:call-template name="gegenstand-basis" />
+			<xsl:call-template name="mods" />
+			<mods>
+				<xsl:if test="number(ess/text())">
+					<xsl:attribute name="wert">
+				<xsl:value-of select="number(ess/text())*-100" />
+				</xsl:attribute>
+				</xsl:if>
+				<attribut>
+					<xsl:attribute name="href">
+							<xsl:value-of
+						select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
+					</xsl:attribute>
+				</attribut>
+			</mods>
+		</entries>
+	</xsl:template>
+	<xsl:template match="//bioware">
+		<entries xsi:type="shr5:BioWare">
+			<xsl:call-template name="gegenstand-basis" />
+			<xsl:call-template name="mods" />
+			<mods>
+				<xsl:if test="number(ess/text())">
+					<xsl:attribute name="wert">
+				<xsl:value-of select="number(ess/text())*-100" />
+				</xsl:attribute>
+				</xsl:if>
+				<attribut>
+					<xsl:attribute name="href">
+							<xsl:value-of
+						select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
+					</xsl:attribute>
+				</attribut>
+			</mods>
+		</entries>
+	</xsl:template>
+	<xsl:template match="//gear">
+		<entries xsi:type="shr5:Gegenstand">
+			<xsl:attribute name="kategorie"><xsl:value-of select="category/text()" /></xsl:attribute>
+			<xsl:call-template name="gegenstand-basis" />
+		</entries>
+	</xsl:template>
+	<xsl:template match="//vehicle">
+		<xsl:choose>
+			<xsl:when
+				test="category/text()='Bike' or category/text()='Car' or category/text()='Truck'">
+				<xsl:call-template name="vehicle">
+					<xsl:with-param name="typeName" select="'Bodenfahrzeug'" />
+				</xsl:call-template>
+			</xsl:when>
+
+			<xsl:otherwise>
+				<xsl:call-template name="vehicle">
+					<xsl:with-param name="typeName" select="'PassagierFahrzeug'" />
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	<xsl:template match="armor">
+		<xsl:choose>
+			<xsl:when test="category/text()='Armor'">
+				<entries xsi:type="shr5:Kleidung">
+					<xsl:call-template name="gegenstand-basis" />
+					<xsl:if test="number(armorvalue/text())">
+						<xsl:attribute name="ruestung"><xsl:value-of
+							select="number(armorvalue/text())" /></xsl:attribute>
+					</xsl:if>
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Helmets and Shields'">
+				<entries xsi:type="shr5:Gegenstand">
+					<xsl:call-template name="gegenstand-basis" />
+					<mods>
+						<xsl:if test="number(armorvalue/text())">
+							<xsl:attribute name="wert">
+				<xsl:value-of select="number(armorvalue/text())" />
+				</xsl:attribute>
+						</xsl:if>
+						<attribut>
+							<xsl:attribute name="href">
+							<xsl:value-of
+								select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
+					</xsl:attribute>
+						</attribut>
+					</mods>
+
+				</entries>
+			</xsl:when>
+
+		</xsl:choose>
+	</xsl:template>
+
+	<!-- weapon -->
+	<xsl:template match="weapon">
+		<xsl:if test="type/text()='Melee'">
+			<entries xsi:type="shr5:Nahkampfwaffe">
+				<xsl:call-template name="gegenstand-basis" />
+				<xsl:call-template name="waffe" />
+				<!-- <xsl:variable name="sname" select="useskill/text()" /> <xsl:for-each 
+					select="$skills"> <xsl:for-each select="chummer/skills/*"> <xsl:if test="name/text()=$sname"> 
+					<xsl:variable name="pos" select="position()-1" /> <xsl:attribute name="fertigkeit"><xsl:value-of 
+					select="concat('//@entries.3/@entries.',$pos)" /></xsl:attribute> </xsl:if> 
+					</xsl:for-each> </xsl:for-each> -->
+			</entries>
+		</xsl:if>
+		<xsl:if test="type/text()='Ranged' and category/text()!='Gear'">
+			<entries xsi:type="shr5:Feuerwaffe">
+				<xsl:call-template name="gegenstand-basis" />
+				<xsl:call-template name="waffe" />
+				<xsl:if test="number(rc/text())">
+					<xsl:attribute name="rueckstoss"><xsl:value-of
+						select="number(rc/text())" /></xsl:attribute>
+				</xsl:if>
+				<xsl:variable name="rname" select="category/text()" />
+				<xsl:for-each select="$ranges">
+					<xsl:for-each select="chummer/ranges/*">
+						<xsl:if test="category/text()=$rname">
+							<xsl:variable name="pos" select="position()-1" />
+							<xsl:attribute name="reichweite"><xsl:value-of
+								select="concat('//@entries.1/@entries.',$pos)" /></xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+				<xsl:call-template name="fw-mode">
+					<xsl:with-param name="list"
+						select="concat(normalize-space(mode/text()), '/')" />
+				</xsl:call-template>
+				<xsl:for-each select="accessorymounts/*">
+					<xsl:choose>
+						<xsl:when test="text()='Barrel'">
+							<erweiterung>Lauf</erweiterung>
+						</xsl:when>
+						<xsl:when test="text()='Top'">
+							<erweiterung>Oben</erweiterung>
+						</xsl:when>
+						<xsl:when test="text()='Under'">
+							<erweiterung>Unten</erweiterung>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:for-each>
+				<xsl:for-each select="accessories/*">
+					<xsl:variable name="aid" select="text()" />
+					<xsl:for-each select="$weapons">
+						<xsl:for-each select="chummer/accessories/*">
+							<xsl:if test="id/text()=$aid">
+								<einbau>
+									<xsl:call-template name="beschreibbar" />
+									<xsl:call-template name="quelle" />
+								</einbau>
+							</xsl:if>
+						</xsl:for-each>
+					</xsl:for-each>
+				</xsl:for-each>
+			</entries>
+		</xsl:if>
+	</xsl:template>
+</xsl:stylesheet>
