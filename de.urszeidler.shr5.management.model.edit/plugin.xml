@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ 2014 Urs Zeidler
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated shr5Management -->
+      <factory
+            uri="http://urszeidler.de/shr5mngt/1.0"
+            class="de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated shr5Management -->
+      <extender
+            uri="http://urszeidler.de/shr5/1.0"
+            class="de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory$Shr5ChildCreationExtender"/>
+   </extension>
+
+</plugin>

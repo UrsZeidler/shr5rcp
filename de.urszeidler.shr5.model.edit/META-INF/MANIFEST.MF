@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.urszeidler.shr5.model.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.urszeidler.eclipse.shr5.provider,
+ de.urszeidler.eclipse.shr5.util
+Require-Bundle: org.eclipse.core.runtime,
+ de.urszeidler.shr5.model;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ de.urszeidler.emf.commons.ui;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy

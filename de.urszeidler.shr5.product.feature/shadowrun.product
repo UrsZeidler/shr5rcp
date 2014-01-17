@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="org.eclipse.emf.ecp.application.e3.application" version="1.0.0" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/de.urszeidler.shr5.product/icons/shrImage_6_250.png"/>
+      <text>
+         The shadowrun IDE client.
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-data shr_workspace/</programArgs>
+      <vmArgs>-Dorg.eclipse.swt.browser.DefaultType=mozilla
+-XX:MaxPermSize=256m
+-Xms240m
+-Xmx768m</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/de.urszeidler.shr5.product/icons/shrImage_6_16.png" i32="/de.urszeidler.shr5.product/icons/shrImage_6_32.png" i48="/de.urszeidler.shr5.product/icons/shrImage_6_48.png" i64="/de.urszeidler.shr5.product/icons/shrImage_6_64.png" i128="/de.urszeidler.shr5.product/icons/shrImage_6_128.png"/>
+
+   <splash
+      location="de.urszeidler.shr5.product"
+      startupProgressRect="5,10,490,15"
+      startupMessageRect="5,226,490,20"
+      startupForegroundColor="000000" />
+   <launcher name="run_shr">
+      <linux icon="/de.urszeidler.shr5.product/icons/shrImage_6_64.xpm"/>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="de.urszeidler.shr5.product.feature" version="1.0.0.qualifier"/>
+   </features>
+
+
+</product>

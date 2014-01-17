@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.urszeidler.shr5.model/src" modelPluginID="de.urszeidler.shr5.model"
+    modelName="Shr5" generateSchema="true" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>shr5.ecore</foreignModel>
+  <genPackages prefix="Shr5" basePackage="de.urszeidler.eclipse" disposableProviderFactory="true"
+      ecorePackage="shr5.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//FeuerModus">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuerModus/EM"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuerModus/HM"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuerModus/SM"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuerModus/AM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//SchadensTyp">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SchadensTyp/koerperlich"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SchadensTyp/geistig"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SchadensTyp/speziell"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//MagazinTyp">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagazinTyp/Clip"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagazinTyp/Trommel"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagazinTyp/Gurt"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagazinTyp/Streifen"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//FeuwerwaffenErweiterung">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuwerwaffenErweiterung/Lauf"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuwerwaffenErweiterung/Unten"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuwerwaffenErweiterung/Oben"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ModifikatorType">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ModifikatorType/Natural"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ModifikatorType/Cyber"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ModifikatorType/Bio"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//SmartgunType">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SmartgunType/SmartBrille"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SmartgunType/SmartGun"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SmartgunType/SmatgunII"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ZauberArt">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberArt/Mana"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberArt/Physisch"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ZauberReichweite">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberReichweite/Blickfeld"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberReichweite/Begrenzt"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberReichweite/Selbst"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberReichweite/Beruehrung"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ZauberDauer">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberDauer/Sofort"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberDauer/Aufrechterhalten"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ZauberDauer/Permanent"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//MagischeTradition">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagischeTradition/Hermetisch"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MagischeTradition/Schamanisch"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//CritterHandlung">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterHandlung/komplex"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterHandlung/auto"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//CritterReichweite">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterReichweite/blickfeld"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterReichweite/beruehrung"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterReichweite/selbst"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterReichweite/speziell"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//CritterDauer">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterDauer/immer"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterDauer/sofort"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterDauer/aufrechterhalten"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterDauer/permanent"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//CritterDauer/speziell"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ResonanzZiel">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/datei"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/geraet"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/selbst"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/persona"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/sprite"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
+    <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Beschreibbar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Beschreibbar/beschreibung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Beschreibbar/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Beschreibbar/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Quelle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Quelle/page"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Quelle/srcBook"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//SourceBook">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SourceBook/startShrTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SourceBook/endShrTime"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktPersona">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/konstitutionBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/geschicklichkeitBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/reaktionBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/staerkeBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/charismaBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/willenskraftBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/intuitionBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/logikBasis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktPersona/fertigkeiten"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktPersona/fertigkeitsGruppen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstraktPersona/spezies"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/modManager"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Gegenstand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/kategorie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/stufe"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//GeldWert">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wert"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/verfuegbarkeit"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Reichweite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/kurz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/mittel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/weit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/extrem"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//AttributModifikatorWert">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/attribut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AttributModifikatorWert/wert"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//AttributModifikatorWert/modifiziertes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Modifizierbar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Modifizierbar/mods"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//KoerperlicheAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/konstitution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/geschicklichkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/reaktion"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/staerke"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//SpezielleAttribute">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/initative"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/initativWuerfel"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/ausweichen"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/essenz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/edgeBasis"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SpezielleAttribute/edge"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktGegenstand"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstaktFernKampfwaffe">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AbstaktFernKampfwaffe/reichweite"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstaktWaffe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadenscode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/schadesTyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/praezision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstaktWaffe/durchschlagsKraft"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Nahkampfwaffe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Nahkampfwaffe/reichweite"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Feuerwaffe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/munitionstyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/modie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/kapazitaet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/erweiterung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Feuerwaffe/rueckstoss"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Feuerwaffe/einbau"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Wurfwaffe"/>
+    <genClasses ecoreClass="shr5.ecore#//ShrList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//ShrList/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Projektilwaffe"/>
+    <genClasses ecoreClass="shr5.ecore#//FertigkeitsGruppe">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//FertigkeitsGruppe/fertigkeiten"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Fertigkeit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/kategorie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/ausweichen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Fertigkeit/attribut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/spezialisierungen"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/fertigkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaFertigkeit/stufe"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeitsGruppe">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeitsGruppe/gruppe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaFertigkeitsGruppe/stufe"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Cyberware">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/persona"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberware/einbau"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//BioWare">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//BioWare/persona"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Koerpermods"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktModifikatoren"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//GeistigeAttribute">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeistigeAttribute/charisma"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeistigeAttribute/willenskraft"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeistigeAttribute/intuition"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeistigeAttribute/logik"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MudanPersona"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//KoerperPersona">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//KoerperPersona/koerperMods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//KoerperPersona/eigenschaften"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MagischeMods"/>
+    <genClasses ecoreClass="shr5.ecore#//KiKraft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KiKraft/kraftpunkte"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MagischePersona">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//MagischePersona/mentor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//BaseMagischePersona">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magie"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//BaseMagischePersona/initationen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magieBasis"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//FernkampfwaffenModifikatoren">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/smartgun"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/rueckstoss"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/lasterPointer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/schalldaempfer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/vergroesserung"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Sichtverhaeltnisse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sichtverhaeltnisse/infrarot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sichtverhaeltnisse/ultrasound"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Spezies">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/konstitutionMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/geschicklichkeitMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/reaktionMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/staerkeMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/charismaMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/willenskraftMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/intuitionMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/logikMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/edgeMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/magieMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/resonanzMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/essenzMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/konstitutionMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/geschicklichkeitMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/reaktionMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/staerkeMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/charismaMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/willenskraftMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/intuitionMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/logikMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/edgeMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/magieMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/resonanzMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/essenzMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/laufen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/rennen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/sprinten"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//GegenstandStufen">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/computer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/elektronik"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/tracing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/antiTracing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/protection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/antiProtection"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//KiAdept">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//KiAdept/kikraft"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Kleidung">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Kleidung/ruestung"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//FernkampfwaffeModifikator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffeModifikator/ep"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Anwendbar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Anwendbar/fertigkeit"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PersonaEigenschaft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaEigenschaft/karmaKosten"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//ProbenModifikatoren">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ProbenModifikatoren/schadenswiederstand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ProbenModifikatoren/heilung"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Magier"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Zauberer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/zauber"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MysticAdept"/>
+    <genClasses ecoreClass="shr5.ecore#//PersonaZauber">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaZauber/stufe"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaZauber/formel"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Zauber">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/art"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/reichweite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/schaden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/dauer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/entzug"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/kategorie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauber/merkmale"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//ChrakterLimits">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ChrakterLimits/koerperlich"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ChrakterLimits/geistig"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ChrakterLimits/sozial"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Panzerung">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Panzerung/panzer"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//AspektMagier">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AspektMagier/aspekt"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AstraleProjektion">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astralesLimit"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astraleKonstitution"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astraleGeschicklichkeit"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astraleReaktion"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astraleStaerke"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astraleInitative"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astraleInitativWuerfel"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AstraleProjektion/astralePanzerung"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Schutzgeist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Schutzgeist/vorteile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Schutzgeist/nachteile"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Initation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Initation/stufe"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Initation/erlernt"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//MetaMagie"/>
+    <genClasses ecoreClass="shr5.ecore#//MudanCritter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//MudanCritter/kraefte"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//CritterKraft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/art"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/handlung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/reichweite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/dauer"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//ParaCritter"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Fahrzeug">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/handling"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/geschwindigkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/beschleunigung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/rumpf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/pilot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/sensor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/fahrzeugTyp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/modifizierungen"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Bodenfahrzeug">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/handlingGelaende"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelände"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PassagierFahrzeug">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PassagierFahrzeug/sitze"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Drohne"/>
+    <genClasses ecoreClass="shr5.ecore#//FahrzeugModifikation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//FahrzeugModifikation/funktion"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Technomancer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Technomancer/complexForms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Technomancer/echos"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//ResonanzPersona">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/resonanz"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/geraetestufe"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/angriff"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/schleicher"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/datenverarbeitung"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/firewall"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/resonanzBasis"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//KomplexeForm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KomplexeForm/ziel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KomplexeForm/dauer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KomplexeForm/schwund"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PersonaKomplexForm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaKomplexForm/form"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaKomplexForm/stufe"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Sprite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sprite/stufe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sprite/angriffMod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sprite/schleicherMod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sprite/datenverarbeitungMod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sprite/firewallMod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sprite/initativeMod"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Echo"/>
+    <genClasses ecoreClass="shr5.ecore#//Vertrag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Vertrag/faelligkeitsIntervall"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Lifestyle"/>
+    <genClasses ecoreClass="shr5.ecore#//Wissensfertigkeit"/>
+    <genClasses ecoreClass="shr5.ecore#//Sprachfertigkeit"/>
+  </genPackages>
+</genmodel:GenModel>

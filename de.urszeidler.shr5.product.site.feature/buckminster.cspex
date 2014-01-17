@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cspecExtension xmlns:com="http://www.eclipse.org/buckminster/Common-1.0"
+                    xmlns="http://www.eclipse.org/buckminster/CSpec-1.0">
+    <actions>
+        <public name="create.product" actor="ant">
+            <actorProperties>
+                <property key="buildFile" value="build/product.ant" />
+                <property key="targets" value="create.product" />
+            </actorProperties>
+            <properties>
+                <property key="profile" value="shr-rcp" />
+                <property key="iu" value="de.urszeidler.shr5.rcp.product.id" />
+            </properties>
+            <prerequisites alias="repository">
+                <attribute name="site.p2" />
+            </prerequisites>
+            <products alias="destination" base="${buckminster.output}">
+                <path path="shr-rcp.${target.ws}.${target.os}.${target.arch}/" />
+            </products>
+        </public>
+        <public name="create.product.zip" actor="ant">
+            <actorProperties>
+                <property key="buildFileId" value="buckminster.pdetasks" />
+                <property key="targets" value="create.zip" />
+            </actorProperties>
+            <prerequisites alias="action.requirements">
+                <attribute name="create.product" />
+            </prerequisites>
+            <products alias="action.output" base="${buckminster.output}">
+                <path path="shr-rcp.${target.ws}.${target.os}.${target.arch}.zip" />
+            </products>
+        </public>
+    </actions>
+</cspecExtension>

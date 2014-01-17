@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="shr5" nsURI="http://urszeidler.de/shr5/1.0" nsPrefix="shr5">
+  <eClassifiers xsi:type="ecore:EClass" name="Beschreibbar" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Quelle" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="page" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srcBook" eType="#//SourceBook"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceBook" eSuperTypes="#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startShrTime" eType="#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endShrTime" eType="#//ShrDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ShrDate" instanceClassName="java.util.Date"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstraktPersona" abstract="true" eSuperTypes="#//Beschreibbar #//KoerperlicheAttribute #//SpezielleAttribute #//GeistigeAttribute #//ChrakterLimits">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="konstitutionBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschicklichkeitBasis"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reaktionBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staerkeBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charismaBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="willenskraftBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intuitionBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logikBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeiten" upperBound="-1"
+        eType="#//PersonaFertigkeit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeitsGruppen" upperBound="-1"
+        eType="#//PersonaFertigkeitsGruppe" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spezies" lowerBound="1"
+        eType="#//Spezies"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modManager" lowerBound="1"
+        eType="#//ModificationManager" changeable="false" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gegenstand" eSuperTypes="#//AbstraktGegenstand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeldWert" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wert" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verfuegbarkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FeuerModus">
+    <eLiterals name="EM"/>
+    <eLiterals name="HM" value="1"/>
+    <eLiterals name="SM" value="2"/>
+    <eLiterals name="AM" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reichweite" eSuperTypes="#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kurz" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mittel" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weit" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extrem" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributModifikatorWert">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="die Modifikation&#xD;&#xA;&#xD;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribut" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wert" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifiziertes" eType="#//Modifizierbar"
+        eOpposite="#//Modifizierbar/mods"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modifizierbar" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mods" upperBound="-1" eType="#//AttributModifikatorWert"
+        containment="true" eOpposite="#//AttributModifikatorWert/modifiziertes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KoerperlicheAttribute" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="konstitution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschicklichkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reaktion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staerke" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpezielleAttribute" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initative" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initativWuerfel" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ausweichen" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essenz" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="edgeBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="edge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstraktGegenstand" abstract="true"
+      eSuperTypes="#//Quelle #//GeldWert #//Beschreibbar #//Modifizierbar #//Anwendbar"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="SchadensTyp">
+    <eLiterals name="koerperlich"/>
+    <eLiterals name="geistig" value="1"/>
+    <eLiterals name="speziell" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstaktFernKampfwaffe" abstract="true"
+      eSuperTypes="#//AbstaktWaffe">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reichweite" lowerBound="1"
+        eType="#//Reichweite"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstaktWaffe" abstract="true" eSuperTypes="#//AbstraktGegenstand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schadenscode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schadesTyp" eType="#//SchadensTyp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="praezision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="durchschlagsKraft" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Nahkampfwaffe" eSuperTypes="#//AbstaktWaffe">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reichweite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feuerwaffe" eSuperTypes="#//AbstaktFernKampfwaffe">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="munitionstyp" eType="#//MagazinTyp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modie" upperBound="-1"
+        eType="#//FeuerModus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kapazitaet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="erweiterung" upperBound="-1"
+        eType="#//FeuwerwaffenErweiterung"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rueckstoss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
+        eType="#//FernkampfwaffeModifikator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wurfwaffe" eSuperTypes="#//AbstaktFernKampfwaffe"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="MagazinTyp">
+    <eLiterals name="Clip"/>
+    <eLiterals name="Trommel" value="1"/>
+    <eLiterals name="Gurt" value="2"/>
+    <eLiterals name="Streifen" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShrList" eSuperTypes="#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Projektilwaffe" eSuperTypes="#//AbstaktFernKampfwaffe"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="FeuwerwaffenErweiterung">
+    <eLiterals name="Lauf"/>
+    <eLiterals name="Unten" value="1"/>
+    <eLiterals name="Oben" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe" eSuperTypes="#//Beschreibbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeiten" upperBound="-1"
+        eType="#//Fertigkeit" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fertigkeit" eSuperTypes="#//Beschreibbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ausweichen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribut" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spezialisierungen" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeit" eType="#//Fertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeitsGruppe">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gruppe" eType="#//FertigkeitsGruppe"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberware" eSuperTypes="#//Koerpermods #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
+        eType="#//AbstraktGegenstand" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BioWare" eSuperTypes="#//Koerpermods #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persona" eType="#//AbstraktPersona"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Koerpermods" abstract="true" eSuperTypes="#//AbstraktModifikatoren"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstraktModifikatoren" abstract="true"
+      eSuperTypes="#//Beschreibbar #//Modifizierbar #//Quelle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GeistigeAttribute" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charisma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="willenskraft" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intuition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logik" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MudanPersona" eSuperTypes="#//KoerperPersona"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona" abstract="true" eSuperTypes="#//AbstraktPersona #//Panzerung">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="koerperMods" upperBound="-1"
+        eType="#//Koerpermods" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eigenschaften" upperBound="-1"
+        eType="#//PersonaEigenschaft" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MagischeMods" abstract="true" eSuperTypes="#//AbstraktModifikatoren"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KiKraft" eSuperTypes="#//MagischeMods">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kraftpunkte" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MagischePersona" abstract="true" eSuperTypes="#//KoerperPersona #//BaseMagischePersona">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mentor" eType="#//Schutzgeist"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseMagischePersona" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="magie" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initationen" upperBound="-1"
+        eType="#//Initation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="magieBasis" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffenModifikatoren" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="smartgun" eType="#//SmartgunType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rueckstoss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lasterPointer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schalldaempfer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vergroesserung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sichtverhaeltnisse" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restlichtverstaerkung"
+        eType="#//ModifikatorType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="infrarot" eType="#//ModifikatorType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ultrasound" eType="#//ModifikatorType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Spezies" eSuperTypes="#//Beschreibbar #//Modifizierbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="konstitutionMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschicklichkeitMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reaktionMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staerkeMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charismaMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="willenskraftMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intuitionMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logikMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="edgeMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="magieMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanzMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essenzMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="konstitutionMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschicklichkeitMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reaktionMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staerkeMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charismaMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="willenskraftMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intuitionMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logikMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="edgeMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="magieMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanzMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essenzMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="laufen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rennen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sprinten" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GegenstandStufen" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="computer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elektronik" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tracing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="antiTracing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="antiProtection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ModifikatorType">
+    <eLiterals name="Natural"/>
+    <eLiterals name="Cyber" value="1"/>
+    <eLiterals name="Bio" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SmartgunType">
+    <eLiterals name="SmartBrille"/>
+    <eLiterals name="SmartGun" value="1"/>
+    <eLiterals name="SmatgunII" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KiAdept" eSuperTypes="#//MagischePersona">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kikraft" upperBound="-1"
+        eType="#//KiKraft" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Kleidung" eSuperTypes="#//AbstraktGegenstand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruestung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffeModifikator" eSuperTypes="#//AbstraktModifikatoren">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ep" eType="#//FeuwerwaffenErweiterung"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Anwendbar" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeit" eType="#//Fertigkeit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaEigenschaft" eSuperTypes="#//AbstraktModifikatoren">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaKosten" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProbenModifikatoren" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schadenswiederstand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heilung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Magier" eSuperTypes="#//MagischePersona #//Zauberer #//AstraleProjektion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Zauberer" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zauber" upperBound="-1"
+        eType="#//PersonaZauber" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enzug" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tradition" eType="#//MagischeTradition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MysticAdept" eSuperTypes="#//KiAdept #//Zauberer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaZauber">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formel" lowerBound="1"
+        eType="#//Zauber"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Zauber" eSuperTypes="#//Beschreibbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="art" eType="#//ZauberArt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reichweite" eType="#//ZauberReichweite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schaden" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dauer" eType="#//ZauberDauer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entzug" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merkmale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ZauberArt">
+    <eLiterals name="Mana"/>
+    <eLiterals name="Physisch" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ZauberReichweite">
+    <eLiterals name="Blickfeld"/>
+    <eLiterals name="Begrenzt" value="1"/>
+    <eLiterals name="Selbst" value="2"/>
+    <eLiterals name="Beruehrung" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ZauberDauer">
+    <eLiterals name="Sofort"/>
+    <eLiterals name="Aufrechterhalten" value="1"/>
+    <eLiterals name="Permanent" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChrakterLimits" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="koerperlich" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geistig" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sozial" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ModificationManager" instanceClassName="de.urszeidler.eclipse.shr5.ModSetter"
+      serializable="false"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Panzerung" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="panzer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MagischeTradition">
+    <eLiterals name="Hermetisch"/>
+    <eLiterals name="Schamanisch" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AspektMagier" eSuperTypes="#//MagischePersona #//Zauberer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aspekt" lowerBound="1"
+        eType="#//FertigkeitsGruppe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AstraleProjektion" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astralesLimit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleKonstitution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleGeschicklichkeit"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleReaktion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleStaerke" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleInitative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astraleInitativWuerfel"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="astralePanzerung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Schutzgeist" eSuperTypes="#//MagischeMods">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vorteile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachteile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Initation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="erlernt" eType="#//MetaMagie"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetaMagie" eSuperTypes="#//Beschreibbar #//Quelle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MudanCritter" eSuperTypes="#//KoerperPersona">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kraefte" upperBound="-1"
+        eType="#//CritterKraft" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CritterKraft" eSuperTypes="#//MagischeMods">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="art" eType="#//ZauberArt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="handlung" eType="#//CritterHandlung"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reichweite" eType="#//CritterReichweite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dauer" eType="#//CritterDauer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParaCritter" eSuperTypes="#//MudanCritter #//BaseMagischePersona"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="CritterHandlung">
+    <eLiterals name="komplex"/>
+    <eLiterals name="auto" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CritterReichweite">
+    <eLiterals name="blickfeld" literal="blickfeld"/>
+    <eLiterals name="beruehrung" value="1"/>
+    <eLiterals name="selbst" value="2"/>
+    <eLiterals name="speziell" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CritterDauer">
+    <eLiterals name="immer"/>
+    <eLiterals name="sofort" value="1"/>
+    <eLiterals name="aufrechterhalten" value="2"/>
+    <eLiterals name="permanent" value="3"/>
+    <eLiterals name="speziell" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="handling" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschwindigkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschleunigung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rumpf" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pilot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sensor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fahrzeugTyp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifizierungen" upperBound="-1"
+        eType="#//FahrzeugModifikation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug" eSuperTypes="#//PassagierFahrzeug">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="handlingGelaende" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschwindigkeitGelände"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PassagierFahrzeug" eSuperTypes="#//Fahrzeug">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sitze" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Drohne" eSuperTypes="#//Fahrzeug"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FahrzeugModifikation" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="funktion" upperBound="-1"
+        eType="#//AbstraktGegenstand" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Technomancer" eSuperTypes="#//KoerperPersona #//ResonanzPersona">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complexForms" upperBound="-1"
+        eType="#//PersonaKomplexForm" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="echos" upperBound="-1"
+        eType="#//Echo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResonanzPersona" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geraetestufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angriff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schleicher" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datenverarbeitung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firewall" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanzBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KomplexeForm" eSuperTypes="#//Quelle #//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ziel" eType="#//ResonanzZiel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dauer" eType="#//ZauberDauer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schwund" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaKomplexForm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="form" lowerBound="1" eType="#//KomplexeForm"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ResonanzZiel">
+    <eLiterals name="datei"/>
+    <eLiterals name="geraet" value="1"/>
+    <eLiterals name="selbst" value="2"/>
+    <eLiterals name="persona" value="3"/>
+    <eLiterals name="sprite" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sprite" eSuperTypes="#//ResonanzPersona #//Beschreibbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angriffMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schleicherMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datenverarbeitungMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firewallMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initativeMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Echo" eSuperTypes="#//AbstraktModifikatoren"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vertrag" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="faelligkeitsIntervall"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lifestyle" eSuperTypes="#//Vertrag"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Wissensfertigkeit" eSuperTypes="#//Fertigkeit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sprachfertigkeit" eSuperTypes="#//Wissensfertigkeit"/>
+</ecore:EPackage>

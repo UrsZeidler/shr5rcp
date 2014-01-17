@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="shr5"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.emf.ecp.application.e3.application"
+            name="RCP schadowrun">
+         <property
+               name="windowImages"
+               value="icons/shrImage_6_16.png,icons/shrImage_6_32.png,icons/shrImage_6_48.png,icons/shrImage_6_64.png,icons/shrImage_6_128.png">
+         </property>
+         <property
+               name="aboutText"
+               value="The shadowrun IDE client.">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/shrImage_6_250.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,10,490,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="5,226,490,20">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

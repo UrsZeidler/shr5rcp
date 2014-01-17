@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://urszeidler.de/shr5/1.0">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="ecore.xsd"/>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:simpleType name="FeuerModus">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="EM"/>
+      <xsd:enumeration value="HM"/>
+      <xsd:enumeration value="SM"/>
+      <xsd:enumeration value="AM"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SchadensTyp">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="koerperlich"/>
+      <xsd:enumeration value="geistig"/>
+      <xsd:enumeration value="speziell"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MagazinTyp">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Clip"/>
+      <xsd:enumeration value="Trommel"/>
+      <xsd:enumeration value="Gurt"/>
+      <xsd:enumeration value="Streifen"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FeuwerwaffenErweiterung">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Lauf"/>
+      <xsd:enumeration value="Unten"/>
+      <xsd:enumeration value="Oben"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ModifikatorType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Natural"/>
+      <xsd:enumeration value="Cyber"/>
+      <xsd:enumeration value="Bio"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SmartgunType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="SmartBrille"/>
+      <xsd:enumeration value="SmartGun"/>
+      <xsd:enumeration value="SmatgunII"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ZauberArt">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Mana"/>
+      <xsd:enumeration value="Physisch"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ZauberReichweite">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Blickfeld"/>
+      <xsd:enumeration value="Begrenzt"/>
+      <xsd:enumeration value="Selbst"/>
+      <xsd:enumeration value="Beruehrung"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ZauberDauer">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Sofort"/>
+      <xsd:enumeration value="Aufrechterhalten"/>
+      <xsd:enumeration value="Permanent"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MagischeTradition">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Hermetisch"/>
+      <xsd:enumeration value="Schamanisch"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CritterHandlung">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="komplex"/>
+      <xsd:enumeration value="auto"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CritterReichweite">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="blickfeld"/>
+      <xsd:enumeration value="beruehrung"/>
+      <xsd:enumeration value="selbst"/>
+      <xsd:enumeration value="speziell"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CritterDauer">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="immer"/>
+      <xsd:enumeration value="sofort"/>
+      <xsd:enumeration value="aufrechterhalten"/>
+      <xsd:enumeration value="permanent"/>
+      <xsd:enumeration value="speziell"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ResonanzZiel">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="datei"/>
+      <xsd:enumeration value="geraet"/>
+      <xsd:enumeration value="selbst"/>
+      <xsd:enumeration value="persona"/>
+      <xsd:enumeration value="sprite"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType abstract="true" name="Beschreibbar">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="beschreibung" type="xsd:string"/>
+    <xsd:attribute name="image" type="xsd:string"/>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="Beschreibbar" type="shr5:Beschreibbar"/>
+  <xsd:complexType abstract="true" name="Quelle">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="srcBook" type="shr5:SourceBook"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="page" type="xsd:string"/>
+    <xsd:attribute name="srcBook" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Quelle" type="shr5:Quelle"/>
+  <xsd:complexType name="SourceBook">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:attribute name="startShrTime" type="xsd:string"/>
+        <xsd:attribute name="endShrTime" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SourceBook" type="shr5:SourceBook"/>
+  <xsd:complexType abstract="true" name="AbstraktPersona">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="fertigkeiten" type="shr5:PersonaFertigkeit"/>
+          <xsd:element name="fertigkeitsGruppen" type="shr5:PersonaFertigkeitsGruppe"/>
+          <xsd:element name="spezies" type="shr5:Spezies"/>
+        </xsd:choice>
+        <xsd:attribute name="edgeBasis" type="xsd:int"/>
+        <xsd:attribute name="konstitutionBasis" type="xsd:int"/>
+        <xsd:attribute name="geschicklichkeitBasis" type="xsd:int"/>
+        <xsd:attribute name="reaktionBasis" type="xsd:int"/>
+        <xsd:attribute name="staerkeBasis" type="xsd:int"/>
+        <xsd:attribute name="charismaBasis" type="xsd:int"/>
+        <xsd:attribute name="willenskraftBasis" type="xsd:int"/>
+        <xsd:attribute name="intuitionBasis" type="xsd:int"/>
+        <xsd:attribute name="logikBasis" type="xsd:int"/>
+        <xsd:attribute name="spezies" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstraktPersona" type="shr5:AbstraktPersona"/>
+  <xsd:complexType name="Gegenstand">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:attribute name="kategorie" type="xsd:string"/>
+        <xsd:attribute name="stufe" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Gegenstand" type="shr5:Gegenstand"/>
+  <xsd:complexType abstract="true" name="GeldWert">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="wert" type="xsd:string"/>
+    <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="GeldWert" type="shr5:GeldWert"/>
+  <xsd:complexType name="Reichweite">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:attribute name="min" type="xsd:int" use="required"/>
+        <xsd:attribute name="kurz" type="xsd:int" use="required"/>
+        <xsd:attribute name="mittel" type="xsd:int" use="required"/>
+        <xsd:attribute name="weit" type="xsd:int" use="required"/>
+        <xsd:attribute name="extrem" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Reichweite" type="shr5:Reichweite"/>
+  <xsd:complexType name="AttributModifikatorWert">
+    <xsd:annotation>
+      <xsd:documentation>die Modifikation
+
+</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="attribut" type="ecore:EAttribute"/>
+      <xsd:element name="modifiziertes" type="shr5:Modifizierbar"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="wert" type="xsd:int"/>
+    <xsd:attribute name="attribut" type="xsd:string"/>
+    <xsd:attribute name="modifiziertes" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="AttributModifikatorWert" type="shr5:AttributModifikatorWert">
+    <xsd:annotation>
+      <xsd:documentation>die Modifikation
+
+</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="Modifizierbar">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Modifizierbar" type="shr5:Modifizierbar"/>
+  <xsd:complexType abstract="true" name="KoerperlicheAttribute">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="KoerperlicheAttribute" type="shr5:KoerperlicheAttribute"/>
+  <xsd:complexType abstract="true" name="SpezielleAttribute">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="edgeBasis" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="SpezielleAttribute" type="shr5:SpezielleAttribute"/>
+  <xsd:complexType abstract="true" name="AbstraktGegenstand">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Quelle">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="wert" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstraktGegenstand" type="shr5:AbstraktGegenstand"/>
+  <xsd:complexType abstract="true" name="AbstaktFernKampfwaffe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstaktWaffe">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="reichweite" type="shr5:Reichweite"/>
+        </xsd:choice>
+        <xsd:attribute name="reichweite" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstaktFernKampfwaffe" type="shr5:AbstaktFernKampfwaffe"/>
+  <xsd:complexType abstract="true" name="AbstaktWaffe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:attribute name="schadenscode" type="xsd:string"/>
+        <xsd:attribute name="schadesTyp" type="shr5:SchadensTyp"/>
+        <xsd:attribute name="praezision" type="xsd:int"/>
+        <xsd:attribute name="durchschlagsKraft" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstaktWaffe" type="shr5:AbstaktWaffe"/>
+  <xsd:complexType name="Nahkampfwaffe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstaktWaffe">
+        <xsd:attribute name="reichweite" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Nahkampfwaffe" type="shr5:Nahkampfwaffe"/>
+  <xsd:complexType name="Feuerwaffe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstaktFernKampfwaffe">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="modie" type="shr5:FeuerModus"/>
+          <xsd:element name="erweiterung" type="shr5:FeuwerwaffenErweiterung"/>
+          <xsd:element name="einbau" type="shr5:FernkampfwaffeModifikator"/>
+        </xsd:choice>
+        <xsd:attribute name="munitionstyp" type="shr5:MagazinTyp"/>
+        <xsd:attribute name="kapazitaet" type="xsd:int"/>
+        <xsd:attribute name="rueckstoss" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Feuerwaffe" type="shr5:Feuerwaffe"/>
+  <xsd:complexType name="Wurfwaffe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstaktFernKampfwaffe"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Wurfwaffe" type="shr5:Wurfwaffe"/>
+  <xsd:complexType name="ShrList">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="entries" type="ecore:EObject"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ShrList" type="shr5:ShrList"/>
+  <xsd:complexType name="Projektilwaffe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstaktFernKampfwaffe"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Projektilwaffe" type="shr5:Projektilwaffe"/>
+  <xsd:complexType name="FertigkeitsGruppe">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="fertigkeiten" type="shr5:Fertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FertigkeitsGruppe" type="shr5:FertigkeitsGruppe"/>
+  <xsd:complexType name="Fertigkeit">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="spezialisierungen" nillable="true" type="xsd:string"/>
+          <xsd:element name="attribut" type="ecore:EAttribute"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="kategorie" type="xsd:string"/>
+        <xsd:attribute name="ausweichen" type="xsd:boolean"/>
+        <xsd:attribute name="attribut" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Fertigkeit" type="shr5:Fertigkeit"/>
+  <xsd:complexType name="PersonaFertigkeit">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="stufe" type="xsd:int"/>
+    <xsd:attribute name="fertigkeit" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="PersonaFertigkeit" type="shr5:PersonaFertigkeit"/>
+  <xsd:complexType name="PersonaFertigkeitsGruppe">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="gruppe" type="shr5:FertigkeitsGruppe"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="stufe" type="xsd:int"/>
+    <xsd:attribute name="gruppe" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="PersonaFertigkeitsGruppe" type="shr5:PersonaFertigkeitsGruppe"/>
+  <xsd:complexType name="Cyberware">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Koerpermods">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="persona" type="shr5:AbstraktPersona"/>
+          <xsd:element name="einbau" type="shr5:AbstraktGegenstand"/>
+        </xsd:choice>
+        <xsd:attribute name="wert" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+        <xsd:attribute name="persona" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Cyberware" type="shr5:Cyberware"/>
+  <xsd:complexType name="BioWare">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Koerpermods">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="persona" type="shr5:AbstraktPersona"/>
+        </xsd:choice>
+        <xsd:attribute name="wert" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+        <xsd:attribute name="persona" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BioWare" type="shr5:BioWare"/>
+  <xsd:complexType abstract="true" name="Koerpermods">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktModifikatoren"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Koerpermods" type="shr5:Koerpermods"/>
+  <xsd:complexType abstract="true" name="AbstraktModifikatoren">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstraktModifikatoren" type="shr5:AbstraktModifikatoren"/>
+  <xsd:complexType abstract="true" name="GeistigeAttribute">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="GeistigeAttribute" type="shr5:GeistigeAttribute"/>
+  <xsd:complexType name="MudanPersona">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:KoerperPersona"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MudanPersona" type="shr5:MudanPersona"/>
+  <xsd:complexType abstract="true" name="KoerperPersona">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktPersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="koerperMods" type="shr5:Koerpermods"/>
+          <xsd:element name="eigenschaften" type="shr5:PersonaEigenschaft"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KoerperPersona" type="shr5:KoerperPersona"/>
+  <xsd:complexType abstract="true" name="MagischeMods">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktModifikatoren"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MagischeMods" type="shr5:MagischeMods"/>
+  <xsd:complexType name="KiKraft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischeMods">
+        <xsd:attribute name="kraftpunkte" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KiKraft" type="shr5:KiKraft"/>
+  <xsd:complexType abstract="true" name="MagischePersona">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:KoerperPersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="initationen" type="shr5:Initation"/>
+          <xsd:element name="mentor" type="shr5:Schutzgeist"/>
+        </xsd:choice>
+        <xsd:attribute name="magieBasis" type="xsd:int" use="required"/>
+        <xsd:attribute name="mentor" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MagischePersona" type="shr5:MagischePersona"/>
+  <xsd:complexType abstract="true" name="BaseMagischePersona">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="initationen" type="shr5:Initation"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="magieBasis" type="xsd:int" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="BaseMagischePersona" type="shr5:BaseMagischePersona"/>
+  <xsd:complexType abstract="true" name="FernkampfwaffenModifikatoren">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="smartgun" type="shr5:SmartgunType"/>
+    <xsd:attribute name="rueckstoss" type="xsd:int"/>
+    <xsd:attribute name="lasterPointer" type="xsd:boolean"/>
+    <xsd:attribute name="schalldaempfer" type="xsd:boolean"/>
+    <xsd:attribute name="vergroesserung" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="FernkampfwaffenModifikatoren" type="shr5:FernkampfwaffenModifikatoren"/>
+  <xsd:complexType abstract="true" name="Sichtverhaeltnisse">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="restlichtverstaerkung" type="shr5:ModifikatorType"/>
+    <xsd:attribute name="infrarot" type="shr5:ModifikatorType"/>
+    <xsd:attribute name="ultrasound" type="shr5:ModifikatorType"/>
+  </xsd:complexType>
+  <xsd:element name="Sichtverhaeltnisse" type="shr5:Sichtverhaeltnisse"/>
+  <xsd:complexType name="Spezies">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="konstitutionMin" type="xsd:int"/>
+        <xsd:attribute name="geschicklichkeitMin" type="xsd:int"/>
+        <xsd:attribute name="reaktionMin" type="xsd:int"/>
+        <xsd:attribute name="staerkeMin" type="xsd:int"/>
+        <xsd:attribute name="charismaMin" type="xsd:int"/>
+        <xsd:attribute name="willenskraftMin" type="xsd:int"/>
+        <xsd:attribute name="intuitionMin" type="xsd:int"/>
+        <xsd:attribute name="logikMin" type="xsd:int"/>
+        <xsd:attribute name="edgeMin" type="xsd:int"/>
+        <xsd:attribute name="magieMin" type="xsd:int"/>
+        <xsd:attribute name="resonanzMin" type="xsd:int"/>
+        <xsd:attribute name="essenzMin" type="xsd:int"/>
+        <xsd:attribute name="konstitutionMax" type="xsd:int"/>
+        <xsd:attribute name="geschicklichkeitMax" type="xsd:int"/>
+        <xsd:attribute name="reaktionMax" type="xsd:int"/>
+        <xsd:attribute name="staerkeMax" type="xsd:int"/>
+        <xsd:attribute name="charismaMax" type="xsd:int"/>
+        <xsd:attribute name="willenskraftMax" type="xsd:int"/>
+        <xsd:attribute name="intuitionMax" type="xsd:int"/>
+        <xsd:attribute name="logikMax" type="xsd:int"/>
+        <xsd:attribute name="edgeMax" type="xsd:int"/>
+        <xsd:attribute name="magieMax" type="xsd:int"/>
+        <xsd:attribute name="resonanzMax" type="xsd:int"/>
+        <xsd:attribute name="essenzMax" type="xsd:int"/>
+        <xsd:attribute name="laufen" type="xsd:int"/>
+        <xsd:attribute name="rennen" type="xsd:int"/>
+        <xsd:attribute name="sprinten" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Spezies" type="shr5:Spezies"/>
+  <xsd:complexType abstract="true" name="GegenstandStufen">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="computer" type="xsd:int"/>
+    <xsd:attribute name="elektronik" type="xsd:int"/>
+    <xsd:attribute name="tracing" type="xsd:int"/>
+    <xsd:attribute name="antiTracing" type="xsd:int"/>
+    <xsd:attribute name="protection" type="xsd:int"/>
+    <xsd:attribute name="antiProtection" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="GegenstandStufen" type="shr5:GegenstandStufen"/>
+  <xsd:complexType name="KiAdept">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischePersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="kikraft" type="shr5:KiKraft"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KiAdept" type="shr5:KiAdept"/>
+  <xsd:complexType name="Kleidung">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:attribute name="ruestung" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Kleidung" type="shr5:Kleidung"/>
+  <xsd:complexType name="FernkampfwaffeModifikator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktModifikatoren">
+        <xsd:attribute name="ep" type="shr5:FeuwerwaffenErweiterung"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FernkampfwaffeModifikator" type="shr5:FernkampfwaffeModifikator"/>
+  <xsd:complexType abstract="true" name="Anwendbar">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="fertigkeit" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Anwendbar" type="shr5:Anwendbar"/>
+  <xsd:complexType name="PersonaEigenschaft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktModifikatoren">
+        <xsd:attribute name="karmaKosten" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonaEigenschaft" type="shr5:PersonaEigenschaft"/>
+  <xsd:complexType abstract="true" name="ProbenModifikatoren">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="schadenswiederstand" type="xsd:int"/>
+    <xsd:attribute name="heilung" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="ProbenModifikatoren" type="shr5:ProbenModifikatoren"/>
+  <xsd:complexType name="Magier">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischePersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+        </xsd:choice>
+        <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Magier" type="shr5:Magier"/>
+  <xsd:complexType abstract="true" name="Zauberer">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+  </xsd:complexType>
+  <xsd:element name="Zauberer" type="shr5:Zauberer"/>
+  <xsd:complexType name="MysticAdept">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:KiAdept">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+        </xsd:choice>
+        <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MysticAdept" type="shr5:MysticAdept"/>
+  <xsd:complexType name="PersonaZauber">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="formel" type="shr5:Zauber"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="stufe" type="xsd:int" use="required"/>
+    <xsd:attribute name="formel" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="PersonaZauber" type="shr5:PersonaZauber"/>
+  <xsd:complexType name="Zauber">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="art" type="shr5:ZauberArt"/>
+        <xsd:attribute name="reichweite" type="shr5:ZauberReichweite"/>
+        <xsd:attribute name="schaden" type="xsd:string"/>
+        <xsd:attribute name="dauer" type="shr5:ZauberDauer"/>
+        <xsd:attribute name="entzug" type="xsd:string" use="required"/>
+        <xsd:attribute name="kategorie" type="xsd:string" use="required"/>
+        <xsd:attribute name="merkmale" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Zauber" type="shr5:Zauber"/>
+  <xsd:complexType abstract="true" name="ChrakterLimits">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="ChrakterLimits" type="shr5:ChrakterLimits"/>
+  <xsd:complexType abstract="true" name="Panzerung">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Panzerung" type="shr5:Panzerung"/>
+  <xsd:complexType name="AspektMagier">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischePersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+          <xsd:element name="aspekt" type="shr5:FertigkeitsGruppe"/>
+        </xsd:choice>
+        <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
+        <xsd:attribute name="aspekt" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AspektMagier" type="shr5:AspektMagier"/>
+  <xsd:complexType abstract="true" name="AstraleProjektion">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="AstraleProjektion" type="shr5:AstraleProjektion"/>
+  <xsd:complexType name="Schutzgeist">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischeMods">
+        <xsd:attribute name="vorteile" type="xsd:string"/>
+        <xsd:attribute name="nachteile" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Schutzgeist" type="shr5:Schutzgeist"/>
+  <xsd:complexType name="Initation">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="erlernt" type="shr5:MetaMagie"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="stufe" type="xsd:int"/>
+    <xsd:attribute name="erlernt" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Initation" type="shr5:Initation"/>
+  <xsd:complexType name="MetaMagie">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MetaMagie" type="shr5:MetaMagie"/>
+  <xsd:complexType name="MudanCritter">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:KoerperPersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="kraefte" type="shr5:CritterKraft"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MudanCritter" type="shr5:MudanCritter"/>
+  <xsd:complexType name="CritterKraft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischeMods">
+        <xsd:attribute name="art" type="shr5:ZauberArt"/>
+        <xsd:attribute name="handlung" type="shr5:CritterHandlung"/>
+        <xsd:attribute name="reichweite" type="shr5:CritterReichweite"/>
+        <xsd:attribute name="dauer" type="shr5:CritterDauer"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CritterKraft" type="shr5:CritterKraft"/>
+  <xsd:complexType name="ParaCritter">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MudanCritter">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="initationen" type="shr5:Initation"/>
+        </xsd:choice>
+        <xsd:attribute name="magieBasis" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ParaCritter" type="shr5:ParaCritter"/>
+  <xsd:complexType abstract="true" name="Fahrzeug">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+          <xsd:element name="modifizierungen" type="shr5:FahrzeugModifikation"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="wert" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string"/>
+        <xsd:attribute name="handling" type="xsd:int"/>
+        <xsd:attribute name="geschwindigkeit" type="xsd:int"/>
+        <xsd:attribute name="beschleunigung" type="xsd:int"/>
+        <xsd:attribute name="rumpf" type="xsd:int"/>
+        <xsd:attribute name="pilot" type="xsd:int"/>
+        <xsd:attribute name="sensor" type="xsd:int"/>
+        <xsd:attribute name="fahrzeugTyp" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Fahrzeug" type="shr5:Fahrzeug"/>
+  <xsd:complexType name="Bodenfahrzeug">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:PassagierFahrzeug">
+        <xsd:attribute name="handlingGelaende" type="xsd:int"/>
+        <xsd:attribute name="geschwindigkeitGelände" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Bodenfahrzeug" type="shr5:Bodenfahrzeug"/>
+  <xsd:complexType name="PassagierFahrzeug">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fahrzeug">
+        <xsd:attribute name="sitze" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PassagierFahrzeug" type="shr5:PassagierFahrzeug"/>
+  <xsd:complexType name="Drohne">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fahrzeug"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Drohne" type="shr5:Drohne"/>
+  <xsd:complexType name="FahrzeugModifikation">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="funktion" type="shr5:AbstraktGegenstand"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="wert" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FahrzeugModifikation" type="shr5:FahrzeugModifikation"/>
+  <xsd:complexType name="Technomancer">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:KoerperPersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="complexForms" type="shr5:PersonaKomplexForm"/>
+          <xsd:element name="echos" type="shr5:Echo"/>
+        </xsd:choice>
+        <xsd:attribute name="resonanzBasis" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Technomancer" type="shr5:Technomancer"/>
+  <xsd:complexType abstract="true" name="ResonanzPersona">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="resonanzBasis" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="ResonanzPersona" type="shr5:ResonanzPersona"/>
+  <xsd:complexType name="KomplexeForm">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Quelle">
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="ziel" type="shr5:ResonanzZiel"/>
+        <xsd:attribute name="dauer" type="shr5:ZauberDauer"/>
+        <xsd:attribute name="schwund" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KomplexeForm" type="shr5:KomplexeForm"/>
+  <xsd:complexType name="PersonaKomplexForm">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="form" type="shr5:KomplexeForm"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="stufe" type="xsd:int" use="required"/>
+    <xsd:attribute name="form" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="PersonaKomplexForm" type="shr5:PersonaKomplexForm"/>
+  <xsd:complexType name="Sprite">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ResonanzPersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="stufe" type="xsd:int"/>
+        <xsd:attribute name="angriffMod" type="xsd:int"/>
+        <xsd:attribute name="schleicherMod" type="xsd:int"/>
+        <xsd:attribute name="datenverarbeitungMod" type="xsd:int"/>
+        <xsd:attribute name="firewallMod" type="xsd:int"/>
+        <xsd:attribute name="initativeMod" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Sprite" type="shr5:Sprite"/>
+  <xsd:complexType name="Echo">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktModifikatoren"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Echo" type="shr5:Echo"/>
+  <xsd:complexType name="Vertrag">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="wert" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
+        <xsd:attribute name="faelligkeitsIntervall" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Vertrag" type="shr5:Vertrag"/>
+  <xsd:complexType name="Lifestyle">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Vertrag"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Lifestyle" type="shr5:Lifestyle"/>
+  <xsd:complexType name="Wissensfertigkeit">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fertigkeit"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Wissensfertigkeit" type="shr5:Wissensfertigkeit"/>
+  <xsd:complexType name="Sprachfertigkeit">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Wissensfertigkeit"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Sprachfertigkeit" type="shr5:Sprachfertigkeit"/>
+</xsd:schema>
