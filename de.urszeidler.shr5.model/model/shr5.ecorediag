@@ -1495,7 +1495,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_xr_g8WDzEeOhYK3BBsrmZg" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_xr_g8mDzEeOhYK3BBsrmZg" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xr_g82DzEeOhYK3BBsrmZg" points="[15, -10, -190, 125]$[197, -158, -8, -23]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xr_g82DzEeOhYK3BBsrmZg" points="[-34, -10, -238, 175]$[-34, -105, -238, 80]$[176, -105, -28, 80]$[176, -161, -28, 24]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xsB9MGDzEeOhYK3BBsrmZg" id="(0.7829457364341085,0.2619047619047619)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_GebOEGD0EeOhYK3BBsrmZg" type="3002" source="_q6taYGDzEeOhYK3BBsrmZg" target="_1sx10GDzEeOhYK3BBsrmZg">
@@ -1515,7 +1515,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_JkVPEWD0EeOhYK3BBsrmZg" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_JkVPEmD0EeOhYK3BBsrmZg" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JkVPE2D0EeOhYK3BBsrmZg" points="[-30, -20, 173, 121]$[-202, -101, 1, 40]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JkVPE2D0EeOhYK3BBsrmZg" points="[-78, -39, 163, 116]$[-78, -59, 163, 96]$[-203, -59, 38, 96]$[-203, -115, 38, 40]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_KZYAsGD0EeOhYK3BBsrmZg" type="3003" source="_1sx10GDzEeOhYK3BBsrmZg" target="_wjg18GDzEeOhYK3BBsrmZg">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_KZYAsWD0EeOhYK3BBsrmZg" routing="Rectilinear" lineColor="4210752"/>
