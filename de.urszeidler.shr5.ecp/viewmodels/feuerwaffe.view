@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.groupedgrid.model="http://org/eclipse/emf/ecp/view/groupedgrid/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" name="Feuerwaffe">
+  <rootEClass href="http://urszeidler.de/shr5/1.0#//Feuerwaffe"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Beschreibbar">
+      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+          <attachments xsi:type="org.eclipse.emf.ecp.view.groupedgrid.model:Span" horizontalSpan="3"/>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control name">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/name"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control beschreibung">
+            <attachments xsi:type="org.eclipse.emf.ecp.view.groupedgrid.model:Span" horizontalSpan="2"/>
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/beschreibung"/>
+            </domainModelReference>
+          </children>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control image">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/image"/>
+          </domainModelReference>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Feuerwaffe">
+      <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control reichweite">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe/reichweite"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control praezision">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstaktWaffe/praezision"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control durchschlagsKraft">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstaktWaffe/durchschlagsKraft"/>
+            </domainModelReference>
+          </children>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control kapazitaet">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Feuerwaffe/kapazitaet"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control munitionstyp" labelAlignment="None">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Feuerwaffe/munitionstyp"/>
+            </domainModelReference>
+          </children>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" name="l">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control modie">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Feuerwaffe/modie"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="erweiterung">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Feuerwaffe/erweiterung"/>
+            </domainModelReference>
+          </children>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="schaden">
+      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control schadenscode">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstaktWaffe/schadenscode"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control schadesTyp" labelAlignment="None">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstaktWaffe/schadesTyp"/>
+          </domainModelReference>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="quelle">
+      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" name="zz">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control srcBook">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//Quelle/srcBook"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control page">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Quelle/page"/>
+          </domainModelReference>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Wert">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control verfuegbarkeit">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeldWert/verfuegbarkeit"/>
+        </domainModelReference>
+      </children>
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control wert">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeldWert/wert"/>
+        </domainModelReference>
+      </children>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

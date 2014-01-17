@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.groupedgrid.model="http://org/eclipse/emf/ecp/view/groupedgrid/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" name="Persona">
+  <rootEClass href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Beschreibbar">
+      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+          <attachments xsi:type="org.eclipse.emf.ecp.view.groupedgrid.model:Span" horizontalSpan="3"/>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control name">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/name"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control beschreibung">
+            <attachments xsi:type="org.eclipse.emf.ecp.view.groupedgrid.model:Span" horizontalSpan="2"/>
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/beschreibung"/>
+            </domainModelReference>
+          </children>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control image">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/image"/>
+          </domainModelReference>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Fertigkeiten">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstractPersona/fertigkeiten"/>
+        </domainModelReference>
+      </children>
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstractPersona/fertigkeitsGruppen"/>
+        </domainModelReference>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="others">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </domainModelReference>
+      </children>
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstractPersona/fertigkeiten"/>
+        </domainModelReference>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="ll">
+      <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" readonly="true" labelAlignment="None" addRemoveDisabled="true">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//KoerperPersona/koerperMods"/>
+          </domainModelReference>
+          <columns readOnly="true">
+            <attribute href="http://urszeidler.de/shr5/1.0#//Beschreibbar/name"/>
+          </columns>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstractPersona/spezies"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstractPersona/fertigkeiten"/>
+          </domainModelReference>
+        </children>
+      </children>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

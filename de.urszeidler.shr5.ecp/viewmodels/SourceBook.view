@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.groupedgrid.model="http://org/eclipse/emf/ecp/view/groupedgrid/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" name="SourceBook">
+  <rootEClass href="http://urszeidler.de/shr5/1.0#//SourceBook"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Beschreibbar">
+      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+          <attachments xsi:type="org.eclipse.emf.ecp.view.groupedgrid.model:Span" horizontalSpan="3"/>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control name">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/name"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control beschreibung">
+            <attachments xsi:type="org.eclipse.emf.ecp.view.groupedgrid.model:Span" horizontalSpan="2"/>
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/beschreibung"/>
+            </domainModelReference>
+          </children>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control image">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/image"/>
+          </domainModelReference>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="time range">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="start">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SourceBook/startShrTime"/>
+        </domainModelReference>
+      </children>
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="end">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SourceBook/endShrTime"/>
+        </domainModelReference>
+      </children>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>
