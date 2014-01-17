@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="2014 Urs Zeidler" modelDirectory="/de.urszeidler.shr5.management.model/src"
+    modelPluginID="de.urszeidler.shr5.management.model" modelName="Shr5Management"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>shr5Management.ecore</foreignModel>
+  <genPackages prefix="Shr5management" basePackage="de.urszeidler.eclipse" disposableProviderFactory="true"
+      childCreationExtenders="true" ecorePackage="shr5Management.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5Management.ecore#//GeneratorState">
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//GeneratorState/new"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//GeneratorState/readyForCreation"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//GeneratorState/commited"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//GeneratorState/personaCreated"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5Management.ecore#//Sex">
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//Sex/female"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//Sex/male"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//Sex/undefinde"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//Sex/none"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//ManagedCharacter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/persona"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/changes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/chracterSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/inventar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/contracts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/sex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/connections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/vehicels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/choosenLifestyle"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/nativeLanguage"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/streetCred"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notoriety"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/notorietyBasic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/publicAwareness"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//ManagedCharacter/karmaGaint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//PrioritySystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PrioritySystem/priorities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PrioritySystem/karmaPoints"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//NonPlayerCharacter"/>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//Changes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Changes/date"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//KarmaGaint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGaint/karma"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//FreeStyle"/>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//PriorityCategorie">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/categorieName"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Shr5System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToResourceFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToMagicFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfMaxAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/knowlegeSkillFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/charismaToConnectionFactor"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//MetaType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//MetaType/choosableTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//MetaType/specialPoints"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//MetaType/calcSpecialPointsSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//MetaType/calcSpecialPointsSpend/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Attributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Attributes/attibutePoints"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Attributes/calcAttributesSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Attributes/calcAttributesSpend/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Skill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Skill/skillPoints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Skill/groupPoints"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Skill/calcSkillSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Skill/calcSkillSpend/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Skill/calcGroupSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Skill/calcGroupSpend/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Skill/calcKnowledgeSkillSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Skill/calcKnowledgeSkillSpend/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Skill/calcKnowledgeSkillPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Skill/calcKnowledgeSkillPoints/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Resourcen">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Resourcen/resource"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Resourcen/calcResourceSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Resourcen/calcResourceSpend/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//SpecialType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//SpecialType/selectableTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//SpecialType/skillValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//SpecialType/skillNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//SpecialType/selectableSkills"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//SpecialType/selectableSkillGroups"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//SpecialType/calcSkillsSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//SpecialType/calcSkillsSpend/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Technomancer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Technomancer/resonanz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Technomancer/complexForms"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Technomancer/calcComplexFormsSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Technomancer/calcComplexFormsSpend/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Spellcaster">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Spellcaster/spellPoints"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Spellcaster/calcSpellPointsSpend">
+        <genParameters ecoreParameter="shr5Management.ecore#//Spellcaster/calcSpellPointsSpend/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Adept">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Adept/magic"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGenerator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/character"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/generator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGenerator/selectedGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/characterName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//CharacterGenerator/currentInstruction"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//FreeStyleGenerator">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/freestyleGenerator"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Shr5Generator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/resourcen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/skills"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/metaType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/magic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/karmaToResource"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/karmaSpend"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/shr5Generator"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllPoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllAttributesPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllAttributesPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllAttributesPoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendSkillAllPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendSkillAllPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendSkillAllPoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialPoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialTypePoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialTypePoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialTypePoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter"/>
+    <genClasses ecoreClass="shr5Management.ecore#//Mudan"/>
+    <genClasses ecoreClass="shr5Management.ecore#//CharacterGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGroup/members"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Connection/influence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Connection/loyality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Connection/character"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//FertigkeitChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//PersonaValueChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PersonaValueChange/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PersonaValueChange/to"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//GeneratorStateToEStringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GeneratorStateToEStringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GeneratorStateToEStringMapEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//Advancement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Advancement/karmaFactor"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//IncreaseCharacterPart">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//IncreaseCharacterPart/type"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//ChangeQuallity"/>
+    <genClasses ecoreClass="shr5Management.ecore#//QuallityChange"/>
+  </genPackages>
+</genmodel:GenModel>

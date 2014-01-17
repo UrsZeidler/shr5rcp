@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="shr5Management" nsURI="http://urszeidler.de/shr5mngt/1.0" nsPrefix="shr5mngt">
+  <eClassifiers xsi:type="ecore:EClass" name="ManagedCharacter" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persona" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktPersona"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
+        eType="#//Changes" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chracterSource" lowerBound="1"
+        eType="#//CharacterGenerator" eOpposite="#//CharacterGenerator/character"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inventar" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contracts" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Vertrag"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" lowerBound="1" eType="#//Sex"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//Connection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicels" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fahrzeug"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choosenLifestyle" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nativeLanguage" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Sprachfertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="streetCred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notoriety" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notorietyBasic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicAwareness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaGaint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterGeneratorSystem" abstract="true"
+      eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//GeneratorStateToEStringMapEntry" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
+        upperBound="-1" eType="#//Advancement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrioritySystem" abstract="true" eSuperTypes="#//CharacterGeneratorSystem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="priorities" upperBound="-1"
+        eType="#//PriorityCategorie" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonPlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Changes" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KarmaGaint" eSuperTypes="#//Changes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karma" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeStyle" eSuperTypes="#//CharacterGeneratorSystem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PriorityCategorie" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="categorieName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5System" eSuperTypes="#//PrioritySystem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResourceFactor"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToMagicFactor" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMaxAttributes"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="knowlegeSkillFactor" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charismaToConnectionFactor"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetaType" eSuperTypes="#//PriorityCategorie">
+    <eOperations name="calcSpecialPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choosableTypes" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezies"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="specialPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attributes" eSuperTypes="#//PriorityCategorie">
+    <eOperations name="calcAttributesSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attibutePoints" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Skill" eSuperTypes="#//PriorityCategorie">
+    <eOperations name="calcSkillSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eOperations name="calcGroupSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eOperations name="calcKnowledgeSkillSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eOperations name="calcKnowledgeSkillPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillPoints" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupPoints" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resourcen" eSuperTypes="#//PriorityCategorie">
+    <eOperations name="calcResourceSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecialType" abstract="true" eSuperTypes="#//PriorityCategorie">
+    <eOperations name="calcSkillsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectableTypes" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectableSkills" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectableSkillGroups"
+        upperBound="-1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Technomancer" eSuperTypes="#//SpecialType">
+    <eOperations name="calcComplexFormsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="complexForms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Spellcaster" eSuperTypes="#//Adept">
+    <eOperations name="calcSpellPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spellPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Adept" eSuperTypes="#//SpecialType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="magic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterGenerator" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
+        eType="#//ManagedCharacter" eOpposite="#//ManagedCharacter/chracterSource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generator" lowerBound="1"
+        eType="#//CharacterGeneratorSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//GeneratorState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedGroup" lowerBound="1"
+        eType="#//CharacterGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeStyleGenerator" eSuperTypes="#//CharacterGenerator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="freestyleGenerator" eType="#//FreeStyle"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator" eSuperTypes="#//CharacterGenerator">
+    <eOperations name="hasCategoryOnlyOnce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotSpendAllPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotMoreMaxAttributes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotSpendAllAttributesPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotSpendSkillAllPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotSpendAllSpecialPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotSpendAllSpecialTypePoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="hasNotSpendAllConnectionPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourcen" lowerBound="1"
+        eType="#//Resourcen"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skills" lowerBound="1"
+        eType="#//Skill"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="#//Attributes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metaType" lowerBound="1"
+        eType="#//MetaType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="magic" lowerBound="1" eType="#//SpecialType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shr5Generator" eType="#//Shr5System"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeChange" eSuperTypes="#//PersonaValueChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mudan" eSuperTypes="#//SpecialType"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="GeneratorState">
+    <eLiterals name="new"/>
+    <eLiterals name="readyForCreation" value="1"/>
+    <eLiterals name="commited" value="3"/>
+    <eLiterals name="personaCreated" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterGroup" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
+        eType="#//ManagedCharacter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Sex">
+    <eLiterals name="female"/>
+    <eLiterals name="male" value="1"/>
+    <eLiterals name="undefinde" value="2"/>
+    <eLiterals name="none" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="influence" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="loyality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
+        eType="#//ManagedCharacter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FertigkeitChange" eSuperTypes="#//PersonaValueChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaValueChange" eSuperTypes="#//KarmaGaint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneratorStateToEStringMapEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="#//GeneratorState"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Advancement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaFactor" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncreaseCharacterPart" eSuperTypes="#//Advancement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeQuallity" eSuperTypes="#//Advancement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuallityChange" eSuperTypes="#//KarmaGaint"/>
+</ecore:EPackage>
