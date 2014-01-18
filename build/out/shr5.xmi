@@ -1,0 +1,2054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shr5:ShrList xmi:version="2.0" name="all" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0">
+<entries xsi:type="shr5:ShrList" name="Sourcebooks">
+<entries xsi:type="shr5:SourceBook" name="Grundregelwerk" startShrTime="2013-12-13T17:51:44.000+0100" endShrTime="2013-12-13T17:51:44.000+0100"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="Reichtweiten">
+<entries xsi:type="shr5:Reichweite" name="Tasers" kurz="5" mittel="10" weit="15" extrem="20"/>
+<entries xsi:type="shr5:Reichweite" name="Holdouts" kurz="5" mittel="15" weit="30" extrem="50"/>
+<entries xsi:type="shr5:Reichweite" name="Light Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
+<entries xsi:type="shr5:Reichweite" name="Heavy Pistols" kurz="5" mittel="20" weit="40" extrem="60"/>
+<entries xsi:type="shr5:Reichweite" name="Machine Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
+<entries xsi:type="shr5:Reichweite" name="Submachine Guns" kurz="10" mittel="40" weit="80" extrem="150"/>
+<entries xsi:type="shr5:Reichweite" name="Assault Rifles" kurz="25" mittel="150" weit="350" extrem="550"/>
+<entries xsi:type="shr5:Reichweite" name="Shotguns" kurz="10" mittel="40" weit="80" extrem="150"/>
+<entries xsi:type="shr5:Reichweite" name="Flechette" kurz="15" mittel="30" weit="45" extrem="60"/>
+<entries xsi:type="shr5:Reichweite" name="Sniper Rifles" kurz="50" mittel="350" weit="800" extrem="1500"/>
+<entries xsi:type="shr5:Reichweite" name="Light Machine Guns" kurz="25" mittel="200" weit="400" extrem="800"/>
+<entries xsi:type="shr5:Reichweite" name="Medium Machine Guns" kurz="40" mittel="250" weit="750" extrem="1200"/>
+<entries xsi:type="shr5:Reichweite" name="Heavy Machine Guns" kurz="40" mittel="250" weit="750" extrem="1200"/>
+<entries xsi:type="shr5:Reichweite" name="Assault Cannons" kurz="50" mittel="300" weit="750" extrem="1500"/>
+<entries xsi:type="shr5:Reichweite" name="Grenade Launchers" min="5" kurz="50" mittel="100" weit="150" extrem="500"/>
+<entries xsi:type="shr5:Reichweite" name="Missile Launchers" min="20" kurz="70" mittel="150" weit="450" extrem="1500"/>
+<entries xsi:type="shr5:Reichweite" name="Mortar Launchers" min="150" kurz="300" mittel="1000" weit="4000" extrem="6000"/>
+<entries xsi:type="shr5:Reichweite" name="Ballistas" min="20" kurz="100" mittel="500" weit="3000" extrem="5000"/>
+<entries xsi:type="shr5:Reichweite" name="Bows"/>
+<entries xsi:type="shr5:Reichweite" name="Light Crossbows" kurz="6" mittel="24" weit="60" extrem="120"/>
+<entries xsi:type="shr5:Reichweite" name="Medium Crossbows" kurz="9" mittel="36" weit="90" extrem="150"/>
+<entries xsi:type="shr5:Reichweite" name="Heavy Crossbows" kurz="15" mittel="45" weit="120" extrem="180"/>
+<entries xsi:type="shr5:Reichweite" name="Pistol Crossbows" kurz="5" mittel="15" weit="30" extrem="50"/>
+<entries xsi:type="shr5:Reichweite" name="Battle Rifles" kurz="100" mittel="250" weit="500" extrem="750"/>
+<entries xsi:type="shr5:Reichweite" name="Heavy Mortar" kurz="600" mittel="1000" weit="8000" extrem="12000"/>
+<entries xsi:type="shr5:Reichweite" name="Howitzer" kurz="1500" mittel="8500" weit="18000" extrem="30000"/>
+<entries xsi:type="shr5:Reichweite" name="Thrown Knife"/>
+<entries xsi:type="shr5:Reichweite" name="Shuriken"/>
+<entries xsi:type="shr5:Reichweite" name="Grenades"/>
+<entries xsi:type="shr5:Reichweite" name="Aerodynamic Grenades"/>
+<entries xsi:type="shr5:Reichweite" name="Blowguns"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="metatypes">
+<entries xsi:type="shr5:Spezies" konstitutionMin="1" konstitutionMax="6" geschicklichkeitMin="1" geschicklichkeitMax="6" reaktionMax="6" reaktionMin="1" staerkeMax="6" staerkeMin="1" charismaMax="6" charismaMin="1" willenskraftMax="6" willenskraftMin="1" intuitionMax="6" intuitionMin="1" logikMax="6" logikMin="1" edgeMax="7" edgeMin="2" resonanzMax="6" resonanzMin="1" essenzMax="6" rennen="4" laufen="2" sprinten="2" name="Human" page="66" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Spezies" konstitutionMin="1" konstitutionMax="6" geschicklichkeitMin="2" geschicklichkeitMax="7" reaktionMax="6" reaktionMin="1" staerkeMax="6" staerkeMin="1" charismaMax="8" charismaMin="3" willenskraftMax="6" willenskraftMin="1" intuitionMax="6" intuitionMin="1" logikMax="6" logikMin="1" edgeMax="6" edgeMin="1" resonanzMax="6" resonanzMin="1" essenzMax="6" rennen="4" laufen="2" sprinten="2" name="Elf" page="66" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Spezies" konstitutionMin="3" konstitutionMax="8" geschicklichkeitMin="1" geschicklichkeitMax="6" reaktionMax="5" reaktionMin="1" staerkeMax="8" staerkeMin="3" charismaMax="6" charismaMin="1" willenskraftMax="7" willenskraftMin="2" intuitionMax="6" intuitionMin="1" logikMax="6" logikMin="1" edgeMax="6" edgeMin="1" resonanzMax="6" resonanzMin="1" essenzMax="6" rennen="4" laufen="2" sprinten="1" name="Dwarf" page="66" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Spezies" konstitutionMin="4" konstitutionMax="9" geschicklichkeitMin="1" geschicklichkeitMax="6" reaktionMax="6" reaktionMin="1" staerkeMax="8" staerkeMin="3" charismaMax="5" charismaMin="1" willenskraftMax="6" willenskraftMin="1" intuitionMax="6" intuitionMin="1" logikMax="5" logikMin="1" edgeMax="6" edgeMin="1" resonanzMax="6" resonanzMin="1" essenzMax="6" rennen="4" laufen="2" sprinten="2" name="Ork" page="66" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Spezies" konstitutionMin="5" konstitutionMax="10" geschicklichkeitMin="1" geschicklichkeitMax="5" reaktionMax="6" reaktionMin="1" staerkeMax="10" staerkeMin="5" charismaMax="4" charismaMin="1" willenskraftMax="6" willenskraftMin="1" intuitionMax="5" intuitionMin="1" logikMax="5" logikMin="1" edgeMax="6" edgeMin="1" resonanzMax="6" resonanzMin="1" essenzMax="6" rennen="4" laufen="2" sprinten="1" name="Troll" page="66" srcBook="//@entries.0/@entries.0">
+<mods wert="1">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="skillgroups">
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Acting">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Con" page="138" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Impersonation" page="138" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Performance" page="139" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Athletics">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Gymnastics" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Running" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Swimming" page="134" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Biotech">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Cybertechnology" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="First Aid" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Medicine" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Close Combat">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Blades" page="130" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Clubs" page="131" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Unarmed Combat" page="132" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Conjuring">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Banishing" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Binding" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Summoning" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Cracking">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Cybercombat" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Electronic Warfare" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Hacking" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Electronics">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Computer" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Hardware" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Software" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Enchanting">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Alchemy" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Artificing" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Disenchanting" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Engineering">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Aeronautics Mechanic" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Automotive Mechanic" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Industrial Mechanic" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Nautical Mechanic" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Firearms">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Automatics" page="130" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Longarms" page="132" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Pistols" page="132" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Influence">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Etiquette" page="138" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Leadership" page="139" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Negotiation" page="139" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Outdoors">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Survival" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Tracking" page="134" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Navigation" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Sorcery">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Counterspelling" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Ritual Spellcasting" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Spellcasting" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Stealth">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Disguise" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Palming" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Sneaking" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</fertigkeiten>
+</entries>
+<entries xsi:type="shr5:FertigkeitsGruppe" name="Tasking">
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Compiling" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Decompiling" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" name="Registering" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</fertigkeiten>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="skills">
+<entries xsi:type="shr5:Fertigkeit" name="Archery" page="130" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Exotic Melee Weapon" page="131" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Exotic Ranged Weapon" page="131" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Heavy Weapons" page="132" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Throwing Weapons" page="132" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Diving" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Escape Artist" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Free-Fall" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Perception" page="133" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Instruction" page="138" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Intimidation" page="139" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Arcana" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Assensing" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Astral Combat" page="142" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Animal Handling" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Armorer" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Artisian" page="143" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Biotechnology" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Chemistry" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Demolitions" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Forgery" page="144" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Locksmith" page="145" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Gunnery" page="146" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Pilot Aerospace" page="146" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Pilot Aircraft" page="147" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Pilot Walker" page="147" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Pilot Exotic Vehicle" page="147" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Pilot Ground Craft" page="147" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" name="Pilot Watercraft" page="147" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="knowledgeskills">
+<entries xsi:type="shr5:Sprachfertigkeit" name="Arabic" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Bengali" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Bulgarian" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Croatian" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Cantonese" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Danish" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="English" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="French" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="German" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Hebrew" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Hindi-Urdu" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Indonesian" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Italian" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Japanese" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Korean" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Latin" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Mandarin" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Or'zet" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Persian" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Portuguese" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Punjabi" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Polish" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Russian" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Sioux" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Spanish" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Sperethiel" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Thai" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Turkish" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Wu" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" name="Xiang" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Atlanta" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Cheyenne" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Chicago" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Denver" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: FDC" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Hong-Kong" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: LA" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Manhattan" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Portland" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Area Knowledge: Seattle" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Alcohol" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Architecture" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Art" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Biology" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Business" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Chemistry" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Combat Tactics" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Bars and Clubs" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Data Havens" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Economics" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Engineering" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Firearms" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Gaming" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Gangs" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Ghost Cartels" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="History" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Music" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="News" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Parazoology" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Politics" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Literature" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Mafia" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Magic Traditions" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Magical Theory" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Magical Threats" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Military" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Religion" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Security Design" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Security Companies" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Security Tactics" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Shadow Community" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Spirits" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Sports" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Syndicates" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Triads" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Trids" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Underworld" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Vory" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Yakuza" srcBook="//@entries.0/@entries.0">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="weapons">
+<entries xsi:type="shr5:Nahkampfwaffe" name="Unarmed Attack" page="112" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR/2)S" praezision="4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Combat Axe" page="422" srcBook="//@entries.0/@entries.0" wert="4000" verfuegbarkeit="12R" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Combat Knife" page="422" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="4" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Forearm Snap-Blades" page="422" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="7R" schadenscode="(STR+2)P" praezision="4" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Katana" page="422" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Knife" page="422" srcBook="//@entries.0/@entries.0" wert="10" verfuegbarkeit="0" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Pole Arm" page="422" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="6R" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Survival Knife" page="422" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="0" schadenscode="(STR+2)P" praezision="5" durchschlagsKraft="-1"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Sword" page="422" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="5R" schadenscode="(STR+3)P" praezision="6" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Club" page="422" srcBook="//@entries.0/@entries.0" wert="30" verfuegbarkeit="0" schadenscode="(STR+3)P" praezision="4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Extendable Baton" page="422" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="4" schadenscode="(STR+2)P" praezision="5"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Sap" page="422" srcBook="//@entries.0/@entries.0" wert="30" verfuegbarkeit="2" schadenscode="(STR+2)P" praezision="5"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Staff" page="422" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="3" schadenscode="(STR+3)P" praezision="6"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Stun Baton" page="422" srcBook="//@entries.0/@entries.0" wert="750" verfuegbarkeit="6R" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Telescoping Staff" page="422" srcBook="//@entries.0/@entries.0" wert="350" verfuegbarkeit="4" schadenscode="(STR+2)P" praezision="4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Knucks" page="422" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="2R" schadenscode="(STR+1)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Monofilament Whip" page="423" srcBook="//@entries.0/@entries.0" wert="10000" verfuegbarkeit="12F" schadenscode="12P" praezision="5" durchschlagsKraft="-8"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Shock Gloves" page="423" srcBook="//@entries.0/@entries.0" wert="550" verfuegbarkeit="6R" schadenscode="8S(e)" durchschlagsKraft="-5"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 1)" page="423" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="1" schadenscode="3P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 2)" page="423" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="2" schadenscode="4P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 3)" page="423" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="3" schadenscode="5P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 4)" page="423" srcBook="//@entries.0/@entries.0" wert="400" verfuegbarkeit="4" schadenscode="6P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 5)" page="423" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="5" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 6)" page="423" srcBook="//@entries.0/@entries.0" wert="600" verfuegbarkeit="6" schadenscode="8P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 7)" page="423" srcBook="//@entries.0/@entries.0" wert="700" verfuegbarkeit="7" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 8)" page="423" srcBook="//@entries.0/@entries.0" wert="800" verfuegbarkeit="8" schadenscode="10P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 9)" page="423" srcBook="//@entries.0/@entries.0" wert="900" verfuegbarkeit="9" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 10)" page="423" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="10" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 11)" page="423" srcBook="//@entries.0/@entries.0" wert="1100" verfuegbarkeit="11" schadenscode="13P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 12)" page="423" srcBook="//@entries.0/@entries.0" wert="1200" verfuegbarkeit="12" schadenscode="14P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Light Crossbow" page="424" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="2" schadenscode="5P" praezision="7" durchschlagsKraft="-1"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Medium Crossbow" page="424" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="4R" schadenscode="7P" praezision="6" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Heavy Crossbow" page="424" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="8R" schadenscode="10P" praezision="5" durchschlagsKraft="-3"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Defiance EX Shocker" page="424" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="0" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" reichweite="//@entries.1/@entries.0">
+<modie>EM</modie>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Yamaha Pulsar" page="425" srcBook="//@entries.0/@entries.0" wert="180" verfuegbarkeit="0" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" reichweite="//@entries.1/@entries.0">
+<modie>HM</modie>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Fichetti Tiffani Needler" page="425" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="5R" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" reichweite="//@entries.1/@entries.1">
+<modie>HM</modie>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Streetline Special" page="425" srcBook="//@entries.0/@entries.0" wert="120" verfuegbarkeit="4R" schadenscode="6P" praezision="4" reichweite="//@entries.1/@entries.1">
+<modie>HM</modie>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Walther Palm Pistol" page="425" srcBook="//@entries.0/@entries.0" wert="180" verfuegbarkeit="4R" schadenscode="7P" praezision="4" reichweite="//@entries.1/@entries.1">
+<modie>EM</modie>
+<modie>SM</modie>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Light Fire 75" page="425" srcBook="//@entries.0/@entries.0" wert="1250" verfuegbarkeit="6F" schadenscode="6P" praezision="6" reichweite="//@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Light Fire 70" page="425" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="3R" schadenscode="6P" praezision="7" reichweite="//@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Silencer, Ares Light Fire 70" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Beretta 201T" page="425" srcBook="//@entries.0/@entries.0" wert="210" verfuegbarkeit="7R" schadenscode="6P" praezision="6" reichweite="//@entries.1/@entries.2">
+<modie>HM</modie>
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Colt America L36" page="425" srcBook="//@entries.0/@entries.0" wert="320" verfuegbarkeit="4R" schadenscode="7P" praezision="7" reichweite="//@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Fichetti Security 600" page="426" srcBook="//@entries.0/@entries.0" wert="350" verfuegbarkeit="6R" schadenscode="7P" praezision="6" reichweite="//@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Taurus Omni-6 (Light Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="3R" schadenscode="6P" praezision="5" reichweite="//@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Taurus Omni-6 (Heavy Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="3R" schadenscode="7P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.2">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Predator V" page="426" srcBook="//@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.3">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Viper Slivergun" page="426" srcBook="//@entries.0/@entries.0" wert="380" verfuegbarkeit="8F" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" reichweite="//@entries.1/@entries.3">
+<modie>HM</modie>
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Browning Ultra-Power" page="426" srcBook="//@entries.0/@entries.0" wert="640" verfuegbarkeit="4R" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.3">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Colt Government 2066" page="426" srcBook="//@entries.0/@entries.0" wert="425" verfuegbarkeit="7R" schadenscode="7P" praezision="6" durchschlagsKraft="-1" rueckstoss="1" reichweite="//@entries.1/@entries.3">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Remington Roomsweeper" page="426" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="6R" schadenscode="7P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.3">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ruger Super Warhawk" page="427" srcBook="//@entries.0/@entries.0" wert="400" verfuegbarkeit="4R" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.3">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Crusader II" page="427" srcBook="//@entries.0/@entries.0" wert="830" verfuegbarkeit="9R" schadenscode="7P" praezision="5" reichweite="//@entries.1/@entries.4">
+<modie>HM</modie>
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ceska Black Scorpion" page="427" srcBook="//@entries.0/@entries.0" wert="270" verfuegbarkeit="6R" schadenscode="6P" praezision="5" reichweite="//@entries.1/@entries.4">
+<modie>HM</modie>
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Steyr TMP" page="427" srcBook="//@entries.0/@entries.0" wert="350" verfuegbarkeit="8R" schadenscode="7P" praezision="4" reichweite="//@entries.1/@entries.4">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Colt Cobra TZ-120" page="427" srcBook="//@entries.0/@entries.0" wert="660" verfuegbarkeit="5R" schadenscode="7P" praezision="4" reichweite="//@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="FN P93 Praetor" page="427" srcBook="//@entries.0/@entries.0" wert="900" verfuegbarkeit="11F" schadenscode="8P" praezision="6" rueckstoss="1" reichweite="//@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="HK-227" page="427" srcBook="//@entries.0/@entries.0" wert="730" verfuegbarkeit="8R" schadenscode="8P" praezision="5" reichweite="//@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ingram Smartgun X" page="427" srcBook="//@entries.0/@entries.0" wert="800" verfuegbarkeit="6R" schadenscode="8P" praezision="4" reichweite="//@entries.1/@entries.5">
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="SCK Model 100" page="428" srcBook="//@entries.0/@entries.0" wert="875" verfuegbarkeit="6R" schadenscode="8P" praezision="5" reichweite="//@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Uzi IV" page="428" srcBook="//@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" schadenscode="7P" praezision="4" reichweite="//@entries.1/@entries.5">
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="AK-97" page="428" srcBook="//@entries.0/@entries.0" wert="950" verfuegbarkeit="4R" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Alpha" page="428" srcBook="//@entries.0/@entries.0" wert="2650" verfuegbarkeit="11F" schadenscode="11P" praezision="5" durchschlagsKraft="-2" rueckstoss="2" reichweite="//@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Alpha Grenade Launcher" page="428" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="Grenade" praezision="4">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Colt M23" page="428" srcBook="//@entries.0/@entries.0" wert="550" verfuegbarkeit="4R" schadenscode="9P" praezision="4" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="FN HAR" page="428" srcBook="//@entries.0/@entries.0" wert="1500" verfuegbarkeit="8R" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Yamaha Raiden" page="428" srcBook="//@entries.0/@entries.0" wert="2600" verfuegbarkeit="14F" schadenscode="11P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.6">
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Desert Strike" page="428" srcBook="//@entries.0/@entries.0" wert="17500" verfuegbarkeit="10F" schadenscode="13P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.1/@entries.9">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Cavalier Arms Crockett EBR" page="428" srcBook="//@entries.0/@entries.0" wert="10300" verfuegbarkeit="12F" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.9">
+<modie>HM</modie>
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ranger Arms SM-5" page="429" srcBook="//@entries.0/@entries.0" wert="28000" verfuegbarkeit="16F" schadenscode="14P" praezision="8" durchschlagsKraft="-5" reichweite="//@entries.1/@entries.9">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Remington 950" page="429" srcBook="//@entries.0/@entries.0" wert="2100" verfuegbarkeit="4R" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.1/@entries.9">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ruger 100" page="429" srcBook="//@entries.0/@entries.0" wert="1300" verfuegbarkeit="4R" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.9">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Defiance T-250" page="429" srcBook="//@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" schadenscode="10P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.7">
+<modie>EM</modie>
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Defiance T-250, Short-Barrel" page="429" srcBook="//@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" schadenscode="9P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.7">
+<modie>EM</modie>
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Enfield AS-7" page="429" srcBook="//@entries.0/@entries.0" wert="1100" verfuegbarkeit="12F" schadenscode="13P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.7">
+<modie>HM</modie>
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="PJSS Model 55" page="429" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" schadenscode="11P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.1/@entries.7">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares S-III Super Squirt" page="429" srcBook="//@entries.0/@entries.0" wert="950" verfuegbarkeit="7R" schadenscode="Chemical" praezision="3">
+<modie>HM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Fichetti Pain Inducer" page="430" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="11R" schadenscode="Special" praezision="3">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Parashield Dart Pistol" page="430" srcBook="//@entries.0/@entries.0" wert="600" verfuegbarkeit="4R" schadenscode="As Drug/Toxin" praezision="5">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Parashield Dart Rifle" page="430" srcBook="//@entries.0/@entries.0" wert="1200" verfuegbarkeit="6R" schadenscode="As Drug/Toxin" praezision="6">
+<modie>HM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ingram Valiant" page="430" srcBook="//@entries.0/@entries.0" wert="5800" verfuegbarkeit="12F" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.1/@entries.10">
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0"/>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Stoner-Ares M202" page="430" srcBook="//@entries.0/@entries.0" wert="7000" verfuegbarkeit="12F" schadenscode="10P" praezision="5" durchschlagsKraft="-3" reichweite="//@entries.1/@entries.11">
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="RPK HMG" page="430" srcBook="//@entries.0/@entries.0" wert="16300" verfuegbarkeit="16F" schadenscode="12P" praezision="5" durchschlagsKraft="-4" reichweite="//@entries.1/@entries.12">
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Tripod" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Ares Antioch-2" page="430" srcBook="//@entries.0/@entries.0" wert="3200" verfuegbarkeit="8F" schadenscode="Grenade" praezision="4" reichweite="//@entries.1/@entries.14">
+<modie>EM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="ArmTech MGL-12" page="431" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="10F" schadenscode="Grenade" praezision="4" reichweite="//@entries.1/@entries.14">
+<modie>HM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Aztechnology Striker" page="431" srcBook="//@entries.0/@entries.0" wert="1200" verfuegbarkeit="10F" schadenscode="Missile" praezision="5" reichweite="//@entries.1/@entries.15">
+<modie>EM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Krime Cannon" page="431" srcBook="//@entries.0/@entries.0" wert="21000" verfuegbarkeit="20F" schadenscode="16P" praezision="4" durchschlagsKraft="-6" reichweite="//@entries.1/@entries.13">
+<modie>HM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Onotari Interceptor" page="431" srcBook="//@entries.0/@entries.0" wert="14000" verfuegbarkeit="18F" schadenscode="Missile" praezision="4" reichweite="//@entries.1/@entries.15">
+<modie>EM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Panther XXL" page="431" srcBook="//@entries.0/@entries.0" wert="43000" verfuegbarkeit="20F" schadenscode="17P" praezision="5" durchschlagsKraft="-6" reichweite="//@entries.1/@entries.13">
+<modie>EM</modie>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="8P" praezision="3" durchschlagsKraft="-6"/>
+<entries xsi:type="shr5:Feuerwaffe" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="5P(Fire)" praezision="3" durchschlagsKraft="-5">
+<modie>EM</modie>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="7S" praezision="3" durchschlagsKraft="-2">
+<modie>EM</modie>
+</entries>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR+1)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Bone Lacing, Aluminum" page="454" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR+2)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" name="Bone Lacing, Titanium" page="454" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR+3)P"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="gears">
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Throwing: Shuriken" page="424" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Throwing: Throwing Knife" page="424" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Arrow" page="423" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Injection Arrow" page="424" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating+2)R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Bolt" page="423" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Injection Bolt" page="424" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="8R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: APDS" page="434" srcBook="//@entries.0/@entries.0" wert="120" verfuegbarkeit="12F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Assault Cannon" page="434" srcBook="//@entries.0/@entries.0" wert="400" verfuegbarkeit="12F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Explosive Rounds" page="434" srcBook="//@entries.0/@entries.0" wert="80" verfuegbarkeit="9F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Flechette Rounds" page="434" srcBook="//@entries.0/@entries.0" wert="65" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Gel Rounds" page="434" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="2R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Hollow Points" page="434" srcBook="//@entries.0/@entries.0" wert="70" verfuegbarkeit="4F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Injection Darts" page="434" srcBook="//@entries.0/@entries.0" wert="75" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Regular Ammo" page="434" srcBook="//@entries.0/@entries.0" wert="20" verfuegbarkeit="2R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Stick-n-Shock" page="434" srcBook="//@entries.0/@entries.0" wert="80" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Tracer" page="434" srcBook="//@entries.0/@entries.0" wert="60" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Taser Dart" page="434" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="3"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0" wert="125" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: High Explosive" page="435" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Gas" page="435" srcBook="//@entries.0/@entries.0" wert="40" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Smoke" page="435" srcBook="//@entries.0/@entries.0" wert="40" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Thermal Smoke" page="435" srcBook="//@entries.0/@entries.0" wert="60" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0" wert="125" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: High Explosive" page="435" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Gas" page="435" srcBook="//@entries.0/@entries.0" wert="40" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Smoke" page="435" srcBook="//@entries.0/@entries.0" wert="40" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Thermal Smoke" page="435" srcBook="//@entries.0/@entries.0" wert="60" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Rocket: Anti-Vehicle" page="436" srcBook="//@entries.0/@entries.0" wert="2800" verfuegbarkeit="18F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Rocket: Fragmentation" page="436" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="12F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Rocket: High Explosive" page="436" srcBook="//@entries.0/@entries.0" wert="2100" verfuegbarkeit="18F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Missile: Anti-Vehicle" page="436" srcBook="//@entries.0/@entries.0" verfuegbarkeit="22F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Missile: Fragmentation" page="436" srcBook="//@entries.0/@entries.0" verfuegbarkeit="16F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Missile: High Explosive" page="436" srcBook="//@entries.0/@entries.0" verfuegbarkeit="22F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" name="Commercial Explosive" page="436" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="8R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" name="Foam Explosive" page="436" srcBook="//@entries.0/@entries.0" verfuegbarkeit="12F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" name="Plastic Explosive" page="436" srcBook="//@entries.0/@entries.0" verfuegbarkeit="16F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Detonators" name="Detonator Cap" page="436" srcBook="//@entries.0/@entries.0" wert="75" verfuegbarkeit="8R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" name="Sim Module (Cold)" page="438" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" name="Sim Module (Hot)" page="438" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="+4F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Meta Link" page="439" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Sony Emperor" page="439" srcBook="//@entries.0/@entries.0" wert="700" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Renraku Sensei" page="439" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="6"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Erika Elite" page="439" srcBook="//@entries.0/@entries.0" wert="2500" verfuegbarkeit="8"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Hermes Ikon" page="439" srcBook="//@entries.0/@entries.0" wert="3000" verfuegbarkeit="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Transys Avalon" page="439" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="12"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Fairlight Caliban" page="439" srcBook="//@entries.0/@entries.0" wert="8000" verfuegbarkeit="14"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="AR Gloves" page="439" srcBook="//@entries.0/@entries.0" wert="150" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Biometric Reader" page="439" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Electronic Paper" page="439" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Printer" page="439" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Satellite Link" page="439" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="6"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Simrig" page="439" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="12"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Subvocal Mic" page="439" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Trid Projector" page="439" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Trodes" page="439" srcBook="//@entries.0/@entries.0" wert="70" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Standard Tags" page="440" srcBook="//@entries.0/@entries.0" wert="1" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Datachip" page="440" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Security Tags" page="440" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="3"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Sensor Tags" page="440" srcBook="//@entries.0/@entries.0" wert="40" verfuegbarkeit="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Stealth Tags" page="440" srcBook="//@entries.0/@entries.0" wert="10" verfuegbarkeit="7R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Bug Scanner" page="440" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating)R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Data Tap" page="440" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Headjammer" page="441" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating)R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Jammer, Area" page="441" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Jammer, Directional" page="441" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*2)F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Micro-Transceiver" page="441" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Tag Eraser" page="441" srcBook="//@entries.0/@entries.0" wert="450" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="White Noise Generator" page="441" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Agent" page="441" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating * 3"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Datasoft" page="441" srcBook="//@entries.0/@entries.0" wert="120" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Mapsoft" page="441" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Shopsoft" page="441" srcBook="//@entries.0/@entries.0" wert="150" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Tutorsoft" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" name="Activesoft" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="8"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" name="Knowsoft" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" name="Linguasoft" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Standard" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Silver" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Gold" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Platinum" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Ebony" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Fake SIN" page="442" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating * 3)F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Fake License" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating * 3)F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Tools" name="Tool Kit" page="443" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Tools" name="Tool Shop" page="443" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="8"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Tools" name="Tool Facility" page="443" srcBook="//@entries.0/@entries.0" wert="50000" verfuegbarkeit="12"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Binoculars" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Binoculars, Optical" page="443" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Camera" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Micro-Camera" page="443" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Contacts" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="6"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Glasses" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Goggles" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Endoscope" page="444" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="8"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Imaging Scope" page="444" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Periscope" page="444" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="3"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Mage Sight Goggles" page="444" srcBook="//@entries.0/@entries.0" wert="3000" verfuegbarkeit="12R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Monocle" page="444" srcBook="//@entries.0/@entries.0" wert="3000" verfuegbarkeit="12R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Low-Light Vision" page="444" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="+4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Flare Compensation" page="444" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="+1"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Image Link" page="444" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Smartlink" page="444" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="+4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Thermographic Vision" page="444" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="+6"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Vision Enhancement" page="444" srcBook="//@entries.0/@entries.0" verfuegbarkeit="+(Rating*2)"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Vision Magnification" page="444" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="+2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Directional Mic" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Ear Buds" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Headphones" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Laser Mic" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Omni-Directional Mic" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Audio Enhancement" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="+(Rating*2)"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Select Sound Filter" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="+(Rating*3)"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Spatial Recognizer" page="445" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="+4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="RFID Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Audio/Visual Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Headware Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Handheld Device Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Small Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Wall-Mount Device Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Medium Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Large Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Cyberlimb Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Motorcycle Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Vehicle Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Building Sensor Housing" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensors" name="Sensor Array" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="7"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensors" name="Single Sensor" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Atmosphere Sensor" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Camera" page="443" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Cyberware Scanner" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Directional Microphone" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Geiger Counter" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Laser Range Finder" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="MAD Scanner" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Motion Sensor" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Olfactory Sensor" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Omni-Directional Microphone" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Radio Signal Scanner" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Ultrasound" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Laser Microphone" page="445" srcBook="//@entries.0/@entries.0" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Key Lock" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Combination Lock" page="446" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Maglock" page="447" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Keypad" page="447" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Card Reader" page="447" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Anti-Tamper Circuits" page="447" srcBook="//@entries.0/@entries.0" verfuegbarkeit="+Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Biometric Reader" page="447" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="+4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Metal Restraints" page="447" srcBook="//@entries.0/@entries.0" wert="20" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Plasteel Restraints" page="447" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Plastic Restraints" page="447" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Containment Manacles" page="447" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Autopicker" page="447" srcBook="//@entries.0/@entries.0" verfuegbarkeit="8R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Cellular Glove Molder" page="447" srcBook="//@entries.0/@entries.0" verfuegbarkeit="12F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Chisel" page="447" srcBook="//@entries.0/@entries.0" wert="20" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Crowbar" page="447" srcBook="//@entries.0/@entries.0" wert="20" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Keycard Copier" page="447" srcBook="//@entries.0/@entries.0" verfuegbarkeit="8F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Lockpick Set" page="448" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Maglock Passkey" page="448" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Miniwelder" page="448" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Miniwelder Fuel Canister" page="448" srcBook="//@entries.0/@entries.0" wert="80" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="8"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Sequencer" page="448" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" name="Glue Solvent" page="448" srcBook="//@entries.0/@entries.0" wert="90" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" name="Glue Sprayer" page="448" srcBook="//@entries.0/@entries.0" wert="150" verfuegbarkeit="2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" name="Thermite Burning Bar" page="448" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="16R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Chemsuit" page="448" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Climbing Gear" page="448" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Diving Gear" page="448" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Flashlight" page="449" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Gas Mask" page="449" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Gecko Tape Gloves" page="449" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="12"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Hazmat Suit" page="449" srcBook="//@entries.0/@entries.0" wert="3000" verfuegbarkeit="8"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Light Stick" page="449" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Magnesium Torch" page="449" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0" wert="175" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Micro Flares" page="449" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Rappelling Gloves" page="449" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Respirator" page="449" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Survival Kit" page="449" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="8R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Catalyst Stick" page="449" srcBook="//@entries.0/@entries.0" wert="120" verfuegbarkeit="8F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Microwire (100 m)" page="449" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="4"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Myomeric Rope (10 m)" page="449" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Standard Rope (100 m)" page="449" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Stealth Rope (100 m)" page="449" srcBook="//@entries.0/@entries.0" wert="85" verfuegbarkeit="8F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Biomonitor" page="450" srcBook="//@entries.0/@entries.0" wert="300" verfuegbarkeit="3"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Disposable Syringe" page="450" srcBook="//@entries.0/@entries.0" wert="10" verfuegbarkeit="3"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Medkit" page="450" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Medkit Supplies" page="450" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Basic" page="450" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Gold" page="450" srcBook="//@entries.0/@entries.0" wert="25000" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Platinum" page="450" srcBook="//@entries.0/@entries.0" wert="50000" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Super-Platinum" page="450" srcBook="//@entries.0/@entries.0" wert="100000" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Antidote Patch" page="451" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Chem Patch" page="451" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="6"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Stim Patch" page="451" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Tranq Patch" page="451" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*2"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Trauma Patch" page="451" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="6"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="CS/Tear Gas" page="409" srcBook="//@entries.0/@entries.0" wert="20" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Gamma-Scopolamine" page="410" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="14F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Narcoject" page="410" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="8R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Nausea Gas" page="410" srcBook="//@entries.0/@entries.0" wert="25" verfuegbarkeit="6R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Neuro-Stun VIII" page="410" srcBook="//@entries.0/@entries.0" wert="60" verfuegbarkeit="12R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Neuro-Stun IX" page="410" srcBook="//@entries.0/@entries.0" wert="60" verfuegbarkeit="13R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Neuro-Stun X" page="410" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="14R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Pepper Punch" page="410" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Seven-7" page="409" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="20F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Bliss" page="411" srcBook="//@entries.0/@entries.0" wert="15" verfuegbarkeit="3F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Cram" page="411" srcBook="//@entries.0/@entries.0" wert="10" verfuegbarkeit="2R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Deepweed" page="411" srcBook="//@entries.0/@entries.0" wert="400" verfuegbarkeit="8F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Jazz" page="411" srcBook="//@entries.0/@entries.0" wert="75" verfuegbarkeit="2R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Kamikaze" page="412" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Long Haul" page="412" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Nitro" page="412" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="2R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Novacoke" page="412" srcBook="//@entries.0/@entries.0" wert="10" verfuegbarkeit="2R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Psyche" page="412" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Zen" page="412" srcBook="//@entries.0/@entries.0" wert="5" verfuegbarkeit="4R"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Dreamchip" page="413" srcBook="//@entries.0/@entries.0" wert="20" verfuegbarkeit="4F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Moodchip" page="413" srcBook="//@entries.0/@entries.0" wert="50" verfuegbarkeit="4F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Personafix" page="413" srcBook="//@entries.0/@entries.0" wert="200" verfuegbarkeit="4F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Tripchip" page="413" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="4F"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="cyberwares">
+<entries xsi:type="shr5:Cyberware" name="Essence Hole" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Commlink" page="451" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="8">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Control Rig" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="FixedValues(5R,10R,15R)">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Cortex Bomb, Kink" page="452" srcBook="//@entries.0/@entries.0" wert="10000" verfuegbarkeit="12F">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Cortex Bomb, Microbomb" page="452" srcBook="//@entries.0/@entries.0" wert="25000" verfuegbarkeit="16F">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Cortext Bomb, Area Bomb" page="452" srcBook="//@entries.0/@entries.0" wert="40000" verfuegbarkeit="20F">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Cyberdeck" page="452" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="5R">
+<mods wert="-40">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Datajack" page="452" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="2">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Data Lock" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*2">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Olfactory Booster" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Simrig" page="452" srcBook="//@entries.0/@entries.0" wert="4000" verfuegbarkeit="12R">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Skilljack" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*2">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Taste Booster" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Tooth Compartment" page="452" srcBook="//@entries.0/@entries.0" wert="800" verfuegbarkeit="8">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Ultrasound Sensor" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="10">
+<mods wert="-25">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Voice Modulator" page="452" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Cybereyes Basic System" page="453" srcBook="//@entries.0/@entries.0" verfuegbarkeit="FixedValues(3,6,9,12)">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Flare Compensation" page="453" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Image Link" page="453" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Low-Light Vision" page="453" srcBook="//@entries.0/@entries.0" wert="1500" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Ocular Drone" page="453" srcBook="//@entries.0/@entries.0" wert="6000" verfuegbarkeit="6">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Retinal Duplication" page="453" srcBook="//@entries.0/@entries.0" verfuegbarkeit="16F">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Smartlink" page="453" srcBook="//@entries.0/@entries.0" wert="4000" verfuegbarkeit="8R">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Thermographic Vision" page="453" srcBook="//@entries.0/@entries.0" wert="1500" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Vision Enhancement" page="453" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Vision Magnification" page="453" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Cyberears" page="453" srcBook="//@entries.0/@entries.0" verfuegbarkeit="FixedValues(3,6,9,12)">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Audio Enhancement" page="453" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Balance Augmenter" page="453" srcBook="//@entries.0/@entries.0" wert="8000" verfuegbarkeit="8">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Damper" page="454" srcBook="//@entries.0/@entries.0" wert="2250" verfuegbarkeit="6">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Select Sound Filter" page="454" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Sound Link" page="454" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Spatial Recognizer" page="454" srcBook="//@entries.0/@entries.0" wert="4000" verfuegbarkeit="8">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Bone Lacing, Aluminum" page="454" srcBook="//@entries.0/@entries.0" wert="18000" verfuegbarkeit="12R">
+<mods wert="2">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+<mods wert="-100">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0" wert="8000" verfuegbarkeit="8R">
+<mods wert="1">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+<mods wert="-50">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Bone Lacing, Titanium" page="454" srcBook="//@entries.0/@entries.0" wert="30000" verfuegbarkeit="16R">
+<mods wert="3">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+<mods wert="-150">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Dermal Plating" page="454" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*4)R">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Fingertip Compartment" page="454" srcBook="//@entries.0/@entries.0" wert="3000" verfuegbarkeit="4">
+<mods wert="-10">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Grapple Gun" page="455" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit="8">
+<mods wert="-50">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Internal Air Tank" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating">
+<mods wert="-25">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Muscle Replacement" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
+<mods wert="NaN">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+</mods>
+<mods wert="NaN">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+</mods>
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Reaction Enhancers" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
+<mods wert="NaN">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</mods>
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Skillwires" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="Rating*4">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Smuggling Compartment" page="455" srcBook="//@entries.0/@entries.0" wert="7500" verfuegbarkeit="6">
+<mods wert="-20">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Cyberware" name="Wired Reflexes" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="FixedValues(8R,12R,20R)">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="powers">
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Adrenaline Boost"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-100" name="Astral Perception"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Attribute Boost"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Combat Sense"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Critical Strike"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Danger Sense"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Enhanced Perception"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Enhanced Accuracy"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Improved Ability"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-100" name="Improved Physical Attribute"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-100" name="Improved Potential"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-150" name="Improved Reflexes 1">
+<mods wert="1">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+</mods>
+<mods wert="1">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-250" name="Improved Reflexes 2">
+<mods wert="2">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+</mods>
+<mods wert="2">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-350" name="Improved Reflexes 3">
+<mods wert="3">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+</mods>
+<mods wert="3">
+<attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Improved Sense"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Killing Hands"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Kinesics"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Light Body"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Missile Parry"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Mystic Armor">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-25" name="Natural Immunity"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Pain Resistance"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Rapid Healing"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Spell Resistance"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-100" name="Traceless Walk"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Voice Control"/>
+<entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Wall Running"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="armors">
+<entries xsi:type="shr5:Kleidung" name="Actioneer Business Clothes" page="437" srcBook="//@entries.0/@entries.0" wert="1500" verfuegbarkeit="8" ruestung="8"/>
+<entries xsi:type="shr5:Kleidung" name="Armor Clothing" page="437" srcBook="//@entries.0/@entries.0" wert="450" verfuegbarkeit="2" ruestung="6"/>
+<entries xsi:type="shr5:Kleidung" name="Armor Jacket" page="437" srcBook="//@entries.0/@entries.0" wert="1000" verfuegbarkeit="2" ruestung="12"/>
+<entries xsi:type="shr5:Kleidung" name="Armor Vest" page="437" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="4" ruestung="9"/>
+<entries xsi:type="shr5:Kleidung" name="Chameleon Suit" page="437" srcBook="//@entries.0/@entries.0" wert="1700" verfuegbarkeit="10R" ruestung="9"/>
+<entries xsi:type="shr5:Kleidung" name="Full Body Armor" page="437" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="14R" ruestung="15"/>
+<entries xsi:type="shr5:Kleidung" name="Lined Coat" page="437" srcBook="//@entries.0/@entries.0" wert="900" verfuegbarkeit="4" ruestung="9"/>
+<entries xsi:type="shr5:Kleidung" name="Urban Explorer Jumpsuit" page="437" srcBook="//@entries.0/@entries.0" wert="650" verfuegbarkeit="8" ruestung="9"/>
+<entries xsi:type="shr5:Gegenstand" name="Helmet" page="438" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="2">
+<mods wert="2">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Gegenstand" name="Ballistic Shield" page="438" srcBook="//@entries.0/@entries.0" wert="1200" verfuegbarkeit="12R">
+<mods wert="6">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Gegenstand" name="Riot Shield" page="438" srcBook="//@entries.0/@entries.0" wert="1500" verfuegbarkeit="10R">
+<mods wert="6">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Gegenstand" name="Full Body Armor Helmet" page="437" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit="0">
+<mods wert="3">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:Gegenstand" name="Urban Explorer Jumpsuit Helmet" page="437" srcBook="//@entries.0/@entries.0" wert="100" verfuegbarkeit="0">
+<mods wert="2">
+<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+</mods>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="spells">
+<entries xsi:type="shr5:Zauber" merkmale="Indirect, Elemental" kategorie="Combat" schaden="P" entzug="F-3" reichweite="Blickfeld" art="Physisch" dauer="Sofort" name="Acid Stream" page="283" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect, Elemental" kategorie="Combat" schaden="P" entzug="F-1" art="Physisch" dauer="Sofort" name="Toxic Wave" page="283" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect" kategorie="Combat" schaden="S" entzug="F-6" reichweite="Beruehrung" art="Physisch" dauer="Sofort" name="Punch" page="283" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect" kategorie="Combat" schaden="S" entzug="F-3" reichweite="Blickfeld" art="Physisch" dauer="Sofort" name="Clout" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect" kategorie="Combat" schaden="S" entzug="F" art="Physisch" dauer="Sofort" name="Blast" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="P" entzug="F-6" reichweite="Beruehrung" art="Mana" dauer="Sofort" name="Death Touch" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="P" entzug="F-3" reichweite="Blickfeld" art="Mana" dauer="Sofort" name="Manabolt" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="P" entzug="F" art="Mana" dauer="Sofort" name="Manaball" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect, Elemental" kategorie="Combat" schaden="P" entzug="F-3" reichweite="Blickfeld" art="Physisch" dauer="Sofort" name="Flamethrower" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect, Elemental" kategorie="Combat" schaden="P" entzug="F-1" art="Physisch" dauer="Sofort" name="Fireball" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect, Elemental" kategorie="Combat" schaden="P" entzug="F-3" reichweite="Blickfeld" art="Physisch" dauer="Sofort" name="Lightning Bolt" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Indirect, Elemental" kategorie="Combat" schaden="P" entzug="F-1" art="Physisch" dauer="Sofort" name="Ball Lightning" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="P" entzug="F-6" reichweite="Beruehrung" art="Physisch" dauer="Sofort" name="Shatter" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="P" entzug="F-3" reichweite="Blickfeld" art="Physisch" dauer="Sofort" name="Powerbolt" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="P" entzug="F" art="Physisch" dauer="Sofort" name="Powerball" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="S" entzug="F-6" reichweite="Beruehrung" art="Mana" dauer="Sofort" name="Knockout" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="S" entzug="F-3" reichweite="Blickfeld" art="Mana" dauer="Sofort" name="Stunbolt" page="284" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Direct" kategorie="Combat" schaden="S" entzug="F" art="Mana" dauer="Sofort" name="Stunball" page="285" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Directional" kategorie="Detection" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Analyze Device" page="285" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Directional" kategorie="Detection" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Analyze Magic" page="285" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Directional" kategorie="Detection" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Analyze Truth" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Passive, Directional" kategorie="Detection" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Clairaudience" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Passive, Directional" kategorie="Detection" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Clairvoyance" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Psychic" kategorie="Detection" schaden="0" entzug="F" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Combat Sense" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Area" kategorie="Detection" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Enemies" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Extended Area" kategorie="Detection" schaden="0" entzug="F" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Enemies, Extended" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Area" kategorie="Detection" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Individual" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Area" kategorie="Detection" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Life" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Extended Area" kategorie="Detection" schaden="0" entzug="F-1" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Life, Extended" page="286" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Area" kategorie="Detection" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect [Life Form]" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Extended Area" kategorie="Detection" schaden="0" entzug="F" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect [Life Form], Extended" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Area" kategorie="Detection" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Magic" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Extended Area" kategorie="Detection" schaden="0" entzug="F" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Detect Magic, Extended Area" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Area" kategorie="Detection" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Detect [Object]" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Psychic" kategorie="Detection" schaden="0" entzug="F-1" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Mindlink" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Active, Directional" kategorie="Detection" schaden="0" entzug="F" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Mind Probe" page="287" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="" kategorie="Health" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Mana" dauer="Permanent" name="Antidote" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Essence" kategorie="Health" schaden="0" entzug="F-4" reichweite="Beruehrung" art="Mana" dauer="Permanent" name="Cure Disease" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Essence" kategorie="Health" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Decrease [Attribute]" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="" kategorie="Health" schaden="0" entzug="F-6" reichweite="Beruehrung" art="Mana" dauer="Permanent" name="Detox" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Essence" kategorie="Health" schaden="0" entzug="F-4" reichweite="Beruehrung" art="Mana" dauer="Permanent" name="Heal" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Essence" kategorie="Health" schaden="0" entzug="F-3" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Increase [Attribute]" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Essence" kategorie="Health" schaden="0" entzug="F" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Increase Reflexes" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="" kategorie="Health" schaden="0" entzug="F-5" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Oxygenate" page="288" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="" kategorie="Health" schaden="0" entzug="F-4" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Prophylaxis" page="289" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="" kategorie="Health" schaden="0" entzug="(Damage Value)-6" reichweite="Beruehrung" art="Mana" dauer="Permanent" name="Resist Pain" page="289" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="" kategorie="Health" schaden="0" entzug="F-4" reichweite="Beruehrung" art="Mana" dauer="Permanent" name="Stabilize" page="289" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense" kategorie="Illusion" schaden="0" entzug="F-4" reichweite="Blickfeld" art="Mana" dauer="Aufrechterhalten" name="Agony" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense" kategorie="Illusion" schaden="0" entzug="F-2" art="Mana" dauer="Aufrechterhalten" name="Mass Agony" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense" kategorie="Illusion" schaden="0" entzug="F-3" reichweite="Blickfeld" art="Mana" dauer="Aufrechterhalten" name="Bugs" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense" kategorie="Illusion" schaden="0" entzug="F-1" art="Mana" dauer="Aufrechterhalten" name="Swarm" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense" kategorie="Illusion" schaden="0" entzug="F-3" reichweite="Blickfeld" art="Mana" dauer="Aufrechterhalten" name="Confusion" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense, Area" kategorie="Illusion" schaden="0" entzug="F-1" art="Mana" dauer="Aufrechterhalten" name="Mass Confusion" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense" kategorie="Illusion" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Chaos" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense, Area" kategorie="Illusion" schaden="0" entzug="F" art="Physisch" dauer="Aufrechterhalten" name="Chaotic World" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Obvious, Multi-Sense, Area" kategorie="Illusion" schaden="0" entzug="F-3" art="Mana" dauer="Aufrechterhalten" name="Entertainment" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Obvious, Multi-Sense, Area" kategorie="Illusion" schaden="0" entzug="F-2" art="Physisch" dauer="Aufrechterhalten" name="Trid Entertainment" page="290" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense" kategorie="Illusion" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Mana" dauer="Aufrechterhalten" name="Invisibility" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense" kategorie="Illusion" schaden="0" entzug="F-1" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Improved Invisibility" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense" kategorie="Illusion" schaden="0" entzug="F-2" reichweite="Beruehrung" art="Mana" dauer="Aufrechterhalten" name="Mask" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense" kategorie="Illusion" schaden="0" entzug="F-1" reichweite="Beruehrung" art="Physisch" dauer="Aufrechterhalten" name="Physical Mask" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense, Area" kategorie="Illusion" schaden="0" entzug="F-1" art="Mana" dauer="Aufrechterhalten" name="Phantasm" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Multi-Sense, Area" kategorie="Illusion" schaden="0" entzug="F" art="Physisch" dauer="Aufrechterhalten" name="Trid Phantasm" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense, Area" kategorie="Illusion" schaden="0" entzug="F-2" art="Mana" dauer="Aufrechterhalten" name="Hush" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense, Area" kategorie="Illusion" schaden="0" entzug="F-1" art="Physisch" dauer="Aufrechterhalten" name="Silence" page="291" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Realistic, Single-Sense" kategorie="Illusion" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Stealth" page="292" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical" kategorie="Manipulation" schaden="0" entzug="F-1" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Animate" page="292" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical, Area" kategorie="Manipulation" schaden="0" entzug="F+1" art="Physisch" dauer="Aufrechterhalten" name="Mass Animate" page="292" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical" kategorie="Manipulation" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Armor" page="292" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Mental" kategorie="Manipulation" schaden="0" entzug="F-1" reichweite="Blickfeld" art="Mana" dauer="Aufrechterhalten" name="Control Actions" page="292" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Mental, Area" kategorie="Manipulation" schaden="0" entzug="F+1" art="Mana" dauer="Aufrechterhalten" name="Mob Control" page="292" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Mental" kategorie="Manipulation" schaden="0" entzug="F-1" reichweite="Blickfeld" art="Mana" dauer="Aufrechterhalten" name="Control Thoughts" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Mental, Area" kategorie="Manipulation" schaden="0" entzug="F+1" art="Mana" dauer="Aufrechterhalten" name="Mob Mind" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical, Damaging" kategorie="Manipulation" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Physisch" dauer="Sofort" name="Fling" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Environmental, Area" kategorie="Manipulation" schaden="0" entzug="(F" art="Physisch" dauer="Sofort" name="Ice Sheet" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical" kategorie="Manipulation" schaden="0" entzug="F-1" reichweite="Blickfeld" art="Physisch" dauer="Permanent" name="Ignite" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Mental" kategorie="Manipulation" schaden="0" entzug="F-1" reichweite="Blickfeld" art="Mana" dauer="Permanent" name="Influence" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical" kategorie="Manipulation" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Levitate" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Environmental, Area" kategorie="Manipulation" schaden="0" entzug="F-4" art="Physisch" dauer="Aufrechterhalten" name="Light" page="293" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Physical" kategorie="Manipulation" schaden="0" entzug="F-2" reichweite="Blickfeld" art="Physisch" dauer="Aufrechterhalten" name="Magic Fingers" page="294" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Environmental, Area" kategorie="Manipulation" schaden="0" entzug="F-2" art="Mana" dauer="Aufrechterhalten" name="Mana Barrier" page="294" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Environmental, Area" kategorie="Manipulation" schaden="0" entzug="F-1" art="Physisch" dauer="Aufrechterhalten" name="Physical Barrier" page="294" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Environmental, Area" kategorie="Manipulation" schaden="0" entzug="F-2" art="Physisch" dauer="Aufrechterhalten" name="Poltergeist" page="294" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Zauber" merkmale="Environmental, Area" kategorie="Manipulation" schaden="0" entzug="F-3" art="Physisch" dauer="Aufrechterhalten" name="Shadow" page="294" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="qualities">
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Analytical Mind" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="Aptitude" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Astral Chameleon" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Bilingual" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Blandness" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="Catlike" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Codeslinger" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Double-Jointed" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="Exceptional Attribute" page="72" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="11" name="First Impression" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Focused Concentration (Rating 1)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Focused Concentration (Rating 2)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Focused Concentration (Rating 3)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="16" name="Focused Concentration (Rating 4)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="20" name="Focused Concentration (Rating 5)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="24" name="Focused Concentration (Rating 6)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="11" name="Gearhead" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Guts" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="High Pain Tolerance (Rating 1)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="14" name="High Pain Tolerance (Rating 2)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="21" name="High Pain Tolerance (Rating 3)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground (Astral Acclimation)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground (You Know a Guy)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground (Digital Turf)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground (The Transporter)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground (On the Lam)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Home Ground (Street Politics)" page="74" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Human-Looking" page="75" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Indomitable" page="75" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Juryrigger" page="75" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Lucky" page="76" srcBook="//@entries.0/@entries.0">
+<mods wert="NaN">
+<attribut href=""/>
+</mods>
+</entries>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Magic Resistance" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="5" name="Mentor Spirit" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="Natural Athlete" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Natural Hardening" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Natural Immunity (Natural)" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Natural Immunity (Synthetic)" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="6" name="Photographic Memory" page="76" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Resistance to Pathogens" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="4" name="Resistance to Toxins" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Resistance to Pathogens and Toxins" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="7" name="Spirit Affinity" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="9" name="Toughness" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="3" name="Will to Live" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-4" name="Addiction (Mild)" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Addiction (Moderate)" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-20" name="Addiction (Severe)" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-25" name="Addiction (Burnout)" page="77" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Allergy (Uncommon, Mild)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Allergy (Uncommon, Moderate)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Allergy (Uncommon, Severe)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-20" name="Allergy (Uncommon, Extreme)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Allergy (Common, Mild)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Allergy (Common, Moderate)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-20" name="Allergy (Common, Severe)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-25" name="Allergy (Common, Extreme)" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Astral Beacon" page="78" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Bad Luck" page="79" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Bad Rep" page="79" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Code of Honor (Assassin's Creed)" page="79" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Code of Honor (Warrior's Code)" page="79" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Codeblock" page="80" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Combat Paralysis" page="80" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-3" name="Dependents (Nuisance)" page="80" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-6" name="Dependents (Inconvenience)" page="80" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Dependents (Family)" page="80" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Distinctive Style" page="80" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-6" name="Elf Poser" page="81" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-4" name="Gremlins" page="81" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Incompetent" page="81" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Insomnia (Rating 1)" page="81" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="Insomnia (Rating 2)" page="81" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Loss of Confidence" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-9" name="Low Pain Tolerance" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-6" name="Ork Poser" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Prejudiced (Common, Biased)" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Prejudiced (Common, Outspoken)" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Prejudiced (Common, Radical)" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-3" name="Prejudiced (Specific, Biased)" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Prejudiced (Specific, Outspoken)" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Prejudiced (Specific, Radical)" page="82" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Scorched" page="83" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-12" name="Sensitive System" page="83" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="Simsense Vertigo" page="83" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-5" name="SINner (National)" page="84" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="SINner (Criminal)" page="84" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-15" name="SINner (Corporate Limited)" page="84" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-25" name="SINner (Corporate)" page="84" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Social Stress" page="85" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Spirit Bane" page="85" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-14" name="Uncouth" page="85" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-8" name="Uneducated" page="87" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-7" name="Unsteady Hands" page="87" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="-10" name="Weak Immune System" page="87" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" name="Low-Light Vision" page="66" srcBook="//@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PersonaEigenschaft" name="Thermographic Vision" page="66" srcBook="//@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="biowares">
+<entries xsi:type="shr5:BioWare" name="Essence Hole" srcBook="//@entries.0/@entries.0" verfuegbarkeit="0">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Adrenaline pump" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Bone density augmentation" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Cat’s eye" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Enhanced articulation" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Muscle augmentation" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Muscle toner" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Orthoskin" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Pathogenic Defense" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Platelet factories" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Skin pocket" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Suprathyroid gland" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Symbiotes" page="459" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Synthacardium" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Tailored pheromones" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Toxin extractor" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Tracheal filter" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Cerebral booster" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Damage compensators" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Mnemonic enhancer" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Pain editor" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Reflex recorder" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Sleep regulator" page="460" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+<entries xsi:type="shr5:BioWare" name="Synaptic booster" page="461" srcBook="//@entries.0/@entries.0" verfuegbarkeit="">
+<mods>
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+</mods>
+</entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="vehicles">
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Dodge Scoot" page="462" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Harley-Davidson Scorpion" page="462" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Yamaha Growler" page="462" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Suzuki Mirage" page="462" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Chrysler-Nissan Jackrabbit" page="462" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Honda Spirit" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Hyundai Shin-Hyung" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Eurocar Westwind 3000" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Ford Americar" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Saeder-Krupp-Bentley Concordat" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Mitsubishi Nightsky" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="Toyota Gopher" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="GMC Bulldog Step-Van" page="463" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="Rover Model 2072" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="Ares Roadmaster" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Samuvani Criscraft Otter" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Yongkang Gala Trinity" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Morgan Cutlass" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Proteus Lamprey" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Vulkan Electronaut" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" name="Artemis Industries Nightwing" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" name="Cessna C750" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" name="Renault-Fiat Fokker Tundra-9" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" name="Ares Dragon" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" name="Nissan Hound" page="464" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" name="Northrup Wasp" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" name="Ares Venture" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" name="GMC Banshee" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" name="Federated Boeing Commuter" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" name="Shiawase Kanmushi" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" name="Sikorsky-Bell Microskimmer" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" name="Horizon Flying Eye" page="465" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" name="MCT Fly-Spy" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" name="Aztechnology Crawler" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" name="Lockheed Optic-X2" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" name="Ares Duelist" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" name="GM-Nissan Doberman" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" name="MCT-Nissan Roto-Drone" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" name="Cyberspace Designs Dalmatian" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" name="Steel Lynx Combat Drone" page="466" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="lifestyles">
+<entries xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Lifestyle" name="Squatter" page="95" srcBook="//@entries.0/@entries.0" wert="500" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Lifestyle" name="Middle" page="95" srcBook="//@entries.0/@entries.0" wert="5000" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Lifestyle" name="High" page="95" srcBook="//@entries.0/@entries.0" wert="10000" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Lifestyle" name="Luxury" page="95" srcBook="//@entries.0/@entries.0" wert="100000" verfuegbarkeit=""/>
+</entries>
+<entries xsi:type="shr5:ShrList" name="generators">
+<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="5000" karmaToMagicFactor="5" karmaPoints="25" knowlegeSkillFactor="2" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0">
+<priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="9">
+<choosableTypes href="#//@entries.2/@entries.0"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="8">
+<choosableTypes href="#//@entries.2/@entries.1"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="7">
+<choosableTypes href="#//@entries.2/@entries.2"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="7">
+<choosableTypes href="#//@entries.2/@entries.3"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="5">
+<choosableTypes href="#//@entries.2/@entries.4"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="7">
+<choosableTypes href="#//@entries.2/@entries.0"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="6">
+<choosableTypes href="#//@entries.2/@entries.1"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="4">
+<choosableTypes href="#//@entries.2/@entries.2"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="4">
+<choosableTypes href="#//@entries.2/@entries.3"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="0">
+<choosableTypes href="#//@entries.2/@entries.4"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="5">
+<choosableTypes href="#//@entries.2/@entries.0"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="3">
+<choosableTypes href="#//@entries.2/@entries.1"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="1">
+<choosableTypes href="#//@entries.2/@entries.2"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="0">
+<choosableTypes href="#//@entries.2/@entries.3"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="D" specialPoints="3">
+<choosableTypes href="#//@entries.2/@entries.0"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="D" specialPoints="0">
+<choosableTypes href="#//@entries.2/@entries.1"/>
+</priorities>
+<priorities xsi:type="shr5mngt:MetaType" categorieName="E" specialPoints="0">
+<choosableTypes href="#//@entries.2/@entries.0"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Attributes" categorieName="A" attibutePoints="24"/>
+<priorities xsi:type="shr5mngt:Attributes" categorieName="B" attibutePoints="20"/>
+<priorities xsi:type="shr5mngt:Attributes" categorieName="C" attibutePoints="16"/>
+<priorities xsi:type="shr5mngt:Attributes" categorieName="D" attibutePoints="14"/>
+<priorities xsi:type="shr5mngt:Attributes" categorieName="E" attibutePoints="12"/>
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="A" magic="6" spellPoints="10" skillNumber="2" skillValue="5">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="A" magic="6" spellPoints="10" skillNumber="2" skillValue="5">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Technomancer" categorieName="A" complexForms="5" resonanz="6" skillNumber="2" skillValue="5">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="4" spellPoints="7" skillNumber="2" skillValue="4">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="4" spellPoints="7" skillNumber="2" skillValue="4">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Technomancer" categorieName="B" complexForms="2" resonanz="4" skillNumber="2" skillValue="4">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Adept" categorieName="B" magic="6" skillNumber="1" skillValue="4">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Adept" categorieName="B" magic="5">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="C" magic="3" spellPoints="5">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="C" magic="3" spellPoints="5">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Technomancer" categorieName="C" complexForms="1" resonanz="3">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Adept" categorieName="C" magic="4" skillNumber="1" skillValue="2">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Adept" categorieName="C" magic="3">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Adept" categorieName="D" magic="2">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Adept" categorieName="D" magic="2">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+</priorities>
+<priorities xsi:type="shr5mngt:Skill" categorieName="A" skillPoints="46" groupPoints="10"/>
+<priorities xsi:type="shr5mngt:Skill" categorieName="B" skillPoints="36" groupPoints="5"/>
+<priorities xsi:type="shr5mngt:Skill" categorieName="C" skillPoints="28" groupPoints="2"/>
+<priorities xsi:type="shr5mngt:Skill" categorieName="D" skillPoints="22" groupPoints="0"/>
+<priorities xsi:type="shr5mngt:Skill" categorieName="E" skillPoints="18" groupPoints="0"/>
+<priorities xsi:type="shr5mngt:Resourcen" categorieName="A" resource="450000"/>
+<priorities xsi:type="shr5mngt:Resourcen" categorieName="B" resource="275000"/>
+<priorities xsi:type="shr5mngt:Resourcen" categorieName="C" resource="140000"/>
+<priorities xsi:type="shr5mngt:Resourcen" categorieName="D" resource="50000"/>
+<priorities xsi:type="shr5mngt:Resourcen" categorieName="E" resource="6000"/>
+<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
+<selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+</priorities>
+<instructions key="new" value="Select the categories and the group."/>
+<instructions key="readyForCreation" value="All has been set, you can create the character now."/>
+<instructions key="personaCreated" value="The character is created spend all the values."/>
+<instructions key="commited" value="The character is finshed and commited."/>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="2">
+<type href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="1">
+<type href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="1">
+<type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://urszeidler.de/shr5/1.0#//Zauber"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://urszeidler.de/shr5/1.0#//PersonaKomplexForm"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+</characterAdvancements>
+</entries>
+<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator">
+<instructions key="new" value="Choose the basic Concept"/>
+<instructions key="readyForCreation" value="All has been set, you can create the character now."/>
+<instructions key="personaCreated" value="The character is created you can comit any time."/>
+<instructions key="commited" value="The character is finshed and commited."/>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="2">
+<type href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="1">
+<type href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="1">
+<type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://urszeidler.de/shr5/1.0#//Zauber"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://urszeidler.de/shr5/1.0#//PersonaKomplexForm"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
+<type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+</characterAdvancements>
+</entries>
+<entries xsi:type="shr5mngt:FreeStyleGenerator" generator="//@entries.16/@entries.1" characterName="Free Style Generator"/>
+<entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0"/>
+<entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0"/>
+<entries xsi:type="shr5mngt:CharacterGroup" name="player group"/>
+<entries xsi:type="shr5mngt:CharacterGroup" name="non player group"/>
+</entries>
+</shr5:ShrList>
