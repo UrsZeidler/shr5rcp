@@ -1391,10 +1391,10 @@
 </mods>
 </entries>
 <entries xsi:type="shr5:Cyberware" name="Muscle Replacement" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
-<mods wert="NaN">
+<mods wert="0">
 <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
 </mods>
-<mods wert="NaN">
+<mods wert="0">
 <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
 </mods>
 <mods>
@@ -1402,7 +1402,7 @@
 </mods>
 </entries>
 <entries xsi:type="shr5:Cyberware" name="Reaction Enhancers" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
-<mods wert="NaN">
+<mods wert="0">
 <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
 </mods>
 <mods>
@@ -1633,7 +1633,7 @@
 <entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="8" name="Indomitable" page="75" srcBook="//@entries.0/@entries.0"/>
 <entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="10" name="Juryrigger" page="75" srcBook="//@entries.0/@entries.0"/>
 <entries xsi:type="shr5:PersonaEigenschaft" karmaKosten="12" name="Lucky" page="76" srcBook="//@entries.0/@entries.0">
-<mods wert="NaN">
+<mods wert="0">
 <attribut href=""/>
 </mods>
 </entries>
