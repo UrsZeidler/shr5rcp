@@ -65,17 +65,20 @@
 		<delete file="${post-answer}" />
 
 		<antcall target="send.file">
-			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+			<param name="file.to.send" value=".project" />
 		</antcall>
 		<!--
 		<antcall target="send.file">
-			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+			<param name="file.to.send" value="shr-rcp.gtk.linux.x86_64.zip" />
 		</antcall>
 		<antcall target="send.file">
-			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+			<param name="file.to.send" value="shr-rcp.gtk.linux.x86_32.zip" />
 		</antcall>
 		<antcall target="send.file">
-			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+			<param name="file.to.send" value="shr-rcp.cocoa.macosx.x86.zip" />
+		</antcall>
+		<antcall target="send.file">
+			<param name="file.to.send" value="shr-rcp.win32.win32.x86.zip" />
 		</antcall>
 		-->
 	</target>
