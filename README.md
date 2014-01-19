@@ -26,4 +26,9 @@ shr5rcp
 
  This project is based on the EMF modeling framework.
  
+ License
+-------
+
+The code is published under the terms of the [Eclipse Public License, version 1.0](http://www.eclipse.org/legal/epl-v10.html).
+ 
  
