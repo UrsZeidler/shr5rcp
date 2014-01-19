@@ -65,10 +65,6 @@
 		<delete file="${post-answer}" />
 
 		<antcall target="send.file">
-			<param name="file.to.send" value=".project" />
-		</antcall>
-		<!--
-		<antcall target="send.file">
 			<param name="file.to.send" value="shr-rcp.gtk.linux.x86_64.zip" />
 		</antcall>
 		<antcall target="send.file">
@@ -80,7 +76,7 @@
 		<antcall target="send.file">
 			<param name="file.to.send" value="shr-rcp.win32.win32.x86.zip" />
 		</antcall>
-		-->
+
 	</target>
 
 	<!-- - - - - - - - - - - - - - - - - - 
