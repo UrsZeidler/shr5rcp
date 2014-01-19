@@ -13,14 +13,87 @@
     </description>
 	<property name="out.path" value="out" />
 	<property name="chummer2shr5xsl" value="xsl/chummer2shr5.xsl" />
-	<property name="path.to.chummer.data" value="/home/urs/chummer2/Chummer2/data"/>
+	<property name="path.to.chummer.data" value="/home/urs/chummer2/Chummer2/data" />
+	<property name="git.repo.path" value="UrsZeidler/shr5rcp"/>
 
+	
 	<!-- transform the xml -->
 	<target name="createSHR5.resource" description="reads the chummer2 xml files and creates a shr5 resourceset">
 		<xslt style="${chummer2shr5xsl}" in="${chummer2shr5xsl}" out="${out.path}/shr5.xmi">
 			<param name="path" expression="${path.to.chummer.data}" />
 		</xslt>
 	</target>
+
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: create.release  
+          uses :
+               version-name as property
+               version-description as the description                 
+         - - - - - - - - - - - - - - - - - -->
+	<target name="create.release"  description="Creates a release at git hub and upload the files.">
+		<property name="url" value="https://api.github.com/repos/${git.repo.path}/releases" />
+		<!--
+		<property name="version-name" value="v0.0.1" />
+		<property name="version-description" value="a test 2" />
+-->
+		
+		<property name="post-answer" value="answer.out" />
+		<property name="strip-end">{?name}",</property>
+		<property name="strip-start">"upload_url": "</property>
+
+
+		<property name="data.to.post">
+		{  "tag_name": "${version-name}",  "target_commitish": "master",  "name": "${version-name}",  "body": "${version-description}",  "draft": true,  "prerelease": true}
+	</property>
+
+
+		<exec executable="curl" output="${post-answer}">
+			<arg line="-H 'Authorization: token ${auth.token}'   -d '${data.to.post}' ${url}" />
+		</exec>
+		<loadfile srcfile="${post-answer}" property="post.url">
+			<filterchain>
+				<tokenfilter>
+					<containsstring contains="upload_url" />
+					<replacestring from="${strip-start}" to="" />
+					<replacestring from="${strip-end}" to="" />
+					<deletecharacters chars=" " />
+				</tokenfilter>
+				<striplinebreaks />
+			</filterchain>
+		</loadfile>
+		<delete file="${post-answer}" />
+
+		<antcall target="send.file">
+			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+		</antcall>
+		<!--
+		<antcall target="send.file">
+			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+		</antcall>
+		<antcall target="send.file">
+			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+		</antcall>
+		<antcall target="send.file">
+			<param name="file.to.send" value="${out.path}/shr5.xmi" />
+		</antcall>
+		-->
+	</target>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: send.file      post the file via curl to the    ${post.url}             
+         - - - - - - - - - - - - - - - - - -->
+	<target name="send.file">
+		<basename file="${file.to.send}" property="file.name"/>
+		<echo>uploading file ${file.to.send} to : ${post.url}  </echo>
+
+		<property name="post.cmd">-H 'Authorization: token ${auth.token}' -H 'Accept: application/vnd.github.manifold-preview' -H 'Content-Type: application/zip'   --data-binary @${file.to.send} ${post.url}?name=${file.name}</property>
+		<exec executable="curl">
+			<arg line="${post.cmd}" />
+		</exec>
+
+	</target>
+
 
 
 </project>
