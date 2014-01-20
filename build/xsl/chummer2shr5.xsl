@@ -126,8 +126,23 @@
 					value="The character is created spend all the values." />
 				<instructions key="commited"
 					value="The character is finshed and commited." />
-
 				<xsl:call-template name="advancements" />
+				<xsl:for-each select="$lifestyle">
+					<xsl:for-each select="chummer/lifestyles/*">
+						<lifestyleToStartMoney>
+							<xsl:attribute name="numberOfW"><xsl:value-of
+								select="dice/text()" /></xsl:attribute>
+							<xsl:attribute name="moneyFactor"><xsl:value-of
+								select="multiplier/text()" /></xsl:attribute>
+							<xsl:variable name="pos" select="position()-1" />
+							<xsl:attribute name="lifeStyles"><xsl:value-of
+								select="concat('//@entries.15/@entries.',$pos)" /></xsl:attribute>
+
+						</lifestyleToStartMoney>
+					</xsl:for-each>
+				</xsl:for-each>
+
+
 			</entries>
 			<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator">
 				<instructions key="new" value="Choose the basic Concept" />
