@@ -22,6 +22,9 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getNumberOfMaxAttributes <em>Number Of Max Attributes</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKnowlegeSkillFactor <em>Knowlege Skill Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getCharismaToConnectionFactor <em>Charisma To Connection Factor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxResourceToKeep <em>Max Resource To Keep</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxKarmaToResources <em>Max Karma To Resources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxKarmaToKeep <em>Max Karma To Keep</em>}</li>
  * </ul>
  * </p>
  *
@@ -123,6 +126,61 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	protected int charismaToConnectionFactor = CHARISMA_TO_CONNECTION_FACTOR_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getMaxResourceToKeep() <em>Max Resource To Keep</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxResourceToKeep()
+     * @generated
+     * @ordered
+     */
+    protected static final int MAX_RESOURCE_TO_KEEP_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getMaxResourceToKeep() <em>Max Resource To Keep</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxResourceToKeep()
+     * @generated
+     * @ordered
+     */
+    protected int maxResourceToKeep = MAX_RESOURCE_TO_KEEP_EDEFAULT;
+    /**
+     * The default value of the '{@link #getMaxKarmaToResources() <em>Max Karma To Resources</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxKarmaToResources()
+     * @generated
+     * @ordered
+     */
+    protected static final int MAX_KARMA_TO_RESOURCES_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getMaxKarmaToResources() <em>Max Karma To Resources</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxKarmaToResources()
+     * @generated
+     * @ordered
+     */
+    protected int maxKarmaToResources = MAX_KARMA_TO_RESOURCES_EDEFAULT;
+    /**
+     * The default value of the '{@link #getMaxKarmaToKeep() <em>Max Karma To Keep</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxKarmaToKeep()
+     * @generated
+     * @ordered
+     */
+    protected static final int MAX_KARMA_TO_KEEP_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getMaxKarmaToKeep() <em>Max Karma To Keep</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMaxKarmaToKeep()
+     * @generated
+     * @ordered
+     */
+    protected int maxKarmaToKeep = MAX_KARMA_TO_KEEP_EDEFAULT;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -248,6 +306,69 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getMaxResourceToKeep() {
+        return maxResourceToKeep;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMaxResourceToKeep(int newMaxResourceToKeep) {
+        int oldMaxResourceToKeep = maxResourceToKeep;
+        maxResourceToKeep = newMaxResourceToKeep;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP, oldMaxResourceToKeep, maxResourceToKeep));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getMaxKarmaToResources() {
+        return maxKarmaToResources;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMaxKarmaToResources(int newMaxKarmaToResources) {
+        int oldMaxKarmaToResources = maxKarmaToResources;
+        maxKarmaToResources = newMaxKarmaToResources;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES, oldMaxKarmaToResources, maxKarmaToResources));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getMaxKarmaToKeep() {
+        return maxKarmaToKeep;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMaxKarmaToKeep(int newMaxKarmaToKeep) {
+        int oldMaxKarmaToKeep = maxKarmaToKeep;
+        maxKarmaToKeep = newMaxKarmaToKeep;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP, oldMaxKarmaToKeep, maxKarmaToKeep));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -264,6 +385,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getKnowlegeSkillFactor();
             case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
                 return getCharismaToConnectionFactor();
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP:
+                return getMaxResourceToKeep();
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES:
+                return getMaxKarmaToResources();
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
+                return getMaxKarmaToKeep();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -290,6 +417,15 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return;
             case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
                 setCharismaToConnectionFactor((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP:
+                setMaxResourceToKeep((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES:
+                setMaxKarmaToResources((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
+                setMaxKarmaToKeep((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -318,6 +454,15 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
                 setCharismaToConnectionFactor(CHARISMA_TO_CONNECTION_FACTOR_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP:
+                setMaxResourceToKeep(MAX_RESOURCE_TO_KEEP_EDEFAULT);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES:
+                setMaxKarmaToResources(MAX_KARMA_TO_RESOURCES_EDEFAULT);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
+                setMaxKarmaToKeep(MAX_KARMA_TO_KEEP_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -340,6 +485,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return knowlegeSkillFactor != KNOWLEGE_SKILL_FACTOR_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
                 return charismaToConnectionFactor != CHARISMA_TO_CONNECTION_FACTOR_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP:
+                return maxResourceToKeep != MAX_RESOURCE_TO_KEEP_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES:
+                return maxKarmaToResources != MAX_KARMA_TO_RESOURCES_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
+                return maxKarmaToKeep != MAX_KARMA_TO_KEEP_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -364,6 +515,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(knowlegeSkillFactor);
         result.append(", charismaToConnectionFactor: ");
         result.append(charismaToConnectionFactor);
+        result.append(", maxResourceToKeep: ");
+        result.append(maxResourceToKeep);
+        result.append(", maxKarmaToResources: ");
+        result.append(maxKarmaToResources);
+        result.append(", maxKarmaToKeep: ");
+        result.append(maxKarmaToKeep);
         result.append(')');
         return result.toString();
     }

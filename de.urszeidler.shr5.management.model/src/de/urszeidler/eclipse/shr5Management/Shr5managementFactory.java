@@ -230,6 +230,15 @@ public interface Shr5managementFactory extends EFactory {
 	QuallityChange createQuallityChange();
 
 	/**
+     * Returns a new object of class '<em>Lifestyle To Start Money</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Lifestyle To Start Money</em>'.
+     * @generated
+     */
+    LifestyleToStartMoney createLifestyleToStartMoney();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

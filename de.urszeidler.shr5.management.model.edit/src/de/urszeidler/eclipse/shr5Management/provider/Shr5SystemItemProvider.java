@@ -62,6 +62,9 @@ public class Shr5SystemItemProvider
             addNumberOfMaxAttributesPropertyDescriptor(object);
             addKnowlegeSkillFactorPropertyDescriptor(object);
             addCharismaToConnectionFactorPropertyDescriptor(object);
+            addMaxResourceToKeepPropertyDescriptor(object);
+            addMaxKarmaToResourcesPropertyDescriptor(object);
+            addMaxKarmaToKeepPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -177,6 +180,72 @@ public class Shr5SystemItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Max Resource To Keep feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMaxResourceToKeepPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_maxResourceToKeep_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxResourceToKeep_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Max Karma To Resources feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMaxKarmaToResourcesPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_maxKarmaToResources_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxKarmaToResources_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Max Karma To Keep feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMaxKarmaToKeepPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_maxKarmaToKeep_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_maxKarmaToKeep_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_KEEP,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,6 +287,9 @@ public class Shr5SystemItemProvider
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES:
             case Shr5managementPackage.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR:
             case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP:
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES:
+            case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

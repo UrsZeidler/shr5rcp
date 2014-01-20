@@ -195,6 +195,7 @@ public class CharacterGeneratorSystemItemProvider
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
+            childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
         }
         return childrenFeatures;
     }
@@ -246,6 +247,7 @@ public class CharacterGeneratorSystemItemProvider
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -277,6 +279,11 @@ public class CharacterGeneratorSystemItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS,
                  Shr5managementFactory.eINSTANCE.createChangeQuallity()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY,
+                 Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
     }
 
 	/**

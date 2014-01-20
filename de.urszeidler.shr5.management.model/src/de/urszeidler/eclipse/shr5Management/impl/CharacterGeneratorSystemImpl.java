@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import java.util.Collection;
 
@@ -38,6 +39,7 @@ import java.util.Collection;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getCharacterAdvancements <em>Character Advancements</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
  * </ul>
  * </p>
  *
@@ -155,6 +157,16 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	protected EList<Advancement> characterAdvancements;
 
 	/**
+     * The cached value of the '{@link #getLifestyleToStartMoney() <em>Lifestyle To Start Money</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLifestyleToStartMoney()
+     * @generated
+     * @ordered
+     */
+    protected EList<LifestyleToStartMoney> lifestyleToStartMoney;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -321,6 +333,18 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<LifestyleToStartMoney> getLifestyleToStartMoney() {
+        if (lifestyleToStartMoney == null) {
+            lifestyleToStartMoney = new EObjectContainmentEList<LifestyleToStartMoney>(LifestyleToStartMoney.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
+        }
+        return lifestyleToStartMoney;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -331,6 +355,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return ((InternalEList<?>)getInstructions()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 return ((InternalEList<?>)getCharacterAdvancements()).basicRemove(otherEnd, msgs);
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
+                return ((InternalEList<?>)getLifestyleToStartMoney()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -359,6 +385,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 else return getInstructions().map();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 return getCharacterAdvancements();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
+                return getLifestyleToStartMoney();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -394,6 +422,10 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 getCharacterAdvancements().clear();
                 getCharacterAdvancements().addAll((Collection<? extends Advancement>)newValue);
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
+                getLifestyleToStartMoney().clear();
+                getLifestyleToStartMoney().addAll((Collection<? extends LifestyleToStartMoney>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -427,6 +459,9 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 getCharacterAdvancements().clear();
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
+                getLifestyleToStartMoney().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -453,6 +488,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return instructions != null && !instructions.isEmpty();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 return characterAdvancements != null && !characterAdvancements.isEmpty();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
+                return lifestyleToStartMoney != null && !lifestyleToStartMoney.isEmpty();
         }
         return super.eIsSet(featureID);
     }

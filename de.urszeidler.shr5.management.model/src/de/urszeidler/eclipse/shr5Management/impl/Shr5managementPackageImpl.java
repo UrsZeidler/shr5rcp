@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
+import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Mudan;
@@ -283,6 +284,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 	private EClass quallityChangeEClass = null;
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass lifestyleToStartMoneyEClass = null;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -542,6 +550,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCharacterGeneratorSystem_LifestyleToStartMoney() {
+        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -694,6 +711,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_MaxResourceToKeep() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_MaxKarmaToResources() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_MaxKarmaToKeep() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(7);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -1226,6 +1270,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map() {
+        return shr5GeneratorEClass.getEOperations().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1424,6 +1477,42 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLifestyleToStartMoney() {
+        return lifestyleToStartMoneyEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifestyleToStartMoney_NumberOfW() {
+        return (EAttribute)lifestyleToStartMoneyEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifestyleToStartMoney_MoneyFactor() {
+        return (EAttribute)lifestyleToStartMoneyEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifestyleToStartMoney_LifeStyles() {
+        return (EReference)lifestyleToStartMoneyEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1488,6 +1577,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         characterGeneratorSystemEClass = createEClass(CHARACTER_GENERATOR_SYSTEM);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
+        createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
 
         prioritySystemEClass = createEClass(PRIORITY_SYSTEM);
         createEReference(prioritySystemEClass, PRIORITY_SYSTEM__PRIORITIES);
@@ -1512,6 +1602,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__MAX_KARMA_TO_KEEP);
 
         metaTypeEClass = createEClass(META_TYPE);
         createEReference(metaTypeEClass, META_TYPE__CHOOSABLE_TYPES);
@@ -1582,6 +1675,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP);
 
         attributeChangeEClass = createEClass(ATTRIBUTE_CHANGE);
 
@@ -1616,6 +1710,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         changeQuallityEClass = createEClass(CHANGE_QUALLITY);
 
         quallityChangeEClass = createEClass(QUALLITY_CHANGE);
+
+        lifestyleToStartMoneyEClass = createEClass(LIFESTYLE_TO_START_MONEY);
+        createEAttribute(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__NUMBER_OF_W);
+        createEAttribute(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__MONEY_FACTOR);
+        createEReference(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__LIFE_STYLES);
 
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
@@ -1701,6 +1800,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(characterGeneratorSystemEClass, CharacterGeneratorSystem.class, "CharacterGeneratorSystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCharacterGeneratorSystem_CharacterAdvancements(), this.getAdvancement(), null, "characterAdvancements", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterGeneratorSystem_LifestyleToStartMoney(), this.getLifestyleToStartMoney(), null, "lifestyleToStartMoney", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(prioritySystemEClass, PrioritySystem.class, "PrioritySystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPrioritySystem_Priorities(), this.getPriorityCategorie(), null, "priorities", null, 0, -1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1725,6 +1825,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5System_NumberOfMaxAttributes(), ecorePackage.getEInt(), "numberOfMaxAttributes", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_KnowlegeSkillFactor(), ecorePackage.getEInt(), "knowlegeSkillFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_CharismaToConnectionFactor(), ecorePackage.getEInt(), "charismaToConnectionFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_MaxResourceToKeep(), ecorePackage.getEInt(), "maxResourceToKeep", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_MaxKarmaToResources(), ecorePackage.getEInt(), "maxKarmaToResources", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_MaxKarmaToKeep(), ecorePackage.getEInt(), "maxKarmaToKeep", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(metaTypeEClass, MetaType.class, "MetaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getMetaType_ChoosableTypes(), theShr5Package.getSpezies(), null, "choosableTypes", null, 1, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1880,6 +1983,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+        op = initEOperation(getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllResourcePoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
         initEClass(attributeChangeEClass, AttributeChange.class, "AttributeChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(playerCharacterEClass, PlayerCharacter.class, "PlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1913,6 +2025,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(changeQuallityEClass, ChangeQuallity.class, "ChangeQuallity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(quallityChangeEClass, QuallityChange.class, "QuallityChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(lifestyleToStartMoneyEClass, LifestyleToStartMoney.class, "LifestyleToStartMoney", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getLifestyleToStartMoney_NumberOfW(), ecorePackage.getEInt(), "numberOfW", null, 0, 1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifestyleToStartMoney_MoneyFactor(), ecorePackage.getEInt(), "moneyFactor", null, 0, 1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLifestyleToStartMoney_LifeStyles(), theShr5Package.getLifestyle(), null, "lifeStyles", null, 0, -1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

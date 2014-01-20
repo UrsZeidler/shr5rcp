@@ -40,6 +40,7 @@
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PrioritySystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PrioritySystem/priorities"/>
@@ -62,6 +63,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfMaxAttributes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/knowlegeSkillFactor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/charismaToConnectionFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxResourceToKeep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToResources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//MetaType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//MetaType/choosableTypes"/>
@@ -176,6 +180,10 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints/context"/>
       </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllResourcePoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllResourcePoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllResourcePoints/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter"/>
@@ -205,5 +213,10 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ChangeQuallity"/>
     <genClasses ecoreClass="shr5Management.ecore#//QuallityChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//LifestyleToStartMoney">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/numberOfW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/moneyFactor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifestyleToStartMoney/lifeStyles"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

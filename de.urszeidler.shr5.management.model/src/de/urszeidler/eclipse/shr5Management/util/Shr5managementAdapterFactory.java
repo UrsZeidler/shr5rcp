@@ -222,6 +222,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createQuallityChangeAdapter();
             }
             @Override
+            public Adapter caseLifestyleToStartMoney(LifestyleToStartMoney object) {
+                return createLifestyleToStartMoneyAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -698,6 +702,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
     }
 
 	/**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney
+     * @generated
+     */
+    public Adapter createLifestyleToStartMoneyAdapter() {
+        return null;
+    }
+
+    /**
      * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Beschreibbar <em>Beschreibbar</em>}'.
      * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;

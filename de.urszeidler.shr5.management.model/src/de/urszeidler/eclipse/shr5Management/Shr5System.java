@@ -17,6 +17,9 @@ package de.urszeidler.eclipse.shr5Management;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfMaxAttributes <em>Number Of Max Attributes</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKnowlegeSkillFactor <em>Knowlege Skill Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getCharismaToConnectionFactor <em>Charisma To Connection Factor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxResourceToKeep <em>Max Resource To Keep</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToResources <em>Max Karma To Resources</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToKeep <em>Max Karma To Keep</em>}</li>
  * </ul>
  * </p>
  *
@@ -155,4 +158,82 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
 	void setCharismaToConnectionFactor(int value);
+
+    /**
+     * Returns the value of the '<em><b>Max Resource To Keep</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Max Resource To Keep</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Max Resource To Keep</em>' attribute.
+     * @see #setMaxResourceToKeep(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxResourceToKeep()
+     * @model required="true"
+     * @generated
+     */
+    int getMaxResourceToKeep();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxResourceToKeep <em>Max Resource To Keep</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Max Resource To Keep</em>' attribute.
+     * @see #getMaxResourceToKeep()
+     * @generated
+     */
+    void setMaxResourceToKeep(int value);
+
+    /**
+     * Returns the value of the '<em><b>Max Karma To Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Max Karma To Resources</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Max Karma To Resources</em>' attribute.
+     * @see #setMaxKarmaToResources(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxKarmaToResources()
+     * @model required="true"
+     * @generated
+     */
+    int getMaxKarmaToResources();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToResources <em>Max Karma To Resources</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Max Karma To Resources</em>' attribute.
+     * @see #getMaxKarmaToResources()
+     * @generated
+     */
+    void setMaxKarmaToResources(int value);
+
+    /**
+     * Returns the value of the '<em><b>Max Karma To Keep</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Max Karma To Keep</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Max Karma To Keep</em>' attribute.
+     * @see #setMaxKarmaToKeep(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxKarmaToKeep()
+     * @model
+     * @generated
+     */
+    int getMaxKarmaToKeep();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToKeep <em>Max Karma To Keep</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Max Karma To Keep</em>' attribute.
+     * @see #getMaxKarmaToKeep()
+     * @generated
+     */
+    void setMaxKarmaToKeep(int value);
 } // Shr5System

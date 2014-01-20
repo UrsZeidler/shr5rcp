@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EMap;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,4 +60,20 @@ public interface CharacterGeneratorSystem extends Beschreibbar, Quelle {
      * @generated
      */
 	EList<Advancement> getCharacterAdvancements();
+
+    /**
+     * Returns the value of the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Lifestyle To Start Money</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Lifestyle To Start Money</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGeneratorSystem_LifestyleToStartMoney()
+     * @model containment="true"
+     * @generated
+     */
+    EList<LifestyleToStartMoney> getLifestyleToStartMoney();
 } // CharacterGeneratorSystem

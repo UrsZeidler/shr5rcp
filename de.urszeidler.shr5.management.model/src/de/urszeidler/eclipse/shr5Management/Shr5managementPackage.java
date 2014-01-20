@@ -298,13 +298,22 @@ public interface Shr5managementPackage extends EPackage {
 	int CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
 
 	/**
+     * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Character Generator System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+	int CHARACTER_GENERATOR_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
 	/**
      * The number of operations of the '<em>Character Generator System</em>' class.
@@ -389,6 +398,15 @@ public interface Shr5managementPackage extends EPackage {
 	int PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
 
 	/**
+     * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PRIORITY_SYSTEM__LIFESTYLE_TO_START_MONEY = CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
      * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -744,6 +762,15 @@ public interface Shr5managementPackage extends EPackage {
 	int FREE_STYLE__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
 
 	/**
+     * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_STYLE__LIFESTYLE_TO_START_MONEY = CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
      * The number of structural features of the '<em>Free Style</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -872,6 +899,15 @@ public interface Shr5managementPackage extends EPackage {
 	int SHR5_SYSTEM__CHARACTER_ADVANCEMENTS = PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS;
 
 	/**
+     * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__LIFESTYLE_TO_START_MONEY = PRIORITY_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
      * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -935,13 +971,40 @@ public interface Shr5managementPackage extends EPackage {
 	int SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR = PRIORITY_SYSTEM_FEATURE_COUNT + 4;
 
 	/**
+     * The feature id for the '<em><b>Max Resource To Keep</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP = PRIORITY_SYSTEM_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Max Karma To Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES = PRIORITY_SYSTEM_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Max Karma To Keep</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__MAX_KARMA_TO_KEEP = PRIORITY_SYSTEM_FEATURE_COUNT + 7;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 5;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 8;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -2035,13 +2098,22 @@ public interface Shr5managementPackage extends EPackage {
 	int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 7;
 
 	/**
+     * The operation id for the '<em>Has Not Spend All Resource Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 8;
+
+    /**
      * The number of operations of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 8;
+	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 9;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl <em>Persona Value Change</em>}' class.
@@ -2823,6 +2895,61 @@ public interface Shr5managementPackage extends EPackage {
 	int QUALLITY_CHANGE_OPERATION_COUNT = KARMA_GAINT_OPERATION_COUNT + 0;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl <em>Lifestyle To Start Money</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifestyleToStartMoney()
+     * @generated
+     */
+    int LIFESTYLE_TO_START_MONEY = 32;
+
+    /**
+     * The feature id for the '<em><b>Number Of W</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_TO_START_MONEY__NUMBER_OF_W = 0;
+
+    /**
+     * The feature id for the '<em><b>Money Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_TO_START_MONEY__MONEY_FACTOR = 1;
+
+    /**
+     * The feature id for the '<em><b>Life Styles</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_TO_START_MONEY__LIFE_STYLES = 2;
+
+    /**
+     * The number of structural features of the '<em>Lifestyle To Start Money</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_TO_START_MONEY_FEATURE_COUNT = 3;
+
+    /**
+     * The number of operations of the '<em>Lifestyle To Start Money</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_TO_START_MONEY_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2830,7 +2957,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 32;
+	int GENERATOR_STATE = 33;
 
 
 	/**
@@ -2841,7 +2968,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 33;
+	int SEX = 34;
 
 
 	/**
@@ -3052,6 +3179,17 @@ public interface Shr5managementPackage extends EPackage {
 	EReference getCharacterGeneratorSystem_CharacterAdvancements();
 
 	/**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Lifestyle To Start Money</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney()
+     * @see #getCharacterGeneratorSystem()
+     * @generated
+     */
+    EReference getCharacterGeneratorSystem_LifestyleToStartMoney();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PrioritySystem <em>Priority System</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3232,6 +3370,39 @@ public interface Shr5managementPackage extends EPackage {
 	EAttribute getShr5System_CharismaToConnectionFactor();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxResourceToKeep <em>Max Resource To Keep</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Max Resource To Keep</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getMaxResourceToKeep()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_MaxResourceToKeep();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToResources <em>Max Karma To Resources</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Max Karma To Resources</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToResources()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_MaxKarmaToResources();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToKeep <em>Max Karma To Keep</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Max Karma To Keep</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToKeep()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_MaxKarmaToKeep();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3852,6 +4023,16 @@ public interface Shr5managementPackage extends EPackage {
 	EOperation getShr5Generator__HasNotSpendAllConnectionPoints__DiagnosticChain_Map();
 
 	/**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Resource Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not Spend All Resource Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.AttributeChange <em>Attribute Change</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4084,6 +4265,49 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getQuallityChange();
 
 	/**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Lifestyle To Start Money</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney
+     * @generated
+     */
+    EClass getLifestyleToStartMoney();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney#getNumberOfW <em>Number Of W</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Number Of W</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney#getNumberOfW()
+     * @see #getLifestyleToStartMoney()
+     * @generated
+     */
+    EAttribute getLifestyleToStartMoney_NumberOfW();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney#getMoneyFactor <em>Money Factor</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Money Factor</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney#getMoneyFactor()
+     * @see #getLifestyleToStartMoney()
+     * @generated
+     */
+    EAttribute getLifestyleToStartMoney_MoneyFactor();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney#getLifeStyles <em>Life Styles</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Life Styles</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney#getLifeStyles()
+     * @see #getLifestyleToStartMoney()
+     * @generated
+     */
+    EReference getLifestyleToStartMoney_LifeStyles();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4283,6 +4507,14 @@ public interface Shr5managementPackage extends EPackage {
 		EReference CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = eINSTANCE.getCharacterGeneratorSystem_CharacterAdvancements();
 
 		/**
+         * The meta object literal for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY = eINSTANCE.getCharacterGeneratorSystem_LifestyleToStartMoney();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PrioritySystemImpl <em>Priority System</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4433,6 +4665,30 @@ public interface Shr5managementPackage extends EPackage {
 		EAttribute SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR = eINSTANCE.getShr5System_CharismaToConnectionFactor();
 
 		/**
+         * The meta object literal for the '<em><b>Max Resource To Keep</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP = eINSTANCE.getShr5System_MaxResourceToKeep();
+
+        /**
+         * The meta object literal for the '<em><b>Max Karma To Resources</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES = eINSTANCE.getShr5System_MaxKarmaToResources();
+
+        /**
+         * The meta object literal for the '<em><b>Max Karma To Keep</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__MAX_KARMA_TO_KEEP = eINSTANCE.getShr5System_MaxKarmaToKeep();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4927,6 +5183,14 @@ public interface Shr5managementPackage extends EPackage {
 		EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllConnectionPoints__DiagnosticChain_Map();
 
 		/**
+         * The meta object literal for the '<em><b>Has Not Spend All Resource Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl <em>Attribute Change</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5127,6 +5391,40 @@ public interface Shr5managementPackage extends EPackage {
 		EClass QUALLITY_CHANGE = eINSTANCE.getQuallityChange();
 
 		/**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl <em>Lifestyle To Start Money</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifestyleToStartMoney()
+         * @generated
+         */
+        EClass LIFESTYLE_TO_START_MONEY = eINSTANCE.getLifestyleToStartMoney();
+
+        /**
+         * The meta object literal for the '<em><b>Number Of W</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFESTYLE_TO_START_MONEY__NUMBER_OF_W = eINSTANCE.getLifestyleToStartMoney_NumberOfW();
+
+        /**
+         * The meta object literal for the '<em><b>Money Factor</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFESTYLE_TO_START_MONEY__MONEY_FACTOR = eINSTANCE.getLifestyleToStartMoney_MoneyFactor();
+
+        /**
+         * The meta object literal for the '<em><b>Life Styles</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFESTYLE_TO_START_MONEY__LIFE_STYLES = eINSTANCE.getLifestyleToStartMoney_LifeStyles();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

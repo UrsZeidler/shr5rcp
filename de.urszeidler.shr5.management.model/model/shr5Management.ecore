@@ -40,6 +40,8 @@
         eType="#//GeneratorStateToEStringMapEntry" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
         upperBound="-1" eType="#//Advancement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifestyleToStartMoney"
+        upperBound="-1" eType="#//LifestyleToStartMoney" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrioritySystem" abstract="true" eSuperTypes="#//CharacterGeneratorSystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="priorities" upperBound="-1"
@@ -69,6 +71,11 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="charismaToConnectionFactor"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxResourceToKeep" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxKarmaToResources" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxKarmaToKeep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaType" eSuperTypes="#//PriorityCategorie">
     <eOperations name="calcSpecialPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -228,6 +235,15 @@
         </eGenericType>
       </eParameters>
     </eOperations>
+    <eOperations name="hasNotSpendAllResourcePoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resourcen" lowerBound="1"
         eType="#//Resourcen"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="skills" lowerBound="1"
@@ -286,4 +302,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChangeQuallity" eSuperTypes="#//Advancement"/>
   <eClassifiers xsi:type="ecore:EClass" name="QuallityChange" eSuperTypes="#//KarmaGaint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LifestyleToStartMoney">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moneyFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifeStyles" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle"/>
+  </eClassifiers>
 </ecore:EPackage>

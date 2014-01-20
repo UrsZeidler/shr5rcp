@@ -128,12 +128,20 @@ public class Shr5managementValidator extends EObjectValidator {
 	public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_CONNECTION_POINTS = 8;
 
 	/**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Resource Points' of 'Shr5 Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS = 9;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 8;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 9;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -237,6 +245,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateChangeQuallity((ChangeQuallity)value, diagnostics, context);
             case Shr5managementPackage.QUALLITY_CHANGE:
                 return validateQuallityChange((QuallityChange)value, diagnostics, context);
+            case Shr5managementPackage.LIFESTYLE_TO_START_MONEY:
+                return validateLifestyleToStartMoney((LifestyleToStartMoney)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -440,6 +450,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllSpecialPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllSpecialTypePoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllConnectionPoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllResourcePoints(shr5Generator, diagnostics, context);
         return result;
     }
 
@@ -524,6 +535,16 @@ public class Shr5managementValidator extends EObjectValidator {
     }
 
 	/**
+     * Validates the hasNotSpendAllResourcePoints constraint of '<em>Shr5 Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5Generator_hasNotSpendAllResourcePoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasNotSpendAllResourcePoints(diagnostics, context);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -632,6 +653,15 @@ public class Shr5managementValidator extends EObjectValidator {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateLifestyleToStartMoney(LifestyleToStartMoney lifestyleToStartMoney, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(lifestyleToStartMoney, diagnostics, context);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
