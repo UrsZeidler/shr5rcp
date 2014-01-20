@@ -360,8 +360,8 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         managedForm.getToolkit().paintBordersFor(grpResourcen);
         grpResourcen.setLayout(new FillLayout(SWT.HORIZONTAL));
         
-        controlDecorationResources = new ControlDecoration(grpResourcen, SWT.LEFT | SWT.TOP);
-        controlDecorationResources.setDescriptionText("Some description");
+        controlDecorationResources = new ControlDecoration(grpResourcen, SWT.RIGHT | SWT.TOP);
+
 
         grpMetatyp = new Group(composite_3, SWT.NONE);
         grpMetatyp.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -526,6 +526,25 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
             controlDecorationMagic.setDescriptionText("");
             controlDecorationMagic.setImage(null);
         }
+        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS)) {
+            controlDecorationResources.setDescriptionText("Not all resource points spend.");
+            controlDecorationResources.setImage(decoratorImage);
+            controlDecorationResources.setShowHover(true);
+            controlDecorationResources.showHoverText("Not all resource points spend.");
+        } else if (controlDecorationResources.getImage() != null) {
+            controlDecorationResources.setDescriptionText("");
+            controlDecorationResources.setImage(null);
+        }
+//        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_)) {
+//            controlDecorationResources.setDescriptionText("Not all resource points spend.");
+//            controlDecorationResources.setImage(decoratorImage);
+//            controlDecorationResources.setShowHover(true);
+//            controlDecorationResources.showHoverText("Not all resource points spend.");
+//        } else if (controlDecorationResources.getImage() != null) {
+//            controlDecorationResources.setDescriptionText("");
+//            controlDecorationResources.setImage(null);
+//        }
+
     }
 
     private void createManagedCharacter() {

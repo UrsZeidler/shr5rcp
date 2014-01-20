@@ -424,7 +424,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_3yNd8XVPEeOo3ey905tymg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5Management.ecore#//Shr5Generator"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3yNd8nVPEeOo3ey905tymg" x="-290" y="575"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3yNd8nVPEeOo3ey905tymg" x="-290" y="620"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_Vgx6YHiXEeO6e8ppJ02iOw" type="1001">
       <children xmi:type="notation:Node" xmi:id="_VgyhcHiXEeO6e8ppJ02iOw" type="4001"/>
