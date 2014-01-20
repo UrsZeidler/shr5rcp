@@ -38,331 +38,331 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
 	/**
-	 * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWert()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getWert()
+     * @generated
+     * @ordered
+     */
 	protected static final BigDecimal WERT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWert()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getWert()
+     * @generated
+     * @ordered
+     */
 	protected BigDecimal wert = WERT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVerfuegbarkeit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getVerfuegbarkeit()
+     * @generated
+     * @ordered
+     */
 	protected static final String VERFUEGBARKEIT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVerfuegbarkeit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getVerfuegbarkeit()
+     * @generated
+     * @ordered
+     */
 	protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPersona() <em>Persona</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getPersona() <em>Persona</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPersona()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getPersona()
+     * @generated
+     * @ordered
+     */
 	protected AbstraktPersona persona;
 
 	/**
-	 * The cached value of the '{@link #getEinbau() <em>Einbau</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getEinbau() <em>Einbau</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEinbau()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getEinbau()
+     * @generated
+     * @ordered
+     */
 	protected EList<AbstraktGegenstand> einbau;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CyberwareImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.CYBERWARE;
-	}
+        return Shr5Package.Literals.CYBERWARE;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public BigDecimal getWert() {
-		return wert;
-	}
+        return wert;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setWert(BigDecimal newWert) {
-		BigDecimal oldWert = wert;
-		wert = newWert;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__WERT, oldWert, wert));
-	}
+        BigDecimal oldWert = wert;
+        wert = newWert;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__WERT, oldWert, wert));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getVerfuegbarkeit() {
-		return verfuegbarkeit;
-	}
+        return verfuegbarkeit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setVerfuegbarkeit(String newVerfuegbarkeit) {
-		String oldVerfuegbarkeit = verfuegbarkeit;
-		verfuegbarkeit = newVerfuegbarkeit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__VERFUEGBARKEIT, oldVerfuegbarkeit, verfuegbarkeit));
-	}
+        String oldVerfuegbarkeit = verfuegbarkeit;
+        verfuegbarkeit = newVerfuegbarkeit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__VERFUEGBARKEIT, oldVerfuegbarkeit, verfuegbarkeit));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AbstraktPersona getPersona() {
-		if (persona != null && persona.eIsProxy()) {
-			InternalEObject oldPersona = (InternalEObject)persona;
-			persona = (AbstraktPersona)eResolveProxy(oldPersona);
-			if (persona != oldPersona) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.CYBERWARE__PERSONA, oldPersona, persona));
-			}
-		}
-		return persona;
-	}
+        if (persona != null && persona.eIsProxy()) {
+            InternalEObject oldPersona = (InternalEObject)persona;
+            persona = (AbstraktPersona)eResolveProxy(oldPersona);
+            if (persona != oldPersona) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.CYBERWARE__PERSONA, oldPersona, persona));
+            }
+        }
+        return persona;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AbstraktPersona basicGetPersona() {
-		return persona;
-	}
+        return persona;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setPersona(AbstraktPersona newPersona) {
-		AbstraktPersona oldPersona = persona;
-		persona = newPersona;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__PERSONA, oldPersona, persona));
-	}
+        AbstraktPersona oldPersona = persona;
+        persona = newPersona;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__PERSONA, oldPersona, persona));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<AbstraktGegenstand> getEinbau() {
-		if (einbau == null) {
-			einbau = new EObjectContainmentEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, Shr5Package.CYBERWARE__EINBAU);
-		}
-		return einbau;
-	}
+        if (einbau == null) {
+            einbau = new EObjectContainmentEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, Shr5Package.CYBERWARE__EINBAU);
+        }
+        return einbau;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Shr5Package.CYBERWARE__EINBAU:
-				return ((InternalEList<?>)getEinbau()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case Shr5Package.CYBERWARE__EINBAU:
+                return ((InternalEList<?>)getEinbau()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.CYBERWARE__WERT:
-				return getWert();
-			case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
-				return getVerfuegbarkeit();
-			case Shr5Package.CYBERWARE__PERSONA:
-				if (resolve) return getPersona();
-				return basicGetPersona();
-			case Shr5Package.CYBERWARE__EINBAU:
-				return getEinbau();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.CYBERWARE__WERT:
+                return getWert();
+            case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
+                return getVerfuegbarkeit();
+            case Shr5Package.CYBERWARE__PERSONA:
+                if (resolve) return getPersona();
+                return basicGetPersona();
+            case Shr5Package.CYBERWARE__EINBAU:
+                return getEinbau();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.CYBERWARE__WERT:
-				setWert((BigDecimal)newValue);
-				return;
-			case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
-				setVerfuegbarkeit((String)newValue);
-				return;
-			case Shr5Package.CYBERWARE__PERSONA:
-				setPersona((AbstraktPersona)newValue);
-				return;
-			case Shr5Package.CYBERWARE__EINBAU:
-				getEinbau().clear();
-				getEinbau().addAll((Collection<? extends AbstraktGegenstand>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.CYBERWARE__WERT:
+                setWert((BigDecimal)newValue);
+                return;
+            case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
+                setVerfuegbarkeit((String)newValue);
+                return;
+            case Shr5Package.CYBERWARE__PERSONA:
+                setPersona((AbstraktPersona)newValue);
+                return;
+            case Shr5Package.CYBERWARE__EINBAU:
+                getEinbau().clear();
+                getEinbau().addAll((Collection<? extends AbstraktGegenstand>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.CYBERWARE__WERT:
-				setWert(WERT_EDEFAULT);
-				return;
-			case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
-				setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
-				return;
-			case Shr5Package.CYBERWARE__PERSONA:
-				setPersona((AbstraktPersona)null);
-				return;
-			case Shr5Package.CYBERWARE__EINBAU:
-				getEinbau().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.CYBERWARE__WERT:
+                setWert(WERT_EDEFAULT);
+                return;
+            case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
+                setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
+                return;
+            case Shr5Package.CYBERWARE__PERSONA:
+                setPersona((AbstraktPersona)null);
+                return;
+            case Shr5Package.CYBERWARE__EINBAU:
+                getEinbau().clear();
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.CYBERWARE__WERT:
-				return WERT_EDEFAULT == null ? wert != null : !WERT_EDEFAULT.equals(wert);
-			case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
-				return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
-			case Shr5Package.CYBERWARE__PERSONA:
-				return persona != null;
-			case Shr5Package.CYBERWARE__EINBAU:
-				return einbau != null && !einbau.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.CYBERWARE__WERT:
+                return WERT_EDEFAULT == null ? wert != null : !WERT_EDEFAULT.equals(wert);
+            case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
+                return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
+            case Shr5Package.CYBERWARE__PERSONA:
+                return persona != null;
+            case Shr5Package.CYBERWARE__EINBAU:
+                return einbau != null && !einbau.isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == GeldWert.class) {
-			switch (derivedFeatureID) {
-				case Shr5Package.CYBERWARE__WERT: return Shr5Package.GELD_WERT__WERT;
-				case Shr5Package.CYBERWARE__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+        if (baseClass == GeldWert.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.CYBERWARE__WERT: return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.CYBERWARE__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == GeldWert.class) {
-			switch (baseFeatureID) {
-				case Shr5Package.GELD_WERT__WERT: return Shr5Package.CYBERWARE__WERT;
-				case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+        if (baseClass == GeldWert.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.GELD_WERT__WERT: return Shr5Package.CYBERWARE__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (wert: ");
-		result.append(wert);
-		result.append(", verfuegbarkeit: ");
-		result.append(verfuegbarkeit);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (wert: ");
+        result.append(wert);
+        result.append(", verfuegbarkeit: ");
+        result.append(verfuegbarkeit);
+        result.append(')');
+        return result.toString();
+    }
 
 } //CyberwareImpl

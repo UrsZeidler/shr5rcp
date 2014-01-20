@@ -38,8 +38,8 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
 	 * @generated
 	 */
 	public MetaTypeItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
 	 * This returns the property descriptors for the adapted class. <!--
@@ -49,14 +49,14 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
 	 */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addChoosableTypesPropertyDescriptor(object);
-			addSpecialPointsPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addChoosableTypesPropertyDescriptor(object);
+            addSpecialPointsPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
 	 * This adds a property descriptor for the Choosable Types feature. <!--
@@ -65,20 +65,20 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
 	 * @generated
 	 */
 	protected void addChoosableTypesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MetaType_choosableTypes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MetaType_choosableTypes_feature", "_UI_MetaType_type"),
-				 Shr5managementPackage.Literals.META_TYPE__CHOOSABLE_TYPES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MetaType_choosableTypes_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MetaType_choosableTypes_feature", "_UI_MetaType_type"),
+                 Shr5managementPackage.Literals.META_TYPE__CHOOSABLE_TYPES,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This adds a property descriptor for the Special Points feature. <!--
@@ -87,30 +87,30 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
 	 * @generated
 	 */
 	protected void addSpecialPointsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MetaType_specialPoints_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MetaType_specialPoints_feature", "_UI_MetaType_type"),
-				 Shr5managementPackage.Literals.META_TYPE__SPECIAL_POINTS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MetaType_specialPoints_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MetaType_specialPoints_feature", "_UI_MetaType_type"),
+                 Shr5managementPackage.Literals.META_TYPE__SPECIAL_POINTS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This returns MetaType.gif.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * This returns MetaType.gif.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MetaType"));
-	}
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/MetaType"));
+    }
 
 	/**
 	 * This returns the label text for the adapted class. <!-- begin-user-doc
@@ -139,23 +139,23 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc --> <!--
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(MetaType.class)) {
-			case Shr5managementPackage.META_TYPE__SPECIAL_POINTS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(MetaType.class)) {
+            case Shr5managementPackage.META_TYPE__SPECIAL_POINTS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
 	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
@@ -166,7 +166,7 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 }

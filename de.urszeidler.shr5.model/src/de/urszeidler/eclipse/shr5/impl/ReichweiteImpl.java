@@ -32,508 +32,508 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reichweite {
 	/**
-	 * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBeschreibung()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
 	protected static final String BESCHREIBUNG_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBeschreibung()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
 	protected String beschreibung = BESCHREIBUNG_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImage()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
 	protected static final String IMAGE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImage()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
 	protected String image = IMAGE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
 	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMin() <em>Min</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getMin() <em>Min</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMin()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMin()
+     * @generated
+     * @ordered
+     */
 	protected static final int MIN_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getMin() <em>Min</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getMin() <em>Min</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMin()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMin()
+     * @generated
+     * @ordered
+     */
 	protected int min = MIN_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getKurz() <em>Kurz</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getKurz() <em>Kurz</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKurz()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKurz()
+     * @generated
+     * @ordered
+     */
 	protected static final int KURZ_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getKurz() <em>Kurz</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getKurz() <em>Kurz</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKurz()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKurz()
+     * @generated
+     * @ordered
+     */
 	protected int kurz = KURZ_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMittel() <em>Mittel</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getMittel() <em>Mittel</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMittel()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMittel()
+     * @generated
+     * @ordered
+     */
 	protected static final int MITTEL_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getMittel() <em>Mittel</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getMittel() <em>Mittel</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMittel()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMittel()
+     * @generated
+     * @ordered
+     */
 	protected int mittel = MITTEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getWeit() <em>Weit</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getWeit() <em>Weit</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWeit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getWeit()
+     * @generated
+     * @ordered
+     */
 	protected static final int WEIT_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getWeit() <em>Weit</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getWeit() <em>Weit</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWeit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getWeit()
+     * @generated
+     * @ordered
+     */
 	protected int weit = WEIT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getExtrem() <em>Extrem</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getExtrem() <em>Extrem</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExtrem()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getExtrem()
+     * @generated
+     * @ordered
+     */
 	protected static final int EXTREM_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getExtrem() <em>Extrem</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getExtrem() <em>Extrem</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExtrem()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getExtrem()
+     * @generated
+     * @ordered
+     */
 	protected int extrem = EXTREM_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ReichweiteImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.REICHWEITE;
-	}
+        return Shr5Package.Literals.REICHWEITE;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getName() {
-		return name;
-	}
+        return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__NAME, oldName, name));
-	}
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__NAME, oldName, name));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getBeschreibung() {
-		return beschreibung;
-	}
+        return beschreibung;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setBeschreibung(String newBeschreibung) {
-		String oldBeschreibung = beschreibung;
-		beschreibung = newBeschreibung;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__BESCHREIBUNG, oldBeschreibung, beschreibung));
-	}
+        String oldBeschreibung = beschreibung;
+        beschreibung = newBeschreibung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__BESCHREIBUNG, oldBeschreibung, beschreibung));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getImage() {
-		return image;
-	}
+        return image;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setImage(String newImage) {
-		String oldImage = image;
-		image = newImage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__IMAGE, oldImage, image));
-	}
+        String oldImage = image;
+        image = newImage;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__IMAGE, oldImage, image));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getMin() {
-		return min;
-	}
+        return min;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setMin(int newMin) {
-		int oldMin = min;
-		min = newMin;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__MIN, oldMin, min));
-	}
+        int oldMin = min;
+        min = newMin;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__MIN, oldMin, min));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getKurz() {
-		return kurz;
-	}
+        return kurz;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setKurz(int newKurz) {
-		int oldKurz = kurz;
-		kurz = newKurz;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__KURZ, oldKurz, kurz));
-	}
+        int oldKurz = kurz;
+        kurz = newKurz;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__KURZ, oldKurz, kurz));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getMittel() {
-		return mittel;
-	}
+        return mittel;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setMittel(int newMittel) {
-		int oldMittel = mittel;
-		mittel = newMittel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__MITTEL, oldMittel, mittel));
-	}
+        int oldMittel = mittel;
+        mittel = newMittel;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__MITTEL, oldMittel, mittel));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getWeit() {
-		return weit;
-	}
+        return weit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setWeit(int newWeit) {
-		int oldWeit = weit;
-		weit = newWeit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__WEIT, oldWeit, weit));
-	}
+        int oldWeit = weit;
+        weit = newWeit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__WEIT, oldWeit, weit));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getExtrem() {
-		return extrem;
-	}
+        return extrem;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setExtrem(int newExtrem) {
-		int oldExtrem = extrem;
-		extrem = newExtrem;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__EXTREM, oldExtrem, extrem));
-	}
+        int oldExtrem = extrem;
+        extrem = newExtrem;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__EXTREM, oldExtrem, extrem));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.REICHWEITE__BESCHREIBUNG:
-				return getBeschreibung();
-			case Shr5Package.REICHWEITE__IMAGE:
-				return getImage();
-			case Shr5Package.REICHWEITE__NAME:
-				return getName();
-			case Shr5Package.REICHWEITE__MIN:
-				return getMin();
-			case Shr5Package.REICHWEITE__KURZ:
-				return getKurz();
-			case Shr5Package.REICHWEITE__MITTEL:
-				return getMittel();
-			case Shr5Package.REICHWEITE__WEIT:
-				return getWeit();
-			case Shr5Package.REICHWEITE__EXTREM:
-				return getExtrem();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.REICHWEITE__BESCHREIBUNG:
+                return getBeschreibung();
+            case Shr5Package.REICHWEITE__IMAGE:
+                return getImage();
+            case Shr5Package.REICHWEITE__NAME:
+                return getName();
+            case Shr5Package.REICHWEITE__MIN:
+                return getMin();
+            case Shr5Package.REICHWEITE__KURZ:
+                return getKurz();
+            case Shr5Package.REICHWEITE__MITTEL:
+                return getMittel();
+            case Shr5Package.REICHWEITE__WEIT:
+                return getWeit();
+            case Shr5Package.REICHWEITE__EXTREM:
+                return getExtrem();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.REICHWEITE__BESCHREIBUNG:
-				setBeschreibung((String)newValue);
-				return;
-			case Shr5Package.REICHWEITE__IMAGE:
-				setImage((String)newValue);
-				return;
-			case Shr5Package.REICHWEITE__NAME:
-				setName((String)newValue);
-				return;
-			case Shr5Package.REICHWEITE__MIN:
-				setMin((Integer)newValue);
-				return;
-			case Shr5Package.REICHWEITE__KURZ:
-				setKurz((Integer)newValue);
-				return;
-			case Shr5Package.REICHWEITE__MITTEL:
-				setMittel((Integer)newValue);
-				return;
-			case Shr5Package.REICHWEITE__WEIT:
-				setWeit((Integer)newValue);
-				return;
-			case Shr5Package.REICHWEITE__EXTREM:
-				setExtrem((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.REICHWEITE__BESCHREIBUNG:
+                setBeschreibung((String)newValue);
+                return;
+            case Shr5Package.REICHWEITE__IMAGE:
+                setImage((String)newValue);
+                return;
+            case Shr5Package.REICHWEITE__NAME:
+                setName((String)newValue);
+                return;
+            case Shr5Package.REICHWEITE__MIN:
+                setMin((Integer)newValue);
+                return;
+            case Shr5Package.REICHWEITE__KURZ:
+                setKurz((Integer)newValue);
+                return;
+            case Shr5Package.REICHWEITE__MITTEL:
+                setMittel((Integer)newValue);
+                return;
+            case Shr5Package.REICHWEITE__WEIT:
+                setWeit((Integer)newValue);
+                return;
+            case Shr5Package.REICHWEITE__EXTREM:
+                setExtrem((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.REICHWEITE__BESCHREIBUNG:
-				setBeschreibung(BESCHREIBUNG_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__IMAGE:
-				setImage(IMAGE_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__MIN:
-				setMin(MIN_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__KURZ:
-				setKurz(KURZ_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__MITTEL:
-				setMittel(MITTEL_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__WEIT:
-				setWeit(WEIT_EDEFAULT);
-				return;
-			case Shr5Package.REICHWEITE__EXTREM:
-				setExtrem(EXTREM_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.REICHWEITE__BESCHREIBUNG:
+                setBeschreibung(BESCHREIBUNG_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__IMAGE:
+                setImage(IMAGE_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__NAME:
+                setName(NAME_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__MIN:
+                setMin(MIN_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__KURZ:
+                setKurz(KURZ_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__MITTEL:
+                setMittel(MITTEL_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__WEIT:
+                setWeit(WEIT_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__EXTREM:
+                setExtrem(EXTREM_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.REICHWEITE__BESCHREIBUNG:
-				return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
-			case Shr5Package.REICHWEITE__IMAGE:
-				return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
-			case Shr5Package.REICHWEITE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Shr5Package.REICHWEITE__MIN:
-				return min != MIN_EDEFAULT;
-			case Shr5Package.REICHWEITE__KURZ:
-				return kurz != KURZ_EDEFAULT;
-			case Shr5Package.REICHWEITE__MITTEL:
-				return mittel != MITTEL_EDEFAULT;
-			case Shr5Package.REICHWEITE__WEIT:
-				return weit != WEIT_EDEFAULT;
-			case Shr5Package.REICHWEITE__EXTREM:
-				return extrem != EXTREM_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.REICHWEITE__BESCHREIBUNG:
+                return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
+            case Shr5Package.REICHWEITE__IMAGE:
+                return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
+            case Shr5Package.REICHWEITE__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.REICHWEITE__MIN:
+                return min != MIN_EDEFAULT;
+            case Shr5Package.REICHWEITE__KURZ:
+                return kurz != KURZ_EDEFAULT;
+            case Shr5Package.REICHWEITE__MITTEL:
+                return mittel != MITTEL_EDEFAULT;
+            case Shr5Package.REICHWEITE__WEIT:
+                return weit != WEIT_EDEFAULT;
+            case Shr5Package.REICHWEITE__EXTREM:
+                return extrem != EXTREM_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (beschreibung: ");
-		result.append(beschreibung);
-		result.append(", image: ");
-		result.append(image);
-		result.append(", name: ");
-		result.append(name);
-		result.append(", min: ");
-		result.append(min);
-		result.append(", kurz: ");
-		result.append(kurz);
-		result.append(", mittel: ");
-		result.append(mittel);
-		result.append(", weit: ");
-		result.append(weit);
-		result.append(", extrem: ");
-		result.append(extrem);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (beschreibung: ");
+        result.append(beschreibung);
+        result.append(", image: ");
+        result.append(image);
+        result.append(", name: ");
+        result.append(name);
+        result.append(", min: ");
+        result.append(min);
+        result.append(", kurz: ");
+        result.append(kurz);
+        result.append(", mittel: ");
+        result.append(mittel);
+        result.append(", weit: ");
+        result.append(weit);
+        result.append(", extrem: ");
+        result.append(extrem);
+        result.append(')');
+        return result.toString();
+    }
 
 } //ReichweiteImpl

@@ -19,22 +19,22 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerCharacter {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PlayerCharacterImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.PLAYER_CHARACTER;
-	}
+        return Shr5managementPackage.Literals.PLAYER_CHARACTER;
+    }
 
 } //PlayerCharacterImpl

@@ -16,6 +16,9 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * The following features are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Panzerung#getPanzer() <em>Panzer</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandKoerperlichMax() <em>Zustand Koerperlich Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGeistigMax() <em>Zustand Geistig Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGrenze() <em>Zustand Grenze</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -29,8 +32,8 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
 	 * @generated
 	 */
 	public KoerperPersonaTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
 	 * Returns the fixture for this Koerper Persona test case. <!--
@@ -40,8 +43,8 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
 	 */
 	@Override
 	protected KoerperPersona getFixture() {
-		return (KoerperPersona)fixture;
-	}
+        return (KoerperPersona)fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.Panzerung#getPanzer()
@@ -66,7 +69,57 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
 
 	}
 
-	public void testBioWare() {
+	/**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandKoerperlichMax() <em>Zustand Koerperlich Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.PersonaZustand#getZustandKoerperlichMax()
+     * @generated not
+     */
+    public void testGetZustandKoerperlichMax() {
+     getFixture().setKonstitutionBasis(4);
+     assertEquals("should be 10", 10, getFixture().getZustandKoerperlichMax());
+     getFixture().setKonstitutionBasis(5);
+     assertEquals("should be 10", 10, getFixture().getZustandKoerperlichMax());
+     getFixture().setKonstitutionBasis(5);
+     assertEquals("should be 10", 10, getFixture().getZustandKoerperlichMax());
+     getFixture().setKonstitutionBasis(6);
+     assertEquals("should be 11", 11, getFixture().getZustandKoerperlichMax());        
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGeistigMax() <em>Zustand Geistig Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGeistigMax()
+     * @generated not
+     */
+    public void testGetZustandGeistigMax() {
+        getFixture().setWillenskraftBasis(4);
+        assertEquals("should be 10", 10, getFixture().getZustandGeistigMax());
+        getFixture().setWillenskraftBasis(5);
+        assertEquals("should be 10", 10, getFixture().getZustandGeistigMax());
+        getFixture().setWillenskraftBasis(6);
+        assertEquals("should be 11", 11, getFixture().getZustandGeistigMax());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGrenze() <em>Zustand Grenze</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGrenze()
+     * @generated not
+     */
+    public void testGetZustandGrenze() {
+        getFixture().setKonstitutionBasis(4);
+        assertEquals("should be 4", 4, getFixture().getZustandGrenze());
+        getFixture().setKonstitutionBasis(5);
+        assertEquals("should be 5", 5, getFixture().getZustandGrenze());
+        
+
+    }
+
+    public void testBioWare() {
 		getFixture().setKonstitutionBasis(1);
 		assertEquals("should be 1", 1, fixture.getKonstitution());
 		getFixture().setGeschicklichkeitBasis(1);

@@ -25,63 +25,63 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface KoerperlicheAttribute extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Konstitution</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Konstitution</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Konstitution</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Konstitution</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Konstitution()
-	 * @model transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Konstitution</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Konstitution()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getKonstitution();
 
 	/**
-	 * Returns the value of the '<em><b>Geschicklichkeit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Geschicklichkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Geschicklichkeit</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Geschicklichkeit</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Geschicklichkeit()
-	 * @model transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Geschicklichkeit</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Geschicklichkeit()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getGeschicklichkeit();
 
 	/**
-	 * Returns the value of the '<em><b>Reaktion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Reaktion</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reaktion</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reaktion</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Reaktion()
-	 * @model transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Reaktion</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Reaktion()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getReaktion();
 
 	/**
-	 * Returns the value of the '<em><b>Staerke</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Staerke</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Staerke</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Staerke</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Staerke()
-	 * @model transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Staerke</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute_Staerke()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getStaerke();
 
 } // KoerperlicheAttribute

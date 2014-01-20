@@ -23,42 +23,42 @@ import de.urszeidler.eclipse.shr5.KoerperlicheAttribute;
 public abstract class KoerperlicheAttributeTest extends TestCase {
 
 	/**
-	 * The fixture for this Koerperliche Attribute test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Koerperliche Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KoerperlicheAttribute fixture = null;
 
 	/**
-	 * Constructs a new Koerperliche Attribute test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Koerperliche Attribute test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KoerperlicheAttributeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Koerperliche Attribute test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Koerperliche Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(KoerperlicheAttribute fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Koerperliche Attribute test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Koerperliche Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KoerperlicheAttribute getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution() <em>Konstitution</em>}' feature getter.

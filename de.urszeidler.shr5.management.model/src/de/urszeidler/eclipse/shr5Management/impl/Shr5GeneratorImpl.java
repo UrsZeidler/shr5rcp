@@ -57,278 +57,278 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  */
 public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Generator {
 	/**
-	 * The cached value of the '{@link #getResourcen() <em>Resourcen</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getResourcen()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getResourcen() <em>Resourcen</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getResourcen()
+     * @generated
+     * @ordered
+     */
 	protected Resourcen resourcen;
 
 	/**
-	 * The cached value of the '{@link #getSkills() <em>Skills</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getSkills()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getSkills() <em>Skills</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getSkills()
+     * @generated
+     * @ordered
+     */
 	protected Skill skills;
 
 	/**
-	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getAttribute()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getAttribute()
+     * @generated
+     * @ordered
+     */
 	protected Attributes attribute;
 
 	/**
-	 * The cached value of the '{@link #getMetaType() <em>Meta Type</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getMetaType()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getMetaType() <em>Meta Type</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getMetaType()
+     * @generated
+     * @ordered
+     */
 	protected MetaType metaType;
 
 	/**
-	 * The cached value of the '{@link #getMagic() <em>Magic</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getMagic()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getMagic() <em>Magic</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getMagic()
+     * @generated
+     * @ordered
+     */
 	protected SpecialType magic;
 
 	/**
-	 * The default value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @see #getKarmaToResource()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaToResource()
+     * @generated
+     * @ordered
+     */
 	protected static final int KARMA_TO_RESOURCE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+     * The cached value of the '{@link #getKarmaToResource() <em>Karma To Resource</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @see #getKarmaToResource()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaToResource()
+     * @generated
+     * @ordered
+     */
 	protected int karmaToResource = KARMA_TO_RESOURCE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getKarmaSpend() <em>Karma Spend</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getKarmaSpend()
-	 * @generated
-	 * @ordered
-	 */
+     * The default value of the '{@link #getKarmaSpend() <em>Karma Spend</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getKarmaSpend()
+     * @generated
+     * @ordered
+     */
 	protected static final int KARMA_SPEND_EDEFAULT = 0;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	protected Shr5GeneratorImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.SHR5_GENERATOR;
-	}
+        return Shr5managementPackage.Literals.SHR5_GENERATOR;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Resourcen getResourcen() {
-		if (resourcen != null && resourcen.eIsProxy()) {
-			InternalEObject oldResourcen = (InternalEObject)resourcen;
-			resourcen = (Resourcen)eResolveProxy(oldResourcen);
-			if (resourcen != oldResourcen) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__RESOURCEN, oldResourcen, resourcen));
-			}
-		}
-		return resourcen;
-	}
+        if (resourcen != null && resourcen.eIsProxy()) {
+            InternalEObject oldResourcen = (InternalEObject)resourcen;
+            resourcen = (Resourcen)eResolveProxy(oldResourcen);
+            if (resourcen != oldResourcen) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__RESOURCEN, oldResourcen, resourcen));
+            }
+        }
+        return resourcen;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Resourcen basicGetResourcen() {
-		return resourcen;
-	}
+        return resourcen;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setResourcen(Resourcen newResourcen) {
-		Resourcen oldResourcen = resourcen;
-		resourcen = newResourcen;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__RESOURCEN, oldResourcen, resourcen));
-	}
+        Resourcen oldResourcen = resourcen;
+        resourcen = newResourcen;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__RESOURCEN, oldResourcen, resourcen));
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Skill getSkills() {
-		if (skills != null && skills.eIsProxy()) {
-			InternalEObject oldSkills = (InternalEObject)skills;
-			skills = (Skill)eResolveProxy(oldSkills);
-			if (skills != oldSkills) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__SKILLS, oldSkills, skills));
-			}
-		}
-		return skills;
-	}
+        if (skills != null && skills.eIsProxy()) {
+            InternalEObject oldSkills = (InternalEObject)skills;
+            skills = (Skill)eResolveProxy(oldSkills);
+            if (skills != oldSkills) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__SKILLS, oldSkills, skills));
+            }
+        }
+        return skills;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Skill basicGetSkills() {
-		return skills;
-	}
+        return skills;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setSkills(Skill newSkills) {
-		Skill oldSkills = skills;
-		skills = newSkills;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__SKILLS, oldSkills, skills));
-	}
+        Skill oldSkills = skills;
+        skills = newSkills;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__SKILLS, oldSkills, skills));
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Attributes getAttribute() {
-		if (attribute != null && attribute.eIsProxy()) {
-			InternalEObject oldAttribute = (InternalEObject)attribute;
-			attribute = (Attributes)eResolveProxy(oldAttribute);
-			if (attribute != oldAttribute) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE, oldAttribute, attribute));
-			}
-		}
-		return attribute;
-	}
+        if (attribute != null && attribute.eIsProxy()) {
+            InternalEObject oldAttribute = (InternalEObject)attribute;
+            attribute = (Attributes)eResolveProxy(oldAttribute);
+            if (attribute != oldAttribute) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE, oldAttribute, attribute));
+            }
+        }
+        return attribute;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Attributes basicGetAttribute() {
-		return attribute;
-	}
+        return attribute;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setAttribute(Attributes newAttribute) {
-		Attributes oldAttribute = attribute;
-		attribute = newAttribute;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE, oldAttribute, attribute));
-	}
+        Attributes oldAttribute = attribute;
+        attribute = newAttribute;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE, oldAttribute, attribute));
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public MetaType getMetaType() {
-		if (metaType != null && metaType.eIsProxy()) {
-			InternalEObject oldMetaType = (InternalEObject)metaType;
-			metaType = (MetaType)eResolveProxy(oldMetaType);
-			if (metaType != oldMetaType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__META_TYPE, oldMetaType, metaType));
-			}
-		}
-		return metaType;
-	}
+        if (metaType != null && metaType.eIsProxy()) {
+            InternalEObject oldMetaType = (InternalEObject)metaType;
+            metaType = (MetaType)eResolveProxy(oldMetaType);
+            if (metaType != oldMetaType) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__META_TYPE, oldMetaType, metaType));
+            }
+        }
+        return metaType;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public MetaType basicGetMetaType() {
-		return metaType;
-	}
+        return metaType;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setMetaType(MetaType newMetaType) {
-		MetaType oldMetaType = metaType;
-		metaType = newMetaType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__META_TYPE, oldMetaType, metaType));
-	}
+        MetaType oldMetaType = metaType;
+        metaType = newMetaType;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__META_TYPE, oldMetaType, metaType));
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public SpecialType getMagic() {
-		if (magic != null && magic.eIsProxy()) {
-			InternalEObject oldMagic = (InternalEObject)magic;
-			magic = (SpecialType)eResolveProxy(oldMagic);
-			if (magic != oldMagic) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__MAGIC, oldMagic, magic));
-			}
-		}
-		return magic;
-	}
+        if (magic != null && magic.eIsProxy()) {
+            InternalEObject oldMagic = (InternalEObject)magic;
+            magic = (SpecialType)eResolveProxy(oldMagic);
+            if (magic != oldMagic) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.SHR5_GENERATOR__MAGIC, oldMagic, magic));
+            }
+        }
+        return magic;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public SpecialType basicGetMagic() {
-		return magic;
-	}
+        return magic;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setMagic(SpecialType newMagic) {
-		SpecialType oldMagic = magic;
-		magic = newMagic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__MAGIC, oldMagic, magic));
-	}
+        SpecialType oldMagic = magic;
+        magic = newMagic;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__MAGIC, oldMagic, magic));
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public int getKarmaToResource() {
-		return karmaToResource;
-	}
+        return karmaToResource;
+    }
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -369,13 +369,13 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public Shr5System getShr5Generator() {
-		Shr5System shr5Generator = basicGetShr5Generator();
-		return shr5Generator != null && shr5Generator.eIsProxy() ? (Shr5System)eResolveProxy((InternalEObject)shr5Generator) : shr5Generator;
-	}
+        Shr5System shr5Generator = basicGetShr5Generator();
+        return shr5Generator != null && shr5Generator.eIsProxy() ? (Shr5System)eResolveProxy((InternalEObject)shr5Generator) : shr5Generator;
+    }
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -658,164 +658,164 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
 
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
-				if (resolve) return getResourcen();
-				return basicGetResourcen();
-			case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
-				if (resolve) return getSkills();
-				return basicGetSkills();
-			case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
-				if (resolve) return getAttribute();
-				return basicGetAttribute();
-			case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
-				if (resolve) return getMetaType();
-				return basicGetMetaType();
-			case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
-				if (resolve) return getMagic();
-				return basicGetMagic();
-			case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
-				return getKarmaToResource();
-			case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
-				return getKarmaSpend();
-			case Shr5managementPackage.SHR5_GENERATOR__SHR5_GENERATOR:
-				if (resolve) return getShr5Generator();
-				return basicGetShr5Generator();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
+                if (resolve) return getResourcen();
+                return basicGetResourcen();
+            case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
+                if (resolve) return getSkills();
+                return basicGetSkills();
+            case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
+                if (resolve) return getAttribute();
+                return basicGetAttribute();
+            case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
+                if (resolve) return getMetaType();
+                return basicGetMetaType();
+            case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
+                if (resolve) return getMagic();
+                return basicGetMagic();
+            case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
+                return getKarmaToResource();
+            case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
+                return getKarmaSpend();
+            case Shr5managementPackage.SHR5_GENERATOR__SHR5_GENERATOR:
+                if (resolve) return getShr5Generator();
+                return basicGetShr5Generator();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
-				setResourcen((Resourcen)newValue);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
-				setSkills((Skill)newValue);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
-				setAttribute((Attributes)newValue);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
-				setMetaType((MetaType)newValue);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
-				setMagic((SpecialType)newValue);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
-				setKarmaToResource((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
+                setResourcen((Resourcen)newValue);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
+                setSkills((Skill)newValue);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
+                setAttribute((Attributes)newValue);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
+                setMetaType((MetaType)newValue);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
+                setMagic((SpecialType)newValue);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
+                setKarmaToResource((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
-				setResourcen((Resourcen)null);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
-				setSkills((Skill)null);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
-				setAttribute((Attributes)null);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
-				setMetaType((MetaType)null);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
-				setMagic((SpecialType)null);
-				return;
-			case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
-				setKarmaToResource(KARMA_TO_RESOURCE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
+                setResourcen((Resourcen)null);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
+                setSkills((Skill)null);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
+                setAttribute((Attributes)null);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
+                setMetaType((MetaType)null);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
+                setMagic((SpecialType)null);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
+                setKarmaToResource(KARMA_TO_RESOURCE_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
-				return resourcen != null;
-			case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
-				return skills != null;
-			case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
-				return attribute != null;
-			case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
-				return metaType != null;
-			case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
-				return magic != null;
-			case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
-				return karmaToResource != KARMA_TO_RESOURCE_EDEFAULT;
-			case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
-				return getKarmaSpend() != KARMA_SPEND_EDEFAULT;
-			case Shr5managementPackage.SHR5_GENERATOR__SHR5_GENERATOR:
-				return basicGetShr5Generator() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SHR5_GENERATOR__RESOURCEN:
+                return resourcen != null;
+            case Shr5managementPackage.SHR5_GENERATOR__SKILLS:
+                return skills != null;
+            case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE:
+                return attribute != null;
+            case Shr5managementPackage.SHR5_GENERATOR__META_TYPE:
+                return metaType != null;
+            case Shr5managementPackage.SHR5_GENERATOR__MAGIC:
+                return magic != null;
+            case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
+                return karmaToResource != KARMA_TO_RESOURCE_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
+                return getKarmaSpend() != KARMA_SPEND_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__SHR5_GENERATOR:
+                return basicGetShr5Generator() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP:
-				return hasCategoryOnlyOnce((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP:
-				return hasNotSpendAllPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP:
-				return hasNotMoreMaxAttributes((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP:
-				return hasNotSpendAllAttributesPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP:
-				return hasNotSpendSkillAllPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP:
-				return hasNotSpendAllSpecialPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP:
-				return hasNotSpendAllSpecialTypePoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP:
-				return hasNotSpendAllConnectionPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
+        switch (operationID) {
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP:
+                return hasCategoryOnlyOnce((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP:
+                return hasNotMoreMaxAttributes((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllAttributesPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendSkillAllPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllSpecialPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllSpecialTypePoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllConnectionPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+        }
+        return super.eInvoke(operationID, arguments);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (karmaToResource: ");
-		result.append(karmaToResource);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (karmaToResource: ");
+        result.append(karmaToResource);
+        result.append(')');
+        return result.toString();
+    }
 
 } // Shr5GeneratorImpl

@@ -15,40 +15,38 @@ import junit.textui.TestRunner;
 public class Shr5Tests extends TestSuite {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(suite());
-	}
+        TestRunner.run(suite());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static Test suite() {
-		TestSuite suite = new Shr5Tests("shr5 Tests");
-		suite.addTestSuite(MudanPersonaTest.class);
-		suite.addTestSuite(KiAdeptTest.class);
-		suite.addTestSuite(MagierTest.class);
-		suite.addTestSuite(MysticAdeptTest.class);
-		suite.addTestSuite(AspektMagierTest.class);
-		suite.addTestSuite(MudanCritterTest.class);
-		suite.addTestSuite(ParaCritterTest.class);
-		suite.addTestSuite(TechnomancerTest.class);
-		suite.addTestSuite(SpriteTest.class);
-		return suite;
-	}
+        TestSuite suite = new Shr5Tests("shr5 Tests");
+        suite.addTestSuite(MudanPersonaTest.class);
+        suite.addTestSuite(KiAdeptTest.class);
+        suite.addTestSuite(MagierTest.class);
+        suite.addTestSuite(MysticAdeptTest.class);
+        suite.addTestSuite(AspektMagierTest.class);
+        suite.addTestSuite(TechnomancerTest.class);
+        suite.addTestSuite(SpriteTest.class);
+        return suite;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5Tests(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 } //Shr5Tests

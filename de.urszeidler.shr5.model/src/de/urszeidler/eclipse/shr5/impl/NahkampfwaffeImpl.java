@@ -24,137 +24,137 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class NahkampfwaffeImpl extends AbstaktWaffeImpl implements Nahkampfwaffe {
 	/**
-	 * The default value of the '{@link #getReichweite() <em>Reichweite</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getReichweite() <em>Reichweite</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReichweite()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getReichweite()
+     * @generated
+     * @ordered
+     */
 	protected static final int REICHWEITE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getReichweite() <em>Reichweite</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getReichweite() <em>Reichweite</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReichweite()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getReichweite()
+     * @generated
+     * @ordered
+     */
 	protected int reichweite = REICHWEITE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NahkampfwaffeImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.NAHKAMPFWAFFE;
-	}
+        return Shr5Package.Literals.NAHKAMPFWAFFE;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getReichweite() {
-		return reichweite;
-	}
+        return reichweite;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setReichweite(int newReichweite) {
-		int oldReichweite = reichweite;
-		reichweite = newReichweite;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.NAHKAMPFWAFFE__REICHWEITE, oldReichweite, reichweite));
-	}
+        int oldReichweite = reichweite;
+        reichweite = newReichweite;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.NAHKAMPFWAFFE__REICHWEITE, oldReichweite, reichweite));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
-				return getReichweite();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
+                return getReichweite();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
-				setReichweite((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
+                setReichweite((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
-				setReichweite(REICHWEITE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
+                setReichweite(REICHWEITE_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
-				return reichweite != REICHWEITE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.NAHKAMPFWAFFE__REICHWEITE:
+                return reichweite != REICHWEITE_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (reichweite: ");
-		result.append(reichweite);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (reichweite: ");
+        result.append(reichweite);
+        result.append(')');
+        return result.toString();
+    }
 
 } //NahkampfwaffeImpl

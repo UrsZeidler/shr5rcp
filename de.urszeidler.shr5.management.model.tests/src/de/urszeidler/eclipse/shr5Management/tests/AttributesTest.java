@@ -22,12 +22,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class AttributesTest extends PriorityCategorieTest {
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(AttributesTest.class);
-	}
+        TestRunner.run(AttributesTest.class);
+    }
 
 	/**
 	 * Constructs a new Attributes test case with the given name. <!--
@@ -36,39 +36,39 @@ public class AttributesTest extends PriorityCategorieTest {
 	 * @generated
 	 */
 	public AttributesTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Attributes test case.
-	 * <!-- begin-user-doc
+     * Returns the fixture for this Attributes test case.
+     * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Attributes getFixture() {
-		return (Attributes)fixture;
-	}
+        return (Attributes)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5managementFactory.eINSTANCE.createAttributes());
-	}
+        setFixture(Shr5managementFactory.eINSTANCE.createAttributes());
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '

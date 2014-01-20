@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PriorityCategorie extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Categorie Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Categorie Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Categorie Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Categorie Name</em>' attribute.
-	 * @see #setCategorieName(String)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPriorityCategorie_CategorieName()
-	 * @model required="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Categorie Name</em>' attribute.
+     * @see #setCategorieName(String)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPriorityCategorie_CategorieName()
+     * @model required="true"
+     * @generated
+     */
 	String getCategorieName();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.PriorityCategorie#getCategorieName <em>Categorie Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.PriorityCategorie#getCategorieName <em>Categorie Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Categorie Name</em>' attribute.
-	 * @see #getCategorieName()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Categorie Name</em>' attribute.
+     * @see #getCategorieName()
+     * @generated
+     */
 	void setCategorieName(String value);
 
 } // PriorityCategorie

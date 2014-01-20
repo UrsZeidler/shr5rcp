@@ -28,196 +28,196 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class InitationImpl extends MinimalEObjectImpl.Container implements Initation {
 	/**
-	 * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStufe()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getStufe()
+     * @generated
+     * @ordered
+     */
 	protected static final int STUFE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStufe()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getStufe()
+     * @generated
+     * @ordered
+     */
 	protected int stufe = STUFE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getErlernt() <em>Erlernt</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getErlernt() <em>Erlernt</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getErlernt()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getErlernt()
+     * @generated
+     * @ordered
+     */
 	protected MetaMagie erlernt;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected InitationImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.INITATION;
-	}
+        return Shr5Package.Literals.INITATION;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getStufe() {
-		return stufe;
-	}
+        return stufe;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setStufe(int newStufe) {
-		int oldStufe = stufe;
-		stufe = newStufe;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.INITATION__STUFE, oldStufe, stufe));
-	}
+        int oldStufe = stufe;
+        stufe = newStufe;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.INITATION__STUFE, oldStufe, stufe));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MetaMagie getErlernt() {
-		if (erlernt != null && erlernt.eIsProxy()) {
-			InternalEObject oldErlernt = (InternalEObject)erlernt;
-			erlernt = (MetaMagie)eResolveProxy(oldErlernt);
-			if (erlernt != oldErlernt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.INITATION__ERLERNT, oldErlernt, erlernt));
-			}
-		}
-		return erlernt;
-	}
+        if (erlernt != null && erlernt.eIsProxy()) {
+            InternalEObject oldErlernt = (InternalEObject)erlernt;
+            erlernt = (MetaMagie)eResolveProxy(oldErlernt);
+            if (erlernt != oldErlernt) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.INITATION__ERLERNT, oldErlernt, erlernt));
+            }
+        }
+        return erlernt;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MetaMagie basicGetErlernt() {
-		return erlernt;
-	}
+        return erlernt;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setErlernt(MetaMagie newErlernt) {
-		MetaMagie oldErlernt = erlernt;
-		erlernt = newErlernt;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.INITATION__ERLERNT, oldErlernt, erlernt));
-	}
+        MetaMagie oldErlernt = erlernt;
+        erlernt = newErlernt;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.INITATION__ERLERNT, oldErlernt, erlernt));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.INITATION__STUFE:
-				return getStufe();
-			case Shr5Package.INITATION__ERLERNT:
-				if (resolve) return getErlernt();
-				return basicGetErlernt();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.INITATION__STUFE:
+                return getStufe();
+            case Shr5Package.INITATION__ERLERNT:
+                if (resolve) return getErlernt();
+                return basicGetErlernt();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.INITATION__STUFE:
-				setStufe((Integer)newValue);
-				return;
-			case Shr5Package.INITATION__ERLERNT:
-				setErlernt((MetaMagie)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.INITATION__STUFE:
+                setStufe((Integer)newValue);
+                return;
+            case Shr5Package.INITATION__ERLERNT:
+                setErlernt((MetaMagie)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.INITATION__STUFE:
-				setStufe(STUFE_EDEFAULT);
-				return;
-			case Shr5Package.INITATION__ERLERNT:
-				setErlernt((MetaMagie)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.INITATION__STUFE:
+                setStufe(STUFE_EDEFAULT);
+                return;
+            case Shr5Package.INITATION__ERLERNT:
+                setErlernt((MetaMagie)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.INITATION__STUFE:
-				return stufe != STUFE_EDEFAULT;
-			case Shr5Package.INITATION__ERLERNT:
-				return erlernt != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.INITATION__STUFE:
+                return stufe != STUFE_EDEFAULT;
+            case Shr5Package.INITATION__ERLERNT:
+                return erlernt != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (stufe: ");
-		result.append(stufe);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (stufe: ");
+        result.append(stufe);
+        result.append(')');
+        return result.toString();
+    }
 
 } //InitationImpl

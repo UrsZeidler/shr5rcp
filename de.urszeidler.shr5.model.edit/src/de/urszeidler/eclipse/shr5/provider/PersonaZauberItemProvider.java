@@ -37,8 +37,8 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	 * @generated
 	 */
 	public PersonaZauberItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
 	 * This returns the property descriptors for the adapted class. <!--
@@ -48,14 +48,14 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	 */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addStufePropertyDescriptor(object);
-			addFormelPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addStufePropertyDescriptor(object);
+            addFormelPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
 	 * This adds a property descriptor for the Stufe feature. <!--
@@ -64,20 +64,20 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	 * @generated
 	 */
 	protected void addStufePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PersonaZauber_stufe_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZauber_stufe_feature", "_UI_PersonaZauber_type"),
-				 Shr5Package.Literals.PERSONA_ZAUBER__STUFE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaZauber_stufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZauber_stufe_feature", "_UI_PersonaZauber_type"),
+                 Shr5Package.Literals.PERSONA_ZAUBER__STUFE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This adds a property descriptor for the Formel feature. <!--
@@ -86,20 +86,20 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	 * @generated
 	 */
 	protected void addFormelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PersonaZauber_formel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZauber_formel_feature", "_UI_PersonaZauber_type"),
-				 Shr5Package.Literals.PERSONA_ZAUBER__FORMEL,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaZauber_formel_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZauber_formel_feature", "_UI_PersonaZauber_type"),
+                 Shr5Package.Literals.PERSONA_ZAUBER__FORMEL,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This returns PersonaZauber.gif. <!-- begin-user-doc --> <!-- end-user-doc
@@ -146,23 +146,23 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc --> <!--
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(PersonaZauber.class)) {
-			case Shr5Package.PERSONA_ZAUBER__STUFE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(PersonaZauber.class)) {
+            case Shr5Package.PERSONA_ZAUBER__STUFE:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
 	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
@@ -173,8 +173,8 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 	/**
 	 * Return the resource locator for this item provider's resources. <!--
@@ -184,7 +184,7 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Shr5EditPlugin.INSTANCE;
-	}
+        return Shr5EditPlugin.INSTANCE;
+    }
 
 }

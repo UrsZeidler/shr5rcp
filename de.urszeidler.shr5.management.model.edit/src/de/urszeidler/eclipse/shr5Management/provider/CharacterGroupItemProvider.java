@@ -42,209 +42,209 @@ public class CharacterGroupItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public CharacterGroupItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addBeschreibungPropertyDescriptor(object);
-			addImagePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Beschreibung feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Beschreibung feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addBeschreibungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_beschreibung_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_beschreibung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Image feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Image feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_image_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_image_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Name feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS);
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS);
+        }
+        return childrenFeatures;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
 
-		return super.getChildFeature(object, child);
-	}
+        return super.getChildFeature(object, child);
+    }
 
 	/**
-	 * This returns CharacterGroup.gif.
-	 * <!-- begin-user-doc -->
+     * This returns CharacterGroup.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CharacterGroup"));
-	}
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/CharacterGroup"));
+    }
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((CharacterGroup)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_CharacterGroup_type") :
-			getString("_UI_CharacterGroup_type") + " " + label;
-	}
+        String label = ((CharacterGroup)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_CharacterGroup_type") :
+            getString("_UI_CharacterGroup_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(CharacterGroup.class)) {
-			case Shr5managementPackage.CHARACTER_GROUP__BESCHREIBUNG:
-			case Shr5managementPackage.CHARACTER_GROUP__IMAGE:
-			case Shr5managementPackage.CHARACTER_GROUP__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case Shr5managementPackage.CHARACTER_GROUP__MEMBERS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(CharacterGroup.class)) {
+            case Shr5managementPackage.CHARACTER_GROUP__BESCHREIBUNG:
+            case Shr5managementPackage.CHARACTER_GROUP__IMAGE:
+            case Shr5managementPackage.CHARACTER_GROUP__NAME:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5managementPackage.CHARACTER_GROUP__MEMBERS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS,
-				 Shr5managementFactory.eINSTANCE.createNonPlayerCharacter()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS,
+                 Shr5managementFactory.eINSTANCE.createNonPlayerCharacter()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS,
-				 Shr5managementFactory.eINSTANCE.createPlayerCharacter()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS,
+                 Shr5managementFactory.eINSTANCE.createPlayerCharacter()));
+    }
 
 	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Shr5ManagementEditPlugin.INSTANCE;
-	}
+        return Shr5ManagementEditPlugin.INSTANCE;
+    }
 
 }

@@ -33,1246 +33,1222 @@ import de.urszeidler.eclipse.shr5.util.Shr5AdapterFactory;
  */
 public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
-	 * This keeps track of the root adapter factory that delegates to this adapter factory.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the root adapter factory that delegates to this adapter factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ComposedAdapterFactory parentAdapterFactory;
 
 	/**
-	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-	 * <!-- begin-user-doc -->
+     * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
 	/**
-	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-	 * <!-- begin-user-doc -->
+     * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
 	/**
-	 * This constructs an instance.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5ItemProviderAdapterFactory() {
-		supportedTypes.add(IEditingDomainItemProvider.class);
-		supportedTypes.add(IStructuredItemContentProvider.class);
-		supportedTypes.add(ITreeItemContentProvider.class);
-		supportedTypes.add(IItemLabelProvider.class);
-		supportedTypes.add(IItemPropertySource.class);
-	}
+        supportedTypes.add(IEditingDomainItemProvider.class);
+        supportedTypes.add(IStructuredItemContentProvider.class);
+        supportedTypes.add(ITreeItemContentProvider.class);
+        supportedTypes.add(IItemLabelProvider.class);
+        supportedTypes.add(IItemPropertySource.class);
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SourceBook} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SourceBook} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SourceBookItemProvider sourceBookItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SourceBook}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SourceBook}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createSourceBookAdapter() {
-		if (sourceBookItemProvider == null) {
-			sourceBookItemProvider = new SourceBookItemProvider(this);
-		}
+        if (sourceBookItemProvider == null) {
+            sourceBookItemProvider = new SourceBookItemProvider(this);
+        }
 
-		return sourceBookItemProvider;
-	}
+        return sourceBookItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Gegenstand} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Gegenstand} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GegenstandItemProvider gegenstandItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Gegenstand}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Gegenstand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createGegenstandAdapter() {
-		if (gegenstandItemProvider == null) {
-			gegenstandItemProvider = new GegenstandItemProvider(this);
-		}
+        if (gegenstandItemProvider == null) {
+            gegenstandItemProvider = new GegenstandItemProvider(this);
+        }
 
-		return gegenstandItemProvider;
-	}
+        return gegenstandItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Reichweite} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Reichweite} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ReichweiteItemProvider reichweiteItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Reichweite}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Reichweite}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createReichweiteAdapter() {
-		if (reichweiteItemProvider == null) {
-			reichweiteItemProvider = new ReichweiteItemProvider(this);
-		}
+        if (reichweiteItemProvider == null) {
+            reichweiteItemProvider = new ReichweiteItemProvider(this);
+        }
 
-		return reichweiteItemProvider;
-	}
+        return reichweiteItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AttributModifikatorWertItemProvider attributModifikatorWertItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createAttributModifikatorWertAdapter() {
-		if (attributModifikatorWertItemProvider == null) {
-			attributModifikatorWertItemProvider = new AttributModifikatorWertItemProvider(this);
-		}
+        if (attributModifikatorWertItemProvider == null) {
+            attributModifikatorWertItemProvider = new AttributModifikatorWertItemProvider(this);
+        }
 
-		return attributModifikatorWertItemProvider;
-	}
+        return attributModifikatorWertItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NahkampfwaffeItemProvider nahkampfwaffeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createNahkampfwaffeAdapter() {
-		if (nahkampfwaffeItemProvider == null) {
-			nahkampfwaffeItemProvider = new NahkampfwaffeItemProvider(this);
-		}
+        if (nahkampfwaffeItemProvider == null) {
+            nahkampfwaffeItemProvider = new NahkampfwaffeItemProvider(this);
+        }
 
-		return nahkampfwaffeItemProvider;
-	}
+        return nahkampfwaffeItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Feuerwaffe} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Feuerwaffe} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FeuerwaffeItemProvider feuerwaffeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Feuerwaffe}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Feuerwaffe}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createFeuerwaffeAdapter() {
-		if (feuerwaffeItemProvider == null) {
-			feuerwaffeItemProvider = new FeuerwaffeItemProvider(this);
-		}
+        if (feuerwaffeItemProvider == null) {
+            feuerwaffeItemProvider = new FeuerwaffeItemProvider(this);
+        }
 
-		return feuerwaffeItemProvider;
-	}
+        return feuerwaffeItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wurfwaffe} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wurfwaffe} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected WurfwaffeItemProvider wurfwaffeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wurfwaffe}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wurfwaffe}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createWurfwaffeAdapter() {
-		if (wurfwaffeItemProvider == null) {
-			wurfwaffeItemProvider = new WurfwaffeItemProvider(this);
-		}
+        if (wurfwaffeItemProvider == null) {
+            wurfwaffeItemProvider = new WurfwaffeItemProvider(this);
+        }
 
-		return wurfwaffeItemProvider;
-	}
+        return wurfwaffeItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ShrList} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ShrList} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ShrListItemProvider shrListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ShrList}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ShrList}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createShrListAdapter() {
-		if (shrListItemProvider == null) {
-			shrListItemProvider = new ShrListItemProvider(this);
-		}
+        if (shrListItemProvider == null) {
+            shrListItemProvider = new ShrListItemProvider(this);
+        }
 
-		return shrListItemProvider;
-	}
+        return shrListItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Projektilwaffe} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Projektilwaffe} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ProjektilwaffeItemProvider projektilwaffeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Projektilwaffe}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Projektilwaffe}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createProjektilwaffeAdapter() {
-		if (projektilwaffeItemProvider == null) {
-			projektilwaffeItemProvider = new ProjektilwaffeItemProvider(this);
-		}
+        if (projektilwaffeItemProvider == null) {
+            projektilwaffeItemProvider = new ProjektilwaffeItemProvider(this);
+        }
 
-		return projektilwaffeItemProvider;
-	}
+        return projektilwaffeItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FertigkeitsGruppeItemProvider fertigkeitsGruppeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createFertigkeitsGruppeAdapter() {
-		if (fertigkeitsGruppeItemProvider == null) {
-			fertigkeitsGruppeItemProvider = new FertigkeitsGruppeItemProvider(this);
-		}
+        if (fertigkeitsGruppeItemProvider == null) {
+            fertigkeitsGruppeItemProvider = new FertigkeitsGruppeItemProvider(this);
+        }
 
-		return fertigkeitsGruppeItemProvider;
-	}
+        return fertigkeitsGruppeItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Fertigkeit} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Fertigkeit} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FertigkeitItemProvider fertigkeitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Fertigkeit}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Fertigkeit}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createFertigkeitAdapter() {
-		if (fertigkeitItemProvider == null) {
-			fertigkeitItemProvider = new FertigkeitItemProvider(this);
-		}
+        if (fertigkeitItemProvider == null) {
+            fertigkeitItemProvider = new FertigkeitItemProvider(this);
+        }
 
-		return fertigkeitItemProvider;
-	}
+        return fertigkeitItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaFertigkeitItemProvider personaFertigkeitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createPersonaFertigkeitAdapter() {
-		if (personaFertigkeitItemProvider == null) {
-			personaFertigkeitItemProvider = new PersonaFertigkeitItemProvider(this);
-		}
+        if (personaFertigkeitItemProvider == null) {
+            personaFertigkeitItemProvider = new PersonaFertigkeitItemProvider(this);
+        }
 
-		return personaFertigkeitItemProvider;
-	}
+        return personaFertigkeitItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaFertigkeitsGruppeItemProvider personaFertigkeitsGruppeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createPersonaFertigkeitsGruppeAdapter() {
-		if (personaFertigkeitsGruppeItemProvider == null) {
-			personaFertigkeitsGruppeItemProvider = new PersonaFertigkeitsGruppeItemProvider(this);
-		}
+        if (personaFertigkeitsGruppeItemProvider == null) {
+            personaFertigkeitsGruppeItemProvider = new PersonaFertigkeitsGruppeItemProvider(this);
+        }
 
-		return personaFertigkeitsGruppeItemProvider;
-	}
+        return personaFertigkeitsGruppeItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberware} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberware} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CyberwareItemProvider cyberwareItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberware}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberware}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createCyberwareAdapter() {
-		if (cyberwareItemProvider == null) {
-			cyberwareItemProvider = new CyberwareItemProvider(this);
-		}
+        if (cyberwareItemProvider == null) {
+            cyberwareItemProvider = new CyberwareItemProvider(this);
+        }
 
-		return cyberwareItemProvider;
-	}
+        return cyberwareItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.BioWare} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.BioWare} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected BioWareItemProvider bioWareItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.BioWare}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.BioWare}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createBioWareAdapter() {
-		if (bioWareItemProvider == null) {
-			bioWareItemProvider = new BioWareItemProvider(this);
-		}
+        if (bioWareItemProvider == null) {
+            bioWareItemProvider = new BioWareItemProvider(this);
+        }
 
-		return bioWareItemProvider;
-	}
+        return bioWareItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MudanPersona} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MudanPersona} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MudanPersonaItemProvider mudanPersonaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MudanPersona}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MudanPersona}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createMudanPersonaAdapter() {
-		if (mudanPersonaItemProvider == null) {
-			mudanPersonaItemProvider = new MudanPersonaItemProvider(this);
-		}
+        if (mudanPersonaItemProvider == null) {
+            mudanPersonaItemProvider = new MudanPersonaItemProvider(this);
+        }
 
-		return mudanPersonaItemProvider;
-	}
+        return mudanPersonaItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiKraft} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiKraft} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KiKraftItemProvider kiKraftItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiKraft}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiKraft}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createKiKraftAdapter() {
-		if (kiKraftItemProvider == null) {
-			kiKraftItemProvider = new KiKraftItemProvider(this);
-		}
+        if (kiKraftItemProvider == null) {
+            kiKraftItemProvider = new KiKraftItemProvider(this);
+        }
 
-		return kiKraftItemProvider;
-	}
+        return kiKraftItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Spezies} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Spezies} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SpeziesItemProvider speziesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Spezies}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Spezies}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createSpeziesAdapter() {
-		if (speziesItemProvider == null) {
-			speziesItemProvider = new SpeziesItemProvider(this);
-		}
+        if (speziesItemProvider == null) {
+            speziesItemProvider = new SpeziesItemProvider(this);
+        }
 
-		return speziesItemProvider;
-	}
+        return speziesItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiAdept} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiAdept} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KiAdeptItemProvider kiAdeptItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiAdept}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiAdept}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createKiAdeptAdapter() {
-		if (kiAdeptItemProvider == null) {
-			kiAdeptItemProvider = new KiAdeptItemProvider(this);
-		}
+        if (kiAdeptItemProvider == null) {
+            kiAdeptItemProvider = new KiAdeptItemProvider(this);
+        }
 
-		return kiAdeptItemProvider;
-	}
+        return kiAdeptItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Kleidung} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Kleidung} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KleidungItemProvider kleidungItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Kleidung}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Kleidung}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createKleidungAdapter() {
-		if (kleidungItemProvider == null) {
-			kleidungItemProvider = new KleidungItemProvider(this);
-		}
+        if (kleidungItemProvider == null) {
+            kleidungItemProvider = new KleidungItemProvider(this);
+        }
 
-		return kleidungItemProvider;
-	}
+        return kleidungItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FernkampfwaffeModifikatorItemProvider fernkampfwaffeModifikatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createFernkampfwaffeModifikatorAdapter() {
-		if (fernkampfwaffeModifikatorItemProvider == null) {
-			fernkampfwaffeModifikatorItemProvider = new FernkampfwaffeModifikatorItemProvider(this);
-		}
+        if (fernkampfwaffeModifikatorItemProvider == null) {
+            fernkampfwaffeModifikatorItemProvider = new FernkampfwaffeModifikatorItemProvider(this);
+        }
 
-		return fernkampfwaffeModifikatorItemProvider;
-	}
+        return fernkampfwaffeModifikatorItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaEigenschaftItemProvider personaEigenschaftItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createPersonaEigenschaftAdapter() {
-		if (personaEigenschaftItemProvider == null) {
-			personaEigenschaftItemProvider = new PersonaEigenschaftItemProvider(this);
-		}
+        if (personaEigenschaftItemProvider == null) {
+            personaEigenschaftItemProvider = new PersonaEigenschaftItemProvider(this);
+        }
 
-		return personaEigenschaftItemProvider;
-	}
+        return personaEigenschaftItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Magier} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Magier} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MagierItemProvider magierItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Magier}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Magier}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createMagierAdapter() {
-		if (magierItemProvider == null) {
-			magierItemProvider = new MagierItemProvider(this);
-		}
+        if (magierItemProvider == null) {
+            magierItemProvider = new MagierItemProvider(this);
+        }
 
-		return magierItemProvider;
-	}
+        return magierItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MysticAdept} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MysticAdept} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MysticAdeptItemProvider mysticAdeptItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MysticAdept}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MysticAdept}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createMysticAdeptAdapter() {
-		if (mysticAdeptItemProvider == null) {
-			mysticAdeptItemProvider = new MysticAdeptItemProvider(this);
-		}
+        if (mysticAdeptItemProvider == null) {
+            mysticAdeptItemProvider = new MysticAdeptItemProvider(this);
+        }
 
-		return mysticAdeptItemProvider;
-	}
+        return mysticAdeptItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaZauber} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaZauber} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaZauberItemProvider personaZauberItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaZauber}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaZauber}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createPersonaZauberAdapter() {
-		if (personaZauberItemProvider == null) {
-			personaZauberItemProvider = new PersonaZauberItemProvider(this);
-		}
+        if (personaZauberItemProvider == null) {
+            personaZauberItemProvider = new PersonaZauberItemProvider(this);
+        }
 
-		return personaZauberItemProvider;
-	}
+        return personaZauberItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Zauber} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Zauber} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ZauberItemProvider zauberItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Zauber}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Zauber}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createZauberAdapter() {
-		if (zauberItemProvider == null) {
-			zauberItemProvider = new ZauberItemProvider(this);
-		}
+        if (zauberItemProvider == null) {
+            zauberItemProvider = new ZauberItemProvider(this);
+        }
 
-		return zauberItemProvider;
-	}
+        return zauberItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AspektMagier} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AspektMagier} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AspektMagierItemProvider aspektMagierItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AspektMagier}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AspektMagier}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createAspektMagierAdapter() {
-		if (aspektMagierItemProvider == null) {
-			aspektMagierItemProvider = new AspektMagierItemProvider(this);
-		}
+        if (aspektMagierItemProvider == null) {
+            aspektMagierItemProvider = new AspektMagierItemProvider(this);
+        }
 
-		return aspektMagierItemProvider;
-	}
+        return aspektMagierItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Schutzgeist} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Schutzgeist} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SchutzgeistItemProvider schutzgeistItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Schutzgeist}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Schutzgeist}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createSchutzgeistAdapter() {
-		if (schutzgeistItemProvider == null) {
-			schutzgeistItemProvider = new SchutzgeistItemProvider(this);
-		}
+        if (schutzgeistItemProvider == null) {
+            schutzgeistItemProvider = new SchutzgeistItemProvider(this);
+        }
 
-		return schutzgeistItemProvider;
-	}
+        return schutzgeistItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Initation} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Initation} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected InitationItemProvider initationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Initation}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Initation}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createInitationAdapter() {
-		if (initationItemProvider == null) {
-			initationItemProvider = new InitationItemProvider(this);
-		}
+        if (initationItemProvider == null) {
+            initationItemProvider = new InitationItemProvider(this);
+        }
 
-		return initationItemProvider;
-	}
+        return initationItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MetaMagie} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MetaMagie} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MetaMagieItemProvider metaMagieItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MetaMagie}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MetaMagie}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createMetaMagieAdapter() {
-		if (metaMagieItemProvider == null) {
-			metaMagieItemProvider = new MetaMagieItemProvider(this);
-		}
+        if (metaMagieItemProvider == null) {
+            metaMagieItemProvider = new MetaMagieItemProvider(this);
+        }
 
-		return metaMagieItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MudanCritter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MudanCritterItemProvider mudanCritterItemProvider;
+        return metaMagieItemProvider;
+    }
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MudanCritter}.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CritterKraft} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMudanCritterAdapter() {
-		if (mudanCritterItemProvider == null) {
-			mudanCritterItemProvider = new MudanCritterItemProvider(this);
-		}
-
-		return mudanCritterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CritterKraft} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CritterKraftItemProvider critterKraftItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CritterKraft}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CritterKraft}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createCritterKraftAdapter() {
-		if (critterKraftItemProvider == null) {
-			critterKraftItemProvider = new CritterKraftItemProvider(this);
-		}
+        if (critterKraftItemProvider == null) {
+            critterKraftItemProvider = new CritterKraftItemProvider(this);
+        }
 
-		return critterKraftItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ParaCritter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ParaCritterItemProvider paraCritterItemProvider;
+        return critterKraftItemProvider;
+    }
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ParaCritter}.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createParaCritterAdapter() {
-		if (paraCritterItemProvider == null) {
-			paraCritterItemProvider = new ParaCritterItemProvider(this);
-		}
-
-		return paraCritterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected BodenfahrzeugItemProvider bodenfahrzeugItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createBodenfahrzeugAdapter() {
-		if (bodenfahrzeugItemProvider == null) {
-			bodenfahrzeugItemProvider = new BodenfahrzeugItemProvider(this);
-		}
+        if (bodenfahrzeugItemProvider == null) {
+            bodenfahrzeugItemProvider = new BodenfahrzeugItemProvider(this);
+        }
 
-		return bodenfahrzeugItemProvider;
-	}
+        return bodenfahrzeugItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PassagierFahrzeugItemProvider passagierFahrzeugItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createPassagierFahrzeugAdapter() {
-		if (passagierFahrzeugItemProvider == null) {
-			passagierFahrzeugItemProvider = new PassagierFahrzeugItemProvider(this);
-		}
+        if (passagierFahrzeugItemProvider == null) {
+            passagierFahrzeugItemProvider = new PassagierFahrzeugItemProvider(this);
+        }
 
-		return passagierFahrzeugItemProvider;
-	}
+        return passagierFahrzeugItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Drohne} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Drohne} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected DrohneItemProvider drohneItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Drohne}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Drohne}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createDrohneAdapter() {
-		if (drohneItemProvider == null) {
-			drohneItemProvider = new DrohneItemProvider(this);
-		}
+        if (drohneItemProvider == null) {
+            drohneItemProvider = new DrohneItemProvider(this);
+        }
 
-		return drohneItemProvider;
-	}
+        return drohneItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FahrzeugModifikation} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FahrzeugModifikation} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FahrzeugModifikationItemProvider fahrzeugModifikationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FahrzeugModifikation}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FahrzeugModifikation}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createFahrzeugModifikationAdapter() {
-		if (fahrzeugModifikationItemProvider == null) {
-			fahrzeugModifikationItemProvider = new FahrzeugModifikationItemProvider(this);
-		}
+        if (fahrzeugModifikationItemProvider == null) {
+            fahrzeugModifikationItemProvider = new FahrzeugModifikationItemProvider(this);
+        }
 
-		return fahrzeugModifikationItemProvider;
-	}
+        return fahrzeugModifikationItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Technomancer} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Technomancer} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected TechnomancerItemProvider technomancerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Technomancer}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Technomancer}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createTechnomancerAdapter() {
-		if (technomancerItemProvider == null) {
-			technomancerItemProvider = new TechnomancerItemProvider(this);
-		}
+        if (technomancerItemProvider == null) {
+            technomancerItemProvider = new TechnomancerItemProvider(this);
+        }
 
-		return technomancerItemProvider;
-	}
+        return technomancerItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KomplexeForm} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KomplexeForm} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KomplexeFormItemProvider komplexeFormItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KomplexeForm}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KomplexeForm}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createKomplexeFormAdapter() {
-		if (komplexeFormItemProvider == null) {
-			komplexeFormItemProvider = new KomplexeFormItemProvider(this);
-		}
+        if (komplexeFormItemProvider == null) {
+            komplexeFormItemProvider = new KomplexeFormItemProvider(this);
+        }
 
-		return komplexeFormItemProvider;
-	}
+        return komplexeFormItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaKomplexFormItemProvider personaKomplexFormItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createPersonaKomplexFormAdapter() {
-		if (personaKomplexFormItemProvider == null) {
-			personaKomplexFormItemProvider = new PersonaKomplexFormItemProvider(this);
-		}
+        if (personaKomplexFormItemProvider == null) {
+            personaKomplexFormItemProvider = new PersonaKomplexFormItemProvider(this);
+        }
 
-		return personaKomplexFormItemProvider;
-	}
+        return personaKomplexFormItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprite} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprite} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SpriteItemProvider spriteItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprite}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprite}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createSpriteAdapter() {
-		if (spriteItemProvider == null) {
-			spriteItemProvider = new SpriteItemProvider(this);
-		}
+        if (spriteItemProvider == null) {
+            spriteItemProvider = new SpriteItemProvider(this);
+        }
 
-		return spriteItemProvider;
-	}
+        return spriteItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Echo} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Echo} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected EchoItemProvider echoItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Echo}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Echo}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createEchoAdapter() {
-		if (echoItemProvider == null) {
-			echoItemProvider = new EchoItemProvider(this);
-		}
+        if (echoItemProvider == null) {
+            echoItemProvider = new EchoItemProvider(this);
+        }
 
-		return echoItemProvider;
-	}
+        return echoItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Vertrag} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Vertrag} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected VertragItemProvider vertragItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Vertrag}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Vertrag}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createVertragAdapter() {
-		if (vertragItemProvider == null) {
-			vertragItemProvider = new VertragItemProvider(this);
-		}
+        if (vertragItemProvider == null) {
+            vertragItemProvider = new VertragItemProvider(this);
+        }
 
-		return vertragItemProvider;
-	}
+        return vertragItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lifestyle} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lifestyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected LifestyleItemProvider lifestyleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lifestyle}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lifestyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createLifestyleAdapter() {
-		if (lifestyleItemProvider == null) {
-			lifestyleItemProvider = new LifestyleItemProvider(this);
-		}
+        if (lifestyleItemProvider == null) {
+            lifestyleItemProvider = new LifestyleItemProvider(this);
+        }
 
-		return lifestyleItemProvider;
-	}
+        return lifestyleItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected WissensfertigkeitItemProvider wissensfertigkeitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createWissensfertigkeitAdapter() {
-		if (wissensfertigkeitItemProvider == null) {
-			wissensfertigkeitItemProvider = new WissensfertigkeitItemProvider(this);
-		}
+        if (wissensfertigkeitItemProvider == null) {
+            wissensfertigkeitItemProvider = new WissensfertigkeitItemProvider(this);
+        }
 
-		return wissensfertigkeitItemProvider;
-	}
+        return wissensfertigkeitItemProvider;
+    }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit} instances.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SprachfertigkeitItemProvider sprachfertigkeitItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit}.
-	 * <!-- begin-user-doc -->
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter createSprachfertigkeitAdapter() {
-		if (sprachfertigkeitItemProvider == null) {
-			sprachfertigkeitItemProvider = new SprachfertigkeitItemProvider(this);
-		}
+        if (sprachfertigkeitItemProvider == null) {
+            sprachfertigkeitItemProvider = new SprachfertigkeitItemProvider(this);
+        }
 
-		return sprachfertigkeitItemProvider;
-	}
+        return sprachfertigkeitItemProvider;
+    }
 
 	/**
-	 * This returns the root adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Critter} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CritterItemProvider critterItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Critter}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCritterAdapter() {
+        if (critterItemProvider == null) {
+            critterItemProvider = new CritterItemProvider(this);
+        }
+
+        return critterItemProvider;
+    }
+
+    /**
+     * This returns the root adapter factory that contains this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-	}
+        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+    }
 
 	/**
-	 * This sets the composed adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+     * This sets the composed adapter factory that contains this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-		this.parentAdapterFactory = parentAdapterFactory;
-	}
+        this.parentAdapterFactory = parentAdapterFactory;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean isFactoryForType(Object type) {
-		return supportedTypes.contains(type) || super.isFactoryForType(type);
-	}
+        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    }
 
 	/**
-	 * This implementation substitutes the factory itself as the key for the adapter.
-	 * <!-- begin-user-doc -->
+     * This implementation substitutes the factory itself as the key for the adapter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Adapter adapt(Notifier notifier, Object type) {
-		return super.adapt(notifier, this);
-	}
+        return super.adapt(notifier, this);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
-			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
-				return adapter;
-			}
-		}
+        if (isFactoryForType(type)) {
+            Object adapter = super.adapt(object, type);
+            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+                return adapter;
+            }
+        }
 
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * This adds a listener.
-	 * <!-- begin-user-doc -->
+     * This adds a listener.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void addListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.addListener(notifyChangedListener);
-	}
+        changeNotifier.addListener(notifyChangedListener);
+    }
 
 	/**
-	 * This removes a listener.
-	 * <!-- begin-user-doc -->
+     * This removes a listener.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.removeListener(notifyChangedListener);
-	}
+        changeNotifier.removeListener(notifyChangedListener);
+    }
 
 	/**
-	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-	 * <!-- begin-user-doc -->
+     * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void fireNotifyChanged(Notification notification) {
-		changeNotifier.fireNotifyChanged(notification);
+        changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
-			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
+        if (parentAdapterFactory != null) {
+            parentAdapterFactory.fireNotifyChanged(notification);
+        }
+    }
 
 	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
+     * This disposes all of the item providers created by this factory. 
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void dispose() {
-		if (sourceBookItemProvider != null) sourceBookItemProvider.dispose();
-		if (gegenstandItemProvider != null) gegenstandItemProvider.dispose();
-		if (reichweiteItemProvider != null) reichweiteItemProvider.dispose();
-		if (attributModifikatorWertItemProvider != null) attributModifikatorWertItemProvider.dispose();
-		if (nahkampfwaffeItemProvider != null) nahkampfwaffeItemProvider.dispose();
-		if (feuerwaffeItemProvider != null) feuerwaffeItemProvider.dispose();
-		if (wurfwaffeItemProvider != null) wurfwaffeItemProvider.dispose();
-		if (shrListItemProvider != null) shrListItemProvider.dispose();
-		if (projektilwaffeItemProvider != null) projektilwaffeItemProvider.dispose();
-		if (fertigkeitsGruppeItemProvider != null) fertigkeitsGruppeItemProvider.dispose();
-		if (fertigkeitItemProvider != null) fertigkeitItemProvider.dispose();
-		if (personaFertigkeitItemProvider != null) personaFertigkeitItemProvider.dispose();
-		if (personaFertigkeitsGruppeItemProvider != null) personaFertigkeitsGruppeItemProvider.dispose();
-		if (cyberwareItemProvider != null) cyberwareItemProvider.dispose();
-		if (bioWareItemProvider != null) bioWareItemProvider.dispose();
-		if (mudanPersonaItemProvider != null) mudanPersonaItemProvider.dispose();
-		if (kiKraftItemProvider != null) kiKraftItemProvider.dispose();
-		if (speziesItemProvider != null) speziesItemProvider.dispose();
-		if (kiAdeptItemProvider != null) kiAdeptItemProvider.dispose();
-		if (kleidungItemProvider != null) kleidungItemProvider.dispose();
-		if (fernkampfwaffeModifikatorItemProvider != null) fernkampfwaffeModifikatorItemProvider.dispose();
-		if (personaEigenschaftItemProvider != null) personaEigenschaftItemProvider.dispose();
-		if (magierItemProvider != null) magierItemProvider.dispose();
-		if (mysticAdeptItemProvider != null) mysticAdeptItemProvider.dispose();
-		if (personaZauberItemProvider != null) personaZauberItemProvider.dispose();
-		if (zauberItemProvider != null) zauberItemProvider.dispose();
-		if (aspektMagierItemProvider != null) aspektMagierItemProvider.dispose();
-		if (schutzgeistItemProvider != null) schutzgeistItemProvider.dispose();
-		if (initationItemProvider != null) initationItemProvider.dispose();
-		if (metaMagieItemProvider != null) metaMagieItemProvider.dispose();
-		if (mudanCritterItemProvider != null) mudanCritterItemProvider.dispose();
-		if (critterKraftItemProvider != null) critterKraftItemProvider.dispose();
-		if (paraCritterItemProvider != null) paraCritterItemProvider.dispose();
-		if (bodenfahrzeugItemProvider != null) bodenfahrzeugItemProvider.dispose();
-		if (passagierFahrzeugItemProvider != null) passagierFahrzeugItemProvider.dispose();
-		if (drohneItemProvider != null) drohneItemProvider.dispose();
-		if (fahrzeugModifikationItemProvider != null) fahrzeugModifikationItemProvider.dispose();
-		if (technomancerItemProvider != null) technomancerItemProvider.dispose();
-		if (komplexeFormItemProvider != null) komplexeFormItemProvider.dispose();
-		if (personaKomplexFormItemProvider != null) personaKomplexFormItemProvider.dispose();
-		if (spriteItemProvider != null) spriteItemProvider.dispose();
-		if (echoItemProvider != null) echoItemProvider.dispose();
-		if (vertragItemProvider != null) vertragItemProvider.dispose();
-		if (lifestyleItemProvider != null) lifestyleItemProvider.dispose();
-		if (wissensfertigkeitItemProvider != null) wissensfertigkeitItemProvider.dispose();
-		if (sprachfertigkeitItemProvider != null) sprachfertigkeitItemProvider.dispose();
-	}
+        if (sourceBookItemProvider != null) sourceBookItemProvider.dispose();
+        if (gegenstandItemProvider != null) gegenstandItemProvider.dispose();
+        if (reichweiteItemProvider != null) reichweiteItemProvider.dispose();
+        if (attributModifikatorWertItemProvider != null) attributModifikatorWertItemProvider.dispose();
+        if (nahkampfwaffeItemProvider != null) nahkampfwaffeItemProvider.dispose();
+        if (feuerwaffeItemProvider != null) feuerwaffeItemProvider.dispose();
+        if (wurfwaffeItemProvider != null) wurfwaffeItemProvider.dispose();
+        if (shrListItemProvider != null) shrListItemProvider.dispose();
+        if (projektilwaffeItemProvider != null) projektilwaffeItemProvider.dispose();
+        if (fertigkeitsGruppeItemProvider != null) fertigkeitsGruppeItemProvider.dispose();
+        if (fertigkeitItemProvider != null) fertigkeitItemProvider.dispose();
+        if (personaFertigkeitItemProvider != null) personaFertigkeitItemProvider.dispose();
+        if (personaFertigkeitsGruppeItemProvider != null) personaFertigkeitsGruppeItemProvider.dispose();
+        if (cyberwareItemProvider != null) cyberwareItemProvider.dispose();
+        if (bioWareItemProvider != null) bioWareItemProvider.dispose();
+        if (mudanPersonaItemProvider != null) mudanPersonaItemProvider.dispose();
+        if (kiKraftItemProvider != null) kiKraftItemProvider.dispose();
+        if (speziesItemProvider != null) speziesItemProvider.dispose();
+        if (kiAdeptItemProvider != null) kiAdeptItemProvider.dispose();
+        if (kleidungItemProvider != null) kleidungItemProvider.dispose();
+        if (fernkampfwaffeModifikatorItemProvider != null) fernkampfwaffeModifikatorItemProvider.dispose();
+        if (personaEigenschaftItemProvider != null) personaEigenschaftItemProvider.dispose();
+        if (magierItemProvider != null) magierItemProvider.dispose();
+        if (mysticAdeptItemProvider != null) mysticAdeptItemProvider.dispose();
+        if (personaZauberItemProvider != null) personaZauberItemProvider.dispose();
+        if (zauberItemProvider != null) zauberItemProvider.dispose();
+        if (aspektMagierItemProvider != null) aspektMagierItemProvider.dispose();
+        if (schutzgeistItemProvider != null) schutzgeistItemProvider.dispose();
+        if (initationItemProvider != null) initationItemProvider.dispose();
+        if (metaMagieItemProvider != null) metaMagieItemProvider.dispose();
+        if (critterKraftItemProvider != null) critterKraftItemProvider.dispose();
+        if (bodenfahrzeugItemProvider != null) bodenfahrzeugItemProvider.dispose();
+        if (passagierFahrzeugItemProvider != null) passagierFahrzeugItemProvider.dispose();
+        if (drohneItemProvider != null) drohneItemProvider.dispose();
+        if (fahrzeugModifikationItemProvider != null) fahrzeugModifikationItemProvider.dispose();
+        if (technomancerItemProvider != null) technomancerItemProvider.dispose();
+        if (komplexeFormItemProvider != null) komplexeFormItemProvider.dispose();
+        if (personaKomplexFormItemProvider != null) personaKomplexFormItemProvider.dispose();
+        if (spriteItemProvider != null) spriteItemProvider.dispose();
+        if (echoItemProvider != null) echoItemProvider.dispose();
+        if (vertragItemProvider != null) vertragItemProvider.dispose();
+        if (lifestyleItemProvider != null) lifestyleItemProvider.dispose();
+        if (wissensfertigkeitItemProvider != null) wissensfertigkeitItemProvider.dispose();
+        if (sprachfertigkeitItemProvider != null) sprachfertigkeitItemProvider.dispose();
+        if (critterItemProvider != null) critterItemProvider.dispose();
+    }
 
 }

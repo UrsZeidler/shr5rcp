@@ -24,137 +24,137 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class PassagierFahrzeugImpl extends FahrzeugImpl implements PassagierFahrzeug {
 	/**
-	 * The default value of the '{@link #getSitze() <em>Sitze</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getSitze() <em>Sitze</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSitze()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getSitze()
+     * @generated
+     * @ordered
+     */
 	protected static final int SITZE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getSitze() <em>Sitze</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getSitze() <em>Sitze</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSitze()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getSitze()
+     * @generated
+     * @ordered
+     */
 	protected int sitze = SITZE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PassagierFahrzeugImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.PASSAGIER_FAHRZEUG;
-	}
+        return Shr5Package.Literals.PASSAGIER_FAHRZEUG;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getSitze() {
-		return sitze;
-	}
+        return sitze;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setSitze(int newSitze) {
-		int oldSitze = sitze;
-		sitze = newSitze;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PASSAGIER_FAHRZEUG__SITZE, oldSitze, sitze));
-	}
+        int oldSitze = sitze;
+        sitze = newSitze;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PASSAGIER_FAHRZEUG__SITZE, oldSitze, sitze));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
-				return getSitze();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
+                return getSitze();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
-				setSitze((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
+                setSitze((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
-				setSitze(SITZE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
+                setSitze(SITZE_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
-				return sitze != SITZE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PASSAGIER_FAHRZEUG__SITZE:
+                return sitze != SITZE_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (sitze: ");
-		result.append(sitze);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (sitze: ");
+        result.append(sitze);
+        result.append(')');
+        return result.toString();
+    }
 
 } //PassagierFahrzeugImpl

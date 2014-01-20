@@ -28,196 +28,196 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class PersonaKomplexFormImpl extends MinimalEObjectImpl.Container implements PersonaKomplexForm {
 	/**
-	 * The cached value of the '{@link #getForm() <em>Form</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getForm() <em>Form</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getForm()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getForm()
+     * @generated
+     * @ordered
+     */
 	protected KomplexeForm form;
 
 	/**
-	 * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStufe()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getStufe()
+     * @generated
+     * @ordered
+     */
 	protected static final int STUFE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStufe()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getStufe()
+     * @generated
+     * @ordered
+     */
 	protected int stufe = STUFE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaKomplexFormImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.PERSONA_KOMPLEX_FORM;
-	}
+        return Shr5Package.Literals.PERSONA_KOMPLEX_FORM;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KomplexeForm getForm() {
-		if (form != null && form.eIsProxy()) {
-			InternalEObject oldForm = (InternalEObject)form;
-			form = (KomplexeForm)eResolveProxy(oldForm);
-			if (form != oldForm) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.PERSONA_KOMPLEX_FORM__FORM, oldForm, form));
-			}
-		}
-		return form;
-	}
+        if (form != null && form.eIsProxy()) {
+            InternalEObject oldForm = (InternalEObject)form;
+            form = (KomplexeForm)eResolveProxy(oldForm);
+            if (form != oldForm) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.PERSONA_KOMPLEX_FORM__FORM, oldForm, form));
+            }
+        }
+        return form;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KomplexeForm basicGetForm() {
-		return form;
-	}
+        return form;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setForm(KomplexeForm newForm) {
-		KomplexeForm oldForm = form;
-		form = newForm;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_KOMPLEX_FORM__FORM, oldForm, form));
-	}
+        KomplexeForm oldForm = form;
+        form = newForm;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_KOMPLEX_FORM__FORM, oldForm, form));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getStufe() {
-		return stufe;
-	}
+        return stufe;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setStufe(int newStufe) {
-		int oldStufe = stufe;
-		stufe = newStufe;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_KOMPLEX_FORM__STUFE, oldStufe, stufe));
-	}
+        int oldStufe = stufe;
+        stufe = newStufe;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_KOMPLEX_FORM__STUFE, oldStufe, stufe));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
-				if (resolve) return getForm();
-				return basicGetForm();
-			case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
-				return getStufe();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
+                if (resolve) return getForm();
+                return basicGetForm();
+            case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
+                return getStufe();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
-				setForm((KomplexeForm)newValue);
-				return;
-			case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
-				setStufe((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
+                setForm((KomplexeForm)newValue);
+                return;
+            case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
+                setStufe((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
-				setForm((KomplexeForm)null);
-				return;
-			case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
-				setStufe(STUFE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
+                setForm((KomplexeForm)null);
+                return;
+            case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
+                setStufe(STUFE_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
-				return form != null;
-			case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
-				return stufe != STUFE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_KOMPLEX_FORM__FORM:
+                return form != null;
+            case Shr5Package.PERSONA_KOMPLEX_FORM__STUFE:
+                return stufe != STUFE_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (stufe: ");
-		result.append(stufe);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (stufe: ");
+        result.append(stufe);
+        result.append(')');
+        return result.toString();
+    }
 
 } //PersonaKomplexFormImpl

@@ -32,8 +32,8 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider im
 	 * @generated
 	 */
 	public PlayerCharacterItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
 	 * This returns the property descriptors for the adapted class. <!--
@@ -43,12 +43,12 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider im
 	 */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-		}
-		return itemPropertyDescriptors;
-	}
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
 	 * This returns PlayerCharacter.gif. <!-- begin-user-doc --> <!--
@@ -95,17 +95,17 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider im
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc --> <!--
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
-		super.notifyChanged(notification);
-	}
+        updateChildren(notification);
+        super.notifyChanged(notification);
+    }
 
 	/**
 	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
@@ -116,7 +116,7 @@ public class PlayerCharacterItemProvider extends ManagedCharacterItemProvider im
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 }

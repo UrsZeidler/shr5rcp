@@ -25,12 +25,12 @@ import de.urszeidler.eclipse.shr5.Technomancer;
 public class TechnomancerTest extends KoerperPersonaTest {
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(TechnomancerTest.class);
-	}
+        TestRunner.run(TechnomancerTest.class);
+    }
 
 	/**
 	 * Constructs a new Technomancer test case with the given name. <!--
@@ -39,39 +39,39 @@ public class TechnomancerTest extends KoerperPersonaTest {
 	 * @generated
 	 */
 	public TechnomancerTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Technomancer test case.
-	 * <!-- begin-user-doc
+     * Returns the fixture for this Technomancer test case.
+     * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Technomancer getFixture() {
-		return (Technomancer)fixture;
-	}
+        return (Technomancer)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createTechnomancer());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createTechnomancer());
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '

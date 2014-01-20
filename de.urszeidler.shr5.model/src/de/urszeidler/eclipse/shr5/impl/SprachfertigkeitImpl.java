@@ -18,22 +18,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class SprachfertigkeitImpl extends WissensfertigkeitImpl implements Sprachfertigkeit {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SprachfertigkeitImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.SPRACHFERTIGKEIT;
-	}
+        return Shr5Package.Literals.SPRACHFERTIGKEIT;
+    }
 
 } //SprachfertigkeitImpl

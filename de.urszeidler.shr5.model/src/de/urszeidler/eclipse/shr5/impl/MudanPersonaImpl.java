@@ -18,22 +18,22 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class MudanPersonaImpl extends KoerperPersonaImpl implements MudanPersona {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MudanPersonaImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.MUDAN_PERSONA;
-	}
+        return Shr5Package.Literals.MUDAN_PERSONA;
+    }
 
 } //MudanPersonaImpl

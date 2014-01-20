@@ -16,72 +16,72 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class FertigkeitsGruppeTest extends TestCase {
 
 	/**
-	 * The fixture for this Fertigkeits Gruppe test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Fertigkeits Gruppe test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FertigkeitsGruppe fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(FertigkeitsGruppeTest.class);
-	}
+        TestRunner.run(FertigkeitsGruppeTest.class);
+    }
 
 	/**
-	 * Constructs a new Fertigkeits Gruppe test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Fertigkeits Gruppe test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FertigkeitsGruppeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Fertigkeits Gruppe test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Fertigkeits Gruppe test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(FertigkeitsGruppe fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Fertigkeits Gruppe test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Fertigkeits Gruppe test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FertigkeitsGruppe getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //FertigkeitsGruppeTest

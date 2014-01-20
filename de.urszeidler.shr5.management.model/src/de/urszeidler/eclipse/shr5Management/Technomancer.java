@@ -23,63 +23,63 @@ package de.urszeidler.eclipse.shr5Management;
  */
 public interface Technomancer extends SpecialType {
 	/**
-	 * Returns the value of the '<em><b>Resonanz</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Resonanz</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resonanz</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resonanz</em>' attribute.
-	 * @see #setResonanz(int)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTechnomancer_Resonanz()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Resonanz</em>' attribute.
+     * @see #setResonanz(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTechnomancer_Resonanz()
+     * @model
+     * @generated
+     */
 	int getResonanz();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Technomancer#getResonanz <em>Resonanz</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Technomancer#getResonanz <em>Resonanz</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resonanz</em>' attribute.
-	 * @see #getResonanz()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Resonanz</em>' attribute.
+     * @see #getResonanz()
+     * @generated
+     */
 	void setResonanz(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Complex Forms</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Complex Forms</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Complex Forms</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Complex Forms</em>' attribute.
-	 * @see #setComplexForms(int)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTechnomancer_ComplexForms()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Complex Forms</em>' attribute.
+     * @see #setComplexForms(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTechnomancer_ComplexForms()
+     * @model
+     * @generated
+     */
 	int getComplexForms();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Technomancer#getComplexForms <em>Complex Forms</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Technomancer#getComplexForms <em>Complex Forms</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Complex Forms</em>' attribute.
-	 * @see #getComplexForms()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Complex Forms</em>' attribute.
+     * @see #getComplexForms()
+     * @generated
+     */
 	void setComplexForms(int value);
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model contextRequired="true"
-	 * @generated
-	 */
+     * @model contextRequired="true"
+     * @generated
+     */
 	int calcComplexFormsSpend(ManagedCharacter context);
 
 } // Technomancer

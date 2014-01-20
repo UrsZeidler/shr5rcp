@@ -18,22 +18,22 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public abstract class MagischeModsImpl extends AbstraktModifikatorenImpl implements MagischeMods {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MagischeModsImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.MAGISCHE_MODS;
-	}
+        return Shr5Package.Literals.MAGISCHE_MODS;
+    }
 
 } //MagischeModsImpl

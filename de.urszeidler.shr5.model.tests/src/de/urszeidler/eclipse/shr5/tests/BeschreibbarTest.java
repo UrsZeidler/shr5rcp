@@ -14,41 +14,41 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 public abstract class BeschreibbarTest extends TestCase {
 
 	/**
-	 * The fixture for this Beschreibbar test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Beschreibbar test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Beschreibbar fixture = null;
 
 	/**
-	 * Constructs a new Beschreibbar test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Beschreibbar test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public BeschreibbarTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Beschreibbar test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Beschreibbar test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(Beschreibbar fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Beschreibbar test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Beschreibbar test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Beschreibbar getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //BeschreibbarTest

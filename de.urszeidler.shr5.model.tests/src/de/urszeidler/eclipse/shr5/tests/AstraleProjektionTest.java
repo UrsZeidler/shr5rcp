@@ -27,42 +27,42 @@ import de.urszeidler.eclipse.shr5.AstraleProjektion;
 public abstract class AstraleProjektionTest extends TestCase {
 
 	/**
-	 * The fixture for this Astrale Projektion test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Astrale Projektion test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AstraleProjektion fixture = null;
 
 	/**
-	 * Constructs a new Astrale Projektion test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Astrale Projektion test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AstraleProjektionTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Astrale Projektion test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Astrale Projektion test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(AstraleProjektion fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Astrale Projektion test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Astrale Projektion test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AstraleProjektion getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstralesLimit() <em>Astrales Limit</em>}' feature getter.

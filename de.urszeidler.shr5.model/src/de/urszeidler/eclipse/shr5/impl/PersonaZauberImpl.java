@@ -28,196 +28,196 @@ import de.urszeidler.eclipse.shr5.Zauber;
  */
 public class PersonaZauberImpl extends MinimalEObjectImpl.Container implements PersonaZauber {
 	/**
-	 * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStufe()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getStufe()
+     * @generated
+     * @ordered
+     */
 	protected static final int STUFE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStufe()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getStufe()
+     * @generated
+     * @ordered
+     */
 	protected int stufe = STUFE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFormel() <em>Formel</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getFormel() <em>Formel</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFormel()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getFormel()
+     * @generated
+     * @ordered
+     */
 	protected Zauber formel;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaZauberImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.PERSONA_ZAUBER;
-	}
+        return Shr5Package.Literals.PERSONA_ZAUBER;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getStufe() {
-		return stufe;
-	}
+        return stufe;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setStufe(int newStufe) {
-		int oldStufe = stufe;
-		stufe = newStufe;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_ZAUBER__STUFE, oldStufe, stufe));
-	}
+        int oldStufe = stufe;
+        stufe = newStufe;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_ZAUBER__STUFE, oldStufe, stufe));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Zauber getFormel() {
-		if (formel != null && formel.eIsProxy()) {
-			InternalEObject oldFormel = (InternalEObject)formel;
-			formel = (Zauber)eResolveProxy(oldFormel);
-			if (formel != oldFormel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.PERSONA_ZAUBER__FORMEL, oldFormel, formel));
-			}
-		}
-		return formel;
-	}
+        if (formel != null && formel.eIsProxy()) {
+            InternalEObject oldFormel = (InternalEObject)formel;
+            formel = (Zauber)eResolveProxy(oldFormel);
+            if (formel != oldFormel) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.PERSONA_ZAUBER__FORMEL, oldFormel, formel));
+            }
+        }
+        return formel;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Zauber basicGetFormel() {
-		return formel;
-	}
+        return formel;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setFormel(Zauber newFormel) {
-		Zauber oldFormel = formel;
-		formel = newFormel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_ZAUBER__FORMEL, oldFormel, formel));
-	}
+        Zauber oldFormel = formel;
+        formel = newFormel;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_ZAUBER__FORMEL, oldFormel, formel));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_ZAUBER__STUFE:
-				return getStufe();
-			case Shr5Package.PERSONA_ZAUBER__FORMEL:
-				if (resolve) return getFormel();
-				return basicGetFormel();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_ZAUBER__STUFE:
+                return getStufe();
+            case Shr5Package.PERSONA_ZAUBER__FORMEL:
+                if (resolve) return getFormel();
+                return basicGetFormel();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_ZAUBER__STUFE:
-				setStufe((Integer)newValue);
-				return;
-			case Shr5Package.PERSONA_ZAUBER__FORMEL:
-				setFormel((Zauber)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_ZAUBER__STUFE:
+                setStufe((Integer)newValue);
+                return;
+            case Shr5Package.PERSONA_ZAUBER__FORMEL:
+                setFormel((Zauber)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_ZAUBER__STUFE:
-				setStufe(STUFE_EDEFAULT);
-				return;
-			case Shr5Package.PERSONA_ZAUBER__FORMEL:
-				setFormel((Zauber)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_ZAUBER__STUFE:
+                setStufe(STUFE_EDEFAULT);
+                return;
+            case Shr5Package.PERSONA_ZAUBER__FORMEL:
+                setFormel((Zauber)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_ZAUBER__STUFE:
-				return stufe != STUFE_EDEFAULT;
-			case Shr5Package.PERSONA_ZAUBER__FORMEL:
-				return formel != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_ZAUBER__STUFE:
+                return stufe != STUFE_EDEFAULT;
+            case Shr5Package.PERSONA_ZAUBER__FORMEL:
+                return formel != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (stufe: ");
-		result.append(stufe);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (stufe: ");
+        result.append(stufe);
+        result.append(')');
+        return result.toString();
+    }
 
 } //PersonaZauberImpl

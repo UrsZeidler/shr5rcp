@@ -22,37 +22,37 @@ package de.urszeidler.eclipse.shr5Management;
  */
 public interface Spellcaster extends Adept {
 	/**
-	 * Returns the value of the '<em><b>Spell Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Spell Points</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Spell Points</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spell Points</em>' attribute.
-	 * @see #setSpellPoints(int)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getSpellcaster_SpellPoints()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Spell Points</em>' attribute.
+     * @see #setSpellPoints(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getSpellcaster_SpellPoints()
+     * @model
+     * @generated
+     */
 	int getSpellPoints();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Spellcaster#getSpellPoints <em>Spell Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Spellcaster#getSpellPoints <em>Spell Points</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Spell Points</em>' attribute.
-	 * @see #getSpellPoints()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Spell Points</em>' attribute.
+     * @see #getSpellPoints()
+     * @generated
+     */
 	void setSpellPoints(int value);
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model contextRequired="true"
-	 * @generated
-	 */
+     * @model contextRequired="true"
+     * @generated
+     */
 	int calcSpellPointsSpend(ManagedCharacter context);
 
 } // Spellcaster

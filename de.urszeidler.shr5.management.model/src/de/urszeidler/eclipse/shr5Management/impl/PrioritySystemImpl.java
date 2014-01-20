@@ -34,184 +34,184 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public abstract class PrioritySystemImpl extends CharacterGeneratorSystemImpl implements PrioritySystem {
 	/**
-	 * The cached value of the '{@link #getPriorities() <em>Priorities</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getPriorities() <em>Priorities</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPriorities()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getPriorities()
+     * @generated
+     * @ordered
+     */
 	protected EList<PriorityCategorie> priorities;
 
 	/**
-	 * The default value of the '{@link #getKarmaPoints() <em>Karma Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getKarmaPoints() <em>Karma Points</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKarmaPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaPoints()
+     * @generated
+     * @ordered
+     */
 	protected static final int KARMA_POINTS_EDEFAULT = 0;
 	/**
-	 * The cached value of the '{@link #getKarmaPoints() <em>Karma Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getKarmaPoints() <em>Karma Points</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKarmaPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaPoints()
+     * @generated
+     * @ordered
+     */
 	protected int karmaPoints = KARMA_POINTS_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PrioritySystemImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.PRIORITY_SYSTEM;
-	}
+        return Shr5managementPackage.Literals.PRIORITY_SYSTEM;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<PriorityCategorie> getPriorities() {
-		if (priorities == null) {
-			priorities = new EObjectContainmentEList<PriorityCategorie>(PriorityCategorie.class, this, Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES);
-		}
-		return priorities;
-	}
+        if (priorities == null) {
+            priorities = new EObjectContainmentEList<PriorityCategorie>(PriorityCategorie.class, this, Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES);
+        }
+        return priorities;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getKarmaPoints() {
-		return karmaPoints;
-	}
+        return karmaPoints;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setKarmaPoints(int newKarmaPoints) {
-		int oldKarmaPoints = karmaPoints;
-		karmaPoints = newKarmaPoints;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS, oldKarmaPoints, karmaPoints));
-	}
+        int oldKarmaPoints = karmaPoints;
+        karmaPoints = newKarmaPoints;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS, oldKarmaPoints, karmaPoints));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
-				return ((InternalEList<?>)getPriorities()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
+                return ((InternalEList<?>)getPriorities()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
-				return getPriorities();
-			case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
-				return getKarmaPoints();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
+                return getPriorities();
+            case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
+                return getKarmaPoints();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
-				getPriorities().clear();
-				getPriorities().addAll((Collection<? extends PriorityCategorie>)newValue);
-				return;
-			case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
-				setKarmaPoints((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
+                getPriorities().clear();
+                getPriorities().addAll((Collection<? extends PriorityCategorie>)newValue);
+                return;
+            case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
+                setKarmaPoints((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
-				getPriorities().clear();
-				return;
-			case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
-				setKarmaPoints(KARMA_POINTS_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
+                getPriorities().clear();
+                return;
+            case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
+                setKarmaPoints(KARMA_POINTS_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
-				return priorities != null && !priorities.isEmpty();
-			case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
-				return karmaPoints != KARMA_POINTS_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES:
+                return priorities != null && !priorities.isEmpty();
+            case Shr5managementPackage.PRIORITY_SYSTEM__KARMA_POINTS:
+                return karmaPoints != KARMA_POINTS_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (karmaPoints: ");
-		result.append(karmaPoints);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (karmaPoints: ");
+        result.append(karmaPoints);
+        result.append(')');
+        return result.toString();
+    }
 
 } //PrioritySystemImpl

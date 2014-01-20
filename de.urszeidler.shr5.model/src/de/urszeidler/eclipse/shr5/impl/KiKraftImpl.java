@@ -24,136 +24,136 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class KiKraftImpl extends MagischeModsImpl implements KiKraft {
 	/**
-	 * The default value of the '{@link #getKraftpunkte() <em>Kraftpunkte</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getKraftpunkte() <em>Kraftpunkte</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKraftpunkte()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKraftpunkte()
+     * @generated
+     * @ordered
+     */
 	protected static final int KRAFTPUNKTE_EDEFAULT = 0;
 	/**
-	 * The cached value of the '{@link #getKraftpunkte() <em>Kraftpunkte</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getKraftpunkte() <em>Kraftpunkte</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKraftpunkte()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKraftpunkte()
+     * @generated
+     * @ordered
+     */
 	protected int kraftpunkte = KRAFTPUNKTE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KiKraftImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.KI_KRAFT;
-	}
+        return Shr5Package.Literals.KI_KRAFT;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getKraftpunkte() {
-		return kraftpunkte;
-	}
+        return kraftpunkte;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setKraftpunkte(int newKraftpunkte) {
-		int oldKraftpunkte = kraftpunkte;
-		kraftpunkte = newKraftpunkte;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KI_KRAFT__KRAFTPUNKTE, oldKraftpunkte, kraftpunkte));
-	}
+        int oldKraftpunkte = kraftpunkte;
+        kraftpunkte = newKraftpunkte;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KI_KRAFT__KRAFTPUNKTE, oldKraftpunkte, kraftpunkte));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
-				return getKraftpunkte();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
+                return getKraftpunkte();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
-				setKraftpunkte((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
+                setKraftpunkte((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
-				setKraftpunkte(KRAFTPUNKTE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
+                setKraftpunkte(KRAFTPUNKTE_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
-				return kraftpunkte != KRAFTPUNKTE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_KRAFT__KRAFTPUNKTE:
+                return kraftpunkte != KRAFTPUNKTE_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (kraftpunkte: ");
-		result.append(kraftpunkte);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (kraftpunkte: ");
+        result.append(kraftpunkte);
+        result.append(')');
+        return result.toString();
+    }
 
 } //KiKraftImpl

@@ -442,6 +442,8 @@
           <xsd:element name="koerperMods" type="shr5:Koerpermods"/>
           <xsd:element name="eigenschaften" type="shr5:PersonaEigenschaft"/>
         </xsd:choice>
+        <xsd:attribute name="zustandKoerperlich" type="xsd:int"/>
+        <xsd:attribute name="zustandGeistig" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -746,16 +748,6 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="MetaMagie" type="shr5:MetaMagie"/>
-  <xsd:complexType name="MudanCritter">
-    <xsd:complexContent>
-      <xsd:extension base="shr5:KoerperPersona">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="kraefte" type="shr5:CritterKraft"/>
-        </xsd:choice>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="MudanCritter" type="shr5:MudanCritter"/>
   <xsd:complexType name="CritterKraft">
     <xsd:complexContent>
       <xsd:extension base="shr5:MagischeMods">
@@ -767,17 +759,6 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="CritterKraft" type="shr5:CritterKraft"/>
-  <xsd:complexType name="ParaCritter">
-    <xsd:complexContent>
-      <xsd:extension base="shr5:MudanCritter">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="initationen" type="shr5:Initation"/>
-        </xsd:choice>
-        <xsd:attribute name="magieBasis" type="xsd:int" use="required"/>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="ParaCritter" type="shr5:ParaCritter"/>
   <xsd:complexType abstract="true" name="Fahrzeug">
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
@@ -945,4 +926,22 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Sprachfertigkeit" type="shr5:Sprachfertigkeit"/>
+  <xsd:complexType abstract="true" name="PersonaZustand">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="PersonaZustand" type="shr5:PersonaZustand"/>
+  <xsd:complexType name="Critter">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Spezies">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="kraefte" type="shr5:CritterKraft"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Critter" type="shr5:Critter"/>
 </xsd:schema>

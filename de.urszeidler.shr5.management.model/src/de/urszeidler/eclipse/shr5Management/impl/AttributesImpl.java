@@ -31,64 +31,64 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class AttributesImpl extends PriorityCategorieImpl implements Attributes {
 	/**
-	 * The default value of the '{@link #getAttibutePoints() <em>Attibute Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAttibutePoints() <em>Attibute Points</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttibutePoints()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAttibutePoints()
+     * @generated
+     * @ordered
+     */
 	protected static final int ATTIBUTE_POINTS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getAttibutePoints() <em>Attibute Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getAttibutePoints() <em>Attibute Points</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttibutePoints()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAttibutePoints()
+     * @generated
+     * @ordered
+     */
 	protected int attibutePoints = ATTIBUTE_POINTS_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AttributesImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.ATTRIBUTES;
-	}
+        return Shr5managementPackage.Literals.ATTRIBUTES;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getAttibutePoints() {
-		return attibutePoints;
-	}
+        return attibutePoints;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setAttibutePoints(int newAttibutePoints) {
-		int oldAttibutePoints = attibutePoints;
-		attibutePoints = newAttibutePoints;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS, oldAttibutePoints, attibutePoints));
-	}
+        int oldAttibutePoints = attibutePoints;
+        attibutePoints = newAttibutePoints;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS, oldAttibutePoints, attibutePoints));
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,91 +120,91 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
-				return getAttibutePoints();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
+                return getAttibutePoints();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
-				setAttibutePoints((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
+                setAttibutePoints((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
-				setAttibutePoints(ATTIBUTE_POINTS_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
+                setAttibutePoints(ATTIBUTE_POINTS_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
-				return attibutePoints != ATTIBUTE_POINTS_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS:
+                return attibutePoints != ATTIBUTE_POINTS_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Shr5managementPackage.ATTRIBUTES___CALC_ATTRIBUTES_SPEND__MANAGEDCHARACTER:
-				return calcAttributesSpend((ManagedCharacter)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
+        switch (operationID) {
+            case Shr5managementPackage.ATTRIBUTES___CALC_ATTRIBUTES_SPEND__MANAGEDCHARACTER:
+                return calcAttributesSpend((ManagedCharacter)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (attibutePoints: ");
-		result.append(attibutePoints);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (attibutePoints: ");
+        result.append(attibutePoints);
+        result.append(')');
+        return result.toString();
+    }
 
 } //AttributesImpl

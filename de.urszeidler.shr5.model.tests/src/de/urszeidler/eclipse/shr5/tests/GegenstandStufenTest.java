@@ -14,41 +14,41 @@ import de.urszeidler.eclipse.shr5.GegenstandStufen;
 public abstract class GegenstandStufenTest extends TestCase {
 
 	/**
-	 * The fixture for this Gegenstand Stufen test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Gegenstand Stufen test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GegenstandStufen fixture = null;
 
 	/**
-	 * Constructs a new Gegenstand Stufen test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Gegenstand Stufen test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public GegenstandStufenTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Gegenstand Stufen test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Gegenstand Stufen test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(GegenstandStufen fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Gegenstand Stufen test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Gegenstand Stufen test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GegenstandStufen getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //GegenstandStufenTest

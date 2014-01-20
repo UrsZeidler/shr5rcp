@@ -19,244 +19,244 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ZauberReichweite implements Enumerator {
 	/**
-	 * The '<em><b>Blickfeld</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Blickfeld</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BLICKFELD_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BLICKFELD_VALUE
+     * @generated
+     * @ordered
+     */
 	BLICKFELD(0, "Blickfeld", "Blickfeld"),
 
 	/**
-	 * The '<em><b>Begrenzt</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Begrenzt</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BEGRENZT_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BEGRENZT_VALUE
+     * @generated
+     * @ordered
+     */
 	BEGRENZT(1, "Begrenzt", "Begrenzt"),
 
 	/**
-	 * The '<em><b>Selbst</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Selbst</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SELBST_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #SELBST_VALUE
+     * @generated
+     * @ordered
+     */
 	SELBST(2, "Selbst", "Selbst"),
 
 	/**
-	 * The '<em><b>Beruehrung</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Beruehrung</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BERUEHRUNG_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BERUEHRUNG_VALUE
+     * @generated
+     * @ordered
+     */
 	BERUEHRUNG(3, "Beruehrung", "Beruehrung");
 
 	/**
-	 * The '<em><b>Blickfeld</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Blickfeld</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Blickfeld</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BLICKFELD
-	 * @model name="Blickfeld"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BLICKFELD
+     * @model name="Blickfeld"
+     * @generated
+     * @ordered
+     */
 	public static final int BLICKFELD_VALUE = 0;
 
 	/**
-	 * The '<em><b>Begrenzt</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Begrenzt</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Begrenzt</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BEGRENZT
-	 * @model name="Begrenzt"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BEGRENZT
+     * @model name="Begrenzt"
+     * @generated
+     * @ordered
+     */
 	public static final int BEGRENZT_VALUE = 1;
 
 	/**
-	 * The '<em><b>Selbst</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Selbst</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Selbst</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SELBST
-	 * @model name="Selbst"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #SELBST
+     * @model name="Selbst"
+     * @generated
+     * @ordered
+     */
 	public static final int SELBST_VALUE = 2;
 
 	/**
-	 * The '<em><b>Beruehrung</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Beruehrung</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Beruehrung</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BERUEHRUNG
-	 * @model name="Beruehrung"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BERUEHRUNG
+     * @model name="Beruehrung"
+     * @generated
+     * @ordered
+     */
 	public static final int BERUEHRUNG_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>Zauber Reichweite</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * An array of all the '<em><b>Zauber Reichweite</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static final ZauberReichweite[] VALUES_ARRAY =
 		new ZauberReichweite[] {
-			BLICKFELD,
-			BEGRENZT,
-			SELBST,
-			BERUEHRUNG,
-		};
+            BLICKFELD,
+            BEGRENZT,
+            SELBST,
+            BERUEHRUNG,
+        };
 
 	/**
-	 * A public read-only list of all the '<em><b>Zauber Reichweite</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * A public read-only list of all the '<em><b>Zauber Reichweite</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final List<ZauberReichweite> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Zauber Reichweite</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Zauber Reichweite</b></em>' literal with the specified literal value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ZauberReichweite get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ZauberReichweite result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ZauberReichweite result = VALUES_ARRAY[i];
+            if (result.toString().equals(literal)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Zauber Reichweite</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Zauber Reichweite</b></em>' literal with the specified name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ZauberReichweite getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ZauberReichweite result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ZauberReichweite result = VALUES_ARRAY[i];
+            if (result.getName().equals(name)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Zauber Reichweite</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Zauber Reichweite</b></em>' literal with the specified integer value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ZauberReichweite get(int value) {
-		switch (value) {
-			case BLICKFELD_VALUE: return BLICKFELD;
-			case BEGRENZT_VALUE: return BEGRENZT;
-			case SELBST_VALUE: return SELBST;
-			case BERUEHRUNG_VALUE: return BERUEHRUNG;
-		}
-		return null;
-	}
+        switch (value) {
+            case BLICKFELD_VALUE: return BLICKFELD;
+            case BEGRENZT_VALUE: return BEGRENZT;
+            case SELBST_VALUE: return SELBST;
+            case BERUEHRUNG_VALUE: return BERUEHRUNG;
+        }
+        return null;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+     * Only this class can construct instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private ZauberReichweite(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+        this.value = value;
+        this.name = name;
+        this.literal = literal;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getValue() {
-	  return value;
-	}
+      return value;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getName() {
-	  return name;
-	}
+      return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getLiteral() {
-	  return literal;
-	}
+      return literal;
+    }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+     * Returns the literal value of the enumerator, which is its string representation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		return literal;
-	}
+        return literal;
+    }
 	
 } //ZauberReichweite

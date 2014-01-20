@@ -19,73 +19,73 @@ import junit.textui.TestRunner;
 public class GeneratorStateToEStringMapEntryTest extends TestCase {
 
 	/**
-	 * The fixture for this Generator State To EString Map Entry test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Generator State To EString Map Entry test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Map.Entry<GeneratorState, String> fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(GeneratorStateToEStringMapEntryTest.class);
-	}
+        TestRunner.run(GeneratorStateToEStringMapEntryTest.class);
+    }
 
 	/**
-	 * Constructs a new Generator State To EString Map Entry test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Generator State To EString Map Entry test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public GeneratorStateToEStringMapEntryTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Generator State To EString Map Entry test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Generator State To EString Map Entry test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(Map.Entry<GeneratorState, String> fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Generator State To EString Map Entry test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Generator State To EString Map Entry test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Map.Entry<GeneratorState, String> getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	@SuppressWarnings("unchecked")
 	protected void setUp() throws Exception {
-		setFixture((Map.Entry<GeneratorState, String>)Shr5managementFactory.eINSTANCE.create(Shr5managementPackage.Literals.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY));
-	}
+        setFixture((Map.Entry<GeneratorState, String>)Shr5managementFactory.eINSTANCE.create(Shr5managementPackage.Literals.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //GeneratorStateToEStringMapEntryTest

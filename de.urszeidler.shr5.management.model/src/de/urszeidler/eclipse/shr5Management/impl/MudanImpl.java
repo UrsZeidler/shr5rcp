@@ -19,22 +19,22 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class MudanImpl extends SpecialTypeImpl implements Mudan {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MudanImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.MUDAN;
-	}
+        return Shr5managementPackage.Literals.MUDAN;
+    }
 
 } //MudanImpl

@@ -23,42 +23,42 @@ import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 public abstract class GeistigeAttributeTest extends TestCase {
 
 	/**
-	 * The fixture for this Geistige Attribute test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Geistige Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GeistigeAttribute fixture = null;
 
 	/**
-	 * Constructs a new Geistige Attribute test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Geistige Attribute test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public GeistigeAttributeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Geistige Attribute test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Geistige Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(GeistigeAttribute fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Geistige Attribute test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Geistige Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GeistigeAttribute getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma() <em>Charisma</em>}' feature getter.

@@ -15,55 +15,55 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class CyberwareTest extends KoerpermodsTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(CyberwareTest.class);
-	}
+        TestRunner.run(CyberwareTest.class);
+    }
 
 	/**
-	 * Constructs a new Cyberware test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Cyberware test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public CyberwareTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Cyberware test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Cyberware test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Cyberware getFixture() {
-		return (Cyberware)fixture;
-	}
+        return (Cyberware)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createCyberware());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createCyberware());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //CyberwareTest

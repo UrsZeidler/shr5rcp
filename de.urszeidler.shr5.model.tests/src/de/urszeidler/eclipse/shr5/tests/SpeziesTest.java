@@ -16,72 +16,72 @@ import de.urszeidler.eclipse.shr5.Spezies;
 public class SpeziesTest extends TestCase {
 
 	/**
-	 * The fixture for this Spezies test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Spezies test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Spezies fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(SpeziesTest.class);
-	}
+        TestRunner.run(SpeziesTest.class);
+    }
 
 	/**
-	 * Constructs a new Spezies test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Spezies test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public SpeziesTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Spezies test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Spezies test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(Spezies fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Spezies test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Spezies test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Spezies getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createSpezies());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createSpezies());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //SpeziesTest

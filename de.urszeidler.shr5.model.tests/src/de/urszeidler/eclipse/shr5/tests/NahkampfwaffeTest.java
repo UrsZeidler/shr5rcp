@@ -15,55 +15,55 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class NahkampfwaffeTest extends AbstaktWaffeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(NahkampfwaffeTest.class);
-	}
+        TestRunner.run(NahkampfwaffeTest.class);
+    }
 
 	/**
-	 * Constructs a new Nahkampfwaffe test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Nahkampfwaffe test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public NahkampfwaffeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Nahkampfwaffe test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Nahkampfwaffe test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Nahkampfwaffe getFixture() {
-		return (Nahkampfwaffe)fixture;
-	}
+        return (Nahkampfwaffe)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createNahkampfwaffe());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createNahkampfwaffe());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //NahkampfwaffeTest

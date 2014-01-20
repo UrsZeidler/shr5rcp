@@ -19,271 +19,271 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ResonanzZiel implements Enumerator {
 	/**
-	 * The '<em><b>Datei</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Datei</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DATEI_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #DATEI_VALUE
+     * @generated
+     * @ordered
+     */
 	DATEI(0, "datei", "datei"),
 
 	/**
-	 * The '<em><b>Geraet</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Geraet</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GERAET_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #GERAET_VALUE
+     * @generated
+     * @ordered
+     */
 	GERAET(1, "geraet", "geraet"),
 
 	/**
-	 * The '<em><b>Selbst</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Selbst</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SELBST_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #SELBST_VALUE
+     * @generated
+     * @ordered
+     */
 	SELBST(2, "selbst", "selbst"),
 
 	/**
-	 * The '<em><b>Persona</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Persona</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PERSONA_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #PERSONA_VALUE
+     * @generated
+     * @ordered
+     */
 	PERSONA(3, "persona", "persona"),
 
 	/**
-	 * The '<em><b>Sprite</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Sprite</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SPRITE_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #SPRITE_VALUE
+     * @generated
+     * @ordered
+     */
 	SPRITE(4, "sprite", "sprite");
 
 	/**
-	 * The '<em><b>Datei</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Datei</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Datei</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DATEI
-	 * @model name="datei"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #DATEI
+     * @model name="datei"
+     * @generated
+     * @ordered
+     */
 	public static final int DATEI_VALUE = 0;
 
 	/**
-	 * The '<em><b>Geraet</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Geraet</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Geraet</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #GERAET
-	 * @model name="geraet"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #GERAET
+     * @model name="geraet"
+     * @generated
+     * @ordered
+     */
 	public static final int GERAET_VALUE = 1;
 
 	/**
-	 * The '<em><b>Selbst</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Selbst</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Selbst</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SELBST
-	 * @model name="selbst"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #SELBST
+     * @model name="selbst"
+     * @generated
+     * @ordered
+     */
 	public static final int SELBST_VALUE = 2;
 
 	/**
-	 * The '<em><b>Persona</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Persona</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Persona</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PERSONA
-	 * @model name="persona"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #PERSONA
+     * @model name="persona"
+     * @generated
+     * @ordered
+     */
 	public static final int PERSONA_VALUE = 3;
 
 	/**
-	 * The '<em><b>Sprite</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Sprite</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Sprite</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SPRITE
-	 * @model name="sprite"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #SPRITE
+     * @model name="sprite"
+     * @generated
+     * @ordered
+     */
 	public static final int SPRITE_VALUE = 4;
 
 	/**
-	 * An array of all the '<em><b>Resonanz Ziel</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * An array of all the '<em><b>Resonanz Ziel</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static final ResonanzZiel[] VALUES_ARRAY =
 		new ResonanzZiel[] {
-			DATEI,
-			GERAET,
-			SELBST,
-			PERSONA,
-			SPRITE,
-		};
+            DATEI,
+            GERAET,
+            SELBST,
+            PERSONA,
+            SPRITE,
+        };
 
 	/**
-	 * A public read-only list of all the '<em><b>Resonanz Ziel</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * A public read-only list of all the '<em><b>Resonanz Ziel</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final List<ResonanzZiel> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Resonanz Ziel</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Resonanz Ziel</b></em>' literal with the specified literal value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ResonanzZiel get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ResonanzZiel result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ResonanzZiel result = VALUES_ARRAY[i];
+            if (result.toString().equals(literal)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Resonanz Ziel</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Resonanz Ziel</b></em>' literal with the specified name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ResonanzZiel getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ResonanzZiel result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ResonanzZiel result = VALUES_ARRAY[i];
+            if (result.getName().equals(name)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Resonanz Ziel</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Resonanz Ziel</b></em>' literal with the specified integer value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ResonanzZiel get(int value) {
-		switch (value) {
-			case DATEI_VALUE: return DATEI;
-			case GERAET_VALUE: return GERAET;
-			case SELBST_VALUE: return SELBST;
-			case PERSONA_VALUE: return PERSONA;
-			case SPRITE_VALUE: return SPRITE;
-		}
-		return null;
-	}
+        switch (value) {
+            case DATEI_VALUE: return DATEI;
+            case GERAET_VALUE: return GERAET;
+            case SELBST_VALUE: return SELBST;
+            case PERSONA_VALUE: return PERSONA;
+            case SPRITE_VALUE: return SPRITE;
+        }
+        return null;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+     * Only this class can construct instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private ResonanzZiel(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+        this.value = value;
+        this.name = name;
+        this.literal = literal;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getValue() {
-	  return value;
-	}
+      return value;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getName() {
-	  return name;
-	}
+      return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getLiteral() {
-	  return literal;
-	}
+      return literal;
+    }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+     * Returns the literal value of the enumerator, which is its string representation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		return literal;
-	}
+        return literal;
+    }
 	
 } //ResonanzZiel

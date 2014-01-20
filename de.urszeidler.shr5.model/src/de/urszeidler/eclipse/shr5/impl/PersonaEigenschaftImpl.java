@@ -24,137 +24,137 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class PersonaEigenschaftImpl extends AbstraktModifikatorenImpl implements PersonaEigenschaft {
 	/**
-	 * The default value of the '{@link #getKarmaKosten() <em>Karma Kosten</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getKarmaKosten() <em>Karma Kosten</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKarmaKosten()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaKosten()
+     * @generated
+     * @ordered
+     */
 	protected static final int KARMA_KOSTEN_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getKarmaKosten() <em>Karma Kosten</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getKarmaKosten() <em>Karma Kosten</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKarmaKosten()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaKosten()
+     * @generated
+     * @ordered
+     */
 	protected int karmaKosten = KARMA_KOSTEN_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PersonaEigenschaftImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.PERSONA_EIGENSCHAFT;
-	}
+        return Shr5Package.Literals.PERSONA_EIGENSCHAFT;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getKarmaKosten() {
-		return karmaKosten;
-	}
+        return karmaKosten;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setKarmaKosten(int newKarmaKosten) {
-		int oldKarmaKosten = karmaKosten;
-		karmaKosten = newKarmaKosten;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN, oldKarmaKosten, karmaKosten));
-	}
+        int oldKarmaKosten = karmaKosten;
+        karmaKosten = newKarmaKosten;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN, oldKarmaKosten, karmaKosten));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
-				return getKarmaKosten();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
+                return getKarmaKosten();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
-				setKarmaKosten((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
+                setKarmaKosten((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
-				setKarmaKosten(KARMA_KOSTEN_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
+                setKarmaKosten(KARMA_KOSTEN_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
-				return karmaKosten != KARMA_KOSTEN_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.PERSONA_EIGENSCHAFT__KARMA_KOSTEN:
+                return karmaKosten != KARMA_KOSTEN_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (karmaKosten: ");
-		result.append(karmaKosten);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (karmaKosten: ");
+        result.append(karmaKosten);
+        result.append(')');
+        return result.toString();
+    }
 
 } //PersonaEigenschaftImpl

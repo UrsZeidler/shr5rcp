@@ -33,64 +33,64 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
 	/**
-	 * The default value of the '{@link #getResource() <em>Resource</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getResource() <em>Resource</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResource()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getResource()
+     * @generated
+     * @ordered
+     */
 	protected static final int RESOURCE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getResource() <em>Resource</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getResource() <em>Resource</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResource()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getResource()
+     * @generated
+     * @ordered
+     */
 	protected int resource = RESOURCE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ResourcenImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.RESOURCEN;
-	}
+        return Shr5managementPackage.Literals.RESOURCEN;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getResource() {
-		return resource;
-	}
+        return resource;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setResource(int newResource) {
-		int oldResource = resource;
-		resource = newResource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.RESOURCEN__RESOURCE, oldResource, resource));
-	}
+        int oldResource = resource;
+        resource = newResource;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.RESOURCEN__RESOURCE, oldResource, resource));
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,91 +132,91 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.RESOURCEN__RESOURCE:
-				return getResource();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.RESOURCEN__RESOURCE:
+                return getResource();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.RESOURCEN__RESOURCE:
-				setResource((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.RESOURCEN__RESOURCE:
+                setResource((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.RESOURCEN__RESOURCE:
-				setResource(RESOURCE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.RESOURCEN__RESOURCE:
+                setResource(RESOURCE_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.RESOURCEN__RESOURCE:
-				return resource != RESOURCE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.RESOURCEN__RESOURCE:
+                return resource != RESOURCE_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Shr5managementPackage.RESOURCEN___CALC_RESOURCE_SPEND__MANAGEDCHARACTER:
-				return calcResourceSpend((ManagedCharacter)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
+        switch (operationID) {
+            case Shr5managementPackage.RESOURCEN___CALC_RESOURCE_SPEND__MANAGEDCHARACTER:
+                return calcResourceSpend((ManagedCharacter)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (resource: ");
-		result.append(resource);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (resource: ");
+        result.append(resource);
+        result.append(')');
+        return result.toString();
+    }
 
 } //ResourcenImpl

@@ -14,24 +14,24 @@ import de.urszeidler.eclipse.shr5Management.PrioritySystem;
 public abstract class PrioritySystemTest extends CharacterGeneratorSystemTest {
 
 	/**
-	 * Constructs a new Priority System test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Priority System test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public PrioritySystemTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Priority System test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Priority System test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected PrioritySystem getFixture() {
-		return (PrioritySystem)fixture;
-	}
+        return (PrioritySystem)fixture;
+    }
 
 } //PrioritySystemTest

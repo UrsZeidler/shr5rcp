@@ -22,34 +22,34 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class FreeStyleGeneratorTest extends CharacterGeneratorTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(FreeStyleGeneratorTest.class);
-	}
+        TestRunner.run(FreeStyleGeneratorTest.class);
+    }
 
 	/**
-	 * Constructs a new Free Style Generator test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Free Style Generator test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FreeStyleGeneratorTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Free Style Generator test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Free Style Generator test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected FreeStyleGenerator getFixture() {
-		return (FreeStyleGenerator)fixture;
-	}
+        return (FreeStyleGenerator)fixture;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,15 +64,15 @@ public class FreeStyleGeneratorTest extends CharacterGeneratorTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getFreestyleGenerator() <em>Freestyle Generator</em>}' feature getter.

@@ -18,22 +18,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class WissensfertigkeitImpl extends FertigkeitImpl implements Wissensfertigkeit {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected WissensfertigkeitImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.WISSENSFERTIGKEIT;
-	}
+        return Shr5Package.Literals.WISSENSFERTIGKEIT;
+    }
 
 } //WissensfertigkeitImpl

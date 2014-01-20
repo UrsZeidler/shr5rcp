@@ -25,34 +25,34 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
 public class TechnomancerTest extends SpecialTypeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(TechnomancerTest.class);
-	}
+        TestRunner.run(TechnomancerTest.class);
+    }
 
 	/**
-	 * Constructs a new Technomancer test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Technomancer test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public TechnomancerTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Technomancer test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Technomancer test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Technomancer getFixture() {
-		return (Technomancer)fixture;
-	}
+        return (Technomancer)fixture;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,15 +67,15 @@ public class TechnomancerTest extends SpecialTypeTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5Management.Technomancer#calcComplexFormsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Complex Forms Spend</em>}' operation.

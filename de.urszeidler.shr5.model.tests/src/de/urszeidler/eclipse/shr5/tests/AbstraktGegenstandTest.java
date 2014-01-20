@@ -14,41 +14,41 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 public abstract class AbstraktGegenstandTest extends TestCase {
 
 	/**
-	 * The fixture for this Abstrakt Gegenstand test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Abstrakt Gegenstand test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AbstraktGegenstand fixture = null;
 
 	/**
-	 * Constructs a new Abstrakt Gegenstand test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Abstrakt Gegenstand test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AbstraktGegenstandTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Abstrakt Gegenstand test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Abstrakt Gegenstand test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(AbstraktGegenstand fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Abstrakt Gegenstand test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Abstrakt Gegenstand test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AbstraktGegenstand getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //AbstraktGegenstandTest

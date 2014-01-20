@@ -19,190 +19,190 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ZauberArt implements Enumerator {
 	/**
-	 * The '<em><b>Mana</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Mana</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MANA_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #MANA_VALUE
+     * @generated
+     * @ordered
+     */
 	MANA(0, "Mana", "Mana"),
 
 	/**
-	 * The '<em><b>Physisch</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Physisch</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PHYSISCH_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #PHYSISCH_VALUE
+     * @generated
+     * @ordered
+     */
 	PHYSISCH(1, "Physisch", "Physisch");
 
 	/**
-	 * The '<em><b>Mana</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Mana</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Mana</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MANA
-	 * @model name="Mana"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #MANA
+     * @model name="Mana"
+     * @generated
+     * @ordered
+     */
 	public static final int MANA_VALUE = 0;
 
 	/**
-	 * The '<em><b>Physisch</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Physisch</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Physisch</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PHYSISCH
-	 * @model name="Physisch"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #PHYSISCH
+     * @model name="Physisch"
+     * @generated
+     * @ordered
+     */
 	public static final int PHYSISCH_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Zauber Art</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * An array of all the '<em><b>Zauber Art</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static final ZauberArt[] VALUES_ARRAY =
 		new ZauberArt[] {
-			MANA,
-			PHYSISCH,
-		};
+            MANA,
+            PHYSISCH,
+        };
 
 	/**
-	 * A public read-only list of all the '<em><b>Zauber Art</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * A public read-only list of all the '<em><b>Zauber Art</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final List<ZauberArt> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Zauber Art</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Zauber Art</b></em>' literal with the specified literal value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ZauberArt get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ZauberArt result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ZauberArt result = VALUES_ARRAY[i];
+            if (result.toString().equals(literal)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Zauber Art</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Zauber Art</b></em>' literal with the specified name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ZauberArt getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ZauberArt result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ZauberArt result = VALUES_ARRAY[i];
+            if (result.getName().equals(name)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Zauber Art</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Zauber Art</b></em>' literal with the specified integer value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ZauberArt get(int value) {
-		switch (value) {
-			case MANA_VALUE: return MANA;
-			case PHYSISCH_VALUE: return PHYSISCH;
-		}
-		return null;
-	}
+        switch (value) {
+            case MANA_VALUE: return MANA;
+            case PHYSISCH_VALUE: return PHYSISCH;
+        }
+        return null;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+     * Only this class can construct instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private ZauberArt(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+        this.value = value;
+        this.name = name;
+        this.literal = literal;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getValue() {
-	  return value;
-	}
+      return value;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getName() {
-	  return name;
-	}
+      return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getLiteral() {
-	  return literal;
-	}
+      return literal;
+    }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+     * Returns the literal value of the enumerator, which is its string representation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		return literal;
-	}
+        return literal;
+    }
 	
 } //ZauberArt

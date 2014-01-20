@@ -18,22 +18,22 @@ import de.urszeidler.eclipse.shr5.Wurfwaffe;
  */
 public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaffe {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected WurfwaffeImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.WURFWAFFE;
-	}
+        return Shr5Package.Literals.WURFWAFFE;
+    }
 
 } //WurfwaffeImpl

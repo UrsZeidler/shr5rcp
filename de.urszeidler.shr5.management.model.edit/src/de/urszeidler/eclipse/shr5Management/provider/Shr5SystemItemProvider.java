@@ -37,203 +37,203 @@ public class Shr5SystemItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5SystemItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addKarmaToResourceFactorPropertyDescriptor(object);
-			addKarmaToMagicFactorPropertyDescriptor(object);
-			addNumberOfMaxAttributesPropertyDescriptor(object);
-			addKnowlegeSkillFactorPropertyDescriptor(object);
-			addCharismaToConnectionFactorPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addKarmaToResourceFactorPropertyDescriptor(object);
+            addKarmaToMagicFactorPropertyDescriptor(object);
+            addNumberOfMaxAttributesPropertyDescriptor(object);
+            addKnowlegeSkillFactorPropertyDescriptor(object);
+            addCharismaToConnectionFactorPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Karma To Resource Factor feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Karma To Resource Factor feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addKarmaToResourceFactorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Shr5System_karmaToResourceFactor_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToResourceFactor_feature", "_UI_Shr5System_type"),
-				 Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_karmaToResourceFactor_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToResourceFactor_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Karma To Magic Factor feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Karma To Magic Factor feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addKarmaToMagicFactorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Shr5System_karmaToMagicFactor_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToMagicFactor_feature", "_UI_Shr5System_type"),
-				 Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_karmaToMagicFactor_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToMagicFactor_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Number Of Max Attributes feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Number Of Max Attributes feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addNumberOfMaxAttributesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Shr5System_numberOfMaxAttributes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_numberOfMaxAttributes_feature", "_UI_Shr5System_type"),
-				 Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_numberOfMaxAttributes_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_numberOfMaxAttributes_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Knowlege Skill Factor feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Knowlege Skill Factor feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addKnowlegeSkillFactorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Shr5System_knowlegeSkillFactor_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_knowlegeSkillFactor_feature", "_UI_Shr5System_type"),
-				 Shr5managementPackage.Literals.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_knowlegeSkillFactor_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_knowlegeSkillFactor_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Charisma To Connection Factor feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Charisma To Connection Factor feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addCharismaToConnectionFactorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Shr5System_charismaToConnectionFactor_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_charismaToConnectionFactor_feature", "_UI_Shr5System_type"),
-				 Shr5managementPackage.Literals.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_charismaToConnectionFactor_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_charismaToConnectionFactor_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This returns Shr5System.gif.
-	 * <!-- begin-user-doc -->
+     * This returns Shr5System.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Shr5System"));
-	}
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Shr5System"));
+    }
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((Shr5System)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Shr5System_type") :
-			getString("_UI_Shr5System_type") + " " + label;
-	}
+        String label = ((Shr5System)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_Shr5System_type") :
+            getString("_UI_Shr5System_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Shr5System.class)) {
-			case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR:
-			case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR:
-			case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES:
-			case Shr5managementPackage.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR:
-			case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Shr5System.class)) {
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR:
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR:
+            case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES:
+            case Shr5managementPackage.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR:
+            case Shr5managementPackage.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 }

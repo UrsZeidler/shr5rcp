@@ -29,56 +29,56 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class ResourcenTest extends PriorityCategorieTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(ResourcenTest.class);
-	}
+        TestRunner.run(ResourcenTest.class);
+    }
 
 	/**
-	 * Constructs a new Resourcen test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Resourcen test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ResourcenTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Resourcen test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Resourcen test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Resourcen getFixture() {
-		return (Resourcen)fixture;
-	}
+        return (Resourcen)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5managementFactory.eINSTANCE.createResourcen());
-	}
+        setFixture(Shr5managementFactory.eINSTANCE.createResourcen());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5Management.Resourcen#calcResourceSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Resource Spend</em>}' operation.

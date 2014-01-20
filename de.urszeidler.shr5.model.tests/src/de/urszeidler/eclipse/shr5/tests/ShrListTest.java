@@ -16,72 +16,72 @@ import de.urszeidler.eclipse.shr5.ShrList;
 public class ShrListTest extends TestCase {
 
 	/**
-	 * The fixture for this Shr List test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Shr List test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ShrList fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(ShrListTest.class);
-	}
+        TestRunner.run(ShrListTest.class);
+    }
 
 	/**
-	 * Constructs a new Shr List test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Shr List test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ShrListTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Shr List test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Shr List test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(ShrList fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Shr List test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Shr List test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ShrList getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createShrList());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createShrList());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //ShrListTest

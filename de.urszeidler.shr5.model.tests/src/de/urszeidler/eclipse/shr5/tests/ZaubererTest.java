@@ -20,54 +20,54 @@ import de.urszeidler.eclipse.shr5.Zauberer;
 public abstract class ZaubererTest extends TestCase {
 
 	/**
-	 * The fixture for this Zauberer test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Zauberer test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Zauberer fixture = null;
 
 	/**
-	 * Constructs a new Zauberer test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Zauberer test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ZaubererTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Zauberer test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Zauberer test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(Zauberer fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Zauberer test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Zauberer test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Zauberer getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug() <em>Enzug</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug() <em>Enzug</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.Zauberer#getEnzug()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.Zauberer#getEnzug()
+     * @generated
+     */
 	public void testGetEnzug() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 } //ZaubererTest

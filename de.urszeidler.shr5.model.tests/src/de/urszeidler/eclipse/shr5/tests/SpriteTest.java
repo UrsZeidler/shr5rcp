@@ -26,20 +26,20 @@ import de.urszeidler.eclipse.shr5.Sprite;
 public class SpriteTest extends TestCase {
 
 	/**
-	 * The fixture for this Sprite test case.
-	 * <!-- begin-user-doc --> <!--
+     * The fixture for this Sprite test case.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Sprite fixture = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(SpriteTest.class);
-	}
+        TestRunner.run(SpriteTest.class);
+    }
 
 	/**
 	 * Constructs a new Sprite test case with the given name. <!--
@@ -48,48 +48,48 @@ public class SpriteTest extends TestCase {
 	 * @generated
 	 */
 	public SpriteTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Sprite test case.
-	 * <!-- begin-user-doc --> <!--
+     * Sets the fixture for this Sprite test case.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(Sprite fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Sprite test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Sprite test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Sprite getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createSprite());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createSprite());
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '

@@ -16,55 +16,55 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class KarmaGaintTest extends ChangesTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(KarmaGaintTest.class);
-	}
+        TestRunner.run(KarmaGaintTest.class);
+    }
 
 	/**
-	 * Constructs a new Karma Gaint test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Karma Gaint test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KarmaGaintTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Karma Gaint test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Karma Gaint test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected KarmaGaint getFixture() {
-		return (KarmaGaint)fixture;
-	}
+        return (KarmaGaint)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5managementFactory.eINSTANCE.createKarmaGaint());
-	}
+        setFixture(Shr5managementFactory.eINSTANCE.createKarmaGaint());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //KarmaGaintTest

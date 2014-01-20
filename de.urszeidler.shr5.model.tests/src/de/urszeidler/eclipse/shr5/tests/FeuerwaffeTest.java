@@ -15,55 +15,55 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class FeuerwaffeTest extends AbstaktFernKampfwaffeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(FeuerwaffeTest.class);
-	}
+        TestRunner.run(FeuerwaffeTest.class);
+    }
 
 	/**
-	 * Constructs a new Feuerwaffe test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Feuerwaffe test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FeuerwaffeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Feuerwaffe test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Feuerwaffe test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Feuerwaffe getFixture() {
-		return (Feuerwaffe)fixture;
-	}
+        return (Feuerwaffe)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createFeuerwaffe());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createFeuerwaffe());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //FeuerwaffeTest

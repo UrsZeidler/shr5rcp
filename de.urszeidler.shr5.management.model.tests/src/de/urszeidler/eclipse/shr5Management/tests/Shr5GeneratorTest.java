@@ -44,56 +44,34 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
- * <em>Karma Spend</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator()
- * <em>Shr5 Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend() <em>Karma Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator() <em>Shr5 Generator</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Category Only Once</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not Spend All Points</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not More Max Attributes</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not Spend All Attributes Points</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not Spend Skill All Points</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not Spend All Special Points</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not Spend All Special Type Points</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not Spend All Connection Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Attributes Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend Skill All Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Special Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Special Type Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Connection Points</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(Shr5GeneratorTest.class);
-	}
+        TestRunner.run(Shr5GeneratorTest.class);
+    }
 
 	private Attributes attributes;
 	private MetaType metaType;
@@ -112,8 +90,8 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 	 * @generated
 	 */
 	public Shr5GeneratorTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
 	 * Returns the fixture for this Shr5 Generator test case. <!--
@@ -123,8 +101,8 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 	 */
 	@Override
 	protected Shr5Generator getFixture() {
-		return (Shr5Generator) fixture;
-	}
+        return (Shr5Generator)fixture;
+    }
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -142,15 +120,14 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Creates a simple mudan character.

@@ -28,137 +28,137 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public abstract class AdvancementImpl extends MinimalEObjectImpl.Container implements Advancement {
 	/**
-	 * The default value of the '{@link #getKarmaFactor() <em>Karma Factor</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getKarmaFactor() <em>Karma Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKarmaFactor()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaFactor()
+     * @generated
+     * @ordered
+     */
 	protected static final int KARMA_FACTOR_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getKarmaFactor() <em>Karma Factor</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getKarmaFactor() <em>Karma Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKarmaFactor()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKarmaFactor()
+     * @generated
+     * @ordered
+     */
 	protected int karmaFactor = KARMA_FACTOR_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AdvancementImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.ADVANCEMENT;
-	}
+        return Shr5managementPackage.Literals.ADVANCEMENT;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getKarmaFactor() {
-		return karmaFactor;
-	}
+        return karmaFactor;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setKarmaFactor(int newKarmaFactor) {
-		int oldKarmaFactor = karmaFactor;
-		karmaFactor = newKarmaFactor;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR, oldKarmaFactor, karmaFactor));
-	}
+        int oldKarmaFactor = karmaFactor;
+        karmaFactor = newKarmaFactor;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR, oldKarmaFactor, karmaFactor));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
-				return getKarmaFactor();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
+                return getKarmaFactor();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
-				setKarmaFactor((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
+                setKarmaFactor((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
-				setKarmaFactor(KARMA_FACTOR_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
+                setKarmaFactor(KARMA_FACTOR_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
-				return karmaFactor != KARMA_FACTOR_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.ADVANCEMENT__KARMA_FACTOR:
+                return karmaFactor != KARMA_FACTOR_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (karmaFactor: ");
-		result.append(karmaFactor);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (karmaFactor: ");
+        result.append(karmaFactor);
+        result.append(')');
+        return result.toString();
+    }
 
 } //AdvancementImpl

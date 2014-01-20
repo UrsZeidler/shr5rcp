@@ -15,55 +15,55 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class KiAdeptTest extends MagischePersonaTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(KiAdeptTest.class);
-	}
+        TestRunner.run(KiAdeptTest.class);
+    }
 
 	/**
-	 * Constructs a new Ki Adept test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Ki Adept test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KiAdeptTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Ki Adept test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Ki Adept test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected KiAdept getFixture() {
-		return (KiAdept)fixture;
-	}
+        return (KiAdept)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createKiAdept());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createKiAdept());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //KiAdeptTest

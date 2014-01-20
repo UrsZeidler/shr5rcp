@@ -41,174 +41,174 @@ public class FeuerwaffeItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FeuerwaffeItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addMunitionstypPropertyDescriptor(object);
-			addModiePropertyDescriptor(object);
-			addKapazitaetPropertyDescriptor(object);
-			addErweiterungPropertyDescriptor(object);
-			addRueckstossPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addMunitionstypPropertyDescriptor(object);
+            addModiePropertyDescriptor(object);
+            addKapazitaetPropertyDescriptor(object);
+            addErweiterungPropertyDescriptor(object);
+            addRueckstossPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Munitionstyp feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Munitionstyp feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addMunitionstypPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feuerwaffe_munitionstyp_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_munitionstyp_feature", "_UI_Feuerwaffe_type"),
-				 Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Feuerwaffe_munitionstyp_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_munitionstyp_feature", "_UI_Feuerwaffe_type"),
+                 Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Modie feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Modie feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addModiePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feuerwaffe_modie_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_modie_feature", "_UI_Feuerwaffe_type"),
-				 Shr5Package.Literals.FEUERWAFFE__MODIE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Feuerwaffe_modie_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_modie_feature", "_UI_Feuerwaffe_type"),
+                 Shr5Package.Literals.FEUERWAFFE__MODIE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Kapazitaet feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Kapazitaet feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addKapazitaetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feuerwaffe_kapazitaet_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_kapazitaet_feature", "_UI_Feuerwaffe_type"),
-				 Shr5Package.Literals.FEUERWAFFE__KAPAZITAET,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Feuerwaffe_kapazitaet_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_kapazitaet_feature", "_UI_Feuerwaffe_type"),
+                 Shr5Package.Literals.FEUERWAFFE__KAPAZITAET,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Erweiterung feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Erweiterung feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addErweiterungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feuerwaffe_erweiterung_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_erweiterung_feature", "_UI_Feuerwaffe_type"),
-				 Shr5Package.Literals.FEUERWAFFE__ERWEITERUNG,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Feuerwaffe_erweiterung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_erweiterung_feature", "_UI_Feuerwaffe_type"),
+                 Shr5Package.Literals.FEUERWAFFE__ERWEITERUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Rueckstoss feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Rueckstoss feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addRueckstossPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Feuerwaffe_rueckstoss_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_rueckstoss_feature", "_UI_Feuerwaffe_type"),
-				 Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Feuerwaffe_rueckstoss_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Feuerwaffe_rueckstoss_feature", "_UI_Feuerwaffe_type"),
+                 Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Shr5Package.Literals.FEUERWAFFE__EINBAU);
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.FEUERWAFFE__EINBAU);
+        }
+        return childrenFeatures;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
 
-		return super.getChildFeature(object, child);
-	}
+        return super.getChildFeature(object, child);
+    }
 
 	/**
 	 * This returns Feuerwaffe.gif.
@@ -229,60 +229,60 @@ public class FeuerwaffeItemProvider
 	}
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((Feuerwaffe)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Feuerwaffe_type") :
-			getString("_UI_Feuerwaffe_type") + " " + label;
-	}
+        String label = ((Feuerwaffe)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_Feuerwaffe_type") :
+            getString("_UI_Feuerwaffe_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Feuerwaffe.class)) {
-			case Shr5Package.FEUERWAFFE__MUNITIONSTYP:
-			case Shr5Package.FEUERWAFFE__MODIE:
-			case Shr5Package.FEUERWAFFE__KAPAZITAET:
-			case Shr5Package.FEUERWAFFE__ERWEITERUNG:
-			case Shr5Package.FEUERWAFFE__RUECKSTOSS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case Shr5Package.FEUERWAFFE__EINBAU:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Feuerwaffe.class)) {
+            case Shr5Package.FEUERWAFFE__MUNITIONSTYP:
+            case Shr5Package.FEUERWAFFE__MODIE:
+            case Shr5Package.FEUERWAFFE__KAPAZITAET:
+            case Shr5Package.FEUERWAFFE__ERWEITERUNG:
+            case Shr5Package.FEUERWAFFE__RUECKSTOSS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5Package.FEUERWAFFE__EINBAU:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.FEUERWAFFE__EINBAU,
-				 Shr5Factory.eINSTANCE.createFernkampfwaffeModifikator()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FEUERWAFFE__EINBAU,
+                 Shr5Factory.eINSTANCE.createFernkampfwaffeModifikator()));
+    }
 
 }

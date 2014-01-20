@@ -48,12 +48,10 @@ import de.urszeidler.eclipse.shr5.MagischeMods;
 import de.urszeidler.eclipse.shr5.MagischePersona;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
-import de.urszeidler.eclipse.shr5.MudanCritter;
 import de.urszeidler.eclipse.shr5.MudanPersona;
 import de.urszeidler.eclipse.shr5.MysticAdept;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Panzerung;
-import de.urszeidler.eclipse.shr5.ParaCritter;
 import de.urszeidler.eclipse.shr5.PassagierFahrzeug;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -93,1888 +91,1882 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  */
 public class Shr5Switch<T> extends Switch<T> {
 	/**
-	 * The cached model package
-	 * <!-- begin-user-doc -->
+     * The cached model package
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected static Shr5Package modelPackage;
 
 	/**
-	 * Creates an instance of the switch.
-	 * <!-- begin-user-doc -->
+     * Creates an instance of the switch.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5Switch() {
-		if (modelPackage == null) {
-			modelPackage = Shr5Package.eINSTANCE;
-		}
-	}
+        if (modelPackage == null) {
+            modelPackage = Shr5Package.eINSTANCE;
+        }
+    }
 
 	/**
-	 * Checks whether this is a switch for the given package.
-	 * <!-- begin-user-doc -->
+     * Checks whether this is a switch for the given package.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
-	 * @return whether this is a switch for the given package.
-	 * @generated
-	 */
+     * @parameter ePackage the package in question.
+     * @return whether this is a switch for the given package.
+     * @generated
+     */
 	@Override
 	protected boolean isSwitchFor(EPackage ePackage) {
-		return ePackage == modelPackage;
-	}
+        return ePackage == modelPackage;
+    }
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
+     * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
+     * @return the first non-null result returned by a <code>caseXXX</code> call.
+     * @generated
+     */
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case Shr5Package.BESCHREIBBAR: {
-				Beschreibbar beschreibbar = (Beschreibbar)theEObject;
-				T result = caseBeschreibbar(beschreibbar);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.QUELLE: {
-				Quelle quelle = (Quelle)theEObject;
-				T result = caseQuelle(quelle);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SOURCE_BOOK: {
-				SourceBook sourceBook = (SourceBook)theEObject;
-				T result = caseSourceBook(sourceBook);
-				if (result == null) result = caseBeschreibbar(sourceBook);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ABSTRAKT_PERSONA: {
-				AbstraktPersona abstraktPersona = (AbstraktPersona)theEObject;
-				T result = caseAbstraktPersona(abstraktPersona);
-				if (result == null) result = caseBeschreibbar(abstraktPersona);
-				if (result == null) result = caseKoerperlicheAttribute(abstraktPersona);
-				if (result == null) result = caseSpezielleAttribute(abstraktPersona);
-				if (result == null) result = caseGeistigeAttribute(abstraktPersona);
-				if (result == null) result = caseChrakterLimits(abstraktPersona);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.GEGENSTAND: {
-				Gegenstand gegenstand = (Gegenstand)theEObject;
-				T result = caseGegenstand(gegenstand);
-				if (result == null) result = caseAbstraktGegenstand(gegenstand);
-				if (result == null) result = caseQuelle(gegenstand);
-				if (result == null) result = caseGeldWert(gegenstand);
-				if (result == null) result = caseBeschreibbar(gegenstand);
-				if (result == null) result = caseModifizierbar(gegenstand);
-				if (result == null) result = caseAnwendbar(gegenstand);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.GELD_WERT: {
-				GeldWert geldWert = (GeldWert)theEObject;
-				T result = caseGeldWert(geldWert);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.REICHWEITE: {
-				Reichweite reichweite = (Reichweite)theEObject;
-				T result = caseReichweite(reichweite);
-				if (result == null) result = caseBeschreibbar(reichweite);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT: {
-				AttributModifikatorWert attributModifikatorWert = (AttributModifikatorWert)theEObject;
-				T result = caseAttributModifikatorWert(attributModifikatorWert);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MODIFIZIERBAR: {
-				Modifizierbar modifizierbar = (Modifizierbar)theEObject;
-				T result = caseModifizierbar(modifizierbar);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KOERPERLICHE_ATTRIBUTE: {
-				KoerperlicheAttribute koerperlicheAttribute = (KoerperlicheAttribute)theEObject;
-				T result = caseKoerperlicheAttribute(koerperlicheAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SPEZIELLE_ATTRIBUTE: {
-				SpezielleAttribute spezielleAttribute = (SpezielleAttribute)theEObject;
-				T result = caseSpezielleAttribute(spezielleAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ABSTRAKT_GEGENSTAND: {
-				AbstraktGegenstand abstraktGegenstand = (AbstraktGegenstand)theEObject;
-				T result = caseAbstraktGegenstand(abstraktGegenstand);
-				if (result == null) result = caseQuelle(abstraktGegenstand);
-				if (result == null) result = caseGeldWert(abstraktGegenstand);
-				if (result == null) result = caseBeschreibbar(abstraktGegenstand);
-				if (result == null) result = caseModifizierbar(abstraktGegenstand);
-				if (result == null) result = caseAnwendbar(abstraktGegenstand);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ABSTAKT_FERN_KAMPFWAFFE: {
-				AbstaktFernKampfwaffe abstaktFernKampfwaffe = (AbstaktFernKampfwaffe)theEObject;
-				T result = caseAbstaktFernKampfwaffe(abstaktFernKampfwaffe);
-				if (result == null) result = caseAbstaktWaffe(abstaktFernKampfwaffe);
-				if (result == null) result = caseAbstraktGegenstand(abstaktFernKampfwaffe);
-				if (result == null) result = caseQuelle(abstaktFernKampfwaffe);
-				if (result == null) result = caseGeldWert(abstaktFernKampfwaffe);
-				if (result == null) result = caseBeschreibbar(abstaktFernKampfwaffe);
-				if (result == null) result = caseModifizierbar(abstaktFernKampfwaffe);
-				if (result == null) result = caseAnwendbar(abstaktFernKampfwaffe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ABSTAKT_WAFFE: {
-				AbstaktWaffe abstaktWaffe = (AbstaktWaffe)theEObject;
-				T result = caseAbstaktWaffe(abstaktWaffe);
-				if (result == null) result = caseAbstraktGegenstand(abstaktWaffe);
-				if (result == null) result = caseQuelle(abstaktWaffe);
-				if (result == null) result = caseGeldWert(abstaktWaffe);
-				if (result == null) result = caseBeschreibbar(abstaktWaffe);
-				if (result == null) result = caseModifizierbar(abstaktWaffe);
-				if (result == null) result = caseAnwendbar(abstaktWaffe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.NAHKAMPFWAFFE: {
-				Nahkampfwaffe nahkampfwaffe = (Nahkampfwaffe)theEObject;
-				T result = caseNahkampfwaffe(nahkampfwaffe);
-				if (result == null) result = caseAbstaktWaffe(nahkampfwaffe);
-				if (result == null) result = caseAbstraktGegenstand(nahkampfwaffe);
-				if (result == null) result = caseQuelle(nahkampfwaffe);
-				if (result == null) result = caseGeldWert(nahkampfwaffe);
-				if (result == null) result = caseBeschreibbar(nahkampfwaffe);
-				if (result == null) result = caseModifizierbar(nahkampfwaffe);
-				if (result == null) result = caseAnwendbar(nahkampfwaffe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FEUERWAFFE: {
-				Feuerwaffe feuerwaffe = (Feuerwaffe)theEObject;
-				T result = caseFeuerwaffe(feuerwaffe);
-				if (result == null) result = caseAbstaktFernKampfwaffe(feuerwaffe);
-				if (result == null) result = caseAbstaktWaffe(feuerwaffe);
-				if (result == null) result = caseAbstraktGegenstand(feuerwaffe);
-				if (result == null) result = caseQuelle(feuerwaffe);
-				if (result == null) result = caseGeldWert(feuerwaffe);
-				if (result == null) result = caseBeschreibbar(feuerwaffe);
-				if (result == null) result = caseModifizierbar(feuerwaffe);
-				if (result == null) result = caseAnwendbar(feuerwaffe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.WURFWAFFE: {
-				Wurfwaffe wurfwaffe = (Wurfwaffe)theEObject;
-				T result = caseWurfwaffe(wurfwaffe);
-				if (result == null) result = caseAbstaktFernKampfwaffe(wurfwaffe);
-				if (result == null) result = caseAbstaktWaffe(wurfwaffe);
-				if (result == null) result = caseAbstraktGegenstand(wurfwaffe);
-				if (result == null) result = caseQuelle(wurfwaffe);
-				if (result == null) result = caseGeldWert(wurfwaffe);
-				if (result == null) result = caseBeschreibbar(wurfwaffe);
-				if (result == null) result = caseModifizierbar(wurfwaffe);
-				if (result == null) result = caseAnwendbar(wurfwaffe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SHR_LIST: {
-				ShrList shrList = (ShrList)theEObject;
-				T result = caseShrList(shrList);
-				if (result == null) result = caseBeschreibbar(shrList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PROJEKTILWAFFE: {
-				Projektilwaffe projektilwaffe = (Projektilwaffe)theEObject;
-				T result = caseProjektilwaffe(projektilwaffe);
-				if (result == null) result = caseAbstaktFernKampfwaffe(projektilwaffe);
-				if (result == null) result = caseAbstaktWaffe(projektilwaffe);
-				if (result == null) result = caseAbstraktGegenstand(projektilwaffe);
-				if (result == null) result = caseQuelle(projektilwaffe);
-				if (result == null) result = caseGeldWert(projektilwaffe);
-				if (result == null) result = caseBeschreibbar(projektilwaffe);
-				if (result == null) result = caseModifizierbar(projektilwaffe);
-				if (result == null) result = caseAnwendbar(projektilwaffe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FERTIGKEITS_GRUPPE: {
-				FertigkeitsGruppe fertigkeitsGruppe = (FertigkeitsGruppe)theEObject;
-				T result = caseFertigkeitsGruppe(fertigkeitsGruppe);
-				if (result == null) result = caseBeschreibbar(fertigkeitsGruppe);
-				if (result == null) result = caseQuelle(fertigkeitsGruppe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FERTIGKEIT: {
-				Fertigkeit fertigkeit = (Fertigkeit)theEObject;
-				T result = caseFertigkeit(fertigkeit);
-				if (result == null) result = caseBeschreibbar(fertigkeit);
-				if (result == null) result = caseQuelle(fertigkeit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PERSONA_FERTIGKEIT: {
-				PersonaFertigkeit personaFertigkeit = (PersonaFertigkeit)theEObject;
-				T result = casePersonaFertigkeit(personaFertigkeit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE: {
-				PersonaFertigkeitsGruppe personaFertigkeitsGruppe = (PersonaFertigkeitsGruppe)theEObject;
-				T result = casePersonaFertigkeitsGruppe(personaFertigkeitsGruppe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.CYBERWARE: {
-				Cyberware cyberware = (Cyberware)theEObject;
-				T result = caseCyberware(cyberware);
-				if (result == null) result = caseKoerpermods(cyberware);
-				if (result == null) result = caseGeldWert(cyberware);
-				if (result == null) result = caseAbstraktModifikatoren(cyberware);
-				if (result == null) result = caseBeschreibbar(cyberware);
-				if (result == null) result = caseModifizierbar(cyberware);
-				if (result == null) result = caseQuelle(cyberware);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.BIO_WARE: {
-				BioWare bioWare = (BioWare)theEObject;
-				T result = caseBioWare(bioWare);
-				if (result == null) result = caseKoerpermods(bioWare);
-				if (result == null) result = caseGeldWert(bioWare);
-				if (result == null) result = caseAbstraktModifikatoren(bioWare);
-				if (result == null) result = caseBeschreibbar(bioWare);
-				if (result == null) result = caseModifizierbar(bioWare);
-				if (result == null) result = caseQuelle(bioWare);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KOERPERMODS: {
-				Koerpermods koerpermods = (Koerpermods)theEObject;
-				T result = caseKoerpermods(koerpermods);
-				if (result == null) result = caseAbstraktModifikatoren(koerpermods);
-				if (result == null) result = caseBeschreibbar(koerpermods);
-				if (result == null) result = caseModifizierbar(koerpermods);
-				if (result == null) result = caseQuelle(koerpermods);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ABSTRAKT_MODIFIKATOREN: {
-				AbstraktModifikatoren abstraktModifikatoren = (AbstraktModifikatoren)theEObject;
-				T result = caseAbstraktModifikatoren(abstraktModifikatoren);
-				if (result == null) result = caseBeschreibbar(abstraktModifikatoren);
-				if (result == null) result = caseModifizierbar(abstraktModifikatoren);
-				if (result == null) result = caseQuelle(abstraktModifikatoren);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.GEISTIGE_ATTRIBUTE: {
-				GeistigeAttribute geistigeAttribute = (GeistigeAttribute)theEObject;
-				T result = caseGeistigeAttribute(geistigeAttribute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MUDAN_PERSONA: {
-				MudanPersona mudanPersona = (MudanPersona)theEObject;
-				T result = caseMudanPersona(mudanPersona);
-				if (result == null) result = caseKoerperPersona(mudanPersona);
-				if (result == null) result = caseAbstraktPersona(mudanPersona);
-				if (result == null) result = casePanzerung(mudanPersona);
-				if (result == null) result = caseBeschreibbar(mudanPersona);
-				if (result == null) result = caseKoerperlicheAttribute(mudanPersona);
-				if (result == null) result = caseSpezielleAttribute(mudanPersona);
-				if (result == null) result = caseGeistigeAttribute(mudanPersona);
-				if (result == null) result = caseChrakterLimits(mudanPersona);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KOERPER_PERSONA: {
-				KoerperPersona koerperPersona = (KoerperPersona)theEObject;
-				T result = caseKoerperPersona(koerperPersona);
-				if (result == null) result = caseAbstraktPersona(koerperPersona);
-				if (result == null) result = casePanzerung(koerperPersona);
-				if (result == null) result = caseBeschreibbar(koerperPersona);
-				if (result == null) result = caseKoerperlicheAttribute(koerperPersona);
-				if (result == null) result = caseSpezielleAttribute(koerperPersona);
-				if (result == null) result = caseGeistigeAttribute(koerperPersona);
-				if (result == null) result = caseChrakterLimits(koerperPersona);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MAGISCHE_MODS: {
-				MagischeMods magischeMods = (MagischeMods)theEObject;
-				T result = caseMagischeMods(magischeMods);
-				if (result == null) result = caseAbstraktModifikatoren(magischeMods);
-				if (result == null) result = caseBeschreibbar(magischeMods);
-				if (result == null) result = caseModifizierbar(magischeMods);
-				if (result == null) result = caseQuelle(magischeMods);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KI_KRAFT: {
-				KiKraft kiKraft = (KiKraft)theEObject;
-				T result = caseKiKraft(kiKraft);
-				if (result == null) result = caseMagischeMods(kiKraft);
-				if (result == null) result = caseAbstraktModifikatoren(kiKraft);
-				if (result == null) result = caseBeschreibbar(kiKraft);
-				if (result == null) result = caseModifizierbar(kiKraft);
-				if (result == null) result = caseQuelle(kiKraft);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MAGISCHE_PERSONA: {
-				MagischePersona magischePersona = (MagischePersona)theEObject;
-				T result = caseMagischePersona(magischePersona);
-				if (result == null) result = caseKoerperPersona(magischePersona);
-				if (result == null) result = caseBaseMagischePersona(magischePersona);
-				if (result == null) result = caseAbstraktPersona(magischePersona);
-				if (result == null) result = casePanzerung(magischePersona);
-				if (result == null) result = caseBeschreibbar(magischePersona);
-				if (result == null) result = caseKoerperlicheAttribute(magischePersona);
-				if (result == null) result = caseSpezielleAttribute(magischePersona);
-				if (result == null) result = caseGeistigeAttribute(magischePersona);
-				if (result == null) result = caseChrakterLimits(magischePersona);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.BASE_MAGISCHE_PERSONA: {
-				BaseMagischePersona baseMagischePersona = (BaseMagischePersona)theEObject;
-				T result = caseBaseMagischePersona(baseMagischePersona);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FERNKAMPFWAFFEN_MODIFIKATOREN: {
-				FernkampfwaffenModifikatoren fernkampfwaffenModifikatoren = (FernkampfwaffenModifikatoren)theEObject;
-				T result = caseFernkampfwaffenModifikatoren(fernkampfwaffenModifikatoren);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SICHTVERHAELTNISSE: {
-				Sichtverhaeltnisse sichtverhaeltnisse = (Sichtverhaeltnisse)theEObject;
-				T result = caseSichtverhaeltnisse(sichtverhaeltnisse);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SPEZIES: {
-				Spezies spezies = (Spezies)theEObject;
-				T result = caseSpezies(spezies);
-				if (result == null) result = caseBeschreibbar(spezies);
-				if (result == null) result = caseModifizierbar(spezies);
-				if (result == null) result = caseQuelle(spezies);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.GEGENSTAND_STUFEN: {
-				GegenstandStufen gegenstandStufen = (GegenstandStufen)theEObject;
-				T result = caseGegenstandStufen(gegenstandStufen);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KI_ADEPT: {
-				KiAdept kiAdept = (KiAdept)theEObject;
-				T result = caseKiAdept(kiAdept);
-				if (result == null) result = caseMagischePersona(kiAdept);
-				if (result == null) result = caseKoerperPersona(kiAdept);
-				if (result == null) result = caseBaseMagischePersona(kiAdept);
-				if (result == null) result = caseAbstraktPersona(kiAdept);
-				if (result == null) result = casePanzerung(kiAdept);
-				if (result == null) result = caseBeschreibbar(kiAdept);
-				if (result == null) result = caseKoerperlicheAttribute(kiAdept);
-				if (result == null) result = caseSpezielleAttribute(kiAdept);
-				if (result == null) result = caseGeistigeAttribute(kiAdept);
-				if (result == null) result = caseChrakterLimits(kiAdept);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KLEIDUNG: {
-				Kleidung kleidung = (Kleidung)theEObject;
-				T result = caseKleidung(kleidung);
-				if (result == null) result = caseAbstraktGegenstand(kleidung);
-				if (result == null) result = caseQuelle(kleidung);
-				if (result == null) result = caseGeldWert(kleidung);
-				if (result == null) result = caseBeschreibbar(kleidung);
-				if (result == null) result = caseModifizierbar(kleidung);
-				if (result == null) result = caseAnwendbar(kleidung);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FERNKAMPFWAFFE_MODIFIKATOR: {
-				FernkampfwaffeModifikator fernkampfwaffeModifikator = (FernkampfwaffeModifikator)theEObject;
-				T result = caseFernkampfwaffeModifikator(fernkampfwaffeModifikator);
-				if (result == null) result = caseAbstraktModifikatoren(fernkampfwaffeModifikator);
-				if (result == null) result = caseBeschreibbar(fernkampfwaffeModifikator);
-				if (result == null) result = caseModifizierbar(fernkampfwaffeModifikator);
-				if (result == null) result = caseQuelle(fernkampfwaffeModifikator);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ANWENDBAR: {
-				Anwendbar anwendbar = (Anwendbar)theEObject;
-				T result = caseAnwendbar(anwendbar);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PERSONA_EIGENSCHAFT: {
-				PersonaEigenschaft personaEigenschaft = (PersonaEigenschaft)theEObject;
-				T result = casePersonaEigenschaft(personaEigenschaft);
-				if (result == null) result = caseAbstraktModifikatoren(personaEigenschaft);
-				if (result == null) result = caseBeschreibbar(personaEigenschaft);
-				if (result == null) result = caseModifizierbar(personaEigenschaft);
-				if (result == null) result = caseQuelle(personaEigenschaft);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PROBEN_MODIFIKATOREN: {
-				ProbenModifikatoren probenModifikatoren = (ProbenModifikatoren)theEObject;
-				T result = caseProbenModifikatoren(probenModifikatoren);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MAGIER: {
-				Magier magier = (Magier)theEObject;
-				T result = caseMagier(magier);
-				if (result == null) result = caseMagischePersona(magier);
-				if (result == null) result = caseZauberer(magier);
-				if (result == null) result = caseAstraleProjektion(magier);
-				if (result == null) result = caseKoerperPersona(magier);
-				if (result == null) result = caseBaseMagischePersona(magier);
-				if (result == null) result = caseAbstraktPersona(magier);
-				if (result == null) result = casePanzerung(magier);
-				if (result == null) result = caseBeschreibbar(magier);
-				if (result == null) result = caseKoerperlicheAttribute(magier);
-				if (result == null) result = caseSpezielleAttribute(magier);
-				if (result == null) result = caseGeistigeAttribute(magier);
-				if (result == null) result = caseChrakterLimits(magier);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ZAUBERER: {
-				Zauberer zauberer = (Zauberer)theEObject;
-				T result = caseZauberer(zauberer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MYSTIC_ADEPT: {
-				MysticAdept mysticAdept = (MysticAdept)theEObject;
-				T result = caseMysticAdept(mysticAdept);
-				if (result == null) result = caseKiAdept(mysticAdept);
-				if (result == null) result = caseZauberer(mysticAdept);
-				if (result == null) result = caseMagischePersona(mysticAdept);
-				if (result == null) result = caseKoerperPersona(mysticAdept);
-				if (result == null) result = caseBaseMagischePersona(mysticAdept);
-				if (result == null) result = caseAbstraktPersona(mysticAdept);
-				if (result == null) result = casePanzerung(mysticAdept);
-				if (result == null) result = caseBeschreibbar(mysticAdept);
-				if (result == null) result = caseKoerperlicheAttribute(mysticAdept);
-				if (result == null) result = caseSpezielleAttribute(mysticAdept);
-				if (result == null) result = caseGeistigeAttribute(mysticAdept);
-				if (result == null) result = caseChrakterLimits(mysticAdept);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PERSONA_ZAUBER: {
-				PersonaZauber personaZauber = (PersonaZauber)theEObject;
-				T result = casePersonaZauber(personaZauber);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ZAUBER: {
-				Zauber zauber = (Zauber)theEObject;
-				T result = caseZauber(zauber);
-				if (result == null) result = caseBeschreibbar(zauber);
-				if (result == null) result = caseQuelle(zauber);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.CHRAKTER_LIMITS: {
-				ChrakterLimits chrakterLimits = (ChrakterLimits)theEObject;
-				T result = caseChrakterLimits(chrakterLimits);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PANZERUNG: {
-				Panzerung panzerung = (Panzerung)theEObject;
-				T result = casePanzerung(panzerung);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ASPEKT_MAGIER: {
-				AspektMagier aspektMagier = (AspektMagier)theEObject;
-				T result = caseAspektMagier(aspektMagier);
-				if (result == null) result = caseMagischePersona(aspektMagier);
-				if (result == null) result = caseZauberer(aspektMagier);
-				if (result == null) result = caseKoerperPersona(aspektMagier);
-				if (result == null) result = caseBaseMagischePersona(aspektMagier);
-				if (result == null) result = caseAbstraktPersona(aspektMagier);
-				if (result == null) result = casePanzerung(aspektMagier);
-				if (result == null) result = caseBeschreibbar(aspektMagier);
-				if (result == null) result = caseKoerperlicheAttribute(aspektMagier);
-				if (result == null) result = caseSpezielleAttribute(aspektMagier);
-				if (result == null) result = caseGeistigeAttribute(aspektMagier);
-				if (result == null) result = caseChrakterLimits(aspektMagier);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ASTRALE_PROJEKTION: {
-				AstraleProjektion astraleProjektion = (AstraleProjektion)theEObject;
-				T result = caseAstraleProjektion(astraleProjektion);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SCHUTZGEIST: {
-				Schutzgeist schutzgeist = (Schutzgeist)theEObject;
-				T result = caseSchutzgeist(schutzgeist);
-				if (result == null) result = caseMagischeMods(schutzgeist);
-				if (result == null) result = caseAbstraktModifikatoren(schutzgeist);
-				if (result == null) result = caseBeschreibbar(schutzgeist);
-				if (result == null) result = caseModifizierbar(schutzgeist);
-				if (result == null) result = caseQuelle(schutzgeist);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.INITATION: {
-				Initation initation = (Initation)theEObject;
-				T result = caseInitation(initation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.META_MAGIE: {
-				MetaMagie metaMagie = (MetaMagie)theEObject;
-				T result = caseMetaMagie(metaMagie);
-				if (result == null) result = caseBeschreibbar(metaMagie);
-				if (result == null) result = caseQuelle(metaMagie);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.MUDAN_CRITTER: {
-				MudanCritter mudanCritter = (MudanCritter)theEObject;
-				T result = caseMudanCritter(mudanCritter);
-				if (result == null) result = caseKoerperPersona(mudanCritter);
-				if (result == null) result = caseAbstraktPersona(mudanCritter);
-				if (result == null) result = casePanzerung(mudanCritter);
-				if (result == null) result = caseBeschreibbar(mudanCritter);
-				if (result == null) result = caseKoerperlicheAttribute(mudanCritter);
-				if (result == null) result = caseSpezielleAttribute(mudanCritter);
-				if (result == null) result = caseGeistigeAttribute(mudanCritter);
-				if (result == null) result = caseChrakterLimits(mudanCritter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.CRITTER_KRAFT: {
-				CritterKraft critterKraft = (CritterKraft)theEObject;
-				T result = caseCritterKraft(critterKraft);
-				if (result == null) result = caseMagischeMods(critterKraft);
-				if (result == null) result = caseAbstraktModifikatoren(critterKraft);
-				if (result == null) result = caseBeschreibbar(critterKraft);
-				if (result == null) result = caseModifizierbar(critterKraft);
-				if (result == null) result = caseQuelle(critterKraft);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PARA_CRITTER: {
-				ParaCritter paraCritter = (ParaCritter)theEObject;
-				T result = caseParaCritter(paraCritter);
-				if (result == null) result = caseMudanCritter(paraCritter);
-				if (result == null) result = caseBaseMagischePersona(paraCritter);
-				if (result == null) result = caseKoerperPersona(paraCritter);
-				if (result == null) result = caseAbstraktPersona(paraCritter);
-				if (result == null) result = casePanzerung(paraCritter);
-				if (result == null) result = caseBeschreibbar(paraCritter);
-				if (result == null) result = caseKoerperlicheAttribute(paraCritter);
-				if (result == null) result = caseSpezielleAttribute(paraCritter);
-				if (result == null) result = caseGeistigeAttribute(paraCritter);
-				if (result == null) result = caseChrakterLimits(paraCritter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FAHRZEUG: {
-				Fahrzeug fahrzeug = (Fahrzeug)theEObject;
-				T result = caseFahrzeug(fahrzeug);
-				if (result == null) result = caseBeschreibbar(fahrzeug);
-				if (result == null) result = caseQuelle(fahrzeug);
-				if (result == null) result = caseGeldWert(fahrzeug);
-				if (result == null) result = caseAnwendbar(fahrzeug);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.BODENFAHRZEUG: {
-				Bodenfahrzeug bodenfahrzeug = (Bodenfahrzeug)theEObject;
-				T result = caseBodenfahrzeug(bodenfahrzeug);
-				if (result == null) result = casePassagierFahrzeug(bodenfahrzeug);
-				if (result == null) result = caseFahrzeug(bodenfahrzeug);
-				if (result == null) result = caseBeschreibbar(bodenfahrzeug);
-				if (result == null) result = caseQuelle(bodenfahrzeug);
-				if (result == null) result = caseGeldWert(bodenfahrzeug);
-				if (result == null) result = caseAnwendbar(bodenfahrzeug);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PASSAGIER_FAHRZEUG: {
-				PassagierFahrzeug passagierFahrzeug = (PassagierFahrzeug)theEObject;
-				T result = casePassagierFahrzeug(passagierFahrzeug);
-				if (result == null) result = caseFahrzeug(passagierFahrzeug);
-				if (result == null) result = caseBeschreibbar(passagierFahrzeug);
-				if (result == null) result = caseQuelle(passagierFahrzeug);
-				if (result == null) result = caseGeldWert(passagierFahrzeug);
-				if (result == null) result = caseAnwendbar(passagierFahrzeug);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.DROHNE: {
-				Drohne drohne = (Drohne)theEObject;
-				T result = caseDrohne(drohne);
-				if (result == null) result = caseFahrzeug(drohne);
-				if (result == null) result = caseBeschreibbar(drohne);
-				if (result == null) result = caseQuelle(drohne);
-				if (result == null) result = caseGeldWert(drohne);
-				if (result == null) result = caseAnwendbar(drohne);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.FAHRZEUG_MODIFIKATION: {
-				FahrzeugModifikation fahrzeugModifikation = (FahrzeugModifikation)theEObject;
-				T result = caseFahrzeugModifikation(fahrzeugModifikation);
-				if (result == null) result = caseBeschreibbar(fahrzeugModifikation);
-				if (result == null) result = caseQuelle(fahrzeugModifikation);
-				if (result == null) result = caseGeldWert(fahrzeugModifikation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.TECHNOMANCER: {
-				Technomancer technomancer = (Technomancer)theEObject;
-				T result = caseTechnomancer(technomancer);
-				if (result == null) result = caseKoerperPersona(technomancer);
-				if (result == null) result = caseResonanzPersona(technomancer);
-				if (result == null) result = caseAbstraktPersona(technomancer);
-				if (result == null) result = casePanzerung(technomancer);
-				if (result == null) result = caseBeschreibbar(technomancer);
-				if (result == null) result = caseKoerperlicheAttribute(technomancer);
-				if (result == null) result = caseSpezielleAttribute(technomancer);
-				if (result == null) result = caseGeistigeAttribute(technomancer);
-				if (result == null) result = caseChrakterLimits(technomancer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.RESONANZ_PERSONA: {
-				ResonanzPersona resonanzPersona = (ResonanzPersona)theEObject;
-				T result = caseResonanzPersona(resonanzPersona);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.KOMPLEXE_FORM: {
-				KomplexeForm komplexeForm = (KomplexeForm)theEObject;
-				T result = caseKomplexeForm(komplexeForm);
-				if (result == null) result = caseQuelle(komplexeForm);
-				if (result == null) result = caseBeschreibbar(komplexeForm);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.PERSONA_KOMPLEX_FORM: {
-				PersonaKomplexForm personaKomplexForm = (PersonaKomplexForm)theEObject;
-				T result = casePersonaKomplexForm(personaKomplexForm);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SPRITE: {
-				Sprite sprite = (Sprite)theEObject;
-				T result = caseSprite(sprite);
-				if (result == null) result = caseResonanzPersona(sprite);
-				if (result == null) result = caseBeschreibbar(sprite);
-				if (result == null) result = caseQuelle(sprite);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.ECHO: {
-				Echo echo = (Echo)theEObject;
-				T result = caseEcho(echo);
-				if (result == null) result = caseAbstraktModifikatoren(echo);
-				if (result == null) result = caseBeschreibbar(echo);
-				if (result == null) result = caseModifizierbar(echo);
-				if (result == null) result = caseQuelle(echo);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.VERTRAG: {
-				Vertrag vertrag = (Vertrag)theEObject;
-				T result = caseVertrag(vertrag);
-				if (result == null) result = caseBeschreibbar(vertrag);
-				if (result == null) result = caseQuelle(vertrag);
-				if (result == null) result = caseGeldWert(vertrag);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.LIFESTYLE: {
-				Lifestyle lifestyle = (Lifestyle)theEObject;
-				T result = caseLifestyle(lifestyle);
-				if (result == null) result = caseVertrag(lifestyle);
-				if (result == null) result = caseBeschreibbar(lifestyle);
-				if (result == null) result = caseQuelle(lifestyle);
-				if (result == null) result = caseGeldWert(lifestyle);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.WISSENSFERTIGKEIT: {
-				Wissensfertigkeit wissensfertigkeit = (Wissensfertigkeit)theEObject;
-				T result = caseWissensfertigkeit(wissensfertigkeit);
-				if (result == null) result = caseFertigkeit(wissensfertigkeit);
-				if (result == null) result = caseBeschreibbar(wissensfertigkeit);
-				if (result == null) result = caseQuelle(wissensfertigkeit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Shr5Package.SPRACHFERTIGKEIT: {
-				Sprachfertigkeit sprachfertigkeit = (Sprachfertigkeit)theEObject;
-				T result = caseSprachfertigkeit(sprachfertigkeit);
-				if (result == null) result = caseWissensfertigkeit(sprachfertigkeit);
-				if (result == null) result = caseFertigkeit(sprachfertigkeit);
-				if (result == null) result = caseBeschreibbar(sprachfertigkeit);
-				if (result == null) result = caseQuelle(sprachfertigkeit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			default: return defaultCase(theEObject);
-		}
-	}
+        switch (classifierID) {
+            case Shr5Package.BESCHREIBBAR: {
+                Beschreibbar beschreibbar = (Beschreibbar)theEObject;
+                T result = caseBeschreibbar(beschreibbar);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.QUELLE: {
+                Quelle quelle = (Quelle)theEObject;
+                T result = caseQuelle(quelle);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SOURCE_BOOK: {
+                SourceBook sourceBook = (SourceBook)theEObject;
+                T result = caseSourceBook(sourceBook);
+                if (result == null) result = caseBeschreibbar(sourceBook);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTRAKT_PERSONA: {
+                AbstraktPersona abstraktPersona = (AbstraktPersona)theEObject;
+                T result = caseAbstraktPersona(abstraktPersona);
+                if (result == null) result = caseBeschreibbar(abstraktPersona);
+                if (result == null) result = caseKoerperlicheAttribute(abstraktPersona);
+                if (result == null) result = caseSpezielleAttribute(abstraktPersona);
+                if (result == null) result = caseGeistigeAttribute(abstraktPersona);
+                if (result == null) result = caseChrakterLimits(abstraktPersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GEGENSTAND: {
+                Gegenstand gegenstand = (Gegenstand)theEObject;
+                T result = caseGegenstand(gegenstand);
+                if (result == null) result = caseAbstraktGegenstand(gegenstand);
+                if (result == null) result = caseQuelle(gegenstand);
+                if (result == null) result = caseGeldWert(gegenstand);
+                if (result == null) result = caseBeschreibbar(gegenstand);
+                if (result == null) result = caseModifizierbar(gegenstand);
+                if (result == null) result = caseAnwendbar(gegenstand);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GELD_WERT: {
+                GeldWert geldWert = (GeldWert)theEObject;
+                T result = caseGeldWert(geldWert);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.REICHWEITE: {
+                Reichweite reichweite = (Reichweite)theEObject;
+                T result = caseReichweite(reichweite);
+                if (result == null) result = caseBeschreibbar(reichweite);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ATTRIBUT_MODIFIKATOR_WERT: {
+                AttributModifikatorWert attributModifikatorWert = (AttributModifikatorWert)theEObject;
+                T result = caseAttributModifikatorWert(attributModifikatorWert);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MODIFIZIERBAR: {
+                Modifizierbar modifizierbar = (Modifizierbar)theEObject;
+                T result = caseModifizierbar(modifizierbar);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KOERPERLICHE_ATTRIBUTE: {
+                KoerperlicheAttribute koerperlicheAttribute = (KoerperlicheAttribute)theEObject;
+                T result = caseKoerperlicheAttribute(koerperlicheAttribute);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SPEZIELLE_ATTRIBUTE: {
+                SpezielleAttribute spezielleAttribute = (SpezielleAttribute)theEObject;
+                T result = caseSpezielleAttribute(spezielleAttribute);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTRAKT_GEGENSTAND: {
+                AbstraktGegenstand abstraktGegenstand = (AbstraktGegenstand)theEObject;
+                T result = caseAbstraktGegenstand(abstraktGegenstand);
+                if (result == null) result = caseQuelle(abstraktGegenstand);
+                if (result == null) result = caseGeldWert(abstraktGegenstand);
+                if (result == null) result = caseBeschreibbar(abstraktGegenstand);
+                if (result == null) result = caseModifizierbar(abstraktGegenstand);
+                if (result == null) result = caseAnwendbar(abstraktGegenstand);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTAKT_FERN_KAMPFWAFFE: {
+                AbstaktFernKampfwaffe abstaktFernKampfwaffe = (AbstaktFernKampfwaffe)theEObject;
+                T result = caseAbstaktFernKampfwaffe(abstaktFernKampfwaffe);
+                if (result == null) result = caseAbstaktWaffe(abstaktFernKampfwaffe);
+                if (result == null) result = caseAbstraktGegenstand(abstaktFernKampfwaffe);
+                if (result == null) result = caseQuelle(abstaktFernKampfwaffe);
+                if (result == null) result = caseGeldWert(abstaktFernKampfwaffe);
+                if (result == null) result = caseBeschreibbar(abstaktFernKampfwaffe);
+                if (result == null) result = caseModifizierbar(abstaktFernKampfwaffe);
+                if (result == null) result = caseAnwendbar(abstaktFernKampfwaffe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTAKT_WAFFE: {
+                AbstaktWaffe abstaktWaffe = (AbstaktWaffe)theEObject;
+                T result = caseAbstaktWaffe(abstaktWaffe);
+                if (result == null) result = caseAbstraktGegenstand(abstaktWaffe);
+                if (result == null) result = caseQuelle(abstaktWaffe);
+                if (result == null) result = caseGeldWert(abstaktWaffe);
+                if (result == null) result = caseBeschreibbar(abstaktWaffe);
+                if (result == null) result = caseModifizierbar(abstaktWaffe);
+                if (result == null) result = caseAnwendbar(abstaktWaffe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.NAHKAMPFWAFFE: {
+                Nahkampfwaffe nahkampfwaffe = (Nahkampfwaffe)theEObject;
+                T result = caseNahkampfwaffe(nahkampfwaffe);
+                if (result == null) result = caseAbstaktWaffe(nahkampfwaffe);
+                if (result == null) result = caseAbstraktGegenstand(nahkampfwaffe);
+                if (result == null) result = caseQuelle(nahkampfwaffe);
+                if (result == null) result = caseGeldWert(nahkampfwaffe);
+                if (result == null) result = caseBeschreibbar(nahkampfwaffe);
+                if (result == null) result = caseModifizierbar(nahkampfwaffe);
+                if (result == null) result = caseAnwendbar(nahkampfwaffe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FEUERWAFFE: {
+                Feuerwaffe feuerwaffe = (Feuerwaffe)theEObject;
+                T result = caseFeuerwaffe(feuerwaffe);
+                if (result == null) result = caseAbstaktFernKampfwaffe(feuerwaffe);
+                if (result == null) result = caseAbstaktWaffe(feuerwaffe);
+                if (result == null) result = caseAbstraktGegenstand(feuerwaffe);
+                if (result == null) result = caseQuelle(feuerwaffe);
+                if (result == null) result = caseGeldWert(feuerwaffe);
+                if (result == null) result = caseBeschreibbar(feuerwaffe);
+                if (result == null) result = caseModifizierbar(feuerwaffe);
+                if (result == null) result = caseAnwendbar(feuerwaffe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.WURFWAFFE: {
+                Wurfwaffe wurfwaffe = (Wurfwaffe)theEObject;
+                T result = caseWurfwaffe(wurfwaffe);
+                if (result == null) result = caseAbstaktFernKampfwaffe(wurfwaffe);
+                if (result == null) result = caseAbstaktWaffe(wurfwaffe);
+                if (result == null) result = caseAbstraktGegenstand(wurfwaffe);
+                if (result == null) result = caseQuelle(wurfwaffe);
+                if (result == null) result = caseGeldWert(wurfwaffe);
+                if (result == null) result = caseBeschreibbar(wurfwaffe);
+                if (result == null) result = caseModifizierbar(wurfwaffe);
+                if (result == null) result = caseAnwendbar(wurfwaffe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SHR_LIST: {
+                ShrList shrList = (ShrList)theEObject;
+                T result = caseShrList(shrList);
+                if (result == null) result = caseBeschreibbar(shrList);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PROJEKTILWAFFE: {
+                Projektilwaffe projektilwaffe = (Projektilwaffe)theEObject;
+                T result = caseProjektilwaffe(projektilwaffe);
+                if (result == null) result = caseAbstaktFernKampfwaffe(projektilwaffe);
+                if (result == null) result = caseAbstaktWaffe(projektilwaffe);
+                if (result == null) result = caseAbstraktGegenstand(projektilwaffe);
+                if (result == null) result = caseQuelle(projektilwaffe);
+                if (result == null) result = caseGeldWert(projektilwaffe);
+                if (result == null) result = caseBeschreibbar(projektilwaffe);
+                if (result == null) result = caseModifizierbar(projektilwaffe);
+                if (result == null) result = caseAnwendbar(projektilwaffe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FERTIGKEITS_GRUPPE: {
+                FertigkeitsGruppe fertigkeitsGruppe = (FertigkeitsGruppe)theEObject;
+                T result = caseFertigkeitsGruppe(fertigkeitsGruppe);
+                if (result == null) result = caseBeschreibbar(fertigkeitsGruppe);
+                if (result == null) result = caseQuelle(fertigkeitsGruppe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FERTIGKEIT: {
+                Fertigkeit fertigkeit = (Fertigkeit)theEObject;
+                T result = caseFertigkeit(fertigkeit);
+                if (result == null) result = caseBeschreibbar(fertigkeit);
+                if (result == null) result = caseQuelle(fertigkeit);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_FERTIGKEIT: {
+                PersonaFertigkeit personaFertigkeit = (PersonaFertigkeit)theEObject;
+                T result = casePersonaFertigkeit(personaFertigkeit);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE: {
+                PersonaFertigkeitsGruppe personaFertigkeitsGruppe = (PersonaFertigkeitsGruppe)theEObject;
+                T result = casePersonaFertigkeitsGruppe(personaFertigkeitsGruppe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CYBERWARE: {
+                Cyberware cyberware = (Cyberware)theEObject;
+                T result = caseCyberware(cyberware);
+                if (result == null) result = caseKoerpermods(cyberware);
+                if (result == null) result = caseGeldWert(cyberware);
+                if (result == null) result = caseAbstraktModifikatoren(cyberware);
+                if (result == null) result = caseBeschreibbar(cyberware);
+                if (result == null) result = caseModifizierbar(cyberware);
+                if (result == null) result = caseQuelle(cyberware);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.BIO_WARE: {
+                BioWare bioWare = (BioWare)theEObject;
+                T result = caseBioWare(bioWare);
+                if (result == null) result = caseKoerpermods(bioWare);
+                if (result == null) result = caseGeldWert(bioWare);
+                if (result == null) result = caseAbstraktModifikatoren(bioWare);
+                if (result == null) result = caseBeschreibbar(bioWare);
+                if (result == null) result = caseModifizierbar(bioWare);
+                if (result == null) result = caseQuelle(bioWare);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KOERPERMODS: {
+                Koerpermods koerpermods = (Koerpermods)theEObject;
+                T result = caseKoerpermods(koerpermods);
+                if (result == null) result = caseAbstraktModifikatoren(koerpermods);
+                if (result == null) result = caseBeschreibbar(koerpermods);
+                if (result == null) result = caseModifizierbar(koerpermods);
+                if (result == null) result = caseQuelle(koerpermods);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN: {
+                AbstraktModifikatoren abstraktModifikatoren = (AbstraktModifikatoren)theEObject;
+                T result = caseAbstraktModifikatoren(abstraktModifikatoren);
+                if (result == null) result = caseBeschreibbar(abstraktModifikatoren);
+                if (result == null) result = caseModifizierbar(abstraktModifikatoren);
+                if (result == null) result = caseQuelle(abstraktModifikatoren);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GEISTIGE_ATTRIBUTE: {
+                GeistigeAttribute geistigeAttribute = (GeistigeAttribute)theEObject;
+                T result = caseGeistigeAttribute(geistigeAttribute);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MUDAN_PERSONA: {
+                MudanPersona mudanPersona = (MudanPersona)theEObject;
+                T result = caseMudanPersona(mudanPersona);
+                if (result == null) result = caseKoerperPersona(mudanPersona);
+                if (result == null) result = caseAbstraktPersona(mudanPersona);
+                if (result == null) result = casePanzerung(mudanPersona);
+                if (result == null) result = casePersonaZustand(mudanPersona);
+                if (result == null) result = caseBeschreibbar(mudanPersona);
+                if (result == null) result = caseKoerperlicheAttribute(mudanPersona);
+                if (result == null) result = caseSpezielleAttribute(mudanPersona);
+                if (result == null) result = caseGeistigeAttribute(mudanPersona);
+                if (result == null) result = caseChrakterLimits(mudanPersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KOERPER_PERSONA: {
+                KoerperPersona koerperPersona = (KoerperPersona)theEObject;
+                T result = caseKoerperPersona(koerperPersona);
+                if (result == null) result = caseAbstraktPersona(koerperPersona);
+                if (result == null) result = casePanzerung(koerperPersona);
+                if (result == null) result = casePersonaZustand(koerperPersona);
+                if (result == null) result = caseBeschreibbar(koerperPersona);
+                if (result == null) result = caseKoerperlicheAttribute(koerperPersona);
+                if (result == null) result = caseSpezielleAttribute(koerperPersona);
+                if (result == null) result = caseGeistigeAttribute(koerperPersona);
+                if (result == null) result = caseChrakterLimits(koerperPersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MAGISCHE_MODS: {
+                MagischeMods magischeMods = (MagischeMods)theEObject;
+                T result = caseMagischeMods(magischeMods);
+                if (result == null) result = caseAbstraktModifikatoren(magischeMods);
+                if (result == null) result = caseBeschreibbar(magischeMods);
+                if (result == null) result = caseModifizierbar(magischeMods);
+                if (result == null) result = caseQuelle(magischeMods);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KI_KRAFT: {
+                KiKraft kiKraft = (KiKraft)theEObject;
+                T result = caseKiKraft(kiKraft);
+                if (result == null) result = caseMagischeMods(kiKraft);
+                if (result == null) result = caseAbstraktModifikatoren(kiKraft);
+                if (result == null) result = caseBeschreibbar(kiKraft);
+                if (result == null) result = caseModifizierbar(kiKraft);
+                if (result == null) result = caseQuelle(kiKraft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MAGISCHE_PERSONA: {
+                MagischePersona magischePersona = (MagischePersona)theEObject;
+                T result = caseMagischePersona(magischePersona);
+                if (result == null) result = caseKoerperPersona(magischePersona);
+                if (result == null) result = caseBaseMagischePersona(magischePersona);
+                if (result == null) result = caseAbstraktPersona(magischePersona);
+                if (result == null) result = casePanzerung(magischePersona);
+                if (result == null) result = casePersonaZustand(magischePersona);
+                if (result == null) result = caseBeschreibbar(magischePersona);
+                if (result == null) result = caseKoerperlicheAttribute(magischePersona);
+                if (result == null) result = caseSpezielleAttribute(magischePersona);
+                if (result == null) result = caseGeistigeAttribute(magischePersona);
+                if (result == null) result = caseChrakterLimits(magischePersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.BASE_MAGISCHE_PERSONA: {
+                BaseMagischePersona baseMagischePersona = (BaseMagischePersona)theEObject;
+                T result = caseBaseMagischePersona(baseMagischePersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FERNKAMPFWAFFEN_MODIFIKATOREN: {
+                FernkampfwaffenModifikatoren fernkampfwaffenModifikatoren = (FernkampfwaffenModifikatoren)theEObject;
+                T result = caseFernkampfwaffenModifikatoren(fernkampfwaffenModifikatoren);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SICHTVERHAELTNISSE: {
+                Sichtverhaeltnisse sichtverhaeltnisse = (Sichtverhaeltnisse)theEObject;
+                T result = caseSichtverhaeltnisse(sichtverhaeltnisse);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SPEZIES: {
+                Spezies spezies = (Spezies)theEObject;
+                T result = caseSpezies(spezies);
+                if (result == null) result = caseBeschreibbar(spezies);
+                if (result == null) result = caseModifizierbar(spezies);
+                if (result == null) result = caseQuelle(spezies);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GEGENSTAND_STUFEN: {
+                GegenstandStufen gegenstandStufen = (GegenstandStufen)theEObject;
+                T result = caseGegenstandStufen(gegenstandStufen);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KI_ADEPT: {
+                KiAdept kiAdept = (KiAdept)theEObject;
+                T result = caseKiAdept(kiAdept);
+                if (result == null) result = caseMagischePersona(kiAdept);
+                if (result == null) result = caseKoerperPersona(kiAdept);
+                if (result == null) result = caseBaseMagischePersona(kiAdept);
+                if (result == null) result = caseAbstraktPersona(kiAdept);
+                if (result == null) result = casePanzerung(kiAdept);
+                if (result == null) result = casePersonaZustand(kiAdept);
+                if (result == null) result = caseBeschreibbar(kiAdept);
+                if (result == null) result = caseKoerperlicheAttribute(kiAdept);
+                if (result == null) result = caseSpezielleAttribute(kiAdept);
+                if (result == null) result = caseGeistigeAttribute(kiAdept);
+                if (result == null) result = caseChrakterLimits(kiAdept);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KLEIDUNG: {
+                Kleidung kleidung = (Kleidung)theEObject;
+                T result = caseKleidung(kleidung);
+                if (result == null) result = caseAbstraktGegenstand(kleidung);
+                if (result == null) result = caseQuelle(kleidung);
+                if (result == null) result = caseGeldWert(kleidung);
+                if (result == null) result = caseBeschreibbar(kleidung);
+                if (result == null) result = caseModifizierbar(kleidung);
+                if (result == null) result = caseAnwendbar(kleidung);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FERNKAMPFWAFFE_MODIFIKATOR: {
+                FernkampfwaffeModifikator fernkampfwaffeModifikator = (FernkampfwaffeModifikator)theEObject;
+                T result = caseFernkampfwaffeModifikator(fernkampfwaffeModifikator);
+                if (result == null) result = caseAbstraktModifikatoren(fernkampfwaffeModifikator);
+                if (result == null) result = caseBeschreibbar(fernkampfwaffeModifikator);
+                if (result == null) result = caseModifizierbar(fernkampfwaffeModifikator);
+                if (result == null) result = caseQuelle(fernkampfwaffeModifikator);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ANWENDBAR: {
+                Anwendbar anwendbar = (Anwendbar)theEObject;
+                T result = caseAnwendbar(anwendbar);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_EIGENSCHAFT: {
+                PersonaEigenschaft personaEigenschaft = (PersonaEigenschaft)theEObject;
+                T result = casePersonaEigenschaft(personaEigenschaft);
+                if (result == null) result = caseAbstraktModifikatoren(personaEigenschaft);
+                if (result == null) result = caseBeschreibbar(personaEigenschaft);
+                if (result == null) result = caseModifizierbar(personaEigenschaft);
+                if (result == null) result = caseQuelle(personaEigenschaft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PROBEN_MODIFIKATOREN: {
+                ProbenModifikatoren probenModifikatoren = (ProbenModifikatoren)theEObject;
+                T result = caseProbenModifikatoren(probenModifikatoren);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MAGIER: {
+                Magier magier = (Magier)theEObject;
+                T result = caseMagier(magier);
+                if (result == null) result = caseMagischePersona(magier);
+                if (result == null) result = caseZauberer(magier);
+                if (result == null) result = caseAstraleProjektion(magier);
+                if (result == null) result = caseKoerperPersona(magier);
+                if (result == null) result = caseBaseMagischePersona(magier);
+                if (result == null) result = caseAbstraktPersona(magier);
+                if (result == null) result = casePanzerung(magier);
+                if (result == null) result = casePersonaZustand(magier);
+                if (result == null) result = caseBeschreibbar(magier);
+                if (result == null) result = caseKoerperlicheAttribute(magier);
+                if (result == null) result = caseSpezielleAttribute(magier);
+                if (result == null) result = caseGeistigeAttribute(magier);
+                if (result == null) result = caseChrakterLimits(magier);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ZAUBERER: {
+                Zauberer zauberer = (Zauberer)theEObject;
+                T result = caseZauberer(zauberer);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MYSTIC_ADEPT: {
+                MysticAdept mysticAdept = (MysticAdept)theEObject;
+                T result = caseMysticAdept(mysticAdept);
+                if (result == null) result = caseKiAdept(mysticAdept);
+                if (result == null) result = caseZauberer(mysticAdept);
+                if (result == null) result = caseMagischePersona(mysticAdept);
+                if (result == null) result = caseKoerperPersona(mysticAdept);
+                if (result == null) result = caseBaseMagischePersona(mysticAdept);
+                if (result == null) result = caseAbstraktPersona(mysticAdept);
+                if (result == null) result = casePanzerung(mysticAdept);
+                if (result == null) result = casePersonaZustand(mysticAdept);
+                if (result == null) result = caseBeschreibbar(mysticAdept);
+                if (result == null) result = caseKoerperlicheAttribute(mysticAdept);
+                if (result == null) result = caseSpezielleAttribute(mysticAdept);
+                if (result == null) result = caseGeistigeAttribute(mysticAdept);
+                if (result == null) result = caseChrakterLimits(mysticAdept);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_ZAUBER: {
+                PersonaZauber personaZauber = (PersonaZauber)theEObject;
+                T result = casePersonaZauber(personaZauber);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ZAUBER: {
+                Zauber zauber = (Zauber)theEObject;
+                T result = caseZauber(zauber);
+                if (result == null) result = caseBeschreibbar(zauber);
+                if (result == null) result = caseQuelle(zauber);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CHRAKTER_LIMITS: {
+                ChrakterLimits chrakterLimits = (ChrakterLimits)theEObject;
+                T result = caseChrakterLimits(chrakterLimits);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PANZERUNG: {
+                Panzerung panzerung = (Panzerung)theEObject;
+                T result = casePanzerung(panzerung);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ASPEKT_MAGIER: {
+                AspektMagier aspektMagier = (AspektMagier)theEObject;
+                T result = caseAspektMagier(aspektMagier);
+                if (result == null) result = caseMagischePersona(aspektMagier);
+                if (result == null) result = caseZauberer(aspektMagier);
+                if (result == null) result = caseKoerperPersona(aspektMagier);
+                if (result == null) result = caseBaseMagischePersona(aspektMagier);
+                if (result == null) result = caseAbstraktPersona(aspektMagier);
+                if (result == null) result = casePanzerung(aspektMagier);
+                if (result == null) result = casePersonaZustand(aspektMagier);
+                if (result == null) result = caseBeschreibbar(aspektMagier);
+                if (result == null) result = caseKoerperlicheAttribute(aspektMagier);
+                if (result == null) result = caseSpezielleAttribute(aspektMagier);
+                if (result == null) result = caseGeistigeAttribute(aspektMagier);
+                if (result == null) result = caseChrakterLimits(aspektMagier);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ASTRALE_PROJEKTION: {
+                AstraleProjektion astraleProjektion = (AstraleProjektion)theEObject;
+                T result = caseAstraleProjektion(astraleProjektion);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SCHUTZGEIST: {
+                Schutzgeist schutzgeist = (Schutzgeist)theEObject;
+                T result = caseSchutzgeist(schutzgeist);
+                if (result == null) result = caseMagischeMods(schutzgeist);
+                if (result == null) result = caseAbstraktModifikatoren(schutzgeist);
+                if (result == null) result = caseBeschreibbar(schutzgeist);
+                if (result == null) result = caseModifizierbar(schutzgeist);
+                if (result == null) result = caseQuelle(schutzgeist);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.INITATION: {
+                Initation initation = (Initation)theEObject;
+                T result = caseInitation(initation);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.META_MAGIE: {
+                MetaMagie metaMagie = (MetaMagie)theEObject;
+                T result = caseMetaMagie(metaMagie);
+                if (result == null) result = caseBeschreibbar(metaMagie);
+                if (result == null) result = caseQuelle(metaMagie);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CRITTER_KRAFT: {
+                CritterKraft critterKraft = (CritterKraft)theEObject;
+                T result = caseCritterKraft(critterKraft);
+                if (result == null) result = caseMagischeMods(critterKraft);
+                if (result == null) result = caseAbstraktModifikatoren(critterKraft);
+                if (result == null) result = caseBeschreibbar(critterKraft);
+                if (result == null) result = caseModifizierbar(critterKraft);
+                if (result == null) result = caseQuelle(critterKraft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FAHRZEUG: {
+                Fahrzeug fahrzeug = (Fahrzeug)theEObject;
+                T result = caseFahrzeug(fahrzeug);
+                if (result == null) result = caseBeschreibbar(fahrzeug);
+                if (result == null) result = caseQuelle(fahrzeug);
+                if (result == null) result = caseGeldWert(fahrzeug);
+                if (result == null) result = caseAnwendbar(fahrzeug);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.BODENFAHRZEUG: {
+                Bodenfahrzeug bodenfahrzeug = (Bodenfahrzeug)theEObject;
+                T result = caseBodenfahrzeug(bodenfahrzeug);
+                if (result == null) result = casePassagierFahrzeug(bodenfahrzeug);
+                if (result == null) result = caseFahrzeug(bodenfahrzeug);
+                if (result == null) result = caseBeschreibbar(bodenfahrzeug);
+                if (result == null) result = caseQuelle(bodenfahrzeug);
+                if (result == null) result = caseGeldWert(bodenfahrzeug);
+                if (result == null) result = caseAnwendbar(bodenfahrzeug);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PASSAGIER_FAHRZEUG: {
+                PassagierFahrzeug passagierFahrzeug = (PassagierFahrzeug)theEObject;
+                T result = casePassagierFahrzeug(passagierFahrzeug);
+                if (result == null) result = caseFahrzeug(passagierFahrzeug);
+                if (result == null) result = caseBeschreibbar(passagierFahrzeug);
+                if (result == null) result = caseQuelle(passagierFahrzeug);
+                if (result == null) result = caseGeldWert(passagierFahrzeug);
+                if (result == null) result = caseAnwendbar(passagierFahrzeug);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.DROHNE: {
+                Drohne drohne = (Drohne)theEObject;
+                T result = caseDrohne(drohne);
+                if (result == null) result = caseFahrzeug(drohne);
+                if (result == null) result = caseBeschreibbar(drohne);
+                if (result == null) result = caseQuelle(drohne);
+                if (result == null) result = caseGeldWert(drohne);
+                if (result == null) result = caseAnwendbar(drohne);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FAHRZEUG_MODIFIKATION: {
+                FahrzeugModifikation fahrzeugModifikation = (FahrzeugModifikation)theEObject;
+                T result = caseFahrzeugModifikation(fahrzeugModifikation);
+                if (result == null) result = caseBeschreibbar(fahrzeugModifikation);
+                if (result == null) result = caseQuelle(fahrzeugModifikation);
+                if (result == null) result = caseGeldWert(fahrzeugModifikation);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.TECHNOMANCER: {
+                Technomancer technomancer = (Technomancer)theEObject;
+                T result = caseTechnomancer(technomancer);
+                if (result == null) result = caseKoerperPersona(technomancer);
+                if (result == null) result = caseResonanzPersona(technomancer);
+                if (result == null) result = caseAbstraktPersona(technomancer);
+                if (result == null) result = casePanzerung(technomancer);
+                if (result == null) result = casePersonaZustand(technomancer);
+                if (result == null) result = caseBeschreibbar(technomancer);
+                if (result == null) result = caseKoerperlicheAttribute(technomancer);
+                if (result == null) result = caseSpezielleAttribute(technomancer);
+                if (result == null) result = caseGeistigeAttribute(technomancer);
+                if (result == null) result = caseChrakterLimits(technomancer);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.RESONANZ_PERSONA: {
+                ResonanzPersona resonanzPersona = (ResonanzPersona)theEObject;
+                T result = caseResonanzPersona(resonanzPersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.KOMPLEXE_FORM: {
+                KomplexeForm komplexeForm = (KomplexeForm)theEObject;
+                T result = caseKomplexeForm(komplexeForm);
+                if (result == null) result = caseQuelle(komplexeForm);
+                if (result == null) result = caseBeschreibbar(komplexeForm);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_KOMPLEX_FORM: {
+                PersonaKomplexForm personaKomplexForm = (PersonaKomplexForm)theEObject;
+                T result = casePersonaKomplexForm(personaKomplexForm);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SPRITE: {
+                Sprite sprite = (Sprite)theEObject;
+                T result = caseSprite(sprite);
+                if (result == null) result = caseResonanzPersona(sprite);
+                if (result == null) result = caseBeschreibbar(sprite);
+                if (result == null) result = caseQuelle(sprite);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ECHO: {
+                Echo echo = (Echo)theEObject;
+                T result = caseEcho(echo);
+                if (result == null) result = caseAbstraktModifikatoren(echo);
+                if (result == null) result = caseBeschreibbar(echo);
+                if (result == null) result = caseModifizierbar(echo);
+                if (result == null) result = caseQuelle(echo);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.VERTRAG: {
+                Vertrag vertrag = (Vertrag)theEObject;
+                T result = caseVertrag(vertrag);
+                if (result == null) result = caseBeschreibbar(vertrag);
+                if (result == null) result = caseQuelle(vertrag);
+                if (result == null) result = caseGeldWert(vertrag);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.LIFESTYLE: {
+                Lifestyle lifestyle = (Lifestyle)theEObject;
+                T result = caseLifestyle(lifestyle);
+                if (result == null) result = caseVertrag(lifestyle);
+                if (result == null) result = caseBeschreibbar(lifestyle);
+                if (result == null) result = caseQuelle(lifestyle);
+                if (result == null) result = caseGeldWert(lifestyle);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.WISSENSFERTIGKEIT: {
+                Wissensfertigkeit wissensfertigkeit = (Wissensfertigkeit)theEObject;
+                T result = caseWissensfertigkeit(wissensfertigkeit);
+                if (result == null) result = caseFertigkeit(wissensfertigkeit);
+                if (result == null) result = caseBeschreibbar(wissensfertigkeit);
+                if (result == null) result = caseQuelle(wissensfertigkeit);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SPRACHFERTIGKEIT: {
+                Sprachfertigkeit sprachfertigkeit = (Sprachfertigkeit)theEObject;
+                T result = caseSprachfertigkeit(sprachfertigkeit);
+                if (result == null) result = caseWissensfertigkeit(sprachfertigkeit);
+                if (result == null) result = caseFertigkeit(sprachfertigkeit);
+                if (result == null) result = caseBeschreibbar(sprachfertigkeit);
+                if (result == null) result = caseQuelle(sprachfertigkeit);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERSONA_ZUSTAND: {
+                PersonaZustand personaZustand = (PersonaZustand)theEObject;
+                T result = casePersonaZustand(personaZustand);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CRITTER: {
+                Critter critter = (Critter)theEObject;
+                T result = caseCritter(critter);
+                if (result == null) result = caseSpezies(critter);
+                if (result == null) result = caseBeschreibbar(critter);
+                if (result == null) result = caseModifizierbar(critter);
+                if (result == null) result = caseQuelle(critter);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            default: return defaultCase(theEObject);
+        }
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Beschreibbar</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Beschreibbar</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Beschreibbar</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Beschreibbar</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseBeschreibbar(Beschreibbar object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Quelle</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Quelle</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Quelle</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Quelle</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseQuelle(Quelle object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Source Book</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Source Book</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Source Book</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Source Book</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSourceBook(SourceBook object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstrakt Persona</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Abstrakt Persona</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstrakt Persona</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstrakt Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAbstraktPersona(AbstraktPersona object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Gegenstand</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Gegenstand</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Gegenstand</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Gegenstand</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseGegenstand(Gegenstand object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Geld Wert</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Geld Wert</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Geld Wert</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Geld Wert</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseGeldWert(GeldWert object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reichweite</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Reichweite</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reichweite</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Reichweite</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseReichweite(Reichweite object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Attribut Modifikator Wert</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Attribut Modifikator Wert</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Attribut Modifikator Wert</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Attribut Modifikator Wert</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAttributModifikatorWert(AttributModifikatorWert object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Modifizierbar</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Modifizierbar</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Modifizierbar</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Modifizierbar</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseModifizierbar(Modifizierbar object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Koerperliche Attribute</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Koerperliche Attribute</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Koerperliche Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Koerperliche Attribute</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKoerperlicheAttribute(KoerperlicheAttribute object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Spezielle Attribute</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Spezielle Attribute</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Spezielle Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Spezielle Attribute</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSpezielleAttribute(SpezielleAttribute object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstrakt Gegenstand</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Abstrakt Gegenstand</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstrakt Gegenstand</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstrakt Gegenstand</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAbstraktGegenstand(AbstraktGegenstand object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstakt Fern Kampfwaffe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Abstakt Fern Kampfwaffe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstakt Fern Kampfwaffe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstakt Fern Kampfwaffe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAbstaktFernKampfwaffe(AbstaktFernKampfwaffe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstakt Waffe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Abstakt Waffe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstakt Waffe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstakt Waffe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAbstaktWaffe(AbstaktWaffe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nahkampfwaffe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Nahkampfwaffe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nahkampfwaffe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Nahkampfwaffe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseNahkampfwaffe(Nahkampfwaffe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feuerwaffe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Feuerwaffe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feuerwaffe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Feuerwaffe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFeuerwaffe(Feuerwaffe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wurfwaffe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Wurfwaffe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wurfwaffe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Wurfwaffe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseWurfwaffe(Wurfwaffe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Shr List</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Shr List</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Shr List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Shr List</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseShrList(ShrList object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Projektilwaffe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Projektilwaffe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Projektilwaffe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Projektilwaffe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseProjektilwaffe(Projektilwaffe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fertigkeits Gruppe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Fertigkeits Gruppe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fertigkeits Gruppe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fertigkeits Gruppe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFertigkeitsGruppe(FertigkeitsGruppe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fertigkeit</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Fertigkeit</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fertigkeit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fertigkeit</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFertigkeit(Fertigkeit object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Persona Fertigkeit</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Persona Fertigkeit</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Persona Fertigkeit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Fertigkeit</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePersonaFertigkeit(PersonaFertigkeit object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Persona Fertigkeits Gruppe</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Persona Fertigkeits Gruppe</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Persona Fertigkeits Gruppe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Fertigkeits Gruppe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePersonaFertigkeitsGruppe(PersonaFertigkeitsGruppe object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cyberware</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Cyberware</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cyberware</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Cyberware</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseCyberware(Cyberware object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bio Ware</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Bio Ware</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bio Ware</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Bio Ware</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseBioWare(BioWare object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Koerpermods</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Koerpermods</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Koerpermods</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Koerpermods</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKoerpermods(Koerpermods object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstrakt Modifikatoren</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Abstrakt Modifikatoren</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstrakt Modifikatoren</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstrakt Modifikatoren</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAbstraktModifikatoren(AbstraktModifikatoren object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Geistige Attribute</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Geistige Attribute</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Geistige Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Geistige Attribute</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseGeistigeAttribute(GeistigeAttribute object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Mudan Persona</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Mudan Persona</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mudan Persona</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Mudan Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseMudanPersona(MudanPersona object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Koerper Persona</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Koerper Persona</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Koerper Persona</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Koerper Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKoerperPersona(KoerperPersona object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Magische Mods</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Magische Mods</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Magische Mods</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Magische Mods</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseMagischeMods(MagischeMods object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ki Kraft</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Ki Kraft</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ki Kraft</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Ki Kraft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKiKraft(KiKraft object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Magische Persona</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Magische Persona</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Magische Persona</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Magische Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseMagischePersona(MagischePersona object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Base Magische Persona</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Base Magische Persona</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Base Magische Persona</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Base Magische Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseBaseMagischePersona(BaseMagischePersona object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fernkampfwaffen Modifikatoren</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Fernkampfwaffen Modifikatoren</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fernkampfwaffen Modifikatoren</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fernkampfwaffen Modifikatoren</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFernkampfwaffenModifikatoren(FernkampfwaffenModifikatoren object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sichtverhaeltnisse</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Sichtverhaeltnisse</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sichtverhaeltnisse</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sichtverhaeltnisse</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSichtverhaeltnisse(Sichtverhaeltnisse object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Spezies</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Spezies</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Spezies</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Spezies</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSpezies(Spezies object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Gegenstand Stufen</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Gegenstand Stufen</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Gegenstand Stufen</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Gegenstand Stufen</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseGegenstandStufen(GegenstandStufen object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ki Adept</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Ki Adept</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ki Adept</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Ki Adept</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKiAdept(KiAdept object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Kleidung</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Kleidung</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Kleidung</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Kleidung</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKleidung(Kleidung object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fernkampfwaffe Modifikator</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Fernkampfwaffe Modifikator</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fernkampfwaffe Modifikator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fernkampfwaffe Modifikator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFernkampfwaffeModifikator(FernkampfwaffeModifikator object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Anwendbar</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Anwendbar</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Anwendbar</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Anwendbar</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAnwendbar(Anwendbar object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Persona Eigenschaft</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Persona Eigenschaft</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Persona Eigenschaft</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Eigenschaft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePersonaEigenschaft(PersonaEigenschaft object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Proben Modifikatoren</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Proben Modifikatoren</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Proben Modifikatoren</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Proben Modifikatoren</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseProbenModifikatoren(ProbenModifikatoren object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Magier</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Magier</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Magier</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Magier</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseMagier(Magier object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Zauberer</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Zauberer</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Zauberer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Zauberer</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseZauberer(Zauberer object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Mystic Adept</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Mystic Adept</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mystic Adept</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Mystic Adept</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseMysticAdept(MysticAdept object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Persona Zauber</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Persona Zauber</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Persona Zauber</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Zauber</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePersonaZauber(PersonaZauber object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Zauber</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Zauber</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Zauber</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Zauber</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseZauber(Zauber object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Chrakter Limits</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Chrakter Limits</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Chrakter Limits</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Chrakter Limits</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseChrakterLimits(ChrakterLimits object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Panzerung</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Panzerung</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Panzerung</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Panzerung</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePanzerung(Panzerung object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Aspekt Magier</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Aspekt Magier</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Aspekt Magier</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Aspekt Magier</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAspektMagier(AspektMagier object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Astrale Projektion</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Astrale Projektion</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Astrale Projektion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Astrale Projektion</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseAstraleProjektion(AstraleProjektion object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Schutzgeist</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Schutzgeist</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Schutzgeist</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Schutzgeist</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSchutzgeist(Schutzgeist object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Initation</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Initation</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Initation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Initation</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseInitation(Initation object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Meta Magie</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Meta Magie</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Meta Magie</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Meta Magie</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseMetaMagie(MetaMagie object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Mudan Critter</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Critter Kraft</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mudan Critter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMudanCritter(MudanCritter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Critter Kraft</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Critter Kraft</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Critter Kraft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseCritterKraft(CritterKraft object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Para Critter</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Fahrzeug</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Para Critter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParaCritter(ParaCritter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fahrzeug</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fahrzeug</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fahrzeug</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFahrzeug(Fahrzeug object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bodenfahrzeug</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Bodenfahrzeug</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bodenfahrzeug</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Bodenfahrzeug</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseBodenfahrzeug(Bodenfahrzeug object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Passagier Fahrzeug</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Passagier Fahrzeug</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Passagier Fahrzeug</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Passagier Fahrzeug</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePassagierFahrzeug(PassagierFahrzeug object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Drohne</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Drohne</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Drohne</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Drohne</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseDrohne(Drohne object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fahrzeug Modifikation</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Fahrzeug Modifikation</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fahrzeug Modifikation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fahrzeug Modifikation</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseFahrzeugModifikation(FahrzeugModifikation object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Technomancer</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Technomancer</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Technomancer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Technomancer</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseTechnomancer(Technomancer object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resonanz Persona</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Resonanz Persona</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resonanz Persona</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Resonanz Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseResonanzPersona(ResonanzPersona object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Komplexe Form</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Komplexe Form</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Komplexe Form</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Komplexe Form</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseKomplexeForm(KomplexeForm object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Persona Komplex Form</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Persona Komplex Form</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Persona Komplex Form</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Komplex Form</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T casePersonaKomplexForm(PersonaKomplexForm object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sprite</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Sprite</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sprite</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sprite</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSprite(Sprite object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Echo</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Echo</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Echo</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Echo</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseEcho(Echo object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vertrag</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Vertrag</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vertrag</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Vertrag</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseVertrag(Vertrag object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Lifestyle</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Lifestyle</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lifestyle</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Lifestyle</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseLifestyle(Lifestyle object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wissensfertigkeit</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Wissensfertigkeit</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wissensfertigkeit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Wissensfertigkeit</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseWissensfertigkeit(Wissensfertigkeit object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sprachfertigkeit</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Sprachfertigkeit</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sprachfertigkeit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sprachfertigkeit</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
 	public T caseSprachfertigkeit(Sprachfertigkeit object) {
-		return null;
-	}
+        return null;
+    }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * <!-- begin-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Persona Zustand</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Zustand</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePersonaZustand(PersonaZustand object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Critter</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Critter</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCritter(Critter object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
+     * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch, but this is the last case anyway.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject)
+     * @generated
+     */
 	@Override
 	public T defaultCase(EObject object) {
-		return null;
-	}
+        return null;
+    }
 
 } //Shr5Switch

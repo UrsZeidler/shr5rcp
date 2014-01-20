@@ -23,43 +23,43 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public abstract class PriorityCategorieTest extends TestCase {
 
 	/**
-	 * The fixture for this Priority Categorie test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Priority Categorie test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PriorityCategorie fixture = null;
 	
 	protected PlayerCharacter character;
 	/**
-	 * Constructs a new Priority Categorie test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Priority Categorie test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public PriorityCategorieTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Priority Categorie test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Priority Categorie test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(PriorityCategorie fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Priority Categorie test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Priority Categorie test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PriorityCategorie getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Creates a simple mudan character.

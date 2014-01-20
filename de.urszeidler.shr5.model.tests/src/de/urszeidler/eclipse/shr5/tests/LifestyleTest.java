@@ -16,55 +16,55 @@ import junit.textui.TestRunner;
 public class LifestyleTest extends VertragTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(LifestyleTest.class);
-	}
+        TestRunner.run(LifestyleTest.class);
+    }
 
 	/**
-	 * Constructs a new Lifestyle test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Lifestyle test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public LifestyleTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Lifestyle test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Lifestyle test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Lifestyle getFixture() {
-		return (Lifestyle)fixture;
-	}
+        return (Lifestyle)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createLifestyle());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createLifestyle());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //LifestyleTest

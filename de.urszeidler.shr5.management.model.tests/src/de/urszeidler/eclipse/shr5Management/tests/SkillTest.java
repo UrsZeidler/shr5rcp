@@ -30,56 +30,56 @@ import de.urszeidler.eclipse.shr5Management.Skill;
 public class SkillTest extends PriorityCategorieTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(SkillTest.class);
-	}
+        TestRunner.run(SkillTest.class);
+    }
 
 	/**
-	 * Constructs a new Skill test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Skill test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public SkillTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Skill test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Skill test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Skill getFixture() {
-		return (Skill)fixture;
-	}
+        return (Skill)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5managementFactory.eINSTANCE.createSkill());
-	}
+        setFixture(Shr5managementFactory.eINSTANCE.createSkill());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5Management.Skill#calcSkillSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Skill Spend</em>}' operation.

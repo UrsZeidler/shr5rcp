@@ -19,25 +19,25 @@ import de.urszeidler.eclipse.shr5.MagischePersona;
 public abstract class MagischePersonaTest extends KoerperPersonaTest {
 
 	/**
-	 * Constructs a new Magische Persona test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Magische Persona test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MagischePersonaTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Magische Persona test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Magische Persona test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected MagischePersona getFixture() {
-		return (MagischePersona)fixture;
-	}
+        return (MagischePersona)fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getMagie() <em>Magie</em>}' feature getter.

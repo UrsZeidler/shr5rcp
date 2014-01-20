@@ -22,42 +22,42 @@ import de.urszeidler.eclipse.shr5.ChrakterLimits;
 public abstract class ChrakterLimitsTest extends TestCase {
 
 	/**
-	 * The fixture for this Chrakter Limits test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Chrakter Limits test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ChrakterLimits fixture = null;
 
 	/**
-	 * Constructs a new Chrakter Limits test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Chrakter Limits test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ChrakterLimitsTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Chrakter Limits test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Chrakter Limits test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(ChrakterLimits fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Chrakter Limits test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Chrakter Limits test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ChrakterLimits getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich() <em>Koerperlich</em>}' feature getter.

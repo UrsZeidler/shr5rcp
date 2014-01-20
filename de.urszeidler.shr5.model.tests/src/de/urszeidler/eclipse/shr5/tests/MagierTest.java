@@ -30,56 +30,56 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class MagierTest extends MagischePersonaTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(MagierTest.class);
-	}
+        TestRunner.run(MagierTest.class);
+    }
 
 	/**
-	 * Constructs a new Magier test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Magier test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MagierTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Magier test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Magier test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Magier getFixture() {
-		return (Magier)fixture;
-	}
+        return (Magier)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createMagier());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createMagier());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug() <em>Enzug</em>}' feature getter.

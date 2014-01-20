@@ -16,32 +16,32 @@ import junit.textui.TestRunner;
 public class Shr5ManagementAllTests extends TestSuite {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(suite());
-	}
+        TestRunner.run(suite());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static Test suite() {
-		TestSuite suite = new Shr5ManagementAllTests("Shr5Management Tests");
-		suite.addTest(Shr5managementTests.suite());
-		return suite;
-	}
+        TestSuite suite = new Shr5ManagementAllTests("Shr5Management Tests");
+        suite.addTest(Shr5managementTests.suite());
+        return suite;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5ManagementAllTests(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 } //Shr5ManagementAllTests

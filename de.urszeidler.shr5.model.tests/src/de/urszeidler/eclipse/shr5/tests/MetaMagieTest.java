@@ -16,72 +16,72 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class MetaMagieTest extends TestCase {
 
 	/**
-	 * The fixture for this Meta Magie test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Meta Magie test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MetaMagie fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(MetaMagieTest.class);
-	}
+        TestRunner.run(MetaMagieTest.class);
+    }
 
 	/**
-	 * Constructs a new Meta Magie test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Meta Magie test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MetaMagieTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Meta Magie test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Meta Magie test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(MetaMagie fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Meta Magie test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Meta Magie test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MetaMagie getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createMetaMagie());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createMetaMagie());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //MetaMagieTest

@@ -22,28 +22,28 @@ package de.urszeidler.eclipse.shr5;
 public interface KiKraft extends MagischeMods {
 
 	/**
-	 * Returns the value of the '<em><b>Kraftpunkte</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Kraftpunkte</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Kraftpunkte</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Kraftpunkte</em>' attribute.
-	 * @see #setKraftpunkte(int)
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getKiKraft_Kraftpunkte()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Kraftpunkte</em>' attribute.
+     * @see #setKraftpunkte(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getKiKraft_Kraftpunkte()
+     * @model
+     * @generated
+     */
 	int getKraftpunkte();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5.KiKraft#getKraftpunkte <em>Kraftpunkte</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.KiKraft#getKraftpunkte <em>Kraftpunkte</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Kraftpunkte</em>' attribute.
-	 * @see #getKraftpunkte()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Kraftpunkte</em>' attribute.
+     * @see #getKraftpunkte()
+     * @generated
+     */
 	void setKraftpunkte(int value);
 } // KiKraft

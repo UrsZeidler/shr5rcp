@@ -23,42 +23,42 @@ import de.urszeidler.eclipse.shr5Management.GeneratorState;
 public abstract class CharacterGeneratorTest extends TestCase {
 
 	/**
-	 * The fixture for this Character Generator test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Character Generator test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CharacterGenerator fixture = null;
 
 	/**
-	 * Constructs a new Character Generator test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Character Generator test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public CharacterGeneratorTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Character Generator test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Character Generator test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(CharacterGenerator fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Character Generator test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Character Generator test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CharacterGenerator getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5Management.CharacterGenerator#getCurrentInstruction() <em>Current Instruction</em>}' feature getter.

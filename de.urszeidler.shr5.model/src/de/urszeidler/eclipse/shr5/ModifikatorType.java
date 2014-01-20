@@ -19,217 +19,217 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ModifikatorType implements Enumerator {
 	/**
-	 * The '<em><b>Natural</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Natural</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NATURAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #NATURAL_VALUE
+     * @generated
+     * @ordered
+     */
 	NATURAL(0, "Natural", "Natural"),
 
 	/**
-	 * The '<em><b>Cyber</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Cyber</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CYBER_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #CYBER_VALUE
+     * @generated
+     * @ordered
+     */
 	CYBER(1, "Cyber", "Cyber"),
 
 	/**
-	 * The '<em><b>Bio</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Bio</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BIO_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BIO_VALUE
+     * @generated
+     * @ordered
+     */
 	BIO(2, "Bio", "Bio");
 
 	/**
-	 * The '<em><b>Natural</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Natural</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Natural</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #NATURAL
-	 * @model name="Natural"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #NATURAL
+     * @model name="Natural"
+     * @generated
+     * @ordered
+     */
 	public static final int NATURAL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Cyber</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Cyber</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Cyber</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CYBER
-	 * @model name="Cyber"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #CYBER
+     * @model name="Cyber"
+     * @generated
+     * @ordered
+     */
 	public static final int CYBER_VALUE = 1;
 
 	/**
-	 * The '<em><b>Bio</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Bio</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Bio</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BIO
-	 * @model name="Bio"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #BIO
+     * @model name="Bio"
+     * @generated
+     * @ordered
+     */
 	public static final int BIO_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Modifikator Type</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * An array of all the '<em><b>Modifikator Type</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static final ModifikatorType[] VALUES_ARRAY =
 		new ModifikatorType[] {
-			NATURAL,
-			CYBER,
-			BIO,
-		};
+            NATURAL,
+            CYBER,
+            BIO,
+        };
 
 	/**
-	 * A public read-only list of all the '<em><b>Modifikator Type</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * A public read-only list of all the '<em><b>Modifikator Type</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final List<ModifikatorType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified literal value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ModifikatorType get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ModifikatorType result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ModifikatorType result = VALUES_ARRAY[i];
+            if (result.toString().equals(literal)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ModifikatorType getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ModifikatorType result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            ModifikatorType result = VALUES_ARRAY[i];
+            if (result.getName().equals(name)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified integer value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static ModifikatorType get(int value) {
-		switch (value) {
-			case NATURAL_VALUE: return NATURAL;
-			case CYBER_VALUE: return CYBER;
-			case BIO_VALUE: return BIO;
-		}
-		return null;
-	}
+        switch (value) {
+            case NATURAL_VALUE: return NATURAL;
+            case CYBER_VALUE: return CYBER;
+            case BIO_VALUE: return BIO;
+        }
+        return null;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+     * Only this class can construct instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private ModifikatorType(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+        this.value = value;
+        this.name = name;
+        this.literal = literal;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getValue() {
-	  return value;
-	}
+      return value;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getName() {
-	  return name;
-	}
+      return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getLiteral() {
-	  return literal;
-	}
+      return literal;
+    }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+     * Returns the literal value of the enumerator, which is its string representation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		return literal;
-	}
+        return literal;
+    }
 	
 } //ModifikatorType

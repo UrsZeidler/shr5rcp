@@ -38,8 +38,8 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	 * @generated
 	 */
 	public PersonaFertigkeitItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
 	 * This returns the property descriptors for the adapted class. <!--
@@ -49,14 +49,14 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	 */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addFertigkeitPropertyDescriptor(object);
-			addStufePropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addFertigkeitPropertyDescriptor(object);
+            addStufePropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
 	 * This adds a property descriptor for the Fertigkeit feature. <!--
@@ -65,20 +65,20 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	 * @generated
 	 */
 	protected void addFertigkeitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PersonaFertigkeit_fertigkeit_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeit_fertigkeit_feature", "_UI_PersonaFertigkeit_type"),
-				 Shr5Package.Literals.PERSONA_FERTIGKEIT__FERTIGKEIT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaFertigkeit_fertigkeit_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeit_fertigkeit_feature", "_UI_PersonaFertigkeit_type"),
+                 Shr5Package.Literals.PERSONA_FERTIGKEIT__FERTIGKEIT,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This adds a property descriptor for the Stufe feature. <!--
@@ -87,20 +87,20 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	 * @generated
 	 */
 	protected void addStufePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PersonaFertigkeit_stufe_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeit_stufe_feature", "_UI_PersonaFertigkeit_type"),
-				 Shr5Package.Literals.PERSONA_FERTIGKEIT__STUFE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaFertigkeit_stufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeit_stufe_feature", "_UI_PersonaFertigkeit_type"),
+                 Shr5Package.Literals.PERSONA_FERTIGKEIT__STUFE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This returns PersonaFertigkeit.gif. <!-- begin-user-doc --> <!--
@@ -146,23 +146,23 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc --> <!--
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(PersonaFertigkeit.class)) {
-			case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(PersonaFertigkeit.class)) {
+            case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
 	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
@@ -173,8 +173,8 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 	/**
 	 * Return the resource locator for this item provider's resources. <!--
@@ -184,7 +184,7 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Shr5EditPlugin.INSTANCE;
-	}
+        return Shr5EditPlugin.INSTANCE;
+    }
 
 }

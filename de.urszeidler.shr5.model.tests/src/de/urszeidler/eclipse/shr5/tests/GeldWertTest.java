@@ -14,41 +14,41 @@ import de.urszeidler.eclipse.shr5.GeldWert;
 public abstract class GeldWertTest extends TestCase {
 
 	/**
-	 * The fixture for this Geld Wert test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Geld Wert test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GeldWert fixture = null;
 
 	/**
-	 * Constructs a new Geld Wert test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Geld Wert test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public GeldWertTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Geld Wert test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Geld Wert test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(GeldWert fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Geld Wert test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Geld Wert test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GeldWert getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //GeldWertTest

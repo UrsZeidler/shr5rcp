@@ -25,60 +25,60 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface BaseMagischePersona extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Magie</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Magie</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Magie</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Magie</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_Magie()
-	 * @model required="true" transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Magie</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_Magie()
+     * @model required="true" transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getMagie();
 
 	/**
-	 * Returns the value of the '<em><b>Initationen</b></em>' containment reference list.
-	 * The list contents are of type {@link de.urszeidler.eclipse.shr5.Initation}.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Initationen</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Initation}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Initationen</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initationen</em>' containment reference list.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_Initationen()
-	 * @model containment="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Initationen</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_Initationen()
+     * @model containment="true"
+     * @generated
+     */
 	EList<Initation> getInitationen();
 
 	/**
-	 * Returns the value of the '<em><b>Magie Basis</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Magie Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Magie Basis</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Magie Basis</em>' attribute.
-	 * @see #setMagieBasis(int)
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_MagieBasis()
-	 * @model required="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Magie Basis</em>' attribute.
+     * @see #setMagieBasis(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_MagieBasis()
+     * @model required="true"
+     * @generated
+     */
 	int getMagieBasis();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getMagieBasis <em>Magie Basis</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getMagieBasis <em>Magie Basis</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Magie Basis</em>' attribute.
-	 * @see #getMagieBasis()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Magie Basis</em>' attribute.
+     * @see #getMagieBasis()
+     * @generated
+     */
 	void setMagieBasis(int value);
 
 } // BaseMagischePersona

@@ -19,22 +19,22 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class FreeStyleImpl extends CharacterGeneratorSystemImpl implements FreeStyle {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FreeStyleImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.FREE_STYLE;
-	}
+        return Shr5managementPackage.Literals.FREE_STYLE;
+    }
 
 } //FreeStyleImpl

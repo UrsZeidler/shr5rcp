@@ -24,48 +24,48 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ChrakterLimits extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Koerperlich</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Koerperlich</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Koerperlich</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Koerperlich</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getChrakterLimits_Koerperlich()
-	 * @model required="true" transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Koerperlich</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getChrakterLimits_Koerperlich()
+     * @model required="true" transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getKoerperlich();
 
 	/**
-	 * Returns the value of the '<em><b>Geistig</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Geistig</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Geistig</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Geistig</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getChrakterLimits_Geistig()
-	 * @model required="true" transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Geistig</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getChrakterLimits_Geistig()
+     * @model required="true" transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getGeistig();
 
 	/**
-	 * Returns the value of the '<em><b>Sozial</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Sozial</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sozial</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sozial</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getChrakterLimits_Sozial()
-	 * @model required="true" transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Sozial</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getChrakterLimits_Sozial()
+     * @model required="true" transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getSozial();
 
 } // ChrakterLimits

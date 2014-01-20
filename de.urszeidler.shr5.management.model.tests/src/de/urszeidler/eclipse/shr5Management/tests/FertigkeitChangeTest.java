@@ -17,55 +17,55 @@ import junit.textui.TestRunner;
 public class FertigkeitChangeTest extends PersonaValueChangeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(FertigkeitChangeTest.class);
-	}
+        TestRunner.run(FertigkeitChangeTest.class);
+    }
 
 	/**
-	 * Constructs a new Fertigkeit Change test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Fertigkeit Change test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FertigkeitChangeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Fertigkeit Change test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Fertigkeit Change test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected FertigkeitChange getFixture() {
-		return (FertigkeitChange)fixture;
-	}
+        return (FertigkeitChange)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5managementFactory.eINSTANCE.createFertigkeitChange());
-	}
+        setFixture(Shr5managementFactory.eINSTANCE.createFertigkeitChange());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //FertigkeitChangeTest

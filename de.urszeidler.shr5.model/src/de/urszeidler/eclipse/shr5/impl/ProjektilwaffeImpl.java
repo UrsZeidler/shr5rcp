@@ -18,22 +18,22 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class ProjektilwaffeImpl extends AbstaktFernKampfwaffeImpl implements Projektilwaffe {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ProjektilwaffeImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.PROJEKTILWAFFE;
-	}
+        return Shr5Package.Literals.PROJEKTILWAFFE;
+    }
 
 } //ProjektilwaffeImpl

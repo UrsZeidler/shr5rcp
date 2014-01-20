@@ -15,55 +15,55 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 public class PassagierFahrzeugTest extends FahrzeugTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(PassagierFahrzeugTest.class);
-	}
+        TestRunner.run(PassagierFahrzeugTest.class);
+    }
 
 	/**
-	 * Constructs a new Passagier Fahrzeug test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Passagier Fahrzeug test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public PassagierFahrzeugTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Passagier Fahrzeug test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Passagier Fahrzeug test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected PassagierFahrzeug getFixture() {
-		return (PassagierFahrzeug)fixture;
-	}
+        return (PassagierFahrzeug)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5Factory.eINSTANCE.createPassagierFahrzeug());
-	}
+        setFixture(Shr5Factory.eINSTANCE.createPassagierFahrzeug());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //PassagierFahrzeugTest

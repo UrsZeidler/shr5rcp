@@ -19,190 +19,190 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum CritterHandlung implements Enumerator {
 	/**
-	 * The '<em><b>Komplex</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Komplex</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #KOMPLEX_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #KOMPLEX_VALUE
+     * @generated
+     * @ordered
+     */
 	KOMPLEX(0, "komplex", "komplex"),
 
 	/**
-	 * The '<em><b>Auto</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Auto</b></em>' literal object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #AUTO_VALUE
-	 * @generated
-	 * @ordered
-	 */
+     * @see #AUTO_VALUE
+     * @generated
+     * @ordered
+     */
 	AUTO(1, "auto", "auto");
 
 	/**
-	 * The '<em><b>Komplex</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Komplex</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Komplex</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #KOMPLEX
-	 * @model name="komplex"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #KOMPLEX
+     * @model name="komplex"
+     * @generated
+     * @ordered
+     */
 	public static final int KOMPLEX_VALUE = 0;
 
 	/**
-	 * The '<em><b>Auto</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+     * The '<em><b>Auto</b></em>' literal value.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Auto</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #AUTO
-	 * @model name="auto"
-	 * @generated
-	 * @ordered
-	 */
+     * @see #AUTO
+     * @model name="auto"
+     * @generated
+     * @ordered
+     */
 	public static final int AUTO_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Critter Handlung</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * An array of all the '<em><b>Critter Handlung</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static final CritterHandlung[] VALUES_ARRAY =
 		new CritterHandlung[] {
-			KOMPLEX,
-			AUTO,
-		};
+            KOMPLEX,
+            AUTO,
+        };
 
 	/**
-	 * A public read-only list of all the '<em><b>Critter Handlung</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+     * A public read-only list of all the '<em><b>Critter Handlung</b></em>' enumerators.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final List<CritterHandlung> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Critter Handlung</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Critter Handlung</b></em>' literal with the specified literal value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static CritterHandlung get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			CritterHandlung result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            CritterHandlung result = VALUES_ARRAY[i];
+            if (result.toString().equals(literal)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Critter Handlung</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Critter Handlung</b></em>' literal with the specified name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static CritterHandlung getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			CritterHandlung result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            CritterHandlung result = VALUES_ARRAY[i];
+            if (result.getName().equals(name)) {
+                return result;
+            }
+        }
+        return null;
+    }
 
 	/**
-	 * Returns the '<em><b>Critter Handlung</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+     * Returns the '<em><b>Critter Handlung</b></em>' literal with the specified integer value.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static CritterHandlung get(int value) {
-		switch (value) {
-			case KOMPLEX_VALUE: return KOMPLEX;
-			case AUTO_VALUE: return AUTO;
-		}
-		return null;
-	}
+        switch (value) {
+            case KOMPLEX_VALUE: return KOMPLEX;
+            case AUTO_VALUE: return AUTO;
+        }
+        return null;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+     * Only this class can construct instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private CritterHandlung(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+        this.value = value;
+        this.name = name;
+        this.literal = literal;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getValue() {
-	  return value;
-	}
+      return value;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getName() {
-	  return name;
-	}
+      return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getLiteral() {
-	  return literal;
-	}
+      return literal;
+    }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+     * Returns the literal value of the enumerator, which is its string representation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		return literal;
-	}
+        return literal;
+    }
 	
 } //CritterHandlung

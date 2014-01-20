@@ -35,95 +35,95 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
  */
 public class SkillImpl extends PriorityCategorieImpl implements Skill {
 	/**
-	 * The default value of the '{@link #getSkillPoints() <em>Skill Points</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getSkillPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * The default value of the '{@link #getSkillPoints() <em>Skill Points</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getSkillPoints()
+     * @generated
+     * @ordered
+     */
 	protected static final int SKILL_POINTS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getSkillPoints() <em>Skill Points</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getSkillPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getSkillPoints() <em>Skill Points</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getSkillPoints()
+     * @generated
+     * @ordered
+     */
 	protected int skillPoints = SKILL_POINTS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getGroupPoints() <em>Group Points</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getGroupPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * The default value of the '{@link #getGroupPoints() <em>Group Points</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getGroupPoints()
+     * @generated
+     * @ordered
+     */
 	protected static final int GROUP_POINTS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getGroupPoints() <em>Group Points</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getGroupPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * The cached value of the '{@link #getGroupPoints() <em>Group Points</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getGroupPoints()
+     * @generated
+     * @ordered
+     */
 	protected int groupPoints = GROUP_POINTS_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	protected SkillImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.SKILL;
-	}
+        return Shr5managementPackage.Literals.SKILL;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public int getSkillPoints() {
-		return skillPoints;
-	}
+        return skillPoints;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setSkillPoints(int newSkillPoints) {
-		int oldSkillPoints = skillPoints;
-		skillPoints = newSkillPoints;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SKILL__SKILL_POINTS, oldSkillPoints, skillPoints));
-	}
+        int oldSkillPoints = skillPoints;
+        skillPoints = newSkillPoints;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SKILL__SKILL_POINTS, oldSkillPoints, skillPoints));
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public int getGroupPoints() {
-		return groupPoints;
-	}
+        return groupPoints;
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	public void setGroupPoints(int newGroupPoints) {
-		int oldGroupPoints = groupPoints;
-		groupPoints = newGroupPoints;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SKILL__GROUP_POINTS, oldGroupPoints, groupPoints));
-	}
+        int oldGroupPoints = groupPoints;
+        groupPoints = newGroupPoints;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SKILL__GROUP_POINTS, oldGroupPoints, groupPoints));
+    }
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -213,103 +213,103 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.SKILL__SKILL_POINTS:
-				return getSkillPoints();
-			case Shr5managementPackage.SKILL__GROUP_POINTS:
-				return getGroupPoints();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SKILL__SKILL_POINTS:
+                return getSkillPoints();
+            case Shr5managementPackage.SKILL__GROUP_POINTS:
+                return getGroupPoints();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.SKILL__SKILL_POINTS:
-				setSkillPoints((Integer)newValue);
-				return;
-			case Shr5managementPackage.SKILL__GROUP_POINTS:
-				setGroupPoints((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SKILL__SKILL_POINTS:
+                setSkillPoints((Integer)newValue);
+                return;
+            case Shr5managementPackage.SKILL__GROUP_POINTS:
+                setGroupPoints((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.SKILL__SKILL_POINTS:
-				setSkillPoints(SKILL_POINTS_EDEFAULT);
-				return;
-			case Shr5managementPackage.SKILL__GROUP_POINTS:
-				setGroupPoints(GROUP_POINTS_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SKILL__SKILL_POINTS:
+                setSkillPoints(SKILL_POINTS_EDEFAULT);
+                return;
+            case Shr5managementPackage.SKILL__GROUP_POINTS:
+                setGroupPoints(GROUP_POINTS_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.SKILL__SKILL_POINTS:
-				return skillPoints != SKILL_POINTS_EDEFAULT;
-			case Shr5managementPackage.SKILL__GROUP_POINTS:
-				return groupPoints != GROUP_POINTS_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.SKILL__SKILL_POINTS:
+                return skillPoints != SKILL_POINTS_EDEFAULT;
+            case Shr5managementPackage.SKILL__GROUP_POINTS:
+                return groupPoints != GROUP_POINTS_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Shr5managementPackage.SKILL___CALC_SKILL_SPEND__MANAGEDCHARACTER:
-				return calcSkillSpend((ManagedCharacter)arguments.get(0));
-			case Shr5managementPackage.SKILL___CALC_GROUP_SPEND__MANAGEDCHARACTER:
-				return calcGroupSpend((ManagedCharacter)arguments.get(0));
-			case Shr5managementPackage.SKILL___CALC_KNOWLEDGE_SKILL_SPEND__MANAGEDCHARACTER:
-				return calcKnowledgeSkillSpend((ManagedCharacter)arguments.get(0));
-			case Shr5managementPackage.SKILL___CALC_KNOWLEDGE_SKILL_POINTS__MANAGEDCHARACTER:
-				return calcKnowledgeSkillPoints((ManagedCharacter)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
+        switch (operationID) {
+            case Shr5managementPackage.SKILL___CALC_SKILL_SPEND__MANAGEDCHARACTER:
+                return calcSkillSpend((ManagedCharacter)arguments.get(0));
+            case Shr5managementPackage.SKILL___CALC_GROUP_SPEND__MANAGEDCHARACTER:
+                return calcGroupSpend((ManagedCharacter)arguments.get(0));
+            case Shr5managementPackage.SKILL___CALC_KNOWLEDGE_SKILL_SPEND__MANAGEDCHARACTER:
+                return calcKnowledgeSkillSpend((ManagedCharacter)arguments.get(0));
+            case Shr5managementPackage.SKILL___CALC_KNOWLEDGE_SKILL_POINTS__MANAGEDCHARACTER:
+                return calcKnowledgeSkillPoints((ManagedCharacter)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
+    }
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (skillPoints: ");
-		result.append(skillPoints);
-		result.append(", groupPoints: ");
-		result.append(groupPoints);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (skillPoints: ");
+        result.append(skillPoints);
+        result.append(", groupPoints: ");
+        result.append(groupPoints);
+        result.append(')');
+        return result.toString();
+    }
 
 } // SkillImpl

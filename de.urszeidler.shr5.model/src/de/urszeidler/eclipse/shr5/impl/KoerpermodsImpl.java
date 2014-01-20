@@ -18,22 +18,22 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public abstract class KoerpermodsImpl extends AbstraktModifikatorenImpl implements Koerpermods {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KoerpermodsImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.KOERPERMODS;
-	}
+        return Shr5Package.Literals.KOERPERMODS;
+    }
 
 } //KoerpermodsImpl

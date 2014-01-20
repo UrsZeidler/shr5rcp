@@ -38,146 +38,266 @@ public class KoerperPersonaItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KoerperPersonaItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addPanzerPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addPanzerPropertyDescriptor(object);
+            addZustandKoerperlichMaxPropertyDescriptor(object);
+            addZustandGeistigMaxPropertyDescriptor(object);
+            addZustandGrenzePropertyDescriptor(object);
+            addZustandKoerperlichPropertyDescriptor(object);
+            addZustandGeistigPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Panzer feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Panzer feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addPanzerPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Panzerung_panzer_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Panzerung_panzer_feature", "_UI_Panzerung_type"),
-				 Shr5Package.Literals.PANZERUNG__PANZER,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Panzerung_panzer_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Panzerung_panzer_feature", "_UI_Panzerung_type"),
+                 Shr5Package.Literals.PANZERUNG__PANZER,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Zustand Koerperlich Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addZustandKoerperlichMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaZustand_zustandKoerperlichMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZustand_zustandKoerperlichMax_feature", "_UI_PersonaZustand_type"),
+                 Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Zustand Geistig Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addZustandGeistigMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaZustand_zustandGeistigMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZustand_zustandGeistigMax_feature", "_UI_PersonaZustand_type"),
+                 Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Zustand Grenze feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addZustandGrenzePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaZustand_zustandGrenze_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaZustand_zustandGrenze_feature", "_UI_PersonaZustand_type"),
+                 Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GRENZE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Zustand Koerperlich feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addZustandKoerperlichPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_KoerperPersona_zustandKoerperlich_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_KoerperPersona_zustandKoerperlich_feature", "_UI_KoerperPersona_type"),
+                 Shr5Package.Literals.KOERPER_PERSONA__ZUSTAND_KOERPERLICH,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Zustand Geistig feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addZustandGeistigPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_KoerperPersona_zustandGeistig_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_KoerperPersona_zustandGeistig_feature", "_UI_KoerperPersona_type"),
+                 Shr5Package.Literals.KOERPER_PERSONA__ZUSTAND_GEISTIG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS);
-			childrenFeatures.add(Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN);
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS);
+            childrenFeatures.add(Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN);
+        }
+        return childrenFeatures;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
 
-		return super.getChildFeature(object, child);
-	}
+        return super.getChildFeature(object, child);
+    }
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((KoerperPersona)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_KoerperPersona_type") :
-			getString("_UI_KoerperPersona_type") + " " + label;
-	}
+        String label = ((KoerperPersona)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_KoerperPersona_type") :
+            getString("_UI_KoerperPersona_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(KoerperPersona.class)) {
-			case Shr5Package.KOERPER_PERSONA__PANZER:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
-			case Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(KoerperPersona.class)) {
+            case Shr5Package.KOERPER_PERSONA__PANZER:
+            case Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX:
+            case Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX:
+            case Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE:
+            case Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH:
+            case Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
+            case Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS,
-				 Shr5Factory.eINSTANCE.createCyberware()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS,
+                 Shr5Factory.eINSTANCE.createCyberware()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS,
-				 Shr5Factory.eINSTANCE.createBioWare()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS,
+                 Shr5Factory.eINSTANCE.createBioWare()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN,
-				 Shr5Factory.eINSTANCE.createPersonaEigenschaft()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN,
+                 Shr5Factory.eINSTANCE.createPersonaEigenschaft()));
+    }
 
 }

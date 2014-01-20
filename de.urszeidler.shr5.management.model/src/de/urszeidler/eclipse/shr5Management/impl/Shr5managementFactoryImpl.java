@@ -40,403 +40,403 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  */
 public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5managementFactory {
 	/**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+     * Creates the default factory implementation.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static Shr5managementFactory init() {
-		try {
-			Shr5managementFactory theShr5managementFactory = (Shr5managementFactory)EPackage.Registry.INSTANCE.getEFactory(Shr5managementPackage.eNS_URI);
-			if (theShr5managementFactory != null) {
-				return theShr5managementFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new Shr5managementFactoryImpl();
-	}
+        try {
+            Shr5managementFactory theShr5managementFactory = (Shr5managementFactory)EPackage.Registry.INSTANCE.getEFactory(Shr5managementPackage.eNS_URI);
+            if (theShr5managementFactory != null) {
+                return theShr5managementFactory;
+            }
+        }
+        catch (Exception exception) {
+            EcorePlugin.INSTANCE.log(exception);
+        }
+        return new Shr5managementFactoryImpl();
+    }
 
 	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+     * Creates an instance of the factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5managementFactoryImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case Shr5managementPackage.NON_PLAYER_CHARACTER: return createNonPlayerCharacter();
-			case Shr5managementPackage.KARMA_GAINT: return createKarmaGaint();
-			case Shr5managementPackage.FREE_STYLE: return createFreeStyle();
-			case Shr5managementPackage.SHR5_SYSTEM: return createShr5System();
-			case Shr5managementPackage.META_TYPE: return createMetaType();
-			case Shr5managementPackage.ATTRIBUTES: return createAttributes();
-			case Shr5managementPackage.SKILL: return createSkill();
-			case Shr5managementPackage.RESOURCEN: return createResourcen();
-			case Shr5managementPackage.TECHNOMANCER: return createTechnomancer();
-			case Shr5managementPackage.SPELLCASTER: return createSpellcaster();
-			case Shr5managementPackage.ADEPT: return createAdept();
-			case Shr5managementPackage.FREE_STYLE_GENERATOR: return createFreeStyleGenerator();
-			case Shr5managementPackage.SHR5_GENERATOR: return createShr5Generator();
-			case Shr5managementPackage.ATTRIBUTE_CHANGE: return createAttributeChange();
-			case Shr5managementPackage.PLAYER_CHARACTER: return createPlayerCharacter();
-			case Shr5managementPackage.MUDAN: return createMudan();
-			case Shr5managementPackage.CHARACTER_GROUP: return createCharacterGroup();
-			case Shr5managementPackage.CONNECTION: return createConnection();
-			case Shr5managementPackage.FERTIGKEIT_CHANGE: return createFertigkeitChange();
-			case Shr5managementPackage.PERSONA_VALUE_CHANGE: return createPersonaValueChange();
-			case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY: return (EObject)createGeneratorStateToEStringMapEntry();
-			case Shr5managementPackage.INCREASE_CHARACTER_PART: return createIncreaseCharacterPart();
-			case Shr5managementPackage.CHANGE_QUALLITY: return createChangeQuallity();
-			case Shr5managementPackage.QUALLITY_CHANGE: return createQuallityChange();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+        switch (eClass.getClassifierID()) {
+            case Shr5managementPackage.NON_PLAYER_CHARACTER: return createNonPlayerCharacter();
+            case Shr5managementPackage.KARMA_GAINT: return createKarmaGaint();
+            case Shr5managementPackage.FREE_STYLE: return createFreeStyle();
+            case Shr5managementPackage.SHR5_SYSTEM: return createShr5System();
+            case Shr5managementPackage.META_TYPE: return createMetaType();
+            case Shr5managementPackage.ATTRIBUTES: return createAttributes();
+            case Shr5managementPackage.SKILL: return createSkill();
+            case Shr5managementPackage.RESOURCEN: return createResourcen();
+            case Shr5managementPackage.TECHNOMANCER: return createTechnomancer();
+            case Shr5managementPackage.SPELLCASTER: return createSpellcaster();
+            case Shr5managementPackage.ADEPT: return createAdept();
+            case Shr5managementPackage.FREE_STYLE_GENERATOR: return createFreeStyleGenerator();
+            case Shr5managementPackage.SHR5_GENERATOR: return createShr5Generator();
+            case Shr5managementPackage.ATTRIBUTE_CHANGE: return createAttributeChange();
+            case Shr5managementPackage.PLAYER_CHARACTER: return createPlayerCharacter();
+            case Shr5managementPackage.MUDAN: return createMudan();
+            case Shr5managementPackage.CHARACTER_GROUP: return createCharacterGroup();
+            case Shr5managementPackage.CONNECTION: return createConnection();
+            case Shr5managementPackage.FERTIGKEIT_CHANGE: return createFertigkeitChange();
+            case Shr5managementPackage.PERSONA_VALUE_CHANGE: return createPersonaValueChange();
+            case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY: return (EObject)createGeneratorStateToEStringMapEntry();
+            case Shr5managementPackage.INCREASE_CHARACTER_PART: return createIncreaseCharacterPart();
+            case Shr5managementPackage.CHANGE_QUALLITY: return createChangeQuallity();
+            case Shr5managementPackage.QUALLITY_CHANGE: return createQuallityChange();
+            default:
+                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        }
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case Shr5managementPackage.GENERATOR_STATE:
-				return createGeneratorStateFromString(eDataType, initialValue);
-			case Shr5managementPackage.SEX:
-				return createSexFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+        switch (eDataType.getClassifierID()) {
+            case Shr5managementPackage.GENERATOR_STATE:
+                return createGeneratorStateFromString(eDataType, initialValue);
+            case Shr5managementPackage.SEX:
+                return createSexFromString(eDataType, initialValue);
+            default:
+                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+        }
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case Shr5managementPackage.GENERATOR_STATE:
-				return convertGeneratorStateToString(eDataType, instanceValue);
-			case Shr5managementPackage.SEX:
-				return convertSexToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+        switch (eDataType.getClassifierID()) {
+            case Shr5managementPackage.GENERATOR_STATE:
+                return convertGeneratorStateToString(eDataType, instanceValue);
+            case Shr5managementPackage.SEX:
+                return convertSexToString(eDataType, instanceValue);
+            default:
+                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+        }
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public NonPlayerCharacter createNonPlayerCharacter() {
-		NonPlayerCharacterImpl nonPlayerCharacter = new NonPlayerCharacterImpl();
-		return nonPlayerCharacter;
-	}
+        NonPlayerCharacterImpl nonPlayerCharacter = new NonPlayerCharacterImpl();
+        return nonPlayerCharacter;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public KarmaGaint createKarmaGaint() {
-		KarmaGaintImpl karmaGaint = new KarmaGaintImpl();
-		return karmaGaint;
-	}
+        KarmaGaintImpl karmaGaint = new KarmaGaintImpl();
+        return karmaGaint;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FreeStyle createFreeStyle() {
-		FreeStyleImpl freeStyle = new FreeStyleImpl();
-		return freeStyle;
-	}
+        FreeStyleImpl freeStyle = new FreeStyleImpl();
+        return freeStyle;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5System createShr5System() {
-		Shr5SystemImpl shr5System = new Shr5SystemImpl();
-		return shr5System;
-	}
+        Shr5SystemImpl shr5System = new Shr5SystemImpl();
+        return shr5System;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MetaType createMetaType() {
-		MetaTypeImpl metaType = new MetaTypeImpl();
-		return metaType;
-	}
+        MetaTypeImpl metaType = new MetaTypeImpl();
+        return metaType;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Attributes createAttributes() {
-		AttributesImpl attributes = new AttributesImpl();
-		return attributes;
-	}
+        AttributesImpl attributes = new AttributesImpl();
+        return attributes;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Skill createSkill() {
-		SkillImpl skill = new SkillImpl();
-		return skill;
-	}
+        SkillImpl skill = new SkillImpl();
+        return skill;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Resourcen createResourcen() {
-		ResourcenImpl resourcen = new ResourcenImpl();
-		return resourcen;
-	}
+        ResourcenImpl resourcen = new ResourcenImpl();
+        return resourcen;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Technomancer createTechnomancer() {
-		TechnomancerImpl technomancer = new TechnomancerImpl();
-		return technomancer;
-	}
+        TechnomancerImpl technomancer = new TechnomancerImpl();
+        return technomancer;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Spellcaster createSpellcaster() {
-		SpellcasterImpl spellcaster = new SpellcasterImpl();
-		return spellcaster;
-	}
+        SpellcasterImpl spellcaster = new SpellcasterImpl();
+        return spellcaster;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adept createAdept() {
-		AdeptImpl adept = new AdeptImpl();
-		return adept;
-	}
+        AdeptImpl adept = new AdeptImpl();
+        return adept;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FreeStyleGenerator createFreeStyleGenerator() {
-		FreeStyleGeneratorImpl freeStyleGenerator = new FreeStyleGeneratorImpl();
-		return freeStyleGenerator;
-	}
+        FreeStyleGeneratorImpl freeStyleGenerator = new FreeStyleGeneratorImpl();
+        return freeStyleGenerator;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5Generator createShr5Generator() {
-		Shr5GeneratorImpl shr5Generator = new Shr5GeneratorImpl();
-		return shr5Generator;
-	}
+        Shr5GeneratorImpl shr5Generator = new Shr5GeneratorImpl();
+        return shr5Generator;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AttributeChange createAttributeChange() {
-		AttributeChangeImpl attributeChange = new AttributeChangeImpl();
-		return attributeChange;
-	}
+        AttributeChangeImpl attributeChange = new AttributeChangeImpl();
+        return attributeChange;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public PlayerCharacter createPlayerCharacter() {
-		PlayerCharacterImpl playerCharacter = new PlayerCharacterImpl();
-		return playerCharacter;
-	}
+        PlayerCharacterImpl playerCharacter = new PlayerCharacterImpl();
+        return playerCharacter;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Mudan createMudan() {
-		MudanImpl mudan = new MudanImpl();
-		return mudan;
-	}
+        MudanImpl mudan = new MudanImpl();
+        return mudan;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public CharacterGroup createCharacterGroup() {
-		CharacterGroupImpl characterGroup = new CharacterGroupImpl();
-		return characterGroup;
-	}
+        CharacterGroupImpl characterGroup = new CharacterGroupImpl();
+        return characterGroup;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Connection createConnection() {
-		ConnectionImpl connection = new ConnectionImpl();
-		return connection;
-	}
+        ConnectionImpl connection = new ConnectionImpl();
+        return connection;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FertigkeitChange createFertigkeitChange() {
-		FertigkeitChangeImpl fertigkeitChange = new FertigkeitChangeImpl();
-		return fertigkeitChange;
-	}
+        FertigkeitChangeImpl fertigkeitChange = new FertigkeitChangeImpl();
+        return fertigkeitChange;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public PersonaValueChange createPersonaValueChange() {
-		PersonaValueChangeImpl personaValueChange = new PersonaValueChangeImpl();
-		return personaValueChange;
-	}
+        PersonaValueChangeImpl personaValueChange = new PersonaValueChangeImpl();
+        return personaValueChange;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Map.Entry<GeneratorState, String> createGeneratorStateToEStringMapEntry() {
-		GeneratorStateToEStringMapEntryImpl generatorStateToEStringMapEntry = new GeneratorStateToEStringMapEntryImpl();
-		return generatorStateToEStringMapEntry;
-	}
+        GeneratorStateToEStringMapEntryImpl generatorStateToEStringMapEntry = new GeneratorStateToEStringMapEntryImpl();
+        return generatorStateToEStringMapEntry;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public IncreaseCharacterPart createIncreaseCharacterPart() {
-		IncreaseCharacterPartImpl increaseCharacterPart = new IncreaseCharacterPartImpl();
-		return increaseCharacterPart;
-	}
+        IncreaseCharacterPartImpl increaseCharacterPart = new IncreaseCharacterPartImpl();
+        return increaseCharacterPart;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ChangeQuallity createChangeQuallity() {
-		ChangeQuallityImpl changeQuallity = new ChangeQuallityImpl();
-		return changeQuallity;
-	}
+        ChangeQuallityImpl changeQuallity = new ChangeQuallityImpl();
+        return changeQuallity;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public QuallityChange createQuallityChange() {
-		QuallityChangeImpl quallityChange = new QuallityChangeImpl();
-		return quallityChange;
-	}
+        QuallityChangeImpl quallityChange = new QuallityChangeImpl();
+        return quallityChange;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public GeneratorState createGeneratorStateFromString(EDataType eDataType, String initialValue) {
-		GeneratorState result = GeneratorState.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+        GeneratorState result = GeneratorState.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String convertGeneratorStateToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+        return instanceValue == null ? null : instanceValue.toString();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Sex createSexFromString(EDataType eDataType, String initialValue) {
-		Sex result = Sex.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+        Sex result = Sex.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String convertSexToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+        return instanceValue == null ? null : instanceValue.toString();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5managementPackage getShr5managementPackage() {
-		return (Shr5managementPackage)getEPackage();
-	}
+        return (Shr5managementPackage)getEPackage();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+     * @deprecated
+     * @generated
+     */
 	@Deprecated
 	public static Shr5managementPackage getPackage() {
-		return Shr5managementPackage.eINSTANCE;
-	}
+        return Shr5managementPackage.eINSTANCE;
+    }
 
 } //Shr5managementFactoryImpl

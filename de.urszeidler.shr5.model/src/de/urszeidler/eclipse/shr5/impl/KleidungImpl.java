@@ -24,137 +24,137 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
 	/**
-	 * The default value of the '{@link #getRuestung() <em>Ruestung</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getRuestung() <em>Ruestung</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRuestung()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getRuestung()
+     * @generated
+     * @ordered
+     */
 	protected static final int RUESTUNG_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getRuestung() <em>Ruestung</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getRuestung() <em>Ruestung</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRuestung()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getRuestung()
+     * @generated
+     * @ordered
+     */
 	protected int ruestung = RUESTUNG_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KleidungImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.KLEIDUNG;
-	}
+        return Shr5Package.Literals.KLEIDUNG;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getRuestung() {
-		return ruestung;
-	}
+        return ruestung;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setRuestung(int newRuestung) {
-		int oldRuestung = ruestung;
-		ruestung = newRuestung;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KLEIDUNG__RUESTUNG, oldRuestung, ruestung));
-	}
+        int oldRuestung = ruestung;
+        ruestung = newRuestung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KLEIDUNG__RUESTUNG, oldRuestung, ruestung));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.KLEIDUNG__RUESTUNG:
-				return getRuestung();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.KLEIDUNG__RUESTUNG:
+                return getRuestung();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.KLEIDUNG__RUESTUNG:
-				setRuestung((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.KLEIDUNG__RUESTUNG:
+                setRuestung((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.KLEIDUNG__RUESTUNG:
-				setRuestung(RUESTUNG_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.KLEIDUNG__RUESTUNG:
+                setRuestung(RUESTUNG_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.KLEIDUNG__RUESTUNG:
-				return ruestung != RUESTUNG_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.KLEIDUNG__RUESTUNG:
+                return ruestung != RUESTUNG_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (ruestung: ");
-		result.append(ruestung);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (ruestung: ");
+        result.append(ruestung);
+        result.append(')');
+        return result.toString();
+    }
 
 } //KleidungImpl

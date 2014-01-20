@@ -18,22 +18,22 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class DrohneImpl extends FahrzeugImpl implements Drohne {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected DrohneImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.DROHNE;
-	}
+        return Shr5Package.Literals.DROHNE;
+    }
 
 } //DrohneImpl

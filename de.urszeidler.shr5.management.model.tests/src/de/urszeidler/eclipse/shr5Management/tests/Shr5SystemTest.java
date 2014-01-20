@@ -16,55 +16,55 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class Shr5SystemTest extends PrioritySystemTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(Shr5SystemTest.class);
-	}
+        TestRunner.run(Shr5SystemTest.class);
+    }
 
 	/**
-	 * Constructs a new Shr5 System test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Shr5 System test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5SystemTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Shr5 System test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Shr5 System test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Shr5System getFixture() {
-		return (Shr5System)fixture;
-	}
+        return (Shr5System)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Shr5managementFactory.eINSTANCE.createShr5System());
-	}
+        setFixture(Shr5managementFactory.eINSTANCE.createShr5System());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //Shr5SystemTest

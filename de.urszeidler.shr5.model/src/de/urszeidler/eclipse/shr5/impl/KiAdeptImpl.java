@@ -30,118 +30,118 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class KiAdeptImpl extends MagischePersonaImpl implements KiAdept {
 	/**
-	 * The cached value of the '{@link #getKikraft() <em>Kikraft</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getKikraft() <em>Kikraft</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKikraft()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getKikraft()
+     * @generated
+     * @ordered
+     */
 	protected EList<KiKraft> kikraft;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected KiAdeptImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.KI_ADEPT;
-	}
+        return Shr5Package.Literals.KI_ADEPT;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<KiKraft> getKikraft() {
-		if (kikraft == null) {
-			kikraft = new EObjectContainmentEList<KiKraft>(KiKraft.class, this, Shr5Package.KI_ADEPT__KIKRAFT);
-		}
-		return kikraft;
-	}
+        if (kikraft == null) {
+            kikraft = new EObjectContainmentEList<KiKraft>(KiKraft.class, this, Shr5Package.KI_ADEPT__KIKRAFT);
+        }
+        return kikraft;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Shr5Package.KI_ADEPT__KIKRAFT:
-				return ((InternalEList<?>)getKikraft()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_ADEPT__KIKRAFT:
+                return ((InternalEList<?>)getKikraft()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.KI_ADEPT__KIKRAFT:
-				return getKikraft();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_ADEPT__KIKRAFT:
+                return getKikraft();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.KI_ADEPT__KIKRAFT:
-				getKikraft().clear();
-				getKikraft().addAll((Collection<? extends KiKraft>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_ADEPT__KIKRAFT:
+                getKikraft().clear();
+                getKikraft().addAll((Collection<? extends KiKraft>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.KI_ADEPT__KIKRAFT:
-				getKikraft().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_ADEPT__KIKRAFT:
+                getKikraft().clear();
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.KI_ADEPT__KIKRAFT:
-				return kikraft != null && !kikraft.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.KI_ADEPT__KIKRAFT:
+                return kikraft != null && !kikraft.isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //KiAdeptImpl

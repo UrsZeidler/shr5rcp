@@ -27,33 +27,33 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements FreeStyleGenerator {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FreeStyleGeneratorImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.FREE_STYLE_GENERATOR;
-	}
+        return Shr5managementPackage.Literals.FREE_STYLE_GENERATOR;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FreeStyle getFreestyleGenerator() {
-		FreeStyle freestyleGenerator = basicGetFreestyleGenerator();
-		return freestyleGenerator != null && freestyleGenerator.eIsProxy() ? (FreeStyle)eResolveProxy((InternalEObject)freestyleGenerator) : freestyleGenerator;
-	}
+        FreeStyle freestyleGenerator = basicGetFreestyleGenerator();
+        return freestyleGenerator != null && freestyleGenerator.eIsProxy() ? (FreeStyle)eResolveProxy((InternalEObject)freestyleGenerator) : freestyleGenerator;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,32 +69,32 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR:
-				if (resolve) return getFreestyleGenerator();
-				return basicGetFreestyleGenerator();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR:
+                if (resolve) return getFreestyleGenerator();
+                return basicGetFreestyleGenerator();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR:
-				return basicGetFreestyleGenerator() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR:
+                return basicGetFreestyleGenerator() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //FreeStyleGeneratorImpl

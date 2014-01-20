@@ -19,22 +19,22 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class AttributeChangeImpl extends PersonaValueChangeImpl implements AttributeChange {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AttributeChangeImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.ATTRIBUTE_CHANGE;
-	}
+        return Shr5managementPackage.Literals.ATTRIBUTE_CHANGE;
+    }
 
 } //AttributeChangeImpl

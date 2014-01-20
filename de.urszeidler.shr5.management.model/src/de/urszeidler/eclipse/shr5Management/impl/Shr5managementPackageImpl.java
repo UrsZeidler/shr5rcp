@@ -59,1876 +59,1876 @@ import java.util.Map;
  */
 public class Shr5managementPackageImpl extends EPackageImpl implements Shr5managementPackage {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass managedCharacterEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass characterGeneratorSystemEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass prioritySystemEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass nonPlayerCharacterEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass changesEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass karmaGaintEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass freeStyleEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass priorityCategorieEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass shr5SystemEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass metaTypeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass attributesEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass skillEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass resourcenEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass specialTypeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass technomancerEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass spellcasterEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass adeptEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass characterGeneratorEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass freeStyleGeneratorEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass shr5GeneratorEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass attributeChangeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass playerCharacterEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass mudanEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass characterGroupEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass connectionEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass fertigkeitChangeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass personaValueChangeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass generatorStateToEStringMapEntryEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass advancementEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass increaseCharacterPartEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass changeQuallityEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EClass quallityChangeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EEnum generatorStateEEnum = null;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private EEnum sexEEnum = null;
 
 	/**
-	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-	 * package URI value.
-	 * <p>Note: the correct way to create the package is via the static
-	 * factory method {@link #init init()}, which also performs
-	 * initialization of the package, or returns the registered package,
-	 * if one already exists.
-	 * <!-- begin-user-doc -->
+     * Creates an instance of the model <b>Package</b>, registered with
+     * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+     * package URI value.
+     * <p>Note: the correct way to create the package is via the static
+     * factory method {@link #init init()}, which also performs
+     * initialization of the package, or returns the registered package,
+     * if one already exists.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#eNS_URI
-	 * @see #init()
-	 * @generated
-	 */
+     * @see org.eclipse.emf.ecore.EPackage.Registry
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#eNS_URI
+     * @see #init()
+     * @generated
+     */
 	private Shr5managementPackageImpl() {
-		super(eNS_URI, Shr5managementFactory.eINSTANCE);
-	}
+        super(eNS_URI, Shr5managementFactory.eINSTANCE);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static boolean isInited = false;
 
 	/**
-	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
-	 * <p>This method is used to initialize {@link Shr5managementPackage#eINSTANCE} when that field is accessed.
-	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-	 * <!-- begin-user-doc -->
+     * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+     * 
+     * <p>This method is used to initialize {@link Shr5managementPackage#eINSTANCE} when that field is accessed.
+     * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #eNS_URI
-	 * @see #createPackageContents()
-	 * @see #initializePackageContents()
-	 * @generated
-	 */
+     * @see #eNS_URI
+     * @see #createPackageContents()
+     * @see #initializePackageContents()
+     * @generated
+     */
 	public static Shr5managementPackage init() {
-		if (isInited) return (Shr5managementPackage)EPackage.Registry.INSTANCE.getEPackage(Shr5managementPackage.eNS_URI);
+        if (isInited) return (Shr5managementPackage)EPackage.Registry.INSTANCE.getEPackage(Shr5managementPackage.eNS_URI);
 
-		// Obtain or create and register package
-		Shr5managementPackageImpl theShr5managementPackage = (Shr5managementPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Shr5managementPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Shr5managementPackageImpl());
+        // Obtain or create and register package
+        Shr5managementPackageImpl theShr5managementPackage = (Shr5managementPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Shr5managementPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Shr5managementPackageImpl());
 
-		isInited = true;
+        isInited = true;
 
-		// Initialize simple dependencies
-		Shr5Package.eINSTANCE.eClass();
+        // Initialize simple dependencies
+        Shr5Package.eINSTANCE.eClass();
 
-		// Create package meta-data objects
-		theShr5managementPackage.createPackageContents();
+        // Create package meta-data objects
+        theShr5managementPackage.createPackageContents();
 
-		// Initialize created meta-data
-		theShr5managementPackage.initializePackageContents();
+        // Initialize created meta-data
+        theShr5managementPackage.initializePackageContents();
 
-		// Register package validator
-		EValidator.Registry.INSTANCE.put
-			(theShr5managementPackage, 
-			 new EValidator.Descriptor() {
-				 public EValidator getEValidator() {
-					 return Shr5managementValidator.INSTANCE;
-				 }
-			 });
+        // Register package validator
+        EValidator.Registry.INSTANCE.put
+            (theShr5managementPackage, 
+             new EValidator.Descriptor() {
+                 public EValidator getEValidator() {
+                     return Shr5managementValidator.INSTANCE;
+                 }
+             });
 
-		// Mark meta-data to indicate it can't be changed
-		theShr5managementPackage.freeze();
+        // Mark meta-data to indicate it can't be changed
+        theShr5managementPackage.freeze();
 
   
-		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Shr5managementPackage.eNS_URI, theShr5managementPackage);
-		return theShr5managementPackage;
-	}
+        // Update the registry and return the package
+        EPackage.Registry.INSTANCE.put(Shr5managementPackage.eNS_URI, theShr5managementPackage);
+        return theShr5managementPackage;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getManagedCharacter() {
-		return managedCharacterEClass;
-	}
+        return managedCharacterEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_Persona() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_Changes() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(1);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_ChracterSource() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(2);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_Inventar() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(3);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_Contracts() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(4);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(4);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getManagedCharacter_Sex() {
-		return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(5);
-	}
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(5);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_Connections() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(6);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(6);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_Vehicels() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(7);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(7);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_ChoosenLifestyle() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(8);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(8);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getManagedCharacter_NativeLanguage() {
-		return (EReference)managedCharacterEClass.getEStructuralFeatures().get(9);
-	}
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(9);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getManagedCharacter_StreetCred() {
-		return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(10);
-	}
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(10);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getManagedCharacter_Notoriety() {
-		return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(11);
-	}
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(11);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getManagedCharacter_NotorietyBasic() {
-		return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(12);
-	}
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(12);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getManagedCharacter_PublicAwareness() {
-		return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(13);
-	}
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(13);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getManagedCharacter_KarmaGaint() {
-		return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(14);
-	}
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(14);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getCharacterGeneratorSystem() {
-		return characterGeneratorSystemEClass;
-	}
+        return characterGeneratorSystemEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getCharacterGeneratorSystem_Instructions() {
-		return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getCharacterGeneratorSystem_CharacterAdvancements() {
-		return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(1);
-	}
+        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getPrioritySystem() {
-		return prioritySystemEClass;
-	}
+        return prioritySystemEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getPrioritySystem_Priorities() {
-		return (EReference)prioritySystemEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)prioritySystemEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getPrioritySystem_KarmaPoints() {
-		return (EAttribute)prioritySystemEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)prioritySystemEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getNonPlayerCharacter() {
-		return nonPlayerCharacterEClass;
-	}
+        return nonPlayerCharacterEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getChanges() {
-		return changesEClass;
-	}
+        return changesEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getChanges_Date() {
-		return (EAttribute)changesEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)changesEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getKarmaGaint() {
-		return karmaGaintEClass;
-	}
+        return karmaGaintEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getKarmaGaint_Karma() {
-		return (EAttribute)karmaGaintEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)karmaGaintEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getFreeStyle() {
-		return freeStyleEClass;
-	}
+        return freeStyleEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getPriorityCategorie() {
-		return priorityCategorieEClass;
-	}
+        return priorityCategorieEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getPriorityCategorie_CategorieName() {
-		return (EAttribute)priorityCategorieEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)priorityCategorieEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getShr5System() {
-		return shr5SystemEClass;
-	}
+        return shr5SystemEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5System_KarmaToResourceFactor() {
-		return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5System_KarmaToMagicFactor() {
-		return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5System_NumberOfMaxAttributes() {
-		return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(2);
-	}
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5System_KnowlegeSkillFactor() {
-		return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(3);
-	}
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5System_CharismaToConnectionFactor() {
-		return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(4);
-	}
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(4);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getMetaType() {
-		return metaTypeEClass;
-	}
+        return metaTypeEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getMetaType_ChoosableTypes() {
-		return (EReference)metaTypeEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)metaTypeEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getMetaType_SpecialPoints() {
-		return (EAttribute)metaTypeEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)metaTypeEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getMetaType__CalcSpecialPointsSpend__ManagedCharacter() {
-		return metaTypeEClass.getEOperations().get(0);
-	}
+        return metaTypeEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getAttributes() {
-		return attributesEClass;
-	}
+        return attributesEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getAttributes_AttibutePoints() {
-		return (EAttribute)attributesEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)attributesEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getAttributes__CalcAttributesSpend__ManagedCharacter() {
-		return attributesEClass.getEOperations().get(0);
-	}
+        return attributesEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getSkill() {
-		return skillEClass;
-	}
+        return skillEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getSkill_SkillPoints() {
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)skillEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getSkill_GroupPoints() {
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)skillEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getSkill__CalcSkillSpend__ManagedCharacter() {
-		return skillEClass.getEOperations().get(0);
-	}
+        return skillEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getSkill__CalcGroupSpend__ManagedCharacter() {
-		return skillEClass.getEOperations().get(1);
-	}
+        return skillEClass.getEOperations().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getSkill__CalcKnowledgeSkillSpend__ManagedCharacter() {
-		return skillEClass.getEOperations().get(2);
-	}
+        return skillEClass.getEOperations().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getSkill__CalcKnowledgeSkillPoints__ManagedCharacter() {
-		return skillEClass.getEOperations().get(3);
-	}
+        return skillEClass.getEOperations().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getResourcen() {
-		return resourcenEClass;
-	}
+        return resourcenEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getResourcen_Resource() {
-		return (EAttribute)resourcenEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)resourcenEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getResourcen__CalcResourceSpend__ManagedCharacter() {
-		return resourcenEClass.getEOperations().get(0);
-	}
+        return resourcenEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getSpecialType() {
-		return specialTypeEClass;
-	}
+        return specialTypeEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getSpecialType_SelectableTypes() {
-		return (EReference)specialTypeEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)specialTypeEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getSpecialType_SkillValue() {
-		return (EAttribute)specialTypeEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)specialTypeEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getSpecialType_SkillNumber() {
-		return (EAttribute)specialTypeEClass.getEStructuralFeatures().get(2);
-	}
+        return (EAttribute)specialTypeEClass.getEStructuralFeatures().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getSpecialType_SelectableSkills() {
-		return (EReference)specialTypeEClass.getEStructuralFeatures().get(3);
-	}
+        return (EReference)specialTypeEClass.getEStructuralFeatures().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getSpecialType_SelectableSkillGroups() {
-		return (EReference)specialTypeEClass.getEStructuralFeatures().get(4);
-	}
+        return (EReference)specialTypeEClass.getEStructuralFeatures().get(4);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getSpecialType__CalcSkillsSpend__ManagedCharacter() {
-		return specialTypeEClass.getEOperations().get(0);
-	}
+        return specialTypeEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getTechnomancer() {
-		return technomancerEClass;
-	}
+        return technomancerEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getTechnomancer_Resonanz() {
-		return (EAttribute)technomancerEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)technomancerEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getTechnomancer_ComplexForms() {
-		return (EAttribute)technomancerEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)technomancerEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getTechnomancer__CalcComplexFormsSpend__ManagedCharacter() {
-		return technomancerEClass.getEOperations().get(0);
-	}
+        return technomancerEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getSpellcaster() {
-		return spellcasterEClass;
-	}
+        return spellcasterEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getSpellcaster_SpellPoints() {
-		return (EAttribute)spellcasterEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)spellcasterEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getSpellcaster__CalcSpellPointsSpend__ManagedCharacter() {
-		return spellcasterEClass.getEOperations().get(0);
-	}
+        return spellcasterEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getAdept() {
-		return adeptEClass;
-	}
+        return adeptEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getAdept_Magic() {
-		return (EAttribute)adeptEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)adeptEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getCharacterGenerator() {
-		return characterGeneratorEClass;
-	}
+        return characterGeneratorEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getCharacterGenerator_Character() {
-		return (EReference)characterGeneratorEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)characterGeneratorEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getCharacterGenerator_Generator() {
-		return (EReference)characterGeneratorEClass.getEStructuralFeatures().get(1);
-	}
+        return (EReference)characterGeneratorEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getCharacterGenerator_State() {
-		return (EAttribute)characterGeneratorEClass.getEStructuralFeatures().get(2);
-	}
+        return (EAttribute)characterGeneratorEClass.getEStructuralFeatures().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getCharacterGenerator_SelectedGroup() {
-		return (EReference)characterGeneratorEClass.getEStructuralFeatures().get(3);
-	}
+        return (EReference)characterGeneratorEClass.getEStructuralFeatures().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getCharacterGenerator_CharacterName() {
-		return (EAttribute)characterGeneratorEClass.getEStructuralFeatures().get(4);
-	}
+        return (EAttribute)characterGeneratorEClass.getEStructuralFeatures().get(4);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getCharacterGenerator_CurrentInstruction() {
-		return (EAttribute)characterGeneratorEClass.getEStructuralFeatures().get(5);
-	}
+        return (EAttribute)characterGeneratorEClass.getEStructuralFeatures().get(5);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getFreeStyleGenerator() {
-		return freeStyleGeneratorEClass;
-	}
+        return freeStyleGeneratorEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getFreeStyleGenerator_FreestyleGenerator() {
-		return (EReference)freeStyleGeneratorEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)freeStyleGeneratorEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getShr5Generator() {
-		return shr5GeneratorEClass;
-	}
+        return shr5GeneratorEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getShr5Generator_Resourcen() {
-		return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getShr5Generator_Skills() {
-		return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(1);
-	}
+        return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getShr5Generator_Attribute() {
-		return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(2);
-	}
+        return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getShr5Generator_MetaType() {
-		return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(3);
-	}
+        return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getShr5Generator_Magic() {
-		return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(4);
-	}
+        return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(4);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5Generator_KarmaToResource() {
-		return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(5);
-	}
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(5);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getShr5Generator_KarmaSpend() {
-		return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(6);
-	}
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(6);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getShr5Generator_Shr5Generator() {
-		return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(7);
-	}
+        return (EReference)shr5GeneratorEClass.getEStructuralFeatures().get(7);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(0);
-	}
+        return shr5GeneratorEClass.getEOperations().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotSpendAllPoints__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(1);
-	}
+        return shr5GeneratorEClass.getEOperations().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotMoreMaxAttributes__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(2);
-	}
+        return shr5GeneratorEClass.getEOperations().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotSpendAllAttributesPoints__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(3);
-	}
+        return shr5GeneratorEClass.getEOperations().get(3);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(4);
-	}
+        return shr5GeneratorEClass.getEOperations().get(4);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotSpendAllSpecialPoints__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(5);
-	}
+        return shr5GeneratorEClass.getEOperations().get(5);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotSpendAllSpecialTypePoints__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(6);
-	}
+        return shr5GeneratorEClass.getEOperations().get(6);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EOperation getShr5Generator__HasNotSpendAllConnectionPoints__DiagnosticChain_Map() {
-		return shr5GeneratorEClass.getEOperations().get(7);
-	}
+        return shr5GeneratorEClass.getEOperations().get(7);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getAttributeChange() {
-		return attributeChangeEClass;
-	}
+        return attributeChangeEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getPlayerCharacter() {
-		return playerCharacterEClass;
-	}
+        return playerCharacterEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getMudan() {
-		return mudanEClass;
-	}
+        return mudanEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getCharacterGroup() {
-		return characterGroupEClass;
-	}
+        return characterGroupEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getCharacterGroup_Members() {
-		return (EReference)characterGroupEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)characterGroupEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getConnection() {
-		return connectionEClass;
-	}
+        return connectionEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getConnection_Influence() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)connectionEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getConnection_Loyality() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)connectionEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getConnection_Character() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(2);
-	}
+        return (EReference)connectionEClass.getEStructuralFeatures().get(2);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getFertigkeitChange() {
-		return fertigkeitChangeEClass;
-	}
+        return fertigkeitChangeEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getPersonaValueChange() {
-		return personaValueChangeEClass;
-	}
+        return personaValueChangeEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getPersonaValueChange_From() {
-		return (EAttribute)personaValueChangeEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)personaValueChangeEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getPersonaValueChange_To() {
-		return (EAttribute)personaValueChangeEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)personaValueChangeEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getGeneratorStateToEStringMapEntry() {
-		return generatorStateToEStringMapEntryEClass;
-	}
+        return generatorStateToEStringMapEntryEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getGeneratorStateToEStringMapEntry_Key() {
-		return (EAttribute)generatorStateToEStringMapEntryEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)generatorStateToEStringMapEntryEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getGeneratorStateToEStringMapEntry_Value() {
-		return (EAttribute)generatorStateToEStringMapEntryEClass.getEStructuralFeatures().get(1);
-	}
+        return (EAttribute)generatorStateToEStringMapEntryEClass.getEStructuralFeatures().get(1);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getAdvancement() {
-		return advancementEClass;
-	}
+        return advancementEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EAttribute getAdvancement_KarmaFactor() {
-		return (EAttribute)advancementEClass.getEStructuralFeatures().get(0);
-	}
+        return (EAttribute)advancementEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getIncreaseCharacterPart() {
-		return increaseCharacterPartEClass;
-	}
+        return increaseCharacterPartEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EReference getIncreaseCharacterPart_Type() {
-		return (EReference)increaseCharacterPartEClass.getEStructuralFeatures().get(0);
-	}
+        return (EReference)increaseCharacterPartEClass.getEStructuralFeatures().get(0);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getChangeQuallity() {
-		return changeQuallityEClass;
-	}
+        return changeQuallityEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EClass getQuallityChange() {
-		return quallityChangeEClass;
-	}
+        return quallityChangeEClass;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EEnum getGeneratorState() {
-		return generatorStateEEnum;
-	}
+        return generatorStateEEnum;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EEnum getSex() {
-		return sexEEnum;
-	}
+        return sexEEnum;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5managementFactory getShr5managementFactory() {
-		return (Shr5managementFactory)getEFactoryInstance();
-	}
+        return (Shr5managementFactory)getEFactoryInstance();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private boolean isCreated = false;
 
 	/**
-	 * Creates the meta-model objects for the package.  This method is
-	 * guarded to have no affect on any invocation but its first.
-	 * <!-- begin-user-doc -->
+     * Creates the meta-model objects for the package.  This method is
+     * guarded to have no affect on any invocation but its first.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void createPackageContents() {
-		if (isCreated) return;
-		isCreated = true;
+        if (isCreated) return;
+        isCreated = true;
 
-		// Create classes and their features
-		managedCharacterEClass = createEClass(MANAGED_CHARACTER);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__PERSONA);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHANGES);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHRACTER_SOURCE);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__INVENTAR);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__CONTRACTS);
-		createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__SEX);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__CONNECTIONS);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__VEHICELS);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHOOSEN_LIFESTYLE);
-		createEReference(managedCharacterEClass, MANAGED_CHARACTER__NATIVE_LANGUAGE);
-		createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__STREET_CRED);
-		createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY);
-		createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY_BASIC);
-		createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__PUBLIC_AWARENESS);
-		createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__KARMA_GAINT);
+        // Create classes and their features
+        managedCharacterEClass = createEClass(MANAGED_CHARACTER);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__PERSONA);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHANGES);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHRACTER_SOURCE);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__INVENTAR);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__CONTRACTS);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__SEX);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__CONNECTIONS);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__VEHICELS);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHOOSEN_LIFESTYLE);
+        createEReference(managedCharacterEClass, MANAGED_CHARACTER__NATIVE_LANGUAGE);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__STREET_CRED);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY_BASIC);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__PUBLIC_AWARENESS);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__KARMA_GAINT);
 
-		characterGeneratorSystemEClass = createEClass(CHARACTER_GENERATOR_SYSTEM);
-		createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
-		createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
+        characterGeneratorSystemEClass = createEClass(CHARACTER_GENERATOR_SYSTEM);
+        createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
+        createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
 
-		prioritySystemEClass = createEClass(PRIORITY_SYSTEM);
-		createEReference(prioritySystemEClass, PRIORITY_SYSTEM__PRIORITIES);
-		createEAttribute(prioritySystemEClass, PRIORITY_SYSTEM__KARMA_POINTS);
+        prioritySystemEClass = createEClass(PRIORITY_SYSTEM);
+        createEReference(prioritySystemEClass, PRIORITY_SYSTEM__PRIORITIES);
+        createEAttribute(prioritySystemEClass, PRIORITY_SYSTEM__KARMA_POINTS);
 
-		nonPlayerCharacterEClass = createEClass(NON_PLAYER_CHARACTER);
+        nonPlayerCharacterEClass = createEClass(NON_PLAYER_CHARACTER);
 
-		changesEClass = createEClass(CHANGES);
-		createEAttribute(changesEClass, CHANGES__DATE);
+        changesEClass = createEClass(CHANGES);
+        createEAttribute(changesEClass, CHANGES__DATE);
 
-		karmaGaintEClass = createEClass(KARMA_GAINT);
-		createEAttribute(karmaGaintEClass, KARMA_GAINT__KARMA);
+        karmaGaintEClass = createEClass(KARMA_GAINT);
+        createEAttribute(karmaGaintEClass, KARMA_GAINT__KARMA);
 
-		freeStyleEClass = createEClass(FREE_STYLE);
+        freeStyleEClass = createEClass(FREE_STYLE);
 
-		priorityCategorieEClass = createEClass(PRIORITY_CATEGORIE);
-		createEAttribute(priorityCategorieEClass, PRIORITY_CATEGORIE__CATEGORIE_NAME);
+        priorityCategorieEClass = createEClass(PRIORITY_CATEGORIE);
+        createEAttribute(priorityCategorieEClass, PRIORITY_CATEGORIE__CATEGORIE_NAME);
 
-		shr5SystemEClass = createEClass(SHR5_SYSTEM);
-		createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR);
-		createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR);
-		createEAttribute(shr5SystemEClass, SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES);
-		createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR);
-		createEAttribute(shr5SystemEClass, SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR);
+        shr5SystemEClass = createEClass(SHR5_SYSTEM);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR);
 
-		metaTypeEClass = createEClass(META_TYPE);
-		createEReference(metaTypeEClass, META_TYPE__CHOOSABLE_TYPES);
-		createEAttribute(metaTypeEClass, META_TYPE__SPECIAL_POINTS);
-		createEOperation(metaTypeEClass, META_TYPE___CALC_SPECIAL_POINTS_SPEND__MANAGEDCHARACTER);
+        metaTypeEClass = createEClass(META_TYPE);
+        createEReference(metaTypeEClass, META_TYPE__CHOOSABLE_TYPES);
+        createEAttribute(metaTypeEClass, META_TYPE__SPECIAL_POINTS);
+        createEOperation(metaTypeEClass, META_TYPE___CALC_SPECIAL_POINTS_SPEND__MANAGEDCHARACTER);
 
-		attributesEClass = createEClass(ATTRIBUTES);
-		createEAttribute(attributesEClass, ATTRIBUTES__ATTIBUTE_POINTS);
-		createEOperation(attributesEClass, ATTRIBUTES___CALC_ATTRIBUTES_SPEND__MANAGEDCHARACTER);
+        attributesEClass = createEClass(ATTRIBUTES);
+        createEAttribute(attributesEClass, ATTRIBUTES__ATTIBUTE_POINTS);
+        createEOperation(attributesEClass, ATTRIBUTES___CALC_ATTRIBUTES_SPEND__MANAGEDCHARACTER);
 
-		skillEClass = createEClass(SKILL);
-		createEAttribute(skillEClass, SKILL__SKILL_POINTS);
-		createEAttribute(skillEClass, SKILL__GROUP_POINTS);
-		createEOperation(skillEClass, SKILL___CALC_SKILL_SPEND__MANAGEDCHARACTER);
-		createEOperation(skillEClass, SKILL___CALC_GROUP_SPEND__MANAGEDCHARACTER);
-		createEOperation(skillEClass, SKILL___CALC_KNOWLEDGE_SKILL_SPEND__MANAGEDCHARACTER);
-		createEOperation(skillEClass, SKILL___CALC_KNOWLEDGE_SKILL_POINTS__MANAGEDCHARACTER);
+        skillEClass = createEClass(SKILL);
+        createEAttribute(skillEClass, SKILL__SKILL_POINTS);
+        createEAttribute(skillEClass, SKILL__GROUP_POINTS);
+        createEOperation(skillEClass, SKILL___CALC_SKILL_SPEND__MANAGEDCHARACTER);
+        createEOperation(skillEClass, SKILL___CALC_GROUP_SPEND__MANAGEDCHARACTER);
+        createEOperation(skillEClass, SKILL___CALC_KNOWLEDGE_SKILL_SPEND__MANAGEDCHARACTER);
+        createEOperation(skillEClass, SKILL___CALC_KNOWLEDGE_SKILL_POINTS__MANAGEDCHARACTER);
 
-		resourcenEClass = createEClass(RESOURCEN);
-		createEAttribute(resourcenEClass, RESOURCEN__RESOURCE);
-		createEOperation(resourcenEClass, RESOURCEN___CALC_RESOURCE_SPEND__MANAGEDCHARACTER);
+        resourcenEClass = createEClass(RESOURCEN);
+        createEAttribute(resourcenEClass, RESOURCEN__RESOURCE);
+        createEOperation(resourcenEClass, RESOURCEN___CALC_RESOURCE_SPEND__MANAGEDCHARACTER);
 
-		specialTypeEClass = createEClass(SPECIAL_TYPE);
-		createEReference(specialTypeEClass, SPECIAL_TYPE__SELECTABLE_TYPES);
-		createEAttribute(specialTypeEClass, SPECIAL_TYPE__SKILL_VALUE);
-		createEAttribute(specialTypeEClass, SPECIAL_TYPE__SKILL_NUMBER);
-		createEReference(specialTypeEClass, SPECIAL_TYPE__SELECTABLE_SKILLS);
-		createEReference(specialTypeEClass, SPECIAL_TYPE__SELECTABLE_SKILL_GROUPS);
-		createEOperation(specialTypeEClass, SPECIAL_TYPE___CALC_SKILLS_SPEND__MANAGEDCHARACTER);
+        specialTypeEClass = createEClass(SPECIAL_TYPE);
+        createEReference(specialTypeEClass, SPECIAL_TYPE__SELECTABLE_TYPES);
+        createEAttribute(specialTypeEClass, SPECIAL_TYPE__SKILL_VALUE);
+        createEAttribute(specialTypeEClass, SPECIAL_TYPE__SKILL_NUMBER);
+        createEReference(specialTypeEClass, SPECIAL_TYPE__SELECTABLE_SKILLS);
+        createEReference(specialTypeEClass, SPECIAL_TYPE__SELECTABLE_SKILL_GROUPS);
+        createEOperation(specialTypeEClass, SPECIAL_TYPE___CALC_SKILLS_SPEND__MANAGEDCHARACTER);
 
-		technomancerEClass = createEClass(TECHNOMANCER);
-		createEAttribute(technomancerEClass, TECHNOMANCER__RESONANZ);
-		createEAttribute(technomancerEClass, TECHNOMANCER__COMPLEX_FORMS);
-		createEOperation(technomancerEClass, TECHNOMANCER___CALC_COMPLEX_FORMS_SPEND__MANAGEDCHARACTER);
+        technomancerEClass = createEClass(TECHNOMANCER);
+        createEAttribute(technomancerEClass, TECHNOMANCER__RESONANZ);
+        createEAttribute(technomancerEClass, TECHNOMANCER__COMPLEX_FORMS);
+        createEOperation(technomancerEClass, TECHNOMANCER___CALC_COMPLEX_FORMS_SPEND__MANAGEDCHARACTER);
 
-		spellcasterEClass = createEClass(SPELLCASTER);
-		createEAttribute(spellcasterEClass, SPELLCASTER__SPELL_POINTS);
-		createEOperation(spellcasterEClass, SPELLCASTER___CALC_SPELL_POINTS_SPEND__MANAGEDCHARACTER);
+        spellcasterEClass = createEClass(SPELLCASTER);
+        createEAttribute(spellcasterEClass, SPELLCASTER__SPELL_POINTS);
+        createEOperation(spellcasterEClass, SPELLCASTER___CALC_SPELL_POINTS_SPEND__MANAGEDCHARACTER);
 
-		adeptEClass = createEClass(ADEPT);
-		createEAttribute(adeptEClass, ADEPT__MAGIC);
+        adeptEClass = createEClass(ADEPT);
+        createEAttribute(adeptEClass, ADEPT__MAGIC);
 
-		characterGeneratorEClass = createEClass(CHARACTER_GENERATOR);
-		createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__CHARACTER);
-		createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__GENERATOR);
-		createEAttribute(characterGeneratorEClass, CHARACTER_GENERATOR__STATE);
-		createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__SELECTED_GROUP);
-		createEAttribute(characterGeneratorEClass, CHARACTER_GENERATOR__CHARACTER_NAME);
-		createEAttribute(characterGeneratorEClass, CHARACTER_GENERATOR__CURRENT_INSTRUCTION);
+        characterGeneratorEClass = createEClass(CHARACTER_GENERATOR);
+        createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__CHARACTER);
+        createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__GENERATOR);
+        createEAttribute(characterGeneratorEClass, CHARACTER_GENERATOR__STATE);
+        createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__SELECTED_GROUP);
+        createEAttribute(characterGeneratorEClass, CHARACTER_GENERATOR__CHARACTER_NAME);
+        createEAttribute(characterGeneratorEClass, CHARACTER_GENERATOR__CURRENT_INSTRUCTION);
 
-		freeStyleGeneratorEClass = createEClass(FREE_STYLE_GENERATOR);
-		createEReference(freeStyleGeneratorEClass, FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR);
+        freeStyleGeneratorEClass = createEClass(FREE_STYLE_GENERATOR);
+        createEReference(freeStyleGeneratorEClass, FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR);
 
-		shr5GeneratorEClass = createEClass(SHR5_GENERATOR);
-		createEReference(shr5GeneratorEClass, SHR5_GENERATOR__RESOURCEN);
-		createEReference(shr5GeneratorEClass, SHR5_GENERATOR__SKILLS);
-		createEReference(shr5GeneratorEClass, SHR5_GENERATOR__ATTRIBUTE);
-		createEReference(shr5GeneratorEClass, SHR5_GENERATOR__META_TYPE);
-		createEReference(shr5GeneratorEClass, SHR5_GENERATOR__MAGIC);
-		createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KARMA_TO_RESOURCE);
-		createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KARMA_SPEND);
-		createEReference(shr5GeneratorEClass, SHR5_GENERATOR__SHR5_GENERATOR);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP);
-		createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP);
+        shr5GeneratorEClass = createEClass(SHR5_GENERATOR);
+        createEReference(shr5GeneratorEClass, SHR5_GENERATOR__RESOURCEN);
+        createEReference(shr5GeneratorEClass, SHR5_GENERATOR__SKILLS);
+        createEReference(shr5GeneratorEClass, SHR5_GENERATOR__ATTRIBUTE);
+        createEReference(shr5GeneratorEClass, SHR5_GENERATOR__META_TYPE);
+        createEReference(shr5GeneratorEClass, SHR5_GENERATOR__MAGIC);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KARMA_TO_RESOURCE);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KARMA_SPEND);
+        createEReference(shr5GeneratorEClass, SHR5_GENERATOR__SHR5_GENERATOR);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP);
 
-		attributeChangeEClass = createEClass(ATTRIBUTE_CHANGE);
+        attributeChangeEClass = createEClass(ATTRIBUTE_CHANGE);
 
-		playerCharacterEClass = createEClass(PLAYER_CHARACTER);
+        playerCharacterEClass = createEClass(PLAYER_CHARACTER);
 
-		mudanEClass = createEClass(MUDAN);
+        mudanEClass = createEClass(MUDAN);
 
-		characterGroupEClass = createEClass(CHARACTER_GROUP);
-		createEReference(characterGroupEClass, CHARACTER_GROUP__MEMBERS);
+        characterGroupEClass = createEClass(CHARACTER_GROUP);
+        createEReference(characterGroupEClass, CHARACTER_GROUP__MEMBERS);
 
-		connectionEClass = createEClass(CONNECTION);
-		createEAttribute(connectionEClass, CONNECTION__INFLUENCE);
-		createEAttribute(connectionEClass, CONNECTION__LOYALITY);
-		createEReference(connectionEClass, CONNECTION__CHARACTER);
+        connectionEClass = createEClass(CONNECTION);
+        createEAttribute(connectionEClass, CONNECTION__INFLUENCE);
+        createEAttribute(connectionEClass, CONNECTION__LOYALITY);
+        createEReference(connectionEClass, CONNECTION__CHARACTER);
 
-		fertigkeitChangeEClass = createEClass(FERTIGKEIT_CHANGE);
+        fertigkeitChangeEClass = createEClass(FERTIGKEIT_CHANGE);
 
-		personaValueChangeEClass = createEClass(PERSONA_VALUE_CHANGE);
-		createEAttribute(personaValueChangeEClass, PERSONA_VALUE_CHANGE__FROM);
-		createEAttribute(personaValueChangeEClass, PERSONA_VALUE_CHANGE__TO);
+        personaValueChangeEClass = createEClass(PERSONA_VALUE_CHANGE);
+        createEAttribute(personaValueChangeEClass, PERSONA_VALUE_CHANGE__FROM);
+        createEAttribute(personaValueChangeEClass, PERSONA_VALUE_CHANGE__TO);
 
-		generatorStateToEStringMapEntryEClass = createEClass(GENERATOR_STATE_TO_ESTRING_MAP_ENTRY);
-		createEAttribute(generatorStateToEStringMapEntryEClass, GENERATOR_STATE_TO_ESTRING_MAP_ENTRY__KEY);
-		createEAttribute(generatorStateToEStringMapEntryEClass, GENERATOR_STATE_TO_ESTRING_MAP_ENTRY__VALUE);
+        generatorStateToEStringMapEntryEClass = createEClass(GENERATOR_STATE_TO_ESTRING_MAP_ENTRY);
+        createEAttribute(generatorStateToEStringMapEntryEClass, GENERATOR_STATE_TO_ESTRING_MAP_ENTRY__KEY);
+        createEAttribute(generatorStateToEStringMapEntryEClass, GENERATOR_STATE_TO_ESTRING_MAP_ENTRY__VALUE);
 
-		advancementEClass = createEClass(ADVANCEMENT);
-		createEAttribute(advancementEClass, ADVANCEMENT__KARMA_FACTOR);
+        advancementEClass = createEClass(ADVANCEMENT);
+        createEAttribute(advancementEClass, ADVANCEMENT__KARMA_FACTOR);
 
-		increaseCharacterPartEClass = createEClass(INCREASE_CHARACTER_PART);
-		createEReference(increaseCharacterPartEClass, INCREASE_CHARACTER_PART__TYPE);
+        increaseCharacterPartEClass = createEClass(INCREASE_CHARACTER_PART);
+        createEReference(increaseCharacterPartEClass, INCREASE_CHARACTER_PART__TYPE);
 
-		changeQuallityEClass = createEClass(CHANGE_QUALLITY);
+        changeQuallityEClass = createEClass(CHANGE_QUALLITY);
 
-		quallityChangeEClass = createEClass(QUALLITY_CHANGE);
+        quallityChangeEClass = createEClass(QUALLITY_CHANGE);
 
-		// Create enums
-		generatorStateEEnum = createEEnum(GENERATOR_STATE);
-		sexEEnum = createEEnum(SEX);
-	}
+        // Create enums
+        generatorStateEEnum = createEEnum(GENERATOR_STATE);
+        sexEEnum = createEEnum(SEX);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private boolean isInitialized = false;
 
 	/**
-	 * Complete the initialization of the package and its meta-model.  This
-	 * method is guarded to have no affect on any invocation but its first.
-	 * <!-- begin-user-doc -->
+     * Complete the initialization of the package and its meta-model.  This
+     * method is guarded to have no affect on any invocation but its first.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void initializePackageContents() {
-		if (isInitialized) return;
-		isInitialized = true;
+        if (isInitialized) return;
+        isInitialized = true;
 
-		// Initialize package
-		setName(eNAME);
-		setNsPrefix(eNS_PREFIX);
-		setNsURI(eNS_URI);
+        // Initialize package
+        setName(eNAME);
+        setNsPrefix(eNS_PREFIX);
+        setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		Shr5Package theShr5Package = (Shr5Package)EPackage.Registry.INSTANCE.getEPackage(Shr5Package.eNS_URI);
+        // Obtain other dependent packages
+        Shr5Package theShr5Package = (Shr5Package)EPackage.Registry.INSTANCE.getEPackage(Shr5Package.eNS_URI);
 
-		// Create type parameters
+        // Create type parameters
 
-		// Set bounds for type parameters
+        // Set bounds for type parameters
 
-		// Add supertypes to classes
-		characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
-		characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getQuelle());
-		prioritySystemEClass.getESuperTypes().add(this.getCharacterGeneratorSystem());
-		nonPlayerCharacterEClass.getESuperTypes().add(this.getManagedCharacter());
-		karmaGaintEClass.getESuperTypes().add(this.getChanges());
-		freeStyleEClass.getESuperTypes().add(this.getCharacterGeneratorSystem());
-		shr5SystemEClass.getESuperTypes().add(this.getPrioritySystem());
-		metaTypeEClass.getESuperTypes().add(this.getPriorityCategorie());
-		attributesEClass.getESuperTypes().add(this.getPriorityCategorie());
-		skillEClass.getESuperTypes().add(this.getPriorityCategorie());
-		resourcenEClass.getESuperTypes().add(this.getPriorityCategorie());
-		specialTypeEClass.getESuperTypes().add(this.getPriorityCategorie());
-		technomancerEClass.getESuperTypes().add(this.getSpecialType());
-		spellcasterEClass.getESuperTypes().add(this.getAdept());
-		adeptEClass.getESuperTypes().add(this.getSpecialType());
-		freeStyleGeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
-		shr5GeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
-		attributeChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
-		playerCharacterEClass.getESuperTypes().add(this.getManagedCharacter());
-		mudanEClass.getESuperTypes().add(this.getSpecialType());
-		characterGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
-		fertigkeitChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
-		personaValueChangeEClass.getESuperTypes().add(this.getKarmaGaint());
-		increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
-		changeQuallityEClass.getESuperTypes().add(this.getAdvancement());
-		quallityChangeEClass.getESuperTypes().add(this.getKarmaGaint());
+        // Add supertypes to classes
+        characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
+        characterGeneratorSystemEClass.getESuperTypes().add(theShr5Package.getQuelle());
+        prioritySystemEClass.getESuperTypes().add(this.getCharacterGeneratorSystem());
+        nonPlayerCharacterEClass.getESuperTypes().add(this.getManagedCharacter());
+        karmaGaintEClass.getESuperTypes().add(this.getChanges());
+        freeStyleEClass.getESuperTypes().add(this.getCharacterGeneratorSystem());
+        shr5SystemEClass.getESuperTypes().add(this.getPrioritySystem());
+        metaTypeEClass.getESuperTypes().add(this.getPriorityCategorie());
+        attributesEClass.getESuperTypes().add(this.getPriorityCategorie());
+        skillEClass.getESuperTypes().add(this.getPriorityCategorie());
+        resourcenEClass.getESuperTypes().add(this.getPriorityCategorie());
+        specialTypeEClass.getESuperTypes().add(this.getPriorityCategorie());
+        technomancerEClass.getESuperTypes().add(this.getSpecialType());
+        spellcasterEClass.getESuperTypes().add(this.getAdept());
+        adeptEClass.getESuperTypes().add(this.getSpecialType());
+        freeStyleGeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
+        shr5GeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
+        attributeChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
+        playerCharacterEClass.getESuperTypes().add(this.getManagedCharacter());
+        mudanEClass.getESuperTypes().add(this.getSpecialType());
+        characterGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
+        fertigkeitChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
+        personaValueChangeEClass.getESuperTypes().add(this.getKarmaGaint());
+        increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
+        changeQuallityEClass.getESuperTypes().add(this.getAdvancement());
+        quallityChangeEClass.getESuperTypes().add(this.getKarmaGaint());
 
-		// Initialize classes, features, and operations; add parameters
-		initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getManagedCharacter_Persona(), theShr5Package.getAbstraktPersona(), null, "persona", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_Changes(), this.getChanges(), null, "changes", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_ChracterSource(), this.getCharacterGenerator(), this.getCharacterGenerator_Character(), "chracterSource", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_Inventar(), theShr5Package.getAbstraktGegenstand(), null, "inventar", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_Contracts(), theShr5Package.getVertrag(), null, "contracts", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getManagedCharacter_Sex(), this.getSex(), "sex", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_Connections(), this.getConnection(), null, "connections", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_Vehicels(), theShr5Package.getFahrzeug(), null, "vehicels", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_ChoosenLifestyle(), theShr5Package.getLifestyle(), null, "choosenLifestyle", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManagedCharacter_NativeLanguage(), theShr5Package.getSprachfertigkeit(), null, "nativeLanguage", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getManagedCharacter_StreetCred(), ecorePackage.getEInt(), "streetCred", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getManagedCharacter_Notoriety(), ecorePackage.getEInt(), "notoriety", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getManagedCharacter_NotorietyBasic(), ecorePackage.getEInt(), "notorietyBasic", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getManagedCharacter_PublicAwareness(), ecorePackage.getEInt(), "publicAwareness", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getManagedCharacter_KarmaGaint(), ecorePackage.getEInt(), "karmaGaint", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        // Initialize classes, features, and operations; add parameters
+        initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getManagedCharacter_Persona(), theShr5Package.getAbstraktPersona(), null, "persona", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_Changes(), this.getChanges(), null, "changes", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_ChracterSource(), this.getCharacterGenerator(), this.getCharacterGenerator_Character(), "chracterSource", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_Inventar(), theShr5Package.getAbstraktGegenstand(), null, "inventar", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_Contracts(), theShr5Package.getVertrag(), null, "contracts", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_Sex(), this.getSex(), "sex", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_Connections(), this.getConnection(), null, "connections", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_Vehicels(), theShr5Package.getFahrzeug(), null, "vehicels", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_ChoosenLifestyle(), theShr5Package.getLifestyle(), null, "choosenLifestyle", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getManagedCharacter_NativeLanguage(), theShr5Package.getSprachfertigkeit(), null, "nativeLanguage", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_StreetCred(), ecorePackage.getEInt(), "streetCred", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_Notoriety(), ecorePackage.getEInt(), "notoriety", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_NotorietyBasic(), ecorePackage.getEInt(), "notorietyBasic", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_PublicAwareness(), ecorePackage.getEInt(), "publicAwareness", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_KarmaGaint(), ecorePackage.getEInt(), "karmaGaint", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(characterGeneratorSystemEClass, CharacterGeneratorSystem.class, "CharacterGeneratorSystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCharacterGeneratorSystem_CharacterAdvancements(), this.getAdvancement(), null, "characterAdvancements", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(characterGeneratorSystemEClass, CharacterGeneratorSystem.class, "CharacterGeneratorSystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterGeneratorSystem_CharacterAdvancements(), this.getAdvancement(), null, "characterAdvancements", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(prioritySystemEClass, PrioritySystem.class, "PrioritySystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrioritySystem_Priorities(), this.getPriorityCategorie(), null, "priorities", null, 0, -1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrioritySystem_KarmaPoints(), ecorePackage.getEInt(), "karmaPoints", null, 0, 1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(prioritySystemEClass, PrioritySystem.class, "PrioritySystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPrioritySystem_Priorities(), this.getPriorityCategorie(), null, "priorities", null, 0, -1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPrioritySystem_KarmaPoints(), ecorePackage.getEInt(), "karmaPoints", null, 0, 1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nonPlayerCharacterEClass, NonPlayerCharacter.class, "NonPlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(nonPlayerCharacterEClass, NonPlayerCharacter.class, "NonPlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(changesEClass, Changes.class, "Changes", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getChanges_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(changesEClass, Changes.class, "Changes", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getChanges_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(karmaGaintEClass, KarmaGaint.class, "KarmaGaint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKarmaGaint_Karma(), ecorePackage.getEInt(), "karma", null, 1, 1, KarmaGaint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(karmaGaintEClass, KarmaGaint.class, "KarmaGaint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getKarmaGaint_Karma(), ecorePackage.getEInt(), "karma", null, 1, 1, KarmaGaint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(freeStyleEClass, FreeStyle.class, "FreeStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(freeStyleEClass, FreeStyle.class, "FreeStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(priorityCategorieEClass, PriorityCategorie.class, "PriorityCategorie", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPriorityCategorie_CategorieName(), ecorePackage.getEString(), "categorieName", null, 1, 1, PriorityCategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(priorityCategorieEClass, PriorityCategorie.class, "PriorityCategorie", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getPriorityCategorie_CategorieName(), ecorePackage.getEString(), "categorieName", null, 1, 1, PriorityCategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(shr5SystemEClass, Shr5System.class, "Shr5System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getShr5System_KarmaToResourceFactor(), ecorePackage.getEInt(), "karmaToResourceFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShr5System_KarmaToMagicFactor(), ecorePackage.getEInt(), "karmaToMagicFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShr5System_NumberOfMaxAttributes(), ecorePackage.getEInt(), "numberOfMaxAttributes", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShr5System_KnowlegeSkillFactor(), ecorePackage.getEInt(), "knowlegeSkillFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShr5System_CharismaToConnectionFactor(), ecorePackage.getEInt(), "charismaToConnectionFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(shr5SystemEClass, Shr5System.class, "Shr5System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getShr5System_KarmaToResourceFactor(), ecorePackage.getEInt(), "karmaToResourceFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_KarmaToMagicFactor(), ecorePackage.getEInt(), "karmaToMagicFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_NumberOfMaxAttributes(), ecorePackage.getEInt(), "numberOfMaxAttributes", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_KnowlegeSkillFactor(), ecorePackage.getEInt(), "knowlegeSkillFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_CharismaToConnectionFactor(), ecorePackage.getEInt(), "charismaToConnectionFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(metaTypeEClass, MetaType.class, "MetaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMetaType_ChoosableTypes(), theShr5Package.getSpezies(), null, "choosableTypes", null, 1, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMetaType_SpecialPoints(), ecorePackage.getEInt(), "specialPoints", null, 0, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(metaTypeEClass, MetaType.class, "MetaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getMetaType_ChoosableTypes(), theShr5Package.getSpezies(), null, "choosableTypes", null, 1, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMetaType_SpecialPoints(), ecorePackage.getEInt(), "specialPoints", null, 0, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getMetaType__CalcSpecialPointsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSpecialPointsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        EOperation op = initEOperation(getMetaType__CalcSpecialPointsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSpecialPointsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(attributesEClass, Attributes.class, "Attributes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttributes_AttibutePoints(), ecorePackage.getEInt(), "attibutePoints", null, 1, 1, Attributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(attributesEClass, Attributes.class, "Attributes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getAttributes_AttibutePoints(), ecorePackage.getEInt(), "attibutePoints", null, 1, 1, Attributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getAttributes__CalcAttributesSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcAttributesSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getAttributes__CalcAttributesSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcAttributesSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(skillEClass, Skill.class, "Skill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSkill_SkillPoints(), ecorePackage.getEInt(), "skillPoints", null, 1, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkill_GroupPoints(), ecorePackage.getEInt(), "groupPoints", null, 1, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(skillEClass, Skill.class, "Skill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSkill_SkillPoints(), ecorePackage.getEInt(), "skillPoints", null, 1, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSkill_GroupPoints(), ecorePackage.getEInt(), "groupPoints", null, 1, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getSkill__CalcSkillSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSkillSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getSkill__CalcSkillSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSkillSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSkill__CalcGroupSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcGroupSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getSkill__CalcGroupSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcGroupSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSkill__CalcKnowledgeSkillSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcKnowledgeSkillSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getSkill__CalcKnowledgeSkillSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcKnowledgeSkillSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSkill__CalcKnowledgeSkillPoints__ManagedCharacter(), ecorePackage.getEInt(), "calcKnowledgeSkillPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getSkill__CalcKnowledgeSkillPoints__ManagedCharacter(), ecorePackage.getEInt(), "calcKnowledgeSkillPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(resourcenEClass, Resourcen.class, "Resourcen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResourcen_Resource(), ecorePackage.getEInt(), "resource", null, 1, 1, Resourcen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(resourcenEClass, Resourcen.class, "Resourcen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getResourcen_Resource(), ecorePackage.getEInt(), "resource", null, 1, 1, Resourcen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getResourcen__CalcResourceSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcResourceSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getResourcen__CalcResourceSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcResourceSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(specialTypeEClass, SpecialType.class, "SpecialType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpecialType_SelectableTypes(), ecorePackage.getEClass(), null, "selectableTypes", null, 1, 1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSpecialType_SkillValue(), ecorePackage.getEInt(), "skillValue", null, 0, 1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSpecialType_SkillNumber(), ecorePackage.getEInt(), "skillNumber", null, 0, 1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecialType_SelectableSkills(), theShr5Package.getFertigkeit(), null, "selectableSkills", null, 0, -1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecialType_SelectableSkillGroups(), theShr5Package.getFertigkeitsGruppe(), null, "selectableSkillGroups", null, 0, -1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(specialTypeEClass, SpecialType.class, "SpecialType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSpecialType_SelectableTypes(), ecorePackage.getEClass(), null, "selectableTypes", null, 1, 1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSpecialType_SkillValue(), ecorePackage.getEInt(), "skillValue", null, 0, 1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSpecialType_SkillNumber(), ecorePackage.getEInt(), "skillNumber", null, 0, 1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSpecialType_SelectableSkills(), theShr5Package.getFertigkeit(), null, "selectableSkills", null, 0, -1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSpecialType_SelectableSkillGroups(), theShr5Package.getFertigkeitsGruppe(), null, "selectableSkillGroups", null, 0, -1, SpecialType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getSpecialType__CalcSkillsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSkillsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getSpecialType__CalcSkillsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSkillsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(technomancerEClass, Technomancer.class, "Technomancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTechnomancer_Resonanz(), ecorePackage.getEInt(), "resonanz", null, 0, 1, Technomancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTechnomancer_ComplexForms(), ecorePackage.getEInt(), "complexForms", null, 0, 1, Technomancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(technomancerEClass, Technomancer.class, "Technomancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getTechnomancer_Resonanz(), ecorePackage.getEInt(), "resonanz", null, 0, 1, Technomancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getTechnomancer_ComplexForms(), ecorePackage.getEInt(), "complexForms", null, 0, 1, Technomancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTechnomancer__CalcComplexFormsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcComplexFormsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getTechnomancer__CalcComplexFormsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcComplexFormsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(spellcasterEClass, Spellcaster.class, "Spellcaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSpellcaster_SpellPoints(), ecorePackage.getEInt(), "spellPoints", null, 0, 1, Spellcaster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(spellcasterEClass, Spellcaster.class, "Spellcaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSpellcaster_SpellPoints(), ecorePackage.getEInt(), "spellPoints", null, 0, 1, Spellcaster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getSpellcaster__CalcSpellPointsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSpellPointsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getSpellcaster__CalcSpellPointsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcSpellPointsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(adeptEClass, Adept.class, "Adept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAdept_Magic(), ecorePackage.getEInt(), "magic", null, 0, 1, Adept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(adeptEClass, Adept.class, "Adept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getAdept_Magic(), ecorePackage.getEInt(), "magic", null, 0, 1, Adept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(characterGeneratorEClass, CharacterGenerator.class, "CharacterGenerator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCharacterGenerator_Character(), this.getManagedCharacter(), this.getManagedCharacter_ChracterSource(), "character", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCharacterGenerator_Generator(), this.getCharacterGeneratorSystem(), null, "generator", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCharacterGenerator_State(), this.getGeneratorState(), "state", null, 0, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCharacterGenerator_SelectedGroup(), this.getCharacterGroup(), null, "selectedGroup", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCharacterGenerator_CharacterName(), ecorePackage.getEString(), "characterName", null, 0, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCharacterGenerator_CurrentInstruction(), ecorePackage.getEString(), "currentInstruction", null, 0, 1, CharacterGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEClass(characterGeneratorEClass, CharacterGenerator.class, "CharacterGenerator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCharacterGenerator_Character(), this.getManagedCharacter(), this.getManagedCharacter_ChracterSource(), "character", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterGenerator_Generator(), this.getCharacterGeneratorSystem(), null, "generator", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCharacterGenerator_State(), this.getGeneratorState(), "state", null, 0, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterGenerator_SelectedGroup(), this.getCharacterGroup(), null, "selectedGroup", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCharacterGenerator_CharacterName(), ecorePackage.getEString(), "characterName", null, 0, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCharacterGenerator_CurrentInstruction(), ecorePackage.getEString(), "currentInstruction", null, 0, 1, CharacterGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(freeStyleGeneratorEClass, FreeStyleGenerator.class, "FreeStyleGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFreeStyleGenerator_FreestyleGenerator(), this.getFreeStyle(), null, "freestyleGenerator", null, 0, 1, FreeStyleGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEClass(freeStyleGeneratorEClass, FreeStyleGenerator.class, "FreeStyleGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getFreeStyleGenerator_FreestyleGenerator(), this.getFreeStyle(), null, "freestyleGenerator", null, 0, 1, FreeStyleGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(shr5GeneratorEClass, Shr5Generator.class, "Shr5Generator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getShr5Generator_Resourcen(), this.getResourcen(), null, "resourcen", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getShr5Generator_Skills(), this.getSkill(), null, "skills", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getShr5Generator_Attribute(), this.getAttributes(), null, "attribute", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getShr5Generator_MetaType(), this.getMetaType(), null, "metaType", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getShr5Generator_Magic(), this.getSpecialType(), null, "magic", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShr5Generator_KarmaToResource(), ecorePackage.getEInt(), "karmaToResource", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShr5Generator_KarmaSpend(), ecorePackage.getEInt(), "karmaSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getShr5Generator_Shr5Generator(), this.getShr5System(), null, "shr5Generator", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEClass(shr5GeneratorEClass, Shr5Generator.class, "Shr5Generator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getShr5Generator_Resourcen(), this.getResourcen(), null, "resourcen", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getShr5Generator_Skills(), this.getSkill(), null, "skills", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getShr5Generator_Attribute(), this.getAttributes(), null, "attribute", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getShr5Generator_MetaType(), this.getMetaType(), null, "metaType", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getShr5Generator_Magic(), this.getSpecialType(), null, "magic", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_KarmaToResource(), ecorePackage.getEInt(), "karmaToResource", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_KarmaSpend(), ecorePackage.getEInt(), "karmaSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getShr5Generator_Shr5Generator(), this.getShr5System(), null, "shr5Generator", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasCategoryOnlyOnce", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
-		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasCategoryOnlyOnce", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        EGenericType g1 = createEGenericType(ecorePackage.getEMap());
+        EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotSpendAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotMoreMaxAttributes__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotMoreMaxAttributes", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotMoreMaxAttributes__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotMoreMaxAttributes", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotSpendAllAttributesPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllAttributesPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendAllAttributesPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllAttributesPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendSkillAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendSkillAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotSpendAllSpecialPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllSpecialPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendAllSpecialPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllSpecialPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotSpendAllSpecialTypePoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllSpecialTypePoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendAllSpecialTypePoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllSpecialTypePoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getShr5Generator__HasNotSpendAllConnectionPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllConnectionPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendAllConnectionPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllConnectionPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(attributeChangeEClass, AttributeChange.class, "AttributeChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(attributeChangeEClass, AttributeChange.class, "AttributeChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(playerCharacterEClass, PlayerCharacter.class, "PlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(playerCharacterEClass, PlayerCharacter.class, "PlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(mudanEClass, Mudan.class, "Mudan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(mudanEClass, Mudan.class, "Mudan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(characterGroupEClass, CharacterGroup.class, "CharacterGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCharacterGroup_Members(), this.getManagedCharacter(), null, "members", null, 0, -1, CharacterGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(characterGroupEClass, CharacterGroup.class, "CharacterGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCharacterGroup_Members(), this.getManagedCharacter(), null, "members", null, 0, -1, CharacterGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConnection_Influence(), ecorePackage.getEInt(), "influence", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnection_Loyality(), ecorePackage.getEInt(), "loyality", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_Character(), this.getManagedCharacter(), null, "character", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getConnection_Influence(), ecorePackage.getEInt(), "influence", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getConnection_Loyality(), ecorePackage.getEInt(), "loyality", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getConnection_Character(), this.getManagedCharacter(), null, "character", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(fertigkeitChangeEClass, FertigkeitChange.class, "FertigkeitChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(fertigkeitChangeEClass, FertigkeitChange.class, "FertigkeitChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(personaValueChangeEClass, PersonaValueChange.class, "PersonaValueChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPersonaValueChange_From(), ecorePackage.getEInt(), "from", null, 1, 1, PersonaValueChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPersonaValueChange_To(), ecorePackage.getEInt(), "to", null, 1, 1, PersonaValueChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(personaValueChangeEClass, PersonaValueChange.class, "PersonaValueChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getPersonaValueChange_From(), ecorePackage.getEInt(), "from", null, 1, 1, PersonaValueChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPersonaValueChange_To(), ecorePackage.getEInt(), "to", null, 1, 1, PersonaValueChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(generatorStateToEStringMapEntryEClass, Map.Entry.class, "GeneratorStateToEStringMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeneratorStateToEStringMapEntry_Key(), this.getGeneratorState(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGeneratorStateToEStringMapEntry_Value(), ecorePackage.getEString(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(generatorStateToEStringMapEntryEClass, Map.Entry.class, "GeneratorStateToEStringMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getGeneratorStateToEStringMapEntry_Key(), this.getGeneratorState(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeneratorStateToEStringMapEntry_Value(), ecorePackage.getEString(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(advancementEClass, Advancement.class, "Advancement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAdvancement_KarmaFactor(), ecorePackage.getEInt(), "karmaFactor", null, 1, 1, Advancement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(advancementEClass, Advancement.class, "Advancement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getAdvancement_KarmaFactor(), ecorePackage.getEInt(), "karmaFactor", null, 1, 1, Advancement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(increaseCharacterPartEClass, IncreaseCharacterPart.class, "IncreaseCharacterPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIncreaseCharacterPart_Type(), ecorePackage.getEClass(), null, "type", null, 1, 1, IncreaseCharacterPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(increaseCharacterPartEClass, IncreaseCharacterPart.class, "IncreaseCharacterPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getIncreaseCharacterPart_Type(), ecorePackage.getEClass(), null, "type", null, 1, 1, IncreaseCharacterPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(changeQuallityEClass, ChangeQuallity.class, "ChangeQuallity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(changeQuallityEClass, ChangeQuallity.class, "ChangeQuallity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(quallityChangeEClass, QuallityChange.class, "QuallityChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(quallityChangeEClass, QuallityChange.class, "QuallityChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		// Initialize enums and add enum literals
-		initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");
-		addEEnumLiteral(generatorStateEEnum, GeneratorState.NEW);
-		addEEnumLiteral(generatorStateEEnum, GeneratorState.READY_FOR_CREATION);
-		addEEnumLiteral(generatorStateEEnum, GeneratorState.COMMITED);
-		addEEnumLiteral(generatorStateEEnum, GeneratorState.PERSONA_CREATED);
+        // Initialize enums and add enum literals
+        initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");
+        addEEnumLiteral(generatorStateEEnum, GeneratorState.NEW);
+        addEEnumLiteral(generatorStateEEnum, GeneratorState.READY_FOR_CREATION);
+        addEEnumLiteral(generatorStateEEnum, GeneratorState.COMMITED);
+        addEEnumLiteral(generatorStateEEnum, GeneratorState.PERSONA_CREATED);
 
-		initEEnum(sexEEnum, Sex.class, "Sex");
-		addEEnumLiteral(sexEEnum, Sex.FEMALE);
-		addEEnumLiteral(sexEEnum, Sex.MALE);
-		addEEnumLiteral(sexEEnum, Sex.UNDEFINDE);
-		addEEnumLiteral(sexEEnum, Sex.NONE);
+        initEEnum(sexEEnum, Sex.class, "Sex");
+        addEEnumLiteral(sexEEnum, Sex.FEMALE);
+        addEEnumLiteral(sexEEnum, Sex.MALE);
+        addEEnumLiteral(sexEEnum, Sex.UNDEFINDE);
+        addEEnumLiteral(sexEEnum, Sex.NONE);
 
-		// Create resource
-		createResource(eNS_URI);
-	}
+        // Create resource
+        createResource(eNS_URI);
+    }
 
 } //Shr5managementPackageImpl

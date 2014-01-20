@@ -23,55 +23,55 @@ package de.urszeidler.eclipse.shr5Management;
  */
 public interface PersonaValueChange extends KarmaGaint {
 	/**
-	 * Returns the value of the '<em><b>From</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>From</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>From</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' attribute.
-	 * @see #setFrom(int)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaValueChange_From()
-	 * @model required="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>From</em>' attribute.
+     * @see #setFrom(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaValueChange_From()
+     * @model required="true"
+     * @generated
+     */
 	int getFrom();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.PersonaValueChange#getFrom <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.PersonaValueChange#getFrom <em>From</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' attribute.
-	 * @see #getFrom()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>From</em>' attribute.
+     * @see #getFrom()
+     * @generated
+     */
 	void setFrom(int value);
 
 	/**
-	 * Returns the value of the '<em><b>To</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>To</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>To</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' attribute.
-	 * @see #setTo(int)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaValueChange_To()
-	 * @model required="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>To</em>' attribute.
+     * @see #setTo(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaValueChange_To()
+     * @model required="true"
+     * @generated
+     */
 	int getTo();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.PersonaValueChange#getTo <em>To</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.PersonaValueChange#getTo <em>To</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' attribute.
-	 * @see #getTo()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>To</em>' attribute.
+     * @see #getTo()
+     * @generated
+     */
 	void setTo(int value);
 
 } // PersonaValueChange

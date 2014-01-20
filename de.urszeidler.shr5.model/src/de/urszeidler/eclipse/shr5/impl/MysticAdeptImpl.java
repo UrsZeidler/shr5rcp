@@ -36,73 +36,73 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  */
 public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
 	/**
-	 * The cached value of the '{@link #getZauber() <em>Zauber</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getZauber() <em>Zauber</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZauber()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getZauber()
+     * @generated
+     * @ordered
+     */
 	protected EList<PersonaZauber> zauber;
 
 	/**
-	 * The default value of the '{@link #getEnzug() <em>Enzug</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getEnzug() <em>Enzug</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnzug()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getEnzug()
+     * @generated
+     * @ordered
+     */
 	protected static final int ENZUG_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTradition()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getTradition()
+     * @generated
+     * @ordered
+     */
 	protected static final MagischeTradition TRADITION_EDEFAULT = MagischeTradition.HERMETISCH;
 	/**
-	 * The cached value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTradition()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getTradition()
+     * @generated
+     * @ordered
+     */
 	protected MagischeTradition tradition = TRADITION_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MysticAdeptImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.MYSTIC_ADEPT;
-	}
+        return Shr5Package.Literals.MYSTIC_ADEPT;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<PersonaZauber> getZauber() {
-		if (zauber == null) {
-			zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.MYSTIC_ADEPT__ZAUBER);
-		}
-		return zauber;
-	}
+        if (zauber == null) {
+            zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.MYSTIC_ADEPT__ZAUBER);
+        }
+        return zauber;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,164 +122,164 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MagischeTradition getTradition() {
-		return tradition;
-	}
+        return tradition;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setTradition(MagischeTradition newTradition) {
-		MagischeTradition oldTradition = tradition;
-		tradition = newTradition == null ? TRADITION_EDEFAULT : newTradition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MYSTIC_ADEPT__TRADITION, oldTradition, tradition));
-	}
+        MagischeTradition oldTradition = tradition;
+        tradition = newTradition == null ? TRADITION_EDEFAULT : newTradition;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MYSTIC_ADEPT__TRADITION, oldTradition, tradition));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Shr5Package.MYSTIC_ADEPT__ZAUBER:
-				return ((InternalEList<?>)getZauber()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case Shr5Package.MYSTIC_ADEPT__ZAUBER:
+                return ((InternalEList<?>)getZauber()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.MYSTIC_ADEPT__ZAUBER:
-				return getZauber();
-			case Shr5Package.MYSTIC_ADEPT__ENZUG:
-				return getEnzug();
-			case Shr5Package.MYSTIC_ADEPT__TRADITION:
-				return getTradition();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.MYSTIC_ADEPT__ZAUBER:
+                return getZauber();
+            case Shr5Package.MYSTIC_ADEPT__ENZUG:
+                return getEnzug();
+            case Shr5Package.MYSTIC_ADEPT__TRADITION:
+                return getTradition();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.MYSTIC_ADEPT__ZAUBER:
-				getZauber().clear();
-				getZauber().addAll((Collection<? extends PersonaZauber>)newValue);
-				return;
-			case Shr5Package.MYSTIC_ADEPT__TRADITION:
-				setTradition((MagischeTradition)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.MYSTIC_ADEPT__ZAUBER:
+                getZauber().clear();
+                getZauber().addAll((Collection<? extends PersonaZauber>)newValue);
+                return;
+            case Shr5Package.MYSTIC_ADEPT__TRADITION:
+                setTradition((MagischeTradition)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.MYSTIC_ADEPT__ZAUBER:
-				getZauber().clear();
-				return;
-			case Shr5Package.MYSTIC_ADEPT__TRADITION:
-				setTradition(TRADITION_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.MYSTIC_ADEPT__ZAUBER:
+                getZauber().clear();
+                return;
+            case Shr5Package.MYSTIC_ADEPT__TRADITION:
+                setTradition(TRADITION_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.MYSTIC_ADEPT__ZAUBER:
-				return zauber != null && !zauber.isEmpty();
-			case Shr5Package.MYSTIC_ADEPT__ENZUG:
-				return getEnzug() != ENZUG_EDEFAULT;
-			case Shr5Package.MYSTIC_ADEPT__TRADITION:
-				return tradition != TRADITION_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.MYSTIC_ADEPT__ZAUBER:
+                return zauber != null && !zauber.isEmpty();
+            case Shr5Package.MYSTIC_ADEPT__ENZUG:
+                return getEnzug() != ENZUG_EDEFAULT;
+            case Shr5Package.MYSTIC_ADEPT__TRADITION:
+                return tradition != TRADITION_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Zauberer.class) {
-			switch (derivedFeatureID) {
-				case Shr5Package.MYSTIC_ADEPT__ZAUBER: return Shr5Package.ZAUBERER__ZAUBER;
-				case Shr5Package.MYSTIC_ADEPT__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
-				case Shr5Package.MYSTIC_ADEPT__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+        if (baseClass == Zauberer.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.MYSTIC_ADEPT__ZAUBER: return Shr5Package.ZAUBERER__ZAUBER;
+                case Shr5Package.MYSTIC_ADEPT__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
+                case Shr5Package.MYSTIC_ADEPT__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Zauberer.class) {
-			switch (baseFeatureID) {
-				case Shr5Package.ZAUBERER__ZAUBER: return Shr5Package.MYSTIC_ADEPT__ZAUBER;
-				case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.MYSTIC_ADEPT__ENZUG;
-				case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MYSTIC_ADEPT__TRADITION;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+        if (baseClass == Zauberer.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.ZAUBERER__ZAUBER: return Shr5Package.MYSTIC_ADEPT__ZAUBER;
+                case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.MYSTIC_ADEPT__ENZUG;
+                case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MYSTIC_ADEPT__TRADITION;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tradition: ");
-		result.append(tradition);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (tradition: ");
+        result.append(tradition);
+        result.append(')');
+        return result.toString();
+    }
 
 } //MysticAdeptImpl

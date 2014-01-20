@@ -31,105 +31,105 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  */
 public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	/**
-	 * The default value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResonanz()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getResonanz()
+     * @generated
+     * @ordered
+     */
 	protected static final int RESONANZ_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResonanz()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getResonanz()
+     * @generated
+     * @ordered
+     */
 	protected int resonanz = RESONANZ_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getComplexForms() <em>Complex Forms</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getComplexForms() <em>Complex Forms</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComplexForms()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getComplexForms()
+     * @generated
+     * @ordered
+     */
 	protected static final int COMPLEX_FORMS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getComplexForms() <em>Complex Forms</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getComplexForms() <em>Complex Forms</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComplexForms()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getComplexForms()
+     * @generated
+     * @ordered
+     */
 	protected int complexForms = COMPLEX_FORMS_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected TechnomancerImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.TECHNOMANCER;
-	}
+        return Shr5managementPackage.Literals.TECHNOMANCER;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getResonanz() {
-		return resonanz;
-	}
+        return resonanz;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setResonanz(int newResonanz) {
-		int oldResonanz = resonanz;
-		resonanz = newResonanz;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TECHNOMANCER__RESONANZ, oldResonanz, resonanz));
-	}
+        int oldResonanz = resonanz;
+        resonanz = newResonanz;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TECHNOMANCER__RESONANZ, oldResonanz, resonanz));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getComplexForms() {
-		return complexForms;
-	}
+        return complexForms;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setComplexForms(int newComplexForms) {
-		int oldComplexForms = complexForms;
-		complexForms = newComplexForms;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS, oldComplexForms, complexForms));
-	}
+        int oldComplexForms = complexForms;
+        complexForms = newComplexForms;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS, oldComplexForms, complexForms));
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,103 +152,103 @@ public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5managementPackage.TECHNOMANCER__RESONANZ:
-				return getResonanz();
-			case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
-				return getComplexForms();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.TECHNOMANCER__RESONANZ:
+                return getResonanz();
+            case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
+                return getComplexForms();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5managementPackage.TECHNOMANCER__RESONANZ:
-				setResonanz((Integer)newValue);
-				return;
-			case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
-				setComplexForms((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.TECHNOMANCER__RESONANZ:
+                setResonanz((Integer)newValue);
+                return;
+            case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
+                setComplexForms((Integer)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.TECHNOMANCER__RESONANZ:
-				setResonanz(RESONANZ_EDEFAULT);
-				return;
-			case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
-				setComplexForms(COMPLEX_FORMS_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.TECHNOMANCER__RESONANZ:
+                setResonanz(RESONANZ_EDEFAULT);
+                return;
+            case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
+                setComplexForms(COMPLEX_FORMS_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5managementPackage.TECHNOMANCER__RESONANZ:
-				return resonanz != RESONANZ_EDEFAULT;
-			case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
-				return complexForms != COMPLEX_FORMS_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5managementPackage.TECHNOMANCER__RESONANZ:
+                return resonanz != RESONANZ_EDEFAULT;
+            case Shr5managementPackage.TECHNOMANCER__COMPLEX_FORMS:
+                return complexForms != COMPLEX_FORMS_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Shr5managementPackage.TECHNOMANCER___CALC_COMPLEX_FORMS_SPEND__MANAGEDCHARACTER:
-				return calcComplexFormsSpend((ManagedCharacter)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
+        switch (operationID) {
+            case Shr5managementPackage.TECHNOMANCER___CALC_COMPLEX_FORMS_SPEND__MANAGEDCHARACTER:
+                return calcComplexFormsSpend((ManagedCharacter)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (resonanz: ");
-		result.append(resonanz);
-		result.append(", complexForms: ");
-		result.append(complexForms);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (resonanz: ");
+        result.append(resonanz);
+        result.append(", complexForms: ");
+        result.append(complexForms);
+        result.append(')');
+        return result.toString();
+    }
 
 } //TechnomancerImpl

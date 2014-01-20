@@ -38,192 +38,192 @@ public class AspektMagierItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AspektMagierItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addEnzugPropertyDescriptor(object);
-			addTraditionPropertyDescriptor(object);
-			addAspektPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addEnzugPropertyDescriptor(object);
+            addTraditionPropertyDescriptor(object);
+            addAspektPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Enzug feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Enzug feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addEnzugPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Zauberer_enzug_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Zauberer_enzug_feature", "_UI_Zauberer_type"),
-				 Shr5Package.Literals.ZAUBERER__ENZUG,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Zauberer_enzug_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Zauberer_enzug_feature", "_UI_Zauberer_type"),
+                 Shr5Package.Literals.ZAUBERER__ENZUG,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Tradition feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Tradition feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addTraditionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Zauberer_tradition_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Zauberer_tradition_feature", "_UI_Zauberer_type"),
-				 Shr5Package.Literals.ZAUBERER__TRADITION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Zauberer_tradition_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Zauberer_tradition_feature", "_UI_Zauberer_type"),
+                 Shr5Package.Literals.ZAUBERER__TRADITION,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Aspekt feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Aspekt feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addAspektPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AspektMagier_aspekt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AspektMagier_aspekt_feature", "_UI_AspektMagier_type"),
-				 Shr5Package.Literals.ASPEKT_MAGIER__ASPEKT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_AspektMagier_aspekt_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AspektMagier_aspekt_feature", "_UI_AspektMagier_type"),
+                 Shr5Package.Literals.ASPEKT_MAGIER__ASPEKT,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Shr5Package.Literals.ZAUBERER__ZAUBER);
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.ZAUBERER__ZAUBER);
+        }
+        return childrenFeatures;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
 
-		return super.getChildFeature(object, child);
-	}
+        return super.getChildFeature(object, child);
+    }
 
 	/**
-	 * This returns AspektMagier.gif.
-	 * <!-- begin-user-doc -->
+     * This returns AspektMagier.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/AspektMagier"));
-	}
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/AspektMagier"));
+    }
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((AspektMagier)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_AspektMagier_type") :
-			getString("_UI_AspektMagier_type") + " " + label;
-	}
+        String label = ((AspektMagier)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_AspektMagier_type") :
+            getString("_UI_AspektMagier_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(AspektMagier.class)) {
-			case Shr5Package.ASPEKT_MAGIER__ENZUG:
-			case Shr5Package.ASPEKT_MAGIER__TRADITION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case Shr5Package.ASPEKT_MAGIER__ZAUBER:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(AspektMagier.class)) {
+            case Shr5Package.ASPEKT_MAGIER__ENZUG:
+            case Shr5Package.ASPEKT_MAGIER__TRADITION:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5Package.ASPEKT_MAGIER__ZAUBER:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.ZAUBERER__ZAUBER,
-				 Shr5Factory.eINSTANCE.createPersonaZauber()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ZAUBERER__ZAUBER,
+                 Shr5Factory.eINSTANCE.createPersonaZauber()));
+    }
 
 }

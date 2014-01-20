@@ -22,29 +22,29 @@ package de.urszeidler.eclipse.shr5Management;
  */
 public interface Adept extends SpecialType {
 	/**
-	 * Returns the value of the '<em><b>Magic</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Magic</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Magic</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Magic</em>' attribute.
-	 * @see #setMagic(int)
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getAdept_Magic()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Magic</em>' attribute.
+     * @see #setMagic(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getAdept_Magic()
+     * @model
+     * @generated
+     */
 	int getMagic();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Adept#getMagic <em>Magic</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Adept#getMagic <em>Magic</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Magic</em>' attribute.
-	 * @see #getMagic()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Magic</em>' attribute.
+     * @see #getMagic()
+     * @generated
+     */
 	void setMagic(int value);
 
 } // Adept

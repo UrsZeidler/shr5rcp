@@ -41,213 +41,213 @@ public class ReichweiteItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ReichweiteItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addBeschreibungPropertyDescriptor(object);
-			addImagePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addMinPropertyDescriptor(object);
-			addKurzPropertyDescriptor(object);
-			addMittelPropertyDescriptor(object);
-			addWeitPropertyDescriptor(object);
-			addExtremPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
+            addMinPropertyDescriptor(object);
+            addKurzPropertyDescriptor(object);
+            addMittelPropertyDescriptor(object);
+            addWeitPropertyDescriptor(object);
+            addExtremPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Name feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Beschreibung feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Beschreibung feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addBeschreibungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_beschreibung_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_beschreibung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Image feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Image feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_image_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_image_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Min feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Min feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addMinPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Reichweite_min_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_min_feature", "_UI_Reichweite_type"),
-				 Shr5Package.Literals.REICHWEITE__MIN,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Reichweite_min_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_min_feature", "_UI_Reichweite_type"),
+                 Shr5Package.Literals.REICHWEITE__MIN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Kurz feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Kurz feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addKurzPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Reichweite_kurz_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_kurz_feature", "_UI_Reichweite_type"),
-				 Shr5Package.Literals.REICHWEITE__KURZ,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Reichweite_kurz_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_kurz_feature", "_UI_Reichweite_type"),
+                 Shr5Package.Literals.REICHWEITE__KURZ,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Mittel feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Mittel feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addMittelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Reichweite_mittel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_mittel_feature", "_UI_Reichweite_type"),
-				 Shr5Package.Literals.REICHWEITE__MITTEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Reichweite_mittel_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_mittel_feature", "_UI_Reichweite_type"),
+                 Shr5Package.Literals.REICHWEITE__MITTEL,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Weit feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Weit feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addWeitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Reichweite_weit_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_weit_feature", "_UI_Reichweite_type"),
-				 Shr5Package.Literals.REICHWEITE__WEIT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Reichweite_weit_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_weit_feature", "_UI_Reichweite_type"),
+                 Shr5Package.Literals.REICHWEITE__WEIT,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Extrem feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Extrem feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addExtremPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Reichweite_extrem_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_extrem_feature", "_UI_Reichweite_type"),
-				 Shr5Package.Literals.REICHWEITE__EXTREM,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Reichweite_extrem_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Reichweite_extrem_feature", "_UI_Reichweite_type"),
+                 Shr5Package.Literals.REICHWEITE__EXTREM,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This returns Reichweite.gif.
@@ -267,66 +267,66 @@ public class ReichweiteItemProvider
 	}
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((Reichweite)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Reichweite_type") :
-			getString("_UI_Reichweite_type") + " " + label;
-	}
+        String label = ((Reichweite)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_Reichweite_type") :
+            getString("_UI_Reichweite_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Reichweite.class)) {
-			case Shr5Package.REICHWEITE__BESCHREIBUNG:
-			case Shr5Package.REICHWEITE__IMAGE:
-			case Shr5Package.REICHWEITE__NAME:
-			case Shr5Package.REICHWEITE__MIN:
-			case Shr5Package.REICHWEITE__KURZ:
-			case Shr5Package.REICHWEITE__MITTEL:
-			case Shr5Package.REICHWEITE__WEIT:
-			case Shr5Package.REICHWEITE__EXTREM:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Reichweite.class)) {
+            case Shr5Package.REICHWEITE__BESCHREIBUNG:
+            case Shr5Package.REICHWEITE__IMAGE:
+            case Shr5Package.REICHWEITE__NAME:
+            case Shr5Package.REICHWEITE__MIN:
+            case Shr5Package.REICHWEITE__KURZ:
+            case Shr5Package.REICHWEITE__MITTEL:
+            case Shr5Package.REICHWEITE__WEIT:
+            case Shr5Package.REICHWEITE__EXTREM:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Shr5EditPlugin.INSTANCE;
-	}
+        return Shr5EditPlugin.INSTANCE;
+    }
 
 }

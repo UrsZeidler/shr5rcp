@@ -23,25 +23,25 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
 public abstract class SpecialTypeTest extends PriorityCategorieTest {
 
 	/**
-	 * Constructs a new Special Type test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Special Type test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public SpecialTypeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Special Type test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Special Type test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected SpecialType getFixture() {
-		return (SpecialType)fixture;
-	}
+        return (SpecialType)fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5Management.SpecialType#calcSkillsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Skills Spend</em>}' operation.

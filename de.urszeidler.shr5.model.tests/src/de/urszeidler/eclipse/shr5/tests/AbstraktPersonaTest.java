@@ -36,11 +36,11 @@ import de.urszeidler.eclipse.shr5.Spezies;
 public abstract class AbstraktPersonaTest extends TestCase {
 
 	/**
-	 * The fixture for this Abstrakt Persona test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Abstrakt Persona test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected AbstraktPersona fixture = null;
 
 	/**
@@ -50,18 +50,18 @@ public abstract class AbstraktPersonaTest extends TestCase {
 	 * @generated
 	 */
 	public AbstraktPersonaTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Abstrakt Persona test case.
-	 * <!-- begin-user-doc
+     * Sets the fixture for this Abstrakt Persona test case.
+     * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(AbstraktPersona fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
 	 * Returns the fixture for this Abstrakt Persona test case. <!--
@@ -70,8 +70,8 @@ public abstract class AbstraktPersonaTest extends TestCase {
 	 * @generated
 	 */
 	protected AbstraktPersona getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution() <em>Konstitution</em>}' feature getter.

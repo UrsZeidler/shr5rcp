@@ -19,22 +19,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class QuallityChangeImpl extends KarmaGaintImpl implements QuallityChange {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected QuallityChangeImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.QUALLITY_CHANGE;
-	}
+        return Shr5managementPackage.Literals.QUALLITY_CHANGE;
+    }
 
 } //QuallityChangeImpl

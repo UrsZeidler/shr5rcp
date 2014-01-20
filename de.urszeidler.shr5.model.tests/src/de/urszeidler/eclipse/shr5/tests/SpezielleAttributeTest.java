@@ -24,42 +24,42 @@ import de.urszeidler.eclipse.shr5.SpezielleAttribute;
 public abstract class SpezielleAttributeTest extends TestCase {
 
 	/**
-	 * The fixture for this Spezielle Attribute test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Spezielle Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SpezielleAttribute fixture = null;
 
 	/**
-	 * Constructs a new Spezielle Attribute test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Spezielle Attribute test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public SpezielleAttributeTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Spezielle Attribute test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Spezielle Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(SpezielleAttribute fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Spezielle Attribute test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Spezielle Attribute test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SpezielleAttribute getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
 	 * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative() <em>Initative</em>}' feature getter.

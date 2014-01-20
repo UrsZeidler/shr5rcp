@@ -42,192 +42,192 @@ public class FertigkeitItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FertigkeitItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addBeschreibungPropertyDescriptor(object);
-			addImagePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addPagePropertyDescriptor(object);
-			addSrcBookPropertyDescriptor(object);
-			addKategoriePropertyDescriptor(object);
-			addAusweichenPropertyDescriptor(object);
-			addAttributPropertyDescriptor(object);
-			addSpezialisierungenPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
+            addPagePropertyDescriptor(object);
+            addSrcBookPropertyDescriptor(object);
+            addKategoriePropertyDescriptor(object);
+            addAusweichenPropertyDescriptor(object);
+            addAttributPropertyDescriptor(object);
+            addSpezialisierungenPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Name feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Beschreibung feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Beschreibung feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addBeschreibungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_beschreibung_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_beschreibung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Image feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Image feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Beschreibbar_image_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
-				 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_image_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Page feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Page feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addPagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Quelle_page_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Quelle_page_feature", "_UI_Quelle_type"),
-				 Shr5Package.Literals.QUELLE__PAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Quelle_page_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Quelle_page_feature", "_UI_Quelle_type"),
+                 Shr5Package.Literals.QUELLE__PAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Src Book feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Src Book feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addSrcBookPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Quelle_srcBook_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Quelle_srcBook_feature", "_UI_Quelle_type"),
-				 Shr5Package.Literals.QUELLE__SRC_BOOK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Quelle_srcBook_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Quelle_srcBook_feature", "_UI_Quelle_type"),
+                 Shr5Package.Literals.QUELLE__SRC_BOOK,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Kategorie feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Kategorie feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addKategoriePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Fertigkeit_kategorie_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_kategorie_feature", "_UI_Fertigkeit_type"),
-				 Shr5Package.Literals.FERTIGKEIT__KATEGORIE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fertigkeit_kategorie_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_kategorie_feature", "_UI_Fertigkeit_type"),
+                 Shr5Package.Literals.FERTIGKEIT__KATEGORIE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Ausweichen feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Ausweichen feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addAusweichenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Fertigkeit_ausweichen_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_ausweichen_feature", "_UI_Fertigkeit_type"),
-				 Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fertigkeit_ausweichen_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_ausweichen_feature", "_UI_Fertigkeit_type"),
+                 Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This adds a property descriptor for the Attribut feature.
@@ -268,26 +268,26 @@ public class FertigkeitItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Spezialisierungen feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Spezialisierungen feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addSpezialisierungenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Fertigkeit_spezialisierungen_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_spezialisierungen_feature", "_UI_Fertigkeit_type"),
-				 Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fertigkeit_spezialisierungen_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_spezialisierungen_feature", "_UI_Fertigkeit_type"),
+                 Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
 	 * This returns Fertigkeit.gif.
@@ -307,65 +307,65 @@ public class FertigkeitItemProvider
 	}
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((Fertigkeit)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Fertigkeit_type") :
-			getString("_UI_Fertigkeit_type") + " " + label;
-	}
+        String label = ((Fertigkeit)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_Fertigkeit_type") :
+            getString("_UI_Fertigkeit_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Fertigkeit.class)) {
-			case Shr5Package.FERTIGKEIT__BESCHREIBUNG:
-			case Shr5Package.FERTIGKEIT__IMAGE:
-			case Shr5Package.FERTIGKEIT__NAME:
-			case Shr5Package.FERTIGKEIT__PAGE:
-			case Shr5Package.FERTIGKEIT__KATEGORIE:
-			case Shr5Package.FERTIGKEIT__AUSWEICHEN:
-			case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Fertigkeit.class)) {
+            case Shr5Package.FERTIGKEIT__BESCHREIBUNG:
+            case Shr5Package.FERTIGKEIT__IMAGE:
+            case Shr5Package.FERTIGKEIT__NAME:
+            case Shr5Package.FERTIGKEIT__PAGE:
+            case Shr5Package.FERTIGKEIT__KATEGORIE:
+            case Shr5Package.FERTIGKEIT__AUSWEICHEN:
+            case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Shr5EditPlugin.INSTANCE;
-	}
+        return Shr5EditPlugin.INSTANCE;
+    }
 
 }

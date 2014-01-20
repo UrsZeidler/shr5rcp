@@ -19,22 +19,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class ChangeQuallityImpl extends AdvancementImpl implements ChangeQuallity {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ChangeQuallityImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.CHANGE_QUALLITY;
-	}
+        return Shr5managementPackage.Literals.CHANGE_QUALLITY;
+    }
 
 } //ChangeQuallityImpl

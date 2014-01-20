@@ -210,6 +210,8 @@
     <genClasses image="false" ecoreClass="shr5.ecore#//KoerperPersona">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//KoerperPersona/koerperMods"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//KoerperPersona/eigenschaften"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperPersona/zustandKoerperlich"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperPersona/zustandGeistig"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//MagischeMods"/>
     <genClasses ecoreClass="shr5.ecore#//KiKraft">
@@ -341,16 +343,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Initation/erlernt"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//MetaMagie"/>
-    <genClasses ecoreClass="shr5.ecore#//MudanCritter">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//MudanCritter/kraefte"/>
-    </genClasses>
     <genClasses ecoreClass="shr5.ecore#//CritterKraft">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/art"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/handlung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/reichweite"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CritterKraft/dauer"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//ParaCritter"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Fahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/handling"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/geschwindigkeit"/>
@@ -409,5 +407,13 @@
     <genClasses ecoreClass="shr5.ecore#//Lifestyle"/>
     <genClasses ecoreClass="shr5.ecore#//Wissensfertigkeit"/>
     <genClasses ecoreClass="shr5.ecore#//Sprachfertigkeit"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//PersonaZustand">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaZustand/zustandKoerperlichMax"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaZustand/zustandGeistigMax"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaZustand/zustandGrenze"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Critter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Critter/kraefte"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

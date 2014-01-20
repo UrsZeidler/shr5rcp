@@ -18,22 +18,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class LifestyleImpl extends VertragImpl implements Lifestyle {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected LifestyleImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.LIFESTYLE;
-	}
+        return Shr5Package.Literals.LIFESTYLE;
+    }
 
 } //LifestyleImpl

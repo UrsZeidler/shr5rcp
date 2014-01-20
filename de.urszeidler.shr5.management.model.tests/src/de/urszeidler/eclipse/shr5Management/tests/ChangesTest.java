@@ -15,41 +15,41 @@ import de.urszeidler.eclipse.shr5Management.Changes;
 public abstract class ChangesTest extends TestCase {
 
 	/**
-	 * The fixture for this Changes test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Changes test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Changes fixture = null;
 
 	/**
-	 * Constructs a new Changes test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Changes test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ChangesTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Changes test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Changes test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(Changes fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Changes test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Changes test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Changes getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //ChangesTest

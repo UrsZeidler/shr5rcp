@@ -19,22 +19,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class FertigkeitChangeImpl extends PersonaValueChangeImpl implements FertigkeitChange {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FertigkeitChangeImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.FERTIGKEIT_CHANGE;
-	}
+        return Shr5managementPackage.Literals.FERTIGKEIT_CHANGE;
+    }
 
 } //FertigkeitChangeImpl

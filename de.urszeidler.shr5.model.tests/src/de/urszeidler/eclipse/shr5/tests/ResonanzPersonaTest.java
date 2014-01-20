@@ -25,119 +25,119 @@ import de.urszeidler.eclipse.shr5.ResonanzPersona;
 public abstract class ResonanzPersonaTest extends TestCase {
 
 	/**
-	 * The fixture for this Resonanz Persona test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Resonanz Persona test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ResonanzPersona fixture = null;
 
 	/**
-	 * Constructs a new Resonanz Persona test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Resonanz Persona test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ResonanzPersonaTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Resonanz Persona test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Resonanz Persona test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(ResonanzPersona fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Resonanz Persona test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Resonanz Persona test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ResonanzPersona getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz() <em>Resonanz</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz() <em>Resonanz</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz()
+     * @generated
+     */
 	public void testGetResonanz() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe()
+     * @generated
+     */
 	public void testGetGeraetestufe() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff() <em>Angriff</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff() <em>Angriff</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff()
+     * @generated
+     */
 	public void testGetAngriff() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher() <em>Schleicher</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher() <em>Schleicher</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher()
+     * @generated
+     */
 	public void testGetSchleicher() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung()
+     * @generated
+     */
 	public void testGetDatenverarbeitung() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 	/**
-	 * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall() <em>Firewall</em>}' feature getter.
-	 * <!-- begin-user-doc -->
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall() <em>Firewall</em>}' feature getter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall()
-	 * @generated
-	 */
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall()
+     * @generated
+     */
 	public void testGetFirewall() {
-		// TODO: implement this feature getter test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
+    }
 
 } //ResonanzPersonaTest

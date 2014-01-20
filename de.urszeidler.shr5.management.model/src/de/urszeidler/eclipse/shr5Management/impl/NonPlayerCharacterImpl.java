@@ -19,22 +19,22 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class NonPlayerCharacterImpl extends ManagedCharacterImpl implements NonPlayerCharacter {
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NonPlayerCharacterImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5managementPackage.Literals.NON_PLAYER_CHARACTER;
-	}
+        return Shr5managementPackage.Literals.NON_PLAYER_CHARACTER;
+    }
 
 } //NonPlayerCharacterImpl

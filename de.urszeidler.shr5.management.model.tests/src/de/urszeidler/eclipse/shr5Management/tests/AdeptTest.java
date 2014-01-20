@@ -16,34 +16,34 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class AdeptTest extends SpecialTypeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(AdeptTest.class);
-	}
+        TestRunner.run(AdeptTest.class);
+    }
 
 	/**
-	 * Constructs a new Adept test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Adept test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AdeptTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Adept test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Adept test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Adept getFixture() {
-		return (Adept)fixture;
-	}
+        return (Adept)fixture;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,14 +58,14 @@ public class AdeptTest extends SpecialTypeTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //AdeptTest

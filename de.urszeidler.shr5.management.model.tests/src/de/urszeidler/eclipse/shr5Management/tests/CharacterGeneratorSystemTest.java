@@ -15,41 +15,41 @@ import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 public abstract class CharacterGeneratorSystemTest extends TestCase {
 
 	/**
-	 * The fixture for this Character Generator System test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Character Generator System test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CharacterGeneratorSystem fixture = null;
 
 	/**
-	 * Constructs a new Character Generator System test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Character Generator System test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public CharacterGeneratorSystemTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Character Generator System test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Character Generator System test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(CharacterGeneratorSystem fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Character Generator System test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Character Generator System test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CharacterGeneratorSystem getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //CharacterGeneratorSystemTest

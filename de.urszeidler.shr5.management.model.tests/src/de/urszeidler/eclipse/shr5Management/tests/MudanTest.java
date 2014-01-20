@@ -16,34 +16,34 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 public class MudanTest extends SpecialTypeTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(MudanTest.class);
-	}
+        TestRunner.run(MudanTest.class);
+    }
 
 	/**
-	 * Constructs a new Mudan test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Mudan test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MudanTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Mudan test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Mudan test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected Mudan getFixture() {
-		return (Mudan)fixture;
-	}
+        return (Mudan)fixture;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,15 +58,15 @@ public class MudanTest extends SpecialTypeTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 	
 } //MudanTest

@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Panzerung extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Panzer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Panzer</b></em>' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Panzer</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Panzer</em>' attribute.
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getPanzerung_Panzer()
-	 * @model transient="true" changeable="false" volatile="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Panzer</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getPanzerung_Panzer()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
 	int getPanzer();
 
 } // Panzerung

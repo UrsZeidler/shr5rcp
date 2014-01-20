@@ -189,11 +189,13 @@
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MudanPersona" eSuperTypes="#//KoerperPersona"/>
-  <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona" abstract="true" eSuperTypes="#//AbstraktPersona #//Panzerung">
+  <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona" abstract="true" eSuperTypes="#//AbstraktPersona #//Panzerung #//PersonaZustand">
     <eStructuralFeatures xsi:type="ecore:EReference" name="koerperMods" upperBound="-1"
         eType="#//Koerpermods" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eigenschaften" upperBound="-1"
         eType="#//PersonaEigenschaft" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandKoerperlich" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandGeistig" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MagischeMods" abstract="true" eSuperTypes="#//AbstraktModifikatoren"/>
   <eClassifiers xsi:type="ecore:EClass" name="KiKraft" eSuperTypes="#//MagischeMods">
@@ -388,17 +390,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="erlernt" eType="#//MetaMagie"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaMagie" eSuperTypes="#//Beschreibbar #//Quelle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MudanCritter" eSuperTypes="#//KoerperPersona">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kraefte" upperBound="-1"
-        eType="#//CritterKraft" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CritterKraft" eSuperTypes="#//MagischeMods">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="art" eType="#//ZauberArt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handlung" eType="#//CritterHandlung"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reichweite" eType="#//CritterReichweite"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dauer" eType="#//CritterDauer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParaCritter" eSuperTypes="#//MudanCritter #//BaseMagischePersona"/>
   <eClassifiers xsi:type="ecore:EEnum" name="CritterHandlung">
     <eLiterals name="komplex"/>
     <eLiterals name="auto" value="1"/>
@@ -493,4 +490,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Lifestyle" eSuperTypes="#//Vertrag"/>
   <eClassifiers xsi:type="ecore:EClass" name="Wissensfertigkeit" eSuperTypes="#//Fertigkeit"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sprachfertigkeit" eSuperTypes="#//Wissensfertigkeit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaZustand" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandKoerperlichMax"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandGeistigMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandGrenze" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Critter" eSuperTypes="#//Spezies">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kraefte" upperBound="-1"
+        eType="#//CritterKraft" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

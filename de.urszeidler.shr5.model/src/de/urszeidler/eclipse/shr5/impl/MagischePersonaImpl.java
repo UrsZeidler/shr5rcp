@@ -37,72 +37,72 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements MagischePersona {
 	/**
-	 * The default value of the '{@link #getMagie() <em>Magie</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getMagie() <em>Magie</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMagie()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMagie()
+     * @generated
+     * @ordered
+     */
 	protected static final int MAGIE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getInitationen() <em>Initationen</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getInitationen() <em>Initationen</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInitationen()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getInitationen()
+     * @generated
+     * @ordered
+     */
 	protected EList<Initation> initationen;
 	/**
-	 * The default value of the '{@link #getMagieBasis() <em>Magie Basis</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getMagieBasis() <em>Magie Basis</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMagieBasis()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMagieBasis()
+     * @generated
+     * @ordered
+     */
 	protected static final int MAGIE_BASIS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getMagieBasis() <em>Magie Basis</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getMagieBasis() <em>Magie Basis</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMagieBasis()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMagieBasis()
+     * @generated
+     * @ordered
+     */
 	protected int magieBasis = MAGIE_BASIS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMentor() <em>Mentor</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getMentor() <em>Mentor</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMentor()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getMentor()
+     * @generated
+     * @ordered
+     */
 	protected Schutzgeist mentor;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MagischePersonaImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.MAGISCHE_PERSONA;
-	}
+        return Shr5Package.Literals.MAGISCHE_PERSONA;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,225 +116,225 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<Initation> getInitationen() {
-		if (initationen == null) {
-			initationen = new EObjectContainmentEList<Initation>(Initation.class, this, Shr5Package.MAGISCHE_PERSONA__INITATIONEN);
-		}
-		return initationen;
-	}
+        if (initationen == null) {
+            initationen = new EObjectContainmentEList<Initation>(Initation.class, this, Shr5Package.MAGISCHE_PERSONA__INITATIONEN);
+        }
+        return initationen;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getMagieBasis() {
-		return magieBasis;
-	}
+        return magieBasis;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setMagieBasis(int newMagieBasis) {
-		int oldMagieBasis = magieBasis;
-		magieBasis = newMagieBasis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS, oldMagieBasis, magieBasis));
-	}
+        int oldMagieBasis = magieBasis;
+        magieBasis = newMagieBasis;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS, oldMagieBasis, magieBasis));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Schutzgeist getMentor() {
-		if (mentor != null && mentor.eIsProxy()) {
-			InternalEObject oldMentor = (InternalEObject)mentor;
-			mentor = (Schutzgeist)eResolveProxy(oldMentor);
-			if (mentor != oldMentor) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.MAGISCHE_PERSONA__MENTOR, oldMentor, mentor));
-			}
-		}
-		return mentor;
-	}
+        if (mentor != null && mentor.eIsProxy()) {
+            InternalEObject oldMentor = (InternalEObject)mentor;
+            mentor = (Schutzgeist)eResolveProxy(oldMentor);
+            if (mentor != oldMentor) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.MAGISCHE_PERSONA__MENTOR, oldMentor, mentor));
+            }
+        }
+        return mentor;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Schutzgeist basicGetMentor() {
-		return mentor;
-	}
+        return mentor;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setMentor(Schutzgeist newMentor) {
-		Schutzgeist oldMentor = mentor;
-		mentor = newMentor;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGISCHE_PERSONA__MENTOR, oldMentor, mentor));
-	}
+        Schutzgeist oldMentor = mentor;
+        mentor = newMentor;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGISCHE_PERSONA__MENTOR, oldMentor, mentor));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
-				return ((InternalEList<?>)getInitationen()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
+                return ((InternalEList<?>)getInitationen()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.MAGISCHE_PERSONA__MAGIE:
-				return getMagie();
-			case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
-				return getInitationen();
-			case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
-				return getMagieBasis();
-			case Shr5Package.MAGISCHE_PERSONA__MENTOR:
-				if (resolve) return getMentor();
-				return basicGetMentor();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGISCHE_PERSONA__MAGIE:
+                return getMagie();
+            case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
+                return getInitationen();
+            case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
+                return getMagieBasis();
+            case Shr5Package.MAGISCHE_PERSONA__MENTOR:
+                if (resolve) return getMentor();
+                return basicGetMentor();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
-				getInitationen().clear();
-				getInitationen().addAll((Collection<? extends Initation>)newValue);
-				return;
-			case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
-				setMagieBasis((Integer)newValue);
-				return;
-			case Shr5Package.MAGISCHE_PERSONA__MENTOR:
-				setMentor((Schutzgeist)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
+                getInitationen().clear();
+                getInitationen().addAll((Collection<? extends Initation>)newValue);
+                return;
+            case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
+                setMagieBasis((Integer)newValue);
+                return;
+            case Shr5Package.MAGISCHE_PERSONA__MENTOR:
+                setMentor((Schutzgeist)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
-				getInitationen().clear();
-				return;
-			case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
-				setMagieBasis(MAGIE_BASIS_EDEFAULT);
-				return;
-			case Shr5Package.MAGISCHE_PERSONA__MENTOR:
-				setMentor((Schutzgeist)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
+                getInitationen().clear();
+                return;
+            case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
+                setMagieBasis(MAGIE_BASIS_EDEFAULT);
+                return;
+            case Shr5Package.MAGISCHE_PERSONA__MENTOR:
+                setMentor((Schutzgeist)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.MAGISCHE_PERSONA__MAGIE:
-				return getMagie() != MAGIE_EDEFAULT;
-			case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
-				return initationen != null && !initationen.isEmpty();
-			case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
-				return magieBasis != MAGIE_BASIS_EDEFAULT;
-			case Shr5Package.MAGISCHE_PERSONA__MENTOR:
-				return mentor != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGISCHE_PERSONA__MAGIE:
+                return getMagie() != MAGIE_EDEFAULT;
+            case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
+                return initationen != null && !initationen.isEmpty();
+            case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
+                return magieBasis != MAGIE_BASIS_EDEFAULT;
+            case Shr5Package.MAGISCHE_PERSONA__MENTOR:
+                return mentor != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == BaseMagischePersona.class) {
-			switch (derivedFeatureID) {
-				case Shr5Package.MAGISCHE_PERSONA__MAGIE: return Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE;
-				case Shr5Package.MAGISCHE_PERSONA__INITATIONEN: return Shr5Package.BASE_MAGISCHE_PERSONA__INITATIONEN;
-				case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS: return Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE_BASIS;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+        if (baseClass == BaseMagischePersona.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.MAGISCHE_PERSONA__MAGIE: return Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE;
+                case Shr5Package.MAGISCHE_PERSONA__INITATIONEN: return Shr5Package.BASE_MAGISCHE_PERSONA__INITATIONEN;
+                case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS: return Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE_BASIS;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == BaseMagischePersona.class) {
-			switch (baseFeatureID) {
-				case Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE: return Shr5Package.MAGISCHE_PERSONA__MAGIE;
-				case Shr5Package.BASE_MAGISCHE_PERSONA__INITATIONEN: return Shr5Package.MAGISCHE_PERSONA__INITATIONEN;
-				case Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE_BASIS: return Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+        if (baseClass == BaseMagischePersona.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE: return Shr5Package.MAGISCHE_PERSONA__MAGIE;
+                case Shr5Package.BASE_MAGISCHE_PERSONA__INITATIONEN: return Shr5Package.MAGISCHE_PERSONA__INITATIONEN;
+                case Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE_BASIS: return Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (magieBasis: ");
-		result.append(magieBasis);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (magieBasis: ");
+        result.append(magieBasis);
+        result.append(')');
+        return result.toString();
+    }
 
 } //MagischePersonaImpl

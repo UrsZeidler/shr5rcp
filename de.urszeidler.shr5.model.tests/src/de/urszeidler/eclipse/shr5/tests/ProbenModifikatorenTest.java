@@ -14,41 +14,41 @@ import de.urszeidler.eclipse.shr5.ProbenModifikatoren;
 public abstract class ProbenModifikatorenTest extends TestCase {
 
 	/**
-	 * The fixture for this Proben Modifikatoren test case.
-	 * <!-- begin-user-doc -->
+     * The fixture for this Proben Modifikatoren test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ProbenModifikatoren fixture = null;
 
 	/**
-	 * Constructs a new Proben Modifikatoren test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Proben Modifikatoren test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ProbenModifikatorenTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Sets the fixture for this Proben Modifikatoren test case.
-	 * <!-- begin-user-doc -->
+     * Sets the fixture for this Proben Modifikatoren test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void setFixture(ProbenModifikatoren fixture) {
-		this.fixture = fixture;
-	}
+        this.fixture = fixture;
+    }
 
 	/**
-	 * Returns the fixture for this Proben Modifikatoren test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Proben Modifikatoren test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ProbenModifikatoren getFixture() {
-		return fixture;
-	}
+        return fixture;
+    }
 
 } //ProbenModifikatorenTest

@@ -45,145 +45,145 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  */
 public class MagierImpl extends MagischePersonaImpl implements Magier {
 	/**
-	 * The cached value of the '{@link #getZauber() <em>Zauber</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getZauber() <em>Zauber</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZauber()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getZauber()
+     * @generated
+     * @ordered
+     */
 	protected EList<PersonaZauber> zauber;
 
 	/**
-	 * The default value of the '{@link #getEnzug() <em>Enzug</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getEnzug() <em>Enzug</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnzug()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getEnzug()
+     * @generated
+     * @ordered
+     */
 	protected static final int ENZUG_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTradition()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getTradition()
+     * @generated
+     * @ordered
+     */
 	protected static final MagischeTradition TRADITION_EDEFAULT = MagischeTradition.HERMETISCH;
 	/**
-	 * The cached value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getTradition() <em>Tradition</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTradition()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getTradition()
+     * @generated
+     * @ordered
+     */
 	protected MagischeTradition tradition = TRADITION_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getAstralesLimit() <em>Astrales Limit</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstralesLimit() <em>Astrales Limit</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstralesLimit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstralesLimit()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALES_LIMIT_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstraleKonstitution() <em>Astrale Konstitution</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstraleKonstitution() <em>Astrale Konstitution</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstraleKonstitution()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstraleKonstitution()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_KONSTITUTION_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstraleGeschicklichkeit() <em>Astrale Geschicklichkeit</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstraleGeschicklichkeit() <em>Astrale Geschicklichkeit</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstraleGeschicklichkeit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstraleGeschicklichkeit()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_GESCHICKLICHKEIT_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstraleReaktion() <em>Astrale Reaktion</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstraleReaktion() <em>Astrale Reaktion</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstraleReaktion()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstraleReaktion()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_REAKTION_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstraleStaerke() <em>Astrale Staerke</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstraleStaerke() <em>Astrale Staerke</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstraleStaerke()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstraleStaerke()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_STAERKE_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstraleInitative() <em>Astrale Initative</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstraleInitative() <em>Astrale Initative</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstraleInitative()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstraleInitative()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_INITATIVE_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstraleInitativWuerfel() <em>Astrale Initativ Wuerfel</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstraleInitativWuerfel() <em>Astrale Initativ Wuerfel</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstraleInitativWuerfel()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstraleInitativWuerfel()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_INITATIV_WUERFEL_EDEFAULT = 0;
 	/**
-	 * The default value of the '{@link #getAstralePanzerung() <em>Astrale Panzerung</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getAstralePanzerung() <em>Astrale Panzerung</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAstralePanzerung()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getAstralePanzerung()
+     * @generated
+     * @ordered
+     */
 	protected static final int ASTRALE_PANZERUNG_EDEFAULT = 0;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected MagierImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return Shr5Package.Literals.MAGIER;
-	}
+        return Shr5Package.Literals.MAGIER;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public EList<PersonaZauber> getZauber() {
-		if (zauber == null) {
-			zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.MAGIER__ZAUBER);
-		}
-		return zauber;
-	}
+        if (zauber == null) {
+            zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.MAGIER__ZAUBER);
+        }
+        return zauber;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,25 +203,25 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public MagischeTradition getTradition() {
-		return tradition;
-	}
+        return tradition;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setTradition(MagischeTradition newTradition) {
-		MagischeTradition oldTradition = tradition;
-		tradition = newTradition == null ? TRADITION_EDEFAULT : newTradition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIER__TRADITION, oldTradition, tradition));
-	}
+        MagischeTradition oldTradition = tradition;
+        tradition = newTradition == null ? TRADITION_EDEFAULT : newTradition;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MAGIER__TRADITION, oldTradition, tradition));
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -300,201 +300,201 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Shr5Package.MAGIER__ZAUBER:
-				return ((InternalEList<?>)getZauber()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGIER__ZAUBER:
+                return ((InternalEList<?>)getZauber()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Shr5Package.MAGIER__ZAUBER:
-				return getZauber();
-			case Shr5Package.MAGIER__ENZUG:
-				return getEnzug();
-			case Shr5Package.MAGIER__TRADITION:
-				return getTradition();
-			case Shr5Package.MAGIER__ASTRALES_LIMIT:
-				return getAstralesLimit();
-			case Shr5Package.MAGIER__ASTRALE_KONSTITUTION:
-				return getAstraleKonstitution();
-			case Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT:
-				return getAstraleGeschicklichkeit();
-			case Shr5Package.MAGIER__ASTRALE_REAKTION:
-				return getAstraleReaktion();
-			case Shr5Package.MAGIER__ASTRALE_STAERKE:
-				return getAstraleStaerke();
-			case Shr5Package.MAGIER__ASTRALE_INITATIVE:
-				return getAstraleInitative();
-			case Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL:
-				return getAstraleInitativWuerfel();
-			case Shr5Package.MAGIER__ASTRALE_PANZERUNG:
-				return getAstralePanzerung();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGIER__ZAUBER:
+                return getZauber();
+            case Shr5Package.MAGIER__ENZUG:
+                return getEnzug();
+            case Shr5Package.MAGIER__TRADITION:
+                return getTradition();
+            case Shr5Package.MAGIER__ASTRALES_LIMIT:
+                return getAstralesLimit();
+            case Shr5Package.MAGIER__ASTRALE_KONSTITUTION:
+                return getAstraleKonstitution();
+            case Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT:
+                return getAstraleGeschicklichkeit();
+            case Shr5Package.MAGIER__ASTRALE_REAKTION:
+                return getAstraleReaktion();
+            case Shr5Package.MAGIER__ASTRALE_STAERKE:
+                return getAstraleStaerke();
+            case Shr5Package.MAGIER__ASTRALE_INITATIVE:
+                return getAstraleInitative();
+            case Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL:
+                return getAstraleInitativWuerfel();
+            case Shr5Package.MAGIER__ASTRALE_PANZERUNG:
+                return getAstralePanzerung();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Shr5Package.MAGIER__ZAUBER:
-				getZauber().clear();
-				getZauber().addAll((Collection<? extends PersonaZauber>)newValue);
-				return;
-			case Shr5Package.MAGIER__TRADITION:
-				setTradition((MagischeTradition)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGIER__ZAUBER:
+                getZauber().clear();
+                getZauber().addAll((Collection<? extends PersonaZauber>)newValue);
+                return;
+            case Shr5Package.MAGIER__TRADITION:
+                setTradition((MagischeTradition)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Shr5Package.MAGIER__ZAUBER:
-				getZauber().clear();
-				return;
-			case Shr5Package.MAGIER__TRADITION:
-				setTradition(TRADITION_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGIER__ZAUBER:
+                getZauber().clear();
+                return;
+            case Shr5Package.MAGIER__TRADITION:
+                setTradition(TRADITION_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Shr5Package.MAGIER__ZAUBER:
-				return zauber != null && !zauber.isEmpty();
-			case Shr5Package.MAGIER__ENZUG:
-				return getEnzug() != ENZUG_EDEFAULT;
-			case Shr5Package.MAGIER__TRADITION:
-				return tradition != TRADITION_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALES_LIMIT:
-				return getAstralesLimit() != ASTRALES_LIMIT_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_KONSTITUTION:
-				return getAstraleKonstitution() != ASTRALE_KONSTITUTION_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT:
-				return getAstraleGeschicklichkeit() != ASTRALE_GESCHICKLICHKEIT_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_REAKTION:
-				return getAstraleReaktion() != ASTRALE_REAKTION_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_STAERKE:
-				return getAstraleStaerke() != ASTRALE_STAERKE_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_INITATIVE:
-				return getAstraleInitative() != ASTRALE_INITATIVE_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL:
-				return getAstraleInitativWuerfel() != ASTRALE_INITATIV_WUERFEL_EDEFAULT;
-			case Shr5Package.MAGIER__ASTRALE_PANZERUNG:
-				return getAstralePanzerung() != ASTRALE_PANZERUNG_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case Shr5Package.MAGIER__ZAUBER:
+                return zauber != null && !zauber.isEmpty();
+            case Shr5Package.MAGIER__ENZUG:
+                return getEnzug() != ENZUG_EDEFAULT;
+            case Shr5Package.MAGIER__TRADITION:
+                return tradition != TRADITION_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALES_LIMIT:
+                return getAstralesLimit() != ASTRALES_LIMIT_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_KONSTITUTION:
+                return getAstraleKonstitution() != ASTRALE_KONSTITUTION_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT:
+                return getAstraleGeschicklichkeit() != ASTRALE_GESCHICKLICHKEIT_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_REAKTION:
+                return getAstraleReaktion() != ASTRALE_REAKTION_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_STAERKE:
+                return getAstraleStaerke() != ASTRALE_STAERKE_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_INITATIVE:
+                return getAstraleInitative() != ASTRALE_INITATIVE_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL:
+                return getAstraleInitativWuerfel() != ASTRALE_INITATIV_WUERFEL_EDEFAULT;
+            case Shr5Package.MAGIER__ASTRALE_PANZERUNG:
+                return getAstralePanzerung() != ASTRALE_PANZERUNG_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Zauberer.class) {
-			switch (derivedFeatureID) {
-				case Shr5Package.MAGIER__ZAUBER: return Shr5Package.ZAUBERER__ZAUBER;
-				case Shr5Package.MAGIER__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
-				case Shr5Package.MAGIER__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
-				default: return -1;
-			}
-		}
-		if (baseClass == AstraleProjektion.class) {
-			switch (derivedFeatureID) {
-				case Shr5Package.MAGIER__ASTRALES_LIMIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
-				case Shr5Package.MAGIER__ASTRALE_KONSTITUTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
-				case Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
-				case Shr5Package.MAGIER__ASTRALE_REAKTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
-				case Shr5Package.MAGIER__ASTRALE_STAERKE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
-				case Shr5Package.MAGIER__ASTRALE_INITATIVE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
-				case Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
-				case Shr5Package.MAGIER__ASTRALE_PANZERUNG: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+        if (baseClass == Zauberer.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.MAGIER__ZAUBER: return Shr5Package.ZAUBERER__ZAUBER;
+                case Shr5Package.MAGIER__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
+                case Shr5Package.MAGIER__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
+                default: return -1;
+            }
+        }
+        if (baseClass == AstraleProjektion.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.MAGIER__ASTRALES_LIMIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
+                case Shr5Package.MAGIER__ASTRALE_KONSTITUTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
+                case Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.MAGIER__ASTRALE_REAKTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
+                case Shr5Package.MAGIER__ASTRALE_STAERKE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
+                case Shr5Package.MAGIER__ASTRALE_INITATIVE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
+                case Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.MAGIER__ASTRALE_PANZERUNG: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Zauberer.class) {
-			switch (baseFeatureID) {
-				case Shr5Package.ZAUBERER__ZAUBER: return Shr5Package.MAGIER__ZAUBER;
-				case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.MAGIER__ENZUG;
-				case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MAGIER__TRADITION;
-				default: return -1;
-			}
-		}
-		if (baseClass == AstraleProjektion.class) {
-			switch (baseFeatureID) {
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT: return Shr5Package.MAGIER__ASTRALES_LIMIT;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION: return Shr5Package.MAGIER__ASTRALE_KONSTITUTION;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION: return Shr5Package.MAGIER__ASTRALE_REAKTION;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE: return Shr5Package.MAGIER__ASTRALE_STAERKE;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE: return Shr5Package.MAGIER__ASTRALE_INITATIVE;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL: return Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL;
-				case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG: return Shr5Package.MAGIER__ASTRALE_PANZERUNG;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+        if (baseClass == Zauberer.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.ZAUBERER__ZAUBER: return Shr5Package.MAGIER__ZAUBER;
+                case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.MAGIER__ENZUG;
+                case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MAGIER__TRADITION;
+                default: return -1;
+            }
+        }
+        if (baseClass == AstraleProjektion.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT: return Shr5Package.MAGIER__ASTRALES_LIMIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION: return Shr5Package.MAGIER__ASTRALE_KONSTITUTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.MAGIER__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION: return Shr5Package.MAGIER__ASTRALE_REAKTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE: return Shr5Package.MAGIER__ASTRALE_STAERKE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE: return Shr5Package.MAGIER__ASTRALE_INITATIVE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL: return Shr5Package.MAGIER__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG: return Shr5Package.MAGIER__ASTRALE_PANZERUNG;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tradition: ");
-		result.append(tradition);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (tradition: ");
+        result.append(tradition);
+        result.append(')');
+        return result.toString();
+    }
 
 } //MagierImpl

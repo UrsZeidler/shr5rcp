@@ -25,19 +25,19 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  */
 public interface CharacterGroup extends Beschreibbar {
 	/**
-	 * Returns the value of the '<em><b>Members</b></em>' containment reference list.
-	 * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.ManagedCharacter}.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Members</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.ManagedCharacter}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Members</em>' containment reference list.
-	 * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGroup_Members()
-	 * @model containment="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Members</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGroup_Members()
+     * @model containment="true"
+     * @generated
+     */
 	EList<ManagedCharacter> getMembers();
 
 } // CharacterGroup

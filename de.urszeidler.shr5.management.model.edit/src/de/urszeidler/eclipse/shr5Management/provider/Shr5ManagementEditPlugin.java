@@ -16,77 +16,77 @@ import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
  */
 public final class Shr5ManagementEditPlugin extends EMFPlugin {
 	/**
-	 * Keep track of the singleton.
-	 * <!-- begin-user-doc -->
+     * Keep track of the singleton.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static final Shr5ManagementEditPlugin INSTANCE = new Shr5ManagementEditPlugin();
 
 	/**
-	 * Keep track of the singleton.
-	 * <!-- begin-user-doc -->
+     * Keep track of the singleton.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	private static Implementation plugin;
 
 	/**
-	 * Create the instance.
-	 * <!-- begin-user-doc -->
+     * Create the instance.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Shr5ManagementEditPlugin() {
-		super
-		  (new ResourceLocator [] {
-		     Shr5EditPlugin.INSTANCE,
-		   });
-	}
+        super
+          (new ResourceLocator [] {
+             Shr5EditPlugin.INSTANCE,
+           });
+    }
 
 	/**
-	 * Returns the singleton instance of the Eclipse plugin.
-	 * <!-- begin-user-doc -->
+     * Returns the singleton instance of the Eclipse plugin.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the singleton instance.
-	 * @generated
-	 */
+     * @return the singleton instance.
+     * @generated
+     */
 	@Override
 	public ResourceLocator getPluginResourceLocator() {
-		return plugin;
-	}
+        return plugin;
+    }
 
 	/**
-	 * Returns the singleton instance of the Eclipse plugin.
-	 * <!-- begin-user-doc -->
+     * Returns the singleton instance of the Eclipse plugin.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the singleton instance.
-	 * @generated
-	 */
+     * @return the singleton instance.
+     * @generated
+     */
 	public static Implementation getPlugin() {
-		return plugin;
-	}
+        return plugin;
+    }
 
 	/**
-	 * The actual implementation of the Eclipse <b>Plugin</b>.
-	 * <!-- begin-user-doc -->
+     * The actual implementation of the Eclipse <b>Plugin</b>.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static class Implementation extends EclipsePlugin {
 		/**
-		 * Creates an instance.
-		 * <!-- begin-user-doc -->
+         * Creates an instance.
+         * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
-		 */
+         * @generated
+         */
 		public Implementation() {
-			super();
+            super();
 
-			// Remember the static instance.
-			//
-			plugin = this;
-		}
+            // Remember the static instance.
+            //
+            plugin = this;
+        }
 	}
 
 }

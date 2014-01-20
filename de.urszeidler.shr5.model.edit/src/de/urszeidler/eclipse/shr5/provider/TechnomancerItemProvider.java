@@ -38,296 +38,296 @@ public class TechnomancerItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public TechnomancerItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addResonanzPropertyDescriptor(object);
-			addGeraetestufePropertyDescriptor(object);
-			addAngriffPropertyDescriptor(object);
-			addSchleicherPropertyDescriptor(object);
-			addDatenverarbeitungPropertyDescriptor(object);
-			addFirewallPropertyDescriptor(object);
-			addResonanzBasisPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addResonanzPropertyDescriptor(object);
+            addGeraetestufePropertyDescriptor(object);
+            addAngriffPropertyDescriptor(object);
+            addSchleicherPropertyDescriptor(object);
+            addDatenverarbeitungPropertyDescriptor(object);
+            addFirewallPropertyDescriptor(object);
+            addResonanzBasisPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
 	/**
-	 * This adds a property descriptor for the Resonanz feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Resonanz feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addResonanzPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_resonanz_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_resonanz_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_resonanz_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_resonanz_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Geraetestufe feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Geraetestufe feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addGeraetestufePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_geraetestufe_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_geraetestufe_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__GERAETESTUFE,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_geraetestufe_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__GERAETESTUFE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Angriff feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Angriff feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addAngriffPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_angriff_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_angriff_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__ANGRIFF,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_angriff_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_angriff_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__ANGRIFF,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Schleicher feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Schleicher feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addSchleicherPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_schleicher_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_schleicher_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__SCHLEICHER,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_schleicher_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_schleicher_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__SCHLEICHER,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Datenverarbeitung feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Datenverarbeitung feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addDatenverarbeitungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_datenverarbeitung_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_datenverarbeitung_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__DATENVERARBEITUNG,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_datenverarbeitung_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__DATENVERARBEITUNG,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Firewall feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Firewall feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addFirewallPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_firewall_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_firewall_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__FIREWALL,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_firewall_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__FIREWALL,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This adds a property descriptor for the Resonanz Basis feature.
-	 * <!-- begin-user-doc -->
+     * This adds a property descriptor for the Resonanz Basis feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addResonanzBasisPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResonanzPersona_resonanzBasis_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_resonanzBasis_feature", "_UI_ResonanzPersona_type"),
-				 Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ResonanzPersona_resonanzBasis_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_resonanzBasis_feature", "_UI_ResonanzPersona_type"),
+                 Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS);
-			childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__ECHOS);
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS);
+            childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__ECHOS);
+        }
+        return childrenFeatures;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
 
-		return super.getChildFeature(object, child);
-	}
+        return super.getChildFeature(object, child);
+    }
 
 	/**
-	 * This returns Technomancer.gif.
-	 * <!-- begin-user-doc -->
+     * This returns Technomancer.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Technomancer"));
-	}
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Technomancer"));
+    }
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String getText(Object object) {
-		String label = ((Technomancer)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Technomancer_type") :
-			getString("_UI_Technomancer_type") + " " + label;
-	}
+        String label = ((Technomancer)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_Technomancer_type") :
+            getString("_UI_Technomancer_type") + " " + label;
+    }
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Technomancer.class)) {
-			case Shr5Package.TECHNOMANCER__RESONANZ:
-			case Shr5Package.TECHNOMANCER__GERAETESTUFE:
-			case Shr5Package.TECHNOMANCER__ANGRIFF:
-			case Shr5Package.TECHNOMANCER__SCHLEICHER:
-			case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
-			case Shr5Package.TECHNOMANCER__FIREWALL:
-			case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
-			case Shr5Package.TECHNOMANCER__ECHOS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Technomancer.class)) {
+            case Shr5Package.TECHNOMANCER__RESONANZ:
+            case Shr5Package.TECHNOMANCER__GERAETESTUFE:
+            case Shr5Package.TECHNOMANCER__ANGRIFF:
+            case Shr5Package.TECHNOMANCER__SCHLEICHER:
+            case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
+            case Shr5Package.TECHNOMANCER__FIREWALL:
+            case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
+            case Shr5Package.TECHNOMANCER__ECHOS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS,
-				 Shr5Factory.eINSTANCE.createPersonaKomplexForm()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS,
+                 Shr5Factory.eINSTANCE.createPersonaKomplexForm()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(Shr5Package.Literals.TECHNOMANCER__ECHOS,
-				 Shr5Factory.eINSTANCE.createEcho()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.TECHNOMANCER__ECHOS,
+                 Shr5Factory.eINSTANCE.createEcho()));
+    }
 
 }

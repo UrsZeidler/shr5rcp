@@ -21,29 +21,29 @@ package de.urszeidler.eclipse.shr5;
  */
 public interface BioWare extends Koerpermods, GeldWert {
 	/**
-	 * Returns the value of the '<em><b>Persona</b></em>' reference.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Persona</b></em>' reference.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Persona</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Persona</em>' reference.
-	 * @see #setPersona(AbstraktPersona)
-	 * @see de.urszeidler.eclipse.shr5.Shr5Package#getBioWare_Persona()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Persona</em>' reference.
+     * @see #setPersona(AbstraktPersona)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBioWare_Persona()
+     * @model
+     * @generated
+     */
 	AbstraktPersona getPersona();
 
 	/**
-	 * Sets the value of the '{@link de.urszeidler.eclipse.shr5.BioWare#getPersona <em>Persona</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.BioWare#getPersona <em>Persona</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Persona</em>' reference.
-	 * @see #getPersona()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Persona</em>' reference.
+     * @see #getPersona()
+     * @generated
+     */
 	void setPersona(AbstraktPersona value);
 
 } // BioWare
