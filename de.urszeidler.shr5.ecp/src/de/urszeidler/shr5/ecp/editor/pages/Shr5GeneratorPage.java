@@ -143,6 +143,8 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     private Set<Integer> oldSet;
     private Label lblConnections;
     private Label lblConnectionleft;
+    private ControlDecoration controlDecorationResources;
+    private ControlDecoration controlDecorationKarma;
 
     /**
      * Create the form page.
@@ -311,6 +313,9 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         spinner.setLayoutData(gd_spinner);
         managedForm.getToolkit().adapt(spinner);
         managedForm.getToolkit().paintBordersFor(spinner);
+        
+        controlDecorationKarma = new ControlDecoration(spinner, SWT.LEFT | SWT.TOP);
+        controlDecorationKarma.setDescriptionText("Some description");
 
         lblKarmaSpend = new Label(composite, SWT.NONE);
         managedForm.getToolkit().adapt(lblKarmaSpend, true, true);
@@ -354,6 +359,9 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         managedForm.getToolkit().adapt(grpResourcen);
         managedForm.getToolkit().paintBordersFor(grpResourcen);
         grpResourcen.setLayout(new FillLayout(SWT.HORIZONTAL));
+        
+        controlDecorationResources = new ControlDecoration(grpResourcen, SWT.LEFT | SWT.TOP);
+        controlDecorationResources.setDescriptionText("Some description");
 
         grpMetatyp = new Group(composite_3, SWT.NONE);
         grpMetatyp.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
