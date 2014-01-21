@@ -474,8 +474,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
 
         int skillPoints = getSkills().getSkillPoints();
         int groupPoints = getSkills().getGroupPoints();
-        boolean notAllSpend = haseSpendAllPoints
-                || getKarmaSpend() != karmaPoints
+        boolean notAllSpend = haseSpendAllPoints || getKarmaSpend() != karmaPoints
                 || getAttribute().calcAttributesSpend(getCharacter()) != getAttribute().getAttibutePoints()
                 || getShr5Generator().getMaxResourceToKeep() < getResourcen().getResource() - getResourcen().calcResourceSpend(getCharacter())
                 || getMagic().calcSkillsSpend(getCharacter()) != getMagic().getSkillNumber()
@@ -686,7 +685,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (getShr5Generator() == null || getResourcen() == null)
             return true;
 
         boolean test = getShr5Generator().getMaxResourceToKeep() < getResourcen().getResource() - getResourcen().calcResourceSpend(getCharacter());

@@ -313,7 +313,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         spinner.setLayoutData(gd_spinner);
         managedForm.getToolkit().adapt(spinner);
         managedForm.getToolkit().paintBordersFor(spinner);
-        
+
         controlDecorationKarma = new ControlDecoration(spinner, SWT.LEFT | SWT.TOP);
         controlDecorationKarma.setDescriptionText("Some description");
 
@@ -359,9 +359,8 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         managedForm.getToolkit().adapt(grpResourcen);
         managedForm.getToolkit().paintBordersFor(grpResourcen);
         grpResourcen.setLayout(new FillLayout(SWT.HORIZONTAL));
-        
-        controlDecorationResources = new ControlDecoration(grpResourcen, SWT.RIGHT | SWT.TOP);
 
+        controlDecorationResources = new ControlDecoration(grpResourcen, SWT.RIGHT | SWT.TOP);
 
         grpMetatyp = new Group(composite_3, SWT.NONE);
         grpMetatyp.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -423,7 +422,6 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
             character.setChracterSource(null);
 
         object.setCharacter(null);
-        // EcoreUtil.delete(character, true);
         object.setState(GeneratorState.NEW);
         validateChange();
     }
@@ -469,7 +467,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE)) {
             object.setState(GeneratorState.NEW);
         }
-        updateDecorator(newSet);
+        updateDecorators(newSet);
         oldSet = newSet;
 
         if (object.getState() == GeneratorState.PERSONA_CREATED)
@@ -489,62 +487,37 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
      * 
      * @param newSet
      */
-    private void updateDecorator(Set<Integer> newSet) {
-        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS)) {
-            controlDecorationAttributes.setDescriptionText("Not all attributes spend.");
-            controlDecorationAttributes.setImage(decoratorImage);
-            controlDecorationAttributes.setShowHover(true);
-            controlDecorationAttributes.showHoverText("Not all attributes spend.");
-        } else if (controlDecorationAttributes.getImage() != null) {
-            controlDecorationAttributes.setDescriptionText("");
-            controlDecorationAttributes.setImage(null);
-        }
-        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS)) {
-            controlDecorationSkills.setDescriptionText("Not all attributes spend.");
-            controlDecorationSkills.setImage(decoratorImage);
-            controlDecorationSkills.setShowHover(true);
-            controlDecorationSkills.showHoverText("Not all skill points spend.");
-        } else if (controlDecorationSkills.getImage() != null) {
-            controlDecorationSkills.setDescriptionText("");
-            controlDecorationSkills.setImage(null);
-        }
-        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_POINTS)) {
-            controlDecorationMetaTyp.setDescriptionText("Not all special points spend.");
-            controlDecorationMetaTyp.setImage(decoratorImage);
-            controlDecorationMetaTyp.setShowHover(true);
-            controlDecorationMetaTyp.showHoverText("Not all special points spend.");
-        } else if (controlDecorationMetaTyp.getImage() != null) {
-            controlDecorationMetaTyp.setDescriptionText("");
-            controlDecorationMetaTyp.setImage(null);
-        }
-        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS)) {
-            controlDecorationMagic.setDescriptionText("Not all type points spend.");
-            controlDecorationMagic.setImage(decoratorImage);
-            controlDecorationMagic.setShowHover(true);
-            controlDecorationMagic.showHoverText("Not all type points spend.");
-        } else if (controlDecorationMagic.getImage() != null) {
-            controlDecorationMagic.setDescriptionText("");
-            controlDecorationMagic.setImage(null);
-        }
-        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS)) {
-            controlDecorationResources.setDescriptionText("Not all resource points spend.");
-            controlDecorationResources.setImage(decoratorImage);
-            controlDecorationResources.setShowHover(true);
-            controlDecorationResources.showHoverText("Not all resource points spend.");
-        } else if (controlDecorationResources.getImage() != null) {
-            controlDecorationResources.setDescriptionText("");
-            controlDecorationResources.setImage(null);
-        }
-//        if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_)) {
-//            controlDecorationResources.setDescriptionText("Not all resource points spend.");
-//            controlDecorationResources.setImage(decoratorImage);
-//            controlDecorationResources.setShowHover(true);
-//            controlDecorationResources.showHoverText("Not all resource points spend.");
-//        } else if (controlDecorationResources.getImage() != null) {
-//            controlDecorationResources.setDescriptionText("");
-//            controlDecorationResources.setImage(null);
-//        }
+    private void updateDecorators(Set<Integer> newSet) {
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS, controlDecorationMagic,
+                "Not all type points spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
+                "Not all special points spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS, controlDecorationSkills,
+                "Not all skill spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
+                "Not all attributes spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
+                "Not all resource points spend.");
+    }
 
+    /**
+     * Update the given decorator with the given text when the feature is in the set.
+     * 
+     * @param newSet
+     * @param featureID
+     * @param decoration
+     * @param textToShow
+     */
+    private void updateDecorator(Set<Integer> newSet, Object featureID, ControlDecoration decoration, String textToShow) {
+        if (newSet.contains(featureID)) {
+            decoration.setDescriptionText(textToShow);
+            decoration.setImage(decoratorImage);
+            decoration.setShowHover(true);
+            decoration.showHoverText(textToShow);
+        } else if (decoration.getImage() != null) {
+            decoration.setDescriptionText("");
+            decoration.setImage(null);
+        }
     }
 
     private void createManagedCharacter() {
