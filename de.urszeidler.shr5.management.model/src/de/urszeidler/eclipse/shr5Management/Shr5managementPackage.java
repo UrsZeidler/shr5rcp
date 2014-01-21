@@ -117,22 +117,13 @@ public interface Shr5managementPackage extends EPackage {
 	int MANAGED_CHARACTER__CONTRACTS = 4;
 
 	/**
-     * The feature id for the '<em><b>Sex</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int MANAGED_CHARACTER__SEX = 5;
-
-	/**
      * The feature id for the '<em><b>Connections</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER__CONNECTIONS = 6;
+	int MANAGED_CHARACTER__CONNECTIONS = 5;
 
 	/**
      * The feature id for the '<em><b>Vehicels</b></em>' containment reference list.
@@ -141,7 +132,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER__VEHICELS = 7;
+	int MANAGED_CHARACTER__VEHICELS = 6;
 
 	/**
      * The feature id for the '<em><b>Choosen Lifestyle</b></em>' reference.
@@ -150,7 +141,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER__CHOOSEN_LIFESTYLE = 8;
+	int MANAGED_CHARACTER__CHOOSEN_LIFESTYLE = 7;
 
 	/**
      * The feature id for the '<em><b>Native Language</b></em>' reference.
@@ -159,7 +150,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER__NATIVE_LANGUAGE = 9;
+	int MANAGED_CHARACTER__NATIVE_LANGUAGE = 8;
+
+    /**
+     * The feature id for the '<em><b>Sex</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int MANAGED_CHARACTER__SEX = 9;
 
 	/**
      * The feature id for the '<em><b>Street Cred</b></em>' attribute.
@@ -498,15 +498,6 @@ public interface Shr5managementPackage extends EPackage {
 	int NON_PLAYER_CHARACTER__CONTRACTS = MANAGED_CHARACTER__CONTRACTS;
 
 	/**
-     * The feature id for the '<em><b>Sex</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int NON_PLAYER_CHARACTER__SEX = MANAGED_CHARACTER__SEX;
-
-	/**
      * The feature id for the '<em><b>Connections</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -541,6 +532,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
 	int NON_PLAYER_CHARACTER__NATIVE_LANGUAGE = MANAGED_CHARACTER__NATIVE_LANGUAGE;
+
+    /**
+     * The feature id for the '<em><b>Sex</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int NON_PLAYER_CHARACTER__SEX = MANAGED_CHARACTER__SEX;
 
 	/**
      * The feature id for the '<em><b>Street Cred</b></em>' attribute.
@@ -2299,15 +2299,6 @@ public interface Shr5managementPackage extends EPackage {
 	int PLAYER_CHARACTER__CONTRACTS = MANAGED_CHARACTER__CONTRACTS;
 
 	/**
-     * The feature id for the '<em><b>Sex</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int PLAYER_CHARACTER__SEX = MANAGED_CHARACTER__SEX;
-
-	/**
      * The feature id for the '<em><b>Connections</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2342,6 +2333,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
 	int PLAYER_CHARACTER__NATIVE_LANGUAGE = MANAGED_CHARACTER__NATIVE_LANGUAGE;
+
+    /**
+     * The feature id for the '<em><b>Sex</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int PLAYER_CHARACTER__SEX = MANAGED_CHARACTER__SEX;
 
 	/**
      * The feature id for the '<em><b>Street Cred</b></em>' attribute.

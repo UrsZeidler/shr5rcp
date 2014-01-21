@@ -26,11 +26,11 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getChracterSource <em>Chracter Source</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getInventar <em>Inventar</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getContracts <em>Contracts</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getSex <em>Sex</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getConnections <em>Connections</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getVehicels <em>Vehicels</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getChoosenLifestyle <em>Choosen Lifestyle</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getNativeLanguage <em>Native Language</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getSex <em>Sex</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getStreetCred <em>Street Cred</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getNotoriety <em>Notoriety</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getNotorietyBasic <em>Notoriety Basic</em>}</li>

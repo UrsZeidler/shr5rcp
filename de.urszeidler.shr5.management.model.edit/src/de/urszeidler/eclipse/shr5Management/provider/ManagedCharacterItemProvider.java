@@ -64,9 +64,9 @@ public class ManagedCharacterItemProvider
             super.getPropertyDescriptors(object);
 
             addChracterSourcePropertyDescriptor(object);
-            addSexPropertyDescriptor(object);
             addChoosenLifestylePropertyDescriptor(object);
             addNativeLanguagePropertyDescriptor(object);
+            addSexPropertyDescriptor(object);
             addStreetCredPropertyDescriptor(object);
             addNotorietyPropertyDescriptor(object);
             addNotorietyBasicPropertyDescriptor(object);

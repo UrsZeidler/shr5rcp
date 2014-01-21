@@ -437,7 +437,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
 	public EAttribute getManagedCharacter_Sex() {
-        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(9);
     }
 
 	/**
@@ -446,7 +446,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
 	public EReference getManagedCharacter_Connections() {
-        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(6);
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(5);
     }
 
 	/**
@@ -455,7 +455,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
 	public EReference getManagedCharacter_Vehicels() {
-        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(7);
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(6);
     }
 
 	/**
@@ -464,7 +464,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
 	public EReference getManagedCharacter_ChoosenLifestyle() {
-        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(8);
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(7);
     }
 
 	/**
@@ -473,7 +473,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
 	public EReference getManagedCharacter_NativeLanguage() {
-        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(9);
+        return (EReference)managedCharacterEClass.getEStructuralFeatures().get(8);
     }
 
 	/**
@@ -1563,11 +1563,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHRACTER_SOURCE);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__INVENTAR);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__CONTRACTS);
-        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__SEX);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__CONNECTIONS);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__VEHICELS);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__CHOOSEN_LIFESTYLE);
         createEReference(managedCharacterEClass, MANAGED_CHARACTER__NATIVE_LANGUAGE);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__SEX);
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__STREET_CRED);
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY);
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY_BASIC);
@@ -1786,11 +1786,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getManagedCharacter_ChracterSource(), this.getCharacterGenerator(), this.getCharacterGenerator_Character(), "chracterSource", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Inventar(), theShr5Package.getAbstraktGegenstand(), null, "inventar", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Contracts(), theShr5Package.getVertrag(), null, "contracts", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getManagedCharacter_Sex(), this.getSex(), "sex", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Connections(), this.getConnection(), null, "connections", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_Vehicels(), theShr5Package.getFahrzeug(), null, "vehicels", null, 0, -1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_ChoosenLifestyle(), theShr5Package.getLifestyle(), null, "choosenLifestyle", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getManagedCharacter_NativeLanguage(), theShr5Package.getSprachfertigkeit(), null, "nativeLanguage", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_Sex(), this.getSex(), "sex", null, 1, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_StreetCred(), ecorePackage.getEInt(), "streetCred", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_Notoriety(), ecorePackage.getEInt(), "notoriety", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_NotorietyBasic(), ecorePackage.getEInt(), "notorietyBasic", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

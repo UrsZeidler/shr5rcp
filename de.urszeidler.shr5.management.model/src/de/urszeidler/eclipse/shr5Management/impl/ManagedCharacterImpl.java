@@ -40,11 +40,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getChracterSource <em>Chracter Source</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getInventar <em>Inventar</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getContracts <em>Contracts</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getSex <em>Sex</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getConnections <em>Connections</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getVehicels <em>Vehicels</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getChoosenLifestyle <em>Choosen Lifestyle</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getNativeLanguage <em>Native Language</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getSex <em>Sex</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getStreetCred <em>Street Cred</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getNotoriety <em>Notoriety</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getNotorietyBasic <em>Notoriety Basic</em>}</li>
@@ -103,26 +103,6 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
 	protected EList<Vertrag> contracts;
 
 	/**
-	 * The default value of the '{@link #getSex() <em>Sex</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getSex()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Sex SEX_EDEFAULT = Sex.FEMALE;
-
-	/**
-	 * The cached value of the '{@link #getSex() <em>Sex</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getSex()
-	 * @generated
-	 * @ordered
-	 */
-	protected Sex sex = SEX_EDEFAULT;
-
-	/**
      * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getConnections()
@@ -159,6 +139,26 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @ordered
      */
 	protected Sprachfertigkeit nativeLanguage;
+
+    /**
+	 * The default value of the '{@link #getSex() <em>Sex</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getSex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Sex SEX_EDEFAULT = Sex.FEMALE;
+
+    /**
+	 * The cached value of the '{@link #getSex() <em>Sex</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getSex()
+	 * @generated
+	 * @ordered
+	 */
+	protected Sex sex = SEX_EDEFAULT;
 
 	/**
      * The default value of the '{@link #getStreetCred() <em>Street Cred</em>}' attribute.
@@ -619,8 +619,6 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return getInventar();
             case Shr5managementPackage.MANAGED_CHARACTER__CONTRACTS:
                 return getContracts();
-            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
-                return getSex();
             case Shr5managementPackage.MANAGED_CHARACTER__CONNECTIONS:
                 return getConnections();
             case Shr5managementPackage.MANAGED_CHARACTER__VEHICELS:
@@ -631,6 +629,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__NATIVE_LANGUAGE:
                 if (resolve) return getNativeLanguage();
                 return basicGetNativeLanguage();
+            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
+                return getSex();
             case Shr5managementPackage.MANAGED_CHARACTER__STREET_CRED:
                 return getStreetCred();
             case Shr5managementPackage.MANAGED_CHARACTER__NOTORIETY:
@@ -671,9 +671,6 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 getContracts().clear();
                 getContracts().addAll((Collection<? extends Vertrag>)newValue);
                 return;
-            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
-                setSex((Sex)newValue);
-                return;
             case Shr5managementPackage.MANAGED_CHARACTER__CONNECTIONS:
                 getConnections().clear();
                 getConnections().addAll((Collection<? extends Connection>)newValue);
@@ -687,6 +684,9 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__NATIVE_LANGUAGE:
                 setNativeLanguage((Sprachfertigkeit)newValue);
+                return;
+            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
+                setSex((Sex)newValue);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__NOTORIETY_BASIC:
                 setNotorietyBasic((Integer)newValue);
@@ -720,9 +720,6 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__CONTRACTS:
                 getContracts().clear();
                 return;
-            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
-                setSex(SEX_EDEFAULT);
-                return;
             case Shr5managementPackage.MANAGED_CHARACTER__CONNECTIONS:
                 getConnections().clear();
                 return;
@@ -734,6 +731,9 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__NATIVE_LANGUAGE:
                 setNativeLanguage((Sprachfertigkeit)null);
+                return;
+            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
+                setSex(SEX_EDEFAULT);
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__NOTORIETY_BASIC:
                 setNotorietyBasic(NOTORIETY_BASIC_EDEFAULT);
@@ -762,8 +762,6 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return inventar != null && !inventar.isEmpty();
             case Shr5managementPackage.MANAGED_CHARACTER__CONTRACTS:
                 return contracts != null && !contracts.isEmpty();
-            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
-                return sex != SEX_EDEFAULT;
             case Shr5managementPackage.MANAGED_CHARACTER__CONNECTIONS:
                 return connections != null && !connections.isEmpty();
             case Shr5managementPackage.MANAGED_CHARACTER__VEHICELS:
@@ -772,6 +770,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return choosenLifestyle != null;
             case Shr5managementPackage.MANAGED_CHARACTER__NATIVE_LANGUAGE:
                 return nativeLanguage != null;
+            case Shr5managementPackage.MANAGED_CHARACTER__SEX:
+                return sex != SEX_EDEFAULT;
             case Shr5managementPackage.MANAGED_CHARACTER__STREET_CRED:
                 return getStreetCred() != STREET_CRED_EDEFAULT;
             case Shr5managementPackage.MANAGED_CHARACTER__NOTORIETY:
