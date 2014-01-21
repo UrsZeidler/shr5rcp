@@ -633,7 +633,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (persona == null)
             return true;
 
-        int allPoints = persona.getCharisma() * getShr5Generator().getCharismaToConnectionFactor();
+        int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(managedCharacter, getShr5Generator());
         int pointsSpend = ShadowrunManagmentTools.calcConnectionsSpend(managedCharacter);
 
         if (pointsSpend >= allPoints) {
