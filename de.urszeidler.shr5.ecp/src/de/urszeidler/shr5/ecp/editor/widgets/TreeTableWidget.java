@@ -113,9 +113,9 @@ public class TreeTableWidget extends Composite {
 		tltmNewItem_1.setText("remove");
 
 		EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(object.getClass(), feature);
-		EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, feature, null);
+		//EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, feature, null);
 		ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory,
-				treeAdvisor);
+				null);
 		//treeViewer.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
 		treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), feature, null) {
 			@Override
