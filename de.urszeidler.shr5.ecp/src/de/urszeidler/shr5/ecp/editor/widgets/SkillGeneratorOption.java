@@ -82,40 +82,40 @@ public class SkillGeneratorOption extends Composite {
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = 100;
+		gd_lblspend.widthHint = 120;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
 		lblspend.setText("New Label");
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = 100;
+		gd_lblleft.widthHint = 120;
 		lblleft.setLayoutData(gd_lblleft);
 		toolkit.adapt(lblleft, true, true);
 		lblleft.setText("New Label");
 		
 		lblgrpSpend = new Label(this, SWT.NONE);
 		GridData gd_lblgrpSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblgrpSpend.widthHint = 100;
+		gd_lblgrpSpend.widthHint = 120;
 		lblgrpSpend.setLayoutData(gd_lblgrpSpend);
 		toolkit.adapt(lblgrpSpend, true, true);
 		lblgrpSpend.setText("New Label");
 		
 		lblgrpLeft = new Label(this, SWT.NONE);
 		GridData gd_lblgrpLeft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblgrpLeft.widthHint = 100;
+		gd_lblgrpLeft.widthHint = 120;
 		lblgrpLeft.setLayoutData(gd_lblgrpLeft);
 		toolkit.adapt(lblgrpLeft, true, true);
 		lblgrpLeft.setText("New Label");
 		
 		lblKnowlegPoints = toolkit.createLabel(this, "New Label", SWT.NONE);
 		GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblKnowlegPoints.widthHint = 100;
+		gd_lblKnowlegPoints.widthHint = 120;
 		lblKnowlegPoints.setLayoutData(gd_lblKnowlegPoints);
 		
 		lblSpendKnowlegePoints = toolkit.createLabel(this, "New Label", SWT.NONE);
 		GridData gd_lblSpendKnowlegePoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblSpendKnowlegePoints.widthHint = 100;
+		gd_lblSpendKnowlegePoints.widthHint = 120;
 		lblSpendKnowlegePoints.setLayoutData(gd_lblSpendKnowlegePoints);
 		m_bindingContext = initDataBindings();
 		internalBinding(m_bindingContext);

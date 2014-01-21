@@ -316,7 +316,7 @@ public class PersonaUIToolkit {
 
 		createAttributeWidgetRO(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN,
 				Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN, client);
-		createAttributeWidgetRO(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS,
+		createAttributeWidget(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS,
 				Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS, client);
 
 		createAttributeWidgetRO(Shr5Package.Literals.PANZERUNG__PANZER, Shr5Package.Literals.PANZERUNG__PANZER, client);
