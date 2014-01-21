@@ -464,6 +464,16 @@ public class ManagedCharacterItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS,
+                 Shr5Factory.eINSTANCE.createSin()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS,
+                 Shr5Factory.eINSTANCE.createLizenz()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS,
                  Shr5managementFactory.eINSTANCE.createConnection()));
 
