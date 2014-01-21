@@ -65,6 +65,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
+import org.eclipse.emf.common.ui.DiagnosticComposite;
 
 /**
  * @author urs
@@ -145,6 +146,10 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     private Label lblConnectionleft;
     private ControlDecoration controlDecorationResources;
     private ControlDecoration controlDecorationKarma;
+    private Label lblConnectionPoints;
+    private ControlDecoration controlDecorationConnections;
+    private Composite compositeValidation;
+    private DiagnosticComposite diagnosticComposite;
 
     /**
      * Create the form page.
@@ -323,8 +328,12 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
 
         lblConnections = managedForm.getToolkit().createLabel(composite, "Connections", SWT.NONE);
 
+        lblConnectionPoints = managedForm.getToolkit().createLabel(composite, "New Label", SWT.NONE);
+        
+        controlDecorationConnections = new ControlDecoration(lblConnectionPoints, SWT.LEFT | SWT.TOP);
+        controlDecorationConnections.setDescriptionText("Some description");
+
         lblConnectionleft = managedForm.getToolkit().createLabel(composite, "connectionLeft", SWT.NONE);
-        new Label(composite, SWT.NONE);
 
         grpAttribute = new Group(composite_3, SWT.NONE);
         grpAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -371,7 +380,18 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
 
         controlDecorationMetaTyp = new ControlDecoration(grpMetatyp, SWT.RIGHT | SWT.TOP);
         new Label(composite_3, SWT.NONE);
-        // diagnosticComposite.setTextProvider(textProvider);
+        
+        
+        diagnosticComposite = new DiagnosticComposite(composite_3, SWT.NONE);
+        GridData gd_diagnosticComposite = new GridData(SWT.FILL, SWT.FILL, false, false, 3, 2);
+        gd_diagnosticComposite.heightHint = 70;
+        diagnosticComposite.setLayoutData(gd_diagnosticComposite);
+        // diagnosticComposite.setDetailText("tttt");
+        diagnosticComposite.setSeverityMask(Diagnostic.ERROR | Diagnostic.INFO | Diagnostic.WARNING);
+        diagnosticComposite.setShowRootDiagnostic(true);
+        diagnosticComposite.initialize(null);
+        managedForm.getToolkit().adapt(diagnosticComposite);
+        managedForm.getToolkit().paintBordersFor(diagnosticComposite);
 
         m_bindingContext = initDataBindings();
         // ----------
@@ -399,7 +419,6 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
             addPersonaPage(object.getCharacter());
         }
         validateChange();
-
     }
 
     @Override
@@ -480,6 +499,9 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
         grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
+        
+      diagnosticComposite.setDiagnostic(validate);
+      diagnosticComposite.update();
     }
 
     /**
@@ -543,7 +565,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
 
         addPersonaPage(playerCharacter);
         createOptionWidgets();
-        // validateChange();
+        validateChange();
     }
 
     private void addPersonaPage(ManagedCharacter playerCharacter) {
@@ -635,6 +657,22 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
                 if (object.getShr5Generator() == null || object.getCharacter() == null)
                     return "Spend : ---";
                 return "Spend : " + ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter());
+            }
+        });
+
+        bindingContext.bindValue(observeTextLblKarmaSpendObserveWidget, objectKarmaSpendObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+
+        // ----
+        observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblConnectionPoints);
+        objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.SHR5_GENERATOR__KARMA_SPEND);
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                if (object.getShr5Generator() == null || object.getCharacter() == null)
+                    return "---";
+                return "" + ShadowrunManagmentTools.calcConnectionsPoints(object.getCharacter(), object.getShr5Generator());
             }
         });
 
