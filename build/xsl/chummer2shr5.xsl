@@ -111,8 +111,9 @@
 	<xsl:template match="priorities">
 		<entries xsi:type="shr5:ShrList" name="generators">
 			<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system."
-				karmaToResourceFactor="5000" karmaToMagicFactor="5" karmaPoints="25"
-				knowlegeSkillFactor="2" numberOfMaxAttributes="1">
+				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" charismaToConnectionFactor="3"
+				maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" 
+				maxKarmaToKeep="7" numberOfMaxAttributes="1">
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />
 				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
