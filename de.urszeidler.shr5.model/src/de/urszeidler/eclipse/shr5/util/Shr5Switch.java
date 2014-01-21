@@ -797,6 +797,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.LIFESTYLE: {
                 Lifestyle lifestyle = (Lifestyle)theEObject;
                 T result = caseLifestyle(lifestyle);
+                if (result == null) result = caseIntervallVertrag(lifestyle);
                 if (result == null) result = caseVertrag(lifestyle);
                 if (result == null) result = caseBeschreibbar(lifestyle);
                 if (result == null) result = caseQuelle(lifestyle);
@@ -836,6 +837,48 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(critter);
                 if (result == null) result = caseModifizierbar(critter);
                 if (result == null) result = caseQuelle(critter);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.INTERVALL_VERTRAG: {
+                IntervallVertrag intervallVertrag = (IntervallVertrag)theEObject;
+                T result = caseIntervallVertrag(intervallVertrag);
+                if (result == null) result = caseVertrag(intervallVertrag);
+                if (result == null) result = caseBeschreibbar(intervallVertrag);
+                if (result == null) result = caseQuelle(intervallVertrag);
+                if (result == null) result = caseGeldWert(intervallVertrag);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SIN: {
+                Sin sin = (Sin)theEObject;
+                T result = caseSin(sin);
+                if (result == null) result = caseFakeable(sin);
+                if (result == null) result = caseVertrag(sin);
+                if (result == null) result = caseBeschreibbar(sin);
+                if (result == null) result = caseQuelle(sin);
+                if (result == null) result = caseGeldWert(sin);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.LIZENZ: {
+                Lizenz lizenz = (Lizenz)theEObject;
+                T result = caseLizenz(lizenz);
+                if (result == null) result = caseFakeable(lizenz);
+                if (result == null) result = caseVertrag(lizenz);
+                if (result == null) result = caseBeschreibbar(lizenz);
+                if (result == null) result = caseQuelle(lizenz);
+                if (result == null) result = caseGeldWert(lizenz);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FAKEABLE: {
+                Fakeable fakeable = (Fakeable)theEObject;
+                T result = caseFakeable(fakeable);
+                if (result == null) result = caseVertrag(fakeable);
+                if (result == null) result = caseBeschreibbar(fakeable);
+                if (result == null) result = caseQuelle(fakeable);
+                if (result == null) result = caseGeldWert(fakeable);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1950,6 +1993,66 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseCritter(Critter object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Intervall Vertrag</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Intervall Vertrag</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseIntervallVertrag(IntervallVertrag object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Sin</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Sin</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSin(Sin object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Lizenz</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Lizenz</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLizenz(Lizenz object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Fakeable</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fakeable</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseFakeable(Fakeable object) {
         return null;
     }
 

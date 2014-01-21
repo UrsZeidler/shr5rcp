@@ -483,11 +483,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initativeMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Echo" eSuperTypes="#//AbstraktModifikatoren"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Vertrag" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="faelligkeitsIntervall"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Lifestyle" eSuperTypes="#//Vertrag"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vertrag" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lifestyle" eSuperTypes="#//IntervallVertrag"/>
   <eClassifiers xsi:type="ecore:EClass" name="Wissensfertigkeit" eSuperTypes="#//Fertigkeit"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sprachfertigkeit" eSuperTypes="#//Wissensfertigkeit"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaZustand" abstract="true" interface="true">
@@ -502,5 +499,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="Critter" eSuperTypes="#//Spezies">
     <eStructuralFeatures xsi:type="ecore:EReference" name="kraefte" upperBound="-1"
         eType="#//CritterKraft" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntervallVertrag" abstract="true" eSuperTypes="#//Vertrag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="faelligkeitsIntervall"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sin" eSuperTypes="#//Fakeable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lizenz" eSuperTypes="#//Fakeable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lizenGegenstand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lizenzTraeger" lowerBound="1"
+        eType="#//Sin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fakeable" abstract="true" eSuperTypes="#//Vertrag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gefaelscht" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
 </ecore:EPackage>

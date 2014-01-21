@@ -427,6 +427,24 @@ public interface Shr5Factory extends EFactory {
     Critter createCritter();
 
     /**
+     * Returns a new object of class '<em>Sin</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Sin</em>'.
+     * @generated
+     */
+    Sin createSin();
+
+    /**
+     * Returns a new object of class '<em>Lizenz</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Lizenz</em>'.
+     * @generated
+     */
+    Lizenz createLizenz();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

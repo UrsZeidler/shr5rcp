@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LifestyleTest extends VertragTest {
+public class LifestyleTest extends IntervallVertragTest {
 
 	/**
      * <!-- begin-user-doc -->

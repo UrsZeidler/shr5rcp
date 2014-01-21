@@ -502,9 +502,7 @@
     <nested inputs="shr5.ecore#//Sprite" outputs="Shr5XMI.xsd#//Sprite;XSDElementDeclaration=66"/>
     <nested inputs="shr5.ecore#//Echo" outputs="Shr5XMI.xsd#//Echo;XSDComplexTypeDefinition=67"/>
     <nested inputs="shr5.ecore#//Echo" outputs="Shr5XMI.xsd#//Echo;XSDElementDeclaration=67"/>
-    <nested inputs="shr5.ecore#//Vertrag" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68">
-      <nested inputs="shr5.ecore#//Vertrag/faelligkeitsIntervall" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=4"/>
-    </nested>
+    <nested inputs="shr5.ecore#//Vertrag" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDParticle/XSDModelGroup/XSDParticle"/>
@@ -523,5 +521,22 @@
       <nested inputs="shr5.ecore#//Critter/kraefte" outputs="Shr5XMI.xsd#//Critter;XSDComplexTypeDefinition=73/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Critter" outputs="Shr5XMI.xsd#//Critter;XSDElementDeclaration=73"/>
+    <nested inputs="shr5.ecore#//IntervallVertrag" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74">
+      <nested inputs="shr5.ecore#//IntervallVertrag/faelligkeitsIntervall" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5.ecore#//IntervallVertrag" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDElementDeclaration=74"/>
+    <nested inputs="shr5.ecore#//Sin" outputs="Shr5XMI.xsd#//Sin;XSDComplexTypeDefinition=75"/>
+    <nested inputs="shr5.ecore#//Sin" outputs="Shr5XMI.xsd#//Sin;XSDElementDeclaration=75"/>
+    <nested inputs="shr5.ecore#//Lizenz" outputs="Shr5XMI.xsd#//Lizenz;XSDComplexTypeDefinition=76">
+      <nested inputs="shr5.ecore#//Lizenz/lizenGegenstand" outputs="Shr5XMI.xsd#//Lizenz;XSDComplexTypeDefinition=76/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Lizenz/lizenzTraeger" outputs="Shr5XMI.xsd#//Lizenz;XSDComplexTypeDefinition=76/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Lizenz/lizenzTraeger" outputs="Shr5XMI.xsd#//Lizenz;XSDComplexTypeDefinition=76/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Lizenz" outputs="Shr5XMI.xsd#//Lizenz;XSDElementDeclaration=76"/>
+    <nested inputs="shr5.ecore#//Fakeable" outputs="Shr5XMI.xsd#//Fakeable;XSDComplexTypeDefinition=77">
+      <nested inputs="shr5.ecore#//Fakeable/stufe" outputs="Shr5XMI.xsd#//Fakeable;XSDComplexTypeDefinition=77/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Fakeable/gefaelscht" outputs="Shr5XMI.xsd#//Fakeable;XSDComplexTypeDefinition=77/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Fakeable" outputs="Shr5XMI.xsd#//Fakeable;XSDElementDeclaration=77"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

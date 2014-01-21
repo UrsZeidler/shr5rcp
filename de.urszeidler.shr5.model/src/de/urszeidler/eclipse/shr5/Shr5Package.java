@@ -9803,22 +9803,13 @@ public interface Shr5Package extends EPackage {
 	int VERTRAG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
 	/**
-     * The feature id for the '<em><b>Faelligkeits Intervall</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int VERTRAG__FAELLIGKEITS_INTERVALL = BESCHREIBBAR_FEATURE_COUNT + 4;
-
-	/**
      * The number of structural features of the '<em>Vertrag</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
 	/**
      * The number of operations of the '<em>Vertrag</em>' class.
@@ -9830,6 +9821,106 @@ public interface Shr5Package extends EPackage {
 	int VERTRAG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl <em>Intervall Vertrag</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getIntervallVertrag()
+     * @generated
+     */
+    int INTERVALL_VERTRAG = 74;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__BESCHREIBUNG = VERTRAG__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__IMAGE = VERTRAG__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__NAME = VERTRAG__NAME;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__PAGE = VERTRAG__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__SRC_BOOK = VERTRAG__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__WERT = VERTRAG__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__VERFUEGBARKEIT = VERTRAG__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Faelligkeits Intervall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL = VERTRAG_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Intervall Vertrag</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG_FEATURE_COUNT = VERTRAG_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Intervall Vertrag</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG_OPERATION_COUNT = VERTRAG_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl <em>Lifestyle</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9846,7 +9937,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__BESCHREIBUNG = VERTRAG__BESCHREIBUNG;
+	int LIFESTYLE__BESCHREIBUNG = INTERVALL_VERTRAG__BESCHREIBUNG;
 
 	/**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -9855,7 +9946,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__IMAGE = VERTRAG__IMAGE;
+	int LIFESTYLE__IMAGE = INTERVALL_VERTRAG__IMAGE;
 
 	/**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9864,7 +9955,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__NAME = VERTRAG__NAME;
+	int LIFESTYLE__NAME = INTERVALL_VERTRAG__NAME;
 
 	/**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -9873,7 +9964,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__PAGE = VERTRAG__PAGE;
+	int LIFESTYLE__PAGE = INTERVALL_VERTRAG__PAGE;
 
 	/**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -9882,7 +9973,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__SRC_BOOK = VERTRAG__SRC_BOOK;
+	int LIFESTYLE__SRC_BOOK = INTERVALL_VERTRAG__SRC_BOOK;
 
 	/**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -9891,7 +9982,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__WERT = VERTRAG__WERT;
+	int LIFESTYLE__WERT = INTERVALL_VERTRAG__WERT;
 
 	/**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -9900,7 +9991,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__VERFUEGBARKEIT = VERTRAG__VERFUEGBARKEIT;
+	int LIFESTYLE__VERFUEGBARKEIT = INTERVALL_VERTRAG__VERFUEGBARKEIT;
 
 	/**
      * The feature id for the '<em><b>Faelligkeits Intervall</b></em>' attribute.
@@ -9909,7 +10000,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE__FAELLIGKEITS_INTERVALL = VERTRAG__FAELLIGKEITS_INTERVALL;
+	int LIFESTYLE__FAELLIGKEITS_INTERVALL = INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL;
 
 	/**
      * The number of structural features of the '<em>Lifestyle</em>' class.
@@ -9918,7 +10009,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE_FEATURE_COUNT = VERTRAG_FEATURE_COUNT + 0;
+	int LIFESTYLE_FEATURE_COUNT = INTERVALL_VERTRAG_FEATURE_COUNT + 0;
 
 	/**
      * The number of operations of the '<em>Lifestyle</em>' class.
@@ -9927,7 +10018,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int LIFESTYLE_OPERATION_COUNT = VERTRAG_OPERATION_COUNT + 0;
+	int LIFESTYLE_OPERATION_COUNT = INTERVALL_VERTRAG_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WissensfertigkeitImpl <em>Wissensfertigkeit</em>}' class.
@@ -10537,6 +10628,351 @@ public interface Shr5Package extends EPackage {
     int CRITTER_OPERATION_COUNT = SPEZIES_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FakeableImpl <em>Fakeable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FakeableImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFakeable()
+     * @generated
+     */
+    int FAKEABLE = 77;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__BESCHREIBUNG = VERTRAG__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__IMAGE = VERTRAG__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__NAME = VERTRAG__NAME;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__PAGE = VERTRAG__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__SRC_BOOK = VERTRAG__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__WERT = VERTRAG__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__VERFUEGBARKEIT = VERTRAG__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__STUFE = VERTRAG_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Gefaelscht</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__GEFAELSCHT = VERTRAG_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Fakeable</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE_FEATURE_COUNT = VERTRAG_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Fakeable</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE_OPERATION_COUNT = VERTRAG_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SinImpl <em>Sin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SinImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSin()
+     * @generated
+     */
+    int SIN = 75;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__BESCHREIBUNG = FAKEABLE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__IMAGE = FAKEABLE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__NAME = FAKEABLE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__PAGE = FAKEABLE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__SRC_BOOK = FAKEABLE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__WERT = FAKEABLE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__VERFUEGBARKEIT = FAKEABLE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__STUFE = FAKEABLE__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Gefaelscht</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__GEFAELSCHT = FAKEABLE__GEFAELSCHT;
+
+    /**
+     * The number of structural features of the '<em>Sin</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN_FEATURE_COUNT = FAKEABLE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Sin</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN_OPERATION_COUNT = FAKEABLE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl <em>Lizenz</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.LizenzImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLizenz()
+     * @generated
+     */
+    int LIZENZ = 76;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__BESCHREIBUNG = FAKEABLE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__IMAGE = FAKEABLE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__NAME = FAKEABLE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__PAGE = FAKEABLE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__SRC_BOOK = FAKEABLE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__WERT = FAKEABLE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__VERFUEGBARKEIT = FAKEABLE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__STUFE = FAKEABLE__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Gefaelscht</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__GEFAELSCHT = FAKEABLE__GEFAELSCHT;
+
+    /**
+     * The feature id for the '<em><b>Lizen Gegenstand</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__LIZEN_GEGENSTAND = FAKEABLE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Lizenz Traeger</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__LIZENZ_TRAEGER = FAKEABLE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Lizenz</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ_FEATURE_COUNT = FAKEABLE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Lizenz</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ_OPERATION_COUNT = FAKEABLE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10544,7 +10980,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 74;
+	int FEUER_MODUS = 78;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -10554,7 +10990,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 75;
+	int SCHADENS_TYP = 79;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -10564,7 +11000,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 76;
+	int MAGAZIN_TYP = 80;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -10574,7 +11010,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 77;
+	int FEUWERWAFFEN_ERWEITERUNG = 81;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -10584,7 +11020,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 78;
+	int MODIFIKATOR_TYPE = 82;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -10594,7 +11030,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 79;
+	int SMARTGUN_TYPE = 83;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -10604,7 +11040,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 80;
+	int ZAUBER_ART = 84;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -10614,7 +11050,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 81;
+	int ZAUBER_REICHWEITE = 85;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -10624,7 +11060,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 82;
+	int ZAUBER_DAUER = 86;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -10634,7 +11070,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 83;
+	int MAGISCHE_TRADITION = 87;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -10644,7 +11080,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 84;
+	int CRITTER_HANDLUNG = 88;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -10654,7 +11090,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 85;
+	int CRITTER_REICHWEITE = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -10664,7 +11100,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 86;
+	int CRITTER_DAUER = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -10674,7 +11110,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 87;
+	int RESONANZ_ZIEL = 91;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -10684,7 +11120,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 88;
+	int SHR_DATE = 92;
 
 
 	/**
@@ -10695,7 +11131,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 89;
+	int MODIFICATION_MANAGER = 93;
 
 
 	/**
@@ -13512,17 +13948,6 @@ public interface Shr5Package extends EPackage {
 	EClass getVertrag();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Vertrag#getFaelligkeitsIntervall <em>Faelligkeits Intervall</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Faelligkeits Intervall</em>'.
-     * @see de.urszeidler.eclipse.shr5.Vertrag#getFaelligkeitsIntervall()
-     * @see #getVertrag()
-     * @generated
-     */
-	EAttribute getVertrag_FaelligkeitsIntervall();
-
-	/**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Lifestyle <em>Lifestyle</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13615,6 +14040,101 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EReference getCritter_Kraefte();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.IntervallVertrag <em>Intervall Vertrag</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Intervall Vertrag</em>'.
+     * @see de.urszeidler.eclipse.shr5.IntervallVertrag
+     * @generated
+     */
+    EClass getIntervallVertrag();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.IntervallVertrag#getFaelligkeitsIntervall <em>Faelligkeits Intervall</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Faelligkeits Intervall</em>'.
+     * @see de.urszeidler.eclipse.shr5.IntervallVertrag#getFaelligkeitsIntervall()
+     * @see #getIntervallVertrag()
+     * @generated
+     */
+    EAttribute getIntervallVertrag_FaelligkeitsIntervall();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Sin <em>Sin</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Sin</em>'.
+     * @see de.urszeidler.eclipse.shr5.Sin
+     * @generated
+     */
+    EClass getSin();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Lizenz <em>Lizenz</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Lizenz</em>'.
+     * @see de.urszeidler.eclipse.shr5.Lizenz
+     * @generated
+     */
+    EClass getLizenz();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Lizenz#getLizenGegenstand <em>Lizen Gegenstand</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Lizen Gegenstand</em>'.
+     * @see de.urszeidler.eclipse.shr5.Lizenz#getLizenGegenstand()
+     * @see #getLizenz()
+     * @generated
+     */
+    EAttribute getLizenz_LizenGegenstand();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Lizenz#getLizenzTraeger <em>Lizenz Traeger</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Lizenz Traeger</em>'.
+     * @see de.urszeidler.eclipse.shr5.Lizenz#getLizenzTraeger()
+     * @see #getLizenz()
+     * @generated
+     */
+    EReference getLizenz_LizenzTraeger();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Fakeable <em>Fakeable</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Fakeable</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fakeable
+     * @generated
+     */
+    EClass getFakeable();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Fakeable#getStufe <em>Stufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Stufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fakeable#getStufe()
+     * @see #getFakeable()
+     * @generated
+     */
+    EAttribute getFakeable_Stufe();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Fakeable#isGefaelscht <em>Gefaelscht</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Gefaelscht</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fakeable#isGefaelscht()
+     * @see #getFakeable()
+     * @generated
+     */
+    EAttribute getFakeable_Gefaelscht();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
@@ -16036,14 +16556,6 @@ public interface Shr5Package extends EPackage {
 		EClass VERTRAG = eINSTANCE.getVertrag();
 
 		/**
-         * The meta object literal for the '<em><b>Faelligkeits Intervall</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute VERTRAG__FAELLIGKEITS_INTERVALL = eINSTANCE.getVertrag_FaelligkeitsIntervall();
-
-		/**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl <em>Lifestyle</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -16124,6 +16636,86 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference CRITTER__KRAEFTE = eINSTANCE.getCritter_Kraefte();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl <em>Intervall Vertrag</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getIntervallVertrag()
+         * @generated
+         */
+        EClass INTERVALL_VERTRAG = eINSTANCE.getIntervallVertrag();
+
+        /**
+         * The meta object literal for the '<em><b>Faelligkeits Intervall</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL = eINSTANCE.getIntervallVertrag_FaelligkeitsIntervall();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SinImpl <em>Sin</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SinImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSin()
+         * @generated
+         */
+        EClass SIN = eINSTANCE.getSin();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl <em>Lizenz</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.LizenzImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLizenz()
+         * @generated
+         */
+        EClass LIZENZ = eINSTANCE.getLizenz();
+
+        /**
+         * The meta object literal for the '<em><b>Lizen Gegenstand</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIZENZ__LIZEN_GEGENSTAND = eINSTANCE.getLizenz_LizenGegenstand();
+
+        /**
+         * The meta object literal for the '<em><b>Lizenz Traeger</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIZENZ__LIZENZ_TRAEGER = eINSTANCE.getLizenz_LizenzTraeger();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.FakeableImpl <em>Fakeable</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.FakeableImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFakeable()
+         * @generated
+         */
+        EClass FAKEABLE = eINSTANCE.getFakeable();
+
+        /**
+         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FAKEABLE__STUFE = eINSTANCE.getFakeable_Stufe();
+
+        /**
+         * The meta object literal for the '<em><b>Gefaelscht</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FAKEABLE__GEFAELSCHT = eINSTANCE.getFakeable_Gefaelscht();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

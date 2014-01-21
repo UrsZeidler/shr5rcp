@@ -1106,6 +1106,52 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sin} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SinItemProvider sinItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sin}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSinAdapter() {
+        if (sinItemProvider == null) {
+            sinItemProvider = new SinItemProvider(this);
+        }
+
+        return sinItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lizenz} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LizenzItemProvider lizenzItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lizenz}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLizenzAdapter() {
+        if (lizenzItemProvider == null) {
+            lizenzItemProvider = new LizenzItemProvider(this);
+        }
+
+        return lizenzItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1249,6 +1295,8 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (wissensfertigkeitItemProvider != null) wissensfertigkeitItemProvider.dispose();
         if (sprachfertigkeitItemProvider != null) sprachfertigkeitItemProvider.dispose();
         if (critterItemProvider != null) critterItemProvider.dispose();
+        if (sinItemProvider != null) sinItemProvider.dispose();
+        if (lizenzItemProvider != null) lizenzItemProvider.dispose();
     }
 
 }

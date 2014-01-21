@@ -13,5 +13,5 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Lifestyle extends Vertrag {
+public interface Lifestyle extends IntervallVertrag {
 } // Lifestyle

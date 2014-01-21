@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Echo;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
+import de.urszeidler.eclipse.shr5.Fakeable;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -46,6 +47,7 @@ import de.urszeidler.eclipse.shr5.GegenstandStufen;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Kleidung;
@@ -54,6 +56,7 @@ import de.urszeidler.eclipse.shr5.KoerperlicheAttribute;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.Lizenz;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
 import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.MagischeMods;
@@ -86,6 +89,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Sichtverhaeltnisse;
+import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.SmartgunType;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.SpezielleAttribute;
@@ -626,6 +630,34 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass critterEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass intervallVertragEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass sinEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass lizenzEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass fakeableEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3163,15 +3195,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getVertrag_FaelligkeitsIntervall() {
-        return (EAttribute)vertragEClass.getEStructuralFeatures().get(0);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	public EClass getLifestyle() {
         return lifestyleEClass;
     }
@@ -3246,6 +3269,87 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EReference getCritter_Kraefte() {
         return (EReference)critterEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getIntervallVertrag() {
+        return intervallVertragEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getIntervallVertrag_FaelligkeitsIntervall() {
+        return (EAttribute)intervallVertragEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSin() {
+        return sinEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLizenz() {
+        return lizenzEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLizenz_LizenGegenstand() {
+        return (EAttribute)lizenzEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLizenz_LizenzTraeger() {
+        return (EReference)lizenzEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getFakeable() {
+        return fakeableEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFakeable_Stufe() {
+        return (EAttribute)fakeableEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFakeable_Gefaelscht() {
+        return (EAttribute)fakeableEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3750,7 +3854,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         echoEClass = createEClass(ECHO);
 
         vertragEClass = createEClass(VERTRAG);
-        createEAttribute(vertragEClass, VERTRAG__FAELLIGKEITS_INTERVALL);
 
         lifestyleEClass = createEClass(LIFESTYLE);
 
@@ -3765,6 +3868,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         critterEClass = createEClass(CRITTER);
         createEReference(critterEClass, CRITTER__KRAEFTE);
+
+        intervallVertragEClass = createEClass(INTERVALL_VERTRAG);
+        createEAttribute(intervallVertragEClass, INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL);
+
+        sinEClass = createEClass(SIN);
+
+        lizenzEClass = createEClass(LIZENZ);
+        createEAttribute(lizenzEClass, LIZENZ__LIZEN_GEGENSTAND);
+        createEReference(lizenzEClass, LIZENZ__LIZENZ_TRAEGER);
+
+        fakeableEClass = createEClass(FAKEABLE);
+        createEAttribute(fakeableEClass, FAKEABLE__STUFE);
+        createEAttribute(fakeableEClass, FAKEABLE__GEFAELSCHT);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -3896,10 +4012,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         vertragEClass.getESuperTypes().add(this.getBeschreibbar());
         vertragEClass.getESuperTypes().add(this.getQuelle());
         vertragEClass.getESuperTypes().add(this.getGeldWert());
-        lifestyleEClass.getESuperTypes().add(this.getVertrag());
+        lifestyleEClass.getESuperTypes().add(this.getIntervallVertrag());
         wissensfertigkeitEClass.getESuperTypes().add(this.getFertigkeit());
         sprachfertigkeitEClass.getESuperTypes().add(this.getWissensfertigkeit());
         critterEClass.getESuperTypes().add(this.getSpezies());
+        intervallVertragEClass.getESuperTypes().add(this.getVertrag());
+        sinEClass.getESuperTypes().add(this.getFakeable());
+        lizenzEClass.getESuperTypes().add(this.getFakeable());
+        fakeableEClass.getESuperTypes().add(this.getVertrag());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4232,7 +4352,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(echoEClass, Echo.class, "Echo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(vertragEClass, Vertrag.class, "Vertrag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getVertrag_FaelligkeitsIntervall(), ecorePackage.getEInt(), "faelligkeitsIntervall", null, 0, 1, Vertrag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(lifestyleEClass, Lifestyle.class, "Lifestyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4247,6 +4366,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(critterEClass, Critter.class, "Critter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCritter_Kraefte(), this.getCritterKraft(), null, "kraefte", null, 0, -1, Critter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(intervallVertragEClass, IntervallVertrag.class, "IntervallVertrag", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getIntervallVertrag_FaelligkeitsIntervall(), ecorePackage.getEInt(), "faelligkeitsIntervall", null, 0, 1, IntervallVertrag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(sinEClass, Sin.class, "Sin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(lizenzEClass, Lizenz.class, "Lizenz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getLizenz_LizenGegenstand(), ecorePackage.getEString(), "lizenGegenstand", null, 0, 1, Lizenz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getLizenz_LizenzTraeger(), this.getSin(), null, "lizenzTraeger", null, 1, 1, Lizenz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(fakeableEClass, Fakeable.class, "Fakeable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getFakeable_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, Fakeable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getFakeable_Gefaelscht(), ecorePackage.getEBoolean(), "gefaelscht", null, 0, 1, Fakeable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

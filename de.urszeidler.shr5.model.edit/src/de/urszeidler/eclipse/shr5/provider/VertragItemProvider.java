@@ -67,7 +67,6 @@ public class VertragItemProvider
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
-            addFaelligkeitsIntervallPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -227,28 +226,6 @@ public class VertragItemProvider
     }
 
 	/**
-     * This adds a property descriptor for the Faelligkeits Intervall feature.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	protected void addFaelligkeitsIntervallPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Vertrag_faelligkeitsIntervall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Vertrag_faelligkeitsIntervall_feature", "_UI_Vertrag_type"),
-                 Shr5Package.Literals.VERTRAG__FAELLIGKEITS_INTERVALL,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
-    }
-
-	/**
      * This returns Vertrag.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -291,7 +268,6 @@ public class VertragItemProvider
             case Shr5Package.VERTRAG__PAGE:
             case Shr5Package.VERTRAG__WERT:
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:
-            case Shr5Package.VERTRAG__FAELLIGKEITS_INTERVALL:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

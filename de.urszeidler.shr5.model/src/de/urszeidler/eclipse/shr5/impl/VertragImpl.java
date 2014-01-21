@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getFaelligkeitsIntervall <em>Faelligkeits Intervall</em>}</li>
  * </ul>
  * </p>
  *
@@ -168,26 +167,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
      * @ordered
      */
 	protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
-
-	/**
-     * The default value of the '{@link #getFaelligkeitsIntervall() <em>Faelligkeits Intervall</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getFaelligkeitsIntervall()
-     * @generated
-     * @ordered
-     */
-	protected static final int FAELLIGKEITS_INTERVALL_EDEFAULT = 0;
-
-	/**
-     * The cached value of the '{@link #getFaelligkeitsIntervall() <em>Faelligkeits Intervall</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getFaelligkeitsIntervall()
-     * @generated
-     * @ordered
-     */
-	protected int faelligkeitsIntervall = FAELLIGKEITS_INTERVALL_EDEFAULT;
 
 	/**
      * <!-- begin-user-doc -->
@@ -377,27 +356,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getFaelligkeitsIntervall() {
-        return faelligkeitsIntervall;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public void setFaelligkeitsIntervall(int newFaelligkeitsIntervall) {
-        int oldFaelligkeitsIntervall = faelligkeitsIntervall;
-        faelligkeitsIntervall = newFaelligkeitsIntervall;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.VERTRAG__FAELLIGKEITS_INTERVALL, oldFaelligkeitsIntervall, faelligkeitsIntervall));
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
@@ -416,8 +374,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
                 return getWert();
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:
                 return getVerfuegbarkeit();
-            case Shr5Package.VERTRAG__FAELLIGKEITS_INTERVALL:
-                return getFaelligkeitsIntervall();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -450,9 +406,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
                 return;
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:
                 setVerfuegbarkeit((String)newValue);
-                return;
-            case Shr5Package.VERTRAG__FAELLIGKEITS_INTERVALL:
-                setFaelligkeitsIntervall((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -487,9 +440,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:
                 setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
                 return;
-            case Shr5Package.VERTRAG__FAELLIGKEITS_INTERVALL:
-                setFaelligkeitsIntervall(FAELLIGKEITS_INTERVALL_EDEFAULT);
-                return;
         }
         super.eUnset(featureID);
     }
@@ -516,8 +466,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
                 return WERT_EDEFAULT == null ? wert != null : !WERT_EDEFAULT.equals(wert);
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
-            case Shr5Package.VERTRAG__FAELLIGKEITS_INTERVALL:
-                return faelligkeitsIntervall != FAELLIGKEITS_INTERVALL_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -592,8 +540,6 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
         result.append(wert);
         result.append(", verfuegbarkeit: ");
         result.append(verfuegbarkeit);
-        result.append(", faelligkeitsIntervall: ");
-        result.append(faelligkeitsIntervall);
         result.append(')');
         return result.toString();
     }

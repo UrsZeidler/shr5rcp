@@ -156,6 +156,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.WISSENSFERTIGKEIT: return createWissensfertigkeit();
             case Shr5Package.SPRACHFERTIGKEIT: return createSprachfertigkeit();
             case Shr5Package.CRITTER: return createCritter();
+            case Shr5Package.SIN: return createSin();
+            case Shr5Package.LIZENZ: return createLizenz();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -695,6 +697,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Critter createCritter() {
         CritterImpl critter = new CritterImpl();
         return critter;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Sin createSin() {
+        SinImpl sin = new SinImpl();
+        return sin;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Lizenz createLizenz() {
+        LizenzImpl lizenz = new LizenzImpl();
+        return lizenz;
     }
 
     /**

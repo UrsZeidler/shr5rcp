@@ -903,14 +903,13 @@
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="wert" type="xsd:string"/>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string"/>
-        <xsd:attribute name="faelligkeitsIntervall" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Vertrag" type="shr5:Vertrag"/>
   <xsd:complexType name="Lifestyle">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Vertrag"/>
+      <xsd:extension base="shr5:IntervallVertrag"/>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Lifestyle" type="shr5:Lifestyle"/>
@@ -944,4 +943,39 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Critter" type="shr5:Critter"/>
+  <xsd:complexType abstract="true" name="IntervallVertrag">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Vertrag">
+        <xsd:attribute name="faelligkeitsIntervall" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IntervallVertrag" type="shr5:IntervallVertrag"/>
+  <xsd:complexType name="Sin">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fakeable"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Sin" type="shr5:Sin"/>
+  <xsd:complexType name="Lizenz">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fakeable">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="lizenzTraeger" type="shr5:Sin"/>
+        </xsd:choice>
+        <xsd:attribute name="lizenGegenstand" type="xsd:string"/>
+        <xsd:attribute name="lizenzTraeger" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Lizenz" type="shr5:Lizenz"/>
+  <xsd:complexType abstract="true" name="Fakeable">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Vertrag">
+        <xsd:attribute name="stufe" type="xsd:int"/>
+        <xsd:attribute name="gefaelscht" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Fakeable" type="shr5:Fakeable"/>
 </xsd:schema>

@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class LifestyleImpl extends VertragImpl implements Lifestyle {
+public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

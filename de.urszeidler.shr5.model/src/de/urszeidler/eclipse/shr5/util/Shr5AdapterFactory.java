@@ -430,6 +430,22 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createCritterAdapter();
             }
             @Override
+            public Adapter caseIntervallVertrag(IntervallVertrag object) {
+                return createIntervallVertragAdapter();
+            }
+            @Override
+            public Adapter caseSin(Sin object) {
+                return createSinAdapter();
+            }
+            @Override
+            public Adapter caseLizenz(Lizenz object) {
+                return createLizenzAdapter();
+            }
+            @Override
+            public Adapter caseFakeable(Fakeable object) {
+                return createFakeableAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1482,6 +1498,62 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCritterAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.IntervallVertrag <em>Intervall Vertrag</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.IntervallVertrag
+     * @generated
+     */
+    public Adapter createIntervallVertragAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Sin <em>Sin</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Sin
+     * @generated
+     */
+    public Adapter createSinAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Lizenz <em>Lizenz</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Lizenz
+     * @generated
+     */
+    public Adapter createLizenzAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Fakeable <em>Fakeable</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Fakeable
+     * @generated
+     */
+    public Adapter createFakeableAdapter() {
         return null;
     }
 
