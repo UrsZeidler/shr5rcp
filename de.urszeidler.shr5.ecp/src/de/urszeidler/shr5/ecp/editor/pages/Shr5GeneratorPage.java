@@ -3,27 +3,20 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -32,7 +25,6 @@ import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -49,12 +41,9 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
-import org.eclipse.wb.swt.ResourceManager;
 
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -72,83 +61,10 @@ import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
 
-import org.eclipse.emf.common.ui.DiagnosticComposite;
-
 /**
  * @author urs
  */
-public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
-    
-    /**
-     * Provides the lables for the validation chain.
-     */
-    public class ValidationLabelProvider implements SubstitutionLabelProvider {
-
-        /*
-         * (non-Javadoc)
-         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getObjectLabel(org.eclipse.emf.ecore.EObject)
-         */
-        @Override
-        public String getObjectLabel(EObject eObject) {
-            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(eObject);
-        }
-
-        /*
-         * (non-Javadoc)
-         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getFeatureLabel(org.eclipse.emf.ecore.EStructuralFeature)
-         */
-        @Override
-        public String getFeatureLabel(EStructuralFeature eStructuralFeature) {
-            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(eStructuralFeature);
-        }
-
-        /*
-         * (non-Javadoc)
-         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getValueLabel(org.eclipse.emf.ecore.EDataType, java.lang.Object)
-         */
-        @Override
-        public String getValueLabel(EDataType eDataType, Object value) {
-            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(value);
-        }
-    }
-
-    /**
-     * The listner.
-     * 
-     * @author urs
-     */
-    private final class AdapterImplementation implements Adapter {
-
-        public Notifier getTarget() {
-            return null;
-        }
-
-        public boolean isAdapterForType(Object type) {
-            return false;
-        }
-
-        public void notifyChanged(Notification notification) {
-            Object feature = notification.getFeature();
-            // System.out.println(notification);
-            if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE.equals(feature))
-                return;
-            if (Shr5managementPackage.Literals.SHR5_GENERATOR__KARMA_TO_RESOURCE.equals(feature))
-                return;
-            if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__CURRENT_INSTRUCTION.equals(feature))
-                return;
-
-            if (feature == null)
-                return;
-            validateChange();
-
-        }
-
-        @Override
-        public void setTarget(Notifier newTarget) {
-
-        }
-    }
-
+public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private Shr5Generator object;
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
@@ -160,7 +76,6 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     private Composite grpAuswahl;
     private Composite grpTyp;
     private Composite composite_group;
-    private AdapterImplementation listner;
     private ToolItem tltmChoose;
     private ToolItem tltmCommit;
     private Button btnRadioButton;
@@ -185,7 +100,6 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     private ControlDecoration controlDecorationSkills;
     private ControlDecoration controlDecorationMagic;
     private ControlDecoration controlDecorationMetaTyp;
-    private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif");
     private Set<Integer> oldSet;
     private Label lblConnections;
     private Label lblConnectionleft;
@@ -195,7 +109,6 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     private ControlDecoration controlDecorationConnections;
     private Composite compositeValidation;
     private DiagnosticComposite diagnosticComposite;
-    private Map<Object, Object> context;
 
     /**
      * Create the form page.
@@ -269,7 +182,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         restItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                resetCharacter();
+                resetCharacter(object);
             }
         });
         restItem.setText("reset");
@@ -458,9 +371,9 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
         managedForm.reflow(true);
-        listner = new AdapterImplementation();
-        if (!object.eAdapters().contains(listner))
-            object.eAdapters().add(listner);
+        //listner = new AdapterImplementation();
+        if (!object.eAdapters().contains(this))
+            object.eAdapters().add(this);
         if (object.getCharacter() != null && object.getCharacter().getPersona() != null) {
             addPersonaPage(object.getCharacter());
         }
@@ -470,25 +383,9 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     @Override
     public void dispose() {
         if (object != null)
-            object.eAdapters().remove(listner);
+            object.eAdapters().remove(this);
 
         super.dispose();
-    }
-
-    /**
-     * Clears the character from the generator.
-     */
-    protected void resetCharacter() {
-        if (object.getSelectedGroup() != null)
-            object.getSelectedGroup().getMembers().remove(object.getCharacter());
-
-        ManagedCharacter character = object.getCharacter();
-        if (character != null)
-            character.setChracterSource(null);
-
-        object.setCharacter(null);
-        object.setState(GeneratorState.NEW);
-        validateChange();
     }
 
     /**
@@ -504,7 +401,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
             sctnCreate.setEnabled(false);
             return;
         }
-        
+
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
         Set<Integer> newSet = new HashSet<Integer>();
 
@@ -550,12 +447,6 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         diagnosticComposite.update();
     }
 
-    private Map<Object, Object> createValidationContext() {
-        Map<Object, Object> context = new HashMap<Object, Object>();
-        context.put(SubstitutionLabelProvider.class, new ValidationLabelProvider());
-        return context;
-    }
-
     /**
      * Update the decorators.
      * 
@@ -572,26 +463,8 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
                 "Not all attributes spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
                 "Not all resource points spend.");
-    }
-
-    /**
-     * Update the given decorator with the given text when the feature is in the set.
-     * 
-     * @param newSet
-     * @param featureID
-     * @param decoration
-     * @param textToShow
-     */
-    private void updateDecorator(Set<Integer> newSet, Object featureID, ControlDecoration decoration, String textToShow) {
-        if (newSet.contains(featureID)) {
-            decoration.setDescriptionText(textToShow);
-            decoration.setImage(decoratorImage);
-            decoration.setShowHover(true);
-            decoration.showHoverText(textToShow);
-        } else if (decoration.getImage() != null) {
-            decoration.setDescriptionText("");
-            decoration.setImage(null);
-        }
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_CONNECTION_POINTS, controlDecorationConnections,
+                "Not all Connection points spend.");
     }
 
     private void createManagedCharacter() {
@@ -600,20 +473,8 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         EClass selectableType = magic.getSelectableTypes();
         Spezies spezies = metaType.getChoosableTypes();
         ManagedCharacter playerCharacter;
-        if (btnRadioButton.getSelection())
-            playerCharacter = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
-        else
-            playerCharacter = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
-
-        int edge = 0;// metaType.getSpecialPoints();
-
-        AbstraktPersona persona = ShadowrunTools.createPersona(spezies, selectableType, edge);
-        playerCharacter.setPersona(persona);
-        persona.setName(object.getCharacterName());
-
-        object.setState(GeneratorState.PERSONA_CREATED);
-        object.getSelectedGroup().getMembers().add(playerCharacter);
-        object.setCharacter(playerCharacter);
+        boolean createPlayer = btnRadioButton.getSelection();
+        playerCharacter = createManagedCharacter(selectableType, spezies, createPlayer, object);
 
         addPersonaPage(playerCharacter);
         createOptionWidgets();
@@ -767,5 +628,16 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         //
         //
         return bindingContext;
+    }
+
+    /**
+     * Some events we do not need.
+     */
+    @Override
+    protected boolean notificationIsRequierd(Notification notification) {
+        Object feature = notification.getFeature();
+        if (Shr5managementPackage.Literals.SHR5_GENERATOR__KARMA_TO_RESOURCE.equals(feature))
+            return false;
+        return true;
     }
 }
