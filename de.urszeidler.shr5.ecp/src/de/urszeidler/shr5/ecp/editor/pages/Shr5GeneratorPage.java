@@ -3,8 +3,10 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -18,6 +20,10 @@ import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -65,13 +71,52 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
+
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 
 /**
  * @author urs
  */
 public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
+    
+    /**
+     * Provides the lables for the validation chain.
+     */
+    public class ValidationLabelProvider implements SubstitutionLabelProvider {
 
+        /*
+         * (non-Javadoc)
+         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getObjectLabel(org.eclipse.emf.ecore.EObject)
+         */
+        @Override
+        public String getObjectLabel(EObject eObject) {
+            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(eObject);
+        }
+
+        /*
+         * (non-Javadoc)
+         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getFeatureLabel(org.eclipse.emf.ecore.EStructuralFeature)
+         */
+        @Override
+        public String getFeatureLabel(EStructuralFeature eStructuralFeature) {
+            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(eStructuralFeature);
+        }
+
+        /*
+         * (non-Javadoc)
+         * @see org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider#getValueLabel(org.eclipse.emf.ecore.EDataType, java.lang.Object)
+         */
+        @Override
+        public String getValueLabel(EDataType eDataType, Object value) {
+            return AdapterFactoryUtil.getInstance().getLabelProvider().getText(value);
+        }
+    }
+
+    /**
+     * The listner.
+     * 
+     * @author urs
+     */
     private final class AdapterImplementation implements Adapter {
 
         public Notifier getTarget() {
@@ -150,6 +195,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     private ControlDecoration controlDecorationConnections;
     private Composite compositeValidation;
     private DiagnosticComposite diagnosticComposite;
+    private Map<Object, Object> context;
 
     /**
      * Create the form page.
@@ -164,6 +210,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
     public Shr5GeneratorPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
         object = Shr5managementFactory.eINSTANCE.createShr5Generator();
+        context = createValidationContext();
     }
 
     /**
@@ -180,7 +227,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         super(editor, id, title, manager);
         this.object = object;
         this.editingDomain = editingDomain;
-
+        context = createValidationContext();
     }
 
     /**
@@ -329,7 +376,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         lblConnections = managedForm.getToolkit().createLabel(composite, "Connections", SWT.NONE);
 
         lblConnectionPoints = managedForm.getToolkit().createLabel(composite, "New Label", SWT.NONE);
-        
+
         controlDecorationConnections = new ControlDecoration(lblConnectionPoints, SWT.LEFT | SWT.TOP);
         controlDecorationConnections.setDescriptionText("Some description");
 
@@ -380,8 +427,7 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
 
         controlDecorationMetaTyp = new ControlDecoration(grpMetatyp, SWT.RIGHT | SWT.TOP);
         new Label(composite_3, SWT.NONE);
-        
-        
+
         diagnosticComposite = new DiagnosticComposite(composite_3, SWT.NONE);
         GridData gd_diagnosticComposite = new GridData(SWT.FILL, SWT.FILL, false, false, 3, 2);
         gd_diagnosticComposite.heightHint = 70;
@@ -458,8 +504,8 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
             sctnCreate.setEnabled(false);
             return;
         }
-
-        Diagnostic validate = Diagnostician.INSTANCE.validate(object);
+        
+        Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
         Set<Integer> newSet = new HashSet<Integer>();
 
         List<Diagnostic> children = validate.getChildren();
@@ -499,9 +545,15 @@ public class Shr5GeneratorPage extends AbstractShr5Page<Shr5Generator> {
         sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
         grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
-        
-      diagnosticComposite.setDiagnostic(validate);
-      diagnosticComposite.update();
+
+        diagnosticComposite.setDiagnostic(validate);
+        diagnosticComposite.update();
+    }
+
+    private Map<Object, Object> createValidationContext() {
+        Map<Object, Object> context = new HashMap<Object, Object>();
+        context.put(SubstitutionLabelProvider.class, new ValidationLabelProvider());
+        return context;
     }
 
     /**
