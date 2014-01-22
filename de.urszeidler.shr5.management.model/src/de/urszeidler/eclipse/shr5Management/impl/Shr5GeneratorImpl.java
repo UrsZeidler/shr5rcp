@@ -636,7 +636,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(managedCharacter, getShr5Generator());
         int pointsSpend = ShadowrunManagmentTools.calcConnectionsSpend(managedCharacter);
 
-        if (pointsSpend >= allPoints) {
+        if (pointsSpend- allPoints !=0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_CONNECTION_POINTS, EcorePlugin.INSTANCE.getString(
