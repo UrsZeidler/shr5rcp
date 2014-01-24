@@ -111,9 +111,10 @@
 	<xsl:template match="priorities">
 		<entries xsi:type="shr5:ShrList" name="generators">
 			<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system."
-				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" charismaToConnectionFactor="3"
-				maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" 
-				maxKarmaToKeep="7" numberOfMaxAttributes="1">
+				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25"
+				charismaToConnectionFactor="3" maxKarmaToResources="10"
+				maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7"
+				numberOfMaxAttributes="1">
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />
 				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
@@ -366,12 +367,12 @@
 				<xsl:value-of select="number(text())" />
 				</xsl:attribute>
 						</xsl:if>
-						<attribut>
-							<xsl:attribute name="href">
+						<!-- <attribut> -->
+						<xsl:attribute name="attribut">
 							<xsl:value-of
-								select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel'" />
+							select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel'" />
 					</xsl:attribute>
-						</attribut>
+						<!-- </attribut> -->
 					</mods>
 				</xsl:when>
 				<xsl:when test="name()='armor' or  name()='armorvalue' ">
@@ -381,41 +382,43 @@
 				<xsl:value-of select="number(text())" />
 				</xsl:attribute>
 						</xsl:if>
-						<attribut>
-							<xsl:attribute name="href">
+						<!-- <attribut> -->
+						<xsl:attribute name="attribut">
 							<xsl:value-of
-								select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
+							select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
 					</xsl:attribute>
-						</attribut>
+						<!-- </attribut> -->
 					</mods>
 				</xsl:when>
 				<xsl:when test="name()='specificattribute'">
 					<mods>
-						<xsl:attribute name="wert">
-				<xsl:value-of select="number(val/text())" />
-				</xsl:attribute>
-						<attribut>
-							<xsl:attribute name="href">
+						<xsl:if test="number(text())">
+							<xsl:attribute name="wert">
+						<xsl:value-of select="number(val/text())" />
+					</xsl:attribute>
+						</xsl:if>
+						<!-- <attribut> -->
+						<xsl:attribute name="attribut">
 			<xsl:call-template name="MATCH">
          <xsl:with-param name="matchingName" select="name/text()" />
       </xsl:call-template>
 					</xsl:attribute>
-						</attribut>
+						<!-- </attribut> -->
 					</mods>
 				</xsl:when>
 			</xsl:choose>
 		</xsl:for-each>
 	</xsl:template>
 	<xsl:template name="skill">
-		<xsl:call-template name="beschreibbar" />
-		<xsl:call-template name="quelle" />
-		<attribut>
-			<xsl:attribute name="href">
+<!-- 		<attribut> -->
+			<xsl:attribute name="attribut">
 			<xsl:call-template name="MATCH">
          <xsl:with-param name="matchingName" select="attribute/text()" />
       </xsl:call-template>
 		</xsl:attribute>
-		</attribut>
+<!-- 		</attribut> -->
+		<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
 	</xsl:template>
 	<!-- matcher for the references of the modificators -->
 	<xsl:template name="MATCH">
@@ -719,12 +722,12 @@
 				<xsl:value-of select="number(ess/text())*-100" />
 				</xsl:attribute>
 				</xsl:if>
-				<attribut>
-					<xsl:attribute name="href">
+<!-- 				<attribut> -->
+					<xsl:attribute name="attribut">
 							<xsl:value-of
 						select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
 					</xsl:attribute>
-				</attribut>
+<!-- 				</attribut> -->
 			</mods>
 		</entries>
 	</xsl:template>
@@ -738,12 +741,12 @@
 				<xsl:value-of select="number(ess/text())*-100" />
 				</xsl:attribute>
 				</xsl:if>
-				<attribut>
-					<xsl:attribute name="href">
+<!-- 				<attribut> -->
+					<xsl:attribute name="attribut">
 							<xsl:value-of
 						select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
 					</xsl:attribute>
-				</attribut>
+<!-- 				</attribut> -->
 			</mods>
 		</entries>
 	</xsl:template>
@@ -789,12 +792,12 @@
 				<xsl:value-of select="number(armorvalue/text())" />
 				</xsl:attribute>
 						</xsl:if>
-						<attribut>
-							<xsl:attribute name="href">
+<!-- 						<attribut> -->
+							<xsl:attribute name="attribut">
 							<xsl:value-of
 								select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
 					</xsl:attribute>
-						</attribut>
+<!-- 						</attribut> -->
 					</mods>
 
 				</entries>

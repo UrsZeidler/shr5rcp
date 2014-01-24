@@ -19,7 +19,7 @@
 	
 	<!-- transform the xml -->
 	<target name="createSHR5.resource" description="reads the chummer2 xml files and creates a shr5 resourceset">
-		<xslt style="${chummer2shr5xsl}" in="${chummer2shr5xsl}" out="${out.path}/shr5.xmi">
+		<xslt force="true" style="${chummer2shr5xsl}" in="${chummer2shr5xsl}" out="${out.path}/shr5.xmi">
 			<param name="path" expression="${path.to.chummer.data}" />
 		</xslt>
 	</target>
