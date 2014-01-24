@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
 
@@ -12,19 +13,21 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
+import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
@@ -528,7 +531,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (getSkills() == null)
             return -1;
 
-       return getSkills().calcSkillSpend(getCharacter());
+        return getSkills().calcSkillSpend(getCharacter());
     }
 
     /**
@@ -566,8 +569,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (set.size() != 5) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
                                 new Object[]{ "hasCategoryOnlyOnce", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -609,7 +611,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (notAllSpend) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_POINTS, EcorePlugin.INSTANCE.getString(
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_GenericInvariant_diagnostic",
                                 new Object[]{ "hasNotSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
@@ -639,9 +641,12 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
 
         getShr5Generator().getNumberOfMaxAttributes();
         int counter = 0;
-
-        if (persona.getKonstitutionBasis() >= spezies.getKonstitutionMax())
+        ArrayList<EAttribute> list = new ArrayList<EAttribute>();
+        // TODO : replace the counter and build a string to print out
+        if (persona.getKonstitutionBasis() >= spezies.getKonstitutionMax()) {
+            list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
             counter++;
+        }
         if (persona.getGeschicklichkeitBasis() >= spezies.getGeschicklichkeitMax())
             counter++;
         if (persona.getReaktionBasis() >= spezies.getReaktionMax())
@@ -662,9 +667,9 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (counter > getShr5Generator().getNumberOfMaxAttributes()) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasNotMoreMaxAttributes", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotMoreMaxAttributes", new Object[]{ "test Attribute names", getShr5Generator().getNumberOfMaxAttributes(),
+                                        "hasNotMoreMaxAttributes", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
@@ -677,15 +682,16 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendAllAttributesPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getAttribute() == null)
+        if (getCharacter() == null || getAttribute() == null)
             return true;
 
-        if (getAttributeSpend() - getAttribute().getAttibutePoints() != 0) {
+        int diff = getAttribute().getAttibutePoints() - getAttributeSpend();
+        if (diff != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasNotSpendAllAttributesPoints", EObjectValidator.getObjectLabel(this, context) }),
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllAttributesPoints", new Object[]{ diff,
+                                        diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
                         new Object[]{ this }));
             }
             return false;
@@ -699,7 +705,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendSkillAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getSkills() == null)
+        if (getCharacter() == null || getSkills() == null)
             return true;
 
         int skillPoints = getSkills().getSkillPoints();
@@ -707,8 +713,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (getSkillPointSpend() - skillPoints != 0 || getSkills().calcGroupSpend(getCharacter()) - groupPoints != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendSkillAllPoints",
                                 new Object[]{ "hasNotSpendSkillAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -722,17 +728,17 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendAllSpecialPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getMetaType() == null)
+        if (getCharacter() == null || getMetaType() == null)
             return true;
 
-        if (getSpecialPointSpend() - getMetaType().getSpecialPoints()!=0) {
+        int diff =  getMetaType().getSpecialPoints()-getSpecialPointSpend();
+        if (diff != 0) {
             if (diagnostics != null) {
-                diagnostics
-                        .add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                                Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_POINTS, EcorePlugin.INSTANCE.getString(
-                                        "_UI_GenericInvariant_diagnostic",
-                                        new Object[]{ "hasNotSpendAllSpecialPoints", EObjectValidator.getObjectLabel(this, context) }),
-                                new Object[]{ this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllSpecialPoints", new Object[]{ diff,
+                                        diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
+                        new Object[]{ this }));
             }
             return false;
         }
@@ -745,7 +751,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendAllSpecialTypePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getMagic() == null)
+        if (getCharacter() == null || getMagic() == null)
             return true;
 
         boolean hasSpendAllPoints = false;
@@ -762,7 +768,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (hasSpendAllPoints || getMagic().calcSkillsSpend(getCharacter()) != getMagic().getSkillNumber()) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS, EcorePlugin.INSTANCE.getString(
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_GenericInvariant_diagnostic",
                                 new Object[]{ "hasNotSpendAllSpecialTypePoints", EObjectValidator.getObjectLabel(this, context) }),
                         new Object[]{ this }));
@@ -779,7 +785,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendAllConnectionPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (getCharacter() == null || getShr5Generator() == null)
             return true;
         ManagedCharacter managedCharacter = getCharacter();
         if (managedCharacter == null)
@@ -791,12 +797,13 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(managedCharacter, getShr5Generator());
         int pointsSpend = getConnectionSpend();
 
-        if (pointsSpend - allPoints != 0) {
+        int diff = allPoints - pointsSpend;
+        if (diff != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_CONNECTION_POINTS, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasNotSpendAllConnectionPoints", EObjectValidator.getObjectLabel(this, context) }),
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_CONNECTION_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllConnectionPoints", new Object[]{ diff,
+                                        diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
                         new Object[]{ this }));
             }
             return false;
@@ -811,18 +818,19 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasNotSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getResourcen() == null)
+        if (getCharacter() == null || getShr5Generator() == null || getResourcen() == null)
             return true;
 
         boolean test = getShr5Generator().getMaxResourceToKeep() < getResourcen().getResource() - getResourceSpend();
+        int diff = getResourcen().getResource() - getResourceSpend();
+
         if (test) {
             if (diagnostics != null) {
-                diagnostics
-                        .add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                                Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS, EcorePlugin.INSTANCE.getString(
-                                        "_UI_GenericInvariant_diagnostic",
-                                        new Object[]{ "hasNotSpendAllResourcePoints", EObjectValidator.getObjectLabel(this, context) }),
-                                new Object[]{ this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllResourcePoints", new Object[]{ diff,
+                                        diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
+                        new Object[]{ this }));
             }
             return false;
         }
