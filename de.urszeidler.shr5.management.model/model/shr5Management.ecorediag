@@ -409,6 +409,30 @@
           <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/karmaToResource"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_ttUbEXiQEeO6e8ppJ02iOw"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_3v-RsIVHEeOZRbkP9PWV1w" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/karmaSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v-RsYVHEeOZRbkP9PWV1w"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3v-RsoVHEeOZRbkP9PWV1w" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/attributeSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v-Rs4VHEeOZRbkP9PWV1w"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3v-4wIVHEeOZRbkP9PWV1w" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/resourceSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v-4wYVHEeOZRbkP9PWV1w"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3v-4woVHEeOZRbkP9PWV1w" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/connectionSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v-4w4VHEeOZRbkP9PWV1w"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3v_f0IVHEeOZRbkP9PWV1w" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/skillPointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v_f0YVHEeOZRbkP9PWV1w"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3v_f0oVHEeOZRbkP9PWV1w" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/specialPointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v_f04VHEeOZRbkP9PWV1w"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_3yOsEnVPEeOo3ey905tymg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_3yOsE3VPEeOo3ey905tymg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_3yOsFHVPEeOo3ey905tymg"/>
