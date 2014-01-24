@@ -2017,13 +2017,58 @@ public interface Shr5managementPackage extends EPackage {
 	int SHR5_GENERATOR__SHR5_GENERATOR = CHARACTER_GENERATOR_FEATURE_COUNT + 7;
 
 	/**
+     * The feature id for the '<em><b>Attribute Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__ATTRIBUTE_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__RESOURCE_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Connection Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__CONNECTION_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 10;
+
+    /**
+     * The feature id for the '<em><b>Skill Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__SKILL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 11;
+
+    /**
+     * The feature id for the '<em><b>Special Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__SPECIAL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 12;
+
+    /**
      * The number of structural features of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 8;
+	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 13;
 
 	/**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
@@ -3943,6 +3988,61 @@ public interface Shr5managementPackage extends EPackage {
 	EReference getShr5Generator_Shr5Generator();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend <em>Attribute Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Attribute Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_AttributeSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend <em>Resource Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Resource Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_ResourceSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend <em>Connection Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Connection Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_ConnectionSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend <em>Skill Point Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Skill Point Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_SkillPointSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend <em>Special Point Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Special Point Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_SpecialPointSpend();
+
+    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5119,6 +5219,46 @@ public interface Shr5managementPackage extends EPackage {
 		EReference SHR5_GENERATOR__SHR5_GENERATOR = eINSTANCE.getShr5Generator_Shr5Generator();
 
 		/**
+         * The meta object literal for the '<em><b>Attribute Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__ATTRIBUTE_SPEND = eINSTANCE.getShr5Generator_AttributeSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Resource Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__RESOURCE_SPEND = eINSTANCE.getShr5Generator_ResourceSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Connection Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__CONNECTION_SPEND = eINSTANCE.getShr5Generator_ConnectionSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Skill Point Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__SKILL_POINT_SPEND = eINSTANCE.getShr5Generator_SkillPointSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Special Point Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__SPECIAL_POINT_SPEND = eINSTANCE.getShr5Generator_SpecialPointSpend();
+
+        /**
          * The meta object literal for the '<em><b>Has Category Only Once</b></em>' operation.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

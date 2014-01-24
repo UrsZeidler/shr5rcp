@@ -144,9 +144,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 	 * @generated not
 	 */
 	public int calcSpecialPointsSpend(ManagedCharacter context) {
-		if (specialPoints == 0)
-			return 0;
-
 		ManagedCharacter managedCharacter = context;
 		if (managedCharacter == null)
 			return 0;

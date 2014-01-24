@@ -24,6 +24,11 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaToResource <em>Karma To Resource</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend <em>Karma Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator <em>Shr5 Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend <em>Attribute Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend <em>Resource Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend <em>Connection Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend <em>Skill Point Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend <em>Special Point Spend</em>}</li>
  * </ul>
  * </p>
  *
@@ -219,6 +224,81 @@ public interface Shr5Generator extends CharacterGenerator {
 	Shr5System getShr5Generator();
 
 	/**
+     * Returns the value of the '<em><b>Attribute Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Attribute Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Attribute Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_AttributeSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getAttributeSpend();
+
+    /**
+     * Returns the value of the '<em><b>Resource Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Resource Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Resource Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_ResourceSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getResourceSpend();
+
+    /**
+     * Returns the value of the '<em><b>Connection Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Connection Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Connection Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_ConnectionSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getConnectionSpend();
+
+    /**
+     * Returns the value of the '<em><b>Skill Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Skill Point Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Skill Point Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_SkillPointSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getSkillPointSpend();
+
+    /**
+     * Returns the value of the '<em><b>Special Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Special Point Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Special Point Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_SpecialPointSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getSpecialPointSpend();
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @model

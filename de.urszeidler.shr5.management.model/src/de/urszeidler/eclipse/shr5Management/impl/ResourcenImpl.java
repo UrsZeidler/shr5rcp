@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -102,33 +103,14 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
 			return 0;
 
 		
-		BigDecimal wert = calcListenWert(context.getInventar());
+		BigDecimal wert = ShadowrunTools.calcListenWert(context.getInventar());
 		if (context.getPersona() instanceof KoerperPersona) {
 			KoerperPersona kp = (KoerperPersona) context.getPersona();
-			wert = wert.add(calcListenWert(kp.getKoerperMods()));
+			wert = wert.add(ShadowrunTools.calcListenWert(kp.getKoerperMods()));
 		}
-
+		
+		wert = wert.add(ShadowrunTools.calcListenWert(context.getContracts()));
 		return  wert.intValue();//-resourceKosten;
-	}
-
-	/**
-	 * Calcs the wert of all {@link GeldWert} in the given list.
-	 * 
-	 * @param list
-	 * @return
-	 */
-	private static BigDecimal calcListenWert(List<? extends Object> list) {
-		BigDecimal summ = new BigDecimal(0);
-		for (Object eo : list) {
-			if (eo instanceof GeldWert) {
-				GeldWert wert = (GeldWert) eo;
-
-				if (wert.getWert() != null)
-					summ = summ.add(wert.getWert());
-			}
-			// TODO : we need some real basic stuff in other lib
-		}
-		return summ;
 	}
 
 	/**

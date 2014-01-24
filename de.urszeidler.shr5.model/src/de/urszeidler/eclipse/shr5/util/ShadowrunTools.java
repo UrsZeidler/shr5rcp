@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.util;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -69,7 +70,7 @@ public class ShadowrunTools {
 	 * @param list
 	 * @return
 	 */
-	private static BigDecimal calcListenWert(EList<Object> list) {
+	public static BigDecimal calcListenWert(List<? extends Object> list) {
 		BigDecimal summ = new BigDecimal(0);
 		for (Object eo : list) {
 			if (eo instanceof GeldWert) {
@@ -78,10 +79,7 @@ public class ShadowrunTools {
 				if (wert.getWert() != null)
 					summ = summ.add(wert.getWert());
 			}
-
 		}
 		return summ;
 	}
-
-	
 }

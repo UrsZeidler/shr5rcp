@@ -1198,6 +1198,51 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_AttributeSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_ResourceSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_ConnectionSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(10);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_SkillPointSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(11);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_SpecialPointSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(12);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1667,6 +1712,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KARMA_TO_RESOURCE);
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KARMA_SPEND);
         createEReference(shr5GeneratorEClass, SHR5_GENERATOR__SHR5_GENERATOR);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__ATTRIBUTE_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__RESOURCE_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__CONNECTION_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__SKILL_POINT_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__SPECIAL_POINT_SPEND);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
@@ -1910,6 +1960,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5Generator_KarmaToResource(), ecorePackage.getEInt(), "karmaToResource", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5Generator_KarmaSpend(), ecorePackage.getEInt(), "karmaSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEReference(getShr5Generator_Shr5Generator(), this.getShr5System(), null, "shr5Generator", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_AttributeSpend(), ecorePackage.getEInt(), "attributeSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_ResourceSpend(), ecorePackage.getEInt(), "resourceSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_ConnectionSpend(), ecorePackage.getEInt(), "connectionSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_SkillPointSpend(), ecorePackage.getEInt(), "skillPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_SpecialPointSpend(), ecorePackage.getEInt(), "specialPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         op = initEOperation(getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasCategoryOnlyOnce", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);

@@ -66,6 +66,11 @@ public class Shr5GeneratorItemProvider
             addKarmaToResourcePropertyDescriptor(object);
             addKarmaSpendPropertyDescriptor(object);
             addShr5GeneratorPropertyDescriptor(object);
+            addAttributeSpendPropertyDescriptor(object);
+            addResourceSpendPropertyDescriptor(object);
+            addConnectionSpendPropertyDescriptor(object);
+            addSkillPointSpendPropertyDescriptor(object);
+            addSpecialPointSpendPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -247,6 +252,116 @@ public class Shr5GeneratorItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Attribute Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAttributeSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_attributeSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_attributeSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Resource Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addResourceSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_resourceSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_resourceSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCE_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Connection Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addConnectionSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_connectionSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_connectionSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__CONNECTION_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Skill Point Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSkillPointSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_skillPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_skillPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SKILL_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Special Point Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSpecialPointSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_specialPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_specialPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5Generator.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -301,6 +416,11 @@ public class Shr5GeneratorItemProvider
         switch (notification.getFeatureID(Shr5Generator.class)) {
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__RESOURCE_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__CONNECTION_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__SKILL_POINT_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__SPECIAL_POINT_SPEND:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
