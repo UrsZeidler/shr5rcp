@@ -394,7 +394,6 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testHasNotSpendAllPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
