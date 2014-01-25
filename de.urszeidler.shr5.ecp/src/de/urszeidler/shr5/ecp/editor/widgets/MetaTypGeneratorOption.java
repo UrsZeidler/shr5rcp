@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.ecp.editor.widgets;
 
+import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
@@ -7,6 +8,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.fieldassist.ControlDecorationSupport;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -21,6 +23,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class MetaTypGeneratorOption extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -31,6 +34,10 @@ public class MetaTypGeneratorOption extends Composite {
 	private EditingDomain editingDomain;
 	private Label lblspend;
 	private Label lblleft;
+
+    private int minSize = 100;
+
+    private NumberInRangeValidator specialPointsInRangeValidator;
 
 	/**
 	 * Create the composite.
@@ -66,6 +73,7 @@ public class MetaTypGeneratorOption extends Composite {
 		this.object = object;
 		this.context = context;
 		this.editingDomain = editingDomain;
+		specialPointsInRangeValidator = new NumberInRangeValidator(0, object.getSpecialPoints());
 		createWidgets();
 	}
 
@@ -76,14 +84,14 @@ public class MetaTypGeneratorOption extends Composite {
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = 120;
+		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
 		lblspend.setText("New Label");
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = 120;
+		gd_lblleft.widthHint = minSize;
 		lblleft.setLayoutData(gd_lblleft);
 		toolkit.adapt(lblleft, true, true);
 		lblleft.setText("New Label");
@@ -103,9 +111,10 @@ public class MetaTypGeneratorOption extends Composite {
 	private void internalBinding(DataBindingContext bindingContext) {
 		IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
 		IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+				context.getChracterSource(), Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
+		modelToTarget.setAfterGetValidator(specialPointsInRangeValidator);
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 			@Override
 			public Object convert(Object fromObject) {
@@ -113,8 +122,9 @@ public class MetaTypGeneratorOption extends Composite {
 				return "spend :" + calcAttributesSpend + "";
 			}
 		});
-		bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+		Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+		ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
 		//
 		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
 		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
