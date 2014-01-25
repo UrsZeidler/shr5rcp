@@ -13,8 +13,8 @@ import org.eclipse.core.runtime.Status;
 public class NumberInRangeValidator implements IValidator {
     private long min;
     private long max;
-    private String toMutchMessage = "To much.";
-    private String toLessMessage = "To less.";
+    protected String toMutchMessage = "To much.";
+    protected String toLessMessage = "To less.";
 
     public NumberInRangeValidator(long min, long max) {
         this.min = min;
