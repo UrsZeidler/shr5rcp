@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.ecp.editor.widgets;
 
+import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
@@ -7,6 +8,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.fieldassist.ControlDecorationSupport;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -21,206 +23,213 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.Skill;
+import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class SkillGeneratorOption extends Composite {
-	private DataBindingContext m_bindingContext;
+    private DataBindingContext m_bindingContext;
 
-	private FormToolkit toolkit;//= new FormToolkit(Display.getCurrent());
-	private Skill object;
-	private ManagedCharacter context;
-	private EditingDomain editingDomain;
-	private Label lblspend;
-	private Label lblleft;
+    private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
+    private Skill object;
+    private ManagedCharacter context;
+    private EditingDomain editingDomain;
+    private Label lblspend;
+    private Label lblleft;
 
-	private Label lblgrpSpend;
+    private Label lblgrpSpend;
 
-	private Label lblgrpLeft;
-	private Label lblKnowlegPoints;
-	private Label lblSpendKnowlegePoints;
+    private Label lblgrpLeft;
+    private Label lblKnowlegPoints;
+    private Label lblSpendKnowlegePoints;
 
-	/**
-	 * Create the composite.
-	 * 
-	 * @param parent
-	 * @param style
-	 */
-	public SkillGeneratorOption(Composite parent, int style) {
-		super(parent, style);
-		toolkit = new FormToolkit(Display.getCurrent());
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				toolkit.dispose();
-			}
-		});
-		createWidgets();
-	}
+    private int minSize = 100;
 
-	/**
-	 * The main contructor.
-	 * 
-	 * @param parent
-	 * @param style
-	 * @param object
-	 * @param context
-	 * @param toolkit
-	 * @param editingDomain
-	 */
-	public SkillGeneratorOption(Composite parent, int style, Skill object, ManagedCharacter context,
-			FormToolkit toolkit, EditingDomain editingDomain) {
-		super(parent, style);
-		this.toolkit = toolkit;
-		this.object = object;
-		this.context = context;
-		this.editingDomain = editingDomain;
-		createWidgets();
-	}
+    private NumberInRangeValidator skillsInRangeValidator;
 
-	private void createWidgets() {
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(2, false));
+    /**
+     * Create the composite.
+     * 
+     * @param parent
+     * @param style
+     */
+    public SkillGeneratorOption(Composite parent, int style) {
+        super(parent, style);
+        toolkit = new FormToolkit(Display.getCurrent());
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        createWidgets();
+    }
 
-		lblspend = new Label(this, SWT.NONE);
-		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = 120;
-		lblspend.setLayoutData(gd_lblspend);
-		toolkit.adapt(lblspend, true, true);
-		lblspend.setText("New Label");
+    /**
+     * The main contructor.
+     * 
+     * @param parent
+     * @param style
+     * @param object
+     * @param context
+     * @param toolkit
+     * @param editingDomain
+     */
+    public SkillGeneratorOption(Composite parent, int style, Skill object, ManagedCharacter context, FormToolkit toolkit, EditingDomain editingDomain) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.context = context;
+        this.editingDomain = editingDomain;
+        skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
+        createWidgets();
+    }
 
-		lblleft = new Label(this, SWT.NONE);
-		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = 120;
-		lblleft.setLayoutData(gd_lblleft);
-		toolkit.adapt(lblleft, true, true);
-		lblleft.setText("New Label");
-		
-		lblgrpSpend = new Label(this, SWT.NONE);
-		GridData gd_lblgrpSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblgrpSpend.widthHint = 120;
-		lblgrpSpend.setLayoutData(gd_lblgrpSpend);
-		toolkit.adapt(lblgrpSpend, true, true);
-		lblgrpSpend.setText("New Label");
-		
-		lblgrpLeft = new Label(this, SWT.NONE);
-		GridData gd_lblgrpLeft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblgrpLeft.widthHint = 120;
-		lblgrpLeft.setLayoutData(gd_lblgrpLeft);
-		toolkit.adapt(lblgrpLeft, true, true);
-		lblgrpLeft.setText("New Label");
-		
-		lblKnowlegPoints = toolkit.createLabel(this, "New Label", SWT.NONE);
-		GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblKnowlegPoints.widthHint = 120;
-		lblKnowlegPoints.setLayoutData(gd_lblKnowlegPoints);
-		
-		lblSpendKnowlegePoints = toolkit.createLabel(this, "New Label", SWT.NONE);
-		GridData gd_lblSpendKnowlegePoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblSpendKnowlegePoints.widthHint = 120;
-		lblSpendKnowlegePoints.setLayoutData(gd_lblSpendKnowlegePoints);
-		m_bindingContext = initDataBindings();
-		internalBinding(m_bindingContext);
-	}
+    private void createWidgets() {
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        setLayout(new GridLayout(2, false));
 
-	protected DataBindingContext initDataBindings() {
-		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		//
+        lblspend = new Label(this, SWT.NONE);
+        GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblspend.widthHint = minSize;
+        lblspend.setLayoutData(gd_lblspend);
+        toolkit.adapt(lblspend, true, true);
+        lblspend.setText("New Label");
 
-		//
-		return bindingContext;
-	}
+        lblleft = new Label(this, SWT.NONE);
+        GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblleft.widthHint = minSize;
+        lblleft.setLayoutData(gd_lblleft);
+        toolkit.adapt(lblleft, true, true);
+        lblleft.setText("New Label");
 
-	private void internalBinding(DataBindingContext bindingContext) {
-		IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
-		IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+        lblgrpSpend = new Label(this, SWT.NONE);
+        GridData gd_lblgrpSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblgrpSpend.widthHint = minSize;
+        lblgrpSpend.setLayoutData(gd_lblgrpSpend);
+        toolkit.adapt(lblgrpSpend, true, true);
+        lblgrpSpend.setText("New Label");
 
-		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcSkillSpend(context);
-				return "spend :" + calcAttributesSpend + "";
-			}
-		});
-		bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-		//
-		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
-		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+        lblgrpLeft = new Label(this, SWT.NONE);
+        GridData gd_lblgrpLeft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblgrpLeft.widthHint = minSize;
+        lblgrpLeft.setLayoutData(gd_lblgrpLeft);
+        toolkit.adapt(lblgrpLeft, true, true);
+        lblgrpLeft.setText("New Label");
 
-		modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcSkillSpend(context);
-				return "left :" + (object.getSkillPoints() - calcAttributesSpend + "");
-			}
-		});
-		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
-				UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-		//----
-		 observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblgrpSpend);
-		 objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+        lblKnowlegPoints = toolkit.createLabel(this, "New Label", SWT.NONE);
+        GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblKnowlegPoints.widthHint = minSize;
+        lblKnowlegPoints.setLayoutData(gd_lblKnowlegPoints);
 
-		 modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcGroupSpend(context);
-				return "spend :" + calcAttributesSpend + "";
-			}
-		});
-		bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-		//
-		 observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblgrpLeft);
-		 objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+        lblSpendKnowlegePoints = toolkit.createLabel(this, "New Label", SWT.NONE);
+        GridData gd_lblSpendKnowlegePoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblSpendKnowlegePoints.widthHint = minSize;
+        lblSpendKnowlegePoints.setLayoutData(gd_lblSpendKnowlegePoints);
+        m_bindingContext = initDataBindings();
+        internalBinding(m_bindingContext);
+    }
 
-		modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcGroupSpend(context);
-				return "left :" + (object.getGroupPoints() - calcAttributesSpend + "");
-			}
-		});
-		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
-				UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        //
 
-		//----
-		 observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblKnowlegPoints);
-		 objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+        //
+        return bindingContext;
+    }
 
-		 modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcKnowledgeSkillPoints(context);
-				return "Wissens :" + calcAttributesSpend + "";
-			}
-		});
-		bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-		//
-		 observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpendKnowlegePoints);
-		 objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+    private void internalBinding(DataBindingContext bindingContext) {
+        IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
+        IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__SKILL_POINT_SPEND);
 
-		modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcKnowledgeSkillSpend(context);
-				return "left :" + (object.calcKnowledgeSkillPoints(context) - calcAttributesSpend + "");
-			}
-		});
-		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
-				UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setAfterGetValidator(skillsInRangeValidator);
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcSkillSpend(context);
+                return "spend :" + calcAttributesSpend + "";
+            }
+        });
+        Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
+        //
+        IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
+        IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__KARMA_SPEND);
 
-	}
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcSkillSpend(context);
+                return "left :" + (object.getSkillPoints() - calcAttributesSpend + "");
+            }
+        });
+        bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        // ----
+        observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblgrpSpend);
+        objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__KARMA_SPEND);
+
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcGroupSpend(context);
+                return "spend :" + calcAttributesSpend + "";
+            }
+        });
+        bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        //
+        observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblgrpLeft);
+        objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__KARMA_SPEND);
+
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcGroupSpend(context);
+                return "left :" + (object.getGroupPoints() - calcAttributesSpend + "");
+            }
+        });
+        bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+
+        // ----
+        observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblKnowlegPoints);
+        objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__KARMA_SPEND);
+
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcKnowledgeSkillPoints(context);
+                return "Wissens :" + calcAttributesSpend + "";
+            }
+        });
+        bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        //
+        observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpendKnowlegePoints);
+        objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__KARMA_SPEND);
+
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcKnowledgeSkillSpend(context);
+                return "left :" + (object.calcKnowledgeSkillPoints(context) - calcAttributesSpend + "");
+            }
+        });
+        bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+
+    }
 }
