@@ -1306,14 +1306,14 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public EOperation getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map() {
+    public EOperation getShr5Generator__HasNotSpendAllSkillPoints__DiagnosticChain_Map() {
         return shr5GeneratorEClass.getEOperations().get(4);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -1347,6 +1347,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      */
     public EOperation getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map() {
         return shr5GeneratorEClass.getEOperations().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5Generator__HasNotSpendAllMagicSkillsPoints__DiagnosticChain_Map() {
+        return shr5GeneratorEClass.getEOperations().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5Generator__HasNotSpendAllMagicPoints__DiagnosticChain_Map() {
+        return shr5GeneratorEClass.getEOperations().get(10);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5Generator__HasNotSpendAllGroupPoints__DiagnosticChain_Map() {
+        return shr5GeneratorEClass.getEOperations().get(11);
     }
 
     /**
@@ -1751,11 +1778,14 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP);
-        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP);
 
         attributeChangeEClass = createEClass(ATTRIBUTE_CHANGE);
 
@@ -2035,7 +2065,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        op = initEOperation(getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendSkillAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        op = initEOperation(getShr5Generator__HasNotSpendAllSkillPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllSkillPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -2072,6 +2102,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         op = initEOperation(getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllResourcePoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        op = initEOperation(getShr5Generator__HasNotSpendAllMagicSkillsPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllMagicSkillsPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        op = initEOperation(getShr5Generator__HasNotSpendAllMagicPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllMagicPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        op = initEOperation(getShr5Generator__HasNotSpendAllGroupPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotSpendAllGroupPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());

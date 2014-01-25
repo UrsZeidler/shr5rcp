@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
@@ -782,27 +783,52 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * 
      * @generated not
      */
-    public boolean hasNotSpendSkillAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+    public boolean hasNotSpendAllSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getSkills() == null)
             return true;
 
         int skillPoints = getSkills().getSkillPoints();
         int groupPoints = getSkills().getGroupPoints();
+
         if (getSkillPointSpend() - skillPoints != 0 || getSkills().calcGroupSpend(getCharacter()) - groupPoints != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotSpendSkillAllPoints",
-                                new Object[]{ "hasNotSpendSkillAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasNotSpendAllSkillPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
         return true;
     }
+
+    // /**
+    // * <!-- begin-user-doc --> <!-- end-user-doc -->
+    // *
+    // * @generated not
+    // */
+    // public boolean hasNotSpendSkillAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+    // if (getCharacter() == null || getSkills() == null)
+    // return true;
+    //
+    // int skillPoints = getSkills().getSkillPoints();
+    // int groupPoints = getSkills().getGroupPoints();
+    // if (getSkillPointSpend() - skillPoints != 0 || getSkills().calcGroupSpend(getCharacter()) - groupPoints != 0) {
+    // if (diagnostics != null) {
+    // diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+    // Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
+    // "_UI_NotSpendSkillAllPoints",
+    // new Object[]{ "hasNotSpendSkillAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+    // }
+    // return false;
+    // }
+    // return true;
+    // }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -913,6 +939,78 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                                 "_UI_NotSpendAllResourcePoints", new Object[]{ diff,
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
                         new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasNotSpendAllMagicSkillsPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getCharacter() == null || getMagic() == null)
+            return true;
+
+        int diff = getMagic().getSkillNumber() - getMagic().calcSkillsSpend(getCharacter());
+        if (diff != 0) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasNotSpendAllMagicSkillsPoints", EObjectValidator.getObjectLabel(this, context) }),
+                        new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated 
+     */
+    public boolean hasNotSpendAllMagicPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getCharacter() == null || getMagic() == null)
+            return true;
+
+        int diff = getMagic().getSkillNumber() - getMagic().calcSkillsSpend(getCharacter());
+        if (diff != 0) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_MAGIC_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasNotSpendAllMagicPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasNotSpendAllGroupPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getCharacter() == null || getSkills() == null)
+            return true;
+
+        int groupPoints = getSkills().getGroupPoints();
+
+        int diff = groupPoints - getSkills().calcGroupSpend(getCharacter());
+        if (diff != 0) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_GROUP_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasNotSpendAllGroupPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
@@ -1096,8 +1194,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return hasNotMoreMaxAttributes((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasNotSpendAllAttributesPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP:
-                return hasNotSpendSkillAllPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllSkillPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasNotSpendAllSpecialPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP:
@@ -1106,6 +1204,12 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return hasNotSpendAllConnectionPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasNotSpendAllResourcePoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllMagicSkillsPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllMagicPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllGroupPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }

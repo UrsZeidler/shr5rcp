@@ -2134,15 +2134,15 @@ public interface Shr5managementPackage extends EPackage {
 	int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 3;
 
 	/**
-     * The operation id for the '<em>Has Not Spend Skill All Points</em>' operation.
+     * The operation id for the '<em>Has Not Spend All Skill Points</em>' operation.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 4;
+    int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 4;
 
-	/**
+    /**
      * The operation id for the '<em>Has Not Spend All Special Points</em>' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2179,13 +2179,40 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 8;
 
     /**
+     * The operation id for the '<em>Has Not Spend All Magic Skills Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 9;
+
+    /**
+     * The operation id for the '<em>Has Not Spend All Magic Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 10;
+
+    /**
+     * The operation id for the '<em>Has Not Spend All Group Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 11;
+
+    /**
      * The number of operations of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 9;
+	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 12;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl <em>Persona Value Change</em>}' class.
@@ -4143,16 +4170,16 @@ public interface Shr5managementPackage extends EPackage {
 	EOperation getShr5Generator__HasNotSpendAllAttributesPoints__DiagnosticChain_Map();
 
 	/**
-     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend Skill All Points</em>}' operation.
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Skill Points</em>}' operation.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the '<em>Has Not Spend Skill All Points</em>' operation.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not Spend All Skill Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated
      */
-	EOperation getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map();
+    EOperation getShr5Generator__HasNotSpendAllSkillPoints__DiagnosticChain_Map();
 
-	/**
+    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Special Points</em>}' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4191,6 +4218,36 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EOperation getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Skills Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not Spend All Magic Skills Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5Generator__HasNotSpendAllMagicSkillsPoints__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not Spend All Magic Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5Generator__HasNotSpendAllMagicPoints__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Group Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not Spend All Group Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5Generator__HasNotSpendAllGroupPoints__DiagnosticChain_Map();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.AttributeChange <em>Attribute Change</em>}'.
@@ -5375,14 +5432,14 @@ public interface Shr5managementPackage extends EPackage {
 		EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllAttributesPoints__DiagnosticChain_Map();
 
 		/**
-         * The meta object literal for the '<em><b>Has Not Spend Skill All Points</b></em>' operation.
+         * The meta object literal for the '<em><b>Has Not Spend All Skill Points</b></em>' operation.
          * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+         * <!-- end-user-doc -->
          * @generated
          */
-		EOperation SHR5_GENERATOR___HAS_NOT_SPEND_SKILL_ALL_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendSkillAllPoints__DiagnosticChain_Map();
+        EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllSkillPoints__DiagnosticChain_Map();
 
-		/**
+        /**
          * The meta object literal for the '<em><b>Has Not Spend All Special Points</b></em>' operation.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5413,6 +5470,30 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllResourcePoints__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Not Spend All Magic Skills Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllMagicSkillsPoints__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Not Spend All Magic Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllMagicPoints__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Not Spend All Group Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllGroupPoints__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl <em>Attribute Change</em>}' class.

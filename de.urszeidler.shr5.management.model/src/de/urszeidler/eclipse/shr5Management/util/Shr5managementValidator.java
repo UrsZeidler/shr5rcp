@@ -107,14 +107,14 @@ public class Shr5managementValidator extends EObjectValidator {
 	public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS = 4;
 
 	/**
-     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend Skill All Points' of 'Shr5 Generator'.
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Skill Points' of 'Shr5 Generator'.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public static final int SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS = 5;
+    public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS = 5;
 
-	/**
+    /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Special Points' of 'Shr5 Generator'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,12 +147,36 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS = 9;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Magic Skills Points' of 'Shr5 Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS = 10;
+
+    /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Magic Points' of 'Shr5 Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_MAGIC_POINTS = 11;
+
+    /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Group Points' of 'Shr5 Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_GROUP_POINTS = 12;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 9;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 12;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -457,11 +481,14 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotMoreMaxAttributes(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllAttributesPoints(shr5Generator, diagnostics, context);
-        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendSkillAllPoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllSkillPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllSpecialPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllSpecialTypePoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllConnectionPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllResourcePoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllMagicSkillsPoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllMagicPoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllGroupPoints(shr5Generator, diagnostics, context);
         return result;
     }
 
@@ -506,16 +533,16 @@ public class Shr5managementValidator extends EObjectValidator {
     }
 
 	/**
-     * Validates the hasNotSpendSkillAllPoints constraint of '<em>Shr5 Generator</em>'.
+     * Validates the hasNotSpendAllSkillPoints constraint of '<em>Shr5 Generator</em>'.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public boolean validateShr5Generator_hasNotSpendSkillAllPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return shr5Generator.hasNotSpendSkillAllPoints(diagnostics, context);
+    public boolean validateShr5Generator_hasNotSpendAllSkillPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasNotSpendAllSkillPoints(diagnostics, context);
     }
 
-	/**
+    /**
      * Validates the hasNotSpendAllSpecialPoints constraint of '<em>Shr5 Generator</em>'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -553,6 +580,36 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateShr5Generator_hasNotSpendAllResourcePoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5Generator.hasNotSpendAllResourcePoints(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNotSpendAllMagicSkillsPoints constraint of '<em>Shr5 Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5Generator_hasNotSpendAllMagicSkillsPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasNotSpendAllMagicSkillsPoints(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNotSpendAllMagicPoints constraint of '<em>Shr5 Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5Generator_hasNotSpendAllMagicPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasNotSpendAllMagicPoints(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNotSpendAllGroupPoints constraint of '<em>Shr5 Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5Generator_hasNotSpendAllGroupPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasNotSpendAllGroupPoints(diagnostics, context);
     }
 
     /**

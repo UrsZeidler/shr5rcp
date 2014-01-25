@@ -482,7 +482,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 "Not all type points spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
                 "Not all special points spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_SKILL_ALL_POINTS, controlDecorationSkills,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS, controlDecorationSkills,
                 "Not all skill spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
                 "Not all attributes spend.");

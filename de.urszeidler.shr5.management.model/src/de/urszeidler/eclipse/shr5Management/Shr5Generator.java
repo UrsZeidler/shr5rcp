@@ -380,13 +380,13 @@ public interface Shr5Generator extends CharacterGenerator {
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @model
      * @generated
      */
-	boolean hasNotSpendSkillAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasNotSpendAllSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
-	/**
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @model
@@ -417,5 +417,29 @@ public interface Shr5Generator extends CharacterGenerator {
      * @generated
      */
     boolean hasNotSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasNotSpendAllMagicSkillsPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasNotSpendAllMagicPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasNotSpendAllGroupPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Shr5Generator
