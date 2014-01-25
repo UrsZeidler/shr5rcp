@@ -36,7 +36,6 @@ public class MetaTypGeneratorOption extends Composite {
 	private Label lblleft;
 
     private int minSize = 100;
-
     private NumberInRangeValidator specialPointsInRangeValidator;
 
 	/**
