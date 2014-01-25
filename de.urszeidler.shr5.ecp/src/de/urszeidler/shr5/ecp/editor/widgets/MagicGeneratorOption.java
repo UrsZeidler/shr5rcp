@@ -33,15 +33,12 @@ public class MagicGeneratorOption extends Composite {
 	private EditingDomain editingDomain;
 	private Label lblspend;
 	private Label lblleft;
-
 	private Label lblSpellSpend;
-
 	private Label lblSpellLeft;
-
 	private Label lblCFormSpend;
-
 	private Label lblCFormLeft;
 
+    private int minSize = 100;
 	/**
 	 * Create the composite.
 	 * 
@@ -86,14 +83,14 @@ public class MagicGeneratorOption extends Composite {
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = 120;
+		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
 		lblspend.setText("New Label");
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = 120;
+		gd_lblleft.widthHint = minSize;
 		lblleft.setLayoutData(gd_lblleft);
 		toolkit.adapt(lblleft, true, true);
 		lblleft.setText("New Label");
