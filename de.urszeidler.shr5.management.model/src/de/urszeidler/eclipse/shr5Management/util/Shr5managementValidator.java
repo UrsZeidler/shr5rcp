@@ -171,12 +171,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_GROUP_POINTS = 12;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not Spend All Knowlege Skill Points' of 'Shr5 Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_GENERATOR__HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS = 13;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 12;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 13;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -489,6 +497,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllMagicSkillsPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllMagicPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllGroupPoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotSpendAllKnowlegeSkillPoints(shr5Generator, diagnostics, context);
         return result;
     }
 
@@ -610,6 +619,16 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateShr5Generator_hasNotSpendAllGroupPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5Generator.hasNotSpendAllGroupPoints(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNotSpendAllKnowlegeSkillPoints constraint of '<em>Shr5 Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5Generator_hasNotSpendAllKnowlegeSkillPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasNotSpendAllKnowlegeSkillPoints(diagnostics, context);
     }
 
     /**

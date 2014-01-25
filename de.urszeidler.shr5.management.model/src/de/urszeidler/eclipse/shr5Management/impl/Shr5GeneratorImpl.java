@@ -973,7 +973,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated 
+     * @generated not
      */
     public boolean hasNotSpendAllMagicPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getMagic() == null)
@@ -1011,6 +1011,31 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_GROUP_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_GenericInvariant_diagnostic",
                                 new Object[]{ "hasNotSpendAllGroupPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasNotSpendAllKnowlegeSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getCharacter() == null || getSkills() == null)
+            return true;
+
+        int diff = getSkills().calcKnowledgeSkillPoints(getCharacter()) - getKnownlegePointSpend();
+
+        if (diff != 0) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasNotSpendAllKnowlegeSkillPoints", EObjectValidator.getObjectLabel(this, context) }),
+                        new Object[]{ this }));
             }
             return false;
         }
@@ -1210,6 +1235,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return hasNotSpendAllMagicPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasNotSpendAllGroupPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllKnowlegeSkillPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }

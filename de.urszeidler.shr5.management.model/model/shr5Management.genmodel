@@ -205,6 +205,10 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllGroupPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllGroupPoints/context"/>
       </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter"/>
