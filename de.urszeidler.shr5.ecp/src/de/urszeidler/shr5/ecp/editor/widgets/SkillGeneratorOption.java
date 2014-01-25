@@ -45,6 +45,10 @@ public class SkillGeneratorOption extends Composite {
 
     private NumberInRangeValidator skillsInRangeValidator;
 
+    private NumberInRangeValidator groupsInRangeValidator;
+
+    private NumberInRangeValidator knownlegeSkillsInRangeValidator;
+
     /**
      * Create the composite.
      * 
@@ -78,11 +82,14 @@ public class SkillGeneratorOption extends Composite {
         this.object = object;
         this.context = context;
         this.editingDomain = editingDomain;
-        skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
         createWidgets();
     }
 
     private void createWidgets() {
+        skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
+        groupsInRangeValidator = new NumberInRangeValidator(0, object.getGroupPoints());
+        knownlegeSkillsInRangeValidator = new NumberInRangeValidator(0, object.calcKnowledgeSkillPoints(context));
+
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
         setLayout(new GridLayout(2, false));
@@ -157,7 +164,7 @@ public class SkillGeneratorOption extends Composite {
         //
         IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
         IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
-                Literals.SHR5_GENERATOR__KARMA_SPEND);
+                Literals.SHR5_GENERATOR__SKILL_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
@@ -172,9 +179,10 @@ public class SkillGeneratorOption extends Composite {
         // ----
         observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblgrpSpend);
         objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
-                Literals.SHR5_GENERATOR__KARMA_SPEND);
+                Literals.SHR5_GENERATOR__GROUP_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setBeforeSetValidator(groupsInRangeValidator);
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
@@ -182,8 +190,9 @@ public class SkillGeneratorOption extends Composite {
                 return "spend :" + calcAttributesSpend + "";
             }
         });
-        bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
+        bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
         //
         observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblgrpLeft);
         objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
@@ -203,9 +212,10 @@ public class SkillGeneratorOption extends Composite {
         // ----
         observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblKnowlegPoints);
         objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
-                Literals.SHR5_GENERATOR__KARMA_SPEND);
+                Literals.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setAfterGetValidator(knownlegeSkillsInRangeValidator);
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
@@ -213,8 +223,9 @@ public class SkillGeneratorOption extends Composite {
                 return "Knownlege :" + calcAttributesSpend + "";
             }
         });
-        bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
+        bindValue =bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
         //
         observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpendKnowlegePoints);
         objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
