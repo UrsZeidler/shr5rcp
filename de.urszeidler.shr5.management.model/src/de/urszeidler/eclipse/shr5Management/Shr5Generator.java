@@ -29,6 +29,9 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend <em>Connection Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend <em>Skill Point Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend <em>Special Point Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend <em>Group Point Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend <em>Knownlege Point Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend <em>Spell Point Spend</em>}</li>
  * </ul>
  * </p>
  *
@@ -297,6 +300,51 @@ public interface Shr5Generator extends CharacterGenerator {
      * @generated
      */
     int getSpecialPointSpend();
+
+    /**
+     * Returns the value of the '<em><b>Group Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Group Point Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Group Point Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_GroupPointSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getGroupPointSpend();
+
+    /**
+     * Returns the value of the '<em><b>Knownlege Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Knownlege Point Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Knownlege Point Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_KnownlegePointSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getKnownlegePointSpend();
+
+    /**
+     * Returns the value of the '<em><b>Spell Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Spell Point Spend</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Spell Point Spend</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_SpellPointSpend()
+     * @model transient="true" changeable="false" volatile="true" derived="true"
+     * @generated
+     */
+    int getSpellPointSpend();
 
     /**
      * <!-- begin-user-doc -->

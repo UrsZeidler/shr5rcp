@@ -7,7 +7,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
@@ -57,6 +55,9 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getConnectionSpend <em>Connection Spend</em>}</li>
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSkillPointSpend <em>Skill Point Spend</em>}</li>
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpecialPointSpend <em>Special Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getGroupPointSpend <em>Group Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKnownlegePointSpend <em>Knownlege Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpellPointSpend <em>Spell Point Spend</em>}</li>
  * </ul>
  * </p>
  * 
@@ -199,6 +200,39 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @ordered
      */
     protected static final int SPECIAL_POINT_SPEND_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getGroupPointSpend() <em>Group Point Spend</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getGroupPointSpend()
+     * @generated
+     * @ordered
+     */
+    protected static final int GROUP_POINT_SPEND_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getKnownlegePointSpend() <em>Knownlege Point Spend</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getKnownlegePointSpend()
+     * @generated
+     * @ordered
+     */
+    protected static final int KNOWNLEGE_POINT_SPEND_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getSpellPointSpend() <em>Spell Point Spend</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getSpellPointSpend()
+     * @generated
+     * @ordered
+     */
+    protected static final int SPELL_POINT_SPEND_EDEFAULT = 0;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -548,6 +582,52 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getGroupPointSpend() {
+        if (getSkills() == null)
+            return -1;
+
+        return getSkills().calcGroupSpend(getCharacter());
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getKnownlegePointSpend() {
+        if (getSkills() == null)
+            return -1;
+
+        return getSkills().calcKnowledgeSkillSpend(getCharacter());
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getSpellPointSpend() {
+        if (getMagic() == null)
+            return -1;
+
+        if (getMagic() instanceof Spellcaster) {
+            Spellcaster sc = (Spellcaster)getMagic();
+            return sc.calcSpellPointsSpend(getCharacter());
+        } else if (getMagic() instanceof Technomancer) {
+            Technomancer tm = (Technomancer)getMagic();
+            tm.calcComplexFormsSpend(getCharacter());
+        }
+        return -1;
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated not
@@ -731,7 +811,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (getCharacter() == null || getMetaType() == null)
             return true;
 
-        int diff =  getMetaType().getSpecialPoints()-getSpecialPointSpend();
+        int diff = getMetaType().getSpecialPoints() - getSpecialPointSpend();
         if (diff != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
@@ -883,6 +963,12 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return getSkillPointSpend();
             case Shr5managementPackage.SHR5_GENERATOR__SPECIAL_POINT_SPEND:
                 return getSpecialPointSpend();
+            case Shr5managementPackage.SHR5_GENERATOR__GROUP_POINT_SPEND:
+                return getGroupPointSpend();
+            case Shr5managementPackage.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND:
+                return getKnownlegePointSpend();
+            case Shr5managementPackage.SHR5_GENERATOR__SPELL_POINT_SPEND:
+                return getSpellPointSpend();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -981,6 +1067,12 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return getSkillPointSpend() != SKILL_POINT_SPEND_EDEFAULT;
             case Shr5managementPackage.SHR5_GENERATOR__SPECIAL_POINT_SPEND:
                 return getSpecialPointSpend() != SPECIAL_POINT_SPEND_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__GROUP_POINT_SPEND:
+                return getGroupPointSpend() != GROUP_POINT_SPEND_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND:
+                return getKnownlegePointSpend() != KNOWNLEGE_POINT_SPEND_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__SPELL_POINT_SPEND:
+                return getSpellPointSpend() != SPELL_POINT_SPEND_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

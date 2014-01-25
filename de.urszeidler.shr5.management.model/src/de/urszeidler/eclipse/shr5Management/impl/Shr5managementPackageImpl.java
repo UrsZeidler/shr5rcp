@@ -1243,6 +1243,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_GroupPointSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(13);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_KnownlegePointSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(14);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5Generator_SpellPointSpend() {
+        return (EAttribute)shr5GeneratorEClass.getEStructuralFeatures().get(15);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1717,6 +1744,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__CONNECTION_SPEND);
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__SKILL_POINT_SPEND);
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__SPECIAL_POINT_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__GROUP_POINT_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND);
+        createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__SPELL_POINT_SPEND);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
@@ -1965,6 +1995,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5Generator_ConnectionSpend(), ecorePackage.getEInt(), "connectionSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5Generator_SkillPointSpend(), ecorePackage.getEInt(), "skillPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5Generator_SpecialPointSpend(), ecorePackage.getEInt(), "specialPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_GroupPointSpend(), ecorePackage.getEInt(), "groupPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_KnownlegePointSpend(), ecorePackage.getEInt(), "knownlegePointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_SpellPointSpend(), ecorePackage.getEInt(), "spellPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         op = initEOperation(getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasCategoryOnlyOnce", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);

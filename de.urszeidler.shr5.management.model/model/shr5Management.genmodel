@@ -154,6 +154,9 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/connectionSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/skillPointSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/specialPointSpend"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/groupPointSpend"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/knownlegePointSpend"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/spellPointSpend"/>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/context"/>

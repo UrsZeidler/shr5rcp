@@ -71,6 +71,9 @@ public class Shr5GeneratorItemProvider
             addConnectionSpendPropertyDescriptor(object);
             addSkillPointSpendPropertyDescriptor(object);
             addSpecialPointSpendPropertyDescriptor(object);
+            addGroupPointSpendPropertyDescriptor(object);
+            addKnownlegePointSpendPropertyDescriptor(object);
+            addSpellPointSpendPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -362,6 +365,72 @@ public class Shr5GeneratorItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Group Point Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addGroupPointSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_groupPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_groupPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__GROUP_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Knownlege Point Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addKnownlegePointSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_knownlegePointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_knownlegePointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Spell Point Spend feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSpellPointSpendPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_spellPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_spellPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SPELL_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5Generator.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -421,6 +490,9 @@ public class Shr5GeneratorItemProvider
             case Shr5managementPackage.SHR5_GENERATOR__CONNECTION_SPEND:
             case Shr5managementPackage.SHR5_GENERATOR__SKILL_POINT_SPEND:
             case Shr5managementPackage.SHR5_GENERATOR__SPECIAL_POINT_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__GROUP_POINT_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__SPELL_POINT_SPEND:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

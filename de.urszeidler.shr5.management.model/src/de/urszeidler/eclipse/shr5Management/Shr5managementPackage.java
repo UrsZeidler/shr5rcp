@@ -2062,13 +2062,40 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_GENERATOR__SPECIAL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 12;
 
     /**
+     * The feature id for the '<em><b>Group Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__GROUP_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 13;
+
+    /**
+     * The feature id for the '<em><b>Knownlege Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 14;
+
+    /**
+     * The feature id for the '<em><b>Spell Point Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__SPELL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 15;
+
+    /**
      * The number of structural features of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 13;
+	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 16;
 
 	/**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
@@ -4043,6 +4070,39 @@ public interface Shr5managementPackage extends EPackage {
     EAttribute getShr5Generator_SpecialPointSpend();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend <em>Group Point Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Group Point Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_GroupPointSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend <em>Knownlege Point Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Knownlege Point Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_KnownlegePointSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend <em>Spell Point Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Spell Point Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_SpellPointSpend();
+
+    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5257,6 +5317,30 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_GENERATOR__SPECIAL_POINT_SPEND = eINSTANCE.getShr5Generator_SpecialPointSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Group Point Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__GROUP_POINT_SPEND = eINSTANCE.getShr5Generator_GroupPointSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Knownlege Point Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND = eINSTANCE.getShr5Generator_KnownlegePointSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Spell Point Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__SPELL_POINT_SPEND = eINSTANCE.getShr5Generator_SpellPointSpend();
 
         /**
          * The meta object literal for the '<em><b>Has Category Only Once</b></em>' operation.
