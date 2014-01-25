@@ -467,6 +467,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                     karmaToResource));
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND, oldKarmaToResource,
                     karmaToResource));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__RESOURCE_SPEND, oldKarmaToResource,
+                    karmaToResource));
         }
     }
 
