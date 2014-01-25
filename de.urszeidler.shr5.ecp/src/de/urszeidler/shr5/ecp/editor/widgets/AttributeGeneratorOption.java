@@ -116,8 +116,6 @@ public class AttributeGeneratorOption extends Composite {
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 			@Override
 			public Object convert(Object fromObject) {
-			    System.out.println("-->"+fromObject);
-			    
 				int calcAttributesSpend = object.calcAttributesSpend(context);
 				return "spend :" + calcAttributesSpend + "";
 			}
