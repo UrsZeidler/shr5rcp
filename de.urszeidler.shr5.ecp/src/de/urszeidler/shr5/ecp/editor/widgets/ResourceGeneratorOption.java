@@ -23,6 +23,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class ResourceGeneratorOption extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -34,6 +35,9 @@ public class ResourceGeneratorOption extends Composite {
 	private Label lblspend;
 	private Label lblleft;
 
+    private int minSize = 100;
+
+    private NumberInRangeValidator resourceInRangeValidator;
 	/**
 	 * Create the composite.
 	 * 
@@ -72,20 +76,21 @@ public class ResourceGeneratorOption extends Composite {
 	}
 
 	private void createWidgets() {
+	    resourceInRangeValidator = new NumberInRangeValidator(0, object.getResource());
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
 		setLayout(new GridLayout(2, false));
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = 120;
+		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
 		lblspend.setText("New Label");
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = 120;
+		gd_lblleft.widthHint = minSize;
 		lblleft.setLayoutData(gd_lblleft);
 		toolkit.adapt(lblleft, true, true);
 		lblleft.setText("New Label");
@@ -105,9 +110,10 @@ public class ResourceGeneratorOption extends Composite {
 	private void internalBinding(DataBindingContext bindingContext) {
 		IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
 		IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+				context.getChracterSource(), Literals.SHR5_GENERATOR__RESOURCE_SPEND);
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
+		modelToTarget.setAfterGetValidator(resourceInRangeValidator);
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 			@Override
 			public Object convert(Object fromObject) {
