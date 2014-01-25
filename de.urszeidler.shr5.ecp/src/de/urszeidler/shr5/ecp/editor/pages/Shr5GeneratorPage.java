@@ -11,10 +11,6 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.core.databinding.validation.IValidator;
-import org.eclipse.core.databinding.validation.ValidationStatus;
-import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -69,33 +65,6 @@ import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
  * @author urs
  */
 public class Shr5GeneratorPage extends AbstractGeneratorPage {
-    private final class NumberInRangeValidator implements IValidator {
-        private int min;
-        private int max;
-
-        public NumberInRangeValidator(int min, int max) {
-            this.min = min;
-            this.max = max;
-        }
-
-        @Override
-        public IStatus validate(Object value) {
-            if (!(value instanceof Number)) {
-                throw new IllegalArgumentException("Parameter 'value' is not of type Number."); //$NON-NLS-1$
-            }
-
-            Number number = (Number)value;
-            if (number.longValue() > max ) {
-                return ValidationStatus.error("To much.");
-            }
-            if(number.longValue() > min){
-                return ValidationStatus.error("To less.");
-            }
-
-            return Status.OK_STATUS;
-        }
-    }
-
     private Shr5Generator object;
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
@@ -141,7 +110,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private DiagnosticComposite diagnosticComposite;
     private Group grpValidation;
     private Composite composite_2;
-    private Label lblNewLabel_test;
 
     /**
      * Create the form page.
@@ -317,12 +285,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         lblKarmaSpend = new Label(composite, SWT.NONE);
         GridData gd_lblKarmaSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-        gd_lblKarmaSpend.widthHint = 40;
+        gd_lblKarmaSpend.widthHint = 60;
         lblKarmaSpend.setLayoutData(gd_lblKarmaSpend);
         managedForm.getToolkit().adapt(lblKarmaSpend, true, true);
         lblKarmaSpend.setText("New Label");
 
-        managedForm.getToolkit().createLabel(composite, "Connections", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite, "Connections (avail/spend)", SWT.NONE);
 
         lblConnectionPoints = managedForm.getToolkit().createLabel(composite, "New Label", SWT.NONE);
         GridData gd_lblConnectionPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -404,11 +372,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().adapt(composite_2);
         managedForm.getToolkit().paintBordersFor(composite_2);
 
-        lblNewLabel_test = new Label(composite_2, SWT.NONE);
-        lblNewLabel_test.setBounds(26, 10, 70, 17);
-        managedForm.getToolkit().adapt(lblNewLabel_test, true, true);
-        lblNewLabel_test.setText("New Label");
-
         m_bindingContext = initDataBindings();
         // ----------
         ownBinding(m_bindingContext);
@@ -459,6 +422,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         }
 
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
+        if (object.getCharacter() != null) {
+            //Diagnostic validate2 = Diagnostician.INSTANCE.validate(object.getCharacter(), context);
+
+            // validate.getChildren().addAll(validate2.getChildren());
+        }
+
         Set<Integer> newSet = new HashSet<Integer>();
 
         List<Diagnostic> children = validate.getChildren();
@@ -618,14 +587,14 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
         // ----
         observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblConnectionleft);
-        objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.SHR5_GENERATOR__KARMA_SPEND);
+        objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.SHR5_GENERATOR__CONNECTION_SPEND);
         modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
                 if (object.getShr5Generator() == null || object.getCharacter() == null)
                     return "Spend : ---";
-                return "Spend : " + ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter());
+                return ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter()) + "";
             }
         });
 
@@ -634,7 +603,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         // ----
         observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblConnectionPoints);
-        objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.SHR5_GENERATOR__KARMA_SPEND);
+        objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.SHR5_GENERATOR__CONNECTION_SPEND);
         modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
@@ -685,8 +654,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.selection().observe(spinner);
         IObservableValue objectKarmaToResourceObserveValue = EMFEditObservables.observeValue(editingDomain, object,
                 Literals.SHR5_GENERATOR__KARMA_TO_RESOURCE);
-        EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-        modelToTarget.setBeforeSetValidator(new NumberInRangeValidator(0, 25));
+        UpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         bindingContext.bindValue(observeSelectionSpinnerObserveWidget, objectKarmaToResourceObserveValue, modelToTarget, modelToTarget);
         //
         IObservableValue observeTextLblPhasestateObserveWidget = WidgetProperties.text().observe(lblPhasestate);
@@ -694,15 +662,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         bindingContext.bindValue(observeTextLblPhasestateObserveWidget, objectStateObserveValue, new EMFUpdateValueStrategy(),
                 new EMFUpdateValueStrategy());
         //
-        IObservableValue observeTextLblNewLabel_testObserveWidget = WidgetProperties.text().observe(lblNewLabel_test);
-        IObservableValue objectAttributeSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object,
-                Literals.SHR5_GENERATOR__ATTRIBUTE_SPEND);
-        bindingContext.bindValue(observeTextLblNewLabel_testObserveWidget, objectAttributeSpendObserveValue, new UpdateValueStrategy(
-                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy() {
-
-        });
-        //
-
         return bindingContext;
     }
 }
