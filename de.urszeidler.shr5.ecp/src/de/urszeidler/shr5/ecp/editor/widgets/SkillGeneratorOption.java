@@ -92,7 +92,7 @@ public class SkillGeneratorOption extends Composite {
         gd_lblspend.widthHint = minSize;
         lblspend.setLayoutData(gd_lblspend);
         toolkit.adapt(lblspend, true, true);
-        lblspend.setText("New Label");
+        lblspend.setText("spend : too much");
 
         lblleft = new Label(this, SWT.NONE);
         GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -106,7 +106,7 @@ public class SkillGeneratorOption extends Composite {
         gd_lblgrpSpend.widthHint = minSize;
         lblgrpSpend.setLayoutData(gd_lblgrpSpend);
         toolkit.adapt(lblgrpSpend, true, true);
-        lblgrpSpend.setText("New Label");
+        lblgrpSpend.setText("spend : too much");
 
         lblgrpLeft = new Label(this, SWT.NONE);
         GridData gd_lblgrpLeft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -115,7 +115,7 @@ public class SkillGeneratorOption extends Composite {
         toolkit.adapt(lblgrpLeft, true, true);
         lblgrpLeft.setText("New Label");
 
-        lblKnowlegPoints = toolkit.createLabel(this, "New Label", SWT.NONE);
+        lblKnowlegPoints = toolkit.createLabel(this, "spend : too much", SWT.NONE);
         GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblKnowlegPoints.widthHint = minSize;
         lblKnowlegPoints.setLayoutData(gd_lblKnowlegPoints);
@@ -210,7 +210,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcKnowledgeSkillPoints(context);
-                return "Wissens :" + calcAttributesSpend + "";
+                return "Knownlege :" + calcAttributesSpend + "";
             }
         });
         bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(

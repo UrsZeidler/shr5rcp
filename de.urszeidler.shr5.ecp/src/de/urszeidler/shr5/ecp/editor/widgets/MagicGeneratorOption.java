@@ -86,7 +86,7 @@ public class MagicGeneratorOption extends Composite {
 		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
-		lblspend.setText("New Label");
+		lblspend.setText("spend : too much");
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -98,7 +98,7 @@ public class MagicGeneratorOption extends Composite {
 		if (object instanceof Spellcaster) {
 			lblSpellSpend = new Label(this, SWT.NONE);
 			toolkit.adapt(lblSpellSpend, true, true);
-			lblSpellSpend.setText("New Label");
+			lblSpellSpend.setText("spend : too much");
 
 			lblSpellLeft = new Label(this, SWT.NONE);
 			toolkit.adapt(lblSpellLeft, true, true);
@@ -107,7 +107,7 @@ public class MagicGeneratorOption extends Composite {
 		} else if (object instanceof Technomancer) {
 			lblCFormSpend = new Label(this, SWT.NONE);
 			toolkit.adapt(lblCFormSpend, true, true);
-			lblCFormSpend.setText("New Label");
+			lblCFormSpend.setText("spend : too much");
 
 			lblCFormLeft = new Label(this, SWT.NONE);
 			toolkit.adapt(lblCFormLeft, true, true);

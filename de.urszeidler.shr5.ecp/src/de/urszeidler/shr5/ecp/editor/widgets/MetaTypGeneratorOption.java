@@ -86,7 +86,7 @@ public class MetaTypGeneratorOption extends Composite {
 		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
-		lblspend.setText("New Label");
+		lblspend.setText("spend : too much");
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
