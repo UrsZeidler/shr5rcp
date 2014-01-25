@@ -36,7 +36,7 @@ public class AttributeGeneratorOption extends Composite {
 	private Label lblleft;
 
     private NumberInRangeValidator attributesInRangeValidator;
-    private int minSize=100;
+    private int minSize=40;
 
 	/**
 	 * Create the composite.
@@ -72,14 +72,18 @@ public class AttributeGeneratorOption extends Composite {
 		this.object = object;
 		this.context = context;
 		this.editingDomain = editingDomain;
-		attributesInRangeValidator = new NumberInRangeValidator(0,object.getAttibutePoints());
 		createWidgets();
 	}
 
 	private void createWidgets() {
+	    attributesInRangeValidator = new NumberInRangeValidator(0,object.getAttibutePoints());
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(2, false));
+		GridLayout gridLayout = new GridLayout(3, false);
+		gridLayout.horizontalSpacing = 10;
+		setLayout(gridLayout);
+		
+		toolkit.createLabel(this, "Attributes (spend/left):", SWT.NONE);
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -114,27 +118,27 @@ public class AttributeGeneratorOption extends Composite {
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
 		modelToTarget.setAfterGetValidator(attributesInRangeValidator);
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcAttributesSpend(context);
-				return "spend :" + calcAttributesSpend + "";
-			}
-		});
+//		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+//			@Override
+//			public Object convert(Object fromObject) {
+//				int calcAttributesSpend = object.calcAttributesSpend(context);
+//				return "spend :" + calcAttributesSpend + "";
+//			}
+//		});
 		Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
 		ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT); 
 		//
 		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
 		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+				context.getChracterSource(), Literals.SHR5_GENERATOR__ATTRIBUTE_SPEND);
 
 		modelToTarget = new EMFUpdateValueStrategy();
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 			@Override
 			public Object convert(Object fromObject) {
 				int calcAttributesSpend = object.calcAttributesSpend(context);
-				return "left :" + (object.getAttibutePoints() - calcAttributesSpend + "");
+				return  (object.getAttibutePoints() - calcAttributesSpend + "");
 			}
 		});
 		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(

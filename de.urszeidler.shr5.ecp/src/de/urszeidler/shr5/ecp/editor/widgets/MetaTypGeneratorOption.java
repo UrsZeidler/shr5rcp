@@ -35,7 +35,7 @@ public class MetaTypGeneratorOption extends Composite {
 	private Label lblspend;
 	private Label lblleft;
 
-    private int minSize = 100;
+    private int minSize = 40;
     private NumberInRangeValidator specialPointsInRangeValidator;
 
 	/**
@@ -79,7 +79,11 @@ public class MetaTypGeneratorOption extends Composite {
 	private void createWidgets() {
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(2, false));
+		GridLayout gridLayout = new GridLayout(3, false);
+		gridLayout.horizontalSpacing = 10;
+		setLayout(gridLayout);
+		
+		Label lblNewLabel = toolkit.createLabel(this, "Special (spend/left):", SWT.NONE);
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -114,27 +118,27 @@ public class MetaTypGeneratorOption extends Composite {
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
 		modelToTarget.setAfterGetValidator(specialPointsInRangeValidator);
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcSpecialPointsSpend(context);
-				return "spend :" + calcAttributesSpend + "";
-			}
-		});
+//		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+//			@Override
+//			public Object convert(Object fromObject) {
+//				int calcAttributesSpend = object.calcSpecialPointsSpend(context);
+//				return "spend :" + calcAttributesSpend + "";
+//			}
+//		});
 		Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
 		ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
 		//
 		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
 		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+				context.getChracterSource(), Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
 
 		modelToTarget = new EMFUpdateValueStrategy();
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 			@Override
 			public Object convert(Object fromObject) {
 				int calcAttributesSpend = object.calcSpecialPointsSpend(context);
-				return "left :" + (object.getSpecialPoints() - calcAttributesSpend + "");
+				return (object.getSpecialPoints() - calcAttributesSpend + "");
 			}
 		});
 		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(

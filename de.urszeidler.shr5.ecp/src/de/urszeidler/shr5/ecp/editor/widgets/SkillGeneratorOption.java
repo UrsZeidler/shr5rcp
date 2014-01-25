@@ -5,6 +5,9 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.validation.ValidationStatus;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -41,7 +44,7 @@ public class SkillGeneratorOption extends Composite {
     private Label lblKnowlegPoints;
     private Label lblSpendKnowlegePoints;
 
-    private int minSize = 100;
+    private int minSize = 40;
 
     private NumberInRangeValidator skillsInRangeValidator;
 
@@ -88,11 +91,33 @@ public class SkillGeneratorOption extends Composite {
     private void createWidgets() {
         skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
         groupsInRangeValidator = new NumberInRangeValidator(0, object.getGroupPoints());
-        knownlegeSkillsInRangeValidator = new NumberInRangeValidator(0, object.calcKnowledgeSkillPoints(context));
+        knownlegeSkillsInRangeValidator = new NumberInRangeValidator(0, object.calcKnowledgeSkillPoints(context)){
+            @Override
+            public IStatus validate(Object value) {
+                if (!(value instanceof Number)) {
+                    throw new IllegalArgumentException("Parameter 'value' is not of type Number."); //$NON-NLS-1$
+                }
+
+                Number number = (Number)value;
+                if (number.longValue() > object.calcKnowledgeSkillPoints(context)) {
+                    return ValidationStatus.error(toMutchMessage);
+                }
+                if (number.longValue() < 0) {
+                    return ValidationStatus.error(toLessMessage);
+                }
+
+                return Status.OK_STATUS;
+            }
+            
+        };
 
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
-        setLayout(new GridLayout(2, false));
+        GridLayout gridLayout = new GridLayout(3, false);
+        gridLayout.horizontalSpacing = 10;
+        setLayout(gridLayout);
+        
+        toolkit.createLabel(this, "Skills (spend/left):", SWT.NONE);
 
         lblspend = new Label(this, SWT.NONE);
         GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -107,6 +132,8 @@ public class SkillGeneratorOption extends Composite {
         lblleft.setLayoutData(gd_lblleft);
         toolkit.adapt(lblleft, true, true);
         lblleft.setText("New Label");
+        
+        toolkit.createLabel(this, "Groups (spend/left):", SWT.NONE);
 
         lblgrpSpend = new Label(this, SWT.NONE);
         GridData gd_lblgrpSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -121,6 +148,8 @@ public class SkillGeneratorOption extends Composite {
         lblgrpLeft.setLayoutData(gd_lblgrpLeft);
         toolkit.adapt(lblgrpLeft, true, true);
         lblgrpLeft.setText("New Label");
+        
+         toolkit.createLabel(this, "Knowlege (spend/left):", SWT.NONE);
 
         lblKnowlegPoints = toolkit.createLabel(this, "spend : too much", SWT.NONE);
         GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -151,13 +180,13 @@ public class SkillGeneratorOption extends Composite {
 
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setAfterGetValidator(skillsInRangeValidator);
-        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-            @Override
-            public Object convert(Object fromObject) {
-                int calcAttributesSpend = object.calcSkillSpend(context);
-                return "spend :" + calcAttributesSpend + "";
-            }
-        });
+//        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+//            @Override
+//            public Object convert(Object fromObject) {
+//                int calcAttributesSpend = object.calcSkillSpend(context);
+//                return "spend :" + calcAttributesSpend + "";
+//            }
+//        });
         Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
                 new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
         ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
@@ -171,7 +200,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcSkillSpend(context);
-                return "left :" + (object.getSkillPoints() - calcAttributesSpend + "");
+                return (object.getSkillPoints() - calcAttributesSpend + "");
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
@@ -182,14 +211,14 @@ public class SkillGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__GROUP_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
-        modelToTarget.setBeforeSetValidator(groupsInRangeValidator);
-        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-            @Override
-            public Object convert(Object fromObject) {
-                int calcAttributesSpend = object.calcGroupSpend(context);
-                return "spend :" + calcAttributesSpend + "";
-            }
-        });
+        modelToTarget.setAfterGetValidator(groupsInRangeValidator);
+//        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+//            @Override
+//            public Object convert(Object fromObject) {
+//                int calcAttributesSpend = object.calcGroupSpend(context);
+//                return "spend :" + calcAttributesSpend + "";
+//            }
+//        });
         bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
         ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
@@ -203,7 +232,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcGroupSpend(context);
-                return "left :" + (object.getGroupPoints() - calcAttributesSpend + "");
+                return (object.getGroupPoints() - calcAttributesSpend + "");
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
@@ -216,13 +245,13 @@ public class SkillGeneratorOption extends Composite {
 
         modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setAfterGetValidator(knownlegeSkillsInRangeValidator);
-        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-            @Override
-            public Object convert(Object fromObject) {
-                int calcAttributesSpend = object.calcKnowledgeSkillPoints(context);
-                return "Knownlege :" + calcAttributesSpend + "";
-            }
-        });
+//        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+//            @Override
+//            public Object convert(Object fromObject) {
+//                int calcAttributesSpend = object.calcKnowledgeSkillPoints(context);
+//                return "Knownlege :" + calcAttributesSpend + "";
+//            }
+//        });
         bindValue =bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
         ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
@@ -236,7 +265,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcKnowledgeSkillSpend(context);
-                return "left :" + (object.calcKnowledgeSkillPoints(context) - calcAttributesSpend + "");
+                return (object.calcKnowledgeSkillPoints(context) - calcAttributesSpend + "");
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(

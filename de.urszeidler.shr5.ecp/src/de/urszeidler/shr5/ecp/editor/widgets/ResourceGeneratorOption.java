@@ -37,7 +37,7 @@ public class ResourceGeneratorOption extends Composite {
 	private Label lblspend;
 	private Label lblleft;
 
-    private int minSize = 100;
+    private int minSize = 50;
 
     private NumberInRangeValidator resourceInRangeValidator;
 	/**
@@ -81,7 +81,11 @@ public class ResourceGeneratorOption extends Composite {
 	    resourceInRangeValidator = new NumberInRangeValidator(0, object.getResource());
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
-		setLayout(new GridLayout(2, false));
+		GridLayout gridLayout = new GridLayout(3, false);
+		gridLayout.horizontalSpacing = 10;
+		setLayout(gridLayout);
+		
+		toolkit.createLabel(this, "Resource (spend/left):", SWT.NONE);
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -116,20 +120,20 @@ public class ResourceGeneratorOption extends Composite {
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
 		modelToTarget.setAfterGetValidator(resourceInRangeValidator);
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcResourceSpend(context);
-				return "spend :" + calcAttributesSpend + "";
-			}
-		});
+//		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+//			@Override
+//			public Object convert(Object fromObject) {
+//				int calcAttributesSpend = object.calcResourceSpend(context);
+//				return "spend :" + calcAttributesSpend + "";
+//			}
+//		});
 		Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
 				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
 		ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
 		//
 		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
 		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__KARMA_SPEND);
+				context.getChracterSource(), Literals.SHR5_GENERATOR__RESOURCE_SPEND);
 
 		modelToTarget = new EMFUpdateValueStrategy();
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
@@ -143,7 +147,7 @@ public class ResourceGeneratorOption extends Composite {
 					karmaToResource = sr5g.getKarmaToResource() * sr5g.getShr5Generator().getKarmaToResourceFactor();
 				}
 				
-				return "left :" + (object.getResource()+karmaToResource - calcAttributesSpend + "");
+				return (object.getResource()+karmaToResource - calcAttributesSpend + "");
 			}
 		});
 		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
