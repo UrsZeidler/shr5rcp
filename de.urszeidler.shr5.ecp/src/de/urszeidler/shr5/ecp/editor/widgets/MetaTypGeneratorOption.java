@@ -83,7 +83,7 @@ public class MetaTypGeneratorOption extends Composite {
 		gridLayout.horizontalSpacing = 10;
 		setLayout(gridLayout);
 		
-		Label lblNewLabel = toolkit.createLabel(this, "Special (spend/left):", SWT.NONE);
+		toolkit.createLabel(this, "Special (spend/left):", SWT.NONE);
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
