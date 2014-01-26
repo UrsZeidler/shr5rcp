@@ -478,17 +478,17 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      * @param newSet
      */
     private void updateDecorators(Set<Integer> newSet) {
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS, controlDecorationMagic,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_TYPE_POINTS, controlDecorationMagic,
                 "Not all type points spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
                 "Not all special points spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS, controlDecorationSkills,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, controlDecorationSkills,
                 "Not all skill spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
                 "Not all attributes spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
                 "Not all resource points spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_CONNECTION_POINTS, controlDecorationConnections,
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS, controlDecorationConnections,
                 "Not all Connection points spend.");
     }
 

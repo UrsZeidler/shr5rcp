@@ -61,19 +61,19 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * The following operations are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Attributes Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Skill Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Special Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Special Type Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Connection Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Resource Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Skills Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Group Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Knowlege Skill Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Attributes Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Skill Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Special Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Special Type Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Connection Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Resource Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Magic Skills Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Magic Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Group Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Knowlege Skill Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -451,14 +451,14 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Points</em>}' operation. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    public void testHasNotSpendAllPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -468,7 +468,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllPoints__DiagnosticChain_Map_KiAdept() {
+    public void testHasSpendAllPoints__DiagnosticChain_Map_KiAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
         getFixture().setCharacter(character);
@@ -483,18 +483,18 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setMagic(mudan);
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllPoints__DiagnosticChain_Map_Magier() {
+    public void testHasSpendAllPoints__DiagnosticChain_Map_Magier() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createZaubererCharacter();
         getFixture().setCharacter(character);
@@ -509,28 +509,28 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setMagic(mudan);
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         Spellcaster sc = (Spellcaster)mudan;
         sc.setSpellPoints(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
 
         Magier t = (Magier)character.getPersona();
         PersonaZauber zauber = Shr5Factory.eINSTANCE.createPersonaZauber();
         t.getZauber().add(zauber);
         zauber.setStufe(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllPoints__DiagnosticChain_Map_MysticAdept() {
+    public void testHasSpendAllPoints__DiagnosticChain_Map_MysticAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
         getFixture().setCharacter(character);
@@ -545,33 +545,33 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setMagic(mudan);
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         Spellcaster sc = (Spellcaster)mudan;
         sc.setSpellPoints(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
 
         MysticAdept t = (MysticAdept)character.getPersona();
         PersonaZauber zauber = Shr5Factory.eINSTANCE.createPersonaZauber();
         t.getZauber().add(zauber);
         zauber.setStufe(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         t.setMagieBasis(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         sc.setMagic(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllPoints__DiagnosticChain_Map_Technomancer() {
+    public void testHasSpendAllPoints__DiagnosticChain_Map_Technomancer() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createTechnoCharacter();
         getFixture().setCharacter(character);
@@ -586,29 +586,29 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setMagic(mudan);
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         Technomancer tm = (Technomancer)mudan;
         tm.setComplexForms(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         de.urszeidler.eclipse.shr5.Technomancer t = (de.urszeidler.eclipse.shr5.Technomancer)character.getPersona();
 
         PersonaKomplexForm komplexeForm = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
         t.getComplexForms().add(komplexeForm);
         komplexeForm.setStufe(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         t.setResonanzBasis(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         tm.setResonanz(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
     }
 
@@ -616,51 +616,51 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     private void assertMudanOptions(PlayerCharacter character) {
         context = Collections.EMPTY_MAP;
         diagnostics = new BasicDiagnostic();
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         attributes.setAttibutePoints(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         character.getPersona().setKonstitutionBasis(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         skill.setSkillPoints(1);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
         fertigkeit.setFertigkeit(wfertigkeit);
         fertigkeit.setStufe(1);
         character.getPersona().getFertigkeiten().add(fertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         skill.setGroupPoints(1);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         PersonaFertigkeitsGruppe fertigkeitg = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
         character.getPersona().getFertigkeitsGruppen().add(fertigkeitg);
         fertigkeitg.setStufe(1);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         metaType.setSpecialPoints(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         character.getPersona().setEdgeBasis(2);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
         resourcen.setResource(100);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
         gegenstand.setWert(new BigDecimal(100));
         character.getInventar().add(gegenstand);
-        assertEquals("is true", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
     /**
@@ -707,16 +707,16 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Attributes Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain,
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain,
      * java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllAttributesPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllAttributesPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -724,21 +724,21 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertMudanOptions(character);
 
         attributes.setAttibutePoints(3);
-        assertEquals("is false", false, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         character.getPersona().setLogikBasis(1);
-        assertEquals("is false", true, getFixture().hasNotSpendAllPoints(diagnostics, context));
+        assertEquals("is false", true, getFixture().hasSpendAllPoints(diagnostics, context));
 
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Skill Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Skill Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllSkillPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllSkillPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -746,13 +746,13 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertMudanOptions(character);
 
         skill.setSkillPoints(2);
-        assertEquals("is false", false, getFixture().hasNotSpendAllSkillPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllSkillPoints(diagnostics, context));
         PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
         fertigkeit.setFertigkeit(wfertigkeit);
         fertigkeit.setStufe(1);
         character.getPersona().getFertigkeiten().add(fertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllSkillPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
 
         character.getPersona().setLogikBasis(1);
         fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
@@ -760,7 +760,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         fertigkeit.setFertigkeit(w1fertigkeit);
         fertigkeit.setStufe(2);
         character.getPersona().getFertigkeiten().add(fertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllSkillPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
 
     }
 
@@ -782,13 +782,13 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 //        assertMudanOptions(character);
 //
 //        skill.setSkillPoints(2);
-//        assertEquals("is false", false, getFixture().hasNotSpendAllSkillPoints(diagnostics, context));
+//        assertEquals("is false", false, getFixture().hasSpendAllSkillPoints(diagnostics, context));
 //        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
 //        Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
 //        fertigkeit.setFertigkeit(wfertigkeit);
 //        fertigkeit.setStufe(1);
 //        character.getPersona().getFertigkeiten().add(fertigkeit);
-//        assertEquals("is true", true, getFixture().hasNotSpendAllSkillPoints(diagnostics, context));
+//        assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
 //
 //        character.getPersona().setLogikBasis(1);
 //        fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
@@ -796,20 +796,20 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 //        fertigkeit.setFertigkeit(w1fertigkeit);
 //        fertigkeit.setStufe(2);
 //        character.getPersona().getFertigkeiten().add(fertigkeit);
-//        assertEquals("is true", true, getFixture().hasNotSpendAllSkillPoints(diagnostics, context));
+//        assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
 //
 //    }
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Special Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    public void testHasNotSpendAllSpecialPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllSpecialPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -821,15 +821,15 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Special Type Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain,
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain,
      * java.util.Map)
      * @generated not
      */
-    public void testHasNotSpendAllSpecialTypePoints__DiagnosticChain_Map() {
+    public void testHasSpendAllSpecialTypePoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -837,79 +837,79 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertMudanOptions(character);
 
         // assertEquals("is false", false,
-        // getFixture().hasNotSpendAllSpecialTypePoints(diagnostics, context));
+        // getFixture().hasSpendAllSpecialTypePoints(diagnostics, context));
         // mudan.se
         // TODO
     }
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Connection Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain,
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain,
      * java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllConnectionPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllConnectionPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
         getFixture().getShr5Generator().setCharismaToConnectionFactor(3);
-        assertEquals("is true", true, getFixture().hasNotSpendAllConnectionPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllConnectionPoints(diagnostics, context));
 
         assertMudanOptions(character);
         getFixture().getCharacter().getPersona().setCharismaBasis(1);
-        assertEquals("is true", false, getFixture().hasNotSpendAllConnectionPoints(diagnostics, context));
+        assertEquals("is true", false, getFixture().hasSpendAllConnectionPoints(diagnostics, context));
 
         Connection connection = Shr5managementFactory.eINSTANCE.createConnection();
         getFixture().getCharacter().getConnections().add(connection);
-        assertEquals("is true", false, getFixture().hasNotSpendAllConnectionPoints(diagnostics, context));
+        assertEquals("is true", false, getFixture().hasSpendAllConnectionPoints(diagnostics, context));
 
         connection.setInfluence(1);
-        assertEquals("is true", false, getFixture().hasNotSpendAllConnectionPoints(diagnostics, context));
+        assertEquals("is true", false, getFixture().hasSpendAllConnectionPoints(diagnostics, context));
         connection.setLoyality(2);
-        assertEquals("is false", true, getFixture().hasNotSpendAllConnectionPoints(diagnostics, context));
+        assertEquals("is false", true, getFixture().hasSpendAllConnectionPoints(diagnostics, context));
     }
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Resource Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain,
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain,
      * java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllResourcePoints__DiagnosticChain_Map() {
+    public void testHasSpendAllResourcePoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
         getFixture().getShr5Generator().setMaxResourceToKeep(1);
         resourcen.setResource(100);
-        assertEquals("is false", false, getFixture().hasNotSpendAllResourcePoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllResourcePoints(diagnostics, context));
         Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
         gegenstand.setWert(new BigDecimal(99));
         character.getInventar().add(gegenstand);
-        assertEquals("is true", true, getFixture().hasNotSpendAllResourcePoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllResourcePoints(diagnostics, context));
 
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Skills Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Skills Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not 
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllMagicSkillsPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllMagicSkillsPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -917,38 +917,38 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllMagicSkillsPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllMagicSkillsPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllMagicSkillsPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllMagicSkillsPoints(diagnostics, context));
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
-    public void testHasNotSpendAllMagicPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllMagicPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllMagicPoints__DiagnosticChain_Map_KiAdept() {
+    public void testHasSpendAllMagicPoints__DiagnosticChain_Map_KiAdept() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
         getFixture().setCharacter(character);
@@ -957,57 +957,57 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setMagic(mudan);
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
-        assertEquals("is false", false, getFixture().hasNotSpendAllMagicPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllMagicPoints(diagnostics, context));
         Fertigkeit f = Shr5Factory.eINSTANCE.createFertigkeit();
         mudan.getSelectableSkills().add(f);
         PersonaFertigkeit pfertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         pfertigkeit.setStufe(5);
         pfertigkeit.setFertigkeit(f);
         character.getPersona().getFertigkeiten().add(pfertigkeit);
-        assertEquals("is true", true, getFixture().hasNotSpendAllMagicPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllMagicPoints(diagnostics, context));
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Group Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Group Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllGroupPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllGroupPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
         getFixture().getSkills().setGroupPoints(2);
 
         assertEquals("should be 0", 0, getFixture().getGroupPointSpend());
-        assertEquals("is false", false, getFixture().hasNotSpendAllGroupPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllGroupPoints(diagnostics, context));
         PersonaFertigkeitsGruppe pfg = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
         FertigkeitsGruppe fg = Shr5Factory.eINSTANCE.createFertigkeitsGruppe();
         pfg.setGruppe(fg);
         pfg.setStufe(1);
         character.getPersona().getFertigkeitsGruppen().add(pfg);
-        assertEquals("is false", false, getFixture().hasNotSpendAllGroupPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllGroupPoints(diagnostics, context));
 
         pfg = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
         fg = Shr5Factory.eINSTANCE.createFertigkeitsGruppe();
         pfg.setGruppe(fg);
         pfg.setStufe(1);
         character.getPersona().getFertigkeitsGruppen().add(pfg);
-        assertEquals("is true", true, getFixture().hasNotSpendAllGroupPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllGroupPoints(diagnostics, context));
 
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Knowlege Skill Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Knowlege Skill Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllKnowlegeSkillPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllKnowlegeSkillPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
@@ -1021,7 +1021,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         fertigkeit.setStufe(1);
         character.getPersona().getFertigkeiten().add(fertigkeit);
         assertEquals("should be 1", 1, getFixture().getKnownlegePointSpend());
-        assertEquals("is false", false, getFixture().hasNotSpendAllKnowlegeSkillPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllKnowlegeSkillPoints(diagnostics, context));
 
 
         fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
@@ -1030,28 +1030,28 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         fertigkeit.setStufe(5);
         character.getPersona().getFertigkeiten().add(fertigkeit);
         assertEquals("should be 6", 6, getFixture().getKnownlegePointSpend());
-        assertEquals("is true", true, getFixture().hasNotSpendAllKnowlegeSkillPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllKnowlegeSkillPoints(diagnostics, context));
 
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}' operation.
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
-    public void testHasNotSpendAllKarmaPoints__DiagnosticChain_Map() {
+    public void testHasSpendAllKarmaPoints__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
         getFixture().getShr5Generator().setKarmaPoints(10);
         
-        assertEquals("is false", false, getFixture().hasNotSpendAllKarmaPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         getFixture().setKarmaToResource(10);
-        assertEquals("is true", true, getFixture().hasNotSpendAllKarmaPoints(diagnostics, context));
+        assertEquals("is true", true, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
     
         getFixture().setKarmaToResource(8);
         

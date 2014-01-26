@@ -163,57 +163,57 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllPoints/context"/>
       </genOperations>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllAttributesPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllAttributesPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllAttributesPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllAttributesPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllAttributesPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllAttributesPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSkillPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSkillPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSkillPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllSkillPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSkillPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSkillPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllSpecialPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSpecialPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSpecialPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialTypePoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialTypePoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllSpecialTypePoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllSpecialTypePoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSpecialTypePoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSpecialTypePoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllConnectionPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllConnectionPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllConnectionPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllConnectionPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllResourcePoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllResourcePoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllResourcePoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllResourcePoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllResourcePoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllResourcePoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllMagicSkillsPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllMagicSkillsPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllMagicSkillsPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllMagicSkillsPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllMagicSkillsPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllMagicSkillsPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllMagicPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllMagicPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllMagicPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllMagicPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllMagicPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllMagicPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllGroupPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllGroupPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllGroupPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllGroupPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllGroupPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllGroupPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllKnowlegeSkillPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllKnowlegeSkillPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllKnowlegeSkillPoints/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKarmaPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKarmaPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKarmaPoints/context"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllKarmaPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllKarmaPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllKarmaPoints/context"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>

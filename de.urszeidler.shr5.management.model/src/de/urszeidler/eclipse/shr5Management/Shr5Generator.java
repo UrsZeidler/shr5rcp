@@ -392,7 +392,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-	boolean hasNotSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
      * <!-- begin-user-doc -->
@@ -408,7 +408,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-	boolean hasNotSpendAllAttributesPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean hasSpendAllAttributesPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
      * <!-- begin-user-doc -->
@@ -416,7 +416,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -424,7 +424,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-	boolean hasNotSpendAllSpecialPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean hasSpendAllSpecialPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
      * <!-- begin-user-doc -->
@@ -432,7 +432,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-	boolean hasNotSpendAllSpecialTypePoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean hasSpendAllSpecialTypePoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
      * <!-- begin-user-doc -->
@@ -440,7 +440,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-	boolean hasNotSpendAllConnectionPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean hasSpendAllConnectionPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -448,7 +448,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -456,7 +456,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllMagicSkillsPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllMagicSkillsPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -464,7 +464,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllMagicPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllMagicPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -472,7 +472,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllGroupPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllGroupPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -480,7 +480,7 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllKnowlegeSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllKnowlegeSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
     /**
      * <!-- begin-user-doc -->
@@ -488,6 +488,6 @@ public interface Shr5Generator extends CharacterGenerator {
      * @model
      * @generated
      */
-    boolean hasNotSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+    boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Shr5Generator
