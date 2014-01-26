@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -165,8 +166,8 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 		if (generator instanceof Shr5Generator) {
 			Shr5Generator shr5 = (Shr5Generator) generator;
 			SpecialType magic = shr5.getMagic();
-			if (magic instanceof Spellcaster) {
-				Spellcaster sp = (Spellcaster) magic;
+			if (magic instanceof Adept) {
+			    Adept sp = (Adept) magic;
 				magicDefault = sp.getMagic();
 			} else if (magic instanceof Technomancer) {
 				Technomancer tm = (Technomancer) magic;
