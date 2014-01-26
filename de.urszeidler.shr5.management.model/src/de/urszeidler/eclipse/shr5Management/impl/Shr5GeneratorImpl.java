@@ -695,7 +695,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendAllPoints",
                                 new Object[]{ "hasNotSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -799,7 +799,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendSkillAllPoints",
                                 new Object[]{ "hasNotSpendAllSkillPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -807,28 +807,6 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         return true;
     }
 
-    // /**
-    // * <!-- begin-user-doc --> <!-- end-user-doc -->
-    // *
-    // * @generated not
-    // */
-    // public boolean hasNotSpendSkillAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-    // if (getCharacter() == null || getSkills() == null)
-    // return true;
-    //
-    // int skillPoints = getSkills().getSkillPoints();
-    // int groupPoints = getSkills().getGroupPoints();
-    // if (getSkillPointSpend() - skillPoints != 0 || getSkills().calcGroupSpend(getCharacter()) - groupPoints != 0) {
-    // if (diagnostics != null) {
-    // diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-    // Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
-    // "_UI_NotSpendSkillAllPoints",
-    // new Object[]{ "hasNotSpendSkillAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
-    // }
-    // return false;
-    // }
-    // return true;
-    // }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -877,7 +855,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_SPECIAL_TYPE_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendAllSpecialTypePoints",
                                 new Object[]{ "hasNotSpendAllSpecialTypePoints", EObjectValidator.getObjectLabel(this, context) }),
                         new Object[]{ this }));
             }
@@ -960,7 +938,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_MAGIC_SKILLS_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendAllMagicSkillsPoints",
                                 new Object[]{ "hasNotSpendAllMagicSkillsPoints", EObjectValidator.getObjectLabel(this, context) }),
                         new Object[]{ this }));
             }
@@ -984,7 +962,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_MAGIC_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendAllMagicPoints",
                                 new Object[]{ "hasNotSpendAllMagicPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -1009,7 +987,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_GROUP_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendAllGroupPoints",
                                 new Object[]{ "hasNotSpendAllGroupPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -1033,7 +1011,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                                "_UI_NotSpendAllKnowlegeSkillPoints",
                                 new Object[]{ "hasNotSpendAllKnowlegeSkillPoints", EObjectValidator.getObjectLabel(this, context) }),
                         new Object[]{ this }));
             }
