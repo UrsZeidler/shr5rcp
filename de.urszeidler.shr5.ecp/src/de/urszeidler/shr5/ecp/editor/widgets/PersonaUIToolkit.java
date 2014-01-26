@@ -324,12 +324,12 @@ public class PersonaUIToolkit {
 		// TODO : here we need to check for the other type and create more
 		// attributes
 		if (eObject instanceof BaseMagischePersona) {
-			createAttributeWidget(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ,
+			createAttributeWidget(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS,
 					Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE, client);
 
 		} else if (eObject instanceof Technomancer) {
-			createAttributeWidget(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ,
-					Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, client);
+			createAttributeWidget(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS,
+					Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ, client);
 		}
 
 	}
