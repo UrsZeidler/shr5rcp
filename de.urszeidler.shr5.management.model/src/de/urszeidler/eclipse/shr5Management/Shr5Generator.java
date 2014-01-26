@@ -490,4 +490,12 @@ public interface Shr5Generator extends CharacterGenerator {
      */
     boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasSpendAllSpellPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
 } // Shr5Generator

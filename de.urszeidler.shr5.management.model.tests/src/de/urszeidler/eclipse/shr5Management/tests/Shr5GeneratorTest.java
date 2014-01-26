@@ -74,6 +74,7 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Group Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Knowlege Skill Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -724,9 +725,10 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertMudanOptions(character);
 
         attributes.setAttibutePoints(3);
-        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllAttributesPoints(diagnostics, context));
         character.getPersona().setLogikBasis(1);
-        assertEquals("is false", true, getFixture().hasSpendAllPoints(diagnostics, context));
+        
+        assertEquals("is true", true, getFixture().hasSpendAllAttributesPoints(diagnostics, context));
 
     }
 
@@ -953,7 +955,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
         getFixture().setCharacter(character);
 
-          mudan = Shr5managementFactory.eINSTANCE.createAdept();
+        mudan = Shr5managementFactory.eINSTANCE.createAdept();
         getFixture().setMagic(mudan);
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
@@ -1053,8 +1055,115 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setKarmaToResource(10);
         assertEquals("is true", true, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
     
-        getFixture().setKarmaToResource(8);
+        getFixture().setKarmaToResource(8);        
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllSpellPoints__DiagnosticChain_Map() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
         
+        assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllSpellPoints__DiagnosticChain_Map_MysticAdept() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(character);
+
+        assertMudanOptions(character);
+        skill.setSkillPoints(skill.getSkillPoints() + 5);
+        mudan = Shr5managementFactory.eINSTANCE.createSpellcaster();
+        getFixture().setMagic(mudan);
+ 
+        Spellcaster sc = (Spellcaster)mudan;
+        sc.setSpellPoints(2);
+        assertEquals("is false", false, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+
+        MysticAdept t = (MysticAdept)character.getPersona();
+        PersonaZauber zauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        t.getZauber().add(zauber);
+        zauber.setStufe(2);
+        assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+
+     }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllSpellPoints__DiagnosticChain_Map_Magier() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createZaubererCharacter();
+        getFixture().setCharacter(character);
+
+        assertMudanOptions(character);
+        mudan = Shr5managementFactory.eINSTANCE.createSpellcaster();
+        getFixture().setMagic(mudan);
+
+        Spellcaster sc = (Spellcaster)mudan;
+        sc.setSpellPoints(2);
+        assertEquals("is false", false, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+
+        Magier t = (Magier)character.getPersona();
+        PersonaZauber zauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        t.getZauber().add(zauber);
+        zauber.setStufe(2);
+        assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllSpellPoints__DiagnosticChain_Map_Technomacher() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createTechnoCharacter();
+        getFixture().setCharacter(character);
+
+        assertMudanOptions(character);
+        skill.setSkillPoints(skill.getSkillPoints() + 5);
+        mudan = Shr5managementFactory.eINSTANCE.createTechnomancer();
+        getFixture().setMagic(mudan);
+
+        Technomancer tm = (Technomancer)mudan;
+        tm.setComplexForms(2);
+        assertEquals("is false", false, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+        de.urszeidler.eclipse.shr5.Technomancer t = (de.urszeidler.eclipse.shr5.Technomancer)character.getPersona();
+
+        PersonaKomplexForm komplexeForm = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
+        t.getComplexForms().add(komplexeForm);
+        komplexeForm.setStufe(2);
+        assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+
+        t.setResonanzBasis(2);
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
+        tm.setResonanz(2);
+        assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
 
 } // Shr5GeneratorTest

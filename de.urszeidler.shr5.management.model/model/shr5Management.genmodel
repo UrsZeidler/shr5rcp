@@ -215,6 +215,10 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllKarmaPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllKarmaPoints/context"/>
       </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllSpellPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSpellPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllSpellPoints/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter"/>
