@@ -59,6 +59,8 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getGroupPointSpend <em>Group Point Spend</em>}</li>
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKnownlegePointSpend <em>Knownlege Point Spend</em>}</li>
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSpellPointSpend <em>Spell Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartResources <em>Start Resources</em>}</li>
  * </ul>
  * </p>
  * 
@@ -234,6 +236,50 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @ordered
      */
     protected static final int SPELL_POINT_SPEND_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getStartKarma() <em>Start Karma</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getStartKarma()
+     * @generated
+     * @ordered
+     */
+    protected static final int START_KARMA_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getStartKarma() <em>Start Karma</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getStartKarma()
+     * @generated
+     * @ordered
+     */
+    protected int startKarma = START_KARMA_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getStartResources() <em>Start Resources</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getStartResources()
+     * @generated
+     * @ordered
+     */
+    protected static final int START_RESOURCES_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getStartResources() <em>Start Resources</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getStartResources()
+     * @generated
+     * @ordered
+     */
+    protected int startResources = START_RESOURCES_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -631,6 +677,26 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public int getStartKarma() {
+        return startKarma;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public int getStartResources() {
+        return startResources;
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated not
@@ -694,8 +760,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (notAllSpend) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotSpendAllPoints",
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString("_UI_NotSpendAllPoints",
                                 new Object[]{ "hasNotSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
@@ -806,7 +871,6 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         }
         return true;
     }
-
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1021,6 +1085,31 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasNotSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
+                || getMagic() == null)
+            return true;
+
+        int karmaPoints = getShr5Generator().getKarmaPoints();
+        int diff = karmaPoints - getKarmaSpend();
+        if (diff != 0) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_SPEND_ALL_KARMA_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllKarmaPoints",
+                                new Object[]{ "hasNotSpendAllKarmaPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -1072,6 +1161,10 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return getKnownlegePointSpend();
             case Shr5managementPackage.SHR5_GENERATOR__SPELL_POINT_SPEND:
                 return getSpellPointSpend();
+            case Shr5managementPackage.SHR5_GENERATOR__START_KARMA:
+                return getStartKarma();
+            case Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES:
+                return getStartResources();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -1176,6 +1269,10 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return getKnownlegePointSpend() != KNOWNLEGE_POINT_SPEND_EDEFAULT;
             case Shr5managementPackage.SHR5_GENERATOR__SPELL_POINT_SPEND:
                 return getSpellPointSpend() != SPELL_POINT_SPEND_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__START_KARMA:
+                return startKarma != START_KARMA_EDEFAULT;
+            case Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES:
+                return startResources != START_RESOURCES_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -1215,6 +1312,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return hasNotSpendAllGroupPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasNotSpendAllKnowlegeSkillPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP:
+                return hasNotSpendAllKarmaPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }
@@ -1232,6 +1331,10 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (karmaToResource: ");
         result.append(karmaToResource);
+        result.append(", startKarma: ");
+        result.append(startKarma);
+        result.append(", startResources: ");
+        result.append(startResources);
         result.append(')');
         return result.toString();
     }

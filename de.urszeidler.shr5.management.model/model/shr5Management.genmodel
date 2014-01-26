@@ -157,6 +157,8 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/groupPointSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/knownlegePointSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/spellPointSpend"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/startKarma"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/startResources"/>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/context"/>
@@ -208,6 +210,10 @@
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKnowlegeSkillPoints/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKarmaPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKarmaPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotSpendAllKarmaPoints/context"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>

@@ -1605,6 +1605,50 @@
     <children xmi:type="notation:Node" xmi:id="_h3JmIIHXEeOOPsd_i6NWrA" type="1001">
       <children xmi:type="notation:Node" xmi:id="_h3K0QIHXEeOOPsd_i6NWrA" type="4001"/>
       <children xmi:type="notation:Node" xmi:id="_h3K0QYHXEeOOPsd_i6NWrA" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_wDfYkIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/karmaToResource"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDfYkYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDfYkoaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/karmaSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDfYk4aDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDfYlIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/attributeSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDfYlYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDf_oIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/resourceSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDf_oYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDf_ooaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/connectionSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDf_o4aDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDf_pIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/skillPointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDf_pYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDgmsIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/specialPointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDgmsYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDgmsoaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/groupPointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDgms4aDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDgmtIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/knownlegePointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDgmtYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wDhNwIaDEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/spellPointSpend"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wDhNwYaDEeOk4ewiX185pA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ScwyAIaIEeOk4ewiX185pA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5Generator/startKarma"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ScwyAYaIEeOk4ewiX185pA"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_h3K0QoHXEeOOPsd_i6NWrA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_h3K0Q4HXEeOOPsd_i6NWrA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_h3K0RIHXEeOOPsd_i6NWrA"/>

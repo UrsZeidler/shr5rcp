@@ -73,6 +73,7 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Group Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Knowlege Skill Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -1031,6 +1032,29 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertEquals("should be 6", 6, getFixture().getKnownlegePointSpend());
         assertEquals("is true", true, getFixture().hasNotSpendAllKnowlegeSkillPoints(diagnostics, context));
 
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasNotSpendAllKarmaPoints__DiagnosticChain_Map() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+
+        getFixture().getShr5Generator().setKarmaPoints(10);
+        
+        assertEquals("is false", false, getFixture().hasNotSpendAllKarmaPoints(diagnostics, context));
+        getFixture().setKarmaToResource(10);
+        assertEquals("is true", true, getFixture().hasNotSpendAllKarmaPoints(diagnostics, context));
+    
+        getFixture().setKarmaToResource(8);
+        
     }
 
 } // Shr5GeneratorTest

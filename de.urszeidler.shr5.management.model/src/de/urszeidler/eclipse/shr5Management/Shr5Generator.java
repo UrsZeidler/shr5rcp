@@ -32,6 +32,8 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend <em>Group Point Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend <em>Knownlege Point Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend <em>Spell Point Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartKarma <em>Start Karma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartResources <em>Start Resources</em>}</li>
  * </ul>
  * </p>
  *
@@ -347,6 +349,36 @@ public interface Shr5Generator extends CharacterGenerator {
     int getSpellPointSpend();
 
     /**
+     * Returns the value of the '<em><b>Start Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Start Karma</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Start Karma</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_StartKarma()
+     * @model changeable="false"
+     * @generated
+     */
+    int getStartKarma();
+
+    /**
+     * Returns the value of the '<em><b>Start Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Start Resources</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Start Resources</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_StartResources()
+     * @model changeable="false"
+     * @generated
+     */
+    int getStartResources();
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @model
@@ -449,5 +481,13 @@ public interface Shr5Generator extends CharacterGenerator {
      * @generated
      */
     boolean hasNotSpendAllKnowlegeSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasNotSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Shr5Generator

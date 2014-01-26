@@ -2089,13 +2089,31 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_GENERATOR__SPELL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 15;
 
     /**
+     * The feature id for the '<em><b>Start Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__START_KARMA = CHARACTER_GENERATOR_FEATURE_COUNT + 16;
+
+    /**
+     * The feature id for the '<em><b>Start Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR__START_RESOURCES = CHARACTER_GENERATOR_FEATURE_COUNT + 17;
+
+    /**
      * The number of structural features of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 16;
+	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 18;
 
 	/**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
@@ -2215,13 +2233,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 12;
 
     /**
+     * The operation id for the '<em>Has Not Spend All Karma Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 13;
+
+    /**
      * The number of operations of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 13;
+	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 14;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl <em>Persona Value Change</em>}' class.
@@ -4139,6 +4166,28 @@ public interface Shr5managementPackage extends EPackage {
     EAttribute getShr5Generator_SpellPointSpend();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartKarma <em>Start Karma</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Karma</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartKarma()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_StartKarma();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartResources <em>Start Resources</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Resources</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartResources()
+     * @see #getShr5Generator()
+     * @generated
+     */
+    EAttribute getShr5Generator_StartResources();
+
+    /**
      * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4267,6 +4316,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EOperation getShr5Generator__HasNotSpendAllKnowlegeSkillPoints__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not Spend All Karma Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5Generator__HasNotSpendAllKarmaPoints__DiagnosticChain_Map();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.AttributeChange <em>Attribute Change</em>}'.
@@ -5419,6 +5478,22 @@ public interface Shr5managementPackage extends EPackage {
         EAttribute SHR5_GENERATOR__SPELL_POINT_SPEND = eINSTANCE.getShr5Generator_SpellPointSpend();
 
         /**
+         * The meta object literal for the '<em><b>Start Karma</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__START_KARMA = eINSTANCE.getShr5Generator_StartKarma();
+
+        /**
+         * The meta object literal for the '<em><b>Start Resources</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_GENERATOR__START_RESOURCES = eINSTANCE.getShr5Generator_StartResources();
+
+        /**
          * The meta object literal for the '<em><b>Has Category Only Once</b></em>' operation.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5521,6 +5596,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllKnowlegeSkillPoints__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Not Spend All Karma Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_GENERATOR___HAS_NOT_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasNotSpendAllKarmaPoints__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl <em>Attribute Change</em>}' class.

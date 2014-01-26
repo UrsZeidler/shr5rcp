@@ -74,6 +74,8 @@ public class Shr5GeneratorItemProvider
             addGroupPointSpendPropertyDescriptor(object);
             addKnownlegePointSpendPropertyDescriptor(object);
             addSpellPointSpendPropertyDescriptor(object);
+            addStartKarmaPropertyDescriptor(object);
+            addStartResourcesPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -431,6 +433,50 @@ public class Shr5GeneratorItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Start Karma feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addStartKarmaPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_startKarma_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_startKarma_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Start Resources feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addStartResourcesPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_startResources_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_startResources_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5Generator.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -493,6 +539,8 @@ public class Shr5GeneratorItemProvider
             case Shr5managementPackage.SHR5_GENERATOR__GROUP_POINT_SPEND:
             case Shr5managementPackage.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND:
             case Shr5managementPackage.SHR5_GENERATOR__SPELL_POINT_SPEND:
+            case Shr5managementPackage.SHR5_GENERATOR__START_KARMA:
+            case Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
