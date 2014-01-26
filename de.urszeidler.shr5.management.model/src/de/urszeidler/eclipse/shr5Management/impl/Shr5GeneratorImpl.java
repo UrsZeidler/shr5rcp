@@ -733,14 +733,13 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
-                || getMagic() == null)
+                || getMagic() == null || getCharacter() == null)
             return true;
 
         boolean spendAll = hasSpendAllAttributesPoints(null, null) && hasSpendAllConnectionPoints(null, null) && hasSpendAllGroupPoints(null, null)
                 && hasSpendAllKarmaPoints(null, null) && hasSpendAllKnowlegeSkillPoints(null, null) && hasSpendAllMagicPoints(null, null)
                 && hasSpendAllMagicSkillsPoints(null, null) && hasSpendAllResourcePoints(null, null) && hasSpendAllSkillPoints(null, null)
-                && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null)
-                && hasSpendAllSpellPoints(null, null);
+                && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null) && hasSpendAllSpellPoints(null, null);
 
         int karmaPoints = getShr5Generator().getKarmaPoints();
 
@@ -909,22 +908,25 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * 
      * @generated not
      */
+    @Deprecated
     public boolean hasSpendAllSpecialTypePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getMagic() == null)
             return true;
-
+//
         boolean hasSpendAllPoints = false;
-        if (magic instanceof Spellcaster) {
-            Spellcaster sc = (Spellcaster)magic;
-            if (sc.calcSpellPointsSpend(getCharacter()) != sc.getSpellPoints())
-                hasSpendAllPoints = true;
-        } else if (magic instanceof Technomancer) {
-            Technomancer tm = (Technomancer)magic;
-            if (tm.calcComplexFormsSpend(getCharacter()) != tm.getComplexForms())
-                hasSpendAllPoints = true;
-        }
+//        if (magic instanceof Spellcaster) {
+//            Spellcaster sc = (Spellcaster)magic;
+//            if (sc.calcSpellPointsSpend(getCharacter()) != sc.getSpellPoints())
+//                hasSpendAllPoints = true;
+//        } else if (magic instanceof Technomancer) {
+//            Technomancer tm = (Technomancer)magic;
+//            if (tm.calcComplexFormsSpend(getCharacter()) != tm.getComplexForms())
+//                hasSpendAllPoints = true;
+//        }
 
-        if (hasSpendAllPoints || getMagic().calcSkillsSpend(getCharacter()) != getMagic().getSkillNumber()) {
+        hasSpendAllPoints = hasSpendAllMagicPoints(null, null)&& hasSpendAllMagicSkillsPoints(null, null);
+        
+        if (!hasSpendAllPoints ) {
             if (diagnostics != null) {
                 diagnostics
                         .add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
@@ -1102,8 +1104,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
-                || getMagic() == null)
+        if (getShr5Generator() == null || getCharacter() == null)
             return true;
 
         int karmaPoints = getShr5Generator().getKarmaPoints();
@@ -1127,7 +1128,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * @generated not
      */
     public boolean hasSpendAllSpellPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getMagic() == null)
+        if (getMagic() == null || getCharacter() == null)
             return true;
 
         boolean hasSpendAllPoints = false;
@@ -1139,10 +1140,9 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             Technomancer tm = (Technomancer)magic;
             if (tm.calcComplexFormsSpend(getCharacter()) == tm.getComplexForms())
                 hasSpendAllPoints = true;
-        }else{
+        } else {
             hasSpendAllPoints = true;
         }
-            
 
         if (!hasSpendAllPoints) {
             if (diagnostics != null) {
