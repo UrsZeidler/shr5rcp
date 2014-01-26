@@ -42,8 +42,10 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
+import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -52,6 +54,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
+import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -500,6 +503,14 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         ManagedCharacter playerCharacter;
         boolean createPlayer = btnRadioButton.getSelection();
         playerCharacter = createManagedCharacter(selectableType, spezies, createPlayer, object);
+        
+        if (magic instanceof Adept) {
+            Adept a = (Adept)magic;
+            ((BaseMagischePersona)playerCharacter.getPersona()).setMagieBasis(a.getMagic());
+        }else if (magic instanceof Technomancer) {
+            Technomancer t = (Technomancer)magic;
+            ((de.urszeidler.eclipse.shr5.Technomancer)playerCharacter.getPersona()).setResonanzBasis(t.getResonanz());
+        }
 
         addPersonaPage(playerCharacter);
         createOptionWidgets();
