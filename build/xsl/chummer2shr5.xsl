@@ -143,8 +143,6 @@
 						</lifestyleToStartMoney>
 					</xsl:for-each>
 				</xsl:for-each>
-
-
 			</entries>
 			<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator">
 				<instructions key="new" value="Choose the basic Concept" />
@@ -158,10 +156,13 @@
 			</entries>
 			<entries xsi:type="shr5mngt:FreeStyleGenerator" generator="//@entries.16/@entries.1"
 				characterName="Free Style Generator" />
+				<!--  
 			<entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" />
 			<entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" />
 			<entries xsi:type="shr5mngt:CharacterGroup" name="player group" />
 			<entries xsi:type="shr5mngt:CharacterGroup" name="non player group" />
+-->
+		<xsl:call-template name="examples"/>
 		</entries>
 	</xsl:template>
 	<xsl:template match="resource" mode="gen">
@@ -242,7 +243,7 @@
 	</xsl:template>
 	<xsl:template match="priorities/specials/special/technomancer"
 		mode="gen">
-		<priorities xsi:type="shr5mngt:Technomancer">
+		<priorities xsi:type="shr5mngt:Technomancer" selectableSkills="//@entries.3/@entries.14/@fertigkeiten.0 //@entries.3/@entries.14/@fertigkeiten.2 //@entries.3/@entries.14/@fertigkeiten.1" selectableSkillGroups="//@entries.3/@entries.14">
 			<xsl:attribute name="categorieName"><xsl:value-of select="../priority/text()" /></xsl:attribute>
 			<xsl:attribute name="complexForms"><xsl:value-of select="forms/text()" /></xsl:attribute>
 			<xsl:attribute name="resonanz"><xsl:value-of select="res/text()" /></xsl:attribute>
@@ -251,6 +252,36 @@
 		</priorities>
 	</xsl:template>
 	<!-- vehicle -->
+	<xsl:template name="examples">
+    <entries xsi:type="shr5mngt:CharacterGroup" name="player group">
+      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.16/@entries.7">
+        <persona xsi:type="shr5:KiAdept" name="Gu" edgeBasis="2" konstitutionBasis="1" geschicklichkeitBasis="1" reaktionBasis="1" staerkeBasis="1" charismaBasis="1" willenskraftBasis="1" intuitionBasis="1" logikBasis="1" spezies="//@entries.2/@entries.0"/>
+      </members>
+    </entries>
+    <entries xsi:type="shr5mngt:CharacterGroup" name="non player group">
+      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.16/@entries.6">
+        <persona xsi:type="shr5:MudanPersona" name="MudanTest1" edgeBasis="2" konstitutionBasis="1" geschicklichkeitBasis="1" reaktionBasis="1" staerkeBasis="1" charismaBasis="1" willenskraftBasis="1" intuitionBasis="1" logikBasis="1" spezies="//@entries.2/@entries.0"/>
+      </members>
+      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.16/@entries.5">
+        <persona xsi:type="shr5:Technomancer" name="James" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="2" reaktionBasis="2" staerkeBasis="3" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="4" spezies="//@entries.2/@entries.0">
+          <fertigkeiten fertigkeit="//@entries.3/@entries.6/@fertigkeiten.0" stufe="3"/>
+          <fertigkeiten fertigkeit="//@entries.3/@entries.5/@fertigkeiten.1" stufe="1"/>
+          <fertigkeiten fertigkeit="//@entries.3/@entries.5/@fertigkeiten.2" stufe="5"/>
+          <fertigkeiten fertigkeit="//@entries.3/@entries.14/@fertigkeiten.0" stufe="4"/>
+          <fertigkeiten fertigkeit="//@entries.3/@entries.9/@fertigkeiten.2" stufe="2"/>
+          <fertigkeiten fertigkeit="//@entries.3/@entries.14/@fertigkeiten.2" stufe="4"/>
+          <fertigkeiten fertigkeit="//@entries.3/@entries.9/@fertigkeiten.0" stufe="2"/>
+          <fertigkeiten fertigkeit="//@entries.4/@entries.8" stufe="2"/>
+          <eigenschaften name="Natural Hardening" page="76" srcBook="//@entries.0/@entries.0" karmaKosten="10"/>
+        </persona>
+      </members>
+    </entries>
+    <entries xsi:type="shr5mngt:Shr5Generator" character="//@entries.16/@entries.4/@members.1" generator="//@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.16/@entries.4" characterName="Example James" resourcen="//@entries.16/@entries.0/@priorities.42" skills="//@entries.16/@entries.0/@priorities.41" attribute="//@entries.16/@entries.0/@priorities.19" metaType="//@entries.16/@entries.0/@priorities.14" magic="//@entries.16/@entries.0/@priorities.27"/>
+    <entries xsi:type="shr5mngt:Shr5Generator" character="//@entries.16/@entries.4/@members.0" generator="//@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.16/@entries.4" characterName="MudanTest1" resourcen="//@entries.16/@entries.0/@priorities.44" skills="//@entries.16/@entries.0/@priorities.38" attribute="//@entries.16/@entries.0/@priorities.17" metaType="//@entries.16/@entries.0/@priorities.14" magic="//@entries.16/@entries.0/@priorities.47"/>
+    <entries xsi:type="shr5mngt:Shr5Generator" character="//@entries.16/@entries.3/@members.0" generator="//@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.16/@entries.3" characterName="Gu" resourcen="//@entries.16/@entries.0/@priorities.46" skills="//@entries.16/@entries.0/@priorities.39" attribute="//@entries.16/@entries.0/@priorities.17" metaType="//@entries.16/@entries.0/@priorities.14" magic="//@entries.16/@entries.0/@priorities.28"/>
+    <entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0"/>
+    <entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0"/>
+	</xsl:template>
 	<xsl:template name="advancements">
 		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
 			karmaFactor="5">
@@ -410,13 +441,13 @@
 		</xsl:for-each>
 	</xsl:template>
 	<xsl:template name="skill">
-<!-- 		<attribut> -->
-			<xsl:attribute name="attribut">
+		<!-- <attribut> -->
+		<xsl:attribute name="attribut">
 			<xsl:call-template name="MATCH">
          <xsl:with-param name="matchingName" select="attribute/text()" />
       </xsl:call-template>
 		</xsl:attribute>
-<!-- 		</attribut> -->
+		<!-- </attribut> -->
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
 	</xsl:template>
@@ -722,12 +753,12 @@
 				<xsl:value-of select="number(ess/text())*-100" />
 				</xsl:attribute>
 				</xsl:if>
-<!-- 				<attribut> -->
-					<xsl:attribute name="attribut">
+				<!-- <attribut> -->
+				<xsl:attribute name="attribut">
 							<xsl:value-of
-						select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
+					select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
 					</xsl:attribute>
-<!-- 				</attribut> -->
+				<!-- </attribut> -->
 			</mods>
 		</entries>
 	</xsl:template>
@@ -741,12 +772,12 @@
 				<xsl:value-of select="number(ess/text())*-100" />
 				</xsl:attribute>
 				</xsl:if>
-<!-- 				<attribut> -->
-					<xsl:attribute name="attribut">
+				<!-- <attribut> -->
+				<xsl:attribute name="attribut">
 							<xsl:value-of
-						select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
+					select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
 					</xsl:attribute>
-<!-- 				</attribut> -->
+				<!-- </attribut> -->
 			</mods>
 		</entries>
 	</xsl:template>
@@ -792,12 +823,12 @@
 				<xsl:value-of select="number(armorvalue/text())" />
 				</xsl:attribute>
 						</xsl:if>
-<!-- 						<attribut> -->
-							<xsl:attribute name="attribut">
+						<!-- <attribut> -->
+						<xsl:attribute name="attribut">
 							<xsl:value-of
-								select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
+							select="'http://urszeidler.de/shr5/1.0#//Panzerung/panzer'" />
 					</xsl:attribute>
-<!-- 						</attribut> -->
+						<!-- </attribut> -->
 					</mods>
 
 				</entries>
