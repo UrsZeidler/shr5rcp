@@ -739,7 +739,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         boolean spendAll = hasSpendAllAttributesPoints(null, null) && hasSpendAllConnectionPoints(null, null) && hasSpendAllGroupPoints(null, null)
                 && hasSpendAllKarmaPoints(null, null) && hasSpendAllKnowlegeSkillPoints(null, null) && hasSpendAllMagicPoints(null, null)
                 && hasSpendAllMagicSkillsPoints(null, null) && hasSpendAllResourcePoints(null, null) && hasSpendAllSkillPoints(null, null)
-                && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null);
+                && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null)
+                && hasSpendAllSpellPoints(null, null);
 
         int karmaPoints = getShr5Generator().getKarmaPoints();
 
@@ -1146,8 +1147,8 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (!hasSpendAllPoints) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPELL_POINTS, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPELL_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllSpellPoints",
                                 new Object[]{ "hasSpendAllSpellPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
