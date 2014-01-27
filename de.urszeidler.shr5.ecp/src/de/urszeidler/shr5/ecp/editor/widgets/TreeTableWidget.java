@@ -28,7 +28,6 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.rcp.databinding.EMFBeansListObservableFactory;
-import org.eclipse.wb.rcp.databinding.EMFTreeBeanAdvisor;
 import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;

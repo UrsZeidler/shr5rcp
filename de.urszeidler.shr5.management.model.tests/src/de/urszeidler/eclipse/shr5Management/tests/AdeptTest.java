@@ -6,10 +6,8 @@ package de.urszeidler.eclipse.shr5Management.tests;
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
-import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.Adept;
-import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
 /**

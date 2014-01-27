@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.PersonaZustand;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.PersonaZustand;
 
 /**
  * <!-- begin-user-doc -->

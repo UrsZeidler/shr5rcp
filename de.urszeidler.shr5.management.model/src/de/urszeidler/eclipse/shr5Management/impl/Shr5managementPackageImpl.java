@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -12,6 +14,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
@@ -50,7 +53,6 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
-import java.util.Map;
 
 /**
  * <!-- begin-user-doc -->

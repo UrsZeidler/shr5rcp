@@ -3,12 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5Management.FreeStyle;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
+import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 

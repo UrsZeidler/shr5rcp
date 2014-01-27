@@ -3,6 +3,7 @@ package de.urszeidler.shr5.ecp.editor.pages;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -20,8 +21,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.layout.FillLayout;
 
 /**
  * This is a basic generic page to display eObjects in an form with an

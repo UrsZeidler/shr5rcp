@@ -3,14 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->

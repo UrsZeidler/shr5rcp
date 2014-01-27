@@ -3,11 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
-import de.urszeidler.eclipse.shr5.Lifestyle;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
+
+import de.urszeidler.eclipse.shr5.Lifestyle;
 
 /**
  * <!-- begin-user-doc -->

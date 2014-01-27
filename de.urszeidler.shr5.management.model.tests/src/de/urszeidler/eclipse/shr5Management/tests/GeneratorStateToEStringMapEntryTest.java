@@ -3,12 +3,13 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import java.util.Map;
+
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import java.util.Map;
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

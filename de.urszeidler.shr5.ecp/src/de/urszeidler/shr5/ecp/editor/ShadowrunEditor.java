@@ -9,7 +9,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecp.internal.wizards.SelectModelElementWizard;
 import org.eclipse.emf.ecp.ui.common.CompositeFactory;
 import org.eclipse.emf.ecp.ui.common.SelectionComposite;
-import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -73,13 +71,13 @@ import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
-import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.GenericBasicBeschreibbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.NahkampwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
+import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 
 /**

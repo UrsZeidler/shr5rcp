@@ -2,18 +2,20 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
+import de.urszeidler.eclipse.shr5.Critter;
 import de.urszeidler.eclipse.shr5.CritterDauer;
 import de.urszeidler.eclipse.shr5.CritterHandlung;
 import de.urszeidler.eclipse.shr5.CritterKraft;
@@ -34,6 +36,8 @@ import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.Lizenz;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
 import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
@@ -56,11 +60,15 @@ import de.urszeidler.eclipse.shr5.Schutzgeist;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.SmartgunType;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Sprite;
 import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.ZauberArt;

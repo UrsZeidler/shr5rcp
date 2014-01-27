@@ -2,12 +2,10 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Vertrag;
-
-import junit.framework.TestCase;
-
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

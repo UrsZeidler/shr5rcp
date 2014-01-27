@@ -3,10 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
