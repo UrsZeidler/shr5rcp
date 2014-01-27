@@ -15,6 +15,8 @@ import org.eclipse.emf.common.util.DiagnosticChain;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Magier;
@@ -75,6 +77,7 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Knowlege Skill Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -1072,6 +1075,81 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setCharacter(character);
         
         assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllPowerPoints__DiagnosticChain_Map() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+        
+        assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
+    }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllPowerPoints__DiagnosticChain_MapAdept() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
+        getFixture().setCharacter(character);
+        
+        mudan = Shr5managementFactory.eINSTANCE.createAdept();
+        getFixture().setMagic(mudan);
+
+        KiAdept ka =(KiAdept) character.getPersona();
+        ka.setMagieBasis(2);
+        assertEquals("is false", false, getFixture().hasSpendAllPowerPoints(diagnostics, context));
+
+        KiKraft kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
+        kiKraft.setKraftpunkte(100);
+        ka.getKikraft().add(kiKraft);
+        assertEquals("is false", false, getFixture().hasSpendAllPowerPoints(diagnostics, context));
+        kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
+        kiKraft.setKraftpunkte(100);
+        ka.getKikraft().add(kiKraft);
+        assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
+
+    }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllPowerPoints__DiagnosticChain_MapMysticAdept() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(character);
+        
+        mudan = Shr5managementFactory.eINSTANCE.createSpellcaster();
+        getFixture().setMagic(mudan);
+
+        KiAdept ka =(KiAdept) character.getPersona();
+        ka.setMagieBasis(2);
+        assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
+
+        KiKraft kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
+        kiKraft.setKraftpunkte(100);
+        ka.getKikraft().add(kiKraft);
+        assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
+        kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
+        kiKraft.setKraftpunkte(100);
+        ka.getKikraft().add(kiKraft);
+        assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
     }
 
     /**

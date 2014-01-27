@@ -4,11 +4,18 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5Management.Adept;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,6 +93,30 @@ public class AdeptImpl extends SpecialTypeImpl implements Adept {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int calcPowerPointsSpend(ManagedCharacter context) {
+        ManagedCharacter managedCharacter = context;
+        if (managedCharacter == null)
+            return 0;
+        AbstraktPersona persona = managedCharacter.getPersona();
+        if (persona == null)
+            return 0;
+        
+        int sum = 0;
+        if (persona instanceof KiAdept) {
+            KiAdept ka = (KiAdept)persona;
+            EList<KiKraft> kikraft = ka.getKikraft();
+            for (KiKraft kraft : kikraft) {
+                sum = sum + kraft.getKraftpunkte();
+            }            
+        }
+        return sum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -143,6 +174,20 @@ public class AdeptImpl extends SpecialTypeImpl implements Adept {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+        switch (operationID) {
+            case Shr5managementPackage.ADEPT___CALC_POWER_POINTS_SPEND__MANAGEDCHARACTER:
+                return calcPowerPointsSpend((ManagedCharacter)arguments.get(0));
+        }
+        return super.eInvoke(operationID, arguments);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated

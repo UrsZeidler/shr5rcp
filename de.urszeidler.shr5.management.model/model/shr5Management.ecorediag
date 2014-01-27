@@ -1756,7 +1756,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_2-1KgYHXEeOOPsd_i6NWrA" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5Management.ecore#//Adept"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2-1KgoHXEeOOPsd_i6NWrA" x="756" y="1029"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2-1KgoHXEeOOPsd_i6NWrA" x="620" y="1020"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_3f86kIHXEeOOPsd_i6NWrA" type="1001">
       <children xmi:type="notation:Node" xmi:id="_3f9hoIHXEeOOPsd_i6NWrA" type="4001"/>
@@ -1956,7 +1956,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_2-_ikYHXEeOOPsd_i6NWrA" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_2-_ikoHXEeOOPsd_i6NWrA" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2-_ik4HXEeOOPsd_i6NWrA" points="[1, 1, -1009, -890]$[970, 856, -40, -35]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2-_ik4HXEeOOPsd_i6NWrA" points="[119, -27, -109, 130]$[119, -122, -109, 35]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_3gHSoIHXEeOOPsd_i6NWrA" type="3003" source="_3f86kIHXEeOOPsd_i6NWrA" target="_2-1KgIHXEeOOPsd_i6NWrA">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_3gHSoYHXEeOOPsd_i6NWrA" routing="Rectilinear" lineColor="4210752"/>

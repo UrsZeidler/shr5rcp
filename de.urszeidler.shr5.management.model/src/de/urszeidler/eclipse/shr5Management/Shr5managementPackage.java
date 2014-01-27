@@ -1581,13 +1581,22 @@ public interface Shr5managementPackage extends EPackage {
 	int ADEPT___CALC_SKILLS_SPEND__MANAGEDCHARACTER = SPECIAL_TYPE___CALC_SKILLS_SPEND__MANAGEDCHARACTER;
 
 	/**
+     * The operation id for the '<em>Calc Power Points Spend</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ADEPT___CALC_POWER_POINTS_SPEND__MANAGEDCHARACTER = SPECIAL_TYPE_OPERATION_COUNT + 0;
+
+    /**
      * The number of operations of the '<em>Adept</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ADEPT_OPERATION_COUNT = SPECIAL_TYPE_OPERATION_COUNT + 0;
+	int ADEPT_OPERATION_COUNT = SPECIAL_TYPE_OPERATION_COUNT + 1;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.SpellcasterImpl <em>Spellcaster</em>}' class.
@@ -1690,6 +1699,15 @@ public interface Shr5managementPackage extends EPackage {
 	int SPELLCASTER___CALC_SKILLS_SPEND__MANAGEDCHARACTER = ADEPT___CALC_SKILLS_SPEND__MANAGEDCHARACTER;
 
 	/**
+     * The operation id for the '<em>Calc Power Points Spend</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELLCASTER___CALC_POWER_POINTS_SPEND__MANAGEDCHARACTER = ADEPT___CALC_POWER_POINTS_SPEND__MANAGEDCHARACTER;
+
+    /**
      * The operation id for the '<em>Calc Spell Points Spend</em>' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2251,13 +2269,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 14;
 
     /**
+     * The operation id for the '<em>Has Spend All Power Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 15;
+
+    /**
      * The number of operations of the '<em>Shr5 Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 15;
+	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 16;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl <em>Persona Value Change</em>}' class.
@@ -3892,6 +3919,16 @@ public interface Shr5managementPackage extends EPackage {
 	EAttribute getAdept_Magic();
 
 	/**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Adept#calcPowerPointsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Power Points Spend</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Calc Power Points Spend</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Adept#calcPowerPointsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter)
+     * @generated
+     */
+    EOperation getAdept__CalcPowerPointsSpend__ManagedCharacter();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterGenerator <em>Character Generator</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4345,6 +4382,16 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EOperation getShr5Generator__HasSpendAllSpellPoints__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Spend All Power Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5Generator__HasSpendAllPowerPoints__DiagnosticChain_Map();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.AttributeChange <em>Attribute Change</em>}'.
@@ -5283,6 +5330,14 @@ public interface Shr5managementPackage extends EPackage {
 		EAttribute ADEPT__MAGIC = eINSTANCE.getAdept_Magic();
 
 		/**
+         * The meta object literal for the '<em><b>Calc Power Points Spend</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation ADEPT___CALC_POWER_POINTS_SPEND__MANAGEDCHARACTER = eINSTANCE.getAdept__CalcPowerPointsSpend__ManagedCharacter();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorImpl <em>Character Generator</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5631,6 +5686,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EOperation SHR5_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasSpendAllSpellPoints__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Spend All Power Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5Generator__HasSpendAllPowerPoints__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl <em>Attribute Change</em>}' class.

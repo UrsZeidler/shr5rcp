@@ -195,12 +195,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPELL_POINTS = 15;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Power Points' of 'Shr5 Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_POWER_POINTS = 16;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 15;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 16;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -516,6 +524,7 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllKnowlegeSkillPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllKarmaPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSpellPoints(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllPowerPoints(shr5Generator, diagnostics, context);
         return result;
     }
 
@@ -667,6 +676,16 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateShr5Generator_hasSpendAllSpellPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5Generator.hasSpendAllSpellPoints(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasSpendAllPowerPoints constraint of '<em>Shr5 Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5Generator_hasSpendAllPowerPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5Generator.hasSpendAllPowerPoints(diagnostics, context);
     }
 
     /**

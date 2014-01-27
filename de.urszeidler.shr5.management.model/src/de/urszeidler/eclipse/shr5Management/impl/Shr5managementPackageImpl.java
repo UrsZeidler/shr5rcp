@@ -1036,6 +1036,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getAdept__CalcPowerPointsSpend__ManagedCharacter() {
+        return adeptEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1423,6 +1432,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5Generator__HasSpendAllPowerPoints__DiagnosticChain_Map() {
+        return shr5GeneratorEClass.getEOperations().get(15);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1790,6 +1808,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         adeptEClass = createEClass(ADEPT);
         createEAttribute(adeptEClass, ADEPT__MAGIC);
+        createEOperation(adeptEClass, ADEPT___CALC_POWER_POINTS_SPEND__MANAGEDCHARACTER);
 
         characterGeneratorEClass = createEClass(CHARACTER_GENERATOR);
         createEReference(characterGeneratorEClass, CHARACTER_GENERATOR__CHARACTER);
@@ -1836,6 +1855,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP);
 
         attributeChangeEClass = createEClass(ATTRIBUTE_CHANGE);
 
@@ -2050,6 +2070,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(adeptEClass, Adept.class, "Adept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getAdept_Magic(), ecorePackage.getEInt(), "magic", null, 0, 1, Adept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        op = initEOperation(getAdept__CalcPowerPointsSpend__ManagedCharacter(), ecorePackage.getEInt(), "calcPowerPointsSpend", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, this.getManagedCharacter(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+
         initEClass(characterGeneratorEClass, CharacterGenerator.class, "CharacterGenerator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterGenerator_Character(), this.getManagedCharacter(), this.getManagedCharacter_ChracterSource(), "character", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCharacterGenerator_Generator(), this.getCharacterGeneratorSystem(), null, "generator", null, 1, 1, CharacterGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2208,6 +2231,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         op = initEOperation(getShr5Generator__HasSpendAllSpellPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllSpellPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        op = initEOperation(getShr5Generator__HasSpendAllPowerPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllPowerPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());

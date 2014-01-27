@@ -47,4 +47,12 @@ public interface Adept extends SpecialType {
      */
 	void setMagic(int value);
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model contextRequired="true"
+     * @generated
+     */
+    int calcPowerPointsSpend(ManagedCharacter context);
+
 } // Adept

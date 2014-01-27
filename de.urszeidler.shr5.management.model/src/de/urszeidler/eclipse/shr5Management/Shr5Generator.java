@@ -498,4 +498,12 @@ public interface Shr5Generator extends CharacterGenerator {
      */
     boolean hasSpendAllSpellPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasSpendAllPowerPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
 } // Shr5Generator
