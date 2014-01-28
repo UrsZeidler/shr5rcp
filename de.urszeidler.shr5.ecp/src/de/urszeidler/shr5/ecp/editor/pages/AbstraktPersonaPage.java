@@ -23,6 +23,9 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
+import org.eclipse.swt.widgets.Label;
+import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
+import org.eclipse.swt.layout.FillLayout;
 
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 	private AbstraktPersona object;
@@ -105,23 +108,39 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		toolkit.paintBordersFor(grpAttribute);
 
 		Group grpFertigkeiten = new Group(body, SWT.NONE);
-		grpFertigkeiten.setLayout(new GridLayout(2, true));
-		grpFertigkeiten.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		grpFertigkeiten.setLayout(new GridLayout(1, true));
+		GridData gd_grpFertigkeiten = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+		gd_grpFertigkeiten.heightHint = 200;
+		grpFertigkeiten.setLayoutData(gd_grpFertigkeiten);
 		grpFertigkeiten.setText("Fertigkeiten");
 		toolkit.adapt(grpFertigkeiten);
 		toolkit.paintBordersFor(grpFertigkeiten);
+		
+//	      Group grpFertigkeitennew = new Group(managedForm.getForm().getBody(), SWT.NONE);
+//	        grpFertigkeitennew.setLayout(new FillLayout(SWT.HORIZONTAL));
+//	        grpFertigkeitennew.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+//	        grpFertigkeitennew.setText("Fertigkeiten-new");
+//	        managedForm.getToolkit().adapt(grpFertigkeitennew);
+//	        managedForm.getToolkit().paintBordersFor(grpFertigkeitennew);
+	        
+	        PersonaFertigkeitenWidget personaFertigkeitenWidget = new PersonaFertigkeitenWidget(grpFertigkeiten, SWT.NONE,object, toolkit,editingDomain);
+	        personaFertigkeitenWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+	        managedForm.getToolkit().adapt(personaFertigkeitenWidget);
+	        managedForm.getToolkit().paintBordersFor(personaFertigkeitenWidget);
 
-		Composite compositeFertigkeiten = new Composite(grpFertigkeiten, SWT.NONE);
-		compositeFertigkeiten.setLayout(new GridLayout(3, false));
-		compositeFertigkeiten.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		toolkit.adapt(compositeFertigkeiten);
-		toolkit.paintBordersFor(compositeFertigkeiten);
+		
 
-		Composite compositeGruppen = new Composite(grpFertigkeiten, SWT.NONE);
-		compositeGruppen.setLayout(new GridLayout(3, false));
-		compositeGruppen.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		toolkit.adapt(compositeGruppen);
-		toolkit.paintBordersFor(compositeGruppen);
+//		Composite compositeFertigkeiten = new Composite(grpFertigkeiten, SWT.NONE);
+//		compositeFertigkeiten.setLayout(new GridLayout(3, false));
+//		compositeFertigkeiten.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+//		toolkit.adapt(compositeFertigkeiten);
+//		toolkit.paintBordersFor(compositeFertigkeiten);
+//
+//		Composite compositeGruppen = new Composite(grpFertigkeiten, SWT.NONE);
+//		compositeGruppen.setLayout(new GridLayout(3, false));
+//		compositeGruppen.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+//		toolkit.adapt(compositeGruppen);
+//		toolkit.paintBordersFor(compositeGruppen);
 
 		Section sctnKoerperAttribute = managedForm.getToolkit().createSection(grpAttribute, Section.DESCRIPTION| Section.EXPANDED |Section.TWISTIE | Section.TITLE_BAR);
 		sctnKoerperAttribute.setDescription("Die körperlichen Attribute");
@@ -225,8 +244,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
 		emfFormBuilder.addTextEntry("Metatyp", Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, compositeMetaType);
 		
-		emfFormBuilder.addTextEntry("", Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, compositeFertigkeiten);
-		emfFormBuilder.addTextEntry("", Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, compositeGruppen);
+//		emfFormBuilder.addTextEntry("", Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, compositeFertigkeiten);
+//		emfFormBuilder.addTextEntry("", Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, compositeGruppen);
 		if (object instanceof KoerperPersona) {
 			emfFormBuilder.addTextEntry("", Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, compositeEigenschaften);
 			emfFormBuilder.addTextEntry("", Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, compositeWares);
@@ -243,7 +262,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		}
 
 		emfFormBuilder.buildinComposite(m_bindingContext, body, object);
-		
+				
 		managedForm.reflow(true);
 
 	}
