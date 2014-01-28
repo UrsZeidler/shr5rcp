@@ -11,7 +11,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezies;
 
@@ -82,4 +86,53 @@ public class ShadowrunTools {
 		}
 		return summ;
 	}
+	
+
+    public static int findFertigkeitValue(FertigkeitsGruppe fg, AbstraktPersona persona2) {
+        PersonaFertigkeitsGruppe pfg = findGruppe(fg, persona2);
+        if(pfg!=null)
+            pfg.getStufe();
+        
+        return 0;
+    }
+    
+    public static PersonaFertigkeitsGruppe findGruppe(FertigkeitsGruppe fg, AbstraktPersona persona2) {
+        EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen = persona2.getFertigkeitsGruppen();
+        for (PersonaFertigkeitsGruppe personaFertigkeitsGruppe : fertigkeitsGruppen) {
+            if (fg.equals(personaFertigkeitsGruppe.getGruppe()))
+                return personaFertigkeitsGruppe;
+        }
+        return null;
+    }
+
+    /**
+     * Returns the stufe or -1.
+     * @param fertigkeit
+     * @param persona
+     * @return
+     */
+    public static Integer findFertigkeitValue(Fertigkeit fertigkeit, AbstraktPersona persona) {
+        PersonaFertigkeit pf = findFertigkeit(fertigkeit, persona);
+        if (pf != null)
+            return pf.getStufe();
+  
+        return -1;
+    }
+
+    /**
+     * Returns the persona fertigkeit or null.
+     * @param fertigkeit
+     * @param persona
+     * @return
+     */
+    public static PersonaFertigkeit findFertigkeit(Fertigkeit fertigkeit, AbstraktPersona persona) {
+        EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+        for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+            if (fertigkeit.equals(personaFertigkeit.getFertigkeit()))
+                return personaFertigkeit;
+        }
+        return null;
+    }
+
+
 }
