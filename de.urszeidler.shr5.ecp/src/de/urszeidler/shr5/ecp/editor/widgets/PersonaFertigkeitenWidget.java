@@ -256,7 +256,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         });
         TreeColumn trclmnName = treeViewerNameColumn.getColumn();
-        tcl_composite.setColumnData(trclmnName, new ColumnPixelData(300, true, true));
+        tcl_composite.setColumnData(trclmnName, new ColumnPixelData(350, true, true));
         trclmnName.setText("Gruppen/Fertigkeiten");
 
         TreeViewerColumn treeViewerValueColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
@@ -340,7 +340,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         });
         TreeColumn trclmnValue = treeViewerValueColumn.getColumn();
         tcl_composite.setColumnData(trclmnValue, new ColumnPixelData(70, true, true));
-        trclmnValue.setText("Skill value");
+        trclmnValue.setText("value");
 
         TreeViewerColumn treeViewerTotalColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
         treeViewerTotalColumn.setLabelProvider(new ColumnLabelProvider() {
