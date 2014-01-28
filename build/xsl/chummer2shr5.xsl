@@ -480,6 +480,19 @@
 		</xsl:for-each>
 	</xsl:template>
 	<xsl:template name="skill">
+	<xsl:attribute name="ausweichen">
+			<xsl:choose>
+			<xsl:when test="default/text()='No'">
+				<xsl:value-of
+					select="'false'" />
+			</xsl:when>
+			<xsl:otherwise>
+			<xsl:value-of
+					select="'true'" />
+			</xsl:otherwise>
+			
+			</xsl:choose>
+	</xsl:attribute>
 		<!-- <attribut> -->
 		<xsl:attribute name="attribut">
 			<xsl:call-template name="MATCH">
