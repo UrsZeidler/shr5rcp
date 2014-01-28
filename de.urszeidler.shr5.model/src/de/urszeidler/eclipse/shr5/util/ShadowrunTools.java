@@ -17,6 +17,7 @@ import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 
 /**
@@ -91,7 +92,7 @@ public class ShadowrunTools {
     public static int findFertigkeitValue(FertigkeitsGruppe fg, AbstraktPersona persona2) {
         PersonaFertigkeitsGruppe pfg = findGruppe(fg, persona2);
         if(pfg!=null)
-            pfg.getStufe();
+            return pfg.getStufe();
         
         return 0;
     }
@@ -115,7 +116,14 @@ public class ShadowrunTools {
         PersonaFertigkeit pf = findFertigkeit(fertigkeit, persona);
         if (pf != null)
             return pf.getStufe();
-  
+        
+        if(Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN.equals(fertigkeit.eContainmentFeature())){
+            FertigkeitsGruppe eContainer = (FertigkeitsGruppe)fertigkeit.eContainer();
+            PersonaFertigkeitsGruppe gruppe = findGruppe(eContainer, persona);
+            if(gruppe!=null)
+                return gruppe.getStufe();            
+        }
+        
         return -1;
     }
 
