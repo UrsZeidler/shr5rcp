@@ -21,10 +21,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.emfstore.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.feature"
          version="0.0.0"/>
 
