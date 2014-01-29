@@ -37,22 +37,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.emfstore.client.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.emfstore.client.ui.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.emfstore.common.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.emfstore.server.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.rcp"
          version="0.0.0"/>
 
