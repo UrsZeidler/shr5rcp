@@ -20,8 +20,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.application.e3;bundle-version="1.1.1",
  org.eclipse.emf.ecp.common;bundle-version="1.1.1",
  org.eclipse.emf.ecp.core.emffilter;bundle-version="1.1.1",
- org.eclipse.emf.ecp.emfstore.core;bundle-version="1.1.1",
- org.eclipse.emf.ecp.emfstore.ui;bundle-version="1.1.1",
  org.eclipse.emf.ecp.explorereditorbridge;bundle-version="1.1.1",
  org.eclipse.emf.ecp.validation;bundle-version="1.1.1",
  org.eclipse.emf.ecp.view.custom.model;bundle-version="1.1.1",
@@ -49,7 +47,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.6.0";resolution:=optional,
  de.urszeidler.shr5.model.edit;bundle-version="1.0.0",
  de.urszeidler.shr5.management.model;bundle-version="0.1.0",
- de.urszeidler.shr5.management.model.edit;bundle-version="1.0.0"
+ de.urszeidler.shr5.management.model.edit;bundle-version="1.0.0",
+ org.eclipse.core.filesystem;bundle-version="1.4.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.ecp,

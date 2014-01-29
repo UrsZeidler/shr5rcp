@@ -165,6 +165,12 @@
             name="Shr5">
       </editor>
    </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="de.urszeidler.shr5.ecp.Shr5Initalizer">
+      </startup>
+   </extension>
 
 
 </plugin>
