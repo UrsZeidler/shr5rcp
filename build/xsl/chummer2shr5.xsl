@@ -300,10 +300,10 @@
             </mods>
           </koerperMods>
           <koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers" page="455" srcBook="//@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
-            <mods>
+            <mods wert="2">
               <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
             </mods>
-            <mods>
+            <mods wert="-300">
               <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
             </mods>
           </koerperMods>
