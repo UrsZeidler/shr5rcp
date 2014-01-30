@@ -113,6 +113,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private DiagnosticComposite diagnosticComposite;
     private Group grpValidation;
     private Composite composite_2;
+    private HashSet<Diagnostic> oldDia;
 
     /**
      * Create the form page.
@@ -426,17 +427,20 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
         if (object.getCharacter() != null) {
-            //Diagnostic validate2 = Diagnostician.INSTANCE.validate(object.getCharacter(), context);
+            // Diagnostic validate2 = Diagnostician.INSTANCE.validate(object.getCharacter(), context);
 
             // validate.getChildren().addAll(validate2.getChildren());
         }
 
         Set<Integer> newSet = new HashSet<Integer>();
+        HashSet<Diagnostic> dia = new HashSet<Diagnostic>();
 
         List<Diagnostic> children = validate.getChildren();
         for (Diagnostic diagnostic : children) {
             if (Shr5managementValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource()))
                 newSet.add(diagnostic.getCode());
+
+            dia.add(diagnostic);
         }
 
         for (Diagnostic diagnostic : children) {
@@ -451,14 +455,16 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         }
 
-        if (newSet.equals(oldSet))
-            return;
+        if (dia.equals(oldDia))
+            //if (newSet.equals(oldSet))
+                return;
 
         if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE)) {
             object.setState(GeneratorState.NEW);
         }
         updateDecorators(newSet);
         oldSet = newSet;
+        oldDia = dia;
 
         if (object.getState() == GeneratorState.PERSONA_CREATED)
             createOptionWidgets();
@@ -485,8 +491,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 "Not all type points spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
                 "Not all special points spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, controlDecorationSkills,
-                "Not all skill spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, controlDecorationSkills, "Not all skill spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
                 "Not all attributes spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
@@ -503,11 +508,11 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         ManagedCharacter playerCharacter;
         boolean createPlayer = btnRadioButton.getSelection();
         playerCharacter = createManagedCharacter(selectableType, spezies, createPlayer, object);
-        
+
         if (magic instanceof Adept) {
             Adept a = (Adept)magic;
             ((BaseMagischePersona)playerCharacter.getPersona()).setMagieBasis(a.getMagic());
-        }else if (magic instanceof Technomancer) {
+        } else if (magic instanceof Technomancer) {
             Technomancer t = (Technomancer)magic;
             ((de.urszeidler.eclipse.shr5.Technomancer)playerCharacter.getPersona()).setResonanzBasis(t.getResonanz());
         }
