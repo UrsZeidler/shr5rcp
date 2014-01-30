@@ -4,11 +4,13 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -22,7 +24,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -124,11 +128,12 @@ public class ManagedCharacterItemProvider
      * This adds a property descriptor for the Choosen Lifestyle feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	protected void addChoosenLifestylePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (//createItemPropertyDescriptor
+                    new ItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_ManagedCharacter_choosenLifestyle_feature"),
@@ -139,7 +144,19 @@ public class ManagedCharacterItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                        public Collection<?> getChoiceOfValues(Object object) {
+                            ArrayList<Lifestyle> list = new ArrayList<Lifestyle>();
+                            EList<Vertrag> contracts = ((ManagedCharacter)object).getContracts();
+                            for (Vertrag vertrag : contracts) {
+                                if (vertrag instanceof Lifestyle) {
+                                    list.add((Lifestyle)vertrag);
+                                }
+                            }                            
+                            return list;
+                        }
+                    });
+                  
     }
 
 	/**
