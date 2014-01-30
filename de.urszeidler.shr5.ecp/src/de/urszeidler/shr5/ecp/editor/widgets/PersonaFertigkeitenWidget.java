@@ -97,9 +97,15 @@ public class PersonaFertigkeitenWidget extends Composite {
     /**
      * 
      */
-    public class GroupWrapper {
+    public static class GroupWrapper {
         private List<Fertigkeit> entries = new ArrayList<Fertigkeit>();
         private String name;
+        public List<Fertigkeit> getEntries() {
+            return entries;
+        }
+        public String getName() {
+            return name;
+        }
     }
 
     /**
@@ -185,7 +191,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         createWidgets();
     }
 
-    protected List<Object> createFertigkeitGroupsRoot() {
+    public static List<Object> createFertigkeitGroupsRoot(AbstraktPersona persona) {
         Collection<EObject> groups = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
         Collection<EObject> skill = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEIT);
 
@@ -377,7 +383,7 @@ public class PersonaFertigkeitenWidget extends Composite {
 
         treeViewer.setContentProvider(new FertigkeitsContentProvider());
 
-        treeViewer.setInput(createFertigkeitGroupsRoot());
+        treeViewer.setInput(createFertigkeitGroupsRoot(persona));
         m_bindingContext = initDataBindings();
 
     }
