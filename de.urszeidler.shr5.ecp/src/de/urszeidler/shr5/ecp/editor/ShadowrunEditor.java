@@ -76,6 +76,7 @@ import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.NahkampwaffePage;
+import de.urszeidler.shr5.ecp.editor.pages.PrintPage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
@@ -382,7 +383,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 			public Object caseManagedCharacter(ManagedCharacter object) {
 				try {
 					addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "persona", "AbstractPersona", object.getPersona(), editingDomain, manager));
-					addPage(new ManagedCharacterPage(ShadowrunEditor.this, "persona", "Inventar", object, editingDomain, manager));
+                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, "persona", "Inventar", object, editingDomain, manager));
+                    addPage(new PrintPage(ShadowrunEditor.this, "printer", "Print sheet", object));
 				} catch (PartInitException e) {
 					logError("error creating ModifizierbarPage", e);
 				}
