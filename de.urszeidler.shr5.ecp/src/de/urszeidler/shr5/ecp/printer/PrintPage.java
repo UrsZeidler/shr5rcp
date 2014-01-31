@@ -1,4 +1,4 @@
-package de.urszeidler.shr5.ecp.editor.pages;
+package de.urszeidler.shr5.ecp.printer;
 
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.forms.IManagedForm;
@@ -8,11 +8,11 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.shr5.ecp.printer.TestPrint;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 
+// This is only for development as we could see the changes in the preview.
 public class PrintPage extends FormPage {
     private ManagedCharacter character;
     /**

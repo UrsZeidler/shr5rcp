@@ -105,7 +105,8 @@ public class TestPrint extends Composite {
 
         Composite shell = this;
 
-        document = createCharacterPrint();
+        document = PersonaPrinter.getInstance().printCharacterSheet(
+                character);//createCharacterPrint();
         final PrintJob job = new PrintJob("GridPrintVerticalAlignmentExample.java", document);
         shell.setLayout(new org.eclipse.swt.layout.GridLayout());
 
