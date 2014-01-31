@@ -9,8 +9,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.LinePrint;
 import org.eclipse.nebula.paperclips.core.Print;
+import org.eclipse.nebula.paperclips.core.border.Border;
+import org.eclipse.nebula.paperclips.core.border.BorderPrint;
+import org.eclipse.nebula.paperclips.core.border.LineBorder;
 import org.eclipse.nebula.paperclips.core.grid.DefaultGridLook;
 import org.eclipse.nebula.paperclips.core.grid.GridPrint;
 import org.eclipse.nebula.paperclips.core.text.TextPrint;
@@ -79,37 +83,84 @@ public class PersonaPrinter {
 
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d,d,d,d,d", look);
+        GridPrint grid = new GridPrint("d,d", look);
 
         Print verticalRule = new LinePrint(SWT.VERTICAL);
         Print horizontalRule = new LinePrint(SWT.HORIZONTAL);
 
-        grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
-        grid.add(SWT.LEFT, SWT.DEFAULT, printPersonaData(character), 2);
+        grid.add(SWT.LEFT, SWT.TOP, printPersonaData(character), 1);
+        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("IMAGE"), 1);
 
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(""), 1);
-        grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
-        grid.add(SWT.LEFT, SWT.FILL, horizontalRule, 5);
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(""), 1);
+        // grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
+        // grid.add(SWT.LEFT, SWT.FILL, horizontalRule, 1);
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(""), 1);
 
-        grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
+        // grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
         grid.add(SWT.LEFT, SWT.DEFAULT, printPersonaAttributes(persona), 1);
-        grid.add(SWT.DEFAULT, SWT.FILL, horizontalRule, 1);
-        grid.add(SWT.LEFT, SWT.DEFAULT, printAllPersonaSkills(persona), 1);
-        grid.add(SWT.DEFAULT, SWT.FILL, verticalRule);
+        grid.add(SWT.LEFT, SWT.TOP, printPersonaConditionMonitor(persona), 1);
+        // grid.add(SWT.DEFAULT, SWT.FILL, horizontalRule, 1);
+        grid.add(SWT.LEFT, SWT.DEFAULT, printAllPersonaSkills(persona), 2);
+        // grid.add(SWT.DEFAULT, SWT.FILL, verticalRule);
 
-        grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
+        // grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
         grid.add(SWT.LEFT, SWT.DEFAULT, printAllCharacterConnections(character), 2);
 
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(""), 1);
         grid.add(SWT.DEFAULT, SWT.FILL, verticalRule, 1);
-        grid.add(SWT.LEFT, SWT.FILL, horizontalRule, 5);
+        grid.add(SWT.LEFT, SWT.FILL, horizontalRule, 1);
 
         return grid;
     }
 
     /**
      * Prints all skills usable from the persona.
+     * 
+     * @param persona
+     * @return
+     */
+    private Print printPersonaConditionMonitor(AbstraktPersona persona) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d,d", look);
+
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Monitor", boldFontData), 2);
+        grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor("Body", 13));
+        grid.add(SWT.RIGHT, SWT.TOP, printConditionMonitor("Mental", 10));
+
+        return grid;
+    }
+
+    /**
+     * Prints all persona connections.
+     * 
+     * @param persona
+     * @return
+     */
+    private Print printConditionMonitor(String monitorName, int number) {
+        DefaultGridLook look = new DefaultGridLook(2, 2);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("c:p,c:p,c:p,d", look);
+
+        grid.add(SWT.LEFT, SWT.TOP, new TextPrint(monitorName, italicFontData), GridPrint.REMAINDER);
+        Border border = new LineBorder();
+        int col = number / 3;
+        for (int i = 0; i < col; i++) {
+            grid.add(SWT.DEFAULT, SWT.FILL, new BorderPrint(new TextPrint(" "), border), 1);
+            grid.add(SWT.DEFAULT, SWT.FILL, new BorderPrint(new TextPrint( " "), border), 1);
+            grid.add(SWT.DEFAULT, SWT.FILL, new BorderPrint(new TextPrint( " "), border), 1);
+            grid.add(SWT.DEFAULT, SWT.FILL, new TextPrint( "-"+(i+1)+" "), 1);
+        }
+        int rest = number % 3;
+        for (int i = 0; i < rest; i++) {
+            grid.add(SWT.DEFAULT, SWT.TOP, new BorderPrint(new TextPrint( " "), border), 1);
+        }
+        grid.add(SWT.LEFT, SWT.TOP, new EmptyPrint(), GridPrint.REMAINDER);
+        return grid;
+    }
+
+    /**
+     * Prints all persona connections.
      * 
      * @param persona
      * @return
