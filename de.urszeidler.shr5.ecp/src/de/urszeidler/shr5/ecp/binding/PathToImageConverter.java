@@ -28,7 +28,7 @@ public class PathToImageConverter extends Converter {
 
 	@Override
 	public Object convert(Object fromObject) {
-		System.out.println("imageConverter -->" + fromObject);
+		//System.out.println("imageConverter -->" + fromObject);
 
 		if (!(fromObject instanceof String))
 			return null;
