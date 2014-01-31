@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
+import de.urszeidler.shr5.ecp.printer.PersonaPrinter.PrintFactory;
 
 /**
  * This a a shameless copy of
@@ -56,7 +57,7 @@ public class PrintPreviewPage extends FormPage {
     protected PrintJob printJob;
     private Display display;
     protected Shell shell;
-    private Print print;
+    private PrintFactory print;
 
     /**
      * Create the form page.
@@ -69,7 +70,7 @@ public class PrintPreviewPage extends FormPage {
 
         NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
-        print = PersonaPrinter.getInstance().printCharacterSheet(character);
+        //print = PersonaPrinter.getInstance().printCharacterSheet(character);
 
     }
 
@@ -88,7 +89,7 @@ public class PrintPreviewPage extends FormPage {
 
         NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
-        print = PersonaPrinter.getInstance().printCharacterSheet(character);
+        //print = PersonaPrinter.getInstance().printCharacterSheet(character);
     }
 
     /**
@@ -98,7 +99,7 @@ public class PrintPreviewPage extends FormPage {
      * @param id
      * @param title
      */
-    public PrintPreviewPage(FormEditor editor, String id, String title, Print print) {
+    public PrintPreviewPage(FormEditor editor, String id, String title, PrintFactory print) {
         super(editor, id, title);
 
         NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
@@ -127,19 +128,34 @@ public class PrintPreviewPage extends FormPage {
         createButtonPanel(body).setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
         createScrollingPreview(body).setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
-        final PrintJob job = new PrintJob("Default Print job", print);
+        updateJob();
+    }
 
+    protected void updateJob() {
+        final PrintJob job = new PrintJob("Default Print job", print.createPrinter());
         preview.setPrintJob(job);
-
+        forgetScrollingPosition();
+        updatePreviewSize();
+        updatePageNumber();
     }
 
     private Control createButtonPanel(Composite parent) {
         Composite composite = new Composite(parent, SWT.NONE);
 
-        GridLayout layout = new GridLayout(16, false);
+        GridLayout layout = new GridLayout(17, false);
         layout.marginWidth = layout.marginHeight = 0;
         composite.setLayout(layout);
 
+        createTextButton(composite, "refresh", "Portrait Orientation", new Listener() {
+            public void handleEvent(Event event) {
+                updateJob();
+//                forgetScrollingPosition();
+//                updatePreviewSize();
+//                updatePageNumber();
+            }
+        });
+
+        
         previousPage = createIconButton(composite, "backward_nav.gif", "Previous Page", new Listener() {
             public void handleEvent(Event event) {
                 setPreviewPageIndex(preview.getPageIndex() - preview.getHorizontalPageCount() * preview.getVerticalPageCount());

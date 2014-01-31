@@ -380,7 +380,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "persona", "AbstractPersona", object.getPersona(), editingDomain, manager));
                     addPage(new ManagedCharacterPage(ShadowrunEditor.this, "persona", "Inventar", object, editingDomain, manager));
                     //addPage(new PrintPage(ShadowrunEditor.this, "printer", "Print sheet", object));
-                    addPage(new PrintPreviewPage(ShadowrunEditor.this, "printer", "Character sheet", PersonaPrinter.getInstance().printCharacterSheet(
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, "printer", "Character sheet", PersonaPrinter.getInstance().createPrintFactory(
                             object)));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
