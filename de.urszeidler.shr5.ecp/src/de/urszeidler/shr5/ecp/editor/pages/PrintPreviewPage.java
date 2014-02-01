@@ -1,12 +1,8 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.nebula.paperclips.core.PaperClips;
-import org.eclipse.nebula.paperclips.core.Print;
 import org.eclipse.nebula.paperclips.core.PrintJob;
 import org.eclipse.nebula.paperclips.widgets.PrintPreview;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.graphics.Image;
@@ -35,7 +31,6 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter.PrintFactory;
 
 /**
