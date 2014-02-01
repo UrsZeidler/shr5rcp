@@ -269,6 +269,10 @@
 					spezies="//@entries.2/@entries.0" magieBasis="6">
 					<fertigkeitsGruppen gruppe="//@entries.3/@entries.0"
 						stufe="2" />
+						          <eigenschaften name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0" karmaKosten="4"/>
+          <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0" karmaKosten="3"/>
+          <eigenschaften name="Allergy (Uncommon, Moderate)" page="78" srcBook="//@entries.0/@entries.0" karmaKosten="-10"/>
+						
 					<kikraft name="Improved Reflexes 3" kraftpunkte="-350">
 						<mods wert="3">
 							<attribut
