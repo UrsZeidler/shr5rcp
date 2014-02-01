@@ -7,6 +7,8 @@
       <image path="/de.urszeidler.shr5.product/icons/shrImage_6_250.png"/>
       <text>
          The shadowrun 5 IDE client.
+under Eclipse Public License, version 1.0.
+(c) Urs Zeidler
       </text>
    </aboutInfo>
 
