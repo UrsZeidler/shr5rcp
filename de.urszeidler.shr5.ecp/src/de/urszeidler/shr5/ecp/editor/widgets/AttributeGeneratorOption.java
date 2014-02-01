@@ -117,7 +117,7 @@ public class AttributeGeneratorOption extends Composite {
 				context.getChracterSource(), Literals.SHR5_GENERATOR__ATTRIBUTE_SPEND);
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setAfterGetValidator(attributesInRangeValidator);
+		//modelToTarget.setAfterGetValidator(attributesInRangeValidator);
 //		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 //			@Override
 //			public Object convert(Object fromObject) {

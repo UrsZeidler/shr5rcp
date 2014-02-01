@@ -200,7 +200,7 @@ public class MagicGeneratorOption extends Composite {
                     Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
 
             modelToTarget = new EMFUpdateValueStrategy();
-            modelToTarget.setAfterGetValidator(spellsInRangeValidator);
+           // modelToTarget.setAfterGetValidator(spellsInRangeValidator);
             // modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             // @Override
             // public Object convert(Object fromObject) {
@@ -235,7 +235,7 @@ public class MagicGeneratorOption extends Composite {
                     Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
 
             modelToTarget = new EMFUpdateValueStrategy();
-            modelToTarget.setAfterGetValidator(spellsInRangeValidator);
+           // modelToTarget.setAfterGetValidator(spellsInRangeValidator);
             // modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             // @Override
             // public Object convert(Object fromObject) {

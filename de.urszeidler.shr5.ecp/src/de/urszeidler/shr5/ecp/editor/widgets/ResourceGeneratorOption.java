@@ -119,7 +119,7 @@ public class ResourceGeneratorOption extends Composite {
 				context.getChracterSource(), Literals.SHR5_GENERATOR__RESOURCE_SPEND);
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setAfterGetValidator(resourceInRangeValidator);
+		//modelToTarget.setAfterGetValidator(resourceInRangeValidator);
 //		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 //			@Override
 //			public Object convert(Object fromObject) {

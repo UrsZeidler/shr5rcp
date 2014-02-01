@@ -117,7 +117,7 @@ public class MetaTypGeneratorOption extends Composite {
 				context.getChracterSource(), Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
 
 		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setAfterGetValidator(specialPointsInRangeValidator);
+		//modelToTarget.setAfterGetValidator(specialPointsInRangeValidator);
 //		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 //			@Override
 //			public Object convert(Object fromObject) {

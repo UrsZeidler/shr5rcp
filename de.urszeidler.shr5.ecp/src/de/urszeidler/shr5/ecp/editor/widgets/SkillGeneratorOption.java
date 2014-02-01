@@ -179,7 +179,7 @@ public class SkillGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__SKILL_POINT_SPEND);
 
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-        modelToTarget.setAfterGetValidator(skillsInRangeValidator);
+//        modelToTarget.setAfterGetValidator(skillsInRangeValidator);
 //        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 //            @Override
 //            public Object convert(Object fromObject) {
