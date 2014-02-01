@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -152,10 +153,10 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printGegenstandList(gList), border), 2);
         // grid.add(printPersonaContracts(character), 1);
 
-        grid.addFooter(new EmptyPrint(),GridPrint.REMAINDER);
-        grid.addFooter(new EmptyPrint(),GridPrint.REMAINDER);
-        grid.addFooter(new TextPrint("Shr5 rich client platform", italicFontData),2);
-        grid.addFooter(new TextPrint("http://urszeidler.github.io/shr5rcp/", italicFontData),2);
+        grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        grid.addFooter(new TextPrint("Shr5 rich client platform", italicFontData), 2);
+        grid.addFooter(new TextPrint("http://urszeidler.github.io/shr5rcp/", italicFontData), 2);
         return grid;
     }
 
@@ -218,17 +219,16 @@ public class PersonaPrinter {
         }
 
         grid.add(printAllCharacterConnections(character));
-        grid.add(printPersonaContracts(character));        
-        
+        grid.add(printPersonaContracts(character));
+
         grid.add(printModList(persona));
         return grid;
     }
 
-    
     private Print printModList(AbstraktPersona persona) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);
-        
+
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Active Modifications", boldFontData), 2);
         ModSetter modManager = persona.getModManager();
         Set<Entry<EAttribute, Integer>> set = modManager.getModificatorMap().entrySet();
@@ -238,7 +238,7 @@ public class PersonaPrinter {
         }
         return grid;
     }
-    
+
     private Print printGegenstandList(List<AbstraktGegenstand> g) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d,d,d", look);
@@ -470,7 +470,7 @@ public class PersonaPrinter {
         grid.add(new TextPrint(fw.getModie().toString(), attributeFont));
         grid.add(new TextPrint(fw.getRueckstoss() + "", attributeFont));
         grid.add(new TextPrint(fw.getKapazitaet() + fw.getMunitionstyp().getLiteral(), attributeFont));
-        grid.add(new TextPrint(toMod(fw.getMods()), attributeFont), 2);
+        grid.add(new TextPrint(toFWAddon(fw.getEinbau()), attributeFont), 2);
 
         grid.add(new TextPrint("short", italicFontData), 2);
         grid.add(new TextPrint("medium", italicFontData), 2);
@@ -485,6 +485,15 @@ public class PersonaPrinter {
         }
 
         return grid;
+    }
+
+    private String toFWAddon(EList<FernkampfwaffeModifikator> einbau) {
+        StringBuffer buffer = new StringBuffer();
+        for (FernkampfwaffeModifikator fernkampfwaffeModifikator : einbau) {
+            buffer.append(fernkampfwaffeModifikator.getEp() + toMod(fernkampfwaffeModifikator.getMods()));
+
+        }
+        return buffer.toString();
     }
 
     private String toMod(EList<AttributModifikatorWert> mods) {
@@ -608,14 +617,12 @@ public class PersonaPrinter {
 
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
-            
+
             grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Monitor", boldFontData), 2);
             grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor("Body", kp.getZustandKoerperlichMax()));
             grid.add(SWT.RIGHT, SWT.TOP, printConditionMonitor("Mental", kp.getZustandGeistigMax()));
-            
-            
+
         }
-        
 
         return grid;
     }
@@ -736,7 +743,7 @@ public class PersonaPrinter {
     private void printFertigkeitList(GridPrint grid, List<Fertigkeit> fertigkeiten, AbstraktPersona persona) {
         for (Fertigkeit fertigkeit : fertigkeiten) {
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
-             Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
+            Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
             if (fertigkeitValue < 1 && !fertigkeit.isAusweichen()) {
                 continue;
             } else {
@@ -744,7 +751,7 @@ public class PersonaPrinter {
             }
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(fertigkeitValue+"", attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(fertigkeitValue + "", attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(value + "", attributeFont), 1);
         }
     }
