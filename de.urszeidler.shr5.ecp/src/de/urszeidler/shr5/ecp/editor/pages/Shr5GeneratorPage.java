@@ -114,6 +114,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private Group grpValidation;
     private Composite composite_2;
     private HashSet<Diagnostic> oldDia;
+    
+    private HashSet<String> changeSet;
 
     /**
      * Create the form page.
@@ -434,6 +436,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         Set<Integer> newSet = new HashSet<Integer>();
         HashSet<Diagnostic> dia = new HashSet<Diagnostic>();
+        HashSet<String> newChangeset = new HashSet<String>();
 
         List<Diagnostic> children = validate.getChildren();
         for (Diagnostic diagnostic : children) {
@@ -441,6 +444,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 newSet.add(diagnostic.getCode());
 
             dia.add(diagnostic);
+            newChangeset.add(diagnostic.getMessage());
         }
 
         for (Diagnostic diagnostic : children) {
@@ -455,8 +459,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         }
 
-        if (dia.equals(oldDia))
+        //if (dia.equals(oldDia))
             //if (newSet.equals(oldSet))
+        if(newChangeset.equals(changeSet))
                 return;
 
         if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE)) {
@@ -465,6 +470,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         updateDecorators(newSet);
         oldSet = newSet;
         oldDia = dia;
+        changeSet = newChangeset;
 
         if (object.getState() == GeneratorState.PERSONA_CREATED)
             createOptionWidgets();
