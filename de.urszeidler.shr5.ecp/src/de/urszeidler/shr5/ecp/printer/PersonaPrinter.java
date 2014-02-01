@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
+import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Zauberer;
@@ -139,7 +140,8 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printPersonaRangedWeapons(character), border), 1);
         grid.add(new BorderPrint(printPersonaMeeleWeapons(character), border), 1);
 
-        // grid.add(printAllCharacterConnections(character), 1);
+        List<AbstraktGegenstand> gList = character.getInventar();
+        grid.add(new BorderPrint(printGegenstandList(gList), border),2);
         // grid.add(printPersonaContracts(character), 1);
 
         
@@ -204,10 +206,43 @@ public class PersonaPrinter {
         }
 
         grid.add(printAllCharacterConnections(character));
+        grid.add(printPersonaContracts(character));
         return grid;
     }
 
-    private Print printZauberList(EList<PersonaZauber> zauber) {
+    private Print printGegenstandList(List<AbstraktGegenstand> g) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        GridPrint grid = new GridPrint("d:g,d,d,d", look);
+
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Items", boldFontData), 4);
+        grid.add(new TextPrint("Name", italicFontData), 1);
+        grid.add(new TextPrint("Avail", italicFontData));
+        grid.add(new TextPrint("Cost", italicFontData));
+        grid.add(new TextPrint("Source", italicFontData));
+        for (AbstraktGegenstand ge : g) {
+            grid.add(new TextPrint(itemDelegator.getText(ge), attributeFont), 1);
+            grid.add(new TextPrint(ge.getVerfuegbarkeit(), attributeFont), 1);
+            grid.add(new TextPrint(ge.getWert().toString(), attributeFont), 1);
+            grid.add(new TextPrint(toSource(ge), attributeFont), 1);
+        }
+
+        return grid;
+    }
+
+    /**
+     * 
+     * @param ge
+     * @return
+     */
+    private String toSource(Quelle ge) {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append(itemDelegator.getText(ge.getSrcBook()));
+        buffer.append(" page ");
+        buffer.append(ge.getPage());
+        return buffer.toString();
+    }
+
+    private Print printZauberList(List<PersonaZauber> zauber) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);
 

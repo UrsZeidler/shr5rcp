@@ -132,8 +132,8 @@ public class PrintPreviewPage extends FormPage {
     }
 
     protected void updateJob() {
-        final PrintJob job = new PrintJob("Default Print job", print.createPrinter());
-        preview.setPrintJob(job);
+        printJob = new PrintJob("Default Print job", print.createPrinter());
+        preview.setPrintJob(printJob);
         forgetScrollingPosition();
         updatePreviewSize();
         updatePageNumber();
