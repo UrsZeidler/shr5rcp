@@ -46,6 +46,7 @@ import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Adept;
+import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -103,7 +104,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private ControlDecoration controlDecorationSkills;
     private ControlDecoration controlDecorationMagic;
     private ControlDecoration controlDecorationMetaTyp;
-    private Set<Integer> oldSet;
     private Label lblConnectionleft;
     private ControlDecoration controlDecorationResources;
     private ControlDecoration controlDecorationKarma;
@@ -113,9 +113,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private DiagnosticComposite diagnosticComposite;
     private Group grpValidation;
     private Composite composite_2;
-    private HashSet<Diagnostic> oldDia;
-    
+
     private HashSet<String> changeSet;
+    private boolean optionWidgetsCreated = false;
 
     /**
      * Create the form page.
@@ -360,7 +360,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         grpValidation = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpValidation.setLayout(new FillLayout(SWT.HORIZONTAL));
         GridData gd_grpValidation = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
-        gd_grpValidation.heightHint = 80;
+        gd_grpValidation.heightHint = 150;
         grpValidation.setLayoutData(gd_grpValidation);
         grpValidation.setText("Validation");
         managedForm.getToolkit().adapt(grpValidation);
@@ -413,6 +413,11 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         super.dispose();
     }
 
+    protected void resetCharacter(CharacterGenerator object) {
+        optionWidgetsCreated = false;
+        super.resetCharacter(object);
+    }
+
     /**
      * Validates the changes and update the gui.
      */
@@ -428,14 +433,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         }
 
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
-        if (object.getCharacter() != null) {
-            // Diagnostic validate2 = Diagnostician.INSTANCE.validate(object.getCharacter(), context);
-
-            // validate.getChildren().addAll(validate2.getChildren());
-        }
 
         Set<Integer> newSet = new HashSet<Integer>();
-        HashSet<Diagnostic> dia = new HashSet<Diagnostic>();
         HashSet<String> newChangeset = new HashSet<String>();
 
         List<Diagnostic> children = validate.getChildren();
@@ -443,11 +442,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             if (Shr5managementValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource()))
                 newSet.add(diagnostic.getCode());
 
-            dia.add(diagnostic);
             newChangeset.add(diagnostic.getMessage());
-        }
-
-        for (Diagnostic diagnostic : children) {
             if (EObjectValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource())) {
                 if (diagnostic.getCode() == EObjectValidator.EOBJECT__EVERY_MULTIPCITY_CONFORMS) {
                     Object object2 = diagnostic.getData().get(1);
@@ -459,17 +454,13 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         }
 
-        //if (dia.equals(oldDia))
-            //if (newSet.equals(oldSet))
-        if(newChangeset.equals(changeSet))
-                return;
+        if (newChangeset.equals(changeSet))
+            return;
 
         if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE)) {
             object.setState(GeneratorState.NEW);
         }
         updateDecorators(newSet);
-        oldSet = newSet;
-        oldDia = dia;
         changeSet = newChangeset;
 
         if (object.getState() == GeneratorState.PERSONA_CREATED)
@@ -498,6 +489,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
                 "Not all special points spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, controlDecorationSkills, "Not all skill spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS, controlDecorationSkills,
+                "Not all skill spend.");
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_GROUP_POINTS, controlDecorationSkills, "Not all skill spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
                 "Not all attributes spend.");
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
@@ -549,7 +543,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      * Creates the option widget lazy.
      */
     private void createOptionWidgets() {
-        if (object.getAttribute() == null || object.getCharacter() == null)
+        if (object.getAttribute() == null || object.getCharacter() == null || optionWidgetsCreated)
             return;
 
         if (attributeGeneratorOption != null)
@@ -589,6 +583,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         grpMetatyp.layout(true, true);
         grpMagic.layout(true, true);
         sctnCreate.setExpanded(true);
+        optionWidgetsCreated = true;
     }
 
     private void ownBinding(DataBindingContext bindingContext) {
