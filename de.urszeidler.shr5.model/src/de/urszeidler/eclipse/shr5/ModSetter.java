@@ -67,9 +67,11 @@ public class ModSetter implements Adapter {
                 Integer value = fMap.get(wert.getAttribut());
                 if (value == null) {
                     value = new Integer(0);
-                    fMap.put(wert.getAttribut(), value);
+                    //fMap.put(wert.getAttribut(), value);
                 }
                 value = value + wert.getWert();
+                fMap.put(wert.getAttribut(), value);
+
             }
         }
     }
