@@ -1,7 +1,9 @@
 2014-02-02 Version 0.1.1
 	
+	* Added automatic creation of the resources.
 	* Added http://www.eclipse.org/nebula/widgets/paperclips/paperclips.php as simple print engine.
-	* Added the creation constrains.
+	* Added most of the creation constrains.
+	* Added some examples 
 	* import from chummer2 :
 		* added examples
 		* added default attribute for skill
