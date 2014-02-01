@@ -25,6 +25,7 @@ import org.eclipse.swt.graphics.Image;
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -141,11 +142,10 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printPersonaMeeleWeapons(character), border), 1);
 
         List<AbstraktGegenstand> gList = character.getInventar();
-        grid.add(new BorderPrint(printGegenstandList(gList), border),2);
+        grid.add(new BorderPrint(printGegenstandList(gList), border), 2);
         // grid.add(printPersonaContracts(character), 1);
 
-        
-
+        grid.addFooter(new TextPrint("Shr5 rich client platform", italicFontData));
         return grid;
     }
 
@@ -179,6 +179,8 @@ public class PersonaPrinter {
         GridPrint grid = new GridPrint("d:g", look);
 
         AbstraktPersona persona = character.getPersona();
+        grid.add(printPersonaCombatAttributes(persona));
+        
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
 
@@ -190,7 +192,6 @@ public class PersonaPrinter {
                 grid.add(printPersonaBodyTec(koerperMods));
         }
 
-
         if (persona instanceof KiAdept) {
             KiAdept ka = (KiAdept)persona;
             EList<KiKraft> kikraft = ka.getKikraft();
@@ -200,9 +201,9 @@ public class PersonaPrinter {
         if (persona instanceof Zauberer) {
             Zauberer z = (Zauberer)persona;
             EList<PersonaZauber> zauber = z.getZauber();
-            if(!zauber.isEmpty())
+            if (!zauber.isEmpty())
                 grid.add(printZauberList(zauber));
-           
+
         }
 
         grid.add(printAllCharacterConnections(character));
@@ -230,7 +231,6 @@ public class PersonaPrinter {
     }
 
     /**
-     * 
      * @param ge
      * @return
      */
@@ -565,7 +565,37 @@ public class PersonaPrinter {
      * @param persona
      * @return
      */
+    private Print printPersonaCombatAttributes(AbstraktPersona persona) {
+
+        DefaultGridLook look = new DefaultGridLook(10, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d,d:g", look);
+
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(""));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Combat info", boldFontData), 1);
+
+        GridPrint grid1 = new GridPrint("d:g,r:d", look);
+        grid1.add(new TextPrint("doge", attributeFont));
+        grid1.add(new TextPrint(persona.getAusweichen() + "", attributeFont));
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            grid1.add(new TextPrint("armor", attributeFont));
+            grid1.add(new TextPrint(kp.getPanzer() + "", attributeFont));
+            
+        }
+
+        grid.add(grid1,2);
+        return grid;
+    }
+
+    /**
+     * Prints the attributes in one block.
+     * 
+     * @param persona
+     * @return
+     */
     private Print printPersonaAttributes(AbstraktPersona persona) {
+
         DefaultGridLook look = new DefaultGridLook(10, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d", look);
@@ -576,12 +606,76 @@ public class PersonaPrinter {
         GridPrint grid1 = new GridPrint("d,d,d,r:d", look);
         printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
         printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
+        grid1.add(new TextPrint("edge", attributeFont), 3);
+        grid1.add(new TextPrint(persona.getEdgeBasis() + "", attributeFont), 1);
+
         grid.add(grid1);
         GridPrint grid2 = new GridPrint("d,d,d,r:d", look);
-        printeAttributes(persona, grid2, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE.getEAttributes());
+
+        grid2.add(new TextPrint("Essenz", attributeFont), 3);
+        grid2.add(new TextPrint(essenzToFloat(persona.getEssenz()), attributeFont), 1);
+        grid2.add(new TextPrint("Ini", attributeFont), 3);
+        grid2.add(new TextPrint(toIni(persona.getInitative(), persona.getInitativWuerfel()), attributeFont), 1);
+        if (persona instanceof AstraleProjektion) {
+            AstraleProjektion ap = (AstraleProjektion)persona;
+            grid2.add(new TextPrint("Astral Ini", attributeFont), 3);
+            grid2.add(new TextPrint(toIni(ap.getAstraleInitative(), ap.getAstraleInitativWuerfel()), attributeFont), 1);
+        }
+
+        grid2.add(new TextPrint("Composure", attributeFont), 3);
+        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint("Juge Intention", attributeFont), 3);
+        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint("Memory", attributeFont), 3);
+        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint("Lift/Carry", attributeFont), 3);
+        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint("Movement", attributeFont), 3);
+        grid2.add(new TextPrint("", attributeFont), 1);
+
+        // grid2.add(new TextPrint("Ini", attributeFont), 3);
+        // grid2.add(new TextPrint(toIni(persona), attributeFont), 1);
+
+        // printeAttributes(persona, grid2, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE.getEAttributes());
         grid.add(grid2);
 
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+
+            GridPrint grid3 = new GridPrint("d,d,d,d,d,d", look);
+            grid3.add(new TextPrint("Physical limit", attributeFont));
+            grid3.add(new TextPrint(kp.getKoerperlich() + "", attributeFont));
+            grid3.add(new TextPrint("Mental limit", attributeFont));
+            grid3.add(new TextPrint(kp.getGeistig() + "", attributeFont));
+            grid3.add(new TextPrint("Social limit", attributeFont));
+            grid3.add(new TextPrint(kp.getSozial() + "", attributeFont));
+
+            grid.add(grid3, 2);
+
+        }
         return grid;
+    }
+
+    /**
+     * Prints the ini.
+     * 
+     * @param persona
+     * @return
+     */
+    private String toIni(int initative, int initativWuerfel) {
+        return initative + " + " + initativWuerfel + "W";
+    }
+
+    /**
+     * Create a float string from an int with base 100.
+     * 
+     * @param essenz
+     * @return
+     */
+    private String essenzToFloat(int essenz) {
+        float f = essenz / 100f;
+        String string = String.format("%.2f", f);
+        return string;
     }
 
     /**
