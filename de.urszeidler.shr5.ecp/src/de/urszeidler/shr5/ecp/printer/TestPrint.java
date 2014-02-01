@@ -53,7 +53,7 @@ public class TestPrint extends Composite {
 
     private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
     private Print document;
-    private final ManagedCharacter character;// = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+    private ManagedCharacter character;// = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
     private FontData boldFontData;
     private FontData attributeFont;
     private AbstraktPersona persona;
@@ -170,6 +170,9 @@ public class TestPrint extends Composite {
         FontData[] defaultFont = JFaceResources.getDefaultFont().getFontData();
         boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
         attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
+
+        character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+        character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
 
         persona = character.getPersona();
         itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
