@@ -96,7 +96,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             decoration.setDescriptionText(textToShow);
             decoration.setImage(decoratorImage);
             decoration.setShowHover(true);
-            decoration.showHoverText(textToShow);
+            //decoration.showHoverText(textToShow);
         } else if (decoration.getImage() != null) {
             decoration.setDescriptionText("");
             decoration.setImage(null);
