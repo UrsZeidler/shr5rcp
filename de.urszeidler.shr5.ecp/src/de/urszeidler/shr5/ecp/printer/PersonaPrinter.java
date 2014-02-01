@@ -4,6 +4,8 @@
 package de.urszeidler.shr5.ecp.printer;
 
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -12,7 +14,6 @@ import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
-import org.eclipse.nebula.paperclips.core.LinePrint;
 import org.eclipse.nebula.paperclips.core.Print;
 import org.eclipse.nebula.paperclips.core.border.Border;
 import org.eclipse.nebula.paperclips.core.border.BorderPrint;
@@ -36,6 +37,7 @@ import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Koerpermods;
+import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
@@ -150,7 +152,10 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printGegenstandList(gList), border), 2);
         // grid.add(printPersonaContracts(character), 1);
 
-        grid.addFooter(new TextPrint("Shr5 rich client platform", italicFontData));
+        grid.addFooter(new EmptyPrint(),GridPrint.REMAINDER);
+        grid.addFooter(new EmptyPrint(),GridPrint.REMAINDER);
+        grid.addFooter(new TextPrint("Shr5 rich client platform", italicFontData),2);
+        grid.addFooter(new TextPrint("http://urszeidler.github.io/shr5rcp/", italicFontData),2);
         return grid;
     }
 
@@ -163,18 +168,19 @@ public class PersonaPrinter {
     private Print printPersonaDetails(AbstraktPersona persona) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d,d", look);
+        GridPrint grid = new GridPrint("d,d:g", look);
 
+        grid.add(new EmptyPrint());
         Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(128, persona.getImage());
         if (imageScaledBy != null) {
-            grid.add(SWT.RIGHT, SWT.DEFAULT, new ImagePrint(imageScaledBy.getImageData()));
+            grid.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
         }
 
         return grid;
     }
 
     /**
-     * Prints the persona condition monitor.
+     * Prints next to the fertigkeiten.
      * 
      * @param persona
      * @return
@@ -212,19 +218,36 @@ public class PersonaPrinter {
         }
 
         grid.add(printAllCharacterConnections(character));
-        grid.add(printPersonaContracts(character));
+        grid.add(printPersonaContracts(character));        
+        
+        grid.add(printModList(persona));
         return grid;
     }
 
+    
+    private Print printModList(AbstraktPersona persona) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        GridPrint grid = new GridPrint("d:g,d", look);
+        
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Active Modifications", boldFontData), 2);
+        ModSetter modManager = persona.getModManager();
+        Set<Entry<EAttribute, Integer>> set = modManager.getModificatorMap().entrySet();
+        for (Entry<EAttribute, Integer> entry : set) {
+            grid.add(new TextPrint(toName(entry.getKey()), attributeFont));
+            grid.add(new TextPrint(entry.getValue().toString(), attributeFont));
+        }
+        return grid;
+    }
+    
     private Print printGegenstandList(List<AbstraktGegenstand> g) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d,d,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Items", boldFontData), 4);
-        grid.add(new TextPrint("Name", italicFontData), 1);
-        grid.add(new TextPrint("Avail", italicFontData));
-        grid.add(new TextPrint("Cost", italicFontData));
-        grid.add(new TextPrint("Source", italicFontData));
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Items", boldFontData), 4);
+        grid.addHeader(new TextPrint("Name", italicFontData), 1);
+        grid.addHeader(new TextPrint("Avail", italicFontData));
+        grid.addHeader(new TextPrint("Cost", italicFontData));
+        grid.addHeader(new TextPrint("Source", italicFontData));
         for (AbstraktGegenstand ge : g) {
             grid.add(new TextPrint(itemDelegator.getText(ge), attributeFont), 1);
             grid.add(new TextPrint(ge.getVerfuegbarkeit(), attributeFont), 1);
@@ -251,8 +274,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Spells", boldFontData), 2);
-        grid.add(new TextPrint("Name", italicFontData), 2);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Spells", boldFontData), 2);
+        grid.addHeader(new TextPrint("Name", italicFontData), 2);
         // grid.add(new TextPrint("Essenz", italicFontData));
         for (PersonaZauber z : zauber) {
             grid.add(new TextPrint(itemDelegator.getText(z.getFormel()), attributeFont), 2);
@@ -265,8 +288,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Ki Powers", boldFontData), 2);
-        grid.add(new TextPrint("Name", italicFontData), 2);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Ki Powers", boldFontData), 2);
+        grid.addHeader(new TextPrint("Name", italicFontData), 2);
         // grid.add(new TextPrint("Essenz", italicFontData));
         for (KiKraft kiKraft2 : kikraft) {
             grid.add(new TextPrint(itemDelegator.getText(kiKraft2), attributeFont), 2);
@@ -285,9 +308,9 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("BodyTec", boldFontData), 2);
-        grid.add(new TextPrint("Name", italicFontData));
-        grid.add(new TextPrint("Essenz", italicFontData));
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("BodyTec", boldFontData), 2);
+        grid.addHeader(new TextPrint("Name", italicFontData));
+        grid.addHeader(new TextPrint("Essenz", italicFontData));
 
         for (Koerpermods koerpermods2 : koerperMods) {
             grid.add(new TextPrint(itemDelegator.getText(koerpermods2), attributeFont));
@@ -308,9 +331,9 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Edges/Flaws", boldFontData), 2);
-        grid.add(new TextPrint("Name", italicFontData));
-        grid.add(new TextPrint("Karma", italicFontData));
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Edges/Flaws", boldFontData), 2);
+        grid.addHeader(new TextPrint("Name", italicFontData));
+        grid.addHeader(new TextPrint("Karma", italicFontData));
 
         for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
             grid.add(new TextPrint(itemDelegator.getText(personaEigenschaft), attributeFont));
@@ -403,7 +426,7 @@ public class PersonaPrinter {
     private Print printNahkampfwaffeDetail(Nahkampfwaffe fw) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d:g,d,d,d,d,d,", look);
+        GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,", look);
 
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", italicFontData), 2);
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("reach", italicFontData));
@@ -528,8 +551,8 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Contracts", boldFontData), 2);
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Name", italicFontData), 2);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Contracts", boldFontData), 2);
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("Name", italicFontData), 2);
         EList<Vertrag> inventar = character.getContracts();
         for (Vertrag contract : inventar) {
             grid.add(new TextPrint(itemDelegator.getText(contract), attributeFont), 2);
@@ -583,9 +606,16 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Monitor", boldFontData), 2);
-        grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor("Body", 13));
-        grid.add(SWT.RIGHT, SWT.TOP, printConditionMonitor("Mental", 10));
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Monitor", boldFontData), 2);
+            grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor("Body", kp.getZustandKoerperlichMax()));
+            grid.add(SWT.RIGHT, SWT.TOP, printConditionMonitor("Mental", kp.getZustandGeistigMax()));
+            
+            
+        }
+        
 
         return grid;
     }
@@ -629,13 +659,13 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d,d,d,d", look);
 
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("", boldFontData), 2);
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Connections", boldFontData), 3);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("", boldFontData), 2);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Connections", boldFontData), 3);
 
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Name", italicFontData), 2);
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Loyality", italicFontData));
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Influence", italicFontData));
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("---"));
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("Name", italicFontData), 2);
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("Loyality", italicFontData));
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("Influence", italicFontData));
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("---"));
 
         EList<Connection> connections = character.getConnections();
         for (Connection connection : connections) {
@@ -660,12 +690,13 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,d,d", look);
 
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", attributeFont));
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Skills", boldFontData), 4);
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("", attributeFont));
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Skills", boldFontData), 4);
 
-        grid.add(new TextPrint("Name", italicFontData), 3);
-        grid.add(new TextPrint("Attrbute", italicFontData), 1);
-        grid.add(new TextPrint("dice pool", italicFontData), 1);
+        grid.addHeader(new TextPrint("Name", italicFontData), 2);
+        grid.addHeader(new TextPrint("Attribute", italicFontData), 1);
+        grid.addHeader(new TextPrint("rtg", italicFontData), 1);
+        grid.addHeader(new TextPrint("dice pool", italicFontData), 1);
         List<Object> root = PersonaFertigkeitenWidget.createFertigkeitGroupsRoot(persona);
         for (Object object : root) {
             if (object instanceof FertigkeitsGruppe) {
@@ -675,15 +706,17 @@ public class PersonaPrinter {
                 String stufe = "";
                 if (gruppe != null) {
                     stufe = gruppe.getStufe() + "";
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(fg), attributeFont), 3);
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(stufe, attributeFont), 1);
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", attributeFont), 1);
                 }
 
-                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(fg), attributeFont), 4);
-                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(stufe, attributeFont), 1);
                 List<Fertigkeit> fertigkeiten = fg.getFertigkeiten();
                 printFertigkeitList(grid, fertigkeiten, persona);
             } else if (object instanceof GroupWrapper) {
                 GroupWrapper gw = (GroupWrapper)object;
-                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(gw.getName(), attributeFont), 4);
+                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(gw.getName(), attributeFont), 3);
+                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", attributeFont), 1);
                 grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", attributeFont), 1);
                 List<Fertigkeit> fertigkeiten = gw.getEntries();
                 printFertigkeitList(grid, fertigkeiten, persona);
@@ -703,15 +736,15 @@ public class PersonaPrinter {
     private void printFertigkeitList(GridPrint grid, List<Fertigkeit> fertigkeiten, AbstraktPersona persona) {
         for (Fertigkeit fertigkeit : fertigkeiten) {
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
-            String attributeText = AdapterFactoryUtil.getInstance().getItemDelegator().getText(fertigkeit.getAttribut());
-            Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
+             Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
             if (fertigkeitValue < 1 && !fertigkeit.isAusweichen()) {
                 continue;
             } else {
                 value = value + fertigkeitValue;
             }
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("  " + itemDelegator.getText(fertigkeit), attributeFont), 3);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(attributeText, attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit), attributeFont), 2);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(fertigkeitValue+"", attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(value + "", attributeFont), 1);
         }
     }
