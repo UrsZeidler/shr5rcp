@@ -548,7 +548,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             for (KiKraft kraft : kikraft) {
                 sum = sum + kraft.getKraftpunkte();
             }
-            sum = (int)Math.ceil(sum /100f);
+            sum = (int)Math.ceil(sum / 100f);
 
             karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor());
         }
@@ -778,7 +778,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 || getMetaType().calcSpecialPointsSpend(getCharacter()) != getMetaType().getSpecialPoints()
                 || getSkills().calcSkillSpend(getCharacter()) != skillPoints || getSkills().calcGroupSpend(getCharacter()) != groupPoints;
 
-        System.out.println("  " + !spendAll + "  " + notAllSpend);
+        //System.out.println("  " + !spendAll + "  " + notAllSpend);
 
         if (!spendAll) {
             if (diagnostics != null) {
@@ -998,10 +998,11 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         if (getCharacter() == null || getShr5Generator() == null || getResourcen() == null)
             return true;
 
-        boolean test = getShr5Generator().getMaxResourceToKeep() < getResourcen().getResource() - getResourceSpend();
-        int diff = getResourcen().getResource() - getResourceSpend();
+        int karma2Res = getKarmaToResource() * getShr5Generator().getKarmaToResourceFactor();
+        int diff = karma2Res+ getResourcen().getResource() - getResourceSpend();
+        boolean test = getShr5Generator().getMaxResourceToKeep() < diff;
 
-        if (test) {
+        if (test || diff < 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS, ModelPlugin.INSTANCE.getString(
