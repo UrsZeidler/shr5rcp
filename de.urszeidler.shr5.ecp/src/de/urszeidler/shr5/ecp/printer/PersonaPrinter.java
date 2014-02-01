@@ -820,11 +820,11 @@ public class PersonaPrinter {
         }
 
         grid2.add(new TextPrint("Composure", attributeFont), 3);
-        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint(persona.getWillenskraft()+persona.getCharisma()+  "", attributeFont), 1);
         grid2.add(new TextPrint("Juge Intention", attributeFont), 3);
-        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint(persona.getIntuition()+persona.getCharisma()+"" , attributeFont), 1);
         grid2.add(new TextPrint("Memory", attributeFont), 3);
-        grid2.add(new TextPrint("", attributeFont), 1);
+        grid2.add(new TextPrint(persona.getWillenskraft()+persona.getLogik()+"", attributeFont), 1);
         grid2.add(new TextPrint("Lift/Carry", attributeFont), 3);
         grid2.add(new TextPrint("", attributeFont), 1);
         grid2.add(new TextPrint("Movement", attributeFont), 3);
