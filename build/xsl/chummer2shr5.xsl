@@ -267,12 +267,30 @@
 					reaktionBasis="5" staerkeBasis="4" charismaBasis="3"
 					willenskraftBasis="3" intuitionBasis="4" logikBasis="2"
 					spezies="//@entries.2/@entries.0" magieBasis="6">
-					<fertigkeitsGruppen gruppe="//@entries.3/@entries.0"
+					<fertigkeiten fertigkeit="//@entries.3/@entries.9/@fertigkeiten.1"
+						stufe="4" />
+					<fertigkeiten fertigkeit="//@entries.3/@entries.9/@fertigkeiten.2"
+						stufe="6" />
+					<fertigkeiten fertigkeit="//@entries.3/@entries.3/@fertigkeiten.0"
+						stufe="6" />
+					<fertigkeiten fertigkeit="//@entries.3/@entries.3/@fertigkeiten.2"
 						stufe="2" />
-						          <eigenschaften name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0" karmaKosten="4"/>
-          <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0" karmaKosten="3"/>
-          <eigenschaften name="Allergy (Uncommon, Moderate)" page="78" srcBook="//@entries.0/@entries.0" karmaKosten="-10"/>
-						
+					<fertigkeiten fertigkeit="//@entries.3/@entries.1/@fertigkeiten.0"
+						stufe="4" />
+					<fertigkeiten fertigkeit="//@entries.3/@entries.13/@fertigkeiten.2"
+						stufe="6" />
+					<fertigkeiten fertigkeit="//@entries.4/@entries.8"
+						stufe="4" />
+					<fertigkeitsGruppen gruppe="//@entries.3/@entries.10"
+						stufe="2" />
+					<eigenschaften name="Ambidextrous" page="71"
+						srcBook="//@entries.0/@entries.0" karmaKosten="4" />
+					<eigenschaften name="Quick Healer" page="77"
+						srcBook="//@entries.0/@entries.0" karmaKosten="3" />
+					<eigenschaften name="Allergy (Uncommon, Moderate)"
+						page="78" srcBook="//@entries.0/@entries.0" karmaKosten="-10" />
+					<eigenschaften name="Toughness" page="77"
+						srcBook="//@entries.0/@entries.0" karmaKosten="9" />
 					<kikraft name="Improved Reflexes 3" kraftpunkte="-350">
 						<mods wert="3">
 							<attribut
@@ -294,6 +312,15 @@
 							<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
 						</mods>
 					</kikraft>
+					<kikraft name="Improved Physical Attribute" kraftpunkte="-100">
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" />
+						</mods>
+					</kikraft>
+					<kikraft name="Improved Sense" kraftpunkte="-25" />
+					<kikraft name="Enhanced Accuracy" kraftpunkte="-25" />
+
 				</persona>
 				<inventar xsi:type="shr5:Feuerwaffe" page="426"
 					srcBook="//@entries.0/@entries.0" wert="725" verfuegbarkeit="5R"
