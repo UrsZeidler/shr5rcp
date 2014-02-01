@@ -7,10 +7,12 @@ import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
+import org.eclipse.nebula.paperclips.core.LinePrint;
 import org.eclipse.nebula.paperclips.core.Print;
 import org.eclipse.nebula.paperclips.core.border.Border;
 import org.eclipse.nebula.paperclips.core.border.BorderPrint;
@@ -26,6 +28,7 @@ import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -135,10 +138,12 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         grid.add(new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
 
+        grid.add(new BorderPrint(printPersonaRangedWeapons(character), border), 2);
+
         grid.add(printAllPersonaSkills(persona));
         grid.add(printPersonaFormPart1(character));
 
-        grid.add(new BorderPrint(printPersonaRangedWeapons(character), border), 1);
+        grid.add(new BorderPrint(printPersonaRangedWeapons1(character), border), 1);
         grid.add(new BorderPrint(printPersonaMeeleWeapons(character), border), 1);
 
         List<AbstraktGegenstand> gList = character.getInventar();
@@ -180,7 +185,7 @@ public class PersonaPrinter {
 
         AbstraktPersona persona = character.getPersona();
         grid.add(printPersonaCombatAttributes(persona));
-        
+
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
 
@@ -321,12 +326,13 @@ public class PersonaPrinter {
      * @param persona
      * @return
      */
-    private Print printPersonaRangedWeapons(ManagedCharacter character) {
+    private Print printPersonaRangedWeapons1(ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d,d,d,d,d,d,d", look);
 
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Ranged Weapons", boldFontData), 8);
+
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Name", italicFontData), 2);
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Dmg", italicFontData));
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("akk", italicFontData));
@@ -339,6 +345,7 @@ public class PersonaPrinter {
         for (AbstraktGegenstand abstraktGegenstand : inventar) {
             if (abstraktGegenstand instanceof AbstaktFernKampfwaffe) {
                 AbstaktFernKampfwaffe fw = (AbstaktFernKampfwaffe)abstraktGegenstand;
+                printFernkampWaffeDetail(fw);
 
                 grid.add(new TextPrint(itemDelegator.getText(fw), attributeFont), 2);
                 grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
@@ -346,9 +353,12 @@ public class PersonaPrinter {
                 grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
                 if (fw instanceof Feuerwaffe) {
                     Feuerwaffe f = (Feuerwaffe)fw;
+                    printFeuerwaffeDetail(f);
+
                     grid.add(new TextPrint(f.getModie().toString(), attributeFont));
                     grid.add(new TextPrint(f.getRueckstoss() + "", attributeFont));
                     grid.add(new TextPrint(f.getKapazitaet() + f.getMunitionstyp().getLiteral(), attributeFont));
+
                 } else {
                     grid.add(new TextPrint("", attributeFont));
                     grid.add(new TextPrint("", attributeFont));
@@ -358,6 +368,153 @@ public class PersonaPrinter {
         }
 
         return grid;
+    }
+
+    /**
+     * Prints the ranged weapons.
+     * 
+     * @param persona
+     * @return
+     */
+    private Print printPersonaRangedWeapons(ManagedCharacter character) {
+        DefaultGridLook look = new DefaultGridLook(5, 10);
+        GridPrint grid = new GridPrint("d:g", look);
+        EList<AbstraktGegenstand> inventar = character.getInventar();
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Weapons", boldFontData));
+        for (AbstraktGegenstand abstraktGegenstand : inventar) {
+            if (abstraktGegenstand instanceof Feuerwaffe) {
+                Feuerwaffe f = (Feuerwaffe)abstraktGegenstand;
+                grid.add(printFeuerwaffeDetail(f));
+            } else if (abstraktGegenstand instanceof AbstaktFernKampfwaffe) {
+                AbstaktFernKampfwaffe af = (AbstaktFernKampfwaffe)abstraktGegenstand;
+                grid.add(printFernkampWaffeDetail(af));
+            }
+        }
+        for (AbstraktGegenstand abstraktGegenstand : inventar) {
+            if (abstraktGegenstand instanceof Nahkampfwaffe) {
+                Nahkampfwaffe f = (Nahkampfwaffe)abstraktGegenstand;
+                grid.add(printNahkampfwaffeDetail(f));
+            }
+        }
+
+        return grid;
+    }
+
+    private Print printNahkampfwaffeDetail(Nahkampfwaffe fw) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d:g,d,d,d,d,d,", look);
+
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", italicFontData), 2);
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("reach", italicFontData));
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("dmg", italicFontData));
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("akk", italicFontData));
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("ap", italicFontData));
+
+        grid.add(new TextPrint(toName(fw), attributeFont), 2);
+        grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+        grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
+        grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
+        grid.add(new TextPrint(fw.getReichweite() + "", attributeFont));
+
+        return grid;
+    }
+
+    /**
+     * Print a detail for a feuerwaffe.
+     */
+    private GridPrint printFeuerwaffeDetail(Feuerwaffe fw) {
+        DefaultGridLook look = new DefaultGridLook(3, 3);
+        GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,d:g,d:g", look);
+
+        // grid.add(new TextPrint("Name", italicFontData), 5);
+        // grid.add(new TextPrint("Type", italicFontData), 3);
+
+        grid.add(new TextPrint(toName(fw), attributeFont), 5);
+        grid.add(new TextPrint(toName(fw.getReichweite()), attributeFont), 3);
+
+        grid.add(new TextPrint("Dmg", italicFontData));
+        grid.add(new TextPrint("akk", italicFontData));
+        grid.add(new TextPrint("ap", italicFontData));
+        grid.add(new TextPrint("modus", italicFontData));
+        grid.add(new TextPrint("rc", italicFontData));
+        grid.add(new TextPrint("muni", italicFontData));
+        grid.add(new TextPrint("adons", italicFontData), 2);
+
+        grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+        grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
+        grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
+        grid.add(new TextPrint(fw.getModie().toString(), attributeFont));
+        grid.add(new TextPrint(fw.getRueckstoss() + "", attributeFont));
+        grid.add(new TextPrint(fw.getKapazitaet() + fw.getMunitionstyp().getLiteral(), attributeFont));
+        grid.add(new TextPrint(toMod(fw.getMods()), attributeFont), 2);
+
+        grid.add(new TextPrint("short", italicFontData), 2);
+        grid.add(new TextPrint("medium", italicFontData), 2);
+        grid.add(new TextPrint("long", italicFontData), 2);
+        grid.add(new TextPrint("extreme", italicFontData), 2);
+
+        if (fw.getReichweite() != null) {
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getMin(), fw.getReichweite().getKurz()), attributeFont), 2);
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getKurz(), fw.getReichweite().getMittel()), attributeFont), 2);
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getMittel(), fw.getReichweite().getWeit()), attributeFont), 2);
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getWeit(), fw.getReichweite().getExtrem()), attributeFont), 2);
+        }
+
+        return grid;
+    }
+
+    private String toMod(EList<AttributModifikatorWert> mods) {
+        return mods.toString();
+    }
+
+    private String toReichweite(int min, int max) {
+        return min + "-" + max;
+    }
+
+    private GridPrint printFernkampWaffeDetail(AbstaktFernKampfwaffe fw) {
+        DefaultGridLook look = new DefaultGridLook(3, 3);
+        GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,d:g,d:g", look);
+
+        // grid.add(new TextPrint("Name", italicFontData), 5);
+        // grid.add(new TextPrint("Type", italicFontData), 3);
+
+        grid.add(new TextPrint(toName(fw), attributeFont), 5);
+        grid.add(new TextPrint(toName(fw.getReichweite()), attributeFont), 3);
+
+        grid.add(new TextPrint("Dmg", italicFontData));
+        grid.add(new TextPrint("akk", italicFontData));
+        grid.add(new TextPrint("ap", italicFontData));
+        grid.add(new TextPrint("", italicFontData));
+        grid.add(new TextPrint("", italicFontData));
+        grid.add(new TextPrint("", italicFontData));
+        grid.add(new TextPrint("adons", italicFontData), 2);
+
+        grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+        grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
+        grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
+        grid.add(new TextPrint("", attributeFont));
+        grid.add(new TextPrint("", attributeFont));
+        grid.add(new TextPrint("", attributeFont));
+        grid.add(new TextPrint(fw.getMods().toString(), attributeFont), 2);
+
+        grid.add(new TextPrint("short", italicFontData), 2);
+        grid.add(new TextPrint("medium", italicFontData), 2);
+        grid.add(new TextPrint("long", italicFontData), 2);
+        grid.add(new TextPrint("extreme", italicFontData), 2);
+
+        if (fw.getReichweite() != null) {
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getMin(), fw.getReichweite().getKurz()), attributeFont), 2);
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getKurz(), fw.getReichweite().getMittel()), attributeFont), 2);
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getMittel(), fw.getReichweite().getWeit()), attributeFont), 2);
+            grid.add(new TextPrint(toReichweite(fw.getReichweite().getWeit(), fw.getReichweite().getExtrem()), attributeFont), 2);
+        }
+
+        return grid;
+    }
+
+    private String toName(EObject fw) {
+        return itemDelegator.getText(fw);
     }
 
     /**
@@ -581,10 +738,10 @@ public class PersonaPrinter {
             KoerperPersona kp = (KoerperPersona)persona;
             grid1.add(new TextPrint("armor", attributeFont));
             grid1.add(new TextPrint(kp.getPanzer() + "", attributeFont));
-            
+
         }
 
-        grid.add(grid1,2);
+        grid.add(grid1, 2);
         return grid;
     }
 
