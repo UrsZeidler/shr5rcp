@@ -1,15 +1,15 @@
 2014-02-02 Version 0.1.1
 	
-	* Added automatic creation of the resources.
-	* Added http://www.eclipse.org/nebula/widgets/paperclips/paperclips.php as simple print engine.
-	* Added most of the creation constrains.
-	* Added some examples 
-	* import from chummer2 :
-		* added examples
-		* added default attribute for skill
-		* added select able skills for magic category
-		* added lifestyle to money in from chummer
+* Added automatic creation of the resources.
+* Added http://www.eclipse.org/nebula/widgets/paperclips/paperclips.php as simple print engine.
+* Added most of the creation constrains.
+* Added some examples 
+* import from chummer2 :
+	* added examples
+	* added default attribute for skill
+	* added select able skills for magic category
+	* added lifestyle to money in from chummer
 	
-2014-02-02 Version 0.1.0
+2014-01-19 Version 0.1.0
 	
-	* First release  with some basic functions.
+* First release  with some basic functions.
