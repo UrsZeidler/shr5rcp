@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -384,10 +385,19 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        Shr5Generator pc = (Shr5Generator) object;
+
+        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        if (factory != null && pc.getCharacter() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(pc.getCharacter(),
+                    IItemLabelProvider.class);
+            if (labelprovider != null)
+                return labelprovider.getImage(pc.getCharacter());
+        }
         return overlayImage(object, getResourceLocator().getImage("full/obj16/Shr5Generator"));
     }
 
