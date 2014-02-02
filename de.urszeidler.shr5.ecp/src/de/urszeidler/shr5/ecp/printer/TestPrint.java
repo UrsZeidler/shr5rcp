@@ -15,10 +15,13 @@ import org.eclipse.nebula.paperclips.core.grid.GridPrint;
 import org.eclipse.nebula.paperclips.core.text.TextPrint;
 import org.eclipse.nebula.paperclips.widgets.PrintPreview;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.graphics.FontData;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.printing.Printer;
 import org.eclipse.swt.printing.PrinterData;
@@ -28,12 +31,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -43,11 +44,6 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
-
-import org.eclipse.swt.custom.ScrolledComposite;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.graphics.Point;
 
 public class TestPrint extends Composite {
 

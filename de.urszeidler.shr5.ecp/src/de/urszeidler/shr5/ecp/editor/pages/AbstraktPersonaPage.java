@@ -22,10 +22,8 @@ import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
-import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
-import org.eclipse.swt.widgets.Label;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
-import org.eclipse.swt.layout.FillLayout;
+import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 	private AbstraktPersona object;

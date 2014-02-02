@@ -21,7 +21,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
-import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**

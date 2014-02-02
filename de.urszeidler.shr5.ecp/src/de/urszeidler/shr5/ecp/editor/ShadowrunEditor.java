@@ -81,7 +81,6 @@ import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
-import de.urszeidler.shr5.ecp.printer.PrintPage;
 
 /**
  * An editor capable of handling several object types

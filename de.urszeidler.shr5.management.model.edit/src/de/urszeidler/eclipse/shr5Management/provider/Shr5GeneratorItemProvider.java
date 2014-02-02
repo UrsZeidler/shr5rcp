@@ -21,7 +21,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
