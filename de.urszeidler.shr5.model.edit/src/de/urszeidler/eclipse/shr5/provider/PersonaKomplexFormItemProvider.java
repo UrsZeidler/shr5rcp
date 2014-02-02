@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
@@ -112,10 +113,21 @@ public class PersonaKomplexFormItemProvider
      * This returns PersonaKomplexForm.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public Object getImage(Object object) {
+	    PersonaKomplexForm personaComplexForm = (PersonaKomplexForm) object;
+
+	        ComposeableAdapterFactory factory = ((Shr5ItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+	        if (factory != null && personaComplexForm.getForm() != null) {
+	            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(personaComplexForm.getForm(),
+	                    IItemLabelProvider.class);
+	            if (labelprovider != null)
+	                return labelprovider.getImage(personaComplexForm.getForm());
+	        }
+
+	    
         return overlayImage(object, getResourceLocator().getImage("full/obj16/PersonaKomplexForm"));
     }
 
