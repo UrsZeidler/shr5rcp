@@ -64,6 +64,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
+import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 
 /**
  * @author urs
@@ -524,7 +525,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
     private void addPersonaPage(ManagedCharacter playerCharacter) {
         try {
-            if (Shr5GeneratorPage.this.getEditor().findPage("character") != null)
+            if (Shr5GeneratorPage.this.getEditor().findPage("persona.printer") != null)
+                Shr5GeneratorPage.this.getEditor().removePage(3);
+            if (Shr5GeneratorPage.this.getEditor().findPage("persona.inventar") != null)
                 Shr5GeneratorPage.this.getEditor().removePage(2);
             if (Shr5GeneratorPage.this.getEditor().findPage("persona") != null)
                 Shr5GeneratorPage.this.getEditor().removePage(1);
@@ -533,7 +536,13 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                     new AbstraktPersonaPage(Shr5GeneratorPage.this.getEditor(), "persona", "AbstractPersona", playerCharacter.getPersona(),
                             editingDomain, mananger));
             Shr5GeneratorPage.this.getEditor().addPage(2,
-                    new ManagedCharacterPage(Shr5GeneratorPage.this.getEditor(), "character", "Inventar", playerCharacter, editingDomain, mananger));
+                    new ManagedCharacterPage(Shr5GeneratorPage.this.getEditor(), "persona.inventar", "Inventar", playerCharacter, editingDomain, mananger));
+
+            Shr5GeneratorPage.this.getEditor().addPage(
+                    3,
+                    new PrintPreviewPage(Shr5GeneratorPage.this.getEditor(), "persona.printer", "Character sheet", PersonaPrinter.getInstance()
+                            .createPrintFactory(playerCharacter)));
+
         } catch (PartInitException e1) {
             e1.printStackTrace();
         };
