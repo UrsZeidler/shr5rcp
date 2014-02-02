@@ -349,7 +349,10 @@
 					<erweiterung>Oben</erweiterung>
 					<einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0" />
 				</inventar>
-				<inventar xsi:type="shr5:Gegenstand" page="448" srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="2" name="Miniwelder" kategorie="B&amp;E Gear"/>
+				<inventar xsi:type="shr5:Gegenstand" page="448"
+					srcBook="//@entries.0/@entries.0" wert="250" verfuegbarkeit="2"
+					image="/shr5Resource/images/Aliens-Portable-Hand-Welder-1.jpg"
+					name="Miniwelder" kategorie="B&amp;E Gear" />
 				<contracts xsi:type="shr5:Lifestyle" name="Low" page="95"
 					srcBook="//@entries.0/@entries.0" wert="2000" verfuegbarkeit="" />
 			</members>
