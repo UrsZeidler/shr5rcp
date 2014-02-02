@@ -7,7 +7,6 @@ shr5rcp
  This is a program to manage resources and characters for the rolegame shadowrun 5.0.
  It is dedicated to create and manage characters. 
 
-![generator ready](wiki-images/images/shr5-generator-addSkills.png)
  
 2. Motivation
   
