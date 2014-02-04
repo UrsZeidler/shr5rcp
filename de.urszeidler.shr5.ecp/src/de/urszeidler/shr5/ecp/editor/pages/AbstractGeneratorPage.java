@@ -7,11 +7,13 @@ import java.util.Set;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.PartInitException;
@@ -25,6 +27,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -220,6 +223,18 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         } catch (PartInitException e1) {
             e1.printStackTrace();
         };
+    }
+
+    protected void updateGeneratorState(Diagnostic diagnostic,CharacterGenerator  generator) {
+        if (EObjectValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource())) {
+            if (diagnostic.getCode() == EObjectValidator.EOBJECT__EVERY_MULTIPCITY_CONFORMS) {
+                Object object2 = diagnostic.getData().get(1);
+                if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP.equals(object2)) {
+                    generator.setState(GeneratorState.NEW);
+                } else if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER.equals(object2))
+                    generator.setState(GeneratorState.READY_FOR_CREATION);
+            }
+        }
     }
 
 }

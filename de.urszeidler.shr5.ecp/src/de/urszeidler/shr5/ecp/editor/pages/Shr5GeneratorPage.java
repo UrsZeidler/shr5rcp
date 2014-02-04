@@ -18,7 +18,6 @@ import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.fieldassist.ControlDecoration;
@@ -442,15 +441,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 newSet.add(diagnostic.getCode());
 
             newChangeset.add(diagnostic.getMessage());
-            if (EObjectValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource())) {
-                if (diagnostic.getCode() == EObjectValidator.EOBJECT__EVERY_MULTIPCITY_CONFORMS) {
-                    Object object2 = diagnostic.getData().get(1);
-                    if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP.equals(object2))
-                        object.setState(GeneratorState.NEW);
-                    if (Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER.equals(object2))
-                        object.setState(GeneratorState.READY_FOR_CREATION);
-                }
-            }
+            Shr5Generator object3 = object;
+            updateGeneratorState(diagnostic, object3);
         }
 
         if (newChangeset.equals(changeSet))

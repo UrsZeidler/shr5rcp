@@ -5,6 +5,7 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.Notification;
@@ -50,10 +51,13 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+
 import org.eclipse.core.databinding.UpdateValueStrategy;
 
 /**
@@ -65,9 +69,9 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
 
-    private EClass selectedType = null;
-    private Spezies selectedSpecies = null;
-    private AbstraktPersona selectedPersona = null;
+    // private EClass selectedType = null;
+    // private Spezies selectedSpecies = null;
+    // private AbstraktPersona selectedPersona = null;
     private Button btnPlayerButton;
     private ToolItem tltmNewItem;
     private ToolItem tltmCommit;
@@ -77,6 +81,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     private Section sctnCreate;
     private DiagnosticComposite diagnosticComposite;
     private Label lblInstruction;
+    private IObservableValue selectedType;
 
     public FreeStyleGeneratorPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
@@ -199,25 +204,22 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
         Composite compositePrio = new Composite(grpAuswahl, SWT.NONE);
         compositePrio.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-        compositePrio.setLayout(new GridLayout(2, false));
+        compositePrio.setLayout(new GridLayout(3, false));
         managedForm.getToolkit().adapt(compositePrio);
         managedForm.getToolkit().paintBordersFor(compositePrio);
 
         Label lblType = new Label(compositePrio, SWT.NONE);
-        lblType.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().adapt(lblType, true, true);
         lblType.setText("Type");
 
         final ImageHyperlink mghprlnkNewImagehyperlink_1 = managedForm.getToolkit().createImageHyperlink(compositePrio, SWT.NONE);
+        mghprlnkNewImagehyperlink_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
         mghprlnkNewImagehyperlink_1.addHyperlinkListener(new IHyperlinkListener() {
             public void linkActivated(HyperlinkEvent e) {
                 handleType();
-                mghprlnkNewImagehyperlink_1.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(selectedType));
-                mghprlnkNewImagehyperlink_1.setImage(AdapterFactoryUtil.getInstance().getLabelProvider().getImage(selectedType));
+                mghprlnkNewImagehyperlink_1.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(selectedType.getValue()));
+                mghprlnkNewImagehyperlink_1.setImage(AdapterFactoryUtil.getInstance().getLabelProvider().getImage(selectedType.getValue()));
 
-                if (selectedSpecies != null && selectedType != null) {
-                    object.setState(GeneratorState.READY_FOR_CREATION);
-                }
                 validateChange();
             }
 
@@ -228,60 +230,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         managedForm.getToolkit().paintBordersFor(mghprlnkNewImagehyperlink_1);
-        mghprlnkNewImagehyperlink_1.setText("New ImageHyperlink");
-
-        Label lblSpezies = managedForm.getToolkit().createLabel(compositePrio, "Species", SWT.NONE);
-        lblSpezies.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-
-        final ImageHyperlink mghprlnkNewImagehyperlink = managedForm.getToolkit().createImageHyperlink(compositePrio, SWT.NONE);
-        mghprlnkNewImagehyperlink.addHyperlinkListener(new IHyperlinkListener() {
-            public void linkActivated(HyperlinkEvent e) {
-                handleSpecies();
-                mghprlnkNewImagehyperlink.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(selectedSpecies));
-                mghprlnkNewImagehyperlink.setImage(AdapterFactoryUtil.getInstance().getLabelProvider().getImage(selectedSpecies));
-                if (selectedSpecies != null && selectedType != null) {
-                    object.setState(GeneratorState.READY_FOR_CREATION);
-
-                }
-                validateChange();
-            }
-
-            public void linkEntered(HyperlinkEvent e) {
-            }
-
-            public void linkExited(HyperlinkEvent e) {
-            }
-        });
-        managedForm.getToolkit().paintBordersFor(mghprlnkNewImagehyperlink);
-        mghprlnkNewImagehyperlink.setText("New ImageHyperlink");
-
-        Label lblClonePersona = managedForm.getToolkit().createLabel(compositePrio, "clone persona", SWT.NONE);
-        lblClonePersona.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-
-        final ImageHyperlink mghprlnkPersona = managedForm.getToolkit().createImageHyperlink(compositePrio, SWT.NONE);
-        mghprlnkPersona.addHyperlinkListener(new IHyperlinkListener() {
-            public void linkActivated(HyperlinkEvent e) {
-                handleClonePersona();
-                mghprlnkPersona.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(selectedPersona));
-                mghprlnkPersona.setImage(AdapterFactoryUtil.getInstance().getLabelProvider().getImage(selectedPersona));
-                if (selectedPersona != null) {
-                    object.setState(GeneratorState.READY_FOR_CREATION);
-                    mghprlnkNewImagehyperlink.setText("");
-                    mghprlnkNewImagehyperlink.setImage(null);
-                    mghprlnkNewImagehyperlink_1.setText("");
-                    mghprlnkNewImagehyperlink_1.setImage(null);
-                }
-                validateChange();
-            }
-
-            public void linkEntered(HyperlinkEvent e) {
-            }
-
-            public void linkExited(HyperlinkEvent e) {
-            }
-        });
-        managedForm.getToolkit().paintBordersFor(mghprlnkPersona);
-        mghprlnkPersona.setText("New ImageHyperlink");
+        mghprlnkNewImagehyperlink_1.setText("[null]");
 
         Composite composite_group = new Composite(grpAuswahl, SWT.NONE);
         composite_group.setLayout(new GridLayout(3, false));
@@ -325,6 +274,10 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry("Name", Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
         emfFormBuilder.addTextEntry("Generator", Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
+        emfFormBuilder.addTextEntry("Species", Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES, compositePrio);
+        emfFormBuilder.addSeperatorEntry(compositePrio);
+        emfFormBuilder.addTextEntry("Clone Persona", Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
+
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
         managedForm.reflow(true);
@@ -334,50 +287,26 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             addPersonaPage(object.getCharacter());
         }
         validateChange();
+        selectedType = EMFEditObservables.observeValue(editingDomain, object, Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE);
 
     }
 
+    /**
+     * Commit the character.
+     */
     protected void commitCharacter() {
         object.setState(GeneratorState.COMMITED);
         validateChange();
-        
+
     }
 
-    protected void handleClonePersona() {
-        Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.ABSTRAKT_PERSONA);
-
-        OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), objectsOfType.toArray(new Object[]{}), "Select species",
-                "Choose a species.");
-        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-        int open = dialog.open();
-        if (open == Dialog.OK) {
-            Object[] result = dialog.getResult();
-            if (result.length > 0)
-                selectedPersona = (AbstraktPersona)result[0];
-            else
-                selectedPersona = null;
-        }
-    }
-
-    protected void handleSpecies() {
-        Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.SPEZIES);
-
-        OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), objectsOfType.toArray(new Object[]{}), "Select species",
-                "Choose a species.");
-        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-        int open = dialog.open();
-        if (open == Dialog.OK) {
-            Object[] result = dialog.getResult();
-            if (result.length > 0)
-                selectedSpecies = (Spezies)result[0];
-            else
-                selectedSpecies = null;
-        }
-    }
-
+    /**
+     * Choose the persona type.
+     */
     protected void handleType() {
         Collection<EClass> filteredEClasses = new HashSet<EClass>();
-        Collection<?> newChildDescriptors = AdapterFactoryUtil.getInstance().getItemDelegator().getNewChildDescriptors(object, editingDomain, null);
+        Collection<?> newChildDescriptors = AdapterFactoryUtil.getInstance().getItemDelegator()
+                .getNewChildDescriptors(Shr5managementFactory.eINSTANCE.createPlayerCharacter(), editingDomain, null);
         for (Object object2 : newChildDescriptors) {
             if (object2 instanceof CommandParameter) {
                 CommandParameter cp = (CommandParameter)object2;
@@ -394,14 +323,15 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         if (open == Dialog.OK) {
             Object[] result = dialog.getResult();
             if (result.length > 0)
-                selectedType = (EClass)result[0];
+                selectedType.setValue((EClass)result[0]);
             else
-                selectedType = null;
+                selectedType.setValue(null);
         }
 
     }
 
     protected void createManagedCharacter() {
+        AbstraktPersona selectedPersona = object.getSelectedPersona();
         if (selectedPersona != null) {
             ManagedCharacter playerCharacter;
             if (btnPlayerButton.getSelection())
@@ -419,12 +349,15 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             object.setCharacter(playerCharacter);
 
         } else {
-            createManagedCharacter(selectedType, selectedSpecies, btnPlayerButton.getSelection(), object);
+            createManagedCharacter((EClass)selectedType.getValue(), object.getSelectedSpecies(), btnPlayerButton.getSelection(), object);
         }
         addPersonaPage(object.getCharacter());
 
     }
 
+    /**
+     * Validates the changes.
+     */
     @Override
     protected void validateChange() {
         if (object.getState() == GeneratorState.COMMITED) {
@@ -439,7 +372,18 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         }
 
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
-
+        List<Diagnostic> children = validate.getChildren();
+        for (Diagnostic diagnostic : children) {
+            updateGeneratorState(diagnostic, object);
+        }
+        if (object.getSelectedPersona() == null && object.getSelectedType() == null &&object.getSelectedSpecies() == null)
+            object.setState(GeneratorState.NEW);
+        else if((object.getSelectedType() != null && object.getSelectedSpecies() != null)&&(object.getSelectedPersona() != null))
+            object.setState(GeneratorState.NEW);
+        else
+            if((object.getSelectedType() == null || object.getSelectedSpecies() == null)&&(object.getSelectedPersona() == null))
+                object.setState(GeneratorState.NEW);
+        
         tltmNewItem.setEnabled(object.getState() == GeneratorState.READY_FOR_CREATION);
         tltmChoose.setEnabled(object.getState() == GeneratorState.NEW);
         tltmCommit.setEnabled(object.getState() == GeneratorState.PERSONA_CREATED);// && validate.getChildren().isEmpty());
@@ -454,13 +398,20 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
     @Override
     protected boolean notificationIsRequierd(Notification notification) {
-        // TODO Auto-generated method stub
         return true;
     }
 
     @Override
     protected EditingDomain getEditingDomain() {
         return editingDomain;
+    }
+
+    @Override
+    public void dispose() {
+        if (object != null)
+            object.eAdapters().remove(this);
+
+        super.dispose();
     }
 
     protected DataBindingContext initDataBindings() {
@@ -471,6 +422,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
                 Literals.CHARACTER_GENERATOR__CURRENT_INSTRUCTION);
         bindingContext.bindValue(observeTextLblInstructionObserveWidget, objectCurrentInstructionObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), null);
+
         //
         return bindingContext;
     }
