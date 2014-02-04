@@ -11,6 +11,7 @@ import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -40,7 +41,11 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -57,6 +62,13 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     private EClass selectedType = null;
     private Spezies selectedSpecies = null;
     private AbstraktPersona selectedPersona = null;
+    private Button btnPlayerButton;
+    private ToolItem tltmNewItem;
+    private ToolItem tltmCommit;
+    private ToolItem restItem;
+    private ToolItem tltmChoose;
+    private Section sctnChoose;
+    private Section sctnCreate;
     
     
 
@@ -102,10 +114,10 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().adapt(toolBar);
         managedForm.getToolkit().paintBordersFor(toolBar);
 
-        ToolItem tltmChoose = new ToolItem(toolBar, SWT.NONE);
+        tltmChoose = new ToolItem(toolBar, SWT.NONE);
         tltmChoose.setText("1. choose");
 
-        ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
+        tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -115,10 +127,10 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         });
         tltmNewItem.setText("2. create");
 
-        ToolItem tltmCommit = new ToolItem(toolBar, SWT.NONE);
+        tltmCommit = new ToolItem(toolBar, SWT.NONE);
         tltmCommit.setText("3. commit");
 
-        ToolItem restItem = new ToolItem(toolBar, SWT.NONE);
+        restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -146,7 +158,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
         Label lblInstruction = managedForm.getToolkit().createLabel(composite_1, "ttt", SWT.NONE);
 
-        Section sctnChoose = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnChoose = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnChoose.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnChoose);
         sctnChoose.setText("1. choose");
@@ -163,14 +175,14 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().paintBordersFor(grpTyp);
         grpTyp.setLayout(new GridLayout(1, false));
 
-        Button btnRadioButton = new Button(grpTyp, SWT.RADIO);
-        btnRadioButton.setSelection(true);
-        managedForm.getToolkit().adapt(btnRadioButton, true, true);
-        btnRadioButton.setText("Player");
+        btnPlayerButton = new Button(grpTyp, SWT.RADIO);
+        btnPlayerButton.setSelection(true);
+        managedForm.getToolkit().adapt(btnPlayerButton, true, true);
+        btnPlayerButton.setText("Player");
 
         Button btnRadioButton_1 = new Button(grpTyp, SWT.RADIO);
         managedForm.getToolkit().adapt(btnRadioButton_1, true, true);
-        btnRadioButton_1.setText("Non player");
+        btnRadioButton_1.setText("None player");
 
         Composite compositePrio = new Composite(grpAuswahl, SWT.NONE);
         compositePrio.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
@@ -241,7 +253,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().adapt(composite_group);
         managedForm.getToolkit().paintBordersFor(composite_group);
 
-        Section sctnCreate = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnCreate = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnCreate.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnCreate);
         sctnCreate.setText("2. create");
@@ -262,7 +274,13 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry("Generator", Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+ 
         managedForm.reflow(true);
+        if (!object.eAdapters().contains(this))
+            object.eAdapters().add(this);
+//        if (object.getCharacter() != null && object.getCharacter().getPersona() != null) {
+//            addPersonaPage(object.getCharacter());
+//        }
         validateChange();
 
     }
@@ -330,22 +348,47 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
 
     protected void createManagedCharacter() {
-        // TODO Auto-generated method stub
+        if(selectedPersona!=null){
+            ManagedCharacter playerCharacter;
+            if (btnPlayerButton.getSelection())
+                playerCharacter = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
+            else
+                playerCharacter = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+
+            
+            AbstraktPersona persona = EcoreUtil.copy(selectedPersona);
+            
+            playerCharacter.setPersona(persona);
+            persona.setName(object.getCharacterName());
+
+            object.setState(GeneratorState.PERSONA_CREATED);
+            object.getSelectedGroup().getMembers().add(playerCharacter);
+            object.setCharacter(playerCharacter);
+
+        }else{
+            createManagedCharacter(selectedType, selectedSpecies, btnPlayerButton.getSelection(), object);
+        }
+        
         
     }
 
 
     @Override
     protected void validateChange() {
-        // TODO Auto-generated method stub
-        
+        tltmNewItem.setEnabled(object.getState() == GeneratorState.READY_FOR_CREATION);
+        tltmChoose.setEnabled(object.getState() == GeneratorState.NEW);
+        tltmCommit.setEnabled(object.getState() == GeneratorState.PERSONA_CREATED );//&& validate.getChildren().isEmpty());
+
+        sctnChoose.setExpanded(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
+        sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
+        //grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
     }
 
 
     @Override
     protected boolean notificationIsRequierd(Notification notification) {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     
