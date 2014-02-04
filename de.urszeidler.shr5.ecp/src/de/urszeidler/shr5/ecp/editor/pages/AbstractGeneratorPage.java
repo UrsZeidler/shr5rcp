@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.wb.swt.ResourceManager;
 
@@ -27,6 +28,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 
 /**
  * The basic page for the generators.
@@ -193,6 +195,31 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         object.setCharacter(null);
         object.setState(GeneratorState.NEW);
         validateChange();
+    }
+
+    protected void addPersonaPage(ManagedCharacter playerCharacter) {
+        try {
+            if (this.getEditor().findPage("persona.printer") != null)
+                this.getEditor().removePage(3);
+            if (this.getEditor().findPage("persona.inventar") != null)
+                this.getEditor().removePage(2);
+            if (this.getEditor().findPage("persona") != null)
+                this.getEditor().removePage(1);
+            this.getEditor().addPage(
+                    1,
+                    new AbstraktPersonaPage(this.getEditor(), "persona", "AbstractPersona", playerCharacter.getPersona(),
+                            getEditingDomain(), mananger));
+            this.getEditor().addPage(2,
+                    new ManagedCharacterPage(this.getEditor(), "persona.inventar", "Inventar", playerCharacter, getEditingDomain(), mananger));
+    
+            this.getEditor().addPage(
+                    3,
+                    new PrintPreviewPage(this.getEditor(), "persona.printer", "Character sheet", PersonaPrinter.getInstance()
+                            .createPrintFactory(playerCharacter)));
+    
+        } catch (PartInitException e1) {
+            e1.printStackTrace();
+        };
     }
 
 }
