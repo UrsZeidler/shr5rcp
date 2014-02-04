@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.util;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -65,9 +66,13 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
 		if (target instanceof EAttribute) {
 			return createModifikatorItemProvider();
 		}
-		if (target instanceof EReference) {
-			return createModifikatorItemProvider();
-		}
+        if (target instanceof EReference) {
+            return createModifikatorItemProvider();
+        }
+
+        if (target instanceof EClass) {
+            return createModifikatorItemProvider();
+        }
 
 		return modelSwitch.doSwitch((EObject) target);
 	}
