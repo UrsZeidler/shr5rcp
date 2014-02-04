@@ -18,6 +18,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
@@ -155,10 +156,20 @@ public class FreeStyleGeneratorItemProvider
      * This returns FreeStyleGenerator.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public Object getImage(Object object) {
+	       FreeStyleGenerator pc = (FreeStyleGenerator) object;
+
+	        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+	        if (factory != null && pc.getCharacter() != null) {
+	            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(pc.getCharacter(),
+	                    IItemLabelProvider.class);
+	            if (labelprovider != null)
+	                return labelprovider.getImage(pc.getCharacter());
+	        }
+
         return overlayImage(object, getResourceLocator().getImage("full/obj16/FreeStyleGenerator"));
     }
 
