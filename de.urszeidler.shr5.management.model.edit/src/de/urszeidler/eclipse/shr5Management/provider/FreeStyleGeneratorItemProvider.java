@@ -56,6 +56,9 @@ public class FreeStyleGeneratorItemProvider
             super.getPropertyDescriptors(object);
 
             addFreestyleGeneratorPropertyDescriptor(object);
+            addSelectedPersonaPropertyDescriptor(object);
+            addSelectedSpeciesPropertyDescriptor(object);
+            addSelectedTypePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -83,6 +86,72 @@ public class FreeStyleGeneratorItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Selected Persona feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSelectedPersonaPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FreeStyleGenerator_selectedPersona_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_FreeStyleGenerator_selectedPersona_feature", "_UI_FreeStyleGenerator_type"),
+                 Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Selected Species feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSelectedSpeciesPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FreeStyleGenerator_selectedSpecies_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_FreeStyleGenerator_selectedSpecies_feature", "_UI_FreeStyleGenerator_type"),
+                 Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Selected Type feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSelectedTypePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FreeStyleGenerator_selectedType_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_FreeStyleGenerator_selectedType_feature", "_UI_FreeStyleGenerator_type"),
+                 Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns FreeStyleGenerator.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

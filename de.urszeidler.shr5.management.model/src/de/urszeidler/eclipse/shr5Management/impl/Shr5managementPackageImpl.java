@@ -1128,6 +1128,33 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getFreeStyleGenerator_SelectedPersona() {
+        return (EReference)freeStyleGeneratorEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getFreeStyleGenerator_SelectedSpecies() {
+        return (EReference)freeStyleGeneratorEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getFreeStyleGenerator_SelectedType() {
+        return (EReference)freeStyleGeneratorEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1822,6 +1849,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         freeStyleGeneratorEClass = createEClass(FREE_STYLE_GENERATOR);
         createEReference(freeStyleGeneratorEClass, FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR);
+        createEReference(freeStyleGeneratorEClass, FREE_STYLE_GENERATOR__SELECTED_PERSONA);
+        createEReference(freeStyleGeneratorEClass, FREE_STYLE_GENERATOR__SELECTED_SPECIES);
+        createEReference(freeStyleGeneratorEClass, FREE_STYLE_GENERATOR__SELECTED_TYPE);
 
         shr5GeneratorEClass = createEClass(SHR5_GENERATOR);
         createEReference(shr5GeneratorEClass, SHR5_GENERATOR__RESOURCEN);
@@ -2085,6 +2115,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(freeStyleGeneratorEClass, FreeStyleGenerator.class, "FreeStyleGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getFreeStyleGenerator_FreestyleGenerator(), this.getFreeStyle(), null, "freestyleGenerator", null, 0, 1, FreeStyleGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEReference(getFreeStyleGenerator_SelectedPersona(), theShr5Package.getAbstraktPersona(), null, "selectedPersona", null, 0, 1, FreeStyleGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFreeStyleGenerator_SelectedSpecies(), theShr5Package.getSpezies(), null, "selectedSpecies", null, 0, 1, FreeStyleGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFreeStyleGenerator_SelectedType(), ecorePackage.getEClass(), null, "selectedType", null, 0, 1, FreeStyleGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(shr5GeneratorEClass, Shr5Generator.class, "Shr5Generator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getShr5Generator_Resourcen(), this.getResourcen(), null, "resourcen", null, 1, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

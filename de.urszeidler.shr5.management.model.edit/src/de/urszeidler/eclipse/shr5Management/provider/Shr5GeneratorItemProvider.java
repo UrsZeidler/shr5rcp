@@ -28,7 +28,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.Shr5Generator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -37,7 +36,6 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Shr5GeneratorItemProvider(AdapterFactory adapterFactory) {
@@ -48,7 +46,6 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -189,194 +186,286 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
      * This adds a property descriptor for the Karma To Resource feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addKarmaToResourcePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_karmaToResource_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_karmaToResource_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__KARMA_TO_RESOURCE, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_karmaToResource_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_karmaToResource_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__KARMA_TO_RESOURCE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Karma Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addKarmaSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_karmaSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_karmaSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__KARMA_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null,
-                null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_karmaSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_karmaSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__KARMA_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Shr5 Generator feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addShr5GeneratorPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_shr5Generator_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_shr5Generator_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__SHR5_GENERATOR, true, false, true, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_shr5Generator_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_shr5Generator_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SHR5_GENERATOR,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Attribute Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addAttributeSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_attributeSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_attributeSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_attributeSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_attributeSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Resource Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addResourceSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_resourceSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_resourceSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCE_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_resourceSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_resourceSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCE_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Connection Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addConnectionSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_connectionSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_connectionSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__CONNECTION_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_connectionSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_connectionSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__CONNECTION_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Skill Point Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addSkillPointSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_skillPointSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_skillPointSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__SKILL_POINT_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_skillPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_skillPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SKILL_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Special Point Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addSpecialPointSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_specialPointSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_specialPointSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_specialPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_specialPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Group Point Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addGroupPointSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_groupPointSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_groupPointSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__GROUP_POINT_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_groupPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_groupPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__GROUP_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Knownlege Point Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addKnownlegePointSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_knownlegePointSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_knownlegePointSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND, false, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_knownlegePointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_knownlegePointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Spell Point Spend feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addSpellPointSpendPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_spellPointSpend_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_spellPointSpend_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__SPELL_POINT_SPEND, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_spellPointSpend_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_spellPointSpend_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__SPELL_POINT_SPEND,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Start Karma feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addStartKarmaPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_startKarma_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_startKarma_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null,
-                null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_startKarma_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_startKarma_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Start Resources feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addStartResourcesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Shr5Generator_startResources_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_startResources_feature", "_UI_Shr5Generator_type"),
-                Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES, false, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5Generator_startResources_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_startResources_feature", "_UI_Shr5Generator_type"),
+                 Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -423,7 +512,6 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -454,7 +542,6 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -164,6 +164,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="FreeStyleGenerator" eSuperTypes="#//CharacterGenerator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="freestyleGenerator" eType="#//FreeStyle"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedPersona" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktPersona"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedSpecies" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezies"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedType" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator" eSuperTypes="#//CharacterGenerator">
     <eOperations name="hasCategoryOnlyOnce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">

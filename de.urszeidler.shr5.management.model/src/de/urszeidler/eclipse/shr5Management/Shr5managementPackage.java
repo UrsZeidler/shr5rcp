@@ -1881,13 +1881,40 @@ public interface Shr5managementPackage extends EPackage {
 	int FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR = CHARACTER_GENERATOR_FEATURE_COUNT + 0;
 
 	/**
+     * The feature id for the '<em><b>Selected Persona</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_STYLE_GENERATOR__SELECTED_PERSONA = CHARACTER_GENERATOR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Selected Species</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_STYLE_GENERATOR__SELECTED_SPECIES = CHARACTER_GENERATOR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Selected Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_STYLE_GENERATOR__SELECTED_TYPE = CHARACTER_GENERATOR_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Free Style Generator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FREE_STYLE_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 1;
+	int FREE_STYLE_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 4;
 
 	/**
      * The number of operations of the '<em>Free Style Generator</em>' class.
@@ -4026,6 +4053,39 @@ public interface Shr5managementPackage extends EPackage {
 	EReference getFreeStyleGenerator_FreestyleGenerator();
 
 	/**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedPersona <em>Selected Persona</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Selected Persona</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedPersona()
+     * @see #getFreeStyleGenerator()
+     * @generated
+     */
+    EReference getFreeStyleGenerator_SelectedPersona();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedSpecies <em>Selected Species</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Selected Species</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedSpecies()
+     * @see #getFreeStyleGenerator()
+     * @generated
+     */
+    EReference getFreeStyleGenerator_SelectedSpecies();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedType <em>Selected Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Selected Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedType()
+     * @see #getFreeStyleGenerator()
+     * @generated
+     */
+    EReference getFreeStyleGenerator_SelectedType();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator <em>Shr5 Generator</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5414,6 +5474,30 @@ public interface Shr5managementPackage extends EPackage {
 		EReference FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR = eINSTANCE.getFreeStyleGenerator_FreestyleGenerator();
 
 		/**
+         * The meta object literal for the '<em><b>Selected Persona</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FREE_STYLE_GENERATOR__SELECTED_PERSONA = eINSTANCE.getFreeStyleGenerator_SelectedPersona();
+
+        /**
+         * The meta object literal for the '<em><b>Selected Species</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FREE_STYLE_GENERATOR__SELECTED_SPECIES = eINSTANCE.getFreeStyleGenerator_SelectedSpecies();
+
+        /**
+         * The meta object literal for the '<em><b>Selected Type</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FREE_STYLE_GENERATOR__SELECTED_TYPE = eINSTANCE.getFreeStyleGenerator_SelectedType();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl <em>Shr5 Generator</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

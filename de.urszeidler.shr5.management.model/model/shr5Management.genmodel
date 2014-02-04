@@ -142,6 +142,9 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//FreeStyleGenerator">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/freestyleGenerator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedPersona"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedSpecies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FreeStyleGenerator/selectedType"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5Generator">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/resourcen"/>

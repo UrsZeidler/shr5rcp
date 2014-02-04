@@ -17,11 +17,9 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Adept#calcPowerPointsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Power
- * Points Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Adept#calcPowerPointsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter) <em>Calc Power Points Spend</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class AdeptTest extends SpecialTypeTest {
@@ -29,7 +27,6 @@ public class AdeptTest extends SpecialTypeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -40,7 +37,6 @@ public class AdeptTest extends SpecialTypeTest {
      * Constructs a new Adept test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AdeptTest(String name) {
@@ -51,7 +47,6 @@ public class AdeptTest extends SpecialTypeTest {
      * Returns the fixture for this Adept test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -75,7 +70,6 @@ public class AdeptTest extends SpecialTypeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
