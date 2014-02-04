@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
@@ -117,7 +118,12 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 			return doSwitch;
 
 		Shr5managementSwitch<Integer> shr5managementSwitch = new Shr5managementSwitch<Integer>() {
-			@Override
+			
+		    @Override
+		    public Integer caseFreeStyleGenerator(FreeStyleGenerator object) {
+		        return 2;
+		    }
+		    @Override
 			public Integer caseShr5Generator(Shr5Generator object) {
 				return 2;
 			}

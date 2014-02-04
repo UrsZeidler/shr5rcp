@@ -52,6 +52,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -70,6 +71,7 @@ import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
+import de.urszeidler.shr5.ecp.editor.pages.FreeStyleGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
 import de.urszeidler.shr5.ecp.editor.pages.GenericBasicBeschreibbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
@@ -363,6 +365,16 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 
         Shr5managementSwitch<Object> shr5managementSwitch = new Shr5managementSwitch<Object>() {
 
+            @Override
+            public Object caseFreeStyleGenerator(FreeStyleGenerator object) {
+                try {
+                    addPage(new FreeStyleGeneratorPage(ShadowrunEditor.this, "", "Modifikationen", object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating ModifizierbarPage", e);
+                }
+                return super.caseFreeStyleGenerator(object);
+            }
+            
             @Override
             public Object caseShr5Generator(Shr5Generator object) {
                 try {
