@@ -10,7 +10,9 @@ import java.util.Set;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
@@ -51,6 +53,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
 
@@ -100,6 +103,8 @@ public class PersonaPrinter {
 
         // persona = character.getPersona();
         itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
+        Shr5managementItemProviderAdapterFactory shr5managementItemProviderAdapterFactory = new de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory();
+        AdapterFactoryUtil.getInstance().getAdapterFactory().insertAdapterFactory(shr5managementItemProviderAdapterFactory);
     }
 
     /**
@@ -820,11 +825,11 @@ public class PersonaPrinter {
         }
 
         grid2.add(new TextPrint("Composure", attributeFont), 3);
-        grid2.add(new TextPrint(persona.getWillenskraft()+persona.getCharisma()+  "", attributeFont), 1);
+        grid2.add(new TextPrint(persona.getWillenskraft() + persona.getCharisma() + "", attributeFont), 1);
         grid2.add(new TextPrint("Juge Intention", attributeFont), 3);
-        grid2.add(new TextPrint(persona.getIntuition()+persona.getCharisma()+"" , attributeFont), 1);
+        grid2.add(new TextPrint(persona.getIntuition() + persona.getCharisma() + "", attributeFont), 1);
         grid2.add(new TextPrint("Memory", attributeFont), 3);
-        grid2.add(new TextPrint(persona.getWillenskraft()+persona.getLogik()+"", attributeFont), 1);
+        grid2.add(new TextPrint(persona.getWillenskraft() + persona.getLogik() + "", attributeFont), 1);
         grid2.add(new TextPrint("Lift/Carry", attributeFont), 3);
         grid2.add(new TextPrint("", attributeFont), 1);
         grid2.add(new TextPrint("Movement", attributeFont), 3);
@@ -926,10 +931,25 @@ public class PersonaPrinter {
     private void printeAttributes(AbstraktPersona persona, GridPrint grid, EList<EAttribute> eAttributes) {
         for (EAttribute eAttribute : eAttributes) {
             String attName = itemDelegator.getText(eAttribute);
+            attName = toFeatureName(persona, eAttribute);
+
             Object value = persona.eGet(eAttribute);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(attName, attributeFont), 3);
             grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(value.toString(), attributeFont), 1);
         }
+    }
+
+    /**
+     * Returns the localized feature name.
+     * 
+     * @param object
+     * @param eAttribute
+     * @return
+     */
+    public static String toFeatureName(EObject object, EStructuralFeature eAttribute) {
+        IItemPropertyDescriptor descriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, eAttribute);
+
+        return descriptor.getDisplayName(eAttribute);
     }
 
 }

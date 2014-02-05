@@ -57,6 +57,7 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 
 import org.eclipse.core.databinding.UpdateValueStrategy;
 
@@ -269,14 +270,14 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         // --------------
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry("Group", Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
 
-        emfFormBuilder.addTextEntry("Name", Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
-        emfFormBuilder.addTextEntry("Generator", Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
-        emfFormBuilder.addTextEntry("Species", Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES, compositePrio);
         emfFormBuilder.addSeperatorEntry(compositePrio);
-        emfFormBuilder.addTextEntry("Clone Persona", Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
@@ -376,14 +377,13 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         for (Diagnostic diagnostic : children) {
             updateGeneratorState(diagnostic, object);
         }
-        if (object.getSelectedPersona() == null && object.getSelectedType() == null &&object.getSelectedSpecies() == null)
+        if (object.getSelectedPersona() == null && object.getSelectedType() == null && object.getSelectedSpecies() == null)
             object.setState(GeneratorState.NEW);
-        else if((object.getSelectedType() != null && object.getSelectedSpecies() != null)&&(object.getSelectedPersona() != null))
+        else if ((object.getSelectedType() != null && object.getSelectedSpecies() != null) && (object.getSelectedPersona() != null))
             object.setState(GeneratorState.NEW);
-        else
-            if((object.getSelectedType() == null || object.getSelectedSpecies() == null)&&(object.getSelectedPersona() == null))
-                object.setState(GeneratorState.NEW);
-        
+        else if ((object.getSelectedType() == null || object.getSelectedSpecies() == null) && (object.getSelectedPersona() == null))
+            object.setState(GeneratorState.NEW);
+
         tltmNewItem.setEnabled(object.getState() == GeneratorState.READY_FOR_CREATION);
         tltmChoose.setEnabled(object.getState() == GeneratorState.NEW);
         tltmCommit.setEnabled(object.getState() == GeneratorState.PERSONA_CREATED);// && validate.getChildren().isEmpty());
