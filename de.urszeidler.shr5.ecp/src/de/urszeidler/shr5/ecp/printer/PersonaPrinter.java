@@ -277,7 +277,7 @@ public class PersonaPrinter {
 
     private Print printZauberList(List<PersonaZauber> zauber) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
-        GridPrint grid = new GridPrint("d:g,d", look);
+        GridPrint grid = new GridPrint("d:g,d", look);//NONE NLS
 
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Spells", boldFontData), 2);
         grid.addHeader(new TextPrint("Name", italicFontData), 2);
@@ -342,7 +342,7 @@ public class PersonaPrinter {
 
         for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
             grid.add(new TextPrint(itemDelegator.getText(personaEigenschaft), attributeFont));
-            grid.add(new TextPrint(personaEigenschaft.getKarmaKosten() + "", attributeFont));
+            grid.add(new TextPrint(  printInteger(personaEigenschaft.getKarmaKosten()), attributeFont));
         }
 
         return grid;
@@ -377,14 +377,14 @@ public class PersonaPrinter {
 
                 grid.add(new TextPrint(itemDelegator.getText(fw), attributeFont), 2);
                 grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-                grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
-                grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
+                grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+                grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
                 if (fw instanceof Feuerwaffe) {
                     Feuerwaffe f = (Feuerwaffe)fw;
                     printFeuerwaffeDetail(f);
 
                     grid.add(new TextPrint(f.getModie().toString(), attributeFont));
-                    grid.add(new TextPrint(f.getRueckstoss() + "", attributeFont));
+                    grid.add(new TextPrint(printInteger(f.getRueckstoss() ), attributeFont));
                     grid.add(new TextPrint(f.getKapazitaet() + f.getMunitionstyp().getLiteral(), attributeFont));
 
                 } else {
@@ -441,9 +441,9 @@ public class PersonaPrinter {
 
         grid.add(new TextPrint(toName(fw), attributeFont), 2);
         grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-        grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
-        grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
-        grid.add(new TextPrint(fw.getReichweite() + "", attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
 
         return grid;
     }
@@ -528,8 +528,8 @@ public class PersonaPrinter {
         grid.add(new TextPrint("adons", italicFontData), 2);
 
         grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-        grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
-        grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
         grid.add(new TextPrint("", attributeFont));
         grid.add(new TextPrint("", attributeFont));
         grid.add(new TextPrint("", attributeFont));
@@ -599,10 +599,10 @@ public class PersonaPrinter {
                 Nahkampfwaffe fw = (Nahkampfwaffe)abstraktGegenstand;
 
                 grid.add(new TextPrint(itemDelegator.getText(fw), attributeFont), 2);
-                grid.add(new TextPrint(fw.getReichweite() + "", attributeFont));
+                grid.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
                 grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-                grid.add(new TextPrint(fw.getPraezision() + "", attributeFont));
-                grid.add(new TextPrint(fw.getDurchschlagsKraft() + "", attributeFont));
+                grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+                grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
             }
         }
 
@@ -682,8 +682,8 @@ public class PersonaPrinter {
         EList<Connection> connections = character.getConnections();
         for (Connection connection : connections) {
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(connection), 2));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(connection.getLoyality() + ""));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(connection.getInfluence() + ""));
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getLoyality())));
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getInfluence())));
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("---"));
 
         }
@@ -717,7 +717,7 @@ public class PersonaPrinter {
                 PersonaFertigkeitsGruppe gruppe = ShadowrunTools.findGruppe(fg, persona);
                 String stufe = "";
                 if (gruppe != null) {
-                    stufe = gruppe.getStufe() + "";
+                    stufe = printInteger(gruppe.getStufe());
                     grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(fg), attributeFont), 3);
                     grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(stufe, attributeFont), 1);
                     grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", attributeFont), 1);
@@ -756,8 +756,8 @@ public class PersonaPrinter {
             }
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(fertigkeitValue + "", attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(value + "", attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
         }
     }
 
@@ -778,11 +778,11 @@ public class PersonaPrinter {
 
         GridPrint grid1 = new GridPrint("d:g,r:d", look);
         grid1.add(new TextPrint("doge", attributeFont));
-        grid1.add(new TextPrint(persona.getAusweichen() + "", attributeFont));
+        grid1.add(new TextPrint(printInteger(persona.getAusweichen()), attributeFont));
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
             grid1.add(new TextPrint("armor", attributeFont));
-            grid1.add(new TextPrint(kp.getPanzer() + "", attributeFont));
+            grid1.add(new TextPrint(printInteger(kp.getPanzer()), attributeFont));
 
         }
 
@@ -809,7 +809,7 @@ public class PersonaPrinter {
         printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
         printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
         grid1.add(new TextPrint("edge", attributeFont), 3);
-        grid1.add(new TextPrint(persona.getEdgeBasis() + "", attributeFont), 1);
+        grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
 
         grid.add(grid1);
         GridPrint grid2 = new GridPrint("d,d,d,r:d", look);
@@ -825,11 +825,11 @@ public class PersonaPrinter {
         }
 
         grid2.add(new TextPrint("Composure", attributeFont), 3);
-        grid2.add(new TextPrint(persona.getWillenskraft() + persona.getCharisma() + "", attributeFont), 1);
+        grid2.add(new TextPrint(printInteger(persona.getWillenskraft() + persona.getCharisma()), attributeFont), 1);
         grid2.add(new TextPrint("Juge Intention", attributeFont), 3);
-        grid2.add(new TextPrint(persona.getIntuition() + persona.getCharisma() + "", attributeFont), 1);
+        grid2.add(new TextPrint(printInteger(persona.getIntuition() + persona.getCharisma()), attributeFont), 1);
         grid2.add(new TextPrint("Memory", attributeFont), 3);
-        grid2.add(new TextPrint(persona.getWillenskraft() + persona.getLogik() + "", attributeFont), 1);
+        grid2.add(new TextPrint(printInteger(persona.getWillenskraft() + persona.getLogik()), attributeFont), 1);
         grid2.add(new TextPrint("Lift/Carry", attributeFont), 3);
         grid2.add(new TextPrint("", attributeFont), 1);
         grid2.add(new TextPrint("Movement", attributeFont), 3);
@@ -846,11 +846,11 @@ public class PersonaPrinter {
 
             GridPrint grid3 = new GridPrint("d,d,d,d,d,d", look);
             grid3.add(new TextPrint("Physical limit", attributeFont));
-            grid3.add(new TextPrint(kp.getKoerperlich() + "", attributeFont));
+            grid3.add(new TextPrint(printInteger(kp.getKoerperlich()) , attributeFont));
             grid3.add(new TextPrint("Mental limit", attributeFont));
-            grid3.add(new TextPrint(kp.getGeistig() + "", attributeFont));
+            grid3.add(new TextPrint(printInteger(kp.getGeistig()) , attributeFont));
             grid3.add(new TextPrint("Social limit", attributeFont));
-            grid3.add(new TextPrint(kp.getSozial() + "", attributeFont));
+            grid3.add(new TextPrint(printInteger(kp.getSozial()), attributeFont));
 
             grid.add(grid3, 2);
 
@@ -880,6 +880,17 @@ public class PersonaPrinter {
         return string;
     }
 
+    /**
+     * Prints the ini.
+     * 
+     * @param persona
+     * @return
+     */
+    private String printInteger(int value) {
+        return String.format("%d", value);
+    }
+
+    
     /**
      * Print the basic info like name and karma .
      * 
