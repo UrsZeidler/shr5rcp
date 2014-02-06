@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.swt.SWT;
@@ -117,7 +118,7 @@ public class PersonaUIToolkit {
 	//
 	private void createEssenzWidget(Composite client) {
 		EAttribute attribute = Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ;
-		getToolkit().createLabel(client, itemDelegator.getText(attribute));
+		getToolkit().createLabel(client,toFeatureName(attribute,eObject));// itemDelegator.getText(attribute));
 
 		Label text = getToolkit().createLabel(client, "");
 		IObservableValue observeValue = createObservableValue(attribute);
@@ -133,7 +134,7 @@ public class PersonaUIToolkit {
 	}
 
 	private void createAttributeWidget(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
-		getToolkit().createLabel(client, itemDelegator.getText(calcFeature));
+		getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
 		Text text = getToolkit().createText(client, "__", SWT.NONE);
 		setDefaultLayout(text);
@@ -165,7 +166,7 @@ public class PersonaUIToolkit {
 	}
 
 	private void createAttributeWidgetRO(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
-		getToolkit().createLabel(client, itemDelegator.getText(calcFeature));
+		getToolkit().createLabel(client, toFeatureName(calcFeature,eObject));// itemDelegator.getText(calcFeature));
 
 		Label text = getToolkit().createLabel(client, "_____");
 		setDefaultLayout(text);
@@ -180,7 +181,7 @@ public class PersonaUIToolkit {
 
 	private void createReaktionAttWidgets(EAttribute basefeature, EAttribute calcFeature, Composite client) {
 
-		getToolkit().createLabel(client, "Initative");
+		getToolkit().createLabel(client, toFeatureName(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE,eObject));
 		Label label = getToolkit().createLabel(client, "ini");
 		bindLabelFeature(label, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, new EMFUpdateValueStrategy());
 		final IObservableValue reaktWValue = createObservableValue(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
@@ -399,4 +400,18 @@ public class PersonaUIToolkit {
 		return toolkit;
 	}
 
+    /**
+     * Returns the localized feature name.
+     * 
+     * @param e
+     * @param object
+     * @return
+     */
+    private String toFeatureName(EStructuralFeature feature, final EObject object) {
+        IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(object, feature);
+        String displayName = propertyDescriptor.getDisplayName(feature);
+        return displayName;
+    }
+
+	
 }
