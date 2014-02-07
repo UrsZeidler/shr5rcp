@@ -3,22 +3,19 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages;
 
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -33,33 +30,19 @@ import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
-import org.eclipse.ui.forms.events.HyperlinkEvent;
-import org.eclipse.ui.forms.events.IHyperlinkListener;
 import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.ui.forms.widgets.ImageHyperlink;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
-import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
-
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.emf.databinding.edit.EMFEditObservables;
-
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
-import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
-
-import org.eclipse.core.databinding.UpdateValueStrategy;
+import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 
 /**
  * @author urs
@@ -70,9 +53,6 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
 
-    // private EClass selectedType = null;
-    // private Spezies selectedSpecies = null;
-    // private AbstraktPersona selectedPersona = null;
     private Button btnPlayerButton;
     private ToolItem tltmNewItem;
     private ToolItem tltmCommit;
@@ -82,7 +62,6 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     private Section sctnCreate;
     private DiagnosticComposite diagnosticComposite;
     private Label lblInstruction;
-    private IObservableValue selectedType;
 
     public FreeStyleGeneratorPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
@@ -209,30 +188,6 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().adapt(compositePrio);
         managedForm.getToolkit().paintBordersFor(compositePrio);
 
-        Label lblType = new Label(compositePrio, SWT.NONE);
-        managedForm.getToolkit().adapt(lblType, true, true);
-        lblType.setText("Type");
-
-        final ImageHyperlink mghprlnkNewImagehyperlink_1 = managedForm.getToolkit().createImageHyperlink(compositePrio, SWT.NONE);
-        mghprlnkNewImagehyperlink_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
-        mghprlnkNewImagehyperlink_1.addHyperlinkListener(new IHyperlinkListener() {
-            public void linkActivated(HyperlinkEvent e) {
-                handleType();
-                mghprlnkNewImagehyperlink_1.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(selectedType.getValue()));
-                mghprlnkNewImagehyperlink_1.setImage(AdapterFactoryUtil.getInstance().getLabelProvider().getImage(selectedType.getValue()));
-
-                validateChange();
-            }
-
-            public void linkEntered(HyperlinkEvent e) {
-            }
-
-            public void linkExited(HyperlinkEvent e) {
-            }
-        });
-        managedForm.getToolkit().paintBordersFor(mghprlnkNewImagehyperlink_1);
-        mghprlnkNewImagehyperlink_1.setText("[null]");
-
         Composite composite_group = new Composite(grpAuswahl, SWT.NONE);
         composite_group.setLayout(new GridLayout(3, false));
         composite_group.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
@@ -275,6 +230,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
         emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE, compositePrio);
         emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES, compositePrio);
         emfFormBuilder.addSeperatorEntry(compositePrio);
         emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
@@ -288,8 +244,6 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             addPersonaPage(object.getCharacter());
         }
         validateChange();
-        selectedType = EMFEditObservables.observeValue(editingDomain, object, Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE);
-
     }
 
     /**
@@ -301,36 +255,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
     }
 
-    /**
-     * Choose the persona type.
-     */
-    protected void handleType() {
-        Collection<EClass> filteredEClasses = new HashSet<EClass>();
-        Collection<?> newChildDescriptors = AdapterFactoryUtil.getInstance().getItemDelegator()
-                .getNewChildDescriptors(Shr5managementFactory.eINSTANCE.createPlayerCharacter(), editingDomain, null);
-        for (Object object2 : newChildDescriptors) {
-            if (object2 instanceof CommandParameter) {
-                CommandParameter cp = (CommandParameter)object2;
-                if (cp.feature.equals(Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA))
-                    filteredEClasses.add(((EObject)cp.value).eClass());
-            }
-
-        }
-
-        OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}), "Select type",
-                "Choose a persona type.");
-        dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-        int open = dialog.open();
-        if (open == Dialog.OK) {
-            Object[] result = dialog.getResult();
-            if (result.length > 0)
-                selectedType.setValue((EClass)result[0]);
-            else
-                selectedType.setValue(null);
-        }
-
-    }
-
+ 
     protected void createManagedCharacter() {
         AbstraktPersona selectedPersona = object.getSelectedPersona();
         if (selectedPersona != null) {
@@ -350,7 +275,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             object.setCharacter(playerCharacter);
 
         } else {
-            createManagedCharacter((EClass)selectedType.getValue(), object.getSelectedSpecies(), btnPlayerButton.getSelection(), object);
+            createManagedCharacter(object.getSelectedType(), object.getSelectedSpecies(), btnPlayerButton.getSelection(), object);
         }
         addPersonaPage(object.getCharacter());
 

@@ -9,6 +9,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
+import org.eclipse.core.databinding.observable.IObservable;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -57,8 +59,10 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.emf.commons.ui.dialogs.GenericEObjectDialog;
+import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.editor.BasicEditor;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -93,6 +97,39 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID";
 
     protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
+        public void handleManage(FormbuilderEntry e, EObject object) {
+            if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
+                Collection<EClass> filteredEClasses = new HashSet<EClass>();
+                Collection<?> newChildDescriptors = AdapterFactoryUtil.getInstance().getItemDelegator()
+                        .getNewChildDescriptors(Shr5managementFactory.eINSTANCE.createPlayerCharacter(), editingDomain, null);
+                for (Object object2 : newChildDescriptors) {
+                    if (object2 instanceof CommandParameter) {
+                        CommandParameter cp = (CommandParameter)object2;
+                        if (cp.feature.equals(Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA))
+                            filteredEClasses.add(((EObject)cp.value).eClass());
+                    }
+
+                }
+                OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}), "Select type",
+                        "Choose a persona type.");
+                dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+                int open = dialog.open();
+                if (open == Dialog.OK) {
+                    Object[] result = dialog.getResult();
+                    IObservable observable = e.getObservable();
+                    if (observable instanceof IObservableValue) {
+                        IObservableValue ov = (IObservableValue)e.getObservable();
+                        if (result.length > 0)
+                            ov.setValue((EClass)result[0]);
+                        else
+                            ov.setValue(null);
+                    }
+                }
+                return;
+            }
+            super.handleManage(e, object);
+        }
+
         @Override
         protected Object provideObject(FormbuilderEntry e, EObject object) {
             if (Shr5Package.Literals.MODIFIZIERBAR__MODS.equals(e.getFeature())) {
@@ -159,7 +196,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 else
                     return null;
             }
-
             return defaultCreationDialog(e, object);
         }
 
@@ -374,7 +410,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 }
                 return super.caseFreeStyleGenerator(object);
             }
-            
+
             @Override
             public Object caseShr5Generator(Shr5Generator object) {
                 try {
@@ -390,7 +426,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "persona", "AbstractPersona", object.getPersona(), editingDomain, manager));
                     addPage(new ManagedCharacterPage(ShadowrunEditor.this, "persona.inventar", "Inventar", object, editingDomain, manager));
-                    //addPage(new PrintPage(ShadowrunEditor.this, "printer", "Print sheet", object));
+                    // addPage(new PrintPage(ShadowrunEditor.this, "printer", "Print sheet", object));
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, "printer", "Character sheet", PersonaPrinter.getInstance().createPrintFactory(
                             object)));
                 } catch (PartInitException e) {
