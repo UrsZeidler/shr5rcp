@@ -84,7 +84,7 @@
 				</xsl:for-each>
 
 			</entries>
-			<entries xsi:type="shr5:ShrList" name="Sourcebooks">
+			<entries xsi:type="shr5:ShrList" name="Generators">
 				<xsl:call-template name="examples" />
 			</entries>
 		</shr5:ShrList>
