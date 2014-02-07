@@ -1568,7 +1568,7 @@
 </entries>
 </entries>
 </entries>
-<entries xsi:type="shr5:ShrList" name="Sourcebooks">
+<entries xsi:type="shr5:ShrList" name="Generators">
 <entries xsi:type="shr5mngt:CharacterGroup" name="player group">
 <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@entries.5" choosenLifestyle="//@entries.1/@entries.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
 <persona xsi:type="shr5:KiAdept" image="/shr5Resource/images/gunter-face-small.png" name="Gu" edgeBasis="5" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
