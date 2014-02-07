@@ -59,7 +59,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.emf.commons.ui.dialogs.GenericEObjectDialog;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
@@ -234,6 +234,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
     @Override
     protected void initAdatpterFactory() {
         adapterFactory = AdapterFactoryUtil.getInstance().getAdapterFactory();
+        adapterFactory.insertAdapterFactory(new Shr5managementItemProviderAdapterFactory());
         basicContentProvider = new AdapterFactoryContentProvider(adapterFactory);
         itemDelegator = new AdapterFactoryItemDelegator(adapterFactory);
         labelProvider = new AdapterFactoryLabelProvider(adapterFactory);
