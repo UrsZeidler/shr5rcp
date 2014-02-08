@@ -3,9 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import org.eclipse.emf.ecore.EClass;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Spezies;
-import org.eclipse.emf.ecore.EClass;
 
 
 /**

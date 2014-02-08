@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
-import de.urszeidler.eclipse.shr5.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -26,6 +25,7 @@ import de.urszeidler.eclipse.shr5.CritterKraft;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Echo;
+import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 import de.urszeidler.eclipse.shr5.Fakeable;
@@ -80,6 +80,7 @@ import de.urszeidler.eclipse.shr5.SpezielleAttribute;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Sprite;
+import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;

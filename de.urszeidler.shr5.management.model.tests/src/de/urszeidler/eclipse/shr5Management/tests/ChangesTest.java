@@ -3,9 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import junit.framework.TestCase;
+
 import org.eclipse.emf.ecore.EcorePackage;
 
-import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;

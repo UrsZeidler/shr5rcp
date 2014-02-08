@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,9 +18,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
-
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,13 +3,13 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
