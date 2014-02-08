@@ -6,7 +6,6 @@ package de.urszeidler.shr5.ecp.editor;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.IObservable;
@@ -19,7 +18,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecp.internal.wizards.SelectModelElementWizard;
 import org.eclipse.emf.ecp.ui.common.CompositeFactory;
 import org.eclipse.emf.ecp.ui.common.SelectionComposite;
-import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
@@ -72,6 +70,7 @@ import de.urszeidler.shr5.ecp.dialogs.CreateAttributModifikatorDialog;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.ReferenceValueDialog;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
+import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancement;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
@@ -87,6 +86,7 @@ import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * An editor capable of handling several object types
@@ -99,17 +99,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
     protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
         public void handleManage(FormbuilderEntry e, EObject object) {
             if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
-                Collection<EClass> filteredEClasses = new HashSet<EClass>();
-                Collection<?> newChildDescriptors = AdapterFactoryUtil.getInstance().getItemDelegator()
-                        .getNewChildDescriptors(Shr5managementFactory.eINSTANCE.createPlayerCharacter(), editingDomain, null);
-                for (Object object2 : newChildDescriptors) {
-                    if (object2 instanceof CommandParameter) {
-                        CommandParameter cp = (CommandParameter)object2;
-                        if (cp.feature.equals(Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA))
-                            filteredEClasses.add(((EObject)cp.value).eClass());
-                    }
+                Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(
+                        Shr5managementFactory.eINSTANCE.createPlayerCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA,
+                        editingDomain);
 
-                }
                 OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}), "Select type",
                         "Choose a persona type.");
                 dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
@@ -129,6 +122,16 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             }
             super.handleManage(e, object);
         }
+
+        // /**
+        // * Extract the eclasses from acceptable for a feature.
+        // * @param eobject
+        // * @param feature
+        // * @return
+        // */
+        // private Collection<EClass> provideNewClassTypes(EObject eobject, EStructuralFeature feature) {
+        // return ShadowrunEditingTools.provideNewClassTypes(eobject, feature, editingDomain);
+        // }
 
         @Override
         protected Object provideObject(FormbuilderEntry e, EObject object) {
@@ -196,23 +199,24 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 else
                     return null;
             }
+            // else
+            // if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES.equals(e.getFeature())) {
+            // Collection<EClass> filteredEClasses = provideNewClassTypes(object, e.getFeature());
+            //
+            // }
+
             return defaultCreationDialog(e, object);
         }
 
         @SuppressWarnings({ "restriction", "unchecked" })
         private EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
-            Collection<EClass> filteredEClasses = new HashSet<EClass>();
-            Collection<?> newChildDescriptors = itemDelegator.getNewChildDescriptors(object, editingDomain, null);
-            for (Object object2 : newChildDescriptors) {
-                if (object2 instanceof CommandParameter) {
-                    CommandParameter cp = (CommandParameter)object2;
-                    if (cp.feature.equals(e.getFeature()))
-                        filteredEClasses.add(((EObject)cp.value).eClass());
-                }
 
-            }
+            Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(object, e.getFeature(), editingDomain);// provideNewClassTypes(object,
+                                                                                                                                    // e.getFeature());
             if (filteredEClasses.size() == 1) {
-                return Shr5Factory.eINSTANCE.create(filteredEClasses.iterator().next());
+                EClass eClass = filteredEClasses.iterator().next();
+                return eClass.getEPackage().getEFactoryInstance().create(eClass);
+                // return Shr5Factory.eINSTANCE.create(eClass);
             }
 
             final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET, Collections.EMPTY_SET,
@@ -225,7 +229,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             final int wizardResult = wd.open();
             if (wizardResult == Window.OK) {
                 Object[] selection = helper.getSelection();
-                return Shr5Factory.eINSTANCE.create((EClass)selection[0]);
+                EClass eClass = (EClass)selection[0];
+                return eClass.getEPackage().getEFactoryInstance().create(eClass);
+                // return Shr5Factory.eINSTANCE.create(eClass);
             }
             return null;
         }
@@ -427,7 +433,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "persona", "AbstractPersona", object.getPersona(), editingDomain, manager));
                     addPage(new ManagedCharacterPage(ShadowrunEditor.this, "persona.inventar", "Inventar", object, editingDomain, manager));
-                    // addPage(new PrintPage(ShadowrunEditor.this, "printer", "Print sheet", object));
+                    addPage(new CharacterAdvancement(ShadowrunEditor.this, "persona.advancement", "Advancement", object, editingDomain, manager));
+
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, "printer", "Character sheet", PersonaPrinter.getInstance().createPrintFactory(
                             object)));
                 } catch (PartInitException e) {

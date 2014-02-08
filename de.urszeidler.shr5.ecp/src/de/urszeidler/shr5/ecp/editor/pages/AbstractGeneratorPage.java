@@ -203,6 +203,8 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     protected void addPersonaPage(ManagedCharacter playerCharacter) {
         try {
             if (this.getEditor().findPage("persona.printer") != null)
+                this.getEditor().removePage(4);
+            if (this.getEditor().findPage("persona.advancement") != null)
                 this.getEditor().removePage(3);
             if (this.getEditor().findPage("persona.inventar") != null)
                 this.getEditor().removePage(2);
@@ -213,10 +215,12 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
                     new AbstraktPersonaPage(this.getEditor(), "persona", "AbstractPersona", playerCharacter.getPersona(),
                             getEditingDomain(), mananger));
             this.getEditor().addPage(2,
-                    new ManagedCharacterPage(this.getEditor(), "persona.inventar", "Inventar", playerCharacter, getEditingDomain(), mananger));
+                    new ManagedCharacterPage(this.getEditor(), "persona.inventar", "Iventory", playerCharacter, getEditingDomain(), mananger));
+            this.getEditor().addPage(3,
+                    new CharacterAdvancement(this.getEditor(), "persona.advancement", "Advancement", playerCharacter, getEditingDomain(), mananger));
     
             this.getEditor().addPage(
-                    3,
+                    4,
                     new PrintPreviewPage(this.getEditor(), "persona.printer", "Character sheet", PersonaPrinter.getInstance()
                             .createPrintFactory(playerCharacter)));
     

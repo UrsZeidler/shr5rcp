@@ -96,13 +96,18 @@ public abstract class PersonaValueChangeImpl extends ChangesImpl implements Pers
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public void setFrom(int newFrom) {
         int oldFrom = from;
         from = newFrom;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PERSONA_VALUE_CHANGE__FROM, oldFrom, from));
+        
+        if(oldFrom!=newFrom)
+            if (eNotificationRequired())
+                eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHANGES__KARMA_COST, oldFrom, from));
+
     }
 
 	/**
@@ -117,13 +122,18 @@ public abstract class PersonaValueChangeImpl extends ChangesImpl implements Pers
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public void setTo(int newTo) {
         int oldTo = to;
         to = newTo;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PERSONA_VALUE_CHANGE__TO, oldTo, to));
+        
+        if(oldTo!=newTo)
+            if (eNotificationRequired())
+                eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHANGES__KARMA_COST, oldTo, to));
+
     }
 
 	/**

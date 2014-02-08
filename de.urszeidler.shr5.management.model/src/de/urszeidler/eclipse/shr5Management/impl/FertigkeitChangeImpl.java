@@ -110,13 +110,19 @@ public class FertigkeitChangeImpl extends PersonaValueChangeImpl implements Fert
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     public void setSkill(PersonaFertigkeit newSkill) {
         PersonaFertigkeit oldSkill = skill;
         skill = newSkill;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.FERTIGKEIT_CHANGE__SKILL, oldSkill, skill));
+        
+        if(newSkill!=null){
+            setSkillGroup(null);
+            setFrom(newSkill.getStufe());
+            setTo(newSkill.getStufe()+1);            
+        }
     }
 
     /**
@@ -152,13 +158,19 @@ public class FertigkeitChangeImpl extends PersonaValueChangeImpl implements Fert
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     public void setSkillGroup(PersonaFertigkeitsGruppe newSkillGroup) {
         PersonaFertigkeitsGruppe oldSkillGroup = skillGroup;
         skillGroup = newSkillGroup;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.FERTIGKEIT_CHANGE__SKILL_GROUP, oldSkillGroup, skillGroup));
+    
+        if(newSkillGroup!=null){
+            setSkill(null);
+            setFrom(newSkillGroup.getStufe());
+            setTo(newSkillGroup.getStufe()+1);            
+        }
     }
 
     /**
