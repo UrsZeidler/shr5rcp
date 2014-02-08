@@ -79,4 +79,22 @@ public class KarmaGaintTest extends ChangesTest {
         getFixture().setKarma(2);        
         assertEquals(2, getFixture().getKarmaCost());
     }
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges() {
+        getFixture().setKarma(2);        
+        assertEquals(2, getFixture().getKarmaCost());
+ 
+        getFixture().applyChanges();
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+    }
+
 } // KarmaGaintTest

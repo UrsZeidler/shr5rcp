@@ -28,14 +28,14 @@ import java.lang.reflect.InvocationTargetException;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getDate <em>Date</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getKarmaCost <em>Karma Cost</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getCharacter <em>Character</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#isChangeApplied <em>Change Applied</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getDateApplied <em>Date Applied</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getDate <em>Date</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getKarmaCost <em>Karma Cost</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getCharacter <em>Character</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#isChangeApplied <em>Change Applied</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getDateApplied <em>Date Applied</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class ChangesImpl extends MinimalEObjectImpl.Container implements Changes {
@@ -43,6 +43,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -53,6 +54,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDate()
      * @generated
      * @ordered
@@ -63,6 +65,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The default value of the '{@link #getKarmaCost() <em>Karma Cost</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getKarmaCost()
      * @generated
      * @ordered
@@ -73,6 +76,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The default value of the '{@link #isChangeApplied() <em>Change Applied</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isChangeApplied()
      * @generated
      * @ordered
@@ -83,6 +87,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The cached value of the '{@link #isChangeApplied() <em>Change Applied</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #isChangeApplied()
      * @generated
      * @ordered
@@ -93,6 +98,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The default value of the '{@link #getDateApplied() <em>Date Applied</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDateApplied()
      * @generated
      * @ordered
@@ -103,6 +109,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * The cached value of the '{@link #getDateApplied() <em>Date Applied</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDateApplied()
      * @generated
      * @ordered
@@ -112,6 +119,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected ChangesImpl() {
@@ -121,6 +129,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -131,6 +140,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Date getDate() {
@@ -140,6 +150,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDate(Date newDate) {
@@ -155,23 +166,26 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * 
      * @generated not
      */
-    public int getKarmaCost() {        
+    public int getKarmaCost() {
         throw new UnsupportedOperationException("Subclasses need to override getKarmaCost()");
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public ManagedCharacter getCharacter() {
-        if (eContainerFeatureID() != Shr5managementPackage.CHANGES__CHARACTER) return null;
+        if (eContainerFeatureID() != Shr5managementPackage.CHANGES__CHARACTER)
+            return null;
         return (ManagedCharacter)eInternalContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NotificationChain basicSetCharacter(ManagedCharacter newCharacter, NotificationChain msgs) {
@@ -182,6 +196,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCharacter(ManagedCharacter newCharacter) {
@@ -192,17 +207,19 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newCharacter != null)
-                msgs = ((InternalEObject)newCharacter).eInverseAdd(this, Shr5managementPackage.MANAGED_CHARACTER__CHANGES, ManagedCharacter.class, msgs);
+                msgs = ((InternalEObject)newCharacter).eInverseAdd(this, Shr5managementPackage.MANAGED_CHARACTER__CHANGES, ManagedCharacter.class,
+                        msgs);
             msgs = basicSetCharacter(newCharacter, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHANGES__CHARACTER, newCharacter, newCharacter));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public boolean isChangeApplied() {
@@ -212,6 +229,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Date getDateApplied() {
@@ -221,17 +239,17 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public void applyChanges() {
-        // TODO: implement this method
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException("Subclasses need to implement applyChanges() ");
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -248,6 +266,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -262,6 +281,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -276,6 +296,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -298,6 +319,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -316,6 +338,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -334,6 +357,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -356,6 +380,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -368,17 +393,16 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
         return super.eInvoke(operationID, arguments);
     }
 
-    
-    
-    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (date: ");
@@ -389,6 +413,11 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
         result.append(dateApplied);
         result.append(')');
         return result.toString();
+    }
+
+    protected void internalApply() {
+        dateApplied = new Date(System.currentTimeMillis());
+        changeApplied = true;
     }
 
 } // ChangesImpl

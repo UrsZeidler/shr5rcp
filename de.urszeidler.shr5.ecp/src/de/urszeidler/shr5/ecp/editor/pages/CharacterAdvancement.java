@@ -159,7 +159,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
         final Composite composite_2 = new Composite(grpAddAnAdvacment, SWT.NONE);
         composite_2.setLayout(new FillLayout(SWT.HORIZONTAL));
         GridData gd_composite_2 = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 5);
-        gd_composite_2.heightHint = 150;
+        gd_composite_2.heightHint = 200;
         composite_2.setLayoutData(gd_composite_2);
 
 
@@ -181,6 +181,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
             public void widgetSelected(SelectionEvent e) {
                 applyChange();
                 combo.setEnabled(true);
+                
             }
         });
         tltmDo.setText("do");
@@ -189,7 +190,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
         tltmCancel.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                
+                object.getChanges().remove(currentChange);
                 combo.setEnabled(true);
             }
         });
@@ -225,7 +226,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
 
     protected void applyChange() {
         if(currentChange!=null){
-            //currentChange.apply();
+            currentChange.applyChanges();
         }
         
     }

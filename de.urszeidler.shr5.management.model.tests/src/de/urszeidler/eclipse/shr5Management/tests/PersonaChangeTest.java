@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.tests;
 
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -14,6 +15,7 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Persona Change</b></em>'.
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class PersonaChangeTest extends PersonaValueChangeTest {
@@ -21,6 +23,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -31,6 +34,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * Constructs a new Persona Change test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public PersonaChangeTest(String name) {
@@ -41,6 +45,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * Returns the fixture for this Persona Change test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -51,6 +56,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -62,6 +68,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -69,8 +76,18 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     protected void tearDown() throws Exception {
         setFixture(null);
     }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testGetKarmaCost() {
+        //fail();
+    }
 
-    
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
      * <!-- begin-user-doc -->
@@ -84,12 +101,11 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
 
         Initation value = Shr5Factory.eINSTANCE.createInitation();
         value.setStufe(1);
-        //getFixture().setGarde(value);
-       
+        getFixture().setChangeable(value);
 
         assertEquals(-13, getFixture().getKarmaCost());
     }
-    
+
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
      * <!-- begin-user-doc -->
@@ -103,8 +119,9 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
 
         PersonaEigenschaft value = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
         value.setKarmaKosten(10);
-//        getFixture().setQuallity(value);
-//        getFixture().setAdded(false);
+        getFixture().setChangeable(value);
+        // getFixture().setQuallity(value);
+        // getFixture().setAdded(false);
 
         assertEquals(-20, getFixture().getKarmaCost());
     }
@@ -118,13 +135,43 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * @generated not
      */
     public void testGetKarmaCost_Skill() {
-        getFixture().setChangeable(playerCharacter.getPersona().getFertigkeiten().get(0));
-        getFixture().setFrom(2);
-        getFixture().setTo(3);
-        
+        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+        int value = personaFertigkeit.getStufe();
+        getFixture().setChangeable(personaFertigkeit);
+        // getFixture().setFrom(2);
+        // getFixture().setTo(3);
+
         playerCharacter.getChanges().add(getFixture());
-        assertEquals(-6, getFixture().getKarmaCost());
+        assertEquals((value+1) * -2, getFixture().getKarmaCost());
+        
+        getFixture().applyChanges();
+        assertEquals(value+1, personaFertigkeit.getStufe());
     }
 
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges() {
+        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+        int value = personaFertigkeit.getStufe();
+        getFixture().setChangeable(personaFertigkeit);
+        // getFixture().setFrom(2);
+        // getFixture().setTo(3);
 
-} //PersonaChangeTest
+        playerCharacter.getChanges().add(getFixture());
+
+        
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+//        fail();
+    }
+
+} // PersonaChangeTest

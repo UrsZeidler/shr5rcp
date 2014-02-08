@@ -3,11 +3,15 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.util.Date;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -24,17 +28,18 @@ import org.eclipse.emf.ecore.EAttribute;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class AttributeChangeImpl extends PersonaValueChangeImpl implements AttributeChange {
-	/**
+    /**
      * The cached value of the '{@link #getAttibute() <em>Attibute</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAttibute()
      * @generated
      * @ordered
@@ -43,26 +48,29 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected AttributeChangeImpl() {
+    protected AttributeChangeImpl() {
         super();
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return Shr5managementPackage.Literals.ATTRIBUTE_CHANGE;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EAttribute getAttibute() {
@@ -80,6 +88,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EAttribute basicGetAttibute() {
@@ -89,25 +98,41 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public void setAttibute(EAttribute newAttibute) {
         EAttribute oldAttibute = attibute;
         attibute = newAttibute;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTE_CHANGE__ATTIBUTE, oldAttibute, attibute));
+   
+    
+        if(newAttibute==null)
+            return;
+        
+        Integer eGet = (Integer)getCharacter().getPersona().eGet(getAttibute());
+ 
+        setFrom(eGet);
+        setTo(eGet + 1);
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.Literals.CHANGES__KARMA_COST, 0, 1));
+
+    
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.ATTRIBUTE_CHANGE__ATTIBUTE:
-                if (resolve) return getAttibute();
+                if (resolve)
+                    return getAttibute();
                 return basicGetAttibute();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -116,6 +141,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -131,6 +157,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -146,6 +173,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -167,14 +195,35 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
         if (chracterSource == null)
             return 0;
 
-        IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(), EcorePackage.Literals.EATTRIBUTE);
+        IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+                EcorePackage.Literals.EATTRIBUTE);
         if (part != null) {
             int karmaFactor = part.getKarmaFactor();
 
-            return -1*karmaFactor * (getTo());
+            return -1 * karmaFactor * (getTo());
         }
 
         return 0;
 
     }
-} //AttributeChangeImpl
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public void applyChanges() {
+        if (getAttibute() == null)
+            return;
+
+        if (getCharacter() == null)
+            return;
+
+       internalApply();
+
+        //Integer eGet = (Integer)getCharacter().getPersona().eGet(getAttibute());
+        getCharacter().getPersona().eSet(getAttibute(), getTo());
+    }
+
+} // AttributeChangeImpl

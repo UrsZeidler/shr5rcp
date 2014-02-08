@@ -78,10 +78,33 @@ public class AttributeChangeTest extends PersonaValueChangeTest {
      */
     public void testGetKarmaCost() {
         getFixture().setCharacter(playerCharacter);
-        getFixture().setAttibute(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
+        getFixture().setAttibute(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS);
         getFixture().setFrom(3);
         getFixture().setTo(4);
         assertEquals(-20, getFixture().getKarmaCost());
+        
+        getFixture().applyChanges();
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges() {
+        getFixture().setCharacter(playerCharacter);
+        getFixture().setAttibute(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS);
+        getFixture().setFrom(3);
+        getFixture().setTo(4);
+        assertEquals(-20, getFixture().getKarmaCost());
+        
+        getFixture().applyChanges();
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
     }
 
 } // AttributeChangeTest

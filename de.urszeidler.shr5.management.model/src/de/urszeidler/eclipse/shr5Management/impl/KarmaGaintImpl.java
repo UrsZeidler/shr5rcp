@@ -151,6 +151,16 @@ public class KarmaGaintImpl extends ChangesImpl implements KarmaGaint {
         return getKarma();
     }
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public void applyChanges() {
+        internalApply();
+    }
+
 	
 	/**
      * <!-- begin-user-doc -->

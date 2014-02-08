@@ -24,43 +24,46 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public abstract class ChangesTest extends TestCase {
 
-	/**
+    /**
      * The fixture for this Changes test case.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected Changes fixture = null;
+    protected Changes fixture = null;
     protected PlayerCharacter playerCharacter;
     protected Shr5System shr5System;
 
-	/**
+    /**
      * Constructs a new Changes test case with the given name.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated not
      */
-	public ChangesTest(String name) {
+    public ChangesTest(String name) {
         super(name);
         playerCharacter = Shr5GeneratorTest.createMudanCharacter();
         shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
         Shr5Generator generator = Shr5managementFactory.eINSTANCE.createShr5Generator();
         generator.setCharacter(playerCharacter);
         generator.setGenerator(shr5System);
-        
+
         IncreaseCharacterPart part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(2);
         part.setType(Shr5Package.Literals.FERTIGKEIT);
@@ -70,7 +73,7 @@ public abstract class ChangesTest extends TestCase {
         part.setKarmaFactor(1);
         part.setType(Shr5Package.Literals.SPRACHFERTIGKEIT);
         shr5System.getCharacterAdvancements().add(part);
-        
+
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(5);
         part.setType(EcorePackage.Literals.EATTRIBUTE);
@@ -80,7 +83,7 @@ public abstract class ChangesTest extends TestCase {
         part.setKarmaFactor(2);
         part.setType(Shr5Package.Literals.PERSONA_EIGENSCHAFT);
         shr5System.getCharacterAdvancements().add(part);
-        
+
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(13);
         part.setType(Shr5Package.Literals.INITATION);
@@ -91,26 +94,28 @@ public abstract class ChangesTest extends TestCase {
         fertigkeit.setFertigkeit(wfertigkeit);
         fertigkeit.setStufe(1);
         playerCharacter.getPersona().getFertigkeiten().add(fertigkeit);
- 
+
     }
 
-	/**
+    /**
      * Sets the fixture for this Changes test case.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected void setFixture(Changes fixture) {
+    protected void setFixture(Changes fixture) {
         this.fixture = fixture;
     }
 
-	/**
+    /**
      * Returns the fixture for this Changes test case.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected Changes getFixture() {
+    protected Changes getFixture() {
         return fixture;
     }
 
@@ -118,6 +123,7 @@ public abstract class ChangesTest extends TestCase {
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
      * @generated not
      */
@@ -129,13 +135,12 @@ public abstract class ChangesTest extends TestCase {
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
-     * @generated
+     * @generated not
      */
     public void testApplyChanges() {
-        // TODO: implement this operation test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+          fail();
     }
 
-} //ChangesTest
+} // ChangesTest

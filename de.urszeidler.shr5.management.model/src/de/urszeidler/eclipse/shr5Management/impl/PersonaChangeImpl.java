@@ -3,19 +3,24 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import de.urszeidler.eclipse.shr5.Erlernbar;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +29,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class PersonaChangeImpl extends PersonaValueChangeImpl implements PersonaChange {
@@ -35,6 +40,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * The cached value of the '{@link #getChangeable() <em>Changeable</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getChangeable()
      * @generated
      * @ordered
@@ -44,6 +50,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected PersonaChangeImpl() {
@@ -53,6 +60,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -63,6 +71,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Erlernbar getChangeable() {
@@ -71,7 +80,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             changeable = (Erlernbar)eResolveProxy(oldChangeable);
             if (changeable != oldChangeable) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable, changeable));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable,
+                            changeable));
             }
         }
         return changeable;
@@ -80,6 +90,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Erlernbar basicGetChangeable() {
@@ -89,25 +100,50 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public void setChangeable(Erlernbar newChangeable) {
         Erlernbar oldChangeable = changeable;
         changeable = newChangeable;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable, changeable));
+
+        if (newChangeable != null) {
+            Shr5Switch<Object> shr5Switch = new Shr5Switch<Object>() {
+                @Override
+                public Object caseSteigerbar(Steigerbar object) {
+                    setFrom(object.getStufe());
+                    setTo(object.getStufe() + 1);
+                    return object;
+                }
+
+                @Override
+                public Object caseErlernbar(Erlernbar object) {
+                    // TODO Auto-generated method stub
+                    return super.caseErlernbar(object);
+                }
+            };
+            Object ret = shr5Switch.doSwitch(newChangeable);
+            if (ret != null)
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.Literals.CHANGES__KARMA_COST, 0, 1));
+
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE:
-                if (resolve) return getChangeable();
+                if (resolve)
+                    return getChangeable();
                 return basicGetChangeable();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -116,6 +152,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -131,6 +168,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -146,6 +184,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -158,89 +197,154 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public void applyChanges() {
+        if (getChangeable() == null)
+            return;
+
+        internalApply();
+
+        Shr5Switch<Object> shr5Switch = new Shr5Switch<Object>() {
+            @Override
+            public Object caseSteigerbar(Steigerbar object) {
+                object.setStufe(getTo());
+                return object;
+            }
+        };
+        shr5Switch.doSwitch(getChangeable());
+
+        shr5Switch = new Shr5Switch<Object>() {
+            @Override
+            public Object casePersonaFertigkeit(PersonaFertigkeit object) {
+                return super.casePersonaFertigkeit(object);
+            }
+        };
+        
+    }
+
+    /**
      * @generated not
      */
     public int getKarmaCost() {
-        
+        Shr5Switch<Integer> sw = new Shr5Switch<Integer>() {
+            @Override
+            public Integer casePersonaEigenschaft(PersonaEigenschaft object) {
+                return getKarmaCostQuallity(object);
+            }
+
+            @Override
+            public Integer casePersonaFertigkeit(PersonaFertigkeit object) {
+                return getKarmaCostSkill(object);
+            }
+
+            @Override
+            public Integer casePersonaFertigkeitsGruppe(PersonaFertigkeitsGruppe object) {
+                return getKarmaCostSkillGroup(object);
+            }
+
+            @Override
+            public Integer caseInitation(Initation object) {
+                return getKarmaCostInitation(object);
+            }
+        };
+
+        Integer i = sw.doSwitch(getChangeable());
+        if (i != null){
+         
+            
+            return i;
+        }
         return 0;
-    }    
-    
-    
+    }
+
     /**
      * @generated not
      */
-    public int getKarmaCostQuallity() {
+    private int getKarmaCostQuallity(PersonaEigenschaft quallity) {
         if (getCharacter() == null)
             return 0;
         CharacterGenerator chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 
-//        PersonaEigenschaft quallity = getQuallity();
-//        if (quallity != null) {
-//            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
-//                    quallity.eClass());
-//            if (part != null) {
-//                int karmaFactor = part.getKarmaFactor();
-//                return -1 * Math.abs(karmaFactor * quallity.getKarmaKosten());
-//            }
-//        }
+        if (quallity != null) {
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+                    quallity.eClass());
+            if (part != null) {
+                int karmaFactor = part.getKarmaFactor();
+                return -1 * Math.abs(karmaFactor * quallity.getKarmaKosten());
+            }
+        }
         return 0;
     }
 
-    
     /**
      * @generated not
      */
-    public int getKarmaCostInitation() {
+    private int getKarmaCostInitation(Initation initation) {
         if (getCharacter() == null)
             return 0;
         CharacterGenerator chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 
-//        Initation initation = getGarde();
-//        if (initation != null) {
-//            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
-//                    initation.eClass());
-//            if (part != null) {
-//                int karmaFactor = part.getKarmaFactor();                
-//                return -1 * Math.abs(karmaFactor * initation.getStufe());
-//            }
-//        }
+        if (initation != null) {
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+                    initation.eClass());
+            if (part != null) {
+                int karmaFactor = part.getKarmaFactor();
+                return -1 * Math.abs(karmaFactor * initation.getStufe());
+            }
+        }
         return 0;
     }
-    
+
     /**
      * @generated not
      */
-    public int getKarmaCostSkill() {
+    private int getKarmaCostSkill(PersonaFertigkeit skill) {
         if (getCharacter() == null)
             return 0;
         CharacterGenerator chracterSource = getCharacter().getChracterSource();
         if (chracterSource == null)
             return 0;
 
-//        PersonaFertigkeit skill2 = getChangeable();
-//        if (skill2 != null) {
-//            Fertigkeit fertigkeit = skill2.getFertigkeit();
-//            EClass eClass = fertigkeit.eClass();
-//
-//            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(), eClass);
-//            if (part != null) {
-//                int karmaFactor = part.getKarmaFactor();
-//                return -1 * karmaFactor * (getTo());
-//            }
-//        } else if (getSkillGroup() != null) {
-//            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
-//                    getSkillGroup().getGruppe().eClass());
-//            if (part != null) {
-//                int karmaFactor = part.getKarmaFactor();
-//                return -1 * karmaFactor * (getTo());
-//            }
-//        }
+        if (skill != null) {
+            Fertigkeit fertigkeit = skill.getFertigkeit();
+            EClass eClass = fertigkeit.eClass();
+
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(), eClass);
+            if (part != null) {
+                int karmaFactor = part.getKarmaFactor();
+                return -1 * karmaFactor * (getTo());
+            }
+        }
         return 0;
     }
 
-    
-} //PersonaChangeImpl
+    /**
+     * @generated not
+     */
+    private int getKarmaCostSkillGroup(PersonaFertigkeitsGruppe skill) {
+        if (getCharacter() == null)
+            return 0;
+        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        if (chracterSource == null)
+            return 0;
+
+        if (skill != null) {
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(), skill
+                    .getGruppe().eClass());
+            if (part != null) {
+                int karmaFactor = part.getKarmaFactor();
+                return -1 * karmaFactor * (getTo());
+            }
+        }
+        return 0;
+    }
+
+} // PersonaChangeImpl
