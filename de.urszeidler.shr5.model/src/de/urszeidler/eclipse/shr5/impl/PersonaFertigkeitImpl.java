@@ -19,24 +19,14 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getStufe <em>Stufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implements PersonaFertigkeit {
-	/**
-     * The cached value of the '{@link #getFertigkeit() <em>Fertigkeit</em>}' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getFertigkeit()
-     * @generated
-     * @ordered
-     */
-	protected Fertigkeit fertigkeit;
-
 	/**
      * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -56,6 +46,16 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
 	protected int stufe = STUFE_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getFertigkeit() <em>Fertigkeit</em>}' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getFertigkeit()
+     * @generated
+     * @ordered
+     */
+	protected Fertigkeit fertigkeit;
 
 	/**
      * <!-- begin-user-doc -->
@@ -143,11 +143,11 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
+                return getStufe();
             case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
                 if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
-            case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
-                return getStufe();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -160,11 +160,11 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
-                setFertigkeit((Fertigkeit)newValue);
-                return;
             case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
                 setStufe((Integer)newValue);
+                return;
+            case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
+                setFertigkeit((Fertigkeit)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -178,11 +178,11 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
-                setFertigkeit((Fertigkeit)null);
-                return;
             case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
                 setStufe(STUFE_EDEFAULT);
+                return;
+            case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
+                setFertigkeit((Fertigkeit)null);
                 return;
         }
         super.eUnset(featureID);
@@ -196,10 +196,10 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
-                return fertigkeit != null;
             case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
                 return stufe != STUFE_EDEFAULT;
+            case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
+                return fertigkeit != null;
         }
         return super.eIsSet(featureID);
     }

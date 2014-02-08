@@ -497,29 +497,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
 	/**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.FertigkeitChange} instances.
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.PersonaChange} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	protected FertigkeitChangeItemProvider fertigkeitChangeItemProvider;
+    protected PersonaChangeItemProvider personaChangeItemProvider;
 
-	/**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.FertigkeitChange}.
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaChange}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	@Override
-	public Adapter createFertigkeitChangeAdapter() {
-        if (fertigkeitChangeItemProvider == null) {
-            fertigkeitChangeItemProvider = new FertigkeitChangeItemProvider(this);
+    @Override
+    public Adapter createPersonaChangeAdapter() {
+        if (personaChangeItemProvider == null) {
+            personaChangeItemProvider = new PersonaChangeItemProvider(this);
         }
 
-        return fertigkeitChangeItemProvider;
+        return personaChangeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -589,29 +589,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
 	/**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.QuallityChange} instances.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	protected QuallityChangeItemProvider quallityChangeItemProvider;
-
-	/**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.QuallityChange}.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	@Override
-	public Adapter createQuallityChangeAdapter() {
-        if (quallityChangeItemProvider == null) {
-            quallityChangeItemProvider = new QuallityChangeItemProvider(this);
-        }
-
-        return quallityChangeItemProvider;
-    }
-
-	/**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -632,29 +609,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         }
 
         return lifestyleToStartMoneyItemProvider;
-    }
-
-    /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.PersonaInitation} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected PersonaInitationItemProvider personaInitationItemProvider;
-
-    /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaInitation}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createPersonaInitationAdapter() {
-        if (personaInitationItemProvider == null) {
-            personaInitationItemProvider = new PersonaInitationItemProvider(this);
-        }
-
-        return personaInitationItemProvider;
     }
 
     /**
@@ -774,13 +728,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (mudanItemProvider != null) mudanItemProvider.dispose();
         if (characterGroupItemProvider != null) characterGroupItemProvider.dispose();
         if (connectionItemProvider != null) connectionItemProvider.dispose();
-        if (fertigkeitChangeItemProvider != null) fertigkeitChangeItemProvider.dispose();
+        if (personaChangeItemProvider != null) personaChangeItemProvider.dispose();
         if (generatorStateToEStringMapEntryItemProvider != null) generatorStateToEStringMapEntryItemProvider.dispose();
         if (increaseCharacterPartItemProvider != null) increaseCharacterPartItemProvider.dispose();
         if (changeQuallityItemProvider != null) changeQuallityItemProvider.dispose();
-        if (quallityChangeItemProvider != null) quallityChangeItemProvider.dispose();
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
-        if (personaInitationItemProvider != null) personaInitationItemProvider.dispose();
     }
 
 	/**
@@ -923,7 +875,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createFertigkeitChange()));
+                         Shr5managementFactory.eINSTANCE.createPersonaChange()));
 
                 newChildDescriptors.add
                     (createChildParameter
@@ -943,17 +895,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createQuallityChange()));
-
-                newChildDescriptors.add
-                    (createChildParameter
-                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
-
-                newChildDescriptors.add
-                    (createChildParameter
-                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createPersonaInitation()));
 
                 return null;
             }

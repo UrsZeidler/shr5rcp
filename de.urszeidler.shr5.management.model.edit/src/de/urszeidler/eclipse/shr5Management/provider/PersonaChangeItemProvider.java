@@ -4,7 +4,7 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
-import de.urszeidler.eclipse.shr5Management.PersonaInitation;
+import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 import java.util.Collection;
@@ -23,13 +23,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaInitation} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaChange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PersonaInitationItemProvider
-    extends ChangesItemProvider
+public class PersonaChangeItemProvider
+    extends PersonaValueChangeItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,
@@ -42,7 +42,7 @@ public class PersonaInitationItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public PersonaInitationItemProvider(AdapterFactory adapterFactory) {
+    public PersonaChangeItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -57,25 +57,25 @@ public class PersonaInitationItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addGardePropertyDescriptor(object);
+            addChangeablePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Garde feature.
+     * This adds a property descriptor for the Changeable feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addGardePropertyDescriptor(Object object) {
+    protected void addChangeablePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_PersonaInitation_garde_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaInitation_garde_feature", "_UI_PersonaInitation_type"),
-                 Shr5managementPackage.Literals.PERSONA_INITATION__GARDE,
+                 getString("_UI_PersonaChange_changeable_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaChange_changeable_feature", "_UI_PersonaChange_type"),
+                 Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE,
                  true,
                  false,
                  true,
@@ -85,14 +85,14 @@ public class PersonaInitationItemProvider
     }
 
     /**
-     * This returns PersonaInitation.gif.
+     * This returns PersonaChange.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/PersonaInitation"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/PersonaChange"));
     }
 
     /**
@@ -103,11 +103,11 @@ public class PersonaInitationItemProvider
      */
     @Override
     public String getText(Object object) {
-        Date labelValue = ((PersonaInitation)object).getDate();
+        Date labelValue = ((PersonaChange)object).getDate();
         String label = labelValue == null ? null : labelValue.toString();
         return label == null || label.length() == 0 ?
-            getString("_UI_PersonaInitation_type") :
-            getString("_UI_PersonaInitation_type") + " " + label;
+            getString("_UI_PersonaChange_type") :
+            getString("_UI_PersonaChange_type") + " " + label;
     }
 
     /**

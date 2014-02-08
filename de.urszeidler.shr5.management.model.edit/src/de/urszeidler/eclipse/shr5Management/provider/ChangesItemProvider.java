@@ -62,6 +62,8 @@ public class ChangesItemProvider
 
             addDatePropertyDescriptor(object);
             addKarmaCostPropertyDescriptor(object);
+            addChangeAppliedPropertyDescriptor(object);
+            addDateAppliedPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -111,6 +113,50 @@ public class ChangesItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Change Applied feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addChangeAppliedPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Changes_changeApplied_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Changes_changeApplied_feature", "_UI_Changes_type"),
+                 Shr5managementPackage.Literals.CHANGES__CHANGE_APPLIED,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Date Applied feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDateAppliedPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Changes_dateApplied_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Changes_dateApplied_feature", "_UI_Changes_type"),
+                 Shr5managementPackage.Literals.CHANGES__DATE_APPLIED,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,6 +185,8 @@ public class ChangesItemProvider
         switch (notification.getFeatureID(Changes.class)) {
             case Shr5managementPackage.CHANGES__DATE:
             case Shr5managementPackage.CHANGES__KARMA_COST:
+            case Shr5managementPackage.CHANGES__CHANGE_APPLIED:
+            case Shr5managementPackage.CHANGES__DATE_APPLIED:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

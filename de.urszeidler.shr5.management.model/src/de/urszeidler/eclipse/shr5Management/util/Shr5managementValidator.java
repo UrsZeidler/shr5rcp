@@ -20,7 +20,6 @@ import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
-import de.urszeidler.eclipse.shr5Management.FertigkeitChange;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -36,7 +35,6 @@ import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
 import de.urszeidler.eclipse.shr5Management.PrioritySystem;
-import de.urszeidler.eclipse.shr5Management.QuallityChange;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
@@ -297,8 +295,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateCharacterGroup((CharacterGroup)value, diagnostics, context);
             case Shr5managementPackage.CONNECTION:
                 return validateConnection((Connection)value, diagnostics, context);
-            case Shr5managementPackage.FERTIGKEIT_CHANGE:
-                return validateFertigkeitChange((FertigkeitChange)value, diagnostics, context);
+            case Shr5managementPackage.PERSONA_CHANGE:
+                return validatePersonaChange((PersonaChange)value, diagnostics, context);
             case Shr5managementPackage.PERSONA_VALUE_CHANGE:
                 return validatePersonaValueChange((PersonaValueChange)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY:
@@ -309,12 +307,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateIncreaseCharacterPart((IncreaseCharacterPart)value, diagnostics, context);
             case Shr5managementPackage.CHANGE_QUALLITY:
                 return validateChangeQuallity((ChangeQuallity)value, diagnostics, context);
-            case Shr5managementPackage.QUALLITY_CHANGE:
-                return validateQuallityChange((QuallityChange)value, diagnostics, context);
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY:
                 return validateLifestyleToStartMoney((LifestyleToStartMoney)value, diagnostics, context);
-            case Shr5managementPackage.PERSONA_INITATION:
-                return validatePersonaInitation((PersonaInitation)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -736,14 +730,14 @@ public class Shr5managementValidator extends EObjectValidator {
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public boolean validateFertigkeitChange(FertigkeitChange fertigkeitChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(fertigkeitChange, diagnostics, context);
+    public boolean validatePersonaChange(PersonaChange personaChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(personaChange, diagnostics, context);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -790,29 +784,11 @@ public class Shr5managementValidator extends EObjectValidator {
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public boolean validateQuallityChange(QuallityChange quallityChange, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(quallityChange, diagnostics, context);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     public boolean validateLifestyleToStartMoney(LifestyleToStartMoney lifestyleToStartMoney, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(lifestyleToStartMoney, diagnostics, context);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public boolean validatePersonaInitation(PersonaInitation personaInitation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(personaInitation, diagnostics, context);
     }
 
     /**

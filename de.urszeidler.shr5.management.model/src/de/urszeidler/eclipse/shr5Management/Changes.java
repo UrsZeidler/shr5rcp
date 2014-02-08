@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost <em>Karma Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getCharacter <em>Character</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#isChangeApplied <em>Change Applied</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getDateApplied <em>Date Applied</em>}</li>
  * </ul>
  * </p>
  *
@@ -94,5 +96,44 @@ public interface Changes extends EObject {
      * @generated
      */
     void setCharacter(ManagedCharacter value);
+
+    /**
+     * Returns the value of the '<em><b>Change Applied</b></em>' attribute.
+     * The default value is <code>"false"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Change Applied</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Change Applied</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getChanges_ChangeApplied()
+     * @model default="false" changeable="false"
+     * @generated
+     */
+    boolean isChangeApplied();
+
+    /**
+     * Returns the value of the '<em><b>Date Applied</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Date Applied</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Date Applied</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getChanges_DateApplied()
+     * @model dataType="de.urszeidler.eclipse.shr5.ShrDate" changeable="false"
+     * @generated
+     */
+    Date getDateApplied();
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    void applyChanges();
 
 } // Changes

@@ -564,16 +564,14 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
 
 	/**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated 
+     * @generated
      */
 	@SuppressWarnings("unchecked")
     @Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5managementPackage.MANAGED_CHARACTER__CHANGES:
-                NotificationChain basicAdd = ((InternalEList<InternalEObject>)(InternalEList<?>)getChanges()).basicAdd(otherEnd, msgs);
- 
-                return basicAdd;
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getChanges()).basicAdd(otherEnd, msgs);
             case Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE:
                 if (chracterSource != null)
                     msgs = ((InternalEObject)chracterSource).eInverseRemove(this, Shr5managementPackage.CHARACTER_GENERATOR__CHARACTER, CharacterGenerator.class, msgs);

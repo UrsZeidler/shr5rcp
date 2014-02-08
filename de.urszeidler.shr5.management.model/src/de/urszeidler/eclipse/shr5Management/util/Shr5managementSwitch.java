@@ -10,40 +10,6 @@ import org.eclipse.emf.ecore.util.Switch;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5Management.*;
-import de.urszeidler.eclipse.shr5Management.Adept;
-import de.urszeidler.eclipse.shr5Management.Advancement;
-import de.urszeidler.eclipse.shr5Management.AttributeChange;
-import de.urszeidler.eclipse.shr5Management.Attributes;
-import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
-import de.urszeidler.eclipse.shr5Management.Changes;
-import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
-import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
-import de.urszeidler.eclipse.shr5Management.CharacterGroup;
-import de.urszeidler.eclipse.shr5Management.Connection;
-import de.urszeidler.eclipse.shr5Management.FertigkeitChange;
-import de.urszeidler.eclipse.shr5Management.FreeStyle;
-import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
-import de.urszeidler.eclipse.shr5Management.GeneratorState;
-import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
-import de.urszeidler.eclipse.shr5Management.KarmaGaint;
-import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.MetaType;
-import de.urszeidler.eclipse.shr5Management.Mudan;
-import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
-import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
-import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
-import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
-import de.urszeidler.eclipse.shr5Management.PrioritySystem;
-import de.urszeidler.eclipse.shr5Management.QuallityChange;
-import de.urszeidler.eclipse.shr5Management.Resourcen;
-import de.urszeidler.eclipse.shr5Management.Shr5Generator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.Skill;
-import de.urszeidler.eclipse.shr5Management.SpecialType;
-import de.urszeidler.eclipse.shr5Management.Spellcaster;
-import de.urszeidler.eclipse.shr5Management.Technomancer;
 
 /**
  * <!-- begin-user-doc -->
@@ -286,11 +252,11 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5managementPackage.FERTIGKEIT_CHANGE: {
-                FertigkeitChange fertigkeitChange = (FertigkeitChange)theEObject;
-                T result = caseFertigkeitChange(fertigkeitChange);
-                if (result == null) result = casePersonaValueChange(fertigkeitChange);
-                if (result == null) result = caseChanges(fertigkeitChange);
+            case Shr5managementPackage.PERSONA_CHANGE: {
+                PersonaChange personaChange = (PersonaChange)theEObject;
+                T result = casePersonaChange(personaChange);
+                if (result == null) result = casePersonaValueChange(personaChange);
+                if (result == null) result = caseChanges(personaChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -327,23 +293,9 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5managementPackage.QUALLITY_CHANGE: {
-                QuallityChange quallityChange = (QuallityChange)theEObject;
-                T result = caseQuallityChange(quallityChange);
-                if (result == null) result = caseChanges(quallityChange);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: {
                 LifestyleToStartMoney lifestyleToStartMoney = (LifestyleToStartMoney)theEObject;
                 T result = caseLifestyleToStartMoney(lifestyleToStartMoney);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case Shr5managementPackage.PERSONA_INITATION: {
-                PersonaInitation personaInitation = (PersonaInitation)theEObject;
-                T result = casePersonaInitation(personaInitation);
-                if (result == null) result = caseChanges(personaInitation);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -727,21 +679,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
     }
 
 	/**
-     * Returns the result of interpreting the object as an instance of '<em>Fertigkeit Change</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Persona Change</em>'.
      * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Fertigkeit Change</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Persona Change</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-	public T caseFertigkeitChange(FertigkeitChange object) {
+    public T casePersonaChange(PersonaChange object) {
         return null;
     }
 
-	/**
+    /**
      * Returns the result of interpreting the object as an instance of '<em>Persona Value Change</em>'.
      * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -817,21 +769,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
     }
 
 	/**
-     * Returns the result of interpreting the object as an instance of '<em>Quallity Change</em>'.
-     * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Quallity Change</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-	public T caseQuallityChange(QuallityChange object) {
-        return null;
-    }
-
-	/**
      * Returns the result of interpreting the object as an instance of '<em>Lifestyle To Start Money</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
@@ -843,21 +780,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseLifestyleToStartMoney(LifestyleToStartMoney object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Persona Initation</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Persona Initation</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T casePersonaInitation(PersonaInitation object) {
         return null;
     }
 

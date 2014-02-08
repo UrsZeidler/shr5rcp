@@ -324,7 +324,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                         pf.setStufe((Integer)value);
                         personaFertigkeiten.add(pf);
                     } else {
-                        Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__STUFE, value);
+                        Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
                         editingDomain.getCommandStack().execute(cmd);
                     }
                 } else if (element instanceof FertigkeitsGruppe) {
@@ -337,7 +337,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                         personaFertigkeitsGruppen.add(pfg);
                     } else {
                         Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe,
-                                Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__STUFE, value);
+                                Shr5Package.Literals.STEIGERBAR__STUFE, value);
                         editingDomain.getCommandStack().execute(cmd);
                     }
                 }

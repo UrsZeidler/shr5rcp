@@ -45,9 +45,7 @@ public class Shr5managementTests extends TestSuite {
         suite.addTestSuite(AttributeChangeTest.class);
         suite.addTestSuite(PlayerCharacterTest.class);
         suite.addTestSuite(MudanTest.class);
-        suite.addTestSuite(FertigkeitChangeTest.class);
-        suite.addTestSuite(QuallityChangeTest.class);
-        suite.addTestSuite(PersonaInitationTest.class);
+        suite.addTestSuite(PersonaChangeTest.class);
         return suite;
     }
 

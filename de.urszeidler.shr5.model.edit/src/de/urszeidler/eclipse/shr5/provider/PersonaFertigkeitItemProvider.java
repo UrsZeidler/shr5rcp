@@ -52,8 +52,8 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addFertigkeitPropertyDescriptor(object);
             addStufePropertyDescriptor(object);
+            addFertigkeitPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -91,9 +91,9 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_PersonaFertigkeit_stufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeit_stufe_feature", "_UI_PersonaFertigkeit_type"),
-                 Shr5Package.Literals.PERSONA_FERTIGKEIT__STUFE,
+                 getString("_UI_Steigerbar_stufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Steigerbar_stufe_feature", "_UI_Steigerbar_type"),
+                 Shr5Package.Literals.STEIGERBAR__STUFE,
                  true,
                  false,
                  false,

@@ -185,15 +185,15 @@ public interface Shr5managementFactory extends EFactory {
 	Connection createConnection();
 
 	/**
-     * Returns a new object of class '<em>Fertigkeit Change</em>'.
+     * Returns a new object of class '<em>Persona Change</em>'.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return a new object of class '<em>Fertigkeit Change</em>'.
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Persona Change</em>'.
      * @generated
      */
-	FertigkeitChange createFertigkeitChange();
+    PersonaChange createPersonaChange();
 
-	/**
+    /**
      * Returns a new object of class '<em>Increase Character Part</em>'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,15 +212,6 @@ public interface Shr5managementFactory extends EFactory {
 	ChangeQuallity createChangeQuallity();
 
 	/**
-     * Returns a new object of class '<em>Quallity Change</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return a new object of class '<em>Quallity Change</em>'.
-     * @generated
-     */
-	QuallityChange createQuallityChange();
-
-	/**
      * Returns a new object of class '<em>Lifestyle To Start Money</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -228,15 +219,6 @@ public interface Shr5managementFactory extends EFactory {
      * @generated
      */
     LifestyleToStartMoney createLifestyleToStartMoney();
-
-    /**
-     * Returns a new object of class '<em>Persona Initation</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Persona Initation</em>'.
-     * @generated
-     */
-    PersonaInitation createPersonaInitation();
 
     /**
      * Returns the package supported by this factory.

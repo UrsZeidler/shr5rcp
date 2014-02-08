@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
+import de.urszeidler.eclipse.shr5.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -339,12 +340,16 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.PERSONA_FERTIGKEIT: {
                 PersonaFertigkeit personaFertigkeit = (PersonaFertigkeit)theEObject;
                 T result = casePersonaFertigkeit(personaFertigkeit);
+                if (result == null) result = caseSteigerbar(personaFertigkeit);
+                if (result == null) result = caseErlernbar(personaFertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE: {
                 PersonaFertigkeitsGruppe personaFertigkeitsGruppe = (PersonaFertigkeitsGruppe)theEObject;
                 T result = casePersonaFertigkeitsGruppe(personaFertigkeitsGruppe);
+                if (result == null) result = caseSteigerbar(personaFertigkeitsGruppe);
+                if (result == null) result = caseErlernbar(personaFertigkeitsGruppe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -440,6 +445,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 KiKraft kiKraft = (KiKraft)theEObject;
                 T result = caseKiKraft(kiKraft);
                 if (result == null) result = caseMagischeMods(kiKraft);
+                if (result == null) result = caseErlernbar(kiKraft);
                 if (result == null) result = caseAbstraktModifikatoren(kiKraft);
                 if (result == null) result = caseBeschreibbar(kiKraft);
                 if (result == null) result = caseModifizierbar(kiKraft);
@@ -545,6 +551,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 PersonaEigenschaft personaEigenschaft = (PersonaEigenschaft)theEObject;
                 T result = casePersonaEigenschaft(personaEigenschaft);
                 if (result == null) result = caseAbstraktModifikatoren(personaEigenschaft);
+                if (result == null) result = caseErlernbar(personaEigenschaft);
                 if (result == null) result = caseBeschreibbar(personaEigenschaft);
                 if (result == null) result = caseModifizierbar(personaEigenschaft);
                 if (result == null) result = caseQuelle(personaEigenschaft);
@@ -604,6 +611,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.PERSONA_ZAUBER: {
                 PersonaZauber personaZauber = (PersonaZauber)theEObject;
                 T result = casePersonaZauber(personaZauber);
+                if (result == null) result = caseErlernbar(personaZauber);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -665,6 +673,8 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.INITATION: {
                 Initation initation = (Initation)theEObject;
                 T result = caseInitation(initation);
+                if (result == null) result = caseSteigerbar(initation);
+                if (result == null) result = caseErlernbar(initation);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -773,6 +783,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.PERSONA_KOMPLEX_FORM: {
                 PersonaKomplexForm personaKomplexForm = (PersonaKomplexForm)theEObject;
                 T result = casePersonaKomplexForm(personaKomplexForm);
+                if (result == null) result = caseErlernbar(personaKomplexForm);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -889,6 +900,19 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(fakeable);
                 if (result == null) result = caseQuelle(fakeable);
                 if (result == null) result = caseGeldWert(fakeable);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.STEIGERBAR: {
+                Steigerbar steigerbar = (Steigerbar)theEObject;
+                T result = caseSteigerbar(steigerbar);
+                if (result == null) result = caseErlernbar(steigerbar);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ERLERNBAR: {
+                Erlernbar erlernbar = (Erlernbar)theEObject;
+                T result = caseErlernbar(erlernbar);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2063,6 +2087,36 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseFakeable(Fakeable object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Steigerbar</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Steigerbar</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSteigerbar(Steigerbar object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Erlernbar</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Erlernbar</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseErlernbar(Erlernbar object) {
         return null;
     }
 

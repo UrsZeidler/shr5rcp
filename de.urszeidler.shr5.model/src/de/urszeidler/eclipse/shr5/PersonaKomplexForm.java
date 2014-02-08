@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PersonaKomplexForm extends EObject {
+public interface PersonaKomplexForm extends Erlernbar {
 	/**
      * Returns the value of the '<em><b>Form</b></em>' reference.
      * <!-- begin-user-doc -->

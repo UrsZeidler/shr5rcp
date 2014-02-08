@@ -19,7 +19,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface KiKraft extends MagischeMods {
+public interface KiKraft extends MagischeMods, Erlernbar {
 
 	/**
      * Returns the value of the '<em><b>Kraftpunkte</b></em>' attribute.

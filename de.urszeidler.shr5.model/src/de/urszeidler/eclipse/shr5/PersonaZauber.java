@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PersonaZauber extends EObject {
+public interface PersonaZauber extends Erlernbar {
 	/**
      * Returns the value of the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->

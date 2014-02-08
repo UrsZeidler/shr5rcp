@@ -19,7 +19,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface PersonaEigenschaft extends AbstraktModifikatoren {
+public interface PersonaEigenschaft extends AbstraktModifikatoren, Erlernbar {
 	/**
      * Returns the value of the '<em><b>Karma Kosten</b></em>' attribute.
      * <!-- begin-user-doc -->

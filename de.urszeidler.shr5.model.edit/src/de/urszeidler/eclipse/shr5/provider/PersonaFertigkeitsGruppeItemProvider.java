@@ -52,8 +52,8 @@ public class PersonaFertigkeitsGruppeItemProvider extends ItemProviderAdapter im
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addGruppePropertyDescriptor(object);
             addStufePropertyDescriptor(object);
+            addGruppePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -91,9 +91,9 @@ public class PersonaFertigkeitsGruppeItemProvider extends ItemProviderAdapter im
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_PersonaFertigkeitsGruppe_stufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeitsGruppe_stufe_feature", "_UI_PersonaFertigkeitsGruppe_type"),
-                 Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__STUFE,
+                 getString("_UI_Steigerbar_stufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Steigerbar_stufe_feature", "_UI_Steigerbar_type"),
+                 Shr5Package.Literals.STEIGERBAR__STUFE,
                  true,
                  false,
                  false,

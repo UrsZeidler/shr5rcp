@@ -354,25 +354,25 @@
   </xsd:complexType>
   <xsd:element name="Fertigkeit" type="shr5:Fertigkeit"/>
   <xsd:complexType name="PersonaFertigkeit">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="stufe" type="xsd:int"/>
-    <xsd:attribute name="fertigkeit" type="xsd:string"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Steigerbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="fertigkeit" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="PersonaFertigkeit" type="shr5:PersonaFertigkeit"/>
   <xsd:complexType name="PersonaFertigkeitsGruppe">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="gruppe" type="shr5:FertigkeitsGruppe"/>
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="stufe" type="xsd:int"/>
-    <xsd:attribute name="gruppe" type="xsd:string"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Steigerbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="gruppe" type="shr5:FertigkeitsGruppe"/>
+        </xsd:choice>
+        <xsd:attribute name="gruppe" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="PersonaFertigkeitsGruppe" type="shr5:PersonaFertigkeitsGruppe"/>
   <xsd:complexType name="Cyberware">
@@ -650,14 +650,15 @@
   </xsd:complexType>
   <xsd:element name="MysticAdept" type="shr5:MysticAdept"/>
   <xsd:complexType name="PersonaZauber">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="formel" type="shr5:Zauber"/>
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="stufe" type="xsd:int" use="required"/>
-    <xsd:attribute name="formel" type="xsd:string"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Erlernbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="formel" type="shr5:Zauber"/>
+        </xsd:choice>
+        <xsd:attribute name="stufe" type="xsd:int" use="required"/>
+        <xsd:attribute name="formel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="PersonaZauber" type="shr5:PersonaZauber"/>
   <xsd:complexType name="Zauber">
@@ -726,14 +727,14 @@
   </xsd:complexType>
   <xsd:element name="Schutzgeist" type="shr5:Schutzgeist"/>
   <xsd:complexType name="Initation">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="erlernt" type="shr5:MetaMagie"/>
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="stufe" type="xsd:int"/>
-    <xsd:attribute name="erlernt" type="xsd:string"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Steigerbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="erlernt" type="shr5:MetaMagie"/>
+        </xsd:choice>
+        <xsd:attribute name="erlernt" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Initation" type="shr5:Initation"/>
   <xsd:complexType name="MetaMagie">
@@ -856,14 +857,15 @@
   </xsd:complexType>
   <xsd:element name="KomplexeForm" type="shr5:KomplexeForm"/>
   <xsd:complexType name="PersonaKomplexForm">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="form" type="shr5:KomplexeForm"/>
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="stufe" type="xsd:int" use="required"/>
-    <xsd:attribute name="form" type="xsd:string"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Erlernbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="form" type="shr5:KomplexeForm"/>
+        </xsd:choice>
+        <xsd:attribute name="stufe" type="xsd:int" use="required"/>
+        <xsd:attribute name="form" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="PersonaKomplexForm" type="shr5:PersonaKomplexForm"/>
   <xsd:complexType name="Sprite">
@@ -978,4 +980,27 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Fakeable" type="shr5:Fakeable"/>
+  <xsd:complexType abstract="true" name="Steigerbar">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Erlernbar">
+        <xsd:attribute name="stufe" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Steigerbar" type="shr5:Steigerbar"/>
+  <xsd:complexType abstract="true" name="Erlernbar">
+    <xsd:annotation>
+      <xsd:documentation>A Tagging interface for all elements part of character advacements.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Erlernbar" type="shr5:Erlernbar">
+    <xsd:annotation>
+      <xsd:documentation>A Tagging interface for all elements part of character advacements.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

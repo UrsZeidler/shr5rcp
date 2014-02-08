@@ -157,7 +157,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 
                 PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
                 ReferenceValueDialog dialog = new ReferenceValueDialog(getSite().getShell(), personaFertigkeit,
-                        Shr5Package.Literals.PERSONA_FERTIGKEIT__FERTIGKEIT, Shr5Package.Literals.PERSONA_FERTIGKEIT__STUFE, objectsOfType.toArray());
+                        Shr5Package.Literals.PERSONA_FERTIGKEIT__FERTIGKEIT, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
 
                 if (dialog.open() == Dialog.OK)
                     return personaFertigkeit;
@@ -170,7 +170,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 
                 PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
                 ReferenceValueDialog dialog = new ReferenceValueDialog(getSite().getShell(), personaFertigkeit,
-                        Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__STUFE,
+                        Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE,
                         objectsOfType.toArray());
 
                 if (dialog.open() == Dialog.OK)

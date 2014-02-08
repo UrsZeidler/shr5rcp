@@ -2393,6 +2393,71 @@ public interface Shr5Package extends EPackage {
 	int FERTIGKEIT_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Erlernbar <em>Erlernbar</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Erlernbar
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getErlernbar()
+     * @generated
+     */
+    int ERLERNBAR = 79;
+
+    /**
+     * The number of structural features of the '<em>Erlernbar</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ERLERNBAR_FEATURE_COUNT = 0;
+
+    /**
+     * The number of operations of the '<em>Erlernbar</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ERLERNBAR_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Steigerbar <em>Steigerbar</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Steigerbar
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSteigerbar()
+     * @generated
+     */
+    int STEIGERBAR = 78;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STEIGERBAR__STUFE = ERLERNBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Steigerbar</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STEIGERBAR_FEATURE_COUNT = ERLERNBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Steigerbar</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STEIGERBAR_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl <em>Persona Fertigkeit</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2403,22 +2468,22 @@ public interface Shr5Package extends EPackage {
 	int PERSONA_FERTIGKEIT = 21;
 
 	/**
-     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int PERSONA_FERTIGKEIT__FERTIGKEIT = 0;
-
-	/**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEIT__STUFE = 1;
+	int PERSONA_FERTIGKEIT__STUFE = STEIGERBAR__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int PERSONA_FERTIGKEIT__FERTIGKEIT = STEIGERBAR_FEATURE_COUNT + 0;
 
 	/**
      * The number of structural features of the '<em>Persona Fertigkeit</em>' class.
@@ -2427,7 +2492,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEIT_FEATURE_COUNT = 2;
+	int PERSONA_FERTIGKEIT_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 1;
 
 	/**
      * The number of operations of the '<em>Persona Fertigkeit</em>' class.
@@ -2436,7 +2501,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEIT_OPERATION_COUNT = 0;
+	int PERSONA_FERTIGKEIT_OPERATION_COUNT = STEIGERBAR_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl <em>Persona Fertigkeits Gruppe</em>}' class.
@@ -2449,22 +2514,22 @@ public interface Shr5Package extends EPackage {
 	int PERSONA_FERTIGKEITS_GRUPPE = 22;
 
 	/**
-     * The feature id for the '<em><b>Gruppe</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int PERSONA_FERTIGKEITS_GRUPPE__GRUPPE = 0;
-
-	/**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEITS_GRUPPE__STUFE = 1;
+	int PERSONA_FERTIGKEITS_GRUPPE__STUFE = STEIGERBAR__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Gruppe</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int PERSONA_FERTIGKEITS_GRUPPE__GRUPPE = STEIGERBAR_FEATURE_COUNT + 0;
 
 	/**
      * The number of structural features of the '<em>Persona Fertigkeits Gruppe</em>' class.
@@ -2473,7 +2538,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEITS_GRUPPE_FEATURE_COUNT = 2;
+	int PERSONA_FERTIGKEITS_GRUPPE_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 1;
 
 	/**
      * The number of operations of the '<em>Persona Fertigkeits Gruppe</em>' class.
@@ -2482,7 +2547,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEITS_GRUPPE_OPERATION_COUNT = 0;
+	int PERSONA_FERTIGKEITS_GRUPPE_OPERATION_COUNT = STEIGERBAR_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl <em>Abstrakt Modifikatoren</em>}' class.
@@ -6773,7 +6838,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_ZAUBER__STUFE = 0;
+	int PERSONA_ZAUBER__STUFE = ERLERNBAR_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Formel</b></em>' reference.
@@ -6782,7 +6847,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_ZAUBER__FORMEL = 1;
+	int PERSONA_ZAUBER__FORMEL = ERLERNBAR_FEATURE_COUNT + 1;
 
 	/**
      * The number of structural features of the '<em>Persona Zauber</em>' class.
@@ -6791,7 +6856,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_ZAUBER_FEATURE_COUNT = 2;
+	int PERSONA_ZAUBER_FEATURE_COUNT = ERLERNBAR_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Persona Zauber</em>' class.
@@ -6800,7 +6865,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_ZAUBER_OPERATION_COUNT = 0;
+	int PERSONA_ZAUBER_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl <em>Zauber</em>}' class.
@@ -7707,7 +7772,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int INITATION__STUFE = 0;
+	int INITATION__STUFE = STEIGERBAR__STUFE;
 
 	/**
      * The feature id for the '<em><b>Erlernt</b></em>' reference.
@@ -7716,7 +7781,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int INITATION__ERLERNT = 1;
+	int INITATION__ERLERNT = STEIGERBAR_FEATURE_COUNT + 0;
 
 	/**
      * The number of structural features of the '<em>Initation</em>' class.
@@ -7725,7 +7790,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int INITATION_FEATURE_COUNT = 2;
+	int INITATION_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 1;
 
 	/**
      * The number of operations of the '<em>Initation</em>' class.
@@ -7734,7 +7799,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int INITATION_OPERATION_COUNT = 0;
+	int INITATION_OPERATION_COUNT = STEIGERBAR_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl <em>Meta Magie</em>}' class.
@@ -9428,7 +9493,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_KOMPLEX_FORM__FORM = 0;
+	int PERSONA_KOMPLEX_FORM__FORM = ERLERNBAR_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
@@ -9437,7 +9502,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_KOMPLEX_FORM__STUFE = 1;
+	int PERSONA_KOMPLEX_FORM__STUFE = ERLERNBAR_FEATURE_COUNT + 1;
 
 	/**
      * The number of structural features of the '<em>Persona Komplex Form</em>' class.
@@ -9446,7 +9511,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_KOMPLEX_FORM_FEATURE_COUNT = 2;
+	int PERSONA_KOMPLEX_FORM_FEATURE_COUNT = ERLERNBAR_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Persona Komplex Form</em>' class.
@@ -9455,7 +9520,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_KOMPLEX_FORM_OPERATION_COUNT = 0;
+	int PERSONA_KOMPLEX_FORM_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl <em>Sprite</em>}' class.
@@ -10980,7 +11045,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 78;
+	int FEUER_MODUS = 80;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -10990,7 +11055,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 79;
+	int SCHADENS_TYP = 81;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -11000,7 +11065,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 80;
+	int MAGAZIN_TYP = 82;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -11010,7 +11075,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 81;
+	int FEUWERWAFFEN_ERWEITERUNG = 83;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -11020,7 +11085,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 82;
+	int MODIFIKATOR_TYPE = 84;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -11030,7 +11095,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 83;
+	int SMARTGUN_TYPE = 85;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -11040,7 +11105,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 84;
+	int ZAUBER_ART = 86;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -11050,7 +11115,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 85;
+	int ZAUBER_REICHWEITE = 87;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -11060,7 +11125,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 86;
+	int ZAUBER_DAUER = 88;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -11070,7 +11135,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 87;
+	int MAGISCHE_TRADITION = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -11080,7 +11145,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 88;
+	int CRITTER_HANDLUNG = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -11090,7 +11155,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 89;
+	int CRITTER_REICHWEITE = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -11100,7 +11165,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 90;
+	int CRITTER_DAUER = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -11110,7 +11175,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 91;
+	int RESONANZ_ZIEL = 93;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -11120,7 +11185,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 92;
+	int SHR_DATE = 94;
 
 
 	/**
@@ -11131,7 +11196,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 93;
+	int MODIFICATION_MANAGER = 95;
 
 
 	/**
@@ -12026,17 +12091,6 @@ public interface Shr5Package extends EPackage {
 	EReference getPersonaFertigkeit_Fertigkeit();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit#getStufe <em>Stufe</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Stufe</em>'.
-     * @see de.urszeidler.eclipse.shr5.PersonaFertigkeit#getStufe()
-     * @see #getPersonaFertigkeit()
-     * @generated
-     */
-	EAttribute getPersonaFertigkeit_Stufe();
-
-	/**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe <em>Persona Fertigkeits Gruppe</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12056,17 +12110,6 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
 	EReference getPersonaFertigkeitsGruppe_Gruppe();
-
-	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe#getStufe <em>Stufe</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Stufe</em>'.
-     * @see de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe#getStufe()
-     * @see #getPersonaFertigkeitsGruppe()
-     * @generated
-     */
-	EAttribute getPersonaFertigkeitsGruppe_Stufe();
 
 	/**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Cyberware <em>Cyberware</em>}'.
@@ -13390,17 +13433,6 @@ public interface Shr5Package extends EPackage {
 	EClass getInitation();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Initation#getStufe <em>Stufe</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Stufe</em>'.
-     * @see de.urszeidler.eclipse.shr5.Initation#getStufe()
-     * @see #getInitation()
-     * @generated
-     */
-	EAttribute getInitation_Stufe();
-
-	/**
      * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Initation#getErlernt <em>Erlernt</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14135,6 +14167,37 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getFakeable_Gefaelscht();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Steigerbar <em>Steigerbar</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Steigerbar</em>'.
+     * @see de.urszeidler.eclipse.shr5.Steigerbar
+     * @generated
+     */
+    EClass getSteigerbar();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Steigerbar#getStufe <em>Stufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Stufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.Steigerbar#getStufe()
+     * @see #getSteigerbar()
+     * @generated
+     */
+    EAttribute getSteigerbar_Stufe();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Erlernbar <em>Erlernbar</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Erlernbar</em>'.
+     * @see de.urszeidler.eclipse.shr5.Erlernbar
+     * @generated
+     */
+    EClass getErlernbar();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
@@ -15030,14 +15093,6 @@ public interface Shr5Package extends EPackage {
 		EReference PERSONA_FERTIGKEIT__FERTIGKEIT = eINSTANCE.getPersonaFertigkeit_Fertigkeit();
 
 		/**
-         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute PERSONA_FERTIGKEIT__STUFE = eINSTANCE.getPersonaFertigkeit_Stufe();
-
-		/**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl <em>Persona Fertigkeits Gruppe</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -15054,14 +15109,6 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
 		EReference PERSONA_FERTIGKEITS_GRUPPE__GRUPPE = eINSTANCE.getPersonaFertigkeitsGruppe_Gruppe();
-
-		/**
-         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute PERSONA_FERTIGKEITS_GRUPPE__STUFE = eINSTANCE.getPersonaFertigkeitsGruppe_Stufe();
 
 		/**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl <em>Cyberware</em>}' class.
@@ -16112,14 +16159,6 @@ public interface Shr5Package extends EPackage {
 		EClass INITATION = eINSTANCE.getInitation();
 
 		/**
-         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute INITATION__STUFE = eINSTANCE.getInitation_Stufe();
-
-		/**
          * The meta object literal for the '<em><b>Erlernt</b></em>' reference feature.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -16716,6 +16755,34 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute FAKEABLE__GEFAELSCHT = eINSTANCE.getFakeable_Gefaelscht();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Steigerbar <em>Steigerbar</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Steigerbar
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSteigerbar()
+         * @generated
+         */
+        EClass STEIGERBAR = eINSTANCE.getSteigerbar();
+
+        /**
+         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute STEIGERBAR__STUFE = eINSTANCE.getSteigerbar_Stufe();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Erlernbar <em>Erlernbar</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Erlernbar
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getErlernbar()
+         * @generated
+         */
+        EClass ERLERNBAR = eINSTANCE.getErlernbar();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

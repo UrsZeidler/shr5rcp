@@ -19,24 +19,14 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl#getGruppe <em>Gruppe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl#getStufe <em>Stufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl#getGruppe <em>Gruppe</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implements PersonaFertigkeitsGruppe {
-	/**
-     * The cached value of the '{@link #getGruppe() <em>Gruppe</em>}' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getGruppe()
-     * @generated
-     * @ordered
-     */
-	protected FertigkeitsGruppe gruppe;
-
 	/**
      * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -56,6 +46,16 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
      * @ordered
      */
 	protected int stufe = STUFE_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getGruppe() <em>Gruppe</em>}' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getGruppe()
+     * @generated
+     * @ordered
+     */
+	protected FertigkeitsGruppe gruppe;
 
 	/**
      * <!-- begin-user-doc -->
@@ -143,11 +143,11 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__STUFE:
+                return getStufe();
             case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
                 if (resolve) return getGruppe();
                 return basicGetGruppe();
-            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__STUFE:
-                return getStufe();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -160,11 +160,11 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
-                setGruppe((FertigkeitsGruppe)newValue);
-                return;
             case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__STUFE:
                 setStufe((Integer)newValue);
+                return;
+            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
+                setGruppe((FertigkeitsGruppe)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -178,11 +178,11 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
-                setGruppe((FertigkeitsGruppe)null);
-                return;
             case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__STUFE:
                 setStufe(STUFE_EDEFAULT);
+                return;
+            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
+                setGruppe((FertigkeitsGruppe)null);
                 return;
         }
         super.eUnset(featureID);
@@ -196,10 +196,10 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
-                return gruppe != null;
             case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__STUFE:
                 return stufe != STUFE_EDEFAULT;
+            case Shr5Package.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE:
+                return gruppe != null;
         }
         return super.eIsSet(featureID);
     }

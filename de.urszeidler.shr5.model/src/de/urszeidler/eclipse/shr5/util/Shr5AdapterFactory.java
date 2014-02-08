@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
+import de.urszeidler.eclipse.shr5.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -454,6 +455,14 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseFakeable(Fakeable object) {
                 return createFakeableAdapter();
+            }
+            @Override
+            public Adapter caseSteigerbar(Steigerbar object) {
+                return createSteigerbarAdapter();
+            }
+            @Override
+            public Adapter caseErlernbar(Erlernbar object) {
+                return createErlernbarAdapter();
             }
             @Override
             public Adapter defaultCase(EObject object) {
@@ -1564,6 +1573,34 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createFakeableAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Steigerbar <em>Steigerbar</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Steigerbar
+     * @generated
+     */
+    public Adapter createSteigerbarAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Erlernbar <em>Erlernbar</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Erlernbar
+     * @generated
+     */
+    public Adapter createErlernbarAdapter() {
         return null;
     }
 

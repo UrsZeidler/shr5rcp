@@ -27,6 +27,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}</li>
  * </ul>
  * </p>
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public abstract class ChangesTest extends TestCase {
@@ -116,6 +122,19 @@ public abstract class ChangesTest extends TestCase {
      * @generated not
      */
     public void testGetKarmaCost() {
+        fail();
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated
+     */
+    public void testApplyChanges() {
+        // TODO: implement this operation test method
+        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

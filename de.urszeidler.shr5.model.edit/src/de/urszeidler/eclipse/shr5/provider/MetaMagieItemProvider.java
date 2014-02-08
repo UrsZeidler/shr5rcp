@@ -5,7 +5,6 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -19,12 +18,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.Image;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.MetaMagie} object.
@@ -188,13 +183,6 @@ public class MetaMagieItemProvider
      */
 	@Override
 	public Object getImage(Object object) {
-	       Beschreibbar beschreibbar = (Beschreibbar) object;
-	        if (beschreibbar.getImage() != null) {
-	            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
-	            if (image != null)
-	                return image;
-	        }
-
         return overlayImage(object, getResourceLocator().getImage("full/obj16/MetaMagie"));
     }
 

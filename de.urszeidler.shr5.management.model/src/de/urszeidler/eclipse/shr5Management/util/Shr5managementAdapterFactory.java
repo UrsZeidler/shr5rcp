@@ -11,40 +11,6 @@ import org.eclipse.emf.ecore.EObject;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5Management.*;
-import de.urszeidler.eclipse.shr5Management.Adept;
-import de.urszeidler.eclipse.shr5Management.Advancement;
-import de.urszeidler.eclipse.shr5Management.AttributeChange;
-import de.urszeidler.eclipse.shr5Management.Attributes;
-import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
-import de.urszeidler.eclipse.shr5Management.Changes;
-import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
-import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
-import de.urszeidler.eclipse.shr5Management.CharacterGroup;
-import de.urszeidler.eclipse.shr5Management.Connection;
-import de.urszeidler.eclipse.shr5Management.FertigkeitChange;
-import de.urszeidler.eclipse.shr5Management.FreeStyle;
-import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
-import de.urszeidler.eclipse.shr5Management.GeneratorState;
-import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
-import de.urszeidler.eclipse.shr5Management.KarmaGaint;
-import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.MetaType;
-import de.urszeidler.eclipse.shr5Management.Mudan;
-import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
-import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
-import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
-import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
-import de.urszeidler.eclipse.shr5Management.PrioritySystem;
-import de.urszeidler.eclipse.shr5Management.QuallityChange;
-import de.urszeidler.eclipse.shr5Management.Resourcen;
-import de.urszeidler.eclipse.shr5Management.Shr5Generator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.Skill;
-import de.urszeidler.eclipse.shr5Management.SpecialType;
-import de.urszeidler.eclipse.shr5Management.Spellcaster;
-import de.urszeidler.eclipse.shr5Management.Technomancer;
 
 /**
  * <!-- begin-user-doc -->
@@ -203,8 +169,8 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createConnectionAdapter();
             }
             @Override
-            public Adapter caseFertigkeitChange(FertigkeitChange object) {
-                return createFertigkeitChangeAdapter();
+            public Adapter casePersonaChange(PersonaChange object) {
+                return createPersonaChangeAdapter();
             }
             @Override
             public Adapter casePersonaValueChange(PersonaValueChange object) {
@@ -227,16 +193,8 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createChangeQuallityAdapter();
             }
             @Override
-            public Adapter caseQuallityChange(QuallityChange object) {
-                return createQuallityChangeAdapter();
-            }
-            @Override
             public Adapter caseLifestyleToStartMoney(LifestyleToStartMoney object) {
                 return createLifestyleToStartMoneyAdapter();
-            }
-            @Override
-            public Adapter casePersonaInitation(PersonaInitation object) {
-                return createPersonaInitationAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -617,20 +575,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
     }
 
 	/**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.FertigkeitChange <em>Fertigkeit Change</em>}'.
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.PersonaChange <em>Persona Change</em>}'.
      * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5Management.FertigkeitChange
+     * @see de.urszeidler.eclipse.shr5Management.PersonaChange
      * @generated
      */
-	public Adapter createFertigkeitChangeAdapter() {
+    public Adapter createPersonaChangeAdapter() {
         return null;
     }
 
-	/**
+    /**
      * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.PersonaValueChange <em>Persona Value Change</em>}'.
      * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -701,20 +659,6 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
     }
 
 	/**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.QuallityChange <em>Quallity Change</em>}'.
-     * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5Management.QuallityChange
-     * @generated
-     */
-	public Adapter createQuallityChangeAdapter() {
-        return null;
-    }
-
-	/**
      * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -725,20 +669,6 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createLifestyleToStartMoneyAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.PersonaInitation <em>Persona Initation</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5Management.PersonaInitation
-     * @generated
-     */
-    public Adapter createPersonaInitationAdapter() {
         return null;
     }
 

@@ -208,14 +208,12 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Fertigkeit" outputs="Shr5XMI.xsd#//Fertigkeit;XSDElementDeclaration=20"/>
     <nested inputs="shr5.ecore#//PersonaFertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21">
-      <nested inputs="shr5.ecore#//PersonaFertigkeit/stufe" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDAttributeUse"/>
       <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//PersonaFertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDElementDeclaration=21"/>
     <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDComplexTypeDefinition=22">
-      <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe/stufe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDComplexTypeDefinition=22/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe/gruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDComplexTypeDefinition=22/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe/gruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDComplexTypeDefinition=22/XSDAttributeUse"/>
       <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe/gruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDComplexTypeDefinition=22/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDElementDeclaration=22"/>
@@ -368,8 +366,8 @@
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//MysticAdept" outputs="Shr5XMI.xsd#//MysticAdept;XSDElementDeclaration=46"/>
     <nested inputs="shr5.ecore#//PersonaZauber" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47">
-      <nested inputs="shr5.ecore#//PersonaZauber/stufe" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//PersonaZauber/formel" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//PersonaZauber/stufe" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//PersonaZauber/formel" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//PersonaZauber/formel" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//PersonaZauber" outputs="Shr5XMI.xsd#//PersonaZauber;XSDElementDeclaration=47"/>
@@ -405,8 +403,7 @@
     </nested>
     <nested inputs="shr5.ecore#//Schutzgeist" outputs="Shr5XMI.xsd#//Schutzgeist;XSDElementDeclaration=53"/>
     <nested inputs="shr5.ecore#//Initation" outputs="Shr5XMI.xsd#//Initation;XSDComplexTypeDefinition=54">
-      <nested inputs="shr5.ecore#//Initation/stufe" outputs="Shr5XMI.xsd#//Initation;XSDComplexTypeDefinition=54/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//Initation/erlernt" outputs="Shr5XMI.xsd#//Initation;XSDComplexTypeDefinition=54/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Initation/erlernt" outputs="Shr5XMI.xsd#//Initation;XSDComplexTypeDefinition=54/XSDAttributeUse"/>
       <nested inputs="shr5.ecore#//Initation/erlernt" outputs="Shr5XMI.xsd#//Initation;XSDComplexTypeDefinition=54/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Initation" outputs="Shr5XMI.xsd#//Initation;XSDElementDeclaration=54"/>
@@ -480,8 +477,8 @@
     <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//KomplexeForm;XSDComplexTypeDefinition=64/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//KomplexeForm" outputs="Shr5XMI.xsd#//KomplexeForm;XSDElementDeclaration=64"/>
     <nested inputs="shr5.ecore#//PersonaKomplexForm" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDComplexTypeDefinition=65">
-      <nested inputs="shr5.ecore#//PersonaKomplexForm/stufe" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDComplexTypeDefinition=65/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//PersonaKomplexForm/form" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDComplexTypeDefinition=65/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//PersonaKomplexForm/stufe" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDComplexTypeDefinition=65/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//PersonaKomplexForm/form" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDComplexTypeDefinition=65/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//PersonaKomplexForm/form" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDComplexTypeDefinition=65/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//PersonaKomplexForm" outputs="Shr5XMI.xsd#//PersonaKomplexForm;XSDElementDeclaration=65"/>
@@ -538,5 +535,11 @@
       <nested inputs="shr5.ecore#//Fakeable/gefaelscht" outputs="Shr5XMI.xsd#//Fakeable;XSDComplexTypeDefinition=77/XSDAttributeUse=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Fakeable" outputs="Shr5XMI.xsd#//Fakeable;XSDElementDeclaration=77"/>
+    <nested inputs="shr5.ecore#//Steigerbar" outputs="Shr5XMI.xsd#//Steigerbar;XSDComplexTypeDefinition=78">
+      <nested inputs="shr5.ecore#//Steigerbar/stufe" outputs="Shr5XMI.xsd#//Steigerbar;XSDComplexTypeDefinition=78/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Steigerbar" outputs="Shr5XMI.xsd#//Steigerbar;XSDElementDeclaration=78"/>
+    <nested inputs="shr5.ecore#//Erlernbar" outputs="Shr5XMI.xsd#//Erlernbar;XSDComplexTypeDefinition=79"/>
+    <nested inputs="shr5.ecore#//Erlernbar" outputs="Shr5XMI.xsd#//Erlernbar;XSDElementDeclaration=79"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

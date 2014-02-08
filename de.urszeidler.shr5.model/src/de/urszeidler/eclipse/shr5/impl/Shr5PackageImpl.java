@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.CritterReichweite;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Echo;
+import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 import de.urszeidler.eclipse.shr5.Fakeable;
@@ -98,6 +99,7 @@ import de.urszeidler.eclipse.shr5.SpezielleAttribute;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Sprite;
+import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
@@ -660,6 +662,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass fakeableEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass steigerbarEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass erlernbarEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1586,15 +1602,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getPersonaFertigkeit_Stufe() {
-        return (EAttribute)personaFertigkeitEClass.getEStructuralFeatures().get(1);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	public EClass getPersonaFertigkeitsGruppe() {
         return personaFertigkeitsGruppeEClass;
     }
@@ -1606,15 +1613,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
 	public EReference getPersonaFertigkeitsGruppe_Gruppe() {
         return (EReference)personaFertigkeitsGruppeEClass.getEStructuralFeatures().get(0);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EAttribute getPersonaFertigkeitsGruppe_Stufe() {
-        return (EAttribute)personaFertigkeitsGruppeEClass.getEStructuralFeatures().get(1);
     }
 
 	/**
@@ -2729,17 +2727,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getInitation_Stufe() {
-        return (EAttribute)initationEClass.getEStructuralFeatures().get(0);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	public EReference getInitation_Erlernt() {
-        return (EReference)initationEClass.getEStructuralFeatures().get(1);
+        return (EReference)initationEClass.getEStructuralFeatures().get(0);
     }
 
 	/**
@@ -3356,6 +3345,33 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSteigerbar() {
+        return steigerbarEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSteigerbar_Stufe() {
+        return (EAttribute)steigerbarEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getErlernbar() {
+        return erlernbarEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3630,11 +3646,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         personaFertigkeitEClass = createEClass(PERSONA_FERTIGKEIT);
         createEReference(personaFertigkeitEClass, PERSONA_FERTIGKEIT__FERTIGKEIT);
-        createEAttribute(personaFertigkeitEClass, PERSONA_FERTIGKEIT__STUFE);
 
         personaFertigkeitsGruppeEClass = createEClass(PERSONA_FERTIGKEITS_GRUPPE);
         createEReference(personaFertigkeitsGruppeEClass, PERSONA_FERTIGKEITS_GRUPPE__GRUPPE);
-        createEAttribute(personaFertigkeitsGruppeEClass, PERSONA_FERTIGKEITS_GRUPPE__STUFE);
 
         cyberwareEClass = createEClass(CYBERWARE);
         createEReference(cyberwareEClass, CYBERWARE__PERSONA);
@@ -3790,7 +3804,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(schutzgeistEClass, SCHUTZGEIST__NACHTEILE);
 
         initationEClass = createEClass(INITATION);
-        createEAttribute(initationEClass, INITATION__STUFE);
         createEReference(initationEClass, INITATION__ERLERNT);
 
         metaMagieEClass = createEClass(META_MAGIE);
@@ -3884,6 +3897,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(fakeableEClass, FAKEABLE__STUFE);
         createEAttribute(fakeableEClass, FAKEABLE__GEFAELSCHT);
 
+        steigerbarEClass = createEClass(STEIGERBAR);
+        createEAttribute(steigerbarEClass, STEIGERBAR__STUFE);
+
+        erlernbarEClass = createEClass(ERLERNBAR);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -3957,6 +3975,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fertigkeitsGruppeEClass.getESuperTypes().add(this.getQuelle());
         fertigkeitEClass.getESuperTypes().add(this.getBeschreibbar());
         fertigkeitEClass.getESuperTypes().add(this.getQuelle());
+        personaFertigkeitEClass.getESuperTypes().add(this.getSteigerbar());
+        personaFertigkeitsGruppeEClass.getESuperTypes().add(this.getSteigerbar());
         cyberwareEClass.getESuperTypes().add(this.getKoerpermods());
         cyberwareEClass.getESuperTypes().add(this.getGeldWert());
         bioWareEClass.getESuperTypes().add(this.getKoerpermods());
@@ -3971,6 +3991,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         koerperPersonaEClass.getESuperTypes().add(this.getPersonaZustand());
         magischeModsEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         kiKraftEClass.getESuperTypes().add(this.getMagischeMods());
+        kiKraftEClass.getESuperTypes().add(this.getErlernbar());
         magischePersonaEClass.getESuperTypes().add(this.getKoerperPersona());
         magischePersonaEClass.getESuperTypes().add(this.getBaseMagischePersona());
         speziesEClass.getESuperTypes().add(this.getBeschreibbar());
@@ -3980,16 +4001,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         kleidungEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         fernkampfwaffeModifikatorEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         personaEigenschaftEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
+        personaEigenschaftEClass.getESuperTypes().add(this.getErlernbar());
         magierEClass.getESuperTypes().add(this.getMagischePersona());
         magierEClass.getESuperTypes().add(this.getZauberer());
         magierEClass.getESuperTypes().add(this.getAstraleProjektion());
         mysticAdeptEClass.getESuperTypes().add(this.getKiAdept());
         mysticAdeptEClass.getESuperTypes().add(this.getZauberer());
+        personaZauberEClass.getESuperTypes().add(this.getErlernbar());
         zauberEClass.getESuperTypes().add(this.getBeschreibbar());
         zauberEClass.getESuperTypes().add(this.getQuelle());
         aspektMagierEClass.getESuperTypes().add(this.getMagischePersona());
         aspektMagierEClass.getESuperTypes().add(this.getZauberer());
         schutzgeistEClass.getESuperTypes().add(this.getMagischeMods());
+        initationEClass.getESuperTypes().add(this.getSteigerbar());
         metaMagieEClass.getESuperTypes().add(this.getBeschreibbar());
         metaMagieEClass.getESuperTypes().add(this.getQuelle());
         critterKraftEClass.getESuperTypes().add(this.getMagischeMods());
@@ -4007,6 +4031,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         technomancerEClass.getESuperTypes().add(this.getResonanzPersona());
         komplexeFormEClass.getESuperTypes().add(this.getQuelle());
         komplexeFormEClass.getESuperTypes().add(this.getBeschreibbar());
+        personaKomplexFormEClass.getESuperTypes().add(this.getErlernbar());
         spriteEClass.getESuperTypes().add(this.getResonanzPersona());
         spriteEClass.getESuperTypes().add(this.getBeschreibbar());
         spriteEClass.getESuperTypes().add(this.getQuelle());
@@ -4022,6 +4047,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         sinEClass.getESuperTypes().add(this.getFakeable());
         lizenzEClass.getESuperTypes().add(this.getFakeable());
         fakeableEClass.getESuperTypes().add(this.getVertrag());
+        steigerbarEClass.getESuperTypes().add(this.getErlernbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4128,11 +4154,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(personaFertigkeitEClass, PersonaFertigkeit.class, "PersonaFertigkeit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaFertigkeit_Fertigkeit(), this.getFertigkeit(), null, "fertigkeit", null, 0, 1, PersonaFertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getPersonaFertigkeit_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, PersonaFertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaFertigkeitsGruppeEClass, PersonaFertigkeitsGruppe.class, "PersonaFertigkeitsGruppe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaFertigkeitsGruppe_Gruppe(), this.getFertigkeitsGruppe(), null, "gruppe", null, 0, 1, PersonaFertigkeitsGruppe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getPersonaFertigkeitsGruppe_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, PersonaFertigkeitsGruppe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(cyberwareEClass, Cyberware.class, "Cyberware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCyberware_Persona(), this.getAbstraktPersona(), null, "persona", null, 0, 1, Cyberware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4288,7 +4312,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getSchutzgeist_Nachteile(), ecorePackage.getEString(), "nachteile", null, 0, 1, Schutzgeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(initationEClass, Initation.class, "Initation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getInitation_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, Initation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getInitation_Erlernt(), this.getMetaMagie(), null, "erlernt", null, 0, 1, Initation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(metaMagieEClass, MetaMagie.class, "MetaMagie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4381,6 +4404,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(fakeableEClass, Fakeable.class, "Fakeable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getFakeable_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, Fakeable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFakeable_Gefaelscht(), ecorePackage.getEBoolean(), "gefaelscht", null, 0, 1, Fakeable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(steigerbarEClass, Steigerbar.class, "Steigerbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSteigerbar_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, Steigerbar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(erlernbarEClass, Erlernbar.class, "Erlernbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
