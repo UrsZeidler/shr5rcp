@@ -447,6 +447,14 @@
 			karmaFactor="5">
 			<type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute" />
 		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="2">
+			<type href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="13">
+			<type href="http://urszeidler.de/shr5/1.0#//Initation" />
+		</characterAdvancements>
 
 	</xsl:template>
 	<xsl:template name="vehicle">
