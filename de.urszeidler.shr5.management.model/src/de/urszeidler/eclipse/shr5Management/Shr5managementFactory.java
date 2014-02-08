@@ -194,15 +194,6 @@ public interface Shr5managementFactory extends EFactory {
 	FertigkeitChange createFertigkeitChange();
 
 	/**
-     * Returns a new object of class '<em>Persona Value Change</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return a new object of class '<em>Persona Value Change</em>'.
-     * @generated
-     */
-	PersonaValueChange createPersonaValueChange();
-
-	/**
      * Returns a new object of class '<em>Increase Character Part</em>'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -237,6 +228,15 @@ public interface Shr5managementFactory extends EFactory {
      * @generated
      */
     LifestyleToStartMoney createLifestyleToStartMoney();
+
+    /**
+     * Returns a new object of class '<em>Persona Initation</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Persona Initation</em>'.
+     * @generated
+     */
+    PersonaInitation createPersonaInitation();
 
     /**
      * Returns the package supported by this factory.

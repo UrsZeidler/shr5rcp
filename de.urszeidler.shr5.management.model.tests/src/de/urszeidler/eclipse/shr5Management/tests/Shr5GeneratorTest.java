@@ -153,7 +153,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * 
      * @return
      */
-    protected PlayerCharacter createMudanCharacter() {
+    public static PlayerCharacter createMudanCharacter() {
         PlayerCharacter character = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
         MudanPersona persona = Shr5Factory.eINSTANCE.createMudanPersona();
         Spezies spezies = Shr5Factory.eINSTANCE.createSpezies();
@@ -497,6 +497,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setMagic(mudan);
         getFixture().setResourcen(resourcen);
         getFixture().setGenerator(shr5System);
+
     }
 
     /**

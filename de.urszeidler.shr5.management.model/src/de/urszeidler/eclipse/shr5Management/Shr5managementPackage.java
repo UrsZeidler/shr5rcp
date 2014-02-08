@@ -625,13 +625,31 @@ public interface Shr5managementPackage extends EPackage {
 	int CHANGES__DATE = 0;
 
 	/**
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHANGES__KARMA_COST = 1;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHANGES__CHARACTER = 2;
+
+    /**
      * The number of structural features of the '<em>Changes</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CHANGES_FEATURE_COUNT = 1;
+	int CHANGES_FEATURE_COUNT = 3;
 
 	/**
      * The number of operations of the '<em>Changes</em>' class.
@@ -662,6 +680,24 @@ public interface Shr5managementPackage extends EPackage {
 	int KARMA_GAINT__DATE = CHANGES__DATE;
 
 	/**
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GAINT__KARMA_COST = CHANGES__KARMA_COST;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KARMA_GAINT__CHARACTER = CHANGES__CHARACTER;
+
+    /**
      * The feature id for the '<em><b>Karma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2330,25 +2366,34 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_VALUE_CHANGE__DATE = KARMA_GAINT__DATE;
+	int PERSONA_VALUE_CHANGE__DATE = CHANGES__DATE;
 
 	/**
-     * The feature id for the '<em><b>Karma</b></em>' attribute.
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PERSONA_VALUE_CHANGE__KARMA = KARMA_GAINT__KARMA;
+    int PERSONA_VALUE_CHANGE__KARMA_COST = CHANGES__KARMA_COST;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_VALUE_CHANGE__CHARACTER = CHANGES__CHARACTER;
+
+    /**
      * The feature id for the '<em><b>From</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PERSONA_VALUE_CHANGE__FROM = KARMA_GAINT_FEATURE_COUNT + 0;
+	int PERSONA_VALUE_CHANGE__FROM = CHANGES_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>To</b></em>' attribute.
@@ -2357,7 +2402,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_VALUE_CHANGE__TO = KARMA_GAINT_FEATURE_COUNT + 1;
+	int PERSONA_VALUE_CHANGE__TO = CHANGES_FEATURE_COUNT + 1;
 
 	/**
      * The number of structural features of the '<em>Persona Value Change</em>' class.
@@ -2366,7 +2411,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_VALUE_CHANGE_FEATURE_COUNT = KARMA_GAINT_FEATURE_COUNT + 2;
+	int PERSONA_VALUE_CHANGE_FEATURE_COUNT = CHANGES_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Persona Value Change</em>' class.
@@ -2375,7 +2420,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int PERSONA_VALUE_CHANGE_OPERATION_COUNT = KARMA_GAINT_OPERATION_COUNT + 0;
+	int PERSONA_VALUE_CHANGE_OPERATION_COUNT = CHANGES_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl <em>Attribute Change</em>}' class.
@@ -2397,15 +2442,24 @@ public interface Shr5managementPackage extends EPackage {
 	int ATTRIBUTE_CHANGE__DATE = PERSONA_VALUE_CHANGE__DATE;
 
 	/**
-     * The feature id for the '<em><b>Karma</b></em>' attribute.
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ATTRIBUTE_CHANGE__KARMA = PERSONA_VALUE_CHANGE__KARMA;
+    int ATTRIBUTE_CHANGE__KARMA_COST = PERSONA_VALUE_CHANGE__KARMA_COST;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ATTRIBUTE_CHANGE__CHARACTER = PERSONA_VALUE_CHANGE__CHARACTER;
+
+    /**
      * The feature id for the '<em><b>From</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2424,13 +2478,22 @@ public interface Shr5managementPackage extends EPackage {
 	int ATTRIBUTE_CHANGE__TO = PERSONA_VALUE_CHANGE__TO;
 
 	/**
+     * The feature id for the '<em><b>Attibute</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ATTRIBUTE_CHANGE__ATTIBUTE = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 0;
+
+    /**
      * The number of structural features of the '<em>Attribute Change</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ATTRIBUTE_CHANGE_FEATURE_COUNT = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 0;
+	int ATTRIBUTE_CHANGE_FEATURE_COUNT = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 1;
 
 	/**
      * The number of operations of the '<em>Attribute Change</em>' class.
@@ -2836,15 +2899,24 @@ public interface Shr5managementPackage extends EPackage {
 	int FERTIGKEIT_CHANGE__DATE = PERSONA_VALUE_CHANGE__DATE;
 
 	/**
-     * The feature id for the '<em><b>Karma</b></em>' attribute.
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT_CHANGE__KARMA = PERSONA_VALUE_CHANGE__KARMA;
+    int FERTIGKEIT_CHANGE__KARMA_COST = PERSONA_VALUE_CHANGE__KARMA_COST;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEIT_CHANGE__CHARACTER = PERSONA_VALUE_CHANGE__CHARACTER;
+
+    /**
      * The feature id for the '<em><b>From</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2863,13 +2935,31 @@ public interface Shr5managementPackage extends EPackage {
 	int FERTIGKEIT_CHANGE__TO = PERSONA_VALUE_CHANGE__TO;
 
 	/**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEIT_CHANGE__SKILL = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Skill Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEIT_CHANGE__SKILL_GROUP = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Fertigkeit Change</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT_CHANGE_FEATURE_COUNT = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 0;
+	int FERTIGKEIT_CHANGE_FEATURE_COUNT = PERSONA_VALUE_CHANGE_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Fertigkeit Change</em>' class.
@@ -3063,25 +3153,52 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int QUALLITY_CHANGE__DATE = KARMA_GAINT__DATE;
+	int QUALLITY_CHANGE__DATE = CHANGES__DATE;
 
 	/**
-     * The feature id for the '<em><b>Karma</b></em>' attribute.
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int QUALLITY_CHANGE__KARMA = KARMA_GAINT__KARMA;
+    int QUALLITY_CHANGE__KARMA_COST = CHANGES__KARMA_COST;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUALLITY_CHANGE__CHARACTER = CHANGES__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Quallity</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUALLITY_CHANGE__QUALLITY = CHANGES_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Added</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUALLITY_CHANGE__ADDED = CHANGES_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Quallity Change</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int QUALLITY_CHANGE_FEATURE_COUNT = KARMA_GAINT_FEATURE_COUNT + 0;
+	int QUALLITY_CHANGE_FEATURE_COUNT = CHANGES_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Quallity Change</em>' class.
@@ -3090,7 +3207,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int QUALLITY_CHANGE_OPERATION_COUNT = KARMA_GAINT_OPERATION_COUNT + 0;
+	int QUALLITY_CHANGE_OPERATION_COUNT = CHANGES_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl <em>Lifestyle To Start Money</em>}' class.
@@ -3148,6 +3265,70 @@ public interface Shr5managementPackage extends EPackage {
     int LIFESTYLE_TO_START_MONEY_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaInitationImpl <em>Persona Initation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.PersonaInitationImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPersonaInitation()
+     * @generated
+     */
+    int PERSONA_INITATION = 33;
+
+    /**
+     * The feature id for the '<em><b>Date</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_INITATION__DATE = CHANGES__DATE;
+
+    /**
+     * The feature id for the '<em><b>Karma Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_INITATION__KARMA_COST = CHANGES__KARMA_COST;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' container reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_INITATION__CHARACTER = CHANGES__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Garde</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_INITATION__GARDE = CHANGES_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Persona Initation</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_INITATION_FEATURE_COUNT = CHANGES_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Persona Initation</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_INITATION_OPERATION_COUNT = CHANGES_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3155,7 +3336,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 33;
+	int GENERATOR_STATE = 34;
 
 
 	/**
@@ -3166,7 +3347,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 34;
+	int SEX = 35;
 
 
 	/**
@@ -3451,6 +3632,28 @@ public interface Shr5managementPackage extends EPackage {
 	EAttribute getChanges_Date();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost <em>Karma Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @see #getChanges()
+     * @generated
+     */
+    EAttribute getChanges_KarmaCost();
+
+    /**
+     * Returns the meta object for the container reference '{@link de.urszeidler.eclipse.shr5Management.Changes#getCharacter <em>Character</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the container reference '<em>Character</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getCharacter()
+     * @see #getChanges()
+     * @generated
+     */
+    EReference getChanges_Character();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.KarmaGaint <em>Karma Gaint</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4464,6 +4667,17 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getAttributeChange();
 
 	/**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.AttributeChange#getAttibute <em>Attibute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Attibute</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.AttributeChange#getAttibute()
+     * @see #getAttributeChange()
+     * @generated
+     */
+    EReference getAttributeChange_Attibute();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PlayerCharacter <em>Player Character</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4558,6 +4772,28 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getFertigkeitChange();
 
 	/**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.FertigkeitChange#getSkill <em>Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.FertigkeitChange#getSkill()
+     * @see #getFertigkeitChange()
+     * @generated
+     */
+    EReference getFertigkeitChange_Skill();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.FertigkeitChange#getSkillGroup <em>Skill Group</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Skill Group</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.FertigkeitChange#getSkillGroup()
+     * @see #getFertigkeitChange()
+     * @generated
+     */
+    EReference getFertigkeitChange_SkillGroup();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PersonaValueChange <em>Persona Value Change</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4686,6 +4922,28 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getQuallityChange();
 
 	/**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.QuallityChange#getQuallity <em>Quallity</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Quallity</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuallityChange#getQuallity()
+     * @see #getQuallityChange()
+     * @generated
+     */
+    EReference getQuallityChange_Quallity();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.QuallityChange#isAdded <em>Added</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Added</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuallityChange#isAdded()
+     * @see #getQuallityChange()
+     * @generated
+     */
+    EAttribute getQuallityChange_Added();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4727,6 +4985,27 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EReference getLifestyleToStartMoney_LifeStyles();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PersonaInitation <em>Persona Initation</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Persona Initation</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PersonaInitation
+     * @generated
+     */
+    EClass getPersonaInitation();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.PersonaInitation#getGarde <em>Garde</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Garde</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PersonaInitation#getGarde()
+     * @see #getPersonaInitation()
+     * @generated
+     */
+    EReference getPersonaInitation_Garde();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
@@ -4990,6 +5269,22 @@ public interface Shr5managementPackage extends EPackage {
 		EAttribute CHANGES__DATE = eINSTANCE.getChanges_Date();
 
 		/**
+         * The meta object literal for the '<em><b>Karma Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CHANGES__KARMA_COST = eINSTANCE.getChanges_KarmaCost();
+
+        /**
+         * The meta object literal for the '<em><b>Character</b></em>' container reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CHANGES__CHARACTER = eINSTANCE.getChanges_Character();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGaintImpl <em>Karma Gaint</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5790,6 +6085,14 @@ public interface Shr5managementPackage extends EPackage {
 		EClass ATTRIBUTE_CHANGE = eINSTANCE.getAttributeChange();
 
 		/**
+         * The meta object literal for the '<em><b>Attibute</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ATTRIBUTE_CHANGE__ATTIBUTE = eINSTANCE.getAttributeChange_Attibute();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl <em>Player Character</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5872,6 +6175,22 @@ public interface Shr5managementPackage extends EPackage {
 		EClass FERTIGKEIT_CHANGE = eINSTANCE.getFertigkeitChange();
 
 		/**
+         * The meta object literal for the '<em><b>Skill</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FERTIGKEIT_CHANGE__SKILL = eINSTANCE.getFertigkeitChange_Skill();
+
+        /**
+         * The meta object literal for the '<em><b>Skill Group</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FERTIGKEIT_CHANGE__SKILL_GROUP = eINSTANCE.getFertigkeitChange_SkillGroup();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl <em>Persona Value Change</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5980,6 +6299,22 @@ public interface Shr5managementPackage extends EPackage {
 		EClass QUALLITY_CHANGE = eINSTANCE.getQuallityChange();
 
 		/**
+         * The meta object literal for the '<em><b>Quallity</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference QUALLITY_CHANGE__QUALLITY = eINSTANCE.getQuallityChange_Quallity();
+
+        /**
+         * The meta object literal for the '<em><b>Added</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute QUALLITY_CHANGE__ADDED = eINSTANCE.getQuallityChange_Added();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl <em>Lifestyle To Start Money</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -6012,6 +6347,24 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference LIFESTYLE_TO_START_MONEY__LIFE_STYLES = eINSTANCE.getLifestyleToStartMoney_LifeStyles();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaInitationImpl <em>Persona Initation</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.PersonaInitationImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPersonaInitation()
+         * @generated
+         */
+        EClass PERSONA_INITATION = eINSTANCE.getPersonaInitation();
+
+        /**
+         * The meta object literal for the '<em><b>Garde</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PERSONA_INITATION__GARDE = eINSTANCE.getPersonaInitation_Garde();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

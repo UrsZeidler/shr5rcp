@@ -22,13 +22,13 @@ import org.eclipse.emf.common.notify.Notification;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getFreestyleGenerator <em>Freestyle Generator</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedPersona <em>Selected Persona</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedSpecies <em>Selected Species</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedType <em>Selected Type</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getFreestyleGenerator <em>Freestyle Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedPersona <em>Selected Persona</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedSpecies <em>Selected Species</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedType <em>Selected Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements FreeStyleGenerator {
@@ -36,7 +36,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
      * The cached value of the '{@link #getSelectedPersona() <em>Selected Persona</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSelectedPersona()
      * @generated
      * @ordered
@@ -46,7 +45,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
      * The cached value of the '{@link #getSelectedSpecies() <em>Selected Species</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSelectedSpecies()
      * @generated
      * @ordered
@@ -56,7 +54,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
      * The cached value of the '{@link #getSelectedType() <em>Selected Type</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSelectedType()
      * @generated
      * @ordered
@@ -66,7 +63,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected FreeStyleGeneratorImpl() {
@@ -76,7 +72,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -87,13 +82,11 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public FreeStyle getFreestyleGenerator() {
         FreeStyle freestyleGenerator = basicGetFreestyleGenerator();
-        return freestyleGenerator != null && freestyleGenerator.eIsProxy() ? (FreeStyle)eResolveProxy((InternalEObject)freestyleGenerator)
-                : freestyleGenerator;
+        return freestyleGenerator != null && freestyleGenerator.eIsProxy() ? (FreeStyle)eResolveProxy((InternalEObject)freestyleGenerator) : freestyleGenerator;
     }
 
     /**
@@ -113,7 +106,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstraktPersona getSelectedPersona() {
@@ -122,8 +114,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
             selectedPersona = (AbstraktPersona)eResolveProxy(oldSelectedPersona);
             if (selectedPersona != oldSelectedPersona) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_PERSONA,
-                            oldSelectedPersona, selectedPersona));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_PERSONA, oldSelectedPersona, selectedPersona));
             }
         }
         return selectedPersona;
@@ -132,7 +123,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstraktPersona basicGetSelectedPersona() {
@@ -160,7 +150,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Spezies getSelectedSpecies() {
@@ -169,8 +158,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
             selectedSpecies = (Spezies)eResolveProxy(oldSelectedSpecies);
             if (selectedSpecies != oldSelectedSpecies) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_SPECIES,
-                            oldSelectedSpecies, selectedSpecies));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_SPECIES, oldSelectedSpecies, selectedSpecies));
             }
         }
         return selectedSpecies;
@@ -179,7 +167,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Spezies basicGetSelectedSpecies() {
@@ -189,23 +176,18 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSelectedSpecies(Spezies newSelectedSpecies) {
         Spezies oldSelectedSpecies = selectedSpecies;
         selectedSpecies = newSelectedSpecies;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_SPECIES, oldSelectedSpecies,
-                    selectedSpecies));
-        if (newSelectedSpecies != null)
-            setSelectedPersona(null);
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_SPECIES, oldSelectedSpecies, selectedSpecies));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EClass getSelectedType() {
@@ -214,8 +196,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
             selectedType = (EClass)eResolveProxy(oldSelectedType);
             if (selectedType != oldSelectedType) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_TYPE,
-                            oldSelectedType, selectedType));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_TYPE, oldSelectedType, selectedType));
             }
         }
         return selectedType;
@@ -224,7 +205,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EClass basicGetSelectedType() {
@@ -250,27 +230,22 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.FREE_STYLE_GENERATOR__FREESTYLE_GENERATOR:
-                if (resolve)
-                    return getFreestyleGenerator();
+                if (resolve) return getFreestyleGenerator();
                 return basicGetFreestyleGenerator();
             case Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_PERSONA:
-                if (resolve)
-                    return getSelectedPersona();
+                if (resolve) return getSelectedPersona();
                 return basicGetSelectedPersona();
             case Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_SPECIES:
-                if (resolve)
-                    return getSelectedSpecies();
+                if (resolve) return getSelectedSpecies();
                 return basicGetSelectedSpecies();
             case Shr5managementPackage.FREE_STYLE_GENERATOR__SELECTED_TYPE:
-                if (resolve)
-                    return getSelectedType();
+                if (resolve) return getSelectedType();
                 return basicGetSelectedType();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -279,7 +254,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -301,7 +275,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -323,7 +296,6 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl implements Fr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

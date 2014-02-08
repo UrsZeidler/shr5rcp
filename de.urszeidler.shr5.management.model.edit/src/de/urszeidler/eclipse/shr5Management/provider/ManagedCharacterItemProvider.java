@@ -422,11 +422,6 @@ public class ManagedCharacterItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES,
-                 Shr5managementFactory.eINSTANCE.createPersonaValueChange()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES,
                  Shr5managementFactory.eINSTANCE.createAttributeChange()));
 
         newChildDescriptors.add
@@ -438,6 +433,11 @@ public class ManagedCharacterItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES,
                  Shr5managementFactory.eINSTANCE.createQuallityChange()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES,
+                 Shr5managementFactory.eINSTANCE.createPersonaInitation()));
 
         newChildDescriptors.add
             (createChildParameter

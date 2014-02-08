@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -290,7 +291,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      */
 	public EList<Changes> getChanges() {
         if (changes == null) {
-            changes = new EObjectContainmentEList<Changes>(Changes.class, this, Shr5managementPackage.MANAGED_CHARACTER__CHANGES);
+            changes = new EObjectContainmentWithInverseEList<Changes>(Changes.class, this, Shr5managementPackage.MANAGED_CHARACTER__CHANGES, Shr5managementPackage.CHANGES__CHARACTER);
         }
         return changes;
     }
@@ -565,9 +566,12 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5managementPackage.MANAGED_CHARACTER__CHANGES:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getChanges()).basicAdd(otherEnd, msgs);
             case Shr5managementPackage.MANAGED_CHARACTER__CHRACTER_SOURCE:
                 if (chracterSource != null)
                     msgs = ((InternalEObject)chracterSource).eInverseRemove(this, Shr5managementPackage.CHARACTER_GENERATOR__CHARACTER, CharacterGenerator.class, msgs);

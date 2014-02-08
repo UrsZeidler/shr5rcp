@@ -30,7 +30,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * @generated
  */
 public class PersonaValueChangeItemProvider
-	extends KarmaGaintItemProvider
+	extends ChangesItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,

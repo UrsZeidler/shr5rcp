@@ -24,7 +24,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *
  * @generated
  */
-public class PersonaValueChangeImpl extends KarmaGaintImpl implements PersonaValueChange {
+public abstract class PersonaValueChangeImpl extends ChangesImpl implements PersonaValueChange {
 	/**
      * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
      * <!-- begin-user-doc -->

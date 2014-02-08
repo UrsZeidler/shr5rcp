@@ -61,6 +61,7 @@ public class ChangesItemProvider
             super.getPropertyDescriptors(object);
 
             addDatePropertyDescriptor(object);
+            addKarmaCostPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -88,6 +89,28 @@ public class ChangesItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Karma Cost feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addKarmaCostPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Changes_karmaCost_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Changes_karmaCost_feature", "_UI_Changes_type"),
+                 Shr5managementPackage.Literals.CHANGES__KARMA_COST,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,6 +138,7 @@ public class ChangesItemProvider
 
         switch (notification.getFeatureID(Changes.class)) {
             case Shr5managementPackage.CHANGES__DATE:
+            case Shr5managementPackage.CHANGES__KARMA_COST:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

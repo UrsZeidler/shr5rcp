@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -253,7 +254,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 AttributeChange attributeChange = (AttributeChange)theEObject;
                 T result = caseAttributeChange(attributeChange);
                 if (result == null) result = casePersonaValueChange(attributeChange);
-                if (result == null) result = caseKarmaGaint(attributeChange);
                 if (result == null) result = caseChanges(attributeChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -290,7 +290,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 FertigkeitChange fertigkeitChange = (FertigkeitChange)theEObject;
                 T result = caseFertigkeitChange(fertigkeitChange);
                 if (result == null) result = casePersonaValueChange(fertigkeitChange);
-                if (result == null) result = caseKarmaGaint(fertigkeitChange);
                 if (result == null) result = caseChanges(fertigkeitChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -298,7 +297,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             case Shr5managementPackage.PERSONA_VALUE_CHANGE: {
                 PersonaValueChange personaValueChange = (PersonaValueChange)theEObject;
                 T result = casePersonaValueChange(personaValueChange);
-                if (result == null) result = caseKarmaGaint(personaValueChange);
                 if (result == null) result = caseChanges(personaValueChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -332,7 +330,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             case Shr5managementPackage.QUALLITY_CHANGE: {
                 QuallityChange quallityChange = (QuallityChange)theEObject;
                 T result = caseQuallityChange(quallityChange);
-                if (result == null) result = caseKarmaGaint(quallityChange);
                 if (result == null) result = caseChanges(quallityChange);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -340,6 +337,13 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: {
                 LifestyleToStartMoney lifestyleToStartMoney = (LifestyleToStartMoney)theEObject;
                 T result = caseLifestyleToStartMoney(lifestyleToStartMoney);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.PERSONA_INITATION: {
+                PersonaInitation personaInitation = (PersonaInitation)theEObject;
+                T result = casePersonaInitation(personaInitation);
+                if (result == null) result = caseChanges(personaInitation);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -839,6 +843,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseLifestyleToStartMoney(LifestyleToStartMoney object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Persona Initation</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Persona Initation</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePersonaInitation(PersonaInitation object) {
         return null;
     }
 

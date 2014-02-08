@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -26,7 +27,6 @@ import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Mudan;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
-import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.QuallityChange;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
@@ -102,12 +102,12 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.CHARACTER_GROUP: return createCharacterGroup();
             case Shr5managementPackage.CONNECTION: return createConnection();
             case Shr5managementPackage.FERTIGKEIT_CHANGE: return createFertigkeitChange();
-            case Shr5managementPackage.PERSONA_VALUE_CHANGE: return createPersonaValueChange();
             case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY: return (EObject)createGeneratorStateToEStringMapEntry();
             case Shr5managementPackage.INCREASE_CHARACTER_PART: return createIncreaseCharacterPart();
             case Shr5managementPackage.CHANGE_QUALLITY: return createChangeQuallity();
             case Shr5managementPackage.QUALLITY_CHANGE: return createQuallityChange();
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: return createLifestyleToStartMoney();
+            case Shr5managementPackage.PERSONA_INITATION: return createPersonaInitation();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -342,16 +342,6 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PersonaValueChange createPersonaValueChange() {
-        PersonaValueChangeImpl personaValueChange = new PersonaValueChangeImpl();
-        return personaValueChange;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	public Map.Entry<GeneratorState, String> createGeneratorStateToEStringMapEntry() {
         GeneratorStateToEStringMapEntryImpl generatorStateToEStringMapEntry = new GeneratorStateToEStringMapEntryImpl();
         return generatorStateToEStringMapEntry;
@@ -395,6 +385,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public LifestyleToStartMoney createLifestyleToStartMoney() {
         LifestyleToStartMoneyImpl lifestyleToStartMoney = new LifestyleToStartMoneyImpl();
         return lifestyleToStartMoney;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonaInitation createPersonaInitation() {
+        PersonaInitationImpl personaInitation = new PersonaInitationImpl();
+        return personaInitation;
     }
 
     /**

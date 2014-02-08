@@ -73,6 +73,7 @@ public interface ManagedCharacter extends EObject {
 	/**
      * Returns the value of the '<em><b>Changes</b></em>' containment reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.Changes}.
+     * It is bidirectional and its opposite is '{@link de.urszeidler.eclipse.shr5Management.Changes#getCharacter <em>Character</em>}'.
      * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Changes</em>' containment reference list isn't clear,
@@ -81,7 +82,8 @@ public interface ManagedCharacter extends EObject {
 	 * <!-- end-user-doc -->
      * @return the value of the '<em>Changes</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_Changes()
-     * @model containment="true"
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getCharacter
+     * @model opposite="character" containment="true"
      * @generated
      */
 	EList<Changes> getChanges();

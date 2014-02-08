@@ -3,13 +3,30 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import org.eclipse.emf.ecore.EcorePackage;
+
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
 /**
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Changes</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public abstract class ChangesTest extends TestCase {
@@ -21,15 +38,54 @@ public abstract class ChangesTest extends TestCase {
      * @generated
      */
 	protected Changes fixture = null;
+    protected PlayerCharacter playerCharacter;
+    protected Shr5System shr5System;
 
 	/**
      * Constructs a new Changes test case with the given name.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public ChangesTest(String name) {
         super(name);
+        playerCharacter = Shr5GeneratorTest.createMudanCharacter();
+        shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
+        Shr5Generator generator = Shr5managementFactory.eINSTANCE.createShr5Generator();
+        generator.setCharacter(playerCharacter);
+        generator.setGenerator(shr5System);
+        
+        IncreaseCharacterPart part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(2);
+        part.setType(Shr5Package.Literals.FERTIGKEIT);
+        shr5System.getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(1);
+        part.setType(Shr5Package.Literals.SPRACHFERTIGKEIT);
+        shr5System.getCharacterAdvancements().add(part);
+        
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(5);
+        part.setType(EcorePackage.Literals.EATTRIBUTE);
+        shr5System.getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(2);
+        part.setType(Shr5Package.Literals.PERSONA_EIGENSCHAFT);
+        shr5System.getCharacterAdvancements().add(part);
+        
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(13);
+        part.setType(Shr5Package.Literals.INITATION);
+        shr5System.getCharacterAdvancements().add(part);
+
+        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
+        fertigkeit.setFertigkeit(wfertigkeit);
+        fertigkeit.setStufe(1);
+        playerCharacter.getPersona().getFertigkeiten().add(fertigkeit);
+ 
     }
 
 	/**
@@ -50,6 +106,17 @@ public abstract class ChangesTest extends TestCase {
      */
 	protected Changes getFixture() {
         return fixture;
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testGetKarmaCost() {
+        fail();
     }
 
 } //ChangesTest

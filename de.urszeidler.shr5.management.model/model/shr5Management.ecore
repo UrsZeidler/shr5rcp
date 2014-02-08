@@ -6,7 +6,7 @@
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktPersona"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
-        eType="#//Changes" containment="true"/>
+        eType="#//Changes" containment="true" eOpposite="#//Changes/character"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chracterSource" lowerBound="1"
         eType="#//CharacterGenerator" eOpposite="#//CharacterGenerator/character"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inventar" upperBound="-1"
@@ -51,6 +51,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="NonPlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
   <eClassifiers xsi:type="ecore:EClass" name="Changes" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="character" eType="#//ManagedCharacter"
+        eOpposite="#//ManagedCharacter/changes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KarmaGaint" eSuperTypes="#//Changes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karma" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -348,7 +352,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeChange" eSuperTypes="#//PersonaValueChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeChange" eSuperTypes="#//PersonaValueChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attibute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
   <eClassifiers xsi:type="ecore:EClass" name="Mudan" eSuperTypes="#//SpecialType"/>
   <eClassifiers xsi:type="ecore:EEnum" name="GeneratorState">
@@ -373,8 +379,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
         eType="#//ManagedCharacter"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FertigkeitChange" eSuperTypes="#//PersonaValueChange"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PersonaValueChange" eSuperTypes="#//KarmaGaint">
+  <eClassifiers xsi:type="ecore:EClass" name="FertigkeitChange" eSuperTypes="#//PersonaValueChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skillGroup" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaFertigkeitsGruppe"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaValueChange" abstract="true"
+      eSuperTypes="#//Changes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -390,11 +400,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChangeQuallity" eSuperTypes="#//Advancement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="QuallityChange" eSuperTypes="#//KarmaGaint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuallityChange" eSuperTypes="#//Changes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quallity" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//PersonaEigenschaft"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="added" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LifestyleToStartMoney">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moneyFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lifeStyles" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaInitation" eSuperTypes="#//Changes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="garde" lowerBound="1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Initation"/>
   </eClassifiers>
 </ecore:EPackage>

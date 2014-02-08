@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -312,6 +313,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateQuallityChange((QuallityChange)value, diagnostics, context);
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY:
                 return validateLifestyleToStartMoney((LifestyleToStartMoney)value, diagnostics, context);
+            case Shr5managementPackage.PERSONA_INITATION:
+                return validatePersonaInitation((PersonaInitation)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -801,6 +804,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateLifestyleToStartMoney(LifestyleToStartMoney lifestyleToStartMoney, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(lifestyleToStartMoney, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validatePersonaInitation(PersonaInitation personaInitation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(personaInitation, diagnostics, context);
     }
 
     /**

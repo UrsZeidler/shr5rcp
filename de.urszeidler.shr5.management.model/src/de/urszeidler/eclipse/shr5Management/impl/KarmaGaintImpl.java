@@ -142,6 +142,16 @@ public class KarmaGaintImpl extends ChangesImpl implements KarmaGaint {
         return super.eIsSet(featureID);
     }
 
+	   /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getKarmaCost() {
+        return getKarma();
+    }
+
+	
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

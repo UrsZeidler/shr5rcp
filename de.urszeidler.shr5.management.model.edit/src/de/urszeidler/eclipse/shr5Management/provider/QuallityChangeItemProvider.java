@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -17,7 +18,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5Management.QuallityChange;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.QuallityChange} object.
@@ -26,7 +30,7 @@ import de.urszeidler.eclipse.shr5Management.QuallityChange;
  * @generated
  */
 public class QuallityChangeItemProvider
-	extends KarmaGaintItemProvider
+	extends ChangesItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -54,11 +58,57 @@ public class QuallityChangeItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addQuallityPropertyDescriptor(object);
+            addAddedPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
 	/**
+     * This adds a property descriptor for the Quallity feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addQuallityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_QuallityChange_quallity_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_QuallityChange_quallity_feature", "_UI_QuallityChange_type"),
+                 Shr5managementPackage.Literals.QUALLITY_CHANGE__QUALLITY,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Added feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAddedPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_QuallityChange_added_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_QuallityChange_added_feature", "_UI_QuallityChange_type"),
+                 Shr5managementPackage.Literals.QUALLITY_CHANGE__ADDED,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns QuallityChange.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,6 +144,12 @@ public class QuallityChangeItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(QuallityChange.class)) {
+            case Shr5managementPackage.QUALLITY_CHANGE__ADDED:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
         super.notifyChanged(notification);
     }
 

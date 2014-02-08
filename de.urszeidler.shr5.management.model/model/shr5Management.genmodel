@@ -50,6 +50,7 @@
     <genClasses ecoreClass="shr5Management.ecore#//NonPlayerCharacter"/>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//Changes">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Changes/date"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Changes/karmaCost"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//KarmaGaint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//KarmaGaint/karma"/>
@@ -230,7 +231,9 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllPowerPoints/context"/>
       </genOperations>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//AttributeChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//AttributeChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//AttributeChange/attibute"/>
+    </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerCharacter"/>
     <genClasses ecoreClass="shr5Management.ecore#//Mudan"/>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterGroup">
@@ -241,7 +244,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Connection/loyality"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Connection/character"/>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//FertigkeitChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//FertigkeitChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FertigkeitChange/skill"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//FertigkeitChange/skillGroup"/>
+    </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PersonaValueChange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PersonaValueChange/from"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PersonaValueChange/to"/>
@@ -257,11 +263,17 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//IncreaseCharacterPart/type"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//ChangeQuallity"/>
-    <genClasses ecoreClass="shr5Management.ecore#//QuallityChange"/>
+    <genClasses ecoreClass="shr5Management.ecore#//QuallityChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuallityChange/quallity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//QuallityChange/added"/>
+    </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//LifestyleToStartMoney">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/numberOfW"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//LifestyleToStartMoney/moneyFactor"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//LifestyleToStartMoney/lifeStyles"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//PersonaInitation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PersonaInitation/garde"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

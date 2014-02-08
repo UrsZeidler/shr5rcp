@@ -15,56 +15,73 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  */
 public class FertigkeitChangeTest extends PersonaValueChangeTest {
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         TestRunner.run(FertigkeitChangeTest.class);
     }
 
-	/**
+    /**
      * Constructs a new Fertigkeit Change test case with the given name.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public FertigkeitChangeTest(String name) {
+    public FertigkeitChangeTest(String name) {
         super(name);
     }
 
-	/**
+    /**
      * Returns the fixture for this Fertigkeit Change test case.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	@Override
-	protected FertigkeitChange getFixture() {
+    @Override
+    protected FertigkeitChange getFixture() {
         return (FertigkeitChange)fixture;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
-	@Override
-	protected void setUp() throws Exception {
+    @Override
+    protected void setUp() throws Exception {
         setFixture(Shr5managementFactory.eINSTANCE.createFertigkeitChange());
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
-	@Override
-	protected void tearDown() throws Exception {
+    @Override
+    protected void tearDown() throws Exception {
         setFixture(null);
     }
 
-} //FertigkeitChangeTest
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testGetKarmaCost() {
+        getFixture().setSkill(playerCharacter.getPersona().getFertigkeiten().get(0));
+        getFixture().setFrom(2);
+        getFixture().setTo(3);
+        
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-6, getFixture().getKarmaCost());
+    }
+
+} // FertigkeitChangeTest

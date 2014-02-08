@@ -520,29 +520,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
 	/**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.PersonaValueChange} instances.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	protected PersonaValueChangeItemProvider personaValueChangeItemProvider;
-
-	/**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaValueChange}.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	@Override
-	public Adapter createPersonaValueChangeAdapter() {
-        if (personaValueChangeItemProvider == null) {
-            personaValueChangeItemProvider = new PersonaValueChangeItemProvider(this);
-        }
-
-        return personaValueChangeItemProvider;
-    }
-
-	/**
      * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -655,6 +632,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         }
 
         return lifestyleToStartMoneyItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.PersonaInitation} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PersonaInitationItemProvider personaInitationItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.PersonaInitation}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPersonaInitationAdapter() {
+        if (personaInitationItemProvider == null) {
+            personaInitationItemProvider = new PersonaInitationItemProvider(this);
+        }
+
+        return personaInitationItemProvider;
     }
 
     /**
@@ -775,12 +775,12 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (characterGroupItemProvider != null) characterGroupItemProvider.dispose();
         if (connectionItemProvider != null) connectionItemProvider.dispose();
         if (fertigkeitChangeItemProvider != null) fertigkeitChangeItemProvider.dispose();
-        if (personaValueChangeItemProvider != null) personaValueChangeItemProvider.dispose();
         if (generatorStateToEStringMapEntryItemProvider != null) generatorStateToEStringMapEntryItemProvider.dispose();
         if (increaseCharacterPartItemProvider != null) increaseCharacterPartItemProvider.dispose();
         if (changeQuallityItemProvider != null) changeQuallityItemProvider.dispose();
         if (quallityChangeItemProvider != null) quallityChangeItemProvider.dispose();
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
+        if (personaInitationItemProvider != null) personaInitationItemProvider.dispose();
     }
 
 	/**
@@ -898,11 +898,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createPersonaValueChange()));
-
-                newChildDescriptors.add
-                    (createChildParameter
-                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createAttributeChange()));
 
                 newChildDescriptors.add
@@ -954,6 +949,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createPersonaInitation()));
 
                 return null;
             }

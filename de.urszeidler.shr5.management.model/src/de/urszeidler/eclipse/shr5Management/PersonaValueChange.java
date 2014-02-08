@@ -18,10 +18,10 @@ package de.urszeidler.eclipse.shr5Management;
  * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaValueChange()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface PersonaValueChange extends KarmaGaint {
+public interface PersonaValueChange extends Changes {
 	/**
      * Returns the value of the '<em><b>From</b></em>' attribute.
      * <!-- begin-user-doc -->

@@ -32,6 +32,7 @@ public class Shr5managementTests extends TestSuite {
 	public static Test suite() {
         TestSuite suite = new Shr5managementTests("shr5Management Tests");
         suite.addTestSuite(NonPlayerCharacterTest.class);
+        suite.addTestSuite(KarmaGaintTest.class);
         suite.addTestSuite(MetaTypeTest.class);
         suite.addTestSuite(AttributesTest.class);
         suite.addTestSuite(SkillTest.class);
@@ -41,8 +42,12 @@ public class Shr5managementTests extends TestSuite {
         suite.addTestSuite(AdeptTest.class);
         suite.addTestSuite(FreeStyleGeneratorTest.class);
         suite.addTestSuite(Shr5GeneratorTest.class);
+        suite.addTestSuite(AttributeChangeTest.class);
         suite.addTestSuite(PlayerCharacterTest.class);
         suite.addTestSuite(MudanTest.class);
+        suite.addTestSuite(FertigkeitChangeTest.class);
+        suite.addTestSuite(QuallityChangeTest.class);
+        suite.addTestSuite(PersonaInitationTest.class);
         return suite;
     }
 
