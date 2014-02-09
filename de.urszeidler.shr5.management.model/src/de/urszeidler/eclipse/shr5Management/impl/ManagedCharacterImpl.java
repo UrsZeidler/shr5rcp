@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.Connection;
@@ -29,6 +30,7 @@ import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Managed Character</b></em>'. <!-- end-user-doc -->
@@ -613,18 +615,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @generated not
      */
     public int getKarmaGaint() {
-        int karmaGaint = 0;
-        EList<Changes> changes = getChanges();
-        for (Changes change : changes) {
-            if (change.eClass().equals(Shr5managementPackage.Literals.KARMA_GAINT)) {
-                if (change instanceof KarmaGaint) {
-                    KarmaGaint kg = (KarmaGaint)change;
-                    if (kg.isChangeApplied())
-                        karmaGaint = karmaGaint + kg.getKarma();
-                }
-            }
-        }
-        return karmaGaint;
+        return ShadowrunManagmentTools.getKarmaGaint(this);
     }
 
     /**

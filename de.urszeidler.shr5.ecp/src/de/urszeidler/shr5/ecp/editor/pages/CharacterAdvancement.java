@@ -31,6 +31,7 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -40,16 +41,12 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.ecp.editor.widgets.CharacterAdvacementWidget;
 
 public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
     private ManagedCharacter object;
     private EditingDomain editingDomain;
-    private Collection<EClass> selectableChanges;
-    private Composite composite_form;
     private DataBindingContext m_bindingContext;
-    private ComboViewer comboViewer;
-    private Combo combo;
-    private Changes currentChange;
 
     /**
      * Create the form page.
@@ -74,8 +71,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
     public CharacterAdvancement(FormEditor editor, String id, String title) {
         super(editor, id, title);
         object = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
-
-        initalizeData();
+        object.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
 
     }
 
@@ -95,7 +91,6 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
         this.object = object;
         this.editingDomain = editingDomain;
         this.mananger = manager;
-        initalizeData();
 
     }
 
@@ -108,89 +103,27 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
     protected void createFormContent(IManagedForm managedForm) {
         final FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
-        form.setText("Empty FormPage");
+        form.setText("Character advacements");
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
-        Group grpAddAnAdvacment = new Group(managedForm.getForm().getBody(), SWT.NONE);
-        grpAddAnAdvacment.setLayout(new GridLayout(2, true));
-        grpAddAnAdvacment.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        grpAddAnAdvacment.setText("Add an advacment");
-        managedForm.getToolkit().adapt(grpAddAnAdvacment);
-        managedForm.getToolkit().paintBordersFor(grpAddAnAdvacment);
+        Composite composite_advacements = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        composite_advacements.setLayout(new FillLayout(SWT.HORIZONTAL));
+        GridData gd_composite_advacements = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
+        gd_composite_advacements.heightHint = 106;
+        composite_advacements.setLayoutData(gd_composite_advacements);
+        managedForm.getToolkit().adapt(composite_advacements);
+        managedForm.getToolkit().paintBordersFor(composite_advacements);
 
-      final  Composite composite_1 = new Composite(grpAddAnAdvacment, SWT.NONE);
-        composite_1.setLayout(new GridLayout(2, false));
-        composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        managedForm.getToolkit().adapt(composite_1);
-        managedForm.getToolkit().paintBordersFor(composite_1);
+        CharacterAdvacementWidget characterAdvacementWidget = new CharacterAdvacementWidget(composite_advacements, SWT.NONE, editingDomain, object,
+                toolkit);
+        managedForm.getToolkit().adapt(characterAdvacementWidget);
+        managedForm.getToolkit().paintBordersFor(characterAdvacementWidget);
 
-        Label lblType = managedForm.getToolkit().createLabel(composite_1, "type", SWT.NONE);
-        lblType.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-
-        comboViewer = new ComboViewer(composite_1, SWT.NONE);
-        comboViewer.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-        comboViewer.setContentProvider(new ArrayContentProvider());
-        comboViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-            public void selectionChanged(SelectionChangedEvent event) {
-                buildDetail( toolkit, event.getSelection());
-            }
-        });
-
-        comboViewer.setInput(selectableChanges);
-        combo = comboViewer.getCombo();
-        combo.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        managedForm.getToolkit().paintBordersFor(combo);
-
-        final Composite composite_2 = new Composite(grpAddAnAdvacment, SWT.NONE);
-        composite_2.setLayout(new FillLayout(SWT.HORIZONTAL));
-        GridData gd_composite_2 = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 5);
-        gd_composite_2.heightHint = 200;
-        composite_2.setLayoutData(gd_composite_2);
-
-
-        managedForm.getToolkit().adapt(composite_2);
-        managedForm.getToolkit().paintBordersFor(composite_2);
-
-        composite_form = new Composite(composite_2, SWT.NONE);
-        composite_form.setLayout(new GridLayout(3, false));
-        managedForm.getToolkit().adapt(composite_form);
-        managedForm.getToolkit().paintBordersFor(composite_form);
-
-        ToolBar toolBar = new ToolBar(grpAddAnAdvacment, SWT.FLAT | SWT.RIGHT);
-        managedForm.getToolkit().adapt(toolBar);
-        managedForm.getToolkit().paintBordersFor(toolBar);
-
-        ToolItem tltmDo = new ToolItem(toolBar, SWT.NONE);
-        tltmDo.addSelectionListener(new SelectionAdapter() {
-            @Override
-            public void widgetSelected(SelectionEvent e) {
-                applyChange();
-                combo.setEnabled(true);
-                
-            }
-        });
-        tltmDo.setText("do");
-        
-        ToolItem tltmCancel = new ToolItem(toolBar, SWT.NONE);
-        tltmCancel.addSelectionListener(new SelectionAdapter() {
-            @Override
-            public void widgetSelected(SelectionEvent e) {
-                object.getChanges().remove(currentChange);
-                combo.setEnabled(true);
-            }
-        });
-        tltmCancel.setText("cancel");
-        
-        Label lblNewLabel = new Label(grpAddAnAdvacment, SWT.NONE);
-        lblNewLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 2));
-        managedForm.getToolkit().adapt(lblNewLabel, true, true);
-        new Label(grpAddAnAdvacment, SWT.NONE);
-
-   Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
         composite.setLayout(new FillLayout(SWT.HORIZONTAL));
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
@@ -212,55 +145,10 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
 
     }
 
-    protected void applyChange() {
-        if(currentChange!=null){
-            currentChange.applyChanges();
-        }
-        
-    }
-
-    protected void buildDetail( FormToolkit toolkit, ISelection selection) {
-        Composite parent = composite_form.getParent();
-        composite_form.dispose();
-        composite_form = new Composite(parent, SWT.NONE);
-        composite_form.setLayout(new GridLayout(3, false));
-        composite_form.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        toolkit.adapt(composite_form);
-        toolkit.paintBordersFor(composite_form);
-        combo.setEnabled(false);
-        
-        StructuredSelection ss = (StructuredSelection)selection;
-        EClass eClass = (EClass)ss.getFirstElement();
-
-        currentChange =(Changes) eClass.getEPackage().getEFactoryInstance().create(eClass);
-        object.getChanges().add(currentChange);
-        
-        
-        emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil.getInstance()
-                .getLabelProvider(), getEditingDomain());
-        emfFormBuilder.setManager(mananger);
-        emfFormBuilder.setBorderStyle(SWT.NONE);
-
-        List<EStructuralFeature> eAllStructuralFeatures = new ArrayList<EStructuralFeature>( eClass.getEAllStructuralFeatures());
-        eAllStructuralFeatures.remove(Shr5managementPackage.Literals.CHANGES__CHARACTER);
-        emfFormBuilder.addAllEntries(eAllStructuralFeatures, composite_form);
-
-        emfFormBuilder.buildinComposite(m_bindingContext, composite_form, currentChange);
-        composite_form.layout();
-        parent.layout();
-        //grpAddAnAdvacment.layout();
-
-    }
-
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
         return bindingContext;
-    }
-
-    private void initalizeData() {
-        selectableChanges = ShadowrunEditingTools.provideNewClassTypes(object, Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES,
-                editingDomain);
     }
 
     @Override

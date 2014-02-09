@@ -9,15 +9,52 @@ import org.eclipse.emf.ecore.EClass;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5Management.Advancement;
+import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
+import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * @author urs
  */
 public class ShadowrunManagmentTools {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public static int getKarmaSpend(ManagedCharacter managedCharacter) {
+        int karmaGaint = 0;
+        EList<Changes> changes = managedCharacter.getChanges();
+        for (Changes change : changes) {
+            if (!change.eClass().equals(Shr5managementPackage.Literals.KARMA_GAINT)) {
+                if (change.isChangeApplied()) {
+                    karmaGaint = karmaGaint + change.getKarmaCost();
+                }
+            }
+        }
+        return karmaGaint;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public static int getKarmaGaint(ManagedCharacter managedCharacter) {
+        int karmaGaint = 0;
+        EList<Changes> changes = managedCharacter.getChanges();
+        for (Changes change : changes) {
+            if (change.eClass().equals(Shr5managementPackage.Literals.KARMA_GAINT)) {
+                if (change instanceof KarmaGaint) {
+                    KarmaGaint kg = (KarmaGaint)change;
+                    if (kg.isChangeApplied())
+                        karmaGaint = karmaGaint + kg.getKarma();
+                }
+            }
+        }
+        return karmaGaint;
+    }
 
     /**
      * Calcs the connection point used.

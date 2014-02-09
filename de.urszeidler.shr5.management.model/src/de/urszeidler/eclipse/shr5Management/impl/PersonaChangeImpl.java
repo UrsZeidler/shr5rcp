@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -10,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Initation;
@@ -18,8 +21,11 @@ import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -237,7 +243,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
                 return super.casePersonaFertigkeitsGruppe(object);
             }
-            
+
             @Override
             public Object casePersonaFertigkeit(PersonaFertigkeit object) {
                 if (getFrom() == 0) {
@@ -255,18 +261,36 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             }
 
             @Override
+            public Object casePersonaZauber(PersonaZauber object) {
+                if (getCharacter().getPersona() instanceof Zauberer) {
+                    Zauberer z = (Zauberer)getCharacter().getPersona();
+                    EList<PersonaZauber> list = z.getZauber();
+                    addOrRemoveEntry(object, list);
+                }
+                return object;
+            }
+
+            @Override
+            public Object casePersonaKomplexForm(PersonaKomplexForm object) {
+                if (getCharacter().getPersona() instanceof Technomancer) {
+                    Technomancer persona = (Technomancer)getCharacter().getPersona();
+                    EList<PersonaKomplexForm> list = persona.getComplexForms();
+                    addOrRemoveEntry(object, list);
+
+                }
+                return object;
+            }
+
+            @Override
             public Object casePersonaEigenschaft(PersonaEigenschaft object) {
                 if (getCharacter().getPersona() instanceof KoerperPersona) {
                     KoerperPersona kp = (KoerperPersona)getCharacter().getPersona();
                     EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
-                    if (getTo() == 0) {
-                        eigenschaften.remove(object);
-                    } else {
-                        eigenschaften.add(object);
-                    }
+                    addOrRemoveEntry(object, eigenschaften);
                 }
                 return object;
             }
+
         };
         shr5Switch.doSwitch(getChangeable());
 
@@ -276,6 +300,9 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * @generated not
      */
     public int getKarmaCost() {
+        if (getChangeable() == null)
+            return 0;
+
         Shr5Switch<Integer> sw = new Shr5Switch<Integer>() {
             @Override
             public Integer casePersonaEigenschaft(PersonaEigenschaft object) {
@@ -420,6 +447,15 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             }
         }
         return 0;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    private void addOrRemoveEntry(EObject object, List eigenschaften) {
+        if (getTo() == 0) {
+            eigenschaften.remove(object);
+        } else {
+            eigenschaften.add(object);
+        }
     }
 
 } // PersonaChangeImpl
