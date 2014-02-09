@@ -5,11 +5,14 @@ package de.urszeidler.eclipse.shr5Management.tests;
 
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,6 +79,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     protected void tearDown() throws Exception {
         setFixture(null);
     }
+
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
      * <!-- begin-user-doc -->
@@ -85,7 +89,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * @generated not
      */
     public void testGetKarmaCost() {
-        //fail();
+        // fail();
     }
 
     /**
@@ -142,13 +146,12 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         // getFixture().setTo(3);
 
         playerCharacter.getChanges().add(getFixture());
-        assertEquals((value+1) * -2, getFixture().getKarmaCost());
-        
+        assertEquals((value + 1) * -2, getFixture().getKarmaCost());
+
         getFixture().applyChanges();
-        assertEquals(value+1, personaFertigkeit.getStufe());
+        assertEquals(value + 1, personaFertigkeit.getStufe());
     }
 
-    
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
      * <!-- begin-user-doc -->
@@ -166,12 +169,145 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
 
         playerCharacter.getChanges().add(getFixture());
 
-        
         getFixture().applyChanges();
 
         assertEquals(true, getFixture().isChangeApplied());
         assertNotNull(getFixture().getDateApplied());
-//        fail();
+
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges_QuallityAdd() {
+        getFixture().setCharacter(playerCharacter);
+
+        PersonaEigenschaft value = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        value.setKarmaKosten(10);
+        getFixture().setChangeable(value);
+        assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+
+        assertEquals(getFixture().getTo(), 1);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
+        assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges_QuallityRemove() {
+        getFixture().setCharacter(playerCharacter);
+
+        PersonaEigenschaft value = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        if (playerCharacter.getPersona() instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)playerCharacter.getPersona();
+            kp.getEigenschaften().add(value);
+        }
+
+        value.setKarmaKosten(10);
+        getFixture().setChangeable(value);
+
+        assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+
+        assertEquals(getFixture().getTo(), 0);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+        assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testApplyChanges_Skill_Increase() {
+        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+        int value = personaFertigkeit.getStufe();
+        getFixture().setChangeable(personaFertigkeit);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals((value + 1) * -2, getFixture().getKarmaCost());
+        assertEquals(getFixture().getFrom(), value);
+        assertEquals(getFixture().getTo(), value + 1);
+
+        getFixture().applyChanges();
+        assertEquals(value + 1, personaFertigkeit.getStufe());
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testApplyChanges_Skill_New() {
+        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        assertFalse(playerCharacter.getPersona().getFertigkeiten().contains(fertigkeit));
+        fertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+
+        getFixture().setChangeable(fertigkeit);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-2, getFixture().getKarmaCost());
+        assertEquals(getFixture().getFrom(), 0);
+        assertEquals(getFixture().getTo(), 1);
+
+        getFixture().applyChanges();
+        assertEquals(1, fertigkeit.getStufe());
+        assertTrue(playerCharacter.getPersona().getFertigkeiten().contains(fertigkeit));
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testApplyChanges_SkillGroup_Increase() {
+        PersonaFertigkeitsGruppe fertigkeitsGruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+        fertigkeitsGruppe.setGruppe(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
+        playerCharacter.getPersona().getFertigkeitsGruppen().add(fertigkeitsGruppe);
+        fertigkeitsGruppe.setStufe(1);
+        getFixture().setChangeable(fertigkeitsGruppe);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-10, getFixture().getKarmaCost());
+        assertEquals(getFixture().getFrom(), 1);
+        assertEquals(getFixture().getTo(), 2);
+
+        getFixture().applyChanges();
+        assertEquals(2, fertigkeitsGruppe.getStufe());
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+    }
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testApplyChanges_SkillGroup_New() {
+        PersonaFertigkeitsGruppe fertigkeitsGruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+        fertigkeitsGruppe.setGruppe(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
+        //playerCharacter.getPersona().getFertigkeitsGruppen().add(fertigkeitsGruppe);
+        //fertigkeitsGruppe.setStufe(1);
+        getFixture().setChangeable(fertigkeitsGruppe);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-5, getFixture().getKarmaCost());
+        assertEquals(getFixture().getFrom(), 0);
+        assertEquals(getFixture().getTo(), 1);
+
+        getFixture().applyChanges();
+        assertEquals(1, fertigkeitsGruppe.getStufe());
+        assertTrue(playerCharacter.getPersona().getFertigkeitsGruppen().contains(fertigkeitsGruppe));
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
     }
 
 } // PersonaChangeTest

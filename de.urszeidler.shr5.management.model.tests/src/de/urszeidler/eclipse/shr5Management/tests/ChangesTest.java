@@ -77,6 +77,11 @@ public abstract class ChangesTest extends TestCase {
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(5);
+        part.setType(Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+        shr5System.getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(5);
         part.setType(EcorePackage.Literals.EATTRIBUTE);
         shr5System.getCharacterAdvancements().add(part);
 

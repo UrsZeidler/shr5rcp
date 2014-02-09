@@ -4,17 +4,22 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -119,9 +124,22 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
 
                 @Override
+                public Object casePersonaEigenschaft(PersonaEigenschaft object) {
+                    if (ShadowrunManagmentTools.hasEigenschaft(getCharacter(), object)) {
+                        setFrom(1);
+                        setTo(0);
+                    } else {
+                        setFrom(0);
+                        setTo(1);
+                    }
+                    return object;
+                }
+
+                @Override
                 public Object caseErlernbar(Erlernbar object) {
-                    // TODO Auto-generated method stub
-                    return super.caseErlernbar(object);
+                    setFrom(0);
+                    setTo(1);
+                    return object;
                 }
             };
             Object ret = shr5Switch.doSwitch(newChangeable);
@@ -209,21 +227,49 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
         internalApply();
 
         Shr5Switch<Object> shr5Switch = new Shr5Switch<Object>() {
+
+            @Override
+            public Object casePersonaFertigkeitsGruppe(PersonaFertigkeitsGruppe object) {
+                if (getFrom() == 0) {
+                    getCharacter().getPersona().getFertigkeitsGruppen().add(object);
+                    object.setStufe(getTo());
+                    return object;
+                }
+                return super.casePersonaFertigkeitsGruppe(object);
+            }
+            
+            @Override
+            public Object casePersonaFertigkeit(PersonaFertigkeit object) {
+                if (getFrom() == 0) {
+                    getCharacter().getPersona().getFertigkeiten().add(object);
+                    object.setStufe(getTo());
+                    return object;
+                }
+                return super.casePersonaFertigkeit(object);
+            }
+
             @Override
             public Object caseSteigerbar(Steigerbar object) {
                 object.setStufe(getTo());
                 return object;
             }
+
+            @Override
+            public Object casePersonaEigenschaft(PersonaEigenschaft object) {
+                if (getCharacter().getPersona() instanceof KoerperPersona) {
+                    KoerperPersona kp = (KoerperPersona)getCharacter().getPersona();
+                    EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
+                    if (getTo() == 0) {
+                        eigenschaften.remove(object);
+                    } else {
+                        eigenschaften.add(object);
+                    }
+                }
+                return object;
+            }
         };
         shr5Switch.doSwitch(getChangeable());
 
-        shr5Switch = new Shr5Switch<Object>() {
-            @Override
-            public Object casePersonaFertigkeit(PersonaFertigkeit object) {
-                return super.casePersonaFertigkeit(object);
-            }
-        };
-        
     }
 
     /**
@@ -250,13 +296,42 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             public Integer caseInitation(Initation object) {
                 return getKarmaCostInitation(object);
             }
+
+            @Override
+            public Integer caseZauber(Zauber object) {
+                return getKarmaCostAdd(object);
+            }
+
+            @Override
+            public Integer casePersonaKomplexForm(PersonaKomplexForm object) {
+                return getKarmaCostAdd(object);
+            }
         };
 
         Integer i = sw.doSwitch(getChangeable());
-        if (i != null){
-         
-            
+        if (i != null) {
+
             return i;
+        }
+        return 0;
+    }
+
+    /**
+     * Return the karma cost for spell and complex form.
+     */
+    private Integer getKarmaCostAdd(EObject eobject) {
+        if (getCharacter() == null)
+            return 0;
+        CharacterGenerator chracterSource = getCharacter().getChracterSource();
+        if (chracterSource == null)
+            return 0;
+        if (eobject != null) {
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+                    eobject.eClass());
+            if (part != null) {
+                int karmaFactor = part.getKarmaFactor();
+                return -1 * Math.abs(karmaFactor * 1);
+            }
         }
         return 0;
     }

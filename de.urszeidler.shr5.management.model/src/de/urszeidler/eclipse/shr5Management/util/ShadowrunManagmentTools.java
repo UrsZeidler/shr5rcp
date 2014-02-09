@@ -6,6 +6,8 @@ package de.urszeidler.eclipse.shr5Management.util;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -17,7 +19,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5System;
  */
 public class ShadowrunManagmentTools {
 
-    
     /**
      * Calcs the connection point used.
      * 
@@ -45,6 +46,26 @@ public class ShadowrunManagmentTools {
             return 0;
         int connP = character.getPersona().getCharisma() * shr5Generator.getCharismaToConnectionFactor();
         return connP;
+    }
+
+    /**
+     * Calcs the connections points for the sh5 system.
+     * 
+     * @param character
+     * @param shr5Generator
+     * @return
+     */
+    public static boolean hasEigenschaft(ManagedCharacter character, PersonaEigenschaft eigenschaft) {
+        if (character == null || character.getPersona() == null)
+            return false;
+
+        if (character.getPersona() instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)character.getPersona();
+            EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
+            return eigenschaften.contains(eigenschaft);
+
+        }
+        return false;
     }
 
     /**
