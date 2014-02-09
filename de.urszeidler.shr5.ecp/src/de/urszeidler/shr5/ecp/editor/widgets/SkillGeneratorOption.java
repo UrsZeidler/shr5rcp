@@ -5,9 +5,6 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.core.databinding.validation.ValidationStatus;
-import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -26,7 +23,6 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.Skill;
-import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class SkillGeneratorOption extends Composite {
     private DataBindingContext m_bindingContext;
@@ -46,11 +42,11 @@ public class SkillGeneratorOption extends Composite {
 
     private int minSize = 40;
 
-    private NumberInRangeValidator skillsInRangeValidator;
-
-    private NumberInRangeValidator groupsInRangeValidator;
-
-    private NumberInRangeValidator knownlegeSkillsInRangeValidator;
+//    private NumberInRangeValidator skillsInRangeValidator;
+//
+//    private NumberInRangeValidator groupsInRangeValidator;
+//
+//    private NumberInRangeValidator knownlegeSkillsInRangeValidator;
 
     /**
      * Create the composite.
@@ -89,27 +85,27 @@ public class SkillGeneratorOption extends Composite {
     }
 
     private void createWidgets() {
-        skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
-        groupsInRangeValidator = new NumberInRangeValidator(0, object.getGroupPoints());
-        knownlegeSkillsInRangeValidator = new NumberInRangeValidator(0, object.calcKnowledgeSkillPoints(context)){
-            @Override
-            public IStatus validate(Object value) {
-                if (!(value instanceof Number)) {
-                    throw new IllegalArgumentException("Parameter 'value' is not of type Number."); //$NON-NLS-1$
-                }
-
-                Number number = (Number)value;
-                if (number.longValue() > object.calcKnowledgeSkillPoints(context)) {
-                    return ValidationStatus.error(toMutchMessage);
-                }
-                if (number.longValue() < 0) {
-                    return ValidationStatus.error(toLessMessage);
-                }
-
-                return Status.OK_STATUS;
-            }
-            
-        };
+//        skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
+//        groupsInRangeValidator = new NumberInRangeValidator(0, object.getGroupPoints());
+//        knownlegeSkillsInRangeValidator = new NumberInRangeValidator(0, object.calcKnowledgeSkillPoints(context)){
+//            @Override
+//            public IStatus validate(Object value) {
+//                if (!(value instanceof Number)) {
+//                    throw new IllegalArgumentException("Parameter 'value' is not of type Number."); //$NON-NLS-1$
+//                }
+//
+//                Number number = (Number)value;
+//                if (number.longValue() > object.calcKnowledgeSkillPoints(context)) {
+//                    return ValidationStatus.error(toMutchMessage);
+//                }
+//                if (number.longValue() < 0) {
+//                    return ValidationStatus.error(toLessMessage);
+//                }
+//
+//                return Status.OK_STATUS;
+//            }
+//            
+//        };
 
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
@@ -179,14 +175,6 @@ public class SkillGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__SKILL_POINT_SPEND);
 
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-//        modelToTarget.setAfterGetValidator(skillsInRangeValidator);
-//        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-//            @Override
-//            public Object convert(Object fromObject) {
-//                int calcAttributesSpend = object.calcSkillSpend(context);
-//                return "spend :" + calcAttributesSpend + "";
-//            }
-//        });
         Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
                 new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
         ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
@@ -211,17 +199,8 @@ public class SkillGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__GROUP_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
-        modelToTarget.setAfterGetValidator(groupsInRangeValidator);
-//        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-//            @Override
-//            public Object convert(Object fromObject) {
-//                int calcAttributesSpend = object.calcGroupSpend(context);
-//                return "spend :" + calcAttributesSpend + "";
-//            }
-//        });
         bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
         //
         observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblgrpLeft);
         objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
@@ -244,18 +223,9 @@ public class SkillGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
-        modelToTarget.setAfterGetValidator(knownlegeSkillsInRangeValidator);
-//        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-//            @Override
-//            public Object convert(Object fromObject) {
-//                int calcAttributesSpend = object.calcKnowledgeSkillPoints(context);
-//                return "Knownlege :" + calcAttributesSpend + "";
-//            }
-//        });
         bindValue =bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
-        //
+       //
         observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpendKnowlegePoints);
         objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
                 Literals.SHR5_GENERATOR__KARMA_SPEND);

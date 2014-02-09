@@ -25,7 +25,6 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
-import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class ResourceGeneratorOption extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -38,8 +37,6 @@ public class ResourceGeneratorOption extends Composite {
 	private Label lblleft;
 
     private int minSize = 50;
-
-    private NumberInRangeValidator resourceInRangeValidator;
 	/**
 	 * Create the composite.
 	 * 
@@ -78,7 +75,6 @@ public class ResourceGeneratorOption extends Composite {
 	}
 
 	private void createWidgets() {
-	    resourceInRangeValidator = new NumberInRangeValidator(0, object.getResource());
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
 		GridLayout gridLayout = new GridLayout(3, false);

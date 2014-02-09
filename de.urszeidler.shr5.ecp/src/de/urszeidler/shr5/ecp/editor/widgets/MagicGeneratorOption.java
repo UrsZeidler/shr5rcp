@@ -25,7 +25,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
-import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class MagicGeneratorOption extends Composite {
     private DataBindingContext m_bindingContext;
@@ -43,9 +42,9 @@ public class MagicGeneratorOption extends Composite {
 
     private int minSize = 40;
 
-    //private NumberInRangeValidator addSkillInRangeValidator;
+    // private NumberInRangeValidator addSkillInRangeValidator;
 
-    private NumberInRangeValidator spellsInRangeValidator;
+    // private NumberInRangeValidator spellsInRangeValidator;
 
     /**
      * Create the composite.
@@ -85,7 +84,7 @@ public class MagicGeneratorOption extends Composite {
     }
 
     private void createWidgets() {
-        //addSkillInRangeValidator = new NumberInRangeValidator(0, object.getSkillNumber());
+        // addSkillInRangeValidator = new NumberInRangeValidator(0, object.getSkillNumber());
 
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
@@ -110,7 +109,7 @@ public class MagicGeneratorOption extends Composite {
         lblleft.setText("New Label");
 
         if (object instanceof Spellcaster) {
-            spellsInRangeValidator = new NumberInRangeValidator(0, ((Spellcaster)object).getSpellPoints());
+            // spellsInRangeValidator = new NumberInRangeValidator(0, ((Spellcaster)object).getSpellPoints());
             toolkit.createLabel(this, "Spells (spend/left):", SWT.NONE);
 
             lblSpellSpend = new Label(this, SWT.NONE);
@@ -128,7 +127,7 @@ public class MagicGeneratorOption extends Composite {
             lblSpellLeft.setLayoutData(gd_lblleft);
 
         } else if (object instanceof Technomancer) {
-            spellsInRangeValidator = new NumberInRangeValidator(0, ((Technomancer)object).getComplexForms());
+            // spellsInRangeValidator = new NumberInRangeValidator(0, ((Technomancer)object).getComplexForms());
             toolkit.createLabel(this, "Complex Forms (spend/left):", SWT.NONE);
             lblCFormSpend = new Label(this, SWT.NONE);
             toolkit.adapt(lblCFormSpend, true, true);
@@ -136,7 +135,6 @@ public class MagicGeneratorOption extends Composite {
             gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             gd_lblleft.widthHint = minSize;
             lblCFormSpend.setLayoutData(gd_lblleft);
-
 
             lblCFormLeft = new Label(this, SWT.NONE);
             toolkit.adapt(lblCFormLeft, true, true);
@@ -166,7 +164,6 @@ public class MagicGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__KARMA_SPEND);
 
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-        // modelToTarget.setAfterGetValidator(addSkillInRangeValidator)
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override
             public Object convert(Object fromObject) {
@@ -200,17 +197,9 @@ public class MagicGeneratorOption extends Composite {
                     Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
 
             modelToTarget = new EMFUpdateValueStrategy();
-           // modelToTarget.setAfterGetValidator(spellsInRangeValidator);
-            // modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-            // @Override
-            // public Object convert(Object fromObject) {
-            // int calcAttributesSpend = sc.calcSpellPointsSpend(context);
-            // return "Spells spend :" + calcAttributesSpend + "";
-            // }
-            // });
-            Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
-                    UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-            ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT); 
+            Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                    new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+            ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
             //
             observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpellLeft);
             objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
@@ -235,17 +224,9 @@ public class MagicGeneratorOption extends Composite {
                     Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
 
             modelToTarget = new EMFUpdateValueStrategy();
-           // modelToTarget.setAfterGetValidator(spellsInRangeValidator);
-            // modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-            // @Override
-            // public Object convert(Object fromObject) {
-            // int calcAttributesSpend = sc.calcComplexFormsSpend(context);
-            // return "Forms spend :" + calcAttributesSpend + "";
-            // }
-            // });
-            Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
-                    UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-            ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT); 
+            Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                    new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+            ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
             //
             observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblCFormLeft);
             objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),

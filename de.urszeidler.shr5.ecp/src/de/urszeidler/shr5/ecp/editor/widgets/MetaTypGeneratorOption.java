@@ -23,7 +23,6 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
-import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
 
 public class MetaTypGeneratorOption extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -36,7 +35,6 @@ public class MetaTypGeneratorOption extends Composite {
 	private Label lblleft;
 
     private int minSize = 40;
-    private NumberInRangeValidator specialPointsInRangeValidator;
 
 	/**
 	 * Create the composite.
@@ -72,7 +70,6 @@ public class MetaTypGeneratorOption extends Composite {
 		this.object = object;
 		this.context = context;
 		this.editingDomain = editingDomain;
-		specialPointsInRangeValidator = new NumberInRangeValidator(0, object.getSpecialPoints());
 		createWidgets();
 	}
 
