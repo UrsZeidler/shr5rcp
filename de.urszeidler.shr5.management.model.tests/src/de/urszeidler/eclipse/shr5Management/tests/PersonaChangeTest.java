@@ -162,10 +162,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      */
     public void testApplyChanges() {
         PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
-        int value = personaFertigkeit.getStufe();
         getFixture().setChangeable(personaFertigkeit);
-        // getFixture().setFrom(2);
-        // getFixture().setTo(3);
 
         playerCharacter.getChanges().add(getFixture());
 

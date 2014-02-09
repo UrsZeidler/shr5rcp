@@ -74,6 +74,7 @@ public abstract class ManagedCharacterTest extends TestCase {
 		KarmaGaint karmaGaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
 		karmaGaint.setKarma(23);
 		getFixture().getChanges().add(karmaGaint);
+		karmaGaint.applyChanges();
 		assertEquals("need to be 2",2, getFixture().getStreetCred());
 		karmaGaint.setKarma(29);
 		assertEquals("need to be 2",2, getFixture().getStreetCred());
@@ -108,7 +109,13 @@ public abstract class ManagedCharacterTest extends TestCase {
 		KarmaGaint karmaGaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
 		karmaGaint.setKarma(2);
 		getFixture().getChanges().add(karmaGaint);
+		karmaGaint.applyChanges();
 		assertEquals("need to be 2",2, getFixture().getKarmaGaint());
+		karmaGaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
+        karmaGaint.setKarma(2);
+        getFixture().getChanges().add(karmaGaint);
+        karmaGaint.applyChanges();
+        assertEquals("need to be 4",4, getFixture().getKarmaGaint());
 	}
 
 } //ManagedCharacterTest
