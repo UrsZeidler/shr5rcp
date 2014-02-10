@@ -67,6 +67,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
  * @author urs
  */
 public class Shr5GeneratorPage extends AbstractGeneratorPage {
+    private static final String EMPTY = "";
     private Shr5Generator object;
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
@@ -381,16 +382,16 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         ownBinding(m_bindingContext);
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry("Metatype", Shr5managementPackage.Literals.SHR5_GENERATOR__META_TYPE, compositePrio);
-        emfFormBuilder.addTextEntry("Attribute", Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE, compositePrio);
-        emfFormBuilder.addTextEntry("Magie", Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC, compositePrio);
-        emfFormBuilder.addTextEntry("Fertigkeiten", Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS, compositePrio);
-        emfFormBuilder.addTextEntry("Resourcen", Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__META_TYPE, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS, compositePrio);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, compositePrio);
 
-        emfFormBuilder.addTextEntry("Gruppe", Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
 
-        emfFormBuilder.addTextEntry("Name", Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
-        emfFormBuilder.addTextEntry("Generator", Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
+        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
@@ -570,7 +571,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 if (object.getShr5Generator() == null)
                     return "left : ---";
 
-                return "left :" + (object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend() + "");
+                return "left :" + (object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend() + EMPTY);
             }
         });
 
@@ -585,7 +586,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             public Object convert(Object fromObject) {
                 if (object.getShr5Generator() == null || object.getCharacter() == null)
                     return "Spend : ---";
-                return ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter()) + "";
+                return ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter()) + EMPTY;
             }
         });
 
@@ -601,7 +602,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             public Object convert(Object fromObject) {
                 if (object.getShr5Generator() == null || object.getCharacter() == null)
                     return "---";
-                return "" + ShadowrunManagmentTools.calcConnectionsPoints(object.getCharacter(), object.getShr5Generator());
+                return EMPTY + ShadowrunManagmentTools.calcConnectionsPoints(object.getCharacter(), object.getShr5Generator());
             }
         });
 
