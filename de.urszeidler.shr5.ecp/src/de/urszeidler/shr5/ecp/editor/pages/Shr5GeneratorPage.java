@@ -67,7 +67,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
  * @author urs
  */
 public class Shr5GeneratorPage extends AbstractGeneratorPage {
-    private static final String EMPTY = "";
+    private static final String EMPTY = ""; //$NON-NLS-1$
     private Shr5Generator object;
     private EditingDomain editingDomain;
     private DataBindingContext m_bindingContext;
@@ -169,7 +169,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().paintBordersFor(toolBar);
 
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
-        tltmChoose.setText("1. choose");
+        tltmChoose.setText(Messages.GeneratorPage_Step_One);
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
@@ -179,10 +179,10 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
             }
         });
-        tltmNewItem.setText("2. create");
+        tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
-        tltmCommit.setText("3. commit");
+        tltmCommit.setText(Messages.GeneratorPage_Step_Three);
 
         ToolItem restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
@@ -191,12 +191,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 resetCharacter(object);
             }
         });
-        restItem.setText("reset");
+        restItem.setText(Messages.GeneratorPage_reset);
 
         grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));
         grpOverview.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        grpOverview.setText("Overview");
+        grpOverview.setText(Messages.GeneratorPage_overview);
         managedForm.getToolkit().adapt(grpOverview);
         managedForm.getToolkit().paintBordersFor(grpOverview);
 
@@ -210,12 +210,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         composite_1.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(composite_1);
 
-        lblInstruction = managedForm.getToolkit().createLabel(composite_1, "ttt", SWT.NONE);
+        lblInstruction = managedForm.getToolkit().createLabel(composite_1, "ttt", SWT.NONE); //$NON-NLS-1$
 
         sctnChoose = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnChoose.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnChoose);
-        sctnChoose.setText("1. choose");
+        sctnChoose.setText(Messages.GeneratorPage_Step_One);
         sctnChoose.setExpanded(true);
 
         grpAuswahl = new Composite(sctnChoose, SWT.NONE);
@@ -232,11 +232,11 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         btnRadioButton = new Button(grpTyp, SWT.RADIO);
         btnRadioButton.setSelection(true);
         managedForm.getToolkit().adapt(btnRadioButton, true, true);
-        btnRadioButton.setText("Spieler");
+        btnRadioButton.setText(Messages.GeneratorPage_player);
 
         Button btnRadioButton_1 = new Button(grpTyp, SWT.RADIO);
         managedForm.getToolkit().adapt(btnRadioButton_1, true, true);
-        btnRadioButton_1.setText("Nichtspieler");
+        btnRadioButton_1.setText(Messages.GeneratorPage_non_player);
 
         Composite compositePrio = new Composite(grpAuswahl, SWT.NONE);
         compositePrio.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
@@ -253,7 +253,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         sctnCreate = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnCreate.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnCreate);
-        sctnCreate.setText("2. create");
+        sctnCreate.setText(Messages.GeneratorPage_Step_Two);
         sctnCreate.setExpanded(true);
 
         composite_3 = managedForm.getToolkit().createComposite(sctnCreate, SWT.NONE);
@@ -267,16 +267,16 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().adapt(composite);
         managedForm.getToolkit().paintBordersFor(composite);
 
-        managedForm.getToolkit().createLabel(composite, "phase", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite, Messages.GeneratorPage_phase, SWT.NONE);
 
-        lblPhasestate = managedForm.getToolkit().createLabel(composite, "phase_State", SWT.NONE);
+        lblPhasestate = managedForm.getToolkit().createLabel(composite, "phase_State", SWT.NONE); //$NON-NLS-1$
         GridData gd_lblPhasestate = new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1);
         gd_lblPhasestate.widthHint = 150;
         lblPhasestate.setLayoutData(gd_lblPhasestate);
 
         Label lblKarmaToResorcen = new Label(composite, SWT.NONE);
         managedForm.getToolkit().adapt(lblKarmaToResorcen, true, true);
-        lblKarmaToResorcen.setText("karma to resorcen");
+        lblKarmaToResorcen.setText(Messages.GeneratorPage_karma2Resource);
 
         spinner = new Spinner(composite, SWT.BORDER);
         GridData gd_spinner = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -286,33 +286,33 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().paintBordersFor(spinner);
 
         controlDecorationKarma = new ControlDecoration(spinner, SWT.LEFT | SWT.TOP);
-        controlDecorationKarma.setDescriptionText("Some description");
+        controlDecorationKarma.setDescriptionText("Some description"); //$NON-NLS-1$
 
         lblKarmaSpend = new Label(composite, SWT.NONE);
         GridData gd_lblKarmaSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblKarmaSpend.widthHint = 60;
         lblKarmaSpend.setLayoutData(gd_lblKarmaSpend);
         managedForm.getToolkit().adapt(lblKarmaSpend, true, true);
-        lblKarmaSpend.setText("New Label");
+        lblKarmaSpend.setText("New Label"); //$NON-NLS-1$
 
-        managedForm.getToolkit().createLabel(composite, "Connections (avail/spend)", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite, Messages.GeneratorPage_connections, SWT.NONE);
 
-        lblConnectionPoints = managedForm.getToolkit().createLabel(composite, "New Label", SWT.NONE);
+        lblConnectionPoints = managedForm.getToolkit().createLabel(composite, "New Label", SWT.NONE); //$NON-NLS-1$
         GridData gd_lblConnectionPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblConnectionPoints.widthHint = 40;
         lblConnectionPoints.setLayoutData(gd_lblConnectionPoints);
 
         controlDecorationConnections = new ControlDecoration(lblConnectionPoints, SWT.LEFT | SWT.TOP);
-        controlDecorationConnections.setDescriptionText("Some description");
+        controlDecorationConnections.setDescriptionText("Some description"); //$NON-NLS-1$
 
-        lblConnectionleft = managedForm.getToolkit().createLabel(composite, "connectionLeft", SWT.NONE);
+        lblConnectionleft = managedForm.getToolkit().createLabel(composite, "connectionLeft", SWT.NONE); //$NON-NLS-1$
         GridData gd_lblConnectionleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblConnectionleft.widthHint = 40;
         lblConnectionleft.setLayoutData(gd_lblConnectionleft);
 
         grpAttribute = new Group(composite_3, SWT.NONE);
         grpAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-        grpAttribute.setText("Attribute");
+        grpAttribute.setText(Messages.GeneratorPage_Attribute);
         managedForm.getToolkit().adapt(grpAttribute);
         managedForm.getToolkit().paintBordersFor(grpAttribute);
         grpAttribute.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -322,7 +322,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         grpSkills = new Group(composite_3, SWT.NONE);
         grpSkills.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
         grpSkills.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpSkills.setText("Skills");
+        grpSkills.setText(Messages.GeneratorPage_Skills);
         managedForm.getToolkit().adapt(grpSkills);
         managedForm.getToolkit().paintBordersFor(grpSkills);
 
@@ -331,7 +331,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         grpMagic = new Group(composite_3, SWT.NONE);
         grpMagic.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
         grpMagic.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpMagic.setText("Magic");
+        grpMagic.setText(Messages.GeneratorPage_Magic);
         managedForm.getToolkit().adapt(grpMagic);
         managedForm.getToolkit().paintBordersFor(grpMagic);
 
@@ -339,7 +339,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         grpResourcen = new Group(composite_3, SWT.NONE);
         grpResourcen.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-        grpResourcen.setText("Resourcen");
+        grpResourcen.setText(Messages.GeneratorPage_Resources);
         managedForm.getToolkit().adapt(grpResourcen);
         managedForm.getToolkit().paintBordersFor(grpResourcen);
         grpResourcen.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -349,7 +349,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         grpMetatyp = new Group(composite_3, SWT.NONE);
         grpMetatyp.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
         grpMetatyp.setLayout(new FillLayout(SWT.HORIZONTAL));
-        grpMetatyp.setText("MetaTyp");
+        grpMetatyp.setText(Messages.GeneratorPage_Metatype);
         managedForm.getToolkit().adapt(grpMetatyp);
         managedForm.getToolkit().paintBordersFor(grpMetatyp);
 
@@ -361,7 +361,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         GridData gd_grpValidation = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
         gd_grpValidation.heightHint = 150;
         grpValidation.setLayoutData(gd_grpValidation);
-        grpValidation.setText("Validation");
+        grpValidation.setText(Messages.GeneratorPage_Validation);
         managedForm.getToolkit().adapt(grpValidation);
         managedForm.getToolkit().paintBordersFor(grpValidation);
 
@@ -477,19 +477,19 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      */
     private void updateDecorators(Set<Integer> newSet) {
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_TYPE_POINTS, controlDecorationMagic,
-                "Not all type points spend.");
+                "Not all type points spend."); //$NON-NLS-1$
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS, controlDecorationMetaTyp,
-                "Not all special points spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, controlDecorationSkills, "Not all skill spend.");
+                "Not all special points spend."); //$NON-NLS-1$
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, controlDecorationSkills, "Not all skill spend."); //$NON-NLS-1$
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS, controlDecorationSkills,
-                "Not all skill spend.");
-        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_GROUP_POINTS, controlDecorationSkills, "Not all skill spend.");
+                "Not all skill spend."); //$NON-NLS-1$
+        updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_GROUP_POINTS, controlDecorationSkills, "Not all skill spend."); //$NON-NLS-1$
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS, controlDecorationAttributes,
-                "Not all attributes spend.");
+                "Not all attributes spend."); //$NON-NLS-1$
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS, controlDecorationResources,
-                "Not all resource points spend.");
+                "Not all resource points spend."); //$NON-NLS-1$
         updateDecorator(newSet, Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS, controlDecorationConnections,
-                "Not all Connection points spend.");
+                "Not all Connection points spend."); //$NON-NLS-1$
     }
 
     private void createManagedCharacter() {
@@ -569,9 +569,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             @Override
             public Object convert(Object fromObject) {
                 if (object.getShr5Generator() == null)
-                    return "left : ---";
+                    return Messages.GeneratorPage_left1;
 
-                return "left :" + (object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend() + EMPTY);
+                return Messages.GeneratorPage_left + (object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend() + EMPTY);
             }
         });
 
@@ -585,7 +585,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             @Override
             public Object convert(Object fromObject) {
                 if (object.getShr5Generator() == null || object.getCharacter() == null)
-                    return "Spend : ---";
+                    return Messages.GeneratorPage_spend;
                 return ShadowrunManagmentTools.calcConnectionsSpend(object.getCharacter()) + EMPTY;
             }
         });
@@ -601,7 +601,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             @Override
             public Object convert(Object fromObject) {
                 if (object.getShr5Generator() == null || object.getCharacter() == null)
-                    return "---";
+                    return "---"; //$NON-NLS-1$
                 return EMPTY + ShadowrunManagmentTools.calcConnectionsPoints(object.getCharacter(), object.getShr5Generator());
             }
         });

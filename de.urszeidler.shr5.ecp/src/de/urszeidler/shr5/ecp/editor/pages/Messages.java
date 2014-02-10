@@ -18,13 +18,31 @@ public class Messages extends NLS {
     public static String AbstraktPersonaPage_Special_Attributes;
     public static String AbstraktPersonaPage_Spells;
     public static String AbstraktPersonaPage_The_Limits;
+    public static String GeneratorPage_Attribute;
+    public static String GeneratorPage_connections;
+    public static String GeneratorPage_karma2Resource;
+    public static String GeneratorPage_left;
+    public static String GeneratorPage_left1;
+    public static String GeneratorPage_Magic;
+    public static String GeneratorPage_Metatype;
+
     public static String GeneratorPage_non_player;
     public static String GeneratorPage_overview;
+
+    public static String GeneratorPage_phase;
     public static String GeneratorPage_player;
+
     public static String GeneratorPage_reset;
+    public static String GeneratorPage_Resources;
+    public static String GeneratorPage_Skills;
+    public static String GeneratorPage_spend;
+
     public static String GeneratorPage_Step_One;
+
     public static String GeneratorPage_Step_Three;
+
     public static String GeneratorPage_Step_Two;
+
     public static String GeneratorPage_Validation;
     static {
         // initialize resource bundle
