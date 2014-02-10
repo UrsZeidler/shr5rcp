@@ -26,7 +26,8 @@ import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
-	private AbstraktPersona object;
+	private static final String EMPTY = ""; //$NON-NLS-1$
+    private AbstraktPersona object;
 	private EditingDomain editingDomain;
 
 	
@@ -101,7 +102,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		Group grpAttribute = new Group(body, SWT.NONE);
 		grpAttribute.setLayout(new GridLayout(4, true));
 		grpAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1));
-		grpAttribute.setText("Attribute");
+		grpAttribute.setText(Messages.AbstraktPersonaPage_Attribute);
 		toolkit.adapt(grpAttribute);
 		toolkit.paintBordersFor(grpAttribute);
 
@@ -110,7 +111,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		GridData gd_grpFertigkeiten = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
 		gd_grpFertigkeiten.heightHint = 200;
 		grpFertigkeiten.setLayoutData(gd_grpFertigkeiten);
-		grpFertigkeiten.setText("Fertigkeiten");
+		grpFertigkeiten.setText(Messages.AbstraktPersonaPage_Fertigkeiten);
 		toolkit.adapt(grpFertigkeiten);
 		toolkit.paintBordersFor(grpFertigkeiten);
 		
@@ -141,10 +142,10 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 //		toolkit.paintBordersFor(compositeGruppen);
 
 		Section sctnKoerperAttribute = managedForm.getToolkit().createSection(grpAttribute, Section.DESCRIPTION| Section.EXPANDED |Section.TWISTIE | Section.TITLE_BAR);
-		sctnKoerperAttribute.setDescription("Die körperlichen Attribute");
+		sctnKoerperAttribute.setDescription(Messages.AbstraktPersonaPage_Body_Attributes);
 		sctnKoerperAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		managedForm.getToolkit().paintBordersFor(sctnKoerperAttribute);
-		sctnKoerperAttribute.setText("Körperlich");
+		sctnKoerperAttribute.setText(Messages.AbstraktPersonaPage_Body);
 		sctnKoerperAttribute.setExpanded(true);
 		
 		Composite grpKrperlicheAttribute = new Composite(sctnKoerperAttribute, SWT.NONE);
@@ -155,10 +156,10 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		sctnKoerperAttribute.setClient(grpKrperlicheAttribute);
 		
 		Section sctnGeistigeAttribute = managedForm.getToolkit().createSection(grpAttribute, Section.DESCRIPTION| Section.EXPANDED |Section.TWISTIE | Section.TITLE_BAR);
-		sctnGeistigeAttribute.setDescription("Die geistigen Attribute");
+		sctnGeistigeAttribute.setDescription(Messages.AbstraktPersonaPage_Mental_Attributes);
 		sctnGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 		managedForm.getToolkit().paintBordersFor(sctnGeistigeAttribute);
-		sctnGeistigeAttribute.setText("Geistig");
+		sctnGeistigeAttribute.setText(Messages.AbstraktPersonaPage_Mental);
 		sctnGeistigeAttribute.setExpanded(true);
 		
 	
@@ -171,10 +172,10 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
 
 		Section sctnSpezielleAttribute = managedForm.getToolkit().createSection(grpAttribute, Section.DESCRIPTION| Section.EXPANDED |Section.TWISTIE | Section.TITLE_BAR);
-		sctnSpezielleAttribute.setDescription("Die speziellen Attribute");
+		sctnSpezielleAttribute.setDescription(Messages.AbstraktPersonaPage_Special_Attributes);
 		sctnSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 		managedForm.getToolkit().paintBordersFor(sctnSpezielleAttribute);
-		sctnSpezielleAttribute.setText("Speziell");
+		sctnSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
 		sctnSpezielleAttribute.setExpanded(true);
 
 		
@@ -186,10 +187,10 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		sctnSpezielleAttribute.setClient(grpSpezielleAttribute);
 		
 		Section sctnLimits = managedForm.getToolkit().createSection(grpAttribute, Section.DESCRIPTION| Section.EXPANDED |Section.TWISTIE | Section.TITLE_BAR);
-		sctnLimits.setDescription("Die limits");
+		sctnLimits.setDescription(Messages.AbstraktPersonaPage_The_Limits);
 		sctnLimits.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 		managedForm.getToolkit().paintBordersFor(sctnLimits);
-		sctnLimits.setText("Limits");
+		sctnLimits.setText(Messages.AbstraktPersonaPage_Limits);
 		sctnLimits.setExpanded(true);
 
 		
@@ -204,7 +205,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 			grpFertigkeitGruppe = new Group(body, SWT.NONE);
 			grpFertigkeitGruppe.setLayout(new GridLayout(2, true));
 			grpFertigkeitGruppe.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-			grpFertigkeitGruppe.setText("Eigenschaften und Einbauten");
+			grpFertigkeitGruppe.setText(Messages.AbstraktPersonaPage_EdgesFlaws_CyberBioware);
 			toolkit.adapt(grpFertigkeitGruppe);
 			toolkit.paintBordersFor(grpFertigkeitGruppe);
 
@@ -225,7 +226,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 			grpKikrfte = new Group(body2, SWT.NONE);
 			grpKikrfte.setLayout(new GridLayout(3, false));
 			grpKikrfte.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-			grpKikrfte.setText("KiKräfte");
+			grpKikrfte.setText(Messages.AbstraktPersonaPage_KiPowers);
 			toolkit.adapt(grpKikrfte);
 			toolkit.paintBordersFor(grpKikrfte);
 
@@ -240,22 +241,22 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 		personaUIToolkit.createLimits(compositelimits);
 		createFormBuilder(managedForm);
 
-		emfFormBuilder.addTextEntry("Metatyp", Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, compositeMetaType);
+		emfFormBuilder.addTextEntry(Messages.AbstraktPersonaPage_MethaType, Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, compositeMetaType);
 		
 //		emfFormBuilder.addTextEntry("", Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, compositeFertigkeiten);
 //		emfFormBuilder.addTextEntry("", Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, compositeGruppen);
 		if (object instanceof KoerperPersona) {
-			emfFormBuilder.addTextEntry("", Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, compositeEigenschaften);
-			emfFormBuilder.addTextEntry("", Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, compositeWares);
+			emfFormBuilder.addTextEntry(EMPTY, Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, compositeEigenschaften);
+			emfFormBuilder.addTextEntry(EMPTY, Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, compositeWares);
 
 		}
 		if (object instanceof KiAdept) {
-			grpKikrfte.setText("KiKräfte");
-			emfFormBuilder.addTextEntry("", Shr5Package.Literals.KI_ADEPT__KIKRAFT, grpKikrfte);
+			grpKikrfte.setText(Messages.AbstraktPersonaPage_KiPowers);
+			emfFormBuilder.addTextEntry(EMPTY, Shr5Package.Literals.KI_ADEPT__KIKRAFT, grpKikrfte);
 
 		}
 		if (object instanceof Zauberer) {
-			emfFormBuilder.addTextEntry("Zauber", Shr5Package.Literals.ZAUBERER__ZAUBER, grpKikrfte);
+			emfFormBuilder.addTextEntry(Messages.AbstraktPersonaPage_Spells, Shr5Package.Literals.ZAUBERER__ZAUBER, grpKikrfte);
 			
 		}
 
