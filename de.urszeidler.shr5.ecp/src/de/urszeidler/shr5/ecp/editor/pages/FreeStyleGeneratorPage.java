@@ -107,7 +107,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         managedForm.getToolkit().paintBordersFor(toolBar);
 
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
-        tltmChoose.setText("1. choose");
+        tltmChoose.setText(Messages.GeneratorPage_Step_One);
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
@@ -117,7 +117,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
             }
         });
-        tltmNewItem.setText("2. create");
+        tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
         tltmCommit.addSelectionListener(new SelectionAdapter() {
@@ -126,7 +126,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
                 commitCharacter();
             }
         });
-        tltmCommit.setText("3. commit");
+        tltmCommit.setText(Messages.GeneratorPage_Step_Three);
 
         restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
@@ -135,12 +135,12 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
                 resetCharacter(object);
             }
         });
-        restItem.setText("reset");
+        restItem.setText(Messages.GeneratorPage_reset);
 
         Group grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));
         grpOverview.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        grpOverview.setText("Overview");
+        grpOverview.setText(Messages.GeneratorPage_overview);
         managedForm.getToolkit().adapt(grpOverview);
         managedForm.getToolkit().paintBordersFor(grpOverview);
 
@@ -154,12 +154,12 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         composite_1.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(composite_1);
 
-        lblInstruction = managedForm.getToolkit().createLabel(composite_1, "ttt", SWT.NONE);
+        lblInstruction = managedForm.getToolkit().createLabel(composite_1, "ttt", SWT.NONE); //$NON-NLS-1$
 
         sctnChoose = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnChoose.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnChoose);
-        sctnChoose.setText("1. choose");
+        sctnChoose.setText(Messages.GeneratorPage_Step_One);
         sctnChoose.setExpanded(true);
 
         Composite grpAuswahl = new Composite(sctnChoose, SWT.NONE);
@@ -176,11 +176,11 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         btnPlayerButton = new Button(grpTyp, SWT.RADIO);
         btnPlayerButton.setSelection(true);
         managedForm.getToolkit().adapt(btnPlayerButton, true, true);
-        btnPlayerButton.setText("Player");
+        btnPlayerButton.setText(Messages.GeneratorPage_player);
 
         Button btnRadioButton_1 = new Button(grpTyp, SWT.RADIO);
         managedForm.getToolkit().adapt(btnRadioButton_1, true, true);
-        btnRadioButton_1.setText("None player");
+        btnRadioButton_1.setText(Messages.GeneratorPage_non_player);
 
         Composite compositePrio = new Composite(grpAuswahl, SWT.NONE);
         compositePrio.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
@@ -197,7 +197,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         sctnCreate = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
         sctnCreate.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().paintBordersFor(sctnCreate);
-        sctnCreate.setText("2. create");
+        sctnCreate.setText(Messages.GeneratorPage_Step_Two);
         sctnCreate.setExpanded(true);
 
         Composite composite_3 = managedForm.getToolkit().createComposite(sctnCreate, SWT.NONE);
@@ -210,7 +210,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         GridData gd_grpValidation = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
         gd_grpValidation.heightHint = 150;
         grpValidation.setLayoutData(gd_grpValidation);
-        grpValidation.setText("Validation");
+        grpValidation.setText(Messages.GeneratorPage_Validation);
         managedForm.getToolkit().adapt(grpValidation);
         managedForm.getToolkit().paintBordersFor(grpValidation);
 

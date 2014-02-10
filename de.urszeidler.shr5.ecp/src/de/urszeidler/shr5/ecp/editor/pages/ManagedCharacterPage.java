@@ -141,11 +141,11 @@ public class ManagedCharacterPage extends FormPage {
 		// +++++
 
 		createFormBuilder(managedForm);
-		emfFormBuilder.addTextEntry("Sex", Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, grpAllgemein);
-		emfFormBuilder.addTextEntry("Nativ language", Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, grpAllgemein);
-		emfFormBuilder.addTextEntry("Main Lifestyle", Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, grpAllgemein);
-		emfFormBuilder.addTextEntry("Karma gaint", Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, grpAllgemein);
-		emfFormBuilder.addTextEntry("Notoriety", Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, grpAllgemein);
+		emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX, grpAllgemein);
+		emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.MANAGED_CHARACTER__NATIVE_LANGUAGE, grpAllgemein);
+		emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.MANAGED_CHARACTER__CHOOSEN_LIFESTYLE, grpAllgemein);
+		emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT, grpAllgemein);
+		emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.MANAGED_CHARACTER__NOTORIETY, grpAllgemein);
 		emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 		managedForm.reflow(true);
 
