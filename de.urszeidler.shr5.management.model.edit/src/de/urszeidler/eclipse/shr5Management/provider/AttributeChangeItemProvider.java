@@ -18,6 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
+import de.urszeidler.eclipse.shr5.provider.Shr5ItemProviderAdapterFactory;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -98,11 +99,23 @@ public class AttributeChangeItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public String getText(Object object) {
-        Date labelValue = ((AttributeChange)object).getDate();
+        AttributeChange attributeChange = (AttributeChange)object;
+        
+        
+        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        String labelValue = "";
+        if (factory != null && attributeChange.getAttibute() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(attributeChange.getAttibute(),
+                    IItemLabelProvider.class);
+            if (labelprovider != null)
+                labelValue = labelprovider.getText(attributeChange.getAttibute()) + attributeChange.getFrom()+"->"+attributeChange.getTo();
+        }
+        
+        //Date labelValue = attributeChange.getDate();
         String label = labelValue == null ? null : labelValue.toString();
         return label == null || label.length() == 0 ?
             getString("_UI_AttributeChange_type") :
