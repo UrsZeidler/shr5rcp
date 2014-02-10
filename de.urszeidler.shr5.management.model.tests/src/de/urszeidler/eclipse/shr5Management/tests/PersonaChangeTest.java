@@ -3,14 +3,23 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import org.eclipse.emf.common.util.EList;
+
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.MysticAdept;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
@@ -284,6 +293,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         assertEquals(true, getFixture().isChangeApplied());
         assertNotNull(getFixture().getDateApplied());
     }
+
     /**
      * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
      * @generated not
@@ -291,8 +301,8 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     public void testApplyChanges_SkillGroup_New() {
         PersonaFertigkeitsGruppe fertigkeitsGruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
         fertigkeitsGruppe.setGruppe(Shr5Factory.eINSTANCE.createFertigkeitsGruppe());
-        //playerCharacter.getPersona().getFertigkeitsGruppen().add(fertigkeitsGruppe);
-        //fertigkeitsGruppe.setStufe(1);
+        // playerCharacter.getPersona().getFertigkeitsGruppen().add(fertigkeitsGruppe);
+        // fertigkeitsGruppe.setStufe(1);
         getFixture().setChangeable(fertigkeitsGruppe);
 
         playerCharacter.getChanges().add(getFixture());
@@ -305,6 +315,123 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         assertTrue(playerCharacter.getPersona().getFertigkeitsGruppen().contains(fertigkeitsGruppe));
         assertEquals(true, getFixture().isChangeApplied());
         assertNotNull(getFixture().getDateApplied());
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges_SpellAdd() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(playerCharacter);
+
+        PersonaZauber value = Shr5Factory.eINSTANCE.createPersonaZauber();
+        // value.setKarmaKosten(10);
+        getFixture().setChangeable(value);
+        // assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+
+        assertEquals(getFixture().getTo(), 1);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
+        AbstraktPersona persona = playerCharacter.getPersona();
+        // assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+        if (persona instanceof MysticAdept) {
+            MysticAdept ma = (MysticAdept)persona;
+            EList<PersonaZauber> zauber = ma.getZauber();
+            assertTrue(zauber.contains(value));
+        } else
+            fail();
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges_InitationAdd() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(playerCharacter);
+
+        Initation value = Shr5Factory.eINSTANCE.createInitation();
+        // value.setKarmaKosten(10);
+        getFixture().setChangeable(value);
+        // assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+
+        assertEquals(getFixture().getTo(), 1);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
+        AbstraktPersona persona = playerCharacter.getPersona();
+        // assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+        if (persona instanceof MysticAdept) {
+            MysticAdept ma = (MysticAdept)persona;
+            EList<Initation> zauber = ma.getInitationen();
+            assertTrue(zauber.contains(value));
+        } else
+            fail();
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges_KiPowerAdd() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(playerCharacter);
+
+        KiKraft value = Shr5Factory.eINSTANCE.createKiKraft();
+        // value.setKarmaKosten(10);
+        getFixture().setChangeable(value);
+        // assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+
+        assertEquals(getFixture().getTo(), 1);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
+        AbstraktPersona persona = playerCharacter.getPersona();
+        // assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+        if (persona instanceof MysticAdept) {
+            MysticAdept ma = (MysticAdept)persona;
+            EList<KiKraft> kikraft = ma.getKikraft();
+            assertTrue(kikraft.contains(value));
+        } else
+            fail();
+    }
+
+    
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
+    public void testApplyChanges_ResonazAdd() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createTechnoCharacter();
+        getFixture().setCharacter(playerCharacter);
+
+        PersonaKomplexForm value = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
+        // value.setKarmaKosten(10);
+        getFixture().setChangeable(value);
+        // assertFalse(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+
+        assertEquals(getFixture().getTo(), 1);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
+        AbstraktPersona persona = playerCharacter.getPersona();
+        // assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+        if (persona instanceof Technomancer) {
+            Technomancer ma = (Technomancer)persona;
+            EList<PersonaKomplexForm> zauber = ma.getComplexForms();
+            assertTrue(zauber.contains(value));
+        } else
+            fail();
     }
 
 } // PersonaChangeTest

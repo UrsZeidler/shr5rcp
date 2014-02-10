@@ -12,10 +12,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -227,7 +229,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * @generated not
      */
     public void applyChanges() {
-        if (getChangeable() == null)
+        if (getChangeable() == null || getCharacter() == null || getCharacter().getPersona() == null)
             return;
 
         internalApply();
@@ -261,6 +263,16 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             }
 
             @Override
+            public Object caseKiKraft(KiKraft object) {
+                if (getCharacter().getPersona() instanceof KiAdept) {
+                    KiAdept ka = (KiAdept)getCharacter().getPersona();
+                    EList<KiKraft> list = ka.getKikraft();
+                    addOrRemoveEntry(object, list);
+                }
+                return object;
+            }
+
+            @Override
             public Object casePersonaZauber(PersonaZauber object) {
                 if (getCharacter().getPersona() instanceof Zauberer) {
                     Zauberer z = (Zauberer)getCharacter().getPersona();
@@ -290,7 +302,16 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
                 return object;
             }
-
+            
+            @Override
+            public Object caseInitation(Initation object) {
+                if (getCharacter().getPersona() instanceof BaseMagischePersona) {
+                    BaseMagischePersona bm = (BaseMagischePersona)getCharacter().getPersona();
+                    EList<Initation> list = bm.getInitationen();
+                    addOrRemoveEntry(object, list);
+                }
+                return object;
+            }
         };
         shr5Switch.doSwitch(getChangeable());
 
@@ -300,8 +321,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * @generated not
      */
     public int getKarmaCost() {
-        if (getChangeable() == null)
-            return 0;
+        if (getChangeable() == null || getCharacter() == null || getCharacter().getPersona() == null)
+             return 0;
 
         Shr5Switch<Integer> sw = new Shr5Switch<Integer>() {
             @Override
