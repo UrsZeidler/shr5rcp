@@ -1394,55 +1394,55 @@
 <entries xsi:type="shr5:ShrList" name="generators">
 <entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" charismaToConnectionFactor="3" maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0/@entries.0">
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="9">
-<choosableTypes href="#//@entries.2/@entries.0"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="8">
-<choosableTypes href="#//@entries.2/@entries.1"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.1"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="7">
-<choosableTypes href="#//@entries.2/@entries.2"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.2"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="7">
-<choosableTypes href="#//@entries.2/@entries.3"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.3"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="5">
-<choosableTypes href="#//@entries.2/@entries.4"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.4"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="7">
-<choosableTypes href="#//@entries.2/@entries.0"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="6">
-<choosableTypes href="#//@entries.2/@entries.1"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.1"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="4">
-<choosableTypes href="#//@entries.2/@entries.2"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.2"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="4">
-<choosableTypes href="#//@entries.2/@entries.3"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.3"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="B" specialPoints="0">
-<choosableTypes href="#//@entries.2/@entries.4"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.4"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="5">
-<choosableTypes href="#//@entries.2/@entries.0"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="3">
-<choosableTypes href="#//@entries.2/@entries.1"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.1"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="1">
-<choosableTypes href="#//@entries.2/@entries.2"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.2"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="C" specialPoints="0">
-<choosableTypes href="#//@entries.2/@entries.3"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.3"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="D" specialPoints="3">
-<choosableTypes href="#//@entries.2/@entries.0"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="D" specialPoints="0">
-<choosableTypes href="#//@entries.2/@entries.1"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.1"/>
 </priorities>
 <priorities xsi:type="shr5mngt:MetaType" categorieName="E" specialPoints="0">
-<choosableTypes href="#//@entries.2/@entries.0"/>
+<choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
 <priorities xsi:type="shr5mngt:Attributes" categorieName="A" attibutePoints="24"/>
 <priorities xsi:type="shr5mngt:Attributes" categorieName="B" attibutePoints="20"/>
@@ -1532,6 +1532,12 @@
 <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
 <type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
 </characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="2">
+<type href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="13">
+<type href="http://urszeidler.de/shr5/1.0#//Initation"/>
+</characterAdvancements>
 <lifestyleToStartMoney numberOfW="1" moneyFactor="30" lifeStyles="//@entries.0/@entries.15/@entries.0"/>
 <lifestyleToStartMoney numberOfW="2" moneyFactor="40" lifeStyles="//@entries.0/@entries.15/@entries.1"/>
 <lifestyleToStartMoney numberOfW="3" moneyFactor="60" lifeStyles="//@entries.0/@entries.15/@entries.2"/>
@@ -1564,6 +1570,12 @@
 </characterAdvancements>
 <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
 <type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="2">
+<type href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
+</characterAdvancements>
+<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="13">
+<type href="http://urszeidler.de/shr5/1.0#//Initation"/>
 </characterAdvancements>
 </entries>
 </entries>

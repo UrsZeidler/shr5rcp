@@ -204,7 +204,7 @@
 						<xsl:if test="id/text()=$posid">
 							<xsl:variable name="pos" select="position()-1" />
 							<xsl:attribute name="href"><xsl:value-of
-								select="concat('#//@entries.2/@entries.',$pos)" /></xsl:attribute>
+								select="concat('#//@entries.0/@entries.2/@entries.',$pos)" /></xsl:attribute>
 						</xsl:if>
 					</xsl:for-each>
 				</xsl:for-each>
