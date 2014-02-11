@@ -451,6 +451,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE)) {
             object.setState(GeneratorState.NEW);
+        }else if(object.getCharacter()!=null && object.getCharacter().getPersona()!=null){
+            object.setState(GeneratorState.PERSONA_CREATED);
         }
         updateDecorators(newSet);
         changeSet = newChangeset;
