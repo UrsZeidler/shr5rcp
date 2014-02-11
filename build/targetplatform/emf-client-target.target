@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?>
-
-<target name="emf-client-platform-target" sequenceNumber="16">
+<?pde version="3.8"?><target name="emf-client-platform-target" sequenceNumber="19">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.7.0.201306111400"/>
@@ -74,6 +72,16 @@
 <unit id="org.eclipse.net4j.sdk.feature.group" version="4.2.1.v20130806-0658"/>
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.9.1.v20130902-0605"/>
 <repository location="http://download.eclipse.org/releases/kepler"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.babel.nls_modeling.emft.emf-client_de.feature.group" version="4.3.0.v20131123020001"/>
+<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.3.0.v20131123020001"/>
+<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.3.0.v20131123020001"/>
+<repository location="file:/home/urs/etc/custombuilding/kepler/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201402061713"/>
+<repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 </locations>
 </target>
