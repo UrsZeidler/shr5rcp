@@ -128,6 +128,18 @@
          id="org.eclipse.emf.ecp.validation.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.babel.nls_eclipse_de"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.babel.nls_modeling.emf_de"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.babel.nls_modeling.emft.emf-client_de"
+         version="0.0.0"/>
+
    <plugin
          id="javax.servlet"
          download-size="0"
