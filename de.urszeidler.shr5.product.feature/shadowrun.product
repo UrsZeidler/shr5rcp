@@ -9,6 +9,7 @@
          The shadowrun 5 IDE client.
 under Eclipse Public License, version 1.0.
 (c) Urs Zeidler
+sample images are from http://openclipart.org/
       </text>
    </aboutInfo>
 
@@ -42,7 +43,6 @@ under Eclipse Public License, version 1.0.
 
    <vm>
    </vm>
-
 
    <plugins>
    </plugins>
