@@ -416,6 +416,12 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     protected void internalApply() {
         dateApplied = new Date(System.currentTimeMillis());
         changeApplied = true;
+        
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHANGES__DATE_APPLIED, null, dateApplied));
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHANGES__CHANGE_APPLIED, false, true));
+
     }
 
 } // ChangesImpl
