@@ -5,29 +5,32 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.observable.IObservable;
+import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
+import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
+import org.eclipse.nebula.widgets.cdatetime.CDT;
+import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
@@ -59,11 +62,10 @@ import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
-import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
-import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 
@@ -78,6 +80,11 @@ public class CharacterAdvacementWidget extends Composite {
 
     private ManagedCharacter character;
     private Changes currentChange;
+
+    // private PersonaChange pchange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+    // private KarmaGaint kgaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
+    // private AttributeChange achange = Shr5managementFactory.eINSTANCE.createAttributeChange();
+
     private EditingDomain editingDomain;
     private ReferenceManager mananger = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
         public void handleManage(FormbuilderEntry e, EObject object) {
@@ -166,7 +173,7 @@ public class CharacterAdvacementWidget extends Composite {
         };
 
     };
-    private EmfFormBuilder emfFormBuilder;
+    // private EmfFormBuilder emfFormBuilder;
 
     private FormToolkit toolkit;
     private Composite composite_detail;
@@ -178,6 +185,17 @@ public class CharacterAdvacementWidget extends Composite {
     private ToolItem tltmCommit;
     private ToolItem tltmCancel;
     private Label lblInstruction;
+
+    // private Composite composite_1;
+    // private Label lblDate;
+    // private Label lblXxx;
+    // private Label lblTo;
+    // private Label lblXxx_1;
+    // private Label lblKarmaCost;
+    // private Label lblAt;
+    // private CDateTime datewidget;
+    // private Label lbl_KarmaCost;
+    // private Composite composite_5;
 
     /**
      * Create the composite.
@@ -223,7 +241,7 @@ public class CharacterAdvacementWidget extends Composite {
     private void createParts() {
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
-        setLayout(new GridLayout(3, false));
+        setLayout(new GridLayout(8, false));
 
         Composite composite = new Composite(this, SWT.NONE);
         composite.setLayout(new GridLayout(3, false));
@@ -262,7 +280,7 @@ public class CharacterAdvacementWidget extends Composite {
 
         comboViewer.setInput(selectableChanges);
         combo = comboViewer.getCombo();
-        combo.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        combo.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         toolkit.paintBordersFor(combo);
         new Label(composite, SWT.NONE);
 
@@ -292,18 +310,182 @@ public class CharacterAdvacementWidget extends Composite {
 
         lblInstruction = toolkit.createLabel(composite, "Instruction", SWT.NONE);
         lblInstruction.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+        new Label(composite, SWT.NONE);
 
         composite_detail = new Composite(this, SWT.NONE);
-        composite_detail.setLayout(new FillLayout(SWT.HORIZONTAL));
-        composite_detail.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1));
+        GridLayout gl_composite_detail = new GridLayout(1, false);
+        gl_composite_detail.marginHeight = 0;
+        gl_composite_detail.marginWidth = 0;
+        gl_composite_detail.verticalSpacing = 0;
+        composite_detail.setLayout(gl_composite_detail);
+        composite_detail.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(composite_detail);
         toolkit.paintBordersFor(composite_detail);
 
         composite_form = toolkit.createComposite(composite_detail, SWT.NONE);
+        composite_form.setLayout(new GridLayout(1, false));
+        composite_form.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+
+        composite_form.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.paintBordersFor(composite_form);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+        new Label(this, SWT.NONE);
+
+        // createComposite();
 
         m_bindingContext = initDataBindings();
+        // createPersonaValueChangeWidget(composite_form);
+        // createComposite();
+        // Composite composite_descr = createPersonaValueChangeWidget();
         updateToolbars();
+    }
+
+    /**
+     * @param parent
+     * @return
+     */
+    private void createPersonaValueChangeWidget(Composite parent) {
+        Composite composite_ValueChange = parent;
+        GridLayout gl_composite_ValueChange = new GridLayout(1, false);
+        gl_composite_ValueChange.verticalSpacing = 0;
+        gl_composite_ValueChange.marginWidth = 0;
+        composite_ValueChange.setLayout(gl_composite_ValueChange);
+
+        Composite composite_type = toolkit.createComposite(composite_ValueChange, SWT.NONE);
+        composite_type.setLayout(new GridLayout(3, false));
+        composite_type.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        toolkit.paintBordersFor(composite_type);
+
+        Composite composite_date = toolkit.createComposite(composite_ValueChange, SWT.NONE);
+        composite_date.setLayout(new GridLayout(6, false));
+        composite_date.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        toolkit.paintBordersFor(composite_date);
+
+        Label lblAt = new Label(composite_date, SWT.NONE);
+        toolkit.adapt(lblAt, true, true);
+        lblAt.setText("at");
+
+        CDateTime datewidget = new CDateTime(composite_date, CDT.DROP_DOWN);
+        datewidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 5, 1));
+
+        Composite composite_descr = toolkit.createComposite(composite_ValueChange, SWT.NONE);
+        composite_descr.setLayout(new GridLayout(7, false));
+        composite_descr.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        toolkit.paintBordersFor(composite_descr);
+
+        Label lblDate = new Label(composite_descr, SWT.NONE);
+        toolkit.adapt(lblDate, true, true);
+        lblDate.setText("from");
+
+        Label lblXxx = new Label(composite_descr, SWT.NONE);
+        GridData gd_lblXxx = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblXxx.widthHint = 20;
+        lblXxx.setLayoutData(gd_lblXxx);
+        toolkit.adapt(lblXxx, true, true);
+        lblXxx.setText("xxx");
+
+        Label lblTo = new Label(composite_descr, SWT.NONE);
+        toolkit.adapt(lblTo, true, true);
+        lblTo.setText("to");
+
+        Label lblXxx_1 = new Label(composite_descr, SWT.NONE);
+        GridData gd_lblXxx_1 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblXxx_1.widthHint = 20;
+        lblXxx_1.setLayoutData(gd_lblXxx_1);
+        toolkit.adapt(lblXxx_1, true, true);
+        lblXxx_1.setText("xxx");
+
+        Label lblKarmaCost = new Label(composite_descr, SWT.NONE);
+        toolkit.adapt(lblKarmaCost, true, true);
+        lblKarmaCost.setText("Karma Cost");
+
+        Label lblKc = toolkit.createLabel(composite_descr, "New Label", SWT.NONE);
+        GridData gd_lblKc = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblKc.widthHint = 20;
+        gd_lblKc.minimumWidth = 20;
+        lblKc.setLayoutData(gd_lblKc);
+
+        IObservableValue observeTextLbl_KarmaCostObserveWidget = WidgetProperties.text().observe(lblKc);
+        IObservableValue currentChangeKarmaCostObserveValue = EMFEditObservables.observeValue(editingDomain, currentChange,
+                Literals.CHANGES__KARMA_COST);
+        m_bindingContext.bindValue(observeTextLbl_KarmaCostObserveWidget, currentChangeKarmaCostObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        //
+        IObservableValue observeTextLblXxxObserveWidget = WidgetProperties.text().observe(lblXxx);
+        IObservableValue pchangeFromObserveValue = EMFEditObservables.observeValue(editingDomain, currentChange, Literals.PERSONA_VALUE_CHANGE__FROM);
+        m_bindingContext.bindValue(observeTextLblXxxObserveWidget, pchangeFromObserveValue,
+                new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        //
+        IObservableValue observeTextLblXxx_1ObserveWidget = WidgetProperties.text().observe(lblXxx_1);
+
+        IObservableValue pchangeKarmaCostObserveValue = EMFEditObservables.observeValue(editingDomain, currentChange,
+                Literals.PERSONA_VALUE_CHANGE__TO);
+        m_bindingContext.bindValue(observeTextLblXxx_1ObserveWidget, pchangeKarmaCostObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        //
+        IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(datewidget);
+        IObservableValue currentChangeDateObserveValue = EMFEditObservables.observeValue(editingDomain, currentChange, Literals.CHANGES__DATE);
+        m_bindingContext.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, null, null);
+
+        EmfFormBuilder emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+                .getInstance().getLabelProvider(), editingDomain);
+        emfFormBuilder.setManager(mananger);
+        emfFormBuilder.setBorderStyle(SWT.NONE);
+
+        if (currentChange instanceof AttributeChange) {
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ATTRIBUTE_CHANGE__ATTIBUTE, composite_type);
+        } else if (currentChange instanceof PersonaChange) {
+            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE, composite_type);
+        }
+
+        emfFormBuilder.buildinComposite(m_bindingContext, composite_type, currentChange);
+    }
+
+    /**
+     * @param parent
+     * @return
+     */
+    private void createKarmaGaintWidget(Composite parent) {
+        Composite composite_ValueChange = parent;
+        GridLayout gl_composite_ValueChange = new GridLayout(1, false);
+        gl_composite_ValueChange.verticalSpacing = 0;
+        gl_composite_ValueChange.marginWidth = 0;
+        composite_ValueChange.setLayout(gl_composite_ValueChange);
+
+        Composite composite_type = toolkit.createComposite(composite_ValueChange, SWT.NONE);
+        composite_type.setLayout(new GridLayout(3, false));
+        composite_type.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        toolkit.paintBordersFor(composite_type);
+
+        Composite composite_date = toolkit.createComposite(composite_ValueChange, SWT.NONE);
+        composite_date.setLayout(new GridLayout(6, false));
+        composite_date.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        toolkit.paintBordersFor(composite_date);
+
+        Label lblAt = new Label(composite_date, SWT.NONE);
+        toolkit.adapt(lblAt, true, true);
+        lblAt.setText("at");
+
+        CDateTime datewidget = new CDateTime(composite_date, CDT.DROP_DOWN);
+        datewidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 5, 1));
+
+        IObservableValue observeLocationDatewidgetObserveWidget = new CDateTimeObservableValue(datewidget);
+        IObservableValue currentChangeDateObserveValue = EMFEditObservables.observeValue(editingDomain, currentChange, Literals.CHANGES__DATE);
+        m_bindingContext.bindValue(observeLocationDatewidgetObserveWidget, currentChangeDateObserveValue, null, null);
+
+        EmfFormBuilder emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
+                .getInstance().getLabelProvider(), editingDomain);
+        emfFormBuilder.setManager(mananger);
+        emfFormBuilder.setBorderStyle(SWT.NONE);
+
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GAINT__KARMA, composite_type);
+
+        emfFormBuilder.buildinComposite(m_bindingContext, composite_type, currentChange);
+
     }
 
     protected void cancelChange() {
@@ -319,7 +501,7 @@ public class CharacterAdvacementWidget extends Composite {
         Composite parent = composite_form.getParent();
         composite_form.dispose();
         composite_form = new Composite(parent, SWT.NONE);
-        composite_form.setLayout(new GridLayout(6, false));
+        composite_form.setLayout(new GridLayout(1, false));
         composite_form.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         toolkit.adapt(composite_form);
         toolkit.paintBordersFor(composite_form);
@@ -338,7 +520,7 @@ public class CharacterAdvacementWidget extends Composite {
         Composite parent = composite_form.getParent();
         composite_form.dispose();
         composite_form = new Composite(parent, SWT.NONE);
-        composite_form.setLayout(new GridLayout(6, false));
+        composite_form.setLayout(new GridLayout(1, false));
         composite_form.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         toolkit.adapt(composite_form);
         toolkit.paintBordersFor(composite_form);
@@ -347,37 +529,17 @@ public class CharacterAdvacementWidget extends Composite {
         currentChange = (Changes)eClass.getEPackage().getEFactoryInstance().create(eClass);
         character.getChanges().add(currentChange);
 
-        emfFormBuilder = new EmfFormBuilder(toolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil.getInstance()
-                .getLabelProvider(), editingDomain);
-        emfFormBuilder.setManager(mananger);
-        emfFormBuilder.setBorderStyle(SWT.NONE);
-
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHANGES__DATE, composite_form);
-
-        if (currentChange instanceof KarmaGaint) {
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GAINT__KARMA, composite_form);
-        } else if (currentChange instanceof AttributeChange) {
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.ATTRIBUTE_CHANGE__ATTIBUTE, composite_form);
-        } else if (currentChange instanceof PersonaChange) {
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_CHANGE__CHANGEABLE, composite_form);
-        }
-
+        currentChange.setDate(ShadowrunManagmentTools.findCorrenspondingDate(character));
         if (currentChange instanceof PersonaValueChange) {
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_VALUE_CHANGE__FROM, composite_form);
-            emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PERSONA_VALUE_CHANGE__TO, composite_form);
+            createPersonaValueChangeWidget(composite_form);
+        } else if (currentChange instanceof KarmaGaint) {
+            createKarmaGaintWidget(composite_form);
         }
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHANGES__KARMA_COST, composite_form);
 
-        emfFormBuilder.buildinComposite(m_bindingContext, composite_form, currentChange);
-        composite_form.layout();
+        // composite_form.layout();
         composite_form.getParent().layout();
-        updateToolbars();
-    }
 
-    protected DataBindingContext initDataBindings() {
-        DataBindingContext bindingContext = new DataBindingContext();
-        //
-        return bindingContext;
+        updateToolbars();
     }
 
     private void updateToolbars() {
@@ -444,5 +606,12 @@ public class CharacterAdvacementWidget extends Composite {
         op.feature = Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN;
         selectableChanges.add(op);
 
+    }
+
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        //
+        return bindingContext;
     }
 }
