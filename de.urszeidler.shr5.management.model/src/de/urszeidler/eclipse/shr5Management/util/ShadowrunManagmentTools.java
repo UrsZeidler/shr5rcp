@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
@@ -121,5 +123,14 @@ public class ShadowrunManagmentTools {
             }
         }
         return null;
+    }
+    
+    /**
+     * Get the best date match.
+     * @param character
+     * @return
+     */
+    public static Date findCorrenspondingDate(ManagedCharacter character) {
+        return new Date(System.currentTimeMillis());
     }
 }
