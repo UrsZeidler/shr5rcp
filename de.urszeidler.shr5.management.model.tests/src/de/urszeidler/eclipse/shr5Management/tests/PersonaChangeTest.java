@@ -3,9 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
+import junit.textui.TestRunner;
+
 import org.eclipse.emf.common.util.EList;
 
-import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.KiKraft;

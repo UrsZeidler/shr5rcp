@@ -4,11 +4,8 @@
 package de.urszeidler.eclipse.shr5Management.tests;
 
 import junit.framework.TestCase;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
-import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
 /**
