@@ -139,9 +139,9 @@ public class PersonaFertigkeitsGruppeItemProvider extends ItemProviderAdapter im
 			IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(personaFertigkeitsGruppe.getGruppe(),
 					IItemLabelProvider.class);
 			if (labelprovider != null)
-				fertigkeitName = labelprovider.getText(personaFertigkeitsGruppe.getGruppe()) + " : ";
+				fertigkeitName = labelprovider.getText(personaFertigkeitsGruppe.getGruppe());// + " : ";
 		}
-		return fertigkeitName + personaFertigkeitsGruppe.getStufe();
+		return fertigkeitName;// + personaFertigkeitsGruppe.getStufe();
 	}
 
 	/**

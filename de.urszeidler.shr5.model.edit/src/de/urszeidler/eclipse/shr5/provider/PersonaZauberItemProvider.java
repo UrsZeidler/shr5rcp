@@ -139,10 +139,10 @@ public class PersonaZauberItemProvider extends ItemProviderAdapter implements IE
 					IItemLabelProvider.class);
 			// getString("_UI_AttributModifikatorWert_type")
 			if (labelprovider != null)
-				zaubername = labelprovider.getText(personaZauber.getFormel()) + " : ";
+				zaubername = labelprovider.getText(personaZauber.getFormel());// + " : ";
 		}
 		return zaubername// getString("_UI_PersonaFertigkeit_type") + " "
-				+ personaZauber.getStufe();
+				;//+ personaZauber.getStufe();
 	}
 
 	/**

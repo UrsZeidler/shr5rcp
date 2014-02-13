@@ -134,12 +134,22 @@ public class PersonaKomplexFormItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public String getText(Object object) {
         PersonaKomplexForm personaKomplexForm = (PersonaKomplexForm)object;
-        return getString("_UI_PersonaKomplexForm_type") + " " + personaKomplexForm.getStufe();
+        
+        ComposeableAdapterFactory factory = ((Shr5ItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        String zaubername = "";
+        if (factory != null && personaKomplexForm.getForm() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(personaKomplexForm.getForm(),
+                    IItemLabelProvider.class);
+            // getString("_UI_AttributModifikatorWert_type")
+            if (labelprovider != null)
+                zaubername = labelprovider.getText(personaKomplexForm.getForm());// + " : ";
+        }
+        return zaubername;
     }
 
 	/**

@@ -140,9 +140,9 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 			IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(personaFertigkeit.getFertigkeit(),
 					IItemLabelProvider.class);
 			if (labelprovider != null)
-				fertigkeitName = labelprovider.getText(personaFertigkeit.getFertigkeit()) + " : ";
+				fertigkeitName = labelprovider.getText(personaFertigkeit.getFertigkeit());// + " : ";
 		}
-		return fertigkeitName + personaFertigkeit.getStufe();
+		return fertigkeitName ;//+ personaFertigkeit.getStufe();
 	}
 
 	/**
