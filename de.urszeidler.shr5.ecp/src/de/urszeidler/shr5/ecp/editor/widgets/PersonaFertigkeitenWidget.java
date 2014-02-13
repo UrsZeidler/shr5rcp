@@ -48,11 +48,14 @@ import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 /**
  * 
  */
 public class PersonaFertigkeitenWidget extends Composite {
+
+    private static final String EMPTY = ""; //$NON-NLS-1$
 
     /**
      * 
@@ -196,11 +199,11 @@ public class PersonaFertigkeitenWidget extends Composite {
         Collection<EObject> skill = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEIT);
 
         GroupWrapper ungrouped = new GroupWrapper();
-        ungrouped.name = "Ungrouped skills";
+        ungrouped.name = Messages.PersonaFertigkeitenWidget_ungrouped_skills;
         GroupWrapper knownGroup = new GroupWrapper();
-        knownGroup.name = "Knowlege skills";
+        knownGroup.name = Messages.PersonaFertigkeitenWidget_knowlege_skill;
         GroupWrapper languGoup = new GroupWrapper();
-        languGoup.name = "Language skills";
+        languGoup.name = Messages.PersonaFertigkeitenWidget_language_skill;
 
         for (EObject eObject : skill) {
             if (eObject instanceof Sprachfertigkeit) {
@@ -263,7 +266,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         });
         TreeColumn trclmnName = treeViewerNameColumn.getColumn();
         tcl_composite.setColumnData(trclmnName, new ColumnPixelData(350, true, true));
-        trclmnName.setText("Gruppen/Fertigkeiten");
+        trclmnName.setText(Messages.PersonaFertigkeitenWidget_groups_skills);
 
         TreeViewerColumn treeViewerValueColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
         treeViewerValueColumn.setLabelProvider(new ColumnLabelProvider() {
@@ -279,11 +282,11 @@ public class PersonaFertigkeitenWidget extends Composite {
 
                 } else if (element instanceof FertigkeitsGruppe) {
                     FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
-                    return ShadowrunTools.findFertigkeitValue(fg, persona) + "";
+                    return ShadowrunTools.findFertigkeitValue(fg, persona) + EMPTY;
                 } else if (element instanceof GroupWrapper) {
-                    return "";
+                    return EMPTY;
                 }
-                return element == null ? "" : element.toString();
+                return element == null ? EMPTY : element.toString();
             }
         });
         treeViewerValueColumn.setEditingSupport(new EditingSupport(treeViewer) {
@@ -346,7 +349,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         });
         TreeColumn trclmnValue = treeViewerValueColumn.getColumn();
         tcl_composite.setColumnData(trclmnValue, new ColumnPixelData(70, true, true));
-        trclmnValue.setText("value");
+        trclmnValue.setText(Messages.PersonaFertigkeitenWidget_value);
 
         TreeViewerColumn treeViewerTotalColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
         treeViewerTotalColumn.setLabelProvider(new ColumnLabelProvider() {
@@ -363,23 +366,23 @@ public class PersonaFertigkeitenWidget extends Composite {
                         String attributeText = AdapterFactoryUtil.getInstance().getItemDelegator().getText(attribut);
                         Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(f, persona);
                         if (fertigkeitValue < 1 && !f.isAusweichen())
-                            return "----";
+                            return Messages.PersonaFertigkeitenWidget_not_valid;
                         value = value + fertigkeitValue;
-                        return "[" + attributeText + "] : " + value.toString();
+                        return "[" + attributeText + "] : " + value.toString(); //$NON-NLS-1$ //$NON-NLS-2$
                     }
                 } else if (element instanceof FertigkeitsGruppe) {
                     FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
-                    return ShadowrunTools.findFertigkeitValue(fg, persona) + "";
+                    return ShadowrunTools.findFertigkeitValue(fg, persona) + EMPTY;
                 } else if (element instanceof GroupWrapper) {
-                    return "";
+                    return EMPTY;
 
                 }
-                return element == null ? "" : element.toString();
+                return element == null ? EMPTY : element.toString();
             }
         });
         TreeColumn trclmnTotalColumn = treeViewerTotalColumn.getColumn();
         tcl_composite.setColumnData(trclmnTotalColumn, new ColumnPixelData(70, true, true));
-        trclmnTotalColumn.setText("dice pool");
+        trclmnTotalColumn.setText(Messages.PersonaFertigkeitenWidget_dice_pool);
 
         treeViewer.setContentProvider(new FertigkeitsContentProvider());
 

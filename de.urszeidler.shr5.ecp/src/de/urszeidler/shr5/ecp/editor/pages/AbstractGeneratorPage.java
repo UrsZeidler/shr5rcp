@@ -39,6 +39,11 @@ import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
  */
 public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGenerator> implements Adapter {
 
+    public static final String PERSONA_PRINTER = "persona.printer";
+    public static final String PERSONA_ADVANCEMENT = "persona.advancement";
+    public static final String PERSONA_INVENTAR = "persona.inventar";
+    public static final String PERSONA = "persona";
+
     /**
      * Provides the lables for the validation chain.
      */
@@ -201,26 +206,26 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
 
     protected void addPersonaPage(ManagedCharacter playerCharacter) {
         try {
-            if (this.getEditor().findPage("persona.printer") != null)
+            if (this.getEditor().findPage(PERSONA_PRINTER) != null)
                 this.getEditor().removePage(4);
-            if (this.getEditor().findPage("persona.advancement") != null)
+            if (this.getEditor().findPage(PERSONA_ADVANCEMENT) != null)
                 this.getEditor().removePage(3);
-            if (this.getEditor().findPage("persona.inventar") != null)
+            if (this.getEditor().findPage(PERSONA_INVENTAR) != null)
                 this.getEditor().removePage(2);
-            if (this.getEditor().findPage("persona") != null)
+            if (this.getEditor().findPage(PERSONA) != null)
                 this.getEditor().removePage(1);
             this.getEditor().addPage(
                     1,
-                    new AbstraktPersonaPage(this.getEditor(), "persona", "AbstractPersona", playerCharacter.getPersona(),
+                    new AbstraktPersonaPage(this.getEditor(), PERSONA, "AbstractPersona", playerCharacter.getPersona(),
                             getEditingDomain(), mananger));
             this.getEditor().addPage(2,
-                    new ManagedCharacterPage(this.getEditor(), "persona.inventar", "Iventory", playerCharacter, getEditingDomain(), mananger));
+                    new ManagedCharacterPage(this.getEditor(), PERSONA_INVENTAR, "Inventory", playerCharacter, getEditingDomain(), mananger));
             this.getEditor().addPage(3,
-                    new CharacterAdvancement(this.getEditor(), "persona.advancement", "Advancement", playerCharacter, getEditingDomain(), mananger));
+                    new CharacterAdvancementPage(this.getEditor(), PERSONA_ADVANCEMENT, "Advancement", playerCharacter, getEditingDomain(), mananger));
     
             this.getEditor().addPage(
                     4,
-                    new PrintPreviewPage(this.getEditor(), "persona.printer", "Character sheet", PersonaPrinter.getInstance()
+                    new PrintPreviewPage(this.getEditor(), PERSONA_PRINTER, "Character sheet", PersonaPrinter.getInstance()
                             .createPrintFactory(playerCharacter)));
     
         } catch (PartInitException e1) {

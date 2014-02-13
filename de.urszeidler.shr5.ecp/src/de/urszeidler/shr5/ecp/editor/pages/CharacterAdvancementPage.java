@@ -35,7 +35,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.CharacterAdvacementWidget;
 
-public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
+public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter> {
 
     //private Changes currentChange;
     
@@ -51,7 +51,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
      * @param id
      * @param title
      */
-    public CharacterAdvancement(String id, String title) {
+    public CharacterAdvancementPage(String id, String title) {
         super(id, title);
     }
 
@@ -65,7 +65,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
      * @wbp.eval.method.parameter id "Some id"
      * @wbp.eval.method.parameter title "Some title"
      */
-    public CharacterAdvancement(FormEditor editor, String id, String title) {
+    public CharacterAdvancementPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
         object = Shr5managementFactory.eINSTANCE.createPlayerCharacter();
         object.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
@@ -82,7 +82,7 @@ public class CharacterAdvancement extends AbstractShr5Page<ManagedCharacter> {
      * @param editingDomain
      * @param manager
      */
-    public CharacterAdvancement(FormEditor editor, String id, String title, ManagedCharacter object, EditingDomain editingDomain,
+    public CharacterAdvancementPage(FormEditor editor, String id, String title, ManagedCharacter object, EditingDomain editingDomain,
             ReferenceManager manager) {
         super(editor, id, title);
         this.object = object;

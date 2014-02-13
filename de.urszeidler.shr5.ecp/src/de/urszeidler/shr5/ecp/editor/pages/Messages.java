@@ -54,6 +54,13 @@ public class Messages extends NLS {
     public static String GeneratorPage_Step_Two;
 
     public static String GeneratorPage_Validation;
+    public static String PersonaFertigkeitenWidget_dice_pool;
+    public static String PersonaFertigkeitenWidget_groups_skills;
+    public static String PersonaFertigkeitenWidget_knowlege_skill;
+    public static String PersonaFertigkeitenWidget_language_skill;
+    public static String PersonaFertigkeitenWidget_not_valid;
+    public static String PersonaFertigkeitenWidget_ungrouped_skills;
+    public static String PersonaFertigkeitenWidget_value;
     static {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);

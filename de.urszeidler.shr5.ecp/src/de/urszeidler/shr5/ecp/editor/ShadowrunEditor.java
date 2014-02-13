@@ -69,8 +69,9 @@ import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.dialogs.CreateAttributModifikatorDialog;
 import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.ReferenceValueDialog;
+import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
-import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancement;
+import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancementPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
@@ -123,16 +124,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             super.handleManage(e, object);
         }
 
-        // /**
-        // * Extract the eclasses from acceptable for a feature.
-        // * @param eobject
-        // * @param feature
-        // * @return
-        // */
-        // private Collection<EClass> provideNewClassTypes(EObject eobject, EStructuralFeature feature) {
-        // return ShadowrunEditingTools.provideNewClassTypes(eobject, feature, editingDomain);
-        // }
-
         @Override
         protected Object provideObject(FormbuilderEntry e, EObject object) {
             if (Shr5Package.Literals.MODIFIZIERBAR__MODS.equals(e.getFeature())) {
@@ -170,8 +161,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 
                 PersonaFertigkeitsGruppe personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
                 ReferenceValueDialog dialog = new ReferenceValueDialog(getSite().getShell(), personaFertigkeit,
-                        Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE,
-                        objectsOfType.toArray());
+                        Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE__GRUPPE, Shr5Package.Literals.STEIGERBAR__STUFE, objectsOfType.toArray());
 
                 if (dialog.open() == Dialog.OK)
                     return personaFertigkeit;
@@ -216,7 +206,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             if (filteredEClasses.size() == 1) {
                 EClass eClass = filteredEClasses.iterator().next();
                 return eClass.getEPackage().getEFactoryInstance().create(eClass);
-                // return Shr5Factory.eINSTANCE.create(eClass);
             }
 
             final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET, Collections.EMPTY_SET,
@@ -364,7 +353,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseProjektilwaffe(Projektilwaffe object) {
                 try {
-                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, "", "", object, editingDomain, manager));
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, "", "Projektilwaffe", object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FernkampfwaffePage", e);
                 }
@@ -396,9 +385,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     addPage(new ModifikatorPage(ShadowrunEditor.this, "", object.eClass().getName(), object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    // ShadowrunEditorPlugin.logError("error creating page Gegenstand",
-                    // e);
-                }
+                    logError("error creating ModifizierbarPage", e);
+                 }
                 return null;
             }
 
@@ -431,12 +419,15 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseManagedCharacter(ManagedCharacter object) {
                 try {
-                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "persona", "AbstractPersona", object.getPersona(), editingDomain, manager));
-                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, "persona.inventar", "Inventar", object, editingDomain, manager));
-                    addPage(new CharacterAdvancement(ShadowrunEditor.this, "persona.advancement", "Advancement", object, editingDomain, manager));
+                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, "AbstractPersona", object.getPersona(),
+                            editingDomain, manager));
+                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR, "Inventar", object, editingDomain,
+                            manager));
+                    addPage(new CharacterAdvancementPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_ADVANCEMENT, "Advancement", object,
+                            editingDomain, manager));
 
-                    addPage(new PrintPreviewPage(ShadowrunEditor.this, "printer", "Character sheet", PersonaPrinter.getInstance().createPrintFactory(
-                            object)));
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Character sheet", PersonaPrinter
+                            .getInstance().createPrintFactory(object)));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
                 }
@@ -516,26 +507,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             }
 
             return objectList;
-            // Command command = AddCommand.create(editingDomain, orgObject, abstaktPersona_Modifikator, objectList);
-            // editingDomain.getCommandStack().execute(command);
         }
         return null;
     }
-
-    // @Override
-    // public Image getTitleImage() {
-    // if(getEObject()!=null)
-    // return
-    // AdapterFactoryUtil.getInstance().getLabelProvider().getImage(getEObject());
-    // return super.getTitleImage();
-    // }
-    //
-    // @Override
-    // public String getTitle() {
-    // if(getEObject()!=null)
-    // return
-    // AdapterFactoryUtil.getInstance().getLabelProvider().getText(getEObject());
-    // return super.getTitle();
-    // }
 
 }

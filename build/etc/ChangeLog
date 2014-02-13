@@ -1,3 +1,10 @@
+2014-02-16 Version 0.1.2
+
+* straiten most of the localisation issues, english and german are currently supportet
+* added a freestyle generator to clone personaes or create chracters with no rule boundaries
+* impleted the character advacment system
+
+
 2014-02-02 Version 0.1.1
 	
 * Added automatic creation of the resources.
