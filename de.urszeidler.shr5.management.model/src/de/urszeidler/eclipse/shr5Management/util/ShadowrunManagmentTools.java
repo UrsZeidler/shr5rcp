@@ -3,6 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
@@ -10,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.Connection;
@@ -25,7 +29,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 public class ShadowrunManagmentTools {
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The Karma cost are a negative number.
      */
     public static int getKarmaSpend(ManagedCharacter managedCharacter) {
         int karmaGaint = 0;
@@ -124,13 +128,45 @@ public class ShadowrunManagmentTools {
         }
         return null;
     }
-    
+
     /**
      * Get the best date match.
+     * 
      * @param character
      * @return
      */
     public static Date findCorrenspondingDate(ManagedCharacter character) {
+        if (character == null)
+            return new Date(System.currentTimeMillis());
+
+        EList<Changes> changes = character.getChanges();
+
+        if (!changes.isEmpty()) {
+            ArrayList<Changes> list = new ArrayList<Changes>(changes);
+            Collections.sort(list, new Comparator<Changes>() {
+                @Override
+                public int compare(Changes o1, Changes o2) {
+                    if (o1.getDate() == null)
+                        return 1;
+                    if (o2.getDate() == null)
+                        return -1;
+
+                    if (o1.getDate().getTime() < o2.getDate().getTime())
+                        return 1;
+                    if (o1.getDate().getTime() > o2.getDate().getTime())
+                        return -1;
+
+                    return 0;
+                }
+            });
+            return list.get(0).getDate();
+        }
+
+        try {
+            SourceBook srcBook = character.getChracterSource().getGenerator().getSrcBook();
+            return srcBook.getStartShrTime();
+        } catch (Exception e) {
+        }
         return new Date(System.currentTimeMillis());
     }
 }

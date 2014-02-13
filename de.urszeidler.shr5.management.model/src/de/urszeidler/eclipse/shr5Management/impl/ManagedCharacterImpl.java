@@ -633,7 +633,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @generated not
      */
     public int getCurrentKarma() {
-        return ShadowrunManagmentTools.getKarmaGaint(this) - ShadowrunManagmentTools.getKarmaSpend(this);
+        return ShadowrunManagmentTools.getKarmaGaint(this) + ShadowrunManagmentTools.getKarmaSpend(this);
     }
 
     /**
