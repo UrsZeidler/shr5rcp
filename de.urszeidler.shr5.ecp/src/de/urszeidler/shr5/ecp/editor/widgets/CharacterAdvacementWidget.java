@@ -182,17 +182,6 @@ public class CharacterAdvacementWidget extends Composite {
     private ToolItem tltmCancel;
     private Label lblInstruction;
 
-    // private Composite composite_1;
-    // private Label lblDate;
-    // private Label lblXxx;
-    // private Label lblTo;
-    // private Label lblXxx_1;
-    // private Label lblKarmaCost;
-    // private Label lblAt;
-    // private CDateTime datewidget;
-    // private Label lbl_KarmaCost;
-    // private Composite composite_5;
-
     /**
      * Create the composite.
      * 
@@ -540,7 +529,7 @@ public class CharacterAdvacementWidget extends Composite {
     private void updateToolbars() {
         boolean enabled = currentChange != null && !currentChange.isChangeApplied();
         boolean canSpend = currentChange == null ? false : 0 <= currentChange.getKarmaCost()
-                + (ShadowrunManagmentTools.getKarmaGaint(character) + ShadowrunManagmentTools.getKarmaSpend(character));
+                + character.getCurrentKarma();
 
         boolean changeableSelected = false;
         if (currentChange instanceof PersonaChange) {

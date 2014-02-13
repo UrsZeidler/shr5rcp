@@ -510,8 +510,9 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
 
             karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor());
         }
-        // TODO need to calc the karma cost
-        return karmaKosten + getKarmaToResource();
+        int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
+        
+        return karmaKosten + getKarmaToResource()- karmaSpend;
     }
 
     /**

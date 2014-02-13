@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
@@ -23,8 +25,10 @@ import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Sex;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
@@ -633,7 +637,18 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @generated not
      */
     public int getCurrentKarma() {
-        return ShadowrunManagmentTools.getKarmaGaint(this) + ShadowrunManagmentTools.getKarmaSpend(this);
+        int addKarma = 0;
+
+        if (getChracterSource() != null)
+            if (getChracterSource().getState() != GeneratorState.COMMITED) {
+                //TODO need to move karma spend in an abstracter way
+                if (getChracterSource() instanceof Shr5Generator) {
+                    Shr5Generator g = (Shr5Generator)getChracterSource();
+                    addKarma = g.getShr5Generator().getKarmaPoints() - g.getKarmaSpend();
+                }
+            }
+
+        return ShadowrunManagmentTools.getKarmaGaint(this) + ShadowrunManagmentTools.getKarmaSpend(this) + addKarma;
     }
 
     /**
