@@ -18,6 +18,16 @@ public class Messages extends NLS {
     public static String AbstraktPersonaPage_Special_Attributes;
     public static String AbstraktPersonaPage_Spells;
     public static String AbstraktPersonaPage_The_Limits;
+    public static String GeneratorOption_attributes_spend;
+    public static String GeneratorOption_complex_forms_spend;
+    public static String GeneratorOption_group_spend;
+    public static String GeneratorOption_kownlege_spend;
+    public static String GeneratorOption_m_skills_spend;
+    public static String GeneratorOption_resource_spend;
+    public static String GeneratorOption_skill_spend;
+    public static String GeneratorOption_special_spend;
+    public static String GeneratorOption_spells_spend;
+    public static String GeneratorOption_spend_to_much;
     public static String GeneratorPage_Attribute;
     public static String GeneratorPage_connections;
     public static String GeneratorPage_karma2Resource;

@@ -25,9 +25,12 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class ResourceGeneratorOption extends Composite {
-	private DataBindingContext m_bindingContext;
+	private static final String EMPTY = ""; //$NON-NLS-1$
+
+    private DataBindingContext m_bindingContext;
 
 	private FormToolkit toolkit;//= new FormToolkit(Display.getCurrent());
 	private Resourcen object;
@@ -81,21 +84,21 @@ public class ResourceGeneratorOption extends Composite {
 		gridLayout.horizontalSpacing = 10;
 		setLayout(gridLayout);
 		
-		toolkit.createLabel(this, "Resource (spend/left):", SWT.NONE);
+		toolkit.createLabel(this, Messages.GeneratorOption_resource_spend, SWT.NONE);
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
 		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
-		lblspend.setText("spend : too much");
+		lblspend.setText(Messages.GeneratorOption_spend_to_much);
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
 		gd_lblleft.widthHint = minSize;
 		lblleft.setLayoutData(gd_lblleft);
 		toolkit.adapt(lblleft, true, true);
-		lblleft.setText("New Label");
+		lblleft.setText(EMPTY);
 		m_bindingContext = initDataBindings();
 		internalBinding(m_bindingContext);
 	}
@@ -143,7 +146,7 @@ public class ResourceGeneratorOption extends Composite {
 					karmaToResource = sr5g.getKarmaToResource() * sr5g.getShr5Generator().getKarmaToResourceFactor();
 				}
 				
-				return (object.getResource()+karmaToResource - calcAttributesSpend + "");
+				return (object.getResource()+karmaToResource - calcAttributesSpend + EMPTY);
 			}
 		});
 		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(

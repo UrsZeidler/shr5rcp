@@ -24,9 +24,12 @@ import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.shr5.ecp.binding.NumberInRangeValidator;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class AttributeGeneratorOption extends Composite {
-	private DataBindingContext m_bindingContext;
+	private static final String EMPTY = ""; //$NON-NLS-1$
+
+    private DataBindingContext m_bindingContext;
 
 	private FormToolkit toolkit;//= new FormToolkit(Display.getCurrent());
 	private Attributes object;
@@ -83,21 +86,21 @@ public class AttributeGeneratorOption extends Composite {
 		gridLayout.horizontalSpacing = 10;
 		setLayout(gridLayout);
 		
-		toolkit.createLabel(this, "Attributes (spend/left):", SWT.NONE);
+		toolkit.createLabel(this, Messages.GeneratorOption_attributes_spend, SWT.NONE);
 
 		lblspend = new Label(this, SWT.NONE);
 		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
 		gd_lblspend.widthHint = minSize;
 		lblspend.setLayoutData(gd_lblspend);
 		toolkit.adapt(lblspend, true, true);
-		lblspend.setText("spend : too much");
+		lblspend.setText(Messages.GeneratorOption_spend_to_much);
 
 		lblleft = new Label(this, SWT.NONE);
 		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
 		gd_lblleft.widthHint = minSize;
 		lblleft.setLayoutData(gd_lblleft);
 		toolkit.adapt(lblleft, true, true);
-		lblleft.setText("New Label");
+		lblleft.setText(EMPTY);
 		m_bindingContext = initDataBindings();
 		internalBinding(m_bindingContext);
 	}
@@ -138,7 +141,7 @@ public class AttributeGeneratorOption extends Composite {
 			@Override
 			public Object convert(Object fromObject) {
 				int calcAttributesSpend = object.calcAttributesSpend(context);
-				return  (object.getAttibutePoints() - calcAttributesSpend + "");
+				return  (object.getAttibutePoints() - calcAttributesSpend + EMPTY);
 			}
 		});
 		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(

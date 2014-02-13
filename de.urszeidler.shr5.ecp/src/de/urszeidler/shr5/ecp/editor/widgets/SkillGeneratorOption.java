@@ -23,8 +23,11 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.Skill;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class SkillGeneratorOption extends Composite {
+    private static final String EMPTY = ""; //$NON-NLS-1$
+
     private DataBindingContext m_bindingContext;
 
     private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
@@ -42,11 +45,6 @@ public class SkillGeneratorOption extends Composite {
 
     private int minSize = 40;
 
-//    private NumberInRangeValidator skillsInRangeValidator;
-//
-//    private NumberInRangeValidator groupsInRangeValidator;
-//
-//    private NumberInRangeValidator knownlegeSkillsInRangeValidator;
 
     /**
      * Create the composite.
@@ -85,74 +83,52 @@ public class SkillGeneratorOption extends Composite {
     }
 
     private void createWidgets() {
-//        skillsInRangeValidator = new NumberInRangeValidator(0, object.getSkillPoints());
-//        groupsInRangeValidator = new NumberInRangeValidator(0, object.getGroupPoints());
-//        knownlegeSkillsInRangeValidator = new NumberInRangeValidator(0, object.calcKnowledgeSkillPoints(context)){
-//            @Override
-//            public IStatus validate(Object value) {
-//                if (!(value instanceof Number)) {
-//                    throw new IllegalArgumentException("Parameter 'value' is not of type Number."); //$NON-NLS-1$
-//                }
-//
-//                Number number = (Number)value;
-//                if (number.longValue() > object.calcKnowledgeSkillPoints(context)) {
-//                    return ValidationStatus.error(toMutchMessage);
-//                }
-//                if (number.longValue() < 0) {
-//                    return ValidationStatus.error(toLessMessage);
-//                }
-//
-//                return Status.OK_STATUS;
-//            }
-//            
-//        };
-
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
         GridLayout gridLayout = new GridLayout(3, false);
         gridLayout.horizontalSpacing = 10;
         setLayout(gridLayout);
         
-        toolkit.createLabel(this, "Skills (spend/left):", SWT.NONE);
+        toolkit.createLabel(this, Messages.GeneratorOption_skill_spend, SWT.NONE);
 
         lblspend = new Label(this, SWT.NONE);
         GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblspend.widthHint = minSize;
         lblspend.setLayoutData(gd_lblspend);
         toolkit.adapt(lblspend, true, true);
-        lblspend.setText("spend : too much");
+        lblspend.setText(Messages.GeneratorOption_spend_to_much);
 
         lblleft = new Label(this, SWT.NONE);
         GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblleft.widthHint = minSize;
         lblleft.setLayoutData(gd_lblleft);
         toolkit.adapt(lblleft, true, true);
-        lblleft.setText("New Label");
+        lblleft.setText(EMPTY);
         
-        toolkit.createLabel(this, "Groups (spend/left):", SWT.NONE);
+        toolkit.createLabel(this, Messages.GeneratorOption_group_spend, SWT.NONE);
 
         lblgrpSpend = new Label(this, SWT.NONE);
         GridData gd_lblgrpSpend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblgrpSpend.widthHint = minSize;
         lblgrpSpend.setLayoutData(gd_lblgrpSpend);
         toolkit.adapt(lblgrpSpend, true, true);
-        lblgrpSpend.setText("spend : too much");
+        lblgrpSpend.setText(Messages.GeneratorOption_spend_to_much);
 
         lblgrpLeft = new Label(this, SWT.NONE);
         GridData gd_lblgrpLeft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblgrpLeft.widthHint = minSize;
         lblgrpLeft.setLayoutData(gd_lblgrpLeft);
         toolkit.adapt(lblgrpLeft, true, true);
-        lblgrpLeft.setText("New Label");
+        lblgrpLeft.setText(EMPTY);
         
-         toolkit.createLabel(this, "Knowlege (spend/left):", SWT.NONE);
+         toolkit.createLabel(this, Messages.GeneratorOption_kownlege_spend, SWT.NONE);
 
-        lblKnowlegPoints = toolkit.createLabel(this, "spend : too much", SWT.NONE);
+        lblKnowlegPoints = toolkit.createLabel(this, Messages.GeneratorOption_spend_to_much, SWT.NONE);
         GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblKnowlegPoints.widthHint = minSize;
         lblKnowlegPoints.setLayoutData(gd_lblKnowlegPoints);
 
-        lblSpendKnowlegePoints = toolkit.createLabel(this, "New Label", SWT.NONE);
+        lblSpendKnowlegePoints = toolkit.createLabel(this, EMPTY, SWT.NONE); 
         GridData gd_lblSpendKnowlegePoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblSpendKnowlegePoints.widthHint = minSize;
         lblSpendKnowlegePoints.setLayoutData(gd_lblSpendKnowlegePoints);
@@ -188,7 +164,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcSkillSpend(context);
-                return (object.getSkillPoints() - calcAttributesSpend + "");
+                return (object.getSkillPoints() - calcAttributesSpend + EMPTY);
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
@@ -211,7 +187,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcGroupSpend(context);
-                return (object.getGroupPoints() - calcAttributesSpend + "");
+                return (object.getGroupPoints() - calcAttributesSpend + EMPTY);
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
@@ -235,7 +211,7 @@ public class SkillGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcKnowledgeSkillSpend(context);
-                return (object.calcKnowledgeSkillPoints(context) - calcAttributesSpend + "");
+                return (object.calcKnowledgeSkillPoints(context) - calcAttributesSpend + EMPTY);
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(

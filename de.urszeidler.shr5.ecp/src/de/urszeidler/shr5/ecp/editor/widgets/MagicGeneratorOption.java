@@ -25,8 +25,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class MagicGeneratorOption extends Composite {
+    private static final String EMPTY = ""; //$NON-NLS-1$
+
     private DataBindingContext m_bindingContext;
 
     private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
@@ -41,10 +44,6 @@ public class MagicGeneratorOption extends Composite {
     private Label lblCFormLeft;
 
     private int minSize = 40;
-
-    // private NumberInRangeValidator addSkillInRangeValidator;
-
-    // private NumberInRangeValidator spellsInRangeValidator;
 
     /**
      * Create the composite.
@@ -84,61 +83,57 @@ public class MagicGeneratorOption extends Composite {
     }
 
     private void createWidgets() {
-        // addSkillInRangeValidator = new NumberInRangeValidator(0, object.getSkillNumber());
-
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
         GridLayout gridLayout = new GridLayout(3, false);
         gridLayout.horizontalSpacing = 10;
         setLayout(gridLayout);
 
-        toolkit.createLabel(this, "Skills (spend/left):", SWT.NONE);
+        toolkit.createLabel(this, Messages.GeneratorOption_m_skills_spend, SWT.NONE);
 
         lblspend = new Label(this, SWT.NONE);
         GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblspend.widthHint = minSize;
         lblspend.setLayoutData(gd_lblspend);
         toolkit.adapt(lblspend, true, true);
-        lblspend.setText("too much");
+        lblspend.setText(Messages.GeneratorOption_spend_to_much);
 
         lblleft = new Label(this, SWT.NONE);
         GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblleft.widthHint = minSize;
         lblleft.setLayoutData(gd_lblleft);
         toolkit.adapt(lblleft, true, true);
-        lblleft.setText("New Label");
+        lblleft.setText(EMPTY);
 
         if (object instanceof Spellcaster) {
-            // spellsInRangeValidator = new NumberInRangeValidator(0, ((Spellcaster)object).getSpellPoints());
-            toolkit.createLabel(this, "Spells (spend/left):", SWT.NONE);
+            toolkit.createLabel(this, Messages.GeneratorOption_spells_spend, SWT.NONE);
 
             lblSpellSpend = new Label(this, SWT.NONE);
             toolkit.adapt(lblSpellSpend, true, true);
-            lblSpellSpend.setText("too much");
+            lblSpellSpend.setText(Messages.GeneratorOption_spend_to_much);
             gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             gd_lblleft.widthHint = minSize;
             lblSpellSpend.setLayoutData(gd_lblleft);
 
             lblSpellLeft = new Label(this, SWT.NONE);
             toolkit.adapt(lblSpellLeft, true, true);
-            lblSpellLeft.setText("New Label");
+            lblSpellLeft.setText(EMPTY);
             gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             gd_lblleft.widthHint = minSize;
             lblSpellLeft.setLayoutData(gd_lblleft);
 
         } else if (object instanceof Technomancer) {
-            // spellsInRangeValidator = new NumberInRangeValidator(0, ((Technomancer)object).getComplexForms());
-            toolkit.createLabel(this, "Complex Forms (spend/left):", SWT.NONE);
+            toolkit.createLabel(this, Messages.GeneratorOption_complex_forms_spend, SWT.NONE);
             lblCFormSpend = new Label(this, SWT.NONE);
             toolkit.adapt(lblCFormSpend, true, true);
-            lblCFormSpend.setText("too much");
+            lblCFormSpend.setText(Messages.GeneratorOption_spend_to_much);
             gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             gd_lblleft.widthHint = minSize;
             lblCFormSpend.setLayoutData(gd_lblleft);
 
             lblCFormLeft = new Label(this, SWT.NONE);
             toolkit.adapt(lblCFormLeft, true, true);
-            lblCFormLeft.setText("New Label");
+            lblCFormLeft.setText(EMPTY);
             gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
             gd_lblleft.widthHint = minSize;
             lblCFormLeft.setLayoutData(gd_lblleft);
@@ -168,7 +163,7 @@ public class MagicGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcSkillsSpend(context);
-                return calcAttributesSpend + "";
+                return calcAttributesSpend + EMPTY;
             }
         });
         bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
@@ -183,7 +178,7 @@ public class MagicGeneratorOption extends Composite {
             @Override
             public Object convert(Object fromObject) {
                 int calcAttributesSpend = object.calcSkillsSpend(context);
-                return (object.getSkillNumber() - calcAttributesSpend + "");
+                return (object.getSkillNumber() - calcAttributesSpend + EMPTY);
             }
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
@@ -210,7 +205,7 @@ public class MagicGeneratorOption extends Composite {
                 @Override
                 public Object convert(Object fromObject) {
                     int calcAttributesSpend = sc.calcSpellPointsSpend(context);
-                    return (((Spellcaster)object).getSpellPoints() - calcAttributesSpend + "");
+                    return (((Spellcaster)object).getSpellPoints() - calcAttributesSpend + EMPTY);
                 }
             });
             bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
@@ -237,7 +232,7 @@ public class MagicGeneratorOption extends Composite {
                 @Override
                 public Object convert(Object fromObject) {
                     int calcAttributesSpend = sc.calcComplexFormsSpend(context);
-                    return (((Technomancer)object).getComplexForms() - calcAttributesSpend + "");
+                    return (((Technomancer)object).getComplexForms() - calcAttributesSpend + EMPTY);
                 }
             });
             bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
