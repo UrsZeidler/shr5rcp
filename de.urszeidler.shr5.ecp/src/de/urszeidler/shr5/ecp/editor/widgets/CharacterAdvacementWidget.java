@@ -81,10 +81,6 @@ public class CharacterAdvacementWidget extends Composite {
     private ManagedCharacter character;
     private Changes currentChange;
 
-    // private PersonaChange pchange = Shr5managementFactory.eINSTANCE.createPersonaChange();
-    // private KarmaGaint kgaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
-    // private AttributeChange achange = Shr5managementFactory.eINSTANCE.createAttributeChange();
-
     private EditingDomain editingDomain;
     private ReferenceManager mananger = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
         public void handleManage(FormbuilderEntry e, EObject object) {
@@ -483,7 +479,6 @@ public class CharacterAdvacementWidget extends Composite {
         emfFormBuilder.setBorderStyle(SWT.NONE);
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.KARMA_GAINT__KARMA, composite_type);
-
         emfFormBuilder.buildinComposite(m_bindingContext, composite_type, currentChange);
 
     }
