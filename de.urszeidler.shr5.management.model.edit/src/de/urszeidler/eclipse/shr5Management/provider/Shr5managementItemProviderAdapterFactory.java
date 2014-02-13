@@ -566,29 +566,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
 	/**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ChangeQuallity} instances.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	protected ChangeQuallityItemProvider changeQuallityItemProvider;
-
-	/**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ChangeQuallity}.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	@Override
-	public Adapter createChangeQuallityAdapter() {
-        if (changeQuallityItemProvider == null) {
-            changeQuallityItemProvider = new ChangeQuallityItemProvider(this);
-        }
-
-        return changeQuallityItemProvider;
-    }
-
-	/**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -731,7 +708,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (personaChangeItemProvider != null) personaChangeItemProvider.dispose();
         if (generatorStateToEStringMapEntryItemProvider != null) generatorStateToEStringMapEntryItemProvider.dispose();
         if (increaseCharacterPartItemProvider != null) increaseCharacterPartItemProvider.dispose();
-        if (changeQuallityItemProvider != null) changeQuallityItemProvider.dispose();
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
     }
 
@@ -886,11 +862,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart()));
-
-                newChildDescriptors.add
-                    (createChildParameter
-                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createChangeQuallity()));
 
                 newChildDescriptors.add
                     (createChildParameter

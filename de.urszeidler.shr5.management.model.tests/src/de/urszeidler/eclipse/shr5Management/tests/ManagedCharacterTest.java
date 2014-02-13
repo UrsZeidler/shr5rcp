@@ -4,8 +4,11 @@
 package de.urszeidler.eclipse.shr5Management.tests;
 
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
 /**
@@ -18,6 +21,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getStreetCred() <em>Street Cred</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getNotoriety() <em>Notoriety</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getKarmaGaint() <em>Karma Gaint</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma() <em>Current Karma</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -116,6 +120,49 @@ public abstract class ManagedCharacterTest extends TestCase {
         getFixture().getChanges().add(karmaGaint);
         karmaGaint.applyChanges();
         assertEquals("need to be 4",4, getFixture().getKarmaGaint());
+        
+//        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+//        assertFalse(getFixture().getPersona().getFertigkeiten().contains(fertigkeit));
+//        fertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+//
+//        PersonaChange change = Shr5managementFactory.eINSTANCE.createPersonaChange();
+//        change.setChangeable(fertigkeit);
+//
+//        getFixture().getChanges().add(change);
+//        assertEquals(-2, change.getKarmaCost());
+//        assertEquals(change.getFrom(), 0);
+//        assertEquals(change.getTo(), 1);
+//
+//        change.applyChanges();
+//        assertEquals(1, fertigkeit.getStufe());
+//        assertTrue(getFixture().getPersona().getFertigkeiten().contains(fertigkeit));
+//        assertEquals(true, change.isChangeApplied());
+//        assertNotNull(change.getDateApplied());
+//
+//        assertEquals("need to be 2",2, getFixture().getKarmaGaint());
 	}
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma() <em>Current Karma</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma()
+     * @generated not
+     */
+    public void testGetCurrentKarma() {
+        assertEquals("need to be 0",0, getFixture().getCurrentKarma());       
+        KarmaGaint karmaGaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
+        karmaGaint.setKarma(2);
+        getFixture().getChanges().add(karmaGaint);
+        karmaGaint.applyChanges();
+        assertEquals("need to be 2",2, getFixture().getCurrentKarma());
+        karmaGaint = Shr5managementFactory.eINSTANCE.createKarmaGaint();
+        karmaGaint.setKarma(2);
+        getFixture().getChanges().add(karmaGaint);
+        karmaGaint.applyChanges();
+        assertEquals("need to be 4",4, getFixture().getCurrentKarma());
+        
+        
+    }
 
 } //ManagedCharacterTest

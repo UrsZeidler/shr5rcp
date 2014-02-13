@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getNotorietyBasic <em>Notoriety Basic</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getPublicAwareness <em>Public Awareness</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getKarmaGaint <em>Karma Gaint</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma <em>Current Karma</em>}</li>
  * </ul>
  * </p>
  *
@@ -357,5 +358,20 @@ public interface ManagedCharacter extends EObject {
      * @generated
      */
 	int getKarmaGaint();
+
+    /**
+     * Returns the value of the '<em><b>Current Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Current Karma</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Current Karma</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_CurrentKarma()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
+    int getCurrentKarma();
 
 } // ManagedCharacter

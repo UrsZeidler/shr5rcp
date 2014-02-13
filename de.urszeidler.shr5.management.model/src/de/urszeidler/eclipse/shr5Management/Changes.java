@@ -107,11 +107,22 @@ public interface Changes extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Change Applied</em>' attribute.
+     * @see #setChangeApplied(boolean)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getChanges_ChangeApplied()
-     * @model default="false" changeable="false"
+     * @model default="false"
      * @generated
      */
     boolean isChangeApplied();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Changes#isChangeApplied <em>Change Applied</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Change Applied</em>' attribute.
+     * @see #isChangeApplied()
+     * @generated
+     */
+    void setChangeApplied(boolean value);
 
     /**
      * Returns the value of the '<em><b>Date Applied</b></em>' attribute.
@@ -122,11 +133,22 @@ public interface Changes extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Date Applied</em>' attribute.
+     * @see #setDateApplied(Date)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getChanges_DateApplied()
-     * @model dataType="de.urszeidler.eclipse.shr5.ShrDate" changeable="false"
+     * @model dataType="de.urszeidler.eclipse.shr5.ShrDate"
      * @generated
      */
     Date getDateApplied();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Changes#getDateApplied <em>Date Applied</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Date Applied</em>' attribute.
+     * @see #getDateApplied()
+     * @generated
+     */
+    void setDateApplied(Date value);
 
     /**
      * <!-- begin-user-doc -->

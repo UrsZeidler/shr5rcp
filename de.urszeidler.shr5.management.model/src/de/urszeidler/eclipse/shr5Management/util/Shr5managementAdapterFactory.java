@@ -4,19 +4,16 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
-import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
@@ -221,10 +218,6 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseIncreaseCharacterPart(IncreaseCharacterPart object) {
                 return createIncreaseCharacterPartAdapter();
-            }
-            @Override
-            public Adapter caseChangeQuallity(ChangeQuallity object) {
-                return createChangeQuallityAdapter();
             }
             @Override
             public Adapter caseLifestyleToStartMoney(LifestyleToStartMoney object) {
@@ -675,20 +668,6 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
 	public Adapter createIncreaseCharacterPartAdapter() {
-        return null;
-    }
-
-	/**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.ChangeQuallity <em>Change Quallity</em>}'.
-     * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5Management.ChangeQuallity
-     * @generated
-     */
-	public Adapter createChangeQuallityAdapter() {
         return null;
     }
 

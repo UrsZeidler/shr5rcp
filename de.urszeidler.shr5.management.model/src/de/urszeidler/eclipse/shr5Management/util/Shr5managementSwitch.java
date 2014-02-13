@@ -4,18 +4,15 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
-import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
@@ -317,13 +314,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 IncreaseCharacterPart increaseCharacterPart = (IncreaseCharacterPart)theEObject;
                 T result = caseIncreaseCharacterPart(increaseCharacterPart);
                 if (result == null) result = caseAdvancement(increaseCharacterPart);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case Shr5managementPackage.CHANGE_QUALLITY: {
-                ChangeQuallity changeQuallity = (ChangeQuallity)theEObject;
-                T result = caseChangeQuallity(changeQuallity);
-                if (result == null) result = caseAdvancement(changeQuallity);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -784,21 +774,6 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
 	public T caseIncreaseCharacterPart(IncreaseCharacterPart object) {
-        return null;
-    }
-
-	/**
-     * Returns the result of interpreting the object as an instance of '<em>Change Quallity</em>'.
-     * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Change Quallity</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-	public T caseChangeQuallity(ChangeQuallity object) {
         return null;
     }
 

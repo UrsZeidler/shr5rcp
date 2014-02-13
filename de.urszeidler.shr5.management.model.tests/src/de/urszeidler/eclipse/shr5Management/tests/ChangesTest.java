@@ -25,16 +25,15 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public abstract class ChangesTest extends TestCase {
@@ -43,7 +42,6 @@ public abstract class ChangesTest extends TestCase {
      * The fixture for this Changes test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Changes fixture = null;
@@ -107,7 +105,6 @@ public abstract class ChangesTest extends TestCase {
      * Sets the fixture for this Changes test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void setFixture(Changes fixture) {
@@ -118,7 +115,6 @@ public abstract class ChangesTest extends TestCase {
      * Returns the fixture for this Changes test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Changes getFixture() {

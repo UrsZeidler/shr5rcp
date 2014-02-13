@@ -33,6 +33,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicAwareness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaGaint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CharacterGeneratorSystem" abstract="true"
       eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
@@ -57,9 +59,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" eType="#//ManagedCharacter"
         eOpposite="#//ManagedCharacter/changes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeApplied" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        changeable="false" defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateApplied" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"
-        changeable="false"/>
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateApplied" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KarmaGaint" eSuperTypes="#//Changes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karma" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -404,7 +405,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="IncreaseCharacterPart" eSuperTypes="#//Advancement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ChangeQuallity" eSuperTypes="#//Advancement"/>
   <eClassifiers xsi:type="ecore:EClass" name="LifestyleToStartMoney">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moneyFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

@@ -203,15 +203,6 @@ public interface Shr5managementFactory extends EFactory {
 	IncreaseCharacterPart createIncreaseCharacterPart();
 
 	/**
-     * Returns a new object of class '<em>Change Quallity</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return a new object of class '<em>Change Quallity</em>'.
-     * @generated
-     */
-	ChangeQuallity createChangeQuallity();
-
-	/**
      * Returns a new object of class '<em>Lifestyle To Start Money</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

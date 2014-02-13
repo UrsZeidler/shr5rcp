@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,18 +14,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Vertrag;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.Connection;
-import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -52,6 +48,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getNotorietyBasic <em>Notoriety Basic</em>}</li>
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getPublicAwareness <em>Public Awareness</em>}</li>
  * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getKarmaGaint <em>Karma Gaint</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getCurrentKarma <em>Current Karma</em>}</li>
  * </ul>
  * </p>
  * 
@@ -244,6 +241,17 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @ordered
      */
     protected static final int KARMA_GAINT_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCurrentKarma() <em>Current Karma</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getCurrentKarma()
+     * @generated
+     * @ordered
+     */
+    protected static final int CURRENT_KARMA_EDEFAULT = 0;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -619,6 +627,16 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getCurrentKarma() {
+        return ShadowrunManagmentTools.getKarmaGaint(this) - ShadowrunManagmentTools.getKarmaSpend(this);
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -708,6 +726,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return getPublicAwareness();
             case Shr5managementPackage.MANAGED_CHARACTER__KARMA_GAINT:
                 return getKarmaGaint();
+            case Shr5managementPackage.MANAGED_CHARACTER__CURRENT_KARMA:
+                return getCurrentKarma();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -852,6 +872,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return publicAwareness != PUBLIC_AWARENESS_EDEFAULT;
             case Shr5managementPackage.MANAGED_CHARACTER__KARMA_GAINT:
                 return getKarmaGaint() != KARMA_GAINT_EDEFAULT;
+            case Shr5managementPackage.MANAGED_CHARACTER__CURRENT_KARMA:
+                return getCurrentKarma() != CURRENT_KARMA_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

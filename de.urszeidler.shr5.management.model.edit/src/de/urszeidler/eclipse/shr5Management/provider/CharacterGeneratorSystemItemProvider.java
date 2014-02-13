@@ -277,11 +277,6 @@ public class CharacterGeneratorSystemItemProvider
 
         newChildDescriptors.add
             (createChildParameter
-                (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS,
-                 Shr5managementFactory.eINSTANCE.createChangeQuallity()));
-
-        newChildDescriptors.add
-            (createChildParameter
                 (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY,
                  Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
     }

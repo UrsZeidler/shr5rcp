@@ -76,6 +76,7 @@ public class ManagedCharacterItemProvider
             addNotorietyBasicPropertyDescriptor(object);
             addPublicAwarenessPropertyDescriptor(object);
             addKarmaGaintPropertyDescriptor(object);
+            addCurrentKarmaPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -292,6 +293,28 @@ public class ManagedCharacterItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Current Karma feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCurrentKarmaPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ManagedCharacter_currentKarma_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ManagedCharacter_currentKarma_feature", "_UI_ManagedCharacter_type"),
+                 Shr5managementPackage.Literals.MANAGED_CHARACTER__CURRENT_KARMA,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -359,6 +382,7 @@ public class ManagedCharacterItemProvider
             case Shr5managementPackage.MANAGED_CHARACTER__NOTORIETY_BASIC:
             case Shr5managementPackage.MANAGED_CHARACTER__PUBLIC_AWARENESS:
             case Shr5managementPackage.MANAGED_CHARACTER__KARMA_GAINT:
+            case Shr5managementPackage.MANAGED_CHARACTER__CURRENT_KARMA:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5managementPackage.MANAGED_CHARACTER__PERSONA:

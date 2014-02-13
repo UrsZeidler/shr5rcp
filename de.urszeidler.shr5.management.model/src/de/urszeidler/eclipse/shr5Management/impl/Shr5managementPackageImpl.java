@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -14,13 +13,11 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
-import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
@@ -272,13 +269,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	private EClass changeQuallityEClass = null;
-
-	/**
-     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
@@ -516,6 +506,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getManagedCharacter_CurrentKarma() {
+        return (EAttribute)managedCharacterEClass.getEStructuralFeatures().get(15);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -1705,15 +1704,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EClass getChangeQuallity() {
-        return changeQuallityEClass;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
@@ -1810,6 +1800,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__NOTORIETY_BASIC);
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__PUBLIC_AWARENESS);
         createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__KARMA_GAINT);
+        createEAttribute(managedCharacterEClass, MANAGED_CHARACTER__CURRENT_KARMA);
 
         characterGeneratorSystemEClass = createEClass(CHARACTER_GENERATOR_SYSTEM);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
@@ -1972,8 +1963,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         increaseCharacterPartEClass = createEClass(INCREASE_CHARACTER_PART);
         createEReference(increaseCharacterPartEClass, INCREASE_CHARACTER_PART__TYPE);
 
-        changeQuallityEClass = createEClass(CHANGE_QUALLITY);
-
         lifestyleToStartMoneyEClass = createEClass(LIFESTYLE_TO_START_MONEY);
         createEAttribute(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__NUMBER_OF_W);
         createEAttribute(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__MONEY_FACTOR);
@@ -2039,7 +2028,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         personaChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
         personaValueChangeEClass.getESuperTypes().add(this.getChanges());
         increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
-        changeQuallityEClass.getESuperTypes().add(this.getAdvancement());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2058,6 +2046,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getManagedCharacter_NotorietyBasic(), ecorePackage.getEInt(), "notorietyBasic", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_PublicAwareness(), ecorePackage.getEInt(), "publicAwareness", null, 0, 1, ManagedCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getManagedCharacter_KarmaGaint(), ecorePackage.getEInt(), "karmaGaint", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getManagedCharacter_CurrentKarma(), ecorePackage.getEInt(), "currentKarma", null, 0, 1, ManagedCharacter.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(characterGeneratorSystemEClass, CharacterGeneratorSystem.class, "CharacterGeneratorSystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2074,8 +2063,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getChanges_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getChanges_KarmaCost(), ecorePackage.getEInt(), "karmaCost", null, 0, 1, Changes.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEReference(getChanges_Character(), this.getManagedCharacter(), this.getManagedCharacter_Changes(), "character", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getChanges_ChangeApplied(), ecorePackage.getEBoolean(), "changeApplied", "false", 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getChanges_DateApplied(), theShr5Package.getShrDate(), "dateApplied", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getChanges_ChangeApplied(), ecorePackage.getEBoolean(), "changeApplied", "false", 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getChanges_DateApplied(), theShr5Package.getShrDate(), "dateApplied", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEOperation(getChanges__ApplyChanges(), null, "applyChanges", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -2370,8 +2359,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(increaseCharacterPartEClass, IncreaseCharacterPart.class, "IncreaseCharacterPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getIncreaseCharacterPart_Type(), ecorePackage.getEClass(), null, "type", null, 1, 1, IncreaseCharacterPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-        initEClass(changeQuallityEClass, ChangeQuallity.class, "ChangeQuallity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(lifestyleToStartMoneyEClass, LifestyleToStartMoney.class, "LifestyleToStartMoney", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getLifestyleToStartMoney_NumberOfW(), ecorePackage.getEInt(), "numberOfW", null, 0, 1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

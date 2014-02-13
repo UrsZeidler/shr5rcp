@@ -207,13 +207,22 @@ public interface Shr5managementPackage extends EPackage {
 	int MANAGED_CHARACTER__KARMA_GAINT = 14;
 
 	/**
+     * The feature id for the '<em><b>Current Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANAGED_CHARACTER__CURRENT_KARMA = 15;
+
+    /**
      * The number of structural features of the '<em>Managed Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER_FEATURE_COUNT = 15;
+	int MANAGED_CHARACTER_FEATURE_COUNT = 16;
 
 	/**
      * The number of operations of the '<em>Managed Character</em>' class.
@@ -588,6 +597,15 @@ public interface Shr5managementPackage extends EPackage {
 	int NON_PLAYER_CHARACTER__KARMA_GAINT = MANAGED_CHARACTER__KARMA_GAINT;
 
 	/**
+     * The feature id for the '<em><b>Current Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NON_PLAYER_CHARACTER__CURRENT_KARMA = MANAGED_CHARACTER__CURRENT_KARMA;
+
+    /**
      * The number of structural features of the '<em>Non Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2758,6 +2776,15 @@ public interface Shr5managementPackage extends EPackage {
 	int PLAYER_CHARACTER__KARMA_GAINT = MANAGED_CHARACTER__KARMA_GAINT;
 
 	/**
+     * The feature id for the '<em><b>Current Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__CURRENT_KARMA = MANAGED_CHARACTER__CURRENT_KARMA;
+
+    /**
      * The number of structural features of the '<em>Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3226,43 +3253,6 @@ public interface Shr5managementPackage extends EPackage {
 	int INCREASE_CHARACTER_PART_OPERATION_COUNT = ADVANCEMENT_OPERATION_COUNT + 0;
 
 	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ChangeQuallityImpl <em>Change Quallity</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ChangeQuallityImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getChangeQuallity()
-     * @generated
-     */
-	int CHANGE_QUALLITY = 30;
-
-	/**
-     * The feature id for the '<em><b>Karma Factor</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int CHANGE_QUALLITY__KARMA_FACTOR = ADVANCEMENT__KARMA_FACTOR;
-
-	/**
-     * The number of structural features of the '<em>Change Quallity</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int CHANGE_QUALLITY_FEATURE_COUNT = ADVANCEMENT_FEATURE_COUNT + 0;
-
-	/**
-     * The number of operations of the '<em>Change Quallity</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int CHANGE_QUALLITY_OPERATION_COUNT = ADVANCEMENT_OPERATION_COUNT + 0;
-
-	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl <em>Lifestyle To Start Money</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3270,7 +3260,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getLifestyleToStartMoney()
      * @generated
      */
-    int LIFESTYLE_TO_START_MONEY = 31;
+    int LIFESTYLE_TO_START_MONEY = 30;
 
     /**
      * The feature id for the '<em><b>Number Of W</b></em>' attribute.
@@ -3325,7 +3315,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 32;
+	int GENERATOR_STATE = 31;
 
 
 	/**
@@ -3336,7 +3326,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 33;
+	int SEX = 32;
 
 
 	/**
@@ -3515,6 +3505,17 @@ public interface Shr5managementPackage extends EPackage {
 	EAttribute getManagedCharacter_KarmaGaint();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma <em>Current Karma</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Current Karma</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma()
+     * @see #getManagedCharacter()
+     * @generated
+     */
+    EAttribute getManagedCharacter_CurrentKarma();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem <em>Character Generator System</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4912,16 +4913,6 @@ public interface Shr5managementPackage extends EPackage {
 	EReference getIncreaseCharacterPart_Type();
 
 	/**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ChangeQuallity <em>Change Quallity</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Change Quallity</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ChangeQuallity
-     * @generated
-     */
-	EClass getChangeQuallity();
-
-	/**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5138,6 +5129,14 @@ public interface Shr5managementPackage extends EPackage {
 		EAttribute MANAGED_CHARACTER__KARMA_GAINT = eINSTANCE.getManagedCharacter_KarmaGaint();
 
 		/**
+         * The meta object literal for the '<em><b>Current Karma</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MANAGED_CHARACTER__CURRENT_KARMA = eINSTANCE.getManagedCharacter_CurrentKarma();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl <em>Character Generator System</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6250,16 +6249,6 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
 		EReference INCREASE_CHARACTER_PART__TYPE = eINSTANCE.getIncreaseCharacterPart_Type();
-
-		/**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ChangeQuallityImpl <em>Change Quallity</em>}' class.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5Management.impl.ChangeQuallityImpl
-         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getChangeQuallity()
-         * @generated
-         */
-		EClass CHANGE_QUALLITY = eINSTANCE.getChangeQuallity();
 
 		/**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl <em>Lifestyle To Start Money</em>}' class.

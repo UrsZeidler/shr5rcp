@@ -4,18 +4,15 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
-import de.urszeidler.eclipse.shr5Management.ChangeQuallity;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
@@ -307,8 +304,6 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateAdvancement((Advancement)value, diagnostics, context);
             case Shr5managementPackage.INCREASE_CHARACTER_PART:
                 return validateIncreaseCharacterPart((IncreaseCharacterPart)value, diagnostics, context);
-            case Shr5managementPackage.CHANGE_QUALLITY:
-                return validateChangeQuallity((ChangeQuallity)value, diagnostics, context);
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY:
                 return validateLifestyleToStartMoney((LifestyleToStartMoney)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
@@ -773,15 +768,6 @@ public class Shr5managementValidator extends EObjectValidator {
      */
 	public boolean validateIncreaseCharacterPart(IncreaseCharacterPart increaseCharacterPart, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(increaseCharacterPart, diagnostics, context);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public boolean validateChangeQuallity(ChangeQuallity changeQuallity, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(changeQuallity, diagnostics, context);
     }
 
 	/**
