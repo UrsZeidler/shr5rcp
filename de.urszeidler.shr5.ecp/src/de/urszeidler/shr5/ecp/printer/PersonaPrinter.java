@@ -56,6 +56,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * @author urs
@@ -877,10 +878,8 @@ public class PersonaPrinter {
      * @return
      */
     private String essenzToFloat(int essenz) {
-        float f = essenz / 100f;
-        String string = String.format("%.2f", f);//$NON-NLS-1$
-        return string;
-    }
+        return ShadowrunEditingTools.essenzToFloat(essenz);
+     }
 
     /**
      * Prints the ini.
