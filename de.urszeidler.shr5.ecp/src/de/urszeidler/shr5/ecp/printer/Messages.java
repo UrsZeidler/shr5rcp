@@ -36,7 +36,6 @@ public class Messages extends NLS {
     public static String Printer_Items;
     public static String Printer_juge_intetion;
     public static String Printer_karma;
-    public static String Printer_Karma;
     public static String Printer_karma_total;
     public static String Printer_KiPower;
     public static String Printer_lift_carry;

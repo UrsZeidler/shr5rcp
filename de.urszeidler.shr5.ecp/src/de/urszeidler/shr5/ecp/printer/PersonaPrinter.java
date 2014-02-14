@@ -340,7 +340,7 @@ public class PersonaPrinter {
 
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_Edge_Flaws, boldFontData), 2);
         grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData));
-        grid.addHeader(new TextPrint(Messages.Printer_Karma, italicFontData));
+        grid.addHeader(new TextPrint(Messages.Printer_karma, italicFontData));
 
         for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
             grid.add(new TextPrint(itemDelegator.getText(personaEigenschaft), attributeFont));
