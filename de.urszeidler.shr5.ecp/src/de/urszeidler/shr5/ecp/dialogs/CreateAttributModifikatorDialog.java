@@ -138,7 +138,6 @@ public class CreateAttributModifikatorDialog extends SimpleEObjectDialog {
 	 */
 	@Override
 	protected Image getImage() {
-		// TODO Auto-generated method stub
 		return getQuestionImage();
 	}
 
