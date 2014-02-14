@@ -322,8 +322,6 @@ public class PersonaUIToolkit {
 
 		createAttributeWidgetRO(Shr5Package.Literals.PANZERUNG__PANZER, Shr5Package.Literals.PANZERUNG__PANZER, client);
 
-		// TODO : here we need to check for the other type and create more
-		// attributes
 		if (eObject instanceof BaseMagischePersona) {
 			createAttributeWidget(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS,
 					Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE, client);
