@@ -5,6 +5,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -20,12 +21,19 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
+import de.urszeidler.eclipse.shr5.MysticAdept;
+import de.urszeidler.eclipse.shr5.Zauberer;
+import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class MagicGeneratorOption extends Composite {
     private static final String EMPTY = ""; //$NON-NLS-1$
@@ -44,6 +52,10 @@ public class MagicGeneratorOption extends Composite {
     private Label lblCFormLeft;
 
     private int minSize = 40;
+
+    private Label lblSpellSpend1;
+
+    private Label lblSpellLeft1;
 
     /**
      * Create the composite.
@@ -105,7 +117,26 @@ public class MagicGeneratorOption extends Composite {
         toolkit.adapt(lblleft, true, true);
         lblleft.setText(EMPTY);
 
-        if (object instanceof Spellcaster) {
+        AbstraktPersona persona = context.getPersona();
+        if (persona instanceof KiAdept) {
+            toolkit.createLabel(this, "Kipower spend :", SWT.NONE);
+
+            lblSpellSpend1 = new Label(this, SWT.NONE);
+            toolkit.adapt(lblSpellSpend1, true, true);
+            lblSpellSpend1.setText(Messages.GeneratorOption_spend_to_much);
+            gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+            gd_lblleft.widthHint = minSize;
+            lblSpellSpend1.setLayoutData(gd_lblleft);
+
+            lblSpellLeft1 = new Label(this, SWT.NONE);
+            toolkit.adapt(lblSpellLeft1, true, true);
+            lblSpellLeft1.setText(EMPTY);
+            gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+            gd_lblleft.widthHint = minSize;
+            lblSpellLeft1.setLayoutData(gd_lblleft);
+        }
+
+        if (persona instanceof Zauberer) {
             toolkit.createLabel(this, Messages.GeneratorOption_spells_spend, SWT.NONE);
 
             lblSpellSpend = new Label(this, SWT.NONE);
@@ -122,7 +153,9 @@ public class MagicGeneratorOption extends Composite {
             gd_lblleft.widthHint = minSize;
             lblSpellLeft.setLayoutData(gd_lblleft);
 
-        } else if (object instanceof Technomancer) {
+        }
+
+        if (persona instanceof de.urszeidler.eclipse.shr5.Technomancer) {
             toolkit.createLabel(this, Messages.GeneratorOption_complex_forms_spend, SWT.NONE);
             lblCFormSpend = new Label(this, SWT.NONE);
             toolkit.adapt(lblCFormSpend, true, true);
@@ -139,6 +172,12 @@ public class MagicGeneratorOption extends Composite {
             lblCFormLeft.setLayoutData(gd_lblleft);
 
         }
+
+        // if (object instanceof Spellcaster) {
+        //
+        // } else if (object instanceof Technomancer) {
+        //
+        // }
 
         m_bindingContext = initDataBindings();
         internalBinding(m_bindingContext);
@@ -183,9 +222,9 @@ public class MagicGeneratorOption extends Composite {
         });
         bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-
-        // ---
-        if (object instanceof Spellcaster) {
+        // --
+        AbstraktPersona persona = context.getPersona();
+        if (persona instanceof Zauberer) {
             final Spellcaster sc = (Spellcaster)object;
             observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblSpellSpend);
             objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
@@ -211,6 +250,76 @@ public class MagicGeneratorOption extends Composite {
             bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
                     UpdateValueStrategy.POLICY_NEVER), modelToTarget);
         }
+
+        if (persona instanceof KiAdept) {
+            final KiAdept ka = (KiAdept)persona;
+
+            observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblSpellSpend1);
+            objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                    Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
+
+            modelToTarget = new EMFUpdateValueStrategy();
+            modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+                @Override
+                public Object convert(Object fromObject) {
+                    // int calcPowerpointsSpend =((Adept)object) .calcPowerPointsSpend(context);
+                    String powerPointsToFloat = ShadowrunEditingTools.powerPointsToFloat(Math.abs(getBasePowerPoints(ka)));
+                    System.out.println("--" + powerPointsToFloat);
+                    return powerPointsToFloat;
+                }
+
+            });
+            Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                    new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+            ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
+            //
+            observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpellLeft1);
+            objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                    Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
+
+            modelToTarget = new EMFUpdateValueStrategy();
+            modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+                @Override
+                public Object convert(Object fromObject) {
+                    int calcPowerpointsSpend = ((Adept)object).calcPowerPointsSpend(context);
+                    int basePowerpoints = getBasePowerPoints(ka);
+                    System.out.println(calcPowerpointsSpend + "   " + basePowerpoints);
+                    return ShadowrunEditingTools.powerPointsToFloat(Math.abs(basePowerpoints) - Math.abs(calcPowerpointsSpend));
+                }
+            });
+            bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                    UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+
+        }
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            final Spellcaster sc = (Spellcaster)object;
+            observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblSpellSpend);
+            objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                    Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
+
+            modelToTarget = new EMFUpdateValueStrategy();
+            Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                    new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+            ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
+            //
+            observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpellLeft);
+            objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                    Literals.SHR5_GENERATOR__SPELL_POINT_SPEND);
+
+            modelToTarget = new EMFUpdateValueStrategy();
+            modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+                @Override
+                public Object convert(Object fromObject) {
+                    int calcAttributesSpend = sc.calcSpellPointsSpend(context);
+                    return (((Spellcaster)object).getSpellPoints() - calcAttributesSpend + EMPTY);
+                }
+            });
+            bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                    UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+
+        }
+
         // ---
         if (object instanceof Technomancer) {
             final Technomancer sc = (Technomancer)object;
@@ -240,5 +349,21 @@ public class MagicGeneratorOption extends Composite {
 
         }
 
+    }
+
+    protected int getBasePowerPoints(KiAdept ka) {
+        if (ka instanceof MysticAdept) {
+            int sum = 0;
+            MysticAdept ma = (MysticAdept)ka;
+            EList<KiKraft> kikraft = ma.getKikraft();
+            for (KiKraft kraft : kikraft) {
+                sum = sum + kraft.getKraftpunkte();
+            }
+            sum = (int)Math.floor(sum / 100f);
+
+            return sum * 100;
+        }
+        int magieBasis = ka.getMagieBasis() * 100;
+        return magieBasis;
     }
 }
