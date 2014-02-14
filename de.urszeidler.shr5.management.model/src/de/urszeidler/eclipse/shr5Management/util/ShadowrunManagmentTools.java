@@ -11,8 +11,10 @@ import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Changes;
@@ -20,6 +22,7 @@ import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -28,6 +31,32 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  */
 public class ShadowrunManagmentTools {
 
+    /**
+     * Count the number of {@link Erlernbar} spend with Karma.
+     * @param changes the changes of a character
+     * @param erlernbar the {@link Erlernbar} type
+     * @param type the type of the {@link Erlernbar} to look after
+     * 
+     * @return
+     */
+    public static int countSpendByKarma(EList<Changes> changes,EClass erlernbar,EClass type) {
+        int counter = 0;
+        for (Changes change : changes) {
+            if (change.isChangeApplied())
+                if (change instanceof PersonaChange) {
+                    PersonaChange pv = (PersonaChange)change;
+                    if (erlernbar.equals(pv.getChangeable().eClass())) {
+                        PersonaFertigkeit pfg = (PersonaFertigkeit)pv.getChangeable();
+                        if (type.equals(pfg.getFertigkeit().eClass()))
+                            counter++;
+
+                    }
+                }
+        }
+        return counter;
+    }
+
+    
     /**
      * The Karma cost are a negative number.
      */

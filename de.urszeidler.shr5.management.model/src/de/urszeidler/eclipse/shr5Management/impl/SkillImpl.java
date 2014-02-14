@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Skill</b></em>'. <!-- end-user-doc -->
@@ -167,17 +168,8 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
                 kosten = kosten + personaFertigkeit.getStufe();
         }
         EList<Changes> changes = context.getChanges();
-        int counter = 0;
-        for (Changes change : changes) {
-            if (change.isChangeApplied())
-                if (change instanceof PersonaChange) {
-                    PersonaChange pv = (PersonaChange)change;
-                    if (Shr5Package.Literals.PERSONA_FERTIGKEIT.equals(pv.getChangeable().eClass()))
-                        counter++;
-                }
-        }
-        // TODO need to remove the spend by karama
-        return kosten - spendByMagic;
+        int counter = ShadowrunManagmentTools.countSpendByKarma(changes, Shr5Package.Literals.PERSONA_FERTIGKEIT, Shr5Package.Literals.FERTIGKEIT);
+        return kosten - spendByMagic - counter;
     }
 
     /**
@@ -200,8 +192,9 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
             if (change.isChangeApplied())
                 if (change instanceof PersonaChange) {
                     PersonaChange pv = (PersonaChange)change;
-                    if (Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE.equals(pv.getChangeable().eClass()))
+                    if (Shr5Package.Literals.PERSONA_FERTIGKEITS_GRUPPE.equals(pv.getChangeable().eClass())) {
                         counter++;
+                    }
                 }
         }
         return kosten - counter;
@@ -222,8 +215,13 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
             if ((personaFertigkeit.getFertigkeit() instanceof Wissensfertigkeit) || personaFertigkeit.getFertigkeit() instanceof Sprachfertigkeit)
                 kosten = kosten + personaFertigkeit.getStufe();
         }
-        // TODO : substract from karma and nativ speaker
-        return kosten;
+        EList<Changes> changes = context.getChanges();
+        int byKarma = ShadowrunManagmentTools.countSpendByKarma(changes, Shr5Package.Literals.PERSONA_FERTIGKEIT,
+                Shr5Package.Literals.WISSENSFERTIGKEIT);
+        byKarma = byKarma
+                + ShadowrunManagmentTools.countSpendByKarma(changes, Shr5Package.Literals.PERSONA_FERTIGKEIT, Shr5Package.Literals.SPRACHFERTIGKEIT);
+
+        return kosten - byKarma;
 
     }
 
