@@ -508,13 +508,13 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             for (KiKraft kraft : kikraft) {
                 sum = sum + kraft.getKraftpunkte();
             }
-            sum = (int)Math.ceil(sum / 100f);
+            sum =   (int)Math.ceil(sum / 100f);
 
             karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor());
         }
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         
-        return karmaKosten + getKarmaToResource()- karmaSpend;
+        return Math.abs(karmaKosten) + getKarmaToResource()+ Math.abs(karmaSpend);
     }
 
     /**
@@ -1149,7 +1149,7 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             int magieBasis = ka.getMagieBasis() * 100;
             // adept.calcPowerPointsSpend()
 
-            hasSpendAll = magieBasis - calcPowerPointsSpend == 0;
+            hasSpendAll = magieBasis - Math.abs(calcPowerPointsSpend) == 0;
 
         } else if (getMagic().eClass().equals(Shr5managementPackage.Literals.SPELLCASTER)) {
             if (getCharacter().getPersona() instanceof MysticAdept) {
