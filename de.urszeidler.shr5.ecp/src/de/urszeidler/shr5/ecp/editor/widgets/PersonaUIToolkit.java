@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.binding.ModificatedAttributeLabelValue;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * A UI tollkit for personas
@@ -56,9 +57,11 @@ public class PersonaUIToolkit {
 		@Override
 		public Object convert(Object fromObject) {
 			if (fromObject instanceof Integer) {
-				Integer v = (Integer) fromObject;
-				float f = v / 100;
-				return "" + f;
+			    
+			    return ShadowrunEditingTools.powerPointsToFloat((Integer) fromObject);
+//				Integer v = (Integer) fromObject;
+//				float f = v / 100;
+//				return "" + f;
 			}
 			return null;
 		}
