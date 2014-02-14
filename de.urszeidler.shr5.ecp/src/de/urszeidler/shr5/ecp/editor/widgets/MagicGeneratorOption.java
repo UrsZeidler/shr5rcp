@@ -119,7 +119,7 @@ public class MagicGeneratorOption extends Composite {
 
         AbstraktPersona persona = context.getPersona();
         if (persona instanceof KiAdept) {
-            toolkit.createLabel(this, "Kipower spend :", SWT.NONE);
+            toolkit.createLabel(this, Messages.GeneratorOption_kipower_spend, SWT.NONE);
 
             lblSpellSpend1 = new Label(this, SWT.NONE);
             toolkit.adapt(lblSpellSpend1, true, true);
@@ -172,12 +172,6 @@ public class MagicGeneratorOption extends Composite {
             lblCFormLeft.setLayoutData(gd_lblleft);
 
         }
-
-        // if (object instanceof Spellcaster) {
-        //
-        // } else if (object instanceof Technomancer) {
-        //
-        // }
 
         m_bindingContext = initDataBindings();
         internalBinding(m_bindingContext);
@@ -262,9 +256,7 @@ public class MagicGeneratorOption extends Composite {
             modelToTarget.setConverter(new Converter(Integer.class, String.class) {
                 @Override
                 public Object convert(Object fromObject) {
-                    // int calcPowerpointsSpend =((Adept)object) .calcPowerPointsSpend(context);
                     String powerPointsToFloat = ShadowrunEditingTools.powerPointsToFloat(Math.abs(getBasePowerPoints(ka)));
-                    System.out.println("--" + powerPointsToFloat);
                     return powerPointsToFloat;
                 }
 
@@ -283,7 +275,6 @@ public class MagicGeneratorOption extends Composite {
                 public Object convert(Object fromObject) {
                     int calcPowerpointsSpend = ((Adept)object).calcPowerPointsSpend(context);
                     int basePowerpoints = getBasePowerPoints(ka);
-                    System.out.println(calcPowerpointsSpend + "   " + basePowerpoints);
                     return ShadowrunEditingTools.powerPointsToFloat(Math.abs(basePowerpoints) - Math.abs(calcPowerpointsSpend));
                 }
             });
@@ -292,7 +283,7 @@ public class MagicGeneratorOption extends Composite {
 
         }
         if (persona instanceof Zauberer) {
-            Zauberer z = (Zauberer)persona;
+
             final Spellcaster sc = (Spellcaster)object;
             observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblSpellSpend);
             objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),

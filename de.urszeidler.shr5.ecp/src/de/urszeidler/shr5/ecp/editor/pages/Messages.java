@@ -21,6 +21,7 @@ public class Messages extends NLS {
     public static String GeneratorOption_attributes_spend;
     public static String GeneratorOption_complex_forms_spend;
     public static String GeneratorOption_group_spend;
+    public static String GeneratorOption_kipower_spend;
     public static String GeneratorOption_kownlege_spend;
     public static String GeneratorOption_m_skills_spend;
     public static String GeneratorOption_resource_spend;
