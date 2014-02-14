@@ -108,7 +108,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private ControlDecoration controlDecorationKarma;
     private Label lblConnectionPoints;
     private ControlDecoration controlDecorationConnections;
-    private Composite compositeValidation;
     private DiagnosticComposite diagnosticComposite;
     private Group grpValidation;
     private Composite composite_2;
