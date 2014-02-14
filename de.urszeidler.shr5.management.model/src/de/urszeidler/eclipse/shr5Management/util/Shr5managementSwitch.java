@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -322,6 +323,13 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: {
                 LifestyleToStartMoney lifestyleToStartMoney = (LifestyleToStartMoney)theEObject;
                 T result = caseLifestyleToStartMoney(lifestyleToStartMoney);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.SHR_MGMT_LIST: {
+                ShrMgmtList shrMgmtList = (ShrMgmtList)theEObject;
+                T result = caseShrMgmtList(shrMgmtList);
+                if (result == null) result = caseBeschreibbar(shrMgmtList);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -791,6 +799,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseLifestyleToStartMoney(LifestyleToStartMoney object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Shr Mgmt List</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Shr Mgmt List</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseShrMgmtList(ShrMgmtList object) {
         return null;
     }
 

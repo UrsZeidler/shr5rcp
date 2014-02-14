@@ -31,18 +31,17 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.SkillImpl#getSkillPoints <em>Skill Points</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.SkillImpl#getGroupPoints <em>Group Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SkillImpl#getSkillPoints <em>Skill Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SkillImpl#getGroupPoints <em>Group Points</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SkillImpl extends PriorityCategorieImpl implements Skill {
     /**
      * The default value of the '{@link #getSkillPoints() <em>Skill Points</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getSkillPoints()
      * @generated
      * @ordered
@@ -52,7 +51,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
     /**
      * The cached value of the '{@link #getSkillPoints() <em>Skill Points</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getSkillPoints()
      * @generated
      * @ordered
@@ -62,7 +60,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
     /**
      * The default value of the '{@link #getGroupPoints() <em>Group Points</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getGroupPoints()
      * @generated
      * @ordered
@@ -72,7 +69,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
     /**
      * The cached value of the '{@link #getGroupPoints() <em>Group Points</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getGroupPoints()
      * @generated
      * @ordered
@@ -81,7 +77,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SkillImpl() {
@@ -90,7 +85,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -100,7 +94,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getSkillPoints() {
@@ -109,7 +102,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSkillPoints(int newSkillPoints) {
@@ -121,7 +113,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getGroupPoints() {
@@ -130,7 +121,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setGroupPoints(int newGroupPoints) {
@@ -242,7 +232,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -258,7 +247,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -276,7 +264,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -294,7 +281,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -310,7 +296,6 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -330,13 +315,11 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (skillPoints: ");

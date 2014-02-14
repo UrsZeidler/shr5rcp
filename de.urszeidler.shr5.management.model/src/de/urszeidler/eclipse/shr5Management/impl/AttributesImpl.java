@@ -25,10 +25,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributesImpl#getAttibutePoints <em>Attibute Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributesImpl#getAttibutePoints <em>Attibute Points</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class AttributesImpl extends PriorityCategorieImpl implements Attributes {
@@ -36,7 +36,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
      * The default value of the '{@link #getAttibutePoints() <em>Attibute Points</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAttibutePoints()
      * @generated
      * @ordered
@@ -47,7 +46,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
      * The cached value of the '{@link #getAttibutePoints() <em>Attibute Points</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAttibutePoints()
      * @generated
      * @ordered
@@ -57,7 +55,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AttributesImpl() {
@@ -67,7 +64,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -78,7 +74,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getAttibutePoints() {
@@ -88,15 +83,13 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setAttibutePoints(int newAttibutePoints) {
         int oldAttibutePoints = attibutePoints;
         attibutePoints = newAttibutePoints;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS, oldAttibutePoints,
-                    attibutePoints));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTES__ATTIBUTE_POINTS, oldAttibutePoints, attibutePoints));
     }
 
     /**
@@ -137,7 +130,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -152,7 +144,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -168,7 +159,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -184,7 +174,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -199,7 +188,6 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -214,13 +202,11 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (attibutePoints: ");

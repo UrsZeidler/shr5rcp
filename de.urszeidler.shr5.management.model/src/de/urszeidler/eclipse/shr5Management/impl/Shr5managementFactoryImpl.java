@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EClass;
@@ -104,6 +105,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY: return (EObject)createGeneratorStateToEStringMapEntry();
             case Shr5managementPackage.INCREASE_CHARACTER_PART: return createIncreaseCharacterPart();
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: return createLifestyleToStartMoney();
+            case Shr5managementPackage.SHR_MGMT_LIST: return createShrMgmtList();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -361,6 +363,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public LifestyleToStartMoney createLifestyleToStartMoney() {
         LifestyleToStartMoneyImpl lifestyleToStartMoney = new LifestyleToStartMoneyImpl();
         return lifestyleToStartMoney;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ShrMgmtList createShrMgmtList() {
+        ShrMgmtListImpl shrMgmtList = new ShrMgmtListImpl();
+        return shrMgmtList;
     }
 
     /**

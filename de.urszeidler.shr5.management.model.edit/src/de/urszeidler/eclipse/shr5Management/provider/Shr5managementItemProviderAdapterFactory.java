@@ -589,6 +589,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ShrMgmtList} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ShrMgmtListItemProvider shrMgmtListItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ShrMgmtList}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createShrMgmtListAdapter() {
+        if (shrMgmtListItemProvider == null) {
+            shrMgmtListItemProvider = new ShrMgmtListItemProvider(this);
+        }
+
+        return shrMgmtListItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -709,6 +732,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (generatorStateToEStringMapEntryItemProvider != null) generatorStateToEStringMapEntryItemProvider.dispose();
         if (increaseCharacterPartItemProvider != null) increaseCharacterPartItemProvider.dispose();
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
+        if (shrMgmtListItemProvider != null) shrMgmtListItemProvider.dispose();
     }
 
 	/**
@@ -753,11 +777,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
             }
 			/**
              * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
+             * <!-- end-user-doc -->
              * @generated
              */
-			@Override
-			public Object caseShrList(ShrList object) {
+            @Override
+            public Object caseShrList(ShrList object) {
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
@@ -868,10 +892,14 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
 
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createShrMgmtList()));
+
                 return null;
             }
- 
-			/**
+            /**
              * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
              * @generated

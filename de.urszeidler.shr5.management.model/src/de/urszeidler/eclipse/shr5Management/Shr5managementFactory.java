@@ -212,6 +212,15 @@ public interface Shr5managementFactory extends EFactory {
     LifestyleToStartMoney createLifestyleToStartMoney();
 
     /**
+     * Returns a new object of class '<em>Shr Mgmt List</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Shr Mgmt List</em>'.
+     * @generated
+     */
+    ShrMgmtList createShrMgmtList();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

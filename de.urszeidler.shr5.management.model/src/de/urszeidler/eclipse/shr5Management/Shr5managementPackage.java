@@ -3308,6 +3308,70 @@ public interface Shr5managementPackage extends EPackage {
     int LIFESTYLE_TO_START_MONEY_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl <em>Shr Mgmt List</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShrMgmtList()
+     * @generated
+     */
+    int SHR_MGMT_LIST = 31;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_MGMT_LIST__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_MGMT_LIST__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_MGMT_LIST__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Entries</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_MGMT_LIST__ENTRIES = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Shr Mgmt List</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_MGMT_LIST_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Shr Mgmt List</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR_MGMT_LIST_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3315,7 +3379,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 31;
+	int GENERATOR_STATE = 32;
 
 
 	/**
@@ -3326,7 +3390,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 32;
+	int SEX = 33;
 
 
 	/**
@@ -4956,6 +5020,27 @@ public interface Shr5managementPackage extends EPackage {
     EReference getLifestyleToStartMoney_LifeStyles();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ShrMgmtList <em>Shr Mgmt List</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Shr Mgmt List</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ShrMgmtList
+     * @generated
+     */
+    EClass getShrMgmtList();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.ShrMgmtList#getEntries <em>Entries</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Entries</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ShrMgmtList#getEntries()
+     * @see #getShrMgmtList()
+     * @generated
+     */
+    EReference getShrMgmtList_Entries();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6283,6 +6368,24 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference LIFESTYLE_TO_START_MONEY__LIFE_STYLES = eINSTANCE.getLifestyleToStartMoney_LifeStyles();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl <em>Shr Mgmt List</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShrMgmtList()
+         * @generated
+         */
+        EClass SHR_MGMT_LIST = eINSTANCE.getShrMgmtList();
+
+        /**
+         * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SHR_MGMT_LIST__ENTRIES = eINSTANCE.getShrMgmtList_Entries();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

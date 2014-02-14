@@ -7,7 +7,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
@@ -714,27 +712,27 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 && hasSpendAllMagicSkillsPoints(null, null) && hasSpendAllResourcePoints(null, null) && hasSpendAllSkillPoints(null, null)
                 && hasSpendAllSpecialPoints(null, null) && hasSpendAllSpecialTypePoints(null, null) && hasSpendAllSpellPoints(null, null);
 
-        int karmaPoints = getShr5Generator().getKarmaPoints();
-
-        boolean haseSpendAllPoints = false;
-        if (magic instanceof Spellcaster) {
-            Spellcaster sc = (Spellcaster)magic;
-            if (sc.calcSpellPointsSpend(getCharacter()) != sc.getSpellPoints())
-                haseSpendAllPoints = true;
-        } else if (magic instanceof Technomancer) {
-            Technomancer tm = (Technomancer)magic;
-            if (tm.calcComplexFormsSpend(getCharacter()) != tm.getComplexForms())
-                haseSpendAllPoints = true;
-        }
-
-        int skillPoints = getSkills().getSkillPoints();
-        int groupPoints = getSkills().getGroupPoints();
-        boolean notAllSpend = haseSpendAllPoints || getKarmaSpend() != karmaPoints
-                || getAttribute().calcAttributesSpend(getCharacter()) != getAttribute().getAttibutePoints()
-                || getShr5Generator().getMaxResourceToKeep() < getResourcen().getResource() - getResourcen().calcResourceSpend(getCharacter())
-                || getMagic().calcSkillsSpend(getCharacter()) != getMagic().getSkillNumber()
-                || getMetaType().calcSpecialPointsSpend(getCharacter()) != getMetaType().getSpecialPoints()
-                || getSkills().calcSkillSpend(getCharacter()) != skillPoints || getSkills().calcGroupSpend(getCharacter()) != groupPoints;
+//        int karmaPoints = getShr5Generator().getKarmaPoints();
+//
+//        boolean haseSpendAllPoints = false;
+//        if (magic instanceof Spellcaster) {
+//            Spellcaster sc = (Spellcaster)magic;
+//            if (sc.calcSpellPointsSpend(getCharacter()) != sc.getSpellPoints())
+//                haseSpendAllPoints = true;
+//        } else if (magic instanceof Technomancer) {
+//            Technomancer tm = (Technomancer)magic;
+//            if (tm.calcComplexFormsSpend(getCharacter()) != tm.getComplexForms())
+//                haseSpendAllPoints = true;
+//        }
+//
+//        int skillPoints = getSkills().getSkillPoints();
+//        int groupPoints = getSkills().getGroupPoints();
+//        boolean notAllSpend = haseSpendAllPoints || getKarmaSpend() != karmaPoints
+//                || getAttribute().calcAttributesSpend(getCharacter()) != getAttribute().getAttibutePoints()
+//                || getShr5Generator().getMaxResourceToKeep() < getResourcen().getResource() - getResourcen().calcResourceSpend(getCharacter())
+//                || getMagic().calcSkillsSpend(getCharacter()) != getMagic().getSkillNumber()
+//                || getMetaType().calcSpecialPointsSpend(getCharacter()) != getMetaType().getSpecialPoints()
+//                || getSkills().calcSkillSpend(getCharacter()) != skillPoints || getSkills().calcGroupSpend(getCharacter()) != groupPoints;
 
         //System.out.println("  " + !spendAll + "  " + notAllSpend);
 

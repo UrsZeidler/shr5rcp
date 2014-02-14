@@ -2,8 +2,10 @@
 
 * straiten most of the localisation issues, english and german are currently supportet
 * added a freestyle generator to clone personaes or create chracters with no rule boundaries
+* added https://www.eclipse.org/nebula/widgets/cdatetime/cdatetime.php as datepicker
 * impleted the character advacment system
-
+* import from chummer2 :
+	* reorganized the resources
 
 2014-02-02 Version 0.1.1
 	
