@@ -684,11 +684,10 @@ public class PersonaPrinter {
 
         EList<Connection> connections = character.getConnections();
         for (Connection connection : connections) {
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(connection), 2));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getLoyality())));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getInfluence())));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("---")); //$NON-NLS-1$
-
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(connection), attributeFont), 2);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getLoyality()), attributeFont));
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getInfluence()), attributeFont));
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("---", attributeFont)); //$NON-NLS-1$
         }
 
         return grid;
@@ -879,7 +878,7 @@ public class PersonaPrinter {
      */
     private String essenzToFloat(int essenz) {
         return ShadowrunEditingTools.essenzToFloat(essenz);
-     }
+    }
 
     /**
      * Prints the ini.
