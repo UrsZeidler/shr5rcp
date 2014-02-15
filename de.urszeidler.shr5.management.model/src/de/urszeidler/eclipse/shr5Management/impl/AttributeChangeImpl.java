@@ -23,10 +23,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class AttributeChangeImpl extends PersonaValueChangeImpl implements AttributeChange {
@@ -34,6 +34,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
      * The cached value of the '{@link #getAttibute() <em>Attibute</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAttibute()
      * @generated
      * @ordered
@@ -43,6 +44,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected AttributeChangeImpl() {
@@ -52,6 +54,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -62,6 +65,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EAttribute getAttibute() {
@@ -79,6 +83,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EAttribute basicGetAttibute() {
@@ -96,31 +101,33 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
         attibute = newAttibute;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTE_CHANGE__ATTIBUTE, oldAttibute, attibute));
-   
-    
-        if(newAttibute==null)
+
+        if (newAttibute == null)
             return;
-        
+        if (changeApplied)
+            return;
+
         Integer eGet = (Integer)getCharacter().getPersona().eGet(getAttibute());
- 
+
         setFrom(eGet);
         setTo(eGet + 1);
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.Literals.CHANGES__KARMA_COST, 0, 1));
 
-    
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.ATTRIBUTE_CHANGE__ATTIBUTE:
-                if (resolve) return getAttibute();
+                if (resolve)
+                    return getAttibute();
                 return basicGetAttibute();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -129,6 +136,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -144,6 +152,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -159,6 +168,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -205,9 +215,9 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
         if (getCharacter() == null)
             return;
 
-       internalApply();
+        internalApply();
 
-        //Integer eGet = (Integer)getCharacter().getPersona().eGet(getAttibute());
+        // Integer eGet = (Integer)getCharacter().getPersona().eGet(getAttibute());
         getCharacter().getPersona().eSet(getAttibute(), getTo());
     }
 
