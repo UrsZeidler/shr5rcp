@@ -13,14 +13,7 @@
          </property>
          <property
                name="aboutText"
-               value="The shadowrun 5 IDE client.
-under Eclipse Public License, version 1.0.
-(c) Urs Zeidler
-
-sample images are from http://openclipart.org/
-
-Shadowrun is © 2013 The Topps Company, Inc, Catalyst Game Labs
-http://www.shadowruntabletop.com/">
+               value="The shadowrun 5 IDE client.&#x0A;under Eclipse Public License, version 1.0.&#x0A;(c) Urs Zeidler&#x0A;&#x0A;sample images are from http://openclipart.org/&#x0A;&#x0A;Shadowrun is © 2013 The Topps Company, Inc, Catalyst Game Labs&#x0A;http://www.shadowruntabletop.com/">
          </property>
          <property
                name="aboutImage"
