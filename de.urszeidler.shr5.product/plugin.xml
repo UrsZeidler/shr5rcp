@@ -13,7 +13,14 @@
          </property>
          <property
                name="aboutText"
-               value="The shadowrun IDE client.">
+               value="The shadowrun 5 IDE client.
+under Eclipse Public License, version 1.0.
+(c) Urs Zeidler
+
+sample images are from http://openclipart.org/
+
+Shadowrun is © 2013 The Topps Company, Inc, Catalyst Game Labs
+http://www.shadowruntabletop.com/">
          </property>
          <property
                name="aboutImage"
@@ -30,6 +37,14 @@
          <property
                name="startupMessageRect"
                value="5,226,490,20">
+         </property>
+         <property
+               name="appName"
+               value="RCP schadowrun">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
    </extension>
