@@ -57,8 +57,8 @@ public class ModifikatorItemProvider extends ReflectiveItemProvider implements I
 
         if (object instanceof EStructuralFeature) {
             EStructuralFeature es = (EStructuralFeature)object;
-            String key = "_UI_" +es.getEContainingClass().getName()+"_"+es.getName() + "_feature";
             try {
+            String key = "_UI_" +es.getEContainingClass().getName()+"_"+es.getName() + "_feature";
                 return getString(key);
             } catch (Exception e) {
             }
