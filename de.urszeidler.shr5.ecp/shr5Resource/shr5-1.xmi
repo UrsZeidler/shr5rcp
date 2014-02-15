@@ -1586,7 +1586,6 @@
 <persona xsi:type="shr5:KiAdept" image="/shr5Resource/images/gunter-face-small.png" name="Gu" edgeBasis="5" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
 <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-<fertigkeiten fertigkeit="//@entries.0/@entries.4/@entries.27"/>
 <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
 <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0"/>
@@ -1598,14 +1597,19 @@
 <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.22"/>
 <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.70"/>
-<fertigkeiten fertigkeit="//@entries.0/@entries.5/@entries.69"/>
-<fertigkeiten fertigkeit="//@entries.0/@entries.5/@entries.11"/>
-<fertigkeitsGruppen gruppe="//@entries.0/@entries.3/@entries.0"/>
 <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.10"/>
 <eigenschaften name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="4"/>
-<eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
+<eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3">
+<mods wert="2">
+<attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
+</mods>
+</eigenschaften>
 <eigenschaften name="Allergy (Silver Moderate)" page="78" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-10"/>
-<eigenschaften name="Toughness" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="9"/>
+<eigenschaften name="Toughness" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="9">
+<mods wert="1">
+<attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
+</mods>
+</eigenschaften>
 <kikraft name="Improved Reflexes 3" kraftpunkte="-350">
 <mods wert="3">
 <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
@@ -1614,7 +1618,11 @@
 <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
 </mods>
 </kikraft>
-<kikraft name="Combat Sense" kraftpunkte="-50"/>
+<kikraft name="Combat Sense 1" kraftpunkte="-50">
+<mods wert="1">
+<attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+</mods>
+</kikraft>
 <kikraft name="Mystic Armor" kraftpunkte="-50">
 <mods wert="1">
 <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
