@@ -101,7 +101,7 @@ public class PersonaChangeItemProvider extends PersonaValueChangeItemProvider im
         if (factory != null && personaChange.getChangeable() != null) {
             IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(personaChange.getChangeable(), IItemLabelProvider.class);
             if (labelprovider != null)
-                labelValue = labelprovider.getText(personaChange.getChangeable()) + personaChange.getFrom() + " -> " + personaChange.getTo();
+                labelValue = labelprovider.getText(personaChange.getChangeable()) +" "+ personaChange.getFrom() + " -> " + personaChange.getTo();
         }
 
         String label = labelValue == null ? null : labelValue.toString();

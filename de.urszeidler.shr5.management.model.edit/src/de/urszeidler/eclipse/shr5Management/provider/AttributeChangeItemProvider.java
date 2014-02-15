@@ -110,7 +110,7 @@ public class AttributeChangeItemProvider
             IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(attributeChange.getAttibute(),
                     IItemLabelProvider.class);
             if (labelprovider != null)
-                labelValue = labelprovider.getText(attributeChange.getAttibute()) + attributeChange.getFrom()+"->"+attributeChange.getTo();
+                labelValue = labelprovider.getText(attributeChange.getAttibute()) +" "+ attributeChange.getFrom()+"->"+attributeChange.getTo();
         }
         
         //Date labelValue = attributeChange.getDate();
