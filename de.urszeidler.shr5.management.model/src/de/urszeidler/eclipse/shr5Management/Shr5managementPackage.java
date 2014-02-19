@@ -606,13 +606,22 @@ public interface Shr5managementPackage extends EPackage {
     int NON_PLAYER_CHARACTER__CURRENT_KARMA = MANAGED_CHARACTER__CURRENT_KARMA;
 
     /**
+     * The feature id for the '<em><b>Professional Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NON_PLAYER_CHARACTER__PROFESSIONAL_RATING = MANAGED_CHARACTER_FEATURE_COUNT + 0;
+
+    /**
      * The number of structural features of the '<em>Non Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int NON_PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 0;
+	int NON_PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 1;
 
 	/**
      * The number of operations of the '<em>Non Player Character</em>' class.
@@ -3665,6 +3674,17 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getNonPlayerCharacter();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.NonPlayerCharacter#getProfessionalRating <em>Professional Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Professional Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.NonPlayerCharacter#getProfessionalRating()
+     * @see #getNonPlayerCharacter()
+     * @generated
+     */
+    EAttribute getNonPlayerCharacter_ProfessionalRating();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Changes <em>Changes</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5292,6 +5312,14 @@ public interface Shr5managementPackage extends EPackage {
 		EClass NON_PLAYER_CHARACTER = eINSTANCE.getNonPlayerCharacter();
 
 		/**
+         * The meta object literal for the '<em><b>Professional Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute NON_PLAYER_CHARACTER__PROFESSIONAL_RATING = eINSTANCE.getNonPlayerCharacter_ProfessionalRating();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl <em>Changes</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

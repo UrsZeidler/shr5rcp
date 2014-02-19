@@ -6,7 +6,6 @@ package de.urszeidler.eclipse.shr5Management.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -16,8 +15,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.NonPlayerCharacter} object.
@@ -54,11 +56,34 @@ public class NonPlayerCharacterItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addProfessionalRatingPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
 	/**
+     * This adds a property descriptor for the Professional Rating feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addProfessionalRatingPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_NonPlayerCharacter_professionalRating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_NonPlayerCharacter_professionalRating_feature", "_UI_NonPlayerCharacter_type"),
+                 Shr5managementPackage.Literals.NON_PLAYER_CHARACTER__PROFESSIONAL_RATING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
 	 * This returns NonPlayerCharacter.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +137,12 @@ public class NonPlayerCharacterItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
         updateChildren(notification);
+
+        switch (notification.getFeatureID(NonPlayerCharacter.class)) {
+            case Shr5managementPackage.NON_PLAYER_CHARACTER__PROFESSIONAL_RATING:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
         super.notifyChanged(notification);
     }
 

@@ -357,11 +357,22 @@ public interface Shr5Generator extends CharacterGenerator {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Start Karma</em>' attribute.
+     * @see #setStartKarma(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_StartKarma()
-     * @model changeable="false"
+     * @model
      * @generated
      */
     int getStartKarma();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartKarma <em>Start Karma</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Start Karma</em>' attribute.
+     * @see #getStartKarma()
+     * @generated
+     */
+    void setStartKarma(int value);
 
     /**
      * Returns the value of the '<em><b>Start Resources</b></em>' attribute.
@@ -372,11 +383,22 @@ public interface Shr5Generator extends CharacterGenerator {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Start Resources</em>' attribute.
+     * @see #setStartResources(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_StartResources()
-     * @model changeable="false"
+     * @model
      * @generated
      */
     int getStartResources();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getStartResources <em>Start Resources</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Start Resources</em>' attribute.
+     * @see #getStartResources()
+     * @generated
+     */
+    void setStartResources(int value);
 
     /**
      * <!-- begin-user-doc -->

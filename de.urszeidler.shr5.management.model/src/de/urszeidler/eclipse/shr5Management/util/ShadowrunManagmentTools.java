@@ -18,11 +18,13 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -33,13 +35,13 @@ public class ShadowrunManagmentTools {
 
     /**
      * Count the number of {@link Erlernbar} spend with Karma.
+     * 
      * @param changes the changes of a character
      * @param erlernbar the {@link Erlernbar} type
      * @param type the type of the {@link Erlernbar} to look after
-     * 
      * @return
      */
-    public static int countSpendByKarma(EList<Changes> changes,EClass erlernbar,EClass type) {
+    public static int countSpendByKarma(EList<Changes> changes, EClass erlernbar, EClass type) {
         int counter = 0;
         for (Changes change : changes) {
             if (change.isChangeApplied())
@@ -56,7 +58,6 @@ public class ShadowrunManagmentTools {
         return counter;
     }
 
-    
     /**
      * The Karma cost are a negative number.
      */
@@ -197,5 +198,31 @@ public class ShadowrunManagmentTools {
         } catch (Exception e) {
         }
         return new Date(System.currentTimeMillis());
+    }
+
+    /**
+     * Calcs the karma left for a generator.
+     * @param object
+     * @return
+     */
+    public static int calcKarmaLeft(Shr5Generator object) {
+        return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+    }
+    
+    /**
+     * Calcs the resources left for a generator.
+     * @param object
+     * @return
+     */
+    public static int calcResourcesLeft(Shr5Generator object) {
+        Shr5System sr5g = object.getShr5Generator();
+        if (sr5g == null)
+            return 0;
+
+        int calcResourceSpend = object.getResourceSpend();
+        int karmaToResource = object.getKarmaToResource() * sr5g.getKarmaToResourceFactor();
+
+        return (object.getResourcen().getResource() + karmaToResource - calcResourceSpend);
+
     }
 }

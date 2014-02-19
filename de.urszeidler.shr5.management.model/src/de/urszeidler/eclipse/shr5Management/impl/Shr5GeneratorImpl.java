@@ -7,7 +7,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
@@ -665,8 +663,32 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
      * <!-- end-user-doc -->
      * @generated
      */
+    public void setStartKarma(int newStartKarma) {
+        int oldStartKarma = startKarma;
+        startKarma = newStartKarma;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__START_KARMA, oldStartKarma, startKarma));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getStartResources() {
         return startResources;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setStartResources(int newStartResources) {
+        int oldStartResources = startResources;
+        startResources = newStartResources;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES, oldStartResources, startResources));
     }
 
     /**
@@ -1251,6 +1273,12 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
                 setKarmaToResource((Integer)newValue);
                 return;
+            case Shr5managementPackage.SHR5_GENERATOR__START_KARMA:
+                setStartKarma((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES:
+                setStartResources((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -1279,6 +1307,12 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return;
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_TO_RESOURCE:
                 setKarmaToResource(KARMA_TO_RESOURCE_EDEFAULT);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__START_KARMA:
+                setStartKarma(START_KARMA_EDEFAULT);
+                return;
+            case Shr5managementPackage.SHR5_GENERATOR__START_RESOURCES:
+                setStartResources(START_RESOURCES_EDEFAULT);
                 return;
         }
         super.eUnset(featureID);

@@ -598,6 +598,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getNonPlayerCharacter_ProfessionalRating() {
+        return (EAttribute)nonPlayerCharacterEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1840,6 +1849,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(prioritySystemEClass, PRIORITY_SYSTEM__KARMA_POINTS);
 
         nonPlayerCharacterEClass = createEClass(NON_PLAYER_CHARACTER);
+        createEAttribute(nonPlayerCharacterEClass, NON_PLAYER_CHARACTER__PROFESSIONAL_RATING);
 
         changesEClass = createEClass(CHANGES);
         createEAttribute(changesEClass, CHANGES__DATE);
@@ -2090,6 +2100,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getPrioritySystem_KarmaPoints(), ecorePackage.getEInt(), "karmaPoints", null, 0, 1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(nonPlayerCharacterEClass, NonPlayerCharacter.class, "NonPlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getNonPlayerCharacter_ProfessionalRating(), ecorePackage.getEInt(), "professionalRating", null, 0, 1, NonPlayerCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(changesEClass, Changes.class, "Changes", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getChanges_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2213,8 +2224,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5Generator_GroupPointSpend(), ecorePackage.getEInt(), "groupPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5Generator_KnownlegePointSpend(), ecorePackage.getEInt(), "knownlegePointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5Generator_SpellPointSpend(), ecorePackage.getEInt(), "spellPointSpend", null, 0, 1, Shr5Generator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        initEAttribute(getShr5Generator_StartKarma(), ecorePackage.getEInt(), "startKarma", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getShr5Generator_StartResources(), ecorePackage.getEInt(), "startResources", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_StartKarma(), ecorePackage.getEInt(), "startKarma", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5Generator_StartResources(), ecorePackage.getEInt(), "startResources", null, 0, 1, Shr5Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         op = initEOperation(getShr5Generator__HasCategoryOnlyOnce__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasCategoryOnlyOnce", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);

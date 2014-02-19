@@ -48,7 +48,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PrioritySystem/priorities"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PrioritySystem/karmaPoints"/>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//NonPlayerCharacter"/>
+    <genClasses ecoreClass="shr5Management.ecore#//NonPlayerCharacter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//NonPlayerCharacter/professionalRating"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//Changes">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Changes/date"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Changes/karmaCost"/>

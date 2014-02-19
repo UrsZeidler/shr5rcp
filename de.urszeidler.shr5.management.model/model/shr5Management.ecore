@@ -50,7 +50,9 @@
         eType="#//PriorityCategorie" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NonPlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NonPlayerCharacter" eSuperTypes="#//ManagedCharacter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="professionalRating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Changes" abstract="true">
     <eOperations name="applyChanges"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
@@ -353,10 +355,8 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="spellPointSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeChange" eSuperTypes="#//PersonaValueChange">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attibute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
