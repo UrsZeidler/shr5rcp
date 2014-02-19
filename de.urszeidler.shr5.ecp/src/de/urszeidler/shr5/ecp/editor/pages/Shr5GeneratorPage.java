@@ -181,6 +181,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
+        tltmCommit.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                commitCharacter();
+            }
+        });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
 
         ToolItem restItem = new ToolItem(toolBar, SWT.NONE);
@@ -417,6 +423,17 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     }
 
     /**
+     * Commit the character.
+     */
+    protected void commitCharacter() {
+        object.setState(GeneratorState.COMMITED);
+        object.setStartResources(ShadowrunManagmentTools.calcResourcesLeft(object));
+        object.setStartKarma(ShadowrunManagmentTools.calcKarmaLeft(object));
+        validateChange();        
+    }
+
+    
+    /**
      * Validates the changes and update the gui.
      */
     protected void validateChange() {
@@ -572,7 +589,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 if (object.getShr5Generator() == null)
                     return Messages.GeneratorPage_left1;
 
-                return Messages.GeneratorPage_left + (object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend() + EMPTY);
+                return Messages.GeneratorPage_left + (ShadowrunManagmentTools.calcKarmaLeft(object) + EMPTY);
             }
         });
 

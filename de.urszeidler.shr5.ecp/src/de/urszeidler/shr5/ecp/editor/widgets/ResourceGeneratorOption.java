@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class ResourceGeneratorOption extends Composite {
@@ -138,15 +139,18 @@ public class ResourceGeneratorOption extends Composite {
 		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
 			@Override
 			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcResourceSpend(context);
+//				int calcAttributesSpend = object.calcResourceSpend(context);
 				CharacterGenerator generator = context.getChracterSource();
-				int karmaToResource = 0;
+//				int karmaToResource = 0;
 				if (generator instanceof Shr5Generator) {
 					Shr5Generator sr5g = (Shr5Generator) generator;
-					karmaToResource = sr5g.getKarmaToResource() * sr5g.getShr5Generator().getKarmaToResourceFactor();
+					
+					return ShadowrunManagmentTools.calcResourcesLeft(sr5g);
+					
+					//karmaToResource = sr5g.getKarmaToResource() * sr5g.getShr5Generator().getKarmaToResourceFactor();
 				}
-				
-				return (object.getResource()+karmaToResource - calcAttributesSpend + EMPTY);
+				return 0;
+				//return (object.getResource()+karmaToResource - calcAttributesSpend + EMPTY);
 			}
 		});
 		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
