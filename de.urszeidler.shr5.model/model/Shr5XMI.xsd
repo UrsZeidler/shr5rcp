@@ -1003,4 +1003,13 @@
       <xsd:documentation>A Tagging interface for all elements part of character advacements.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="Credstick">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:attribute name="currenValue" type="xsd:int"/>
+        <xsd:attribute name="maxValue" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Credstick" type="shr5:Credstick"/>
 </xsd:schema>

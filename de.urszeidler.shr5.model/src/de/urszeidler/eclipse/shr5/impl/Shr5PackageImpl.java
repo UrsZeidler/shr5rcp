@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
 import de.urszeidler.eclipse.shr5.ChrakterLimits;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Critter;
 import de.urszeidler.eclipse.shr5.CritterDauer;
 import de.urszeidler.eclipse.shr5.CritterHandlung;
@@ -676,6 +677,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass erlernbarEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass credstickEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3372,6 +3380,33 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCredstick() {
+        return credstickEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCredstick_CurrenValue() {
+        return (EAttribute)credstickEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCredstick_MaxValue() {
+        return (EAttribute)credstickEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3902,6 +3937,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         erlernbarEClass = createEClass(ERLERNBAR);
 
+        credstickEClass = createEClass(CREDSTICK);
+        createEAttribute(credstickEClass, CREDSTICK__CURREN_VALUE);
+        createEAttribute(credstickEClass, CREDSTICK__MAX_VALUE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4048,6 +4087,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         lizenzEClass.getESuperTypes().add(this.getFakeable());
         fakeableEClass.getESuperTypes().add(this.getVertrag());
         steigerbarEClass.getESuperTypes().add(this.getErlernbar());
+        credstickEClass.getESuperTypes().add(this.getAbstraktGegenstand());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4409,6 +4449,10 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getSteigerbar_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, Steigerbar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(erlernbarEClass, Erlernbar.class, "Erlernbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(credstickEClass, Credstick.class, "Credstick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCredstick_CurrenValue(), ecorePackage.getEInt(), "currenValue", null, 0, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCredstick_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 0, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

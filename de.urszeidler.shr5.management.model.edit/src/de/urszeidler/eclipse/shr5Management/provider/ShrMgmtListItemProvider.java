@@ -575,6 +575,11 @@ public class ShrMgmtListItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.SHR_MGMT_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createLizenz()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.SHR_MGMT_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createCredstick()));
     }
 
     /**

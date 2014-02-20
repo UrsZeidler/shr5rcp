@@ -541,5 +541,10 @@
     <nested inputs="shr5.ecore#//Steigerbar" outputs="Shr5XMI.xsd#//Steigerbar;XSDElementDeclaration=78"/>
     <nested inputs="shr5.ecore#//Erlernbar" outputs="Shr5XMI.xsd#//Erlernbar;XSDComplexTypeDefinition=79"/>
     <nested inputs="shr5.ecore#//Erlernbar" outputs="Shr5XMI.xsd#//Erlernbar;XSDElementDeclaration=79"/>
+    <nested inputs="shr5.ecore#//Credstick" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80">
+      <nested inputs="shr5.ecore#//Credstick/currenValue" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Credstick/maxValue" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Credstick" outputs="Shr5XMI.xsd#//Credstick;XSDElementDeclaration=80"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

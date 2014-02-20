@@ -258,6 +258,11 @@ public class CyberwareItemProvider
             (createChildParameter
                 (Shr5Package.Literals.CYBERWARE__EINBAU,
                  Shr5Factory.eINSTANCE.createKleidung()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CYBERWARE__EINBAU,
+                 Shr5Factory.eINSTANCE.createCredstick()));
     }
 
 }

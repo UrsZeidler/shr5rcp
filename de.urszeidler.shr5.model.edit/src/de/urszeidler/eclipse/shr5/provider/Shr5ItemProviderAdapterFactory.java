@@ -1152,6 +1152,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Credstick} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CredstickItemProvider credstickItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Credstick}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCredstickAdapter() {
+        if (credstickItemProvider == null) {
+            credstickItemProvider = new CredstickItemProvider(this);
+        }
+
+        return credstickItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1297,6 +1320,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (critterItemProvider != null) critterItemProvider.dispose();
         if (sinItemProvider != null) sinItemProvider.dispose();
         if (lizenzItemProvider != null) lizenzItemProvider.dispose();
+        if (credstickItemProvider != null) credstickItemProvider.dispose();
     }
 
 }

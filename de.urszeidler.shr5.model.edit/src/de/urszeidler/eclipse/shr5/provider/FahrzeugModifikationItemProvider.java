@@ -357,6 +357,11 @@ public class FahrzeugModifikationItemProvider
             (createChildParameter
                 (Shr5Package.Literals.FAHRZEUG_MODIFIKATION__FUNKTION,
                  Shr5Factory.eINSTANCE.createKleidung()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FAHRZEUG_MODIFIKATION__FUNKTION,
+                 Shr5Factory.eINSTANCE.createCredstick()));
     }
 
 	/**

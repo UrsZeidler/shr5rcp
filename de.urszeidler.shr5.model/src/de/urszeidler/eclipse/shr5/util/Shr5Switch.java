@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
+import de.urszeidler.eclipse.shr5.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -914,6 +915,18 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.ERLERNBAR: {
                 Erlernbar erlernbar = (Erlernbar)theEObject;
                 T result = caseErlernbar(erlernbar);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CREDSTICK: {
+                Credstick credstick = (Credstick)theEObject;
+                T result = caseCredstick(credstick);
+                if (result == null) result = caseAbstraktGegenstand(credstick);
+                if (result == null) result = caseQuelle(credstick);
+                if (result == null) result = caseGeldWert(credstick);
+                if (result == null) result = caseBeschreibbar(credstick);
+                if (result == null) result = caseModifizierbar(credstick);
+                if (result == null) result = caseAnwendbar(credstick);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2118,6 +2131,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseErlernbar(Erlernbar object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Credstick</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Credstick</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCredstick(Credstick object) {
         return null;
     }
 

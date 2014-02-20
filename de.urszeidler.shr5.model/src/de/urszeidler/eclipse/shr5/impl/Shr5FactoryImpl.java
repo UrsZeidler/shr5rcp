@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
@@ -166,6 +167,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.CRITTER: return createCritter();
             case Shr5Package.SIN: return createSin();
             case Shr5Package.LIZENZ: return createLizenz();
+            case Shr5Package.CREDSTICK: return createCredstick();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -725,6 +727,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Lizenz createLizenz() {
         LizenzImpl lizenz = new LizenzImpl();
         return lizenz;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Credstick createCredstick() {
+        CredstickImpl credstick = new CredstickImpl();
+        return credstick;
     }
 
     /**

@@ -520,4 +520,8 @@
       <details key="documentation" value="A Tagging interface for all elements part of character advacements."/>
     </eAnnotations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Credstick" eSuperTypes="#//AbstraktGegenstand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currenValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
 </ecore:EPackage>

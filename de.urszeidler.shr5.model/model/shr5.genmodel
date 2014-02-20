@@ -426,5 +426,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Steigerbar/stufe"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Erlernbar"/>
+    <genClasses ecoreClass="shr5.ecore#//Credstick">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/currenValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/maxValue"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

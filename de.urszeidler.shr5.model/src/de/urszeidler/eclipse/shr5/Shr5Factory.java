@@ -445,6 +445,15 @@ public interface Shr5Factory extends EFactory {
     Lizenz createLizenz();
 
     /**
+     * Returns a new object of class '<em>Credstick</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Credstick</em>'.
+     * @generated
+     */
+    Credstick createCredstick();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

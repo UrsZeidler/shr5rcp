@@ -11038,6 +11038,133 @@ public interface Shr5Package extends EPackage {
     int LIZENZ_OPERATION_COUNT = FAKEABLE_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl <em>Credstick</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CredstickImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCredstick()
+     * @generated
+     */
+    int CREDSTICK = 80;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__WERT = ABSTRAKT_GEGENSTAND__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__NAME = ABSTRAKT_GEGENSTAND__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__MODS = ABSTRAKT_GEGENSTAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Curren Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__CURREN_VALUE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Max Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__MAX_VALUE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Credstick</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Credstick</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11045,7 +11172,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 80;
+	int FEUER_MODUS = 81;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -11055,7 +11182,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 81;
+	int SCHADENS_TYP = 82;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -11065,7 +11192,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 82;
+	int MAGAZIN_TYP = 83;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -11075,7 +11202,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 83;
+	int FEUWERWAFFEN_ERWEITERUNG = 84;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -11085,7 +11212,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 84;
+	int MODIFIKATOR_TYPE = 85;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -11095,7 +11222,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 85;
+	int SMARTGUN_TYPE = 86;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -11105,7 +11232,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 86;
+	int ZAUBER_ART = 87;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -11115,7 +11242,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 87;
+	int ZAUBER_REICHWEITE = 88;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -11125,7 +11252,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 88;
+	int ZAUBER_DAUER = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -11135,7 +11262,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 89;
+	int MAGISCHE_TRADITION = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -11145,7 +11272,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 90;
+	int CRITTER_HANDLUNG = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -11155,7 +11282,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 91;
+	int CRITTER_REICHWEITE = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -11165,7 +11292,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 92;
+	int CRITTER_DAUER = 93;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -11175,7 +11302,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 93;
+	int RESONANZ_ZIEL = 94;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -11185,7 +11312,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 94;
+	int SHR_DATE = 95;
 
 
 	/**
@@ -11196,7 +11323,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 95;
+	int MODIFICATION_MANAGER = 96;
 
 
 	/**
@@ -14200,6 +14327,38 @@ public interface Shr5Package extends EPackage {
     EClass getErlernbar();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Credstick <em>Credstick</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Credstick</em>'.
+     * @see de.urszeidler.eclipse.shr5.Credstick
+     * @generated
+     */
+    EClass getCredstick();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Credstick#getCurrenValue <em>Curren Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Curren Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.Credstick#getCurrenValue()
+     * @see #getCredstick()
+     * @generated
+     */
+    EAttribute getCredstick_CurrenValue();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Credstick#getMaxValue <em>Max Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Max Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.Credstick#getMaxValue()
+     * @see #getCredstick()
+     * @generated
+     */
+    EAttribute getCredstick_MaxValue();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16783,6 +16942,32 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass ERLERNBAR = eINSTANCE.getErlernbar();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl <em>Credstick</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.CredstickImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCredstick()
+         * @generated
+         */
+        EClass CREDSTICK = eINSTANCE.getCredstick();
+
+        /**
+         * The meta object literal for the '<em><b>Curren Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CREDSTICK__CURREN_VALUE = eINSTANCE.getCredstick_CurrenValue();
+
+        /**
+         * The meta object literal for the '<em><b>Max Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CREDSTICK__MAX_VALUE = eINSTANCE.getCredstick_MaxValue();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
