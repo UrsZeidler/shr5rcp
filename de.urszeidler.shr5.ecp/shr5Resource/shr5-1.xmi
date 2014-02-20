@@ -237,133 +237,133 @@
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Yakuza" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="weapons">
-<entries xsi:type="shr5:Nahkampfwaffe" name="Unarmed Attack" page="112" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR/2)S" praezision="4"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Combat Axe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000" verfuegbarkeit="12R" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Combat Knife" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="4" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Forearm Snap-Blades" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="7R" schadenscode="(STR+2)P" praezision="4" durchschlagsKraft="-2"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Katana" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Knife" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="0" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Pole Arm" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6R" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-2"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Survival Knife" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="0" schadenscode="(STR+2)P" praezision="5" durchschlagsKraft="-1"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Sword" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="5R" schadenscode="(STR+3)P" praezision="6" durchschlagsKraft="-2"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Club" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" verfuegbarkeit="0" schadenscode="(STR+3)P" praezision="4"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Extendable Baton" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="4" schadenscode="(STR+2)P" praezision="5"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Sap" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" verfuegbarkeit="2" schadenscode="(STR+2)P" praezision="5"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Staff" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="3" schadenscode="(STR+3)P" praezision="6"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Stun Baton" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="750" verfuegbarkeit="6R" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Telescoping Staff" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" verfuegbarkeit="4" schadenscode="(STR+2)P" praezision="4"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Knucks" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2R" schadenscode="(STR+1)P"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Monofilament Whip" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000" verfuegbarkeit="12F" schadenscode="12P" praezision="5" durchschlagsKraft="-8"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Shock Gloves" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" verfuegbarkeit="6R" schadenscode="8S(e)" durchschlagsKraft="-5"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 1)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="1" schadenscode="3P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 2)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="2" schadenscode="4P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 3)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="3" schadenscode="5P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 4)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="4" schadenscode="6P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 5)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="5" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 6)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" verfuegbarkeit="6" schadenscode="8P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 7)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="700" verfuegbarkeit="7" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 8)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" verfuegbarkeit="8" schadenscode="10P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 9)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" verfuegbarkeit="9" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 10)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="10" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 11)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" verfuegbarkeit="11" schadenscode="13P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Bow (Rating 12)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" verfuegbarkeit="12" schadenscode="14P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Light Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="2" schadenscode="5P" praezision="7" durchschlagsKraft="-1"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Medium Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="4R" schadenscode="7P" praezision="6" durchschlagsKraft="-2"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Heavy Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="8R" schadenscode="10P" praezision="5" durchschlagsKraft="-3"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Defiance EX Shocker" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="0" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.0">
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Unarmed Attack" page="112" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="(STR/2)S" praezision="4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="12R" name="Combat Axe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000" schadenscode="(STR+5)P" praezision="4" durchschlagsKraft="-4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="4" name="Combat Knife" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="7R" name="Forearm Snap-Blades" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="(STR+2)P" praezision="4" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="9R" name="Katana" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Knife" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="6R" name="Pole Arm" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="(STR+3)P" praezision="5" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Survival Knife" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="(STR+2)P" praezision="5" durchschlagsKraft="-1"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="5R" name="Sword" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" schadenscode="(STR+3)P" praezision="6" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Club" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" schadenscode="(STR+3)P" praezision="4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="4" name="Extendable Baton" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="(STR+2)P" praezision="5"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="2" name="Sap" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" schadenscode="(STR+2)P" praezision="5"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="3" name="Staff" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="(STR+3)P" praezision="6"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="6R" name="Stun Baton" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="750" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="4" name="Telescoping Staff" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="(STR+2)P" praezision="4"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="2R" name="Knucks" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="(STR+1)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="12F" name="Monofilament Whip" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000" schadenscode="12P" praezision="5" durchschlagsKraft="-8"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="6R" name="Shock Gloves" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" schadenscode="8S(e)" durchschlagsKraft="-5"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="1" name="Bow (Rating 1)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="3P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2" name="Bow (Rating 2)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="4P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3" name="Bow (Rating 3)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="5P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4" name="Bow (Rating 4)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" schadenscode="6P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5" name="Bow (Rating 5)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6" name="Bow (Rating 6)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" schadenscode="8P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7" name="Bow (Rating 7)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="700" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8" name="Bow (Rating 8)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" schadenscode="10P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9" name="Bow (Rating 9)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10" name="Bow (Rating 10)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11" name="Bow (Rating 11)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" schadenscode="13P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12" name="Bow (Rating 12)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="14P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2" name="Light Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="5P" praezision="7" durchschlagsKraft="-1"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Medium Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" schadenscode="7P" praezision="6" durchschlagsKraft="-2"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="Heavy Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="10P" praezision="5" durchschlagsKraft="-3"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Defiance EX Shocker" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Yamaha Pulsar" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" verfuegbarkeit="0" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.0">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Yamaha Pulsar" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Fichetti Tiffani Needler" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="5R" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" reichweite="//@entries.0/@entries.1/@entries.1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Fichetti Tiffani Needler" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Streetline Special" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" verfuegbarkeit="4R" schadenscode="6P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Streetline Special" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" schadenscode="6P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Walther Palm Pistol" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" verfuegbarkeit="4R" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Walther Palm Pistol" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>EM</modie>
 <modie>SM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Light Fire 75" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1250" verfuegbarkeit="6F" schadenscode="6P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6F" name="Ares Light Fire 75" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1250" schadenscode="6P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Light Fire 70" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="3R" schadenscode="6P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Ares Light Fire 70" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="6P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Silencer, Ares Light Fire 70" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Beretta 201T" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="210" verfuegbarkeit="7R" schadenscode="6P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Beretta 201T" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="210" schadenscode="6P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Colt America L36" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="320" verfuegbarkeit="4R" schadenscode="7P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Colt America L36" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="320" schadenscode="7P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Fichetti Security 600" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" verfuegbarkeit="6R" schadenscode="7P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
-<modie>HM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Taurus Omni-6 (Light Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="3R" schadenscode="6P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Fichetti Security 600" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="7P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Taurus Omni-6 (Heavy Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="3R" schadenscode="7P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Taurus Omni-6 (Light Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="6P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Taurus Omni-6 (Heavy Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="7P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Predator V" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Ares Predator V" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Viper Slivergun" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="380" verfuegbarkeit="8F" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" name="Ares Viper Slivergun" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="380" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Browning Ultra-Power" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="640" verfuegbarkeit="4R" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Browning Ultra-Power" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="640" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Colt Government 2066" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="425" verfuegbarkeit="7R" schadenscode="7P" praezision="6" durchschlagsKraft="-1" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Colt Government 2066" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="425" schadenscode="7P" praezision="6" durchschlagsKraft="-1" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Remington Roomsweeper" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="6R" schadenscode="7P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Remington Roomsweeper" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" schadenscode="7P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ruger Super Warhawk" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="4R" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Ruger Super Warhawk" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Crusader II" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="830" verfuegbarkeit="9R" schadenscode="7P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" name="Ares Crusader II" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="830" schadenscode="7P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -371,13 +371,13 @@
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ceska Black Scorpion" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="270" verfuegbarkeit="6R" schadenscode="6P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Ceska Black Scorpion" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="270" schadenscode="6P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Steyr TMP" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" verfuegbarkeit="8R" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="Steyr TMP" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -385,7 +385,7 @@
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Colt Cobra TZ-120" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="660" verfuegbarkeit="5R" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Colt Cobra TZ-120" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="660" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -395,7 +395,7 @@
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="FN P93 Praetor" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" verfuegbarkeit="11F" schadenscode="8P" praezision="6" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" name="FN P93 Praetor" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" schadenscode="8P" praezision="6" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -403,7 +403,7 @@
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="HK-227" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="730" verfuegbarkeit="8R" schadenscode="8P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="HK-227" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="730" schadenscode="8P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -413,7 +413,7 @@
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ingram Smartgun X" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" verfuegbarkeit="6R" schadenscode="8P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Ingram Smartgun X" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" schadenscode="8P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -423,7 +423,7 @@
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="SCK Model 100" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="875" verfuegbarkeit="6R" schadenscode="8P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="SCK Model 100" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="875" schadenscode="8P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -431,14 +431,14 @@
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Uzi IV" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Uzi IV" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="AK-97" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" verfuegbarkeit="4R" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="AK-97" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -446,7 +446,7 @@
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Alpha" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2650" verfuegbarkeit="11F" schadenscode="11P" praezision="5" durchschlagsKraft="-2" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" name="Ares Alpha" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2650" schadenscode="11P" praezision="5" durchschlagsKraft="-2" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -455,13 +455,13 @@
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Alpha Grenade Launcher" page="428" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="Grenade" praezision="4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" page="428" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="Grenade" praezision="4">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Colt M23" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" verfuegbarkeit="4R" schadenscode="9P" praezision="4" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Colt M23" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" schadenscode="9P" praezision="4" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -469,7 +469,7 @@
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="FN HAR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="8R" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="FN HAR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -479,7 +479,7 @@
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Yamaha Raiden" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2600" verfuegbarkeit="14F" schadenscode="11P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" name="Yamaha Raiden" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2600" schadenscode="11P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -488,7 +488,7 @@
 <einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Desert Strike" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="17500" verfuegbarkeit="10F" schadenscode="13P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="Ares Desert Strike" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="17500" schadenscode="13P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
@@ -496,7 +496,7 @@
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Cavalier Arms Crockett EBR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="10300" verfuegbarkeit="12F" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Cavalier Arms Crockett EBR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="10300" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -505,19 +505,19 @@
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ranger Arms SM-5" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="28000" verfuegbarkeit="16F" schadenscode="14P" praezision="8" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" name="Ranger Arms SM-5" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="28000" schadenscode="14P" praezision="8" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Remington 950" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" verfuegbarkeit="4R" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Remington 950" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ruger 100" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1300" verfuegbarkeit="4R" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Ruger 100" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1300" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
@@ -525,21 +525,21 @@
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Defiance T-250" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" schadenscode="10P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Defiance T-250" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="10P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Defiance T-250, Short-Barrel" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" schadenscode="9P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Defiance T-250, Short-Barrel" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="9P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Enfield AS-7" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" verfuegbarkeit="12F" schadenscode="13P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Enfield AS-7" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" schadenscode="13P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -547,37 +547,37 @@
 <erweiterung>Unten</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="PJSS Model 55" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" schadenscode="11P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" name="PJSS Model 55" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="11P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares S-III Super Squirt" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" verfuegbarkeit="7R" schadenscode="Chemical" praezision="3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Ares S-III Super Squirt" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" schadenscode="Chemical" praezision="3">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Fichetti Pain Inducer" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="11R" schadenscode="Special" praezision="3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11R" name="Fichetti Pain Inducer" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" schadenscode="Special" praezision="3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Parashield Dart Pistol" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" verfuegbarkeit="4R" schadenscode="As Drug/Toxin" praezision="5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Parashield Dart Pistol" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" schadenscode="As Drug/Toxin" praezision="5">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Parashield Dart Rifle" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" verfuegbarkeit="6R" schadenscode="As Drug/Toxin" praezision="6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Parashield Dart Rifle" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="As Drug/Toxin" praezision="6">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ingram Valiant" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="5800" verfuegbarkeit="12F" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.10">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Ingram Valiant" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="5800" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -587,430 +587,430 @@
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Stoner-Ares M202" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="7000" verfuegbarkeit="12F" schadenscode="10P" praezision="5" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.11">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Stoner-Ares M202" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="7000" schadenscode="10P" praezision="5" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.11">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="RPK HMG" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="16300" verfuegbarkeit="16F" schadenscode="12P" praezision="5" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.12">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" name="RPK HMG" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="16300" schadenscode="12P" praezision="5" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.12">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Tripod" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Ares Antioch-2" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="3200" verfuegbarkeit="8F" schadenscode="Grenade" praezision="4" reichweite="//@entries.0/@entries.1/@entries.14">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" name="Ares Antioch-2" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="3200" schadenscode="Grenade" praezision="4" reichweite="//@entries.0/@entries.1/@entries.14">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="ArmTech MGL-12" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="10F" schadenscode="Grenade" praezision="4" reichweite="//@entries.0/@entries.1/@entries.14">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="ArmTech MGL-12" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" schadenscode="Grenade" praezision="4" reichweite="//@entries.0/@entries.1/@entries.14">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Aztechnology Striker" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" verfuegbarkeit="10F" schadenscode="Missile" praezision="5" reichweite="//@entries.0/@entries.1/@entries.15">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="Aztechnology Striker" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="Missile" praezision="5" reichweite="//@entries.0/@entries.1/@entries.15">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Krime Cannon" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="21000" verfuegbarkeit="20F" schadenscode="16P" praezision="4" durchschlagsKraft="-6" reichweite="//@entries.0/@entries.1/@entries.13">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" name="Krime Cannon" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="21000" schadenscode="16P" praezision="4" durchschlagsKraft="-6" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Onotari Interceptor" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="14000" verfuegbarkeit="18F" schadenscode="Missile" praezision="4" reichweite="//@entries.0/@entries.1/@entries.15">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" name="Onotari Interceptor" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="14000" schadenscode="Missile" praezision="4" reichweite="//@entries.0/@entries.1/@entries.15">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Panther XXL" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="43000" verfuegbarkeit="20F" schadenscode="17P" praezision="5" durchschlagsKraft="-6" reichweite="//@entries.0/@entries.1/@entries.13">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" name="Panther XXL" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="43000" schadenscode="17P" praezision="5" durchschlagsKraft="-6" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="8P" praezision="3" durchschlagsKraft="-6"/>
-<entries xsi:type="shr5:Feuerwaffe" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="5P(Fire)" praezision="3" durchschlagsKraft="-5">
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="8P" praezision="3" durchschlagsKraft="-6"/>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="5P(Fire)" praezision="3" durchschlagsKraft="-5">
 <modie>EM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="7S" praezision="3" durchschlagsKraft="-2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="7S" praezision="3" durchschlagsKraft="-2">
 <modie>EM</modie>
 </entries>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR+1)P"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Bone Lacing, Aluminum" page="454" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR+2)P"/>
-<entries xsi:type="shr5:Nahkampfwaffe" name="Bone Lacing, Titanium" page="454" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" schadenscode="(STR+3)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="(STR+1)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Bone Lacing, Aluminum" page="454" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="(STR+2)P"/>
+<entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Bone Lacing, Titanium" page="454" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="(STR+3)P"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="gears">
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Throwing: Shuriken" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Throwing: Throwing Knife" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Arrow" page="423" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Injection Arrow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating+2)R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Bolt" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Injection Bolt" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="8R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: APDS" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" verfuegbarkeit="12F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Assault Cannon" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="12F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Explosive Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="80" verfuegbarkeit="9F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Flechette Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="65" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Gel Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="2R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Hollow Points" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="70" verfuegbarkeit="4F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Injection Darts" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="75" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Regular Ammo" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="2R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Stick-n-Shock" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="80" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Tracer" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="60" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Ammo: Taser Dart" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="3"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="125" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: High Explosive" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Gas" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Grenade: Thermal Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="60" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="125" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: High Explosive" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="11F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Gas" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Minigrenade: Thermal Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="60" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Rocket: Anti-Vehicle" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="2800" verfuegbarkeit="18F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Rocket: Fragmentation" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="12F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Rocket: High Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" verfuegbarkeit="18F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Missile: Anti-Vehicle" page="436" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="22F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Missile: Fragmentation" page="436" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="16F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" name="Missile: High Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="22F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" name="Commercial Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="8R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" name="Foam Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="12F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" name="Plastic Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="16F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Detonators" name="Detonator Cap" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="75" verfuegbarkeit="8R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" name="Sim Module (Cold)" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" name="Sim Module (Hot)" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="+4F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Meta Link" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Sony Emperor" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="700" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Renraku Sensei" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Erika Elite" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="2500" verfuegbarkeit="8"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Hermes Ikon" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000" verfuegbarkeit="10"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Transys Avalon" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="12"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" name="Fairlight Caliban" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000" verfuegbarkeit="14"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="AR Gloves" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="150" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Biometric Reader" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Electronic Paper" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Printer" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Satellite Link" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="6"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Simrig" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="12"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Subvocal Mic" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Trid Projector" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" name="Trodes" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="70" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Standard Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="1" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Datachip" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Security Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="3"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Sensor Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="40" verfuegbarkeit="5"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" name="Stealth Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="7R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Bug Scanner" page="440" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating)R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Data Tap" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Headjammer" page="441" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating)R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Jammer, Area" page="441" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Jammer, Directional" page="441" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*2)F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Micro-Transceiver" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="Tag Eraser" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Communications" name="White Noise Generator" page="441" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Agent" page="441" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating * 3"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Datasoft" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Mapsoft" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Shopsoft" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="150" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Software" name="Tutorsoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" name="Activesoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="8"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" name="Knowsoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" name="Linguasoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Standard" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Silver" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Gold" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="5"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Platinum" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="10"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Certified Credstick, Ebony" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="20"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Fake SIN" page="442" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating * 3)F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" name="Fake License" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating * 3)F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Tools" name="Tool Kit" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Tools" name="Tool Shop" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="8"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Tools" name="Tool Facility" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="50000" verfuegbarkeit="12"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Binoculars" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Binoculars, Optical" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Camera" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Micro-Camera" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Contacts" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="6"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Glasses" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Goggles" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Endoscope" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="8"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Imaging Scope" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Periscope" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="3"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Mage Sight Goggles" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000" verfuegbarkeit="12R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" name="Monocle" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000" verfuegbarkeit="12R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Low-Light Vision" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="+4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Flare Compensation" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="+1"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Image Link" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Smartlink" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="+4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Thermographic Vision" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="+6"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Vision Enhancement" page="444" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="+(Rating*2)"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Vision Magnification" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="+2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Directional Mic" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Ear Buds" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Headphones" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Laser Mic" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" name="Omni-Directional Mic" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Audio Enhancement" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="+(Rating*2)"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Select Sound Filter" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="+(Rating*3)"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" name="Spatial Recognizer" page="445" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="+4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="RFID Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Audio/Visual Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Headware Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Handheld Device Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Small Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Wall-Mount Device Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Medium Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Large Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Cyberlimb Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Motorcycle Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Vehicle Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" name="Building Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensors" name="Sensor Array" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="7"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensors" name="Single Sensor" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="5"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Atmosphere Sensor" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Camera" page="443" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Cyberware Scanner" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Directional Microphone" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Geiger Counter" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Laser Range Finder" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="MAD Scanner" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Motion Sensor" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Olfactory Sensor" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Omni-Directional Microphone" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Radio Signal Scanner" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Ultrasound" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" name="Laser Microphone" page="445" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Key Lock" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Combination Lock" page="446" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Maglock" page="447" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Keypad" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Card Reader" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Anti-Tamper Circuits" page="447" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="+Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" name="Biometric Reader" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="+4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Metal Restraints" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Plasteel Restraints" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Plastic Restraints" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" name="Containment Manacles" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Autopicker" page="447" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="8R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Cellular Glove Molder" page="447" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="12F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Chisel" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Crowbar" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Keycard Copier" page="447" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="8F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Lockpick Set" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Maglock Passkey" page="448" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Miniwelder" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Miniwelder Fuel Canister" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="80" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="8"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" name="Sequencer" page="448" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" name="Glue Solvent" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="90" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" name="Glue Sprayer" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="150" verfuegbarkeit="2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" name="Thermite Burning Bar" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="16R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Chemsuit" page="448" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Climbing Gear" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Diving Gear" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Flashlight" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Gas Mask" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Gecko Tape Gloves" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="12"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Hazmat Suit" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000" verfuegbarkeit="8"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Light Stick" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Magnesium Torch" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="175" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Micro Flares" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Rappelling Gloves" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Respirator" page="449" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" name="Survival Kit" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="8R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Catalyst Stick" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" verfuegbarkeit="8F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Microwire (100 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="4"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Myomeric Rope (10 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="10"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Standard Rope (100 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" name="Stealth Rope (100 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="85" verfuegbarkeit="8F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Biomonitor" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="3"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Disposable Syringe" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="3"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Medkit" page="450" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" name="Medkit Supplies" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Basic" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Gold" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="25000" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Platinum" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="50000" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" name="DocWagon Contract, Super-Platinum" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="100000" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Antidote Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Chem Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="6"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Stim Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Tranq Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*2"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" name="Trauma Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="6"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="CS/Tear Gas" page="409" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Gamma-Scopolamine" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="14F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Narcoject" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="8R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Nausea Gas" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="25" verfuegbarkeit="6R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Neuro-Stun VIII" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="60" verfuegbarkeit="12R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Neuro-Stun IX" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="60" verfuegbarkeit="13R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Neuro-Stun X" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="14R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Pepper Punch" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" name="Seven-7" page="409" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="20F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Bliss" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="15" verfuegbarkeit="3F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Cram" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="2R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Deepweed" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="8F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Jazz" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="75" verfuegbarkeit="2R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Kamikaze" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Long Haul" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Nitro" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="2R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Novacoke" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="2R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Psyche" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="0"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" name="Zen" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="5" verfuegbarkeit="4R"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Dreamchip" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="4F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Moodchip" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="50" verfuegbarkeit="4F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Personafix" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="4F"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" name="Tripchip" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="4F"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4R" name="Throwing: Shuriken" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2" name="Throwing: Throwing Knife" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="Rating" name="Ammo: Arrow" page="423" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="(Rating+2)R" name="Ammo: Injection Arrow" page="424" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2" name="Ammo: Bolt" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="8R" name="Ammo: Injection Bolt" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="12F" name="Ammo: APDS" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="120"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="12F" name="Ammo: Assault Cannon" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="400"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="9F" name="Ammo: Explosive Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="80"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Ammo: Flechette Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="65"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2R" name="Ammo: Gel Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4F" name="Ammo: Hollow Points" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="70"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4R" name="Ammo: Injection Darts" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="75"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2R" name="Ammo: Regular Ammo" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Ammo: Stick-n-Shock" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="80"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Ammo: Tracer" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="60"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="3" name="Ammo: Taser Dart" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Grenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4" name="Grenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="125"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="11F" name="Grenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="11F" name="Grenade: High Explosive" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2" name="Grenade: Gas" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4R" name="Grenade: Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Grenade: Thermal Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="60"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Minigrenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4" name="Minigrenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="125"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="11F" name="Minigrenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="11F" name="Minigrenade: High Explosive" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2" name="Minigrenade: Gas" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4R" name="Minigrenade: Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="40"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Minigrenade: Thermal Smoke" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="60"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="18F" name="Rocket: Anti-Vehicle" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="2800"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="12F" name="Rocket: Fragmentation" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="18F" name="Rocket: High Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="22F" name="Missile: Anti-Vehicle" page="436" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="16F" name="Missile: Fragmentation" page="436" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="22F" name="Missile: High Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" verfuegbarkeit="8R" name="Commercial Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" verfuegbarkeit="12F" name="Foam Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Explosives" verfuegbarkeit="16F" name="Plastic Explosive" page="436" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Detonators" verfuegbarkeit="8R" name="Detonator Cap" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wert="75"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" verfuegbarkeit="0" name="Sim Module (Cold)" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" verfuegbarkeit="+4F" name="Sim Module (Hot)" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="2" name="Meta Link" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="4" name="Sony Emperor" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="700"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="6" name="Renraku Sensei" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="8" name="Erika Elite" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="2500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="10" name="Hermes Ikon" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="12" name="Transys Avalon" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="14" name="Fairlight Caliban" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="AR Gloves" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="150"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="4" name="Biometric Reader" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="Electronic Paper" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="Printer" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="6" name="Satellite Link" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="12" name="Simrig" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="4" name="Subvocal Mic" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="Trid Projector" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="Trodes" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="70"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" verfuegbarkeit="0" name="Standard Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="1"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" verfuegbarkeit="0" name="Datachip" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" verfuegbarkeit="3" name="Security Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" verfuegbarkeit="5" name="Sensor Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="40"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="RFID Tags" verfuegbarkeit="7R" name="Stealth Tags" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="(Rating)R" name="Bug Scanner" page="440" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="6R" name="Data Tap" page="440" srcBook="//@entries.0/@entries.0/@entries.0" wert="300"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="(Rating)R" name="Headjammer" page="441" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="(Rating*3)F" name="Jammer, Area" page="441" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="(Rating*2)F" name="Jammer, Directional" page="441" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="2" name="Micro-Transceiver" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="6R" name="Tag Eraser" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="450"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Communications" verfuegbarkeit="Rating" name="White Noise Generator" page="441" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" verfuegbarkeit="Rating * 3" name="Agent" page="441" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" verfuegbarkeit="4" name="Datasoft" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="120"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" verfuegbarkeit="4" name="Mapsoft" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" verfuegbarkeit="4" name="Shopsoft" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="150"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Software" verfuegbarkeit="Rating" name="Tutorsoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" verfuegbarkeit="8" name="Activesoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" verfuegbarkeit="4" name="Knowsoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Skillsofts" verfuegbarkeit="2" name="Linguasoft" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="0" name="Certified Credstick, Standard" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="0" name="Certified Credstick, Silver" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="5" name="Certified Credstick, Gold" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="10" name="Certified Credstick, Platinum" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="20" name="Certified Credstick, Ebony" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="(Rating * 3)F" name="Fake SIN" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="ID/Credsticks" verfuegbarkeit="(Rating * 3)F" name="Fake License" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Tools" verfuegbarkeit="0" name="Tool Kit" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Tools" verfuegbarkeit="8" name="Tool Shop" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Tools" verfuegbarkeit="12" name="Tool Facility" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="50000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="0" name="Binoculars" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="0" name="Binoculars, Optical" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="0" name="Camera" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="0" name="Micro-Camera" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="6" name="Contacts" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="0" name="Glasses" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="0" name="Goggles" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="8" name="Endoscope" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="2" name="Imaging Scope" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="300"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="3" name="Periscope" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="12R" name="Mage Sight Goggles" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Optical &amp; Imaging Devices" verfuegbarkeit="12R" name="Monocle" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+4" name="Low-Light Vision" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+1" name="Flare Compensation" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="0" name="Image Link" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+4" name="Smartlink" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+6" name="Thermographic Vision" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+(Rating*2)" name="Vision Enhancement" page="444" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+2" name="Vision Magnification" page="444" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" verfuegbarkeit="4" name="Directional Mic" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" verfuegbarkeit="0" name="Ear Buds" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" verfuegbarkeit="0" name="Headphones" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" verfuegbarkeit="6R" name="Laser Mic" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Audio Devices" verfuegbarkeit="0" name="Omni-Directional Mic" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+(Rating*2)" name="Audio Enhancement" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+(Rating*3)" name="Select Sound Filter" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Vision Enhancements" verfuegbarkeit="+4" name="Spatial Recognizer" page="445" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="RFID Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Audio/Visual Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Headware Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Handheld Device Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Small Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Wall-Mount Device Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Medium Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Large Drone Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Cyberlimb Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Motorcycle Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Vehicle Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Housings" verfuegbarkeit="0" name="Building Sensor Housing" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensors" verfuegbarkeit="7" name="Sensor Array" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensors" verfuegbarkeit="5" name="Single Sensor" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Atmosphere Sensor" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Camera" page="443" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Cyberware Scanner" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="4" name="Directional Microphone" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Geiger Counter" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Laser Range Finder" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="MAD Scanner" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Motion Sensor" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Olfactory Sensor" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Omni-Directional Microphone" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Radio Signal Scanner" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="0" name="Ultrasound" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Sensor Functions" verfuegbarkeit="6R" name="Laser Microphone" page="445" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="Rating" name="Key Lock" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="Rating" name="Combination Lock" page="446" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="Rating" name="Maglock" page="447" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="0" name="Keypad" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="0" name="Card Reader" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="+Rating" name="Anti-Tamper Circuits" page="447" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Security Devices" verfuegbarkeit="+4" name="Biometric Reader" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" verfuegbarkeit="" name="Metal Restraints" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" verfuegbarkeit="6R" name="Plasteel Restraints" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" verfuegbarkeit="0" name="Plastic Restraints" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Restraints" verfuegbarkeit="6R" name="Containment Manacles" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="8R" name="Autopicker" page="447" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="12F" name="Cellular Glove Molder" page="447" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="0" name="Chisel" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="0" name="Crowbar" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="8F" name="Keycard Copier" page="447" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="4R" name="Lockpick Set" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="(Rating*3)F" name="Maglock Passkey" page="448" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="2" name="Miniwelder" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="2" name="Miniwelder Fuel Canister" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="80"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="8" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="B&amp;E Gear" verfuegbarkeit="(Rating*3)F" name="Sequencer" page="448" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" verfuegbarkeit="2" name="Glue Solvent" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="90"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" verfuegbarkeit="2" name="Glue Sprayer" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="150"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Chemicals" verfuegbarkeit="16R" name="Thermite Burning Bar" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="Rating*2" name="Chemsuit" page="448" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Climbing Gear" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Diving Gear" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Flashlight" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Gas Mask" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="12" name="Gecko Tape Gloves" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="250"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="8" name="Hazmat Suit" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Light Stick" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Magnesium Torch" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="175"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Micro Flares" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Rappelling Gloves" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="0" name="Respirator" page="449" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Survival Gear" verfuegbarkeit="4" name="Survival Kit" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" verfuegbarkeit="8R" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" verfuegbarkeit="8F" name="Catalyst Stick" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="120"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" verfuegbarkeit="4" name="Microwire (100 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" verfuegbarkeit="10" name="Myomeric Rope (10 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" verfuegbarkeit="0" name="Standard Rope (100 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Grapple Gun" verfuegbarkeit="8F" name="Stealth Rope (100 m)" page="449" srcBook="//@entries.0/@entries.0/@entries.0" wert="85"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" verfuegbarkeit="3" name="Biomonitor" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="300"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" verfuegbarkeit="3" name="Disposable Syringe" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" verfuegbarkeit="Rating" name="Medkit" page="450" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Biotech" verfuegbarkeit="0" name="Medkit Supplies" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" name="DocWagon Contract, Basic" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" name="DocWagon Contract, Gold" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="25000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" name="DocWagon Contract, Platinum" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="50000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="DocWagon Contract" verfuegbarkeit="0" name="DocWagon Contract, Super-Platinum" page="450" srcBook="//@entries.0/@entries.0/@entries.0" wert="100000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" verfuegbarkeit="Rating" name="Antidote Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" verfuegbarkeit="6" name="Chem Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" verfuegbarkeit="Rating*2" name="Stim Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" verfuegbarkeit="Rating*2" name="Tranq Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Slap Patches" verfuegbarkeit="6" name="Trauma Patch" page="451" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="4R" name="CS/Tear Gas" page="409" srcBook="//@entries.0/@entries.0/@entries.0" wert="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="14F" name="Gamma-Scopolamine" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="8R" name="Narcoject" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="6R" name="Nausea Gas" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="25"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="12R" name="Neuro-Stun VIII" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="60"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="13R" name="Neuro-Stun IX" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="60"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="14R" name="Neuro-Stun X" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="0" name="Pepper Punch" page="410" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Toxins" verfuegbarkeit="20F" name="Seven-7" page="409" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="3F" name="Bliss" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="15"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="2R" name="Cram" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="8F" name="Deepweed" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="400"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="2R" name="Jazz" page="411" srcBook="//@entries.0/@entries.0/@entries.0" wert="75"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="4R" name="Kamikaze" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="0" name="Long Haul" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="2R" name="Nitro" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="2R" name="Novacoke" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="10"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="0" name="Psyche" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="Drugs" verfuegbarkeit="4R" name="Zen" page="412" srcBook="//@entries.0/@entries.0/@entries.0" wert="5"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" verfuegbarkeit="4F" name="Dreamchip" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="20"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" verfuegbarkeit="4F" name="Moodchip" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="50"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" verfuegbarkeit="4F" name="Personafix" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="200"/>
+<entries xsi:type="shr5:Gegenstand" kategorie="BTLs" verfuegbarkeit="4F" name="Tripchip" page="413" srcBook="//@entries.0/@entries.0/@entries.0" wert="100"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="cyberwares">
-<entries xsi:type="shr5:Cyberware" name="Essence Hole" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="0" name="Essence Hole" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Commlink" page="451" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="8">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8" name="Commlink" page="451" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Control Rig" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="FixedValues(5R,10R,15R)">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="FixedValues(5R,10R,15R)" name="Control Rig" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Cortex Bomb, Kink" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000" verfuegbarkeit="12F">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="12F" name="Cortex Bomb, Kink" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Cortex Bomb, Microbomb" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="25000" verfuegbarkeit="16F">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="16F" name="Cortex Bomb, Microbomb" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="25000">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Cortext Bomb, Area Bomb" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="40000" verfuegbarkeit="20F">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="20F" name="Cortext Bomb, Area Bomb" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="40000">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Cyberdeck" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="5R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="5R" name="Cyberdeck" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000">
 <mods wert="-40" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Datajack" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="2">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="2" name="Datajack" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Data Lock" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*2">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*2" name="Data Lock" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Olfactory Booster" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*3" name="Olfactory Booster" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Simrig" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000" verfuegbarkeit="12R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="12R" name="Simrig" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Skilljack" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*2">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*2" name="Skilljack" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Taste Booster" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*3" name="Taste Booster" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Tooth Compartment" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" verfuegbarkeit="8">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8" name="Tooth Compartment" page="452" srcBook="//@entries.0/@entries.0/@entries.0" wert="800">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Ultrasound Sensor" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="10">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="10" name="Ultrasound Sensor" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-25" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Voice Modulator" page="452" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*3)F">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="(Rating*3)F" name="Voice Modulator" page="452" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Cybereyes Basic System" page="453" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="FixedValues(3,6,9,12)">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="FixedValues(3,6,9,12)" name="Cybereyes Basic System" page="453" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Flare Compensation" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Flare Compensation" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Image Link" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Image Link" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Low-Light Vision" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Low-Light Vision" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Ocular Drone" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="6000" verfuegbarkeit="6">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="6" name="Ocular Drone" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="6000">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Retinal Duplication" page="453" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="16F">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="16F" name="Retinal Duplication" page="453" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Smartlink" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000" verfuegbarkeit="8R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8R" name="Smartlink" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Thermographic Vision" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Thermographic Vision" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Vision Enhancement" page="453" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*3" name="Vision Enhancement" page="453" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Vision Magnification" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Vision Magnification" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Cyberears" page="453" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="FixedValues(3,6,9,12)">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="FixedValues(3,6,9,12)" name="Cyberears" page="453" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Audio Enhancement" page="453" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*3" name="Audio Enhancement" page="453" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Balance Augmenter" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000" verfuegbarkeit="8">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8" name="Balance Augmenter" page="453" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Damper" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="2250" verfuegbarkeit="6">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="6" name="Damper" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="2250">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Select Sound Filter" page="454" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*3">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*3" name="Select Sound Filter" page="454" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Sound Link" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Sound Link" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Spatial Recognizer" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000" verfuegbarkeit="8">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8" name="Spatial Recognizer" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Bone Lacing, Aluminum" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="18000" verfuegbarkeit="12R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="12R" name="Bone Lacing, Aluminum" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="18000">
 <mods wert="2" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 <mods wert="-100" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000" verfuegbarkeit="8R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8R" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000">
 <mods wert="1" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 <mods wert="-50" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Bone Lacing, Titanium" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="30000" verfuegbarkeit="16R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="16R" name="Bone Lacing, Titanium" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="30000">
 <mods wert="3" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 <mods wert="-150" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Dermal Plating" page="454" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*4)R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="(Rating*4)R" name="Dermal Plating" page="454" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Fingertip Compartment" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000" verfuegbarkeit="4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="4" name="Fingertip Compartment" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="3000">
 <mods wert="-10" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Grapple Gun" page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="8">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="8" name="Grapple Gun" page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000">
 <mods wert="-50" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Internal Air Tank" page="455" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating" name="Internal Air Tank" page="455" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods wert="-25" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Muscle Replacement" page="455" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="(Rating*5)R" name="Muscle Replacement" page="455" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Reaction Enhancers" page="455" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="(Rating*5)R">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="(Rating*5)R" name="Reaction Enhancers" page="455" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Skillwires" page="455" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating*4">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="Rating*4" name="Skillwires" page="455" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Smuggling Compartment" page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="7500" verfuegbarkeit="6">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="6" name="Smuggling Compartment" page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="7500">
 <mods wert="-20" attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:Cyberware" name="Wired Reflexes" page="455" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="FixedValues(8R,12R,20R)">
+<entries xsi:type="shr5:Cyberware" verfuegbarkeit="FixedValues(8R,12R,20R)" name="Wired Reflexes" page="455" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
 </entries>
@@ -1055,27 +1055,27 @@
 <entries xsi:type="shr5:KiKraft" kraftpunkte="-50" name="Wall Running"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="armors">
-<entries xsi:type="shr5:Kleidung" name="Actioneer Business Clothes" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="8" ruestung="8"/>
-<entries xsi:type="shr5:Kleidung" name="Armor Clothing" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" verfuegbarkeit="2" ruestung="6"/>
-<entries xsi:type="shr5:Kleidung" name="Armor Jacket" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="2" ruestung="12"/>
-<entries xsi:type="shr5:Kleidung" name="Armor Vest" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="4" ruestung="9"/>
-<entries xsi:type="shr5:Kleidung" name="Chameleon Suit" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1700" verfuegbarkeit="10R" ruestung="9"/>
-<entries xsi:type="shr5:Kleidung" name="Full Body Armor" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="14R" ruestung="15"/>
-<entries xsi:type="shr5:Kleidung" name="Lined Coat" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" verfuegbarkeit="4" ruestung="9"/>
-<entries xsi:type="shr5:Kleidung" name="Urban Explorer Jumpsuit" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="650" verfuegbarkeit="8" ruestung="9"/>
-<entries xsi:type="shr5:Gegenstand" name="Helmet" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2">
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="8" name="Actioneer Business Clothes" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" ruestung="8"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="2" name="Armor Clothing" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" ruestung="6"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="2" name="Armor Jacket" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" ruestung="12"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="4" name="Armor Vest" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" ruestung="9"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="10R" name="Chameleon Suit" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1700" ruestung="9"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="14R" name="Full Body Armor" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" ruestung="15"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="4" name="Lined Coat" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" ruestung="9"/>
+<entries xsi:type="shr5:Kleidung" verfuegbarkeit="8" name="Urban Explorer Jumpsuit" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="650" ruestung="9"/>
+<entries xsi:type="shr5:Gegenstand" verfuegbarkeit="2" name="Helmet" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="100">
 <mods wert="2" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" name="Ballistic Shield" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" verfuegbarkeit="12R">
+<entries xsi:type="shr5:Gegenstand" verfuegbarkeit="12R" name="Ballistic Shield" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200">
 <mods wert="6" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" name="Riot Shield" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="10R">
+<entries xsi:type="shr5:Gegenstand" verfuegbarkeit="10R" name="Riot Shield" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500">
 <mods wert="6" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" name="Full Body Armor Helmet" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="0">
+<entries xsi:type="shr5:Gegenstand" verfuegbarkeit="0" name="Full Body Armor Helmet" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="500">
 <mods wert="3" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 </entries>
-<entries xsi:type="shr5:Gegenstand" name="Urban Explorer Jumpsuit Helmet" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="0">
+<entries xsi:type="shr5:Gegenstand" verfuegbarkeit="0" name="Urban Explorer Jumpsuit Helmet" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="100">
 <mods wert="2" attribut="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
 </entries>
 </entries>
@@ -1268,128 +1268,128 @@
 <entries xsi:type="shr5:PersonaEigenschaft" name="Thermographic Vision" page="66" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="biowares">
-<entries xsi:type="shr5:BioWare" name="Essence Hole" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="0" name="Essence Hole" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Adrenaline pump" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Adrenaline pump" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Bone density augmentation" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Bone density augmentation" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Cat’s eye" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Cat’s eye" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Enhanced articulation" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Enhanced articulation" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Muscle augmentation" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Muscle augmentation" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Muscle toner" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Muscle toner" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Orthoskin" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Orthoskin" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Pathogenic Defense" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Pathogenic Defense" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Platelet factories" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Platelet factories" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Skin pocket" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Skin pocket" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Suprathyroid gland" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Suprathyroid gland" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Symbiotes" page="459" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Symbiotes" page="459" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Synthacardium" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Synthacardium" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Tailored pheromones" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Tailored pheromones" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Toxin extractor" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Toxin extractor" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Tracheal filter" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Tracheal filter" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Cerebral booster" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Cerebral booster" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Damage compensators" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Damage compensators" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Mnemonic enhancer" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Mnemonic enhancer" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Pain editor" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Pain editor" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Reflex recorder" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Reflex recorder" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Sleep regulator" page="460" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Sleep regulator" page="460" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
-<entries xsi:type="shr5:BioWare" name="Synaptic booster" page="461" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="">
+<entries xsi:type="shr5:BioWare" verfuegbarkeit="" name="Synaptic booster" page="461" srcBook="//@entries.0/@entries.0/@entries.0">
 <mods attribut="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
 </entries>
 </entries>
 <entries xsi:type="shr5:ShrList" name="vehicles">
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Dodge Scoot" page="462" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Harley-Davidson Scorpion" page="462" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Yamaha Growler" page="462" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" name="Suzuki Mirage" page="462" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Chrysler-Nissan Jackrabbit" page="462" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Honda Spirit" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Hyundai Shin-Hyung" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Eurocar Westwind 3000" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Ford Americar" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Saeder-Krupp-Bentley Concordat" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" name="Mitsubishi Nightsky" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="Toyota Gopher" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="GMC Bulldog Step-Van" page="463" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="Rover Model 2072" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" name="Ares Roadmaster" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Samuvani Criscraft Otter" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Yongkang Gala Trinity" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Morgan Cutlass" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Proteus Lamprey" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" name="Vulkan Electronaut" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" name="Artemis Industries Nightwing" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" name="Cessna C750" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" name="Renault-Fiat Fokker Tundra-9" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" name="Ares Dragon" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" name="Nissan Hound" page="464" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" name="Northrup Wasp" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" name="Ares Venture" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" name="GMC Banshee" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" name="Federated Boeing Commuter" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" name="Shiawase Kanmushi" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" name="Sikorsky-Bell Microskimmer" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" name="Horizon Flying Eye" page="465" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" name="MCT Fly-Spy" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" name="Aztechnology Crawler" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" name="Lockheed Optic-X2" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" name="Ares Duelist" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" name="GM-Nissan Doberman" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" name="MCT-Nissan Roto-Drone" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" name="Cyberspace Designs Dalmatian" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" name="Steel Lynx Combat Drone" page="466" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" verfuegbarkeit="" name="Dodge Scoot" page="462" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" verfuegbarkeit="" name="Harley-Davidson Scorpion" page="462" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" verfuegbarkeit="" name="Yamaha Growler" page="462" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Bike" verfuegbarkeit="" name="Suzuki Mirage" page="462" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Chrysler-Nissan Jackrabbit" page="462" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Honda Spirit" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Hyundai Shin-Hyung" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Eurocar Westwind 3000" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Ford Americar" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Saeder-Krupp-Bentley Concordat" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Car" verfuegbarkeit="" name="Mitsubishi Nightsky" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" verfuegbarkeit="" name="Toyota Gopher" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" verfuegbarkeit="" name="GMC Bulldog Step-Van" page="463" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" verfuegbarkeit="" name="Rover Model 2072" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Bodenfahrzeug" fahrzeugTyp="Truck" verfuegbarkeit="" name="Ares Roadmaster" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" verfuegbarkeit="" name="Samuvani Criscraft Otter" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" verfuegbarkeit="" name="Yongkang Gala Trinity" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" verfuegbarkeit="" name="Morgan Cutlass" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" verfuegbarkeit="" name="Proteus Lamprey" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Boat or Sub" verfuegbarkeit="" name="Vulkan Electronaut" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" verfuegbarkeit="" name="Artemis Industries Nightwing" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" verfuegbarkeit="" name="Cessna C750" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Winged Plane" verfuegbarkeit="" name="Renault-Fiat Fokker Tundra-9" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" verfuegbarkeit="" name="Ares Dragon" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" verfuegbarkeit="" name="Nissan Hound" page="464" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Rotorcraft" verfuegbarkeit="" name="Northrup Wasp" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" verfuegbarkeit="" name="Ares Venture" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" verfuegbarkeit="" name="GMC Banshee" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" verfuegbarkeit="" name="Federated Boeing Commuter" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" verfuegbarkeit="" name="Shiawase Kanmushi" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" verfuegbarkeit="" name="Sikorsky-Bell Microskimmer" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" verfuegbarkeit="" name="Horizon Flying Eye" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" verfuegbarkeit="" name="MCT Fly-Spy" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" verfuegbarkeit="" name="Aztechnology Crawler" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" verfuegbarkeit="" name="Lockheed Optic-X2" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="Ares Duelist" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="GM-Nissan Doberman" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="MCT-Nissan Roto-Drone" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" verfuegbarkeit="" name="Cyberspace Designs Dalmatian" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" verfuegbarkeit="" name="Steel Lynx Combat Drone" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="lifestyles">
-<entries xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Lifestyle" name="Squatter" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Lifestyle" name="Middle" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Lifestyle" name="High" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000" verfuegbarkeit=""/>
-<entries xsi:type="shr5:Lifestyle" name="Luxury" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="100000" verfuegbarkeit=""/>
+<entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Squatter" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="500"/>
+<entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"/>
+<entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Middle" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"/>
+<entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="High" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000"/>
+<entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Luxury" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="100000"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="generators">
 <entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" charismaToConnectionFactor="3" maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0/@entries.0">
@@ -1578,6 +1578,13 @@
 <type href="http://urszeidler.de/shr5/1.0#//Initation"/>
 </characterAdvancements>
 </entries>
+</entries>
+<entries xsi:type="shr5:ShrList" name="Credsticks">
+<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" wert="5" page="443" name="Standard" maxValue="5000"/>
+<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="0" wert="20" page="443" name="Silver" maxValue="20000"/>
+<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="5" wert="20" page="443" name="Gold" maxValue="100000"/>
+<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="10" wert="500" page="443" name="Platinum" maxValue="500000"/>
+<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="10" wert="1000" page="443" name="Ebony" maxValue="1000000"/>
 </entries>
 </entries>
 <entries xsi:type="shr5mngt:ShrMgmtList" name="Generators">
