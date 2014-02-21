@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://urszeidler.de/shr5mngt/1.0">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="ecore.xsd"/>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:import namespace="http://urszeidler.de/shr5/1.0" schemaLocation="shr5.xsd"/>
+  <xsd:simpleType name="GeneratorState">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="new"/>
+      <xsd:enumeration value="readyForCreation"/>
+      <xsd:enumeration value="commited"/>
+      <xsd:enumeration value="personaCreated"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Sex">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="female"/>
+      <xsd:enumeration value="male"/>
+      <xsd:enumeration value="undefinde"/>
+      <xsd:enumeration value="none"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType abstract="true" name="ManagedCharacter">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="persona" type="shr5:AbstraktPersona"/>
+      <xsd:element name="changes" type="shr5mngt:Changes"/>
+      <xsd:element name="chracterSource" type="shr5mngt:CharacterGenerator"/>
+      <xsd:element name="inventar" type="shr5:AbstraktGegenstand"/>
+      <xsd:element name="contracts" type="shr5:Vertrag"/>
+      <xsd:element name="connections" type="shr5mngt:Connection"/>
+      <xsd:element name="vehicels" type="shr5:Fahrzeug"/>
+      <xsd:element name="choosenLifestyle" type="shr5:Lifestyle"/>
+      <xsd:element name="nativeLanguage" type="shr5:Sprachfertigkeit"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="sex" type="shr5mngt:Sex" use="required"/>
+    <xsd:attribute name="notorietyBasic" type="xsd:int"/>
+    <xsd:attribute name="publicAwareness" type="xsd:int"/>
+    <xsd:attribute name="chracterSource" type="xsd:string"/>
+    <xsd:attribute name="choosenLifestyle" type="xsd:string"/>
+    <xsd:attribute name="nativeLanguage" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="ManagedCharacter" type="shr5mngt:ManagedCharacter"/>
+  <xsd:complexType abstract="true" name="CharacterGeneratorSystem">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="instructions" type="shr5mngt:GeneratorStateToEStringMapEntry"/>
+          <xsd:element name="characterAdvancements" type="shr5mngt:Advancement"/>
+          <xsd:element name="lifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CharacterGeneratorSystem" type="shr5mngt:CharacterGeneratorSystem"/>
+  <xsd:complexType abstract="true" name="PrioritySystem">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:CharacterGeneratorSystem">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="priorities" type="shr5mngt:PriorityCategorie"/>
+        </xsd:choice>
+        <xsd:attribute name="karmaPoints" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PrioritySystem" type="shr5mngt:PrioritySystem"/>
+  <xsd:complexType name="NonPlayerCharacter">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ManagedCharacter">
+        <xsd:attribute name="professionalRating" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NonPlayerCharacter" type="shr5mngt:NonPlayerCharacter"/>
+  <xsd:complexType abstract="true" name="Changes">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="date" type="xsd:string"/>
+    <xsd:attribute name="changeApplied" type="xsd:boolean"/>
+    <xsd:attribute name="dateApplied" type="xsd:string"/>
+    <xsd:attribute name="character" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Changes" type="shr5mngt:Changes"/>
+  <xsd:complexType name="KarmaGaint">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Changes">
+        <xsd:attribute name="karma" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="KarmaGaint" type="shr5mngt:KarmaGaint"/>
+  <xsd:complexType name="FreeStyle">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:CharacterGeneratorSystem"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FreeStyle" type="shr5mngt:FreeStyle"/>
+  <xsd:complexType abstract="true" name="PriorityCategorie">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="categorieName" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="PriorityCategorie" type="shr5mngt:PriorityCategorie"/>
+  <xsd:complexType name="Shr5System">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PrioritySystem">
+        <xsd:attribute name="karmaToResourceFactor" type="xsd:int" use="required"/>
+        <xsd:attribute name="karmaToMagicFactor" type="xsd:int" use="required"/>
+        <xsd:attribute name="numberOfMaxAttributes" type="xsd:int" use="required"/>
+        <xsd:attribute name="knowlegeSkillFactor" type="xsd:int" use="required"/>
+        <xsd:attribute name="charismaToConnectionFactor" type="xsd:int" use="required"/>
+        <xsd:attribute name="maxResourceToKeep" type="xsd:int" use="required"/>
+        <xsd:attribute name="maxKarmaToResources" type="xsd:int" use="required"/>
+        <xsd:attribute name="maxKarmaToKeep" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Shr5System" type="shr5mngt:Shr5System"/>
+  <xsd:complexType name="MetaType">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PriorityCategorie">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="choosableTypes" type="shr5:Spezies"/>
+        </xsd:choice>
+        <xsd:attribute name="specialPoints" type="xsd:int"/>
+        <xsd:attribute name="choosableTypes" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MetaType" type="shr5mngt:MetaType"/>
+  <xsd:complexType name="Attributes">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PriorityCategorie">
+        <xsd:attribute name="attibutePoints" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Attributes" type="shr5mngt:Attributes"/>
+  <xsd:complexType name="Skill">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PriorityCategorie">
+        <xsd:attribute name="skillPoints" type="xsd:int" use="required"/>
+        <xsd:attribute name="groupPoints" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Skill" type="shr5mngt:Skill"/>
+  <xsd:complexType name="Resourcen">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PriorityCategorie">
+        <xsd:attribute name="resource" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Resourcen" type="shr5mngt:Resourcen"/>
+  <xsd:complexType abstract="true" name="SpecialType">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PriorityCategorie">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="selectableTypes" type="ecore:EClass"/>
+          <xsd:element name="selectableSkills" type="shr5:Fertigkeit"/>
+          <xsd:element name="selectableSkillGroups" type="shr5:FertigkeitsGruppe"/>
+        </xsd:choice>
+        <xsd:attribute name="skillValue" type="xsd:int"/>
+        <xsd:attribute name="skillNumber" type="xsd:int"/>
+        <xsd:attribute name="selectableTypes" type="xsd:string"/>
+        <xsd:attribute name="selectableSkills" type="xsd:string"/>
+        <xsd:attribute name="selectableSkillGroups" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SpecialType" type="shr5mngt:SpecialType"/>
+  <xsd:complexType name="Technomancer">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:SpecialType">
+        <xsd:attribute name="resonanz" type="xsd:int"/>
+        <xsd:attribute name="complexForms" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Technomancer" type="shr5mngt:Technomancer"/>
+  <xsd:complexType name="Spellcaster">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Adept">
+        <xsd:attribute name="spellPoints" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Spellcaster" type="shr5mngt:Spellcaster"/>
+  <xsd:complexType name="Adept">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:SpecialType">
+        <xsd:attribute name="magic" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Adept" type="shr5mngt:Adept"/>
+  <xsd:complexType abstract="true" name="CharacterGenerator">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
+      <xsd:element name="generator" type="shr5mngt:CharacterGeneratorSystem"/>
+      <xsd:element name="selectedGroup" type="shr5mngt:CharacterGroup"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="state" type="shr5mngt:GeneratorState"/>
+    <xsd:attribute name="characterName" type="xsd:string"/>
+    <xsd:attribute name="character" type="xsd:string"/>
+    <xsd:attribute name="generator" type="xsd:string"/>
+    <xsd:attribute name="selectedGroup" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="CharacterGenerator" type="shr5mngt:CharacterGenerator"/>
+  <xsd:complexType name="FreeStyleGenerator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:CharacterGenerator">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="selectedPersona" type="shr5:AbstraktPersona"/>
+          <xsd:element name="selectedSpecies" type="shr5:Spezies"/>
+          <xsd:element name="selectedType" type="ecore:EClass"/>
+        </xsd:choice>
+        <xsd:attribute name="selectedPersona" type="xsd:string"/>
+        <xsd:attribute name="selectedSpecies" type="xsd:string"/>
+        <xsd:attribute name="selectedType" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FreeStyleGenerator" type="shr5mngt:FreeStyleGenerator"/>
+  <xsd:complexType name="Shr5Generator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:CharacterGenerator">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="resourcen" type="shr5mngt:Resourcen"/>
+          <xsd:element name="skills" type="shr5mngt:Skill"/>
+          <xsd:element name="attribute" type="shr5mngt:Attributes"/>
+          <xsd:element name="metaType" type="shr5mngt:MetaType"/>
+          <xsd:element name="magic" type="shr5mngt:SpecialType"/>
+        </xsd:choice>
+        <xsd:attribute name="karmaToResource" type="xsd:int"/>
+        <xsd:attribute name="startKarma" type="xsd:int"/>
+        <xsd:attribute name="startResources" type="xsd:int"/>
+        <xsd:attribute name="resourcen" type="xsd:string"/>
+        <xsd:attribute name="skills" type="xsd:string"/>
+        <xsd:attribute name="attribute" type="xsd:string"/>
+        <xsd:attribute name="metaType" type="xsd:string"/>
+        <xsd:attribute name="magic" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Shr5Generator" type="shr5mngt:Shr5Generator"/>
+  <xsd:complexType name="AttributeChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PersonaValueChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="attibute" type="ecore:EAttribute"/>
+        </xsd:choice>
+        <xsd:attribute name="attibute" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AttributeChange" type="shr5mngt:AttributeChange"/>
+  <xsd:complexType name="PlayerCharacter">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:ManagedCharacter"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PlayerCharacter" type="shr5mngt:PlayerCharacter"/>
+  <xsd:complexType name="Mudan">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:SpecialType"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Mudan" type="shr5mngt:Mudan"/>
+  <xsd:complexType name="CharacterGroup">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="members" type="shr5mngt:ManagedCharacter"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CharacterGroup" type="shr5mngt:CharacterGroup"/>
+  <xsd:complexType name="Connection">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="influence" type="xsd:int"/>
+    <xsd:attribute name="loyality" type="xsd:int"/>
+    <xsd:attribute name="character" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Connection" type="shr5mngt:Connection"/>
+  <xsd:complexType name="PersonaChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PersonaValueChange">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="changeable" type="shr5:Erlernbar"/>
+        </xsd:choice>
+        <xsd:attribute name="changeable" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonaChange" type="shr5mngt:PersonaChange"/>
+  <xsd:complexType abstract="true" name="PersonaValueChange">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Changes">
+        <xsd:attribute name="from" type="xsd:int" use="required"/>
+        <xsd:attribute name="to" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonaValueChange" type="shr5mngt:PersonaValueChange"/>
+  <xsd:complexType name="GeneratorStateToEStringMapEntry">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="key" type="shr5mngt:GeneratorState" use="required"/>
+    <xsd:attribute name="value" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="GeneratorStateToEStringMapEntry" type="shr5mngt:GeneratorStateToEStringMapEntry"/>
+  <xsd:complexType abstract="true" name="Advancement">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="karmaFactor" type="xsd:int" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="Advancement" type="shr5mngt:Advancement"/>
+  <xsd:complexType name="IncreaseCharacterPart">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Advancement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="type" type="ecore:EClass"/>
+        </xsd:choice>
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IncreaseCharacterPart" type="shr5mngt:IncreaseCharacterPart"/>
+  <xsd:complexType name="LifestyleToStartMoney">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="lifeStyles" type="shr5:Lifestyle"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="numberOfW" type="xsd:int"/>
+    <xsd:attribute name="moneyFactor" type="xsd:int"/>
+    <xsd:attribute name="lifeStyles" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="LifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>
+  <xsd:complexType name="ShrMgmtList">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="entries" type="ecore:EObject"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ShrMgmtList" type="shr5mngt:ShrMgmtList"/>
+</xsd:schema>

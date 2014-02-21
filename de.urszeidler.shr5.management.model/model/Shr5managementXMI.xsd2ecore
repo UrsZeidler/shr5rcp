@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="shr5Management.ecore#/" outputs="Shr5managementXMI.xsd#/">
+  <nested inputs="shr5Management.ecore#/" outputs="Shr5managementXMI.xsd#/">
+    <nested inputs="shr5Management.ecore#//GeneratorState" outputs="Shr5managementXMI.xsd#//GeneratorState;XSDSimpleTypeDefinition">
+      <nested inputs="shr5Management.ecore#//GeneratorState/new" outputs="Shr5managementXMI.xsd#//GeneratorState;XSDSimpleTypeDefinition/XSDEnumerationFacet"/>
+      <nested inputs="shr5Management.ecore#//GeneratorState/readyForCreation" outputs="Shr5managementXMI.xsd#//GeneratorState;XSDSimpleTypeDefinition/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5Management.ecore#//GeneratorState/commited" outputs="Shr5managementXMI.xsd#//GeneratorState;XSDSimpleTypeDefinition/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5Management.ecore#//GeneratorState/personaCreated" outputs="Shr5managementXMI.xsd#//GeneratorState;XSDSimpleTypeDefinition/XSDEnumerationFacet=3"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Sex" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1">
+      <nested inputs="shr5Management.ecore#//Sex/female" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1/XSDEnumerationFacet"/>
+      <nested inputs="shr5Management.ecore#//Sex/male" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5Management.ecore#//Sex/undefinde" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5Management.ecore#//Sex/none" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=3"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ManagedCharacter" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition">
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/sex" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/notorietyBasic" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/publicAwareness" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/persona" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/changes" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/chracterSource" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/chracterSource" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/inventar" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/contracts" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/connections" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/vehicels" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=6"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/choosenLifestyle" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=5"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/choosenLifestyle" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=7"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/nativeLanguage" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=6"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/nativeLanguage" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=8"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ManagedCharacter" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDElementDeclaration"/>
+    <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1">
+      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/instructions"
+          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"
+          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"
+          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDElementDeclaration=1"/>
+    <nested inputs="shr5Management.ecore#//PrioritySystem" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDComplexTypeDefinition=2">
+      <nested inputs="shr5Management.ecore#//PrioritySystem/karmaPoints" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDComplexTypeDefinition=2/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//PrioritySystem/priorities" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//PrioritySystem" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDElementDeclaration=2"/>
+    <nested inputs="shr5Management.ecore#//NonPlayerCharacter" outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDComplexTypeDefinition=3">
+      <nested inputs="shr5Management.ecore#//NonPlayerCharacter/professionalRating"
+          outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDComplexTypeDefinition=3/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//NonPlayerCharacter" outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDElementDeclaration=3"/>
+    <nested inputs="shr5Management.ecore#//Changes" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4">
+      <nested inputs="shr5Management.ecore#//Changes/date" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//Changes/changeApplied" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//Changes/dateApplied" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//Changes/character" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//Changes/character" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Changes" outputs="Shr5managementXMI.xsd#//Changes;XSDElementDeclaration=4"/>
+    <nested inputs="shr5Management.ecore#//KarmaGaint" outputs="Shr5managementXMI.xsd#//KarmaGaint;XSDComplexTypeDefinition=5">
+      <nested inputs="shr5Management.ecore#//KarmaGaint/karma" outputs="Shr5managementXMI.xsd#//KarmaGaint;XSDComplexTypeDefinition=5/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//KarmaGaint" outputs="Shr5managementXMI.xsd#//KarmaGaint;XSDElementDeclaration=5"/>
+    <nested inputs="shr5Management.ecore#//FreeStyle" outputs="Shr5managementXMI.xsd#//FreeStyle;XSDComplexTypeDefinition=6"/>
+    <nested inputs="shr5Management.ecore#//FreeStyle" outputs="Shr5managementXMI.xsd#//FreeStyle;XSDElementDeclaration=6"/>
+    <nested inputs="shr5Management.ecore#//PriorityCategorie" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDComplexTypeDefinition=7">
+      <nested inputs="shr5Management.ecore#//PriorityCategorie/categorieName" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDComplexTypeDefinition=7/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//PriorityCategorie" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDElementDeclaration=7"/>
+    <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8">
+      <nested inputs="shr5Management.ecore#//Shr5System/karmaToResourceFactor" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/karmaToMagicFactor" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/numberOfMaxAttributes" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/knowlegeSkillFactor" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/charismaToConnectionFactor"
+          outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/maxResourceToKeep" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=5"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/maxKarmaToResources" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=6"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/maxKarmaToKeep" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=7"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDElementDeclaration=8"/>
+    <nested inputs="shr5Management.ecore#//MetaType" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9">
+      <nested inputs="shr5Management.ecore#//MetaType/specialPoints" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//MetaType/choosableTypes" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//MetaType/choosableTypes" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//MetaType" outputs="Shr5managementXMI.xsd#//MetaType;XSDElementDeclaration=9"/>
+    <nested inputs="shr5Management.ecore#//Attributes" outputs="Shr5managementXMI.xsd#//Attributes;XSDComplexTypeDefinition=10">
+      <nested inputs="shr5Management.ecore#//Attributes/attibutePoints" outputs="Shr5managementXMI.xsd#//Attributes;XSDComplexTypeDefinition=10/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Attributes" outputs="Shr5managementXMI.xsd#//Attributes;XSDElementDeclaration=10"/>
+    <nested inputs="shr5Management.ecore#//Skill" outputs="Shr5managementXMI.xsd#//Skill;XSDComplexTypeDefinition=11">
+      <nested inputs="shr5Management.ecore#//Skill/skillPoints" outputs="Shr5managementXMI.xsd#//Skill;XSDComplexTypeDefinition=11/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//Skill/groupPoints" outputs="Shr5managementXMI.xsd#//Skill;XSDComplexTypeDefinition=11/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Skill" outputs="Shr5managementXMI.xsd#//Skill;XSDElementDeclaration=11"/>
+    <nested inputs="shr5Management.ecore#//Resourcen" outputs="Shr5managementXMI.xsd#//Resourcen;XSDComplexTypeDefinition=12">
+      <nested inputs="shr5Management.ecore#//Resourcen/resource" outputs="Shr5managementXMI.xsd#//Resourcen;XSDComplexTypeDefinition=12/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Resourcen" outputs="Shr5managementXMI.xsd#//Resourcen;XSDElementDeclaration=12"/>
+    <nested inputs="shr5Management.ecore#//SpecialType" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13">
+      <nested inputs="shr5Management.ecore#//SpecialType/skillValue" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/skillNumber" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/selectableTypes" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/selectableTypes" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/selectableSkills" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/selectableSkills" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/selectableSkillGroups" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//SpecialType/selectableSkillGroups" outputs="Shr5managementXMI.xsd#//SpecialType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//SpecialType" outputs="Shr5managementXMI.xsd#//SpecialType;XSDElementDeclaration=13"/>
+    <nested inputs="shr5Management.ecore#//Technomancer" outputs="Shr5managementXMI.xsd#//Technomancer;XSDComplexTypeDefinition=14">
+      <nested inputs="shr5Management.ecore#//Technomancer/resonanz" outputs="Shr5managementXMI.xsd#//Technomancer;XSDComplexTypeDefinition=14/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//Technomancer/complexForms" outputs="Shr5managementXMI.xsd#//Technomancer;XSDComplexTypeDefinition=14/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Technomancer" outputs="Shr5managementXMI.xsd#//Technomancer;XSDElementDeclaration=14"/>
+    <nested inputs="shr5Management.ecore#//Spellcaster" outputs="Shr5managementXMI.xsd#//Spellcaster;XSDComplexTypeDefinition=15">
+      <nested inputs="shr5Management.ecore#//Spellcaster/spellPoints" outputs="Shr5managementXMI.xsd#//Spellcaster;XSDComplexTypeDefinition=15/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Spellcaster" outputs="Shr5managementXMI.xsd#//Spellcaster;XSDElementDeclaration=15"/>
+    <nested inputs="shr5Management.ecore#//Adept" outputs="Shr5managementXMI.xsd#//Adept;XSDComplexTypeDefinition=16">
+      <nested inputs="shr5Management.ecore#//Adept/magic" outputs="Shr5managementXMI.xsd#//Adept;XSDComplexTypeDefinition=16/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Adept" outputs="Shr5managementXMI.xsd#//Adept;XSDElementDeclaration=16"/>
+    <nested inputs="shr5Management.ecore#//CharacterGenerator" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17">
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/state" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/characterName" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/character" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/character" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/generator" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/generator" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/selectedGroup" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDAttributeUse=5"/>
+      <nested inputs="shr5Management.ecore#//CharacterGenerator/selectedGroup" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//CharacterGenerator" outputs="Shr5managementXMI.xsd#//CharacterGenerator;XSDElementDeclaration=17"/>
+    <nested inputs="shr5Management.ecore#//FreeStyleGenerator" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18">
+      <nested inputs="shr5Management.ecore#//FreeStyleGenerator/selectedPersona" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//FreeStyleGenerator/selectedPersona" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//FreeStyleGenerator/selectedSpecies" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//FreeStyleGenerator/selectedSpecies" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//FreeStyleGenerator/selectedType" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//FreeStyleGenerator/selectedType" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//FreeStyleGenerator" outputs="Shr5managementXMI.xsd#//FreeStyleGenerator;XSDElementDeclaration=18"/>
+    <nested inputs="shr5Management.ecore#//Shr5Generator" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19">
+      <nested inputs="shr5Management.ecore#//Shr5Generator/karmaToResource" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/startKarma" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/startResources" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/resourcen" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/resourcen" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/skills" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/skills" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/attribute" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=5"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/attribute" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/metaType" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=6"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/metaType" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/magic" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDAttributeUse=7"/>
+      <nested inputs="shr5Management.ecore#//Shr5Generator/magic" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=4"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Shr5Generator" outputs="Shr5managementXMI.xsd#//Shr5Generator;XSDElementDeclaration=19"/>
+    <nested inputs="shr5Management.ecore#//AttributeChange" outputs="Shr5managementXMI.xsd#//AttributeChange;XSDComplexTypeDefinition=20">
+      <nested inputs="shr5Management.ecore#//AttributeChange/attibute" outputs="Shr5managementXMI.xsd#//AttributeChange;XSDComplexTypeDefinition=20/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//AttributeChange/attibute" outputs="Shr5managementXMI.xsd#//AttributeChange;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//AttributeChange" outputs="Shr5managementXMI.xsd#//AttributeChange;XSDElementDeclaration=20"/>
+    <nested inputs="shr5Management.ecore#//PlayerCharacter" outputs="Shr5managementXMI.xsd#//PlayerCharacter;XSDComplexTypeDefinition=21"/>
+    <nested inputs="shr5Management.ecore#//PlayerCharacter" outputs="Shr5managementXMI.xsd#//PlayerCharacter;XSDElementDeclaration=21"/>
+    <nested inputs="shr5Management.ecore#//Mudan" outputs="Shr5managementXMI.xsd#//Mudan;XSDComplexTypeDefinition=22"/>
+    <nested inputs="shr5Management.ecore#//Mudan" outputs="Shr5managementXMI.xsd#//Mudan;XSDElementDeclaration=22"/>
+    <nested inputs="shr5Management.ecore#//CharacterGroup" outputs="Shr5managementXMI.xsd#//CharacterGroup;XSDComplexTypeDefinition=23">
+      <nested inputs="shr5Management.ecore#//CharacterGroup/members" outputs="Shr5managementXMI.xsd#//CharacterGroup;XSDComplexTypeDefinition=23/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//CharacterGroup" outputs="Shr5managementXMI.xsd#//CharacterGroup;XSDElementDeclaration=23"/>
+    <nested inputs="shr5Management.ecore#//Connection" outputs="Shr5managementXMI.xsd#//Connection;XSDComplexTypeDefinition=24">
+      <nested inputs="shr5Management.ecore#//Connection/influence" outputs="Shr5managementXMI.xsd#//Connection;XSDComplexTypeDefinition=24/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//Connection/loyality" outputs="Shr5managementXMI.xsd#//Connection;XSDComplexTypeDefinition=24/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//Connection/character" outputs="Shr5managementXMI.xsd#//Connection;XSDComplexTypeDefinition=24/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//Connection/character" outputs="Shr5managementXMI.xsd#//Connection;XSDComplexTypeDefinition=24/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Connection" outputs="Shr5managementXMI.xsd#//Connection;XSDElementDeclaration=24"/>
+    <nested inputs="shr5Management.ecore#//PersonaChange" outputs="Shr5managementXMI.xsd#//PersonaChange;XSDComplexTypeDefinition=25">
+      <nested inputs="shr5Management.ecore#//PersonaChange/changeable" outputs="Shr5managementXMI.xsd#//PersonaChange;XSDComplexTypeDefinition=25/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//PersonaChange/changeable" outputs="Shr5managementXMI.xsd#//PersonaChange;XSDComplexTypeDefinition=25/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//PersonaChange" outputs="Shr5managementXMI.xsd#//PersonaChange;XSDElementDeclaration=25"/>
+    <nested inputs="shr5Management.ecore#//PersonaValueChange" outputs="Shr5managementXMI.xsd#//PersonaValueChange;XSDComplexTypeDefinition=26">
+      <nested inputs="shr5Management.ecore#//PersonaValueChange/from" outputs="Shr5managementXMI.xsd#//PersonaValueChange;XSDComplexTypeDefinition=26/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//PersonaValueChange/to" outputs="Shr5managementXMI.xsd#//PersonaValueChange;XSDComplexTypeDefinition=26/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//PersonaValueChange" outputs="Shr5managementXMI.xsd#//PersonaValueChange;XSDElementDeclaration=26"/>
+    <nested inputs="shr5Management.ecore#//GeneratorStateToEStringMapEntry" outputs="Shr5managementXMI.xsd#//GeneratorStateToEStringMapEntry;XSDComplexTypeDefinition=27">
+      <nested inputs="shr5Management.ecore#//GeneratorStateToEStringMapEntry/key"
+          outputs="Shr5managementXMI.xsd#//GeneratorStateToEStringMapEntry;XSDComplexTypeDefinition=27/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//GeneratorStateToEStringMapEntry/value"
+          outputs="Shr5managementXMI.xsd#//GeneratorStateToEStringMapEntry;XSDComplexTypeDefinition=27/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//GeneratorStateToEStringMapEntry" outputs="Shr5managementXMI.xsd#//GeneratorStateToEStringMapEntry;XSDElementDeclaration=27"/>
+    <nested inputs="shr5Management.ecore#//Advancement" outputs="Shr5managementXMI.xsd#//Advancement;XSDComplexTypeDefinition=28">
+      <nested inputs="shr5Management.ecore#//Advancement/karmaFactor" outputs="Shr5managementXMI.xsd#//Advancement;XSDComplexTypeDefinition=28/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Advancement" outputs="Shr5managementXMI.xsd#//Advancement;XSDElementDeclaration=28"/>
+    <nested inputs="shr5Management.ecore#//IncreaseCharacterPart" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29">
+      <nested inputs="shr5Management.ecore#//IncreaseCharacterPart/type" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//IncreaseCharacterPart/type" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDComplexTypeDefinition=29/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//IncreaseCharacterPart" outputs="Shr5managementXMI.xsd#//IncreaseCharacterPart;XSDElementDeclaration=29"/>
+    <nested inputs="shr5Management.ecore#//LifestyleToStartMoney" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30">
+      <nested inputs="shr5Management.ecore#//LifestyleToStartMoney/numberOfW" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//LifestyleToStartMoney/moneyFactor" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//LifestyleToStartMoney/lifeStyles" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//LifestyleToStartMoney/lifeStyles" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDComplexTypeDefinition=30/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//LifestyleToStartMoney" outputs="Shr5managementXMI.xsd#//LifestyleToStartMoney;XSDElementDeclaration=30"/>
+    <nested inputs="shr5Management.ecore#//ShrMgmtList" outputs="Shr5managementXMI.xsd#//ShrMgmtList;XSDComplexTypeDefinition=31">
+      <nested inputs="shr5Management.ecore#//ShrMgmtList/entries" outputs="Shr5managementXMI.xsd#//ShrMgmtList;XSDComplexTypeDefinition=31/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//ShrMgmtList" outputs="Shr5managementXMI.xsd#//ShrMgmtList;XSDElementDeclaration=31"/>
+  </nested>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
+      outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse=1"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
+      outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"/>
+</xsd2ecore:XSD2EcoreMappingRoot>
