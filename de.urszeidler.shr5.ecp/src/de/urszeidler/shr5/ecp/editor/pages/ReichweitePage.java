@@ -97,11 +97,11 @@ public class ReichweitePage extends AbstractShr5Page<Reichweite> {
 		m_bindingContext = initDataBindings();
 
 		createFormBuilder(managedForm);
-		emfFormBuilder.addTextEntry("Min", Shr5Package.Literals.REICHWEITE__MIN, grpGegenstand);
-		emfFormBuilder.addTextEntry("Kurz", Shr5Package.Literals.REICHWEITE__KURZ, grpGegenstand);
-		emfFormBuilder.addTextEntry("Mitel", Shr5Package.Literals.REICHWEITE__MITTEL, grpGegenstand);
-		emfFormBuilder.addTextEntry("Weit", Shr5Package.Literals.REICHWEITE__WEIT, grpGegenstand);
-		emfFormBuilder.addTextEntry("Extrem", Shr5Package.Literals.REICHWEITE__EXTREM, grpGegenstand);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.REICHWEITE__MIN, grpGegenstand);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.REICHWEITE__KURZ, grpGegenstand);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.REICHWEITE__MITTEL, grpGegenstand);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.REICHWEITE__WEIT, grpGegenstand);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.REICHWEITE__EXTREM, grpGegenstand);
 		emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 		managedForm.reflow(true);
 	}
