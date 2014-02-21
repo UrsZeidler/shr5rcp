@@ -33,6 +33,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class BeschreibbarWidget extends Composite {
 
@@ -92,7 +93,7 @@ public class BeschreibbarWidget extends Composite {
 
 		Label lblName = new Label(parent, SWT.NONE);
 		toolkit.adapt(lblName, true, true);
-		lblName.setText("Name");
+		lblName.setText(Messages.BeschreibbarWidget_name);
 
 		textName = new Text(parent, SWT.NONE);
 		textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false,
@@ -114,7 +115,7 @@ public class BeschreibbarWidget extends Composite {
 		lblBeschreibbar.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER,
 				false, false, 1, 1));
 		toolkit.adapt(lblBeschreibbar, true, true);
-		lblBeschreibbar.setText("Beschreibbar");
+		lblBeschreibbar.setText(Messages.BeschreibbarWidget_description);
 
 		textBeschreibung = new Text(parent, SWT.MULTI);
 		GridData gd_textBeschreibung = new GridData(SWT.FILL, SWT.FILL, true,
@@ -128,7 +129,7 @@ public class BeschreibbarWidget extends Composite {
 		btnChange.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false,
 				false, 1, 1));
 		toolkit.adapt(btnChange, true, true);
-		btnChange.setText("change");
+		btnChange.setText(Messages.BeschreibbarWidget_change_image);
 		btnChange.addSelectionListener(new SelectionAdapter() {
 
 			@Override
@@ -138,7 +139,7 @@ public class BeschreibbarWidget extends Composite {
 				SelectionDialog dlg;
 				dlg = new ResourceListSelectionDialog(getShell(), workspace
 						.getRoot(), 1);
-				dlg.setTitle("select image");
+				dlg.setTitle(Messages.BeschreibbarWidget_select_image);
 				int open = dlg.open();
 				if (open == Window.OK) {
 					Object[] result = dlg.getResult();

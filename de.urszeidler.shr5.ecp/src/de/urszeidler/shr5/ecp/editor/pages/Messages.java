@@ -18,6 +18,10 @@ public class Messages extends NLS {
     public static String AbstraktPersonaPage_Special_Attributes;
     public static String AbstraktPersonaPage_Spells;
     public static String AbstraktPersonaPage_The_Limits;
+    public static String BeschreibbarWidget_change_image;
+    public static String BeschreibbarWidget_description;
+    public static String BeschreibbarWidget_name;
+    public static String BeschreibbarWidget_select_image;
     public static String GeneratorOption_attributes_spend;
     public static String GeneratorOption_complex_forms_spend;
     public static String GeneratorOption_group_spend;
