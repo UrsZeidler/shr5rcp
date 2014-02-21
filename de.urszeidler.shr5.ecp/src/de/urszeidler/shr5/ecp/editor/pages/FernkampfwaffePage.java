@@ -127,17 +127,17 @@ public class FernkampfwaffePage extends AbstractShr5Page<AbstaktFernKampfwaffe> 
 
 		createFormBuilder(managedForm);
 
-		emfFormBuilder.addTextEntry("wert", Shr5Package.Literals.GELD_WERT__WERT, grpWert);
-		emfFormBuilder.addTextEntry("verfügbarkeit", Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
 
-		emfFormBuilder.addTextEntry("Source", Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-		emfFormBuilder.addTextEntry("Page", Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
-		emfFormBuilder.addTextEntry("Typ", Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, grpFernkampfwaffe);
-		emfFormBuilder.addTextEntry("Präzision", Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, grpFernkampfwaffe);
-		emfFormBuilder.addTextEntry("Schaden", Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
-		emfFormBuilder.addTextEntry("SchadenT", Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
-		emfFormBuilder.addTextEntry("Dk", Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, grpFernkampfwaffe);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, grpFernkampfwaffe);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
 
 		emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 		managedForm.reflow(true);

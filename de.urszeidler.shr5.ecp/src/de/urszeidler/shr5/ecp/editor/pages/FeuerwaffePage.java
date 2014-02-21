@@ -138,25 +138,25 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
 
 		createFormBuilder(managedForm);
 
-		emfFormBuilder.addTextEntry("wert", Shr5Package.Literals.GELD_WERT__WERT, grpWert);
-		emfFormBuilder.addTextEntry("verfügbarkeit", Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
 
-		emfFormBuilder.addTextEntry("Source", Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-		emfFormBuilder.addTextEntry("Page", Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
-		emfFormBuilder.addTextEntry("Typ", Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, compositefw);
-		emfFormBuilder.addTextEntry("Präzision", Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, compositefw);
-		emfFormBuilder.addTextEntry("Schaden", Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, compositefw);
-		emfFormBuilder.addTextEntry("SchadenT", Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, compositefw);
-		emfFormBuilder.addTextEntry("Dk", Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, compositefw);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE, compositefw);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__PRAEZISION, compositefw);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, compositefw);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, compositefw);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, compositefw);
 		
-		emfFormBuilder.addTextEntry("Kap", Shr5Package.Literals.FEUERWAFFE__KAPAZITAET, compositefw1);
-		emfFormBuilder.addTextEntry("Muni", Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP, compositefw1);
-		emfFormBuilder.addTextEntry("Rk", Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS, compositefw1);
-		emfFormBuilder.addTextEntry("Modie", Shr5Package.Literals.FEUERWAFFE__MODIE, compositefw1);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.FEUERWAFFE__KAPAZITAET, compositefw1);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP, compositefw1);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.FEUERWAFFE__RUECKSTOSS, compositefw1);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.FEUERWAFFE__MODIE, compositefw1);
 
-		emfFormBuilder.addTextEntry("Erweiterbar", Shr5Package.Literals.FEUERWAFFE__ERWEITERUNG, compositefw2);
-		emfFormBuilder.addTextEntry("Einbau", Shr5Package.Literals.FEUERWAFFE__EINBAU, compositefw2);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.FEUERWAFFE__ERWEITERUNG, compositefw2);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.FEUERWAFFE__EINBAU, compositefw2);
 		
 		emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 

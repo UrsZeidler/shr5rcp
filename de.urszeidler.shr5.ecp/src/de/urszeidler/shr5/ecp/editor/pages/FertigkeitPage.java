@@ -108,16 +108,16 @@ public class FertigkeitPage extends AbstractShr5Page<Beschreibbar> {
 
 		if (object instanceof Fertigkeit) {
 			grpFertigkeit.setText("Fertigkeit");
-			emfFormBuilder.addTextEntry("Attribut", Shr5Package.Literals.FERTIGKEIT__ATTRIBUT, grpFertigkeit);
-			emfFormBuilder.addTextEntry("Kategorie", Shr5Package.Literals.FERTIGKEIT__KATEGORIE, grpFertigkeit);
-			emfFormBuilder.addTextEntry("Ausweichen", Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
+			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__ATTRIBUT, grpFertigkeit);
+			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__KATEGORIE, grpFertigkeit);
+			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
 		} else if (object instanceof FertigkeitsGruppe) {
 			grpFertigkeit.setText("Fertigkeitsgruppe");
-			emfFormBuilder.addTextEntry("Fertigkeiten", Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN, grpFertigkeit);
+			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN, grpFertigkeit);
 		}
 
-		emfFormBuilder.addTextEntry("Source", Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-		emfFormBuilder.addTextEntry("Page", Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
+		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
 		emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);		
 		managedForm.reflow(true);
