@@ -110,7 +110,9 @@ public class FertigkeitPage extends AbstractShr5Page<Beschreibbar> {
 			grpFertigkeit.setText(Messages.ObjectPage_skill);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__ATTRIBUT, grpFertigkeit);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__KATEGORIE, grpFertigkeit);
-			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
+            emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
+            emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN, grpFertigkeit);
+		
 		} else if (object instanceof FertigkeitsGruppe) {
 			grpFertigkeit.setText(Messages.ObjectPage_skillgroup);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN, grpFertigkeit);
