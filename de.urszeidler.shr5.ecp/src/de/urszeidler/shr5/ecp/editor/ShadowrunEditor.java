@@ -33,6 +33,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -290,6 +291,16 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return null;
             }
 
+            @Override
+            public Object caseCredstick(Credstick object) {
+                try {
+                    addPage(new GegenstandPage(ShadowrunEditor.this, "", "Credstick", object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating GegenstandPage", e);
+                }
+                return null;
+            }
+            
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {
