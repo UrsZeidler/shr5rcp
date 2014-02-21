@@ -91,13 +91,13 @@ public class FertigkeitPage extends AbstractShr5Page<Beschreibbar> {
 		Group grpFertigkeit = new Group(managedForm.getForm().getBody(), SWT.NONE);
 		grpFertigkeit.setLayout(new GridLayout(3, false));
 		grpFertigkeit.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		grpFertigkeit.setText("Fertigkeit");
+		grpFertigkeit.setText(Messages.ObjectPage_skill);
 		managedForm.getToolkit().adapt(grpFertigkeit);
 		managedForm.getToolkit().paintBordersFor(grpFertigkeit);
 
 		Group grpQuelle = new Group(managedForm.getForm().getBody(), SWT.NONE);
 		grpQuelle.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-		grpQuelle.setText("Quelle");
+		grpQuelle.setText(Messages.ObjectPage_source);
 		managedForm.getToolkit().adapt(grpQuelle);
 		managedForm.getToolkit().paintBordersFor(grpQuelle);
 		grpQuelle.setLayout(new GridLayout(6, false));
@@ -107,12 +107,12 @@ public class FertigkeitPage extends AbstractShr5Page<Beschreibbar> {
 		createFormBuilder(managedForm);
 
 		if (object instanceof Fertigkeit) {
-			grpFertigkeit.setText("Fertigkeit");
+			grpFertigkeit.setText(Messages.ObjectPage_skill);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__ATTRIBUT, grpFertigkeit);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__KATEGORIE, grpFertigkeit);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
 		} else if (object instanceof FertigkeitsGruppe) {
-			grpFertigkeit.setText("Fertigkeitsgruppe");
+			grpFertigkeit.setText(Messages.ObjectPage_skillgroup);
 			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN, grpFertigkeit);
 		}
 

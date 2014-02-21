@@ -87,7 +87,7 @@ public class ReichweitePage extends AbstractShr5Page<Reichweite> {
 		managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 		
 		Group grpGegenstand = new Group(managedForm.getForm().getBody(), SWT.NONE);
-		grpGegenstand.setText("Reichweite");
+		grpGegenstand.setText(Messages.ObjectPage_range);
 		grpGegenstand.setLayout(new GridLayout(15, false));
 		grpGegenstand.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		managedForm.getToolkit().adapt(grpGegenstand);

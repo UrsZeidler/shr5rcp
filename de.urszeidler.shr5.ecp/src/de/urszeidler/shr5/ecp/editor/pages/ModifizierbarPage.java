@@ -83,13 +83,13 @@ public class ModifizierbarPage extends AbstractShr5Page<Modifizierbar> {
 		Group grpModifikationen = new Group(managedForm.getForm().getBody(), SWT.NONE);
 		grpModifikationen.setLayout(new GridLayout(3, false));
 		grpModifikationen.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		grpModifikationen.setText("Modifikationen");
+		grpModifikationen.setText(Messages.ObjectPage_modifications);
 		managedForm.getToolkit().adapt(grpModifikationen);
 		managedForm.getToolkit().paintBordersFor(grpModifikationen);
 
 		m_bindingContext = initDataBindings();
 
-		TreeTableWidget treeTableWidget = new TreeTableWidget(grpModifikationen,"Modifikationen", SWT.NONE, object,
+		TreeTableWidget treeTableWidget = new TreeTableWidget(grpModifikationen,Messages.ObjectPage_modifications, SWT.NONE, object,
 				Shr5Package.Literals.MODIFIZIERBAR__MODS, toolkit, mananger, editingDomain);
 		treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		managedForm.getToolkit().adapt(treeTableWidget);

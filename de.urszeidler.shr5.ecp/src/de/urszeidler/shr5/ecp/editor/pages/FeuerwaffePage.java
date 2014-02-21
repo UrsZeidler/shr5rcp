@@ -94,7 +94,7 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
 		Group grpFernkampfwaffe = new Group(managedForm.getForm().getBody(), SWT.NONE);
 		grpFernkampfwaffe.setLayout(new GridLayout(2, true));
 		grpFernkampfwaffe.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		grpFernkampfwaffe.setText("Feuerwaffe");
+		grpFernkampfwaffe.setText(Messages.ObjectPage_firearm);
 		managedForm.getToolkit().adapt(grpFernkampfwaffe);
 		managedForm.getToolkit().paintBordersFor(grpFernkampfwaffe);
 
@@ -105,13 +105,13 @@ public class FeuerwaffePage extends AbstractShr5Page<Feuerwaffe> {
 		managedForm.getToolkit().paintBordersFor(composite);
 
 		Group grpWert = new Group(composite, SWT.NONE);
-		grpWert.setText("Wert");
+		grpWert.setText(Messages.ObjectPage_price);
 		managedForm.getToolkit().adapt(grpWert);
 		managedForm.getToolkit().paintBordersFor(grpWert);
 		grpWert.setLayout(new GridLayout(6, false));
 
 		Group grpQuelle = new Group(composite, SWT.NONE);
-		grpQuelle.setText("Quelle");
+		grpQuelle.setText(Messages.ObjectPage_source);
 		managedForm.getToolkit().adapt(grpQuelle);
 		managedForm.getToolkit().paintBordersFor(grpQuelle);
 		grpQuelle.setLayout(new GridLayout(6, false));

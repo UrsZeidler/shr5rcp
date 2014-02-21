@@ -105,7 +105,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         grpWert.setLayout(new GridLayout(6, false));
 
         Group grpQuelle = new Group(composite, SWT.NONE);
-        grpQuelle.setText("Quelle");
+        grpQuelle.setText(Messages.ObjectPage_source);
         managedForm.getToolkit().adapt(grpQuelle);
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));
@@ -115,7 +115,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         createFormBuilder(managedForm);
 
         if (object instanceof Koerpermods) {
-            grpWert.setText("Wert");
+            grpWert.setText(Messages.ObjectPage_price);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
 
@@ -124,15 +124,15 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
             }
 
         } else if (object instanceof PersonaEigenschaft) {
-            grpWert.setText("Karama Kosten");
+            grpWert.setText(Messages.ObjectPage_karmaCost);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.PERSONA_EIGENSCHAFT__KARMA_KOSTEN, grpWert);
 
         } else if (object instanceof FernkampfwaffeModifikator) {
-            grpWert.setText("Erweiterung");
+            grpWert.setText(Messages.ObjectPage_addon);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FERNKAMPFWAFFE_MODIFIKATOR__EP, grpWert);
 
         } else if (object instanceof KiKraft) {
-            grpWert.setText("Kraft Punkte");
+            grpWert.setText(Messages.ObjectPage_powwerPoint);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE, grpWert);
         }
 

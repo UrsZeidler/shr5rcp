@@ -94,20 +94,20 @@ public class SpeziesPage extends AbstractShr5Page<Spezies> {
         Group grpSpeziesBasis = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpSpeziesBasis.setLayout(new GridLayout(6, false));
         grpSpeziesBasis.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        grpSpeziesBasis.setText("Spezies Basis");
+        grpSpeziesBasis.setText(Messages.ObjectPage_species_basic);
         managedForm.getToolkit().adapt(grpSpeziesBasis);
         managedForm.getToolkit().paintBordersFor(grpSpeziesBasis);
 
         Group grpLaufmodifikator = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpLaufmodifikator.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        grpLaufmodifikator.setText("Laufmodifikator");
+        grpLaufmodifikator.setText(Messages.ObjectPage_movement);
         managedForm.getToolkit().adapt(grpLaufmodifikator);
         managedForm.getToolkit().paintBordersFor(grpLaufmodifikator);
         grpLaufmodifikator.setLayout(new GridLayout(9, false));
 
         Group grpQuelle = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpQuelle.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        grpQuelle.setText("Quelle");
+        grpQuelle.setText(Messages.ObjectPage_source);
         managedForm.getToolkit().adapt(grpQuelle);
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));

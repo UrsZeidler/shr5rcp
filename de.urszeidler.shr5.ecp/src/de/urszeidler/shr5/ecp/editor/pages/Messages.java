@@ -55,6 +55,23 @@ public class Messages extends NLS {
     public static String GeneratorPage_Step_Two;
 
     public static String GeneratorPage_Validation;
+    public static String ObjectPage_addon;
+    public static String ObjectPage_armor;
+    public static String ObjectPage_credstick;
+    public static String ObjectPage_firearm;
+    public static String ObjectPage_Item;
+    public static String ObjectPage_karmaCost;
+    public static String ObjectPage_meeleweapon;
+    public static String ObjectPage_modifications;
+    public static String ObjectPage_movement;
+    public static String ObjectPage_powwerPoint;
+    public static String ObjectPage_price;
+    public static String ObjectPage_range;
+    public static String ObjectPage_rangedweapon;
+    public static String ObjectPage_skill;
+    public static String ObjectPage_skillgroup;
+    public static String ObjectPage_source;
+    public static String ObjectPage_species_basic;
     public static String PersonaFertigkeitenWidget_dice_pool;
     public static String PersonaFertigkeitenWidget_groups_skills;
     public static String PersonaFertigkeitenWidget_knowlege_skill;

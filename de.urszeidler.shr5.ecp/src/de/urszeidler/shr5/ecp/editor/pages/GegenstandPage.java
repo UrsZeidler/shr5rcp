@@ -102,13 +102,13 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         managedForm.getToolkit().paintBordersFor(composite);
 
         Group grpWert = new Group(composite, SWT.NONE);
-        grpWert.setText("Wert");
+        grpWert.setText(Messages.ObjectPage_price);
         managedForm.getToolkit().adapt(grpWert);
         managedForm.getToolkit().paintBordersFor(grpWert);
         grpWert.setLayout(new GridLayout(6, false));
 
         Group grpQuelle = new Group(composite, SWT.NONE);
-        grpQuelle.setText("Quelle");
+        grpQuelle.setText(Messages.ObjectPage_source);
         managedForm.getToolkit().adapt(grpQuelle);
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));
@@ -118,14 +118,14 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         createFormBuilder(managedForm);
 
         if (object instanceof Gegenstand) {
-            grpGegenstand.setText("Gegenstand");
+            grpGegenstand.setText(Messages.ObjectPage_Item);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEGENSTAND__KATEGORIE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEGENSTAND__STUFE, grpGegenstand);
         } else if (object instanceof Kleidung) {
-            grpGegenstand.setText("Rüstung");
+            grpGegenstand.setText(Messages.ObjectPage_armor);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEIDUNG__RUESTUNG, grpGegenstand);
         } else if (object instanceof Credstick) {
-            grpGegenstand.setText("Credstick");
+            grpGegenstand.setText(Messages.ObjectPage_credstick);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURREN_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
         }
