@@ -581,6 +581,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                     Shr5Generator g = (Shr5Generator)getChracterSource();
                     addKarma = g.getShr5Generator().getKarmaPoints() - g.getKarmaSpend();
                 }
+                return addKarma;
             }
 
         return ShadowrunManagmentTools.getKarmaGaint(this) + ShadowrunManagmentTools.getKarmaSpend(this) + addKarma;
