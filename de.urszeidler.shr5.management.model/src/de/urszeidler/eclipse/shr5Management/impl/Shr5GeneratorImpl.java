@@ -1105,7 +1105,10 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
 
         int karmaPoints = getShr5Generator().getKarmaPoints();
         int diff = karmaPoints - getKarmaSpend();
-        if (diff != 0) {
+        
+        boolean test = getShr5Generator().getMaxKarmaToKeep() < diff;
+        
+        if (test || diff < 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS, ModelPlugin.INSTANCE.getString(
