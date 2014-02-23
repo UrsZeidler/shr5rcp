@@ -145,11 +145,11 @@ public class ResourceGeneratorOption extends Composite {
 				if (generator instanceof Shr5Generator) {
 					Shr5Generator sr5g = (Shr5Generator) generator;
 					
-					return ShadowrunManagmentTools.calcResourcesLeft(sr5g);
+					return ShadowrunManagmentTools.calcResourcesLeft(sr5g)+EMPTY;
 					
 					//karmaToResource = sr5g.getKarmaToResource() * sr5g.getShr5Generator().getKarmaToResourceFactor();
 				}
-				return 0;
+				return 0+EMPTY;
 				//return (object.getResource()+karmaToResource - calcAttributesSpend + EMPTY);
 			}
 		});
