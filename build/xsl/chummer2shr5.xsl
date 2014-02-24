@@ -439,109 +439,103 @@
 						srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="10" />
 				</persona>
 			</members>
-			<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@entries.3"
-				nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-				<persona xsi:type="shr5:MudanPersona" name="Rob" edgeBasis="1"
-					konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3"
-					staerkeBasis="11" charismaBasis="3" willenskraftBasis="4"
-					intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.4">
-					<fertigkeiten stufe="2"
-						fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
-					<fertigkeiten stufe="2"
-						fertigkeit="//@entries.0/@entries.4/@entries.27" />
-					<fertigkeiten stufe="5"
-						fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
-					<fertigkeiten stufe="5"
-						fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
-					<fertigkeiten stufe="1"
-						fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0" />
-					<fertigkeiten stufe="2"
-						fertigkeit="//@entries.0/@entries.4/@entries.4" />
-					<fertigkeiten stufe="1"
-						fertigkeit="//@entries.0/@entries.4/@entries.3" />
-					<fertigkeiten stufe="1"
-						fertigkeit="//@entries.0/@entries.4/@entries.8" />
-					<fertigkeiten stufe="4"
-						fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
-					<fertigkeiten stufe="2"
-						fertigkeit="//@entries.0/@entries.3/@entries.2/@fertigkeiten.1" />
-					<fertigkeiten stufe="3"
-						fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1" />
-					<fertigkeiten fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1" />
-					<fertigkeitsGruppen stufe="2"
-						gruppe="//@entries.0/@entries.3/@entries.1" />
-					<koerperMods xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic"
-						page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000"
-						verfuegbarkeit="8R">
-						<mods wert="1">
-							<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
-						</mods>
-						<mods wert="-50">
-							<attribut
-								href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
-						</mods>
-					</koerperMods>
-					<koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers"
-						page="455" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="(Rating*5)R">
-						<mods wert="2">
-							<attribut
-								href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" />
-						</mods>
-						<mods wert="-300">
-							<attribut
-								href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
-						</mods>
-					</koerperMods>
-				</persona>
-				<inventar xsi:type="shr5:Feuerwaffe" page="428"
-					srcBook="//@entries.0/@entries.0/@entries.0" wert="1500"
-					verfuegbarkeit="8R" name="FN HAR" schadenscode="10P" praezision="5"
-					durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
-					<modie>HM</modie>
-					<modie>SM</modie>
-					<modie>AM</modie>
-					<erweiterung>Lauf</erweiterung>
-					<erweiterung>Oben</erweiterung>
-					<erweiterung>Unten</erweiterung>
-					<einbau name="Laser Sight" page="432"
-						srcBook="//@entries.0/@entries.0/@entries.0" />
-					<einbau name="Gas-Vent 2 System" page="431"
-						srcBook="//@entries.0/@entries.0/@entries.0" />
-				</inventar>
-				<inventar xsi:type="shr5:Feuerwaffe" page="427"
-					srcBook="//@entries.0/@entries.0/@entries.0" wert="660"
-					verfuegbarkeit="5R" name="Colt Cobra TZ-120" schadenscode="7P"
-					praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
-					<modie>HM</modie>
-					<modie>SM</modie>
-					<modie>AM</modie>
-					<erweiterung>Lauf</erweiterung>
-					<erweiterung>Oben</erweiterung>
-					<erweiterung>Unten</erweiterung>
-					<einbau name="Laser Sight" page="432"
-						srcBook="//@entries.0/@entries.0/@entries.0" />
-					<einbau name="Gas-Vent 2 System" page="431"
-						srcBook="//@entries.0/@entries.0/@entries.0" />
-				</inventar>
-				<inventar xsi:type="shr5:Feuerwaffe" page="426"
-					srcBook="//@entries.0/@entries.0/@entries.0" wert="725"
-					verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P"
-					praezision="5" durchschlagsKraft="-1"
-					reichweite="//@entries.0/@entries.1/@entries.3">
-					<modie>HM</modie>
-					<erweiterung>Lauf</erweiterung>
-					<erweiterung>Oben</erweiterung>
-					<einbau name="Smartgun System, Internal" page="433"
-						srcBook="//@entries.0/@entries.0/@entries.0" />
-				</inventar>
-				<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-					srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
-					verfuegbarkeit="9R" name="Katana" schadenscode="(STR+3)P"
-					praezision="7" durchschlagsKraft="-3" />
-				<contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wert="10000"
-					stufe="4" gefaelscht="true" />
-			</members>
+
+
+      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@entries.3" choosenLifestyle="//@entries.1/@entries.1/@members.1/@contracts.1" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
+        <persona xsi:type="shr5:MudanPersona" name="Rob" edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="11" charismaBasis="3" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.4">
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.4"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.3"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.2/@fertigkeiten.1"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.47"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.61"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.65"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.69"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.70"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.24"/>
+          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.1"/>
+          <koerperMods xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000" verfuegbarkeit="8R">
+            <mods wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+            <mods wert="-50">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers 2" page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="26000" verfuegbarkeit="10R">
+            <mods wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </mods>
+            <mods wert="-60">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+          </koerperMods>
+          <eigenschaften name="Exceptional Attribute" page="72" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="14"/>
+          <eigenschaften name="SINner (National)" page="84" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-5"/>
+          <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
+          <eigenschaften name="Will to Live" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
+          <eigenschaften name="Gremlins 2" page="81" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-8"/>
+          <eigenschaften name="Bad Rep" page="79" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-7"/>
+        </persona>
+        <changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T22:59:36.856+0100" from="1" to="2" changeable="//@entries.1/@entries.1/@members.1/@persona/@fertigkeiten.7"/>
+        <changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:00:12.990+0100" from="1" to="2" changeable="//@entries.1/@entries.1/@members.1/@persona/@fertigkeiten.6"/>
+        <changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:14:29.584+0100" from="2" to="3" changeable="//@entries.1/@entries.1/@members.1/@persona/@fertigkeiten.9"/>
+        <inventar xsi:type="shr5:Feuerwaffe" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="8R" name="FN HAR" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+          <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="660" verfuegbarkeit="5R" name="Colt Cobra TZ-120" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+          <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
+        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2R" name="Knucks" schadenscode="(STR+1)P"/>
+        <inventar xsi:type="shr5:Kleidung" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="2" name="Armor Jacket" ruestung="12"/>
+        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="1400" verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices"/>
+        <inventar xsi:type="shr5:Credstick" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0" name="Silver" maxValue="20000"/>
+        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink"/>
+        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" verfuegbarkeit="2R" name="Ammo: Regular Ammo 300" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="9F" name="Ammo: Explosive Rounds 50" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="140" verfuegbarkeit="4F" name="Ammo: Hollow Points 20" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="11F" name="Minigrenade: High Explosive 3" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="6R" name="Grenade: Flash-Bang 5" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" srcBook="//@entries.0/@entries.0/@entries.0" wert="45" name="SPare clip 9"/>
+        <contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wert="10000" stufe="4" gefaelscht="true"/>
+        <contracts xsi:type="shr5:Lifestyle" name="Low 3 month Troll" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="12000" verfuegbarkeit="" faelligkeitsIntervall="30"/>
+        <contracts xsi:type="shr5:Lizenz" name="Gun Licence" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" stufe="4" gefaelscht="true" lizenzTraeger="//@entries.1/@entries.1/@members.1/@contracts.0"/>
+        <connections influence="2" loyality="3"/>
+        <connections influence="2" loyality="2"/>
+      </members>
+
+
+
 			<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@entries.4">
 				<persona xsi:type="shr5:MysticAdept" name="Kyra"
 					image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png"
