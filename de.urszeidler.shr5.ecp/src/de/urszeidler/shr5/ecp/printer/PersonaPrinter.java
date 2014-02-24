@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.ecp.printer;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -259,7 +260,7 @@ public class PersonaPrinter {
         for (AbstraktGegenstand ge : g) {
             grid.add(new TextPrint(itemDelegator.getText(ge), attributeFont), 1);
             grid.add(new TextPrint(ge.getVerfuegbarkeit(), attributeFont), 1);
-            grid.add(new TextPrint(ge.getWert().toString(), attributeFont), 1);
+            grid.add(new TextPrint(printIntegerMoney(ge.getWert()), attributeFont), 1);
             grid.add(new TextPrint(toSource(ge), attributeFont), 1);
         }
 
@@ -888,6 +889,16 @@ public class PersonaPrinter {
      */
     private String printInteger(int value) {
         return String.format("%d", value);//$NON-NLS-1$
+    }
+
+    /**
+     * Prints the ini.
+     * 
+     * @param persona
+     * @return
+     */
+    private String printIntegerMoney(BigDecimal bigDecimal) {
+        return String.format("%,.0f", bigDecimal);//$NON-NLS-1$
     }
 
     /**
