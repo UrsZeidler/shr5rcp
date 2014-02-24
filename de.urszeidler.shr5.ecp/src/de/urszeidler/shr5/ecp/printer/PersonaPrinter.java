@@ -17,6 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
+import org.eclipse.nebula.paperclips.core.LinePrint;
 import org.eclipse.nebula.paperclips.core.Print;
 import org.eclipse.nebula.paperclips.core.border.Border;
 import org.eclipse.nebula.paperclips.core.border.BorderPrint;
@@ -243,7 +244,7 @@ public class PersonaPrinter {
         Set<Entry<EAttribute, Integer>> set = modManager.getModificatorMap().entrySet();
         for (Entry<EAttribute, Integer> entry : set) {
             grid.add(new TextPrint(toName(entry.getKey()), attributeFont));
-            grid.add(new TextPrint(entry.getValue().toString(), attributeFont));
+            grid.add(new TextPrint(printInteger(entry.getValue()), attributeFont));
         }
         return grid;
     }
@@ -259,12 +260,18 @@ public class PersonaPrinter {
         grid.addHeader(new TextPrint(Messages.Printer_source, italicFontData));
         for (AbstraktGegenstand ge : g) {
             grid.add(new TextPrint(itemDelegator.getText(ge), attributeFont), 1);
-            grid.add(new TextPrint(ge.getVerfuegbarkeit(), attributeFont), 1);
+            grid.add(new TextPrint(printString(ge.getVerfuegbarkeit()), attributeFont), 1);
             grid.add(new TextPrint(printIntegerMoney(ge.getWert()), attributeFont), 1);
             grid.add(new TextPrint(toSource(ge), attributeFont), 1);
         }
 
         return grid;
+    }
+
+    private String printString(String message) {
+        if (message == null)
+            return EMPTY;
+        return message;
     }
 
     /**
@@ -422,26 +429,46 @@ public class PersonaPrinter {
                 grid.add(printFernkampWaffeDetail(af));
             }
         }
+        
+        DefaultGridLook look1 = new DefaultGridLook(2, 2);
+        look.setHeaderGap(2);
+        GridPrint grid1 = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g", look1);//$NON-NLS-1$
+         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_Name, italicFontData), 2);
+         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_dmg, italicFontData));
+         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_akk, italicFontData));
+         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_ap, italicFontData));
+         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_reach, italicFontData));
+
         for (AbstraktGegenstand abstraktGegenstand : inventar) {
             if (abstraktGegenstand instanceof Nahkampfwaffe) {
-                Nahkampfwaffe f = (Nahkampfwaffe)abstraktGegenstand;
-                grid.add(printNahkampfwaffeDetail(f));
+                Nahkampfwaffe fw = (Nahkampfwaffe)abstraktGegenstand;
+                //grid.add(printNahkampfwaffeDetail(fw));
+                
+                grid1.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
+
+                grid1.add(new TextPrint(toName(fw), attributeFont), 2);
+                grid1.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+                grid1.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+                grid1.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
+                grid1.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
+
             }
         }
-
+        grid.add(grid1);
         return grid;
     }
 
     private Print printNahkampfwaffeDetail(Nahkampfwaffe fw) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,", look);//$NON-NLS-1$
+        GridPrint grid = new GridPrint("d:g,d,d,d,d,d", look);//$NON-NLS-1$
 
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", italicFontData), 2);
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("reach", italicFontData));
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("dmg", italicFontData));
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("akk", italicFontData));
         // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("ap", italicFontData));
+        grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(toName(fw), attributeFont), 2);
         grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
@@ -461,7 +488,8 @@ public class PersonaPrinter {
 
         // grid.add(new TextPrint("Name", italicFontData), 5);
         // grid.add(new TextPrint("Type", italicFontData), 3);
-
+        grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
+        
         grid.add(new TextPrint(toName(fw), attributeFont), 5);
         grid.add(new TextPrint(toName(fw.getReichweite()), attributeFont), 3);
 
@@ -519,6 +547,7 @@ public class PersonaPrinter {
 
         // grid.add(new TextPrint("Name", italicFontData), 5);
         // grid.add(new TextPrint("Type", italicFontData), 3);
+        grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(toName(fw), attributeFont), 5);
         grid.add(new TextPrint(toName(fw.getReichweite()), attributeFont), 3);
@@ -932,7 +961,7 @@ public class PersonaPrinter {
         grid.add(new TextPrint(Messages.Printer_notoriety, attributeFont));
         grid.add(new TextPrint(printInteger(character.getNotoriety()), attributeFont), 1);
         grid.add(new TextPrint(Messages.Printer_prom, attributeFont));
-        grid.add(new TextPrint(character.getPublicAwareness() + EMPTY, attributeFont), 1);
+        grid.add(new TextPrint(printInteger(character.getPublicAwareness()), attributeFont), 1);
 
         grid.add(new TextPrint(Messages.Printer_karma, attributeFont));
         grid.add(new TextPrint(printInteger(character.getCurrentKarma()), attributeFont), 1);
