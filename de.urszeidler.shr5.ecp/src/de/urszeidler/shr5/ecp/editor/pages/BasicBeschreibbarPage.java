@@ -72,7 +72,7 @@ public class BasicBeschreibbarPage extends AbstractShr5Page<Beschreibbar> {
 
 		BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(
 				managedForm.getForm().getBody(), SWT.NONE, object,
-				toolkit);
+				toolkit, editingDomain);
 		GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP,
 				true, false, 1, 1);
 		gd_beschreibbarWidget.widthHint = 0;

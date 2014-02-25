@@ -36,7 +36,6 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private Composite compositeEigenschaften;
     private Composite compositeWares;
 
-
     /**
      * Create the form page.
      * 
@@ -67,14 +66,14 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     @Override
     protected void createFormContent(IManagedForm managedForm) {
         FormToolkit toolkit = managedForm.getToolkit();
-         ScrolledForm form = managedForm.getForm();
+        ScrolledForm form = managedForm.getForm();
         form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         body.setLayout(new GridLayout(1, false));
 
-        BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(body, SWT.NONE, object, toolkit);
+        BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(body, SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
         gd_beschreibbarWidget.widthHint = 0;
         gd_beschreibbarWidget.heightHint = 0;
@@ -175,13 +174,13 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             GridData gd_grpFertigkeitGruppe = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
             gd_grpFertigkeitGruppe.heightHint = 150;
             grpFertigkeitGruppe.setLayoutData(gd_grpFertigkeitGruppe);
-             toolkit.adapt(grpFertigkeitGruppe);
+            toolkit.adapt(grpFertigkeitGruppe);
             toolkit.paintBordersFor(grpFertigkeitGruppe);
 
             compositeEigenschaften = new Composite(grpFertigkeitGruppe, SWT.NONE);
             compositeEigenschaften.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
             compositeEigenschaften.setLayout(new FillLayout(SWT.HORIZONTAL));
-             toolkit.adapt(compositeEigenschaften);
+            toolkit.adapt(compositeEigenschaften);
             toolkit.paintBordersFor(compositeEigenschaften);
 
             TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften, "Edges/Flaws", SWT.NONE, object,
@@ -192,7 +191,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             compositeWares = new Composite(grpFertigkeitGruppe, SWT.NONE);
             compositeWares.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
             compositeWares.setLayout(new FillLayout(SWT.HORIZONTAL));
-             toolkit.adapt(compositeWares);
+            toolkit.adapt(compositeWares);
             toolkit.paintBordersFor(compositeWares);
 
             TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(compositeWares, "Wares", SWT.NONE, object,
@@ -205,7 +204,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         if (object instanceof KiAdept) {
             Composite grpKikrfte = new Composite(body, SWT.NONE);
             grpKikrfte.setLayout(new FillLayout(SWT.HORIZONTAL));
-            
+
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1);
             layoutData.minimumHeight = 150;
             grpKikrfte.setLayoutData(layoutData);
@@ -245,7 +244,6 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
         }
-
 
         m_bindingContext = initDataBindings();
 

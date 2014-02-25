@@ -81,7 +81,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
-        BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit);
+        BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
         gd_beschreibbarWidget.widthHint = 0;
         gd_beschreibbarWidget.heightHint = 0;
