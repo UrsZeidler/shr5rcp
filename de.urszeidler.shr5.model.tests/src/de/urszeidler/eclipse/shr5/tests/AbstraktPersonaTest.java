@@ -287,6 +287,12 @@ public abstract class AbstraktPersonaTest extends TestCase {
 		fixture.setWillenskraftBasis(2);
 		
 		assertEquals("limit need to be 2", 2, fixture.getGeistig());
+		
+        fixture.setLogikBasis(3);
+        fixture.setIntuitionBasis(3);
+        fixture.setWillenskraftBasis(4);
+        
+        assertEquals("limit need to be 5", 5, fixture.getGeistig());
 	}
 
 	/**
@@ -298,11 +304,18 @@ public abstract class AbstraktPersonaTest extends TestCase {
 	 * @generated not
 	 */
 	public void testGetSozial() {
-		fixture.setCharismaBasis(3);
-		fixture.setWillenskraftBasis(6);
-		
-		
-		assertEquals("limit need to be 6", 6, fixture.getSozial());
+        fixture.setCharismaBasis(3);
+        fixture.setWillenskraftBasis(6);
+        
+        
+        assertEquals("limit need to be 6", 6, fixture.getSozial());
+        
+        fixture.setCharismaBasis(3);
+        fixture.setWillenskraftBasis(4);
+        
+        
+        
+        assertEquals("limit need to be 7", 7, fixture.getSozial());
 	}
 
 } // AbstraktPersonaTest

@@ -747,7 +747,7 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
 	 */
 	public int getKoerperlich() {
 		double baselimit1 = ((getStaerke() * 2) + getKonstitution() + getReaktion()) / 3.0;
-		int baselimit = (int) Math.floor(baselimit1);
+		int baselimit = (int) Math.ceil(baselimit1);
 		int getmodWert = modManager.getmodWert(Shr5Package.Literals.CHRAKTER_LIMITS__KOERPERLICH);
 		return baselimit + getmodWert;
 	}
@@ -759,7 +759,7 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
 	 */
 	public int getGeistig() {
 		double baselimit1 = ((getLogik() * 2) + getIntuition() + getWillenskraft()) / 3.0;
-		int baselimit = (int) Math.floor(baselimit1);
+		int baselimit = (int) Math.ceil(baselimit1);
 		int getmodWert = modManager.getmodWert(Shr5Package.Literals.CHRAKTER_LIMITS__GEISTIG);
 		return baselimit + getmodWert;
 	}
@@ -771,7 +771,7 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
 	 */
 	public int getSozial() {
 		double baselimit1 = ((getCharisma() * 2) + getWillenskraft() + (getEssenz() / 100)) / 3.0;
-		int baselimit = (int) Math.floor(baselimit1);
+		int baselimit = (int) Math.ceil(baselimit1);
 		int getmodWert = modManager.getmodWert(Shr5Package.Literals.CHRAKTER_LIMITS__SOZIAL);
 		return baselimit + getmodWert;
 	}
