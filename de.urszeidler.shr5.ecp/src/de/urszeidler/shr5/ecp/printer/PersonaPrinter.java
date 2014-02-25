@@ -49,6 +49,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -429,21 +430,21 @@ public class PersonaPrinter {
                 grid.add(printFernkampWaffeDetail(af));
             }
         }
-        
+
         DefaultGridLook look1 = new DefaultGridLook(2, 2);
         look.setHeaderGap(2);
         GridPrint grid1 = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g", look1);//$NON-NLS-1$
-         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_Name, italicFontData), 2);
-         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_dmg, italicFontData));
-         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_akk, italicFontData));
-         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_ap, italicFontData));
-         grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_reach, italicFontData));
+        grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_Name, italicFontData), 2);
+        grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_dmg, italicFontData));
+        grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_akk, italicFontData));
+        grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_ap, italicFontData));
+        grid1.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_reach, italicFontData));
 
         for (AbstraktGegenstand abstraktGegenstand : inventar) {
             if (abstraktGegenstand instanceof Nahkampfwaffe) {
                 Nahkampfwaffe fw = (Nahkampfwaffe)abstraktGegenstand;
-                //grid.add(printNahkampfwaffeDetail(fw));
-                
+                // grid.add(printNahkampfwaffeDetail(fw));
+
                 grid1.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
                 grid1.add(new TextPrint(toName(fw), attributeFont), 2);
@@ -489,7 +490,7 @@ public class PersonaPrinter {
         // grid.add(new TextPrint("Name", italicFontData), 5);
         // grid.add(new TextPrint("Type", italicFontData), 3);
         grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
-        
+
         grid.add(new TextPrint(toName(fw), attributeFont), 5);
         grid.add(new TextPrint(toName(fw.getReichweite()), attributeFont), 3);
 
@@ -830,7 +831,7 @@ public class PersonaPrinter {
      */
     private Print printPersonaAttributes(AbstraktPersona persona) {
 
-        DefaultGridLook look = new DefaultGridLook(10, 5);
+        DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d", look);//$NON-NLS-1$
 
@@ -863,9 +864,9 @@ public class PersonaPrinter {
         grid2.add(new TextPrint(Messages.Printer_memory, attributeFont), 3);
         grid2.add(new TextPrint(printInteger(persona.getWillenskraft() + persona.getLogik()), attributeFont), 1);
         grid2.add(new TextPrint(Messages.Printer_lift_carry, attributeFont), 3);
-        grid2.add(new TextPrint(EMPTY, attributeFont), 1);
+        grid2.add(new TextPrint(printLiftCarry(persona), attributeFont), 1);
         grid2.add(new TextPrint(Messages.Printer_movement, attributeFont), 3);
-        grid2.add(new TextPrint(EMPTY, attributeFont), 1);
+        grid2.add(new TextPrint(printMovement(persona), attributeFont), 1);
 
         // grid2.add(new TextPrint("Ini", attributeFont), 3);
         // grid2.add(new TextPrint(toIni(persona), attributeFont), 1);
@@ -888,6 +889,29 @@ public class PersonaPrinter {
 
         }
         return grid;
+    }
+
+    
+    private String printLiftCarry(AbstraktPersona persona) {
+        int staerke = persona.getStaerke();
+
+        return String.format("%dkg/%dkg", staerke * 15, staerke * 10);//$NON-NLS-1
+    }
+
+    /**
+     * print the movement to string.
+     * 
+     * @param persona
+     * @return
+     */
+    private String printMovement(AbstraktPersona persona) {
+        Spezies spezies = persona.getSpezies();
+        if (spezies != null) {
+
+            int geschicklichkeit = persona.getGeschicklichkeit();
+            return String.format("%d/%d/+%d", geschicklichkeit * spezies.getLaufen(), geschicklichkeit * spezies.getRennen(), spezies.getSprinten());//$NON-NLS-1$
+        }
+        return EMPTY;
     }
 
     /**
