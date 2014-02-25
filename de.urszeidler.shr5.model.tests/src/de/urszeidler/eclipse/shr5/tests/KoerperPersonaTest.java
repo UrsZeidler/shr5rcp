@@ -356,7 +356,7 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
 	 */
 	public void testGetSozialMod() {
 		fixture.setCharismaBasis(3);
-		fixture.setWillenskraftBasis(6);
+		fixture.setWillenskraftBasis(4);
 		Koerpermods bioware = Shr5Factory.eINSTANCE.createBioWare();
 		AttributModifikatorWert mod = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
 

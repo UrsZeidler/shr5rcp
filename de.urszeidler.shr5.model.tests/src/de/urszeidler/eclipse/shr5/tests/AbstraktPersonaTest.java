@@ -315,7 +315,7 @@ public abstract class AbstraktPersonaTest extends TestCase {
         
         
         
-        assertEquals("limit need to be 7", 7, fixture.getSozial());
+        assertEquals("limit need to be 6", 6, fixture.getSozial());
 	}
 
 } // AbstraktPersonaTest
