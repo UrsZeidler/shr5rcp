@@ -27,34 +27,36 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getPanzer <em>Panzer</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlichMax <em>Zustand Koerperlich Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGeistigMax <em>Zustand Geistig Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGrenze <em>Zustand Grenze</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getKoerperMods <em>Koerper Mods</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getEigenschaften <em>Eigenschaften</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlich <em>Zustand Koerperlich</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGeistig <em>Zustand Geistig</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getPanzer <em>Panzer</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlichMax <em>Zustand Koerperlich Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGeistigMax <em>Zustand Geistig Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGrenze <em>Zustand Grenze</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getKoerperMods <em>Koerper Mods</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getEigenschaften <em>Eigenschaften</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlich <em>Zustand Koerperlich</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGeistig <em>Zustand Geistig</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements KoerperPersona {
-	/**
+    /**
      * The default value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getPanzer()
      * @generated
      * @ordered
      */
-	protected static final int PANZER_EDEFAULT = 0;
+    protected static final int PANZER_EDEFAULT = 0;
 
-	/**
+    /**
      * The default value of the '{@link #getZustandKoerperlichMax() <em>Zustand Koerperlich Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandKoerperlichMax()
      * @generated
      * @ordered
@@ -65,6 +67,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * The default value of the '{@link #getZustandGeistigMax() <em>Zustand Geistig Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandGeistigMax()
      * @generated
      * @ordered
@@ -75,6 +78,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * The default value of the '{@link #getZustandGrenze() <em>Zustand Grenze</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandGrenze()
      * @generated
      * @ordered
@@ -84,27 +88,30 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
     /**
      * The cached value of the '{@link #getKoerperMods() <em>Koerper Mods</em>}' containment reference list.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getKoerperMods()
      * @generated
      * @ordered
      */
-	protected EList<Koerpermods> koerperMods;
+    protected EList<Koerpermods> koerperMods;
 
-	/**
+    /**
      * The cached value of the '{@link #getEigenschaften() <em>Eigenschaften</em>}' containment reference list.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getEigenschaften()
      * @generated
      * @ordered
      */
-	protected EList<PersonaEigenschaft> eigenschaften;
+    protected EList<PersonaEigenschaft> eigenschaften;
 
-	/**
+    /**
      * The default value of the '{@link #getZustandKoerperlich() <em>Zustand Koerperlich</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandKoerperlich()
      * @generated
      * @ordered
@@ -115,6 +122,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * The cached value of the '{@link #getZustandKoerperlich() <em>Zustand Koerperlich</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandKoerperlich()
      * @generated
      * @ordered
@@ -125,6 +133,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * The default value of the '{@link #getZustandGeistig() <em>Zustand Geistig</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandGeistig()
      * @generated
      * @ordered
@@ -135,6 +144,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * The cached value of the '{@link #getZustandGeistig() <em>Zustand Geistig</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandGeistig()
      * @generated
      * @ordered
@@ -143,56 +153,62 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected KoerperPersonaImpl() {
+    protected KoerperPersonaImpl() {
         super();
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return Shr5Package.Literals.KOERPER_PERSONA;
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated not
-	 */
-	public int getPanzer() {
-		int getmodWert = modManager.getmodWert(Shr5Package.Literals.PANZERUNG__PANZER);
-		return getmodWert;
-	}
-
-	/**
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getPanzer() {
+        int getmodWert = modManager.getmodWert(Shr5Package.Literals.PANZERUNG__PANZER);
+        return getmodWert;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getZustandKoerperlichMax() {
-        int konstitution = getKonstitution()/2;
-        return 8+konstitution;
+        int konstitution = (int)Math.ceil(getKonstitution() / 2.0D);
+        return 8 + konstitution;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getZustandGeistigMax() {
-        int willenskraft = getWillenskraft()/2;
-        return 8+willenskraft;
+        int willenskraft = (int)Math.ceil(getWillenskraft() / 2.0D);
+        return 8 + willenskraft;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getZustandGrenze() {
@@ -201,31 +217,35 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public EList<Koerpermods> getKoerperMods() {
+    public EList<Koerpermods> getKoerperMods() {
         if (koerperMods == null) {
             koerperMods = new EObjectContainmentEList<Koerpermods>(Koerpermods.class, this, Shr5Package.KOERPER_PERSONA__KOERPER_MODS);
         }
         return koerperMods;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public EList<PersonaEigenschaft> getEigenschaften() {
+    public EList<PersonaEigenschaft> getEigenschaften() {
         if (eigenschaften == null) {
-            eigenschaften = new EObjectContainmentEList<PersonaEigenschaft>(PersonaEigenschaft.class, this, Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN);
+            eigenschaften = new EObjectContainmentEList<PersonaEigenschaft>(PersonaEigenschaft.class, this,
+                    Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN);
         }
         return eigenschaften;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getZustandKoerperlich() {
@@ -235,18 +255,21 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setZustandKoerperlich(int newZustandKoerperlich) {
         int oldZustandKoerperlich = zustandKoerperlich;
         zustandKoerperlich = newZustandKoerperlich;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH, oldZustandKoerperlich, zustandKoerperlich));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH, oldZustandKoerperlich,
+                    zustandKoerperlich));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getZustandGeistig() {
@@ -256,6 +279,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setZustandGeistig(int newZustandGeistig) {
@@ -267,11 +291,12 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
                 return ((InternalEList<?>)getKoerperMods()).basicRemove(otherEnd, msgs);
@@ -281,13 +306,14 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.KOERPER_PERSONA__PANZER:
                 return getPanzer();
@@ -309,14 +335,15 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
         return super.eGet(featureID, resolve, coreType);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
                 getKoerperMods().clear();
@@ -336,13 +363,14 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
         super.eSet(featureID, newValue);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eUnset(int featureID) {
+    @Override
+    public void eUnset(int featureID) {
         switch (featureID) {
             case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
                 getKoerperMods().clear();
@@ -360,13 +388,14 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
         super.eUnset(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean eIsSet(int featureID) {
+    @Override
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
             case Shr5Package.KOERPER_PERSONA__PANZER:
                 return getPanzer() != PANZER_EDEFAULT;
@@ -388,49 +417,63 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
         return super.eIsSet(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Panzerung.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.KOERPER_PERSONA__PANZER: return Shr5Package.PANZERUNG__PANZER;
-                default: return -1;
+                case Shr5Package.KOERPER_PERSONA__PANZER:
+                    return Shr5Package.PANZERUNG__PANZER;
+                default:
+                    return -1;
             }
         }
         if (baseClass == PersonaZustand.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX: return Shr5Package.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX;
-                case Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX: return Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX;
-                case Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE: return Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GRENZE;
-                default: return -1;
+                case Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX:
+                    return Shr5Package.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX;
+                case Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX:
+                    return Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX;
+                case Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE:
+                    return Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GRENZE;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Panzerung.class) {
             switch (baseFeatureID) {
-                case Shr5Package.PANZERUNG__PANZER: return Shr5Package.KOERPER_PERSONA__PANZER;
-                default: return -1;
+                case Shr5Package.PANZERUNG__PANZER:
+                    return Shr5Package.KOERPER_PERSONA__PANZER;
+                default:
+                    return -1;
             }
         }
         if (baseClass == PersonaZustand.class) {
             switch (baseFeatureID) {
-                case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX: return Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX;
-                case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX: return Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX;
-                case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GRENZE: return Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE;
-                default: return -1;
+                case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX:
+                    return Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX;
+                case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX:
+                    return Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX;
+                case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GRENZE:
+                    return Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -439,11 +482,13 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (zustandKoerperlich: ");
@@ -454,4 +499,4 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
         return result.toString();
     }
 
-} //KoerperPersonaImpl
+} // KoerperPersonaImpl

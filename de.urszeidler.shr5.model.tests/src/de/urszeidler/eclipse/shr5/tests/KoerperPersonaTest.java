@@ -80,11 +80,11 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
      getFixture().setKonstitutionBasis(4);
      assertEquals("should be 10", 10, getFixture().getZustandKoerperlichMax());
      getFixture().setKonstitutionBasis(5);
-     assertEquals("should be 10", 10, getFixture().getZustandKoerperlichMax());
-     getFixture().setKonstitutionBasis(5);
-     assertEquals("should be 10", 10, getFixture().getZustandKoerperlichMax());
+     assertEquals("should be 11", 11, getFixture().getZustandKoerperlichMax());
      getFixture().setKonstitutionBasis(6);
      assertEquals("should be 11", 11, getFixture().getZustandKoerperlichMax());        
+     getFixture().setKonstitutionBasis(9);
+     assertEquals("should be 13", 13, getFixture().getZustandKoerperlichMax());        
     }
 
     /**
@@ -98,9 +98,11 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
         getFixture().setWillenskraftBasis(4);
         assertEquals("should be 10", 10, getFixture().getZustandGeistigMax());
         getFixture().setWillenskraftBasis(5);
-        assertEquals("should be 10", 10, getFixture().getZustandGeistigMax());
+        assertEquals("should be 11", 11, getFixture().getZustandGeistigMax());
         getFixture().setWillenskraftBasis(6);
         assertEquals("should be 11", 11, getFixture().getZustandGeistigMax());
+        getFixture().setWillenskraftBasis(9);
+        assertEquals("should be 13", 13, getFixture().getZustandGeistigMax());
     }
 
     /**
