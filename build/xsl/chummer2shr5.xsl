@@ -536,34 +536,40 @@
 
 
 
-			<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@entries.4">
-				<persona xsi:type="shr5:MysticAdept" name="Kyra"
-					image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png"
-					edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6"
-					reaktionBasis="3" staerkeBasis="2" charismaBasis="6"
-					willenskraftBasis="4" intuitionBasis="4" logikBasis="3"
-					spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
-					<fertigkeiten stufe="5"
-						fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0" />
-					<fertigkeiten stufe="5"
-						fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2" />
-					<fertigkeiten stufe="4"
-						fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
-					<fertigkeiten stufe="3"
-						fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
-					<fertigkeiten stufe="3"
-						fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
-					<fertigkeiten stufe="4"
-						fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2" />
-					<fertigkeiten stufe="3"
-						fertigkeit="//@entries.0/@entries.4/@entries.8" />
-					<fertigkeitsGruppen stufe="2"
-						gruppe="//@entries.0/@entries.3/@entries.4" />
-					<kikraft name="Enhanced Perception" kraftpunkte="-50" />
-					<kikraft name="Improved Potential" kraftpunkte="-100" />
-					<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.2" />
-				</persona>
-			</members>
+      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@entries.4">
+        <persona xsi:type="shr5:MysticAdept" image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png" name="Kyra" edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2" charismaBasis="6" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.12"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.21"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.25"/>
+          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.4"/>
+          <kikraft name="Improved Potential" kraftpunkte="-50">
+            <mods wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial"/>
+            </mods>
+          </kikraft>
+          <kikraft name="Mystic Armor" kraftpunkte="-50">
+            <mods wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+          </kikraft>
+          <kikraft name="Enhanced Accuracy" kraftpunkte="-25"/>
+          <kikraft name="Improved Ability" kraftpunkte="-50"/>
+          <kikraft name="Voice Control 1" kraftpunkte="-25"/>
+          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.2"/>
+        </persona>
+      </members>
+
+			
+			
 		</entries>
 		<entries xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@entries.1/@members.0"
 			generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
