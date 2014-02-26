@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -104,6 +105,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.INCREASE_CHARACTER_PART: return createIncreaseCharacterPart();
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: return createLifestyleToStartMoney();
             case Shr5managementPackage.SHR_MGMT_LIST: return createShrMgmtList();
+            case Shr5managementPackage.GRUNT_GROUP: return createGruntGroup();
+            case Shr5managementPackage.GRUNT_MENBERS: return createGruntMenbers();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -371,6 +374,26 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public ShrMgmtList createShrMgmtList() {
         ShrMgmtListImpl shrMgmtList = new ShrMgmtListImpl();
         return shrMgmtList;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GruntGroup createGruntGroup() {
+        GruntGroupImpl gruntGroup = new GruntGroupImpl();
+        return gruntGroup;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GruntMenbers createGruntMenbers() {
+        GruntMenbersImpl gruntMenbers = new GruntMenbersImpl();
+        return gruntMenbers;
     }
 
     /**

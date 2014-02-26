@@ -344,6 +344,16 @@ public class ShrMgmtListItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.SHR_MGMT_LIST__ENTRIES,
+                 Shr5managementFactory.eINSTANCE.createGruntGroup()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.SHR_MGMT_LIST__ENTRIES,
+                 Shr5managementFactory.eINSTANCE.createGruntMenbers()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.SHR_MGMT_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createSourceBook()));
 
         newChildDescriptors.add

@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -309,6 +310,10 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateLifestyleToStartMoney((LifestyleToStartMoney)value, diagnostics, context);
             case Shr5managementPackage.SHR_MGMT_LIST:
                 return validateShrMgmtList((ShrMgmtList)value, diagnostics, context);
+            case Shr5managementPackage.GRUNT_GROUP:
+                return validateGruntGroup((GruntGroup)value, diagnostics, context);
+            case Shr5managementPackage.GRUNT_MENBERS:
+                return validateGruntMenbers((GruntMenbers)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -789,6 +794,24 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateShrMgmtList(ShrMgmtList shrMgmtList, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(shrMgmtList, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateGruntGroup(GruntGroup gruntGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(gruntGroup, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateGruntMenbers(GruntMenbers gruntMenbers, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(gruntMenbers, diagnostics, context);
     }
 
     /**

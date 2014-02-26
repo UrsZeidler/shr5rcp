@@ -606,22 +606,13 @@ public interface Shr5managementPackage extends EPackage {
     int NON_PLAYER_CHARACTER__CURRENT_KARMA = MANAGED_CHARACTER__CURRENT_KARMA;
 
     /**
-     * The feature id for the '<em><b>Professional Rating</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int NON_PLAYER_CHARACTER__PROFESSIONAL_RATING = MANAGED_CHARACTER_FEATURE_COUNT + 0;
-
-    /**
      * The number of structural features of the '<em>Non Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int NON_PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 1;
+	int NON_PLAYER_CHARACTER_FEATURE_COUNT = MANAGED_CHARACTER_FEATURE_COUNT + 0;
 
 	/**
      * The number of operations of the '<em>Non Player Character</em>' class.
@@ -3381,6 +3372,134 @@ public interface Shr5managementPackage extends EPackage {
     int SHR_MGMT_LIST_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl <em>Grunt Group</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntGroup()
+     * @generated
+     */
+    int GRUNT_GROUP = 32;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mebers</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP__MEBERS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Leader</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP__LEADER = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Professional Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP__PROFESSIONAL_RATING = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Grunt Group</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Grunt Group</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_GROUP_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl <em>Grunt Menbers</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMenbers()
+     * @generated
+     */
+    int GRUNT_MENBERS = 33;
+
+    /**
+     * The feature id for the '<em><b>Count</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_MENBERS__COUNT = 0;
+
+    /**
+     * The feature id for the '<em><b>Nsc</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_MENBERS__NSC = 1;
+
+    /**
+     * The number of structural features of the '<em>Grunt Menbers</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_MENBERS_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Grunt Menbers</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GRUNT_MENBERS_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3388,7 +3507,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 32;
+	int GENERATOR_STATE = 34;
 
 
 	/**
@@ -3399,7 +3518,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 33;
+	int SEX = 35;
 
 
 	/**
@@ -3674,17 +3793,6 @@ public interface Shr5managementPackage extends EPackage {
 	EClass getNonPlayerCharacter();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.NonPlayerCharacter#getProfessionalRating <em>Professional Rating</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Professional Rating</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.NonPlayerCharacter#getProfessionalRating()
-     * @see #getNonPlayerCharacter()
-     * @generated
-     */
-    EAttribute getNonPlayerCharacter_ProfessionalRating();
-
-    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Changes <em>Changes</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5061,6 +5169,81 @@ public interface Shr5managementPackage extends EPackage {
     EReference getShrMgmtList_Entries();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.GruntGroup <em>Grunt Group</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Grunt Group</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntGroup
+     * @generated
+     */
+    EClass getGruntGroup();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getMebers <em>Mebers</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Mebers</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntGroup#getMebers()
+     * @see #getGruntGroup()
+     * @generated
+     */
+    EReference getGruntGroup_Mebers();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getLeader <em>Leader</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Leader</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntGroup#getLeader()
+     * @see #getGruntGroup()
+     * @generated
+     */
+    EReference getGruntGroup_Leader();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getProfessionalRating <em>Professional Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Professional Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntGroup#getProfessionalRating()
+     * @see #getGruntGroup()
+     * @generated
+     */
+    EAttribute getGruntGroup_ProfessionalRating();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers <em>Grunt Menbers</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Grunt Menbers</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers
+     * @generated
+     */
+    EClass getGruntMenbers();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers#getCount <em>Count</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Count</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers#getCount()
+     * @see #getGruntMenbers()
+     * @generated
+     */
+    EAttribute getGruntMenbers_Count();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers#getNsc <em>Nsc</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Nsc</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers#getNsc()
+     * @see #getGruntMenbers()
+     * @generated
+     */
+    EReference getGruntMenbers_Nsc();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5312,14 +5495,6 @@ public interface Shr5managementPackage extends EPackage {
 		EClass NON_PLAYER_CHARACTER = eINSTANCE.getNonPlayerCharacter();
 
 		/**
-         * The meta object literal for the '<em><b>Professional Rating</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute NON_PLAYER_CHARACTER__PROFESSIONAL_RATING = eINSTANCE.getNonPlayerCharacter_ProfessionalRating();
-
-        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl <em>Changes</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6414,6 +6589,66 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference SHR_MGMT_LIST__ENTRIES = eINSTANCE.getShrMgmtList_Entries();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl <em>Grunt Group</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntGroup()
+         * @generated
+         */
+        EClass GRUNT_GROUP = eINSTANCE.getGruntGroup();
+
+        /**
+         * The meta object literal for the '<em><b>Mebers</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GRUNT_GROUP__MEBERS = eINSTANCE.getGruntGroup_Mebers();
+
+        /**
+         * The meta object literal for the '<em><b>Leader</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GRUNT_GROUP__LEADER = eINSTANCE.getGruntGroup_Leader();
+
+        /**
+         * The meta object literal for the '<em><b>Professional Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute GRUNT_GROUP__PROFESSIONAL_RATING = eINSTANCE.getGruntGroup_ProfessionalRating();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl <em>Grunt Menbers</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMenbers()
+         * @generated
+         */
+        EClass GRUNT_MENBERS = eINSTANCE.getGruntMenbers();
+
+        /**
+         * The meta object literal for the '<em><b>Count</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute GRUNT_MENBERS__COUNT = eINSTANCE.getGruntMenbers_Count();
+
+        /**
+         * The meta object literal for the '<em><b>Nsc</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GRUNT_MENBERS__NSC = eINSTANCE.getGruntMenbers_Nsc();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

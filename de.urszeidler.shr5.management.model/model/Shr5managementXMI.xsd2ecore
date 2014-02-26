@@ -46,10 +46,7 @@
       <nested inputs="shr5Management.ecore#//PrioritySystem/priorities" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//PrioritySystem" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDElementDeclaration=2"/>
-    <nested inputs="shr5Management.ecore#//NonPlayerCharacter" outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDComplexTypeDefinition=3">
-      <nested inputs="shr5Management.ecore#//NonPlayerCharacter/professionalRating"
-          outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDComplexTypeDefinition=3/XSDAttributeUse"/>
-    </nested>
+    <nested inputs="shr5Management.ecore#//NonPlayerCharacter" outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDComplexTypeDefinition=3"/>
     <nested inputs="shr5Management.ecore#//NonPlayerCharacter" outputs="Shr5managementXMI.xsd#//NonPlayerCharacter;XSDElementDeclaration=3"/>
     <nested inputs="shr5Management.ecore#//Changes" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4">
       <nested inputs="shr5Management.ecore#//Changes/date" outputs="Shr5managementXMI.xsd#//Changes;XSDComplexTypeDefinition=4/XSDAttributeUse=1"/>
@@ -217,6 +214,18 @@
       <nested inputs="shr5Management.ecore#//ShrMgmtList/entries" outputs="Shr5managementXMI.xsd#//ShrMgmtList;XSDComplexTypeDefinition=31/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//ShrMgmtList" outputs="Shr5managementXMI.xsd#//ShrMgmtList;XSDElementDeclaration=31"/>
+    <nested inputs="shr5Management.ecore#//GruntGroup" outputs="Shr5managementXMI.xsd#//GruntGroup;XSDComplexTypeDefinition=32">
+      <nested inputs="shr5Management.ecore#//GruntGroup/professionalRating" outputs="Shr5managementXMI.xsd#//GruntGroup;XSDComplexTypeDefinition=32/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//GruntGroup/mebers" outputs="Shr5managementXMI.xsd#//GruntGroup;XSDComplexTypeDefinition=32/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//GruntGroup/leader" outputs="Shr5managementXMI.xsd#//GruntGroup;XSDComplexTypeDefinition=32/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//GruntGroup" outputs="Shr5managementXMI.xsd#//GruntGroup;XSDElementDeclaration=32"/>
+    <nested inputs="shr5Management.ecore#//GruntMenbers" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDComplexTypeDefinition=33">
+      <nested inputs="shr5Management.ecore#//GruntMenbers/count" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDComplexTypeDefinition=33/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//GruntMenbers/nsc" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDComplexTypeDefinition=33/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//GruntMenbers/nsc" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDComplexTypeDefinition=33/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//GruntMenbers" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDElementDeclaration=33"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"

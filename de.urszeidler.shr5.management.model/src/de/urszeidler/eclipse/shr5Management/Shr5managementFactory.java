@@ -221,6 +221,24 @@ public interface Shr5managementFactory extends EFactory {
     ShrMgmtList createShrMgmtList();
 
     /**
+     * Returns a new object of class '<em>Grunt Group</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Grunt Group</em>'.
+     * @generated
+     */
+    GruntGroup createGruntGroup();
+
+    /**
+     * Returns a new object of class '<em>Grunt Menbers</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Grunt Menbers</em>'.
+     * @generated
+     */
+    GruntMenbers createGruntMenbers();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

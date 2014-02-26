@@ -28,6 +28,8 @@ import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.GruntMenbers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
@@ -283,6 +285,20 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass shrMgmtListEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass gruntGroupEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass gruntMenbersEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -597,15 +613,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
     }
 
 	/**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EAttribute getNonPlayerCharacter_ProfessionalRating() {
-        return (EAttribute)nonPlayerCharacterEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -1777,6 +1784,69 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGruntGroup() {
+        return gruntGroupEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGruntGroup_Mebers() {
+        return (EReference)gruntGroupEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGruntGroup_Leader() {
+        return (EReference)gruntGroupEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGruntGroup_ProfessionalRating() {
+        return (EAttribute)gruntGroupEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGruntMenbers() {
+        return gruntMenbersEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGruntMenbers_Count() {
+        return (EAttribute)gruntMenbersEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGruntMenbers_Nsc() {
+        return (EReference)gruntMenbersEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1849,7 +1919,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(prioritySystemEClass, PRIORITY_SYSTEM__KARMA_POINTS);
 
         nonPlayerCharacterEClass = createEClass(NON_PLAYER_CHARACTER);
-        createEAttribute(nonPlayerCharacterEClass, NON_PLAYER_CHARACTER__PROFESSIONAL_RATING);
 
         changesEClass = createEClass(CHANGES);
         createEAttribute(changesEClass, CHANGES__DATE);
@@ -2009,6 +2078,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         shrMgmtListEClass = createEClass(SHR_MGMT_LIST);
         createEReference(shrMgmtListEClass, SHR_MGMT_LIST__ENTRIES);
 
+        gruntGroupEClass = createEClass(GRUNT_GROUP);
+        createEReference(gruntGroupEClass, GRUNT_GROUP__MEBERS);
+        createEReference(gruntGroupEClass, GRUNT_GROUP__LEADER);
+        createEAttribute(gruntGroupEClass, GRUNT_GROUP__PROFESSIONAL_RATING);
+
+        gruntMenbersEClass = createEClass(GRUNT_MENBERS);
+        createEAttribute(gruntMenbersEClass, GRUNT_MENBERS__COUNT);
+        createEReference(gruntMenbersEClass, GRUNT_MENBERS__NSC);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -2070,6 +2148,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         personaValueChangeEClass.getESuperTypes().add(this.getChanges());
         increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
         shrMgmtListEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
+        gruntGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2100,7 +2179,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getPrioritySystem_KarmaPoints(), ecorePackage.getEInt(), "karmaPoints", null, 0, 1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(nonPlayerCharacterEClass, NonPlayerCharacter.class, "NonPlayerCharacter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getNonPlayerCharacter_ProfessionalRating(), ecorePackage.getEInt(), "professionalRating", null, 0, 1, NonPlayerCharacter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(changesEClass, Changes.class, "Changes", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getChanges_Date(), theShr5Package.getShrDate(), "date", null, 0, 1, Changes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2410,6 +2488,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(shrMgmtListEClass, ShrMgmtList.class, "ShrMgmtList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getShrMgmtList_Entries(), ecorePackage.getEObject(), null, "entries", null, 0, -1, ShrMgmtList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(gruntGroupEClass, GruntGroup.class, "GruntGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getGruntGroup_Mebers(), this.getGruntMenbers(), null, "mebers", null, 0, -1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGruntGroup_Leader(), this.getGruntMenbers(), null, "leader", null, 1, 1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGruntGroup_ProfessionalRating(), ecorePackage.getEInt(), "professionalRating", null, 0, 1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(gruntMenbersEClass, GruntMenbers.class, "GruntMenbers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getGruntMenbers_Count(), ecorePackage.getEInt(), "count", null, 1, 1, GruntMenbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGruntMenbers_Nsc(), this.getNonPlayerCharacter(), null, "nsc", null, 1, 1, GruntMenbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

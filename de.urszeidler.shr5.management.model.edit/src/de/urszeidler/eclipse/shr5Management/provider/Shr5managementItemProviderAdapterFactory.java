@@ -612,6 +612,52 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.GruntGroup} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GruntGroupItemProvider gruntGroupItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntGroup}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGruntGroupAdapter() {
+        if (gruntGroupItemProvider == null) {
+            gruntGroupItemProvider = new GruntGroupItemProvider(this);
+        }
+
+        return gruntGroupItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.GruntMenbers} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GruntMenbersItemProvider gruntMenbersItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMenbers}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGruntMenbersAdapter() {
+        if (gruntMenbersItemProvider == null) {
+            gruntMenbersItemProvider = new GruntMenbersItemProvider(this);
+        }
+
+        return gruntMenbersItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -733,6 +779,8 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (increaseCharacterPartItemProvider != null) increaseCharacterPartItemProvider.dispose();
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
         if (shrMgmtListItemProvider != null) shrMgmtListItemProvider.dispose();
+        if (gruntGroupItemProvider != null) gruntGroupItemProvider.dispose();
+        if (gruntMenbersItemProvider != null) gruntMenbersItemProvider.dispose();
     }
 
 	/**
@@ -896,6 +944,16 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createShrMgmtList()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createGruntGroup()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createGruntMenbers()));
 
                 return null;
             }

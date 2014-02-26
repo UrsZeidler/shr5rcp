@@ -70,9 +70,7 @@
   <xsd:element name="PrioritySystem" type="shr5mngt:PrioritySystem"/>
   <xsd:complexType name="NonPlayerCharacter">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:ManagedCharacter">
-        <xsd:attribute name="professionalRating" type="xsd:int"/>
-      </xsd:extension>
+      <xsd:extension base="shr5mngt:ManagedCharacter"/>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="NonPlayerCharacter" type="shr5mngt:NonPlayerCharacter"/>
@@ -376,4 +374,41 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ShrMgmtList" type="shr5mngt:ShrMgmtList"/>
+  <xsd:complexType name="GruntGroup">
+    <xsd:annotation>
+      <xsd:documentation>This is a grunt group.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mebers" type="shr5mngt:GruntMenbers"/>
+          <xsd:element name="leader" type="shr5mngt:GruntMenbers"/>
+        </xsd:choice>
+        <xsd:attribute name="professionalRating" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GruntGroup" type="shr5mngt:GruntGroup">
+    <xsd:annotation>
+      <xsd:documentation>This is a grunt group.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GruntMenbers">
+    <xsd:annotation>
+      <xsd:documentation>This decribes the members of a grunt group.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="nsc" type="shr5mngt:NonPlayerCharacter"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="count" type="xsd:int" use="required"/>
+    <xsd:attribute name="nsc" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="GruntMenbers" type="shr5mngt:GruntMenbers">
+    <xsd:annotation>
+      <xsd:documentation>This decribes the members of a grunt group.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>
