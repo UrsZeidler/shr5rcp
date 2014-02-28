@@ -12,6 +12,7 @@ import org.eclipse.jface.databinding.viewers.IViewerObservableList;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
 import org.eclipse.jface.layout.TreeColumnLayout;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -36,128 +37,146 @@ import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 
 public class TreeTableWidget extends Composite {
 
-	private ReferenceManager manager;
-	private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
+    private ReferenceManager manager;
+    private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
 
-	private EObject object;
-	private EStructuralFeature feature;
-	//private EStructuralFeature labelFeature;
-	private EditingDomain editingDomain;
-	private String titel;
+    private EObject object;
+    private EStructuralFeature feature;
+    // private EStructuralFeature labelFeature;
+    private EditingDomain editingDomain;
+    private String titel;
+    private ISelectionChangedListener selectionChangeListener;
 
-	/**
-	 * Create the composite.
-	 * 
-	 * @param parent
-	 * @param style
-	 */
-	public TreeTableWidget(Composite parent, int style) {
-		super(parent, style);
-		toolkit = new FormToolkit(Display.getCurrent());
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				toolkit.dispose();
-			}
-		});
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		createWidgets();
+    /**
+     * Create the composite.
+     * 
+     * @param parent
+     * @param style
+     */
+    public TreeTableWidget(Composite parent, int style) {
+        super(parent, style);
+        toolkit = new FormToolkit(Display.getCurrent());
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        createWidgets();
 
-	}
+    }
 
-	public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
-			ReferenceManager mananger, EditingDomain editingDomain) {
-		super(parent, style);
-		this.toolkit = toolkit;
-		this.object = object;
-		this.feature = modifizierbarMods;
-		this.manager = mananger;
-		this.editingDomain = editingDomain;
-		this.titel = titel;
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		createWidgets();
+    public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
+            ReferenceManager mananger, EditingDomain editingDomain) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.feature = modifizierbarMods;
+        this.manager = mananger;
+        this.editingDomain = editingDomain;
+        this.titel = titel;
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        createWidgets();
 
-	}
+    }
 
-	private void createWidgets() {
-		setLayout(new FillLayout(SWT.HORIZONTAL));
+    public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
+            ReferenceManager mananger, EditingDomain editingDomain, ISelectionChangedListener selectionChangeListener) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.feature = modifizierbarMods;
+        this.manager = mananger;
+        this.editingDomain = editingDomain;
+        this.titel = titel;
+        this.selectionChangeListener = selectionChangeListener;
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        createWidgets();
 
-		Section sctnNewSection = toolkit.createSection(this, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
-		toolkit.paintBordersFor(sctnNewSection);
-		sctnNewSection.setText(titel);
-		sctnNewSection.setExpanded(true);
+    }
 
-		Composite composite = new Composite(sctnNewSection, SWT.NONE);
-		toolkit.adapt(composite);
-		toolkit.paintBordersFor(composite);
-		sctnNewSection.setClient(composite);
+    private void createWidgets() {
+        setLayout(new FillLayout(SWT.HORIZONTAL));
 
-		composite.setLayout(new TreeColumnLayout());
+        Section sctnNewSection = toolkit.createSection(this, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
+        toolkit.paintBordersFor(sctnNewSection);
+        sctnNewSection.setText(titel);
+        sctnNewSection.setExpanded(true);
 
-		final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER);
-		Tree tree = treeViewer.getTree();
-		tree.setLinesVisible(true);
-		toolkit.paintBordersFor(tree);
+        Composite composite = new Composite(sctnNewSection, SWT.NONE);
+        toolkit.adapt(composite);
+        toolkit.paintBordersFor(composite);
+        sctnNewSection.setClient(composite);
 
-		ToolBar toolBar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
-		toolkit.adapt(toolBar);
-		toolkit.paintBordersFor(toolBar);
-		sctnNewSection.setDescriptionControl(toolBar);
+        composite.setLayout(new TreeColumnLayout());
 
-		ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem.setText("add");
+        final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER);
+        if (selectionChangeListener != null)
+            treeViewer.addSelectionChangedListener(selectionChangeListener);
+        Tree tree = treeViewer.getTree();
+        tree.setLinesVisible(true);
+        toolkit.paintBordersFor(tree);
 
-		ToolItem tltmNewItem_1 = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem_1.setText("remove");
+        ToolBar toolBar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
+        toolkit.adapt(toolBar);
+        toolkit.paintBordersFor(toolBar);
+        sctnNewSection.setDescriptionControl(toolBar);
 
-		EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(object.getClass(), feature);
-		//EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, feature, null);
-		ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory,
-				null);
-		//treeViewer.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
-		treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), feature, null) {
-			@Override
-			public String getText(Object element) {
-				return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
-			}
+        ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
+        tltmNewItem.setText("add");
 
-			@Override
-			public Image getImage(Object element) {
-				return AdapterFactoryUtil.getInstance().getLabelProvider().getImage(element);
-			}
+        ToolItem tltmNewItem_1 = new ToolItem(toolBar, SWT.NONE);
+        tltmNewItem_1.setText("remove");
 
-		});
+        EMFBeansListObservableFactory treeObservableFactory = new EMFBeansListObservableFactory(object.getClass(), feature);
+        // EMFTreeBeanAdvisor treeAdvisor = new EMFTreeBeanAdvisor(null, feature, null);
+        ObservableListTreeContentProvider treeContentProvider = new ObservableListTreeContentProvider(treeObservableFactory, null);
+        // treeViewer.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+        treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), feature, null) {
+            @Override
+            public String getText(Object element) {
+                return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
+            }
 
-		treeViewer.setContentProvider(treeContentProvider);
-		IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
-		IListProperty property = null;
-		if (editingDomain != null)
-			property = EMFEditProperties.list(editingDomain, feature);
-		else
-			property = EMFProperties.list(feature);
+            @Override
+            public Image getImage(Object element) {
+                return AdapterFactoryUtil.getInstance().getLabelProvider().getImage(element);
+            }
 
-		IObservableList mObs = property.observe(object);
-		treeViewer.setInput(mObs);
-		final FormbuilderEntry e1 = new FormbuilderEntry(null, feature, null, null);
-		e1.setObservable(mObs);
-		e1.setUiObservable(uiObs);
-		tltmNewItem.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				if (manager != null) {
-					manager.handleAdd(e1, object);
-				}
-			}
-		});
+        });
 
-		tltmNewItem_1.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				manager.handleRemove(e1, object);
-			}
-		});
+        treeViewer.setContentProvider(treeContentProvider);
+        IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
+        IListProperty property = null;
+        if (editingDomain != null)
+            property = EMFEditProperties.list(editingDomain, feature);
+        else
+            property = EMFProperties.list(feature);
 
-	}
+        IObservableList mObs = property.observe(object);
+        treeViewer.setInput(mObs);
+        final FormbuilderEntry e1 = new FormbuilderEntry(null, feature, null, null);
+        e1.setObservable(mObs);
+        e1.setUiObservable(uiObs);
+        tltmNewItem.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (manager != null) {
+                    manager.handleAdd(e1, object);
+                }
+            }
+        });
+
+        tltmNewItem_1.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                manager.handleRemove(e1, object);
+            }
+        });
+
+    }
 
 }
