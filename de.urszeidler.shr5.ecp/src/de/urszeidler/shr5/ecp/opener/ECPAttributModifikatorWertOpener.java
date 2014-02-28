@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
@@ -131,6 +132,10 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 			@Override
 			public Integer caseManagedCharacter(ManagedCharacter object) {
 				return 2;
+			}
+			@Override
+			public Integer caseGruntGroup(GruntGroup object) {
+			    return 2;
 			}
 		};
 		doSwitch = shr5managementSwitch.doSwitch((EObject) eObject);

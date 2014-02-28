@@ -54,6 +54,7 @@ import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -79,6 +80,7 @@ import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FreeStyleGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
 import de.urszeidler.shr5.ecp.editor.pages.GenericBasicBeschreibbarPage;
+import de.urszeidler.shr5.ecp.editor.pages.GruntGroupPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
@@ -445,6 +447,17 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return super.caseManagedCharacter(object);
             }
 
+            
+            @Override
+            public Object caseGruntGroup(GruntGroup object) {
+                try {
+                    addPage(new GruntGroupPage(ShadowrunEditor.this, "", "Modifikationen", object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating ModifizierbarPage", e);
+                }
+                return super.caseGruntGroup(object);
+            }
+            
         };
         shr5managementSwitch.doSwitch(theEObject);
 
