@@ -411,4 +411,26 @@
       <xsd:documentation>This decribes the members of a grunt group.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="PlayerManagement">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="groups" type="shr5mngt:CharacterGroup"/>
+          <xsd:element name="generators" type="shr5mngt:CharacterGenerator"/>
+          <xsd:element name="entries" type="shr5mngt:PlayerManagement"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PlayerManagement" type="shr5mngt:PlayerManagement"/>
+  <xsd:complexType name="GamemasterManagement">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:PlayerManagement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="grunts" type="shr5mngt:GruntGroup"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GamemasterManagement" type="shr5mngt:GamemasterManagement"/>
 </xsd:schema>

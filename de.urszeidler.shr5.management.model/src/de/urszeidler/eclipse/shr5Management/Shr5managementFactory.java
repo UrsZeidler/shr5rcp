@@ -239,6 +239,24 @@ public interface Shr5managementFactory extends EFactory {
     GruntMenbers createGruntMenbers();
 
     /**
+     * Returns a new object of class '<em>Player Management</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Player Management</em>'.
+     * @generated
+     */
+    PlayerManagement createPlayerManagement();
+
+    /**
+     * Returns a new object of class '<em>Gamemaster Management</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Gamemaster Management</em>'.
+     * @generated
+     */
+    GamemasterManagement createGamemasterManagement();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -226,6 +226,16 @@
       <nested inputs="shr5Management.ecore#//GruntMenbers/nsc" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDComplexTypeDefinition=33/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//GruntMenbers" outputs="Shr5managementXMI.xsd#//GruntMenbers;XSDElementDeclaration=33"/>
+    <nested inputs="shr5Management.ecore#//PlayerManagement" outputs="Shr5managementXMI.xsd#//PlayerManagement;XSDComplexTypeDefinition=34">
+      <nested inputs="shr5Management.ecore#//PlayerManagement/groups" outputs="Shr5managementXMI.xsd#//PlayerManagement;XSDComplexTypeDefinition=34/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//PlayerManagement/generators" outputs="Shr5managementXMI.xsd#//PlayerManagement;XSDComplexTypeDefinition=34/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5Management.ecore#//PlayerManagement/entries" outputs="Shr5managementXMI.xsd#//PlayerManagement;XSDComplexTypeDefinition=34/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//PlayerManagement" outputs="Shr5managementXMI.xsd#//PlayerManagement;XSDElementDeclaration=34"/>
+    <nested inputs="shr5Management.ecore#//GamemasterManagement" outputs="Shr5managementXMI.xsd#//GamemasterManagement;XSDComplexTypeDefinition=35">
+      <nested inputs="shr5Management.ecore#//GamemasterManagement/grunts" outputs="Shr5managementXMI.xsd#//GamemasterManagement;XSDComplexTypeDefinition=35/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//GamemasterManagement" outputs="Shr5managementXMI.xsd#//GamemasterManagement;XSDElementDeclaration=35"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"

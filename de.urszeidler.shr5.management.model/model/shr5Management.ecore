@@ -430,4 +430,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nsc" lowerBound="1" eType="#//NonPlayerCharacter"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlayerManagement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
+        eType="#//CharacterGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generators" upperBound="-1"
+        eType="#//CharacterGenerator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
+        eType="#//PlayerManagement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GamemasterManagement" eSuperTypes="#//PlayerManagement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grunts" upperBound="-1"
+        eType="#//GruntGroup" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

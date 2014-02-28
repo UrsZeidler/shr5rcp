@@ -345,6 +345,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5managementPackage.PLAYER_MANAGEMENT: {
+                PlayerManagement playerManagement = (PlayerManagement)theEObject;
+                T result = casePlayerManagement(playerManagement);
+                if (result == null) result = caseBeschreibbar(playerManagement);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.GAMEMASTER_MANAGEMENT: {
+                GamemasterManagement gamemasterManagement = (GamemasterManagement)theEObject;
+                T result = caseGamemasterManagement(gamemasterManagement);
+                if (result == null) result = casePlayerManagement(gamemasterManagement);
+                if (result == null) result = caseBeschreibbar(gamemasterManagement);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -856,6 +871,36 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseGruntMenbers(GruntMenbers object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Player Management</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Player Management</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePlayerManagement(PlayerManagement object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Gamemaster Management</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Gamemaster Management</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGamemasterManagement(GamemasterManagement object) {
         return null;
     }
 

@@ -3500,6 +3500,179 @@ public interface Shr5managementPackage extends EPackage {
     int GRUNT_MENBERS_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl <em>Player Management</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPlayerManagement()
+     * @generated
+     */
+    int PLAYER_MANAGEMENT = 34;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Groups</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT__GROUPS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Generators</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT__GENERATORS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Entries</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT__ENTRIES = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Player Management</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Player Management</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_MANAGEMENT_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.GamemasterManagementImpl <em>Gamemaster Management</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.GamemasterManagementImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGamemasterManagement()
+     * @generated
+     */
+    int GAMEMASTER_MANAGEMENT = 35;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__BESCHREIBUNG = PLAYER_MANAGEMENT__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__IMAGE = PLAYER_MANAGEMENT__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__NAME = PLAYER_MANAGEMENT__NAME;
+
+    /**
+     * The feature id for the '<em><b>Groups</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__GROUPS = PLAYER_MANAGEMENT__GROUPS;
+
+    /**
+     * The feature id for the '<em><b>Generators</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__GENERATORS = PLAYER_MANAGEMENT__GENERATORS;
+
+    /**
+     * The feature id for the '<em><b>Entries</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__ENTRIES = PLAYER_MANAGEMENT__ENTRIES;
+
+    /**
+     * The feature id for the '<em><b>Grunts</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT__GRUNTS = PLAYER_MANAGEMENT_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Gamemaster Management</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT_FEATURE_COUNT = PLAYER_MANAGEMENT_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Gamemaster Management</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GAMEMASTER_MANAGEMENT_OPERATION_COUNT = PLAYER_MANAGEMENT_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3507,7 +3680,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 34;
+	int GENERATOR_STATE = 36;
 
 
 	/**
@@ -3518,7 +3691,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 35;
+	int SEX = 37;
 
 
 	/**
@@ -5244,6 +5417,70 @@ public interface Shr5managementPackage extends EPackage {
     EReference getGruntMenbers_Nsc();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PlayerManagement <em>Player Management</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Player Management</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerManagement
+     * @generated
+     */
+    EClass getPlayerManagement();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.PlayerManagement#getGroups <em>Groups</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Groups</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerManagement#getGroups()
+     * @see #getPlayerManagement()
+     * @generated
+     */
+    EReference getPlayerManagement_Groups();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.PlayerManagement#getGenerators <em>Generators</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Generators</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerManagement#getGenerators()
+     * @see #getPlayerManagement()
+     * @generated
+     */
+    EReference getPlayerManagement_Generators();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.PlayerManagement#getEntries <em>Entries</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Entries</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerManagement#getEntries()
+     * @see #getPlayerManagement()
+     * @generated
+     */
+    EReference getPlayerManagement_Entries();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.GamemasterManagement <em>Gamemaster Management</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Gamemaster Management</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GamemasterManagement
+     * @generated
+     */
+    EClass getGamemasterManagement();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.GamemasterManagement#getGrunts <em>Grunts</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Grunts</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GamemasterManagement#getGrunts()
+     * @see #getGamemasterManagement()
+     * @generated
+     */
+    EReference getGamemasterManagement_Grunts();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6649,6 +6886,58 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference GRUNT_MENBERS__NSC = eINSTANCE.getGruntMenbers_Nsc();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl <em>Player Management</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPlayerManagement()
+         * @generated
+         */
+        EClass PLAYER_MANAGEMENT = eINSTANCE.getPlayerManagement();
+
+        /**
+         * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLAYER_MANAGEMENT__GROUPS = eINSTANCE.getPlayerManagement_Groups();
+
+        /**
+         * The meta object literal for the '<em><b>Generators</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLAYER_MANAGEMENT__GENERATORS = eINSTANCE.getPlayerManagement_Generators();
+
+        /**
+         * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLAYER_MANAGEMENT__ENTRIES = eINSTANCE.getPlayerManagement_Entries();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.GamemasterManagementImpl <em>Gamemaster Management</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.GamemasterManagementImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGamemasterManagement()
+         * @generated
+         */
+        EClass GAMEMASTER_MANAGEMENT = eINSTANCE.getGamemasterManagement();
+
+        /**
+         * The meta object literal for the '<em><b>Grunts</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GAMEMASTER_MANAGEMENT__GRUNTS = eINSTANCE.getGamemasterManagement_Grunts();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

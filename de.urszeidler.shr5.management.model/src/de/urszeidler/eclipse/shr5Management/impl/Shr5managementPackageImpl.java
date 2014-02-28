@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMenbers;
@@ -40,6 +41,7 @@ import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PersonaValueChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
 import de.urszeidler.eclipse.shr5Management.PrioritySystem;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
@@ -299,6 +301,20 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass gruntMenbersEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass playerManagementEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass gamemasterManagementEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1847,6 +1863,60 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getPlayerManagement() {
+        return playerManagementEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPlayerManagement_Groups() {
+        return (EReference)playerManagementEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPlayerManagement_Generators() {
+        return (EReference)playerManagementEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPlayerManagement_Entries() {
+        return (EReference)playerManagementEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGamemasterManagement() {
+        return gamemasterManagementEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGamemasterManagement_Grunts() {
+        return (EReference)gamemasterManagementEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2087,6 +2157,14 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(gruntMenbersEClass, GRUNT_MENBERS__COUNT);
         createEReference(gruntMenbersEClass, GRUNT_MENBERS__NSC);
 
+        playerManagementEClass = createEClass(PLAYER_MANAGEMENT);
+        createEReference(playerManagementEClass, PLAYER_MANAGEMENT__GROUPS);
+        createEReference(playerManagementEClass, PLAYER_MANAGEMENT__GENERATORS);
+        createEReference(playerManagementEClass, PLAYER_MANAGEMENT__ENTRIES);
+
+        gamemasterManagementEClass = createEClass(GAMEMASTER_MANAGEMENT);
+        createEReference(gamemasterManagementEClass, GAMEMASTER_MANAGEMENT__GRUNTS);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -2149,6 +2227,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
         shrMgmtListEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         gruntGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
+        playerManagementEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
+        gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2497,6 +2577,14 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(gruntMenbersEClass, GruntMenbers.class, "GruntMenbers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getGruntMenbers_Count(), ecorePackage.getEInt(), "count", null, 1, 1, GruntMenbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getGruntMenbers_Nsc(), this.getNonPlayerCharacter(), null, "nsc", null, 1, 1, GruntMenbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(playerManagementEClass, PlayerManagement.class, "PlayerManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPlayerManagement_Groups(), this.getCharacterGroup(), null, "groups", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPlayerManagement_Generators(), this.getCharacterGenerator(), null, "generators", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPlayerManagement_Entries(), this.getPlayerManagement(), null, "entries", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(gamemasterManagementEClass, GamemasterManagement.class, "GamemasterManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getGamemasterManagement_Grunts(), this.getGruntGroup(), null, "grunts", null, 0, -1, GamemasterManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

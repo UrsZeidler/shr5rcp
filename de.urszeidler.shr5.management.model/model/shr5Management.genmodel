@@ -283,5 +283,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntMenbers/count"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntMenbers/nsc"/>
     </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//PlayerManagement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerManagement/groups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerManagement/generators"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerManagement/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//GamemasterManagement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GamemasterManagement/grunts"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

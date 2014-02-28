@@ -658,6 +658,52 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.PlayerManagement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PlayerManagementItemProvider playerManagementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.PlayerManagement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPlayerManagementAdapter() {
+        if (playerManagementItemProvider == null) {
+            playerManagementItemProvider = new PlayerManagementItemProvider(this);
+        }
+
+        return playerManagementItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.GamemasterManagement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GamemasterManagementItemProvider gamemasterManagementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.GamemasterManagement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGamemasterManagementAdapter() {
+        if (gamemasterManagementItemProvider == null) {
+            gamemasterManagementItemProvider = new GamemasterManagementItemProvider(this);
+        }
+
+        return gamemasterManagementItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -781,6 +827,8 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (shrMgmtListItemProvider != null) shrMgmtListItemProvider.dispose();
         if (gruntGroupItemProvider != null) gruntGroupItemProvider.dispose();
         if (gruntMenbersItemProvider != null) gruntMenbersItemProvider.dispose();
+        if (playerManagementItemProvider != null) playerManagementItemProvider.dispose();
+        if (gamemasterManagementItemProvider != null) gamemasterManagementItemProvider.dispose();
     }
 
 	/**
@@ -954,6 +1002,16 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createGruntMenbers()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createPlayerManagement()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createGamemasterManagement()));
 
                 return null;
             }

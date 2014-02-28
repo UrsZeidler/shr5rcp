@@ -107,6 +107,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.SHR_MGMT_LIST: return createShrMgmtList();
             case Shr5managementPackage.GRUNT_GROUP: return createGruntGroup();
             case Shr5managementPackage.GRUNT_MENBERS: return createGruntMenbers();
+            case Shr5managementPackage.PLAYER_MANAGEMENT: return createPlayerManagement();
+            case Shr5managementPackage.GAMEMASTER_MANAGEMENT: return createGamemasterManagement();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -394,6 +396,26 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public GruntMenbers createGruntMenbers() {
         GruntMenbersImpl gruntMenbers = new GruntMenbersImpl();
         return gruntMenbers;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PlayerManagement createPlayerManagement() {
+        PlayerManagementImpl playerManagement = new PlayerManagementImpl();
+        return playerManagement;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GamemasterManagement createGamemasterManagement() {
+        GamemasterManagementImpl gamemasterManagement = new GamemasterManagementImpl();
+        return gamemasterManagement;
     }
 
     /**

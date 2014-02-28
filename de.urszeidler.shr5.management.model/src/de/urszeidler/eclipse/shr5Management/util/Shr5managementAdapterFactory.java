@@ -238,6 +238,14 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createGruntMenbersAdapter();
             }
             @Override
+            public Adapter casePlayerManagement(PlayerManagement object) {
+                return createPlayerManagementAdapter();
+            }
+            @Override
+            public Adapter caseGamemasterManagement(GamemasterManagement object) {
+                return createGamemasterManagementAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -738,6 +746,34 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createGruntMenbersAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.PlayerManagement <em>Player Management</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.PlayerManagement
+     * @generated
+     */
+    public Adapter createPlayerManagementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.GamemasterManagement <em>Gamemaster Management</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.GamemasterManagement
+     * @generated
+     */
+    public Adapter createGamemasterManagementAdapter() {
         return null;
     }
 
