@@ -52,16 +52,6 @@
          </staticTest>
       </control>
       -->
-            <control
-            class="de.urszeidler.shr5.ecp.widgets.AttributModifikatorWidget"
-            id="de.urszeidler.shr5.ecp.AttributModifikatorWidget1"
-            showLabel="false">
-         <staticTest
-               priority="1"
-               singleValue="true"
-               supportedClassType="org.eclipse.emf.ecore.EAttribute">
-         </staticTest>
-      </control>
       <!--
       <control
             class="de.urszeidler.shr5.ecp.widgets.BeschreibbarTableWidget"
