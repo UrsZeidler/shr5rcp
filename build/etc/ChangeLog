@@ -1,10 +1,19 @@
-2014-02-16 Version 0.1.2
+2014-03-08 Version 0.1.3
 
-* straiten most of the localisation issues, english and german are currently supportet
-* added a freestyle generator to clone personaes or create chracters with no rule boundaries
+* fixed several rounding errors
+* added grunts as described in the core rule book
+* import from chummer2 :
+	* reorganized the resources
+	* added container objects for game aiding
+
+
+2014-02-15 Version 0.1.2
+
+* straiten most of the localization issues, english and german are currently supporter
+* added a freestyle generator to clone personas or create characters with no rule boundaries
 * added https://www.eclipse.org/nebula/widgets/cdatetime/cdatetime.php as datepicker
 * added some art from http://openclipart.org 
-* impleted the character advacment system
+* implemented the character advancement system
 * import from chummer2 :
 	* reorganized the resources
 
