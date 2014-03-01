@@ -34,7 +34,7 @@ import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
  * 
  */
 public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, ECPModelElementOpenTester {
-
+private static int RET=3;
 	/**
 	 * 
 	 */
@@ -70,47 +70,47 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
 			@Override
 			public Integer caseSpezies(Spezies object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseReichweite(Reichweite object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseFertigkeit(Fertigkeit object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseFertigkeitsGruppe(FertigkeitsGruppe object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseAbstraktGegenstand(AbstraktGegenstand object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseAbstraktPersona(AbstraktPersona object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseShrList(ShrList object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseKiAdept(KiAdept object) {
-				return 2;
+				return RET;
 			}
 
 		};
@@ -122,20 +122,20 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 			
 		    @Override
 		    public Integer caseFreeStyleGenerator(FreeStyleGenerator object) {
-		        return 2;
+		        return RET;
 		    }
 		    @Override
 			public Integer caseShr5Generator(Shr5Generator object) {
-				return 2;
+				return RET;
 			}
 
 			@Override
 			public Integer caseManagedCharacter(ManagedCharacter object) {
-				return 2;
+				return RET;
 			}
 			@Override
 			public Integer caseGruntGroup(GruntGroup object) {
-			    return 2;
+			    return RET;
 			}
 		};
 		doSwitch = shr5managementSwitch.doSwitch((EObject) eObject);
