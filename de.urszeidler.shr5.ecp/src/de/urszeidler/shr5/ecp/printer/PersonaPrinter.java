@@ -4,6 +4,8 @@
 package de.urszeidler.shr5.ecp.printer;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -15,6 +17,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.nebula.paperclips.core.BreakPrint;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
 import org.eclipse.nebula.paperclips.core.LinePrint;
@@ -24,6 +27,9 @@ import org.eclipse.nebula.paperclips.core.border.BorderPrint;
 import org.eclipse.nebula.paperclips.core.border.LineBorder;
 import org.eclipse.nebula.paperclips.core.grid.DefaultGridLook;
 import org.eclipse.nebula.paperclips.core.grid.GridPrint;
+import org.eclipse.nebula.paperclips.core.page.PageNumberPageDecoration;
+import org.eclipse.nebula.paperclips.core.page.PagePrint;
+import org.eclipse.nebula.paperclips.core.page.SimplePageDecoration;
 import org.eclipse.nebula.paperclips.core.text.TextPrint;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
@@ -45,6 +51,7 @@ import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Quelle;
@@ -55,6 +62,8 @@ import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.GruntMenbers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
@@ -100,6 +109,9 @@ public class PersonaPrinter {
     private AdapterFactoryItemDelegator itemDelegator;
     private FontData italicFontData;
 
+    /**
+     * Creates some style objects.
+     */
     protected void initalizePrinter() {
 
         FontData[] defaultFont = JFaceResources.getDefaultFont().getFontData();
@@ -107,7 +119,6 @@ public class PersonaPrinter {
         italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
         attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
 
-        // persona = character.getPersona();
         itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
         Shr5managementItemProviderAdapterFactory shr5managementItemProviderAdapterFactory = new de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory();
         AdapterFactoryUtil.getInstance().getAdapterFactory().insertAdapterFactory(shr5managementItemProviderAdapterFactory);
@@ -128,6 +139,135 @@ public class PersonaPrinter {
                 return printCharacterSheet(character);
             }
         };
+    }
+
+    /**
+     * Returns the factory to create a new print of the character.
+     * 
+     * @param c
+     * @return
+     */
+    public PrintFactory createGruntPrintFactory(final GruntGroup c) {
+        return new PrintFactory() {
+            private GruntGroup character = c;
+
+            @Override
+            public Print createPrinter() {
+                return printGruntGroupSheet(character);
+            }
+        };
+    }
+
+    /**
+     * Prints the gamemaster sheet for a grount group.
+     * 
+     * @param grunts
+     * @return
+     */
+    protected Print printGruntGroupSheet(GruntGroup grunts) {
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint body = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
+        body.add(new BorderPrint(printGruntsData(grunts), border), 2);
+        if (grunts.getLeader() != null)
+            body.add(new BorderPrint(printGruntMembersData(grunts.getLeader()), border), 2);
+
+        body.add(new BreakPrint(), GridPrint.REMAINDER);
+
+        EList<GruntMenbers> mebers = grunts.getMebers();
+        for (GruntMenbers gruntMenbers : mebers) {
+            body.add(new BorderPrint(printGruntMembersData(gruntMenbers), border), 2);
+        }
+
+        // DefaultGridLook look1 = new DefaultGridLook(5, 5);
+        // look1.setHeaderGap(5);
+        //GridPrint footer = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
+
+        // body.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        // body.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        // body.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
+        // body.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData), 2);
+        // body.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+
+        PagePrint pagePrint = new PagePrint(body);
+
+        PageNumberPageDecoration footer2 = new PageNumberPageDecoration();
+        footer2.setFontData(italicFontData);
+        pagePrint.setFooter(footer2);
+
+        //        GridPrint header = new GridPrint("d", look);//$NON-NLS-1$
+        // // header.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        // // header.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        // header.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData));
+        // header.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData));
+        // header.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+
+        // pagePrint.setHeader(new SimplePageDecoration(header));
+        return pagePrint;
+    }
+
+    /**
+     * Print the Attributes and the condition monitors.
+     * 
+     * @param gruntMembers
+     * @return
+     */
+    private Print printGruntMembersData(GruntMenbers gruntMembers) {
+
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d,d:g,d,d,d:g", look);//$NON-NLS-1$
+
+        int zustandKoerperlichMax = 8;
+        AbstraktPersona persona = gruntMembers.getNsc().getPersona();
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            zustandKoerperlichMax = kp.getZustandKoerperlichMax();
+        }
+        grid.add(printPersonaAttributes(persona), 2);
+        for (int i = 0; i < gruntMembers.getCount(); i++) {
+            grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor(gruntMembers.getNsc().getPersona().getName() + " " + (i + 1), zustandKoerperlichMax));
+        }
+        grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+        grid.add(printPersonaRangedWeapons(gruntMembers.getNsc()), 5);
+        grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
+
+        DefaultGridLook look1 = new DefaultGridLook(5, 5);
+        look.setHeaderGap(0);
+        GridPrint grid1 = new GridPrint("d,d,d", look1);//$NON-NLS-1$
+
+        grid1.add(printPersonaCombatAttributes(persona));
+        grid1.add(printPersonaSkills(persona));
+        grid1.add(printGegenstandList(gruntMembers.getNsc().getInventar()));
+
+        grid.add(grid1, GridPrint.REMAINDER);
+        return grid;
+    }
+
+    /**
+     * Prints the basic grunt data.
+     * 
+     * @param gruntGroup
+     * @return
+     */
+    private Print printGruntsData(GruntGroup gruntGroup) {
+
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Grounts", boldFontData), 1);
+
+        grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
+        grid.add(new TextPrint(printString(gruntGroup.getName()), attributeFont), 1);
+        grid.add(new TextPrint("Professionalrating", attributeFont));
+        grid.add(new TextPrint(printInteger(gruntGroup.getProfessionalRating()), attributeFont), 1);
+
+        return grid;
     }
 
     /**
@@ -172,7 +312,7 @@ public class PersonaPrinter {
     }
 
     /**
-     * Prints the persona condition monitor.
+     * Prints the persona details.
      * 
      * @param persona
      * @return
@@ -772,7 +912,82 @@ public class PersonaPrinter {
     }
 
     /**
-     * Prints the given list of fertigkeiten.
+     * Prints all persona skills.
+     * 
+     * @param persona
+     * @return
+     */
+    private Print printPersonaSkills(AbstraktPersona persona) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d,d,d,d,d", look);//$NON-NLS-1$
+
+        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, boldFontData), 4);
+
+        grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData), 2);
+        grid.addHeader(new TextPrint(Messages.Printer_attributes, italicFontData), 1);
+        grid.addHeader(new TextPrint(Messages.Printer_rtg, italicFontData), 1);
+        grid.addHeader(new TextPrint(Messages.Printer_dice_pool, italicFontData), 1);
+        List root = new ArrayList(persona.getFertigkeitsGruppen());
+        // root.addAll(persona.getFertigkeiten());
+        for (Object object : root) {
+            if (object instanceof FertigkeitsGruppe) {
+                FertigkeitsGruppe fg = (FertigkeitsGruppe)object;
+                // printGroup
+                PersonaFertigkeitsGruppe gruppe = ShadowrunTools.findGruppe(fg, persona);
+                String stufe = EMPTY;
+                if (gruppe != null) {
+                    stufe = printInteger(gruppe.getStufe());
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(fg), attributeFont), 3);
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(stufe, attributeFont), 1);
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
+                }
+
+                List<Fertigkeit> fertigkeiten = fg.getFertigkeiten();
+                printFertigkeitList(grid, fertigkeiten, persona);
+            }
+        }
+        // else
+        // if (object instanceof GroupWrapper) {
+        // GroupWrapper gw = (GroupWrapper)object;
+        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Skills", attributeFont), 3);
+        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
+        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
+        // List<Fertigkeit> fertigkeiten = persona.getFertigkeiten();
+        // printFertigkeitList(grid, fertigkeiten, persona);
+        printPersonaFertigkeitList(grid, persona);
+        // }
+        // }
+
+        return grid;
+    }
+
+    /**
+     * Prints the given list of Persona fertigkeiten
+     * 
+     * @param grid
+     * @param persona
+     */
+    private void printPersonaFertigkeitList(GridPrint grid, AbstraktPersona persona) {
+        List<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+
+        for (PersonaFertigkeit pfertigkeit : fertigkeiten) {
+            Fertigkeit fertigkeit = pfertigkeit.getFertigkeit();
+            Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
+
+            Integer fertigkeitValue = pfertigkeit.getStufe();
+            value = value + fertigkeitValue;
+
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit), attributeFont), 2);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
+        }
+    }
+
+    /**
+     * Prints the given list of fertigkeiten. And fills the values of the persona fertigkeit if available.
      * 
      * @param grid
      * @param fertigkeiten
@@ -830,7 +1045,6 @@ public class PersonaPrinter {
      * @return
      */
     private Print printPersonaAttributes(AbstraktPersona persona) {
-
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d", look);//$NON-NLS-1$
@@ -891,7 +1105,6 @@ public class PersonaPrinter {
         return grid;
     }
 
-    
     private String printLiftCarry(AbstraktPersona persona) {
         int staerke = persona.getStaerke();
 

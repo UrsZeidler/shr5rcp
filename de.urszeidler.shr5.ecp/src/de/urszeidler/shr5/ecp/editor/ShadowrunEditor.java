@@ -451,7 +451,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseGruntGroup(GruntGroup object) {
                 try {
-                    addPage(new GruntGroupPage(ShadowrunEditor.this, "", "Modifikationen", object, editingDomain, manager));
+                    addPage(new GruntGroupPage(ShadowrunEditor.this, "", "Grount Group", object, editingDomain, manager));
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Grount Group sheet", PersonaPrinter
+                            .getInstance().createGruntPrintFactory(object)));
+
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
                 }
