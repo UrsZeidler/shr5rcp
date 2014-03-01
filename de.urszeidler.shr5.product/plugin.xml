@@ -5,8 +5,29 @@
          id="shr5"
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.eclipse.emf.ecp.application.e3.application"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
             name="RCP schadowrun">
+           <property
+               name="clearPersistedState"
+               value="true">
+         </property>
+         <!--
+         <property
+               name="applicationXMI"
+               value="platform:/plugin/org.eclipse.emf.ecp.application.e4/Application.e4xmi">
+               
+         </property>
+         -->
+         <property
+name="lifeCycleURI"
+value="platform:/plugin/de.urszeidler.shr5.ecp/de.urszeidler.shr5.ecp.Shr5Initalizer">
+</property>
+         
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/org.eclipse.emf.ecp.application.e4/css/default.css">
+         </property>
+
          <property
                name="windowImages"
                value="icons/shrImage_6_16.png,icons/shrImage_6_32.png,icons/shrImage_6_48.png,icons/shrImage_6_64.png,icons/shrImage_6_128.png">

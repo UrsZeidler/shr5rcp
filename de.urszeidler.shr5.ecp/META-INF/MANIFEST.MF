@@ -11,12 +11,9 @@ Require-Bundle: org.eclipse.ui,
  de.urszeidler.shr5.model;bundle-version="1.0.0",
  org.eclipse.emf.ecp.ui.view;bundle-version="1.1.1",
  org.eclipse.emf.ecp.view.model.provider.xmi;bundle-version="1.1.1",
- org.eclipse.emf.ecp.editor.e3;bundle-version="1.1.1",
  org.eclipse.emf.ecp.ui.view.editor.controls;bundle-version="1.1.1",
  org.eclipse.emf.ecp.ui.view.swt;bundle-version="1.1.1",
  org.eclipse.emf.ecp.ui;bundle-version="1.1.1",
- org.eclipse.emf.ecp.ui.e3;bundle-version="1.1.1",
- org.eclipse.emf.ecp.application.e3;bundle-version="1.1.1",
  org.eclipse.emf.ecp.common;bundle-version="1.1.1",
  org.eclipse.emf.ecp.core.emffilter;bundle-version="1.1.1",
  org.eclipse.emf.ecp.explorereditorbridge;bundle-version="1.1.1",
@@ -84,7 +81,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.view.validation;bundle-version="1.2.0",
  org.eclipse.emf.ecp.view.vertical.model;bundle-version="1.2.0",
  org.eclipse.emf.ecp.view.vertical.model.edit;bundle-version="1.2.0",
- org.eclipse.emf.ecp.view.vertical.ui.swt;bundle-version="1.2.0"
+ org.eclipse.emf.ecp.view.vertical.ui.swt;bundle-version="1.2.0",
+ org.eclipse.emf.ecp.application.e4;bundle-version="1.2.0",
+ org.eclipse.emf.ecp.ui.e4;bundle-version="1.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.ecp,

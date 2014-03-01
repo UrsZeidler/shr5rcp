@@ -17,10 +17,6 @@
    </license>
 
    <includes
-         id="org.eclipse.emf.ecp.e3.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.feature"
          version="0.0.0"/>
 
@@ -54,10 +50,6 @@
 
    <includes
          id="org.eclipse.emf.ecp.view.label.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.model.ide.feature"
          version="0.0.0"/>
 
    <includes
@@ -122,10 +114,6 @@
 
    <includes
          id="org.eclipse.emf.edit.ui"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.validation.feature"
          version="0.0.0"/>
 
    <plugin
@@ -362,14 +350,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.ecp.application.e3.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.e4.ui.widgets.nl_de"
          download-size="0"
          install-size="0"
@@ -427,14 +407,6 @@
 
    <plugin
          id="org.eclipse.emf.ecp.editor.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.ecp.ui.e3.nl_de"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -500,6 +472,20 @@
          install-size="0"
          version="0.0.0"
          fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.application.e4"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.e4"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
