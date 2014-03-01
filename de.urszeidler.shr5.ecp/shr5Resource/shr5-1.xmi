@@ -1815,7 +1815,7 @@
 <entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
 <groups name="non player group">
 <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@entries.0/@generators.0" choosenLifestyle="//@entries.2/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-<persona xsi:type="shr5:MudanPersona" name="Thugs &amp; mouth breathers" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0">
+<persona xsi:type="shr5:MudanPersona" name="Thugs &amp; mouth breathers" image="/shr5Resource/images/MrBordello_Strategy_Game_Tileset_19.png" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0">
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1"/>
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
@@ -1827,7 +1827,7 @@
 <contracts xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
 </members>
 <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@entries.0/@generators.1" choosenLifestyle="//@entries.2/@groups.0/@members.1/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-<persona xsi:type="shr5:MudanPersona" name="Thug lieutenant" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
+<persona xsi:type="shr5:MudanPersona" name="Thug lieutenant" image="/shr5Resource/images/Cowboy_Shooting_Gun_Wild_West_Vector_Pixel_Art.png" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1"/>
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
@@ -1856,7 +1856,7 @@
 </generators>
 </entries>
 <grunts name="Thugs">
-<mebers count="7" nsc="//@entries.2/@groups.0/@members.0"/>
+<members count="7" nsc="//@entries.2/@groups.0/@members.0"/>
 <leader count="1" nsc="//@entries.2/@groups.0/@members.1"/>
 </grunts>
 </entries>
