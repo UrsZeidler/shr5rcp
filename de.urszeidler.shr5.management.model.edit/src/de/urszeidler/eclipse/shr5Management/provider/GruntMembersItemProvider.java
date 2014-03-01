@@ -12,9 +12,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -115,10 +113,20 @@ public class GruntMembersItemProvider
      * This returns GruntMembers.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        GruntMembers gruntMembers = (GruntMembers)object;
+        
+        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+        if (factory != null && gruntMembers.getNsc() != null) {
+            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(gruntMembers.getNsc(),
+                    IItemLabelProvider.class);
+            if (labelprovider != null)
+                return labelprovider.getImage(gruntMembers.getNsc());
+        }
+
         return overlayImage(object, getResourceLocator().getImage("full/obj16/GruntMembers"));
     }
 
