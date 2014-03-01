@@ -20,7 +20,7 @@
          -->
          <property
 name="lifeCycleURI"
-value="platform:/plugin/de.urszeidler.shr5.ecp/de.urszeidler.shr5.ecp.Shr5Initalizer">
+value="bundleclass://de.urszeidler.shr5.ecp/de.urszeidler.shr5.ecp.Shr5Initalizer">
 </property>
          
          <property
