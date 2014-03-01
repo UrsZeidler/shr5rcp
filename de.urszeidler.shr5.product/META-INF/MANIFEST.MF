@@ -5,6 +5,7 @@ Bundle-SymbolicName: de.urszeidler.shr5.product;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.urszeidler.shr5.product.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecp.application.e3;bundle-version="1.1.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

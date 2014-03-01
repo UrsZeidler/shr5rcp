@@ -5,7 +5,7 @@
          id="shr5"
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.eclipse.emf.ecp.application.e3.application"
+            application="de.urszeidler.shr5.product.app"
             name="RCP schadowrun">
          <property
                name="windowImages"
@@ -40,6 +40,49 @@
                value="plugin_customization.ini">
          </property>
       </product>
+   </extension>
+   <extension
+         id="app"
+         point="org.eclipse.core.runtime.applications">
+      <application >
+                     <run
+               class="de.urszeidler.shr5.product.application.Application">
+         </run>
+            
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="de.urszeidler.shr5.product.application.ShadowrunPerspective"
+            icon="icons/shadowrunPerspektive_16.png"
+            id="de.urszeidler.shr5.product.application.ShadowrunPerspective"
+            name="Main shadowrun">
+      </perspective>
+   </extension>
+
+
+  <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="project">
+            <command
+                  commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.emf.ecp.ui.workbench.import"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.emf.ecp.ui.workbench.export"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
    </extension>
 
 </plugin>
