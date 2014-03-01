@@ -4,22 +4,14 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
-import de.urszeidler.eclipse.shr5.Shr5Package;
-
-import de.urszeidler.eclipse.shr5Management.GruntGroup;
-import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -30,6 +22,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.swt.graphics.Image;
+
+import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.GruntGroup;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntGroup} object.
@@ -197,10 +197,17 @@ public class GruntGroupItemProvider
      * This returns GruntGroup.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        Beschreibbar beschreibbar = (Beschreibbar) object;
+        if (beschreibbar.getImage() != null) {
+            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+            if (image != null)
+                return image;
+        }
+        
         return overlayImage(object, getResourceLocator().getImage("full/obj16/GruntGroup"));
     }
 
