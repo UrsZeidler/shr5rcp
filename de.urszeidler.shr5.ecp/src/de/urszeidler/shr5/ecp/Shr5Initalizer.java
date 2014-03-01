@@ -26,5 +26,19 @@ public class Shr5Initalizer implements IStartup {
         }
 
     }
+    
+    
+//    @PostContextCreate
+//    public void startup(IEclipseContext context) {
+//        Activator.getDefault().createDefaultWorkspace();
+//        try {
+//            Activator.getDefault().createECPWorkspace();
+//        } catch (ECPProjectWithNameExistsException e) {
+//            Activator.logError("Error while createing default workspace.", e);
+//        }
+//    	
+//    	
+//    }
+
 
 }
