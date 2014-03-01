@@ -635,26 +635,26 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.GruntMenbers} instances.
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.GruntMembers} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected GruntMenbersItemProvider gruntMenbersItemProvider;
+    protected GruntMembersItemProvider gruntMembersItemProvider;
 
     /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMenbers}.
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMembers}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createGruntMenbersAdapter() {
-        if (gruntMenbersItemProvider == null) {
-            gruntMenbersItemProvider = new GruntMenbersItemProvider(this);
+    public Adapter createGruntMembersAdapter() {
+        if (gruntMembersItemProvider == null) {
+            gruntMembersItemProvider = new GruntMembersItemProvider(this);
         }
 
-        return gruntMenbersItemProvider;
+        return gruntMembersItemProvider;
     }
 
     /**
@@ -826,7 +826,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
         if (shrMgmtListItemProvider != null) shrMgmtListItemProvider.dispose();
         if (gruntGroupItemProvider != null) gruntGroupItemProvider.dispose();
-        if (gruntMenbersItemProvider != null) gruntMenbersItemProvider.dispose();
+        if (gruntMembersItemProvider != null) gruntMembersItemProvider.dispose();
         if (playerManagementItemProvider != null) playerManagementItemProvider.dispose();
         if (gamemasterManagementItemProvider != null) gamemasterManagementItemProvider.dispose();
     }
@@ -1001,7 +1001,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                 newChildDescriptors.add
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createGruntMenbers()));
+                         Shr5managementFactory.eINSTANCE.createGruntMembers()));
 
                 newChildDescriptors.add
                     (createChildParameter

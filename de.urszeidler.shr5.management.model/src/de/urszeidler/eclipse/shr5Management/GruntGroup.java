@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getMebers <em>Mebers</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getMembers <em>Members</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getLeader <em>Leader</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getProfessionalRating <em>Professional Rating</em>}</li>
  * </ul>
@@ -31,20 +31,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface GruntGroup extends Beschreibbar {
     /**
-     * Returns the value of the '<em><b>Mebers</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.GruntMenbers}.
+     * Returns the value of the '<em><b>Members</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.GruntMembers}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Mebers</em>' containment reference list isn't clear,
+     * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Mebers</em>' containment reference list.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntGroup_Mebers()
+     * @return the value of the '<em>Members</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntGroup_Members()
      * @model containment="true"
      * @generated
      */
-    EList<GruntMenbers> getMebers();
+    EList<GruntMembers> getMembers();
 
     /**
      * Returns the value of the '<em><b>Leader</b></em>' containment reference.
@@ -55,12 +55,12 @@ public interface GruntGroup extends Beschreibbar {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Leader</em>' containment reference.
-     * @see #setLeader(GruntMenbers)
+     * @see #setLeader(GruntMembers)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntGroup_Leader()
      * @model containment="true" required="true"
      * @generated
      */
-    GruntMenbers getLeader();
+    GruntMembers getLeader();
 
     /**
      * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getLeader <em>Leader</em>}' containment reference.
@@ -70,7 +70,7 @@ public interface GruntGroup extends Beschreibbar {
      * @see #getLeader()
      * @generated
      */
-    void setLeader(GruntMenbers value);
+    void setLeader(GruntMembers value);
 
     /**
      * Returns the value of the '<em><b>Professional Rating</b></em>' attribute.

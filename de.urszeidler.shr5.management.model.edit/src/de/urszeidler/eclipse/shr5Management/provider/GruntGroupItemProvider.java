@@ -174,7 +174,7 @@ public class GruntGroupItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5managementPackage.Literals.GRUNT_GROUP__MEBERS);
+            childrenFeatures.add(Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS);
             childrenFeatures.add(Shr5managementPackage.Literals.GRUNT_GROUP__LEADER);
         }
         return childrenFeatures;
@@ -236,7 +236,7 @@ public class GruntGroupItemProvider
             case Shr5managementPackage.GRUNT_GROUP__PROFESSIONAL_RATING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5managementPackage.GRUNT_GROUP__MEBERS:
+            case Shr5managementPackage.GRUNT_GROUP__MEMBERS:
             case Shr5managementPackage.GRUNT_GROUP__LEADER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -257,13 +257,13 @@ public class GruntGroupItemProvider
 
         newChildDescriptors.add
             (createChildParameter
-                (Shr5managementPackage.Literals.GRUNT_GROUP__MEBERS,
-                 Shr5managementFactory.eINSTANCE.createGruntMenbers()));
+                (Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS,
+                 Shr5managementFactory.eINSTANCE.createGruntMembers()));
 
         newChildDescriptors.add
             (createChildParameter
                 (Shr5managementPackage.Literals.GRUNT_GROUP__LEADER,
-                 Shr5managementFactory.eINSTANCE.createGruntMenbers()));
+                 Shr5managementFactory.eINSTANCE.createGruntMembers()));
     }
 
     /**
@@ -278,7 +278,7 @@ public class GruntGroupItemProvider
         Object childObject = child;
 
         boolean qualify =
-            childFeature == Shr5managementPackage.Literals.GRUNT_GROUP__MEBERS ||
+            childFeature == Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS ||
             childFeature == Shr5managementPackage.Literals.GRUNT_GROUP__LEADER;
 
         if (qualify) {

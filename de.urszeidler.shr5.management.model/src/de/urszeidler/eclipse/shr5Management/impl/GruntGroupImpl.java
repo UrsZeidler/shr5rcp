@@ -4,22 +4,16 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,7 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getMebers <em>Mebers</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getMembers <em>Members</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getLeader <em>Leader</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getProfessionalRating <em>Professional Rating</em>}</li>
  * </ul>
@@ -103,14 +97,14 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
     protected String name = NAME_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getMebers() <em>Mebers</em>}' containment reference list.
+     * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getMebers()
+     * @see #getMembers()
      * @generated
      * @ordered
      */
-    protected EList<GruntMenbers> mebers;
+    protected EList<GruntMembers> members;
 
     /**
      * The cached value of the '{@link #getLeader() <em>Leader</em>}' containment reference.
@@ -120,7 +114,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * @generated
      * @ordered
      */
-    protected GruntMenbers leader;
+    protected GruntMembers leader;
 
     /**
      * The default value of the '{@link #getProfessionalRating() <em>Professional Rating</em>}' attribute.
@@ -229,11 +223,11 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<GruntMenbers> getMebers() {
-        if (mebers == null) {
-            mebers = new EObjectContainmentEList<GruntMenbers>(GruntMenbers.class, this, Shr5managementPackage.GRUNT_GROUP__MEBERS);
+    public EList<GruntMembers> getMembers() {
+        if (members == null) {
+            members = new EObjectContainmentEList<GruntMembers>(GruntMembers.class, this, Shr5managementPackage.GRUNT_GROUP__MEMBERS);
         }
-        return mebers;
+        return members;
     }
 
     /**
@@ -241,7 +235,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
-    public GruntMenbers getLeader() {
+    public GruntMembers getLeader() {
         return leader;
     }
 
@@ -250,8 +244,8 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLeader(GruntMenbers newLeader, NotificationChain msgs) {
-        GruntMenbers oldLeader = leader;
+    public NotificationChain basicSetLeader(GruntMembers newLeader, NotificationChain msgs) {
+        GruntMembers oldLeader = leader;
         leader = newLeader;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.GRUNT_GROUP__LEADER, oldLeader, newLeader);
@@ -265,7 +259,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setLeader(GruntMenbers newLeader) {
+    public void setLeader(GruntMembers newLeader) {
         if (newLeader != leader) {
             NotificationChain msgs = null;
             if (leader != null)
@@ -308,8 +302,8 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case Shr5managementPackage.GRUNT_GROUP__MEBERS:
-                return ((InternalEList<?>)getMebers()).basicRemove(otherEnd, msgs);
+            case Shr5managementPackage.GRUNT_GROUP__MEMBERS:
+                return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.GRUNT_GROUP__LEADER:
                 return basicSetLeader(null, msgs);
         }
@@ -330,8 +324,8 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
                 return getImage();
             case Shr5managementPackage.GRUNT_GROUP__NAME:
                 return getName();
-            case Shr5managementPackage.GRUNT_GROUP__MEBERS:
-                return getMebers();
+            case Shr5managementPackage.GRUNT_GROUP__MEMBERS:
+                return getMembers();
             case Shr5managementPackage.GRUNT_GROUP__LEADER:
                 return getLeader();
             case Shr5managementPackage.GRUNT_GROUP__PROFESSIONAL_RATING:
@@ -358,12 +352,12 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
             case Shr5managementPackage.GRUNT_GROUP__NAME:
                 setName((String)newValue);
                 return;
-            case Shr5managementPackage.GRUNT_GROUP__MEBERS:
-                getMebers().clear();
-                getMebers().addAll((Collection<? extends GruntMenbers>)newValue);
+            case Shr5managementPackage.GRUNT_GROUP__MEMBERS:
+                getMembers().clear();
+                getMembers().addAll((Collection<? extends GruntMembers>)newValue);
                 return;
             case Shr5managementPackage.GRUNT_GROUP__LEADER:
-                setLeader((GruntMenbers)newValue);
+                setLeader((GruntMembers)newValue);
                 return;
             case Shr5managementPackage.GRUNT_GROUP__PROFESSIONAL_RATING:
                 setProfessionalRating((Integer)newValue);
@@ -389,11 +383,11 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
             case Shr5managementPackage.GRUNT_GROUP__NAME:
                 setName(NAME_EDEFAULT);
                 return;
-            case Shr5managementPackage.GRUNT_GROUP__MEBERS:
-                getMebers().clear();
+            case Shr5managementPackage.GRUNT_GROUP__MEMBERS:
+                getMembers().clear();
                 return;
             case Shr5managementPackage.GRUNT_GROUP__LEADER:
-                setLeader((GruntMenbers)null);
+                setLeader((GruntMembers)null);
                 return;
             case Shr5managementPackage.GRUNT_GROUP__PROFESSIONAL_RATING:
                 setProfessionalRating(PROFESSIONAL_RATING_EDEFAULT);
@@ -416,8 +410,8 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5managementPackage.GRUNT_GROUP__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Shr5managementPackage.GRUNT_GROUP__MEBERS:
-                return mebers != null && !mebers.isEmpty();
+            case Shr5managementPackage.GRUNT_GROUP__MEMBERS:
+                return members != null && !members.isEmpty();
             case Shr5managementPackage.GRUNT_GROUP__LEADER:
                 return leader != null;
             case Shr5managementPackage.GRUNT_GROUP__PROFESSIONAL_RATING:

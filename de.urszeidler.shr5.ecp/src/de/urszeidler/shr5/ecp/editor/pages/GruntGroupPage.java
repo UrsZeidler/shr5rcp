@@ -1,13 +1,13 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.observable.ChangeEvent;
-import org.eclipse.core.databinding.observable.IChangeListener;
-import org.eclipse.core.databinding.observable.Realm;
-import org.eclipse.core.databinding.observable.list.IObservableList;
-import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.viewers.IViewerObservableValue;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -17,43 +17,14 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
-import de.urszeidler.eclipse.shr5.MagazinTyp;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
-
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.layout.TableColumnLayout;
-import org.eclipse.jface.databinding.viewers.IViewerObservableValue;
-import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
-import org.eclipse.core.databinding.observable.map.IObservableMap;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
-
-import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
-
-import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.Spinner;
-import org.eclipse.ui.forms.widgets.ImageHyperlink;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.emf.databinding.edit.EMFEditProperties;
-import org.eclipse.emf.databinding.FeaturePath;
-import org.eclipse.ui.forms.widgets.Hyperlink;
-import org.eclipse.swt.layout.FillLayout;
-
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
 public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
@@ -137,7 +108,7 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
         managedForm.getToolkit().adapt(grpLeader);
         managedForm.getToolkit().paintBordersFor(grpLeader);
         if (object.getLeader() == null) {
-            object.setLeader(Shr5managementFactory.eINSTANCE.createGruntMenbers());
+            object.setLeader(Shr5managementFactory.eINSTANCE.createGruntMembers());
         }
 
         Composite composite_grunt_groups = new Composite(managedForm.getForm().getBody(), SWT.NONE);
@@ -154,7 +125,7 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
                   if (detail != null) {
                       detail.dispose();
                   }
-                  detail = createDetail(composite_detail, toolkit, (GruntMenbers)element);
+                  detail = createDetail(composite_detail, toolkit, (GruntMembers)element);
 
                   composite_detail.getParent().layout(true, true);
                   detail.layout(true, true);
@@ -162,7 +133,7 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
             }
         };
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite_grunt_groups, "Grunts Members", SWT.NONE, object,
-                Shr5managementPackage.Literals.GRUNT_GROUP__MEBERS, toolkit, mananger, editingDomain,selectionChange);
+                Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS, toolkit, mananger, editingDomain,selectionChange);
         treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
         managedForm.getToolkit().adapt(treeTableWidget);
@@ -190,7 +161,7 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
         managedForm.reflow(true);
     }
 
-    private Composite createDetail(Composite composite, FormToolkit formToolkit, GruntMenbers gruntMenbers) {
+    private Composite createDetail(Composite composite, FormToolkit formToolkit, GruntMembers gruntMenbers) {
         Composite composite_detail = formToolkit.createComposite(composite, SWT.NONE);
         composite_detail.setLayout(new GridLayout(3, false));
         formToolkit.paintBordersFor(composite_detail);
@@ -198,7 +169,7 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
         EmfFormBuilder builder = new EmfFormBuilder(formToolkit, AdapterFactoryUtil.getInstance().getItemDelegator(), AdapterFactoryUtil
                 .getInstance().getLabelProvider(), editingDomain);
         builder.setBorderStyle(SWT.NONE);
-        builder.addAllEntries(Shr5managementPackage.Literals.GRUNT_MENBERS);
+        builder.addAllEntries(Shr5managementPackage.Literals.GRUNT_MEMBERS);
 
         builder.buildinComposite(m_bindingContext, composite_detail, gruntMenbers);
 

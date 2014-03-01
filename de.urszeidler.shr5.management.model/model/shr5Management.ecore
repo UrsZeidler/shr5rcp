@@ -417,13 +417,13 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This is a grunt group."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mebers" upperBound="-1"
-        eType="#//GruntMenbers" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
+        eType="#//GruntMembers" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="leader" lowerBound="1"
-        eType="#//GruntMenbers" containment="true"/>
+        eType="#//GruntMembers" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="professionalRating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GruntMenbers">
+  <eClassifiers xsi:type="ecore:EClass" name="GruntMembers">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This decribes the members of a grunt group."/>
     </eAnnotations>

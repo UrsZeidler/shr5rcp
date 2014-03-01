@@ -4,7 +4,7 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 import java.util.Collection;
@@ -27,12 +27,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMenbers} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMembers} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class GruntMenbersItemProvider
+public class GruntMembersItemProvider
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -46,7 +46,7 @@ public class GruntMenbersItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public GruntMenbersItemProvider(AdapterFactory adapterFactory) {
+    public GruntMembersItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -78,9 +78,9 @@ public class GruntMenbersItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_GruntMenbers_count_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMenbers_count_feature", "_UI_GruntMenbers_type"),
-                 Shr5managementPackage.Literals.GRUNT_MENBERS__COUNT,
+                 getString("_UI_GruntMembers_count_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_count_feature", "_UI_GruntMembers_type"),
+                 Shr5managementPackage.Literals.GRUNT_MEMBERS__COUNT,
                  true,
                  false,
                  false,
@@ -100,9 +100,9 @@ public class GruntMenbersItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_GruntMenbers_nsc_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMenbers_nsc_feature", "_UI_GruntMenbers_type"),
-                 Shr5managementPackage.Literals.GRUNT_MENBERS__NSC,
+                 getString("_UI_GruntMembers_nsc_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_nsc_feature", "_UI_GruntMembers_type"),
+                 Shr5managementPackage.Literals.GRUNT_MEMBERS__NSC,
                  true,
                  false,
                  true,
@@ -112,14 +112,14 @@ public class GruntMenbersItemProvider
     }
 
     /**
-     * This returns GruntMenbers.gif.
+     * This returns GruntMembers.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/GruntMenbers"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/GruntMembers"));
     }
 
     /**
@@ -130,8 +130,8 @@ public class GruntMenbersItemProvider
      */
     @Override
     public String getText(Object object) {
-        GruntMenbers gruntMenbers = (GruntMenbers)object;
-        return getString("_UI_GruntMenbers_type") + " " + gruntMenbers.getCount();
+        GruntMembers gruntMembers = (GruntMembers)object;
+        return getString("_UI_GruntMembers_type") + " " + gruntMembers.getCount();
     }
 
     /**
@@ -145,8 +145,8 @@ public class GruntMenbersItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(GruntMenbers.class)) {
-            case Shr5managementPackage.GRUNT_MENBERS__COUNT:
+        switch (notification.getFeatureID(GruntMembers.class)) {
+            case Shr5managementPackage.GRUNT_MEMBERS__COUNT:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

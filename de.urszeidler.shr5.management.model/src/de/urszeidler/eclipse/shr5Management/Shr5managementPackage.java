@@ -3409,13 +3409,13 @@ public interface Shr5managementPackage extends EPackage {
     int GRUNT_GROUP__NAME = Shr5Package.BESCHREIBBAR__NAME;
 
     /**
-     * The feature id for the '<em><b>Mebers</b></em>' containment reference list.
+     * The feature id for the '<em><b>Members</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int GRUNT_GROUP__MEBERS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+    int GRUNT_GROUP__MEMBERS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Leader</b></em>' containment reference.
@@ -3454,14 +3454,14 @@ public interface Shr5managementPackage extends EPackage {
     int GRUNT_GROUP_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl <em>Grunt Menbers</em>}' class.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl <em>Grunt Members</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMenbers()
+     * @see de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMembers()
      * @generated
      */
-    int GRUNT_MENBERS = 33;
+    int GRUNT_MEMBERS = 33;
 
     /**
      * The feature id for the '<em><b>Count</b></em>' attribute.
@@ -3470,7 +3470,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int GRUNT_MENBERS__COUNT = 0;
+    int GRUNT_MEMBERS__COUNT = 0;
 
     /**
      * The feature id for the '<em><b>Nsc</b></em>' reference.
@@ -3479,25 +3479,25 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int GRUNT_MENBERS__NSC = 1;
+    int GRUNT_MEMBERS__NSC = 1;
 
     /**
-     * The number of structural features of the '<em>Grunt Menbers</em>' class.
+     * The number of structural features of the '<em>Grunt Members</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int GRUNT_MENBERS_FEATURE_COUNT = 2;
+    int GRUNT_MEMBERS_FEATURE_COUNT = 2;
 
     /**
-     * The number of operations of the '<em>Grunt Menbers</em>' class.
+     * The number of operations of the '<em>Grunt Members</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int GRUNT_MENBERS_OPERATION_COUNT = 0;
+    int GRUNT_MEMBERS_OPERATION_COUNT = 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl <em>Player Management</em>}' class.
@@ -5352,15 +5352,15 @@ public interface Shr5managementPackage extends EPackage {
     EClass getGruntGroup();
 
     /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getMebers <em>Mebers</em>}'.
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getMembers <em>Members</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Mebers</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.GruntGroup#getMebers()
+     * @return the meta object for the containment reference list '<em>Members</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntGroup#getMembers()
      * @see #getGruntGroup()
      * @generated
      */
-    EReference getGruntGroup_Mebers();
+    EReference getGruntGroup_Members();
 
     /**
      * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getLeader <em>Leader</em>}'.
@@ -5385,36 +5385,36 @@ public interface Shr5managementPackage extends EPackage {
     EAttribute getGruntGroup_ProfessionalRating();
 
     /**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers <em>Grunt Menbers</em>}'.
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.GruntMembers <em>Grunt Members</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Grunt Menbers</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers
+     * @return the meta object for class '<em>Grunt Members</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.GruntMembers
      * @generated
      */
-    EClass getGruntMenbers();
+    EClass getGruntMembers();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers#getCount <em>Count</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.GruntMembers#getCount <em>Count</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Count</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers#getCount()
-     * @see #getGruntMenbers()
+     * @see de.urszeidler.eclipse.shr5Management.GruntMembers#getCount()
+     * @see #getGruntMembers()
      * @generated
      */
-    EAttribute getGruntMenbers_Count();
+    EAttribute getGruntMembers_Count();
 
     /**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers#getNsc <em>Nsc</em>}'.
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.GruntMembers#getNsc <em>Nsc</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the reference '<em>Nsc</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers#getNsc()
-     * @see #getGruntMenbers()
+     * @see de.urszeidler.eclipse.shr5Management.GruntMembers#getNsc()
+     * @see #getGruntMembers()
      * @generated
      */
-    EReference getGruntMenbers_Nsc();
+    EReference getGruntMembers_Nsc();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.PlayerManagement <em>Player Management</em>}'.
@@ -6838,12 +6838,12 @@ public interface Shr5managementPackage extends EPackage {
         EClass GRUNT_GROUP = eINSTANCE.getGruntGroup();
 
         /**
-         * The meta object literal for the '<em><b>Mebers</b></em>' containment reference list feature.
+         * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference GRUNT_GROUP__MEBERS = eINSTANCE.getGruntGroup_Mebers();
+        EReference GRUNT_GROUP__MEMBERS = eINSTANCE.getGruntGroup_Members();
 
         /**
          * The meta object literal for the '<em><b>Leader</b></em>' containment reference feature.
@@ -6862,14 +6862,14 @@ public interface Shr5managementPackage extends EPackage {
         EAttribute GRUNT_GROUP__PROFESSIONAL_RATING = eINSTANCE.getGruntGroup_ProfessionalRating();
 
         /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl <em>Grunt Menbers</em>}' class.
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl <em>Grunt Members</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl
-         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMenbers()
+         * @see de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMembers()
          * @generated
          */
-        EClass GRUNT_MENBERS = eINSTANCE.getGruntMenbers();
+        EClass GRUNT_MEMBERS = eINSTANCE.getGruntMembers();
 
         /**
          * The meta object literal for the '<em><b>Count</b></em>' attribute feature.
@@ -6877,7 +6877,7 @@ public interface Shr5managementPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute GRUNT_MENBERS__COUNT = eINSTANCE.getGruntMenbers_Count();
+        EAttribute GRUNT_MEMBERS__COUNT = eINSTANCE.getGruntMembers_Count();
 
         /**
          * The meta object literal for the '<em><b>Nsc</b></em>' reference feature.
@@ -6885,7 +6885,7 @@ public interface Shr5managementPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference GRUNT_MENBERS__NSC = eINSTANCE.getGruntMenbers_Nsc();
+        EReference GRUNT_MEMBERS__NSC = eINSTANCE.getGruntMembers_Nsc();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl <em>Player Management</em>}' class.

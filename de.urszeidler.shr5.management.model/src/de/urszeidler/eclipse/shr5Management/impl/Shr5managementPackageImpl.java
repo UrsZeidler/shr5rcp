@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -14,7 +13,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
@@ -30,7 +28,7 @@ import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
@@ -300,7 +298,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass gruntMenbersEClass = null;
+    private EClass gruntMembersEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1812,7 +1810,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getGruntGroup_Mebers() {
+    public EReference getGruntGroup_Members() {
         return (EReference)gruntGroupEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1839,8 +1837,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getGruntMenbers() {
-        return gruntMenbersEClass;
+    public EClass getGruntMembers() {
+        return gruntMembersEClass;
     }
 
     /**
@@ -1848,8 +1846,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getGruntMenbers_Count() {
-        return (EAttribute)gruntMenbersEClass.getEStructuralFeatures().get(0);
+    public EAttribute getGruntMembers_Count() {
+        return (EAttribute)gruntMembersEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -1857,8 +1855,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getGruntMenbers_Nsc() {
-        return (EReference)gruntMenbersEClass.getEStructuralFeatures().get(1);
+    public EReference getGruntMembers_Nsc() {
+        return (EReference)gruntMembersEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -2149,13 +2147,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEReference(shrMgmtListEClass, SHR_MGMT_LIST__ENTRIES);
 
         gruntGroupEClass = createEClass(GRUNT_GROUP);
-        createEReference(gruntGroupEClass, GRUNT_GROUP__MEBERS);
+        createEReference(gruntGroupEClass, GRUNT_GROUP__MEMBERS);
         createEReference(gruntGroupEClass, GRUNT_GROUP__LEADER);
         createEAttribute(gruntGroupEClass, GRUNT_GROUP__PROFESSIONAL_RATING);
 
-        gruntMenbersEClass = createEClass(GRUNT_MENBERS);
-        createEAttribute(gruntMenbersEClass, GRUNT_MENBERS__COUNT);
-        createEReference(gruntMenbersEClass, GRUNT_MENBERS__NSC);
+        gruntMembersEClass = createEClass(GRUNT_MEMBERS);
+        createEAttribute(gruntMembersEClass, GRUNT_MEMBERS__COUNT);
+        createEReference(gruntMembersEClass, GRUNT_MEMBERS__NSC);
 
         playerManagementEClass = createEClass(PLAYER_MANAGEMENT);
         createEReference(playerManagementEClass, PLAYER_MANAGEMENT__GROUPS);
@@ -2570,13 +2568,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getShrMgmtList_Entries(), ecorePackage.getEObject(), null, "entries", null, 0, -1, ShrMgmtList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(gruntGroupEClass, GruntGroup.class, "GruntGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getGruntGroup_Mebers(), this.getGruntMenbers(), null, "mebers", null, 0, -1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getGruntGroup_Leader(), this.getGruntMenbers(), null, "leader", null, 1, 1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGruntGroup_Members(), this.getGruntMembers(), null, "members", null, 0, -1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGruntGroup_Leader(), this.getGruntMembers(), null, "leader", null, 1, 1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getGruntGroup_ProfessionalRating(), ecorePackage.getEInt(), "professionalRating", null, 0, 1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(gruntMenbersEClass, GruntMenbers.class, "GruntMenbers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getGruntMenbers_Count(), ecorePackage.getEInt(), "count", null, 1, 1, GruntMenbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getGruntMenbers_Nsc(), this.getNonPlayerCharacter(), null, "nsc", null, 1, 1, GruntMenbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(gruntMembersEClass, GruntMembers.class, "GruntMembers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getGruntMembers_Count(), ecorePackage.getEInt(), "count", null, 1, 1, GruntMembers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGruntMembers_Nsc(), this.getNonPlayerCharacter(), null, "nsc", null, 1, 1, GruntMembers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(playerManagementEClass, PlayerManagement.class, "PlayerManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPlayerManagement_Groups(), this.getCharacterGroup(), null, "groups", null, 0, -1, PlayerManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

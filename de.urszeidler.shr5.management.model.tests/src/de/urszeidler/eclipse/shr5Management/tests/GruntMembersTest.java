@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.tests;
 
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
 import junit.framework.TestCase;
@@ -12,19 +12,19 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Grunt Menbers</b></em>'.
+ * A test case for the model object '<em><b>Grunt Members</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class GruntMenbersTest extends TestCase {
+public class GruntMembersTest extends TestCase {
 
     /**
-     * The fixture for this Grunt Menbers test case.
+     * The fixture for this Grunt Members test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected GruntMenbers fixture = null;
+    protected GruntMembers fixture = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -32,36 +32,36 @@ public class GruntMenbersTest extends TestCase {
      * @generated
      */
     public static void main(String[] args) {
-        TestRunner.run(GruntMenbersTest.class);
+        TestRunner.run(GruntMembersTest.class);
     }
 
     /**
-     * Constructs a new Grunt Menbers test case with the given name.
+     * Constructs a new Grunt Members test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public GruntMenbersTest(String name) {
+    public GruntMembersTest(String name) {
         super(name);
     }
 
     /**
-     * Sets the fixture for this Grunt Menbers test case.
+     * Sets the fixture for this Grunt Members test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void setFixture(GruntMenbers fixture) {
+    protected void setFixture(GruntMembers fixture) {
         this.fixture = fixture;
     }
 
     /**
-     * Returns the fixture for this Grunt Menbers test case.
+     * Returns the fixture for this Grunt Members test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected GruntMenbers getFixture() {
+    protected GruntMembers getFixture() {
         return fixture;
     }
 
@@ -73,7 +73,7 @@ public class GruntMenbersTest extends TestCase {
      */
     @Override
     protected void setUp() throws Exception {
-        setFixture(Shr5managementFactory.eINSTANCE.createGruntMenbers());
+        setFixture(Shr5managementFactory.eINSTANCE.createGruntMembers());
     }
 
     /**
@@ -87,4 +87,4 @@ public class GruntMenbersTest extends TestCase {
         setFixture(null);
     }
 
-} //GruntMenbersTest
+} //GruntMembersTest

@@ -3014,7 +3014,7 @@
       <children xmi:type="notation:Node" xmi:id="_IVfNwJ73EeOxJq8LMg9RHQ" type="4001"/>
       <children xmi:type="notation:Node" xmi:id="_IVf00J73EeOxJq8LMg9RHQ" type="5001">
         <children xmi:type="notation:Node" xmi:id="_ktovEJ73EeOxJq8LMg9RHQ" type="2001">
-          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//GruntMenbers/count"/>
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//GruntMembers/count"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_ktpWIJ73EeOxJq8LMg9RHQ"/>
         </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_IVf00Z73EeOxJq8LMg9RHQ"/>
@@ -3027,7 +3027,7 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_IVgb4Z73EeOxJq8LMg9RHQ"/>
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_IVd_oZ73EeOxJq8LMg9RHQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-      <element xmi:type="ecore:EClass" href="shr5Management.ecore#//GruntMenbers"/>
+      <element xmi:type="ecore:EClass" href="shr5Management.ecore#//GruntMembers"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IVd_op73EeOxJq8LMg9RHQ" x="415" y="155"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_rZyokJ74EeOxJq8LMg9RHQ" type="1001">
@@ -3060,7 +3060,7 @@
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_LJjQ0Z73EeOxJq8LMg9RHQ" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_LJjQ0p73EeOxJq8LMg9RHQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-      <element xmi:type="ecore:EReference" href="shr5Management.ecore#//GruntGroup/mebers"/>
+      <element xmi:type="ecore:EReference" href="shr5Management.ecore#//GruntGroup/members"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LJjQ0573EeOxJq8LMg9RHQ" points="[50, 2, -175, 1]$[226, -17, 1, -18]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LJniQJ73EeOxJq8LMg9RHQ" id="(0.12844036697247707,0.4523809523809524)"/>
     </edges>
@@ -3073,7 +3073,7 @@
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_p6RMAZ73EeOxJq8LMg9RHQ" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_p6RMAp73EeOxJq8LMg9RHQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-      <element xmi:type="ecore:EReference" href="shr5Management.ecore#//GruntMenbers/nsc"/>
+      <element xmi:type="ecore:EReference" href="shr5Management.ecore#//GruntMembers/nsc"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_p6RMA573EeOxJq8LMg9RHQ" points="[-6, 24, -26, -131]$[-68, 154, -88, -1]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_tPA6QJ73EeOxJq8LMg9RHQ" type="3002" source="_ES3s4J73EeOxJq8LMg9RHQ" target="_IVd_oJ73EeOxJq8LMg9RHQ">

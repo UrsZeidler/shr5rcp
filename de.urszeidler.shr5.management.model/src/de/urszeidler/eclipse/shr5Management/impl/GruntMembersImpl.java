@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -17,19 +17,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Grunt Menbers</b></em>'.
+ * An implementation of the model object '<em><b>Grunt Members</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl#getCount <em>Count</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntMenbersImpl#getNsc <em>Nsc</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl#getCount <em>Count</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl#getNsc <em>Nsc</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements GruntMenbers {
+public class GruntMembersImpl extends MinimalEObjectImpl.Container implements GruntMembers {
     /**
      * The default value of the '{@link #getCount() <em>Count</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
      * <!-- end-user-doc -->
      * @generated
      */
-    protected GruntMenbersImpl() {
+    protected GruntMembersImpl() {
         super();
     }
 
@@ -76,7 +76,7 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
      */
     @Override
     protected EClass eStaticClass() {
-        return Shr5managementPackage.Literals.GRUNT_MENBERS;
+        return Shr5managementPackage.Literals.GRUNT_MEMBERS;
     }
 
     /**
@@ -97,7 +97,7 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
         int oldCount = count;
         count = newCount;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.GRUNT_MENBERS__COUNT, oldCount, count));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.GRUNT_MEMBERS__COUNT, oldCount, count));
     }
 
     /**
@@ -111,7 +111,7 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
             nsc = (NonPlayerCharacter)eResolveProxy(oldNsc);
             if (nsc != oldNsc) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.GRUNT_MENBERS__NSC, oldNsc, nsc));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.GRUNT_MEMBERS__NSC, oldNsc, nsc));
             }
         }
         return nsc;
@@ -135,7 +135,7 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
         NonPlayerCharacter oldNsc = nsc;
         nsc = newNsc;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.GRUNT_MENBERS__NSC, oldNsc, nsc));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.GRUNT_MEMBERS__NSC, oldNsc, nsc));
     }
 
     /**
@@ -146,9 +146,9 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5managementPackage.GRUNT_MENBERS__COUNT:
+            case Shr5managementPackage.GRUNT_MEMBERS__COUNT:
                 return getCount();
-            case Shr5managementPackage.GRUNT_MENBERS__NSC:
+            case Shr5managementPackage.GRUNT_MEMBERS__NSC:
                 if (resolve) return getNsc();
                 return basicGetNsc();
         }
@@ -163,10 +163,10 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5managementPackage.GRUNT_MENBERS__COUNT:
+            case Shr5managementPackage.GRUNT_MEMBERS__COUNT:
                 setCount((Integer)newValue);
                 return;
-            case Shr5managementPackage.GRUNT_MENBERS__NSC:
+            case Shr5managementPackage.GRUNT_MEMBERS__NSC:
                 setNsc((NonPlayerCharacter)newValue);
                 return;
         }
@@ -181,10 +181,10 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5managementPackage.GRUNT_MENBERS__COUNT:
+            case Shr5managementPackage.GRUNT_MEMBERS__COUNT:
                 setCount(COUNT_EDEFAULT);
                 return;
-            case Shr5managementPackage.GRUNT_MENBERS__NSC:
+            case Shr5managementPackage.GRUNT_MEMBERS__NSC:
                 setNsc((NonPlayerCharacter)null);
                 return;
         }
@@ -199,9 +199,9 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5managementPackage.GRUNT_MENBERS__COUNT:
+            case Shr5managementPackage.GRUNT_MEMBERS__COUNT:
                 return count != COUNT_EDEFAULT;
-            case Shr5managementPackage.GRUNT_MENBERS__NSC:
+            case Shr5managementPackage.GRUNT_MEMBERS__NSC:
                 return nsc != null;
         }
         return super.eIsSet(featureID);
@@ -223,4 +223,4 @@ public class GruntMenbersImpl extends MinimalEObjectImpl.Container implements Gr
         return result.toString();
     }
 
-} //GruntMenbersImpl
+} //GruntMembersImpl

@@ -230,13 +230,13 @@ public interface Shr5managementFactory extends EFactory {
     GruntGroup createGruntGroup();
 
     /**
-     * Returns a new object of class '<em>Grunt Menbers</em>'.
+     * Returns a new object of class '<em>Grunt Members</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Grunt Menbers</em>'.
+     * @return a new object of class '<em>Grunt Members</em>'.
      * @generated
      */
-    GruntMenbers createGruntMenbers();
+    GruntMembers createGruntMembers();
 
     /**
      * Returns a new object of class '<em>Player Management</em>'.

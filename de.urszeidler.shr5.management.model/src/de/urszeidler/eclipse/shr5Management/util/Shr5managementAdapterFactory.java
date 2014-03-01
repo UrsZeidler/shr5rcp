@@ -234,8 +234,8 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createGruntGroupAdapter();
             }
             @Override
-            public Adapter caseGruntMenbers(GruntMenbers object) {
-                return createGruntMenbersAdapter();
+            public Adapter caseGruntMembers(GruntMembers object) {
+                return createGruntMembersAdapter();
             }
             @Override
             public Adapter casePlayerManagement(PlayerManagement object) {
@@ -736,16 +736,16 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.GruntMenbers <em>Grunt Menbers</em>}'.
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.GruntMembers <em>Grunt Members</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5Management.GruntMenbers
+     * @see de.urszeidler.eclipse.shr5Management.GruntMembers
      * @generated
      */
-    public Adapter createGruntMenbersAdapter() {
+    public Adapter createGruntMembersAdapter() {
         return null;
     }
 

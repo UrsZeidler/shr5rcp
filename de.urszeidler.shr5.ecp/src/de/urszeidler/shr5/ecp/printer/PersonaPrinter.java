@@ -5,7 +5,6 @@ package de.urszeidler.shr5.ecp.printer;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -29,7 +28,6 @@ import org.eclipse.nebula.paperclips.core.grid.DefaultGridLook;
 import org.eclipse.nebula.paperclips.core.grid.GridPrint;
 import org.eclipse.nebula.paperclips.core.page.PageNumberPageDecoration;
 import org.eclipse.nebula.paperclips.core.page.PagePrint;
-import org.eclipse.nebula.paperclips.core.page.SimplePageDecoration;
 import org.eclipse.nebula.paperclips.core.text.TextPrint;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
@@ -63,7 +61,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
-import de.urszeidler.eclipse.shr5Management.GruntMenbers;
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
@@ -177,8 +175,8 @@ public class PersonaPrinter {
 
         body.add(new BreakPrint(), GridPrint.REMAINDER);
 
-        EList<GruntMenbers> mebers = grunts.getMebers();
-        for (GruntMenbers gruntMenbers : mebers) {
+        EList<GruntMembers> mebers = grunts.getMembers();
+        for (GruntMembers gruntMenbers : mebers) {
             body.add(new BorderPrint(printGruntMembersData(gruntMenbers), border), 2);
         }
 
@@ -215,7 +213,7 @@ public class PersonaPrinter {
      * @param gruntMembers
      * @return
      */
-    private Print printGruntMembersData(GruntMenbers gruntMembers) {
+    private Print printGruntMembersData(GruntMembers gruntMembers) {
 
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
@@ -948,17 +946,10 @@ public class PersonaPrinter {
                 printFertigkeitList(grid, fertigkeiten, persona);
             }
         }
-        // else
-        // if (object instanceof GroupWrapper) {
-        // GroupWrapper gw = (GroupWrapper)object;
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("Skills", attributeFont), 3);
+        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, attributeFont), 3);
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
-        // List<Fertigkeit> fertigkeiten = persona.getFertigkeiten();
-        // printFertigkeitList(grid, fertigkeiten, persona);
         printPersonaFertigkeitList(grid, persona);
-        // }
-        // }
 
         return grid;
     }

@@ -312,8 +312,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateShrMgmtList((ShrMgmtList)value, diagnostics, context);
             case Shr5managementPackage.GRUNT_GROUP:
                 return validateGruntGroup((GruntGroup)value, diagnostics, context);
-            case Shr5managementPackage.GRUNT_MENBERS:
-                return validateGruntMenbers((GruntMenbers)value, diagnostics, context);
+            case Shr5managementPackage.GRUNT_MEMBERS:
+                return validateGruntMembers((GruntMembers)value, diagnostics, context);
             case Shr5managementPackage.PLAYER_MANAGEMENT:
                 return validatePlayerManagement((PlayerManagement)value, diagnostics, context);
             case Shr5managementPackage.GAMEMASTER_MANAGEMENT:
@@ -814,8 +814,8 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean validateGruntMenbers(GruntMenbers gruntMenbers, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(gruntMenbers, diagnostics, context);
+    public boolean validateGruntMembers(GruntMembers gruntMembers, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(gruntMembers, diagnostics, context);
     }
 
     /**

@@ -106,7 +106,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: return createLifestyleToStartMoney();
             case Shr5managementPackage.SHR_MGMT_LIST: return createShrMgmtList();
             case Shr5managementPackage.GRUNT_GROUP: return createGruntGroup();
-            case Shr5managementPackage.GRUNT_MENBERS: return createGruntMenbers();
+            case Shr5managementPackage.GRUNT_MEMBERS: return createGruntMembers();
             case Shr5managementPackage.PLAYER_MANAGEMENT: return createPlayerManagement();
             case Shr5managementPackage.GAMEMASTER_MANAGEMENT: return createGamemasterManagement();
             default:
@@ -393,9 +393,9 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public GruntMenbers createGruntMenbers() {
-        GruntMenbersImpl gruntMenbers = new GruntMenbersImpl();
-        return gruntMenbers;
+    public GruntMembers createGruntMembers() {
+        GruntMembersImpl gruntMembers = new GruntMembersImpl();
+        return gruntMembers;
     }
 
     /**

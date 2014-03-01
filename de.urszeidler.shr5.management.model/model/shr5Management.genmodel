@@ -275,13 +275,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ShrMgmtList/entries"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//GruntGroup">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntGroup/mebers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntGroup/members"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntGroup/leader"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntGroup/professionalRating"/>
     </genClasses>
-    <genClasses ecoreClass="shr5Management.ecore#//GruntMenbers">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntMenbers/count"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntMenbers/nsc"/>
+    <genClasses ecoreClass="shr5Management.ecore#//GruntMembers">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//GruntMembers/count"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GruntMembers/nsc"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//PlayerManagement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PlayerManagement/groups"/>
