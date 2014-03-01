@@ -73,12 +73,22 @@
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
                   style="push">
             </command>
+            <separator
+                  name="de.urszeidler.shr5.product.separator1">
+            </separator>
             <command
-                  commandId="org.eclipse.emf.ecp.ui.workbench.import"
+                  commandId="org.eclipse.ui.file.restartWorkbench"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               label="window">
+            <command
+                  commandId="org.eclipse.ui.window.newWindow"
                   style="push">
             </command>
             <command
-                  commandId="org.eclipse.emf.ecp.ui.workbench.export"
+                  commandId="org.eclipse.ui.window.preferences"
                   style="push">
             </command>
          </menu>
