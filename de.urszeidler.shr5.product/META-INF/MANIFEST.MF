@@ -9,3 +9,4 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.application.e3;bundle-version="1.1.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
+Export-Package: de.urszeidler.shr5.product.application
