@@ -17,7 +17,7 @@ public class Shr5Initalizer implements IStartup {
      */
     @Override
     public void earlyStartup() {
-
+        Activator.logInfo("Begin early startup ...");
         Activator.getDefault().createDefaultWorkspace();
         try {
             Activator.getDefault().createECPWorkspace();

@@ -68,6 +68,7 @@ public class Activator extends AbstractUIPlugin {
         ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.xmi");
         ECPProject ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
         if (ecpProject == null) {
+            logInfo("creating ECP project....");
             ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME, ecpProperties);
             project.open();
         }
@@ -79,12 +80,13 @@ public class Activator extends AbstractUIPlugin {
         IProject project = root.getProject("shr5Resource");
         if (!project.exists()) {
             try {
+                logInfo("creating default workspace....");
                 project.create(progressMonitor);
                 project.open(progressMonitor);
                 copyResource(progressMonitor, project);
                 project.refreshLocal(3, progressMonitor);
             } catch (CoreException e) {
-                Activator.logError(e.getMessage());
+                logError(e.getMessage());
             }
         }
     }
@@ -148,7 +150,7 @@ public class Activator extends AbstractUIPlugin {
 
         InputStream stream = null;
         try {
-            stream =  new FileInputStream(file);//  file. _getProcessedStream(file, dest.getDefaultCharset());
+            stream =  new FileInputStream(file);
             if (dstFile.exists()) {
                 dstFile.setContents(stream, true, true, monitor);
             } else {
@@ -156,13 +158,13 @@ public class Activator extends AbstractUIPlugin {
             }
 
         } catch (IOException ioe) {
-            //Activator.getDefault().log(ioe);
+            logError("error while copy file",ioe);
             try {
                 if (stream != null) {
                     stream.close();
                 }
             } catch (IOException ioe2) {
-                //CallchainEditPlugin.log(ioe2);
+                logError("error while closing stream file",ioe2);
             }
         }
 
@@ -207,6 +209,9 @@ public class Activator extends AbstractUIPlugin {
 
     public static void logError(String message) {
         plugin.getLog().log(new Status(IStatus.ERROR, plugin.getBundle().getSymbolicName(), message));
+    }
+    public static void logInfo(String message) {
+        plugin.getLog().log(new Status(IStatus.INFO, plugin.getBundle().getSymbolicName(), message));
     }
 
     /**
