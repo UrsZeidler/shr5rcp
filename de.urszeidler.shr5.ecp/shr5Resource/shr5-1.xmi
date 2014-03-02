@@ -255,115 +255,115 @@
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="2R" name="Knucks" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="(STR+1)P"/>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="12F" name="Monofilament Whip" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="10000" schadenscode="12P" praezision="5" durchschlagsKraft="-8"/>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="6R" name="Shock Gloves" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" schadenscode="8S(e)" durchschlagsKraft="-5"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="1" name="Bow (Rating 1)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="3P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2" name="Bow (Rating 2)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="4P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3" name="Bow (Rating 3)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="5P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4" name="Bow (Rating 4)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" schadenscode="6P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5" name="Bow (Rating 5)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6" name="Bow (Rating 6)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" schadenscode="8P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7" name="Bow (Rating 7)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="700" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8" name="Bow (Rating 8)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" schadenscode="10P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9" name="Bow (Rating 9)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10" name="Bow (Rating 10)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11" name="Bow (Rating 11)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" schadenscode="13P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12" name="Bow (Rating 12)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="14P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="1" name="Bow (Rating 1)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" schadenscode="3P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="2" name="Bow (Rating 2)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="4P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="3" name="Bow (Rating 3)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="5P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="4" name="Bow (Rating 4)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" schadenscode="6P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="5" name="Bow (Rating 5)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="6" name="Bow (Rating 6)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" schadenscode="8P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="7" name="Bow (Rating 7)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="700" schadenscode="9P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="8" name="Bow (Rating 8)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" schadenscode="10P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="9" name="Bow (Rating 9)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="10" name="Bow (Rating 10)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="11" name="Bow (Rating 11)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" schadenscode="13P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
+<entries xsi:type="shr5:Projektilwaffe" verfuegbarkeit="12" name="Bow (Rating 12)" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="14P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.18"/>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="2" name="Light Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="5P" praezision="7" durchschlagsKraft="-1"/>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Medium Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" schadenscode="7P" praezision="6" durchschlagsKraft="-2"/>
 <entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="Heavy Crossbow" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="10P" praezision="5" durchschlagsKraft="-3"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Defiance EX Shocker" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.0">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Defiance EX Shocker" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" schadenscode="9S(e)" praezision="4" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Yamaha Pulsar" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.0">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Yamaha Pulsar" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" schadenscode="7S(e)" praezision="5" durchschlagsKraft="-5" kapazitaet="4" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.0">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Fichetti Tiffani Needler" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" reichweite="//@entries.0/@entries.1/@entries.1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Fichetti Tiffani Needler" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="8P(f)" praezision="5" durchschlagsKraft="5" kapazitaet="4" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Streetline Special" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" schadenscode="6P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Streetline Special" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="120" schadenscode="6P" praezision="4" kapazitaet="6" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>HM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Walther Palm Pistol" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.1">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Walther Palm Pistol" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="180" schadenscode="7P" praezision="4" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.1">
 <modie>EM</modie>
 <modie>SM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6F" name="Ares Light Fire 75" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1250" schadenscode="6P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6F" name="Ares Light Fire 75" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="1250" schadenscode="6P" praezision="6" kapazitaet="16" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Ares Light Fire 70" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="6P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Ares Light Fire 70" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" schadenscode="6P" praezision="7" kapazitaet="16" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Silencer, Ares Light Fire 70" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Beretta 201T" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="210" schadenscode="6P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Beretta 201T" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="210" schadenscode="6P" praezision="6" kapazitaet="21" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Colt America L36" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="320" schadenscode="7P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Colt America L36" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="320" schadenscode="7P" praezision="7" kapazitaet="11" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Fichetti Security 600" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="7P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2">
-<modie>HM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Taurus Omni-6 (Light Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="6P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Fichetti Security 600" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="7P" praezision="6" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Taurus Omni-6 (Heavy Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="7P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Taurus Omni-6 (Light Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="6P" praezision="5" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.2">
+<modie>HM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="3R" name="Taurus Omni-6 (Heavy Pistol Ammo)" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" schadenscode="7P" praezision="5" durchschlagsKraft="-1" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.2">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Ares Predator V" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Ares Predator V" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" name="Ares Viper Slivergun" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="380" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" name="Ares Viper Slivergun" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="380" schadenscode="9P(f)" praezision="4" durchschlagsKraft="4" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Browning Ultra-Power" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="640" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Browning Ultra-Power" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="640" schadenscode="8P" praezision="5" durchschlagsKraft="-1" kapazitaet="10" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Colt Government 2066" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="425" schadenscode="7P" praezision="6" durchschlagsKraft="-1" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Colt Government 2066" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="425" schadenscode="7P" praezision="6" durchschlagsKraft="-1" kapazitaet="14" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Remington Roomsweeper" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" schadenscode="7P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Remington Roomsweeper" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" schadenscode="7P" praezision="4" durchschlagsKraft="-1" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Ruger Super Warhawk" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Ruger Super Warhawk" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="6" munitionstyp="Trommel" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" name="Ares Crusader II" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="830" schadenscode="7P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" name="Ares Crusader II" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="830" schadenscode="7P" praezision="5" kapazitaet="40" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -371,13 +371,13 @@
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Ceska Black Scorpion" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="270" schadenscode="6P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Ceska Black Scorpion" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="270" schadenscode="6P" praezision="5" kapazitaet="35" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="Steyr TMP" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.4">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="Steyr TMP" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" schadenscode="7P" praezision="4" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.4">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -385,91 +385,7 @@
 <erweiterung>Oben</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Colt Cobra TZ-120" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="660" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
-<modie>HM</modie>
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" name="FN P93 Praetor" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" schadenscode="8P" praezision="6" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
-<modie>HM</modie>
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="HK-227" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="730" schadenscode="8P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.5">
-<modie>HM</modie>
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Ingram Smartgun X" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" schadenscode="8P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="SCK Model 100" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="875" schadenscode="8P" praezision="5" reichweite="//@entries.0/@entries.1/@entries.5">
-<modie>HM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Uzi IV" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
-<modie>SM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="AK-97" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
-<modie>HM</modie>
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" name="Ares Alpha" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2650" schadenscode="11P" praezision="5" durchschlagsKraft="-2" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.6">
-<modie>HM</modie>
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" page="428" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="Grenade" praezision="4">
-<modie>EM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Colt M23" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" schadenscode="9P" praezision="4" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
-<modie>HM</modie>
-<modie>SM</modie>
-<modie>AM</modie>
-<erweiterung>Lauf</erweiterung>
-<erweiterung>Oben</erweiterung>
-<erweiterung>Unten</erweiterung>
-</entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="FN HAR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="5R" name="Colt Cobra TZ-120" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="660" schadenscode="7P" praezision="4" kapazitaet="32" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
 <modie>HM</modie>
 <modie>SM</modie>
 <modie>AM</modie>
@@ -479,7 +395,91 @@
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" name="Yamaha Raiden" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2600" schadenscode="11P" praezision="6" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" name="FN P93 Praetor" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" schadenscode="8P" praezision="6" kapazitaet="50" munitionstyp="Streifen" rueckstoss="1" reichweite="//@entries.0/@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="HK-227" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="730" schadenscode="8P" praezision="5" kapazitaet="28" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Ingram Smartgun X" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" schadenscode="8P" praezision="4" kapazitaet="32" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="SCK Model 100" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="875" schadenscode="8P" praezision="5" kapazitaet="30" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
+<modie>HM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Uzi IV" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="7P" praezision="4" kapazitaet="24" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.5">
+<modie>SM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="AK-97" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="38" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="11F" name="Ares Alpha" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2650" schadenscode="11P" praezision="5" durchschlagsKraft="-2" kapazitaet="42" munitionstyp="Streifen" rueckstoss="2" reichweite="//@entries.0/@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Ares Alpha Grenade Launcher" page="428" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="Grenade" praezision="4" kapazitaet="6" munitionstyp="Streifen">
+<modie>EM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Colt M23" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="550" schadenscode="9P" praezision="4" durchschlagsKraft="-2" kapazitaet="40" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8R" name="FN HAR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" schadenscode="10P" praezision="5" durchschlagsKraft="-2" kapazitaet="35" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
+<modie>HM</modie>
+<modie>SM</modie>
+<modie>AM</modie>
+<erweiterung>Lauf</erweiterung>
+<erweiterung>Oben</erweiterung>
+<erweiterung>Unten</erweiterung>
+<einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
+</entries>
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="14F" name="Yamaha Raiden" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="2600" schadenscode="11P" praezision="6" durchschlagsKraft="-2" kapazitaet="60" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.6">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -488,7 +488,7 @@
 <einbau name="Suppressor" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="Ares Desert Strike" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="17500" schadenscode="13P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="Ares Desert Strike" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="17500" schadenscode="13P" praezision="7" durchschlagsKraft="-4" kapazitaet="14" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
@@ -496,7 +496,7 @@
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Cavalier Arms Crockett EBR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="10300" schadenscode="12P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Cavalier Arms Crockett EBR" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="10300" schadenscode="12P" praezision="6" durchschlagsKraft="-3" kapazitaet="20" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -505,19 +505,19 @@
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" name="Ranger Arms SM-5" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="28000" schadenscode="14P" praezision="8" durchschlagsKraft="-5" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" name="Ranger Arms SM-5" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="28000" schadenscode="14P" praezision="8" durchschlagsKraft="-5" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Remington 950" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Remington 950" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" schadenscode="12P" praezision="7" durchschlagsKraft="-4" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Ruger 100" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1300" schadenscode="11P" praezision="6" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.9">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Ruger 100" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1300" schadenscode="11P" praezision="6" durchschlagsKraft="-3" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.9">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
@@ -525,21 +525,21 @@
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Defiance T-250" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="10P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Defiance T-250" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="10P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Defiance T-250, Short-Barrel" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="9P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Defiance T-250, Short-Barrel" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" schadenscode="9P" praezision="4" durchschlagsKraft="-1" kapazitaet="5" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Enfield AS-7" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" schadenscode="13P" praezision="4" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Enfield AS-7" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1100" schadenscode="13P" praezision="4" durchschlagsKraft="-1" kapazitaet="10" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>HM</modie>
 <modie>SM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -547,14 +547,14 @@
 <erweiterung>Unten</erweiterung>
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" name="PJSS Model 55" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="11P" praezision="6" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.7">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="9R" name="PJSS Model 55" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" schadenscode="11P" praezision="6" durchschlagsKraft="-1" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.7">
 <modie>EM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Shock Pad" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Ares S-III Super Squirt" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" schadenscode="Chemical" praezision="3">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="7R" name="Ares S-III Super Squirt" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="950" schadenscode="Chemical" praezision="3" kapazitaet="20" munitionstyp="Streifen">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
@@ -565,19 +565,19 @@
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Parashield Dart Pistol" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" schadenscode="As Drug/Toxin" praezision="5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="4R" name="Parashield Dart Pistol" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" schadenscode="As Drug/Toxin" praezision="5" kapazitaet="5" munitionstyp="Streifen">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Parashield Dart Rifle" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="As Drug/Toxin" praezision="6">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="6R" name="Parashield Dart Rifle" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="As Drug/Toxin" praezision="6" kapazitaet="6" munitionstyp="Clip">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Ingram Valiant" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="5800" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.10">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Ingram Valiant" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="5800" schadenscode="9P" praezision="5" durchschlagsKraft="-2" kapazitaet="50" reichweite="//@entries.0/@entries.1/@entries.10">
 <modie>SM</modie>
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -587,57 +587,57 @@
 <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Stoner-Ares M202" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="7000" schadenscode="10P" praezision="5" durchschlagsKraft="-3" reichweite="//@entries.0/@entries.1/@entries.11">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="12F" name="Stoner-Ares M202" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="7000" schadenscode="10P" praezision="5" durchschlagsKraft="-3" kapazitaet="50" reichweite="//@entries.0/@entries.1/@entries.11">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" name="RPK HMG" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="16300" schadenscode="12P" praezision="5" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.12">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="16F" name="RPK HMG" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="16300" schadenscode="12P" praezision="5" durchschlagsKraft="-4" kapazitaet="50" reichweite="//@entries.0/@entries.1/@entries.12">
 <modie>AM</modie>
 <erweiterung>Lauf</erweiterung>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Tripod" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" name="Ares Antioch-2" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="3200" schadenscode="Grenade" praezision="4" reichweite="//@entries.0/@entries.1/@entries.14">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="8F" name="Ares Antioch-2" page="430" srcBook="//@entries.0/@entries.0/@entries.0" wert="3200" schadenscode="Grenade" praezision="4" kapazitaet="8" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.14">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="ArmTech MGL-12" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" schadenscode="Grenade" praezision="4" reichweite="//@entries.0/@entries.1/@entries.14">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="ArmTech MGL-12" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" schadenscode="Grenade" praezision="4" kapazitaet="12" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.14">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="Aztechnology Striker" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="Missile" praezision="5" reichweite="//@entries.0/@entries.1/@entries.15">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="10F" name="Aztechnology Striker" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="1200" schadenscode="Missile" praezision="5" kapazitaet="1" reichweite="//@entries.0/@entries.1/@entries.15">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" name="Krime Cannon" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="21000" schadenscode="16P" praezision="4" durchschlagsKraft="-6" reichweite="//@entries.0/@entries.1/@entries.13">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" name="Krime Cannon" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="21000" schadenscode="16P" praezision="4" durchschlagsKraft="-6" kapazitaet="6" munitionstyp="Clip" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>HM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" name="Onotari Interceptor" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="14000" schadenscode="Missile" praezision="4" reichweite="//@entries.0/@entries.1/@entries.15">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="18F" name="Onotari Interceptor" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="14000" schadenscode="Missile" praezision="4" kapazitaet="2" reichweite="//@entries.0/@entries.1/@entries.15">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" name="Panther XXL" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="43000" schadenscode="17P" praezision="5" durchschlagsKraft="-6" reichweite="//@entries.0/@entries.1/@entries.13">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="20F" name="Panther XXL" page="431" srcBook="//@entries.0/@entries.0/@entries.0" wert="43000" schadenscode="17P" praezision="5" durchschlagsKraft="-6" kapazitaet="15" munitionstyp="Streifen" reichweite="//@entries.0/@entries.1/@entries.13">
 <modie>EM</modie>
 <erweiterung>Oben</erweiterung>
 <erweiterung>Unten</erweiterung>
 <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Monofilament Chainsaw" page="448" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="8P" praezision="3" durchschlagsKraft="-6"/>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="5P(Fire)" praezision="3" durchschlagsKraft="-5">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Micro Flare Launcher" page="449" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="5P(Fire)" praezision="3" durchschlagsKraft="-5" kapazitaet="1">
 <modie>EM</modie>
 </entries>
-<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="7S" praezision="3" durchschlagsKraft="-2">
+<entries xsi:type="shr5:Feuerwaffe" verfuegbarkeit="0" name="Grapple Gun" page="449" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="7S" praezision="3" durchschlagsKraft="-2" kapazitaet="1">
 <modie>EM</modie>
 </entries>
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="(STR+1)P"/>

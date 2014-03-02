@@ -96,7 +96,7 @@
 						verfuegbarkeit="10" wert="1000" page="443" name="Ebony" maxValue="1000000" />
 				</entries>
 			</entries>
-				<xsl:call-template name="examples" />
+			<xsl:call-template name="examples" />
 
 		</shr5:ShrList>
 	</xsl:template>
@@ -274,280 +274,549 @@
 	<!-- vehicle -->
 	<xsl:template name="examples">
 
-  
-  <entries xsi:type="shr5mngt:PlayerManagement" name="my player">
-    <groups name="player group">
-      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.3" choosenLifestyle="//@entries.1/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
-        <persona xsi:type="shr5:KiAdept" image="/shr5Resource/images/gunter-face-small.png" name="Gu" edgeBasis="5" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.13/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.21"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.6"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.22"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.70"/>
-          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.10"/>
-          <eigenschaften name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="4"/>
-          <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3">
-            <mods wert="2">
-              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
-            </mods>
-          </eigenschaften>
-          <eigenschaften name="Allergy (Silver Moderate)" page="78" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-10"/>
-          <eigenschaften name="Toughness" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="9">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
-            </mods>
-          </eigenschaften>
-          <kikraft name="Improved Reflexes 3" kraftpunkte="-350">
-            <mods wert="3">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
-            </mods>
-            <mods wert="3">
-              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Combat Sense 1" kraftpunkte="-50">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Mystic Armor" kraftpunkte="-50">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Improved Physical Attribute agillity" kraftpunkte="-100">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Improved Sense" kraftpunkte="-25"/>
-          <kikraft name="Enhanced Accuracy" kraftpunkte="-25"/>
-        </persona>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2014-02-13T22:41:55.000+0100" changeApplied="true" dateApplied="2014-02-13T22:41:22.800+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.8"/>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2072-02-19T22:41:55.000+0100" changeApplied="true" dateApplied="2014-02-13T22:43:27.359+0100" from="2" to="3" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.8"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" image="/shr5Resource/images/katana.png" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="4" name="Combat Knife" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" verfuegbarkeit="4R" name="Remington 950" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
-          <modie>EM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Gegenstand" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="2" image="/shr5Resource/images/Aliens-Portable-Hand-Welder-1.jpg" name="Miniwelder" kategorie="B&amp;E Gear"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
-        <connections influence="3" loyality="2"/>
-      </members>
-      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.0" sex="male">
-        <persona xsi:type="shr5:Technomancer" name="James" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="2" reaktionBasis="2" staerkeBasis="3" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="4" spezies="//@entries.0/@entries.2/@entries.0">
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.3/@entries.5/@fertigkeiten.1"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.5/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.14/@fertigkeiten.0"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.14/@fertigkeiten.2"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
-          <eigenschaften name="Natural Hardening" page="76" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="10"/>
-        </persona>
-      </members>
-      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.1" choosenLifestyle="//@entries.1/@groups.0/@members.2/@contracts.1" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-        <persona xsi:type="shr5:MudanPersona" name="Robuihuhuuhu" edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="11" charismaBasis="3" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.4">
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.4"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.3"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.2/@fertigkeiten.1"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.47"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.61"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.65"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.69"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.70"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.24"/>
-          <fertigkeiten fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0"/>
-          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.1"/>
-          <koerperMods xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic" page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000" verfuegbarkeit="8R">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-            </mods>
-            <mods wert="-50">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-            </mods>
-          </koerperMods>
-          <koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers 2" page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="26000" verfuegbarkeit="10R">
-            <mods wert="2">
-              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
-            </mods>
-            <mods wert="-60">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-            </mods>
-          </koerperMods>
-          <eigenschaften name="Exceptional Attribute" page="72" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="14"/>
-          <eigenschaften name="SINner (National)" page="84" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-5"/>
-          <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
-          <eigenschaften name="Will to Live" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
-          <eigenschaften name="Gremlins 2" page="81" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-8"/>
-          <eigenschaften name="Bad Rep" page="79" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-7"/>
-        </persona>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T22:59:36.856+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.7"/>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:00:12.990+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.6"/>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100" changeApplied="true" dateApplied="2014-02-23T23:14:29.584+0100" from="2" to="3" changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.9"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="8R" name="FN HAR" schadenscode="10P" praezision="5" durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-          <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Feuerwaffe" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="660" verfuegbarkeit="5R" name="Colt Cobra TZ-120" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
-          <modie>HM</modie>
-          <modie>SM</modie>
-          <modie>AM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <erweiterung>Unten</erweiterung>
-          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-          <einbau name="Gas-Vent 2 System" page="431" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2R" name="Knucks" schadenscode="(STR+1)P"/>
-        <inventar xsi:type="shr5:Kleidung" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit="2" name="Armor Jacket" ruestung="12"/>
-        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="1400" verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices"/>
-        <inventar xsi:type="shr5:Credstick" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0" name="Silver" maxValue="20000"/>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink"/>
-        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="600" verfuegbarkeit="2R" name="Ammo: Regular Ammo 300" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="9F" name="Ammo: Explosive Rounds 50" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="140" verfuegbarkeit="4F" name="Ammo: Hollow Points 20" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="11F" name="Minigrenade: High Explosive 3" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="6R" name="Grenade: Flash-Bang 5" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Gegenstand" srcBook="//@entries.0/@entries.0/@entries.0" wert="45" name="SPare clip 9"/>
-        <contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wert="10000" stufe="4" gefaelscht="true"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Low 3 month Troll" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="12000" verfuegbarkeit="" faelligkeitsIntervall="30"/>
-        <contracts xsi:type="shr5:Lizenz" name="Gun Licence" srcBook="//@entries.0/@entries.0/@entries.0" wert="800" stufe="4" gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.2/@contracts.0"/>
-        <connections influence="2" loyality="3"/>
-        <connections influence="2" loyality="2"/>
-      </members>
-      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.2">
-        <persona xsi:type="shr5:MysticAdept" image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png" name="Kyra" edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2" charismaBasis="6" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.12"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.21"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.25"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.63"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.5/@entries.62"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.44"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
-          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.4"/>
-          <kikraft name="Improved Potential" kraftpunkte="-50">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Mystic Armor" kraftpunkte="-50">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Enhanced Accuracy" kraftpunkte="-25"/>
-          <kikraft name="Improved Ability" kraftpunkte="-50"/>
-          <kikraft name="Voice Control 1" kraftpunkte="-25"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.2"/>
-        </persona>
-      </members>
-    </groups>
-    <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Example James" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.42" skills="//@entries.0/@entries.16/@entries.0/@priorities.41" attribute="//@entries.0/@entries.16/@entries.0/@priorities.19" metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.27"/>
-    <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.0" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Rob" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.45" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.9" magic="//@entries.0/@entries.16/@entries.0/@priorities.47" karmaToResource="10" startKarma="1" startResources="2810"/>
-    <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Kyra" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.18" metaType="//@entries.0/@entries.16/@entries.0/@priorities.15" magic="//@entries.0/@entries.16/@entries.0/@priorities.23"/>
-    <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.1/@groups.0" characterName="Gu" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.28" karmaToResource="5"/>
-    <generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0"/>
-  </entries>
-  <entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
-    <groups name="non player group">
-      <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@entries.0/@generators.0" choosenLifestyle="//@entries.2/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-        <persona xsi:type="shr5:MudanPersona" name="Thugs &amp; mouth breathers" image="/shr5Resource/images/MrBordello_Strategy_Game_Tileset_19.png" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0">
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.10"/>
-        </persona>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4"/>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Meta Link" kategorie="Commlink"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-      </members>
-      <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@entries.0/@generators.1" choosenLifestyle="//@entries.2/@groups.0/@members.1/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-        <persona xsi:type="shr5:MudanPersona" name="Thug lieutenant" image="/shr5Resource/images/Cowboy_Shooting_Gun_Wild_West_Vector_Pixel_Art.png" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten fertigkeit="//@entries.0/@entries.4/@entries.9"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.4/@entries.10"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-        </persona>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="320" verfuegbarkeit="4R" name="Colt America L36" schadenscode="7P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-        </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Meta Link" kategorie="Commlink"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-      </members>
-    </groups>
-    <entries xsi:type="shr5mngt:GamemasterManagement" beschreibung="generators" name="generators">
-      <generators xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.1" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Thugs &amp; mouth breathers" selectedSpecies="//@entries.0/@entries.2/@entries.0">
-        <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
-      </generators>
-      <generators xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.1" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Thug lieutenant" selectedSpecies="//@entries.0/@entries.2/@entries.0">
-        <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
-      </generators>
-    </entries>
-    <grunts name="Thugs">
-      <members count="7" nsc="//@entries.2/@groups.0/@members.0"/>
-      <leader count="1" nsc="//@entries.2/@groups.0/@members.1"/>
-    </grunts>
-  </entries>
+
+		<entries xsi:type="shr5mngt:PlayerManagement" name="my player">
+			<groups name="player group">
+				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.3"
+					choosenLifestyle="//@entries.1/@groups.0/@members.0/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
+					<persona xsi:type="shr5:KiAdept"
+						image="/shr5Resource/images/gunter-face-small.png" name="Gu"
+						edgeBasis="5" konstitutionBasis="5" geschicklichkeitBasis="6"
+						reaktionBasis="5" staerkeBasis="4" charismaBasis="3"
+						willenskraftBasis="3" intuitionBasis="4" logikBasis="2"
+						spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.13/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.21" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.53" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.6" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.22" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.39" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.70" />
+						<fertigkeitsGruppen stufe="2"
+							gruppe="//@entries.0/@entries.3/@entries.10" />
+						<eigenschaften name="Ambidextrous" page="71"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="4" />
+						<eigenschaften name="Quick Healer" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3">
+							<mods wert="2">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung" />
+							</mods>
+						</eigenschaften>
+						<eigenschaften name="Allergy (Silver Moderate)"
+							page="78" srcBook="//@entries.0/@entries.0/@entries.0"
+							karmaKosten="-10" />
+						<eigenschaften name="Toughness" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="9">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand" />
+							</mods>
+						</eigenschaften>
+						<kikraft name="Improved Reflexes 3" kraftpunkte="-350">
+							<mods wert="3">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel" />
+							</mods>
+							<mods wert="3">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" />
+							</mods>
+						</kikraft>
+						<kikraft name="Combat Sense 1" kraftpunkte="-50">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen" />
+							</mods>
+						</kikraft>
+						<kikraft name="Mystic Armor" kraftpunkte="-50">
+							<mods wert="1">
+								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
+							</mods>
+						</kikraft>
+						<kikraft name="Improved Physical Attribute agillity"
+							kraftpunkte="-100">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" />
+							</mods>
+						</kikraft>
+						<kikraft name="Improved Sense" kraftpunkte="-25" />
+						<kikraft name="Enhanced Accuracy" kraftpunkte="-25" />
+					</persona>
+					<changes xsi:type="shr5mngt:PersonaChange" date="2014-02-13T22:41:55.000+0100"
+						changeApplied="true" dateApplied="2014-02-13T22:41:22.800+0100"
+						from="1" to="2"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.8" />
+					<changes xsi:type="shr5mngt:PersonaChange" date="2072-02-19T22:41:55.000+0100"
+						changeApplied="true" dateApplied="2014-02-13T22:43:27.359+0100"
+						from="2" to="3"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.8" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="426"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="725"
+						verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P"
+						praezision="5" durchschlagsKraft="-1"
+						reichweite="//@entries.0/@entries.1/@entries.3">
+						<modie>HM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<einbau name="Smartgun System, Internal" page="433"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						verfuegbarkeit="9R" image="/shr5Resource/images/katana.png" name="Katana"
+						schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" />
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="300"
+						verfuegbarkeit="4" name="Combat Knife" schadenscode="(STR+2)P"
+						praezision="6" durchschlagsKraft="-3" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="429"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="2100"
+						verfuegbarkeit="4R" name="Remington 950" schadenscode="12P"
+						praezision="7" durchschlagsKraft="-4"
+						reichweite="//@entries.0/@entries.1/@entries.9">
+						<modie>EM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<einbau name="Imaging Scope" page="432"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Gegenstand" page="448"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="250"
+						verfuegbarkeit="2"
+						image="/shr5Resource/images/Aliens-Portable-Hand-Welder-1.jpg"
+						name="Miniwelder" kategorie="B&amp;E Gear" />
+					<contracts xsi:type="shr5:Lifestyle" name="Low" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						verfuegbarkeit="" />
+					<connections influence="3" loyality="2" />
+				</members>
+				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.0"
+					sex="male">
+					<persona xsi:type="shr5:Technomancer" name="James"
+						edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="2"
+						reaktionBasis="2" staerkeBasis="3" charismaBasis="3"
+						willenskraftBasis="3" intuitionBasis="4" logikBasis="4"
+						spezies="//@entries.0/@entries.2/@entries.0">
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.3/@entries.5/@fertigkeiten.1" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.5/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.14/@fertigkeiten.0" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.14/@fertigkeiten.2" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<eigenschaften name="Natural Hardening" page="76"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="10" />
+					</persona>
+				</members>
+				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.1"
+					choosenLifestyle="//@entries.1/@groups.0/@members.2/@contracts.1"
+					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
+					<persona xsi:type="shr5:MudanPersona" name="Robuihuhuuhu"
+						edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4"
+						reaktionBasis="3" staerkeBasis="11" charismaBasis="3"
+						willenskraftBasis="4" intuitionBasis="3" logikBasis="3"
+						spezies="//@entries.0/@entries.2/@entries.4">
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.27" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.4" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.3" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.2/@fertigkeiten.1" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.39" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.47" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.53" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.61" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.65" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.69" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.70" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.24" />
+						<fertigkeiten fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0" />
+						<fertigkeitsGruppen stufe="2"
+							gruppe="//@entries.0/@entries.3/@entries.1" />
+						<koerperMods xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic"
+							page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000"
+							verfuegbarkeit="8R">
+							<mods wert="1">
+								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
+							</mods>
+							<mods wert="-50">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
+							</mods>
+						</koerperMods>
+						<koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers 2"
+							page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="26000"
+							verfuegbarkeit="10R">
+							<mods wert="2">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" />
+							</mods>
+							<mods wert="-60">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
+							</mods>
+						</koerperMods>
+						<eigenschaften name="Exceptional Attribute" page="72"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="14" />
+						<eigenschaften name="SINner (National)" page="84"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-5" />
+						<eigenschaften name="Quick Healer" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3" />
+						<eigenschaften name="Will to Live" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3" />
+						<eigenschaften name="Gremlins 2" page="81"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-8" />
+						<eigenschaften name="Bad Rep" page="79"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-7" />
+					</persona>
+					<changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100"
+						changeApplied="true" dateApplied="2014-02-23T22:59:36.856+0100"
+						from="1" to="2"
+						changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.7" />
+					<changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100"
+						changeApplied="true" dateApplied="2014-02-23T23:00:12.990+0100"
+						from="1" to="2"
+						changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.6" />
+					<changes xsi:type="shr5mngt:PersonaChange" date="2075-02-01T22:59:05.370+0100"
+						changeApplied="true" dateApplied="2014-02-23T23:14:29.584+0100"
+						from="2" to="3"
+						changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.9" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="428"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1500"
+						verfuegbarkeit="8R" name="FN HAR" schadenscode="10P" praezision="5"
+						durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
+						<modie>HM</modie>
+						<modie>SM</modie>
+						<modie>AM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<erweiterung>Unten</erweiterung>
+						<einbau name="Laser Sight" page="432"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+						<einbau name="Gas-Vent 2 System" page="431"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Feuerwaffe" page="427"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="660"
+						verfuegbarkeit="5R" name="Colt Cobra TZ-120" schadenscode="7P"
+						praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
+						<modie>HM</modie>
+						<modie>SM</modie>
+						<modie>AM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<erweiterung>Unten</erweiterung>
+						<einbau name="Laser Sight" page="432"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+						<einbau name="Gas-Vent 2 System" page="431"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Feuerwaffe" page="426"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="725"
+						verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P"
+						praezision="5" durchschlagsKraft="-1"
+						reichweite="//@entries.0/@entries.1/@entries.3">
+						<modie>HM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<einbau name="Smartgun System, Internal" page="433"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						verfuegbarkeit="9R" name="Katana" schadenscode="(STR+3)P"
+						praezision="7" durchschlagsKraft="-3" />
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2R" name="Knucks" schadenscode="(STR+1)P" />
+					<inventar xsi:type="shr5:Kleidung" page="437"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						verfuegbarkeit="2" name="Armor Jacket" ruestung="12" />
+					<inventar xsi:type="shr5:Gegenstand" page="443"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1400"
+						verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices" />
+					<inventar xsi:type="shr5:Credstick" page="443"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="20"
+						verfuegbarkeit="0" name="Silver" maxValue="20000" />
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink" />
+					<inventar xsi:type="shr5:Gegenstand" page="434"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="600"
+						verfuegbarkeit="2R" name="Ammo: Regular Ammo 300" kategorie="Ammunition" />
+					<inventar xsi:type="shr5:Gegenstand" page="434"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="400"
+						verfuegbarkeit="9F" name="Ammo: Explosive Rounds 50" kategorie="Ammunition" />
+					<inventar xsi:type="shr5:Gegenstand" page="434"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="140"
+						verfuegbarkeit="4F" name="Ammo: Hollow Points 20" kategorie="Ammunition" />
+					<inventar xsi:type="shr5:Gegenstand" page="435"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="300"
+						verfuegbarkeit="11F" name="Minigrenade: High Explosive 3"
+						kategorie="Ammunition" />
+					<inventar xsi:type="shr5:Gegenstand" page="435"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="500"
+						verfuegbarkeit="6R" name="Grenade: Flash-Bang 5" kategorie="Ammunition" />
+					<inventar xsi:type="shr5:Gegenstand" srcBook="//@entries.0/@entries.0/@entries.0"
+						wert="45" name="SPare clip 9" />
+					<contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wert="10000"
+						stufe="4" gefaelscht="true" />
+					<contracts xsi:type="shr5:Lifestyle" name="Low 3 month Troll"
+						page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="12000"
+						verfuegbarkeit="" faelligkeitsIntervall="30" />
+					<contracts xsi:type="shr5:Lizenz" name="Gun Licence"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="800" stufe="4"
+						gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.2/@contracts.0" />
+					<connections influence="2" loyality="3" />
+					<connections influence="2" loyality="2" />
+				</members>
+				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.2">
+					<persona xsi:type="shr5:MysticAdept"
+						image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png"
+						name="Kyra" edgeBasis="1" konstitutionBasis="3"
+						geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2"
+						charismaBasis="6" willenskraftBasis="4" intuitionBasis="4"
+						logikBasis="3" spezies="//@entries.0/@entries.2/@entries.1"
+						magieBasis="6">
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.12" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.21" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.27" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.25" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.63" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.5/@entries.62" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.53" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.44" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.39" />
+						<fertigkeitsGruppen stufe="2"
+							gruppe="//@entries.0/@entries.3/@entries.4" />
+						<kikraft name="Improved Potential" kraftpunkte="-50">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial" />
+							</mods>
+						</kikraft>
+						<kikraft name="Mystic Armor" kraftpunkte="-50">
+							<mods wert="1">
+								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
+							</mods>
+						</kikraft>
+						<kikraft name="Enhanced Accuracy" kraftpunkte="-25" />
+						<kikraft name="Improved Ability" kraftpunkte="-50" />
+						<kikraft name="Voice Control 1" kraftpunkte="-25" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.2" />
+					</persona>
+				</members>
+			</groups>
+			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.1"
+				generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
+				selectedGroup="//@entries.2/@groups.0" characterName="Example James"
+				resourcen="//@entries.0/@entries.16/@entries.0/@priorities.42"
+				skills="//@entries.0/@entries.16/@entries.0/@priorities.41"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.19"
+				metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.27" />
+			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.2"
+				generator="//@entries.0/@entries.16/@entries.0" state="commited"
+				selectedGroup="//@entries.2/@groups.0" characterName="Rob"
+				resourcen="//@entries.0/@entries.16/@entries.0/@priorities.45"
+				skills="//@entries.0/@entries.16/@entries.0/@priorities.39"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.17"
+				metaType="//@entries.0/@entries.16/@entries.0/@priorities.9" magic="//@entries.0/@entries.16/@entries.0/@priorities.47"
+				karmaToResource="10" startKarma="1" startResources="2810" />
+			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.3"
+				generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
+				selectedGroup="//@entries.2/@groups.0" characterName="Kyra"
+				resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46"
+				skills="//@entries.0/@entries.16/@entries.0/@priorities.39"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.18"
+				metaType="//@entries.0/@entries.16/@entries.0/@priorities.15" magic="//@entries.0/@entries.16/@entries.0/@priorities.23" />
+			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.0"
+				generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
+				selectedGroup="//@entries.1/@groups.0" characterName="Gu"
+				resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46"
+				skills="//@entries.0/@entries.16/@entries.0/@priorities.39"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.17"
+				metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.28"
+				karmaToResource="5" />
+			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" />
+		</entries>
+		<entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
+			<groups name="non player group">
+				<members xsi:type="shr5mngt:NonPlayerCharacter"
+					chracterSource="//@entries.2/@entries.0/@generators.0"
+					choosenLifestyle="//@entries.2/@groups.0/@members.0/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
+					<persona xsi:type="shr5:MudanPersona" name="Thugs &amp; mouth breathers"
+						image="/shr5Resource/images/MrBordello_Strategy_Game_Tileset_19.png"
+						konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3"
+						staerkeBasis="3" charismaBasis="2" willenskraftBasis="3"
+						intuitionBasis="3" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0">
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.10" />
+					</persona>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="30"
+						verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4" />
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="10"
+						verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P"
+						praezision="5" durchschlagsKraft="-1" />
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
+					<contracts xsi:type="shr5:Lifestyle" name="Street" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="" />
+				</members>
+				<members xsi:type="shr5mngt:NonPlayerCharacter"
+					chracterSource="//@entries.2/@entries.0/@generators.1"
+					choosenLifestyle="//@entries.2/@groups.0/@members.1/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
+					<persona xsi:type="shr5:MudanPersona" name="Thug lieutenant"
+						image="/shr5Resource/images/Cowboy_Shooting_Gun_Wild_West_Vector_Pixel_Art.png"
+						konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3"
+						staerkeBasis="4" charismaBasis="3" willenskraftBasis="3"
+						intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten fertigkeit="//@entries.0/@entries.4/@entries.9" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.4/@entries.10" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.53" />
+					</persona>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="30"
+						verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="425"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="320"
+						verfuegbarkeit="4R" name="Colt America L36" schadenscode="7P"
+						praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
+						<modie>HM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+					</inventar>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="10"
+						verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P"
+						praezision="5" durchschlagsKraft="-1" />
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
+					<contracts xsi:type="shr5:Lifestyle" name="Street" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="" />
+				</members>
+			</groups>
+			<entries xsi:type="shr5mngt:GamemasterManagement"
+				beschreibung="generators" name="generators">
+				<generators xsi:type="shr5mngt:FreeStyleGenerator"
+					character="//@entries.2/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.1"
+					state="personaCreated" selectedGroup="//@entries.2/@groups.0"
+					characterName="Thugs &amp; mouth breathers" selectedSpecies="//@entries.0/@entries.2/@entries.0">
+					<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+				</generators>
+				<generators xsi:type="shr5mngt:FreeStyleGenerator"
+					character="//@entries.2/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.1"
+					state="personaCreated" selectedGroup="//@entries.2/@groups.0"
+					characterName="Thug lieutenant" selectedSpecies="//@entries.0/@entries.2/@entries.0">
+					<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+				</generators>
+			</entries>
+			<grunts name="Thugs">
+				<members count="7" nsc="//@entries.2/@groups.0/@members.0" />
+				<leader count="1" nsc="//@entries.2/@groups.0/@members.1" />
+			</grunts>
+		</entries>
 
 
 	</xsl:template>
@@ -1138,14 +1407,57 @@
 					</xsl:for-each> </xsl:for-each> -->
 			</entries>
 		</xsl:if>
-		<xsl:if test="type/text()='Ranged' and category/text()!='Gear'">
+		<xsl:if test="type/text()='Ranged' and category/text()='Bows'">
+		<entries xsi:type="shr5:Projektilwaffe">
+				<xsl:call-template name="gegenstand-basis" />
+				<xsl:call-template name="waffe" />
+		
+						<xsl:variable name="rname" select="category/text()" />
+				<xsl:for-each select="$ranges">
+					<xsl:for-each select="chummer/ranges/*">
+						<xsl:if test="category/text()=$rname">
+							<xsl:variable name="pos" select="position()-1" />
+							<xsl:attribute name="reichweite"><xsl:value-of
+								select="concat('//@entries.0/@entries.1/@entries.',$pos)" /></xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+		
+		</entries>
+		</xsl:if>
+		<xsl:if test="type/text()='Ranged' and category/text()!='Gear' and category/text()!='Bows'">
 			<entries xsi:type="shr5:Feuerwaffe">
 				<xsl:call-template name="gegenstand-basis" />
 				<xsl:call-template name="waffe" />
+				<xsl:if test="number(substring-before(ammo/text(),'('))">
+					<xsl:attribute name="kapazitaet">
+				<xsl:value-of select="number(substring-before(ammo/text(),'('))" />
+				</xsl:attribute>
+					<xsl:choose>
+						<xsl:when test="substring-after(ammo/text(),'(')='m)'">
+							<xsl:attribute name="munitionstyp">
+				<xsl:value-of select="'Clip'" />
+				</xsl:attribute>
+						</xsl:when>
+
+						<xsl:when test="substring-after(ammo/text(),'(')='c)'">
+							<xsl:attribute name="munitionstyp">
+				<xsl:value-of select="'Streifen'" />
+				</xsl:attribute>
+						</xsl:when>
+
+						<xsl:when test="substring-after(ammo/text(),'(')='cy)'">
+							<xsl:attribute name="munitionstyp">
+				<xsl:value-of select="'Trommel'" />
+				</xsl:attribute>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:if>
 				<xsl:if test="number(rc/text())">
 					<xsl:attribute name="rueckstoss"><xsl:value-of
 						select="number(rc/text())" /></xsl:attribute>
 				</xsl:if>
+
 				<xsl:variable name="rname" select="category/text()" />
 				<xsl:for-each select="$ranges">
 					<xsl:for-each select="chummer/ranges/*">
