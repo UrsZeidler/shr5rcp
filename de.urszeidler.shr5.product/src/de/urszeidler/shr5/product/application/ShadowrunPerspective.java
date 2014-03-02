@@ -9,7 +9,7 @@ public class ShadowrunPerspective implements IPerspectiveFactory {
      * Creates the initial layout for a page.
      */
     public void createInitialLayout(IPageLayout layout) {
-        String editorArea = layout.getEditorArea();
+        //String editorArea = layout.getEditorArea();
         addFastViews(layout);
         addViewShortcuts(layout);
         addPerspectiveShortcuts(layout);
