@@ -3,7 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
-
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -28,20 +27,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMembers} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
-public class GruntMembersItemProvider
-    extends ItemProviderAdapter
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+public class GruntMembersItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public GruntMembersItemProvider(AdapterFactory adapterFactory) {
@@ -52,6 +47,7 @@ public class GruntMembersItemProvider
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -69,60 +65,44 @@ public class GruntMembersItemProvider
      * This adds a property descriptor for the Count feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addCountPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_GruntMembers_count_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_count_feature", "_UI_GruntMembers_type"),
-                 Shr5managementPackage.Literals.GRUNT_MEMBERS__COUNT,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_GruntMembers_count_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_count_feature", "_UI_GruntMembers_type"),
+                Shr5managementPackage.Literals.GRUNT_MEMBERS__COUNT, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Nsc feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected void addNscPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_GruntMembers_nsc_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_nsc_feature", "_UI_GruntMembers_type"),
-                 Shr5managementPackage.Literals.GRUNT_MEMBERS__NSC,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_GruntMembers_nsc_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_nsc_feature", "_UI_GruntMembers_type"),
+                Shr5managementPackage.Literals.GRUNT_MEMBERS__NSC, true, false, true, null, null, null));
     }
 
     /**
      * This returns GruntMembers.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     @Override
     public Object getImage(Object object) {
         GruntMembers gruntMembers = (GruntMembers)object;
-        
-        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory).getRootAdapterFactory();
+
+        ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
         if (factory != null && gruntMembers.getNsc() != null) {
-            IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(gruntMembers.getNsc(),
-                    IItemLabelProvider.class);
+            IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(gruntMembers.getNsc(), IItemLabelProvider.class);
             if (labelprovider != null)
                 return labelprovider.getImage(gruntMembers.getNsc());
         }
@@ -134,11 +114,22 @@ public class GruntMembersItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     @Override
     public String getText(Object object) {
         GruntMembers gruntMembers = (GruntMembers)object;
+        if (gruntMembers.getNsc() != null && gruntMembers.getNsc().getPersona() != null) {
+            ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+            IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(gruntMembers.getNsc().getPersona(), IItemLabelProvider.class);
+
+            if (labelprovider != null)
+                return getString("_UI_GruntMembers_type") + " " + labelprovider.getText(gruntMembers.getNsc().getPersona()) + " "
+                        + gruntMembers.getCount();
+
+        }
+
         return getString("_UI_GruntMembers_type") + " " + gruntMembers.getCount();
     }
 
@@ -147,6 +138,7 @@ public class GruntMembersItemProvider
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -166,6 +158,7 @@ public class GruntMembersItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -177,6 +170,7 @@ public class GruntMembersItemProvider
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
