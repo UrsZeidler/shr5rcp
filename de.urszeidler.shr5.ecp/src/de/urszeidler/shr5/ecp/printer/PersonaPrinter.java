@@ -11,6 +11,8 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
@@ -38,6 +40,7 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
@@ -242,7 +245,7 @@ public class PersonaPrinter {
             grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor(gruntMembers.getNsc().getPersona().getName() + " " + (i + 1), zustandKoerperlichMax));
         }
         grid.add(new EmptyPrint(), GridPrint.REMAINDER);
-        grid.add(printPersonaRangedWeapons(gruntMembers.getNsc()), 5);
+        grid.add(printPersonaWeaponsDetailList(gruntMembers.getNsc()), 5);
         grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
         DefaultGridLook look1 = new DefaultGridLook(5, 5);
@@ -302,7 +305,7 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         grid.add(new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
 
-        grid.add(new BorderPrint(printPersonaRangedWeapons(character), border), 2);
+        grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), 2);
 
         grid.add(printAllPersonaSkills(persona));
         grid.add(printPersonaFormPart1(character));
@@ -431,7 +434,7 @@ public class PersonaPrinter {
      */
     private String toSource(Quelle ge) {
         StringBuffer buffer = new StringBuffer();
-        buffer.append(itemDelegator.getText(ge.getSrcBook()));
+        buffer.append(toSimpleName(ge.getSrcBook()));
         buffer.append(Messages.Printer_page);
         buffer.append(ge.getPage());
         return buffer.toString();
@@ -561,23 +564,20 @@ public class PersonaPrinter {
     }
 
     /**
-     * Prints the ranged weapons.
+     * Prints the weapon in a list with the necessary information for gameplay.
      * 
      * @param persona
      * @return
      */
-    private Print printPersonaRangedWeapons(ManagedCharacter character) {
-        DefaultGridLook look = new DefaultGridLook(5, 10);
+    private Print printPersonaWeaponsDetailList(ManagedCharacter character) {
+        DefaultGridLook look = new DefaultGridLook(3, 5);
         GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
         EList<AbstraktGegenstand> inventar = character.getInventar();
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_weapons, boldFontData));
         for (AbstraktGegenstand abstraktGegenstand : inventar) {
-            if (abstraktGegenstand instanceof Feuerwaffe) {
-                Feuerwaffe f = (Feuerwaffe)abstraktGegenstand;
-                grid.add(printFeuerwaffeDetail(f));
-            } else if (abstraktGegenstand instanceof AbstaktFernKampfwaffe) {
+            if (abstraktGegenstand instanceof AbstaktFernKampfwaffe) {
                 AbstaktFernKampfwaffe af = (AbstaktFernKampfwaffe)abstraktGegenstand;
-                grid.add(printFernkampWaffeDetail(af));
+                grid.add(printFernkampfwaffeDetailCompact(af));
             }
         }
 
@@ -609,25 +609,110 @@ public class PersonaPrinter {
         return grid;
     }
 
-    private Print printNahkampfwaffeDetail(Nahkampfwaffe fw) {
-        DefaultGridLook look = new DefaultGridLook(5, 5);
-        look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d:g,d,d,d,d,d", look);//$NON-NLS-1$
+    // private Print printNahkampfwaffeDetail(Nahkampfwaffe fw) {
+    // DefaultGridLook look = new DefaultGridLook(5, 5);
+    // look.setHeaderGap(5);
+    //        GridPrint grid = new GridPrint("d:g,d,d,d,d,d", look);//$NON-NLS-1$
+    //
+    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", italicFontData), 2);
+    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("reach", italicFontData));
+    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("dmg", italicFontData));
+    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("akk", italicFontData));
+    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("ap", italicFontData));
+    // grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
+    //
+    // grid.add(new TextPrint(toName(fw), attributeFont), 2);
+    // grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+    // grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+    // grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
+    // grid.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
+    //
+    // return grid;
+    // }
 
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", italicFontData), 2);
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("reach", italicFontData));
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("dmg", italicFontData));
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("akk", italicFontData));
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("ap", italicFontData));
+    /**
+     * Print a detail for a feuerwaffe.
+     */
+    private GridPrint printFernkampfwaffeDetailCompact(AbstaktFernKampfwaffe fernkampfwaffe) {
+        DefaultGridLook look = new DefaultGridLook(2, 2);
+        GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,d:g,d:g", look);//$NON-NLS-1$
+
         grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
-        grid.add(new TextPrint(toName(fw), attributeFont), 2);
-        grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-        grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
-        grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
-        grid.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
+        grid.add(new TextPrint(toName(fernkampfwaffe), attributeFont), 5);
+        grid.add(new TextPrint(toSimpleName(fernkampfwaffe.getReichweite()), attributeFont), 3);
+
+        GridPrint innerGrid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g", look);//$NON-NLS-1$
+
+        innerGrid.add(new TextPrint(Messages.Printer_dmg, italicFontData));
+        innerGrid.add(new TextPrint(Messages.Printer_akk, italicFontData));
+        innerGrid.add(new TextPrint(Messages.Printer_ak, italicFontData));
+        if (fernkampfwaffe instanceof Feuerwaffe) {
+            innerGrid.add(new TextPrint(Messages.Printer_modus, italicFontData));
+            innerGrid.add(new TextPrint(Messages.Printer_rc, italicFontData));
+            innerGrid.add(new TextPrint(Messages.Printer_muni, italicFontData));
+        } else
+            innerGrid.add(new EmptyPrint(), GridPrint.REMAINDER);
+
+        innerGrid.add(new TextPrint(fernkampfwaffe.getSchadenscode(), attributeFont));
+        innerGrid.add(new TextPrint(fernkampfwaffe.getPraezision() + EMPTY, attributeFont));
+        innerGrid.add(new TextPrint(fernkampfwaffe.getDurchschlagsKraft() + EMPTY, attributeFont));
+        if (fernkampfwaffe instanceof Feuerwaffe) {
+            Feuerwaffe fw = (Feuerwaffe)fernkampfwaffe;
+            innerGrid.add(new TextPrint(toName(fw.getModie(), fernkampfwaffe, Shr5Package.Literals.FEUERWAFFE__MODIE), attributeFont));
+            innerGrid.add(new TextPrint(fw.getRueckstoss() + EMPTY, attributeFont));
+            innerGrid.add(new TextPrint(fw.getKapazitaet() + ONE_SPACE
+                    + toName(fw.getMunitionstyp(), fernkampfwaffe, Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP), attributeFont));
+        } else
+            innerGrid.add(new EmptyPrint(), GridPrint.REMAINDER);
+
+        innerGrid.add(new TextPrint(Messages.Printer_short, italicFontData));
+        innerGrid.add(new TextPrint(Messages.Printer_medium, italicFontData));
+        innerGrid.add(new TextPrint(Messages.Printer_long, italicFontData));
+        innerGrid.add(new TextPrint(Messages.Printer_extreme, italicFontData));
+        innerGrid.add(new EmptyPrint(), GridPrint.REMAINDER);
+
+        if (fernkampfwaffe.getReichweite() != null) {
+            innerGrid.add(new TextPrint(toReichweite(fernkampfwaffe.getReichweite().getMin(), fernkampfwaffe.getReichweite().getKurz()),
+                    attributeFont));
+            innerGrid.add(new TextPrint(toReichweite(fernkampfwaffe.getReichweite().getKurz(), fernkampfwaffe.getReichweite().getMittel()),
+                    attributeFont));
+            innerGrid.add(new TextPrint(toReichweite(fernkampfwaffe.getReichweite().getMittel(), fernkampfwaffe.getReichweite().getWeit()),
+                    attributeFont));
+            innerGrid.add(new TextPrint(toReichweite(fernkampfwaffe.getReichweite().getWeit(), fernkampfwaffe.getReichweite().getExtrem()),
+                    attributeFont));
+            innerGrid.add(new EmptyPrint(), GridPrint.REMAINDER);
+        }
+
+        GridPrint innerGrid1 = new GridPrint("d:g", look);//$NON-NLS-1$
+        innerGrid1.add(new TextPrint(Messages.Printer_addons, italicFontData));
+        if (fernkampfwaffe instanceof Feuerwaffe) {
+            Feuerwaffe fw = (Feuerwaffe)fernkampfwaffe;
+            innerGrid1.add(new TextPrint(toFWAddon(fw.getEinbau()), attributeFont));
+        }
+        grid.add(innerGrid, 6);
+        grid.add(innerGrid1, 2);
 
         return grid;
+
+    }
+
+    /**
+     * To name for the enum literals.
+     * 
+     * @param fw
+     * @param eobject
+     * @param feature
+     * @return
+     */
+    private String toName(Object fw, EObject eobject, EAttribute feature) {
+        String text2 = fw.toString();
+        IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(eobject, feature);
+        if (propertyDescriptor != null)
+            text2 = propertyDescriptor.getLabelProvider(eobject).getText(fw);
+
+        return text2;
+
     }
 
     /**
@@ -637,8 +722,6 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(3, 3);
         GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,d:g,d:g", look);//$NON-NLS-1$
 
-        // grid.add(new TextPrint("Name", italicFontData), 5);
-        // grid.add(new TextPrint("Type", italicFontData), 3);
         grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(toName(fw), attributeFont), 5);
@@ -678,14 +761,32 @@ public class PersonaPrinter {
     private String toFWAddon(EList<FernkampfwaffeModifikator> einbau) {
         StringBuffer buffer = new StringBuffer();
         for (FernkampfwaffeModifikator fernkampfwaffeModifikator : einbau) {
-            buffer.append(fernkampfwaffeModifikator.getEp() + toMod(fernkampfwaffeModifikator.getMods()));
+            buffer.append(fernkampfwaffeModifikator.getName());
+            buffer.append("\n");
+
+            // buffer.append(fernkampfwaffeModifikator.getEp() + toMod(fernkampfwaffeModifikator.getMods()));
 
         }
         return buffer.toString();
     }
 
     private String toMod(EList<AttributModifikatorWert> mods) {
-        return mods.toString();
+        StringBuffer buffer = new StringBuffer();
+
+        for (AttributModifikatorWert attributModifikatorWert : mods) {
+            EAttribute attribut = attributModifikatorWert.getAttribut();
+            buffer.append(itemDelegator.getText(attribut));
+
+            if (attribut.getEType() instanceof EEnum) {
+                EEnumLiteral eEnumLiteral = ((EEnum)attribut.getEType()).getEEnumLiteral(attributModifikatorWert.getWert());
+                buffer.append(":");
+                buffer.append(itemDelegator.getText(eEnumLiteral));
+
+            }
+            buffer.append("\n");
+        }
+
+        return buffer.toString();
     }
 
     private String toReichweite(int min, int max) {
@@ -734,8 +835,16 @@ public class PersonaPrinter {
         return grid;
     }
 
-    private String toName(EObject fw) {
+    private String toName(Object fw) {
+        if (fw instanceof EObject) {
+            return itemDelegator.getText(fw);
+        }
+
         return itemDelegator.getText(fw);
+    }
+
+    private String toSimpleName(Beschreibbar be) {
+        return be.getName();
     }
 
     /**
@@ -927,6 +1036,7 @@ public class PersonaPrinter {
      * @param persona
      * @return
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private Print printPersonaSkills(AbstraktPersona persona) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
@@ -949,7 +1059,7 @@ public class PersonaPrinter {
                 String stufe = EMPTY;
                 if (gruppe != null) {
                     stufe = printInteger(gruppe.getStufe());
-                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(fg), attributeFont), 3);
+                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(fg), attributeFont), 3);
                     grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(stufe, attributeFont), 1);
                     grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
                 }
@@ -958,9 +1068,9 @@ public class PersonaPrinter {
                 printFertigkeitList(grid, fertigkeiten, persona);
             }
         }
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, attributeFont), 3);
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, attributeFont), 3);
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
+        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
         printPersonaFertigkeitList(grid, persona);
 
         return grid;
@@ -982,7 +1092,7 @@ public class PersonaPrinter {
             Integer fertigkeitValue = pfertigkeit.getStufe();
             value = value + fertigkeitValue;
 
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit), attributeFont), 2);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(fertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
