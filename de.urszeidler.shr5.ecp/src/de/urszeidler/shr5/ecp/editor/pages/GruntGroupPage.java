@@ -2,7 +2,6 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.viewers.IViewerObservableValue;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
@@ -32,8 +31,8 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
-    private IViewerObservableValue selection;
-    private Composite parent;
+
+
     private Composite detail;
     private Composite composite_detail;
 
