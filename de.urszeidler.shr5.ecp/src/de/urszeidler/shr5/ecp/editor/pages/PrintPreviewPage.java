@@ -65,7 +65,7 @@ public class PrintPreviewPage extends FormPage {
 
         NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
-        //print = PersonaPrinter.getInstance().printCharacterSheet(character);
+        // print = PersonaPrinter.getInstance().printCharacterSheet(character);
 
     }
 
@@ -84,7 +84,7 @@ public class PrintPreviewPage extends FormPage {
 
         NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
-        //print = PersonaPrinter.getInstance().printCharacterSheet(character);
+        // print = PersonaPrinter.getInstance().printCharacterSheet(character);
     }
 
     /**
@@ -111,7 +111,7 @@ public class PrintPreviewPage extends FormPage {
     protected void createFormContent(IManagedForm managedForm) {
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
-        form.setText("Empty FormPage");
+        form.setText("Printer Preview for :" + print.getPrintTitel());
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
@@ -121,13 +121,13 @@ public class PrintPreviewPage extends FormPage {
         shell = display.getActiveShell();
 
         createButtonPanel(body).setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-        createScrollingPreview(body).setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+        createScrollingPreview(body).setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 
         updateJob();
     }
 
     protected void updateJob() {
-        printJob = new PrintJob("Default Print job", print.createPrinter());
+        printJob = new PrintJob(print.getPrintTitel(), print.createPrinter());
         preview.setPrintJob(printJob);
         forgetScrollingPosition();
         updatePreviewSize();
@@ -144,13 +144,12 @@ public class PrintPreviewPage extends FormPage {
         createTextButton(composite, "refresh", "Portrait Orientation", new Listener() {
             public void handleEvent(Event event) {
                 updateJob();
-//                forgetScrollingPosition();
-//                updatePreviewSize();
-//                updatePageNumber();
+                // forgetScrollingPosition();
+                // updatePreviewSize();
+                // updatePageNumber();
             }
         });
 
-        
         previousPage = createIconButton(composite, "backward_nav.gif", "Previous Page", new Listener() {
             public void handleEvent(Event event) {
                 setPreviewPageIndex(preview.getPageIndex() - preview.getHorizontalPageCount() * preview.getVerticalPageCount());
@@ -265,6 +264,19 @@ public class PrintPreviewPage extends FormPage {
                 updatePageNumber();
             }
         });
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
+        new Label(composite, SWT.NONE);
 
         return composite;
     }

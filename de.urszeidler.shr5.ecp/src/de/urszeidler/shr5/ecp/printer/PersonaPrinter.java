@@ -83,6 +83,8 @@ public class PersonaPrinter {
      * @author urs
      */
     public interface PrintFactory {
+        String getPrintTitel();
+
         Print createPrinter();
     }
 
@@ -136,6 +138,11 @@ public class PersonaPrinter {
             public Print createPrinter() {
                 return printCharacterSheet(character);
             }
+
+            @Override
+            public String getPrintTitel() {
+                return "Character sheet for " + c.getPersona().getName();
+            }
         };
     }
 
@@ -152,6 +159,11 @@ public class PersonaPrinter {
             @Override
             public Print createPrinter() {
                 return printGruntGroupSheet(character);
+            }
+
+            @Override
+            public String getPrintTitel() {
+                return "Grunt sheet for " + c.getName();
             }
         };
     }
