@@ -29,7 +29,7 @@
 		<link>
 			<name>test1</name>
 			<type>2</type>
-			<location>/home/urs/eclipse_workspaces/runtime-emf-client/test1</location>
+			<location>/home/urs/eclipse_workspaces/runtime-emf-client</location>
 		</link>
 	</linkedResources>
 </projectDescription>
