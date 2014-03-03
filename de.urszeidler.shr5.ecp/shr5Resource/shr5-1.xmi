@@ -48,144 +48,654 @@
 </entries>
 <entries xsi:type="shr5:ShrList" name="skillgroups">
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Acting">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Con" page="138" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Impersonation" page="138" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Performance" page="139" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Con" page="138" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Fast Talk</spezialisierungen>
+<spezialisierungen>Seduction</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Impersonation" page="138" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Dwarf</spezialisierungen>
+<spezialisierungen>Elf</spezialisierungen>
+<spezialisierungen>Human</spezialisierungen>
+<spezialisierungen>Ork</spezialisierungen>
+<spezialisierungen>Troll</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Performance" page="139" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Presentation</spezialisierungen>
+<spezialisierungen>Acting</spezialisierungen>
+<spezialisierungen>Comedy</spezialisierungen>
+<spezialisierungen>Instrument</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Athletics">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Gymnastics" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke" name="Running" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke" name="Swimming" page="134" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Gymnastics" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Balance</spezialisierungen>
+<spezialisierungen>Climbing</spezialisierungen>
+<spezialisierungen>Dance</spezialisierungen>
+<spezialisierungen>Leaping</spezialisierungen>
+<spezialisierungen>Parkour</spezialisierungen>
+<spezialisierungen>Rolling</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke" name="Running" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Distance</spezialisierungen>
+<spezialisierungen>Sprinting</spezialisierungen>
+<spezialisierungen>Desert</spezialisierungen>
+<spezialisierungen>Urban</spezialisierungen>
+<spezialisierungen>Wilderness</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke" name="Swimming" page="134" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Dash</spezialisierungen>
+<spezialisierungen>Long Distance</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Biotech">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Cybertechnology" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="First Aid" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Medicine" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Cybertechnology" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Bodyware</spezialisierungen>
+<spezialisierungen>Cyberlimbs</spezialisierungen>
+<spezialisierungen>Headware</spezialisierungen>
+<spezialisierungen>Repair</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="First Aid" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Gunshot Wounds</spezialisierungen>
+<spezialisierungen>Resuscitation</spezialisierungen>
+<spezialisierungen>Broken Bones</spezialisierungen>
+<spezialisierungen>Burns</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Medicine" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Cosmetic Surgery</spezialisierungen>
+<spezialisierungen>Extended Care</spezialisierungen>
+<spezialisierungen>Implant Surgery</spezialisierungen>
+<spezialisierungen>Magical Health</spezialisierungen>
+<spezialisierungen>Organ Culture</spezialisierungen>
+<spezialisierungen>Trauma Surgery</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Close Combat">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Blades" page="130" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Clubs" page="131" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Unarmed Combat" page="132" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Blades" page="130" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Axes</spezialisierungen>
+<spezialisierungen>Knives</spezialisierungen>
+<spezialisierungen>Swords</spezialisierungen>
+<spezialisierungen>Parrying</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Clubs" page="131" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Batons</spezialisierungen>
+<spezialisierungen>Hammers</spezialisierungen>
+<spezialisierungen>Saps</spezialisierungen>
+<spezialisierungen>Staves</spezialisierungen>
+<spezialisierungen>Parrying</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Unarmed Combat" page="132" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Blocking</spezialisierungen>
+<spezialisierungen>Cyber Implants</spezialisierungen>
+<spezialisierungen>Subduing Combat</spezialisierungen>
+<spezialisierungen>Martial Art</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Conjuring">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Banishing" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Binding" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Summoning" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Banishing" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Spirit Type</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Binding" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Spirit Type</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Summoning" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Spirit Type</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Cracking">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Cybercombat" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Electronic Warfare" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Hacking" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Cybercombat" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Devices</spezialisierungen>
+<spezialisierungen>Grids</spezialisierungen>
+<spezialisierungen>IC</spezialisierungen>
+<spezialisierungen>Personas</spezialisierungen>
+<spezialisierungen>Sprites</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Electronic Warfare" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Communications</spezialisierungen>
+<spezialisierungen>Encryption</spezialisierungen>
+<spezialisierungen>Jamming</spezialisierungen>
+<spezialisierungen>Sensor Operations</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Hacking" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Devices</spezialisierungen>
+<spezialisierungen>Files</spezialisierungen>
+<spezialisierungen>Hosts</spezialisierungen>
+<spezialisierungen>Personas</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Electronics">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Computer" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Hardware" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Software" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Computer" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>By Action</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Hardware" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Commlinks</spezialisierungen>
+<spezialisierungen>Cyberdecks</spezialisierungen>
+<spezialisierungen>Smartguns</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Software" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Data Bombs</spezialisierungen>
+<spezialisierungen>Complex Form</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Enchanting">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Alchemy" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Artificing" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Disenchanting" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Alchemy" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Command</spezialisierungen>
+<spezialisierungen>Contact</spezialisierungen>
+<spezialisierungen>Time</spezialisierungen>
+<spezialisierungen>Combat Spells</spezialisierungen>
+<spezialisierungen>Detection Spells</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Artificing" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Focus Analysis</spezialisierungen>
+<spezialisierungen>Crafting</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Disenchanting" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>By Type</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Engineering">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Aeronautics Mechanic" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Automotive Mechanic" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Industrial Mechanic" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Nautical Mechanic" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Aeronautics Mechanic" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Aerospace</spezialisierungen>
+<spezialisierungen>Fixed Wing</spezialisierungen>
+<spezialisierungen>LTA</spezialisierungen>
+<spezialisierungen>Rotary Wing</spezialisierungen>
+<spezialisierungen>Tilt Wing</spezialisierungen>
+<spezialisierungen>Vector Thrust</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Automotive Mechanic" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Walker</spezialisierungen>
+<spezialisierungen>Hover</spezialisierungen>
+<spezialisierungen>Tracked</spezialisierungen>
+<spezialisierungen>Wheeled</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Industrial Mechanic" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Electrical Power Systems</spezialisierungen>
+<spezialisierungen>Hydraulics</spezialisierungen>
+<spezialisierungen>HVAC</spezialisierungen>
+<spezialisierungen>Industrial Robotics</spezialisierungen>
+<spezialisierungen>Structural</spezialisierungen>
+<spezialisierungen>Welding</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Nautical Mechanic" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Motorboat</spezialisierungen>
+<spezialisierungen>Sailboat</spezialisierungen>
+<spezialisierungen>Ship</spezialisierungen>
+<spezialisierungen>Submarine</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Firearms">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Automatics" page="130" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Longarms" page="132" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Pistols" page="132" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Automatics" page="130" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Assault Rifles</spezialisierungen>
+<spezialisierungen>Cyber-Implant</spezialisierungen>
+<spezialisierungen>Machine Pistols</spezialisierungen>
+<spezialisierungen>Submachine Guns</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Longarms" page="132" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Extended-Range Shots</spezialisierungen>
+<spezialisierungen>Long-Range Shots</spezialisierungen>
+<spezialisierungen>Shotguns</spezialisierungen>
+<spezialisierungen>Sniper Rifles</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Pistols" page="132" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Holdouts</spezialisierungen>
+<spezialisierungen>Revolvers</spezialisierungen>
+<spezialisierungen>Semi-Automatics</spezialisierungen>
+<spezialisierungen>Tasers</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Influence">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Etiquette" page="138" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Leadership" page="139" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Negotiation" page="139" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Etiquette" page="138" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>High Society</spezialisierungen>
+<spezialisierungen>Media</spezialisierungen>
+<spezialisierungen>Mercenary</spezialisierungen>
+<spezialisierungen>Street</spezialisierungen>
+<spezialisierungen>Yakuza</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Leadership" page="139" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Command</spezialisierungen>
+<spezialisierungen>Direct</spezialisierungen>
+<spezialisierungen>Inspire</spezialisierungen>
+<spezialisierungen>Rally</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Negotiation" page="139" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Bargaining</spezialisierungen>
+<spezialisierungen>Contracts</spezialisierungen>
+<spezialisierungen>Diplomacy</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Outdoors">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft" name="Survival" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Tracking" page="134" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Navigation" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft" name="Survival" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Desert</spezialisierungen>
+<spezialisierungen>Forest</spezialisierungen>
+<spezialisierungen>Jungle</spezialisierungen>
+<spezialisierungen>Mountain</spezialisierungen>
+<spezialisierungen>Polar</spezialisierungen>
+<spezialisierungen>Urban</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Tracking" page="134" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Desert</spezialisierungen>
+<spezialisierungen>Forest</spezialisierungen>
+<spezialisierungen>Jungle</spezialisierungen>
+<spezialisierungen>Mountain</spezialisierungen>
+<spezialisierungen>Polar</spezialisierungen>
+<spezialisierungen>Urban</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Navigation" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Augmented Reality Markers</spezialisierungen>
+<spezialisierungen>Celestial</spezialisierungen>
+<spezialisierungen>Compass</spezialisierungen>
+<spezialisierungen>Maps</spezialisierungen>
+<spezialisierungen>GPS</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Sorcery">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Counterspelling" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Ritual Spellcasting" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Spellcasting" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Counterspelling" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Spell Type</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Ritual Spellcasting" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>By Keyword</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Spellcasting" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Combat</spezialisierungen>
+<spezialisierungen>Detection</spezialisierungen>
+<spezialisierungen>Health</spezialisierungen>
+<spezialisierungen>Illusion</spezialisierungen>
+<spezialisierungen>Manipulation</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Stealth">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Disguise" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Palming" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Sneaking" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Disguise" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Camouflage</spezialisierungen>
+<spezialisierungen>Cosmetic</spezialisierungen>
+<spezialisierungen>Theatrical</spezialisierungen>
+<spezialisierungen>Trideo &amp; Video</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Palming" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Legerdemain</spezialisierungen>
+<spezialisierungen>Pickpocket</spezialisierungen>
+<spezialisierungen>Pilfering</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Sneaking" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Desert</spezialisierungen>
+<spezialisierungen>Urban</spezialisierungen>
+<spezialisierungen>Jungle</spezialisierungen>
+</fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Tasking">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Compiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Decompiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Registering" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Compiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Sprite Type</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Decompiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Sprite Type</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Registering" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Sprite Type</spezialisierungen>
+</fertigkeiten>
 </entries>
 </entries>
 <entries xsi:type="shr5:ShrList" name="skills">
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Archery" page="130" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Archery" page="130" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Bows</spezialisierungen>
+<spezialisierungen>Crossbows</spezialisierungen>
+<spezialisierungen>Non-Standard Ammunition</spezialisierungen>
+<spezialisierungen>Slingshots</spezialisierungen>
+</entries>
 <entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Exotic Melee Weapon" page="131" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Exotic Ranged Weapon" page="131" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Heavy Weapons" page="132" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Throwing Weapons" page="132" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution" name="Diving" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Escape Artist" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution" name="Free-Fall" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Perception" page="133" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Instruction" page="138" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Intimidation" page="139" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Arcana" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Assensing" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft" name="Astral Combat" page="142" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Animal Handling" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Armorer" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Artisian" page="143" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Biotechnology" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Chemistry" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Demolitions" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Forgery" page="144" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Locksmith" page="145" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Gunnery" page="146" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Aerospace" page="146" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Aircraft" page="147" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Walker" page="147" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Exotic Ranged Weapon" page="131" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Flamethrowers</spezialisierungen>
+<spezialisierungen>Laser Weapons</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Heavy Weapons" page="132" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Assault Cannons</spezialisierungen>
+<spezialisierungen>Grenade Launchers</spezialisierungen>
+<spezialisierungen>Guided Missiles</spezialisierungen>
+<spezialisierungen>Machine Guns</spezialisierungen>
+<spezialisierungen>Rocket Launchers</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Throwing Weapons" page="132" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Aerodynamic</spezialisierungen>
+<spezialisierungen>Blades</spezialisierungen>
+<spezialisierungen>Non-Aerodynamic</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution" name="Diving" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Liquid Breathing Apparatus</spezialisierungen>
+<spezialisierungen>Mixed Gas</spezialisierungen>
+<spezialisierungen>Oxygen Extraction</spezialisierungen>
+<spezialisierungen>SCUBA</spezialisierungen>
+<spezialisierungen>Arctic</spezialisierungen>
+<spezialisierungen>Cave</spezialisierungen>
+<spezialisierungen>Commercial</spezialisierungen>
+<spezialisierungen>Military</spezialisierungen>
+<spezialisierungen>Controlled Hyperventilation</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Escape Artist" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Cuffs</spezialisierungen>
+<spezialisierungen>Ropes</spezialisierungen>
+<spezialisierungen>Zip Ties</spezialisierungen>
+<spezialisierungen>Contortionism</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution" name="Free-Fall" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>BASE Jumping</spezialisierungen>
+<spezialisierungen>Break-Fall</spezialisierungen>
+<spezialisierungen>Bungee</spezialisierungen>
+<spezialisierungen>HALO</spezialisierungen>
+<spezialisierungen>Low Altitude</spezialisierungen>
+<spezialisierungen>Parachute</spezialisierungen>
+<spezialisierungen>Static Line</spezialisierungen>
+<spezialisierungen>Wingsuit</spezialisierungen>
+<spezialisierungen>Zipline</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Perception" page="133" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Hearing</spezialisierungen>
+<spezialisierungen>Scent</spezialisierungen>
+<spezialisierungen>Searching</spezialisierungen>
+<spezialisierungen>Taste</spezialisierungen>
+<spezialisierungen>Touch</spezialisierungen>
+<spezialisierungen>Visual</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Instruction" page="138" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Combat</spezialisierungen>
+<spezialisierungen>Language</spezialisierungen>
+<spezialisierungen>Magical</spezialisierungen>
+<spezialisierungen>Academic Knowledge</spezialisierungen>
+<spezialisierungen>Street Knowledge</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Intimidation" page="139" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Interrogation</spezialisierungen>
+<spezialisierungen>Mental</spezialisierungen>
+<spezialisierungen>Physical</spezialisierungen>
+<spezialisierungen>Torture</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Arcana" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Spell Design</spezialisierungen>
+<spezialisierungen>Focus Design</spezialisierungen>
+<spezialisierungen>Spirit Formula</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Assensing" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Aura Reading</spezialisierungen>
+<spezialisierungen>Astral Signatures</spezialisierungen>
+<spezialisierungen>Aura Type</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft" name="Astral Combat" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Focus Type</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma" name="Animal Handling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Animal</spezialisierungen>
+<spezialisierungen>Herding</spezialisierungen>
+<spezialisierungen>Riding</spezialisierungen>
+<spezialisierungen>Training</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Armorer" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Armor</spezialisierungen>
+<spezialisierungen>Artillery</spezialisierungen>
+<spezialisierungen>Explosives</spezialisierungen>
+<spezialisierungen>Firearms</spezialisierungen>
+<spezialisierungen>Heavy Weapons</spezialisierungen>
+<spezialisierungen>Weapon Accessories</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Artisian" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Discipline</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Biotechnology" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Bioinformatics</spezialisierungen>
+<spezialisierungen>Bioware</spezialisierungen>
+<spezialisierungen>Cloning</spezialisierungen>
+<spezialisierungen>Gene Therapy</spezialisierungen>
+<spezialisierungen>Vat Maintenance</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Chemistry" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Analytical</spezialisierungen>
+<spezialisierungen>Biochemistry</spezialisierungen>
+<spezialisierungen>Inorganic</spezialisierungen>
+<spezialisierungen>Organic</spezialisierungen>
+<spezialisierungen>Physical</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Demolitions" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Commercial Explosives</spezialisierungen>
+<spezialisierungen>Defusing</spezialisierungen>
+<spezialisierungen>Improvised Explosives</spezialisierungen>
+<spezialisierungen>Plastic Explosives</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Forgery" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Counterfeiting</spezialisierungen>
+<spezialisierungen>Credstick Forgery</spezialisierungen>
+<spezialisierungen>False ID</spezialisierungen>
+<spezialisierungen>Image Doctoring</spezialisierungen>
+<spezialisierungen>Paper Forgery</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Locksmith" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Combination</spezialisierungen>
+<spezialisierungen>Keypad</spezialisierungen>
+<spezialisierungen>Maglock</spezialisierungen>
+<spezialisierungen>Tumbler</spezialisierungen>
+<spezialisierungen>Voice Recognition</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" name="Gunnery" page="146" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Artillery</spezialisierungen>
+<spezialisierungen>Ballistic</spezialisierungen>
+<spezialisierungen>Energy</spezialisierungen>
+<spezialisierungen>Guided Missile</spezialisierungen>
+<spezialisierungen>Rocket</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Aerospace" page="146" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Deep Space</spezialisierungen>
+<spezialisierungen>Launch Craft</spezialisierungen>
+<spezialisierungen>Remote Operation</spezialisierungen>
+<spezialisierungen>Semiballistic</spezialisierungen>
+<spezialisierungen>Suborbital</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Aircraft" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Fixed-Wing</spezialisierungen>
+<spezialisierungen>Lighter-Than-Air</spezialisierungen>
+<spezialisierungen>Remote Operation</spezialisierungen>
+<spezialisierungen>Rotary Wing</spezialisierungen>
+<spezialisierungen>Tilt Wing</spezialisierungen>
+<spezialisierungen>Vectored Thrust</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Walker" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Biped</spezialisierungen>
+<spezialisierungen>Multiped</spezialisierungen>
+<spezialisierungen>Quadruped</spezialisierungen>
+<spezialisierungen>Remote</spezialisierungen>
+</entries>
 <entries xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Exotic Vehicle" page="147" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Ground Craft" page="147" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Watercraft" page="147" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Ground Craft" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Bike</spezialisierungen>
+<spezialisierungen>Hovercraft</spezialisierungen>
+<spezialisierungen>Remote Operation</spezialisierungen>
+<spezialisierungen>Tracked</spezialisierungen>
+<spezialisierungen>Wheeled</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Fertigkeit" ausweichen="true" attribut="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" name="Pilot Watercraft" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Hydrofoil</spezialisierungen>
+<spezialisierungen>Motorboat</spezialisierungen>
+<spezialisierungen>Remote Operation</spezialisierungen>
+<spezialisierungen>Sail</spezialisierungen>
+<spezialisierungen>Ship</spezialisierungen>
+<spezialisierungen>Submarine</spezialisierungen>
+</entries>
 </entries>
 <entries xsi:type="shr5:ShrList" name="knowledgeskills">
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Arabic" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Bengali" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Bulgarian" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Croatian" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Cantonese" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Danish" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="English" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="French" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="German" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Hebrew" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Hindi-Urdu" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Indonesian" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Italian" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Japanese" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Korean" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Latin" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Mandarin" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Or'zet" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Persian" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Portuguese" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Punjabi" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Polish" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Russian" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Sioux" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Spanish" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Sperethiel" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Thai" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Turkish" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Wu" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Xiang" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Arabic" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Bengali" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Bulgarian" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Croatian" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Cantonese" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Danish" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="English" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="French" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="German" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Hebrew" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Hindi-Urdu" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Indonesian" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Italian" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Japanese" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Korean" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Latin" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Mandarin" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Or'zet" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Persian" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Portuguese" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Punjabi" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Polish" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Russian" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Sioux" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Spanish" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Sperethiel" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Thai" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Turkish" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Wu" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Sprachfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Xiang" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Read/Write</spezialisierungen>
+<spezialisierungen>Speak</spezialisierungen>
+<spezialisierungen>Dialect</spezialisierungen>
+<spezialisierungen>Lingo</spezialisierungen>
+</entries>
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Atlanta" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Cheyenne" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Chicago" srcBook="//@entries.0/@entries.0/@entries.0"/>
@@ -195,46 +705,710 @@
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: LA" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Manhattan" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Portland" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Seattle" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Alcohol" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Architecture" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Art" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Biology" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Business" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Chemistry" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Combat Tactics" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Bars and Clubs" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Data Havens" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Economics" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Engineering" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Firearms" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Gaming" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Gangs" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Ghost Cartels" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="History" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Music" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="News" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Parazoology" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Politics" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Literature" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Mafia" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Magic Traditions" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Magical Theory" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Magical Threats" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Military" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Religion" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Security Design" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Security Companies" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Security Tactics" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Shadow Community" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Spirits" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Sports" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Syndicates" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Triads" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Trids" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Underworld" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Vory" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Yakuza" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Area Knowledge: Seattle" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Auburn</spezialisierungen>
+<spezialisierungen>Bellevue</spezialisierungen>
+<spezialisierungen>Council Island</spezialisierungen>
+<spezialisierungen>Downtown</spezialisierungen>
+<spezialisierungen>Everett</spezialisierungen>
+<spezialisierungen>Puyallup</spezialisierungen>
+<spezialisierungen>Redmond</spezialisierungen>
+<spezialisierungen>Renton</spezialisierungen>
+<spezialisierungen>Snohomish</spezialisierungen>
+<spezialisierungen>Outremer</spezialisierungen>
+<spezialisierungen>Seattle Matrix</spezialisierungen>
+<spezialisierungen>Salish-Shide</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Alcohol" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Beers</spezialisierungen>
+<spezialisierungen>Coolers</spezialisierungen>
+<spezialisierungen>Hard Liquor</spezialisierungen>
+<spezialisierungen>Wines</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Architecture" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Commercial</spezialisierungen>
+<spezialisierungen>Residential</spezialisierungen>
+<spezialisierungen>Elven</spezialisierungen>
+<spezialisierungen>Orcish</spezialisierungen>
+<spezialisierungen>Medieval</spezialisierungen>
+<spezialisierungen>Gothic</spezialisierungen>
+<spezialisierungen>Renaissance</spezialisierungen>
+<spezialisierungen>Baroque</spezialisierungen>
+<spezialisierungen>Victorian</spezialisierungen>
+<spezialisierungen>Neo-Classical</spezialisierungen>
+<spezialisierungen>Modern</spezialisierungen>
+<spezialisierungen>High-Tech</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Art" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Da Vinci</spezialisierungen>
+<spezialisierungen>Monet</spezialisierungen>
+<spezialisierungen>Matisse</spezialisierungen>
+<spezialisierungen>Michelangelo</spezialisierungen>
+<spezialisierungen>Picasso</spezialisierungen>
+<spezialisierungen>Rembrandt</spezialisierungen>
+<spezialisierungen>Van Gogh</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Biology" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Anatomy</spezialisierungen>
+<spezialisierungen>Microbiology</spezialisierungen>
+<spezialisierungen>Physiology</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Business" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Budgeting</spezialisierungen>
+<spezialisierungen>Compliance</spezialisierungen>
+<spezialisierungen>Reporting</spezialisierungen>
+<spezialisierungen>Manufacturing</spezialisierungen>
+<spezialisierungen>People Management</spezialisierungen>
+<spezialisierungen>Project Management</spezialisierungen>
+<spezialisierungen>Retail</spezialisierungen>
+<spezialisierungen>Supply and Demand</spezialisierungen>
+<spezialisierungen>Small Business</spezialisierungen>
+<spezialisierungen>Time Management</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Chemistry" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Industrial</spezialisierungen>
+<spezialisierungen>Organic</spezialisierungen>
+<spezialisierungen>Pharmaceuticals</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Combat Tactics" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Ambush</spezialisierungen>
+<spezialisierungen>Guerilla</spezialisierungen>
+<spezialisierungen>Hostage Rescue</spezialisierungen>
+<spezialisierungen>Magic</spezialisierungen>
+<spezialisierungen>Anti-Magic</spezialisierungen>
+<spezialisierungen>Open Field</spezialisierungen>
+<spezialisierungen>Outer Space</spezialisierungen>
+<spezialisierungen>Terror</spezialisierungen>
+<spezialisierungen>Underwater</spezialisierungen>
+<spezialisierungen>Urban</spezialisierungen>
+<spezialisierungen>Wilderness</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Bars and Clubs" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Awakened</spezialisierungen>
+<spezialisierungen>Biker</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Dwarf</spezialisierungen>
+<spezialisierungen>Elf</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Gay</spezialisierungen>
+<spezialisierungen>High-Class</spezialisierungen>
+<spezialisierungen>Hotel</spezialisierungen>
+<spezialisierungen>Jazz</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Low-Class</spezialisierungen>
+<spezialisierungen>Mafia</spezialisierungen>
+<spezialisierungen>Matrix</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>Ork</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Piano</spezialisierungen>
+<spezialisierungen>Pubs</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Rock</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Sports</spezialisierungen>
+<spezialisierungen>Surge</spezialisierungen>
+<spezialisierungen>Triad</spezialisierungen>
+<spezialisierungen>Troll</spezialisierungen>
+<spezialisierungen>Vory</spezialisierungen>
+<spezialisierungen>Yakuza</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Data Havens" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Hacking</spezialisierungen>
+<spezialisierungen>Magic</spezialisierungen>
+<spezialisierungen>Matrix</spezialisierungen>
+<spezialisierungen>Shadows</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Economics" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>Tribal</spezialisierungen>
+<spezialisierungen>Underworld</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Engineering" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Chemical</spezialisierungen>
+<spezialisierungen>Civil</spezialisierungen>
+<spezialisierungen>Electrical</spezialisierungen>
+<spezialisierungen>Mechanical</spezialisierungen>
+<spezialisierungen>Nuclear</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Firearms" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Accessories</spezialisierungen>
+<spezialisierungen>Ammunition</spezialisierungen>
+<spezialisierungen>Automatics</spezialisierungen>
+<spezialisierungen>Design</spezialisierungen>
+<spezialisierungen>Heavy Weapons</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Longarms</spezialisierungen>
+<spezialisierungen>Modification</spezialisierungen>
+<spezialisierungen>Pistols</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Gaming" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Dawn of Atlantis</spezialisierungen>
+<spezialisierungen>Dark Eye</spezialisierungen>
+<spezialisierungen>Grand Larceny</spezialisierungen>
+<spezialisierungen>Killing Floor</spezialisierungen>
+<spezialisierungen>Paranormal Crisis</spezialisierungen>
+<spezialisierungen>Miracle Shooter</spezialisierungen>
+<spezialisierungen>Spectrum Delta</spezialisierungen>
+<spezialisierungen>SC IV: Protoss Gate</spezialisierungen>
+<spezialisierungen>World of Shadows</spezialisierungen>
+<spezialisierungen>Urban Brawl League 70</spezialisierungen>
+<spezialisierungen>Guild Ages</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Gangs" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Ancients</spezialisierungen>
+<spezialisierungen>Area Boys</spezialisierungen>
+<spezialisierungen>Cirque du Sorciere</spezialisierungen>
+<spezialisierungen>Chaos Engine</spezialisierungen>
+<spezialisierungen>Cocotona</spezialisierungen>
+<spezialisierungen>Comando Verdge</spezialisierungen>
+<spezialisierungen>Cutters</spezialisierungen>
+<spezialisierungen>Desolation Angels</spezialisierungen>
+<spezialisierungen>First Nations</spezialisierungen>
+<spezialisierungen>Ghost Cartels</spezialisierungen>
+<spezialisierungen>Haloweeners</spezialisierungen>
+<spezialisierungen>Hell's Angels</spezialisierungen>
+<spezialisierungen>Iron Crosses</spezialisierungen>
+<spezialisierungen>Los Verdugos</spezialisierungen>
+<spezialisierungen>Los Angeles Ardientes</spezialisierungen>
+<spezialisierungen>Lynch Mob</spezialisierungen>
+<spezialisierungen>Merlyns</spezialisierungen>
+<spezialisierungen>Numbers Gang</spezialisierungen>
+<spezialisierungen>Spikes</spezialisierungen>
+<spezialisierungen>Steppin Wulfs</spezialisierungen>
+<spezialisierungen>Thunder Boys</spezialisierungen>
+<spezialisierungen>Yardies</spezialisierungen>
+<spezialisierungen>Vikings</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Ghost Cartels" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Turf</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+<spezialisierungen>Signs</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Organizations</spezialisierungen>
+<spezialisierungen>Safe Houses</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="History" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Art</spezialisierungen>
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>Military</spezialisierungen>
+<spezialisierungen>Political</spezialisierungen>
+<spezialisierungen>Religion</spezialisierungen>
+<spezialisierungen>Social</spezialisierungen>
+<spezialisierungen>Tribal</spezialisierungen>
+<spezialisierungen>Underworld</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Music" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Goblin Rock</spezialisierungen>
+<spezialisierungen>Powernoize</spezialisierungen>
+<spezialisierungen>Rockabilly</spezialisierungen>
+<spezialisierungen>Sinthcore</spezialisierungen>
+<spezialisierungen>Wizpunk</spezialisierungen>
+<spezialisierungen>Trash Metal Troll</spezialisierungen>
+<spezialisierungen>Retro Gothic</spezialisierungen>
+<spezialisierungen>Elven Rap</spezialisierungen>
+<spezialisierungen>Neo-J Pop</spezialisierungen>
+<spezialisierungen>Nova K Rock</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="News" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Business</spezialisierungen>
+<spezialisierungen>Entertainment</spezialisierungen>
+<spezialisierungen>Health</spezialisierungen>
+<spezialisierungen>Science/Environment</spezialisierungen>
+<spezialisierungen>Sports</spezialisierungen>
+<spezialisierungen>Technology</spezialisierungen>
+<spezialisierungen>Underworld</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Parazoology" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Spirits</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Politics" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>Military</spezialisierungen>
+<spezialisierungen>Political</spezialisierungen>
+<spezialisierungen>Social</spezialisierungen>
+<spezialisierungen>Tribal</spezialisierungen>
+<spezialisierungen>Underworld</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Literature" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Science Fiction</spezialisierungen>
+<spezialisierungen>Poetry</spezialisierungen>
+<spezialisierungen>Romance</spezialisierungen>
+<spezialisierungen>N. America</spezialisierungen>
+<spezialisierungen>S. America</spezialisierungen>
+<spezialisierungen>Antarctica</spezialisierungen>
+<spezialisierungen>Africa</spezialisierungen>
+<spezialisierungen>Western Europe</spezialisierungen>
+<spezialisierungen>Eastern Europe</spezialisierungen>
+<spezialisierungen>Northern Europe</spezialisierungen>
+<spezialisierungen>Asia - Pacific</spezialisierungen>
+<spezialisierungen>Asia - Minor</spezialisierungen>
+<spezialisierungen>Middle East</spezialisierungen>
+<spezialisierungen>Australia</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Mafia" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Turf</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+<spezialisierungen>Signs</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Organizations</spezialisierungen>
+<spezialisierungen>Safe Houses</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Magic Traditions" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Adepts</spezialisierungen>
+<spezialisierungen>Shamans</spezialisierungen>
+<spezialisierungen>Mages</spezialisierungen>
+<spezialisierungen>Magic Adepts</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Magical Theory" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Sorcery</spezialisierungen>
+<spezialisierungen>Conjuring</spezialisierungen>
+<spezialisierungen>Enchanting</spezialisierungen>
+<spezialisierungen>Foci</spezialisierungen>
+<spezialisierungen>Astral World</spezialisierungen>
+<spezialisierungen>Metaplanes</spezialisierungen>
+<spezialisierungen>Initiation</spezialisierungen>
+<spezialisierungen>Mentor Spirits</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Magical Threats" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Blood Magic</spezialisierungen>
+<spezialisierungen>Toxic Magic</spezialisierungen>
+<spezialisierungen>Insect Spirits</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Military" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Air Force</spezialisierungen>
+<spezialisierungen>Army</spezialisierungen>
+<spezialisierungen>Coast Guard</spezialisierungen>
+<spezialisierungen>Marines</spezialisierungen>
+<spezialisierungen>Military Magic</spezialisierungen>
+<spezialisierungen>Navy</spezialisierungen>
+<spezialisierungen>Special Forces</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Religion" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Islam</spezialisierungen>
+<spezialisierungen>Judaism</spezialisierungen>
+<spezialisierungen>Buddhism</spezialisierungen>
+<spezialisierungen>Christianity</spezialisierungen>
+<spezialisierungen>Hinduism</spezialisierungen>
+<spezialisierungen>Zoroastrianism</spezialisierungen>
+<spezialisierungen>Shinto</spezialisierungen>
+<spezialisierungen>Paganism</spezialisierungen>
+<spezialisierungen>Taoism</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Security Design" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Bank</spezialisierungen>
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>Government</spezialisierungen>
+<spezialisierungen>Home</spezialisierungen>
+<spezialisierungen>Public Event</spezialisierungen>
+<spezialisierungen>Vehicle</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Security Companies" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Lone Star</spezialisierungen>
+<spezialisierungen>Knight Errant</spezialisierungen>
+<spezialisierungen>Hard Corps</spezialisierungen>
+<spezialisierungen>Minutemen Security</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Security Tactics" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Corporate</spezialisierungen>
+<spezialisierungen>Crimson Rush</spezialisierungen>
+<spezialisierungen>Entertainment</spezialisierungen>
+<spezialisierungen>Government</spezialisierungen>
+<spezialisierungen>Security Company</spezialisierungen>
+<spezialisierungen>Rapid Response</spezialisierungen>
+<spezialisierungen>Border Patrol</spezialisierungen>
+<spezialisierungen>Customs</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Shadow Community" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Turf</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Organizations</spezialisierungen>
+<spezialisierungen>Safe Houses</spezialisierungen>
+<spezialisierungen>News</spezialisierungen>
+<spezialisierungen>Personalities</spezialisierungen>
+<spezialisierungen>Rumours</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Spirits" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Beast</spezialisierungen>
+<spezialisierungen>Earth</spezialisierungen>
+<spezialisierungen>Fire</spezialisierungen>
+<spezialisierungen>Guardian</spezialisierungen>
+<spezialisierungen>Guidance</spezialisierungen>
+<spezialisierungen>Man</spezialisierungen>
+<spezialisierungen>Plant</spezialisierungen>
+<spezialisierungen>Task</spezialisierungen>
+<spezialisierungen>Wind</spezialisierungen>
+<spezialisierungen>Water</spezialisierungen>
+<spezialisierungen>Watcher</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Sports" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Baseball</spezialisierungen>
+<spezialisierungen>Combat Biking</spezialisierungen>
+<spezialisierungen>Football</spezialisierungen>
+<spezialisierungen>Hockey</spezialisierungen>
+<spezialisierungen>Soccer</spezialisierungen>
+<spezialisierungen>UFC</spezialisierungen>
+<spezialisierungen>Urban Brawl</spezialisierungen>
+<spezialisierungen>Wrestling</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Syndicates" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Ghost Cartels</spezialisierungen>
+<spezialisierungen>Mafia</spezialisierungen>
+<spezialisierungen>Triad</spezialisierungen>
+<spezialisierungen>Yakuza</spezialisierungen>
+<spezialisierungen>Vory</spezialisierungen>
+<spezialisierungen>Atlanta</spezialisierungen>
+<spezialisierungen>Cheyenne</spezialisierungen>
+<spezialisierungen>Chicago</spezialisierungen>
+<spezialisierungen>Denver</spezialisierungen>
+<spezialisierungen>Hong-Kong</spezialisierungen>
+<spezialisierungen>LA</spezialisierungen>
+<spezialisierungen>Manhattan</spezialisierungen>
+<spezialisierungen>FDC</spezialisierungen>
+<spezialisierungen>Portland</spezialisierungen>
+<spezialisierungen>Seattle</spezialisierungen>
+<spezialisierungen>Saskatoon</spezialisierungen>
+<spezialisierungen>Sacramento</spezialisierungen>
+<spezialisierungen>Quebec City</spezialisierungen>
+<spezialisierungen>Algonkian-Manitou Council</spezialisierungen>
+<spezialisierungen>Athabaskan Council</spezialisierungen>
+<spezialisierungen>Amazonia</spezialisierungen>
+<spezialisierungen>Aztlan</spezialisierungen>
+<spezialisierungen>Carribean League</spezialisierungen>
+<spezialisierungen>California Free State</spezialisierungen>
+<spezialisierungen>Pueblo Corporate Council</spezialisierungen>
+<spezialisierungen>CAS</spezialisierungen>
+<spezialisierungen>UCAS</spezialisierungen>
+<spezialisierungen>Quebec</spezialisierungen>
+<spezialisierungen>Salish-Shidhe Council</spezialisierungen>
+<spezialisierungen>Sioux</spezialisierungen>
+<spezialisierungen>Tir Tairngire</spezialisierungen>
+<spezialisierungen>Tsimshian Protectorate</spezialisierungen>
+<spezialisierungen>Yukutan</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Triads" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Turf</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+<spezialisierungen>Signs</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Organizations</spezialisierungen>
+<spezialisierungen>Safe Houses</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Trids" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Action</spezialisierungen>
+<spezialisierungen>Cop</spezialisierungen>
+<spezialisierungen>Documentary</spezialisierungen>
+<spezialisierungen>Fantasy</spezialisierungen>
+<spezialisierungen>Rom-Com</spezialisierungen>
+<spezialisierungen>Sci-fi</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Underworld" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Arson</spezialisierungen>
+<spezialisierungen>Black Magic</spezialisierungen>
+<spezialisierungen>Blackmail</spezialisierungen>
+<spezialisierungen>BTL</spezialisierungen>
+<spezialisierungen>Counterfitting</spezialisierungen>
+<spezialisierungen>Drugs</spezialisierungen>
+<spezialisierungen>Fencing</spezialisierungen>
+<spezialisierungen>Financial Crime</spezialisierungen>
+<spezialisierungen>Fixing</spezialisierungen>
+<spezialisierungen>Forgery</spezialisierungen>
+<spezialisierungen>Gambling</spezialisierungen>
+<spezialisierungen>Grifting</spezialisierungen>
+<spezialisierungen>Hijacking</spezialisierungen>
+<spezialisierungen>Kidnapping</spezialisierungen>
+<spezialisierungen>Loansharking</spezialisierungen>
+<spezialisierungen>Medicine</spezialisierungen>
+<spezialisierungen>Matrix Crime</spezialisierungen>
+<spezialisierungen>Money Laundering</spezialisierungen>
+<spezialisierungen>Pornography</spezialisierungen>
+<spezialisierungen>Prostitution</spezialisierungen>
+<spezialisierungen>Protection</spezialisierungen>
+<spezialisierungen>Robbery</spezialisierungen>
+<spezialisierungen>Smuggling</spezialisierungen>
+<spezialisierungen>White Collar</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Vory" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Turf</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+<spezialisierungen>Signs</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Organizations</spezialisierungen>
+<spezialisierungen>Safe Houses</spezialisierungen>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" name="Yakuza" srcBook="//@entries.0/@entries.0/@entries.0">
+<spezialisierungen>Turf</spezialisierungen>
+<spezialisierungen>Politics</spezialisierungen>
+<spezialisierungen>Signs</spezialisierungen>
+<spezialisierungen>History</spezialisierungen>
+<spezialisierungen>Organizations</spezialisierungen>
+<spezialisierungen>Safe Houses</spezialisierungen>
+</entries>
 </entries>
 <entries xsi:type="shr5:ShrList" name="weapons">
 <entries xsi:type="shr5:Nahkampfwaffe" verfuegbarkeit="0" name="Unarmed Attack" page="112" srcBook="//@entries.0/@entries.0/@entries.0" schadenscode="(STR/2)S" praezision="4"/>

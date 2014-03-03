@@ -1007,7 +1007,23 @@
 		<!-- </attribut> -->
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
+		
+		<xsl:for-each select="specs/*">
+				<spezialisierungen>
+			<xsl:value-of select="text()" />
+		</spezialisierungen>
+		
+		</xsl:for-each>
+		
+<!-- 		<xsl:apply-templates mode="spec" /> -->
+
 	</xsl:template>
+	<xsl:template mode="spec" match="specs">
+		<spezialisierungen>
+			<xsl:value-of select="spec/text()" />
+		</spezialisierungen>
+	</xsl:template>
+
 	<!-- matcher for the references of the modificators -->
 	<xsl:template name="MATCH">
 		<xsl:param name="matchingName" />
@@ -1408,11 +1424,11 @@
 			</entries>
 		</xsl:if>
 		<xsl:if test="type/text()='Ranged' and category/text()='Bows'">
-		<entries xsi:type="shr5:Projektilwaffe">
+			<entries xsi:type="shr5:Projektilwaffe">
 				<xsl:call-template name="gegenstand-basis" />
 				<xsl:call-template name="waffe" />
-		
-						<xsl:variable name="rname" select="category/text()" />
+
+				<xsl:variable name="rname" select="category/text()" />
 				<xsl:for-each select="$ranges">
 					<xsl:for-each select="chummer/ranges/*">
 						<xsl:if test="category/text()=$rname">
@@ -1422,10 +1438,11 @@
 						</xsl:if>
 					</xsl:for-each>
 				</xsl:for-each>
-		
-		</entries>
+
+			</entries>
 		</xsl:if>
-		<xsl:if test="type/text()='Ranged' and category/text()!='Gear' and category/text()!='Bows'">
+		<xsl:if
+			test="type/text()='Ranged' and category/text()!='Gear' and category/text()!='Bows'">
 			<entries xsi:type="shr5:Feuerwaffe">
 				<xsl:call-template name="gegenstand-basis" />
 				<xsl:call-template name="waffe" />
