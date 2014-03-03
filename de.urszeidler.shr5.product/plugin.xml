@@ -70,14 +70,19 @@
          <menu
                label="project">
             <command
+                  commandId="org.eclipse.ui.file.import"
+                  style="push">
+            </command>
+            <command
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
                   style="push">
             </command>
             <separator
-                  name="de.urszeidler.shr5.product.separator1">
+                  name="de.urszeidler.shr5.product.separator1"
+                  visible="true">
             </separator>
             <command
-                  commandId="org.eclipse.ui.file.restartWorkbench"
+                  commandId="org.eclipse.ui.file.exit"
                   style="push">
             </command>
          </menu>
