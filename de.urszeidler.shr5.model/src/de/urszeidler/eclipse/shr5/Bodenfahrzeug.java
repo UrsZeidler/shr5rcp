@@ -12,7 +12,7 @@ package de.urszeidler.eclipse.shr5;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getHandlingGelaende <em>Handling Gelaende</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelände <em>Geschwindigkeit Gelände</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelaende <em>Geschwindigkeit Gelaende</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,29 +48,29 @@ public interface Bodenfahrzeug extends PassagierFahrzeug {
 	void setHandlingGelaende(int value);
 
 	/**
-     * Returns the value of the '<em><b>Geschwindigkeit Gelände</b></em>' attribute.
+     * Returns the value of the '<em><b>Geschwindigkeit Gelaende</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Geschwindigkeit Gelände</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Geschwindigkeit Gelände</em>' attribute.
-     * @see #setGeschwindigkeitGelände(int)
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBodenfahrzeug_GeschwindigkeitGelände()
+     * <p>
+     * If the meaning of the '<em>Geschwindigkeit Gelaende</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Geschwindigkeit Gelaende</em>' attribute.
+     * @see #setGeschwindigkeitGelaende(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBodenfahrzeug_GeschwindigkeitGelaende()
      * @model
      * @generated
      */
-	int getGeschwindigkeitGelände();
+    int getGeschwindigkeitGelaende();
 
-	/**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelände <em>Geschwindigkeit Gelände</em>}' attribute.
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelaende <em>Geschwindigkeit Gelaende</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Geschwindigkeit Gelände</em>' attribute.
-     * @see #getGeschwindigkeitGelände()
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Geschwindigkeit Gelaende</em>' attribute.
+     * @see #getGeschwindigkeitGelaende()
      * @generated
      */
-	void setGeschwindigkeitGelände(int value);
+    void setGeschwindigkeitGelaende(int value);
 
 } // Bodenfahrzeug

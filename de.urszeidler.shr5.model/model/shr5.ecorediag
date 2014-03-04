@@ -2807,7 +2807,7 @@
           <layoutConstraint xmi:type="notation:Location" xmi:id="_eu9NoXGmEeO_E4jIzaF87A"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_tybM0HGmEeO_E4jIzaF87A" type="2001">
-          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelände"/>
+          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelaende"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_tybM0XGmEeO_E4jIzaF87A"/>
         </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_VkqoUnGmEeO_E4jIzaF87A"/>

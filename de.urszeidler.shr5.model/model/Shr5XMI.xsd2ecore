@@ -439,7 +439,7 @@
     <nested inputs="shr5.ecore#//Fahrzeug" outputs="Shr5XMI.xsd#//Fahrzeug;XSDElementDeclaration=57"/>
     <nested inputs="shr5.ecore#//Bodenfahrzeug" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58">
       <nested inputs="shr5.ecore#//Bodenfahrzeug/handlingGelaende" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58/XSDAttributeUse"/>
-      <nested inputs="shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelände" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelaende" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58/XSDAttributeUse=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Bodenfahrzeug" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDElementDeclaration=58"/>
     <nested inputs="shr5.ecore#//PassagierFahrzeug" outputs="Shr5XMI.xsd#//PassagierFahrzeug;XSDComplexTypeDefinition=59">

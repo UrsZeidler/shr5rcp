@@ -17,7 +17,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl#getHandlingGelaende <em>Handling Gelaende</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl#getGeschwindigkeitGelände <em>Geschwindigkeit Gelände</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl#getGeschwindigkeitGelaende <em>Geschwindigkeit Gelaende</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,26 +45,26 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
 	protected int handlingGelaende = HANDLING_GELAENDE_EDEFAULT;
 
 	/**
-     * The default value of the '{@link #getGeschwindigkeitGelände() <em>Geschwindigkeit Gelände</em>}' attribute.
+     * The default value of the '{@link #getGeschwindigkeitGelaende() <em>Geschwindigkeit Gelaende</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getGeschwindigkeitGelände()
+     * <!-- end-user-doc -->
+     * @see #getGeschwindigkeitGelaende()
      * @generated
      * @ordered
      */
-	protected static final int GESCHWINDIGKEIT_GELÄNDE_EDEFAULT = 0;
+    protected static final int GESCHWINDIGKEIT_GELAENDE_EDEFAULT = 0;
 
-	/**
-     * The cached value of the '{@link #getGeschwindigkeitGelände() <em>Geschwindigkeit Gelände</em>}' attribute.
+    /**
+     * The cached value of the '{@link #getGeschwindigkeitGelaende() <em>Geschwindigkeit Gelaende</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getGeschwindigkeitGelände()
+     * <!-- end-user-doc -->
+     * @see #getGeschwindigkeitGelaende()
      * @generated
      * @ordered
      */
-	protected int geschwindigkeitGelände = GESCHWINDIGKEIT_GELÄNDE_EDEFAULT;
+    protected int geschwindigkeitGelaende = GESCHWINDIGKEIT_GELAENDE_EDEFAULT;
 
-	/**
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -106,26 +106,26 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public int getGeschwindigkeitGelände() {
-        return geschwindigkeitGelände;
+    public int getGeschwindigkeitGelaende() {
+        return geschwindigkeitGelaende;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public void setGeschwindigkeitGelände(int newGeschwindigkeitGelände) {
-        int oldGeschwindigkeitGelände = geschwindigkeitGelände;
-        geschwindigkeitGelände = newGeschwindigkeitGelände;
+    public void setGeschwindigkeitGelaende(int newGeschwindigkeitGelaende) {
+        int oldGeschwindigkeitGelaende = geschwindigkeitGelaende;
+        geschwindigkeitGelaende = newGeschwindigkeitGelaende;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE, oldGeschwindigkeitGelände, geschwindigkeitGelände));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE, oldGeschwindigkeitGelaende, geschwindigkeitGelaende));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -135,8 +135,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
         switch (featureID) {
             case Shr5Package.BODENFAHRZEUG__HANDLING_GELAENDE:
                 return getHandlingGelaende();
-            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE:
-                return getGeschwindigkeitGelände();
+            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE:
+                return getGeschwindigkeitGelaende();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -152,8 +152,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
             case Shr5Package.BODENFAHRZEUG__HANDLING_GELAENDE:
                 setHandlingGelaende((Integer)newValue);
                 return;
-            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE:
-                setGeschwindigkeitGelände((Integer)newValue);
+            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE:
+                setGeschwindigkeitGelaende((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -170,8 +170,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
             case Shr5Package.BODENFAHRZEUG__HANDLING_GELAENDE:
                 setHandlingGelaende(HANDLING_GELAENDE_EDEFAULT);
                 return;
-            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE:
-                setGeschwindigkeitGelände(GESCHWINDIGKEIT_GELÄNDE_EDEFAULT);
+            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE:
+                setGeschwindigkeitGelaende(GESCHWINDIGKEIT_GELAENDE_EDEFAULT);
                 return;
         }
         super.eUnset(featureID);
@@ -187,8 +187,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
         switch (featureID) {
             case Shr5Package.BODENFAHRZEUG__HANDLING_GELAENDE:
                 return handlingGelaende != HANDLING_GELAENDE_EDEFAULT;
-            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE:
-                return geschwindigkeitGelände != GESCHWINDIGKEIT_GELÄNDE_EDEFAULT;
+            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE:
+                return geschwindigkeitGelaende != GESCHWINDIGKEIT_GELAENDE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -205,8 +205,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (handlingGelaende: ");
         result.append(handlingGelaende);
-        result.append(", geschwindigkeitGelände: ");
-        result.append(geschwindigkeitGelände);
+        result.append(", geschwindigkeitGelaende: ");
+        result.append(geschwindigkeitGelaende);
         result.append(')');
         return result.toString();
     }

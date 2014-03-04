@@ -8518,15 +8518,15 @@ public interface Shr5Package extends EPackage {
 	int BODENFAHRZEUG__HANDLING_GELAENDE = PASSAGIER_FAHRZEUG_FEATURE_COUNT + 0;
 
 	/**
-     * The feature id for the '<em><b>Geschwindigkeit Gelände</b></em>' attribute.
+     * The feature id for the '<em><b>Geschwindigkeit Gelaende</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE = PASSAGIER_FAHRZEUG_FEATURE_COUNT + 1;
+    int BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE = PASSAGIER_FAHRZEUG_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of structural features of the '<em>Bodenfahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13754,17 +13754,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getBodenfahrzeug_HandlingGelaende();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelände <em>Geschwindigkeit Gelände</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelaende <em>Geschwindigkeit Gelaende</em>}'.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Geschwindigkeit Gelände</em>'.
-     * @see de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelände()
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Geschwindigkeit Gelaende</em>'.
+     * @see de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelaende()
      * @see #getBodenfahrzeug()
      * @generated
      */
-	EAttribute getBodenfahrzeug_GeschwindigkeitGelände();
+    EAttribute getBodenfahrzeug_GeschwindigkeitGelaende();
 
-	/**
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PassagierFahrzeug <em>Passagier Fahrzeug</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16470,14 +16470,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute BODENFAHRZEUG__HANDLING_GELAENDE = eINSTANCE.getBodenfahrzeug_HandlingGelaende();
 
 		/**
-         * The meta object literal for the '<em><b>Geschwindigkeit Gelände</b></em>' attribute feature.
+         * The meta object literal for the '<em><b>Geschwindigkeit Gelaende</b></em>' attribute feature.
          * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+         * <!-- end-user-doc -->
          * @generated
          */
-		EAttribute BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE = eINSTANCE.getBodenfahrzeug_GeschwindigkeitGelände();
+        EAttribute BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE = eINSTANCE.getBodenfahrzeug_GeschwindigkeitGelaende();
 
-		/**
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PassagierFahrzeugImpl <em>Passagier Fahrzeug</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

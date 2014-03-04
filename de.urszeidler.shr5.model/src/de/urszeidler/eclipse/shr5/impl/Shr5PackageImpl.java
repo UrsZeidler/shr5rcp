@@ -2894,14 +2894,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBodenfahrzeug_GeschwindigkeitGelände() {
+    public EAttribute getBodenfahrzeug_GeschwindigkeitGelaende() {
         return (EAttribute)bodenfahrzeugEClass.getEStructuralFeatures().get(1);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -3861,7 +3861,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         bodenfahrzeugEClass = createEClass(BODENFAHRZEUG);
         createEAttribute(bodenfahrzeugEClass, BODENFAHRZEUG__HANDLING_GELAENDE);
-        createEAttribute(bodenfahrzeugEClass, BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE);
+        createEAttribute(bodenfahrzeugEClass, BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE);
 
         passagierFahrzeugEClass = createEClass(PASSAGIER_FAHRZEUG);
         createEAttribute(passagierFahrzeugEClass, PASSAGIER_FAHRZEUG__SITZE);
@@ -4374,7 +4374,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(bodenfahrzeugEClass, Bodenfahrzeug.class, "Bodenfahrzeug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getBodenfahrzeug_HandlingGelaende(), ecorePackage.getEInt(), "handlingGelaende", null, 0, 1, Bodenfahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getBodenfahrzeug_GeschwindigkeitGelände(), ecorePackage.getEInt(), "geschwindigkeitGelände", null, 0, 1, Bodenfahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getBodenfahrzeug_GeschwindigkeitGelaende(), ecorePackage.getEInt(), "geschwindigkeitGelaende", null, 0, 1, Bodenfahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(passagierFahrzeugEClass, PassagierFahrzeug.class, "PassagierFahrzeug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getPassagierFahrzeug_Sitze(), ecorePackage.getEInt(), "sitze", null, 0, 1, PassagierFahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

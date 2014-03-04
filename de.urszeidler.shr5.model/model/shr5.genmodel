@@ -358,7 +358,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Bodenfahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/handlingGelaende"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelände"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/geschwindigkeitGelaende"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PassagierFahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PassagierFahrzeug/sitze"/>

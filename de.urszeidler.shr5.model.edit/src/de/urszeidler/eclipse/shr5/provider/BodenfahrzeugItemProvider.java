@@ -60,7 +60,7 @@ public class BodenfahrzeugItemProvider
             super.getPropertyDescriptors(object);
 
             addHandlingGelaendePropertyDescriptor(object);
-            addGeschwindigkeitGeländePropertyDescriptor(object);
+            addGeschwindigkeitGelaendePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -88,19 +88,19 @@ public class BodenfahrzeugItemProvider
     }
 
 	/**
-     * This adds a property descriptor for the Geschwindigkeit Gelände feature.
+     * This adds a property descriptor for the Geschwindigkeit Gelaende feature.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	protected void addGeschwindigkeitGeländePropertyDescriptor(Object object) {
+    protected void addGeschwindigkeitGelaendePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Bodenfahrzeug_geschwindigkeitGelände_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Bodenfahrzeug_geschwindigkeitGelände_feature", "_UI_Bodenfahrzeug_type"),
-                 Shr5Package.Literals.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE,
+                 getString("_UI_Bodenfahrzeug_geschwindigkeitGelaende_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Bodenfahrzeug_geschwindigkeitGelaende_feature", "_UI_Bodenfahrzeug_type"),
+                 Shr5Package.Literals.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE,
                  true,
                  false,
                  false,
@@ -109,7 +109,7 @@ public class BodenfahrzeugItemProvider
                  null));
     }
 
-	/**
+    /**
      * This returns Bodenfahrzeug.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,7 +154,7 @@ public class BodenfahrzeugItemProvider
 
         switch (notification.getFeatureID(Bodenfahrzeug.class)) {
             case Shr5Package.BODENFAHRZEUG__HANDLING_GELAENDE:
-            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELÄNDE:
+            case Shr5Package.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
