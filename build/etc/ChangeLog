@@ -1,10 +1,13 @@
 2014-03-08 Version 0.1.3
 
+* added simple application to add a basic menu and to gain the control
 * fixed several rounding errors
 * added grunts as described in the core rule book
 * import from chummer2 :
 	* reorganized the resources
 	* added container objects for game aiding
+	* discrimination of projectile and fireweapon
+	* added specs from skills
 
 
 2014-02-15 Version 0.1.2
