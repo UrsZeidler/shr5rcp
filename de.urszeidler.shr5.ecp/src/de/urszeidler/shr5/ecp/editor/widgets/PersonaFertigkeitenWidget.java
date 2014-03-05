@@ -7,12 +7,15 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.ui.celleditor.ExtendedDialogCellEditor;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.CellEditor;
@@ -23,6 +26,7 @@ import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -103,9 +107,11 @@ public class PersonaFertigkeitenWidget extends Composite {
     public static class GroupWrapper {
         private List<Fertigkeit> entries = new ArrayList<Fertigkeit>();
         private String name;
+
         public List<Fertigkeit> getEntries() {
             return entries;
         }
+
         public String getName() {
             return name;
         }
@@ -265,9 +271,90 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         });
         TreeColumn trclmnName = treeViewerNameColumn.getColumn();
-        tcl_composite.setColumnData(trclmnName, new ColumnPixelData(350, true, true));
+        tcl_composite.setColumnData(trclmnName, new ColumnPixelData(200, true, true));
         trclmnName.setText(Messages.PersonaFertigkeitenWidget_groups_skills);
 
+        TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
+        treeViewerColumn.setLabelProvider(new ColumnLabelProvider() {
+            public String getText(Object object) {
+                if (object instanceof Fertigkeit) {
+                    Fertigkeit fertigkeit = (Fertigkeit)object;
+                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+                    if (personaFertigkeit != null)
+                        return personaFertigkeit.getSpezialisierungen().toString();
+                }
+                return EMPTY;
+            }
+        });
+        TreeColumn trclmnSpecs = treeViewerColumn.getColumn();
+        tcl_composite.setColumnData(trclmnSpecs, new ColumnPixelData(150, true, true));
+        trclmnSpecs.setText(Messages.PersonaFertigkeitenWidget_trclmnSpecs_text);
+
+        treeViewerColumn.setEditingSupport(new EditingSupport(treeViewer) {
+
+            @Override
+            protected CellEditor getCellEditor(Object element) {
+                if (element instanceof Fertigkeit) {
+                    final Fertigkeit fertigkeit = (Fertigkeit)element;
+                    final PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+
+                    ExtendedDialogCellEditor cellEditor = new ExtendedDialogCellEditor(tree, AdapterFactoryUtil.getInstance().getLabelProvider()) {
+
+                        @Override
+                        protected Object openDialogBox(Control cellEditorWindow) {
+                            FeatureEditorDialog featureEditorDialog = new FeatureEditorDialog(getShell(), AdapterFactoryUtil.getInstance()
+                                    .getLabelProvider(), personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, "Select Specali",
+                                    fertigkeit.getSpezialisierungen());
+                            int result = featureEditorDialog.open();
+                            if (result == Window.OK) {
+                               return featureEditorDialog.getResult();
+                            }
+                            return null;
+                        }
+                    };
+
+                    return cellEditor;
+                }
+                return null;
+            }
+
+            @Override
+            protected boolean canEdit(Object element) {
+                if (element instanceof Fertigkeit) {
+                    Fertigkeit fertigkeit = (Fertigkeit)element;
+                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+                    if (personaFertigkeit != null)
+                        return true;
+                }
+                return false;
+            }
+
+            @Override
+            protected Object getValue(Object element) {
+                if (element instanceof Fertigkeit) {
+                    Fertigkeit fertigkeit = (Fertigkeit)element;
+                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+                    if (personaFertigkeit != null)
+                        return personaFertigkeit.getSpezialisierungen();
+                }
+                return null;
+            }
+
+            @Override
+            protected void setValue(Object element, Object value) {
+                if (element instanceof Fertigkeit) {
+                    Fertigkeit fertigkeit = (Fertigkeit)element;
+                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+                    if (personaFertigkeit != null){
+                        Command command = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, value);
+                        editingDomain.getCommandStack().execute(command);                       
+                    }
+                }
+                treeViewer.refresh(true);
+            }
+
+        });
+ 
         TreeViewerColumn treeViewerValueColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
         treeViewerValueColumn.setLabelProvider(new ColumnLabelProvider() {
             public Image getImage(Object object) {
@@ -339,8 +426,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                         pfg.setStufe((Integer)value);
                         personaFertigkeitsGruppen.add(pfg);
                     } else {
-                        Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe,
-                                Shr5Package.Literals.STEIGERBAR__STUFE, value);
+                        Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
                         editingDomain.getCommandStack().execute(cmd);
                     }
                 }
