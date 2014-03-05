@@ -84,6 +84,8 @@ public class Messages extends NLS {
     public static String PersonaFertigkeitenWidget_ungrouped_skills;
     public static String PersonaFertigkeitenWidget_value;
     public static String AbstraktPersonaPage_sctnSkill_text;
+    public static String PersonaFertigkeitenWidget_trclmnNewColumn_text;
+    public static String PersonaFertigkeitenWidget_trclmnSpecs_text;
     static {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);
