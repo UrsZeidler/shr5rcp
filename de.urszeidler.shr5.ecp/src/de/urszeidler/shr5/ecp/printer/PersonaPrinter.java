@@ -62,6 +62,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
@@ -76,6 +77,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public class PersonaPrinter {
 
+    private static final int BIG_SCALE = 80;
     private static final int SMALL_SCALE = 32;
     private static final String ONE_SPACE = " ";//$NON-NLS-1$
     private static final String EMPTY = "";//$NON-NLS-1$
@@ -173,6 +175,49 @@ public class PersonaPrinter {
     }
 
     /**
+     * Prints the sheets for all {@link ManagedCharacter} in the {@link CharacterGroup}.
+     * 
+     * @param group
+     * @return
+     */
+    protected Print printCharacterGroupSheet(CharacterGroup group) {
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint body = new GridPrint("d:g", look);//$NON-NLS-1$
+
+        body.add(printBeschreibbar(group));
+
+        EList<ManagedCharacter> members = group.getMembers();
+        for (ManagedCharacter managedCharacter : members) {
+            printCharacterSheet(managedCharacter);
+        }
+
+        PagePrint pagePrint = createPagePrint(body);
+        return pagePrint;
+
+    }
+
+    /**
+     * Prints the decription as a header.
+     * 
+     * @param group
+     * @return
+     */
+    private Print printBeschreibbar(Beschreibbar descr) {
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
+
+        return grid;
+    }
+
+    /**
      * Prints the gamemaster sheet for a grount group.
      * 
      * @param grunts
@@ -208,12 +253,34 @@ public class PersonaPrinter {
             body.add(new BorderPrint(printGruntMembersData(gruntMenbers), border), 2);
         }
 
+        PagePrint pagePrint = createPagePrint(body);
+
+        return pagePrint;
+    }
+
+    /**
+     * Creates the page, with header and footer, for the given body.
+     * 
+     * @param body the document to print on pages
+     * @return the page print.
+     */
+    private PagePrint createPagePrint(GridPrint body) {
+        // DefaultGridLook look = new DefaultGridLook(5, 5);
+        // look.setHeaderGap(5);
+        //        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+        //
+        // grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        // grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
+        // grid.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
+        // grid.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData), 2);
+
         PagePrint pagePrint = new PagePrint(body);
 
         PageNumberPageDecoration footer2 = new PageNumberPageDecoration();
         footer2.setFontData(italicFontData);
-        pagePrint.setFooter(footer2);
 
+        // pagePrint.setHeader(new SimplePageDecoration(grid));
+        pagePrint.setFooter(footer2);
         return pagePrint;
     }
 
@@ -295,7 +362,6 @@ public class PersonaPrinter {
      * @return
      */
     public Print printCharacterSheet(ManagedCharacter character) {
-        AbstraktPersona persona = character.getPersona();
 
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
@@ -303,6 +369,10 @@ public class PersonaPrinter {
 
         LineBorder border = new LineBorder();
         border.setLineWidth(1);
+
+        if (character.getPersona() == null)
+            return grid;
+        AbstraktPersona persona = character.getPersona();
 
         grid.add(new BorderPrint(printPersonaData(character), border), 1);
         grid.add(printPersonaDetails(persona), 1);
@@ -322,11 +392,8 @@ public class PersonaPrinter {
         grid.add(new BorderPrint(printGegenstandList(gList), border), 2);
         // grid.add(printPersonaContracts(character), 1);
 
-        grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        grid.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
-        grid.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData), 2);
-        return grid;
+        PagePrint pagePrint = createPagePrint(grid);
+        return pagePrint;
     }
 
     /**
@@ -341,7 +408,7 @@ public class PersonaPrinter {
         GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
 
         grid.add(new EmptyPrint());
-        Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(128, persona.getImage());
+        Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(BIG_SCALE, persona.getImage());
         if (imageScaledBy != null) {
             grid.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
         }
