@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +14,7 @@ package de.urszeidler.eclipse.shr5;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit#getFertigkeit <em>Fertigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,5 +48,21 @@ public interface PersonaFertigkeit extends Steigerbar {
      * @generated
      */
 	void setFertigkeit(Fertigkeit value);
+
+    /**
+     * Returns the value of the '<em><b>Spezialisierungen</b></em>' attribute list.
+     * The list contents are of type {@link java.lang.String}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Spezialisierungen</em>' attribute list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Spezialisierungen</em>' attribute list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getPersonaFertigkeit_Spezialisierungen()
+     * @model
+     * @generated
+     */
+    EList<String> getSpezialisierungen();
 
 } // PersonaFertigkeit

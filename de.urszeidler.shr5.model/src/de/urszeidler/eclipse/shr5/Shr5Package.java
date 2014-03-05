@@ -2486,13 +2486,22 @@ public interface Shr5Package extends EPackage {
 	int PERSONA_FERTIGKEIT__FERTIGKEIT = STEIGERBAR_FEATURE_COUNT + 0;
 
 	/**
+     * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN = STEIGERBAR_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Persona Fertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PERSONA_FERTIGKEIT_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 1;
+	int PERSONA_FERTIGKEIT_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Persona Fertigkeit</em>' class.
@@ -12218,6 +12227,17 @@ public interface Shr5Package extends EPackage {
 	EReference getPersonaFertigkeit_Fertigkeit();
 
 	/**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Spezialisierungen</em>'.
+     * @see de.urszeidler.eclipse.shr5.PersonaFertigkeit#getSpezialisierungen()
+     * @see #getPersonaFertigkeit()
+     * @generated
+     */
+    EAttribute getPersonaFertigkeit_Spezialisierungen();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe <em>Persona Fertigkeits Gruppe</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15252,6 +15272,14 @@ public interface Shr5Package extends EPackage {
 		EReference PERSONA_FERTIGKEIT__FERTIGKEIT = eINSTANCE.getPersonaFertigkeit_Fertigkeit();
 
 		/**
+         * The meta object literal for the '<em><b>Spezialisierungen</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN = eINSTANCE.getPersonaFertigkeit_Spezialisierungen();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl <em>Persona Fertigkeits Gruppe</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

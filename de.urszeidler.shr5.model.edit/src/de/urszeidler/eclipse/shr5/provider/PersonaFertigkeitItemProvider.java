@@ -54,6 +54,7 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 
             addStufePropertyDescriptor(object);
             addFertigkeitPropertyDescriptor(object);
+            addSpezialisierungenPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -81,6 +82,28 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
     }
 
 	/**
+     * This adds a property descriptor for the Spezialisierungen feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSpezialisierungenPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PersonaFertigkeit_spezialisierungen_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PersonaFertigkeit_spezialisierungen_feature", "_UI_PersonaFertigkeit_type"),
+                 Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
 	 * This adds a property descriptor for the Stufe feature. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -158,6 +181,7 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 
         switch (notification.getFeatureID(PersonaFertigkeit.class)) {
             case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
+            case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

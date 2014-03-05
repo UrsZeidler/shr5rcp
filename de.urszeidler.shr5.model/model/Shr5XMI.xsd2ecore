@@ -208,8 +208,9 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Fertigkeit" outputs="Shr5XMI.xsd#//Fertigkeit;XSDElementDeclaration=20"/>
     <nested inputs="shr5.ecore#//PersonaFertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21">
+      <nested inputs="shr5.ecore#//PersonaFertigkeit/spezialisierungen" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDAttributeUse"/>
-      <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//PersonaFertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDElementDeclaration=21"/>
     <nested inputs="shr5.ecore#//PersonaFertigkeitsGruppe" outputs="Shr5XMI.xsd#//PersonaFertigkeitsGruppe;XSDComplexTypeDefinition=22">

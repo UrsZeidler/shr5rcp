@@ -3,14 +3,17 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +24,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getFertigkeit <em>Fertigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getSpezialisierungen <em>Spezialisierungen</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,6 +62,16 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	protected Fertigkeit fertigkeit;
 
 	/**
+     * The cached value of the '{@link #getSpezialisierungen() <em>Spezialisierungen</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSpezialisierungen()
+     * @generated
+     * @ordered
+     */
+    protected EList<String> spezialisierungen;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -116,6 +130,18 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<String> getSpezialisierungen() {
+        if (spezialisierungen == null) {
+            spezialisierungen = new EDataTypeUniqueEList<String>(String.class, this, Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
+        }
+        return spezialisierungen;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -148,6 +174,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
                 if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
+            case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
+                return getSpezialisierungen();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -157,7 +185,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
@@ -165,6 +194,10 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)newValue);
+                return;
+            case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
+                getSpezialisierungen().clear();
+                getSpezialisierungen().addAll((Collection<? extends String>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -184,6 +217,9 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)null);
                 return;
+            case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
+                getSpezialisierungen().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -200,6 +236,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
                 return stufe != STUFE_EDEFAULT;
             case Shr5Package.PERSONA_FERTIGKEIT__FERTIGKEIT:
                 return fertigkeit != null;
+            case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
+                return spezialisierungen != null && !spezialisierungen.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -216,6 +254,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
+        result.append(", spezialisierungen: ");
+        result.append(spezialisierungen);
         result.append(')');
         return result.toString();
     }

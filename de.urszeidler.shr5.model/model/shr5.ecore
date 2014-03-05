@@ -161,6 +161,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeit" eSuperTypes="#//Steigerbar">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeit" eType="#//Fertigkeit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spezialisierungen" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeitsGruppe" eSuperTypes="#//Steigerbar">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gruppe" eType="#//FertigkeitsGruppe"/>

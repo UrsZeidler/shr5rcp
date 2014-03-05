@@ -357,6 +357,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Steigerbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="spezialisierungen" nillable="true" type="xsd:string"/>
           <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
         </xsd:choice>
         <xsd:attribute name="fertigkeit" type="xsd:string"/>
