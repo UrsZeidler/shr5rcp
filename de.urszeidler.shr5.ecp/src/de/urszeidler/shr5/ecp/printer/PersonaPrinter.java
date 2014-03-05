@@ -67,6 +67,7 @@ import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
@@ -374,8 +375,8 @@ public class PersonaPrinter {
             return grid;
         AbstraktPersona persona = character.getPersona();
 
-        grid.add(new BorderPrint(printPersonaData(character), border), 1);
-        grid.add(printPersonaDetails(persona), 1);
+        grid.add(new BorderPrint(printPersonaData(character), border), 2);
+        //grid.add(printPersonaDetails(persona), 1);
 
         grid.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         grid.add(new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
@@ -772,16 +773,16 @@ public class PersonaPrinter {
     /**
      * To name for the enum literals.
      * 
-     * @param fw
+     * @param literal
      * @param eobject
      * @param feature
      * @return
      */
-    private String toName(Object fw, EObject eobject, EAttribute feature) {
-        String text2 = fw.toString();
+    private String toName(Object literal, EObject eobject, EAttribute feature) {
+        String text2 = literal.toString();
         IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(eobject, feature);
         if (propertyDescriptor != null)
-            text2 = propertyDescriptor.getLabelProvider(eobject).getText(fw);
+            text2 = propertyDescriptor.getLabelProvider(eobject).getText(literal);
 
         return text2;
 
@@ -1365,13 +1366,11 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,d,d,d", look);//$NON-NLS-1$
 
-        grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_data, boldFontData), 5);
 
         grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
         grid.add(new TextPrint(persona.getName(), attributeFont), 3);
         grid.add(new TextPrint(Messages.Printer_sex, attributeFont));
-        grid.add(new TextPrint(itemDelegator.getText(character.getSex()), attributeFont));
+        grid.add(new TextPrint(toName(character.getSex(), character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX), attributeFont));
 
         grid.add(new TextPrint(Messages.Printer_meta, attributeFont));
         grid.add(new TextPrint(itemDelegator.getText(persona.getSpezies()), attributeFont), 2);
@@ -1390,7 +1389,25 @@ public class PersonaPrinter {
         grid.add(new TextPrint(Messages.Printer_karma_total, attributeFont));
         grid.add(new TextPrint(printInteger(character.getKarmaGaint()), attributeFont), 1);
 
-        return grid;
+        // DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid1 = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        grid1.add(new EmptyPrint());
+        Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(BIG_SCALE, persona.getImage());
+        if (imageScaledBy != null) {
+            grid1.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+        }
+
+        look.setHeaderGap(5);
+        GridPrint outerGrid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
+        outerGrid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
+        outerGrid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_data, boldFontData));
+
+        outerGrid.add(grid);
+        outerGrid.add(grid1);
+        
+        return outerGrid;
     }
 
     /**
