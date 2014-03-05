@@ -76,6 +76,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public class PersonaPrinter {
 
+    private static final int SMALL_SCALE = 32;
     private static final String ONE_SPACE = " ";//$NON-NLS-1$
     private static final String EMPTY = "";//$NON-NLS-1$
     private static PersonaPrinter instance;
@@ -185,25 +186,27 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint body = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
         body.add(new BorderPrint(printGruntsData(grunts), border), 2);
-        if (grunts.getLeader() != null)
-            body.add(new BorderPrint(printGruntMembersData(grunts.getLeader()), border), 2);
+        if (grunts.getLeader() != null && grunts.getLeader().getNsc() != null) {
+            if (grunts.getLeader().getNsc().getPersona().getName() != null) {
+                body.add(SWT.LEFT, SWT.BOTTOM, new TextPrint(grunts.getLeader().getNsc().getPersona().getName(), attributeFont));
+                Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(SMALL_SCALE,
+                        grunts.getLeader().getNsc().getPersona().getImage());
+                body.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
 
+            }
+            body.add(new BorderPrint(printGruntMembersData(grunts.getLeader()), border), 2);
+        }
         body.add(new BreakPrint(), GridPrint.REMAINDER);
 
         EList<GruntMembers> mebers = grunts.getMembers();
         for (GruntMembers gruntMenbers : mebers) {
+            if (gruntMenbers.getNsc() != null && gruntMenbers.getNsc().getPersona() != null) {
+                body.add(SWT.LEFT, SWT.BOTTOM, new TextPrint(gruntMenbers.getNsc().getPersona().getName(), attributeFont));
+                Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(SMALL_SCALE, gruntMenbers.getNsc().getPersona().getImage());
+                body.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+            }
             body.add(new BorderPrint(printGruntMembersData(gruntMenbers), border), 2);
         }
-
-        // DefaultGridLook look1 = new DefaultGridLook(5, 5);
-        // look1.setHeaderGap(5);
-        //GridPrint footer = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
-
-        // body.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // body.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // body.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
-        // body.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData), 2);
-        // body.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
 
         PagePrint pagePrint = new PagePrint(body);
 
@@ -211,14 +214,6 @@ public class PersonaPrinter {
         footer2.setFontData(italicFontData);
         pagePrint.setFooter(footer2);
 
-        //        GridPrint header = new GridPrint("d", look);//$NON-NLS-1$
-        // // header.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // // header.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // header.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData));
-        // header.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData));
-        // header.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-
-        // pagePrint.setHeader(new SimplePageDecoration(header));
         return pagePrint;
     }
 
@@ -270,16 +265,26 @@ public class PersonaPrinter {
 
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+        GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
 
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Grounts", boldFontData), 1);
 
-        grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
-        grid.add(new TextPrint(printString(gruntGroup.getName()), attributeFont), 1);
-        grid.add(new TextPrint("Professionalrating", attributeFont));
-        grid.add(new TextPrint(printInteger(gruntGroup.getProfessionalRating()), attributeFont), 1);
+        GridPrint innerGrid = new GridPrint("d,d", look);//$NON-NLS-1$
+        innerGrid.add(new TextPrint(Messages.Printer_Name, attributeFont));
+        innerGrid.add(new TextPrint(printString(gruntGroup.getName()), attributeFont), 1);
+        innerGrid.add(new TextPrint("Professionalrating", attributeFont));
+        innerGrid.add(new TextPrint(printInteger(gruntGroup.getProfessionalRating()), attributeFont), 1);
 
+        grid.add(innerGrid);
+
+        innerGrid = new GridPrint("d,d,d,d,d", look);//$NON-NLS-1$
+        Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(SMALL_SCALE, gruntGroup.getImage());
+        if (imageScaledBy != null) {
+            innerGrid.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+        }
+
+        grid.add(innerGrid);
         return grid;
     }
 
