@@ -782,6 +782,9 @@ public class PersonaPrinter {
      * @return
      */
     private String toName(Object literal, EObject eobject, EAttribute feature) {
+        if (literal == null)
+            return EMPTY;
+
         String text2 = literal.toString();
         IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(eobject, feature);
         if (propertyDescriptor != null)
@@ -797,6 +800,8 @@ public class PersonaPrinter {
     private GridPrint printFeuerwaffeDetail(Feuerwaffe fw) {
         DefaultGridLook look = new DefaultGridLook(3, 3);
         GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,d:g,d:g", look);//$NON-NLS-1$
+        if (fw == null)
+            return grid;
 
         grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
@@ -872,6 +877,8 @@ public class PersonaPrinter {
     private GridPrint printFernkampWaffeDetail(AbstaktFernKampfwaffe fw) {
         DefaultGridLook look = new DefaultGridLook(3, 3);
         GridPrint grid = new GridPrint("d:g,d:g,d:g,d:g,d:g,d:g,d:g,d:g", look);//$NON-NLS-1$
+        if (fw == null)
+            return grid;
 
         // grid.add(new TextPrint("Name", italicFontData), 5);
         // grid.add(new TextPrint("Type", italicFontData), 3);
@@ -945,6 +952,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
+        if (character == null)
+            return grid;
 
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_contracts, boldFontData), 2);
         grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_Name, italicFontData), 2);
@@ -966,6 +975,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d,d,d,d,d,", look);//$NON-NLS-1$
+        if (character == null)
+            return grid;
 
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_meele_weapons, boldFontData), 6);
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_Name, italicFontData), 2);
@@ -1000,6 +1011,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
 
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
@@ -1051,6 +1064,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d,d,d,d", look);//$NON-NLS-1$
+        if (character == null)
+            return grid;
 
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(EMPTY, boldFontData), 2);
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_connections, boldFontData), 3);
@@ -1081,6 +1096,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,d,d", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
 
         grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, boldFontData), 4);
@@ -1129,6 +1146,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,d,d", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
 
         grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, boldFontData), 4);
@@ -1156,9 +1175,6 @@ public class PersonaPrinter {
                 printFertigkeitList(grid, fertigkeiten, persona);
             }
         }
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, attributeFont), 3);
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
-        // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
         printPersonaFertigkeitList(grid, persona);
 
         return grid;
@@ -1171,6 +1187,7 @@ public class PersonaPrinter {
      * @param persona
      */
     private void printPersonaFertigkeitList(GridPrint grid, AbstraktPersona persona) {
+
         List<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
 
         for (PersonaFertigkeit pfertigkeit : fertigkeiten) {
@@ -1194,6 +1211,9 @@ public class PersonaPrinter {
      * @return
      */
     private String toFertigkeitAndSpec(PersonaFertigkeit pfertigkeit) {
+        if (pfertigkeit == null)
+            return EMPTY;
+
         String simpleName = toSimpleName(pfertigkeit.getFertigkeit());
         if (!pfertigkeit.getSpezialisierungen().isEmpty())
             simpleName = simpleName + ONE_SPACE + pfertigkeit.getSpezialisierungen().toString();
@@ -1208,6 +1228,9 @@ public class PersonaPrinter {
      * @param persona
      */
     private void printFertigkeitList(GridPrint grid, List<Fertigkeit> fertigkeiten, AbstraktPersona persona) {
+        if (persona == null)
+            return;
+
         for (Fertigkeit fertigkeit : fertigkeiten) {
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
             Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
@@ -1238,6 +1261,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(10, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
 
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(EMPTY));
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_combat_info, boldFontData), 1);
@@ -1266,6 +1291,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
 
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(EMPTY));
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_attributes, boldFontData), 1);
@@ -1324,6 +1351,9 @@ public class PersonaPrinter {
     }
 
     private String printLiftCarry(AbstraktPersona persona) {
+        if (persona == null)
+            return EMPTY;
+
         int staerke = persona.getStaerke();
 
         return String.format("%dkg/%dkg", staerke * 15, staerke * 10);//$NON-NLS-1
@@ -1336,6 +1366,8 @@ public class PersonaPrinter {
      * @return
      */
     private String printMovement(AbstraktPersona persona) {
+        if (persona == null)
+            return EMPTY;
         Spezies spezies = persona.getSpezies();
         if (spezies != null) {
 
@@ -1397,6 +1429,8 @@ public class PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,d,d,d", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
 
         grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
         grid.add(new TextPrint(persona.getName(), attributeFont), 3);
@@ -1449,6 +1483,9 @@ public class PersonaPrinter {
      * @param eAttributes
      */
     private void printeAttributes(AbstraktPersona persona, GridPrint grid, EList<EAttribute> eAttributes) {
+        if (persona == null)
+            return;
+
         for (EAttribute eAttribute : eAttributes) {
             String attName = itemDelegator.getText(eAttribute);
             attName = toFeatureName(persona, eAttribute);
