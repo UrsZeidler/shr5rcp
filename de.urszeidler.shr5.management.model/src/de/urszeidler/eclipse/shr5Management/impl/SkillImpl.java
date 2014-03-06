@@ -152,10 +152,13 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
         }
 
         int kosten = 0;
+        //int specCost = 0;
         EList<PersonaFertigkeit> fertigkeiten = context.getPersona().getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
-            if (personaFertigkeit.getFertigkeit() != null && personaFertigkeit.getFertigkeit().getClass().equals(FertigkeitImpl.class))
-                kosten = kosten + personaFertigkeit.getStufe();
+            if (personaFertigkeit.getFertigkeit() != null && personaFertigkeit.getFertigkeit().getClass().equals(FertigkeitImpl.class)){
+                kosten = kosten + personaFertigkeit.getStufe() + personaFertigkeit.getSpezialisierungen().size();
+                //specCost = specCost + personaFertigkeit.getSpezialisierungen().size();
+            }
         }
         EList<Changes> changes = context.getChanges();
         int counter = ShadowrunManagmentTools.countSpendByKarma(changes, Shr5Package.Literals.PERSONA_FERTIGKEIT, Shr5Package.Literals.FERTIGKEIT);
@@ -203,7 +206,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
         EList<PersonaFertigkeit> fertigkeiten = context.getPersona().getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             if ((personaFertigkeit.getFertigkeit() instanceof Wissensfertigkeit) || personaFertigkeit.getFertigkeit() instanceof Sprachfertigkeit)
-                kosten = kosten + personaFertigkeit.getStufe();
+                kosten = kosten + personaFertigkeit.getStufe() + personaFertigkeit.getSpezialisierungen().size();
         }
         EList<Changes> changes = context.getChanges();
         int byKarma = ShadowrunManagmentTools.countSpendByKarma(changes, Shr5Package.Literals.PERSONA_FERTIGKEIT,
