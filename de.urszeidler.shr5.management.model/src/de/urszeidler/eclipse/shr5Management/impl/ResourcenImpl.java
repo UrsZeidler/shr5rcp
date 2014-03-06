@@ -108,6 +108,7 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
 		}
 		
 		wert = wert.add(ShadowrunTools.calcListenWert(context.getContracts()));
+		wert = wert.add(ShadowrunTools.calcListenWert(context.getVehicels()));
 		return  wert.intValue();//-resourceKosten;
 	}
 
