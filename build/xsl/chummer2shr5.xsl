@@ -625,67 +625,84 @@
 					<connections influence="2" loyality="3" />
 					<connections influence="2" loyality="2" />
 				</members>
-				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.2">
-					<persona xsi:type="shr5:MysticAdept"
-						image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png"
-						name="Kyra" edgeBasis="1" konstitutionBasis="3"
-						geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2"
-						charismaBasis="6" willenskraftBasis="4" intuitionBasis="4"
-						logikBasis="3" spezies="//@entries.0/@entries.2/@entries.1"
-						magieBasis="6">
-						<fertigkeiten stufe="5"
-							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0" />
-						<fertigkeiten stufe="5"
-							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2" />
-						<fertigkeiten stufe="4"
-							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
-						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
-						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
-						<fertigkeiten stufe="4"
-							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2" />
-						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.4/@entries.8" />
-						<fertigkeiten stufe="4"
-							fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0" />
-						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.4/@entries.12" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.4/@entries.21" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.4/@entries.27" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.5/@entries.25" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.5/@entries.63" />
-						<fertigkeiten stufe="4"
-							fertigkeit="//@entries.0/@entries.5/@entries.62" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.5/@entries.53" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.5/@entries.44" />
-						<fertigkeiten stufe="2"
-							fertigkeit="//@entries.0/@entries.5/@entries.39" />
-						<fertigkeitsGruppen stufe="2"
-							gruppe="//@entries.0/@entries.3/@entries.4" />
-						<kikraft name="Improved Potential" kraftpunkte="-50">
-							<mods wert="1">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial" />
-							</mods>
-						</kikraft>
-						<kikraft name="Mystic Armor" kraftpunkte="-50">
-							<mods wert="1">
-								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
-							</mods>
-						</kikraft>
-						<kikraft name="Enhanced Accuracy" kraftpunkte="-25" />
-						<kikraft name="Improved Ability" kraftpunkte="-50" />
-						<kikraft name="Voice Control 1" kraftpunkte="-25" />
-						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.2" />
-					</persona>
-				</members>
+
+
+
+      <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.2" choosenLifestyle="//@entries.1/@groups.0/@members.3/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6">
+        <persona xsi:type="shr5:MysticAdept" image="/shr5Resource/images/kablam_Girl_s_face_in_black_frame.png" name="Kyra" edgeBasis="1" konstitutionBasis="3" geschicklichkeitBasis="6" reaktionBasis="3" staerkeBasis="2" charismaBasis="6" willenskraftBasis="4" intuitionBasis="4" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.0"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.12"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.21"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.25"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.63"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.5/@entries.62"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.44"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
+          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.4"/>
+          <kikraft name="Improved Potential" kraftpunkte="-50">
+            <mods wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//ChrakterLimits/sozial"/>
+            </mods>
+          </kikraft>
+          <kikraft name="Mystic Armor" kraftpunkte="-50">
+            <mods wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+          </kikraft>
+          <kikraft name="Enhanced Accuracy" kraftpunkte="-25"/>
+          <kikraft name="Improved Ability" kraftpunkte="-50"/>
+          <kikraft name="Voice Control 1" kraftpunkte="-25"/>
+          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.2"/>
+        </persona>
+        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="640" verfuegbarkeit="4R" name="Browning Ultra-Power" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3" munitionstyp="Streifen" kapazitaet="10">
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Feuerwaffe" page="428" srcBook="//@entries.0/@entries.0/@entries.0" wert="450" verfuegbarkeit="4R" name="Uzi IV" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.5" munitionstyp="Streifen" kapazitaet="24">
+          <modie>SM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <erweiterung>Unten</erweiterung>
+          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="2" name="Armor Jacket" ruestung="12"/>
+        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink"/>
+        <inventar xsi:type="shr5:Feuerwaffe" page="427" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" verfuegbarkeit="8R" name="Steyr TMP" schadenscode="7P" praezision="4" reichweite="//@entries.0/@entries.1/@entries.4" munitionstyp="Streifen" kapazitaet="30">
+          <modie>HM</modie>
+          <modie>SM</modie>
+          <modie>AM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" page="448" srcBook="//@entries.0/@entries.0/@entries.0" wert="250" verfuegbarkeit="2" image="/shr5Resource/images/Aliens-Portable-Hand-Welder-1.jpg" name="Miniwelder" kategorie="B&amp;E Gear"/>
+        <inventar xsi:type="shr5:Credstick" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0" name="Silver" maxValue="20000"/>
+        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="400" verfuegbarkeit="2R" name="Ammo: Regular Ammo 200" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="175" verfuegbarkeit="2R" name="Ammo: Gel Rounds 70" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Gegenstand" wert="75" name="5 x Bliss" kategorie="Drugs"/>
+        <inventar xsi:type="shr5:Gegenstand" page="447" srcBook="//@entries.0/@entries.0/@entries.0" wert="1500" verfuegbarkeit="8R" name="Autopicker 3" kategorie="B&amp;E Gear" stufe="3"/>
+        <contracts xsi:type="shr5:Lifestyle" name="Low 2 Month" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000" verfuegbarkeit=""/>
+        <contracts xsi:type="shr5:Sin" name="Sin 3" wert="7500" stufe="3" gefaelscht="true"/>
+        <contracts xsi:type="shr5:Lizenz" name="Driver Licence" wert="800" stufe="4" gefaelscht="true" lizenGegenstand="Driver Licence" lizenzTraeger="//@entries.1/@groups.0/@members.3/@contracts.1"/>
+        <contracts xsi:type="shr5:Lizenz" name="Magic" wert="600" stufe="3" gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.3/@contracts.1"/>
+        <contracts xsi:type="shr5:Lizenz" name="Fake gun license (Rating 3)" wert="600" gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.3/@contracts.1"/>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" name="Yamaha Growler" page="462" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="" fahrzeugTyp="Bike"/>
+      </members>
+
+
+				
+				
 			</groups>
 			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.1"
 				generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
