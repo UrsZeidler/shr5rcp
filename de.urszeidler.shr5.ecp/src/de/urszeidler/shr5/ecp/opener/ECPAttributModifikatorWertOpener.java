@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -31,118 +32,123 @@ import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 
 /**
  * @author urs
- * 
  */
 public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, ECPModelElementOpenTester {
-private static int RET=3;
-	/**
+    private static int RET = 3;
+
+    /**
 	 * 
 	 */
-	public ECPAttributModifikatorWertOpener() {
-	}
+    public ECPAttributModifikatorWertOpener() {
+    }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * org.eclipse.emf.ecp.ui.util.ECPModelElementOpener#openModelElement(java
-	 * .lang.Object, org.eclipse.emf.ecp.core.ECPProject)
-	 */
-	@Override
-	public void openModelElement(Object element, ECPProject ecpProject) {
-		EObjectEditorInput eObjectEditorInput = new EObjectEditorInput((EObject) element, ecpProject.getEditingDomain());
-		try {
-			PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
-					.openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
-		} catch (PartInitException e) {
-			Activator.logError("Error open editor " + ShadowrunEditor.id + "for object :" + element, e);
-		}
+    /*
+     * (non-Javadoc)
+     * @see
+     * org.eclipse.emf.ecp.ui.util.ECPModelElementOpener#openModelElement(java
+     * .lang.Object, org.eclipse.emf.ecp.core.ECPProject)
+     */
+    @Override
+    public void openModelElement(Object element, ECPProject ecpProject) {
+        EObjectEditorInput eObjectEditorInput = new EObjectEditorInput((EObject)element, ecpProject.getEditingDomain());
+        try {
+            PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
+        } catch (PartInitException e) {
+            Activator.logError("Error open editor " + ShadowrunEditor.id + "for object :" + element, e);
+        }
 
-	}
+    }
 
-	@Override
-	public int isApplicable(Object eObject) {
-		Shr5Switch<Integer> shr5Switch = new Shr5Switch<Integer>() {
-			// @Override
-			// public Integer caseBeschreibbar(Beschreibbar object) {
-			// return 0;
-			// }
+    @Override
+    public int isApplicable(Object eObject) {
+        Shr5Switch<Integer> shr5Switch = new Shr5Switch<Integer>() {
+            // @Override
+            // public Integer caseBeschreibbar(Beschreibbar object) {
+            // return 0;
+            // }
 
-			@Override
-			public Integer caseSpezies(Spezies object) {
-				return RET;
-			}
+            @Override
+            public Integer caseSpezies(Spezies object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseReichweite(Reichweite object) {
-				return RET;
-			}
+            @Override
+            public Integer caseReichweite(Reichweite object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseFertigkeit(Fertigkeit object) {
-				return RET;
-			}
+            @Override
+            public Integer caseFertigkeit(Fertigkeit object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseFertigkeitsGruppe(FertigkeitsGruppe object) {
-				return RET;
-			}
+            @Override
+            public Integer caseFertigkeitsGruppe(FertigkeitsGruppe object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseAbstraktGegenstand(AbstraktGegenstand object) {
-				return RET;
-			}
+            @Override
+            public Integer caseAbstraktGegenstand(AbstraktGegenstand object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
-				return RET;
-			}
+            @Override
+            public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseAbstraktPersona(AbstraktPersona object) {
-				return RET;
-			}
+            @Override
+            public Integer caseAbstraktPersona(AbstraktPersona object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseShrList(ShrList object) {
-				return RET;
-			}
+            @Override
+            public Integer caseShrList(ShrList object) {
+                return RET;
+            }
 
-			@Override
-			public Integer caseKiAdept(KiAdept object) {
-				return RET;
-			}
+            @Override
+            public Integer caseKiAdept(KiAdept object) {
+                return RET;
+            }
 
-		};
-		Integer doSwitch = shr5Switch.doSwitch((EObject) eObject);
-		if (doSwitch != null)
-			return doSwitch;
+        };
+        Integer doSwitch = shr5Switch.doSwitch((EObject)eObject);
+        if (doSwitch != null)
+            return doSwitch;
 
-		Shr5managementSwitch<Integer> shr5managementSwitch = new Shr5managementSwitch<Integer>() {
-			
-		    @Override
-		    public Integer caseFreeStyleGenerator(FreeStyleGenerator object) {
-		        return RET;
-		    }
-		    @Override
-			public Integer caseShr5Generator(Shr5Generator object) {
-				return RET;
-			}
+        Shr5managementSwitch<Integer> shr5managementSwitch = new Shr5managementSwitch<Integer>() {
 
-			@Override
-			public Integer caseManagedCharacter(ManagedCharacter object) {
-				return RET;
-			}
-			@Override
-			public Integer caseGruntGroup(GruntGroup object) {
-			    return RET;
-			}
-		};
-		doSwitch = shr5managementSwitch.doSwitch((EObject) eObject);
-		if (doSwitch == null)
-			return 0;
-		return doSwitch;
-		// return 0;
-	}
+            @Override
+            public Integer caseFreeStyleGenerator(FreeStyleGenerator object) {
+                return RET;
+            }
+
+            @Override
+            public Integer caseShr5Generator(Shr5Generator object) {
+                return RET;
+            }
+
+            @Override
+            public Integer caseManagedCharacter(ManagedCharacter object) {
+                return RET;
+            }
+
+            @Override
+            public Integer caseGruntGroup(GruntGroup object) {
+                return RET;
+            }
+
+            @Override
+            public Integer caseCharacterGroup(CharacterGroup object) {
+                return RET;
+            }
+        };
+        doSwitch = shr5managementSwitch.doSwitch((EObject)eObject);
+        if (doSwitch == null)
+            return 0;
+        return doSwitch;
+        // return 0;
+    }
 
 }

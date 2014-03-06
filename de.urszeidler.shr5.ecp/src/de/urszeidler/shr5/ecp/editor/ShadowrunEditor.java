@@ -53,6 +53,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -73,6 +74,7 @@ import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.dialogs.ReferenceValueDialog;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
+import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancementPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
@@ -302,7 +304,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {
@@ -399,7 +401,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     addPage(new ModifikatorPage(ShadowrunEditor.this, "", object.eClass().getName(), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
-                 }
+                }
                 return null;
             }
 
@@ -442,12 +444,11 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Character sheet", PersonaPrinter
                             .getInstance().createPrintFactory(object)));
                 } catch (PartInitException e) {
-                    logError("error creating ModifizierbarPage", e);
+                    logError("error creating ManagedCharacterPage", e);
                 }
                 return super.caseManagedCharacter(object);
             }
 
-            
             @Override
             public Object caseGruntGroup(GruntGroup object) {
                 try {
@@ -456,11 +457,24 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                             .getInstance().createGruntPrintFactory(object)));
 
                 } catch (PartInitException e) {
-                    logError("error creating ModifizierbarPage", e);
+                    logError("error creating GruntPage", e);
                 }
                 return super.caseGruntGroup(object);
             }
-            
+
+            @Override
+            public Object caseCharacterGroup(CharacterGroup object) {
+                try {
+                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, "", "Character Group", object, editingDomain, manager));
+                    // addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Grount Group sheet", PersonaPrinter
+                    // .getInstance().createGruntPrintFactory(object)));
+
+                } catch (PartInitException e) {
+                    logError("error creating BeschreibbarContainterPage", e);
+                }
+                return super.caseCharacterGroup(object);
+            }
+
         };
         shr5managementSwitch.doSwitch(theEObject);
 
