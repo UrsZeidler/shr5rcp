@@ -4,6 +4,11 @@ import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
     private static final String BUNDLE_NAME = "de.urszeidler.shr5.ecp.printer.messages"; //$NON-NLS-1$
+    public static String PersonaPrinter_Character_Group_sheet;
+    public static String PersonaPrinter_Character_sheet;
+    public static String PersonaPrinter_Grunt_sheet;
+    public static String PersonaPrinter_Grunts;
+    public static String PersonaPrinter_Professinal_rating;
     public static String Printer_Active_Modification;
     public static String Printer_addons;
     public static String Printer_ak;

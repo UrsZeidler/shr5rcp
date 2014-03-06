@@ -466,8 +466,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             public Object caseCharacterGroup(CharacterGroup object) {
                 try {
                     addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, "", "Character Group", object, editingDomain, manager));
-                    // addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Grount Group sheet", PersonaPrinter
-                    // .getInstance().createGruntPrintFactory(object)));
+                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Character Group sheet", PersonaPrinter
+                     .getInstance().createCharacterGroupPrintFactory(object)));
 
                 } catch (PartInitException e) {
                     logError("error creating BeschreibbarContainterPage", e);

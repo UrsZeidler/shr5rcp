@@ -78,6 +78,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public class PersonaPrinter {
 
+    private static final String EOL = "\n";
     private static final int BIG_SCALE = 80;
     private static final int SMALL_SCALE = 32;
     private static final String ONE_SPACE = " ";//$NON-NLS-1$
@@ -143,12 +144,12 @@ public class PersonaPrinter {
 
             @Override
             public Print createPrinter() {
-                return printCharacterSheet(character);
+                return createPagePrint(printCharacterSheet(character));
             }
 
             @Override
             public String getPrintTitel() {
-                return "Character sheet for " + c.getPersona().getName();
+                return Messages.PersonaPrinter_Character_sheet + c.getPersona().getName();
             }
         };
     }
@@ -165,12 +166,34 @@ public class PersonaPrinter {
 
             @Override
             public Print createPrinter() {
-                return printGruntGroupSheet(character);
+                return createPagePrint(printGruntGroupSheet(character));
             }
 
             @Override
             public String getPrintTitel() {
-                return "Grunt sheet for " + c.getName();
+                return Messages.PersonaPrinter_Grunt_sheet + c.getName();
+            }
+        };
+    }
+
+    /**
+     * Returns the factory to create a new print of the character.
+     * 
+     * @param c
+     * @return
+     */
+    public PrintFactory createCharacterGroupPrintFactory(final CharacterGroup c) {
+        return new PrintFactory() {
+            private CharacterGroup characterGroup = c;
+
+            @Override
+            public Print createPrinter() {
+                return createPagePrint(printCharacterGroupSheet(characterGroup));
+            }
+
+            @Override
+            public String getPrintTitel() {
+                return Messages.PersonaPrinter_Character_Group_sheet + c.getName();
             }
         };
     }
@@ -193,11 +216,10 @@ public class PersonaPrinter {
 
         EList<ManagedCharacter> members = group.getMembers();
         for (ManagedCharacter managedCharacter : members) {
-            printCharacterSheet(managedCharacter);
+            body.add(printCharacterSheet(managedCharacter));
         }
 
-        PagePrint pagePrint = createPagePrint(body);
-        return pagePrint;
+        return body;
 
     }
 
@@ -254,9 +276,7 @@ public class PersonaPrinter {
             body.add(new BorderPrint(printGruntMembersData(gruntMenbers), border), 2);
         }
 
-        PagePrint pagePrint = createPagePrint(body);
-
-        return pagePrint;
+        return body;
     }
 
     /**
@@ -265,7 +285,7 @@ public class PersonaPrinter {
      * @param body the document to print on pages
      * @return the page print.
      */
-    private PagePrint createPagePrint(GridPrint body) {
+    private PagePrint createPagePrint(Print body) {
         // DefaultGridLook look = new DefaultGridLook(5, 5);
         // look.setHeaderGap(5);
         //        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
@@ -305,7 +325,8 @@ public class PersonaPrinter {
         }
         grid.add(printPersonaAttributes(persona), 2);
         for (int i = 0; i < gruntMembers.getCount(); i++) {
-            grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor(gruntMembers.getNsc().getPersona().getName() + " " + (i + 1), zustandKoerperlichMax));
+            grid.add(SWT.LEFT, SWT.TOP,
+                    printConditionMonitor(gruntMembers.getNsc().getPersona().getName() + ONE_SPACE + (i + 1), zustandKoerperlichMax));
         }
         grid.add(new EmptyPrint(), GridPrint.REMAINDER);
         grid.add(printPersonaWeaponsDetailList(gruntMembers.getNsc()), 5);
@@ -336,12 +357,12 @@ public class PersonaPrinter {
         GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
 
         grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
-        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Grounts", boldFontData), 1);
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.PersonaPrinter_Grunts, boldFontData), 1);
 
         GridPrint innerGrid = new GridPrint("d,d", look);//$NON-NLS-1$
         innerGrid.add(new TextPrint(Messages.Printer_Name, attributeFont));
         innerGrid.add(new TextPrint(printString(gruntGroup.getName()), attributeFont), 1);
-        innerGrid.add(new TextPrint("Professionalrating", attributeFont));
+        innerGrid.add(new TextPrint(Messages.PersonaPrinter_Professinal_rating, attributeFont));
         innerGrid.add(new TextPrint(printInteger(gruntGroup.getProfessionalRating()), attributeFont), 1);
 
         grid.add(innerGrid);
@@ -391,10 +412,8 @@ public class PersonaPrinter {
 
         List<AbstraktGegenstand> gList = character.getInventar();
         grid.add(new BorderPrint(printGegenstandList(gList), border), 2);
-        // grid.add(printPersonaContracts(character), 1);
-
-        PagePrint pagePrint = createPagePrint(grid);
-        return pagePrint;
+        grid.add(new BreakPrint(), GridPrint.REMAINDER);
+        return grid;
     }
 
     /**
@@ -522,7 +541,6 @@ public class PersonaPrinter {
 
         grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_spells, boldFontData), 2);
         grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData), 2);
-        // grid.add(new TextPrint("Essenz", italicFontData));
         for (PersonaZauber z : zauber) {
             grid.add(new TextPrint(itemDelegator.getText(z.getFormel()), attributeFont), 2);
         }
@@ -685,27 +703,6 @@ public class PersonaPrinter {
         return grid;
     }
 
-    // private Print printNahkampfwaffeDetail(Nahkampfwaffe fw) {
-    // DefaultGridLook look = new DefaultGridLook(5, 5);
-    // look.setHeaderGap(5);
-    //        GridPrint grid = new GridPrint("d:g,d,d,d,d,d", look);//$NON-NLS-1$
-    //
-    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("", italicFontData), 2);
-    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("reach", italicFontData));
-    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("dmg", italicFontData));
-    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("akk", italicFontData));
-    // // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("ap", italicFontData));
-    // grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
-    //
-    // grid.add(new TextPrint(toName(fw), attributeFont), 2);
-    // grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-    // grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
-    // grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
-    // grid.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
-    //
-    // return grid;
-    // }
-
     /**
      * Print a detail for a feuerwaffe.
      */
@@ -843,10 +840,7 @@ public class PersonaPrinter {
         StringBuffer buffer = new StringBuffer();
         for (FernkampfwaffeModifikator fernkampfwaffeModifikator : einbau) {
             buffer.append(fernkampfwaffeModifikator.getName());
-            buffer.append("\n");
-
-            // buffer.append(fernkampfwaffeModifikator.getEp() + toMod(fernkampfwaffeModifikator.getMods()));
-
+            buffer.append(EOL);
         }
         return buffer.toString();
     }
@@ -864,7 +858,7 @@ public class PersonaPrinter {
                 buffer.append(itemDelegator.getText(eEnumLiteral));
 
             }
-            buffer.append("\n");
+            buffer.append(EOL);
         }
 
         return buffer.toString();
@@ -1356,7 +1350,7 @@ public class PersonaPrinter {
 
         int staerke = persona.getStaerke();
 
-        return String.format("%dkg/%dkg", staerke * 15, staerke * 10);//$NON-NLS-1
+        return String.format("%dkg/%dkg", staerke * 15, staerke * 10);//$NON-NLS-1 //$NON-NLS-1$
     }
 
     /**
