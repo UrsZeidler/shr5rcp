@@ -376,7 +376,7 @@ public class PersonaPrinter {
         AbstraktPersona persona = character.getPersona();
 
         grid.add(new BorderPrint(printPersonaData(character), border), 2);
-        //grid.add(printPersonaDetails(persona), 1);
+        // grid.add(printPersonaDetails(persona), 1);
 
         grid.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         grid.add(new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
@@ -506,6 +506,9 @@ public class PersonaPrinter {
      * @return
      */
     private String toSource(Quelle ge) {
+        if (ge.getSrcBook() == null)
+            return EMPTY;
+
         StringBuffer buffer = new StringBuffer();
         buffer.append(toSimpleName(ge.getSrcBook()));
         buffer.append(Messages.Printer_page);
@@ -909,6 +912,9 @@ public class PersonaPrinter {
     }
 
     private String toName(Object fw) {
+        if (fw == null)
+            return EMPTY;
+
         if (fw instanceof EObject) {
             return itemDelegator.getText(fw);
         }
@@ -916,7 +922,16 @@ public class PersonaPrinter {
         return itemDelegator.getText(fw);
     }
 
+    /**
+     * Delegates the the name feature instead of the itemdelegator.getText.
+     * 
+     * @param be a {@link Beschreibbar}
+     * @return
+     */
     private String toSimpleName(Beschreibbar be) {
+        if (be == null)
+            return EMPTY;
+
         return be.getName();
     }
 
@@ -1165,11 +1180,24 @@ public class PersonaPrinter {
             Integer fertigkeitValue = pfertigkeit.getStufe();
             value = value + fertigkeitValue;
 
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(fertigkeit), attributeFont), 2);
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toFertigkeitAndSpec(pfertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
         }
+    }
+
+    /**
+     * Print the fertigkeit name and the spec.
+     * 
+     * @param pfertigkeit
+     * @return
+     */
+    private String toFertigkeitAndSpec(PersonaFertigkeit pfertigkeit) {
+        String simpleName = toSimpleName(pfertigkeit.getFertigkeit());
+        if (!pfertigkeit.getSpezialisierungen().isEmpty())
+            simpleName = simpleName + ONE_SPACE + pfertigkeit.getSpezialisierungen().toString();
+        return simpleName;
     }
 
     /**
@@ -1188,7 +1216,11 @@ public class PersonaPrinter {
             } else {
                 value = value + fertigkeitValue;
             }
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit), attributeFont), 2);
+            PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+            if (personaFertigkeit != null)
+                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toFertigkeitAndSpec(personaFertigkeit), attributeFont), 2);
+            else
+                grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(fertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
@@ -1366,7 +1398,6 @@ public class PersonaPrinter {
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d,d,d,d,d,d", look);//$NON-NLS-1$
 
-
         grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
         grid.add(new TextPrint(persona.getName(), attributeFont), 3);
         grid.add(new TextPrint(Messages.Printer_sex, attributeFont));
@@ -1406,7 +1437,7 @@ public class PersonaPrinter {
 
         outerGrid.add(grid);
         outerGrid.add(grid1);
-        
+
         return outerGrid;
     }
 
