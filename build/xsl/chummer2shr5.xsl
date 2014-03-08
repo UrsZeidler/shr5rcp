@@ -37,7 +37,7 @@
 			xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" name="all">
 			<entries xsi:type="shr5:ShrList" name="resourcen">
 				<entries xsi:type="shr5:ShrList" name="Sourcebooks">
-					<entries xsi:type="shr5:SourceBook" name="Core rule book"
+					<entries xsi:type="shr5:SourceBook" name="Core rule book" image="/shr5Resource/images/SR5_Cover_CRBook.jpg"
 						startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" />
 				</entries>
 				<xsl:for-each select="$ranges">
