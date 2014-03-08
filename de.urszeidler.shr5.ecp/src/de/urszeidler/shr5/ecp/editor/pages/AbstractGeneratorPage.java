@@ -105,7 +105,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             decoration.setDescriptionText(textToShow);
             decoration.setImage(decoratorImage);
             decoration.setShowHover(true);
-            //decoration.showHoverText(textToShow);
+            // decoration.showHoverText(textToShow);
         } else if (decoration.getImage() != null) {
             decoration.setDescriptionText("");
             decoration.setImage(null);
@@ -216,24 +216,28 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
                 this.getEditor().removePage(1);
             this.getEditor().addPage(
                     1,
-                    new AbstraktPersonaPage(this.getEditor(), PERSONA, "AbstractPersona", playerCharacter.getPersona(),
+                    new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter.getPersona(),
                             getEditingDomain(), mananger));
-            this.getEditor().addPage(2,
-                    new ManagedCharacterPage(this.getEditor(), PERSONA_INVENTAR, "Inventory", playerCharacter, getEditingDomain(), mananger));
-            this.getEditor().addPage(3,
-                    new CharacterAdvancementPage(this.getEditor(), PERSONA_ADVANCEMENT, "Advancement", playerCharacter, getEditingDomain(), mananger));
-    
+            this.getEditor().addPage(
+                    2,
+                    new ManagedCharacterPage(this.getEditor(), PERSONA_INVENTAR, Messages.ShadowrunEditor_page_character, playerCharacter,
+                            getEditingDomain(), mananger));
+            this.getEditor().addPage(
+                    3,
+                    new CharacterAdvancementPage(this.getEditor(), PERSONA_ADVANCEMENT, Messages.ShadowrunEditor_page_advacement, playerCharacter,
+                            getEditingDomain(), mananger));
+
             this.getEditor().addPage(
                     4,
-                    new PrintPreviewPage(this.getEditor(), PERSONA_PRINTER, "Character sheet", PersonaPrinter.getInstance()
-                            .createPrintFactory(playerCharacter)));
-    
+                    new PrintPreviewPage(this.getEditor(), PERSONA_PRINTER, Messages.ShadowrunEditor_page_character_sheet, PersonaPrinter
+                            .getInstance().createPrintFactory(playerCharacter)));
+
         } catch (PartInitException e1) {
             e1.printStackTrace();
         };
     }
 
-    protected void updateGeneratorState(Diagnostic diagnostic,CharacterGenerator  generator) {
+    protected void updateGeneratorState(Diagnostic diagnostic, CharacterGenerator generator) {
         if (EObjectValidator.DIAGNOSTIC_SOURCE.equals(diagnostic.getSource())) {
             if (diagnostic.getCode() == EObjectValidator.EOBJECT__EVERY_MULTIPCITY_CONFORMS) {
                 Object object2 = diagnostic.getData().get(1);

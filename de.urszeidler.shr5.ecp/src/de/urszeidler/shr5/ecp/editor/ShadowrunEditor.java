@@ -84,6 +84,7 @@ import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
 import de.urszeidler.shr5.ecp.editor.pages.GenericBasicBeschreibbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.GruntGroupPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.editor.pages.ModifikatorPage;
 import de.urszeidler.shr5.ecp.editor.pages.ModifizierbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.NahkampwaffePage;
