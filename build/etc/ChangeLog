@@ -2,7 +2,7 @@
 
 * added specialism in persona
 * added simple application to add a basic menu and to gain the control
-* fixed several rounding errors
+* fixed several rounding and display errors
 * added grunts as described in the core rule book
 * import from chummer2 :
 	* reorganized the resources
