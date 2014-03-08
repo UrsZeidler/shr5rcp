@@ -73,6 +73,9 @@
                   commandId="org.eclipse.ui.file.import"
                   style="push">
             </command>
+            <separator
+                  name="de.urszeidler.shr5.product.separator1">
+            </separator>
             <command
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
                   style="push">
@@ -90,6 +93,10 @@
                label="window">
             <command
                   commandId="org.eclipse.ui.window.newWindow"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.views.showView"
                   style="push">
             </command>
             <command
