@@ -100,7 +100,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  * @author urs
  */
 public class ShadowrunEditor extends BasicEditor<EObject> {
-    public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID";
+    public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
 
     protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
         public void handleManage(FormbuilderEntry e, EObject object) {
@@ -109,8 +109,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                         Shr5managementFactory.eINSTANCE.createPlayerCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA,
                         editingDomain);
 
-                OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}), "Select type",
-                        "Choose a persona type.");
+                OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}), Messages.ShadowrunEditor_dlg_select_type,
+                        Messages.ShadowrunEditor_dlg_select_persona_type);
                 dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
                 int open = dialog.open();
                 if (open == Dialog.OK) {
@@ -216,7 +216,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET, Collections.EMPTY_SET,
                     filteredEClasses);
 
-            SelectModelElementWizard w = new SelectModelElementWizard("", "", "", "Select the new object class");
+            SelectModelElementWizard w = new SelectModelElementWizard("", "", "", Messages.ShadowrunEditor_dlg_select_object_type); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
             w.setCompositeProvider(helper);
             final WizardDialog wd = new WizardDialog(getSite().getShell(), w);
 
@@ -258,7 +258,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseSpezies(Spezies object) {
                 try {
-                    addPage(new SpeziesPage(ShadowrunEditor.this, "", "Spezies", object, editingDomain, manager));
+                    addPage(new SpeziesPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_species, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating SpeziesPage", e);
                 }
@@ -268,7 +268,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFertigkeitsGruppe(FertigkeitsGruppe object) {
                 try {
-                    addPage(new FertigkeitPage(ShadowrunEditor.this, "", "Fertigkeitsgruppe", object, editingDomain, manager));
+                    addPage(new FertigkeitPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_skill_group, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);
                 }
@@ -278,7 +278,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFertigkeit(Fertigkeit object) {
                 try {
-                    addPage(new FertigkeitPage(ShadowrunEditor.this, "", "Fertigkeit", object, editingDomain, manager));
+                    addPage(new FertigkeitPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_skill, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);
                 }
@@ -288,7 +288,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseReichweite(Reichweite object) {
                 try {
-                    addPage(new ReichweitePage(ShadowrunEditor.this, "", "Reichweite", object, editingDomain, manager));
+                    addPage(new ReichweitePage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_range, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating ReichweitePage", e);
                 }
@@ -298,7 +298,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseCredstick(Credstick object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, "", "Credstick", object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_credstick, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);
                 }
@@ -308,7 +308,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, "", "Gegenstand", object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_item, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);
                 }
@@ -318,7 +318,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseKleidung(Kleidung object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, "", "Rüstung", object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_armor, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);
                 }
@@ -328,7 +328,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseNahkampfwaffe(Nahkampfwaffe object) {
                 try {
-                    addPage(new NahkampwaffePage(ShadowrunEditor.this, "", "Nahkampfwaffe", object, editingDomain, manager));
+                    addPage(new NahkampwaffePage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_meeleweapon, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating NahkampwaffePage", e);
                 }
@@ -338,7 +338,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFeuerwaffe(Feuerwaffe object) {
                 try {
-                    addPage(new FeuerwaffePage(ShadowrunEditor.this, "", "Feuerwaffe", object, editingDomain, manager));
+                    addPage(new FeuerwaffePage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_fireweapon, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating FeuerwaffePage", e);
                 }
@@ -348,7 +348,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShrList(ShrList object) {
                 try {
-                    addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, "", "", object, editingDomain, manager));
+                    addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, "", "", object, editingDomain, manager)); //$NON-NLS-1$ //$NON-NLS-2$
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);
                 }
@@ -358,7 +358,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseAbstraktPersona(AbstraktPersona object) {
                 try {
-                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "", "AbstractPersona", object, editingDomain, manager));
+                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_persona, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);
                 }
@@ -368,7 +368,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseProjektilwaffe(Projektilwaffe object) {
                 try {
-                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, "", "Projektilwaffe", object, editingDomain, manager));
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_projectileweapon, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating FernkampfwaffePage", e);
                 }
@@ -378,7 +378,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseWurfwaffe(Wurfwaffe object) {
                 try {
-                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, "", "Wurfwaffe", object, editingDomain, manager));
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_throwingweapon, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating FernkampfwaffePage", e);
                 }
@@ -388,7 +388,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseModifizierbar(Modifizierbar object) {
                 try {
-                    addPage(new ModifizierbarPage(ShadowrunEditor.this, "", "Modifikationen", object, editingDomain, manager));
+                    addPage(new ModifizierbarPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_modifications, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
                 }
@@ -398,7 +398,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
                 try {
-                    addPage(new ModifikatorPage(ShadowrunEditor.this, "", object.eClass().getName(), object, editingDomain, manager));
+                    addPage(new ModifikatorPage(ShadowrunEditor.this, "", object.eClass().getName(), object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
                 }
@@ -414,7 +414,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFreeStyleGenerator(FreeStyleGenerator object) {
                 try {
-                    addPage(new FreeStyleGeneratorPage(ShadowrunEditor.this, "", "Modifikationen", object, editingDomain, manager));
+                    addPage(new FreeStyleGeneratorPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_freestyle_generator, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
                 }
@@ -424,7 +424,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShr5Generator(Shr5Generator object) {
                 try {
-                    addPage(new Shr5GeneratorPage(ShadowrunEditor.this, "", "Modifikationen", object, editingDomain, manager));
+                    addPage(new Shr5GeneratorPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_shr5_generator, object, editingDomain, manager)); //$NON-NLS-1$
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);
                 }
@@ -434,14 +434,14 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseManagedCharacter(ManagedCharacter object) {
                 try {
-                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, "AbstractPersona", object.getPersona(),
+                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona, object.getPersona(),
                             editingDomain, manager));
-                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR, "Inventar", object, editingDomain,
+                    addPage(new ManagedCharacterPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_INVENTAR, Messages.ShadowrunEditor_page_character, object, editingDomain,
                             manager));
-                    addPage(new CharacterAdvancementPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_ADVANCEMENT, "Advancement", object,
+                    addPage(new CharacterAdvancementPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_ADVANCEMENT, Messages.ShadowrunEditor_page_advacement, object,
                             editingDomain, manager));
 
-                    addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Character sheet", PersonaPrinter
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, Messages.ShadowrunEditor_page_character_sheet, PersonaPrinter
                             .getInstance().createPrintFactory(object)));
                 } catch (PartInitException e) {
                     logError("error creating ManagedCharacterPage", e);
@@ -452,8 +452,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseGruntGroup(GruntGroup object) {
                 try {
-                    addPage(new GruntGroupPage(ShadowrunEditor.this, "", "Grount Group", object, editingDomain, manager));
-                    addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Grount Group sheet", PersonaPrinter
+                    addPage(new GruntGroupPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_grount_group, object, editingDomain, manager)); //$NON-NLS-1$
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, Messages.ShadowrunEditor_page_grunt_group_sheet, PersonaPrinter
                             .getInstance().createGruntPrintFactory(object)));
 
                 } catch (PartInitException e) {
@@ -465,8 +465,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseCharacterGroup(CharacterGroup object) {
                 try {
-                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, "", "Character Group", object, editingDomain, manager));
-                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, "Character Group sheet", PersonaPrinter
+                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, "", Messages.ShadowrunEditor_page_character_group, object, editingDomain, manager)); //$NON-NLS-1$
+                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER, Messages.ShadowrunEditor_page_character_group_sheet, PersonaPrinter
                      .getInstance().createCharacterGroupPrintFactory(object)));
 
                 } catch (PartInitException e) {
@@ -533,7 +533,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                Shr5Package.Literals.SHR_LIST__ENTRIES, "Verwalte Ausrüstung", new ArrayList<EObject>(collection));
+                Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_manage_inventory, new ArrayList<EObject>(collection));
 
         int result = dialog.open();
         if (result == Window.OK) {

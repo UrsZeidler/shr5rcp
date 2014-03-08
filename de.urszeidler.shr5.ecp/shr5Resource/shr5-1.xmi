@@ -2,9 +2,9 @@
 <shr5:ShrList xmi:version="2.0" name="all" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0">
 <entries xsi:type="shr5:ShrList" name="resourcen">
 <entries xsi:type="shr5:ShrList" name="Sourcebooks">
-<entries xsi:type="shr5:SourceBook" name="Grundregelwerk" startShrTime="2013-12-13T17:51:44.000+0100" endShrTime="2013-12-13T17:51:44.000+0100"/>
+<entries xsi:type="shr5:SourceBook" name="Core rule book" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
 </entries>
-<entries xsi:type="shr5:ShrList" name="Reichtweiten">
+<entries xsi:type="shr5:ShrList" name="ranges">
 <entries xsi:type="shr5:Reichweite" name="Tasers" kurz="5" mittel="10" weit="15" extrem="20"/>
 <entries xsi:type="shr5:Reichweite" name="Holdouts" kurz="5" mittel="15" weit="30" extrem="50"/>
 <entries xsi:type="shr5:Reichweite" name="Light Pistols" kurz="5" mittel="15" weit="30" extrem="50"/>
