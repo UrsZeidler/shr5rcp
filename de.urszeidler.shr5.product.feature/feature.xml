@@ -511,14 +511,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.e4.emf.xpath.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.e4.ui.bindings.nl_de"
          download-size="0"
          install-size="0"
@@ -552,14 +544,6 @@
 
    <plugin
          id="org.eclipse.e4.ui.di.nl_de"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.e4.ui.model.workbench.edit.nl_de"
          download-size="0"
          install-size="0"
          version="0.0.0"
