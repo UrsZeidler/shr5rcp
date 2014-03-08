@@ -3256,7 +3256,6 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_S9URsKCwEeOXyOL8m9oCJQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="shr5Management.ecore#//GamemasterManagement/grunts"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S9URsaCwEeOXyOL8m9oCJQ" points="[19, 20, -157, -158]$[182, 202, 6, 24]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E8T_oKCxEeOXyOL8m9oCJQ" id="(0.7159090909090909,0.9523809523809523)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_18LoUKCwEeOXyOL8m9oCJQ" type="3002" source="_AlYREKCwEeOXyOL8m9oCJQ" target="_AlYREKCwEeOXyOL8m9oCJQ">
       <children xmi:type="notation:Node" xmi:id="_18PSsKCwEeOXyOL8m9oCJQ" type="4011">
@@ -3282,7 +3281,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="__sFcIKCwEeOXyOL8m9oCJQ" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="__sFcIaCwEeOXyOL8m9oCJQ" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__sFcIqCwEeOXyOL8m9oCJQ" points="[67, -23, 383, 458]$[67, -252, 383, 229]$[37, -252, 353, 229]$[37, -383, 353, 98]$[-263, -383, 53, 98]$[-263, -433, 53, 48]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__sFcIqCwEeOXyOL8m9oCJQ" points="[35, -20, 345, 477]$[35, -80, 345, 417]$[115, -80, 425, 417]$[115, -396, 425, 101]$[-296, -396, 14, 101]$[-296, -469, 14, 28]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_HlBuUKCxEeOXyOL8m9oCJQ" type="3003" source="_AlYREKCwEeOXyOL8m9oCJQ" target="__rp-UKCwEeOXyOL8m9oCJQ">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_HlCVYKCxEeOXyOL8m9oCJQ" routing="Rectilinear" lineColor="4210752"/>
