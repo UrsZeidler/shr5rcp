@@ -37,8 +37,8 @@
 			xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" name="all">
 			<entries xsi:type="shr5:ShrList" name="resourcen">
 				<entries xsi:type="shr5:ShrList" name="Sourcebooks">
-					<entries xsi:type="shr5:SourceBook" name="Grundregelwerk"
-						startShrTime="2013-12-13T17:51:44.000+0100" endShrTime="2013-12-13T17:51:44.000+0100" />
+					<entries xsi:type="shr5:SourceBook" name="Core rule book"
+						startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" />
 				</entries>
 				<xsl:for-each select="$ranges">
 					<xsl:apply-templates select="node()" />
@@ -104,18 +104,13 @@
 	<xsl:template match="priority|mods|limits" />
 	<xsl:template mode="lifestyle"
 		match="safehousecosts|version|qualities|comforts|entertainments|necessities|neighborhoods|securities|costs" />
-	<xsl:template match="ranges">
-		<entries xsi:type="shr5:ShrList" name="Reichtweiten">
-			<xsl:apply-templates />
-		</entries>
-	</xsl:template>
 	<xsl:template mode="lifestyle" match="lifestyles">
 		<entries xsi:type="shr5:ShrList" name="lifestyles">
 			<xsl:apply-templates mode="lifestyle" />
 		</entries>
 	</xsl:template>
 	<xsl:template
-		match="gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles">
+		match="ranges|gears|armors|skills|knowledgeskills|cyberwares|weapons|powers|skillgroups|metatypes|spells|qualities|biowares|vehicles">
 		<entries xsi:type="shr5:ShrList">
 			<xsl:attribute name="name"><xsl:value-of select="name()" /></xsl:attribute>
 			<xsl:apply-templates />
@@ -724,7 +719,7 @@
 				selectedGroup="//@entries.2/@groups.0" characterName="Kyra"
 				resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46"
 				skills="//@entries.0/@entries.16/@entries.0/@priorities.39"
-				attribute="//@entries.0/@entries.16/@entries.0/@priorities.18"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.18" karmaToResource="10"
 				metaType="//@entries.0/@entries.16/@entries.0/@priorities.15" magic="//@entries.0/@entries.16/@entries.0/@priorities.23" />
 			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.0"
 				generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
