@@ -1412,7 +1412,7 @@ public class PersonaPrinter {
     }
 
     /**
-     * Print the basic info like name and karma .
+     * Print the basic info like name and karma and the image.
      * 
      * @param character
      * @return
@@ -1432,9 +1432,9 @@ public class PersonaPrinter {
         grid.add(new TextPrint(toName(character.getSex(), character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX), attributeFont));
 
         grid.add(new TextPrint(Messages.Printer_meta, attributeFont));
-        grid.add(new TextPrint(itemDelegator.getText(persona.getSpezies()), attributeFont), 2);
+        grid.add(new TextPrint(toSimpleName(persona.getSpezies()), attributeFont), 2);
         grid.add(new TextPrint(Messages.Printer_nativ, attributeFont));
-        grid.add(new TextPrint(itemDelegator.getText(character.getNativeLanguage()), attributeFont), 2);
+        grid.add(new TextPrint(toSimpleName(character.getNativeLanguage()), attributeFont), 2);
 
         grid.add(new TextPrint(Messages.Printer_street_cred, attributeFont));
         grid.add(new TextPrint(printInteger(character.getStreetCred()), attributeFont), 1);
