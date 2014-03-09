@@ -68,9 +68,10 @@
             allPopups="false"
             locationURI="menu:org.eclipse.ui.main.menu">
          <menu
-               label="project">
+               label="%menu.label">
             <command
                   commandId="org.eclipse.ui.file.import"
+                  label="%command.import"
                   style="push">
             </command>
             <separator
@@ -78,6 +79,7 @@
             </separator>
             <command
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
+                  label="%command.save"
                   style="push">
             </command>
             <separator
@@ -86,11 +88,12 @@
             </separator>
             <command
                   commandId="org.eclipse.ui.file.exit"
+                  label="%command.exit"
                   style="push">
             </command>
          </menu>
          <menu
-               label="window">
+               label="%menu.windows">
             <command
                   commandId="org.eclipse.ui.window.newWindow"
                   style="push">
