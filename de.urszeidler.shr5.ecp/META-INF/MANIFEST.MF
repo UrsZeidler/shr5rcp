@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Ecp
+Bundle-Name: shr5 ecp forms
 Bundle-SymbolicName: de.urszeidler.shr5.ecp;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.urszeidler.shr5.ecp.Activator
@@ -66,3 +66,4 @@ Export-Package: de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.ecp.widgets,
  org.eclipse.wb.rcp.databinding,
  org.eclipse.wb.swt
+Bundle-Vendor: Urs Zeidler
