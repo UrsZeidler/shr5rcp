@@ -143,7 +143,7 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
             IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(connection.getCharacter(), IItemLabelProvider.class);
 
             if (labelprovider != null) {
-                label = labelprovider.getText(connection);
+                label = labelprovider.getText(connection.getCharacter());
             }
         }
 
