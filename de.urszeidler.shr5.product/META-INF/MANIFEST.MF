@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Product
+Bundle-Name: shr5 Product
 Bundle-SymbolicName: de.urszeidler.shr5.product;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.3.qualifier
 Bundle-Activator: de.urszeidler.shr5.product.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -10,3 +10,4 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.product.application
+Bundle-Vendor: Urs Zeidler

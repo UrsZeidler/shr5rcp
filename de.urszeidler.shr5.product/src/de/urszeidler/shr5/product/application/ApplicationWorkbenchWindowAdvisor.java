@@ -7,6 +7,8 @@ import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
+import de.urszeidler.shr5.product.Activator;
+
 /**
  * The WorkbenchWindowAdvisor class.
  * 
@@ -37,7 +39,9 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
         configurer.setInitialSize(new Point(400, 300));
         configurer.setShowCoolBar(false);
         configurer.setShowStatusLine(false);
-        configurer.setTitle("shr5rcp");
+        String version = Activator.getDefault().getBundle().getVersion().toString();
+        configurer.setTitle("shr5rcp "+version);
+        
     }
 
 }
