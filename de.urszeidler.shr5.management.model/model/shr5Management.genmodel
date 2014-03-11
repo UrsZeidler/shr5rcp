@@ -41,8 +41,8 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//CharacterGeneratorSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PrioritySystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PrioritySystem/priorities"/>
@@ -290,6 +290,9 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//GamemasterManagement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//GamemasterManagement/grunts"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//CharacterAdvancementSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterAdvancementSystem/characterAdvancements"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

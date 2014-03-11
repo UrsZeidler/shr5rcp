@@ -257,6 +257,15 @@ public interface Shr5managementFactory extends EFactory {
     GamemasterManagement createGamemasterManagement();
 
     /**
+     * Returns a new object of class '<em>Character Advancement System</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Character Advancement System</em>'.
+     * @generated
+     */
+    CharacterAdvancementSystem createCharacterAdvancementSystem();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

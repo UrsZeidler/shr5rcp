@@ -180,7 +180,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
         if (chracterSource == null)
             return 0;
 
-        IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+        IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
                 EcorePackage.Literals.EATTRIBUTE);
         if (part != null) {
             int karmaFactor = part.getKarmaFactor();

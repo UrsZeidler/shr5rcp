@@ -18,8 +18,8 @@ import de.urszeidler.eclipse.shr5.Quelle;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getInstructions <em>Instructions</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,20 +47,30 @@ public interface CharacterGeneratorSystem extends Beschreibbar, Quelle {
 	EMap<GeneratorState, String> getInstructions();
 
 	/**
-     * Returns the value of the '<em><b>Character Advancements</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.Advancement}.
+     * Returns the value of the '<em><b>Character Advancements</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Character Advancements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Character Advancements</em>' containment reference list.
+     * @return the value of the '<em>Character Advancements</em>' reference.
+     * @see #setCharacterAdvancements(CharacterAdvancementSystem)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGeneratorSystem_CharacterAdvancements()
-     * @model containment="true"
+     * @model required="true"
      * @generated
      */
-	EList<Advancement> getCharacterAdvancements();
+	CharacterAdvancementSystem getCharacterAdvancements();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Character Advancements</em>' reference.
+     * @see #getCharacterAdvancements()
+     * @generated
+     */
+    void setCharacterAdvancements(CharacterAdvancementSystem value);
 
     /**
      * Returns the value of the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.

@@ -704,6 +704,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CharacterAdvancementSystemItemProvider characterAdvancementSystemItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCharacterAdvancementSystemAdapter() {
+        if (characterAdvancementSystemItemProvider == null) {
+            characterAdvancementSystemItemProvider = new CharacterAdvancementSystemItemProvider(this);
+        }
+
+        return characterAdvancementSystemItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -829,6 +852,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (gruntMembersItemProvider != null) gruntMembersItemProvider.dispose();
         if (playerManagementItemProvider != null) playerManagementItemProvider.dispose();
         if (gamemasterManagementItemProvider != null) gamemasterManagementItemProvider.dispose();
+        if (characterAdvancementSystemItemProvider != null) characterAdvancementSystemItemProvider.dispose();
     }
 
 	/**
@@ -1012,6 +1036,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createGamemasterManagement()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem()));
 
                 return null;
             }

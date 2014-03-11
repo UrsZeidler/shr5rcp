@@ -364,7 +364,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
         if (chracterSource == null)
             return 0;
         if (eobject != null) {
-            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
                     eobject.eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
@@ -385,7 +385,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             return 0;
 
         if (quallity != null) {
-            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
                     quallity.eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
@@ -406,7 +406,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             return 0;
 
         if (initation != null) {
-            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(),
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
                     initation.eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
@@ -430,7 +430,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             Fertigkeit fertigkeit = skill.getFertigkeit();
             EClass eClass = fertigkeit.eClass();
 
-            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(), eClass);
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(), eClass);
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
                 return -1 * karmaFactor * (getTo());
@@ -450,7 +450,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             return 0;
 
         if (skill != null) {
-            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements(), skill
+            IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(), skill
                     .getGruppe().eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();

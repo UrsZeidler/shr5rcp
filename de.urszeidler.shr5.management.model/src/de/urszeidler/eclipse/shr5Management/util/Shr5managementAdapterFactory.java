@@ -246,6 +246,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createGamemasterManagementAdapter();
             }
             @Override
+            public Adapter caseCharacterAdvancementSystem(CharacterAdvancementSystem object) {
+                return createCharacterAdvancementSystemAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -774,6 +778,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createGamemasterManagementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem <em>Character Advancement System</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem
+     * @generated
+     */
+    public Adapter createCharacterAdvancementSystemAdapter() {
         return null;
     }
 

@@ -59,6 +59,7 @@ public abstract class ChangesTest extends TestCase {
         super(name);
         playerCharacter = Shr5GeneratorTest.createMudanCharacter();
         shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
         Shr5Generator generator = Shr5managementFactory.eINSTANCE.createShr5Generator();
         generator.setCharacter(playerCharacter);
         generator.setGenerator(shr5System);
@@ -66,32 +67,33 @@ public abstract class ChangesTest extends TestCase {
         IncreaseCharacterPart part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(2);
         part.setType(Shr5Package.Literals.FERTIGKEIT);
-        shr5System.getCharacterAdvancements().add(part);
+        
+        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(1);
         part.setType(Shr5Package.Literals.SPRACHFERTIGKEIT);
-        shr5System.getCharacterAdvancements().add(part);
+        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(5);
         part.setType(Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-        shr5System.getCharacterAdvancements().add(part);
+        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(5);
         part.setType(EcorePackage.Literals.EATTRIBUTE);
-        shr5System.getCharacterAdvancements().add(part);
+        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(2);
         part.setType(Shr5Package.Literals.PERSONA_EIGENSCHAFT);
-        shr5System.getCharacterAdvancements().add(part);
+        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(13);
         part.setType(Shr5Package.Literals.INITATION);
-        shr5System.getCharacterAdvancements().add(part);
+        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();

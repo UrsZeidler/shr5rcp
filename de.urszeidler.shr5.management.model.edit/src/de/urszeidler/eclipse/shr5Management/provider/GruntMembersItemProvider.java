@@ -27,7 +27,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMembers} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class GruntMembersItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -36,7 +35,6 @@ public class GruntMembersItemProvider extends ItemProviderAdapter implements IEd
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public GruntMembersItemProvider(AdapterFactory adapterFactory) {
@@ -47,7 +45,6 @@ public class GruntMembersItemProvider extends ItemProviderAdapter implements IEd
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -65,28 +62,44 @@ public class GruntMembersItemProvider extends ItemProviderAdapter implements IEd
      * This adds a property descriptor for the Count feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addCountPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_GruntMembers_count_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_count_feature", "_UI_GruntMembers_type"),
-                Shr5managementPackage.Literals.GRUNT_MEMBERS__COUNT, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_GruntMembers_count_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_count_feature", "_UI_GruntMembers_type"),
+                 Shr5managementPackage.Literals.GRUNT_MEMBERS__COUNT,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Nsc feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addNscPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_GruntMembers_nsc_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_nsc_feature", "_UI_GruntMembers_type"),
-                Shr5managementPackage.Literals.GRUNT_MEMBERS__NSC, true, false, true, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_GruntMembers_nsc_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GruntMembers_nsc_feature", "_UI_GruntMembers_type"),
+                 Shr5managementPackage.Literals.GRUNT_MEMBERS__NSC,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
@@ -138,7 +151,6 @@ public class GruntMembersItemProvider extends ItemProviderAdapter implements IEd
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -158,7 +170,6 @@ public class GruntMembersItemProvider extends ItemProviderAdapter implements IEd
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -170,7 +181,6 @@ public class GruntMembersItemProvider extends ItemProviderAdapter implements IEd
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

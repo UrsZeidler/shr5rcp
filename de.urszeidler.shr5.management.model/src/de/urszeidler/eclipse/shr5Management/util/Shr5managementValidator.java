@@ -318,6 +318,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validatePlayerManagement((PlayerManagement)value, diagnostics, context);
             case Shr5managementPackage.GAMEMASTER_MANAGEMENT:
                 return validateGamemasterManagement((GamemasterManagement)value, diagnostics, context);
+            case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM:
+                return validateCharacterAdvancementSystem((CharacterAdvancementSystem)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -834,6 +836,15 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateGamemasterManagement(GamemasterManagement gamemasterManagement, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(gamemasterManagement, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateCharacterAdvancementSystem(CharacterAdvancementSystem characterAdvancementSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(characterAdvancementSystem, diagnostics, context);
     }
 
     /**

@@ -123,7 +123,7 @@
 	<xsl:template match="priorities">
 		<entries xsi:type="shr5:ShrList" name="generators">
 			<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system."
-				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25"
+				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" characterAdvancements="//@entries.0/@entries.16/@entries.2"
 				charismaToConnectionFactor="3" maxKarmaToResources="10"
 				maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7"
 				numberOfMaxAttributes="1">
@@ -140,7 +140,7 @@
 					value="The character is created spend all the values." />
 				<instructions key="commited"
 					value="The character is finshed and commited." />
-				<xsl:call-template name="advancements" />
+				
 				<xsl:for-each select="$lifestyle">
 					<xsl:for-each select="chummer/lifestyles/*">
 						<lifestyleToStartMoney>
@@ -156,7 +156,7 @@
 					</xsl:for-each>
 				</xsl:for-each>
 			</entries>
-			<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator">
+			<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator" characterAdvancements="//@entries.0/@entries.16/@entries.2">
 				<instructions key="new" value="Choose the basic Concept" />
 				<instructions key="readyForCreation"
 					value="All has been set, you can create the character now." />
@@ -164,8 +164,10 @@
 					value="The character is created you can comit any time." />
 				<instructions key="commited"
 					value="The character is finshed and commited." />
-				<xsl:call-template name="advancements" />
 			</entries>
+		<entries xsi:type="shr5mngt:CharacterAdvancementSystem" name="The basic advancements system.">
+		<xsl:call-template name="advancements" />
+		</entries>
 
 			<!-- <entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" 
 				/> <entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" 

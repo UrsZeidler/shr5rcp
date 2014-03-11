@@ -40,10 +40,10 @@
       eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
     <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//GeneratorStateToEStringMapEntry" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
-        upperBound="-1" eType="#//Advancement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lifestyleToStartMoney"
         upperBound="-1" eType="#//LifestyleToStartMoney" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
+        lowerBound="1" eType="#//CharacterAdvancementSystem"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrioritySystem" abstract="true" eSuperTypes="#//CharacterGeneratorSystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="priorities" upperBound="-1"
@@ -441,5 +441,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="GamemasterManagement" eSuperTypes="#//PlayerManagement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="grunts" upperBound="-1"
         eType="#//GruntGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterAdvancementSystem" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
+        upperBound="-1" eType="#//Advancement" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

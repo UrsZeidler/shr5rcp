@@ -298,22 +298,22 @@ public interface Shr5managementPackage extends EPackage {
 	int CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
 
 	/**
-     * The feature id for the '<em><b>Character Advancements</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
-
-	/**
      * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+    int CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Character Advancements</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Character Generator System</em>' class.
@@ -398,15 +398,6 @@ public interface Shr5managementPackage extends EPackage {
 	int PRIORITY_SYSTEM__INSTRUCTIONS = CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS;
 
 	/**
-     * The feature id for the '<em><b>Character Advancements</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
-
-	/**
      * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -414,6 +405,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int PRIORITY_SYSTEM__LIFESTYLE_TO_START_MONEY = CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
+     * The feature id for the '<em><b>Character Advancements</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
 
     /**
      * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
@@ -861,15 +861,6 @@ public interface Shr5managementPackage extends EPackage {
 	int FREE_STYLE__INSTRUCTIONS = CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS;
 
 	/**
-     * The feature id for the '<em><b>Character Advancements</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int FREE_STYLE__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
-
-	/**
      * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -877,6 +868,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int FREE_STYLE__LIFESTYLE_TO_START_MONEY = CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
+     * The feature id for the '<em><b>Character Advancements</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int FREE_STYLE__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
 
     /**
      * The number of structural features of the '<em>Free Style</em>' class.
@@ -998,15 +998,6 @@ public interface Shr5managementPackage extends EPackage {
 	int SHR5_SYSTEM__INSTRUCTIONS = PRIORITY_SYSTEM__INSTRUCTIONS;
 
 	/**
-     * The feature id for the '<em><b>Character Advancements</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_SYSTEM__CHARACTER_ADVANCEMENTS = PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS;
-
-	/**
      * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1014,6 +1005,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int SHR5_SYSTEM__LIFESTYLE_TO_START_MONEY = PRIORITY_SYSTEM__LIFESTYLE_TO_START_MONEY;
+
+    /**
+     * The feature id for the '<em><b>Character Advancements</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_SYSTEM__CHARACTER_ADVANCEMENTS = PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS;
 
     /**
      * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
@@ -3673,6 +3673,70 @@ public interface Shr5managementPackage extends EPackage {
     int GAMEMASTER_MANAGEMENT_OPERATION_COUNT = PLAYER_MANAGEMENT_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl <em>Character Advancement System</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterAdvancementSystem()
+     * @generated
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM = 36;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM__NAME = Shr5Package.BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Character Advancements</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Character Advancement System</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Character Advancement System</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_ADVANCEMENT_SYSTEM_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3680,7 +3744,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 36;
+	int GENERATOR_STATE = 37;
 
 
 	/**
@@ -3691,7 +3755,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 37;
+	int SEX = 38;
 
 
 	/**
@@ -3902,10 +3966,10 @@ public interface Shr5managementPackage extends EPackage {
 	EReference getCharacterGeneratorSystem_Instructions();
 
 	/**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}'.
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Character Advancements</em>'.
+     * @return the meta object for the reference '<em>Character Advancements</em>'.
      * @see de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements()
      * @see #getCharacterGeneratorSystem()
      * @generated
@@ -5481,6 +5545,27 @@ public interface Shr5managementPackage extends EPackage {
     EReference getGamemasterManagement_Grunts();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem <em>Character Advancement System</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Character Advancement System</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem
+     * @generated
+     */
+    EClass getCharacterAdvancementSystem();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem#getCharacterAdvancements <em>Character Advancements</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Character Advancements</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem#getCharacterAdvancements()
+     * @see #getCharacterAdvancementSystem()
+     * @generated
+     */
+    EReference getCharacterAdvancementSystem_CharacterAdvancements();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5680,7 +5765,7 @@ public interface Shr5managementPackage extends EPackage {
 		EReference CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS = eINSTANCE.getCharacterGeneratorSystem_Instructions();
 
 		/**
-         * The meta object literal for the '<em><b>Character Advancements</b></em>' containment reference list feature.
+         * The meta object literal for the '<em><b>Character Advancements</b></em>' reference feature.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
          * @generated
@@ -6938,6 +7023,24 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference GAMEMASTER_MANAGEMENT__GRUNTS = eINSTANCE.getGamemasterManagement_Grunts();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl <em>Character Advancement System</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterAdvancementSystem()
+         * @generated
+         */
+        EClass CHARACTER_ADVANCEMENT_SYSTEM = eINSTANCE.getCharacterAdvancementSystem();
+
+        /**
+         * The meta object literal for the '<em><b>Character Advancements</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS = eINSTANCE.getCharacterAdvancementSystem_CharacterAdvancements();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

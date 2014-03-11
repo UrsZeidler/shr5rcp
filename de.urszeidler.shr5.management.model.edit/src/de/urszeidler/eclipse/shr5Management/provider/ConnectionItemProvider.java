@@ -27,7 +27,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.Connection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class ConnectionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -36,7 +35,6 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ConnectionItemProvider(AdapterFactory adapterFactory) {
@@ -47,7 +45,6 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -66,42 +63,66 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
      * This adds a property descriptor for the Influence feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addInfluencePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Connection_influence_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Connection_influence_feature", "_UI_Connection_type"),
-                Shr5managementPackage.Literals.CONNECTION__INFLUENCE, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Connection_influence_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Connection_influence_feature", "_UI_Connection_type"),
+                 Shr5managementPackage.Literals.CONNECTION__INFLUENCE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Loyality feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addLoyalityPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Connection_loyality_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Connection_loyality_feature", "_UI_Connection_type"),
-                Shr5managementPackage.Literals.CONNECTION__LOYALITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Connection_loyality_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Connection_loyality_feature", "_UI_Connection_type"),
+                 Shr5managementPackage.Literals.CONNECTION__LOYALITY,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Character feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addCharacterPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Connection_character_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Connection_character_feature", "_UI_Connection_type"),
-                Shr5managementPackage.Literals.CONNECTION__CHARACTER, true, false, true, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Connection_character_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Connection_character_feature", "_UI_Connection_type"),
+                 Shr5managementPackage.Literals.CONNECTION__CHARACTER,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
@@ -155,7 +176,6 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -176,7 +196,6 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -188,7 +207,6 @@ public class ConnectionItemProvider extends ItemProviderAdapter implements IEdit
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

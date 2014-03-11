@@ -2566,7 +2566,7 @@
 <entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Luxury" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="100000"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="generators">
-<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" charismaToConnectionFactor="3" maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" characterAdvancements="//@entries.0/@entries.16/@entries.2" charismaToConnectionFactor="3" maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0/@entries.0">
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="9">
 <choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
@@ -2685,33 +2685,6 @@
 <instructions key="readyForCreation" value="All has been set, you can create the character now."/>
 <instructions key="personaCreated" value="The character is created spend all the values."/>
 <instructions key="commited" value="The character is finshed and commited."/>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
-<type href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="2">
-<type href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="1">
-<type href="http://urszeidler.de/shr5/1.0#//Wissensfertigkeit"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="1">
-<type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
-<type href="http://urszeidler.de/shr5/1.0#//Zauber"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
-<type href="http://urszeidler.de/shr5/1.0#//PersonaKomplexForm"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
-<type href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="2">
-<type href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
-</characterAdvancements>
-<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="13">
-<type href="http://urszeidler.de/shr5/1.0#//Initation"/>
-</characterAdvancements>
 <lifestyleToStartMoney numberOfW="1" moneyFactor="30" lifeStyles="//@entries.0/@entries.15/@entries.0"/>
 <lifestyleToStartMoney numberOfW="2" moneyFactor="40" lifeStyles="//@entries.0/@entries.15/@entries.1"/>
 <lifestyleToStartMoney numberOfW="3" moneyFactor="60" lifeStyles="//@entries.0/@entries.15/@entries.2"/>
@@ -2719,11 +2692,13 @@
 <lifestyleToStartMoney numberOfW="5" moneyFactor="500" lifeStyles="//@entries.0/@entries.15/@entries.4"/>
 <lifestyleToStartMoney numberOfW="6" moneyFactor="1000" lifeStyles="//@entries.0/@entries.15/@entries.5"/>
 </entries>
-<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator">
+<entries xsi:type="shr5mngt:FreeStyle" name="Free Style Generator" characterAdvancements="//@entries.0/@entries.16/@entries.2">
 <instructions key="new" value="Choose the basic Concept"/>
 <instructions key="readyForCreation" value="All has been set, you can create the character now."/>
 <instructions key="personaCreated" value="The character is created you can comit any time."/>
 <instructions key="commited" value="The character is finshed and commited."/>
+</entries>
+<entries xsi:type="shr5mngt:CharacterAdvancementSystem" name="The basic advancements system.">
 <characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart" karmaFactor="5">
 <type href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
 </characterAdvancements>

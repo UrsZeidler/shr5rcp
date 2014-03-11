@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
@@ -316,6 +317,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass characterAdvancementSystemEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -578,7 +586,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
 	public EReference getCharacterGeneratorSystem_CharacterAdvancements() {
-        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(1);
+        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(2);
     }
 
 	/**
@@ -587,7 +595,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EReference getCharacterGeneratorSystem_LifestyleToStartMoney() {
-        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(2);
+        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -1915,6 +1923,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCharacterAdvancementSystem() {
+        return characterAdvancementSystemEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCharacterAdvancementSystem_CharacterAdvancements() {
+        return (EReference)characterAdvancementSystemEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1979,8 +2005,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         characterGeneratorSystemEClass = createEClass(CHARACTER_GENERATOR_SYSTEM);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
-        createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
+        createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
 
         prioritySystemEClass = createEClass(PRIORITY_SYSTEM);
         createEReference(prioritySystemEClass, PRIORITY_SYSTEM__PRIORITIES);
@@ -2163,6 +2189,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         gamemasterManagementEClass = createEClass(GAMEMASTER_MANAGEMENT);
         createEReference(gamemasterManagementEClass, GAMEMASTER_MANAGEMENT__GRUNTS);
 
+        characterAdvancementSystemEClass = createEClass(CHARACTER_ADVANCEMENT_SYSTEM);
+        createEReference(characterAdvancementSystemEClass, CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -2227,6 +2256,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         gruntGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         playerManagementEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
+        characterAdvancementSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2249,8 +2279,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(characterGeneratorSystemEClass, CharacterGeneratorSystem.class, "CharacterGeneratorSystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCharacterGeneratorSystem_CharacterAdvancements(), this.getAdvancement(), null, "characterAdvancements", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCharacterGeneratorSystem_LifestyleToStartMoney(), this.getLifestyleToStartMoney(), null, "lifestyleToStartMoney", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterGeneratorSystem_CharacterAdvancements(), this.getCharacterAdvancementSystem(), null, "characterAdvancements", null, 1, 1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(prioritySystemEClass, PrioritySystem.class, "PrioritySystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPrioritySystem_Priorities(), this.getPriorityCategorie(), null, "priorities", null, 0, -1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2583,6 +2613,9 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(gamemasterManagementEClass, GamemasterManagement.class, "GamemasterManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getGamemasterManagement_Grunts(), this.getGruntGroup(), null, "grunts", null, 0, -1, GamemasterManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(characterAdvancementSystemEClass, CharacterAdvancementSystem.class, "CharacterAdvancementSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getCharacterAdvancementSystem_CharacterAdvancements(), this.getAdvancement(), null, "characterAdvancements", null, 0, -1, CharacterAdvancementSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");

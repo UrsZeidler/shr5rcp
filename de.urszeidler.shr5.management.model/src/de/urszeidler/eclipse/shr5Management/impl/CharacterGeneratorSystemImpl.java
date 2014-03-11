@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -17,11 +16,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
-import de.urszeidler.eclipse.shr5Management.Advancement;
+import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
@@ -40,8 +38,8 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getInstructions <em>Instructions</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getCharacterAdvancements <em>Character Advancements</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getCharacterAdvancements <em>Character Advancements</em>}</li>
  * </ul>
  * </p>
  *
@@ -149,16 +147,6 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	protected EMap<GeneratorState, String> instructions;
 
 	/**
-     * The cached value of the '{@link #getCharacterAdvancements() <em>Character Advancements</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getCharacterAdvancements()
-     * @generated
-     * @ordered
-     */
-	protected EList<Advancement> characterAdvancements;
-
-	/**
      * The cached value of the '{@link #getLifestyleToStartMoney() <em>Lifestyle To Start Money</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -167,6 +155,16 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * @ordered
      */
     protected EList<LifestyleToStartMoney> lifestyleToStartMoney;
+
+    /**
+     * The cached value of the '{@link #getCharacterAdvancements() <em>Character Advancements</em>}' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getCharacterAdvancements()
+     * @generated
+     * @ordered
+     */
+	protected CharacterAdvancementSystem characterAdvancements;
 
     /**
      * <!-- begin-user-doc -->
@@ -326,14 +324,40 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<Advancement> getCharacterAdvancements() {
-        if (characterAdvancements == null) {
-            characterAdvancements = new EObjectContainmentEList<Advancement>(Advancement.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
+	public CharacterAdvancementSystem getCharacterAdvancements() {
+        if (characterAdvancements != null && characterAdvancements.eIsProxy()) {
+            InternalEObject oldCharacterAdvancements = (InternalEObject)characterAdvancements;
+            characterAdvancements = (CharacterAdvancementSystem)eResolveProxy(oldCharacterAdvancements);
+            if (characterAdvancements != oldCharacterAdvancements) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS, oldCharacterAdvancements, characterAdvancements));
+            }
         }
         return characterAdvancements;
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CharacterAdvancementSystem basicGetCharacterAdvancements() {
+        return characterAdvancements;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCharacterAdvancements(CharacterAdvancementSystem newCharacterAdvancements) {
+        CharacterAdvancementSystem oldCharacterAdvancements = characterAdvancements;
+        characterAdvancements = newCharacterAdvancements;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS, oldCharacterAdvancements, characterAdvancements));
+    }
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -355,8 +379,6 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
         switch (featureID) {
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
                 return ((InternalEList<?>)getInstructions()).basicRemove(otherEnd, msgs);
-            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
-                return ((InternalEList<?>)getCharacterAdvancements()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 return ((InternalEList<?>)getLifestyleToStartMoney()).basicRemove(otherEnd, msgs);
         }
@@ -385,10 +407,11 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
                 if (coreType) return getInstructions();
                 else return getInstructions().map();
-            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
-                return getCharacterAdvancements();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 return getLifestyleToStartMoney();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
+                if (resolve) return getCharacterAdvancements();
+                return basicGetCharacterAdvancements();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -420,13 +443,12 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
                 ((EStructuralFeature.Setting)getInstructions()).set(newValue);
                 return;
-            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
-                getCharacterAdvancements().clear();
-                getCharacterAdvancements().addAll((Collection<? extends Advancement>)newValue);
-                return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 getLifestyleToStartMoney().clear();
                 getLifestyleToStartMoney().addAll((Collection<? extends LifestyleToStartMoney>)newValue);
+                return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
+                setCharacterAdvancements((CharacterAdvancementSystem)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -458,11 +480,11 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
                 getInstructions().clear();
                 return;
-            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
-                getCharacterAdvancements().clear();
-                return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 getLifestyleToStartMoney().clear();
+                return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
+                setCharacterAdvancements((CharacterAdvancementSystem)null);
                 return;
         }
         super.eUnset(featureID);
@@ -488,10 +510,10 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return srcBook != null;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
                 return instructions != null && !instructions.isEmpty();
-            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
-                return characterAdvancements != null && !characterAdvancements.isEmpty();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 return lifestyleToStartMoney != null && !lifestyleToStartMoney.isEmpty();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
+                return characterAdvancements != null;
         }
         return super.eIsSet(featureID);
     }
