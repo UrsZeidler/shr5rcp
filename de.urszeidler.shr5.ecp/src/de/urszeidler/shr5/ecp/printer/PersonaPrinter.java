@@ -17,7 +17,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.nebula.paperclips.core.BreakPrint;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
@@ -69,14 +73,16 @@ import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * @author urs
  */
-public class PersonaPrinter {
+public class PersonaPrinter implements IPropertyChangeListener {
 
     private static final String EOL = "\n";
     private static final int BIG_SCALE = 80;
@@ -107,8 +113,12 @@ public class PersonaPrinter {
         return instance;
     }
 
+    private IPreferenceStore store;
+
     public PersonaPrinter() {
         super();
+        store = Activator.getDefault().getPreferenceStore();
+        store.addPropertyChangeListener(this);
         initalizePrinter();
     }
 
@@ -122,14 +132,25 @@ public class PersonaPrinter {
      */
     protected void initalizePrinter() {
 
-        FontData[] defaultFont = JFaceResources.getDefaultFont().getFontData();
-        boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
-        italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
-        attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
+        initalizeFontData();
 
         itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
         Shr5managementItemProviderAdapterFactory shr5managementItemProviderAdapterFactory = new de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory();
         AdapterFactoryUtil.getInstance().getAdapterFactory().insertAdapterFactory(shr5managementItemProviderAdapterFactory);
+    }
+
+    /**
+     * 
+     */
+    private void initalizeFontData() {
+        FontData[] defaultFont = JFaceResources.getDefaultFont().getFontData();
+        boldFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_MAIN_HEADER)[0];
+        italicFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_TABLE_HEADER)[0];
+        attributeFont = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_NORMAL_TEXT)[0];
+//        
+//        boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
+//        italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
+//        attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
     }
 
     /**
@@ -1402,13 +1423,13 @@ public class PersonaPrinter {
     }
 
     /**
-     * Prints the ini.
+     * Prints the money.
      * 
      * @param persona
      * @return
      */
     private String printIntegerMoney(BigDecimal bigDecimal) {
-        return String.format("%,.0f", bigDecimal);//$NON-NLS-1$
+        return String.format("%,.0f" + store.getString(PreferenceConstants.CURRENCY_SYMBOL), bigDecimal);//$NON-NLS-1$
     }
 
     /**
@@ -1501,6 +1522,11 @@ public class PersonaPrinter {
         IItemPropertyDescriptor descriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, eAttribute);
 
         return descriptor.getDisplayName(eAttribute);
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent event) {       
+        initalizeFontData();
     }
 
 }

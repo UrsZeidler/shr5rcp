@@ -171,6 +171,20 @@
             class="de.urszeidler.shr5.ecp.Shr5Initalizer">
       </startup>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
+            id="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
+            name="Print Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="de.urszeidler.shr5.ecp.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
 
 
 </plugin>
