@@ -147,10 +147,10 @@ public class PersonaPrinter implements IPropertyChangeListener {
         boldFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_MAIN_HEADER)[0];
         italicFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_TABLE_HEADER)[0];
         attributeFont = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_NORMAL_TEXT)[0];
-//        
-//        boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
-//        italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
-//        attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
+        //
+        // boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
+        // italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
+        // attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
     }
 
     /**
@@ -425,7 +425,11 @@ public class PersonaPrinter implements IPropertyChangeListener {
 
         grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), 2);
 
-        grid.add(printAllPersonaSkills(persona));
+        if (store.getBoolean(PreferenceConstants.PRINT_USEABLE_SKILLS))
+            grid.add(printAllPersonaSkills(persona));
+        else
+            grid.add(printPersonaSkills(persona));
+
         grid.add(printPersonaFormPart1(character));
 
         grid.add(new BorderPrint(printPersonaRangedWeapons1(character), border), 1);
@@ -1525,7 +1529,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
     }
 
     @Override
-    public void propertyChange(PropertyChangeEvent event) {       
+    public void propertyChange(PropertyChangeEvent event) {
         initalizeFontData();
     }
 
