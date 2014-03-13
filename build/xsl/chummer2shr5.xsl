@@ -1076,11 +1076,11 @@
 			</xsl:when>
 			<xsl:when test="$matchingName='MAG'">
 				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" />
+					select="'http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie'" />
 			</xsl:when>
 			<xsl:when test="$matchingName='RES'">
 				<xsl:value-of
-					select="'http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik'" />
+					select="'http://urszeidler.de/shr5/1.0#//ResonanzPersona/resonanz'" />
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>

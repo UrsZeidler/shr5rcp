@@ -131,13 +131,13 @@
 </fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Conjuring">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Banishing" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Banishing" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Spirit Type</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Binding" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Binding" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Spirit Type</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Summoning" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Summoning" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Spirit Type</spezialisierungen>
 </fertigkeiten>
 </entries>
@@ -177,7 +177,7 @@
 </fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Enchanting">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Alchemy" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Alchemy" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Command</spezialisierungen>
 <spezialisierungen>Contact</spezialisierungen>
 <spezialisierungen>Time</spezialisierungen>
@@ -188,7 +188,7 @@
 <spezialisierungen>Focus Analysis</spezialisierungen>
 <spezialisierungen>Crafting</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Disenchanting" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Disenchanting" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>By Type</spezialisierungen>
 </fertigkeiten>
 </entries>
@@ -289,13 +289,13 @@
 </fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Sorcery">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Counterspelling" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Counterspelling" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Spell Type</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Ritual Spellcasting" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Ritual Spellcasting" page="142" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>By Keyword</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Spellcasting" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie" name="Spellcasting" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Combat</spezialisierungen>
 <spezialisierungen>Detection</spezialisierungen>
 <spezialisierungen>Health</spezialisierungen>
@@ -322,13 +322,13 @@
 </fertigkeiten>
 </entries>
 <entries xsi:type="shr5:FertigkeitsGruppe" name="Tasking">
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Compiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//ResonanzPersona/resonanz" name="Compiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Sprite Type</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Decompiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//ResonanzPersona/resonanz" name="Decompiling" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Sprite Type</spezialisierungen>
 </fertigkeiten>
-<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik" name="Registering" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
+<fertigkeiten xsi:type="shr5:Fertigkeit" ausweichen="false" attribut="http://urszeidler.de/shr5/1.0#//ResonanzPersona/resonanz" name="Registering" page="143" srcBook="//@entries.0/@entries.0/@entries.0">
 <spezialisierungen>Sprite Type</spezialisierungen>
 </fertigkeiten>
 </entries>
