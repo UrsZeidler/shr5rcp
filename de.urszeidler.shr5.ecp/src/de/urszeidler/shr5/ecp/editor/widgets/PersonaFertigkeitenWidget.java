@@ -250,15 +250,14 @@ public class PersonaFertigkeitenWidget extends Composite {
         TreeColumnLayout tcl_composite = new TreeColumnLayout();
         composite.setLayout(tcl_composite);
 
-        
+        final EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
         treeViewer = new TreeViewer(composite, SWT.BORDER);
         treeViewer.setAutoExpandLevel(2);
         ViewerFilter filter = new ViewerFilter() {
             @Override
             public boolean select(Viewer viewer, Object parentElement, Object element) {
                 if (element instanceof Fertigkeit) {
-                    Fertigkeit f = (Fertigkeit)element;
-                    EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
+                    Fertigkeit f = (Fertigkeit)element;                    
                    return eAllAttributes.contains(f.getAttribut());
                 }
                 return true;
