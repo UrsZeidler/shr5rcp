@@ -30,6 +30,7 @@
       <xsd:element name="vehicels" type="shr5:Fahrzeug"/>
       <xsd:element name="choosenLifestyle" type="shr5:Lifestyle"/>
       <xsd:element name="nativeLanguage" type="shr5:Sprachfertigkeit"/>
+      <xsd:element name="generatorSrc" type="shr5mngt:CharacterGenerator"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>

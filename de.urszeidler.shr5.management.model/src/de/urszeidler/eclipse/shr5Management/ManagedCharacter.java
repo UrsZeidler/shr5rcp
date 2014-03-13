@@ -37,6 +37,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getPublicAwareness <em>Public Awareness</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getKarmaGaint <em>Karma Gaint</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getCurrentKarma <em>Current Karma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getGeneratorSrc <em>Generator Src</em>}</li>
  * </ul>
  * </p>
  *
@@ -373,5 +374,31 @@ public interface ManagedCharacter extends EObject {
      * @generated
      */
     int getCurrentKarma();
+
+    /**
+     * Returns the value of the '<em><b>Generator Src</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Generator Src</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Generator Src</em>' containment reference.
+     * @see #setGeneratorSrc(CharacterGenerator)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_GeneratorSrc()
+     * @model containment="true"
+     * @generated
+     */
+    CharacterGenerator getGeneratorSrc();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getGeneratorSrc <em>Generator Src</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Generator Src</em>' containment reference.
+     * @see #getGeneratorSrc()
+     * @generated
+     */
+    void setGeneratorSrc(CharacterGenerator value);
 
 } // ManagedCharacter

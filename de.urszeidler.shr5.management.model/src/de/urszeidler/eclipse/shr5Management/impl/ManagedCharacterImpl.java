@@ -53,6 +53,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getPublicAwareness <em>Public Awareness</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getKarmaGaint <em>Karma Gaint</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getCurrentKarma <em>Current Karma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getGeneratorSrc <em>Generator Src</em>}</li>
  * </ul>
  * </p>
  *
@@ -239,6 +240,16 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * @ordered
      */
     protected static final int CURRENT_KARMA_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getGeneratorSrc() <em>Generator Src</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getGeneratorSrc()
+     * @generated
+     * @ordered
+     */
+    protected CharacterGenerator generatorSrc;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -591,6 +602,49 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CharacterGenerator getGeneratorSrc() {
+        return generatorSrc;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetGeneratorSrc(CharacterGenerator newGeneratorSrc, NotificationChain msgs) {
+        CharacterGenerator oldGeneratorSrc = generatorSrc;
+        generatorSrc = newGeneratorSrc;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC, oldGeneratorSrc, newGeneratorSrc);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setGeneratorSrc(CharacterGenerator newGeneratorSrc) {
+        if (newGeneratorSrc != generatorSrc) {
+            NotificationChain msgs = null;
+            if (generatorSrc != null)
+                msgs = ((InternalEObject)generatorSrc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC, null, msgs);
+            if (newGeneratorSrc != null)
+                msgs = ((InternalEObject)newGeneratorSrc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC, null, msgs);
+            msgs = basicSetGeneratorSrc(newGeneratorSrc, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC, newGeneratorSrc, newGeneratorSrc));
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
@@ -629,6 +683,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.MANAGED_CHARACTER__VEHICELS:
                 return ((InternalEList<?>)getVehicels()).basicRemove(otherEnd, msgs);
+            case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
+                return basicSetGeneratorSrc(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -675,6 +731,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return getKarmaGaint();
             case Shr5managementPackage.MANAGED_CHARACTER__CURRENT_KARMA:
                 return getCurrentKarma();
+            case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
+                return getGeneratorSrc();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -728,6 +786,9 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__PUBLIC_AWARENESS:
                 setPublicAwareness((Integer)newValue);
                 return;
+            case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
+                setGeneratorSrc((CharacterGenerator)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -775,6 +836,9 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
             case Shr5managementPackage.MANAGED_CHARACTER__PUBLIC_AWARENESS:
                 setPublicAwareness(PUBLIC_AWARENESS_EDEFAULT);
                 return;
+            case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
+                setGeneratorSrc((CharacterGenerator)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -818,6 +882,8 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                 return getKarmaGaint() != KARMA_GAINT_EDEFAULT;
             case Shr5managementPackage.MANAGED_CHARACTER__CURRENT_KARMA:
                 return getCurrentKarma() != CURRENT_KARMA_EDEFAULT;
+            case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
+                return generatorSrc != null;
         }
         return super.eIsSet(featureID);
     }

@@ -30,6 +30,7 @@
       <nested inputs="shr5Management.ecore#//ManagedCharacter/choosenLifestyle" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=7"/>
       <nested inputs="shr5Management.ecore#//ManagedCharacter/nativeLanguage" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=6"/>
       <nested inputs="shr5Management.ecore#//ManagedCharacter/nativeLanguage" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=8"/>
+      <nested inputs="shr5Management.ecore#//ManagedCharacter/generatorSrc" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=9"/>
     </nested>
     <nested inputs="shr5Management.ecore#//ManagedCharacter" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDElementDeclaration"/>
     <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1">

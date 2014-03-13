@@ -216,13 +216,22 @@ public interface Shr5managementPackage extends EPackage {
     int MANAGED_CHARACTER__CURRENT_KARMA = 15;
 
     /**
+     * The feature id for the '<em><b>Generator Src</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MANAGED_CHARACTER__GENERATOR_SRC = 16;
+
+    /**
      * The number of structural features of the '<em>Managed Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MANAGED_CHARACTER_FEATURE_COUNT = 16;
+	int MANAGED_CHARACTER_FEATURE_COUNT = 17;
 
 	/**
      * The number of operations of the '<em>Managed Character</em>' class.
@@ -604,6 +613,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int NON_PLAYER_CHARACTER__CURRENT_KARMA = MANAGED_CHARACTER__CURRENT_KARMA;
+
+    /**
+     * The feature id for the '<em><b>Generator Src</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NON_PLAYER_CHARACTER__GENERATOR_SRC = MANAGED_CHARACTER__GENERATOR_SRC;
 
     /**
      * The number of structural features of the '<em>Non Player Character</em>' class.
@@ -2785,6 +2803,15 @@ public interface Shr5managementPackage extends EPackage {
     int PLAYER_CHARACTER__CURRENT_KARMA = MANAGED_CHARACTER__CURRENT_KARMA;
 
     /**
+     * The feature id for the '<em><b>Generator Src</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLAYER_CHARACTER__GENERATOR_SRC = MANAGED_CHARACTER__GENERATOR_SRC;
+
+    /**
      * The number of structural features of the '<em>Player Character</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3943,6 +3970,17 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getManagedCharacter_CurrentKarma();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getGeneratorSrc <em>Generator Src</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Generator Src</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.ManagedCharacter#getGeneratorSrc()
+     * @see #getManagedCharacter()
+     * @generated
+     */
+    EReference getManagedCharacter_GeneratorSrc();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem <em>Character Generator System</em>}'.
@@ -5745,6 +5783,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute MANAGED_CHARACTER__CURRENT_KARMA = eINSTANCE.getManagedCharacter_CurrentKarma();
+
+        /**
+         * The meta object literal for the '<em><b>Generator Src</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MANAGED_CHARACTER__GENERATOR_SRC = eINSTANCE.getManagedCharacter_GeneratorSrc();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl <em>Character Generator System</em>}' class.

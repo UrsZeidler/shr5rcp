@@ -332,6 +332,7 @@ public class ManagedCharacterItemProvider
             childrenFeatures.add(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS);
             childrenFeatures.add(Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS);
             childrenFeatures.add(Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS);
+            childrenFeatures.add(Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC);
         }
         return childrenFeatures;
     }
@@ -391,6 +392,7 @@ public class ManagedCharacterItemProvider
             case Shr5managementPackage.MANAGED_CHARACTER__CONTRACTS:
             case Shr5managementPackage.MANAGED_CHARACTER__CONNECTIONS:
             case Shr5managementPackage.MANAGED_CHARACTER__VEHICELS:
+            case Shr5managementPackage.MANAGED_CHARACTER__GENERATOR_SRC:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -527,6 +529,16 @@ public class ManagedCharacterItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS,
                  Shr5Factory.eINSTANCE.createDrohne()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+                 Shr5managementFactory.eINSTANCE.createFreeStyleGenerator()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+                 Shr5managementFactory.eINSTANCE.createShr5Generator()));
     }
 
 	/**
