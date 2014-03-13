@@ -1249,8 +1249,12 @@ public class PersonaPrinter implements IPropertyChangeListener {
     private void printFertigkeitList(GridPrint grid, List<Fertigkeit> fertigkeiten, AbstraktPersona persona) {
         if (persona == null)
             return;
+        final EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
 
         for (Fertigkeit fertigkeit : fertigkeiten) {
+            if (eAllAttributes.contains(fertigkeit.getAttribut()))
+                continue;
+
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
             Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(fertigkeit, persona);
             if (fertigkeitValue < 1 && !fertigkeit.isAusweichen()) {
