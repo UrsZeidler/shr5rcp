@@ -8,6 +8,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.ui.celleditor.ExtendedDialogCellEditor;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
@@ -26,6 +27,7 @@ import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
@@ -248,8 +250,24 @@ public class PersonaFertigkeitenWidget extends Composite {
         TreeColumnLayout tcl_composite = new TreeColumnLayout();
         composite.setLayout(tcl_composite);
 
+        
         treeViewer = new TreeViewer(composite, SWT.BORDER);
         treeViewer.setAutoExpandLevel(2);
+        ViewerFilter filter = new ViewerFilter() {
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+                if (element instanceof Fertigkeit) {
+                    Fertigkeit f = (Fertigkeit)element;
+                    EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
+                   return eAllAttributes.contains(f.getAttribut());
+                }
+                return true;
+            }
+        };
+        treeViewer.setFilters(new ViewerFilter[]{
+                filter
+                
+        });
         final Tree tree = treeViewer.getTree();
         tree.setHeaderVisible(true);
         tree.setLinesVisible(true);
