@@ -11,6 +11,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -18,6 +19,7 @@ import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.Diagnostician;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.fieldassist.ControlDecoration;
@@ -426,9 +428,17 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
-        object.setState(GeneratorState.COMMITED);
-        object.setStartResources(ShadowrunManagmentTools.calcResourcesLeft(object));
-        object.setStartKarma(ShadowrunManagmentTools.calcKarmaLeft(object));
+         CompoundCommand command = new CompoundCommand();
+        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
+                GeneratorState.COMMITED));
+        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
+                ShadowrunManagmentTools.calcKarmaLeft(object)));
+        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES,
+                ShadowrunManagmentTools.calcResourcesLeft(object)));
+        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+                object));
+        
+        getEditingDomain().getCommandStack().execute(command);
         validateChange();        
     }
 

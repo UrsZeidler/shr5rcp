@@ -8,12 +8,14 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
@@ -227,13 +229,13 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
 
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE, compositePrio);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_SPECIES, compositePrio);
         emfFormBuilder.addSeperatorEntry(compositePrio);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_PERSONA, compositePrio);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
@@ -251,11 +253,28 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
      */
     protected void commitCharacter() {
         object.setState(GeneratorState.COMMITED);
+
+//        SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE, GeneratorState.COMMITED);
+        moveGeneratorToCharacterCommit();
         validateChange();
 
     }
 
  
+    /**
+     * 
+     */
+    protected void moveGeneratorToCharacterCommit() {
+        CompoundCommand command = new CompoundCommand();
+        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
+                GeneratorState.COMMITED));
+        command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+                object));
+        
+        getEditingDomain().getCommandStack().execute(command);
+    }
+
+    
     protected void createManagedCharacter() {
         AbstraktPersona selectedPersona = object.getSelectedPersona();
         if (selectedPersona != null) {
