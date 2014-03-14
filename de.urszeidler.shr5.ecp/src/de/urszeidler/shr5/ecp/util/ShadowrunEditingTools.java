@@ -12,12 +12,58 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
+import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
+ * A collection of tool functions.
+ * 
  * @author urs
  */
 public class ShadowrunEditingTools {
+
+    /**
+     * Creates a transformer to make a {@link Zauber} object to a {@link PersonaZauber} object referencing the spell.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<Zauber, PersonaZauber> zauber2PersonaZauberTransformer() {
+        Transformer<Zauber, PersonaZauber> transformer = new Transformer<Zauber, PersonaZauber>() {
+
+            @Override
+            public PersonaZauber transform(Zauber input) {
+                PersonaZauber personaZauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+                personaZauber.setFormel(input);
+                personaZauber.setStufe(1);
+                return personaZauber;
+            }
+        };
+        return transformer;
+    }
+
+    /**
+     * Creates a transformer to make a {@link KomplexeForm} object to a {@link PersonaKomplexForm} object referencing the spell.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<KomplexeForm, PersonaKomplexForm> complexForm2PersonaComplexFormTransformer() {
+        Transformer<KomplexeForm, PersonaKomplexForm> transformer = new Transformer<KomplexeForm, PersonaKomplexForm>() {
+            @Override
+            public PersonaKomplexForm transform(KomplexeForm input) {
+                PersonaKomplexForm komplexForm = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
+                komplexForm.setStufe(1);
+                komplexForm.setForm(input);
+                return komplexForm;
+            }
+
+        };
+        return transformer;
+    }
 
     /**
      * Create a float string from an int with base 100.

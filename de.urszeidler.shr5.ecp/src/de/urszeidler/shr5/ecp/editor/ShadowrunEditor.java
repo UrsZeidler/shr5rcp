@@ -31,6 +31,7 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
+import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
@@ -51,6 +52,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
+import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
@@ -179,14 +181,39 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             } else if (Shr5Package.Literals.ZAUBERER__ZAUBER.equals(e.getFeature())) {
                 Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(theEObject, Shr5Package.Literals.ZAUBER);
 
-                PersonaZauber personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaZauber();
-                ReferenceValueDialog dialog = new ReferenceValueDialog(getSite().getShell(), personaFertigkeit,
-                        Shr5Package.Literals.PERSONA_ZAUBER__FORMEL, Shr5Package.Literals.PERSONA_ZAUBER__STUFE, objectsOfType.toArray());
+                ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
-                if (dialog.open() == Dialog.OK)
-                    return personaFertigkeit;
-                else
-                    return null;
+                Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
+
+                FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
+                        Shr5Package.Literals.SHR_LIST__ENTRIES, "Select spells", new ArrayList<EObject>(objectsOfType));
+
+                int result = dialog.open();
+                if (result == Window.OK) {
+                    EList<?> list = dialog.getResult();
+                    List<EObject> objectList = new ArrayList<EObject>();
+                    for (Object object1 : list) {
+                        if (object1 instanceof EObject) {
+                            objectList.add(transformer.transform((Zauber)object1));
+                        }
+                    }
+
+                    return objectList;
+                }
+
+                //
+                //
+                //
+                //
+                //
+                // PersonaZauber personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaZauber();
+                // ReferenceValueDialog dialog = new ReferenceValueDialog(getSite().getShell(), personaFertigkeit,
+                // Shr5Package.Literals.PERSONA_ZAUBER__FORMEL, Shr5Package.Literals.PERSONA_ZAUBER__STUFE, objectsOfType.toArray());
+                //
+                // if (dialog.open() == Dialog.OK)
+                // return personaFertigkeit;
+                // else
+                // return null;
 
             } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())) {
                 EObject eObject = Shr5managementFactory.eINSTANCE.createConnection();

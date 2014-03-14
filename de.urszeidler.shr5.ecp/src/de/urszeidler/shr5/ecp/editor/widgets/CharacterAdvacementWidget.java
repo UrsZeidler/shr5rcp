@@ -68,6 +68,7 @@ import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class CharacterAdvacementWidget extends Composite {
 
@@ -96,28 +97,13 @@ public class CharacterAdvacementWidget extends Composite {
                     }
                 } else if (Shr5Package.Literals.ZAUBERER__ZAUBER.equals(currentOperation.feature)) {
                     Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(), Shr5Package.Literals.ZAUBER);
-                    handleSingleReference(new Transformer<Zauber, PersonaZauber>() {
-                        @Override
-                        public PersonaZauber transform(Zauber input) {
-                            PersonaZauber zauber = Shr5Factory.eINSTANCE.createPersonaZauber();
-                            zauber.setFormel(input);
-                            return zauber;
-                        }
-                    }, e, list, getShell());
+                    handleSingleReference(ShadowrunEditingTools.zauber2PersonaZauberTransformer(), e, list, getShell());
                     updateToolbars();
                     return;
                 } else if (Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS.equals(currentOperation.feature)) {
                     Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(),
                             Shr5Package.Literals.KOMPLEXE_FORM);
-                    handleSingleReference(new Transformer<KomplexeForm, PersonaKomplexForm>() {
-                        @Override
-                        public PersonaKomplexForm transform(KomplexeForm input) {
-                            PersonaKomplexForm komplexForm = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
-                            komplexForm.setForm(input);
-                            return komplexForm;
-                        }
-
-                    }, e, list, getShell());
+                    handleSingleReference(ShadowrunEditingTools.complexForm2PersonaComplexFormTransformer(), e, list, getShell());
                     updateToolbars();
                     return;
                 } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN.equals(currentOperation.feature)) {
