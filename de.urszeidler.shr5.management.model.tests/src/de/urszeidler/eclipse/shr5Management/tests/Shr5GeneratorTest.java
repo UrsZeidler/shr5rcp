@@ -119,6 +119,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
     private Skill skill;
     private SpecialType mudan;
     private Resourcen resourcen;
+
     /**
      * Constructs a new Shr5 Generator test case with the given name. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -736,111 +737,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
     /**
      * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * <em>Has Not More Max Attributes</em>}' operation. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated not
-     */
-    @SuppressWarnings("unchecked")
-    public void testHasNotMoreMaxAttributes__DiagnosticChain_Map() {
-        createBasicCategories();
-        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
-        Spezies spezies = Shr5Factory.eINSTANCE.createSpezies();
-        character.getPersona().setSpezies(spezies);
-        spezies.setKonstitutionMax(5);
-        spezies.setStaerkeMax(5);
-        spezies.setReaktionMax(5);
-        spezies.setGeschicklichkeitMax(3);
-        spezies.setCharismaMax(1);
-        spezies.setIntuitionMax(1);
-        spezies.setWillenskraftMax(1);
-        spezies.setLogikMax(1);
-
-        getFixture().setCharacter(character);
-
-        shr5System.setNumberOfMaxAttributes(2);
-        Map<Object, Object> context = Collections.EMPTY_MAP;
-        DiagnosticChain diagnostics = new BasicDiagnostic();
-        assertEquals("is true", true, getFixture().hasNotMoreMaxAttributes(diagnostics, context));
-
-        character.getPersona().setKonstitutionBasis(5);
-        assertEquals("is true", true, getFixture().hasNotMoreMaxAttributes(diagnostics, context));
-        character.getPersona().setReaktionBasis(5);
-        assertEquals("is true", true, getFixture().hasNotMoreMaxAttributes(diagnostics, context));
-        character.getPersona().setStaerkeBasis(5);
-        assertEquals("is true", false, getFixture().hasNotMoreMaxAttributes(diagnostics, context));
-
-        getFixture().setCharacter(character);
-
-    }
-
-    /**
-     * Tests the '
-     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * <em>Has No Skills Over Max</em>}' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated not
-     */
-    @SuppressWarnings("unchecked")
-    public void testHasNoSkillsOverMax__DiagnosticChain_Map() {
-        int max = 10;
-        getFixture().getShr5Generator().setSkillMax(max);
-        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
-        getFixture().setCharacter(character);
-
-        assertEquals(true, getFixture().hasNoSkillsOverMax(diagnostics, context));
-
-        AbstraktPersona persona = character.getPersona();
-        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-        personaFertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
-        personaFertigkeit.setStufe(max + 1);
-        persona.getFertigkeiten().add(personaFertigkeit);
-
-        assertEquals(false, getFixture().hasNoSkillsOverMax(diagnostics, context));
-        personaFertigkeit.setStufe(max);
-        assertEquals(true, getFixture().hasNoSkillsOverMax(diagnostics, context));
-        getFixture().getShr5Generator().setSkillMax(max - 1);
-        assertEquals(false, getFixture().hasNoSkillsOverMax(diagnostics, context));
-    }
-
-    /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated not
-     */
-    @SuppressWarnings("unchecked")
-    public void testHasNotMoreSpecalism__DiagnosticChain_Map() {
-        int max = 10;
-        getFixture().getShr5Generator().setNumberOfSpecalism(1);
-        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
-        getFixture().setCharacter(character);
-
-        assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
-
-        AbstraktPersona persona = character.getPersona();
-        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-        personaFertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
-        personaFertigkeit.setStufe(1);
-        personaFertigkeit.getSpezialisierungen().add("1");
-        persona.getFertigkeiten().add(personaFertigkeit);
-
-        assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
-        personaFertigkeit.getSpezialisierungen().add("2");
-        assertEquals(false, getFixture().hasNotMoreSpecalism(diagnostics, context));
-        getFixture().getShr5Generator().setNumberOfSpecalism(2);
-        assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
-    }
-
-    
-    /**
-     * Tests the '
      * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Attributes Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -900,43 +796,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
 
     }
-
-    // /**
-    // * Tests the '
-    // * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain,
-    // java.util.Map)
-    // * <em>Has Not Spend Skill All Points</em>}' operation. <!-- begin-user-doc
-    // * --> <!-- end-user-doc -->
-    // *
-    // * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-    // * @generated not
-    // */
-    // @SuppressWarnings("unchecked")
-    // public void testHasNotSpendSkillAllPoints__DiagnosticChain_Map() {
-    // createBasicCategories();
-    // PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
-    // getFixture().setCharacter(character);
-    //
-    // assertMudanOptions(character);
-    //
-    // skill.setSkillPoints(2);
-    // assertEquals("is false", false, getFixture().hasSpendAllSkillPoints(diagnostics, context));
-    // PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-    // Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
-    // fertigkeit.setFertigkeit(wfertigkeit);
-    // fertigkeit.setStufe(1);
-    // character.getPersona().getFertigkeiten().add(fertigkeit);
-    // assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
-    //
-    // character.getPersona().setLogikBasis(1);
-    // fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-    // Fertigkeit w1fertigkeit = Shr5Factory.eINSTANCE.createWissensfertigkeit();
-    // fertigkeit.setFertigkeit(w1fertigkeit);
-    // fertigkeit.setStufe(2);
-    // character.getPersona().getFertigkeiten().add(fertigkeit);
-    // assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
-    //
-    // }
 
     /**
      * Tests the '
