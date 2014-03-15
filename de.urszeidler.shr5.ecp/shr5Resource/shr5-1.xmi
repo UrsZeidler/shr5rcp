@@ -2566,7 +2566,7 @@
 <entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Luxury" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="100000"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="generators">
-<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" characterAdvancements="//@entries.0/@entries.16/@entries.2" charismaToConnectionFactor="3" maxKarmaToResources="10" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" characterAdvancements="//@entries.0/@entries.16/@entries.2" charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6" numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" srcBook="//@entries.0/@entries.0/@entries.0">
 <priorities xsi:type="shr5mngt:MetaType" categorieName="A" specialPoints="9">
 <choosableTypes href="#//@entries.0/@entries.2/@entries.0"/>
 </priorities>
