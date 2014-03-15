@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
@@ -27,6 +29,7 @@ import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
 /**
@@ -108,7 +111,6 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
             return true;
 
         getShr5Generator().getNumberOfMaxAttributes();
-        int counter = 0;
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
         if (persona.getKonstitutionBasis() >= spezies.getKonstitutionMax())
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
@@ -128,16 +130,37 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (persona.getIntuitionBasis() >= spezies.getIntuitionMax())
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION);
 
+        String attributes = toAttributeString(list, context);
+
         if (list.size() > getShr5Generator().getNumberOfMaxAttributes()) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotMoreMaxAttributes", new Object[]{ "test Attribute names", getShr5Generator().getNumberOfMaxAttributes(),
-                                        "hasNotMoreMaxAttributes", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                "_UI_NotMoreMaxAttributes", new Object[]{ attributes, getShr5Generator().getNumberOfMaxAttributes() }),
+                        new Object[]{ this }));
             }
             return false;
         }
         return true;
+    }
+
+    /**
+     * Creates a string from a list of attributes.
+     * 
+     * @param list the attributes
+     * @param context
+     * @return the localized test
+     */
+    protected String toAttributeString(ArrayList<EAttribute> list, Map<Object, Object> context) {
+
+        StringBuffer buffer = new StringBuffer();
+        for (Iterator<EAttribute> iterator2 = list.iterator(); iterator2.hasNext();) {
+            EAttribute eAttribute = iterator2.next();
+            buffer.append(EObjectValidator.getObjectLabel(eAttribute, context));
+            if (iterator2.hasNext())
+                buffer.append(",");
+        }
+        return buffer.toString();
     }
 
     /**
@@ -156,19 +179,19 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (persona == null)
             return true;
 
-        List<PersonaFertigkeit> list = new ArrayList<PersonaFertigkeit>();
+        List<Fertigkeit> list = new ArrayList<Fertigkeit>();
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             if (personaFertigkeit.getStufe() > getShr5Generator().getSkillMax())
-                list.add(personaFertigkeit);
+                list.add(personaFertigkeit.getFertigkeit());
         }
 
+        String fertigkeitsList = ShadowrunManagmentTools.beschreibarListToString(list);
         if (list.size() != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_SKILLS_OVER_MAX, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasNoSkillsOverMax", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_SKILLS_OVER_MAX, ModelPlugin.INSTANCE.getString("_UI_NoSkillsOverMax",
+                                new Object[]{ fertigkeitsList, getShr5Generator().getSkillMax() }), new Object[]{ this }));
             }
             return false;
         }
@@ -191,19 +214,19 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (persona == null)
             return true;
 
-        List<PersonaFertigkeit> list = new ArrayList<PersonaFertigkeit>();
+        List<Fertigkeit> list = new ArrayList<Fertigkeit>();
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
             if (personaFertigkeit.getSpezialisierungen().size() > getShr5Generator().getNumberOfSpecalism())
-                list.add(personaFertigkeit);
+                list.add(personaFertigkeit.getFertigkeit());
         }
+        String fertigkeitsList = ShadowrunManagmentTools.beschreibarListToString(list);
 
         if (list.size() != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NOT_MORE_SPECALISM, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasNotMoreSpecalism", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NOT_MORE_SPECALISM, ModelPlugin.INSTANCE.getString("_UI_NotMoreSpecalism",
+                                new Object[]{ fertigkeitsList, getShr5Generator().getNumberOfSpecalism() }), new Object[]{ this }));
             }
             return false;
         }
@@ -231,7 +254,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
             return true;
 
         getShr5Generator().getNumberOfMaxAttributes();
-        //int counter = 0;
+        // int counter = 0;
         ArrayList<EAttribute> list = new ArrayList<EAttribute>();
         if (persona.getKonstitutionBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX))// spezies.getKonstitutionMax())
             list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
@@ -250,14 +273,13 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__WILLENSKRAFT);
         if (persona.getIntuitionBasis() >= ShadowrunTools.calcRaceMaximum(persona, Shr5Package.Literals.SPEZIES__INTUITION_MAX))
             list.add(Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION);
-        
+
+        String attributesString = toAttributeString(list, context);
         if (list.size() != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT, ModelPlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasNoAttributesOverSpeciesAtt", EObjectValidator.getObjectLabel(this, context) }),
-                        new Object[]{ this }));
+                                "_UI_NoAttributesOverSpeciesAtt", new Object[]{ attributesString }), new Object[]{ this }));
             }
             return false;
         }
