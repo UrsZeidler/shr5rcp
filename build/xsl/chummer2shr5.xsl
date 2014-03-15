@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
+			xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="xml" indent="yes" encoding="UTF-8" />
 	<xsl:strip-space elements="*" />
 	<xsl:param name="path" select="'/home/urs/chummer2/Chummer2/data'" />
@@ -124,8 +126,8 @@
 		<entries xsi:type="shr5:ShrList" name="generators">
 			<entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system."
 				karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" characterAdvancements="//@entries.0/@entries.16/@entries.2"
-				charismaToConnectionFactor="3" maxKarmaToResources="10"
-				maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7"
+				charismaToConnectionFactor="3" maxKarmaToResources="10"  skillMax="6" numberOfSpecalism="1"
+				maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" 
 				numberOfMaxAttributes="1">
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />
