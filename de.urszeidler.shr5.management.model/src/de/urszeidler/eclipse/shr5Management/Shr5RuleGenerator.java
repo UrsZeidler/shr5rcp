@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5Management;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.util.DiagnosticChain;
 
 

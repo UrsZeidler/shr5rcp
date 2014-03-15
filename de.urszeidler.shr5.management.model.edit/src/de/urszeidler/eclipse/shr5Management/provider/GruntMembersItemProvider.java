@@ -3,9 +3,6 @@
  */
 package de.urszeidler.eclipse.shr5Management.provider;
 
-import de.urszeidler.eclipse.shr5Management.GruntMembers;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -22,6 +19,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import de.urszeidler.eclipse.shr5Management.GruntMembers;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.GruntMembers} object.

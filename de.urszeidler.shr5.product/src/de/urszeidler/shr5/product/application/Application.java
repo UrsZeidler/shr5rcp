@@ -3,7 +3,6 @@
  */
 package de.urszeidler.shr5.product.application;
 
-import org.eclipse.emf.ecp.application3x.ApplicationWorkbenchAdvisor;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.eclipse.swt.widgets.Display;

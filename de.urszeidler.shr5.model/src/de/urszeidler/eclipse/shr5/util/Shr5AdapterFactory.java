@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
-import de.urszeidler.eclipse.shr5.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -22,6 +21,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
 import de.urszeidler.eclipse.shr5.ChrakterLimits;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Critter;
 import de.urszeidler.eclipse.shr5.CritterKraft;
 import de.urszeidler.eclipse.shr5.Cyberware;

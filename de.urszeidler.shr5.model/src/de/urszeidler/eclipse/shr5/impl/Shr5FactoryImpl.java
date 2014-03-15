@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
@@ -16,6 +15,7 @@ import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Critter;
 import de.urszeidler.eclipse.shr5.CritterDauer;
 import de.urszeidler.eclipse.shr5.CritterHandlung;

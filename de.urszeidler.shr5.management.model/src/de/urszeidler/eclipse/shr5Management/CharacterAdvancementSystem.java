@@ -3,9 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
-import de.urszeidler.eclipse.shr5.Beschreibbar;
-
 import org.eclipse.emf.common.util.EList;
+
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 
 /**
  * <!-- begin-user-doc -->
