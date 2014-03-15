@@ -7,10 +7,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
@@ -201,15 +205,17 @@ public class ShadowrunManagmentTools {
 
     /**
      * Calcs the karma left for a generator.
+     * 
      * @param object
      * @return
      */
     public static int calcKarmaLeft(Shr5Generator object) {
         return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
     }
-    
+
     /**
      * Calcs the resources left for a generator.
+     * 
      * @param object
      * @return
      */
@@ -223,5 +229,23 @@ public class ShadowrunManagmentTools {
 
         return (object.getResourcen().getResource() + karmaToResource - calcResourceSpend);
 
+    }
+
+    /**
+     * Creates a string from a list of beschreibbar.
+     * 
+     * @param list the attributes
+     * @return the localized test
+     */
+    public static String beschreibarListToString(List<? extends Beschreibbar> list) {
+        StringBuffer buffer = new StringBuffer();
+        Iterator<? extends Beschreibbar> iterator = list.iterator();
+        for (Iterator<? extends Beschreibbar> iterator2 = list.iterator(); iterator2.hasNext();) {
+            Beschreibbar besch = iterator2.next();
+            buffer.append(besch.getName());
+            if (iterator.hasNext())
+                buffer.append(",");
+        }
+        return buffer.toString();
     }
 }
