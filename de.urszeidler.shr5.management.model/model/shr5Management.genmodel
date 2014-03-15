@@ -74,6 +74,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxResourceToKeep"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToResources"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/skillMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfSpecalism"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//MetaType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//MetaType/choosableTypes"/>
@@ -161,7 +163,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/magic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/karmaToResource"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/karmaSpend"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5Generator/shr5Generator"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/attributeSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/resourceSpend"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5Generator/connectionSpend"/>
@@ -294,6 +295,25 @@
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//CharacterAdvancementSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterAdvancementSystem/characterAdvancements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5Management.ecore#//Shr5RuleGenerator">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/shr5Generator"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreMaxAttributes">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreMaxAttributes/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreMaxAttributes/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNoSkillsOverMax">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoSkillsOverMax/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoSkillsOverMax/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreSpecalism">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreSpecalism/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreSpecalism/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt/context"/>
+      </genOperations>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

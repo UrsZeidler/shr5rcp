@@ -30,7 +30,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class Shr5GeneratorItemProvider extends Shr5RuleGeneratorItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
         ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
@@ -60,7 +60,6 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
             addMagicPropertyDescriptor(object);
             addKarmaToResourcePropertyDescriptor(object);
             addKarmaSpendPropertyDescriptor(object);
-            addShr5GeneratorPropertyDescriptor(object);
             addAttributeSpendPropertyDescriptor(object);
             addResourceSpendPropertyDescriptor(object);
             addConnectionSpendPropertyDescriptor(object);
@@ -222,28 +221,6 @@ public class Shr5GeneratorItemProvider extends CharacterGeneratorItemProvider im
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Shr5 Generator feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addShr5GeneratorPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Shr5Generator_shr5Generator_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5Generator_shr5Generator_feature", "_UI_Shr5Generator_type"),
-                 Shr5managementPackage.Literals.SHR5_GENERATOR__SHR5_GENERATOR,
-                 true,
-                 false,
-                 true,
-                 null,
                  null,
                  null));
     }

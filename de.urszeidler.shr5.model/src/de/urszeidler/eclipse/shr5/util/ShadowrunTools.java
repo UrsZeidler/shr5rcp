@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -21,82 +22,79 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 
 /**
- * 
  * Collection of tool methods.
  * 
  * @author urs
- * 
  */
 public class ShadowrunTools {
 
-	/**
-	 * Creates and initalise a character with the given spezies.
-	 * 
-	 * @param spezies
-	 * @param eclass
-	 * @param edge 
-	 * @return
-	 */
-	public static AbstraktPersona createPersona(Spezies spezies, EClass eclass, int edge) {
-		EObject p = Shr5Factory.eINSTANCE.create(eclass);
+    /**
+     * Creates and initalise a character with the given spezies.
+     * 
+     * @param spezies
+     * @param eclass
+     * @param edge
+     * @return
+     */
+    public static AbstraktPersona createPersona(Spezies spezies, EClass eclass, int edge) {
+        EObject p = Shr5Factory.eINSTANCE.create(eclass);
 
-		AbstraktPersona persona = (AbstraktPersona) p;
-		persona.setSpezies(spezies);
-		persona.setKonstitutionBasis(spezies.getKonstitutionMin());
-		persona.setGeschicklichkeitBasis(spezies.getGeschicklichkeitMin());
-		persona.setReaktionBasis(spezies.getReaktionMin());
-		persona.setStaerkeBasis(spezies.getStaerkeMin());
-		
-		persona.setCharismaBasis(spezies.getCharismaMin());
-		persona.setIntuitionBasis(spezies.getIntuitionMin());
-		persona.setLogikBasis(spezies.getLogikMin());
-		persona.setWillenskraftBasis(spezies.getWillenskraftMin());
-		
-		persona.setEdgeBasis(spezies.getEdgeMin());
-		//persona.setEdgeBasis(edge);
-		
-		return persona;
-	}
+        AbstraktPersona persona = (AbstraktPersona)p;
+        persona.setSpezies(spezies);
+        persona.setKonstitutionBasis(spezies.getKonstitutionMin());
+        persona.setGeschicklichkeitBasis(spezies.getGeschicklichkeitMin());
+        persona.setReaktionBasis(spezies.getReaktionMin());
+        persona.setStaerkeBasis(spezies.getStaerkeMin());
 
-	/**
-	 * Returns the geldwert as rounded string.
-	 * 
-	 * @param list
-	 * @return
-	 */
-	public static String calcListenWertToString(EList<Object> list) {
-		BigDecimal summ = calcListenWert(list);
-		return summ.longValue() + "";
-	}
+        persona.setCharismaBasis(spezies.getCharismaMin());
+        persona.setIntuitionBasis(spezies.getIntuitionMin());
+        persona.setLogikBasis(spezies.getLogikMin());
+        persona.setWillenskraftBasis(spezies.getWillenskraftMin());
 
-	/**
-	 * Calcs the wert of all {@link GeldWert} in the given list.
-	 * 
-	 * @param list
-	 * @return
-	 */
-	public static BigDecimal calcListenWert(List<? extends Object> list) {
-		BigDecimal summ = new BigDecimal(0);
-		for (Object eo : list) {
-			if (eo instanceof GeldWert) {
-				GeldWert wert = (GeldWert) eo;
+        persona.setEdgeBasis(spezies.getEdgeMin());
+        // persona.setEdgeBasis(edge);
 
-				if (wert.getWert() != null)
-					summ = summ.add(wert.getWert());
-			}
-		}
-		return summ;
-	}
-	
+        return persona;
+    }
+
+    /**
+     * Returns the geldwert as rounded string.
+     * 
+     * @param list
+     * @return
+     */
+    public static String calcListenWertToString(EList<Object> list) {
+        BigDecimal summ = calcListenWert(list);
+        return summ.longValue() + "";
+    }
+
+    /**
+     * Calcs the wert of all {@link GeldWert} in the given list.
+     * 
+     * @param list
+     * @return
+     */
+    public static BigDecimal calcListenWert(List<? extends Object> list) {
+        BigDecimal summ = new BigDecimal(0);
+        for (Object eo : list) {
+            if (eo instanceof GeldWert) {
+                GeldWert wert = (GeldWert)eo;
+
+                if (wert.getWert() != null)
+                    summ = summ.add(wert.getWert());
+            }
+        }
+        return summ;
+    }
 
     public static int findFertigkeitValue(FertigkeitsGruppe fg, AbstraktPersona persona2) {
         PersonaFertigkeitsGruppe pfg = findGruppe(fg, persona2);
-        if(pfg!=null)
+        if (pfg != null)
             return pfg.getStufe();
-        
+
         return 0;
     }
-    
+
     public static PersonaFertigkeitsGruppe findGruppe(FertigkeitsGruppe fg, AbstraktPersona persona2) {
         EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen = persona2.getFertigkeitsGruppen();
         for (PersonaFertigkeitsGruppe personaFertigkeitsGruppe : fertigkeitsGruppen) {
@@ -108,6 +106,7 @@ public class ShadowrunTools {
 
     /**
      * Returns the stufe or -1.
+     * 
      * @param fertigkeit
      * @param persona
      * @return
@@ -116,19 +115,20 @@ public class ShadowrunTools {
         PersonaFertigkeit pf = findFertigkeit(fertigkeit, persona);
         if (pf != null)
             return pf.getStufe();
-        
-        if(Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN.equals(fertigkeit.eContainmentFeature())){
+
+        if (Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN.equals(fertigkeit.eContainmentFeature())) {
             FertigkeitsGruppe eContainer = (FertigkeitsGruppe)fertigkeit.eContainer();
             PersonaFertigkeitsGruppe gruppe = findGruppe(eContainer, persona);
-            if(gruppe!=null)
-                return gruppe.getStufe();            
+            if (gruppe != null)
+                return gruppe.getStufe();
         }
-        
+
         return -1;
     }
 
     /**
      * Returns the persona fertigkeit or null.
+     * 
      * @param fertigkeit
      * @param persona
      * @return
@@ -142,5 +142,26 @@ public class ShadowrunTools {
         return null;
     }
 
+    /**
+     * Calcs the race maximum for the given persona and the max feature.
+     * 
+     * @param persona
+     * @param attribute
+     * @return
+     */
+    public static int calcRaceMaximum(AbstraktPersona persona, EAttribute attribute) {
+        if (persona == null)
+            return -1;
+
+        Spezies spezies = persona.getSpezies();
+        if (spezies == null)
+            return -1;
+
+        int value = (Integer)spezies.eGet(attribute);
+        int wert = persona.getModManager().getmodWert(attribute);
+        int halfEven = (int)Math.ceil((float)(value + wert) / 2F);
+
+        return value + halfEven;
+    }
 
 }

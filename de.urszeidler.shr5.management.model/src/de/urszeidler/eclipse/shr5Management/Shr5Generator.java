@@ -23,7 +23,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getMagic <em>Magic</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaToResource <em>Karma To Resource</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend <em>Karma Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator <em>Shr5 Generator</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend <em>Attribute Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend <em>Resource Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend <em>Connection Spend</em>}</li>
@@ -41,7 +40,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @model
  * @generated
  */
-public interface Shr5Generator extends CharacterGenerator {
+public interface Shr5Generator extends Shr5RuleGenerator {
 	/**
      * Returns the value of the '<em><b>Resourcen</b></em>' reference.
      * <!-- begin-user-doc -->
@@ -212,21 +211,6 @@ public interface Shr5Generator extends CharacterGenerator {
      * @generated
      */
 	int getKarmaSpend();
-
-	/**
-     * Returns the value of the '<em><b>Shr5 Generator</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Shr5 Generator</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Shr5 Generator</em>' reference.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5Generator_Shr5Generator()
-     * @model transient="true" changeable="false" volatile="true" derived="true"
-     * @generated
-     */
-	Shr5System getShr5Generator();
 
 	/**
      * Returns the value of the '<em><b>Attribute Spend</b></em>' attribute.

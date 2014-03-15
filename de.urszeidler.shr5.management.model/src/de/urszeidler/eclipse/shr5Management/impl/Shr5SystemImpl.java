@@ -25,6 +25,8 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxResourceToKeep <em>Max Resource To Keep</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxKarmaToResources <em>Max Karma To Resources</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxKarmaToKeep <em>Max Karma To Keep</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getSkillMax <em>Skill Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
  * </ul>
  * </p>
  *
@@ -179,6 +181,43 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected int maxKarmaToKeep = MAX_KARMA_TO_KEEP_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getSkillMax() <em>Skill Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSkillMax()
+     * @generated
+     * @ordered
+     */
+    protected static final int SKILL_MAX_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getSkillMax() <em>Skill Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSkillMax()
+     * @generated
+     * @ordered
+     */
+    protected int skillMax = SKILL_MAX_EDEFAULT;
+    /**
+     * The default value of the '{@link #getNumberOfSpecalism() <em>Number Of Specalism</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getNumberOfSpecalism()
+     * @generated
+     * @ordered
+     */
+    protected static final int NUMBER_OF_SPECALISM_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getNumberOfSpecalism() <em>Number Of Specalism</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getNumberOfSpecalism()
+     * @generated
+     * @ordered
+     */
+    protected int numberOfSpecalism = NUMBER_OF_SPECALISM_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -369,6 +408,48 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getSkillMax() {
+        return skillMax;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSkillMax(int newSkillMax) {
+        int oldSkillMax = skillMax;
+        skillMax = newSkillMax;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX, oldSkillMax, skillMax));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getNumberOfSpecalism() {
+        return numberOfSpecalism;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setNumberOfSpecalism(int newNumberOfSpecalism) {
+        int oldNumberOfSpecalism = numberOfSpecalism;
+        numberOfSpecalism = newNumberOfSpecalism;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM, oldNumberOfSpecalism, numberOfSpecalism));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -391,6 +472,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getMaxKarmaToResources();
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
                 return getMaxKarmaToKeep();
+            case Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX:
+                return getSkillMax();
+            case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
+                return getNumberOfSpecalism();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -426,6 +511,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return;
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
                 setMaxKarmaToKeep((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX:
+                setSkillMax((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
+                setNumberOfSpecalism((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -463,6 +554,12 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
                 setMaxKarmaToKeep(MAX_KARMA_TO_KEEP_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX:
+                setSkillMax(SKILL_MAX_EDEFAULT);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
+                setNumberOfSpecalism(NUMBER_OF_SPECALISM_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -491,6 +588,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return maxKarmaToResources != MAX_KARMA_TO_RESOURCES_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
                 return maxKarmaToKeep != MAX_KARMA_TO_KEEP_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX:
+                return skillMax != SKILL_MAX_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
+                return numberOfSpecalism != NUMBER_OF_SPECALISM_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -521,6 +622,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(maxKarmaToResources);
         result.append(", maxKarmaToKeep: ");
         result.append(maxKarmaToKeep);
+        result.append(", skillMax: ");
+        result.append(skillMax);
+        result.append(", numberOfSpecalism: ");
+        result.append(numberOfSpecalism);
         result.append(')');
         return result.toString();
     }

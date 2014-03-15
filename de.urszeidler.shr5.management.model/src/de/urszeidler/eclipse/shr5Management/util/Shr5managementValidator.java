@@ -201,12 +201,44 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_GENERATOR__HAS_SPEND_ALL_POWER_POINTS = 16;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not More Max Attributes' of 'Shr5 Rule Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_RULE_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES = 17;
+
+    /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has No Skills Over Max' of 'Shr5 Rule Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_RULE_GENERATOR__HAS_NO_SKILLS_OVER_MAX = 18;
+
+    /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not More Specalism' of 'Shr5 Rule Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_RULE_GENERATOR__HAS_NOT_MORE_SPECALISM = 19;
+
+    /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has No Attributes Over Species Att' of 'Shr5 Rule Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_RULE_GENERATOR__HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT = 20;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 16;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 20;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -320,6 +352,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateGamemasterManagement((GamemasterManagement)value, diagnostics, context);
             case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM:
                 return validateCharacterAdvancementSystem((CharacterAdvancementSystem)value, diagnostics, context);
+            case Shr5managementPackage.SHR5_RULE_GENERATOR:
+                return validateShr5RuleGenerator((Shr5RuleGenerator)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -515,9 +549,12 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validate_UniqueID(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryKeyUnique(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5Generator_hasNotMoreMaxAttributes(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasCategoryOnlyOnce(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllPoints(shr5Generator, diagnostics, context);
-        if (result || diagnostics != null) result &= validateShr5Generator_hasNotMoreMaxAttributes(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllAttributesPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSkillPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSpecialPoints(shr5Generator, diagnostics, context);
@@ -845,6 +882,68 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateCharacterAdvancementSystem(CharacterAdvancementSystem characterAdvancementSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(characterAdvancementSystem, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!validate_NoCircularContainment(shr5RuleGenerator, diagnostics, context)) return false;
+        boolean result = validate_EveryMultiplicityConforms(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryDataValueConforms(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryProxyResolves(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_UniqueID(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryKeyUnique(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreMaxAttributes(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5RuleGenerator, diagnostics, context);
+        return result;
+    }
+
+    /**
+     * Validates the hasNotMoreMaxAttributes constraint of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator_hasNotMoreMaxAttributes(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5RuleGenerator.hasNotMoreMaxAttributes(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNoSkillsOverMax constraint of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator_hasNoSkillsOverMax(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5RuleGenerator.hasNoSkillsOverMax(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNotMoreSpecalism constraint of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator_hasNotMoreSpecalism(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5RuleGenerator.hasNotMoreSpecalism(diagnostics, context);
+    }
+
+    /**
+     * Validates the hasNoAttributesOverSpeciesAtt constraint of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5RuleGenerator.hasNoAttributesOverSpeciesAtt(diagnostics, context);
     }
 
     /**

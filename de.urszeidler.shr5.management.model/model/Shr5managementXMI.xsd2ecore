@@ -79,6 +79,8 @@
       <nested inputs="shr5Management.ecore#//Shr5System/maxResourceToKeep" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=5"/>
       <nested inputs="shr5Management.ecore#//Shr5System/maxKarmaToResources" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=6"/>
       <nested inputs="shr5Management.ecore#//Shr5System/maxKarmaToKeep" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=7"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/skillMax" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=8"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/numberOfSpecalism" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=9"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDElementDeclaration=8"/>
     <nested inputs="shr5Management.ecore#//MetaType" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9">
@@ -244,6 +246,8 @@
           outputs="Shr5managementXMI.xsd#//CharacterAdvancementSystem;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//CharacterAdvancementSystem" outputs="Shr5managementXMI.xsd#//CharacterAdvancementSystem;XSDElementDeclaration=36"/>
+    <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=37"/>
+    <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDElementDeclaration=37"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"

@@ -32,7 +32,6 @@ import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
@@ -53,7 +52,6 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getMagic <em>Magic</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKarmaToResource <em>Karma To Resource</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getKarmaSpend <em>Karma Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getAttributeSpend <em>Attribute Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getResourceSpend <em>Resource Spend</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getConnectionSpend <em>Connection Spend</em>}</li>
@@ -69,7 +67,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *
  * @generated
  */
-public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Generator {
+public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Generator {
     /**
      * The cached value of the '{@link #getResourcen() <em>Resourcen</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -515,27 +513,6 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
         return Math.abs(karmaKosten) + getKarmaToResource()+ Math.abs(karmaSpend);
     }
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Shr5System getShr5Generator() {
-        Shr5System shr5Generator = basicGetShr5Generator();
-        return shr5Generator != null && shr5Generator.eIsProxy() ? (Shr5System)eResolveProxy((InternalEObject)shr5Generator) : shr5Generator;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated not
-     */
-    public Shr5System basicGetShr5Generator() {
-        if (generator instanceof Shr5System) {
-            Shr5System sr5 = (Shr5System)generator;
-            return sr5;
-        }
-        return null;
-    }
 
     /**
      * <!-- begin-user-doc -->
@@ -1224,9 +1201,6 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return getKarmaToResource();
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
                 return getKarmaSpend();
-            case Shr5managementPackage.SHR5_GENERATOR__SHR5_GENERATOR:
-                if (resolve) return getShr5Generator();
-                return basicGetShr5Generator();
             case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE_SPEND:
                 return getAttributeSpend();
             case Shr5managementPackage.SHR5_GENERATOR__RESOURCE_SPEND:
@@ -1342,8 +1316,6 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return karmaToResource != KARMA_TO_RESOURCE_EDEFAULT;
             case Shr5managementPackage.SHR5_GENERATOR__KARMA_SPEND:
                 return getKarmaSpend() != KARMA_SPEND_EDEFAULT;
-            case Shr5managementPackage.SHR5_GENERATOR__SHR5_GENERATOR:
-                return basicGetShr5Generator() != null;
             case Shr5managementPackage.SHR5_GENERATOR__ATTRIBUTE_SPEND:
                 return getAttributeSpend() != ATTRIBUTE_SPEND_EDEFAULT;
             case Shr5managementPackage.SHR5_GENERATOR__RESOURCE_SPEND:
@@ -1380,8 +1352,6 @@ public class Shr5GeneratorImpl extends CharacterGeneratorImpl implements Shr5Gen
                 return hasCategoryOnlyOnce((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasSpendAllPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-            case Shr5managementPackage.SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP:
-                return hasNotMoreMaxAttributes((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP:
                 return hasSpendAllAttributesPoints((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_GENERATOR___HAS_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP:

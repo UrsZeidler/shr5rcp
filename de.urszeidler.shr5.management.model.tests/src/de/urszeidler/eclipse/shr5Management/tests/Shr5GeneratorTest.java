@@ -12,6 +12,7 @@ import junit.textui.TestRunner;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
@@ -47,45 +48,66 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend() <em>Karma Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator() <em>Shr5 Generator</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend() <em>Attribute Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend() <em>Resource Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend() <em>Connection Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend() <em>Skill Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend() <em>Special Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend() <em>Group Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend() <em>Knownlege Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend() <em>Karma Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend() <em>Attribute Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend() <em>Resource Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend() <em>Connection Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend() <em>Skill Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend() <em>Special Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend() <em>Group Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend() <em>Knownlege Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Attributes Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Skill Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Special Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Special Type Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Connection Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Resource Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Magic Skills Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Magic Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Group Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Knowlege Skill Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>
+ * Has Category Only Once</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has
+ * Spend All Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Attributes Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Skill Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Special Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Special Type Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Connection Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Resource Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Magic Skills Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Magic Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Group Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Knowlege Skill Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Karma Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Spell Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Power Points</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
-public class Shr5GeneratorTest extends CharacterGeneratorTest {
+public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -97,11 +119,6 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     private Skill skill;
     private SpecialType mudan;
     private Resourcen resourcen;
-    private Shr5System shr5System;
-    private BasicDiagnostic diagnostics;
-    @SuppressWarnings("rawtypes")
-    private Map context;
-
     /**
      * Constructs a new Shr5 Generator test case with the given name. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -140,6 +157,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -202,7 +220,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     public void testGetKarmaSpend_MysticAdept() {
         createBasicCategories();
         shr5System.setKarmaToMagicFactor(1);
-        
+
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
         getFixture().setCharacter(playerCharacter);
 
@@ -218,8 +236,8 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("4 spend", 4, getFixture().getKarmaSpend());
 
-        KiAdept ka =(KiAdept) playerCharacter.getPersona();
-  
+        KiAdept ka = (KiAdept)playerCharacter.getPersona();
+
         KiKraft kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
         kiKraft.setKraftpunkte(100);
         ka.getKikraft().add(kiKraft);
@@ -233,7 +251,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         kiKraft.setKraftpunkte(80);
         ka.getKikraft().add(kiKraft);
         assertEquals("7 spend", 7, getFixture().getKarmaSpend());
-       
+
     }
 
     /**
@@ -380,6 +398,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend() <em>Group Point Spend</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend()
      * @generated not
      */
@@ -387,7 +406,6 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
-
 
         assertEquals("should be 0", 0, getFixture().getGroupPointSpend());
         PersonaFertigkeitsGruppe pfg = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
@@ -409,6 +427,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend() <em>Knownlege Point Spend</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend()
      * @generated not
      */
@@ -437,6 +456,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend()
      * @generated not
      */
@@ -446,7 +466,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setCharacter(character);
 
         assertEquals("should be -1", -1, getFixture().getSpellPointSpend());
-        
+
     }
 
     /**
@@ -758,12 +778,74 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
     /**
      * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has No Skills Over Max</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasNoSkillsOverMax__DiagnosticChain_Map() {
+        int max = 10;
+        getFixture().getShr5Generator().setSkillMax(max);
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+
+        assertEquals(true, getFixture().hasNoSkillsOverMax(diagnostics, context));
+
+        AbstraktPersona persona = character.getPersona();
+        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        personaFertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+        personaFertigkeit.setStufe(max + 1);
+        persona.getFertigkeiten().add(personaFertigkeit);
+
+        assertEquals(false, getFixture().hasNoSkillsOverMax(diagnostics, context));
+        personaFertigkeit.setStufe(max);
+        assertEquals(true, getFixture().hasNoSkillsOverMax(diagnostics, context));
+        getFixture().getShr5Generator().setSkillMax(max - 1);
+        assertEquals(false, getFixture().hasNoSkillsOverMax(diagnostics, context));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasNotMoreSpecalism__DiagnosticChain_Map() {
+        int max = 10;
+        getFixture().getShr5Generator().setNumberOfSpecalism(1);
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+
+        assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
+
+        AbstraktPersona persona = character.getPersona();
+        PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        personaFertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+        personaFertigkeit.setStufe(1);
+        personaFertigkeit.getSpezialisierungen().add("1");
+        persona.getFertigkeiten().add(personaFertigkeit);
+
+        assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
+        personaFertigkeit.getSpezialisierungen().add("2");
+        assertEquals(false, getFixture().hasNotMoreSpecalism(diagnostics, context));
+        getFixture().getShr5Generator().setNumberOfSpecalism(2);
+        assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
+    }
+
+    
+    /**
+     * Tests the '
      * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * <em>Has Not Spend All Attributes Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain,
-     * java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
@@ -777,15 +859,18 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         attributes.setAttibutePoints(3);
         assertEquals("is false", false, getFixture().hasSpendAllAttributesPoints(diagnostics, context));
         character.getPersona().setLogikBasis(1);
-        
+
         assertEquals("is true", true, getFixture().hasSpendAllAttributesPoints(diagnostics, context));
 
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Skill Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Skill Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -816,41 +901,42 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
 
     }
 
-//    /**
-//     * Tests the '
-//     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-//     * <em>Has Not Spend Skill All Points</em>}' operation. <!-- begin-user-doc
-//     * --> <!-- end-user-doc -->
-//     * 
-//     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-//     * @generated not
-//     */
-//    @SuppressWarnings("unchecked")
-//    public void testHasNotSpendSkillAllPoints__DiagnosticChain_Map() {
-//        createBasicCategories();
-//        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
-//        getFixture().setCharacter(character);
-//
-//        assertMudanOptions(character);
-//
-//        skill.setSkillPoints(2);
-//        assertEquals("is false", false, getFixture().hasSpendAllSkillPoints(diagnostics, context));
-//        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-//        Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
-//        fertigkeit.setFertigkeit(wfertigkeit);
-//        fertigkeit.setStufe(1);
-//        character.getPersona().getFertigkeiten().add(fertigkeit);
-//        assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
-//
-//        character.getPersona().setLogikBasis(1);
-//        fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-//        Fertigkeit w1fertigkeit = Shr5Factory.eINSTANCE.createWissensfertigkeit();
-//        fertigkeit.setFertigkeit(w1fertigkeit);
-//        fertigkeit.setStufe(2);
-//        character.getPersona().getFertigkeiten().add(fertigkeit);
-//        assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
-//
-//    }
+    // /**
+    // * Tests the '
+    // * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain,
+    // java.util.Map)
+    // * <em>Has Not Spend Skill All Points</em>}' operation. <!-- begin-user-doc
+    // * --> <!-- end-user-doc -->
+    // *
+    // * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasNotSpendSkillAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+    // * @generated not
+    // */
+    // @SuppressWarnings("unchecked")
+    // public void testHasNotSpendSkillAllPoints__DiagnosticChain_Map() {
+    // createBasicCategories();
+    // PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+    // getFixture().setCharacter(character);
+    //
+    // assertMudanOptions(character);
+    //
+    // skill.setSkillPoints(2);
+    // assertEquals("is false", false, getFixture().hasSpendAllSkillPoints(diagnostics, context));
+    // PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+    // Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
+    // fertigkeit.setFertigkeit(wfertigkeit);
+    // fertigkeit.setStufe(1);
+    // character.getPersona().getFertigkeiten().add(fertigkeit);
+    // assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
+    //
+    // character.getPersona().setLogikBasis(1);
+    // fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+    // Fertigkeit w1fertigkeit = Shr5Factory.eINSTANCE.createWissensfertigkeit();
+    // fertigkeit.setFertigkeit(w1fertigkeit);
+    // fertigkeit.setStufe(2);
+    // character.getPersona().getFertigkeiten().add(fertigkeit);
+    // assertEquals("is true", true, getFixture().hasSpendAllSkillPoints(diagnostics, context));
+    //
+    // }
 
     /**
      * Tests the '
@@ -900,8 +986,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * <em>Has Not Spend All Connection Points</em>}' operation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain,
-     * java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
@@ -933,8 +1018,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain,
-     * java.util.Map)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
@@ -954,11 +1038,15 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Skills Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Magic Skills Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated not 
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain,
+     * java.util.Map)
+     * @generated not
      */
     @SuppressWarnings("unchecked")
     public void testHasSpendAllMagicSkillsPoints__DiagnosticChain_Map() {
@@ -966,7 +1054,6 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
 
-        
         mudan.setSkillNumber(1);
         mudan.setSkillValue(5);
         assertEquals("is false", false, getFixture().hasSpendAllMagicSkillsPoints(diagnostics, context));
@@ -980,9 +1067,12 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Magic Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -993,9 +1083,12 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Magic Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Magic Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1020,9 +1113,12 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Group Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Group Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1052,10 +1148,14 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Knowlege Skill Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Knowlege Skill Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain,
+     * java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
@@ -1075,7 +1175,6 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertEquals("should be 1", 1, getFixture().getKnownlegePointSpend());
         assertEquals("is false", false, getFixture().hasSpendAllKnowlegeSkillPoints(diagnostics, context));
 
-
         fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         wfertigkeit = Shr5Factory.eINSTANCE.createWissensfertigkeit();
         fertigkeit.setFertigkeit(wfertigkeit);
@@ -1087,9 +1186,12 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not Spend All Karma Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not Spend All Karma Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1100,18 +1202,21 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         getFixture().setCharacter(character);
 
         getFixture().getShr5Generator().setKarmaPoints(10);
-        
+
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         getFixture().setKarmaToResource(10);
         assertEquals("is true", true, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
-    
-        getFixture().setKarmaToResource(8);        
+
+        getFixture().setKarmaToResource(8);
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Spell Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1120,14 +1225,17 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
-        
+
         assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Power Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1136,13 +1244,17 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
-        
+
         assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
     }
+
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Power Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1151,11 +1263,11 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createAdeptCharacter();
         getFixture().setCharacter(character);
-        
+
         mudan = Shr5managementFactory.eINSTANCE.createAdept();
         getFixture().setMagic(mudan);
 
-        KiAdept ka =(KiAdept) character.getPersona();
+        KiAdept ka = (KiAdept)character.getPersona();
         ka.setMagieBasis(2);
         assertEquals("is false", false, getFixture().hasSpendAllPowerPoints(diagnostics, context));
 
@@ -1169,10 +1281,14 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
 
     }
+
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Power Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1181,11 +1297,11 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();
         getFixture().setCharacter(character);
-        
+
         mudan = Shr5managementFactory.eINSTANCE.createSpellcaster();
         getFixture().setMagic(mudan);
 
-        KiAdept ka =(KiAdept) character.getPersona();
+        KiAdept ka = (KiAdept)character.getPersona();
         ka.setMagieBasis(2);
         assertEquals("is true", true, getFixture().hasSpendAllPowerPoints(diagnostics, context));
 
@@ -1200,9 +1316,12 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Spell Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1216,7 +1335,7 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         skill.setSkillPoints(skill.getSkillPoints() + 5);
         mudan = Shr5managementFactory.eINSTANCE.createSpellcaster();
         getFixture().setMagic(mudan);
- 
+
         Spellcaster sc = (Spellcaster)mudan;
         sc.setSpellPoints(2);
         assertEquals("is false", false, getFixture().hasSpendAllSpellPoints(diagnostics, context));
@@ -1227,12 +1346,15 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
         zauber.setStufe(2);
         assertEquals("is true", true, getFixture().hasSpendAllSpellPoints(diagnostics, context));
 
-     }
+    }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Spell Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -1258,9 +1380,12 @@ public class Shr5GeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Spell Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */

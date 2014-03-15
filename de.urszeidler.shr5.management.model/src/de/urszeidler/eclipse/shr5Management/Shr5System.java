@@ -20,6 +20,8 @@ package de.urszeidler.eclipse.shr5Management;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxResourceToKeep <em>Max Resource To Keep</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToResources <em>Max Karma To Resources</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToKeep <em>Max Karma To Keep</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSkillMax <em>Skill Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
  * </ul>
  * </p>
  *
@@ -236,4 +238,56 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     void setMaxKarmaToKeep(int value);
+
+    /**
+     * Returns the value of the '<em><b>Skill Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Skill Max</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Skill Max</em>' attribute.
+     * @see #setSkillMax(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_SkillMax()
+     * @model
+     * @generated
+     */
+    int getSkillMax();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSkillMax <em>Skill Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Skill Max</em>' attribute.
+     * @see #getSkillMax()
+     * @generated
+     */
+    void setSkillMax(int value);
+
+    /**
+     * Returns the value of the '<em><b>Number Of Specalism</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Number Of Specalism</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Number Of Specalism</em>' attribute.
+     * @see #setNumberOfSpecalism(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_NumberOfSpecalism()
+     * @model
+     * @generated
+     */
+    int getNumberOfSpecalism();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism <em>Number Of Specalism</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Number Of Specalism</em>' attribute.
+     * @see #getNumberOfSpecalism()
+     * @generated
+     */
+    void setNumberOfSpecalism(int value);
 } // Shr5System

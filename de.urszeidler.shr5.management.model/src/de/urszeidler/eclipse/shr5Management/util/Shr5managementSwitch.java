@@ -245,6 +245,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
             case Shr5managementPackage.SHR5_GENERATOR: {
                 Shr5Generator shr5Generator = (Shr5Generator)theEObject;
                 T result = caseShr5Generator(shr5Generator);
+                if (result == null) result = caseShr5RuleGenerator(shr5Generator);
                 if (result == null) result = caseCharacterGenerator(shr5Generator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -364,6 +365,13 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 CharacterAdvancementSystem characterAdvancementSystem = (CharacterAdvancementSystem)theEObject;
                 T result = caseCharacterAdvancementSystem(characterAdvancementSystem);
                 if (result == null) result = caseBeschreibbar(characterAdvancementSystem);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.SHR5_RULE_GENERATOR: {
+                Shr5RuleGenerator shr5RuleGenerator = (Shr5RuleGenerator)theEObject;
+                T result = caseShr5RuleGenerator(shr5RuleGenerator);
+                if (result == null) result = caseCharacterGenerator(shr5RuleGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -923,6 +931,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseCharacterAdvancementSystem(CharacterAdvancementSystem object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Shr5 Rule Generator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseShr5RuleGenerator(Shr5RuleGenerator object) {
         return null;
     }
 

@@ -123,6 +123,8 @@
         <xsd:attribute name="maxResourceToKeep" type="xsd:int" use="required"/>
         <xsd:attribute name="maxKarmaToResources" type="xsd:int" use="required"/>
         <xsd:attribute name="maxKarmaToKeep" type="xsd:int"/>
+        <xsd:attribute name="skillMax" type="xsd:int"/>
+        <xsd:attribute name="numberOfSpecalism" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -239,7 +241,7 @@
   <xsd:element name="FreeStyleGenerator" type="shr5mngt:FreeStyleGenerator"/>
   <xsd:complexType name="Shr5Generator">
     <xsd:complexContent>
-      <xsd:extension base="shr5mngt:CharacterGenerator">
+      <xsd:extension base="shr5mngt:Shr5RuleGenerator">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="resourcen" type="shr5mngt:Resourcen"/>
           <xsd:element name="skills" type="shr5mngt:Skill"/>
@@ -445,4 +447,10 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="CharacterAdvancementSystem" type="shr5mngt:CharacterAdvancementSystem"/>
+  <xsd:complexType abstract="true" name="Shr5RuleGenerator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:CharacterGenerator"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Shr5RuleGenerator" type="shr5mngt:Shr5RuleGenerator"/>
 </xsd:schema>

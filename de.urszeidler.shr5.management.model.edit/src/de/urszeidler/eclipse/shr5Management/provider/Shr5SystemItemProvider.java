@@ -65,6 +65,8 @@ public class Shr5SystemItemProvider
             addMaxResourceToKeepPropertyDescriptor(object);
             addMaxKarmaToResourcesPropertyDescriptor(object);
             addMaxKarmaToKeepPropertyDescriptor(object);
+            addSkillMaxPropertyDescriptor(object);
+            addNumberOfSpecalismPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -246,6 +248,50 @@ public class Shr5SystemItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Skill Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSkillMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_skillMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_skillMax_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__SKILL_MAX,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Number Of Specalism feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addNumberOfSpecalismPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_numberOfSpecalism_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_numberOfSpecalism_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_SPECALISM,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -290,6 +336,8 @@ public class Shr5SystemItemProvider
             case Shr5managementPackage.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP:
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES:
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
+            case Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX:
+            case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

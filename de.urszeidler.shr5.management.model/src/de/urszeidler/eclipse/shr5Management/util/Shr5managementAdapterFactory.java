@@ -250,6 +250,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createCharacterAdvancementSystemAdapter();
             }
             @Override
+            public Adapter caseShr5RuleGenerator(Shr5RuleGenerator object) {
+                return createShr5RuleGeneratorAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -792,6 +796,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCharacterAdvancementSystemAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator <em>Shr5 Rule Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator
+     * @generated
+     */
+    public Adapter createShr5RuleGeneratorAdapter() {
         return null;
     }
 

@@ -1124,13 +1124,31 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_SYSTEM__MAX_KARMA_TO_KEEP = PRIORITY_SYSTEM_FEATURE_COUNT + 7;
 
     /**
+     * The feature id for the '<em><b>Skill Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__SKILL_MAX = PRIORITY_SYSTEM_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Number Of Specalism</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__NUMBER_OF_SPECALISM = PRIORITY_SYSTEM_FEATURE_COUNT + 9;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 8;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 10;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -2052,6 +2070,133 @@ public interface Shr5managementPackage extends EPackage {
 	int FREE_STYLE_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 0;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl <em>Shr5 Rule Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5RuleGenerator()
+     * @generated
+     */
+    int SHR5_RULE_GENERATOR = 37;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__CHARACTER = CHARACTER_GENERATOR__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__GENERATOR = CHARACTER_GENERATOR__GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__STATE = CHARACTER_GENERATOR__STATE;
+
+    /**
+     * The feature id for the '<em><b>Selected Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__SELECTED_GROUP = CHARACTER_GENERATOR__SELECTED_GROUP;
+
+    /**
+     * The feature id for the '<em><b>Character Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__CHARACTER_NAME = CHARACTER_GENERATOR__CHARACTER_NAME;
+
+    /**
+     * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__CURRENT_INSTRUCTION = CHARACTER_GENERATOR__CURRENT_INSTRUCTION;
+
+    /**
+     * The feature id for the '<em><b>Shr5 Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR__SHR5_GENERATOR = CHARACTER_GENERATOR_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Shr5 Rule Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 1;
+
+    /**
+     * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 0;
+
+    /**
+     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 1;
+
+    /**
+     * The operation id for the '<em>Has Not More Specalism</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 2;
+
+    /**
+     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Shr5 Rule Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 4;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl <em>Shr5 Generator</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2068,7 +2213,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__CHARACTER = CHARACTER_GENERATOR__CHARACTER;
+	int SHR5_GENERATOR__CHARACTER = SHR5_RULE_GENERATOR__CHARACTER;
 
 	/**
      * The feature id for the '<em><b>Generator</b></em>' reference.
@@ -2077,7 +2222,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__GENERATOR = CHARACTER_GENERATOR__GENERATOR;
+	int SHR5_GENERATOR__GENERATOR = SHR5_RULE_GENERATOR__GENERATOR;
 
 	/**
      * The feature id for the '<em><b>State</b></em>' attribute.
@@ -2086,7 +2231,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__STATE = CHARACTER_GENERATOR__STATE;
+	int SHR5_GENERATOR__STATE = SHR5_RULE_GENERATOR__STATE;
 
 	/**
      * The feature id for the '<em><b>Selected Group</b></em>' reference.
@@ -2095,7 +2240,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__SELECTED_GROUP = CHARACTER_GENERATOR__SELECTED_GROUP;
+	int SHR5_GENERATOR__SELECTED_GROUP = SHR5_RULE_GENERATOR__SELECTED_GROUP;
 
 	/**
      * The feature id for the '<em><b>Character Name</b></em>' attribute.
@@ -2104,7 +2249,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__CHARACTER_NAME = CHARACTER_GENERATOR__CHARACTER_NAME;
+	int SHR5_GENERATOR__CHARACTER_NAME = SHR5_RULE_GENERATOR__CHARACTER_NAME;
 
 	/**
      * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
@@ -2113,70 +2258,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__CURRENT_INSTRUCTION = CHARACTER_GENERATOR__CURRENT_INSTRUCTION;
-
-	/**
-     * The feature id for the '<em><b>Resourcen</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__RESOURCEN = CHARACTER_GENERATOR_FEATURE_COUNT + 0;
-
-	/**
-     * The feature id for the '<em><b>Skills</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__SKILLS = CHARACTER_GENERATOR_FEATURE_COUNT + 1;
-
-	/**
-     * The feature id for the '<em><b>Attribute</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__ATTRIBUTE = CHARACTER_GENERATOR_FEATURE_COUNT + 2;
-
-	/**
-     * The feature id for the '<em><b>Meta Type</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__META_TYPE = CHARACTER_GENERATOR_FEATURE_COUNT + 3;
-
-	/**
-     * The feature id for the '<em><b>Magic</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__MAGIC = CHARACTER_GENERATOR_FEATURE_COUNT + 4;
-
-	/**
-     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__KARMA_TO_RESOURCE = CHARACTER_GENERATOR_FEATURE_COUNT + 5;
-
-	/**
-     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SHR5_GENERATOR__KARMA_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 6;
+	int SHR5_GENERATOR__CURRENT_INSTRUCTION = SHR5_RULE_GENERATOR__CURRENT_INSTRUCTION;
 
 	/**
      * The feature id for the '<em><b>Shr5 Generator</b></em>' reference.
@@ -2185,7 +2267,70 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR__SHR5_GENERATOR = CHARACTER_GENERATOR_FEATURE_COUNT + 7;
+	int SHR5_GENERATOR__SHR5_GENERATOR = SHR5_RULE_GENERATOR__SHR5_GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>Resourcen</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__RESOURCEN = SHR5_RULE_GENERATOR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Skills</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__SKILLS = SHR5_RULE_GENERATOR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Attribute</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__ATTRIBUTE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Meta Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__META_TYPE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Magic</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__MAGIC = SHR5_RULE_GENERATOR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__KARMA_TO_RESOURCE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SHR5_GENERATOR__KARMA_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 6;
 
 	/**
      * The feature id for the '<em><b>Attribute Spend</b></em>' attribute.
@@ -2194,7 +2339,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__ATTRIBUTE_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 8;
+    int SHR5_GENERATOR__ATTRIBUTE_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
@@ -2203,7 +2348,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__RESOURCE_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 9;
+    int SHR5_GENERATOR__RESOURCE_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Connection Spend</b></em>' attribute.
@@ -2212,7 +2357,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__CONNECTION_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 10;
+    int SHR5_GENERATOR__CONNECTION_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Skill Point Spend</b></em>' attribute.
@@ -2221,7 +2366,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__SKILL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 11;
+    int SHR5_GENERATOR__SKILL_POINT_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Special Point Spend</b></em>' attribute.
@@ -2230,7 +2375,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__SPECIAL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 12;
+    int SHR5_GENERATOR__SPECIAL_POINT_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Group Point Spend</b></em>' attribute.
@@ -2239,7 +2384,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__GROUP_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 13;
+    int SHR5_GENERATOR__GROUP_POINT_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 12;
 
     /**
      * The feature id for the '<em><b>Knownlege Point Spend</b></em>' attribute.
@@ -2248,7 +2393,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 14;
+    int SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 13;
 
     /**
      * The feature id for the '<em><b>Spell Point Spend</b></em>' attribute.
@@ -2257,7 +2402,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__SPELL_POINT_SPEND = CHARACTER_GENERATOR_FEATURE_COUNT + 15;
+    int SHR5_GENERATOR__SPELL_POINT_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 14;
 
     /**
      * The feature id for the '<em><b>Start Karma</b></em>' attribute.
@@ -2266,7 +2411,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__START_KARMA = CHARACTER_GENERATOR_FEATURE_COUNT + 16;
+    int SHR5_GENERATOR__START_KARMA = SHR5_RULE_GENERATOR_FEATURE_COUNT + 15;
 
     /**
      * The feature id for the '<em><b>Start Resources</b></em>' attribute.
@@ -2275,7 +2420,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR__START_RESOURCES = CHARACTER_GENERATOR_FEATURE_COUNT + 17;
+    int SHR5_GENERATOR__START_RESOURCES = SHR5_RULE_GENERATOR_FEATURE_COUNT + 16;
 
     /**
      * The number of structural features of the '<em>Shr5 Generator</em>' class.
@@ -2284,16 +2429,43 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_FEATURE_COUNT = CHARACTER_GENERATOR_FEATURE_COUNT + 18;
+	int SHR5_GENERATOR_FEATURE_COUNT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 17;
 
 	/**
+     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Specalism</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+
+    /**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 0;
+	int SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 0;
 
 	/**
      * The operation id for the '<em>Has Spend All Points</em>' operation.
@@ -2302,7 +2474,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 1;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
 
     /**
      * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
@@ -2311,7 +2483,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 2;
+	int SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 2;
 
 	/**
      * The operation id for the '<em>Has Spend All Attributes Points</em>' operation.
@@ -2320,7 +2492,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 3;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 3;
 
     /**
      * The operation id for the '<em>Has Spend All Skill Points</em>' operation.
@@ -2329,7 +2501,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 4;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 4;
 
     /**
      * The operation id for the '<em>Has Spend All Special Points</em>' operation.
@@ -2338,7 +2510,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 5;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_SPECIAL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 5;
 
     /**
      * The operation id for the '<em>Has Spend All Special Type Points</em>' operation.
@@ -2347,7 +2519,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 6;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_SPECIAL_TYPE_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 6;
 
     /**
      * The operation id for the '<em>Has Spend All Connection Points</em>' operation.
@@ -2356,7 +2528,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 7;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_CONNECTION_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 7;
 
     /**
      * The operation id for the '<em>Has Spend All Resource Points</em>' operation.
@@ -2365,7 +2537,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 8;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_RESOURCE_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 8;
 
     /**
      * The operation id for the '<em>Has Spend All Magic Skills Points</em>' operation.
@@ -2374,7 +2546,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 9;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_MAGIC_SKILLS_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 9;
 
     /**
      * The operation id for the '<em>Has Spend All Magic Points</em>' operation.
@@ -2383,7 +2555,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 10;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_MAGIC_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 10;
 
     /**
      * The operation id for the '<em>Has Spend All Group Points</em>' operation.
@@ -2392,7 +2564,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 11;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_GROUP_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 11;
 
     /**
      * The operation id for the '<em>Has Spend All Knowlege Skill Points</em>' operation.
@@ -2401,7 +2573,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 12;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 12;
 
     /**
      * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
@@ -2410,7 +2582,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 13;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 13;
 
     /**
      * The operation id for the '<em>Has Spend All Spell Points</em>' operation.
@@ -2419,7 +2591,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 14;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_SPELL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 14;
 
     /**
      * The operation id for the '<em>Has Spend All Power Points</em>' operation.
@@ -2428,7 +2600,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SHR5_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 15;
+    int SHR5_GENERATOR___HAS_SPEND_ALL_POWER_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 15;
 
     /**
      * The number of operations of the '<em>Shr5 Generator</em>' class.
@@ -2437,7 +2609,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int SHR5_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 16;
+	int SHR5_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 16;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl <em>Persona Value Change</em>}' class.
@@ -3771,7 +3943,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 37;
+	int GENERATOR_STATE = 38;
 
 
 	/**
@@ -3782,7 +3954,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 38;
+	int SEX = 39;
 
 
 	/**
@@ -4291,6 +4463,28 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getShr5System_MaxKarmaToKeep();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSkillMax <em>Skill Max</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Skill Max</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getSkillMax()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_SkillMax();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism <em>Number Of Specalism</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Number Of Specalism</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_NumberOfSpecalism();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
@@ -4863,17 +5057,6 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
 	EAttribute getShr5Generator_KarmaSpend();
-
-	/**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator <em>Shr5 Generator</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Shr5 Generator</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getShr5Generator()
-     * @see #getShr5Generator()
-     * @generated
-     */
-	EReference getShr5Generator_Shr5Generator();
 
 	/**
      * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend <em>Attribute Spend</em>}'.
@@ -5604,6 +5787,67 @@ public interface Shr5managementPackage extends EPackage {
     EReference getCharacterAdvancementSystem_CharacterAdvancements();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator <em>Shr5 Rule Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Shr5 Rule Generator</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator
+     * @generated
+     */
+    EClass getShr5RuleGenerator();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator <em>Shr5 Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Shr5 Generator</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator()
+     * @see #getShr5RuleGenerator()
+     * @generated
+     */
+    EReference getShr5RuleGenerator_Shr5Generator();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not More Max Attributes</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasNotMoreMaxAttributes__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Skills Over Max</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has No Skills Over Max</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasNoSkillsOverMax__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Not More Specalism</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasNotMoreSpecalism__DiagnosticChain_Map();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Attributes Over Species Att</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6039,6 +6283,22 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_SYSTEM__MAX_KARMA_TO_KEEP = eINSTANCE.getShr5System_MaxKarmaToKeep();
+
+        /**
+         * The meta object literal for the '<em><b>Skill Max</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__SKILL_MAX = eINSTANCE.getShr5System_SkillMax();
+
+        /**
+         * The meta object literal for the '<em><b>Number Of Specalism</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__NUMBER_OF_SPECALISM = eINSTANCE.getShr5System_NumberOfSpecalism();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.
@@ -6493,14 +6753,6 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
 		EAttribute SHR5_GENERATOR__KARMA_SPEND = eINSTANCE.getShr5Generator_KarmaSpend();
-
-		/**
-         * The meta object literal for the '<em><b>Shr5 Generator</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EReference SHR5_GENERATOR__SHR5_GENERATOR = eINSTANCE.getShr5Generator_Shr5Generator();
 
 		/**
          * The meta object literal for the '<em><b>Attribute Spend</b></em>' attribute feature.
@@ -7087,6 +7339,56 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS = eINSTANCE.getCharacterAdvancementSystem_CharacterAdvancements();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl <em>Shr5 Rule Generator</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5RuleGenerator()
+         * @generated
+         */
+        EClass SHR5_RULE_GENERATOR = eINSTANCE.getShr5RuleGenerator();
+
+        /**
+         * The meta object literal for the '<em><b>Shr5 Generator</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SHR5_RULE_GENERATOR__SHR5_GENERATOR = eINSTANCE.getShr5RuleGenerator_Shr5Generator();
+
+        /**
+         * The meta object literal for the '<em><b>Has Not More Max Attributes</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNotMoreMaxAttributes__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has No Skills Over Max</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNoSkillsOverMax__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has Not More Specalism</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNotMoreSpecalism__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '<em><b>Has No Attributes Over Species Att</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
