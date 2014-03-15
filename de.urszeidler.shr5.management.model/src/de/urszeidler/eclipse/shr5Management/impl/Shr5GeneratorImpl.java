@@ -750,61 +750,6 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         return true;
     }
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated not
-     */
-    public boolean hasNotMoreMaxAttributes(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
-            return true;
-        ManagedCharacter managedCharacter = getCharacter();
-        if (managedCharacter == null)
-            return true;
-        AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return true;
-
-        Spezies spezies = persona.getSpezies();
-        if (spezies == null)
-            return true;
-
-        getShr5Generator().getNumberOfMaxAttributes();
-        int counter = 0;
-        ArrayList<EAttribute> list = new ArrayList<EAttribute>();
-        // TODO : replace the counter and build a string to print out
-        if (persona.getKonstitutionBasis() >= spezies.getKonstitutionMax()) {
-            list.add(Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
-            counter++;
-        }
-        if (persona.getGeschicklichkeitBasis() >= spezies.getGeschicklichkeitMax())
-            counter++;
-        if (persona.getReaktionBasis() >= spezies.getReaktionMax())
-            counter++;
-        if (persona.getStaerkeBasis() >= spezies.getStaerkeMax())
-            counter++;
-
-        if (persona.getCharismaBasis() >= spezies.getCharismaMax())
-            counter++;
-
-        if (persona.getLogikBasis() >= spezies.getLogikMax())
-            counter++;
-        if (persona.getWillenskraftBasis() >= spezies.getWillenskraftMax())
-            counter++;
-        if (persona.getIntuitionBasis() >= spezies.getIntuitionMax())
-            counter++;
-
-        if (counter > getShr5Generator().getNumberOfMaxAttributes()) {
-            if (diagnostics != null) {
-                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotMoreMaxAttributes", new Object[]{ "test Attribute names", getShr5Generator().getNumberOfMaxAttributes(),
-                                        "hasNotMoreMaxAttributes", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
-            }
-            return false;
-        }
-        return true;
-    }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
