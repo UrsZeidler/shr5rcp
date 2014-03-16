@@ -512,7 +512,13 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         }
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         
-        return Math.abs(karmaKosten) + getKarmaToResource()+ Math.abs(karmaSpend);
+        int spendByConnections = 0;
+        int allPoints = ShadowrunManagmentTools.calcConnectionsPoints(getCharacter(), getShr5Generator());
+        int pointsSpend = getConnectionSpend();
+        if(allPoints-pointsSpend<0)
+            spendByConnections = Math.abs(allPoints-pointsSpend);
+        
+        return Math.abs(karmaKosten) + getKarmaToResource()+ Math.abs(karmaSpend) + spendByConnections;
     }
 
 
@@ -879,12 +885,11 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         int pointsSpend = getConnectionSpend();
 
         int diff = allPoints - pointsSpend;
-        if (diff != 0) {
+        if (diff > 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotSpendAllConnectionPoints", new Object[]{ diff,
-                                        diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
+                                "_UI_NotSpendAllConnectionPoints", new Object[]{ }),
                         new Object[]{ this }));
             }
             return false;
