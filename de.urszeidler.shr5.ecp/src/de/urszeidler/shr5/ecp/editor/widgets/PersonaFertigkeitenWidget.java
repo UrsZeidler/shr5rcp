@@ -256,15 +256,14 @@ public class PersonaFertigkeitenWidget extends Composite {
             @Override
             public boolean select(Viewer viewer, Object parentElement, Object element) {
                 if (element instanceof Fertigkeit) {
-                    Fertigkeit f = (Fertigkeit)element;                    
-                   return eAllAttributes.contains(f.getAttribut());
+                    Fertigkeit f = (Fertigkeit)element;
+                    return eAllAttributes.contains(f.getAttribut());
                 }
                 return true;
             }
         };
-        treeViewer.setFilters(new ViewerFilter[]{
-                filter
-                
+        treeViewer.setFilters(new ViewerFilter[]{ filter
+
         });
         final Tree tree = treeViewer.getTree();
         tree.setHeaderVisible(true);
@@ -296,7 +295,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                 if (object instanceof Fertigkeit) {
                     Fertigkeit fertigkeit = (Fertigkeit)object;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
-                    if (personaFertigkeit != null)
+                    if (personaFertigkeit != null && !personaFertigkeit.getSpezialisierungen().isEmpty())
                         return personaFertigkeit.getSpezialisierungen().toString();
                 }
                 return EMPTY;
@@ -319,11 +318,11 @@ public class PersonaFertigkeitenWidget extends Composite {
                         @Override
                         protected Object openDialogBox(Control cellEditorWindow) {
                             FeatureEditorDialog featureEditorDialog = new FeatureEditorDialog(getShell(), AdapterFactoryUtil.getInstance()
-                                    .getLabelProvider(), personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, "Select Specali",
-                                    fertigkeit.getSpezialisierungen());
+                                    .getLabelProvider(), personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN,
+                                    "Select Specali", fertigkeit.getSpezialisierungen());
                             int result = featureEditorDialog.open();
                             if (result == Window.OK) {
-                               return featureEditorDialog.getResult();
+                                return featureEditorDialog.getResult();
                             }
                             return null;
                         }
@@ -361,16 +360,17 @@ public class PersonaFertigkeitenWidget extends Composite {
                 if (element instanceof Fertigkeit) {
                     Fertigkeit fertigkeit = (Fertigkeit)element;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
-                    if (personaFertigkeit != null){
-                        Command command = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, value);
-                        editingDomain.getCommandStack().execute(command);                       
+                    if (personaFertigkeit != null) {
+                        Command command = SetCommand.create(editingDomain, personaFertigkeit,
+                                Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, value);
+                        editingDomain.getCommandStack().execute(command);
                     }
                 }
                 treeViewer.refresh(true);
             }
 
         });
- 
+
         TreeViewerColumn treeViewerValueColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
         treeViewerValueColumn.setLabelProvider(new ColumnLabelProvider() {
             public Image getImage(Object object) {
@@ -430,8 +430,12 @@ public class PersonaFertigkeitenWidget extends Composite {
                         pf.setStufe((Integer)value);
                         personaFertigkeiten.add(pf);
                     } else {
-                        Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
-                        editingDomain.getCommandStack().execute(cmd);
+                        if (personaFertigkeit.getStufe() == 0) {
+                            personaFertigkeiten.remove(personaFertigkeit);
+                        } else {
+                            Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
+                            editingDomain.getCommandStack().execute(cmd);
+                        }
                     }
                 } else if (element instanceof FertigkeitsGruppe) {
                     FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
