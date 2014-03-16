@@ -239,11 +239,10 @@ public class ShadowrunManagmentTools {
      */
     public static String beschreibarListToString(List<? extends Beschreibbar> list) {
         StringBuffer buffer = new StringBuffer();
-        Iterator<? extends Beschreibbar> iterator = list.iterator();
-        for (Iterator<? extends Beschreibbar> iterator2 = list.iterator(); iterator2.hasNext();) {
+         for (Iterator<? extends Beschreibbar> iterator2 = list.iterator(); iterator2.hasNext();) {
             Beschreibbar besch = iterator2.next();
             buffer.append(besch.getName());
-            if (iterator.hasNext())
+            if (iterator2.hasNext())
                 buffer.append(",");
         }
         return buffer.toString();
