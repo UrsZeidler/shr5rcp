@@ -32,6 +32,8 @@
 		select="document(concat($path,'/priorities.xml'),/)" />
 	<xsl:variable name="lifestyle"
 		select="document(concat($path,'/lifestyles.xml'),/)" />
+	<xsl:variable name="critter-species"
+		select="document(concat($path,'/critters.xml'),/)" />
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
@@ -84,6 +86,12 @@
 				<xsl:for-each select="$shr5CharacterBuilder">
 					<xsl:apply-templates select="node()" />
 				</xsl:for-each>
+				<xsl:for-each select="$critter-species">
+					<entries xsi:type="shr5:ShrList" name="Critters species">
+						<xsl:apply-templates mode="critter" select="node()" />
+					</entries>
+				</xsl:for-each>
+
 				<entries xsi:type="shr5:ShrList" name="Credsticks">
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
 						verfuegbarkeit="0" wert="5" page="443" name="Standard" maxValue="5000" />
@@ -112,6 +120,7 @@
 
 		</shr5:ShrList>
 	</xsl:template>
+	<xsl:template match="categories|version" mode="critter" />
 	<xsl:template match="categories|version|accessories|grades|modcategories" />
 	<xsl:template match="priority|mods|limits" />
 	<xsl:template mode="lifestyle"
@@ -290,116 +299,223 @@
 			<groups name="player group">
 
 
-	     <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@groups.0/@members.0/@generatorSrc" choosenLifestyle="//@entries.1/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
-        <persona xsi:type="shr5:KiAdept" beschreibung="Gunter ist der letzte des alten Geschlechts der Kinzel, die Kinzels sind eine altes Offiziers Familie.&#xA;Der Vater Otto von Kinzel starb in den Eurokriegen, sein Mutter entschied sich sehr spät zu einer künstlichen&#xA;Befruchtung. Sie starb bei der Geburt am 26.8.2057. Gunter wuchs in einem Waisenhaus auf das durch die Stiftung&#xA;der Familie Finanziert wurde. Durch den Crash von 2064 wurde das Stifftungvermögen vernichtet und alle Datensätze&#xA;der Kinzel Stiftung. Gunter wurde wie die anderen Kinder vertrieben.&#xA;Er zog mittellos durch Niedersachsen, um in Berlin zu stranden. " image="/shr5Resource/images/gunter-face-small.png" name="Gunter von Kintzel" edgeBasis="6" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.13/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.21"/>
-          <fertigkeiten fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.6"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.5/@entries.22"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.18/@entries.0"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.69"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.18/@entries.1"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1"/>
-          <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.10"/>
-          <eigenschaften name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="4"/>
-          <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3">
-            <mods wert="2">
-              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung"/>
-            </mods>
-          </eigenschaften>
-          <eigenschaften name="Allergy (Silver Moderate)" page="78" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-10"/>
-          <eigenschaften name="Toughness" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="9">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand"/>
-            </mods>
-          </eigenschaften>
-          <kikraft name="Improved Reflexes 3" kraftpunkte="-350">
-            <mods wert="3">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
-            </mods>
-            <mods wert="3">
-              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Combat Sense 1" kraftpunkte="-50">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Mystic Armor" kraftpunkte="-50">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Improved Physical Attribute agillity" kraftpunkte="-100">
-            <mods wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
-            </mods>
-          </kikraft>
-          <kikraft name="Improved Sense" kraftpunkte="-25"/>
-          <kikraft name="Enhanced Accuracy" kraftpunkte="-25"/>
-        </persona>
-        <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:14:40.206+0100" to="1" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.7"/>
-        <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:15:02.090+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.7"/>
-        <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:15:27.614+0100" from="2" to="3" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.3"/>
-        <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:15:52.686+0100" to="1" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14"/>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-16T21:05:35.585+0100" changeApplied="true" dateApplied="2014-03-16T21:06:14.346+0100" karma="6"/>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-20T21:05:35.585+0100" changeApplied="true" dateApplied="2014-03-16T21:06:43.975+0100" karma="6"/>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-29T21:05:35.585+0100" changeApplied="true" dateApplied="2014-03-16T21:08:09.119+0100" karma="8"/>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-01T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:08:51.017+0100" karma="6"/>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-05T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:10:48.765+0100" karma="7"/>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2075-04-07T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:11:33.105+0100" to="1" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.15"/>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2075-04-08T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:12:21.577+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.15"/>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-11T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:12:50.933+0100" karma="7"/>
-        <changes xsi:type="shr5mngt:AttributeChange" date="2075-04-11T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:13:23.766+0100" from="5" to="6">
-          <attibute href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/edgeBasis"/>
-        </changes>
-        <changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:19:24.648+0100" karma="7"/>
-        <changes xsi:type="shr5mngt:PersonaChange" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:20:05.723+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau name="Smartgun System, Internal" page="433" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="9R" image="/shr5Resource/images/katana.png" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3"/>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="300" verfuegbarkeit="4" name="Combat Knife" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="429" srcBook="//@entries.0/@entries.0/@entries.0" wert="2100" verfuegbarkeit="4R" name="Remington 950" schadenscode="12P" praezision="7" durchschlagsKraft="-4" reichweite="//@entries.0/@entries.1/@entries.9">
-          <modie>EM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau name="Imaging Scope" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Kleidung" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="2" name="Armor Jacket" ruestung="12"/>
-        <inventar xsi:type="shr5:Gegenstand" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="2" name="Helmet">
-          <mods wert="2">
-            <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-          </mods>
-        </inventar>
-        <inventar xsi:type="shr5:Gegenstand" wert="175" name="quickdraw holfter"/>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Meta Link" kategorie="Commlink"/>
-        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="3750" verfuegbarkeit="0" name="Goggles" kategorie="Optical &amp; Imaging Devices">
-          <mods>
-            <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/smartgun"/>
-          </mods>
-          <mods wert="2">
-            <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/vergroesserung"/>
-          </mods>
-        </inventar>
-        <contracts xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
-        <connections influence="3" loyality="2"/>
-        <connections influence="4" loyality="2"/>
-        <generatorSrc xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.0" state="commited" selectedGroup="//@entries.1/@groups.0" characterName="Gu" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.28" karmaToResource="3" startResources="650"/>
-      </members>
-      
+				<members xsi:type="shr5mngt:PlayerCharacter"
+					chracterSource="//@entries.1/@groups.0/@members.0/@generatorSrc"
+					choosenLifestyle="//@entries.1/@groups.0/@members.0/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
+					<persona xsi:type="shr5:KiAdept"
+						beschreibung="Gunter ist der letzte des alten Geschlechts der Kinzel, die Kinzels sind eine altes Offiziers Familie.&#xA;Der Vater Otto von Kinzel starb in den Eurokriegen, sein Mutter entschied sich sehr spät zu einer künstlichen&#xA;Befruchtung. Sie starb bei der Geburt am 26.8.2057. Gunter wuchs in einem Waisenhaus auf das durch die Stiftung&#xA;der Familie Finanziert wurde. Durch den Crash von 2064 wurde das Stifftungvermögen vernichtet und alle Datensätze&#xA;der Kinzel Stiftung. Gunter wurde wie die anderen Kinder vertrieben.&#xA;Er zog mittellos durch Niedersachsen, um in Berlin zu stranden. "
+						image="/shr5Resource/images/gunter-face-small.png" name="Gunter von Kintzel"
+						edgeBasis="6" konstitutionBasis="5" geschicklichkeitBasis="6"
+						reaktionBasis="5" staerkeBasis="4" charismaBasis="3"
+						willenskraftBasis="3" intuitionBasis="4" logikBasis="2"
+						spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.13/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.21" />
+						<fertigkeiten fertigkeit="//@entries.0/@entries.5/@entries.53" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.6" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.5/@entries.22" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.18/@entries.0" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.69" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.18/@entries.1" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.4/@entries.27" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1" />
+						<fertigkeitsGruppen stufe="2"
+							gruppe="//@entries.0/@entries.3/@entries.10" />
+						<eigenschaften name="Ambidextrous" page="71"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="4" />
+						<eigenschaften name="Quick Healer" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3">
+							<mods wert="2">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/heilung" />
+							</mods>
+						</eigenschaften>
+						<eigenschaften name="Allergy (Silver Moderate)"
+							page="78" srcBook="//@entries.0/@entries.0/@entries.0"
+							karmaKosten="-10" />
+						<eigenschaften name="Toughness" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="9">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//ProbenModifikatoren/schadenswiederstand" />
+							</mods>
+						</eigenschaften>
+						<kikraft name="Improved Reflexes 3" kraftpunkte="-350">
+							<mods wert="3">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel" />
+							</mods>
+							<mods wert="3">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" />
+							</mods>
+						</kikraft>
+						<kikraft name="Combat Sense 1" kraftpunkte="-50">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen" />
+							</mods>
+						</kikraft>
+						<kikraft name="Mystic Armor" kraftpunkte="-50">
+							<mods wert="1">
+								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
+							</mods>
+						</kikraft>
+						<kikraft name="Improved Physical Attribute agillity"
+							kraftpunkte="-100">
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit" />
+							</mods>
+						</kikraft>
+						<kikraft name="Improved Sense" kraftpunkte="-25" />
+						<kikraft name="Enhanced Accuracy" kraftpunkte="-25" />
+					</persona>
+					<changes xsi:type="shr5mngt:PersonaChange" changeApplied="true"
+						dateApplied="2014-03-16T13:14:40.206+0100" to="1"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.7" />
+					<changes xsi:type="shr5mngt:PersonaChange" changeApplied="true"
+						dateApplied="2014-03-16T13:15:02.090+0100" from="1" to="2"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.7" />
+					<changes xsi:type="shr5mngt:PersonaChange" changeApplied="true"
+						dateApplied="2014-03-16T13:15:27.614+0100" from="2" to="3"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.3" />
+					<changes xsi:type="shr5mngt:PersonaChange" changeApplied="true"
+						dateApplied="2014-03-16T13:15:52.686+0100" to="1"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14" />
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-16T21:05:35.585+0100"
+						changeApplied="true" dateApplied="2014-03-16T21:06:14.346+0100"
+						karma="6" />
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-20T21:05:35.585+0100"
+						changeApplied="true" dateApplied="2014-03-16T21:06:43.975+0100"
+						karma="6" />
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-29T21:05:35.585+0100"
+						changeApplied="true" dateApplied="2014-03-16T21:08:09.119+0100"
+						karma="8" />
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-01T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:08:51.017+0100"
+						karma="6" />
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-05T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:10:48.765+0100"
+						karma="7" />
+					<changes xsi:type="shr5mngt:PersonaChange" date="2075-04-07T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:11:33.105+0100"
+						to="1" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.15" />
+					<changes xsi:type="shr5mngt:PersonaChange" date="2075-04-08T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:12:21.577+0100"
+						from="1" to="2"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.15" />
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-11T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:12:50.933+0100"
+						karma="7" />
+					<changes xsi:type="shr5mngt:AttributeChange" date="2075-04-11T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:13:23.766+0100"
+						from="5" to="6">
+						<attibute
+							href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/edgeBasis" />
+					</changes>
+					<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-14T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:19:24.648+0100"
+						karma="7" />
+					<changes xsi:type="shr5mngt:PersonaChange" date="2075-04-14T21:05:35.585+0200"
+						changeApplied="true" dateApplied="2014-03-16T21:20:05.723+0100"
+						from="1" to="2"
+						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="426"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="725"
+						verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P"
+						praezision="5" durchschlagsKraft="-1"
+						reichweite="//@entries.0/@entries.1/@entries.3">
+						<modie>HM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<einbau name="Smartgun System, Internal" page="433"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						verfuegbarkeit="9R" image="/shr5Resource/images/katana.png" name="Katana"
+						schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" />
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="300"
+						verfuegbarkeit="4" name="Combat Knife" schadenscode="(STR+2)P"
+						praezision="6" durchschlagsKraft="-3" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="429"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="2100"
+						verfuegbarkeit="4R" name="Remington 950" schadenscode="12P"
+						praezision="7" durchschlagsKraft="-4"
+						reichweite="//@entries.0/@entries.1/@entries.9">
+						<modie>EM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<einbau name="Imaging Scope" page="432"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Kleidung" page="437"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						verfuegbarkeit="2" name="Armor Jacket" ruestung="12" />
+					<inventar xsi:type="shr5:Gegenstand" page="438"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="200"
+						verfuegbarkeit="2" name="Helmet">
+						<mods wert="2">
+							<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
+						</mods>
+					</inventar>
+					<inventar xsi:type="shr5:Gegenstand" wert="175"
+						name="quickdraw holfter" />
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
+					<inventar xsi:type="shr5:Gegenstand" page="443"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="3750"
+						verfuegbarkeit="0" name="Goggles" kategorie="Optical &amp; Imaging Devices">
+						<mods>
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/smartgun" />
+						</mods>
+						<mods wert="2">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/vergroesserung" />
+						</mods>
+					</inventar>
+					<contracts xsi:type="shr5:Lifestyle" name="Low" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						verfuegbarkeit="" />
+					<connections influence="3" loyality="2" />
+					<connections influence="4" loyality="2" />
+					<generatorSrc xsi:type="shr5mngt:Shr5Generator"
+						character="//@entries.1/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.0"
+						state="commited" selectedGroup="//@entries.1/@groups.0"
+						characterName="Gu" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46"
+						skills="//@entries.0/@entries.16/@entries.0/@priorities.39"
+						attribute="//@entries.0/@entries.16/@entries.0/@priorities.17"
+						metaType="//@entries.0/@entries.16/@entries.0/@priorities.14"
+						magic="//@entries.0/@entries.16/@entries.0/@priorities.28"
+						karmaToResource="3" startResources="650" />
+				</members>
+
 
 
 
@@ -1149,116 +1265,125 @@
 			<xsl:call-template name="gegenstand-basis" />
 		</entries>
 	</xsl:template>
-	<!-- metatype -->
+	<!-- metatype and critter -->
 	<xsl:template match="//metatype">
 		<entries xsi:type="shr5:Spezies">
-			<xsl:if test="number(bodmin/text())">
-				<xsl:attribute name="konstitutionMin"><xsl:value-of
-					select="number(bodmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(bodmax/text())">
-				<xsl:attribute name="konstitutionMax"><xsl:value-of
-					select="number(bodmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(agimin/text())">
-				<xsl:attribute name="geschicklichkeitMin"><xsl:value-of
-					select="number(agimin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(agimax/text())">
-				<xsl:attribute name="geschicklichkeitMax"><xsl:value-of
-					select="number(agimax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(reamax/text())">
-				<xsl:attribute name="reaktionMax"><xsl:value-of
-					select="number(reamax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(reamin/text())">
-				<xsl:attribute name="reaktionMin"><xsl:value-of
-					select="number(reamin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(strmax/text())">
-				<xsl:attribute name="staerkeMax"><xsl:value-of
-					select="number(strmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(strmin/text())">
-				<xsl:attribute name="staerkeMin"><xsl:value-of
-					select="number(strmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(chamax/text())">
-				<xsl:attribute name="charismaMax"><xsl:value-of
-					select="number(chamax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(chamin/text())">
-				<xsl:attribute name="charismaMin"><xsl:value-of
-					select="number(chamin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(wilmax/text())">
-				<xsl:attribute name="willenskraftMax"><xsl:value-of
-					select="number(wilmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(wilmin/text())">
-				<xsl:attribute name="willenskraftMin"><xsl:value-of
-					select="number(wilmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(intmax/text())">
-				<xsl:attribute name="intuitionMax"><xsl:value-of
-					select="number(intmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(intmin/text())">
-				<xsl:attribute name="intuitionMin"><xsl:value-of
-					select="number(intmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(logmax/text())">
-				<xsl:attribute name="logikMax"><xsl:value-of
-					select="number(logmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(logmin/text())">
-				<xsl:attribute name="logikMin"><xsl:value-of
-					select="number(logmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(edgmax/text())">
-				<xsl:attribute name="edgeMax"><xsl:value-of
-					select="number(edgmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(edgmin/text())">
-				<xsl:attribute name="edgeMin"><xsl:value-of
-					select="number(edgmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(resmax/text())">
-				<xsl:attribute name="resonanzMax"><xsl:value-of
-					select="number(resmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(resmin/text())">
-				<xsl:attribute name="resonanzMin"><xsl:value-of
-					select="number(resmin/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(essmax/text())">
-				<xsl:attribute name="essenzMax"><xsl:value-of
-					select="number(essmax/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(essmin/text())">
-				<xsl:attribute name="essenzMin"><xsl:value-of
-					select="number(essmin/text())" /></xsl:attribute>
-			</xsl:if>
-
-
-			<xsl:if test="number(run/text())">
-				<xsl:attribute name="rennen"><xsl:value-of select="number(run/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(walk/text())">
-				<xsl:attribute name="laufen"><xsl:value-of
-					select="number(walk/text())" /></xsl:attribute>
-			</xsl:if>
-			<xsl:if test="number(sprint/text())">
-				<xsl:attribute name="sprinten"><xsl:value-of
-					select="number(sprint/text())" /></xsl:attribute>
-			</xsl:if>
-
-			<xsl:call-template name="beschreibbar" />
-			<xsl:call-template name="quelle" />
-			<xsl:call-template name="mods" />
+			<xsl:call-template name="species-data" />
 		</entries>
 	</xsl:template>
+	<xsl:template match="//metatype" mode="critter">
+		<entries xsi:type="shr5:Critter">
+			<xsl:call-template name="species-data" />
+		</entries>
+	</xsl:template>
+
+	<xsl:template name="species-data">
+		<xsl:if test="number(bodmin/text())">
+			<xsl:attribute name="konstitutionMin"><xsl:value-of
+				select="number(bodmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(bodmax/text())">
+			<xsl:attribute name="konstitutionMax"><xsl:value-of
+				select="number(bodmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(agimin/text())">
+			<xsl:attribute name="geschicklichkeitMin"><xsl:value-of
+				select="number(agimin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(agimax/text())">
+			<xsl:attribute name="geschicklichkeitMax"><xsl:value-of
+				select="number(agimax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(reamax/text())">
+			<xsl:attribute name="reaktionMax"><xsl:value-of
+				select="number(reamax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(reamin/text())">
+			<xsl:attribute name="reaktionMin"><xsl:value-of
+				select="number(reamin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(strmax/text())">
+			<xsl:attribute name="staerkeMax"><xsl:value-of
+				select="number(strmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(strmin/text())">
+			<xsl:attribute name="staerkeMin"><xsl:value-of
+				select="number(strmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(chamax/text())">
+			<xsl:attribute name="charismaMax"><xsl:value-of
+				select="number(chamax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(chamin/text())">
+			<xsl:attribute name="charismaMin"><xsl:value-of
+				select="number(chamin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(wilmax/text())">
+			<xsl:attribute name="willenskraftMax"><xsl:value-of
+				select="number(wilmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(wilmin/text())">
+			<xsl:attribute name="willenskraftMin"><xsl:value-of
+				select="number(wilmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(intmax/text())">
+			<xsl:attribute name="intuitionMax"><xsl:value-of
+				select="number(intmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(intmin/text())">
+			<xsl:attribute name="intuitionMin"><xsl:value-of
+				select="number(intmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(logmax/text())">
+			<xsl:attribute name="logikMax"><xsl:value-of
+				select="number(logmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(logmin/text())">
+			<xsl:attribute name="logikMin"><xsl:value-of
+				select="number(logmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(edgmax/text())">
+			<xsl:attribute name="edgeMax"><xsl:value-of
+				select="number(edgmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(edgmin/text())">
+			<xsl:attribute name="edgeMin"><xsl:value-of
+				select="number(edgmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(resmax/text())">
+			<xsl:attribute name="resonanzMax"><xsl:value-of
+				select="number(resmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(resmin/text())">
+			<xsl:attribute name="resonanzMin"><xsl:value-of
+				select="number(resmin/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(essmax/text())">
+			<xsl:attribute name="essenzMax"><xsl:value-of
+				select="number(essmax/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(essmin/text())">
+			<xsl:attribute name="essenzMin"><xsl:value-of
+				select="number(essmin/text())" /></xsl:attribute>
+		</xsl:if>
+
+
+		<xsl:if test="number(run/text())">
+			<xsl:attribute name="rennen"><xsl:value-of select="number(run/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(walk/text())">
+			<xsl:attribute name="laufen"><xsl:value-of select="number(walk/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(sprint/text())">
+			<xsl:attribute name="sprinten"><xsl:value-of
+				select="number(sprint/text())" /></xsl:attribute>
+		</xsl:if>
+
+		<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
+		<xsl:call-template name="mods" />
+	</xsl:template>
+
 	<!-- zauber -->
 	<xsl:template match="//spell">
 		<entries xsi:type="shr5:Zauber">
