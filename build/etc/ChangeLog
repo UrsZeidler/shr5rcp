@@ -6,6 +6,7 @@
 * filter all skills not usable for the character
 * import from chummer2 :
 	* fixed the attributes in skills for the magic and resonance attribute
+	* imported the critter as species
 
 
 2014-03-09 Version 0.1.3
