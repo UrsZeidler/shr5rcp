@@ -87,16 +87,30 @@ public class ShadowrunTools {
         return summ;
     }
 
-    public static int findFertigkeitValue(FertigkeitsGruppe fg, AbstraktPersona persona2) {
-        PersonaFertigkeitsGruppe pfg = findGruppe(fg, persona2);
+    /**
+     * Find the value of the personafertigeitsgruppe for a persona.
+     * 
+     * @param fg the {@link FertigkeitsGruppe} to look for
+     * @param persona the persona
+     * @return the value or 0
+     */
+    public static int findFertigkeitValue(FertigkeitsGruppe fg, AbstraktPersona persona) {
+        PersonaFertigkeitsGruppe pfg = findGruppe(fg, persona);
         if (pfg != null)
             return pfg.getStufe();
 
         return 0;
     }
 
-    public static PersonaFertigkeitsGruppe findGruppe(FertigkeitsGruppe fg, AbstraktPersona persona2) {
-        EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen = persona2.getFertigkeitsGruppen();
+    /**
+     * Finds the values of {@link PersonaFertigkeitsGruppe} for a given {@link FertigkeitsGruppe} and persona.
+     * 
+     * @param fg  the fertigkeit
+     * @param persona the persina
+     * @return null or the {@link PersonaFertigkeitsGruppe}r
+     */
+    public static PersonaFertigkeitsGruppe findGruppe(FertigkeitsGruppe fg, AbstraktPersona persona) {
+        EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen = persona.getFertigkeitsGruppen();
         for (PersonaFertigkeitsGruppe personaFertigkeitsGruppe : fertigkeitsGruppen) {
             if (fg.equals(personaFertigkeitsGruppe.getGruppe()))
                 return personaFertigkeitsGruppe;
@@ -114,7 +128,10 @@ public class ShadowrunTools {
     public static Integer findFertigkeitValue(Fertigkeit fertigkeit, AbstraktPersona persona) {
         PersonaFertigkeit pf = findFertigkeit(fertigkeit, persona);
         if (pf != null)
-            return pf.getStufe();
+            if (pf.getStufe() == 0)
+                return -1;
+            else
+                return pf.getStufe();
 
         if (Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN.equals(fertigkeit.eContainmentFeature())) {
             FertigkeitsGruppe eContainer = (FertigkeitsGruppe)fertigkeit.eContainer();
