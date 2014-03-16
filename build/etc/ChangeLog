@@ -1,5 +1,6 @@
 2014-03-30 Version 0.1.4
 
+* allow to exchange karma for connections in the shr5 generator
 * changed the dialog for selecting spells
 * added a printer preferences
 * filter all skills not usable for the character
