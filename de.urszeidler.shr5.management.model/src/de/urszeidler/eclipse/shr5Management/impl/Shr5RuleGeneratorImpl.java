@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
@@ -97,7 +98,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNotMoreMaxAttributes(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
             return true;
         ManagedCharacter managedCharacter = getCharacter();
         if (managedCharacter == null)
@@ -170,7 +171,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNoSkillsOverMax(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
             return true;
         ManagedCharacter managedCharacter = getCharacter();
         if (managedCharacter == null)
@@ -205,7 +206,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNotMoreSpecalism(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
             return true;
         ManagedCharacter managedCharacter = getCharacter();
         if (managedCharacter == null)
