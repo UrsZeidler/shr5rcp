@@ -143,7 +143,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
      * 
      */
     private void initalizeFontData() {
-        FontData[] defaultFont = JFaceResources.getDefaultFont().getFontData();
         boldFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_MAIN_HEADER)[0];
         italicFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_TABLE_HEADER)[0];
         attributeFont = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_NORMAL_TEXT)[0];
@@ -257,7 +256,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
-
+        
         return grid;
     }
 
@@ -447,6 +446,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
      * @param persona
      * @return
      */
+    @Deprecated
     private Print printPersonaDetails(AbstraktPersona persona) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
@@ -870,6 +870,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
         return buffer.toString();
     }
 
+    @Deprecated
     private String toMod(EList<AttributModifikatorWert> mods) {
         StringBuffer buffer = new StringBuffer();
 
