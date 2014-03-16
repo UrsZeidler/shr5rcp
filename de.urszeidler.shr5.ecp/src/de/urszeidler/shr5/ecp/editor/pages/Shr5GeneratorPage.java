@@ -389,23 +389,23 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         ownBinding(m_bindingContext);
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__META_TYPE, compositePrio);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE, compositePrio);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC, compositePrio);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS, compositePrio);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__META_TYPE, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS, compositePrio);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN, compositePrio);
 
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__SELECTED_GROUP, composite_group);
 
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
-        emfFormBuilder.addTextEntry( Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__CHARACTER_NAME, composite_overview);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR__GENERATOR, composite_overview);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
         managedForm.reflow(true);
         if (!object.eAdapters().contains(this))
             object.eAdapters().add(this);
-        if (object.getCharacter() != null && object.getCharacter().getPersona() != null) {
+        if (object.getCharacter() != null && object.getCharacter().getPersona() != null && object.getState() != GeneratorState.COMMITED) {
             addPersonaPage(object.getCharacter());
         }
         validateChange();
@@ -428,7 +428,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
-         CompoundCommand command = new CompoundCommand();
+        CompoundCommand command = new CompoundCommand();
         command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
                 GeneratorState.COMMITED));
         command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
@@ -437,12 +437,11 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 ShadowrunManagmentTools.calcResourcesLeft(object)));
         command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
                 object));
-        
+
         getEditingDomain().getCommandStack().execute(command);
-        validateChange();        
+        validateChange();
     }
 
-    
     /**
      * Validates the changes and update the gui.
      */
@@ -477,7 +476,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         if (newSet.contains(Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE)) {
             object.setState(GeneratorState.NEW);
-        }else if(object.getCharacter()!=null && object.getCharacter().getPersona()!=null){
+        } else if (object.getCharacter() != null && object.getCharacter().getPersona() != null) {
             object.setState(GeneratorState.PERSONA_CREATED);
         }
         updateDecorators(newSet);

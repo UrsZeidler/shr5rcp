@@ -480,6 +480,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER,
                             Messages.ShadowrunEditor_page_character_sheet, PersonaPrinter.getInstance().createPrintFactory(object)));
+                    if (object.getGeneratorSrc() != null)
+                        this.doSwitch(object.getGeneratorSrc());
+
                 } catch (PartInitException e) {
                     logError("error creating ManagedCharacterPage", e);//$NON-NLS-1$
                 }

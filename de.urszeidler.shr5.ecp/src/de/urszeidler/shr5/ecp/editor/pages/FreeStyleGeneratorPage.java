@@ -242,7 +242,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         managedForm.reflow(true);
         if (!object.eAdapters().contains(this))
             object.eAdapters().add(this);
-        if (object.getCharacter() != null && object.getCharacter().getPersona() != null) {
+        if (object.getCharacter() != null && object.getCharacter().getPersona() != null && object.getState() != GeneratorState.COMMITED) {
             addPersonaPage(object.getCharacter());
         }
         validateChange();
@@ -254,13 +254,12 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     protected void commitCharacter() {
         object.setState(GeneratorState.COMMITED);
 
-//        SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE, GeneratorState.COMMITED);
+        // SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE, GeneratorState.COMMITED);
         moveGeneratorToCharacterCommit();
         validateChange();
 
     }
 
- 
     /**
      * 
      */
@@ -270,11 +269,10 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
                 GeneratorState.COMMITED));
         command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
                 object));
-        
+
         getEditingDomain().getCommandStack().execute(command);
     }
 
-    
     protected void createManagedCharacter() {
         AbstraktPersona selectedPersona = object.getSelectedPersona();
         if (selectedPersona != null) {
