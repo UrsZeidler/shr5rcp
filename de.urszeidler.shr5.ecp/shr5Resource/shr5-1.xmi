@@ -2746,8 +2746,8 @@
 </entries>
 <entries xsi:type="shr5mngt:PlayerManagement" name="my player">
 <groups name="player group">
-<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.3" choosenLifestyle="//@entries.1/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
-<persona xsi:type="shr5:KiAdept" beschreibung="Gunter ist der letzte des alten Geschlechts der Kinzel, die Kinzels sind eine altes Offiziers Familie.&#10;Der Vater Otto von Kinzel starb in den Eurokriegen, sein Mutter entschied sich sehr spät zu einer künstlichen&#10;Befruchtung. Sie starb bei der Geburt am 26.8.2057. Gunter wuchs in einem Waisenhaus auf das durch die Stiftung&#10;der Familie Finanziert wurde. Durch den Crash von 2064 wurde das Stifftungvermögen vernichtet und alle Datensätze&#10;der Kinzel Stiftung. Gunter wurde wie die anderen Kinder vertrieben.&#10;Er zog mittellos durch Niedersachsen, um in Berlin zu stranden. " image="/shr5Resource/images/gunter-face-small.png" name="Gunter von Kintzel" edgeBasis="5" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
+<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@groups.0/@members.0/@generatorSrc" choosenLifestyle="//@entries.1/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
+<persona xsi:type="shr5:KiAdept" beschreibung="Gunter ist der letzte des alten Geschlechts der Kinzel, die Kinzels sind eine altes Offiziers Familie.&#10;Der Vater Otto von Kinzel starb in den Eurokriegen, sein Mutter entschied sich sehr spät zu einer künstlichen&#10;Befruchtung. Sie starb bei der Geburt am 26.8.2057. Gunter wuchs in einem Waisenhaus auf das durch die Stiftung&#10;der Familie Finanziert wurde. Durch den Crash von 2064 wurde das Stifftungvermögen vernichtet und alle Datensätze&#10;der Kinzel Stiftung. Gunter wurde wie die anderen Kinder vertrieben.&#10;Er zog mittellos durch Niedersachsen, um in Berlin zu stranden. " image="/shr5Resource/images/gunter-face-small.png" name="Gunter von Kintzel" edgeBasis="6" konstitutionBasis="5" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0" magieBasis="6">
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
 <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
 <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
@@ -2762,7 +2762,8 @@
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.18/@entries.0"/>
 <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.69"/>
 <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.18/@entries.1"/>
-<fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
+<fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
+<fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1"/>
 <fertigkeitsGruppen stufe="2" gruppe="//@entries.0/@entries.3/@entries.10"/>
 <eigenschaften name="Ambidextrous" page="71" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="4"/>
 <eigenschaften name="Quick Healer" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3">
@@ -2806,6 +2807,19 @@
 <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:15:02.090+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.7"/>
 <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:15:27.614+0100" from="2" to="3" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.3"/>
 <changes xsi:type="shr5mngt:PersonaChange" changeApplied="true" dateApplied="2014-03-16T13:15:52.686+0100" to="1" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14"/>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-16T21:05:35.585+0100" changeApplied="true" dateApplied="2014-03-16T21:06:14.346+0100" karma="6"/>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-20T21:05:35.585+0100" changeApplied="true" dateApplied="2014-03-16T21:06:43.975+0100" karma="6"/>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-03-29T21:05:35.585+0100" changeApplied="true" dateApplied="2014-03-16T21:08:09.119+0100" karma="8"/>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-01T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:08:51.017+0100" karma="6"/>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-05T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:10:48.765+0100" karma="7"/>
+<changes xsi:type="shr5mngt:PersonaChange" date="2075-04-07T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:11:33.105+0100" to="1" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.15"/>
+<changes xsi:type="shr5mngt:PersonaChange" date="2075-04-08T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:12:21.577+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.15"/>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-11T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:12:50.933+0100" karma="7"/>
+<changes xsi:type="shr5mngt:AttributeChange" date="2075-04-11T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:13:23.766+0100" from="5" to="6">
+<attibute href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/edgeBasis"/>
+</changes>
+<changes xsi:type="shr5mngt:KarmaGaint" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:19:24.648+0100" karma="7"/>
+<changes xsi:type="shr5mngt:PersonaChange" date="2075-04-14T21:05:35.585+0200" changeApplied="true" dateApplied="2014-03-16T21:20:05.723+0100" from="1" to="2" changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14"/>
 <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="725" verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="//@entries.0/@entries.1/@entries.3">
 <modie>HM</modie>
 <erweiterung>Lauf</erweiterung>
@@ -2838,7 +2852,8 @@
 </inventar>
 <contracts xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
 <connections influence="3" loyality="2"/>
-<connections influence="2" loyality="2"/>
+<connections influence="4" loyality="2"/>
+<generatorSrc xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.0" state="commited" selectedGroup="//@entries.1/@groups.0" characterName="Gu" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.28" karmaToResource="3" startResources="650"/>
 </members>
 <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.0" sex="male">
 <persona xsi:type="shr5:Technomancer" name="James" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="2" reaktionBasis="2" staerkeBasis="3" charismaBasis="3" willenskraftBasis="3" intuitionBasis="4" logikBasis="4" spezies="//@entries.0/@entries.2/@entries.0">
@@ -3021,7 +3036,6 @@
 <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Example James" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.42" skills="//@entries.0/@entries.16/@entries.0/@priorities.41" attribute="//@entries.0/@entries.16/@entries.0/@priorities.19" metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.27"/>
 <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Rob" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.45" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.9" magic="//@entries.0/@entries.16/@entries.0/@priorities.47" karmaToResource="10" startKarma="1" startResources="2810"/>
 <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Kyra" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.18" karmaToResource="10" metaType="//@entries.0/@entries.16/@entries.0/@priorities.15" magic="//@entries.0/@entries.16/@entries.0/@priorities.23"/>
-<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.1/@groups.0" characterName="Gu" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.14" magic="//@entries.0/@entries.16/@entries.0/@priorities.28" karmaToResource="3"/>
 <generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0"/>
 </entries>
 <entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
