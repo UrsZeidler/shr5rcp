@@ -532,7 +532,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
         for (AbstraktGegenstand ge : g) {
             grid.add(new TextPrint(itemDelegator.getText(ge), attributeFont), 1);
             grid.add(new TextPrint(printString(ge.getVerfuegbarkeit()), attributeFont), 1);
-            grid.add(new TextPrint(printIntegerMoney(ge.getWert()), attributeFont), 1);
+            grid.add(SWT.RIGHT, SWT.DEFAULT,new TextPrint(printIntegerMoney(ge.getWert()), attributeFont), 1);
             grid.add(new TextPrint(toSource(ge), attributeFont), 1);
         }
 
@@ -1252,7 +1252,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
         final EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
 
         for (Fertigkeit fertigkeit : fertigkeiten) {
-            if (eAllAttributes.contains(fertigkeit.getAttribut()))
+            if (!eAllAttributes.contains(fertigkeit.getAttribut()))
                 continue;
 
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
