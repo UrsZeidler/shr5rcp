@@ -97,6 +97,9 @@
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
 						verfuegbarkeit="10" wert="1000" page="443" name="Ebony" maxValue="1000000" />
 				</entries>
+				<entries xsi:type="shr5:ShrList" name="additional stuff" >
+				
+				</entries>
 			</entries>
 			<xsl:call-template name="examples" />
 

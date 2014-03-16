@@ -2735,6 +2735,7 @@
 <entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="10" wert="500" page="443" name="Platinum" maxValue="500000"/>
 <entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="10" wert="1000" page="443" name="Ebony" maxValue="1000000"/>
 </entries>
+<entries xsi:type="shr5:ShrList" name="additional stuff"/>
 </entries>
 <entries xsi:type="shr5mngt:PlayerManagement" name="my player">
 <groups name="player group">
