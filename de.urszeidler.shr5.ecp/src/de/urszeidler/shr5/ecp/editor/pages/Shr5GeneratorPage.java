@@ -15,6 +15,7 @@ import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
@@ -43,14 +44,17 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
+import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
@@ -64,6 +68,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * @author urs
@@ -429,6 +434,12 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
+        Lifestyle choosenLifestyle = object.getCharacter().getChoosenLifestyle();
+        Shr5System shr5System = object.getShr5Generator();
+        EList<LifestyleToStartMoney> lifestyleToStartMoney = shr5System.getLifestyleToStartMoney();
+        LifestyleToStartMoney lifestyleToMoney = ShadowrunEditingTools.getLifestyleToMoney(choosenLifestyle, lifestyleToStartMoney);
+       
+
         CompoundCommand command = new CompoundCommand();
         command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
                 GeneratorState.COMMITED));
@@ -442,6 +453,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         getEditingDomain().getCommandStack().execute(command);
         validateChange();
     }
+
 
     /**
      * Validates the changes and update the gui.

@@ -6,6 +6,7 @@ package de.urszeidler.shr5.ecp.util;
 import java.util.Collection;
 import java.util.HashSet;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -14,11 +15,13 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 
 /**
  * A collection of tool functions.
@@ -27,6 +30,25 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
  */
 public class ShadowrunEditingTools {
 
+    
+    /**
+     * @param choosenLifestyle
+     * @param lifestyleToStartMoney
+     * @return 
+     */
+    public static LifestyleToStartMoney getLifestyleToMoney(Lifestyle choosenLifestyle, EList<LifestyleToStartMoney> lifestyleToStartMoney) {
+        for (LifestyleToStartMoney lstsm : lifestyleToStartMoney) {
+            EList<Lifestyle> lifeStyles = lstsm.getLifeStyles();
+            for (Lifestyle lifestyle : lifeStyles) {
+                if (lifestyle.getName().equals(choosenLifestyle.getName())) {
+                    return lstsm;
+                }
+            }
+        }
+        return null;
+    }
+
+    
     /**
      * Creates a transformer to make a {@link Zauber} object to a {@link PersonaZauber} object referencing the spell.
      * 
