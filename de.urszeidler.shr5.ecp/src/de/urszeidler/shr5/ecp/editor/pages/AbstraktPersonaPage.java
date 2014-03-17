@@ -153,7 +153,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         toolkit.adapt(compositelimits);
         toolkit.paintBordersFor(compositelimits);
         sctnLimits.setClient(compositelimits);
-        
+
         Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
         composite_1.setLayout(new FillLayout(SWT.HORIZONTAL));
         GridData gd_composite_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
@@ -170,8 +170,6 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         sctnSkill.setClient(personaFertigkeitenWidget);
         managedForm.getToolkit().adapt(personaFertigkeitenWidget);
         managedForm.getToolkit().paintBordersFor(personaFertigkeitenWidget);
-
-        
 
         if (object instanceof KoerperPersona) {
             Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
@@ -234,6 +232,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
                     Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
+
         }
         if (object instanceof Technomancer) {
             Composite grpKikrfte = new Composite(body, SWT.NONE);
@@ -260,9 +259,10 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         createFormBuilder(managedForm);
 
         emfFormBuilder.addTextEntry(Messages.AbstraktPersonaPage_MethaType, Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, compositeMetaType);
-
+        if (object instanceof Zauberer) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBERER__TRADITION, compositeMetaType);
+        }
         emfFormBuilder.buildinComposite(m_bindingContext, body, object);
-
 
         managedForm.reflow(true);
 
