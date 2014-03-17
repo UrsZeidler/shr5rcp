@@ -5,6 +5,7 @@ package de.urszeidler.shr5.ecp.printer;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -66,6 +67,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
@@ -256,7 +258,7 @@ public class PersonaPrinter implements IPropertyChangeListener {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
-        
+
         return grid;
     }
 
@@ -437,6 +439,8 @@ public class PersonaPrinter implements IPropertyChangeListener {
         List<AbstraktGegenstand> gList = character.getInventar();
         grid.add(new BorderPrint(printGegenstandList(gList), border), 2);
         grid.add(new BreakPrint(), GridPrint.REMAINDER);
+        if (store.getBoolean(PreferenceConstants.PRINT_CHARACTER_ADVACEMENTS))
+            grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), 2);
         return grid;
     }
 
@@ -532,13 +536,19 @@ public class PersonaPrinter implements IPropertyChangeListener {
         for (AbstraktGegenstand ge : g) {
             grid.add(new TextPrint(itemDelegator.getText(ge), attributeFont), 1);
             grid.add(new TextPrint(printString(ge.getVerfuegbarkeit()), attributeFont), 1);
-            grid.add(SWT.RIGHT, SWT.DEFAULT,new TextPrint(printIntegerMoney(ge.getWert()), attributeFont), 1);
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printIntegerMoney(ge.getWert()), attributeFont), 1);
             grid.add(new TextPrint(toSource(ge), attributeFont), 1);
         }
 
         return grid;
     }
 
+    /**
+     * Simply checks for null and returns empty for it.
+     * 
+     * @param message
+     * @return
+     */
     private String printString(String message) {
         if (message == null)
             return EMPTY;
@@ -630,6 +640,45 @@ public class PersonaPrinter implements IPropertyChangeListener {
         }
 
         return grid;
+    }
+
+    /**
+     * Prints the character advancement list.
+     * 
+     * @param persona
+     * @return
+     */
+    private Print printCharacterAdvancementsList(ManagedCharacter character) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d:g,d,d,d", look);//$NON-NLS-1$
+
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("advancements", boldFontData), 4);
+        grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData));
+        grid.addHeader(new TextPrint("gamedate", italicFontData));
+        grid.addHeader(new TextPrint("date applied", italicFontData));
+        grid.addHeader(new TextPrint("karma", italicFontData));
+
+        EList<Changes> changes = character.getChanges();
+        for (Changes change : changes) {
+            grid.add(new TextPrint(itemDelegator.getText(change), attributeFont));
+            grid.add(new TextPrint(printDate(change.getDate()), attributeFont));
+            grid.add(new TextPrint(printDate(change.getDateApplied()), attributeFont));
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(change.getKarmaCost()), attributeFont));
+        }
+
+        return grid;
+    }
+
+    /**
+     * Simple prints a date.
+     * 
+     * @param date
+     * @return
+     */
+    private String printDate(Date date) {
+        String format = String.format("%tF", date);
+        return format;
     }
 
     /**
