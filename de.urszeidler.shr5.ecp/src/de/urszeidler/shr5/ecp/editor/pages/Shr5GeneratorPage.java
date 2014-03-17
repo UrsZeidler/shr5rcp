@@ -116,6 +116,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
     private HashSet<String> changeSet;
     private boolean optionWidgetsCreated = false;
+    private ToolItem restItem;
 
     /**
      * Create the form page.
@@ -191,7 +192,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
 
-        ToolItem restItem = new ToolItem(toolBar, SWT.NONE);
+        restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -403,7 +404,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
 
         managedForm.reflow(true);
-        if (!object.eAdapters().contains(this))
+        if (!object.eAdapters().contains(this) && object.getState() != GeneratorState.COMMITED)
             object.eAdapters().add(this);
         if (object.getCharacter() != null && object.getCharacter().getPersona() != null && object.getState() != GeneratorState.COMMITED) {
             addPersonaPage(object.getCharacter());
@@ -450,6 +451,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             tltmNewItem.setEnabled(false);
             tltmChoose.setEnabled(false);
             tltmCommit.setEnabled(false);
+            restItem.setEnabled(false);
 
             grpAuswahl.setEnabled(false);
             sctnCreate.setEnabled(false);
