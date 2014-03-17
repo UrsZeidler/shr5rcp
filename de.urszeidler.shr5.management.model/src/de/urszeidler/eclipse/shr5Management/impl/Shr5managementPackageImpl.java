@@ -1447,20 +1447,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EOperation getShr5Generator__HasSpendAllPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
 	public EOperation getShr5Generator__HasNotMoreMaxAttributes__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(2);
+        return shr5GeneratorEClass.getEOperations().get(1);
     }
 
 	/**
@@ -1469,7 +1460,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllAttributesPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(3);
+        return shr5GeneratorEClass.getEOperations().get(2);
     }
 
     /**
@@ -1478,7 +1469,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllSkillPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(4);
+        return shr5GeneratorEClass.getEOperations().get(3);
     }
 
     /**
@@ -1487,7 +1478,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllSpecialPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(5);
+        return shr5GeneratorEClass.getEOperations().get(4);
     }
 
     /**
@@ -1496,7 +1487,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllSpecialTypePoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(6);
+        return shr5GeneratorEClass.getEOperations().get(5);
     }
 
     /**
@@ -1505,7 +1496,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllConnectionPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(7);
+        return shr5GeneratorEClass.getEOperations().get(6);
     }
 
     /**
@@ -1514,7 +1505,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllResourcePoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(8);
+        return shr5GeneratorEClass.getEOperations().get(7);
     }
 
     /**
@@ -1523,7 +1514,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllMagicSkillsPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(9);
+        return shr5GeneratorEClass.getEOperations().get(8);
     }
 
     /**
@@ -1532,7 +1523,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllMagicPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(10);
+        return shr5GeneratorEClass.getEOperations().get(9);
     }
 
     /**
@@ -1541,7 +1532,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllGroupPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(11);
+        return shr5GeneratorEClass.getEOperations().get(10);
     }
 
     /**
@@ -1550,7 +1541,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllKnowlegeSkillPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(12);
+        return shr5GeneratorEClass.getEOperations().get(11);
     }
 
     /**
@@ -1559,7 +1550,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllKarmaPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(13);
+        return shr5GeneratorEClass.getEOperations().get(12);
     }
 
     /**
@@ -1568,7 +1559,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllSpellPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(14);
+        return shr5GeneratorEClass.getEOperations().get(13);
     }
 
     /**
@@ -1577,7 +1568,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     public EOperation getShr5Generator__HasSpendAllPowerPoints__DiagnosticChain_Map() {
-        return shr5GeneratorEClass.getEOperations().get(15);
+        return shr5GeneratorEClass.getEOperations().get(14);
     }
 
     /**
@@ -1990,7 +1981,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EOperation getShr5RuleGenerator__HasNotMoreMaxAttributes__DiagnosticChain_Map() {
+    public EOperation getShr5RuleGenerator__HasSpendAllPoints__DiagnosticChain_Map() {
         return shr5RuleGeneratorEClass.getEOperations().get(0);
     }
 
@@ -1999,7 +1990,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EOperation getShr5RuleGenerator__HasNoSkillsOverMax__DiagnosticChain_Map() {
+    public EOperation getShr5RuleGenerator__HasNotMoreMaxAttributes__DiagnosticChain_Map() {
         return shr5RuleGeneratorEClass.getEOperations().get(1);
     }
 
@@ -2008,7 +1999,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EOperation getShr5RuleGenerator__HasNotMoreSpecalism__DiagnosticChain_Map() {
+    public EOperation getShr5RuleGenerator__HasNoSkillsOverMax__DiagnosticChain_Map() {
         return shr5RuleGeneratorEClass.getEOperations().get(2);
     }
 
@@ -2017,8 +2008,17 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EOperation getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map() {
+    public EOperation getShr5RuleGenerator__HasNotMoreSpecalism__DiagnosticChain_Map() {
         return shr5RuleGeneratorEClass.getEOperations().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map() {
+        return shr5RuleGeneratorEClass.getEOperations().get(4);
     }
 
     /**
@@ -2200,7 +2200,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__START_KARMA);
         createEAttribute(shr5GeneratorEClass, SHR5_GENERATOR__START_RESOURCES);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_CATEGORY_ONLY_ONCE__DIAGNOSTICCHAIN_MAP);
-        createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_ATTRIBUTES_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5GeneratorEClass, SHR5_GENERATOR___HAS_SPEND_ALL_SKILL_POINTS__DIAGNOSTICCHAIN_MAP);
@@ -2278,6 +2277,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         shr5RuleGeneratorEClass = createEClass(SHR5_RULE_GENERATOR);
         createEReference(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR__SHR5_GENERATOR);
+        createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP);
@@ -2516,15 +2516,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-        op = initEOperation(getShr5Generator__HasSpendAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
-        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-        g1 = createEGenericType(ecorePackage.getEMap());
-        g2 = createEGenericType(ecorePackage.getEJavaObject());
-        g1.getETypeArguments().add(g2);
-        g2 = createEGenericType(ecorePackage.getEJavaObject());
-        g1.getETypeArguments().add(g2);
-        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
         op = initEOperation(getShr5Generator__HasNotMoreMaxAttributes__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotMoreMaxAttributes", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
@@ -2713,6 +2704,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         initEClass(shr5RuleGeneratorEClass, Shr5RuleGenerator.class, "Shr5RuleGenerator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getShr5RuleGenerator_Shr5Generator(), this.getShr5System(), null, "shr5Generator", null, 0, 1, Shr5RuleGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+        op = initEOperation(getShr5RuleGenerator__HasSpendAllPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         op = initEOperation(getShr5RuleGenerator__HasNotMoreMaxAttributes__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNotMoreMaxAttributes", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);

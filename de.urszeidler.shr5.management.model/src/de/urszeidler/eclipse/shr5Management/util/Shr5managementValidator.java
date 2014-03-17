@@ -4,13 +4,11 @@
 package de.urszeidler.eclipse.shr5Management.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -88,20 +86,12 @@ public class Shr5managementValidator extends EObjectValidator {
 	public static final int SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE = 1;
 
 	/**
-     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Points' of 'Shr5 Generator'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_POINTS = 2;
-
-    /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not More Max Attributes' of 'Shr5 Generator'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public static final int SHR5_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES = 3;
+	public static final int SHR5_GENERATOR__HAS_NOT_MORE_MAX_ATTRIBUTES = 2;
 
 	/**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Attributes Points' of 'Shr5 Generator'.
@@ -109,7 +99,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS = 4;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS = 3;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Skill Points' of 'Shr5 Generator'.
@@ -117,7 +107,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS = 5;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS = 4;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Special Points' of 'Shr5 Generator'.
@@ -125,7 +115,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS = 6;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS = 5;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Special Type Points' of 'Shr5 Generator'.
@@ -133,7 +123,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_TYPE_POINTS = 7;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_TYPE_POINTS = 6;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Connection Points' of 'Shr5 Generator'.
@@ -141,7 +131,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS = 8;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS = 7;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Resource Points' of 'Shr5 Generator'.
@@ -149,7 +139,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS = 9;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS = 8;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Magic Skills Points' of 'Shr5 Generator'.
@@ -157,7 +147,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_SKILLS_POINTS = 10;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_SKILLS_POINTS = 9;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Magic Points' of 'Shr5 Generator'.
@@ -165,7 +155,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_POINTS = 11;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_POINTS = 10;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Group Points' of 'Shr5 Generator'.
@@ -173,7 +163,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_GROUP_POINTS = 12;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_GROUP_POINTS = 11;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Knowlege Skill Points' of 'Shr5 Generator'.
@@ -181,7 +171,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS = 13;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS = 12;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Karma Points' of 'Shr5 Generator'.
@@ -189,7 +179,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 14;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 13;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Spell Points' of 'Shr5 Generator'.
@@ -197,7 +187,7 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPELL_POINTS = 15;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_SPELL_POINTS = 14;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Power Points' of 'Shr5 Generator'.
@@ -205,7 +195,15 @@ public class Shr5managementValidator extends EObjectValidator {
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_POWER_POINTS = 16;
+    public static final int SHR5_GENERATOR__HAS_SPEND_ALL_POWER_POINTS = 15;
+
+    /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Points' of 'Shr5 Rule Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_RULE_GENERATOR__HAS_SPEND_ALL_POINTS = 16;
 
     /**
      * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Not More Max Attributes' of 'Shr5 Rule Generator'.
@@ -556,12 +554,12 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validate_UniqueID(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryKeyUnique(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(shr5Generator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasSpendAllPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasNotMoreMaxAttributes(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasCategoryOnlyOnce(shr5Generator, diagnostics, context);
-        if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllAttributesPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSkillPoints(shr5Generator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5Generator_hasSpendAllSpecialPoints(shr5Generator, diagnostics, context);
@@ -586,16 +584,6 @@ public class Shr5managementValidator extends EObjectValidator {
      */
 	public boolean validateShr5Generator_hasCategoryOnlyOnce(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5Generator.hasCategoryOnlyOnce(diagnostics, context);
-    }
-
-	/**
-     * Validates the hasSpendAllPoints constraint of '<em>Shr5 Generator</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public boolean validateShr5Generator_hasSpendAllPoints(Shr5Generator shr5Generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return shr5Generator.hasSpendAllPoints(diagnostics, context);
     }
 
 	/**
@@ -906,11 +894,22 @@ public class Shr5managementValidator extends EObjectValidator {
         if (result || diagnostics != null) result &= validate_UniqueID(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryKeyUnique(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(shr5RuleGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasSpendAllPoints(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreMaxAttributes(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5RuleGenerator, diagnostics, context);
         if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5RuleGenerator, diagnostics, context);
         return result;
+    }
+
+    /**
+     * Validates the hasSpendAllPoints constraint of '<em>Shr5 Rule Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5RuleGenerator_hasSpendAllPoints(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5RuleGenerator.hasSpendAllPoints(diagnostics, context);
     }
 
     /**

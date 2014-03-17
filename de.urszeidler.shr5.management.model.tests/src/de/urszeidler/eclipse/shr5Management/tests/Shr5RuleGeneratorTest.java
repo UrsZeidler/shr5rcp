@@ -29,18 +29,27 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Skills Over Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Attributes Over Species Att</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Not More Max Attributes</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has No Skills Over Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Not More Specalism</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has No Attributes Over Species Att</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
@@ -54,6 +63,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * Constructs a new Shr5 Rule Generator test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Shr5RuleGeneratorTest(String name) {
@@ -64,6 +74,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * Returns the fixture for this Shr5 Rule Generator test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -75,18 +86,36 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator()
-     * @generated not 
+     * @generated not
      */
     public void testGetShr5Generator() {
-     }
+    }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Points</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasSpendAllPoints__DiagnosticChain_Map() {
+        // need to be checked in the subclasses
+    }
+
+    /**
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not More Max Attributes</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-     * @generated
+     * @generated not
      */
     public void testHasNotMoreMaxAttributes__DiagnosticChain_Map() {
         createBasicCategories();
@@ -103,7 +132,6 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         spezies.setLogikMax(5);
 
         getFixture().setCharacter(character);
-        
 
         shr5System.setNumberOfMaxAttributes(2);
         Map<Object, Object> context = Collections.EMPTY_MAP;
@@ -158,9 +186,12 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Not More Specalism</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
@@ -187,10 +218,14 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Attributes Over Species Att</em>}' operation.
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has No Attributes Over Species Att</em>}' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain,
+     * java.util.Map)
      * @generated not
      */
     @SuppressWarnings("unchecked")
@@ -210,17 +245,15 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         spezies.setWillenskraftMax(5);
         spezies.setLogikMax(5);
 
-
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
 
         AbstraktPersona persona = character.getPersona();
         persona.setKonstitutionBasis(7);
         assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
-        spezies.setKonstitutionMax(5);        
+        spezies.setKonstitutionMax(5);
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
         persona.setKonstitutionBasis(8);
         assertEquals(false, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
- 
 
         PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
         AttributModifikatorWert modifikatorWert = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
@@ -228,9 +261,8 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         modifikatorWert.setWert(2);
         eigenschaft.getMods().add(modifikatorWert);
         ((KoerperPersona)persona).getEigenschaften().add(eigenschaft);
-        
-        
+
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
     }
 
-} //Shr5RuleGeneratorTest
+} // Shr5RuleGeneratorTest

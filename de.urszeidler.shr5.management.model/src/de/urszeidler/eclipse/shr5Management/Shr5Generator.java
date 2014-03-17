@@ -398,14 +398,6 @@ public interface Shr5Generator extends Shr5RuleGenerator {
      * @model
      * @generated
      */
-	boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @model
-     * @generated
-     */
 	boolean hasNotMoreMaxAttributes(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**

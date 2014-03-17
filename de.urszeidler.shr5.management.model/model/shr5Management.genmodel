@@ -177,10 +177,6 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasCategoryOnlyOnce/context"/>
       </genOperations>
-      <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasSpendAllPoints">
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllPoints/diagnostics"/>
-        <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasSpendAllPoints/context"/>
-      </genOperations>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5Generator/hasNotMoreMaxAttributes/context"/>
@@ -298,6 +294,10 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//Shr5RuleGenerator">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5RuleGenerator/shr5Generator"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasSpendAllPoints/context"/>
+      </genOperations>
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreMaxAttributes">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreMaxAttributes/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNotMoreMaxAttributes/context"/>

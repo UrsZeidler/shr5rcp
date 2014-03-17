@@ -43,6 +43,14 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
      * Not more that shr5System.numberOfMaxAttributes with a vaule higer the default max.
      * <!-- end-model-doc -->
