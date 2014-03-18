@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -377,6 +378,14 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 Shr5RuleGenerator shr5RuleGenerator = (Shr5RuleGenerator)theEObject;
                 T result = caseShr5RuleGenerator(shr5RuleGenerator);
                 if (result == null) result = caseCharacterGenerator(shr5RuleGenerator);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR: {
+                Shr5KarmaGenerator shr5KarmaGenerator = (Shr5KarmaGenerator)theEObject;
+                T result = caseShr5KarmaGenerator(shr5KarmaGenerator);
+                if (result == null) result = caseShr5RuleGenerator(shr5KarmaGenerator);
+                if (result == null) result = caseCharacterGenerator(shr5KarmaGenerator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -951,6 +960,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseShr5RuleGenerator(Shr5RuleGenerator object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Shr5 Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Shr5 Karma Generator</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
         return null;
     }
 

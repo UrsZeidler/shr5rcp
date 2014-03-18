@@ -64,6 +64,7 @@
     <genClasses ecoreClass="shr5Management.ecore#//FreeStyle"/>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PriorityCategorie">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/categorieName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//PriorityCategorie/cost"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5System">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToResourceFactor"/>
@@ -76,6 +77,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/skillMax"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/numberOfSpecalism"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5System/karmaToConnectionFactor"/>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//MetaType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//MetaType/choosableTypes"/>
@@ -313,6 +315,19 @@
       <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt">
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/metaType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/karmaToResource"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/karmaSpend"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/resourceSpend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/startKarma"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//Shr5KarmaGenerator/startResources"/>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/context"/>
       </genOperations>
     </genClasses>
   </genPackages>

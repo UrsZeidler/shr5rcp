@@ -934,13 +934,22 @@ public interface Shr5managementPackage extends EPackage {
 	int PRIORITY_CATEGORIE__CATEGORIE_NAME = 0;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PRIORITY_CATEGORIE__COST = 1;
+
+    /**
      * The number of structural features of the '<em>Priority Categorie</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int PRIORITY_CATEGORIE_FEATURE_COUNT = 1;
+	int PRIORITY_CATEGORIE_FEATURE_COUNT = 2;
 
 	/**
      * The number of operations of the '<em>Priority Categorie</em>' class.
@@ -1142,13 +1151,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_SYSTEM__NUMBER_OF_SPECALISM = PRIORITY_SYSTEM_FEATURE_COUNT + 9;
 
     /**
+     * The feature id for the '<em><b>Karma To Connection Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR = PRIORITY_SYSTEM_FEATURE_COUNT + 10;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 10;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 11;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -1179,6 +1197,15 @@ public interface Shr5managementPackage extends EPackage {
 	int META_TYPE__CATEGORIE_NAME = PRIORITY_CATEGORIE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int META_TYPE__COST = PRIORITY_CATEGORIE__COST;
+
+    /**
      * The feature id for the '<em><b>Choosable Types</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1243,6 +1270,15 @@ public interface Shr5managementPackage extends EPackage {
 	int ATTRIBUTES__CATEGORIE_NAME = PRIORITY_CATEGORIE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ATTRIBUTES__COST = PRIORITY_CATEGORIE__COST;
+
+    /**
      * The feature id for the '<em><b>Attibute Points</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1298,6 +1334,15 @@ public interface Shr5managementPackage extends EPackage {
 	int SKILL__CATEGORIE_NAME = PRIORITY_CATEGORIE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL__COST = PRIORITY_CATEGORIE__COST;
+
+    /**
      * The feature id for the '<em><b>Skill Points</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1389,6 +1434,15 @@ public interface Shr5managementPackage extends EPackage {
 	int RESOURCEN__CATEGORIE_NAME = PRIORITY_CATEGORIE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RESOURCEN__COST = PRIORITY_CATEGORIE__COST;
+
+    /**
      * The feature id for the '<em><b>Resource</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1444,6 +1498,15 @@ public interface Shr5managementPackage extends EPackage {
 	int SPECIAL_TYPE__CATEGORIE_NAME = PRIORITY_CATEGORIE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPECIAL_TYPE__COST = PRIORITY_CATEGORIE__COST;
+
+    /**
      * The feature id for the '<em><b>Selectable Types</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1535,6 +1598,15 @@ public interface Shr5managementPackage extends EPackage {
 	int TECHNOMANCER__CATEGORIE_NAME = SPECIAL_TYPE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TECHNOMANCER__COST = SPECIAL_TYPE__COST;
+
+    /**
      * The feature id for the '<em><b>Selectable Types</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1653,6 +1725,15 @@ public interface Shr5managementPackage extends EPackage {
 	int ADEPT__CATEGORIE_NAME = SPECIAL_TYPE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ADEPT__COST = SPECIAL_TYPE__COST;
+
+    /**
      * The feature id for the '<em><b>Selectable Types</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1762,6 +1843,15 @@ public interface Shr5managementPackage extends EPackage {
 	int SPELLCASTER__CATEGORIE_NAME = ADEPT__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPELLCASTER__COST = ADEPT__COST;
+
+    /**
      * The feature id for the '<em><b>Selectable Types</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3031,6 +3121,15 @@ public interface Shr5managementPackage extends EPackage {
 	int MUDAN__CATEGORIE_NAME = SPECIAL_TYPE__CATEGORIE_NAME;
 
 	/**
+     * The feature id for the '<em><b>Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUDAN__COST = SPECIAL_TYPE__COST;
+
+    /**
      * The feature id for the '<em><b>Selectable Types</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3945,6 +4044,214 @@ public interface Shr5managementPackage extends EPackage {
     int CHARACTER_ADVANCEMENT_SYSTEM_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl <em>Shr5 Karma Generator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5KarmaGenerator()
+     * @generated
+     */
+    int SHR5_KARMA_GENERATOR = 38;
+
+    /**
+     * The feature id for the '<em><b>Character</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__CHARACTER = SHR5_RULE_GENERATOR__CHARACTER;
+
+    /**
+     * The feature id for the '<em><b>Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__GENERATOR = SHR5_RULE_GENERATOR__GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>State</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__STATE = SHR5_RULE_GENERATOR__STATE;
+
+    /**
+     * The feature id for the '<em><b>Selected Group</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__SELECTED_GROUP = SHR5_RULE_GENERATOR__SELECTED_GROUP;
+
+    /**
+     * The feature id for the '<em><b>Character Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__CHARACTER_NAME = SHR5_RULE_GENERATOR__CHARACTER_NAME;
+
+    /**
+     * The feature id for the '<em><b>Current Instruction</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__CURRENT_INSTRUCTION = SHR5_RULE_GENERATOR__CURRENT_INSTRUCTION;
+
+    /**
+     * The feature id for the '<em><b>Shr5 Generator</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__SHR5_GENERATOR = SHR5_RULE_GENERATOR__SHR5_GENERATOR;
+
+    /**
+     * The feature id for the '<em><b>Meta Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__META_TYPE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Character Concept</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Karma To Resource</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE = SHR5_RULE_GENERATOR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Karma Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__KARMA_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Resource Spend</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__RESOURCE_SPEND = SHR5_RULE_GENERATOR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Start Karma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__START_KARMA = SHR5_RULE_GENERATOR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Start Resources</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR__START_RESOURCES = SHR5_RULE_GENERATOR_FEATURE_COUNT + 6;
+
+    /**
+     * The number of structural features of the '<em>Shr5 Karma Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR_FEATURE_COUNT = SHR5_RULE_GENERATOR_FEATURE_COUNT + 7;
+
+    /**
+     * The operation id for the '<em>Has Spend All Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_SPEND_ALL_POINTS__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Max Attributes</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_MAX_ATTRIBUTES__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Skills Over Max</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Not More Specalism</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Attributes Over Species Att</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR_OPERATION_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Shr5 Karma Generator</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3952,7 +4259,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 38;
+	int GENERATOR_STATE = 39;
 
 
 	/**
@@ -3963,7 +4270,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 39;
+	int SEX = 40;
 
 
 	/**
@@ -4376,6 +4683,17 @@ public interface Shr5managementPackage extends EPackage {
 	EAttribute getPriorityCategorie_CategorieName();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.PriorityCategorie#getCost <em>Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.PriorityCategorie#getCost()
+     * @see #getPriorityCategorie()
+     * @generated
+     */
+    EAttribute getPriorityCategorie_Cost();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5System <em>Shr5 System</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4494,6 +4812,17 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getShr5System_NumberOfSpecalism();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma To Connection Factor</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_KarmaToConnectionFactor();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
@@ -5857,6 +6186,103 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator <em>Shr5 Karma Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Shr5 Karma Generator</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator
+     * @generated
+     */
+    EClass getShr5KarmaGenerator();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getMetaType <em>Meta Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Meta Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getMetaType()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EReference getShr5KarmaGenerator_MetaType();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getCharacterConcept <em>Character Concept</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Character Concept</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getCharacterConcept()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EReference getShr5KarmaGenerator_CharacterConcept();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaToResource <em>Karma To Resource</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma To Resource</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaToResource()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EAttribute getShr5KarmaGenerator_KarmaToResource();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend <em>Karma Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Karma Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EAttribute getShr5KarmaGenerator_KarmaSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend <em>Resource Spend</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Resource Spend</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EAttribute getShr5KarmaGenerator_ResourceSpend();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartKarma <em>Start Karma</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Karma</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartKarma()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EAttribute getShr5KarmaGenerator_StartKarma();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartResources <em>Start Resources</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Start Resources</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getStartResources()
+     * @see #getShr5KarmaGenerator()
+     * @generated
+     */
+    EAttribute getShr5KarmaGenerator_StartResources();
+
+    /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has Spend All Karma Points</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6220,6 +6646,14 @@ public interface Shr5managementPackage extends EPackage {
 		EAttribute PRIORITY_CATEGORIE__CATEGORIE_NAME = eINSTANCE.getPriorityCategorie_CategorieName();
 
 		/**
+         * The meta object literal for the '<em><b>Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PRIORITY_CATEGORIE__COST = eINSTANCE.getPriorityCategorie_Cost();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl <em>Shr5 System</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6308,6 +6742,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_SYSTEM__NUMBER_OF_SPECALISM = eINSTANCE.getShr5System_NumberOfSpecalism();
+
+        /**
+         * The meta object literal for the '<em><b>Karma To Connection Factor</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR = eINSTANCE.getShr5System_KarmaToConnectionFactor();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.
@@ -7398,6 +7840,80 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EOperation SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl <em>Shr5 Karma Generator</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5KarmaGenerator()
+         * @generated
+         */
+        EClass SHR5_KARMA_GENERATOR = eINSTANCE.getShr5KarmaGenerator();
+
+        /**
+         * The meta object literal for the '<em><b>Meta Type</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SHR5_KARMA_GENERATOR__META_TYPE = eINSTANCE.getShr5KarmaGenerator_MetaType();
+
+        /**
+         * The meta object literal for the '<em><b>Character Concept</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT = eINSTANCE.getShr5KarmaGenerator_CharacterConcept();
+
+        /**
+         * The meta object literal for the '<em><b>Karma To Resource</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE = eINSTANCE.getShr5KarmaGenerator_KarmaToResource();
+
+        /**
+         * The meta object literal for the '<em><b>Karma Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_KARMA_GENERATOR__KARMA_SPEND = eINSTANCE.getShr5KarmaGenerator_KarmaSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Resource Spend</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_KARMA_GENERATOR__RESOURCE_SPEND = eINSTANCE.getShr5KarmaGenerator_ResourceSpend();
+
+        /**
+         * The meta object literal for the '<em><b>Start Karma</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_KARMA_GENERATOR__START_KARMA = eINSTANCE.getShr5KarmaGenerator_StartKarma();
+
+        /**
+         * The meta object literal for the '<em><b>Start Resources</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_KARMA_GENERATOR__START_RESOURCES = eINSTANCE.getShr5KarmaGenerator_StartResources();
+
+        /**
+         * The meta object literal for the '<em><b>Has Spend All Karma Points</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.

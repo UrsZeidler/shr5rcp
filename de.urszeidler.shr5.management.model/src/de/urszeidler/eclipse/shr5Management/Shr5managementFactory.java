@@ -266,6 +266,15 @@ public interface Shr5managementFactory extends EFactory {
     CharacterAdvancementSystem createCharacterAdvancementSystem();
 
     /**
+     * Returns a new object of class '<em>Shr5 Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Shr5 Karma Generator</em>'.
+     * @generated
+     */
+    Shr5KarmaGenerator createShr5KarmaGenerator();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

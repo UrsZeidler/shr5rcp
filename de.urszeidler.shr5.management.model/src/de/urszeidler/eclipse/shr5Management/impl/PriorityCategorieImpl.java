@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PriorityCategorieImpl#getCategorieName <em>Categorie Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PriorityCategorieImpl#getCost <em>Cost</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +47,26 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
 	protected String categorieName = CATEGORIE_NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getCost() <em>Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCost()
+     * @generated
+     * @ordered
+     */
+    protected static final int COST_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getCost() <em>Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCost()
+     * @generated
+     * @ordered
+     */
+    protected int cost = COST_EDEFAULT;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -87,6 +108,27 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getCost() {
+        return cost;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCost(int newCost) {
+        int oldCost = cost;
+        cost = newCost;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.PRIORITY_CATEGORIE__COST, oldCost, cost));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -95,6 +137,8 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
         switch (featureID) {
             case Shr5managementPackage.PRIORITY_CATEGORIE__CATEGORIE_NAME:
                 return getCategorieName();
+            case Shr5managementPackage.PRIORITY_CATEGORIE__COST:
+                return getCost();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -109,6 +153,9 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
         switch (featureID) {
             case Shr5managementPackage.PRIORITY_CATEGORIE__CATEGORIE_NAME:
                 setCategorieName((String)newValue);
+                return;
+            case Shr5managementPackage.PRIORITY_CATEGORIE__COST:
+                setCost((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -125,6 +172,9 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
             case Shr5managementPackage.PRIORITY_CATEGORIE__CATEGORIE_NAME:
                 setCategorieName(CATEGORIE_NAME_EDEFAULT);
                 return;
+            case Shr5managementPackage.PRIORITY_CATEGORIE__COST:
+                setCost(COST_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -139,6 +189,8 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
         switch (featureID) {
             case Shr5managementPackage.PRIORITY_CATEGORIE__CATEGORIE_NAME:
                 return CATEGORIE_NAME_EDEFAULT == null ? categorieName != null : !CATEGORIE_NAME_EDEFAULT.equals(categorieName);
+            case Shr5managementPackage.PRIORITY_CATEGORIE__COST:
+                return cost != COST_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -155,6 +207,8 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (categorieName: ");
         result.append(categorieName);
+        result.append(", cost: ");
+        result.append(cost);
         result.append(')');
         return result.toString();
     }

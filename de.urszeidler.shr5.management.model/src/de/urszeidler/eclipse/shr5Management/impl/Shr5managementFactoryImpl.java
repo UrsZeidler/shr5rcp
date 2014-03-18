@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -114,6 +115,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.PLAYER_MANAGEMENT: return createPlayerManagement();
             case Shr5managementPackage.GAMEMASTER_MANAGEMENT: return createGamemasterManagement();
             case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM: return createCharacterAdvancementSystem();
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR: return createShr5KarmaGenerator();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -431,6 +433,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public CharacterAdvancementSystem createCharacterAdvancementSystem() {
         CharacterAdvancementSystemImpl characterAdvancementSystem = new CharacterAdvancementSystemImpl();
         return characterAdvancementSystem;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Shr5KarmaGenerator createShr5KarmaGenerator() {
+        Shr5KarmaGeneratorImpl shr5KarmaGenerator = new Shr5KarmaGeneratorImpl();
+        return shr5KarmaGenerator;
     }
 
     /**

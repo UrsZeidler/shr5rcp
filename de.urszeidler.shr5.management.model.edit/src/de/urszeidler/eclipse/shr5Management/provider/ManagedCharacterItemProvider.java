@@ -539,6 +539,11 @@ public class ManagedCharacterItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
                  Shr5managementFactory.eINSTANCE.createShr5Generator()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
+                 Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
     }
 
 	/**

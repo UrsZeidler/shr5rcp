@@ -67,6 +67,7 @@
     <nested inputs="shr5Management.ecore#//FreeStyle" outputs="Shr5managementXMI.xsd#//FreeStyle;XSDElementDeclaration=6"/>
     <nested inputs="shr5Management.ecore#//PriorityCategorie" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDComplexTypeDefinition=7">
       <nested inputs="shr5Management.ecore#//PriorityCategorie/categorieName" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDComplexTypeDefinition=7/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//PriorityCategorie/cost" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDComplexTypeDefinition=7/XSDAttributeUse=2"/>
     </nested>
     <nested inputs="shr5Management.ecore#//PriorityCategorie" outputs="Shr5managementXMI.xsd#//PriorityCategorie;XSDElementDeclaration=7"/>
     <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8">
@@ -81,6 +82,7 @@
       <nested inputs="shr5Management.ecore#//Shr5System/maxKarmaToKeep" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=7"/>
       <nested inputs="shr5Management.ecore#//Shr5System/skillMax" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=8"/>
       <nested inputs="shr5Management.ecore#//Shr5System/numberOfSpecalism" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=9"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/karmaToConnectionFactor" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=10"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDElementDeclaration=8"/>
     <nested inputs="shr5Management.ecore#//MetaType" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9">
@@ -248,6 +250,18 @@
     <nested inputs="shr5Management.ecore#//CharacterAdvancementSystem" outputs="Shr5managementXMI.xsd#//CharacterAdvancementSystem;XSDElementDeclaration=36"/>
     <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDComplexTypeDefinition=37"/>
     <nested inputs="shr5Management.ecore#//Shr5RuleGenerator" outputs="Shr5managementXMI.xsd#//Shr5RuleGenerator;XSDElementDeclaration=37"/>
+    <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38">
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/karmaToResource" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDAttributeUse"/>
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/startKarma" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/startResources" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/metaType" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/metaType" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"
+          outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDAttributeUse=4"/>
+      <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator/characterConcept"
+          outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDElementDeclaration=38"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"

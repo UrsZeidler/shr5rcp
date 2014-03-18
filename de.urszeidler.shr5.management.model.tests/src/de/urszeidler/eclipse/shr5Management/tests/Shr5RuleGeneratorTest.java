@@ -29,27 +29,19 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#getShr5Generator() <em>Shr5 Generator</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Spend All Points</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not More Max Attributes</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has No Skills Over Max</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Not More Specalism</em>}</li>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has No Attributes Over Species Att</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Max Attributes</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Skills Over Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Attributes Over Species Att</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
@@ -63,7 +55,6 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * Constructs a new Shr5 Rule Generator test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Shr5RuleGeneratorTest(String name) {
@@ -74,7 +65,6 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * Returns the fixture for this Shr5 Rule Generator test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

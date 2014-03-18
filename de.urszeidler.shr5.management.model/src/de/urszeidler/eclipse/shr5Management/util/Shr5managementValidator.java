@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import de.urszeidler.eclipse.shr5Management.*;
 import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -238,12 +239,20 @@ public class Shr5managementValidator extends EObjectValidator {
     public static final int SHR5_RULE_GENERATOR__HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT = 20;
 
     /**
+     * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Has Spend All Karma Points' of 'Shr5 Karma Generator'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static final int SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS = 21;
+
+    /**
      * A constant with a fixed name that can be used as the base value for additional hand written constants.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 20;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 21;
 
 	/**
      * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -359,6 +368,8 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateCharacterAdvancementSystem((CharacterAdvancementSystem)value, diagnostics, context);
             case Shr5managementPackage.SHR5_RULE_GENERATOR:
                 return validateShr5RuleGenerator((Shr5RuleGenerator)value, diagnostics, context);
+            case Shr5managementPackage.SHR5_KARMA_GENERATOR:
+                return validateShr5KarmaGenerator((Shr5KarmaGenerator)value, diagnostics, context);
             case Shr5managementPackage.GENERATOR_STATE:
                 return validateGeneratorState((GeneratorState)value, diagnostics, context);
             case Shr5managementPackage.SEX:
@@ -950,6 +961,40 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(Shr5RuleGenerator shr5RuleGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return shr5RuleGenerator.hasNoAttributesOverSpeciesAtt(diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5KarmaGenerator(Shr5KarmaGenerator shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!validate_NoCircularContainment(shr5KarmaGenerator, diagnostics, context)) return false;
+        boolean result = validate_EveryMultiplicityConforms(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryDataValueConforms(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryProxyResolves(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_UniqueID(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryKeyUnique(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasSpendAllPoints(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreMaxAttributes(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoSkillsOverMax(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNotMoreSpecalism(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5RuleGenerator_hasNoAttributesOverSpeciesAtt(shr5KarmaGenerator, diagnostics, context);
+        if (result || diagnostics != null) result &= validateShr5KarmaGenerator_hasSpendAllKarmaPoints(shr5KarmaGenerator, diagnostics, context);
+        return result;
+    }
+
+    /**
+     * Validates the hasSpendAllKarmaPoints constraint of '<em>Shr5 Karma Generator</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateShr5KarmaGenerator_hasSpendAllKarmaPoints(Shr5KarmaGenerator shr5KarmaGenerator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+        return shr5KarmaGenerator.hasSpendAllKarmaPoints(diagnostics, context);
     }
 
     /**

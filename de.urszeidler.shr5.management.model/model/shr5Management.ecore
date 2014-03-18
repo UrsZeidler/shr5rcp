@@ -69,8 +69,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FreeStyle" eSuperTypes="#//CharacterGeneratorSystem"/>
   <eClassifiers xsi:type="ecore:EClass" name="PriorityCategorie" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="categorieName" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="categorieName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5System" eSuperTypes="#//PrioritySystem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResourceFactor"
@@ -90,6 +90,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxKarmaToKeep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSpecalism" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToConnectionFactor"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaType" eSuperTypes="#//PriorityCategorie">
     <eOperations name="calcSpecialPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -499,5 +501,27 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="shr5Generator" eType="#//Shr5System"
         changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator" eSuperTypes="#//Shr5RuleGenerator">
+    <eOperations name="hasSpendAllKarmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metaType" lowerBound="1"
+        eType="#//MetaType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterConcept" lowerBound="1"
+        eType="#//SpecialType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5Management.*;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -257,6 +258,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseShr5RuleGenerator(Shr5RuleGenerator object) {
                 return createShr5RuleGeneratorAdapter();
+            }
+            @Override
+            public Adapter caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+                return createShr5KarmaGeneratorAdapter();
             }
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
@@ -815,6 +820,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createShr5RuleGeneratorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator <em>Shr5 Karma Generator</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator
+     * @generated
+     */
+    public Adapter createShr5KarmaGeneratorAdapter() {
         return null;
     }
 

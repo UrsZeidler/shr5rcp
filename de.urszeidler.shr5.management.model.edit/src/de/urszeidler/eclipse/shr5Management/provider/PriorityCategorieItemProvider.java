@@ -60,6 +60,7 @@ public class PriorityCategorieItemProvider
             super.getPropertyDescriptors(object);
 
             addCategorieNamePropertyDescriptor(object);
+            addCostPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -87,6 +88,28 @@ public class PriorityCategorieItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Cost feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCostPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_PriorityCategorie_cost_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_PriorityCategorie_cost_feature", "_UI_PriorityCategorie_type"),
+                 Shr5managementPackage.Literals.PRIORITY_CATEGORIE__COST,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,6 +136,7 @@ public class PriorityCategorieItemProvider
 
         switch (notification.getFeatureID(PriorityCategorie.class)) {
             case Shr5managementPackage.PRIORITY_CATEGORIE__CATEGORIE_NAME:
+            case Shr5managementPackage.PRIORITY_CATEGORIE__COST:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

@@ -48,6 +48,7 @@ import de.urszeidler.eclipse.shr5Management.PrioritySystem;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -331,6 +332,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass shr5RuleGeneratorEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass shr5KarmaGeneratorEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -763,6 +771,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getPriorityCategorie_Cost() {
+        return (EAttribute)priorityCategorieEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -858,6 +875,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      */
     public EAttribute getShr5System_NumberOfSpecalism() {
         return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_KarmaToConnectionFactor() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(10);
     }
 
     /**
@@ -2023,6 +2049,87 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getShr5KarmaGenerator() {
+        return shr5KarmaGeneratorEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getShr5KarmaGenerator_MetaType() {
+        return (EReference)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getShr5KarmaGenerator_CharacterConcept() {
+        return (EReference)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5KarmaGenerator_KarmaToResource() {
+        return (EAttribute)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5KarmaGenerator_KarmaSpend() {
+        return (EAttribute)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5KarmaGenerator_ResourceSpend() {
+        return (EAttribute)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5KarmaGenerator_StartKarma() {
+        return (EAttribute)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5KarmaGenerator_StartResources() {
+        return (EAttribute)shr5KarmaGeneratorEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EOperation getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map() {
+        return shr5KarmaGeneratorEClass.getEOperations().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2112,6 +2219,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
         priorityCategorieEClass = createEClass(PRIORITY_CATEGORIE);
         createEAttribute(priorityCategorieEClass, PRIORITY_CATEGORIE__CATEGORIE_NAME);
+        createEAttribute(priorityCategorieEClass, PRIORITY_CATEGORIE__COST);
 
         shr5SystemEClass = createEClass(SHR5_SYSTEM);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR);
@@ -2124,6 +2232,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__MAX_KARMA_TO_KEEP);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__SKILL_MAX);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__NUMBER_OF_SPECALISM);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR);
 
         metaTypeEClass = createEClass(META_TYPE);
         createEReference(metaTypeEClass, META_TYPE__CHOOSABLE_TYPES);
@@ -2283,6 +2392,16 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP);
 
+        shr5KarmaGeneratorEClass = createEClass(SHR5_KARMA_GENERATOR);
+        createEReference(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__META_TYPE);
+        createEReference(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__CHARACTER_CONCEPT);
+        createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE);
+        createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__KARMA_SPEND);
+        createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__RESOURCE_SPEND);
+        createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__START_KARMA);
+        createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__START_RESOURCES);
+        createEOperation(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
@@ -2349,6 +2468,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
         characterAdvancementSystemEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         shr5RuleGeneratorEClass.getESuperTypes().add(this.getCharacterGenerator());
+        shr5KarmaGeneratorEClass.getESuperTypes().add(this.getShr5RuleGenerator());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(managedCharacterEClass, ManagedCharacter.class, "ManagedCharacter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2396,7 +2516,8 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEClass(freeStyleEClass, FreeStyle.class, "FreeStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(priorityCategorieEClass, PriorityCategorie.class, "PriorityCategorie", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getPriorityCategorie_CategorieName(), ecorePackage.getEString(), "categorieName", null, 1, 1, PriorityCategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPriorityCategorie_CategorieName(), ecorePackage.getEString(), "categorieName", null, 0, 1, PriorityCategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPriorityCategorie_Cost(), ecorePackage.getEInt(), "cost", null, 0, 1, PriorityCategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(shr5SystemEClass, Shr5System.class, "Shr5System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getShr5System_KarmaToResourceFactor(), ecorePackage.getEInt(), "karmaToResourceFactor", null, 1, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2409,6 +2530,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5System_MaxKarmaToKeep(), ecorePackage.getEInt(), "maxKarmaToKeep", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_SkillMax(), ecorePackage.getEInt(), "skillMax", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_NumberOfSpecalism(), ecorePackage.getEInt(), "numberOfSpecalism", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_KarmaToConnectionFactor(), ecorePackage.getEInt(), "karmaToConnectionFactor", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(metaTypeEClass, MetaType.class, "MetaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getMetaType_ChoosableTypes(), theShr5Package.getSpezies(), null, "choosableTypes", null, 1, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2742,6 +2864,24 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
         op = initEOperation(getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNoAttributesOverSpeciesAtt", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+        initEClass(shr5KarmaGeneratorEClass, Shr5KarmaGenerator.class, "Shr5KarmaGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getShr5KarmaGenerator_MetaType(), this.getMetaType(), null, "metaType", null, 1, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getShr5KarmaGenerator_CharacterConcept(), this.getSpecialType(), null, "characterConcept", null, 1, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5KarmaGenerator_KarmaToResource(), ecorePackage.getEInt(), "karmaToResource", null, 0, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5KarmaGenerator_KarmaSpend(), ecorePackage.getEInt(), "karmaSpend", null, 0, 1, Shr5KarmaGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5KarmaGenerator_ResourceSpend(), ecorePackage.getEInt(), "resourceSpend", null, 0, 1, Shr5KarmaGenerator.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5KarmaGenerator_StartKarma(), ecorePackage.getEInt(), "startKarma", null, 0, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5KarmaGenerator_StartResources(), ecorePackage.getEInt(), "startResources", null, 0, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        op = initEOperation(getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasSpendAllKarmaPoints", 0, 1, IS_UNIQUE, IS_ORDERED);
         addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
         g1 = createEGenericType(ecorePackage.getEMap());
         g2 = createEGenericType(ecorePackage.getEJavaObject());

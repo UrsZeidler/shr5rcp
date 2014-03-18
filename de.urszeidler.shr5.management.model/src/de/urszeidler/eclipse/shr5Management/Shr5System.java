@@ -22,6 +22,7 @@ package de.urszeidler.eclipse.shr5Management;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getMaxKarmaToKeep <em>Max Karma To Keep</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSkillMax <em>Skill Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
  * </ul>
  * </p>
  *
@@ -290,4 +291,30 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     void setNumberOfSpecalism(int value);
+
+    /**
+     * Returns the value of the '<em><b>Karma To Connection Factor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Karma To Connection Factor</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Karma To Connection Factor</em>' attribute.
+     * @see #setKarmaToConnectionFactor(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_KarmaToConnectionFactor()
+     * @model
+     * @generated
+     */
+    int getKarmaToConnectionFactor();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Karma To Connection Factor</em>' attribute.
+     * @see #getKarmaToConnectionFactor()
+     * @generated
+     */
+    void setKarmaToConnectionFactor(int value);
 } // Shr5System

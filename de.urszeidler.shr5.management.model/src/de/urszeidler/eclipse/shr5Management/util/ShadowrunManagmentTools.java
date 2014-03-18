@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.util;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -20,6 +21,7 @@ import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.Connection;
@@ -93,6 +95,24 @@ public class ShadowrunManagmentTools {
             }
         }
         return karmaGaint;
+    }
+
+    /**
+     * Calcs the resources for a managed character.
+     * 
+     * @param context
+     * @return
+     */
+    public static BigDecimal calcResourcesSpend(ManagedCharacter context) {
+        BigDecimal wert = ShadowrunTools.calcListenWert(context.getInventar());
+        if (context.getPersona() instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)context.getPersona();
+            wert = wert.add(ShadowrunTools.calcListenWert(kp.getKoerperMods()));
+        }
+
+        wert = wert.add(ShadowrunTools.calcListenWert(context.getContracts()));
+        wert = wert.add(ShadowrunTools.calcListenWert(context.getVehicels()));
+        return wert;
     }
 
     /**
@@ -239,7 +259,7 @@ public class ShadowrunManagmentTools {
      */
     public static String beschreibarListToString(List<? extends Beschreibbar> list) {
         StringBuffer buffer = new StringBuffer();
-         for (Iterator<? extends Beschreibbar> iterator2 = list.iterator(); iterator2.hasNext();) {
+        for (Iterator<? extends Beschreibbar> iterator2 = list.iterator(); iterator2.hasNext();) {
             Beschreibbar besch = iterator2.next();
             buffer.append(besch.getName());
             if (iterator2.hasNext())

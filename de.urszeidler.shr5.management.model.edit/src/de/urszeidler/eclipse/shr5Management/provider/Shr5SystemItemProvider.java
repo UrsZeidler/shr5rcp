@@ -67,6 +67,7 @@ public class Shr5SystemItemProvider
             addMaxKarmaToKeepPropertyDescriptor(object);
             addSkillMaxPropertyDescriptor(object);
             addNumberOfSpecalismPropertyDescriptor(object);
+            addKarmaToConnectionFactorPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -292,6 +293,28 @@ public class Shr5SystemItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Karma To Connection Factor feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addKarmaToConnectionFactorPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_karmaToConnectionFactor_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_karmaToConnectionFactor_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Shr5System.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -338,6 +361,7 @@ public class Shr5SystemItemProvider
             case Shr5managementPackage.SHR5_SYSTEM__MAX_KARMA_TO_KEEP:
             case Shr5managementPackage.SHR5_SYSTEM__SKILL_MAX:
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

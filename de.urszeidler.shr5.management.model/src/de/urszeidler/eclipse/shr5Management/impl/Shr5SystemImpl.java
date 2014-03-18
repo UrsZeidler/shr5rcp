@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxKarmaToKeep <em>Max Karma To Keep</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getSkillMax <em>Skill Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
  * </ul>
  * </p>
  *
@@ -218,6 +219,25 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected int numberOfSpecalism = NUMBER_OF_SPECALISM_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getKarmaToConnectionFactor() <em>Karma To Connection Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getKarmaToConnectionFactor()
+     * @generated
+     * @ordered
+     */
+    protected static final int KARMA_TO_CONNECTION_FACTOR_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getKarmaToConnectionFactor() <em>Karma To Connection Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getKarmaToConnectionFactor()
+     * @generated
+     * @ordered
+     */
+    protected int karmaToConnectionFactor = KARMA_TO_CONNECTION_FACTOR_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -450,6 +470,27 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getKarmaToConnectionFactor() {
+        return karmaToConnectionFactor;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setKarmaToConnectionFactor(int newKarmaToConnectionFactor) {
+        int oldKarmaToConnectionFactor = karmaToConnectionFactor;
+        karmaToConnectionFactor = newKarmaToConnectionFactor;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR, oldKarmaToConnectionFactor, karmaToConnectionFactor));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -476,6 +517,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getSkillMax();
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
                 return getNumberOfSpecalism();
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
+                return getKarmaToConnectionFactor();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -517,6 +560,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return;
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
                 setNumberOfSpecalism((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
+                setKarmaToConnectionFactor((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -560,6 +606,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
                 setNumberOfSpecalism(NUMBER_OF_SPECALISM_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
+                setKarmaToConnectionFactor(KARMA_TO_CONNECTION_FACTOR_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -592,6 +641,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return skillMax != SKILL_MAX_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__NUMBER_OF_SPECALISM:
                 return numberOfSpecalism != NUMBER_OF_SPECALISM_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
+                return karmaToConnectionFactor != KARMA_TO_CONNECTION_FACTOR_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -626,6 +677,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(skillMax);
         result.append(", numberOfSpecalism: ");
         result.append(numberOfSpecalism);
+        result.append(", karmaToConnectionFactor: ");
+        result.append(karmaToConnectionFactor);
         result.append(')');
         return result.toString();
     }

@@ -109,7 +109,8 @@
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="categorieName" type="xsd:string" use="required"/>
+    <xsd:attribute name="categorieName" type="xsd:string"/>
+    <xsd:attribute name="cost" type="xsd:int"/>
   </xsd:complexType>
   <xsd:element name="PriorityCategorie" type="shr5mngt:PriorityCategorie"/>
   <xsd:complexType name="Shr5System">
@@ -125,6 +126,7 @@
         <xsd:attribute name="maxKarmaToKeep" type="xsd:int"/>
         <xsd:attribute name="skillMax" type="xsd:int"/>
         <xsd:attribute name="numberOfSpecalism" type="xsd:int"/>
+        <xsd:attribute name="karmaToConnectionFactor" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -453,4 +455,20 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Shr5RuleGenerator" type="shr5mngt:Shr5RuleGenerator"/>
+  <xsd:complexType name="Shr5KarmaGenerator">
+    <xsd:complexContent>
+      <xsd:extension base="shr5mngt:Shr5RuleGenerator">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="metaType" type="shr5mngt:MetaType"/>
+          <xsd:element name="characterConcept" type="shr5mngt:SpecialType"/>
+        </xsd:choice>
+        <xsd:attribute name="karmaToResource" type="xsd:int"/>
+        <xsd:attribute name="startKarma" type="xsd:int"/>
+        <xsd:attribute name="startResources" type="xsd:int"/>
+        <xsd:attribute name="metaType" type="xsd:string"/>
+        <xsd:attribute name="characterConcept" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator"/>
 </xsd:schema>

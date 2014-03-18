@@ -64,36 +64,7 @@ public abstract class ChangesTest extends TestCase {
         generator.setCharacter(playerCharacter);
         generator.setGenerator(shr5System);
 
-        IncreaseCharacterPart part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
-        part.setKarmaFactor(2);
-        part.setType(Shr5Package.Literals.FERTIGKEIT);
-        
-        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
-
-        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
-        part.setKarmaFactor(1);
-        part.setType(Shr5Package.Literals.SPRACHFERTIGKEIT);
-        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
-
-        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
-        part.setKarmaFactor(5);
-        part.setType(Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
-
-        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
-        part.setKarmaFactor(5);
-        part.setType(EcorePackage.Literals.EATTRIBUTE);
-        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
-
-        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
-        part.setKarmaFactor(2);
-        part.setType(Shr5Package.Literals.PERSONA_EIGENSCHAFT);
-        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
-
-        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
-        part.setKarmaFactor(13);
-        part.setType(Shr5Package.Literals.INITATION);
-        shr5System.getCharacterAdvancements().getCharacterAdvancements().add(part);
+        createAdvacements(shr5System);
 
         PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         Fertigkeit wfertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
@@ -101,6 +72,42 @@ public abstract class ChangesTest extends TestCase {
         fertigkeit.setStufe(1);
         playerCharacter.getPersona().getFertigkeiten().add(fertigkeit);
 
+    }
+
+    /**
+     * @param shr5System1
+     */
+    public static void createAdvacements(Shr5System shr5System1) {
+        IncreaseCharacterPart part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(2);
+        part.setType(Shr5Package.Literals.FERTIGKEIT);
+        
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(1);
+        part.setType(Shr5Package.Literals.SPRACHFERTIGKEIT);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(5);
+        part.setType(Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(5);
+        part.setType(EcorePackage.Literals.EATTRIBUTE);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(2);
+        part.setType(Shr5Package.Literals.PERSONA_EIGENSCHAFT);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(13);
+        part.setType(Shr5Package.Literals.INITATION);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
     }
 
     /**

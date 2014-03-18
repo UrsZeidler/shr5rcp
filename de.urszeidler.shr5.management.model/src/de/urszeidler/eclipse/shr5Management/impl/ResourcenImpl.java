@@ -16,6 +16,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,101 +25,117 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ResourcenImpl#getResource <em>Resource</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ResourcenImpl#getResource <em>Resource</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
-	/**
+    /**
      * The default value of the '{@link #getResource() <em>Resource</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getResource()
      * @generated
      * @ordered
      */
-	protected static final int RESOURCE_EDEFAULT = 0;
+    protected static final int RESOURCE_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getResource() <em>Resource</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getResource()
      * @generated
      * @ordered
      */
-	protected int resource = RESOURCE_EDEFAULT;
+    protected int resource = RESOURCE_EDEFAULT;
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected ResourcenImpl() {
+    protected ResourcenImpl() {
         super();
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return Shr5managementPackage.Literals.RESOURCEN;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getResource() {
+    public int getResource() {
         return resource;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setResource(int newResource) {
+    public void setResource(int newResource) {
         int oldResource = resource;
         resource = newResource;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.RESOURCEN__RESOURCE, oldResource, resource));
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated not
-	 */
-	public int calcResourceSpend(ManagedCharacter context) {
-		if (context == null ||context.getPersona() == null)
-			return 0;
-
-		
-		BigDecimal wert = ShadowrunTools.calcListenWert(context.getInventar());
-		if (context.getPersona() instanceof KoerperPersona) {
-			KoerperPersona kp = (KoerperPersona) context.getPersona();
-			wert = wert.add(ShadowrunTools.calcListenWert(kp.getKoerperMods()));
-		}
-		
-		wert = wert.add(ShadowrunTools.calcListenWert(context.getContracts()));
-		wert = wert.add(ShadowrunTools.calcListenWert(context.getVehicels()));
-		return  wert.intValue();//-resourceKosten;
-	}
-
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int calcResourceSpend(ManagedCharacter context) {
+        if (context == null || context.getPersona() == null)
+            return 0;
+
+        BigDecimal wert = ShadowrunManagmentTools.calcResourcesSpend(context);
+        return wert.intValue();// -resourceKosten;
+    }
+
+    /**
+     * @param context
+     * @return
+     */
+    private BigDecimal calcResourcesSpend(ManagedCharacter context) {
+        BigDecimal wert = ShadowrunTools.calcListenWert(context.getInventar());
+        if (context.getPersona() instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)context.getPersona();
+            wert = wert.add(ShadowrunTools.calcListenWert(kp.getKoerperMods()));
+        }
+
+        wert = wert.add(ShadowrunTools.calcListenWert(context.getContracts()));
+        wert = wert.add(ShadowrunTools.calcListenWert(context.getVehicels()));
+        return wert;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.RESOURCEN__RESOURCE:
                 return getResource();
@@ -126,13 +143,14 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
         return super.eGet(featureID, resolve, coreType);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eSet(int featureID, Object newValue) {
+    @Override
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5managementPackage.RESOURCEN__RESOURCE:
                 setResource((Integer)newValue);
@@ -141,13 +159,14 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
         super.eSet(featureID, newValue);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eUnset(int featureID) {
+    @Override
+    public void eUnset(int featureID) {
         switch (featureID) {
             case Shr5managementPackage.RESOURCEN__RESOURCE:
                 setResource(RESOURCE_EDEFAULT);
@@ -156,13 +175,14 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
         super.eUnset(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean eIsSet(int featureID) {
+    @Override
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
             case Shr5managementPackage.RESOURCEN__RESOURCE:
                 return resource != RESOURCE_EDEFAULT;
@@ -170,13 +190,14 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
         return super.eIsSet(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+    @Override
+    public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
         switch (operationID) {
             case Shr5managementPackage.RESOURCEN___CALC_RESOURCE_SPEND__MANAGEDCHARACTER:
                 return calcResourceSpend((ManagedCharacter)arguments.get(0));
@@ -184,14 +205,16 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
         return super.eInvoke(operationID, arguments);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public String toString() {
-        if (eIsProxy()) return super.toString();
+    @Override
+    public String toString() {
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (resource: ");
@@ -200,4 +223,4 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
         return result.toString();
     }
 
-} //ResourcenImpl
+} // ResourcenImpl

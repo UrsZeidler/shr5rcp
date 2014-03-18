@@ -727,6 +727,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected Shr5KarmaGeneratorItemProvider shr5KarmaGeneratorItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createShr5KarmaGeneratorAdapter() {
+        if (shr5KarmaGeneratorItemProvider == null) {
+            shr5KarmaGeneratorItemProvider = new Shr5KarmaGeneratorItemProvider(this);
+        }
+
+        return shr5KarmaGeneratorItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -853,6 +876,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (playerManagementItemProvider != null) playerManagementItemProvider.dispose();
         if (gamemasterManagementItemProvider != null) gamemasterManagementItemProvider.dispose();
         if (characterAdvancementSystemItemProvider != null) characterAdvancementSystemItemProvider.dispose();
+        if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
     }
 
 	/**
@@ -1041,6 +1065,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
 
                 return null;
             }
