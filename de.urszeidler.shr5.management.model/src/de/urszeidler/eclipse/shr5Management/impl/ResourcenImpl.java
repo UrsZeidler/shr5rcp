@@ -113,22 +113,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     }
 
     /**
-     * @param context
-     * @return
-     */
-    private BigDecimal calcResourcesSpend(ManagedCharacter context) {
-        BigDecimal wert = ShadowrunTools.calcListenWert(context.getInventar());
-        if (context.getPersona() instanceof KoerperPersona) {
-            KoerperPersona kp = (KoerperPersona)context.getPersona();
-            wert = wert.add(ShadowrunTools.calcListenWert(kp.getKoerperMods()));
-        }
-
-        wert = wert.add(ShadowrunTools.calcListenWert(context.getContracts()));
-        wert = wert.add(ShadowrunTools.calcListenWert(context.getVehicels()));
-        return wert;
-    }
-
-    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
