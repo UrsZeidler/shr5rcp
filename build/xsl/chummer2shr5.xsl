@@ -191,7 +191,45 @@
 			<entries xsi:type="shr5mngt:CharacterAdvancementSystem" name="The basic advancements system.">
 				<xsl:call-template name="advancements" />
 			</entries>
+			<entries xsi:type="shr5mngt:Shr5System" name="The karma character generator system."
+				karmaToResourceFactor="2500" karmaToMagicFactor="5" karmaPoints="750"
+				characterAdvancements="//@entries.0/@entries.16/@entries.2"
+				charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6"
+				numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2"
+				maxKarmaToKeep="7" numberOfMaxAttributes="1"
+				karmaToConnectionFactor="2">
+				<priorities xsi:type="shr5mngt:MetaType" cost="0">
+					<choosableTypes href="#//@entries.0/@entries.2/@entries.0" />
+				</priorities>
+				<priorities xsi:type="shr5mngt:MetaType" cost="60">
+					<choosableTypes href="#//@entries.0/@entries.2/@entries.1" />
+				</priorities>
+				<priorities xsi:type="shr5mngt:MetaType" cost="50">
+					<choosableTypes href="#//@entries.0/@entries.2/@entries.2" />
+				</priorities>
+				<priorities xsi:type="shr5mngt:MetaType" cost="40">
+					<choosableTypes href="#//@entries.0/@entries.2/@entries.3" />
+				</priorities>
+				<priorities xsi:type="shr5mngt:MetaType" cost="80">
+					<choosableTypes href="#//@entries.0/@entries.2/@entries.4" />
+				</priorities>
+				<priorities xsi:type="shr5mngt:Mudan" cost="0">
+					<selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+				</priorities>
+				<priorities xsi:type="shr5mngt:Spellcaster" cost="30">
+					<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier" />
+				</priorities>
+				<instructions key="new"
+					value="Select the categories and the group." />
+				<instructions key="readyForCreation"
+					value="All has been set, you can create the character now." />
+				<instructions key="personaCreated"
+					value="The character is created spend all the values." />
+				<instructions key="commited"
+					value="The character is finshed and commited." />
 
+
+			</entries>
 			<!-- <entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" 
 				/> <entries xsi:type="shr5mngt:Shr5Generator" generator="//@entries.16/@entries.0" 
 				/> <entries xsi:type="shr5mngt:CharacterGroup" name="player group" /> <entries 
