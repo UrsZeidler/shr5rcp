@@ -578,7 +578,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         if (resourceGeneratorOption != null)
             resourceGeneratorOption.dispose();
         resourceGeneratorOption = new ResourceGeneratorOption(grpResourcen, SWT.NONE, object.getResourcen(), object.getCharacter(), getManagedForm()
-                .getToolkit(), editingDomain);
+                .getToolkit(), editingDomain,Literals.SHR5_GENERATOR__RESOURCE_SPEND);
         resourceGeneratorOption.layout();
 
         if (metaTypGeneratorOption != null)

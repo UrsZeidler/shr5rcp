@@ -60,6 +60,7 @@ import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
@@ -93,6 +94,7 @@ import de.urszeidler.shr5.ecp.editor.pages.NahkampwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
+import de.urszeidler.shr5.ecp.editor.pages.Shr5KarmaGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -468,6 +470,18 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return super.caseShr5Generator(object);
             }
 
+            @Override
+            public Object caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+                try {
+                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, "Karma Generator", object, editingDomain,
+                            manager));
+                } catch (PartInitException e) {
+                    logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
+                }
+                return super.caseShr5KarmaGenerator(object);
+            }
+            
+            
             @Override
             public Object caseManagedCharacter(ManagedCharacter object) {
                 try {

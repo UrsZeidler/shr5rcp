@@ -7,6 +7,8 @@ import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.fieldassist.ControlDecorationSupport;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -24,136 +26,139 @@ import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class ResourceGeneratorOption extends Composite {
-	private static final String EMPTY = ""; //$NON-NLS-1$
+    private static final String EMPTY = ""; //$NON-NLS-1$
 
     private DataBindingContext m_bindingContext;
 
-	private FormToolkit toolkit;//= new FormToolkit(Display.getCurrent());
-	private Resourcen object;
-	private ManagedCharacter context;
-	private EditingDomain editingDomain;
-	private Label lblspend;
-	private Label lblleft;
+    private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
+    private Resourcen object;
+    private ManagedCharacter context;
+    private EditingDomain editingDomain;
+    private Label lblspend;
+    private Label lblleft;
 
     private int minSize = 50;
-	/**
-	 * Create the composite.
-	 * 
-	 * @param parent
-	 * @param style
-	 */
-	public ResourceGeneratorOption(Composite parent, int style) {
-		super(parent, style);
-		toolkit = new FormToolkit(Display.getCurrent());
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				toolkit.dispose();
-			}
-		});
-		createWidgets();
-	}
 
-	/**
-	 * The main contructor.
-	 * 
-	 * @param parent
-	 * @param style
-	 * @param object
-	 * @param context
-	 * @param toolkit
-	 * @param editingDomain
-	 */
-	public ResourceGeneratorOption(Composite parent, int style, Resourcen object, ManagedCharacter context,
-			FormToolkit toolkit, EditingDomain editingDomain) {
-		super(parent, style);
-		this.toolkit = toolkit;
-		this.object = object;
-		this.context = context;
-		this.editingDomain = editingDomain;
-		createWidgets();
-	}
+    private EStructuralFeature shr5GeneratorResourceSpend;
 
-	private void createWidgets() {
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		GridLayout gridLayout = new GridLayout(3, false);
-		gridLayout.horizontalSpacing = 10;
-		setLayout(gridLayout);
-		
-		toolkit.createLabel(this, Messages.GeneratorOption_resource_spend, SWT.NONE);
+    /**
+     * Create the composite.
+     * 
+     * @param parent
+     * @param style
+     */
+    public ResourceGeneratorOption(Composite parent, int style) {
+        super(parent, style);
+        toolkit = new FormToolkit(Display.getCurrent());
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        createWidgets();
+    }
 
-		lblspend = new Label(this, SWT.NONE);
-		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = minSize;
-		lblspend.setLayoutData(gd_lblspend);
-		toolkit.adapt(lblspend, true, true);
-		lblspend.setText(Messages.GeneratorOption_spend_to_much);
+    /**
+     * EAttribute shr5GeneratorResourceSpend = Literals.SHR5_GENERATOR__RESOURCE_SPEND;
+     * The main contructor.
+     * 
+     * @param parent
+     * @param style
+     * @param object
+     * @param context
+     * @param toolkit
+     * @param editingDomain
+     */
+    public ResourceGeneratorOption(Composite parent, int style, Resourcen object, ManagedCharacter context, FormToolkit toolkit,
+            EditingDomain editingDomain, EStructuralFeature resourcesSpend) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.context = context;
+        this.editingDomain = editingDomain;
+        this.shr5GeneratorResourceSpend = resourcesSpend;
+        createWidgets();
+    }
 
-		lblleft = new Label(this, SWT.NONE);
-		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = minSize;
-		lblleft.setLayoutData(gd_lblleft);
-		toolkit.adapt(lblleft, true, true);
-		lblleft.setText(EMPTY);
-		m_bindingContext = initDataBindings();
-		internalBinding(m_bindingContext);
-	}
+    private void createWidgets() {
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        GridLayout gridLayout = new GridLayout(3, false);
+        gridLayout.horizontalSpacing = 10;
+        setLayout(gridLayout);
 
-	protected DataBindingContext initDataBindings() {
-		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		//
+        toolkit.createLabel(this, Messages.GeneratorOption_resource_spend, SWT.NONE);
 
-		//
-		return bindingContext;
-	}
+        lblspend = new Label(this, SWT.NONE);
+        GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblspend.widthHint = minSize;
+        lblspend.setLayoutData(gd_lblspend);
+        toolkit.adapt(lblspend, true, true);
+        lblspend.setText(Messages.GeneratorOption_spend_to_much);
 
-	private void internalBinding(DataBindingContext bindingContext) {
-		IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
-		IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__RESOURCE_SPEND);
+        lblleft = new Label(this, SWT.NONE);
+        GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblleft.widthHint = minSize;
+        lblleft.setLayoutData(gd_lblleft);
+        toolkit.adapt(lblleft, true, true);
+        lblleft.setText(EMPTY);
+        m_bindingContext = initDataBindings();
+        internalBinding(m_bindingContext);
+    }
 
-		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-		//modelToTarget.setAfterGetValidator(resourceInRangeValidator);
-//		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-//			@Override
-//			public Object convert(Object fromObject) {
-//				int calcAttributesSpend = object.calcResourceSpend(context);
-//				return "spend :" + calcAttributesSpend + "";
-//			}
-//		});
-		Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-		ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
-		//
-		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
-		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__RESOURCE_SPEND);
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        //
 
-		modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-//				int calcAttributesSpend = object.calcResourceSpend(context);
-				CharacterGenerator generator = context.getChracterSource();
-//				int karmaToResource = 0;
-				if (generator instanceof Shr5Generator) {
-					Shr5Generator sr5g = (Shr5Generator) generator;
-					
-					return ShadowrunManagmentTools.calcResourcesLeft(sr5g)+EMPTY;
-					
-					//karmaToResource = sr5g.getKarmaToResource() * sr5g.getShr5Generator().getKarmaToResourceFactor();
-				}
-				return 0+EMPTY;
-				//return (object.getResource()+karmaToResource - calcAttributesSpend + EMPTY);
-			}
-		});
-		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
-				UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-	}
+        //
+        return bindingContext;
+    }
+
+    private void internalBinding(DataBindingContext bindingContext) {
+        IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
+        IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                shr5GeneratorResourceSpend);
+
+        EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
+        // modelToTarget.setAfterGetValidator(resourceInRangeValidator);
+        // modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+        // @Override
+        // public Object convert(Object fromObject) {
+        // int calcAttributesSpend = object.calcResourceSpend(context);
+        // return "spend :" + calcAttributesSpend + "";
+        // }
+        // });
+        Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
+        //
+        IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
+        IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                shr5GeneratorResourceSpend);
+
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                CharacterGenerator generator = context.getChracterSource();
+                if (generator instanceof Shr5Generator) {
+                    Shr5Generator sr5g = (Shr5Generator)generator;
+                    return ShadowrunManagmentTools.calcResourcesLeft(sr5g) + EMPTY;
+                } else if (generator instanceof Shr5KarmaGenerator) {
+                    Shr5KarmaGenerator kg = (Shr5KarmaGenerator)generator;
+                    return ShadowrunManagmentTools.calcResourcesLeft(kg) + EMPTY;
+                }
+                return 0 + EMPTY;
+            }
+        });
+        bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+    }
 }

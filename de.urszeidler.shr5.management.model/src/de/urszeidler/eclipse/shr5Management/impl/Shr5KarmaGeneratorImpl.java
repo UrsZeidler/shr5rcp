@@ -277,14 +277,19 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated not
      */
     public void setKarmaToResource(int newKarmaToResource) {
         int oldKarmaToResource = karmaToResource;
         karmaToResource = newKarmaToResource;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE, oldKarmaToResource,
                     karmaToResource));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__KARMA_SPEND, oldKarmaToResource,
+                    karmaToResource));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__RESOURCE_SPEND, oldKarmaToResource,
+                    karmaToResource));
+        }
     }
 
     /**
@@ -294,15 +299,15 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
      * @generated not
      */
     public int getKarmaSpend() {
-        if (getCharacter() == null || getCharacter().getPersona() == null)
+        if (getShr5Generator() == null || getCharacterConcept() == null || getMetaType() == null || getCharacter() == null
+                || getCharacter().getPersona() == null)
             return 0;
         int karmaKosten = 0;
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
-        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter());
-        
-        
-        return Math.abs(karmaSpend);
+        int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
+        int basicCost = getMetaType().getCost() + getCharacterConcept().getCost();
+        return Math.abs(karmaSpend) + basicCost +connectionsSpend + getKarmaToResource();
     }
 
     /**
@@ -370,6 +375,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -384,8 +390,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
         return true;
     }
 
-    
-    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

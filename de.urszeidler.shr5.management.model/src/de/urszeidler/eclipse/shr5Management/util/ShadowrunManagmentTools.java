@@ -12,7 +12,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
@@ -30,6 +29,7 @@ import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
@@ -232,6 +232,15 @@ public class ShadowrunManagmentTools {
     public static int calcKarmaLeft(Shr5Generator object) {
         return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
     }
+    /**
+     * Calcs the karma left for a generator.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaLeft(Shr5KarmaGenerator object) {
+        return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+    }
 
     /**
      * Calcs the resources left for a generator.
@@ -248,7 +257,24 @@ public class ShadowrunManagmentTools {
         int karmaToResource = object.getKarmaToResource() * sr5g.getKarmaToResourceFactor();
 
         return (object.getResourcen().getResource() + karmaToResource - calcResourceSpend);
+    }
 
+    
+    /**
+     * Calcs the resources left for a generator.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcResourcesLeft(Shr5KarmaGenerator object) {
+        Shr5System sr5g = object.getShr5Generator();
+        if (sr5g == null)
+            return 0;
+
+        int calcResourceSpend = object.getResourceSpend();
+        int karmaToResource = object.getKarmaToResource() * sr5g.getKarmaToResourceFactor();
+
+        return  karmaToResource - calcResourceSpend;
     }
 
     /**
