@@ -72,11 +72,15 @@ public class MudanItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	@Override
 	public String getText(Object object) {
-        String label = ((Mudan)object).getCategorieName();
+        Mudan mudan = (Mudan)object;
+        String label = mudan.getCategorieName();
+        if(label==null)
+            label = mudan.getCost()+"";
+        
         return label == null || label.length() == 0 ?
             getString("_UI_Mudan_type") :
             getString("_UI_Mudan_type") + " " + label;

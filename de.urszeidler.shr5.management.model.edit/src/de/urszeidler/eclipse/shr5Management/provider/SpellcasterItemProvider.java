@@ -104,12 +104,12 @@ public class SpellcasterItemProvider
 	@Override
 	public String getText(Object object) {
 		Spellcaster spellcaster = (Spellcaster)object;
-		
-//		ComposeableAdapterFactory factory = ((Shr5managementItemProviderAdapterFactory) this.adapterFactory)
-//				.getRootAdapterFactory();
-		//IItemLabelProvider labelprovider = (IItemLabelProvider) factory.adapt(spellcaster, IItemLabelProvider.class);
 
 		String label = spellcaster.getCategorieName();
+	       if(label==null)
+	            label = spellcaster.getCost()+"";
+
+		
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(" [");
 		buffer.append(spellcaster.getSelectableTypes().getName());
