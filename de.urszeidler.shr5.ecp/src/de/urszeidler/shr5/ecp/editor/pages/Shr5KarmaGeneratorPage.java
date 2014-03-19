@@ -3,7 +3,9 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
@@ -16,7 +18,6 @@ import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
@@ -40,11 +41,8 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
-import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -53,7 +51,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
-import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
 
 /**
  * @author urs
@@ -82,6 +79,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
     private boolean optionWidgetsCreated;
     private Resourcen resourcen;
     private Group grpResources;
+    private Set<String> changeSet;
 
     public Shr5KarmaGeneratorPage(FormEditor editor, String id, String title) {
         super(editor, id, title);
@@ -305,7 +303,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         if (object.getCharacter() != null && object.getCharacter().getPersona() != null && object.getState() != GeneratorState.COMMITED) {
             addPersonaPage(object.getCharacter());
         }
-         //validateChange();
+        validateChange();
     }
 
     /**
@@ -357,10 +355,15 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         }
 
         Diagnostic validate = Diagnostician.INSTANCE.validate(object, context);
+        Set<String> newChangeset = new HashSet<String>();
         List<Diagnostic> children = validate.getChildren();
         for (Diagnostic diagnostic : children) {
             updateGeneratorState(diagnostic, object);
+            newChangeset.add(diagnostic.getMessage());
         }
+        if (newChangeset.equals(changeSet))
+            return;
+        changeSet = newChangeset;
         // if (object.getCharacterConcept() == null && object.getMetaType() == null)
         // object.setState(GeneratorState.NEW);
         // else if ((object.getCharacterConcept() != null && object.getMetaType() != null))
@@ -387,7 +390,6 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
     @Override
     protected boolean notificationIsRequierd(Notification notification) {
-        System.out.println(notification.toString());
         return true;
     }
 
