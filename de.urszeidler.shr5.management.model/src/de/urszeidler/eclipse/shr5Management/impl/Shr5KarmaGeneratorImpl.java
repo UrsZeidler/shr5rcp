@@ -282,7 +282,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
     public void setKarmaToResource(int newKarmaToResource) {
         int oldKarmaToResource = karmaToResource;
         karmaToResource = newKarmaToResource;
-        if (eNotificationRequired()){
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__KARMA_TO_RESOURCE, oldKarmaToResource,
                     karmaToResource));
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_KARMA_GENERATOR__KARMA_SPEND, oldKarmaToResource,
@@ -307,7 +307,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
         int basicCost = getMetaType().getCost() + getCharacterConcept().getCost();
-        return Math.abs(karmaSpend) + basicCost +connectionsSpend + getKarmaToResource();
+        return Math.abs(karmaSpend) + basicCost + connectionsSpend + getKarmaToResource();
     }
 
     /**
@@ -408,9 +408,8 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
         if (test || diff < 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasSpendAllKarmaPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllKarmaPoints", new Object[]{ EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
             }
             return false;
         }
