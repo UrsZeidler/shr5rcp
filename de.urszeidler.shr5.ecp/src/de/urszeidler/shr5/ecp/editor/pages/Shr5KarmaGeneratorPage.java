@@ -310,9 +310,6 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
-        object.setState(GeneratorState.COMMITED);
-
-        // SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE, GeneratorState.COMMITED);
         moveGeneratorToCharacterCommit();
         validateChange();
 
