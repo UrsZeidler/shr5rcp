@@ -94,7 +94,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * @generated not
      */
     public void testHasSpendAllPoints__DiagnosticChain_Map() {
-        // need to be checked in the subclasses
+       fail("testHasSpendAllPoints__DiagnosticChain_Map need to be implemented in subtest");
     }
 
     /**

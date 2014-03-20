@@ -285,7 +285,50 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         getFixture().getShr5Generator().setMaxKarmaToKeep(0);
         assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
         assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
-
     }
+
+    /**
+     * Tests the '
+     * {@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * <em>Has Spend All Points</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasSpendAllPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    @SuppressWarnings("unchecked")
+    public void testHasSpendAllPoints__DiagnosticChain_Map() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(3);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
+
+        PersonaFertigkeit fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+        assertFalse(playerCharacter.getPersona().getFertigkeiten().contains(fertigkeit));
+        fertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
+
+        PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+        personaChange.setChangeable(fertigkeit);
+
+        playerCharacter.getChanges().add(personaChange);
+        assertEquals(-2, personaChange.getKarmaCost());
+        personaChange.applyChanges();
+
+        assertEquals("is false", true, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
+        assertEquals("is false", true, getFixture().hasSpendAllPoints(diagnostics, context));
+
+        getFixture().getShr5Generator().setMaxKarmaToKeep(0);
+        assertEquals("is false", false, getFixture().hasSpendAllKarmaPoints(diagnostics, context));
+        assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
+    }
+
 
 } // Shr5KarmaGeneratorTest
