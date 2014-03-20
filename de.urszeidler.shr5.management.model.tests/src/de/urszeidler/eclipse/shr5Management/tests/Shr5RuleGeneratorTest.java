@@ -107,6 +107,7 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreMaxAttributes(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
      * @generated not
      */
+    @SuppressWarnings("unchecked")
     public void testHasNotMoreMaxAttributes__DiagnosticChain_Map() {
         createBasicCategories();
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
