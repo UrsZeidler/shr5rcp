@@ -175,6 +175,8 @@ public class PersonaFertigkeitenWidget extends Composite {
 
     private IObservableList personaFertigkeitsGruppen;
 
+    private boolean filterOnlyPersona;
+
     /**
      * Create the composite.
      * 
@@ -262,7 +264,30 @@ public class PersonaFertigkeitenWidget extends Composite {
                 return true;
             }
         };
-        treeViewer.setFilters(new ViewerFilter[]{ filter
+        ViewerFilter filterOnlyPersonaFilter = new ViewerFilter() {
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+                if (!filterOnlyPersona)
+                    return true;
+
+                if (element instanceof Fertigkeit) {
+                    Fertigkeit fertigkeit = (Fertigkeit)element;
+                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+                    boolean hasSkillGroup = false;
+                    if (parentElement instanceof FertigkeitsGruppe) {
+                        FertigkeitsGruppe fg = (FertigkeitsGruppe)parentElement;
+                         hasSkillGroup = ShadowrunTools.findGruppe(fg, persona) != null;
+                    }
+                    return personaFertigkeit != null || hasSkillGroup;
+                } else if (element instanceof FertigkeitsGruppe) {
+                    FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
+                    return ShadowrunTools.hasFertigkeitUnderGroup(fg, persona) || ShadowrunTools.findGruppe(fg, persona) != null;
+                }
+                return true;
+            }
+        };
+
+        treeViewer.setFilters(new ViewerFilter[]{ filter, filterOnlyPersonaFilter
 
         });
         final Tree tree = treeViewer.getTree();
@@ -503,5 +528,15 @@ public class PersonaFertigkeitenWidget extends Composite {
 
         //
         return bindingContext;
+    }
+
+    public boolean isFilterOnlyPersona() {
+        return filterOnlyPersona;
+    }
+
+    public void setFilterOnlyPersona(boolean filterOnlyPersona) {
+        this.filterOnlyPersona = filterOnlyPersona;
+        treeViewer.refresh();
+        treeViewer.expandToLevel(2);
     }
 }

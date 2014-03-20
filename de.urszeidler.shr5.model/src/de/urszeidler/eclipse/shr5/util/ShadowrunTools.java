@@ -105,7 +105,7 @@ public class ShadowrunTools {
     /**
      * Finds the values of {@link PersonaFertigkeitsGruppe} for a given {@link FertigkeitsGruppe} and persona.
      * 
-     * @param fg  the fertigkeit
+     * @param fg the fertigkeit
      * @param persona the persina
      * @return null or the {@link PersonaFertigkeitsGruppe}r
      */
@@ -179,6 +179,15 @@ public class ShadowrunTools {
         int halfEven = (int)Math.ceil((float)(value + wert) / 2F);
 
         return value + halfEven;
+    }
+
+    public static boolean hasFertigkeitUnderGroup(FertigkeitsGruppe fg, AbstraktPersona persona) {
+        EList<Fertigkeit> fertigkeiten = fg.getFertigkeiten();
+        for (Fertigkeit fertigkeit : fertigkeiten) {
+            if (findFertigkeit(fertigkeit, persona) != null)
+                return true;
+        }
+        return false;
     }
 
 }
