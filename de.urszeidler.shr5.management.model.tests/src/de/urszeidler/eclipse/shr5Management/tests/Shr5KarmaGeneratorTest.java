@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5Management.tests;
 
 import java.math.BigDecimal;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -17,8 +18,6 @@ import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import de.urszeidler.eclipse.shr5Management.SpecialType;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
