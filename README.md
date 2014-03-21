@@ -8,10 +8,10 @@ shr5rcp
  It is dedicated to create and manage characters, providing game master aid and reporting.
 
  
-* editors for the resources objects
-* shadowrun 5 character generator after the core rule book 
-* a simple character sheet
-* grunt editor and sheet
+ * editors for the resources objects
+ * shadowrun 5 character generator after the core rule book 
+ * a simple character sheet
+ * grunt editor and sheet
 
  
 2. Motivation
