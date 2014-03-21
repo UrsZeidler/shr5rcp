@@ -113,7 +113,7 @@ public class Messages extends NLS {
     public static String ShadowrunEditor_page_species;
     public static String ShadowrunEditor_page_throwingweapon;
     public static String Shr5KarmaGeneratorPage_grpResources_text;
-    public static String AbstraktPersonaPage_tltmNewItem_toolTipText_1;
+    public static String AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText;
 
     static {
         // initialize resource bundle

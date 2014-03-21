@@ -2,21 +2,22 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.action.Action;
-import org.eclipse.jface.action.ToolBarManager;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
-import org.eclipse.ui.internal.ide.actions.LTKLauncher;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KiAdept;
@@ -31,11 +32,6 @@ import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
-
-import org.eclipse.swt.widgets.ToolItem;
-import org.eclipse.wb.swt.ResourceManager;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private AbstraktPersona object = Shr5Factory.eINSTANCE.createMysticAdept();
@@ -187,20 +183,20 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 //        managedForm.getToolkit().paintBordersFor(toolBar);
         sctnSkill.setTextClient(toolBar);
         
-        final ToolItem tltmNewItem = new ToolItem(toolBar, SWT.CHECK);
-        tltmNewItem.setToolTipText(Messages.AbstraktPersonaPage_tltmNewItem_toolTipText_1);
-        tltmNewItem.addSelectionListener(new SelectionAdapter() {
+        final ToolItem filterOnlyPersonaSkillsToolItem = new ToolItem(toolBar, SWT.CHECK);
+        filterOnlyPersonaSkillsToolItem.setToolTipText(Messages.AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText);
+        filterOnlyPersonaSkillsToolItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetDefaultSelected(SelectionEvent e) {
-                personaFertigkeitenWidget.setFilterOnlyPersona(tltmNewItem.getSelection());
+                personaFertigkeitenWidget.setFilterOnlyPersona(filterOnlyPersonaSkillsToolItem.getSelection());
                 
             }
             @Override
             public void widgetSelected(SelectionEvent e) {
-                personaFertigkeitenWidget.setFilterOnlyPersona(tltmNewItem.getSelection());
+                personaFertigkeitenWidget.setFilterOnlyPersona(filterOnlyPersonaSkillsToolItem.getSelection());
             }
         });
-        tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif"));
+        filterOnlyPersonaSkillsToolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif"));
 
         if (object instanceof KoerperPersona) {
             Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
