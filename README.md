@@ -1,11 +1,16 @@
 shr5rcp
 =====================
-
+![logo](https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.product/icons/shrImage_6_250.png)
 
 1. Overview
 
  This is a program to manage resources and characters for the rolegame shadowrun 5.0.
  It is dedicated to create and manage characters. 
+ 
+* editors for the resources objects
+* shadowrun 5 character generator after the core rule book 
+* a simple character sheet
+* grunt editor and sheet
 
  
 2. Motivation
