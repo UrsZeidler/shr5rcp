@@ -5,7 +5,8 @@ shr5rcp
 1. Overview
 
  This is a program to manage resources and characters for the rolegame shadowrun 5.0.
- It is dedicated to create and manage characters. 
+ It is dedicated to create and manage characters, providing game master aid and reporting.
+
  
 * editors for the resources objects
 * shadowrun 5 character generator after the core rule book 
