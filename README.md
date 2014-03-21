@@ -29,7 +29,7 @@ shr5rcp
  
 4. Technical stuff
 
- This project is based on the EMF modeling framework.
+ This project is based on the EMF modeling framework the EMF Client Platform and EMF Forms.
  
  License
 -------
