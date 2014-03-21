@@ -31,7 +31,7 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
-import de.urszeidler.shr5.ecp.printer.PersonaPrinter.PrintFactory;
+import de.urszeidler.shr5.ecp.printer.BasicPrinter.PrintFactory;
 
 /**
  * This a a shameless copy of
