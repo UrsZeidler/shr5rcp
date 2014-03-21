@@ -3,9 +3,7 @@
  */
 package de.urszeidler.shr5.ecp.printer;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -14,15 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
-import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.jface.resource.JFaceResources;
-import org.eclipse.jface.util.IPropertyChangeListener;
-import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.nebula.paperclips.core.BreakPrint;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
@@ -33,11 +22,8 @@ import org.eclipse.nebula.paperclips.core.border.BorderPrint;
 import org.eclipse.nebula.paperclips.core.border.LineBorder;
 import org.eclipse.nebula.paperclips.core.grid.DefaultGridLook;
 import org.eclipse.nebula.paperclips.core.grid.GridPrint;
-import org.eclipse.nebula.paperclips.core.page.PageNumberPageDecoration;
-import org.eclipse.nebula.paperclips.core.page.PagePrint;
 import org.eclipse.nebula.paperclips.core.text.TextPrint;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
@@ -60,7 +46,6 @@ import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
-import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Vertrag;
@@ -74,7 +59,6 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
@@ -84,28 +68,12 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 /**
  * @author urs
  */
-public class PersonaPrinter implements IPropertyChangeListener {
+public class PersonaPrinter extends BasicPrinter {
 
-    private static final String EOL = "\n";
-    private static final int BIG_SCALE = 80;
-    private static final int SMALL_SCALE = 32;
-    private static final String ONE_SPACE = " ";//$NON-NLS-1$
-    private static final String EMPTY = "";//$NON-NLS-1$
     private static PersonaPrinter instance;
 
     /**
-     * Simple factory interface.
-     * 
-     * @author urs
-     */
-    public interface PrintFactory {
-        String getPrintTitel();
-
-        Print createPrinter();
-    }
-
-    /**
-     * The sigelton instance acces.
+     * The singleton instance access.
      * 
      * @return
      */
@@ -115,43 +83,11 @@ public class PersonaPrinter implements IPropertyChangeListener {
         return instance;
     }
 
-    private IPreferenceStore store;
-
     public PersonaPrinter() {
         super();
         store = Activator.getDefault().getPreferenceStore();
         store.addPropertyChangeListener(this);
         initalizePrinter();
-    }
-
-    private FontData boldFontData;
-    private FontData attributeFont;
-    private AdapterFactoryItemDelegator itemDelegator;
-    private FontData italicFontData;
-
-    /**
-     * Creates some style objects.
-     */
-    protected void initalizePrinter() {
-
-        initalizeFontData();
-
-        itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
-        Shr5managementItemProviderAdapterFactory shr5managementItemProviderAdapterFactory = new de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory();
-        AdapterFactoryUtil.getInstance().getAdapterFactory().insertAdapterFactory(shr5managementItemProviderAdapterFactory);
-    }
-
-    /**
-     * 
-     */
-    private void initalizeFontData() {
-        boldFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_MAIN_HEADER)[0];
-        italicFontData = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_TABLE_HEADER)[0];
-        attributeFont = PreferenceConverter.getFontDataArray(store, PreferenceConstants.FONT_NORMAL_TEXT)[0];
-        //
-        // boldFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight(), SWT.BOLD);
-        // italicFontData = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, SWT.ITALIC);
-        // attributeFont = new FontData(defaultFont[0].getName(), defaultFont[0].getHeight() - 2, defaultFont[0].getStyle());
     }
 
     /**
@@ -299,32 +235,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
         }
 
         return body;
-    }
-
-    /**
-     * Creates the page, with header and footer, for the given body.
-     * 
-     * @param body the document to print on pages
-     * @return the page print.
-     */
-    private PagePrint createPagePrint(Print body) {
-        // DefaultGridLook look = new DefaultGridLook(5, 5);
-        // look.setHeaderGap(5);
-        //        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
-        //
-        // grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // grid.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
-        // grid.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData), 2);
-
-        PagePrint pagePrint = new PagePrint(body);
-
-        PageNumberPageDecoration footer2 = new PageNumberPageDecoration();
-        footer2.setFontData(italicFontData);
-
-        // pagePrint.setHeader(new SimplePageDecoration(grid));
-        pagePrint.setFooter(footer2);
-        return pagePrint;
     }
 
     /**
@@ -543,33 +453,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
         return grid;
     }
 
-    /**
-     * Simply checks for null and returns empty for it.
-     * 
-     * @param message
-     * @return
-     */
-    private String printString(String message) {
-        if (message == null)
-            return EMPTY;
-        return message;
-    }
-
-    /**
-     * @param ge
-     * @return
-     */
-    private String toSource(Quelle ge) {
-        if (ge.getSrcBook() == null)
-            return EMPTY;
-
-        StringBuffer buffer = new StringBuffer();
-        buffer.append(toSimpleName(ge.getSrcBook()));
-        buffer.append(Messages.Printer_page);
-        buffer.append(ge.getPage());
-        return buffer.toString();
-    }
-
     private Print printZauberList(List<PersonaZauber> zauber) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
@@ -668,17 +551,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
         }
 
         return grid;
-    }
-
-    /**
-     * Simple prints a date.
-     * 
-     * @param date
-     * @return
-     */
-    private String printDate(Date date) {
-        String format = String.format("%tF", date);
-        return format;
     }
 
     /**
@@ -845,27 +717,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
     }
 
     /**
-     * To name for the enum literals.
-     * 
-     * @param literal
-     * @param eobject
-     * @param feature
-     * @return
-     */
-    private String toName(Object literal, EObject eobject, EAttribute feature) {
-        if (literal == null)
-            return EMPTY;
-
-        String text2 = literal.toString();
-        IItemPropertyDescriptor propertyDescriptor = itemDelegator.getPropertyDescriptor(eobject, feature);
-        if (propertyDescriptor != null)
-            text2 = propertyDescriptor.getLabelProvider(eobject).getText(literal);
-
-        return text2;
-
-    }
-
-    /**
      * Print a detail for a feuerwaffe.
      */
     private GridPrint printFeuerwaffeDetail(Feuerwaffe fw) {
@@ -985,30 +836,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
         }
 
         return grid;
-    }
-
-    private String toName(Object fw) {
-        if (fw == null)
-            return EMPTY;
-
-        if (fw instanceof EObject) {
-            return itemDelegator.getText(fw);
-        }
-
-        return itemDelegator.getText(fw);
-    }
-
-    /**
-     * Delegates the the name feature instead of the itemdelegator.getText.
-     * 
-     * @param be a {@link Beschreibbar}
-     * @return
-     */
-    private String toSimpleName(Beschreibbar be) {
-        if (be == null)
-            return EMPTY;
-
-        return be.getName();
     }
 
     /**
@@ -1261,6 +1088,8 @@ public class PersonaPrinter implements IPropertyChangeListener {
 
         for (PersonaFertigkeit pfertigkeit : fertigkeiten) {
             Fertigkeit fertigkeit = pfertigkeit.getFertigkeit();
+            if (fertigkeit == null)
+                continue;
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
 
             Integer fertigkeitValue = pfertigkeit.getStufe();
@@ -1471,26 +1300,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
     }
 
     /**
-     * Prints the ini.
-     * 
-     * @param persona
-     * @return
-     */
-    private String printInteger(int value) {
-        return String.format("%d", value);//$NON-NLS-1$
-    }
-
-    /**
-     * Prints the money.
-     * 
-     * @param persona
-     * @return
-     */
-    private String printIntegerMoney(BigDecimal bigDecimal) {
-        return String.format("%,.0f" + store.getString(PreferenceConstants.CURRENCY_SYMBOL), bigDecimal);//$NON-NLS-1$
-    }
-
-    /**
      * Print the basic info like name and karma and the image.
      * 
      * @param character
@@ -1567,24 +1376,6 @@ public class PersonaPrinter implements IPropertyChangeListener {
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(attName, attributeFont), 3);
             grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(value.toString(), attributeFont), 1);
         }
-    }
-
-    /**
-     * Returns the localized feature name.
-     * 
-     * @param object
-     * @param eAttribute
-     * @return
-     */
-    public static String toFeatureName(EObject object, EStructuralFeature eAttribute) {
-        IItemPropertyDescriptor descriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, eAttribute);
-
-        return descriptor.getDisplayName(eAttribute);
-    }
-
-    @Override
-    public void propertyChange(PropertyChangeEvent event) {
-        initalizeFontData();
     }
 
 }
