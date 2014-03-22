@@ -532,6 +532,9 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint("Connection with Charisma", attributeFont));
         grid.add(SWT.RIGHT, new TextPrint(printInteger(ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())),
                 attributeFont));
+        grid.add(new TextPrint("Knownlege Skills", attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(ShadowrunManagmentTools.calcKnownlegeSkillPoints(character, generator.getShr5Generator())),
+                attributeFont));
 
         grid.add(new TextPrint("Start Karma", attributeFont));
         grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getStartKarma()), attributeFont));
