@@ -232,6 +232,7 @@ public class ShadowrunManagmentTools {
     public static int calcKarmaLeft(Shr5Generator object) {
         return object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
     }
+
     /**
      * Calcs the karma left for a generator.
      * 
@@ -254,12 +255,22 @@ public class ShadowrunManagmentTools {
             return 0;
 
         int calcResourceSpend = object.getResourceSpend();
-        int karmaToResource = object.getKarmaToResource() * sr5g.getKarmaToResourceFactor();
+        int karmaToResource = calcKarmaToResources(object, sr5g);
 
         return (object.getResourcen().getResource() + karmaToResource - calcResourceSpend);
     }
 
-    
+    /**
+     * Calcs the resources for the spend karma.
+     * 
+     * @param object
+     * @param sr5g
+     * @return
+     */
+    public static int calcKarmaToResources(Shr5Generator object, Shr5System sr5g) {
+        return object.getKarmaToResource() * sr5g.getKarmaToResourceFactor();
+    }
+
     /**
      * Calcs the resources left for a generator.
      * 
@@ -274,7 +285,7 @@ public class ShadowrunManagmentTools {
         int calcResourceSpend = object.getResourceSpend();
         int karmaToResource = object.getKarmaToResource() * sr5g.getKarmaToResourceFactor();
 
-        return  karmaToResource - calcResourceSpend;
+        return karmaToResource - calcResourceSpend;
     }
 
     /**
