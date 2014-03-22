@@ -464,6 +464,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     addPage(new Shr5GeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_shr5_generator, object, editingDomain,
                             manager));
+
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_shr5_generator, PersonaPrinter
+                            .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
+
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
@@ -473,15 +477,13 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                 try {
-                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, "Karma Generator", object, editingDomain,
-                            manager));
+                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, "Karma Generator", object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
                 return super.caseShr5KarmaGenerator(object);
             }
-            
-            
+
             @Override
             public Object caseManagedCharacter(ManagedCharacter object) {
                 try {

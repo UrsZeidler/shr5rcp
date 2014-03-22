@@ -133,10 +133,24 @@ public class BasicPrinter implements IPropertyChangeListener {
     }
 
     /**
+     * Try to make a {@link Quelle} and print the source.
+     * 
      * @param ge
      * @return
      */
-    protected String toSource(Quelle ge) {
+    protected String toSource(Object ge) {
+        if (ge instanceof Quelle) {
+            Quelle src = (Quelle)ge;
+            return printSource(src);
+        }
+        return EMPTY;
+    }
+
+    /**
+     * @param ge
+     * @return
+     */
+    protected String printSource(Quelle ge) {
         if (ge.getSrcBook() == null)
             return EMPTY;
 
@@ -222,7 +236,6 @@ public class BasicPrinter implements IPropertyChangeListener {
     protected String printIntegerMoney(BigDecimal bigDecimal) {
         return String.format("%,.0f" + store.getString(PreferenceConstants.CURRENCY_SYMBOL), bigDecimal);//$NON-NLS-1$
     }
-
 
     @Override
     public void propertyChange(PropertyChangeEvent event) {
