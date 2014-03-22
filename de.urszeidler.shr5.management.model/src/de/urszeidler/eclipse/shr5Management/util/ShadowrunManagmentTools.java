@@ -284,9 +284,6 @@ public class ShadowrunManagmentTools {
 
         return (intuition + logik) *  sr5g.getKnowlegeSkillFactor();
     }
-
-  
-  
     
     
     /**
