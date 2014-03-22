@@ -98,6 +98,20 @@ public class ShadowrunManagmentTools {
     }
 
     /**
+     * Calcs the connection point used.
+     * 
+     * @param managedCharacter
+     * @return
+     */
+    public static int calcQuallityKarmaCost(EList<PersonaEigenschaft> eigenschaften) {
+        int karmaKosten = 0;
+        for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
+            karmaKosten = karmaKosten + personaEigenschaft.getKarmaKosten();
+        }
+        return karmaKosten;
+    }
+
+    /**
      * Calcs the resources for a managed character.
      * 
      * @param context
@@ -278,14 +292,13 @@ public class ShadowrunManagmentTools {
      * @param sr5g
      * @return
      */
-    public static int calcKnownlegeSkillPoints(ManagedCharacter context, Shr5System sr5g) {        
+    public static int calcKnownlegeSkillPoints(ManagedCharacter context, Shr5System sr5g) {
         int intuition = context.getPersona().getIntuition();
         int logik = context.getPersona().getLogik();
 
-        return (intuition + logik) *  sr5g.getKnowlegeSkillFactor();
+        return (intuition + logik) * sr5g.getKnowlegeSkillFactor();
     }
-    
-    
+
     /**
      * Calcs the resources left for a generator.
      * 
