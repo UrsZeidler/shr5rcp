@@ -51,7 +51,9 @@ import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.Zauberer;
+import de.urszeidler.eclipse.shr5.impl.FertigkeitImpl;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Changes;
@@ -377,10 +379,7 @@ public class PersonaPrinter extends BasicPrinter {
             KoerperPersona kp = (KoerperPersona)persona;
             EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
             GridPrint personaEigenschaften = printPersonaEigenschaften(eigenschaften);
-            int sum = 0;
-            for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
-                sum = personaEigenschaft.getKarmaKosten();
-            }
+            int sum = ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften());
             personaEigenschaften.add(new LinePrint(), GridPrint.REMAINDER);
             personaEigenschaften.addFooter(SWT.RIGHT, new TextPrint("Summe", attributeFont));
             personaEigenschaften.addFooter(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
@@ -398,6 +397,65 @@ public class PersonaPrinter extends BasicPrinter {
         gridLeft.add(new BorderPrint(characterConnections, border), 1);
 
         gridRight.add(new BorderPrint(printGeneratorAttributes(generator), border), GridPrint.REMAINDER);
+
+        EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+        int sum = 0;
+        ArrayList<PersonaFertigkeit> arrayList = new ArrayList<PersonaFertigkeit>();
+        for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+            if (personaFertigkeit.getFertigkeit() != null && personaFertigkeit.getFertigkeit().getClass().equals(FertigkeitImpl.class)) {
+                arrayList.add(personaFertigkeit);
+                sum = sum + personaFertigkeit.getStufe();
+            }
+        }
+        String printer_skills = Messages.Printer_skills;
+        gridRight.add(new BorderPrint(printPersonaSkillForGenerator(persona, printer_skills, arrayList, sum), border), GridPrint.REMAINDER);
+
+        sum = 0;
+        arrayList = new ArrayList<PersonaFertigkeit>();
+        for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+            if (personaFertigkeit.getFertigkeit() != null && (personaFertigkeit.getFertigkeit() instanceof Wissensfertigkeit)) {
+                 arrayList.add(personaFertigkeit);
+                sum = sum + personaFertigkeit.getStufe();
+            }
+
+            if (personaFertigkeit.getFertigkeit() != null && personaFertigkeit.getFertigkeit().getClass().equals(FertigkeitImpl.class)) {
+            }
+        }
+        printer_skills = "Kownlege skills";
+
+        gridLeft.add(new BorderPrint(printPersonaSkillForGenerator(persona, printer_skills, arrayList, sum), border), GridPrint.REMAINDER);
+
+        return grid;
+    }
+
+    /**
+     * Prints all persona skills.
+     * 
+     * @param persona
+     * @param printer_skills
+     * @param arrayList
+     * @param sum
+     * @return
+     */
+    private Print printPersonaSkillForGenerator(AbstraktPersona persona, String printer_skills, List<PersonaFertigkeit> arrayList, int sum) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d,d,d,d,d", look);//$NON-NLS-1$
+        if (persona == null)
+            return grid;
+
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printer_skills, boldFontData), GridPrint.REMAINDER);
+
+        grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData), 2);
+        grid.addHeader(new TextPrint(Messages.Printer_attributes, italicFontData), 1);
+        grid.addHeader(new TextPrint(Messages.Printer_rtg, italicFontData), 1);
+        grid.addHeader(new TextPrint(Messages.Printer_dice_pool, italicFontData), 1);
+
+        printPersonaFertigkeitsList(grid, persona, arrayList);
+
+        grid.add(new LinePrint(), GridPrint.REMAINDER);
+        grid.addFooter(SWT.RIGHT, new TextPrint("Summe", attributeFont), 3);
+        grid.addFooter(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
 
         return grid;
     }
@@ -463,7 +521,6 @@ public class PersonaPrinter extends BasicPrinter {
     private GridPrint printWertListAndSumm(EList<? extends GeldWert> list, String header) {
         GridPrint gegenstandList = printGegenstandList(list, header);
         gegenstandList.add(new LinePrint(), GridPrint.REMAINDER);
-
         gegenstandList.addFooter(SWT.RIGHT, new TextPrint("Summe", attributeFont), 2);
         gegenstandList.addFooter(SWT.RIGHT, new TextPrint(printIntegerMoney(ShadowrunTools.calcListenWert(list)), attributeFont));
         return gegenstandList;
@@ -1290,8 +1347,7 @@ public class PersonaPrinter extends BasicPrinter {
         if (persona == null)
             return grid;
 
-        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont));
-        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, boldFontData), 4);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_skills, boldFontData), GridPrint.REMAINDER);
 
         grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData), 2);
         grid.addHeader(new TextPrint(Messages.Printer_attributes, italicFontData), 1);
@@ -1308,8 +1364,8 @@ public class PersonaPrinter extends BasicPrinter {
                 if (gruppe != null) {
                     stufe = printInteger(gruppe.getStufe());
                     grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(fg), attributeFont), 3);
-                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(stufe, attributeFont), 1);
-                    grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(EMPTY, attributeFont), 1);
+                    grid.add(SWT.RIGHT, new TextPrint(stufe, attributeFont), 1);
+                    grid.add(SWT.RIGHT, new TextPrint(EMPTY, attributeFont), 1);
                 }
 
                 List<Fertigkeit> fertigkeiten = fg.getFertigkeiten();
@@ -1328,9 +1384,18 @@ public class PersonaPrinter extends BasicPrinter {
      * @param persona
      */
     private void printPersonaFertigkeitList(GridPrint grid, AbstraktPersona persona) {
-
         List<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+        printPersonaFertigkeitsList(grid, persona, fertigkeiten);
+    }
 
+    /**
+     * Pint the given list of {@link Fertigkeit}.
+     * 
+     * @param grid
+     * @param persona
+     * @param fertigkeiten
+     */
+    private void printPersonaFertigkeitsList(GridPrint grid, AbstraktPersona persona, List<PersonaFertigkeit> fertigkeiten) {
         for (PersonaFertigkeit pfertigkeit : fertigkeiten) {
             Fertigkeit fertigkeit = pfertigkeit.getFertigkeit();
             if (fertigkeit == null)
@@ -1342,8 +1407,8 @@ public class PersonaPrinter extends BasicPrinter {
 
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toFertigkeitAndSpec(pfertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
+            grid.add(SWT.RIGHT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
+            grid.add(SWT.RIGHT, new TextPrint(printInteger(value), attributeFont), 1);
         }
     }
 
@@ -1392,8 +1457,8 @@ public class PersonaPrinter extends BasicPrinter {
             else
                 grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(fertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
+            grid.add(SWT.RIGHT, new TextPrint(printInteger(fertigkeitValue), attributeFont), 1);
+            grid.add(SWT.RIGHT, new TextPrint(printInteger(value), attributeFont), 1);
         }
     }
 
