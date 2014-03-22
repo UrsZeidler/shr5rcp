@@ -4,11 +4,36 @@ import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
     private static final String BUNDLE_NAME = "de.urszeidler.shr5.ecp.printer.messages"; //$NON-NLS-1$
+    public static String PersonaPrinter_attributes;
+    public static String PersonaPrinter_Advacements;
+    public static String PersonaPrinter_base;
     public static String PersonaPrinter_Character_Group_sheet;
     public static String PersonaPrinter_Character_sheet;
+    public static String PersonaPrinter_Choosen_System;
+    public static String PersonaPrinter_Connection_with_karma;
+    public static String PersonaPrinter_cost;
+    public static String PersonaPrinter_date_applied;
+    public static String PersonaPrinter_game_date;
     public static String PersonaPrinter_Grunt_sheet;
     public static String PersonaPrinter_Grunts;
+    public static String PersonaPrinter_Karma_in_resources;
+    public static String PersonaPrinter_Karma_to_resources;
+    public static String PersonaPrinter_Karma;
+    public static String PersonaPrinter_Karma_to_spend;
+    public static String PersonaPrinter_Kownlege_skills;
+    public static String PersonaPrinter_Magic;
+    public static String PersonaPrinter_Metatype;
     public static String PersonaPrinter_Professinal_rating;
+    public static String PersonaPrinter_rating;
+    public static String PersonaPrinter_Resources;
+    public static String PersonaPrinter_Resources_at_all;
+    public static String PersonaPrinter_Shr5_Generator;
+    public static String PersonaPrinter_Skills;
+    public static String PersonaPrinter_Start_Karma;
+    public static String PersonaPrinter_Start_Resources;
+    public static String PersonaPrinter_sum;
+    public static String PersonaPrinter_Vehicles;
+    public static String PersonaPrinter_Wares;
     public static String Printer_Active_Modification;
     public static String Printer_addons;
     public static String Printer_ak;
