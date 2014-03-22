@@ -272,6 +272,24 @@ public class ShadowrunManagmentTools {
     }
 
     /**
+     * Calcs the knowlege skill points for the spend karma.
+     * 
+     * @param object
+     * @param sr5g
+     * @return
+     */
+    public static int calcKnownlegeSkillPoints(ManagedCharacter context, Shr5System sr5g) {        
+        int intuition = context.getPersona().getIntuition();
+        int logik = context.getPersona().getLogik();
+
+        return (intuition + logik) *  sr5g.getKnowlegeSkillFactor();
+    }
+
+  
+  
+    
+    
+    /**
      * Calcs the resources left for a generator.
      * 
      * @param object

@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
@@ -226,11 +227,12 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
     public int calcKnowledgeSkillPoints(ManagedCharacter context) {
         if (context == null || context.getPersona() == null)
             return 0;
-
-        int intuition = context.getPersona().getIntuition();
-        int logik = context.getPersona().getLogik();
-
-        return (intuition + logik) * 2;
+        
+        if (this.eContainer() instanceof Shr5System) {
+            Shr5System sr5g = (Shr5System)this.eContainer();
+            return ShadowrunManagmentTools.calcKnownlegeSkillPoints(context, sr5g) ;            
+        }
+        return 0;
     }
 
     /**
