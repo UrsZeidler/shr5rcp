@@ -629,13 +629,13 @@ public class PersonaPrinter extends BasicPrinter {
             return grid;
         AbstraktPersona persona = character.getPersona();
 
-        grid.add(new BorderPrint(printPersonaData(character), border), 2);
+        grid.add(new BorderPrint(printPersonaData(character), border), GridPrint.REMAINDER);
         // grid.add(printPersonaDetails(persona), 1);
 
         grid.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         grid.add(SWT.LEFT, SWT.FILL, new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
 
-        grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), 2);
+        grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border),GridPrint.REMAINDER);
 
         if (store.getBoolean(PreferenceConstants.PRINT_USEABLE_SKILLS))
             grid.add(printAllPersonaSkills(persona));
@@ -648,10 +648,10 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printPersonaMeeleWeapons(character), border), 1);
 
         List<AbstraktGegenstand> gList = character.getInventar();
-        grid.add(new BorderPrint(printGegenstandList(gList, Messages.Printer_Items), border), 2);
+        grid.add(new BorderPrint(printGegenstandList(gList, Messages.Printer_Items), border), GridPrint.REMAINDER);
         grid.add(new BreakPrint(), GridPrint.REMAINDER);
         if (store.getBoolean(PreferenceConstants.PRINT_CHARACTER_ADVACEMENTS))
-            grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), 2);
+            grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
         return grid;
     }
 
@@ -687,7 +687,7 @@ public class PersonaPrinter extends BasicPrinter {
         GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
 
         AbstraktPersona persona = character.getPersona();
-        grid.add(printPersonaCombatAttributes(persona));
+        //grid.add(printPersonaCombatAttributes(persona));
 
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
@@ -1224,7 +1224,7 @@ public class PersonaPrinter extends BasicPrinter {
             grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_monitor, boldFontData), GridPrint.REMAINDER);
             grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor(Messages.Printer_body, kp.getZustandKoerperlichMax()));
             grid.add(SWT.RIGHT, SWT.TOP, printConditionMonitor(Messages.Printer_mental, kp.getZustandGeistigMax()));
-            grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+            grid.add(SWT.LEFT, SWT.BOTTOM,printPersonaCombatAttributes(persona)  , GridPrint.REMAINDER);
             grid.add(new BreakPrint(), GridPrint.REMAINDER);
         }
 
@@ -1493,6 +1493,8 @@ public class PersonaPrinter extends BasicPrinter {
             KoerperPersona kp = (KoerperPersona)persona;
             grid1.add(new TextPrint(Messages.Printer_armor, attributeFont));
             grid1.add(new TextPrint(printInteger(kp.getPanzer()), attributeFont));
+            grid1.add(new TextPrint("Overflow damage", attributeFont));
+            grid1.add(new TextPrint(printInteger(kp.getZustandGrenze()), attributeFont));
 
         }
 
