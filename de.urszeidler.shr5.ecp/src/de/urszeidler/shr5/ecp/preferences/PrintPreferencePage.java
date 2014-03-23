@@ -52,6 +52,12 @@ public class PrintPreferencePage
 	        ScaleFieldEditor scaleFieldEditor = new ScaleFieldEditor(PreferenceConstants.FOOTER_GAP, "Footer gab", getFieldEditorParent(), 10, 32, 1, 10);
 	        addField(scaleFieldEditor);
 	    }
+	    {
+	        ScaleFieldEditor scaleFieldEditor = new ScaleFieldEditor(PreferenceConstants.PAGE_MARGIN, "Page margin", getFieldEditorParent(), 0, 100, 1, 10);
+	        scaleFieldEditor.setMinimum(6);
+	        scaleFieldEditor.setMaximum(48);
+	        addField(scaleFieldEditor);
+	    }
 	}
 
 	/* (non-Javadoc)

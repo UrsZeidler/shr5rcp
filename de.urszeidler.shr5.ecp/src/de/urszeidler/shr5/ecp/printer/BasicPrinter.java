@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 
 /**
@@ -78,6 +79,8 @@ public class BasicPrinter implements IPropertyChangeListener {
 
     public BasicPrinter() {
         super();
+        store = Activator.getDefault().getPreferenceStore();
+        store.addPropertyChangeListener(this);
     }
 
     /**

@@ -11,4 +11,5 @@ public class PreferenceConstants {
     public static final String PRINT_CHARACTER_ADVACEMENTS = "PRINT_CHARACTER_ADVACEMENTS";
     public static final String CURRENCY_SYMBOL = "CURRENCY_SYMBOL";
     public static final String FOOTER_GAP = "FOOTER_GAP";
+    public static final String PAGE_MARGIN = "PAGE_MARGIN";
 }

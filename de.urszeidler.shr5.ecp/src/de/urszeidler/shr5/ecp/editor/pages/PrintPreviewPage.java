@@ -1,5 +1,6 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.nebula.paperclips.core.PaperClips;
 import org.eclipse.nebula.paperclips.core.PrintJob;
 import org.eclipse.nebula.paperclips.widgets.PrintPreview;
@@ -31,6 +32,8 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.printer.BasicPrinter.PrintFactory;
 
 /**
@@ -53,6 +56,7 @@ public class PrintPreviewPage extends FormPage {
     private Display display;
     protected Shell shell;
     private PrintFactory print;
+    private IPreferenceStore store;
 
     /**
      * Create the form page.
@@ -100,6 +104,9 @@ public class PrintPreviewPage extends FormPage {
         NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
         character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
         this.print = print;
+        store = Activator.getDefault().getPreferenceStore();
+        //store.addPropertyChangeListener(this);
+
     }
 
     /**
@@ -109,6 +116,7 @@ public class PrintPreviewPage extends FormPage {
      */
     @Override
     protected void createFormContent(IManagedForm managedForm) {
+        managedForm.getForm().setDelayedReflow(true);
         FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
         form.setText("Printer Preview for :" + print.getPrintTitel());
@@ -117,6 +125,8 @@ public class PrintPreviewPage extends FormPage {
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
+        //Composite body2 = form.;
+        
         display = Display.getCurrent();
         shell = display.getActiveShell();
 
@@ -124,10 +134,12 @@ public class PrintPreviewPage extends FormPage {
         createScrollingPreview(body).setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 
         updateJob();
+        managedForm.reflow(true);
     }
 
     protected void updateJob() {
         printJob = new PrintJob(print.getPrintTitel(), print.createPrinter());
+        printJob.setMargins(store.getInt(PreferenceConstants.FOOTER_GAP));
         preview.setPrintJob(printJob);
         forgetScrollingPosition();
         updatePreviewSize();
@@ -282,7 +294,7 @@ public class PrintPreviewPage extends FormPage {
     }
 
     private Control createScrollingPreview(Composite parent) {
-        scroll = new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+        scroll =  new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
         scroll.setExpandHorizontal(true);
         scroll.setExpandVertical(true);
 

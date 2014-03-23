@@ -91,9 +91,7 @@ public class PersonaPrinter extends BasicPrinter {
 
     public PersonaPrinter() {
         super();
-        store = Activator.getDefault().getPreferenceStore();
-        store.addPropertyChangeListener(this);
-        initalizePrinter();
+         initalizePrinter();
     }
 
     /**
