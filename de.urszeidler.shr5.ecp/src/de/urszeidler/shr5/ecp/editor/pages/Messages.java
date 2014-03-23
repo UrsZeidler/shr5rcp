@@ -89,7 +89,9 @@ public class Messages extends NLS {
     public static String ShadowrunEditor_dlg_manage_inventory;
     public static String ShadowrunEditor_dlg_select_object_type;
     public static String ShadowrunEditor_dlg_select_persona_type;
+    public static String ShadowrunEditor_dlg_select_spells;
     public static String ShadowrunEditor_dlg_select_type;
+    public static String ShadowrunEditor_Karama_Generator;
     public static String ShadowrunEditor_page_advacement;
     public static String ShadowrunEditor_page_armor;
     public static String ShadowrunEditor_page_character;
@@ -112,6 +114,7 @@ public class Messages extends NLS {
     public static String ShadowrunEditor_page_skill_group;
     public static String ShadowrunEditor_page_species;
     public static String ShadowrunEditor_page_throwingweapon;
+    public static String ShadowrunEditor_shr5_generator_sheet;
     public static String Shr5KarmaGeneratorPage_grpResources_text;
     public static String AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText;
 

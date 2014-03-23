@@ -188,7 +188,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
 
                 FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                        Shr5Package.Literals.SHR_LIST__ENTRIES, "Select spells", new ArrayList<EObject>(objectsOfType));
+                        Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(objectsOfType));
 
                 int result = dialog.open();
                 if (result == Window.OK) {
@@ -465,7 +465,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     addPage(new Shr5GeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_shr5_generator, object, editingDomain,
                             manager));
 
-                    addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_shr5_generator, PersonaPrinter
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_shr5_generator_sheet, PersonaPrinter
                             .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
 
                 } catch (PartInitException e) {
@@ -477,7 +477,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                 try {
-                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, "Karma Generator", object, editingDomain, manager));
+                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_Karama_Generator, object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
