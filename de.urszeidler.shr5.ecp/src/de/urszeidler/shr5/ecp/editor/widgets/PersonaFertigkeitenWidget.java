@@ -276,7 +276,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                     boolean hasSkillGroup = false;
                     if (parentElement instanceof FertigkeitsGruppe) {
                         FertigkeitsGruppe fg = (FertigkeitsGruppe)parentElement;
-                         hasSkillGroup = ShadowrunTools.findGruppe(fg, persona) != null;
+                        hasSkillGroup = ShadowrunTools.findGruppe(fg, persona) != null;
                     }
                     return personaFertigkeit != null || hasSkillGroup;
                 } else if (element instanceof FertigkeitsGruppe) {
@@ -446,35 +446,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
 
             protected void setValue(Object element, Object value) {
-                if (element instanceof Fertigkeit) {
-                    Fertigkeit f = (Fertigkeit)element;
-                    PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(f, persona);
-                    if (personaFertigkeit == null) {
-                        PersonaFertigkeit pf = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-                        pf.setFertigkeit(f);
-                        pf.setStufe((Integer)value);
-                        personaFertigkeiten.add(pf);
-                    } else {
-                        if (personaFertigkeit.getStufe() == 0) {
-                            personaFertigkeiten.remove(personaFertigkeit);
-                        } else {
-                            Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
-                            editingDomain.getCommandStack().execute(cmd);
-                        }
-                    }
-                } else if (element instanceof FertigkeitsGruppe) {
-                    FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
-                    PersonaFertigkeitsGruppe personaFertigkeitsGruppe = ShadowrunTools.findGruppe(fg, persona);
-                    if (personaFertigkeitsGruppe == null) {
-                        PersonaFertigkeitsGruppe pfg = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
-                        pfg.setGruppe(fg);
-                        pfg.setStufe((Integer)value);
-                        personaFertigkeitsGruppen.add(pfg);
-                    } else {
-                        Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
-                        editingDomain.getCommandStack().execute(cmd);
-                    }
-                }
+                changeFertigkeitsValue(element, value);
                 treeViewer.refresh(true);
             }
         });
@@ -538,5 +510,43 @@ public class PersonaFertigkeitenWidget extends Composite {
         this.filterOnlyPersona = filterOnlyPersona;
         treeViewer.refresh();
         treeViewer.expandToLevel(2);
+    }
+
+    /**
+     * Changes the value of the fertigkeit by setting it.
+     * 
+     * @param element the fertigkeit or guppe
+     * @param value the value
+     */
+    private void changeFertigkeitsValue(Object element, Object value) {
+        if (element instanceof Fertigkeit) {
+            Fertigkeit f = (Fertigkeit)element;
+            PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(f, persona);
+            if (personaFertigkeit == null) {
+                PersonaFertigkeit pf = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+                pf.setFertigkeit(f);
+                pf.setStufe((Integer)value);
+                personaFertigkeiten.add(pf);
+            } else {
+                if (personaFertigkeit.getStufe() == 0) {
+                    personaFertigkeiten.remove(personaFertigkeit);
+                } else {
+                    Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
+                    editingDomain.getCommandStack().execute(cmd);
+                }
+            }
+        } else if (element instanceof FertigkeitsGruppe) {
+            FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
+            PersonaFertigkeitsGruppe personaFertigkeitsGruppe = ShadowrunTools.findGruppe(fg, persona);
+            if (personaFertigkeitsGruppe == null) {
+                PersonaFertigkeitsGruppe pfg = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+                pfg.setGruppe(fg);
+                pfg.setStufe((Integer)value);
+                personaFertigkeitsGruppen.add(pfg);
+            } else {
+                Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
+                editingDomain.getCommandStack().execute(cmd);
+            }
+        }
     }
 }
