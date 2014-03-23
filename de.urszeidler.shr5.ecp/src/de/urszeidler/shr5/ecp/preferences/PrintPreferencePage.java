@@ -8,6 +8,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 import de.urszeidler.shr5.ecp.Activator;
+import org.eclipse.jface.preference.ScaleFieldEditor;
 
 /**
  * This class represents a preference page that
@@ -47,6 +48,10 @@ public class PrintPreferencePage
 	    addField(new StringFieldEditor(PreferenceConstants.CURRENCY_SYMBOL, "currency symbol", -1, StringFieldEditor.VALIDATE_ON_KEY_STROKE, getFieldEditorParent()));
 	    addField(new BooleanFieldEditor(PreferenceConstants.PRINT_USEABLE_SKILLS, "print all usable skills", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
 	    addField(new BooleanFieldEditor(PreferenceConstants.PRINT_CHARACTER_ADVACEMENTS, "print character advacements", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
+	    {
+	        ScaleFieldEditor scaleFieldEditor = new ScaleFieldEditor(PreferenceConstants.FOOTER_GAP, "Footer gab", getFieldEditorParent(), 10, 32, 1, 10);
+	        addField(scaleFieldEditor);
+	    }
 	}
 
 	/* (non-Javadoc)

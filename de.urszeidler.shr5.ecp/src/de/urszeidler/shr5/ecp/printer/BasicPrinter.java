@@ -124,7 +124,7 @@ public class BasicPrinter implements IPropertyChangeListener {
 //                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
 
                 grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
-                grid.add(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
+                grid.add(new TextPrint(Messages.Printer_footer_1, italicFontData));
                 grid.add(new PageNumberPrint(pageNumber, italicFontData, SWT.RIGHT));
                 return grid;
             }
@@ -132,6 +132,7 @@ public class BasicPrinter implements IPropertyChangeListener {
 
         PagePrint pagePrint = new PagePrint(body);
         pagePrint.setFooter(footer);
+        pagePrint.setFooterGap(store.getInt(PreferenceConstants.FOOTER_GAP));
         return pagePrint;
     }
 

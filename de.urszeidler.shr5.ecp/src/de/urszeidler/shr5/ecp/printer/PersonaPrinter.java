@@ -157,7 +157,7 @@ public class PersonaPrinter extends BasicPrinter {
 
             @Override
             public String getPrintTitel() {
-                return Messages.PersonaPrinter_Character_Group_sheet + c.getCharacterName();
+                return "Shr character generator" + c.getCharacterName();
             }
         };
     }

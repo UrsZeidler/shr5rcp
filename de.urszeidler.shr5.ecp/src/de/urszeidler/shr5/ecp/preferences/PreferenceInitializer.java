@@ -35,6 +35,7 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
         }
 
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+        store.setDefault(PreferenceConstants.FOOTER_GAP, 24);
         store.setDefault(PreferenceConstants.PRINT_USEABLE_SKILLS, true);
         store.setDefault(PreferenceConstants.PRINT_CHARACTER_ADVACEMENTS, true);
         store.setDefault(PreferenceConstants.CURRENCY_SYMBOL, "¥");
