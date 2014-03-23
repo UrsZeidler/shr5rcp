@@ -370,11 +370,11 @@
 						<fertigkeiten stufe="1"
 							fertigkeit="//@entries.0/@entries.5/@entries.22" />
 						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.18/@entries.0" />
+							fertigkeit="//@entries.0/@entries.19/@entries.0" />
 						<fertigkeiten stufe="2"
 							fertigkeit="//@entries.0/@entries.5/@entries.69" />
 						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.18/@entries.1" />
+							fertigkeit="//@entries.0/@entries.19/@entries.1" />
 						<fertigkeiten stufe="2"
 							fertigkeit="//@entries.0/@entries.4/@entries.27" />
 						<fertigkeiten stufe="2"
