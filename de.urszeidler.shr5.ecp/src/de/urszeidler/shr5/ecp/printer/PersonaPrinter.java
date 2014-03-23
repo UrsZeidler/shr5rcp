@@ -368,7 +368,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         GridPrint characterConnections = printAllCharacterConnections(character);
         characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
-        //characterConnections.add(new BreakPrint(), GridPrint.REMAINDER);
+        // characterConnections.add(new BreakPrint(), GridPrint.REMAINDER);
         characterConnections.addFooter(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
         characterConnections.addFooter(
                 SWT.RIGHT,
@@ -382,7 +382,7 @@ public class PersonaPrinter extends BasicPrinter {
             GridPrint personaEigenschaften = printPersonaEigenschaften(eigenschaften);
             int sum = ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften());
             personaEigenschaften.add(new LinePrint(), GridPrint.REMAINDER);
-            //personaEigenschaften.add(new BreakPrint(), GridPrint.REMAINDER);
+            // personaEigenschaften.add(new BreakPrint(), GridPrint.REMAINDER);
             personaEigenschaften.addFooter(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont));
             personaEigenschaften.addFooter(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
             // grid.add(new BorderPrint(personaEigenschaften, border), 1);
@@ -635,7 +635,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         grid.add(SWT.LEFT, SWT.FILL, new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
 
-        grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border),GridPrint.REMAINDER);
+        grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), GridPrint.REMAINDER);
 
         if (store.getBoolean(PreferenceConstants.PRINT_USEABLE_SKILLS))
             grid.add(printAllPersonaSkills(persona));
@@ -687,7 +687,7 @@ public class PersonaPrinter extends BasicPrinter {
         GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
 
         AbstraktPersona persona = character.getPersona();
-        //grid.add(printPersonaCombatAttributes(persona));
+        // grid.add(printPersonaCombatAttributes(persona));
 
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
@@ -1224,7 +1224,7 @@ public class PersonaPrinter extends BasicPrinter {
             grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_monitor, boldFontData), GridPrint.REMAINDER);
             grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor(Messages.Printer_body, kp.getZustandKoerperlichMax()));
             grid.add(SWT.RIGHT, SWT.TOP, printConditionMonitor(Messages.Printer_mental, kp.getZustandGeistigMax()));
-            grid.add(SWT.LEFT, SWT.BOTTOM,printPersonaCombatAttributes(persona)  , GridPrint.REMAINDER);
+            grid.add(SWT.LEFT, SWT.BOTTOM, printPersonaCombatAttributes(persona), GridPrint.REMAINDER);
             grid.add(new BreakPrint(), GridPrint.REMAINDER);
         }
 
@@ -1657,7 +1657,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         // DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid1 = new GridPrint("d,d:g", look);//$NON-NLS-1$
+        GridPrint grid1 = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
 
         grid1.add(new EmptyPrint());
         Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(BIG_SCALE, persona.getImage());
@@ -1673,6 +1673,10 @@ public class PersonaPrinter extends BasicPrinter {
         outerGrid.add(grid);
         outerGrid.add(grid1);
 
+        if (store.getBoolean(PreferenceConstants.PRINT_PERSONA_DECRIPTION)) {
+            outerGrid.add(new LinePrint(), GridPrint.REMAINDER);
+            outerGrid.add(new TextPrint(persona.getBeschreibung(), attributeFont), GridPrint.REMAINDER);
+        }
         return outerGrid;
     }
 

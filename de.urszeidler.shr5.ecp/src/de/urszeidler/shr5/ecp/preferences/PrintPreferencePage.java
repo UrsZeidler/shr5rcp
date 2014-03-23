@@ -46,6 +46,7 @@ public class PrintPreferencePage
 	    addField(new FontFieldEditor(PreferenceConstants.FONT_TABLE_HEADER, "table header", "table header", getFieldEditorParent()));
 	    addField(new FontFieldEditor(PreferenceConstants.FONT_NORMAL_TEXT, "normal text", "attribute", getFieldEditorParent()));
 	    addField(new StringFieldEditor(PreferenceConstants.CURRENCY_SYMBOL, "currency symbol", -1, StringFieldEditor.VALIDATE_ON_KEY_STROKE, getFieldEditorParent()));
+	    addField(new BooleanFieldEditor(PreferenceConstants.PRINT_PERSONA_DECRIPTION, "print persona description", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
 	    addField(new BooleanFieldEditor(PreferenceConstants.PRINT_USEABLE_SKILLS, "print all usable skills", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
 	    addField(new BooleanFieldEditor(PreferenceConstants.PRINT_CHARACTER_ADVACEMENTS, "print character advacements", BooleanFieldEditor.DEFAULT, getFieldEditorParent()));
 	    {
