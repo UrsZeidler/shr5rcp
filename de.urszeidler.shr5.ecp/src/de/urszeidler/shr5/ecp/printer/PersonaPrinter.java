@@ -1511,7 +1511,7 @@ public class PersonaPrinter extends BasicPrinter {
     private Print printPersonaAttributes(AbstraktPersona persona) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d,d", look);//$NON-NLS-1$
+        GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
         if (persona == null)
             return grid;
 
