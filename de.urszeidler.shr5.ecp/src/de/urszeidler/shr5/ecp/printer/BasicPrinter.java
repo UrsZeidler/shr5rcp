@@ -1,6 +1,7 @@
 package de.urszeidler.shr5.ecp.printer;
 
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -12,9 +13,19 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.nebula.paperclips.core.EmptyPrint;
+import org.eclipse.nebula.paperclips.core.LinePrint;
 import org.eclipse.nebula.paperclips.core.Print;
+import org.eclipse.nebula.paperclips.core.grid.DefaultGridLook;
+import org.eclipse.nebula.paperclips.core.grid.GridLook;
+import org.eclipse.nebula.paperclips.core.grid.GridPrint;
+import org.eclipse.nebula.paperclips.core.page.PageDecoration;
+import org.eclipse.nebula.paperclips.core.page.PageNumber;
 import org.eclipse.nebula.paperclips.core.page.PageNumberPageDecoration;
+import org.eclipse.nebula.paperclips.core.page.PageNumberPrint;
 import org.eclipse.nebula.paperclips.core.page.PagePrint;
+import org.eclipse.nebula.paperclips.core.text.TextPrint;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
@@ -101,22 +112,26 @@ public class BasicPrinter implements IPropertyChangeListener {
      * @return the page print.
      */
     protected PagePrint createPagePrint(Print body) {
-        // DefaultGridLook look = new DefaultGridLook(5, 5);
-        // look.setHeaderGap(5);
-        //        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
-        //
-        // grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // grid.addFooter(new EmptyPrint(), GridPrint.REMAINDER);
-        // grid.addFooter(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
-        // grid.addFooter(new TextPrint(Messages.Printer_footer_2, italicFontData), 2);
+
+        PageDecoration footer = new PageDecoration() {
+            private final GridLook footerLook = new DefaultGridLook(5, 2);
+
+            public Print createPrint(PageNumber pageNumber) {
+                GridPrint grid = new GridPrint("d:g, d", footerLook);
+                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+//                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+//                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+//                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+
+                grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
+                grid.add(new TextPrint(Messages.Printer_footer_1, italicFontData), 2);
+                grid.add(new PageNumberPrint(pageNumber, italicFontData, SWT.RIGHT));
+                return grid;
+            }
+        };
 
         PagePrint pagePrint = new PagePrint(body);
-
-        PageNumberPageDecoration footer2 = new PageNumberPageDecoration();
-        footer2.setFontData(italicFontData);
-
-        // pagePrint.setHeader(new SimplePageDecoration(grid));
-        pagePrint.setFooter(footer2);
+        pagePrint.setFooter(footer);
         return pagePrint;
     }
 
