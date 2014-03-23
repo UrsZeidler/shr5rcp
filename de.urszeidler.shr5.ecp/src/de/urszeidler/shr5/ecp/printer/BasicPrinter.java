@@ -122,9 +122,9 @@ public class BasicPrinter implements IPropertyChangeListener {
             public Print createPrint(PageNumber pageNumber) {
                 GridPrint grid = new GridPrint("d:g, d", footerLook);
                 grid.add(new EmptyPrint(), GridPrint.REMAINDER);
-//                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
-//                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
-//                grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+                // grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+                // grid.add(new EmptyPrint(), GridPrint.REMAINDER);
+                // grid.add(new EmptyPrint(), GridPrint.REMAINDER);
 
                 grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
                 grid.add(new TextPrint(Messages.Printer_footer_1, italicFontData));
@@ -137,6 +137,24 @@ public class BasicPrinter implements IPropertyChangeListener {
         pagePrint.setFooter(footer);
         pagePrint.setFooterGap(store.getInt(PreferenceConstants.FOOTER_GAP));
         return pagePrint;
+    }
+
+    /**
+     * Creates a simple printer and adds all given printer to this band.
+     * 
+     * @param body
+     * @return a print containing all printer in a line
+     */
+    protected GridPrint createBandPrint(Print... body) {
+
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint(look);
+        for (Print print : body) {
+            grid.addColumn("d:g");//$NON-NLS-1$
+            grid.add(print);
+        }
+        return grid;
     }
 
     /**
