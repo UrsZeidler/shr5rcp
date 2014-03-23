@@ -485,6 +485,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         shr5System.getPriorities().add(skill);
         shr5System.getPriorities().add(mudan);
         shr5System.getPriorities().add(resourcen);
+        shr5System.setKnowlegeSkillFactor(2);
 
         getFixture().setAttribute(attributes);
         getFixture().setMetaType(metaType);

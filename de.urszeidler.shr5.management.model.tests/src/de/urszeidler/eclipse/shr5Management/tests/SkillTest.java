@@ -9,6 +9,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Skill;
 
@@ -63,11 +64,15 @@ public class SkillTest extends PriorityCategorieTest {
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @see junit.framework.TestCase#setUp()
-     * @generated
+     * @generated not
      */
 	@Override
 	protected void setUp() throws Exception {
         setFixture(Shr5managementFactory.eINSTANCE.createSkill());
+        Shr5System shr5System = Shr5managementFactory.eINSTANCE.createShr5System();
+        shr5System.getPriorities().add(getFixture());
+        shr5System.setKnowlegeSkillFactor(2);
+        getFixture();
     }
 
 	/**
