@@ -528,7 +528,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         AbstraktPersona persona = getCharacter().getPersona();
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
-            karmaKosten = karmaKosten + (-1* ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften()));
+            karmaKosten = karmaKosten + ( ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften()));
         }
         if (persona instanceof MysticAdept) {
             int sum = 0;
@@ -537,11 +537,11 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             for (KiKraft kraft : kikraft) {
                 sum = sum + kraft.getKraftpunkte();
             }
-            sum = (int)Math.ceil(sum / 100f);
+            sum = (int)Math.floor(sum / 100f);
 
-            karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor());
+            karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor()*-1);
         }
-        int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
+        int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter()) * -1;
         karmaKosten = karmaKosten + karmaSpend;
 
         int spendByConnections = 0;

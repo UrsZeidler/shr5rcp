@@ -172,12 +172,12 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 
         PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
-        eigenschaft.setKarmaKosten(2);
+        eigenschaft.setKarmaKosten(-2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("2 spend", -2, getFixture().getKarmaSpend());
 
         eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
-        eigenschaft.setKarmaKosten(2);
+        eigenschaft.setKarmaKosten(-2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("4 spend", -4, getFixture().getKarmaSpend());
 
@@ -191,7 +191,6 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
      * @generated not
      */
-    @SuppressWarnings("unchecked")
     public void testGetKarmaSpend_MysticAdept() {
         createBasicCategories();
         shr5System.setKarmaToMagicFactor(1);
@@ -202,28 +201,28 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 
         PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
-        eigenschaft.setKarmaKosten(-2);
+        eigenschaft.setKarmaKosten(2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("2 spend", 2, getFixture().getKarmaSpend());
 
         eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
-        eigenschaft.setKarmaKosten(-2);
+        eigenschaft.setKarmaKosten(2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("4 spend", 4, getFixture().getKarmaSpend());
 
         KiAdept ka = (KiAdept)playerCharacter.getPersona();
 
         KiKraft kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
-        kiKraft.setKraftpunkte(100);
+        kiKraft.setKraftpunkte(-100);
         ka.getKikraft().add(kiKraft);
         assertEquals("5 spend", 5, getFixture().getKarmaSpend());
         kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
-        kiKraft.setKraftpunkte(100);
+        kiKraft.setKraftpunkte(-100);
         ka.getKikraft().add(kiKraft);
         assertEquals("6 spend", 6, getFixture().getKarmaSpend());
 
         kiKraft = Shr5Factory.eINSTANCE.createKiKraft();
-        kiKraft.setKraftpunkte(80);
+        kiKraft.setKraftpunkte(-80);
         ka.getKikraft().add(kiKraft);
         assertEquals("7 spend", 7, getFixture().getKarmaSpend());
 
