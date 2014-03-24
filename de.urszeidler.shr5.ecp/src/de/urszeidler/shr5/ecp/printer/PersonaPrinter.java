@@ -1675,7 +1675,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         if (store.getBoolean(PreferenceConstants.PRINT_PERSONA_DECRIPTION)) {
             outerGrid.add(new LinePrint(), GridPrint.REMAINDER);
-            outerGrid.add(new TextPrint(persona.getBeschreibung(), attributeFont), GridPrint.REMAINDER);
+            outerGrid.add(new TextPrint(printString(persona.getBeschreibung()), attributeFont), GridPrint.REMAINDER);
         }
         return outerGrid;
     }
