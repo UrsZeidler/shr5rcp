@@ -64,7 +64,7 @@ public class ShadowrunManagmentTools {
     }
 
     /**
-     * The Karma cost are a negative number.
+     * Calculates the spend karma by advacements. The Karma cost are a negative number.
      */
     public static int getKarmaSpend(ManagedCharacter managedCharacter) {
         int karmaGaint = 0;

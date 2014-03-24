@@ -174,12 +174,12 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
         eigenschaft.setKarmaKosten(2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
-        assertEquals("2 spend", 2, getFixture().getKarmaSpend());
+        assertEquals("2 spend", -2, getFixture().getKarmaSpend());
 
         eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
         eigenschaft.setKarmaKosten(2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
-        assertEquals("4 spend", 4, getFixture().getKarmaSpend());
+        assertEquals("4 spend", -4, getFixture().getKarmaSpend());
 
     }
 
@@ -202,12 +202,12 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
 
         PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
-        eigenschaft.setKarmaKosten(2);
+        eigenschaft.setKarmaKosten(-2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("2 spend", 2, getFixture().getKarmaSpend());
 
         eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
-        eigenschaft.setKarmaKosten(2);
+        eigenschaft.setKarmaKosten(-2);
         ((KoerperPersona)playerCharacter.getPersona()).getEigenschaften().add(eigenschaft);
         assertEquals("4 spend", 4, getFixture().getKarmaSpend());
 
