@@ -115,16 +115,16 @@ public class InitationItemProvider
      * This returns Initation.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated not
+     * @generated 
      */
 	@Override
 	public Object getImage(Object object) {
-	       Beschreibbar beschreibbar = (Beschreibbar) object;
-	        if (beschreibbar.getImage() != null) {
-	            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
-	            if (image != null)
-	                return image;
-	        }
+//	       Beschreibbar beschreibbar = (Beschreibbar) object;
+//	        if (beschreibbar.getImage() != null) {
+//	            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+//	            if (image != null)
+//	                return image;
+//	        }
 
         return overlayImage(object, getResourceLocator().getImage("full/obj16/Initation"));
     }
