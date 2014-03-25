@@ -587,11 +587,10 @@
 				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.1"
 					choosenLifestyle="//@entries.1/@groups.0/@members.2/@contracts.1"
 					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-					<persona xsi:type="shr5:MudanPersona" name="Robuihuhuuhu"
-						edgeBasis="1" konstitutionBasis="9" geschicklichkeitBasis="4"
-						reaktionBasis="3" staerkeBasis="11" charismaBasis="3"
-						willenskraftBasis="4" intuitionBasis="3" logikBasis="3"
-						spezies="//@entries.0/@entries.2/@entries.4">
+					<persona xsi:type="shr5:MudanPersona" name="Rob" edgeBasis="1"
+						konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3"
+						staerkeBasis="11" charismaBasis="3" willenskraftBasis="4"
+						intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.4">
 						<fertigkeiten stufe="2"
 							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
 						<fertigkeiten stufe="2"
@@ -791,8 +790,7 @@
 							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.0" />
 						<fertigkeiten stufe="3"
 							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
-						<fertigkeiten stufe="3"
-							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
 						<fertigkeiten stufe="4"
 							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2" />
 						<fertigkeiten stufe="3"
@@ -817,13 +815,24 @@
 							fertigkeit="//@entries.0/@entries.5/@entries.44" />
 						<fertigkeiten stufe="2"
 							fertigkeit="//@entries.0/@entries.5/@entries.39" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.3/@entries.6/@fertigkeiten.0" />
 						<fertigkeitsGruppen stufe="2"
 							gruppe="//@entries.0/@entries.3/@entries.4" />
-							          <eigenschaften name="Focused Concentration (Rating 2)" page="74" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="8"/>
-          <eigenschaften name="Code of Honor (Elfs)" page="79" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-15"/>
-          <eigenschaften name="Distinctive Style" page="80" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-5"/>
-          <eigenschaften name="Addiction (Mild,Bliss)" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-4"/>
-							
+						<eigenschaften name="Focused Concentration (Rating 2)"
+							page="74" srcBook="//@entries.0/@entries.0/@entries.0"
+							karmaKosten="8" />
+						<eigenschaften name="Code of Honor (Elfs)" page="79"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-15" />
+						<eigenschaften name="Distinctive Style" page="80"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-5" />
+						<eigenschaften name="Addiction (Mild,Bliss)" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-4" />
+						<eigenschaften name="Mentor Spirit (Sea)" page="76"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="5" />
+
 						<kikraft name="Improved Potential" kraftpunkte="-50">
 							<mods wert="1">
 								<attribut
@@ -838,18 +847,23 @@
 						<kikraft name="Enhanced Accuracy" kraftpunkte="-25" />
 						<kikraft name="Improved Ability" kraftpunkte="-50" />
 						<kikraft name="Voice Control 1" kraftpunkte="-25" />
-						          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.3"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.4"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.10"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.16"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.20"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.21"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.76"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.58"/>
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.3" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.4" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.10" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.16" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.20" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.21" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.76" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.58" />
 
 					</persona>
+
+					<changes xsi:type="shr5mngt:PersonaChange" changeApplied="true"
+						dateApplied="2014-03-25T12:58:04.696+0100" from="2" to="3"
+						changeable="//@entries.1/@groups.0/@members.3/@persona/@fertigkeiten.17" />
+
 					<inventar xsi:type="shr5:Feuerwaffe" page="426"
 						srcBook="//@entries.0/@entries.0/@entries.0" wert="640"
 						verfuegbarkeit="4R" name="Browning Ultra-Power" schadenscode="8P"
