@@ -363,7 +363,6 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(gridLeft, 1);
 
         GridPrint gridMid = new GridPrint("d:g,d:g,d:g", look);//$NON-NLS-1$
-
         grid.add(gridMid, GridPrint.REMAINDER);
 
         GridPrint characterConnections = printAllCharacterConnections(character);
@@ -395,11 +394,15 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printWertListAndSumm(character.getInventar(), Messages.Printer_Items), border), GridPrint.REMAINDER);
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
-            grid.add(new BorderPrint(printWertListAndSumm((EList<? extends GeldWert>)kp.getKoerperMods(), Messages.PersonaPrinter_Wares), border),
-                    GridPrint.REMAINDER);
+            if (!kp.getKoerperMods().isEmpty())
+                grid.add(
+                        new BorderPrint(printWertListAndSumm((EList<? extends GeldWert>)kp.getKoerperMods(), Messages.PersonaPrinter_Wares), border),
+                        GridPrint.REMAINDER);
         }
-        grid.add(new BorderPrint(printWertListAndSumm(character.getVehicels(), Messages.PersonaPrinter_Vehicles), border), GridPrint.REMAINDER);
-        grid.add(new BorderPrint(printWertListAndSumm(character.getContracts(), Messages.Printer_contracts), border), GridPrint.REMAINDER);
+        if (!character.getVehicels().isEmpty())
+            grid.add(new BorderPrint(printWertListAndSumm(character.getVehicels(), Messages.PersonaPrinter_Vehicles), border), GridPrint.REMAINDER);
+        if (!character.getContracts().isEmpty())
+            grid.add(new BorderPrint(printWertListAndSumm(character.getContracts(), Messages.Printer_contracts), border), GridPrint.REMAINDER);
 
         gridMid.add(new BorderPrint(printGeneratorAttributes(generator), border));
 
