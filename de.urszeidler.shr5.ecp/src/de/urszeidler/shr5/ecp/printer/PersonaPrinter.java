@@ -154,7 +154,7 @@ public class PersonaPrinter extends BasicPrinter {
 
             @Override
             public String getPrintTitel() {
-                return "Shr character generator" + c.getCharacterName();
+                return Messages.PersonaPrinter_Shr_character_generator + c.getCharacterName();
             }
         };
     }
@@ -1496,7 +1496,7 @@ public class PersonaPrinter extends BasicPrinter {
             KoerperPersona kp = (KoerperPersona)persona;
             grid1.add(new TextPrint(Messages.Printer_armor, attributeFont));
             grid1.add(new TextPrint(printInteger(kp.getPanzer()), attributeFont));
-            grid1.add(new TextPrint("Overflow damage", attributeFont));
+            grid1.add(new TextPrint(Messages.PersonaPrinter_Overflow_damage, attributeFont));
             grid1.add(new TextPrint(printInteger(kp.getZustandGrenze()), attributeFont));
 
         }
@@ -1580,7 +1580,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         int staerke = persona.getStaerke();
 
-        return String.format("%dkg/%dkg", staerke * 15, staerke * 10);//$NON-NLS-1 //$NON-NLS-1$ //$NON-NLS-1$
+        return String.format("%dkg/%dkg", staerke * 15, staerke * 10);//$NON-NLS-1 //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
     }
 
     /**

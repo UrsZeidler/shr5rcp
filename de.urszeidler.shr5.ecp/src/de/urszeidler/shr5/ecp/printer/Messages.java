@@ -23,10 +23,12 @@ public class Messages extends NLS {
     public static String PersonaPrinter_Kownlege_skills;
     public static String PersonaPrinter_Magic;
     public static String PersonaPrinter_Metatype;
+    public static String PersonaPrinter_Overflow_damage;
     public static String PersonaPrinter_Professinal_rating;
     public static String PersonaPrinter_rating;
     public static String PersonaPrinter_Resources;
     public static String PersonaPrinter_Resources_at_all;
+    public static String PersonaPrinter_Shr_character_generator;
     public static String PersonaPrinter_Shr5_Generator;
     public static String PersonaPrinter_Skills;
     public static String PersonaPrinter_Start_Karma;
