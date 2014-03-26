@@ -1,6 +1,6 @@
 shr5rcp
 =====================
-![logo](https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.product/icons/shrImage_6_128.png)
+![logo](de.urszeidler.shr5.product/icons/shrImage_6_128.png)
 
 1. Overview
 
