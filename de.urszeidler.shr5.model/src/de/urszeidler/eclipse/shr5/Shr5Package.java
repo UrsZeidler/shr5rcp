@@ -4877,13 +4877,22 @@ public interface Shr5Package extends EPackage {
 	int SPEZIES__SPRINTEN = BESCHREIBBAR_FEATURE_COUNT + 29;
 
 	/**
+     * The feature id for the '<em><b>Angriff</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIES__ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 30;
+
+    /**
      * The number of structural features of the '<em>Spezies</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 30;
+	int SPEZIES_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 31;
 
 	/**
      * The number of operations of the '<em>Spezies</em>' class.
@@ -10675,6 +10684,15 @@ public interface Shr5Package extends EPackage {
     int CRITTER__SPRINTEN = SPEZIES__SPRINTEN;
 
     /**
+     * The feature id for the '<em><b>Angriff</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CRITTER__ANGRIFF = SPEZIES__ANGRIFF;
+
+    /**
      * The feature id for the '<em><b>Kraefte</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12960,6 +12978,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getSpezies_Sprinten();
 
 	/**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.Spezies#getAngriff <em>Angriff</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Angriff</em>'.
+     * @see de.urszeidler.eclipse.shr5.Spezies#getAngriff()
+     * @see #getSpezies()
+     * @generated
+     */
+    EReference getSpezies_Angriff();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.GegenstandStufen <em>Gegenstand Stufen</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15846,6 +15875,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute SPEZIES__SPRINTEN = eINSTANCE.getSpezies_Sprinten();
 
 		/**
+         * The meta object literal for the '<em><b>Angriff</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SPEZIES__ANGRIFF = eINSTANCE.getSpezies_Angriff();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.GegenstandStufen <em>Gegenstand Stufen</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

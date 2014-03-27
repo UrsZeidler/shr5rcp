@@ -264,6 +264,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/laufen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/rennen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Spezies/sprinten"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Spezies/angriff"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//GegenstandStufen">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GegenstandStufen/computer"/>

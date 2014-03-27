@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
+import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -61,6 +62,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getLaufen <em>Laufen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getRennen <em>Rennen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getSprinten <em>Sprinten</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getAngriff <em>Angriff</em>}</li>
  * </ul>
  * </p>
  *
@@ -708,6 +710,16 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	protected int sprinten = SPRINTEN_EDEFAULT;
 
 	/**
+     * The cached value of the '{@link #getAngriff() <em>Angriff</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAngriff()
+     * @generated
+     * @ordered
+     */
+    protected Nahkampfwaffe angriff;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -1429,6 +1441,49 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Nahkampfwaffe getAngriff() {
+        return angriff;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetAngriff(Nahkampfwaffe newAngriff, NotificationChain msgs) {
+        Nahkampfwaffe oldAngriff = angriff;
+        angriff = newAngriff;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.SPEZIES__ANGRIFF, oldAngriff, newAngriff);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setAngriff(Nahkampfwaffe newAngriff) {
+        if (newAngriff != angriff) {
+            NotificationChain msgs = null;
+            if (angriff != null)
+                msgs = ((InternalEObject)angriff).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.SPEZIES__ANGRIFF, null, msgs);
+            if (newAngriff != null)
+                msgs = ((InternalEObject)newAngriff).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.SPEZIES__ANGRIFF, null, msgs);
+            msgs = basicSetAngriff(newAngriff, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SPEZIES__ANGRIFF, newAngriff, newAngriff));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1452,6 +1507,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
         switch (featureID) {
             case Shr5Package.SPEZIES__MODS:
                 return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
+            case Shr5Package.SPEZIES__ANGRIFF:
+                return basicSetAngriff(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -1531,6 +1588,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return getRennen();
             case Shr5Package.SPEZIES__SPRINTEN:
                 return getSprinten();
+            case Shr5Package.SPEZIES__ANGRIFF:
+                return getAngriff();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -1644,6 +1703,9 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
             case Shr5Package.SPEZIES__SPRINTEN:
                 setSprinten((Integer)newValue);
                 return;
+            case Shr5Package.SPEZIES__ANGRIFF:
+                setAngriff((Nahkampfwaffe)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -1755,6 +1817,9 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
             case Shr5Package.SPEZIES__SPRINTEN:
                 setSprinten(SPRINTEN_EDEFAULT);
                 return;
+            case Shr5Package.SPEZIES__ANGRIFF:
+                setAngriff((Nahkampfwaffe)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -1833,6 +1898,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return rennen != RENNEN_EDEFAULT;
             case Shr5Package.SPEZIES__SPRINTEN:
                 return sprinten != SPRINTEN_EDEFAULT;
+            case Shr5Package.SPEZIES__ANGRIFF:
+                return angriff != null;
         }
         return super.eIsSet(featureID);
     }

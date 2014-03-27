@@ -256,6 +256,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="laufen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rennen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sprinten" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angriff" lowerBound="1"
+        eType="#//Nahkampfwaffe" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GegenstandStufen" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="computer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

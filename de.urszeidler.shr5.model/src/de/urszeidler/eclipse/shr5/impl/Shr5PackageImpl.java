@@ -2219,6 +2219,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSpezies_Angriff() {
+        return (EReference)speziesEClass.getEStructuralFeatures().get(27);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3773,6 +3782,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(speziesEClass, SPEZIES__LAUFEN);
         createEAttribute(speziesEClass, SPEZIES__RENNEN);
         createEAttribute(speziesEClass, SPEZIES__SPRINTEN);
+        createEReference(speziesEClass, SPEZIES__ANGRIFF);
 
         gegenstandStufenEClass = createEClass(GEGENSTAND_STUFEN);
         createEAttribute(gegenstandStufenEClass, GEGENSTAND_STUFEN__COMPUTER);
@@ -4287,6 +4297,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getSpezies_Laufen(), ecorePackage.getEInt(), "laufen", null, 0, 1, Spezies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSpezies_Rennen(), ecorePackage.getEInt(), "rennen", null, 0, 1, Spezies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSpezies_Sprinten(), ecorePackage.getEInt(), "sprinten", null, 0, 1, Spezies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getSpezies_Angriff(), this.getNahkampfwaffe(), null, "angriff", null, 1, 1, Spezies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(gegenstandStufenEClass, GegenstandStufen.class, "GegenstandStufen", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getGegenstandStufen_Computer(), ecorePackage.getEInt(), "computer", null, 0, 1, GegenstandStufen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -38,6 +38,7 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getLaufen <em>Laufen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getRennen <em>Rennen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getSprinten <em>Sprinten</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getAngriff <em>Angriff</em>}</li>
  * </ul>
  * </p>
  *
@@ -747,5 +748,31 @@ public interface Spezies extends Beschreibbar, Modifizierbar, Quelle {
      * @generated
      */
 	void setSprinten(int value);
+
+    /**
+     * Returns the value of the '<em><b>Angriff</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Angriff</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Angriff</em>' containment reference.
+     * @see #setAngriff(Nahkampfwaffe)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getSpezies_Angriff()
+     * @model containment="true" required="true"
+     * @generated
+     */
+    Nahkampfwaffe getAngriff();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Spezies#getAngriff <em>Angriff</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Angriff</em>' containment reference.
+     * @see #getAngriff()
+     * @generated
+     */
+    void setAngriff(Nahkampfwaffe value);
 
 } // Spezies

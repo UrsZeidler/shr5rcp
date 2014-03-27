@@ -816,6 +816,7 @@ public class SpeziesItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
+            childrenFeatures.add(Shr5Package.Literals.SPEZIES__ANGRIFF);
         }
         return childrenFeatures;
     }
@@ -910,6 +911,7 @@ public class SpeziesItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.SPEZIES__MODS:
+            case Shr5Package.SPEZIES__ANGRIFF:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -931,6 +933,11 @@ public class SpeziesItemProvider
             (createChildParameter
                 (Shr5Package.Literals.MODIFIZIERBAR__MODS,
                  Shr5Factory.eINSTANCE.createAttributModifikatorWert()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SPEZIES__ANGRIFF,
+                 Shr5Factory.eINSTANCE.createNahkampfwaffe()));
     }
 
 	/**

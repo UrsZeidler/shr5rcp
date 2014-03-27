@@ -312,6 +312,7 @@
       <nested inputs="shr5.ecore#//Spezies/laufen" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=26"/>
       <nested inputs="shr5.ecore#//Spezies/rennen" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=27"/>
       <nested inputs="shr5.ecore#//Spezies/sprinten" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=28"/>
+      <nested inputs="shr5.ecore#//Spezies/angriff" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse"/>
