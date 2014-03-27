@@ -55,8 +55,10 @@ import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
+import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
@@ -106,9 +108,11 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
  */
 public class ShadowrunEditor extends BasicEditor<EObject> {
     private static final String EMPTY = ""; //$NON-NLS-1$
-
+    private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
 
+    
+    
     protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
         public void handleManage(FormbuilderEntry e, EObject object) {
             if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
@@ -534,6 +538,23 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return super.caseCharacterGroup(object);
             }
 
+            
+            @Override
+            public Object caseCharacterGenerator(CharacterGenerator object) {
+                
+                GeneratorState state = object.getState();
+                switch (state) {
+                    case COMMITED:
+                        editingMode = ShrEditingState.READONLY;
+                        break;
+
+                    default:
+                        editingMode = ShrEditingState.EDITABLE;
+                        break;
+                }
+                
+                return super.caseCharacterGenerator(object);
+            }
         };
         shr5managementSwitch.doSwitch(theEObject);
 
