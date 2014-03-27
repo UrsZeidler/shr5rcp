@@ -1402,6 +1402,8 @@
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
 		<xsl:call-template name="mods" />
+		<angriff schadenscode="(STR)P" />
+		
 	</xsl:template>
 
 	<!-- zauber -->
