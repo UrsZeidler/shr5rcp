@@ -243,7 +243,10 @@ public class PersonaPrinter extends BasicPrinter {
                 body.add(SWT.LEFT, SWT.BOTTOM, new TextPrint(grunts.getLeader().getNsc().getPersona().getName(), attributeFont));
                 Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(SMALL_SCALE,
                         grunts.getLeader().getNsc().getPersona().getImage());
-                body.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+                if (imageScaledBy != null)
+                    body.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+                else
+                    body.add(SWT.RIGHT, SWT.TOP, new EmptyPrint());
 
             }
             body.add(new BorderPrint(printGruntMembersData(grunts.getLeader()), border), 2);
@@ -255,7 +258,10 @@ public class PersonaPrinter extends BasicPrinter {
             if (gruntMenbers.getNsc() != null && gruntMenbers.getNsc().getPersona() != null) {
                 body.add(SWT.LEFT, SWT.BOTTOM, new TextPrint(gruntMenbers.getNsc().getPersona().getName(), attributeFont));
                 Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(SMALL_SCALE, gruntMenbers.getNsc().getPersona().getImage());
-                body.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+                if (imageScaledBy != null)
+                    body.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
+                else
+                    body.add(SWT.RIGHT, SWT.TOP, new EmptyPrint());
             }
             body.add(new BorderPrint(printGruntMembersData(gruntMenbers), border), 2);
         }
