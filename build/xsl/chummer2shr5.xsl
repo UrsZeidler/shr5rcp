@@ -587,10 +587,11 @@
 				<members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@generators.1"
 					choosenLifestyle="//@entries.1/@groups.0/@members.2/@contracts.1"
 					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-					<persona xsi:type="shr5:MudanPersona" name="Rob" edgeBasis="1" image="/shr5Resource/images/rob.png"
-						konstitutionBasis="9" geschicklichkeitBasis="4" reaktionBasis="3"
-						staerkeBasis="11" charismaBasis="3" willenskraftBasis="4"
-						intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.4">
+					<persona xsi:type="shr5:MudanPersona" name="Rob" edgeBasis="1"
+						image="/shr5Resource/images/rob.png" konstitutionBasis="9"
+						geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="11"
+						charismaBasis="3" willenskraftBasis="4" intuitionBasis="3"
+						logikBasis="3" spezies="//@entries.0/@entries.2/@entries.4">
 						<fertigkeiten stufe="2"
 							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
 						<fertigkeiten stufe="2"
@@ -976,55 +977,135 @@
 			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" />
 		</entries>
 		<entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
-		
-		
-    <groups name="non player group">
-      <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.0/@generatorSrc" choosenLifestyle="//@entries.2/@groups.0/@members.0/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-        <persona xsi:type="shr5:MudanPersona" image="/shr5Resource/images/MrBordello_Strategy_Game_Tileset_19.png" name="Thugs &amp; mouth breathers" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0">
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.10"/>
-        </persona>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4"/>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Meta Link" kategorie="Commlink"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Thugs &amp; mouth breathers" selectedSpecies="//@entries.0/@entries.2/@entries.0">
-          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
-        </generatorSrc>
-      </members>
-      <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.1/@generatorSrc" choosenLifestyle="//@entries.2/@groups.0/@members.1/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
-        <persona xsi:type="shr5:MudanPersona" image="/shr5Resource/images/Cowboy_Shooting_Gun_Wild_West_Vector_Pixel_Art.png" name="Thug lieutenant" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten fertigkeit="//@entries.0/@entries.4/@entries.9"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.4/@entries.10"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-        </persona>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="30" verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4"/>
-        <inventar xsi:type="shr5:Feuerwaffe" page="425" srcBook="//@entries.0/@entries.0/@entries.0" wert="320" verfuegbarkeit="4R" name="Colt America L36" schadenscode="7P" praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-        </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" page="422" srcBook="//@entries.0/@entries.0/@entries.0" wert="10" verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1"/>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Meta Link" kategorie="Commlink"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Street" page="95" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit=""/>
-        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Thug lieutenant" selectedSpecies="//@entries.0/@entries.2/@entries.0">
-          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
-        </generatorSrc>
-      </members>
-    </groups>
-    <grunts name="Thugs">
-      <members count="7" nsc="//@entries.2/@groups.0/@members.0"/>
-      <leader count="1" nsc="//@entries.2/@groups.0/@members.1"/>
-    </grunts>
-			
-			
-			
+
+
+			<groups name="non player group">
+				<members xsi:type="shr5mngt:NonPlayerCharacter"
+					chracterSource="//@entries.2/@groups.0/@members.0/@generatorSrc"
+					choosenLifestyle="//@entries.2/@groups.0/@members.0/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
+					<persona xsi:type="shr5:MudanPersona"
+						image="/shr5Resource/images/MrBordello_Strategy_Game_Tileset_19.png"
+						name="Thugs &amp; mouth breathers" konstitutionBasis="3"
+						geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3"
+						charismaBasis="2" willenskraftBasis="3" intuitionBasis="3"
+						logikBasis="2" spezies="//@entries.0/@entries.2/@entries.0">
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.10" />
+					</persona>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="30"
+						verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4" />
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="10"
+						verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P"
+						praezision="5" durchschlagsKraft="-1" />
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
+					<contracts xsi:type="shr5:Lifestyle" name="Street" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="" />
+					<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator"
+						character="//@entries.2/@groups.0/@members.0" generator="//@entries.0/@entries.16/@entries.1"
+						state="commited" selectedGroup="//@entries.2/@groups.0"
+						characterName="Thugs &amp; mouth breathers" selectedSpecies="//@entries.0/@entries.2/@entries.0">
+						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+					</generatorSrc>
+				</members>
+				<members xsi:type="shr5mngt:NonPlayerCharacter"
+					chracterSource="//@entries.2/@groups.0/@members.1/@generatorSrc"
+					choosenLifestyle="//@entries.2/@groups.0/@members.1/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.6" sex="male">
+					<persona xsi:type="shr5:MudanPersona"
+						image="/shr5Resource/images/Cowboy_Shooting_Gun_Wild_West_Vector_Pixel_Art.png"
+						name="Thug lieutenant" konstitutionBasis="3"
+						geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="4"
+						charismaBasis="3" willenskraftBasis="3" intuitionBasis="3"
+						logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.0" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.1" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten fertigkeit="//@entries.0/@entries.4/@entries.9" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.4/@entries.10" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.53" />
+					</persona>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="30"
+						verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4" />
+					<inventar xsi:type="shr5:Feuerwaffe" page="425"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="320"
+						verfuegbarkeit="4R" name="Colt America L36" schadenscode="7P"
+						praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
+						<modie>HM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+					</inventar>
+					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="10"
+						verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P"
+						praezision="5" durchschlagsKraft="-1" />
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
+					<contracts xsi:type="shr5:Lifestyle" name="Street" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="" />
+					<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator"
+						character="//@entries.2/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.1"
+						state="commited" selectedGroup="//@entries.2/@groups.0"
+						characterName="Thug lieutenant" selectedSpecies="//@entries.0/@entries.2/@entries.0">
+						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+					</generatorSrc>
+
+					<members xsi:type="shr5mngt:NonPlayerCharacter"
+						chracterSource="//@entries.2/@groups.0/@members.2/@generatorSrc"
+						sex="male">
+						<persona xsi:type="shr5:MudanPersona" name="Delvil Rat"
+							edgeBasis="2" konstitutionBasis="2" geschicklichkeitBasis="5"
+							reaktionBasis="5" staerkeBasis="1" charismaBasis="5"
+							willenskraftBasis="3" intuitionBasis="5" logikBasis="2"
+							spezies="//@entries.0/@entries.17/@entries.208">
+							<fertigkeiten stufe="5"
+								fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0" />
+							<fertigkeiten stufe="2"
+								fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1" />
+							<fertigkeiten stufe="5"
+								fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+							<fertigkeiten stufe="4"
+								fertigkeit="//@entries.0/@entries.4/@entries.8" />
+							<eigenschaften name="Allergy Sun(Common, Mild)"
+								page="78" srcBook="//@entries.0/@entries.0/@entries.0"
+								karmaKosten="-10" />
+						</persona>
+						<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator"
+							character="//@entries.2/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.1"
+							state="commited" selectedGroup="//@entries.2/@groups.0"
+							characterName="Delvil Rat" selectedSpecies="//@entries.0/@entries.17/@entries.208">
+							<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+						</generatorSrc>
+					</members>
+
+				</members>
+			</groups>
+			<grunts name="Thugs">
+				<members count="7" nsc="//@entries.2/@groups.0/@members.0" />
+				<leader count="1" nsc="//@entries.2/@groups.0/@members.1" />
+			</grunts>
+
+
+
 		</entries>
 
 
@@ -1294,6 +1375,7 @@
 	<xsl:template match="//metatype" mode="critter">
 		<entries xsi:type="shr5:Critter">
 			<xsl:call-template name="species-data" />
+
 		</entries>
 	</xsl:template>
 
@@ -1403,7 +1485,7 @@
 		<xsl:call-template name="quelle" />
 		<xsl:call-template name="mods" />
 		<angriff schadenscode="(STR)P" />
-		
+
 	</xsl:template>
 
 	<!-- zauber -->
