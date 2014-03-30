@@ -48,6 +48,9 @@
         lowerBound="1" eType="#//CharacterAdvancementSystem"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrioritySystem" abstract="true" eSuperTypes="#//CharacterGeneratorSystem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The priority system collects a set of generation options."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="priorities" upperBound="-1"
         eType="#//PriorityCategorie" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -73,6 +76,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5System" eSuperTypes="#//PrioritySystem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The shr5System describes the values of the different rule factors. This is the main description of the character generator system for shr5."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResourceFactor"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToMagicFactor" lowerBound="1"
@@ -442,6 +448,9 @@
         upperBound="-1" eType="#//Advancement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5RuleGenerator" abstract="true" eSuperTypes="#//CharacterGenerator">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The shr5 rule generator collects the main rules for all character generation."/>
+    </eAnnotations>
     <eOperations name="hasSpendAllPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
@@ -503,6 +512,9 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator" eSuperTypes="#//Shr5RuleGenerator">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama."/>
+    </eAnnotations>
     <eOperations name="hasSpendAllKarmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
