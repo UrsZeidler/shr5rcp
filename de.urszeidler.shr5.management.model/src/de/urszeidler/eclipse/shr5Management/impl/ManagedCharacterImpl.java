@@ -660,7 +660,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
                     addKarma = g.getShr5Generator().getKarmaPoints() - g.getKarmaSpend();
                     return addKarma;
                 } else {
-                    addKarma = g.getStartKarma();
+                    addKarma = g.getStartKarma()+ShadowrunManagmentTools.getKarmaSpend(this);
                     return ShadowrunManagmentTools.getKarmaGaint(this) + addKarma;
                 }
             } else if (getChracterSource() instanceof Shr5KarmaGenerator) {

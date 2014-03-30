@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -72,7 +73,11 @@ public class ShadowrunManagmentTools {
         for (Changes change : changes) {
             if (!change.eClass().equals(Shr5managementPackage.Literals.KARMA_GAINT)) {
                 if (change.isChangeApplied()) {
-                    karmaGaint = karmaGaint + change.getKarmaCost();
+                    if (managedCharacter.getGeneratorSrc() != null) {
+                        if (managedCharacter.getGeneratorSrc().getState() == GeneratorState.COMMITED && change.getDate() != null)
+                            karmaGaint = karmaGaint + change.getKarmaCost();
+                    } else
+                        karmaGaint = karmaGaint + change.getKarmaCost();
                 }
             }
         }
