@@ -58,10 +58,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.model.ide.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.view.rule.feature"
          version="0.0.0"/>
 
@@ -126,7 +122,43 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.validation.feature"
+         id="org.eclipse.emf.ecp.ecore.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.emfforms.runtime.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.license.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.categorization.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.model.controls.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.model.editor.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.template.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.template.helper.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.treemasterdetail.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.unset.feature"
          version="0.0.0"/>
 
    <plugin
