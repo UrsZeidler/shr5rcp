@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="emf-client-platform-target" sequenceNumber="24">
+<?pde version="3.8"?><target name="emf-client-platform-target" sequenceNumber="26">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.ide" version="4.3.1.M20130911-1000"/>
-<unit id="org.eclipse.rcp.feature.group" version="4.3.1.v20130911-1000"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20140319-1722"/>
+<repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.ecp.view.categorization.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.treemasterdetail.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.label.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.custom.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.model.controls.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.e3.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.viewmodel.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.rule.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.template.helper.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.table.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.model.editor.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.unset.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.emfforms.runtime.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.validation.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.groupedgrid.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.ecore.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.separator.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.vertical.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.group.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.horizontal.feature.feature.group" version="1.2.1.20140311-1143"/>
+<unit id="org.eclipse.emf.ecp.view.template.feature.feature.group" version="1.2.1.20140311-1143"/>
+<repository location="http://download.eclipse.org/ecp/releases/releases_12"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.nebula.visualization.feature.feature.group" version="0.9.9.201403281303"/>
+<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201403281303"/>
+<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201403281303"/>
+<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201403281303"/>
+<repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.7.0.201306111400"/>
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.9.1.v20130902-0605"/>
 <unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.7.0.201306111341"/>
 <repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.ecp.view.separator.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.horizontal.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.emfstore.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.vertical.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.validation.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.group.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.groupedgrid.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.table.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.viewmodel.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.label.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.validation.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.model.ide.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.e3.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.custom.feature.feature.group" version="1.1.1.20131114-1613"/>
-<unit id="org.eclipse.emf.ecp.view.rule.feature.feature.group" version="1.1.1.20131114-1613"/>
-<repository location="http://download.eclipse.org/emfclient/releases_11/111"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.visualization.feature.feature.group" version="0.9.9.201403182228"/>
-<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201403182228"/>
-<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201403182228"/>
-<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201403182228"/>
-<repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.babel.nls_modeling.emft.emf-client_de.feature.group" version="4.3.0.v20131123020001"/>
@@ -58,20 +64,21 @@
 <repository location="file:/home/urs/etc/custombuilding/kepler/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.sdk" version="4.3.1.M20130911-1000"/>
-<unit id="org.eclipse.sdk.ide" version="4.3.1.M20130911-1000"/>
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20130828-0031"/>
-<unit id="org.eclipse.platform.ide" version="4.3.1.M20130911-1000"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.net4j.sdk.feature.group" version="4.2.1.v20130806-0658"/>
 <unit id="org.eclipse.emf.sdk.feature.group" version="2.9.1.v20130902-0605"/>
 <repository location="http://download.eclipse.org/releases/kepler"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20140319-1722"/>
-<repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/"/>
+<unit id="org.eclipse.platform.ide" version="4.3.1.M20130911-1000"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.3.1.v20130911-1000"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.platform.sdk" version="4.3.1.M20130911-1000"/>
+<unit id="org.eclipse.sdk.ide" version="4.3.1.M20130911-1000"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20130828-0031"/>
+<unit id="org.eclipse.platform.ide" version="4.3.1.M20130911-1000"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
 </location>
 </locations>
 </target>

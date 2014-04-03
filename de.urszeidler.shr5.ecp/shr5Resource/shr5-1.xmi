@@ -4767,6 +4767,18 @@
 <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.1" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Thug lieutenant" selectedSpecies="//@entries.0/@entries.2/@entries.0">
 <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
 </generatorSrc>
+<members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.2/@generatorSrc" sex="male">
+<persona xsi:type="shr5:MudanPersona" name="Delvil Rat" edgeBasis="2" konstitutionBasis="2" geschicklichkeitBasis="5" reaktionBasis="5" staerkeBasis="1" charismaBasis="5" willenskraftBasis="3" intuitionBasis="5" logikBasis="2" spezies="//@entries.0/@entries.17/@entries.208">
+<fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0"/>
+<fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1"/>
+<fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+<fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
+<eigenschaften name="Allergy Sun(Common, Mild)" page="78" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-10"/>
+</persona>
+<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Delvil Rat" selectedSpecies="//@entries.0/@entries.17/@entries.208">
+<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+</generatorSrc>
+</members>
 </members>
 </groups>
 <grunts name="Thugs">
