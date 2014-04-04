@@ -40,9 +40,17 @@ http://www.shadowruntabletop.com/
       <linux icon="/de.urszeidler.shr5.product/icons/shrImage_6_64.xpm"/>
       <solaris/>
       <win useIco="false">
-         <bmp/>
+         <bmp
+            winSmallHigh="/de.urszeidler.shr5.product/icons/shrImage_6_16.ico"
+            winSmallLow="/de.urszeidler.shr5.product/icons/shrImage_6_16_1.ico"
+            winMediumHigh="/de.urszeidler.shr5.product/icons/shrImage_6_32.ico"
+            winMediumLow="/de.urszeidler.shr5.product/icons/shrImage_6_32_1.ico"
+            winLargeHigh="/de.urszeidler.shr5.product/icons/shrImage_6_48.ico"
+            winLargeLow="/de.urszeidler.shr5.product/icons/shrImage_6_48_1.ico"
+            winExtraLargeHigh="/de.urszeidler.shr5.product/icons/shrImage_6_256.ico"/>
       </win>
    </launcher>
+
 
    <vm>
    </vm>
