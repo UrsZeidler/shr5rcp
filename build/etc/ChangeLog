@@ -1,3 +1,10 @@
+2014-04-27 Version 0.1.5
+
+* update to ecp 1.2
+* added ammunition as object type
+* import from chummer2 :
+	* ammunition as object
+
 2014-03-30 Version 0.1.4
 
 * added karma based generator
