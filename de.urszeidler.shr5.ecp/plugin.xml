@@ -13,7 +13,7 @@
       <file
             filePath="viewmodels/feuerwaffe.view">
       </file>
-      -->
+     
       <file
             filePath="viewmodels/shrList.view">
       </file>
@@ -33,7 +33,7 @@
            <file
             filePath="viewmodels/fertigkeit.view">
       </file>
-
+ -->
       
    </extension>
    <extension
@@ -51,7 +51,7 @@
                supportedFeature="attribut">
          </staticTest>
       </control>
-      -->
+     
             <control
             class="de.urszeidler.shr5.ecp.widgets.AttributModifikatorWidget"
             id="de.urszeidler.shr5.ecp.AttributModifikatorWidget1"
@@ -62,6 +62,7 @@
                supportedClassType="org.eclipse.emf.ecore.EAttribute">
          </staticTest>
       </control>
+       -->
       <!--
       <control
             class="de.urszeidler.shr5.ecp.widgets.BeschreibbarTableWidget"
