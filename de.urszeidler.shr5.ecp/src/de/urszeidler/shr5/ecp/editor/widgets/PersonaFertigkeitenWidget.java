@@ -537,7 +537,8 @@ public class PersonaFertigkeitenWidget extends Composite {
                 } else {
                     Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
                     editingDomain.getCommandStack().execute(cmd);
-                    persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,  Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
+                    persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
+                            Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
                 }
             }
         } else if (element instanceof FertigkeitsGruppe) {
@@ -549,10 +550,14 @@ public class PersonaFertigkeitenWidget extends Composite {
                 pfg.setStufe((Integer)value);
                 personaFertigkeitsGruppen.add(pfg);
             } else {
-                Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
-                editingDomain.getCommandStack().execute(cmd);
-                persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,  Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, 0, 1));
-
+                if (personaFertigkeitsGruppe.getStufe() == 0) {
+                    personaFertigkeitsGruppen.remove(personaFertigkeitsGruppe);
+                } else {
+                    Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
+                    editingDomain.getCommandStack().execute(cmd);
+                    persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
+                            Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, 0, 1));
+                }
             }
         }
     }
