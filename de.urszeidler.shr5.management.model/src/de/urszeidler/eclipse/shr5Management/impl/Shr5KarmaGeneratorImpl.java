@@ -302,7 +302,6 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
         if (getShr5Generator() == null || getCharacterConcept() == null || getMetaType() == null || getCharacter() == null
                 || getCharacter().getPersona() == null)
             return 0;
-        int karmaKosten = 0;
 
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter());
         int connectionsSpend = ShadowrunManagmentTools.calcConnectionsSpend(getCharacter()) * getShr5Generator().getKarmaToConnectionFactor();
@@ -383,7 +382,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString("_UI_NotSpendAllPoints",
-                                new Object[]{ "hasSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this ,Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
             }
             return false;
         }
@@ -409,7 +408,7 @@ public class Shr5KarmaGeneratorImpl extends Shr5RuleGeneratorImpl implements Shr
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_KARMA_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotSpendAllKarmaPoints", new Object[]{ EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                "_UI_NotSpendAllKarmaPoints", new Object[]{ EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
             }
             return false;
         }

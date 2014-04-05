@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5Management.MetaType;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
@@ -740,7 +741,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_CATEGORY_ONLY_ONCE, ModelPlugin.INSTANCE.getString("_UI_CategoryOnlyOnce",
-                                new Object[]{ "hasCategoryOnlyOnce", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasCategoryOnlyOnce", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                    Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR}));
             }
             return false;
         }
@@ -793,7 +795,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_SPEND_ALL_POINTS, ModelPlugin.INSTANCE.getString("_UI_NotSpendAllPoints",
-                                new Object[]{ "hasSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                    Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
             }
             return false;
         }
@@ -818,7 +821,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_ATTRIBUTES_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllAttributesPoints", new Object[]{ diff,
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
-                        new Object[]{ this }));
+                        new Object[]{ this, Shr5managementPackage.Literals.SHR5_GENERATOR__ATTRIBUTE }));
             }
             return false;
         }
@@ -845,7 +848,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendSkillAllPoints",
-                                new Object[]{ "hasSpendAllSkillPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllSkillPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                    Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS }));
             }
             return false;
         }
@@ -870,7 +874,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllSpecialPoints", new Object[]{ diff,
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
-                        new Object[]{ this }));
+                        new Object[]{ this, Shr5managementPackage.Literals.SHR5_GENERATOR__META_TYPE }));
             }
             return false;
         }
@@ -904,12 +908,11 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
 
         if (!hasSpendAllPoints) {
             if (diagnostics != null) {
-                diagnostics
-                        .add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                                Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_TYPE_POINTS, ModelPlugin.INSTANCE.getString(
-                                        "_UI_NotSpendAllSpecialTypePoints",
-                                        new Object[]{ "hasSpendAllSpecialTypePoints", EObjectValidator.getObjectLabel(this, context) }),
-                                new Object[]{ this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPECIAL_TYPE_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllSpecialTypePoints",
+                                new Object[]{ "hasSpendAllSpecialTypePoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                    Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC }));
             }
             return false;
         }
@@ -942,7 +945,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS, ModelPlugin.INSTANCE.getString(
-                                "_UI_NotSpendAllConnectionPoints", new Object[]{}), new Object[]{ this }));
+                                "_UI_NotSpendAllConnectionPoints", new Object[]{}), new Object[]{ this, Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
             }
             return false;
         }
@@ -971,7 +974,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_RESOURCE_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllResourcePoints", new Object[]{ diff,
                                         diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") }),
-                        new Object[]{ this }));
+                        new Object[]{ this, Shr5managementPackage.Literals.SHR5_GENERATOR__RESOURCEN }));
             }
             return false;
         }
@@ -993,12 +996,11 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         int diff = getMagic().getSkillNumber() - getMagic().calcSkillsSpend(getCharacter());
         if (diff != 0) {
             if (diagnostics != null) {
-                diagnostics
-                        .add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                                Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_SKILLS_POINTS, ModelPlugin.INSTANCE.getString(
-                                        "_UI_NotSpendAllMagicSkillsPoints",
-                                        new Object[]{ "hasSpendAllMagicSkillsPoints", EObjectValidator.getObjectLabel(this, context) }),
-                                new Object[]{ this }));
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_SKILLS_POINTS, ModelPlugin.INSTANCE.getString(
+                                "_UI_NotSpendAllMagicSkillsPoints",
+                                new Object[]{ "hasSpendAllMagicSkillsPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                                Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC }));
             }
             return false;
         }
@@ -1023,7 +1025,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_MAGIC_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllMagicPoints",
-                                new Object[]{ "hasSpendAllMagicPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllMagicPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                                Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC }));
             }
             return false;
         }
@@ -1050,7 +1053,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_GROUP_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllGroupPoints",
-                                new Object[]{ "hasSpendAllGroupPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllGroupPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                    Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS }));
             }
             return false;
         }
@@ -1075,8 +1079,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_KNOWLEGE_SKILL_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllKnowlegeSkillPoints",
-                                new Object[]{ "hasSpendAllKnowlegeSkillPoints", EObjectValidator.getObjectLabel(this, context) }),
-                        new Object[]{ this }));
+                                new Object[]{ "hasSpendAllKnowlegeSkillPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{
+                                this, Shr5managementPackage.Literals.SHR5_GENERATOR__SKILLS }));
             }
             return false;
         }
@@ -1105,7 +1109,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_KARMA_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllKarmaPoints",
-                                new Object[]{ "hasSpendAllKarmaPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllKarmaPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                                Shr5managementPackage.Literals.SHR5_RULE_GENERATOR__SHR5_GENERATOR }));
             }
             return false;
         }
@@ -1142,7 +1147,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_SPELL_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllSpellPoints",
-                                new Object[]{ "hasSpendAllSpellPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllSpellPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                                Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC }));
             }
             return false;
         }
@@ -1187,7 +1193,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_POWER_POINTS, ModelPlugin.INSTANCE.getString(
                                 "_UI_NotSpendAllPowerPoints",
-                                new Object[]{ "hasSpendAllPowerPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                                new Object[]{ "hasSpendAllPowerPoints", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this,
+                                Shr5managementPackage.Literals.SHR5_GENERATOR__MAGIC }));
             }
             return false;
         }
