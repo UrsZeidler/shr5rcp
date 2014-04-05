@@ -130,8 +130,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rueckstoss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
         eType="#//FernkampfwaffeModifikator" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="magazin" upperBound="-1"
-        eType="#//Munition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="magazin" unique="false"
+        upperBound="-1" eType="#//Munition">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This reference holds the current loaded amuntition, when used the first element should be removed."/>
       </eAnnotations>
