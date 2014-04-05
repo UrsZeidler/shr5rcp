@@ -1068,7 +1068,7 @@
 						characterName="Thug lieutenant" selectedSpecies="//@entries.0/@entries.2/@entries.0">
 						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
 					</generatorSrc>
-
+				</members>
 					<members xsi:type="shr5mngt:NonPlayerCharacter"
 						chracterSource="//@entries.2/@groups.0/@members.2/@generatorSrc"
 						sex="male">
@@ -1097,7 +1097,7 @@
 						</generatorSrc>
 					</members>
 
-				</members>
+
 			</groups>
 			<grunts name="Thugs">
 				<members count="7" nsc="//@entries.2/@groups.0/@members.0" />
@@ -1484,7 +1484,7 @@
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
 		<xsl:call-template name="mods" />
-		<angriff schadenscode="(STR)P" />
+		<angriff name="unarmed" schadenscode="(STR)P" />
 
 	</xsl:template>
 
@@ -1585,6 +1585,7 @@
 	<xsl:template match="skillgroups/name">
 		<entries xsi:type="shr5:FertigkeitsGruppe">
 			<xsl:attribute name="name"><xsl:value-of select="text()" /></xsl:attribute>
+			<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 			<xsl:variable name="name" select="text()" />
 			<xsl:for-each select="$skills">
 				<xsl:for-each select="chummer/skills/*">
@@ -1657,10 +1658,36 @@
 		</entries>
 	</xsl:template>
 	<xsl:template match="//gear">
-		<entries xsi:type="shr5:Gegenstand">
-			<xsl:attribute name="kategorie"><xsl:value-of select="category/text()" /></xsl:attribute>
-			<xsl:call-template name="gegenstand-basis" />
-		</entries>
+		<xsl:choose>
+			<xsl:when test="category/text()='Ammunition' and  starts-with(name/text(),'Ammo:' )">
+				<entries xsi:type="shr5:Munition">
+					<xsl:if test="number(costfor/text())">
+						<xsl:attribute name="proAnzahl">
+					<xsl:value-of select="costfor/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(weaponbonus/damage/text())">
+						<xsl:attribute name="damageMod">
+					<xsl:value-of select="weaponbonus/damage/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="number(weaponbonus/ap/text())">
+						<xsl:attribute name="armorMod">
+					<xsl:value-of select="weaponbonus/ap/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="gegenstand-basis" />
+				</entries>
+			</xsl:when>
+			<xsl:otherwise>
+				<entries xsi:type="shr5:Gegenstand">
+					<xsl:attribute name="kategorie"><xsl:value-of
+						select="category/text()" /></xsl:attribute>
+					<xsl:call-template name="gegenstand-basis" />
+				</entries>
+			</xsl:otherwise>
+		</xsl:choose>
+
 	</xsl:template>
 	<xsl:template match="//vehicle">
 		<xsl:choose>
