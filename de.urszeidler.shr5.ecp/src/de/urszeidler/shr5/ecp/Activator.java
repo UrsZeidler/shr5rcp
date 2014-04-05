@@ -90,31 +90,26 @@ public class Activator extends AbstractUIPlugin {
             }
         }
     }
-    
+
     private void copyResource(IProgressMonitor monitor, IProject project) throws CoreException {
         Bundle extensionBundle = Activator.getDefault().getBundle();
-        IContainer target =project;//.getFolder("resource");
+        IContainer target = project;// .getFolder("resource");
         Enumeration<String> entryPaths = extensionBundle.getEntryPaths("shr5Resource");
-        processPath(entryPaths, target, extensionBundle, "shr5Resource");        
+        processPath(entryPaths, target, extensionBundle, "shr5Resource");
     }
 
-    protected void processPath(Enumeration<String> entryPaths, IContainer target,
-            Bundle extensionBundle, String basename) throws CoreException {
+    protected void processPath(Enumeration<String> entryPaths, IContainer target, Bundle extensionBundle, String basename) throws CoreException {
         for (Enumeration<String> iter = entryPaths; iter.hasMoreElements();) {
-            String name = (String) iter.nextElement();
+            String name = (String)iter.nextElement();
             if (name.endsWith("/.svn/"))
                 continue;
 
             File file = getFile(name);
-            IFileStore fileStore = EFS.getLocalFileSystem().getStore(
-                    target.getLocationURI());
+            IFileStore fileStore = EFS.getLocalFileSystem().getStore(target.getLocationURI());
             IContainer ntarget;
             if (file.isDirectory()) {
-                IFileStore dir = fileStore.getChild(
-                        name.substring(basename.length())).mkdir(EFS.SHALLOW,
-                        null);
-                IContainer[] containers = ResourcesPlugin.getWorkspace()
-                        .getRoot().findContainersForLocationURI(dir.toURI());
+                IFileStore dir = fileStore.getChild(name.substring(basename.length())).mkdir(EFS.SHALLOW, null);
+                IContainer[] containers = ResourcesPlugin.getWorkspace().getRoot().findContainersForLocationURI(dir.toURI());
                 if (containers.length == 1) {
                     Enumeration<String> entrys = extensionBundle.getEntryPaths(name);
                     ntarget = containers[0];
@@ -129,7 +124,7 @@ public class Activator extends AbstractUIPlugin {
         }
 
     }
-    
+
     public IResource generate(IProgressMonitor monitor, File _source, IContainer _destination) throws CoreException {
         monitor.setTaskName("Template Generation Process");
         IResource dest = null;
@@ -140,9 +135,7 @@ public class Activator extends AbstractUIPlugin {
         return dest;
     }
 
-    
-    protected IFile _copyFile(File file, IContainer dest,
-            IProgressMonitor monitor) throws CoreException {
+    protected IFile _copyFile(File file, IContainer dest, IProgressMonitor monitor) throws CoreException {
         String targetFileName = (file.getName());
 
         monitor.subTask(targetFileName);
@@ -150,7 +143,7 @@ public class Activator extends AbstractUIPlugin {
 
         InputStream stream = null;
         try {
-            stream =  new FileInputStream(file);
+            stream = new FileInputStream(file);
             if (dstFile.exists()) {
                 dstFile.setContents(stream, true, true, monitor);
             } else {
@@ -158,13 +151,13 @@ public class Activator extends AbstractUIPlugin {
             }
 
         } catch (IOException ioe) {
-            logError("error while copy file",ioe);
+            logError("error while copy file", ioe);
             try {
                 if (stream != null) {
                     stream.close();
                 }
             } catch (IOException ioe2) {
-                logError("error while closing stream file",ioe2);
+                logError("error while closing stream file", ioe2);
             }
         }
 
@@ -175,8 +168,8 @@ public class Activator extends AbstractUIPlugin {
      * Returns the file of the given relativePath
      * 
      * @param relativePath
-     *            the relativePath of the template which represent the file to
-     *            get
+     * the relativePath of the template which represent the file to
+     * get
      * @return the file
      */
     protected File getFile(String relativePath) {
@@ -188,12 +181,12 @@ public class Activator extends AbstractUIPlugin {
         } catch (IOException e) {
             e.printStackTrace();
             ILog log = Activator.getDefault().getLog();
-            log.log(new  Status(IStatus.ERROR,Activator.PLUGIN_ID,e.getMessage()));
-            
+            log.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage()));
+
         }
         return null;
     }
-    
+
     /*
      * (non-Javadoc)
      * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
@@ -210,6 +203,11 @@ public class Activator extends AbstractUIPlugin {
     public static void logError(String message) {
         plugin.getLog().log(new Status(IStatus.ERROR, plugin.getBundle().getSymbolicName(), message));
     }
+
+    public static void logError(Exception e) {
+        plugin.getLog().log(new Status(IStatus.ERROR, plugin.getBundle().getSymbolicName(), e.getMessage(), e));
+    }
+
     public static void logInfo(String message) {
         plugin.getLog().log(new Status(IStatus.INFO, plugin.getBundle().getSymbolicName(), message));
     }

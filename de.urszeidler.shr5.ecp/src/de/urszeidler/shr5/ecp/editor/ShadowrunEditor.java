@@ -81,6 +81,7 @@ import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancementPage;
+import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
@@ -446,6 +447,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return null;
             }
 
+            
+           
+            
         };
 
         shadowrunSwitch.doSwitch(theEObject);
@@ -558,6 +562,13 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
         };
         shr5managementSwitch.doSwitch(theEObject);
 
+        
+        try {
+            addPage(new DefaultEmfFormsPage(ShadowrunEditor.this, "Default_EMF_Form_Page", "default form",
+                                theEObject));
+        } catch (PartInitException e) {
+            logError("error creating DefaultEmfFormsPage", e);//$NON-NLS-1$
+        }
     }
 
     @Override
