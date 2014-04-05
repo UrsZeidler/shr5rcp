@@ -1812,13 +1812,22 @@ public interface Shr5Package extends EPackage {
 	int FEUERWAFFE__EINBAU = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 5;
 
 	/**
+     * The feature id for the '<em><b>Magazin</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FEUERWAFFE__MAGAZIN = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 6;
+
+    /**
      * The number of structural features of the '<em>Feuerwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FEUERWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 6;
+	int FEUERWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 7;
 
 	/**
      * The number of operations of the '<em>Feuerwaffe</em>' class.
@@ -11192,6 +11201,215 @@ public interface Shr5Package extends EPackage {
     int CREDSTICK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Menge <em>Menge</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Menge
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMenge()
+     * @generated
+     */
+    int MENGE = 81;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MENGE__ANZAHL = 0;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MENGE__PRO_ANZAHL = 1;
+
+    /**
+     * The number of structural features of the '<em>Menge</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MENGE_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Menge</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MENGE_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl <em>Munition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MunitionImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMunition()
+     * @generated
+     */
+    int MUNITION = 82;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__WERT = ABSTRAKT_GEGENSTAND__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__NAME = ABSTRAKT_GEGENSTAND__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__MODS = ABSTRAKT_GEGENSTAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__ANZAHL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__PRO_ANZAHL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Damage Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__DAMAGE_TYPE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Damage Mod</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__DAMAGE_MOD = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Armor Mod</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__ARMOR_MOD = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__TYPE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 5;
+
+    /**
+     * The number of structural features of the '<em>Munition</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 6;
+
+    /**
+     * The number of operations of the '<em>Munition</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11199,7 +11417,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 81;
+	int FEUER_MODUS = 83;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -11209,7 +11427,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 82;
+	int SCHADENS_TYP = 84;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -11219,7 +11437,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 83;
+	int MAGAZIN_TYP = 85;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -11229,7 +11447,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 84;
+	int FEUWERWAFFEN_ERWEITERUNG = 86;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -11239,7 +11457,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 85;
+	int MODIFIKATOR_TYPE = 87;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -11249,7 +11467,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 86;
+	int SMARTGUN_TYPE = 88;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -11259,7 +11477,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 87;
+	int ZAUBER_ART = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -11269,7 +11487,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 88;
+	int ZAUBER_REICHWEITE = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -11279,7 +11497,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 89;
+	int ZAUBER_DAUER = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -11289,7 +11507,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 90;
+	int MAGISCHE_TRADITION = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -11299,7 +11517,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 91;
+	int CRITTER_HANDLUNG = 93;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -11309,7 +11527,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 92;
+	int CRITTER_REICHWEITE = 94;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -11319,7 +11537,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 93;
+	int CRITTER_DAUER = 95;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -11329,7 +11547,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 94;
+	int RESONANZ_ZIEL = 96;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -11339,7 +11557,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 95;
+	int SHR_DATE = 97;
 
 
 	/**
@@ -11350,7 +11568,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 96;
+	int MODIFICATION_MANAGER = 98;
 
 
 	/**
@@ -12108,6 +12326,17 @@ public interface Shr5Package extends EPackage {
 	EReference getFeuerwaffe_Einbau();
 
 	/**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Magazin</em>'.
+     * @see de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin()
+     * @see #getFeuerwaffe()
+     * @generated
+     */
+    EReference getFeuerwaffe_Magazin();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Wurfwaffe <em>Wurfwaffe</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14408,6 +14637,92 @@ public interface Shr5Package extends EPackage {
     EAttribute getCredstick_MaxValue();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Menge <em>Menge</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Menge</em>'.
+     * @see de.urszeidler.eclipse.shr5.Menge
+     * @generated
+     */
+    EClass getMenge();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Menge#getAnzahl <em>Anzahl</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Anzahl</em>'.
+     * @see de.urszeidler.eclipse.shr5.Menge#getAnzahl()
+     * @see #getMenge()
+     * @generated
+     */
+    EAttribute getMenge_Anzahl();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Menge#getProAnzahl <em>Pro Anzahl</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Pro Anzahl</em>'.
+     * @see de.urszeidler.eclipse.shr5.Menge#getProAnzahl()
+     * @see #getMenge()
+     * @generated
+     */
+    EAttribute getMenge_ProAnzahl();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Munition <em>Munition</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Munition</em>'.
+     * @see de.urszeidler.eclipse.shr5.Munition
+     * @generated
+     */
+    EClass getMunition();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Munition#getDamageType <em>Damage Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Damage Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.Munition#getDamageType()
+     * @see #getMunition()
+     * @generated
+     */
+    EAttribute getMunition_DamageType();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Munition#getDamageMod <em>Damage Mod</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Damage Mod</em>'.
+     * @see de.urszeidler.eclipse.shr5.Munition#getDamageMod()
+     * @see #getMunition()
+     * @generated
+     */
+    EAttribute getMunition_DamageMod();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Munition#getArmorMod <em>Armor Mod</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Armor Mod</em>'.
+     * @see de.urszeidler.eclipse.shr5.Munition#getArmorMod()
+     * @see #getMunition()
+     * @generated
+     */
+    EAttribute getMunition_ArmorMod();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Munition#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.Munition#getType()
+     * @see #getMunition()
+     * @generated
+     */
+    EReference getMunition_Type();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15185,6 +15500,14 @@ public interface Shr5Package extends EPackage {
 		EReference FEUERWAFFE__EINBAU = eINSTANCE.getFeuerwaffe_Einbau();
 
 		/**
+         * The meta object literal for the '<em><b>Magazin</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FEUERWAFFE__MAGAZIN = eINSTANCE.getFeuerwaffe_Magazin();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl <em>Wurfwaffe</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17033,6 +17356,74 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute CREDSTICK__MAX_VALUE = eINSTANCE.getCredstick_MaxValue();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Menge <em>Menge</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Menge
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMenge()
+         * @generated
+         */
+        EClass MENGE = eINSTANCE.getMenge();
+
+        /**
+         * The meta object literal for the '<em><b>Anzahl</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MENGE__ANZAHL = eINSTANCE.getMenge_Anzahl();
+
+        /**
+         * The meta object literal for the '<em><b>Pro Anzahl</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MENGE__PRO_ANZAHL = eINSTANCE.getMenge_ProAnzahl();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl <em>Munition</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.MunitionImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMunition()
+         * @generated
+         */
+        EClass MUNITION = eINSTANCE.getMunition();
+
+        /**
+         * The meta object literal for the '<em><b>Damage Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MUNITION__DAMAGE_TYPE = eINSTANCE.getMunition_DamageType();
+
+        /**
+         * The meta object literal for the '<em><b>Damage Mod</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MUNITION__DAMAGE_MOD = eINSTANCE.getMunition_DamageMod();
+
+        /**
+         * The meta object literal for the '<em><b>Armor Mod</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MUNITION__ARMOR_MOD = eINSTANCE.getMunition_ArmorMod();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference MUNITION__TYPE = eINSTANCE.getMunition_Type();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

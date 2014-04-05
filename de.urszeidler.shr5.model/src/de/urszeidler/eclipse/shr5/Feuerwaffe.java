@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getErweiterung <em>Erweiterung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getRueckstoss <em>Rueckstoss</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getEinbau <em>Einbau</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Feuerwaffe#getMagazin <em>Magazin</em>}</li>
  * </ul>
  * </p>
  *
@@ -158,5 +159,20 @@ public interface Feuerwaffe extends AbstaktFernKampfwaffe {
      * @generated
      */
 	EList<FernkampfwaffeModifikator> getEinbau();
+
+    /**
+     * Returns the value of the '<em><b>Magazin</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Munition}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This reference holds the current loaded amuntition, when used the first element should be removed.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Magazin</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getFeuerwaffe_Magazin()
+     * @model
+     * @generated
+     */
+    EList<Munition> getMagazin();
 
 } // Feuerwaffe

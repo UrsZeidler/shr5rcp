@@ -130,6 +130,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rueckstoss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="einbau" upperBound="-1"
         eType="#//FernkampfwaffeModifikator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="magazin" upperBound="-1"
+        eType="#//Munition">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This reference holds the current loaded amuntition, when used the first element should be removed."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Wurfwaffe" eSuperTypes="#//AbstaktFernKampfwaffe"/>
   <eClassifiers xsi:type="ecore:EEnum" name="MagazinTyp">
@@ -527,5 +533,26 @@
   <eClassifiers xsi:type="ecore:EClass" name="Credstick" eSuperTypes="#//AbstraktGegenstand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currenValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Menge" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This interface is used to define items coming in great numbers like amunition and others."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current count of items."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="proAnzahl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines the number of items for the cost, if the element is a GeldWert."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Munition" eSuperTypes="#//AbstraktGegenstand #//Menge">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageType" eType="#//SchadensTyp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="armorMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Reichweite"/>
   </eClassifiers>
 </ecore:EPackage>

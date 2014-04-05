@@ -66,11 +66,13 @@ import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.MagischeMods;
 import de.urszeidler.eclipse.shr5.MagischePersona;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
+import de.urszeidler.eclipse.shr5.Menge;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.ModifikatorType;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.MudanPersona;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.MysticAdept;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Panzerung;
@@ -684,6 +686,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass credstickEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass mengeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass munitionEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1489,6 +1505,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getFeuerwaffe_Magazin() {
+        return (EReference)feuerwaffeEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -3425,6 +3450,78 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMenge() {
+        return mengeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMenge_Anzahl() {
+        return (EAttribute)mengeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMenge_ProAnzahl() {
+        return (EAttribute)mengeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMunition() {
+        return munitionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMunition_DamageType() {
+        return (EAttribute)munitionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMunition_DamageMod() {
+        return (EAttribute)munitionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMunition_ArmorMod() {
+        return (EAttribute)munitionEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getMunition_Type() {
+        return (EReference)munitionEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3680,6 +3777,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(feuerwaffeEClass, FEUERWAFFE__ERWEITERUNG);
         createEAttribute(feuerwaffeEClass, FEUERWAFFE__RUECKSTOSS);
         createEReference(feuerwaffeEClass, FEUERWAFFE__EINBAU);
+        createEReference(feuerwaffeEClass, FEUERWAFFE__MAGAZIN);
 
         wurfwaffeEClass = createEClass(WURFWAFFE);
 
@@ -3961,6 +4059,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(credstickEClass, CREDSTICK__CURREN_VALUE);
         createEAttribute(credstickEClass, CREDSTICK__MAX_VALUE);
 
+        mengeEClass = createEClass(MENGE);
+        createEAttribute(mengeEClass, MENGE__ANZAHL);
+        createEAttribute(mengeEClass, MENGE__PRO_ANZAHL);
+
+        munitionEClass = createEClass(MUNITION);
+        createEAttribute(munitionEClass, MUNITION__DAMAGE_TYPE);
+        createEAttribute(munitionEClass, MUNITION__DAMAGE_MOD);
+        createEAttribute(munitionEClass, MUNITION__ARMOR_MOD);
+        createEReference(munitionEClass, MUNITION__TYPE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4108,6 +4216,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fakeableEClass.getESuperTypes().add(this.getVertrag());
         steigerbarEClass.getESuperTypes().add(this.getErlernbar());
         credstickEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        munitionEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        munitionEClass.getESuperTypes().add(this.getMenge());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4195,6 +4305,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFeuerwaffe_Erweiterung(), this.getFeuwerwaffenErweiterung(), "erweiterung", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFeuerwaffe_Rueckstoss(), ecorePackage.getEInt(), "rueckstoss", null, 0, 1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFeuerwaffe_Einbau(), this.getFernkampfwaffeModifikator(), null, "einbau", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFeuerwaffe_Magazin(), this.getMunition(), null, "magazin", null, 0, -1, Feuerwaffe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(wurfwaffeEClass, Wurfwaffe.class, "Wurfwaffe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4475,6 +4586,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(credstickEClass, Credstick.class, "Credstick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCredstick_CurrenValue(), ecorePackage.getEInt(), "currenValue", null, 0, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCredstick_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 0, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(mengeEClass, Menge.class, "Menge", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMenge_Anzahl(), ecorePackage.getEInt(), "anzahl", null, 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMenge_ProAnzahl(), ecorePackage.getEInt(), "proAnzahl", null, 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(munitionEClass, Munition.class, "Munition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMunition_DamageType(), this.getSchadensTyp(), "damageType", null, 0, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMunition_DamageMod(), ecorePackage.getEInt(), "damageMod", null, 0, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMunition_ArmorMod(), ecorePackage.getEInt(), "armorMod", null, 0, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getMunition_Type(), this.getReichweite(), null, "type", null, 1, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

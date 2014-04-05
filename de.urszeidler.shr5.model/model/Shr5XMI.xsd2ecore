@@ -179,6 +179,8 @@
       <nested inputs="shr5.ecore#//Feuerwaffe/erweiterung" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=1"/>
       <nested inputs="shr5.ecore#//Feuerwaffe/rueckstoss" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDAttributeUse=2"/>
       <nested inputs="shr5.ecore#//Feuerwaffe/einbau" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Feuerwaffe/magazin" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Feuerwaffe/magazin" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Feuerwaffe" outputs="Shr5XMI.xsd#//Feuerwaffe;XSDElementDeclaration=15"/>
     <nested inputs="shr5.ecore#//Wurfwaffe" outputs="Shr5XMI.xsd#//Wurfwaffe;XSDComplexTypeDefinition=16"/>
@@ -548,5 +550,20 @@
       <nested inputs="shr5.ecore#//Credstick/maxValue" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDAttributeUse=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Credstick" outputs="Shr5XMI.xsd#//Credstick;XSDElementDeclaration=80"/>
+    <nested inputs="shr5.ecore#//Menge" outputs="Shr5XMI.xsd#//Menge;XSDComplexTypeDefinition=81">
+      <nested inputs="shr5.ecore#//Menge/anzahl" outputs="Shr5XMI.xsd#//Menge;XSDComplexTypeDefinition=81/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Menge/proAnzahl" outputs="Shr5XMI.xsd#//Menge;XSDComplexTypeDefinition=81/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Menge" outputs="Shr5XMI.xsd#//Menge;XSDElementDeclaration=81"/>
+    <nested inputs="shr5.ecore#//Munition" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82">
+      <nested inputs="shr5.ecore#//Munition/damageType" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Munition/damageMod" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Munition/armorMod" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//Munition/type" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse=5"/>
+      <nested inputs="shr5.ecore#//Munition/type" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Menge/anzahl" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Menge/proAnzahl" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Munition" outputs="Shr5XMI.xsd#//Munition;XSDElementDeclaration=82"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

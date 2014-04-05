@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
@@ -19,6 +20,7 @@ import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
@@ -34,6 +36,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getErweiterung <em>Erweiterung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getRueckstoss <em>Rueckstoss</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getEinbau <em>Einbau</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getMagazin <em>Magazin</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,6 +134,16 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	protected EList<FernkampfwaffeModifikator> einbau;
 
 	/**
+     * The cached value of the '{@link #getMagazin() <em>Magazin</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMagazin()
+     * @generated
+     * @ordered
+     */
+    protected EList<Munition> magazin;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -250,6 +263,18 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Munition> getMagazin() {
+        if (magazin == null) {
+            magazin = new EObjectResolvingEList<Munition>(Munition.class, this, Shr5Package.FEUERWAFFE__MAGAZIN);
+        }
+        return magazin;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -282,6 +307,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
                 return getRueckstoss();
             case Shr5Package.FEUERWAFFE__EINBAU:
                 return getEinbau();
+            case Shr5Package.FEUERWAFFE__MAGAZIN:
+                return getMagazin();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -316,6 +343,10 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
                 getEinbau().clear();
                 getEinbau().addAll((Collection<? extends FernkampfwaffeModifikator>)newValue);
                 return;
+            case Shr5Package.FEUERWAFFE__MAGAZIN:
+                getMagazin().clear();
+                getMagazin().addAll((Collection<? extends Munition>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -346,6 +377,9 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
             case Shr5Package.FEUERWAFFE__EINBAU:
                 getEinbau().clear();
                 return;
+            case Shr5Package.FEUERWAFFE__MAGAZIN:
+                getMagazin().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -370,6 +404,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
                 return rueckstoss != RUECKSTOSS_EDEFAULT;
             case Shr5Package.FEUERWAFFE__EINBAU:
                 return einbau != null && !einbau.isEmpty();
+            case Shr5Package.FEUERWAFFE__MAGAZIN:
+                return magazin != null && !magazin.isEmpty();
         }
         return super.eIsSet(featureID);
     }

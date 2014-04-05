@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
+import de.urszeidler.eclipse.shr5.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -926,6 +927,25 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(credstick);
                 if (result == null) result = caseModifizierbar(credstick);
                 if (result == null) result = caseAnwendbar(credstick);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MENGE: {
+                Menge menge = (Menge)theEObject;
+                T result = caseMenge(menge);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MUNITION: {
+                Munition munition = (Munition)theEObject;
+                T result = caseMunition(munition);
+                if (result == null) result = caseAbstraktGegenstand(munition);
+                if (result == null) result = caseMenge(munition);
+                if (result == null) result = caseQuelle(munition);
+                if (result == null) result = caseGeldWert(munition);
+                if (result == null) result = caseBeschreibbar(munition);
+                if (result == null) result = caseModifizierbar(munition);
+                if (result == null) result = caseAnwendbar(munition);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2145,6 +2165,36 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseCredstick(Credstick object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Menge</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Menge</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMenge(Menge object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Munition</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Munition</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMunition(Munition object) {
         return null;
     }
 

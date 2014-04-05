@@ -1175,6 +1175,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Munition} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MunitionItemProvider munitionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Munition}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMunitionAdapter() {
+        if (munitionItemProvider == null) {
+            munitionItemProvider = new MunitionItemProvider(this);
+        }
+
+        return munitionItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1321,6 +1344,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (sinItemProvider != null) sinItemProvider.dispose();
         if (lizenzItemProvider != null) lizenzItemProvider.dispose();
         if (credstickItemProvider != null) credstickItemProvider.dispose();
+        if (munitionItemProvider != null) munitionItemProvider.dispose();
     }
 
 }

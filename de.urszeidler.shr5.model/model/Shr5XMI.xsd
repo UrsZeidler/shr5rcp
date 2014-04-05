@@ -293,10 +293,20 @@
           <xsd:element name="modie" type="shr5:FeuerModus"/>
           <xsd:element name="erweiterung" type="shr5:FeuwerwaffenErweiterung"/>
           <xsd:element name="einbau" type="shr5:FernkampfwaffeModifikator"/>
+          <xsd:element name="magazin" type="shr5:Munition">
+            <xsd:annotation>
+              <xsd:documentation>This reference holds the current loaded amuntition, when used the first element should be removed.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="munitionstyp" type="shr5:MagazinTyp"/>
         <xsd:attribute name="kapazitaet" type="xsd:int"/>
         <xsd:attribute name="rueckstoss" type="xsd:int"/>
+        <xsd:attribute name="magazin" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This reference holds the current loaded amuntition, when used the first element should be removed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1014,4 +1024,53 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Credstick" type="shr5:Credstick"/>
+  <xsd:complexType abstract="true" name="Menge">
+    <xsd:annotation>
+      <xsd:documentation>This interface is used to define items coming in great numbers like amunition and others.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="anzahl" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>The current count of items.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="proAnzahl" type="xsd:int">
+      <xsd:annotation>
+        <xsd:documentation>Defines the number of items for the cost, if the element is a GeldWert.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:element name="Menge" type="shr5:Menge">
+    <xsd:annotation>
+      <xsd:documentation>This interface is used to define items coming in great numbers like amunition and others.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Munition">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="type" type="shr5:Reichweite"/>
+        </xsd:choice>
+        <xsd:attribute name="anzahl" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The current count of items.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="proAnzahl" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>Defines the number of items for the cost, if the element is a GeldWert.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="damageType" type="shr5:SchadensTyp"/>
+        <xsd:attribute name="damageMod" type="xsd:int"/>
+        <xsd:attribute name="armorMod" type="xsd:int"/>
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Munition" type="shr5:Munition"/>
 </xsd:schema>

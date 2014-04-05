@@ -454,6 +454,15 @@ public interface Shr5Factory extends EFactory {
     Credstick createCredstick();
 
     /**
+     * Returns a new object of class '<em>Munition</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Munition</em>'.
+     * @generated
+     */
+    Munition createMunition();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
