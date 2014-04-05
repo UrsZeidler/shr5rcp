@@ -531,7 +531,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         AbstraktPersona persona = getCharacter().getPersona();
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
-            karmaKosten = karmaKosten + ( ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften()));
+            karmaKosten = karmaKosten + (ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften()));
         }
         if (persona instanceof MysticAdept) {
             int sum = 0;
@@ -542,7 +542,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
             }
             sum = (int)Math.floor(sum / 100f);
 
-            karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor()*-1);
+            karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor() * -1);
         }
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter()) * -1;
         karmaKosten = karmaKosten + karmaSpend;
@@ -555,7 +555,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
 
         karmaKosten = karmaKosten + spendByConnections;
         karmaKosten = karmaKosten + getKarmaToResource();
-        return karmaKosten;//Math.abs(karmaKosten) + getKarmaToResource() + Math.abs(karmaSpend) + spendByConnections;
+        return karmaKosten;// Math.abs(karmaKosten) + getKarmaToResource() + Math.abs(karmaSpend) + spendByConnections;
     }
 
     /**
@@ -756,8 +756,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         if (getShr5Generator() == null || getSkills() == null || getAttribute() == null || getResourcen() == null || getMetaType() == null
                 || getMagic() == null || getCharacter() == null)
             return true;
-        
-        if(state==GeneratorState.COMMITED)
+
+        if (state == GeneratorState.COMMITED)
             return true;
 
         boolean spendAll = hasSpendAllAttributesPoints(null, null) && hasSpendAllConnectionPoints(null, null) && hasSpendAllGroupPoints(null, null)
@@ -808,6 +808,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllAttributesPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getAttribute() == null)
             return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
 
         int diff = getAttribute().getAttibutePoints() - getAttributeSpend();
         if (diff != 0) {
@@ -831,6 +833,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      */
     public boolean hasSpendAllSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getSkills() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
 
         int skillPoints = getSkills().getSkillPoints();
@@ -856,6 +860,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllSpecialPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getMetaType() == null)
             return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
 
         int diff = getMetaType().getSpecialPoints() - getSpecialPointSpend();
         if (diff != 0) {
@@ -879,6 +885,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     @Deprecated
     public boolean hasSpendAllSpecialTypePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getMagic() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
         //
         boolean hasSpendAllPoints = false;
@@ -917,6 +925,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllConnectionPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getShr5Generator() == null)
             return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
         ManagedCharacter managedCharacter = getCharacter();
         if (managedCharacter == null)
             return true;
@@ -948,6 +958,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllResourcePoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getShr5Generator() == null || getResourcen() == null)
             return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
 
         int karma2Res = getKarmaToResource() * getShr5Generator().getKarmaToResourceFactor();
         int diff = karma2Res + getResourcen().getResource() - getResourceSpend();
@@ -975,6 +987,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllMagicSkillsPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getMagic() == null)
             return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
 
         int diff = getMagic().getSkillNumber() - getMagic().calcSkillsSpend(getCharacter());
         if (diff != 0) {
@@ -1000,6 +1014,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllMagicPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getMagic() == null)
             return true;
+        if (state == GeneratorState.COMMITED)
+            return true;
 
         int diff = getMagic().getSkillNumber() - getMagic().calcSkillsSpend(getCharacter());
         if (diff != 0) {
@@ -1022,6 +1038,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      */
     public boolean hasSpendAllGroupPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getSkills() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
 
         int groupPoints = getSkills().getGroupPoints();
@@ -1048,7 +1066,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
     public boolean hasSpendAllKnowlegeSkillPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getCharacter() == null || getSkills() == null)
             return true;
-
+        if (state == GeneratorState.COMMITED)
+            return true;
         int diff = getSkills().calcKnowledgeSkillPoints(getCharacter()) - getKnownlegePointSpend();
 
         if (diff != 0) {
@@ -1072,6 +1091,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      */
     public boolean hasSpendAllKarmaPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getShr5Generator() == null || getCharacter() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
 
         int karmaPoints = getShr5Generator().getKarmaPoints();
@@ -1099,6 +1120,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      */
     public boolean hasSpendAllSpellPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getMagic() == null || getCharacter() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
 
         boolean hasSpendAllPoints = false;
@@ -1134,6 +1157,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
      */
     public boolean hasSpendAllPowerPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
         if (getMagic() == null || getCharacter() == null || getShr5Generator() == null || getCharacter().getPersona() == null)
+            return true;
+        if (state == GeneratorState.COMMITED)
             return true;
 
         boolean hasSpendAll = true;
