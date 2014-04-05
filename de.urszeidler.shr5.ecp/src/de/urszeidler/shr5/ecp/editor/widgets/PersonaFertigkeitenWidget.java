@@ -7,11 +7,14 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.celleditor.ExtendedDialogCellEditor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -53,6 +56,7 @@ import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 /**
@@ -533,6 +537,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                 } else {
                     Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
                     editingDomain.getCommandStack().execute(cmd);
+                    persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,  Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
                 }
             }
         } else if (element instanceof FertigkeitsGruppe) {
@@ -546,6 +551,8 @@ public class PersonaFertigkeitenWidget extends Composite {
             } else {
                 Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
                 editingDomain.getCommandStack().execute(cmd);
+                persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,  Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, 0, 1));
+
             }
         }
     }
