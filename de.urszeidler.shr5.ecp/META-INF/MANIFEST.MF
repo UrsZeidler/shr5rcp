@@ -85,7 +85,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.view.vertical.ui.swt;bundle-version="1.2.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: de.urszeidler.shr5.ecp,
+Export-Package: de.urszeidler.shr5.dice,
+ de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.ecp.binding,
  de.urszeidler.shr5.ecp.dialogs,
  de.urszeidler.shr5.ecp.editor,
@@ -93,6 +94,7 @@ Export-Package: de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.ecp.editor.widgets,
  de.urszeidler.shr5.ecp.filter,
  de.urszeidler.shr5.ecp.opener,
+ de.urszeidler.shr5.ecp.util,
  de.urszeidler.shr5.ecp.widgets,
  org.eclipse.wb.rcp.databinding,
  org.eclipse.wb.swt
