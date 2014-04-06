@@ -119,7 +119,7 @@ public class MetaTypeTest extends PriorityCategorieTest {
 		character.getPersona().setEdgeBasis(5);
 		assertEquals("5 points spend", 5,getFixture().calcSpecialPointsSpend(character));		
 		ma.setMagieBasis(2);
-		assertEquals("3 points spend", 3,getFixture().calcSpecialPointsSpend(character));		
+		assertEquals("7 points spend", 7,getFixture().calcSpecialPointsSpend(character));		
 		
 	}
 	/**
@@ -145,7 +145,7 @@ public class MetaTypeTest extends PriorityCategorieTest {
 		character.getPersona().setEdgeBasis(5);
 		assertEquals("5 points spend", 5,getFixture().calcSpecialPointsSpend(character));		
 		ma.setMagieBasis(2);
-		assertEquals("3 points spend", 3,getFixture().calcSpecialPointsSpend(character));		
+		assertEquals("7 points spend", 7,getFixture().calcSpecialPointsSpend(character));		
 		
 	}
 
@@ -172,7 +172,7 @@ public class MetaTypeTest extends PriorityCategorieTest {
 		assertEquals("5 points spend", 5,getFixture().calcSpecialPointsSpend(character));		
 		ma.setMagieBasis(2);
 
-		assertEquals("3 points spend", 3,getFixture().calcSpecialPointsSpend(character));		
+		assertEquals("7 points spend", 7,getFixture().calcSpecialPointsSpend(character));		
 	}
 
 
@@ -199,7 +199,7 @@ public class MetaTypeTest extends PriorityCategorieTest {
 		assertEquals("5 points spend", 5,getFixture().calcSpecialPointsSpend(character));		
 		
 		ma.setResonanzBasis(2);
-		assertEquals("3 points spend", 3,getFixture().calcSpecialPointsSpend(character));		
+		assertEquals("7 points spend", 7,getFixture().calcSpecialPointsSpend(character));		
 		
 	}
 
