@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.Changes;
@@ -181,6 +182,27 @@ public class ShadowrunManagmentTools {
 
         }
         return false;
+    }
+
+ 
+    
+    /**
+     * Finds the persona change for the given {@link Steigerbar}.
+     * 
+     * @param character
+     * @param steigerbar
+     * @return
+     */
+    public static PersonaChange findCharacterAdvacements(ManagedCharacter character, Steigerbar steigerbar) {
+        EList<Changes> changes = character.getChanges();
+        for (Changes change : changes) {
+            if (change instanceof PersonaChange) {
+                PersonaChange pc = (PersonaChange)change;
+                if (steigerbar.equals(pc.getChangeable()))
+                    return pc;
+            }
+        }
+        return null;
     }
 
     /**
