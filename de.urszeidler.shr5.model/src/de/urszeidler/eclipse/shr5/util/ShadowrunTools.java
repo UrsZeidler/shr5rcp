@@ -32,6 +32,7 @@ public class ShadowrunTools {
 
     private static Map<EAttribute, EAttribute> base2SpeciesMin;
     private static Map<EAttribute, EAttribute> base2SpeciesMax;
+    private static Map<EAttribute, EAttribute> base2Calced;
 
     static {
         base2SpeciesMin = new HashMap<EAttribute, EAttribute>();
@@ -58,8 +59,29 @@ public class ShadowrunTools {
         base2SpeciesMax.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.SPEZIES__MAGIE_MAX);
         base2SpeciesMax.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.SPEZIES__RESONANZ_MAX);
 
+        base2Calced = new HashMap<EAttribute, EAttribute>();
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__REAKTION);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__STAERKE);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__CHARISMA);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK);
+        base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__WILLENSKRAFT);
+        base2Calced.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE);
+        base2Calced.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ);
+
     }
 
+    /**
+     * Get the species min attribute for a persona attribute.
+     * 
+     * @param attribute
+     * @return
+     */
+    public static EAttribute base2Calced(EAttribute attribute) {
+        return base2Calced.get(attribute);
+    }
     /**
      * Get the species min attribute for a persona attribute.
      * 
