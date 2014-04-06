@@ -190,4 +190,27 @@ public class ShadowrunTools {
         return false;
     }
 
+    
+    /**
+     * calcs a simple Karma costs.
+     * 
+     * @param from
+     * @param to
+     * @param fac
+     * @return
+     */
+    public static int calcKarmaCosts(int from, int to, int fac) {
+        if (from < 0 || to <= 0)
+            return 0;
+
+        if (from >= to)
+            return 0;
+
+        int sum = 0;
+        for (int i = from; i < to ; i++) {
+            sum += (i + 1) * fac;
+        }
+        return (int) sum;
+    }
+
 }
