@@ -535,7 +535,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                 pf.setStufe((Integer)value);
                 personaFertigkeiten.add(pf);
             } else {
-                if (personaFertigkeit.getStufe() == 0) {
+                if ((Integer)value == 0) {
                     personaFertigkeiten.remove(personaFertigkeit);
                 } else {
                     Command cmd = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.STEIGERBAR__STUFE, value);
@@ -553,7 +553,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                 pfg.setStufe((Integer)value);
                 personaFertigkeitsGruppen.add(pfg);
             } else {
-                if (personaFertigkeitsGruppe.getStufe() == 0) {
+                if ((Integer)value == 0) {
                     personaFertigkeitsGruppen.remove(personaFertigkeitsGruppe);
                 } else {
                     Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
