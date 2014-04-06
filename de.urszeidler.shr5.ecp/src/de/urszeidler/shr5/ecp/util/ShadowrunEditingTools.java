@@ -101,7 +101,7 @@ public class ShadowrunEditingTools {
             personaChange.setTo((Integer)value);
             personaChange.applyChanges();
         } else {
-            if (personaFertigkeit.getStufe() == 0) {
+            if ((Integer)value == 0) {
                 persona.getFertigkeiten().remove(personaFertigkeit);
                 PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeit);
                 if (advacements != null)

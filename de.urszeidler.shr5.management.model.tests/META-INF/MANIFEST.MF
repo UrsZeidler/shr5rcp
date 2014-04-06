@@ -12,5 +12,6 @@ Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.management.model;visibility:=reexport,
  de.urszeidler.shr5.model;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport
+ org.junit;visibility:=reexport,
+ de.urszeidler.shr5.ecp;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
