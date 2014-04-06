@@ -10,9 +10,9 @@
   <rm:searchPath name="local.platform">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" mutable="false">
       <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="file:///var/lib/jenkins/jobs/emf-client-platform/lastSuccessful/archive/targetPlatform"/>
+      <rm:uri format="file:///var/lib/jenkins/jobs/emf-client-platform-git/lastSuccessful/archive/targetPlatform"/>
     </rm:provider>
-   <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" mutable="false">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" mutable="false">
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="file:///var/lib/jenkins/workspace/eclipse-others/buckminster.output/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2"/>
     </rm:provider>
