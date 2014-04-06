@@ -1643,7 +1643,7 @@ public class PersonaPrinter extends BasicPrinter {
             return grid;
 
         grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
-        grid.add(new TextPrint(persona.getName(), attributeFont), 3);
+        grid.add(new TextPrint(toSimpleName(persona), attributeFont), 3);
         grid.add(new TextPrint(Messages.Printer_sex, attributeFont));
         grid.add(new TextPrint(toName(character.getSex(), character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX), attributeFont));
 
