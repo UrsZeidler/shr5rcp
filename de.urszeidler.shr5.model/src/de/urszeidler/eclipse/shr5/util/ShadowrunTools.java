@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5.util;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +35,9 @@ public class ShadowrunTools {
     private static Map<EAttribute, EAttribute> base2SpeciesMax;
     private static Map<EAttribute, EAttribute> base2Calced;
 
+    private static List<EAttribute> orderedAttibutes;
+    
+    // the static initaliser
     static {
         base2SpeciesMin = new HashMap<EAttribute, EAttribute>();
         base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.SPEZIES__KONSTITUTION_MIN);
@@ -71,6 +75,8 @@ public class ShadowrunTools {
         base2Calced.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE);
         base2Calced.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ);
 
+        
+        orderedAttibutes = new ArrayList<EAttribute>();
     }
 
     /**

@@ -11,16 +11,26 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Erlernbar;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
@@ -35,6 +45,7 @@ import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
+import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
@@ -386,4 +397,128 @@ public class ShadowrunManagmentTools {
         }
         return buffer.toString();
     }
+    
+    
+    /**
+     * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
+     * 
+     * @param character
+     * @param fertigkeit
+     * @param value
+     */
+    public static void changeFertigkeitByAdvacement(ManagedCharacter character, Fertigkeit fertigkeit, Integer value) {
+        final AbstraktPersona persona = character.getPersona();
+
+        PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
+        if (personaFertigkeit == null) {
+            PersonaFertigkeit pf = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+            pf.setFertigkeit(fertigkeit);
+            PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+            character.getChanges().add(personaChange);
+            personaChange.setChangeable(pf);
+            personaChange.setFrom(0);
+            personaChange.setTo((Integer)value);
+            personaChange.applyChanges();
+        } else {
+            if ((Integer)value == 0) {
+                persona.getFertigkeiten().remove(personaFertigkeit);
+                PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeit);
+                if (advacements != null)
+                    character.getChanges().remove(advacements);
+            } else {
+                PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeit);
+                if (advacements != null) {
+                    advacements.setTo((Integer)value);
+                    advacements.applyChanges();
+
+                    persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
+                            Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
+                }
+            }
+        }
+
+    }
+
+    /**
+     * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
+     * 
+     * @param character
+     * @param fertigkeitsGruppe
+     * @param value
+     */
+    public static void changeAttributeByAdvacement(ManagedCharacter character, EAttribute attribute, Integer value) {
+        final AbstraktPersona persona = character.getPersona();
+        EAttribute speciesMin = ShadowrunTools.base2SpeciesMin(attribute);
+
+        Spezies spezies = persona.getSpezies();
+        if (spezies == null)
+            return;
+
+        Integer eGet = (Integer)spezies.eGet(speciesMin);
+        if (value < eGet)
+            value= eGet;
+
+        AttributeChange attributeChange = ShadowrunManagmentTools.findCharacterAdvacements(character, attribute);
+        if (attributeChange == null) {
+            attributeChange = Shr5managementFactory.eINSTANCE.createAttributeChange();
+            attributeChange.setAttibute(attribute);
+            character.getChanges().add(attributeChange);
+            attributeChange.setFrom((Integer)eGet);
+            attributeChange.setTo(value);
+            attributeChange.applyChanges();
+            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
+                    attribute, eGet, value));
+        }else if(eGet==value){
+            character.getChanges().remove(attributeChange);
+            persona.eSet(attribute, eGet);
+        }else{
+            attributeChange.setTo((Integer)value);
+            attributeChange.applyChanges();
+            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
+                    attribute, eGet, value));
+        }
+
+    }
+
+    /**
+     * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
+     * 
+     * @param character
+     * @param fertigkeitsGruppe
+     * @param value
+     */
+    public static void changeFertigkeitsGruppeByAdvacement(ManagedCharacter character, FertigkeitsGruppe fertigkeitsGruppe, Integer value) {
+        final AbstraktPersona persona = character.getPersona();
+
+        PersonaFertigkeitsGruppe personaFertigkeitsGruppe = ShadowrunTools.findGruppe(fertigkeitsGruppe, persona);
+        if (personaFertigkeitsGruppe == null) {
+            PersonaFertigkeitsGruppe pf = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+            pf.setGruppe(fertigkeitsGruppe);
+            PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+            character.getChanges().add(personaChange);
+            personaChange.setChangeable(pf);
+            personaChange.setFrom(0);
+            personaChange.setTo((Integer)value);
+            personaChange.applyChanges();
+        } else {
+            if ((Integer)value == 0) {
+                persona.getFertigkeitsGruppen().remove(personaFertigkeitsGruppe);
+                PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeitsGruppe);
+                if (advacements != null)
+                    character.getChanges().remove(advacements);
+            } else {
+                PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(character, personaFertigkeitsGruppe);
+                if (advacements != null) {
+                    advacements.setTo((Integer)value);
+                    advacements.applyChanges();
+
+                    persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
+                            Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
+                }
+            }
+        }
+
+    }
+
+
 }
