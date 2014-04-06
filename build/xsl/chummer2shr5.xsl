@@ -281,26 +281,37 @@
 		</priorities>
 	</xsl:template>
 	<xsl:template
-		match="priorities/specials/special/magician|priorities/specials/special/mysticadept"
+		match="priorities/specials/special/magician|priorities/specials/special/mysticadept|priorities/specials/special/aspected"
 		mode="gen">
 		<xsl:variable name="typename" select="name()" />
 		<priorities xsi:type="shr5mngt:Spellcaster">
 			<xsl:attribute name="categorieName"><xsl:value-of select="../priority/text()" /></xsl:attribute>
 			<xsl:attribute name="magic"><xsl:value-of select="mag/text()" /></xsl:attribute>
-			<xsl:attribute name="spellPoints"><xsl:value-of select="spells/text()" /></xsl:attribute>
 			<xsl:call-template name="skill-options" />
 			<xsl:if test="$typename='magician'">
+					<xsl:if test="number(spells/text())">	
+			<xsl:attribute name="spellPoints"><xsl:value-of select="spells/text()" /></xsl:attribute>
+			</xsl:if>
 				<xsl:attribute name="selectableSkills">//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0</xsl:attribute>
 				<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier" />
 			</xsl:if>
 			<xsl:if test="$typename='mysticadept'">
+					<xsl:if test="number(spells/text())">	
+			<xsl:attribute name="spellPoints"><xsl:value-of select="spells/text()" /></xsl:attribute>
+			</xsl:if>
+			
 				<xsl:attribute name="selectableSkills">//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0</xsl:attribute>
 				<selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept" />
+			</xsl:if>
+			<xsl:if test="$typename='aspected'">			
+			<xsl:attribute name="spellPoints"><xsl:value-of select="number(mag/text())*2" /></xsl:attribute>
+				<xsl:attribute name="selectableSkills">//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0</xsl:attribute>
+				<selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier" />
 			</xsl:if>
 		</priorities>
 	</xsl:template>
 	<xsl:template
-		match="priorities/specials/special/adept|priorities/specials/special/aspected"
+		match="priorities/specials/special/adept"
 		mode="gen">
 		<xsl:variable name="typename" select="name()" />
 		<priorities xsi:type="shr5mngt:Adept">
@@ -975,6 +986,8 @@
 				karmaToResource="10" metaType="//@entries.0/@entries.16/@entries.0/@priorities.15"
 				magic="//@entries.0/@entries.16/@entries.0/@priorities.23" />
 			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" />
+			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" state="readyForCreation" selectedGroup="//@entries.1/@groups.0" characterName="Test-Aspekt-1" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.43" skills="//@entries.0/@entries.16/@entries.0/@priorities.37" attribute="//@entries.0/@entries.16/@entries.0/@priorities.19" metaType="//@entries.0/@entries.16/@entries.0/@priorities.16" magic="//@entries.0/@entries.16/@entries.0/@priorities.36"/>
+			
 		</entries>
 		<entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
 

@@ -2632,19 +2632,19 @@
 <priorities xsi:type="shr5mngt:Attributes" categorieName="C" attibutePoints="16"/>
 <priorities xsi:type="shr5mngt:Attributes" categorieName="D" attibutePoints="14"/>
 <priorities xsi:type="shr5mngt:Attributes" categorieName="E" attibutePoints="12"/>
-<priorities xsi:type="shr5mngt:Spellcaster" categorieName="A" magic="6" spellPoints="10" skillNumber="2" skillValue="5" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="A" magic="6" skillNumber="2" skillValue="5" spellPoints="10" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
 </priorities>
-<priorities xsi:type="shr5mngt:Spellcaster" categorieName="A" magic="6" spellPoints="10" skillNumber="2" skillValue="5" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="A" magic="6" skillNumber="2" skillValue="5" spellPoints="10" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
 </priorities>
 <priorities xsi:type="shr5mngt:Technomancer" selectableSkills="//@entries.0/@entries.3/@entries.14/@fertigkeiten.0 //@entries.0/@entries.3/@entries.14/@fertigkeiten.2 //@entries.0/@entries.3/@entries.14/@fertigkeiten.1" selectableSkillGroups="//@entries.0/@entries.3/@entries.14" categorieName="A" complexForms="5" resonanz="6" skillNumber="2" skillValue="5">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
 </priorities>
-<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="4" spellPoints="7" skillNumber="2" skillValue="4" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="4" skillNumber="2" skillValue="4" spellPoints="7" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
 </priorities>
-<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="4" spellPoints="7" skillNumber="2" skillValue="4" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="4" skillNumber="2" skillValue="4" spellPoints="7" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
 </priorities>
 <priorities xsi:type="shr5mngt:Technomancer" selectableSkills="//@entries.0/@entries.3/@entries.14/@fertigkeiten.0 //@entries.0/@entries.3/@entries.14/@fertigkeiten.2 //@entries.0/@entries.3/@entries.14/@fertigkeiten.1" selectableSkillGroups="//@entries.0/@entries.3/@entries.14" categorieName="B" complexForms="2" resonanz="4" skillNumber="2" skillValue="4">
@@ -2653,7 +2653,7 @@
 <priorities xsi:type="shr5mngt:Adept" categorieName="B" magic="6" skillNumber="1" skillValue="4" selectableSkills="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0 //@entries.0/@entries.3/@entries.1/@fertigkeiten.1 //@entries.0/@entries.4/@entries.7 //@entries.0/@entries.3/@entries.13/@fertigkeiten.2 //@entries.0/@entries.3/@entries.1/@fertigkeiten.2 //@entries.0/@entries.3/@entries.11/@fertigkeiten.0 //@entries.0/@entries.4/@entries.5 //@entries.0/@entries.4/@entries.8">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
 </priorities>
-<priorities xsi:type="shr5mngt:Adept" categorieName="B" magic="5" selectableSkillGroups="//@entries.0/@entries.3/@entries.4 //@entries.0/@entries.3/@entries.7 //@entries.0/@entries.3/@entries.12">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="B" magic="5" spellPoints="10" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
 </priorities>
 <priorities xsi:type="shr5mngt:Spellcaster" categorieName="C" magic="3" spellPoints="5" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
@@ -2668,13 +2668,13 @@
 <priorities xsi:type="shr5mngt:Adept" categorieName="C" magic="4" skillNumber="1" skillValue="2" selectableSkills="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0 //@entries.0/@entries.3/@entries.1/@fertigkeiten.1 //@entries.0/@entries.4/@entries.7 //@entries.0/@entries.3/@entries.13/@fertigkeiten.2 //@entries.0/@entries.3/@entries.1/@fertigkeiten.2 //@entries.0/@entries.3/@entries.11/@fertigkeiten.0 //@entries.0/@entries.4/@entries.5 //@entries.0/@entries.4/@entries.8">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
 </priorities>
-<priorities xsi:type="shr5mngt:Adept" categorieName="C" magic="3" selectableSkillGroups="//@entries.0/@entries.3/@entries.4 //@entries.0/@entries.3/@entries.7 //@entries.0/@entries.3/@entries.12">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="C" magic="3" spellPoints="6" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
 </priorities>
 <priorities xsi:type="shr5mngt:Adept" categorieName="D" magic="2" selectableSkills="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0 //@entries.0/@entries.3/@entries.1/@fertigkeiten.1 //@entries.0/@entries.4/@entries.7 //@entries.0/@entries.3/@entries.13/@fertigkeiten.2 //@entries.0/@entries.3/@entries.1/@fertigkeiten.2 //@entries.0/@entries.3/@entries.11/@fertigkeiten.0 //@entries.0/@entries.4/@entries.5 //@entries.0/@entries.4/@entries.8">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
 </priorities>
-<priorities xsi:type="shr5mngt:Adept" categorieName="D" magic="2" selectableSkillGroups="//@entries.0/@entries.3/@entries.4 //@entries.0/@entries.3/@entries.7 //@entries.0/@entries.3/@entries.12">
+<priorities xsi:type="shr5mngt:Spellcaster" categorieName="D" magic="2" spellPoints="4" selectableSkills="//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0">
 <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
 </priorities>
 <priorities xsi:type="shr5mngt:Skill" categorieName="A" skillPoints="46" groupPoints="10"/>
@@ -4727,6 +4727,7 @@
 <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Rob" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.45" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.9" magic="//@entries.0/@entries.16/@entries.0/@priorities.47" karmaToResource="10" startKarma="1" startResources="2810"/>
 <generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.2/@groups.0" characterName="Kyra" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.18" karmaToResource="10" metaType="//@entries.0/@entries.16/@entries.0/@priorities.15" magic="//@entries.0/@entries.16/@entries.0/@priorities.23"/>
 <generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0"/>
+<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" state="readyForCreation" selectedGroup="//@entries.1/@groups.0" characterName="Test-Aspekt-1" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.43" skills="//@entries.0/@entries.16/@entries.0/@priorities.37" attribute="//@entries.0/@entries.16/@entries.0/@priorities.19" metaType="//@entries.0/@entries.16/@entries.0/@priorities.16" magic="//@entries.0/@entries.16/@entries.0/@priorities.36"/>
 </entries>
 <entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
 <groups name="non player group">
