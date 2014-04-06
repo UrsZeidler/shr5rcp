@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -23,10 +24,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class AttributeChangeImpl extends PersonaValueChangeImpl implements AttributeChange {
@@ -34,6 +35,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
      * The cached value of the '{@link #getAttibute() <em>Attibute</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAttibute()
      * @generated
      * @ordered
@@ -43,6 +45,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected AttributeChangeImpl() {
@@ -52,6 +55,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -62,6 +66,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EAttribute getAttibute() {
@@ -79,6 +84,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EAttribute basicGetAttibute() {
@@ -97,7 +103,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.ATTRIBUTE_CHANGE__ATTIBUTE, oldAttibute, attibute));
 
-        if (newAttibute == null)
+        if (newAttibute == null || getCharacter() == null || getCharacter().getPersona() == null)
             return;
         if (changeApplied)
             return;
@@ -114,13 +120,15 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.ATTRIBUTE_CHANGE__ATTIBUTE:
-                if (resolve) return getAttibute();
+                if (resolve)
+                    return getAttibute();
                 return basicGetAttibute();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -129,6 +137,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -144,6 +153,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -159,6 +169,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -180,12 +191,11 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
         if (chracterSource == null)
             return 0;
 
-        IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(),
-                EcorePackage.Literals.EATTRIBUTE);
+        IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements()
+                .getCharacterAdvancements(), EcorePackage.Literals.EATTRIBUTE);
         if (part != null) {
-            int karmaFactor = part.getKarmaFactor();
-
-            return -1 * karmaFactor * (getTo());
+            int karmaFactor = part.getKarmaFactor();            
+            return -1 *ShadowrunTools.calcKarmaCosts(getFrom(), getTo(), karmaFactor);// karmaFactor * (getTo());
         }
 
         return 0;
