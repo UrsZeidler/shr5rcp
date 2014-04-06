@@ -1528,10 +1528,12 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_attributes, boldFontData), 1);
 
         GridPrint grid1 = new GridPrint("d,d,d,r:d", look);//$NON-NLS-1$
-        printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
-        printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
-        grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 3);
+        printeAttributes(persona, grid1, ShadowrunTools.getOrderedAttibutes());
+        //printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
+       // printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
+        grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 2);
         grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
+        grid1.add(new TextPrint(EMPTY, attributeFont), 1);
 
         grid.add(grid1);
         GridPrint grid2 = new GridPrint("d,d,d,r:d", look);//$NON-NLS-1$
@@ -1696,17 +1698,27 @@ public class PersonaPrinter extends BasicPrinter {
      * @param grid
      * @param eAttributes
      */
-    private void printeAttributes(AbstraktPersona persona, GridPrint grid, EList<EAttribute> eAttributes) {
+    private void printeAttributes(AbstraktPersona persona, GridPrint grid, List<EAttribute> eAttributes) {
         if (persona == null)
             return;
 
         for (EAttribute eAttribute : eAttributes) {
-            String attName = itemDelegator.getText(eAttribute);
-            attName = toFeatureName(persona, eAttribute);
+            EAttribute base2Calced = ShadowrunTools.base2Calced(eAttribute);
+            if(base2Calced==null)
+                continue;
+            
+            //String attName = itemDelegator.getText(base2Calced);
+            String attName = toFeatureName(persona, base2Calced);
 
-            Object value = persona.eGet(eAttribute);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(attName, attributeFont), 3);
-            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(value.toString(), attributeFont), 1);
+            Integer value = (Integer)persona.eGet(eAttribute);
+            Integer calc = (Integer)persona.eGet(base2Calced);
+            String a = EMPTY;
+            if (value != calc)
+                a = "(" + calc + ")";
+
+            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(attName, attributeFont), 2);
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(value), attributeFont), 1);
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(a, attributeFont), 1);
         }
     }
 

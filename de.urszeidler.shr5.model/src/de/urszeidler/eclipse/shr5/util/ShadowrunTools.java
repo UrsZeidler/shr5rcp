@@ -36,7 +36,7 @@ public class ShadowrunTools {
     private static Map<EAttribute, EAttribute> base2Calced;
 
     private static List<EAttribute> orderedAttibutes;
-    
+
     // the static initaliser
     static {
         base2SpeciesMin = new HashMap<EAttribute, EAttribute>();
@@ -75,8 +75,26 @@ public class ShadowrunTools {
         base2Calced.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE);
         base2Calced.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ);
 
-        
         orderedAttibutes = new ArrayList<EAttribute>();
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS);
+        //orderedAttibutes.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
+        //orderedAttibutes.add(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
+    }
+
+    /**
+     * The ordered list of the attributes.
+     * 
+     * @return the orderedAttibutes
+     */
+    public static List<EAttribute> getOrderedAttibutes() {
+        return orderedAttibutes;
     }
 
     /**
@@ -88,6 +106,7 @@ public class ShadowrunTools {
     public static EAttribute base2Calced(EAttribute attribute) {
         return base2Calced.get(attribute);
     }
+
     /**
      * Get the species min attribute for a persona attribute.
      * 
@@ -97,6 +116,7 @@ public class ShadowrunTools {
     public static EAttribute base2SpeciesMin(EAttribute attribute) {
         return base2SpeciesMin.get(attribute);
     }
+
     /**
      * Get the species max attribute for a persona attribute.
      * 
