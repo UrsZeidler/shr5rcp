@@ -958,6 +958,58 @@
 						verfuegbarkeit="" fahrzeugTyp="Bike" />
 				</members>
 
+     <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@groups.0/@members.4/@generatorSrc" choosenLifestyle="//@entries.1/@groups.0/@members.4/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6">
+        <persona xsi:type="shr5:AspektMagier" name="Trojan" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="5" staerkeBasis="2" charismaBasis="6" willenskraftBasis="6" intuitionBasis="5" logikBasis="5" spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.1"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.12"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
+          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0"/>
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.5/@entries.57"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.5/@entries.63"/>
+          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
+          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.47"/>
+          <fertigkeitsGruppen stufe="1" gruppe="//@entries.0/@entries.3/@entries.1"/>
+          <fertigkeitsGruppen stufe="1" gruppe="//@entries.0/@entries.3/@entries.9"/>
+          <eigenschaften name="Will to Live" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
+          <eigenschaften name="Bilingual" page="72" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="5"/>
+          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40"/>
+          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.6"/>
+          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.1"/>
+          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35"/>
+        </persona>
+        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" verfuegbarkeit="6R" name="Fichetti Security 600" schadenscode="7P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2" munitionstyp="Streifen" kapazitaet="30">
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink"/>
+        <inventar xsi:type="shr5:Gegenstand" wert="8000" name="Spell foci" stufe="2"/>
+        <inventar xsi:type="shr5:Kleidung" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" verfuegbarkeit="4" name="Lined Coat" ruestung="9"/>
+        <inventar xsi:type="shr5:Credstick" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0" name="Silver" maxValue="20000"/>
+        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="1150" verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices">
+          <mods wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
+          </mods>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="2R" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="//@entries.0/@entries.1/@entries.2"/>
+        <inventar xsi:type="shr5:Gegenstand" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Micro-Transceiver" kategorie="Communications"/>
+        <inventar xsi:type="shr5:Gegenstand" page="450" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating" name="Medkit" kategorie="Biotech"/>
+        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="0" name="Tool Kit" kategorie="Tools"/>
+        <inventar xsi:type="shr5:Gegenstand" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="(Rating*3)F" name="Jammer, Area" kategorie="Communications" stufe="6"/>
+        <contracts xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
+        <contracts xsi:type="shr5:Sin" name="Daniel Silverbane" wert="5000" stufe="2" gefaelscht="true"/>
+        <contracts xsi:type="shr5:Lizenz" name="Adjunct professor of magical theory to carry spell foci" wert="800" gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.4/@contracts.1"/>
+        <connections influence="2" loyality="2"/>
+        <connections influence="4" loyality="2"/>
+        <connections influence="4" loyality="4"/>
+        <generatorSrc xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.4" generator="//@entries.0/@entries.16/@entries.0" state="commited" selectedGroup="//@entries.1/@groups.0" characterName="Trojan" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.6" magic="//@entries.0/@entries.16/@entries.0/@priorities.36" karmaToResource="10" startKarma="7" startResources="980"/>
+      </members>
 
 
 
