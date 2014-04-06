@@ -14,14 +14,21 @@ import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
 import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
 /**
  * A collection of tool functions.
@@ -30,11 +37,10 @@ import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
  */
 public class ShadowrunEditingTools {
 
-    
     /**
      * @param choosenLifestyle
      * @param lifestyleToStartMoney
-     * @return 
+     * @return
      */
     public static LifestyleToStartMoney getLifestyleToMoney(Lifestyle choosenLifestyle, EList<LifestyleToStartMoney> lifestyleToStartMoney) {
         for (LifestyleToStartMoney lstsm : lifestyleToStartMoney) {
@@ -48,7 +54,6 @@ public class ShadowrunEditingTools {
         return null;
     }
 
-    
     /**
      * Creates a transformer to make a {@link Zauber} object to a {@link PersonaZauber} object referencing the spell.
      * 
@@ -64,6 +69,74 @@ public class ShadowrunEditingTools {
                 personaZauber.setStufe(1);
                 return personaZauber;
             }
+        };
+        return transformer;
+    }
+
+    /**
+     * Creates a transformer to make a {@link Fertigkeit} object to a {@link PersonaFertigkeit} object referencing the {@link Fertigkeit}. It creates
+     * the {@link PersonaFertigkeit} or returns the found one.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<Fertigkeit, PersonaFertigkeit> fertigkeit2PersonafertigkeitTransformer(final ManagedCharacter character) {
+        final AbstraktPersona persona = character.getPersona();
+        return fertigkeit2PersonafertigkeitTransformer(persona);
+    }
+
+    /**
+     * Creates a transformer to make a {@link Fertigkeit} object to a {@link PersonaFertigkeit} object referencing the {@link Fertigkeit}. It creates
+     * the {@link PersonaFertigkeit} or returns the found one.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<Fertigkeit, PersonaFertigkeit> fertigkeit2PersonafertigkeitTransformer(final AbstraktPersona persona) {
+        Transformer<Fertigkeit, PersonaFertigkeit> transformer = new Transformer<Fertigkeit, PersonaFertigkeit>() {
+            @Override
+            public PersonaFertigkeit transform(Fertigkeit input) {
+                PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(input, persona);
+                if (fertigkeit == null) {
+                    fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+                    fertigkeit.setFertigkeit(input);
+                }
+                return fertigkeit;
+            }
+        };
+        return transformer;
+    }
+
+    /**
+     * Creates a transformer to make a {@link FertigkeitsGruppe} object to a {@link PersonaFertigkeitsGruppe} object referencing the
+     * {@link FertigkeitsGruppe}. It creates
+     * a new one or returns the one existing.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe> fertigkeitsGruppe2PersonafertigkeitsGruppeTransformer(
+            final ManagedCharacter character) {
+        final AbstraktPersona persona = character.getPersona();
+        return fertigkeitsGruppe2PersonafertigkeitsGruppeTransformer(persona);
+    }
+
+    /**
+     * Creates a transformer to make a {@link FertigkeitsGruppe} object to a {@link PersonaFertigkeitsGruppe} object referencing the spell. It creates
+     * a new one or returns the one existing.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe> fertigkeitsGruppe2PersonafertigkeitsGruppeTransformer(
+            final AbstraktPersona persona) {
+        Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe> transformer = new Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe>() {
+            @Override
+            public PersonaFertigkeitsGruppe transform(FertigkeitsGruppe input) {
+                PersonaFertigkeitsGruppe gruppe = ShadowrunTools.findGruppe(input, persona);
+                if (gruppe == null) {
+                    gruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+                    gruppe.setGruppe(input);
+                }
+                return gruppe;
+            }
+
         };
         return transformer;
     }

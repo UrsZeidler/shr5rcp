@@ -105,36 +105,43 @@ public class CharacterAdvacementWidget extends Composite {
                 } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN.equals(currentOperation.feature)) {
                     Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(),
                             Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-                    handleSingleReference(new Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe>() {
-                        @Override
-                        public PersonaFertigkeitsGruppe transform(FertigkeitsGruppe input) {
-                            PersonaFertigkeitsGruppe gruppe = ShadowrunTools.findGruppe(input, character.getPersona());
-                            if (gruppe == null) {
-                                gruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
-                                gruppe.setGruppe(input);
-                            }
-                            return gruppe;
-                        }
-
-                    }, e, list, getShell());
+                    Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe> transformer = ShadowrunEditingTools.fertigkeitsGruppe2PersonafertigkeitsGruppeTransformer(character);
+                    
+//                            
+//                            new Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe>() {
+//                        @Override
+//                        public PersonaFertigkeitsGruppe transform(FertigkeitsGruppe input) {
+//                            PersonaFertigkeitsGruppe gruppe = ShadowrunTools.findGruppe(input, character.getPersona());
+//                            if (gruppe == null) {
+//                                gruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
+//                                gruppe.setGruppe(input);
+//                            }
+//                            return gruppe;
+//                        }
+//
+//                    };
+                    handleSingleReference(transformer, e, list, getShell());
                     updateToolbars();
                     return;
 
                 } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN.equals(currentOperation.feature)) {
                     Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(),
                             Shr5Package.Literals.FERTIGKEIT);
-                    handleSingleReference(new Transformer<Fertigkeit, PersonaFertigkeit>() {
-                        @Override
-                        public PersonaFertigkeit transform(Fertigkeit input) {
-                            PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(input, character.getPersona());
-                            if (fertigkeit == null) {
-                                fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-                                fertigkeit.setFertigkeit(input);
-                            }
-                            return fertigkeit;
-                        }
-
-                    }, e, list, getShell());
+                    Transformer<Fertigkeit, PersonaFertigkeit> transformer = ShadowrunEditingTools.fertigkeit2PersonafertigkeitTransformer(character);
+//                            
+//                            new Transformer<Fertigkeit, PersonaFertigkeit>() {
+//                        @Override
+//                        public PersonaFertigkeit transform(Fertigkeit input) {
+//                            PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(input, character.getPersona());
+//                            if (fertigkeit == null) {
+//                                fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
+//                                fertigkeit.setFertigkeit(input);
+//                            }
+//                            return fertigkeit;
+//                        }
+//
+//                    };
+                    handleSingleReference(transformer, e, list, getShell());
                     updateToolbars();
                     return;
                 }
