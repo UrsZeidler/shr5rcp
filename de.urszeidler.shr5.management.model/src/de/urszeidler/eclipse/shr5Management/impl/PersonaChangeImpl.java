@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.Zauberer;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -433,7 +434,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             IncreaseCharacterPart part = ShadowrunManagmentTools.findAdvancment(chracterSource.getGenerator().getCharacterAdvancements().getCharacterAdvancements(), eClass);
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
-                return -1 * karmaFactor * (getTo());
+                int calcKarmaCosts = ShadowrunTools.calcKarmaCosts(getFrom(), getTo(), karmaFactor);
+                return -1 * calcKarmaCosts;//karmaFactor * (getTo());
             }
         }
         return 0;
@@ -454,7 +456,8 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                     .getGruppe().eClass());
             if (part != null) {
                 int karmaFactor = part.getKarmaFactor();
-                return -1 * karmaFactor * (getTo());
+                int calcKarmaCosts = ShadowrunTools.calcKarmaCosts(getFrom(), getTo(), karmaFactor);
+                return -1 * calcKarmaCosts;//karmaFactor * (getTo());
             }
         }
         return 0;
