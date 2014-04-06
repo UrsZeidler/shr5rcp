@@ -56,8 +56,9 @@ import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * 
@@ -171,6 +172,7 @@ public class PersonaFertigkeitenWidget extends Composite {
 
     private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
     private AbstraktPersona persona;
+    private ManagedCharacter character;
     private EditingDomain editingDomain;
     private TreeViewer treeViewer;
     private Composite composite;
@@ -451,6 +453,7 @@ public class PersonaFertigkeitenWidget extends Composite {
 
             protected void setValue(Object element, Object value) {
                 changeFertigkeitsValue(element, value);
+                // changeFertigkeitsValueByAdvacement(element, value);
                 treeViewer.refresh(true);
             }
         });
@@ -559,6 +562,22 @@ public class PersonaFertigkeitenWidget extends Composite {
                             Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, 0, 1));
                 }
             }
+        }
+    }
+
+    /**
+     * Changes the value of the fertigkeit by setting it.
+     * 
+     * @param element the fertigkeit or guppe
+     * @param value the value
+     */
+    private void changeFertigkeitsValueByAdvacement(Object element, Object value) {
+        if (element instanceof Fertigkeit) {
+            Fertigkeit f = (Fertigkeit)element;
+            ShadowrunEditingTools.changeFertigkeitByAdvacement(character, f, (Integer)value);
+        } else if (element instanceof FertigkeitsGruppe) {
+            FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
+            ShadowrunEditingTools.changeFertigkeitsGruppeByAdvacement(character, fg, (Integer)value);
         }
     }
 }
