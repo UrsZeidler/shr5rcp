@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
@@ -23,6 +24,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
+import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -190,10 +192,35 @@ public class ShadowrunManagmentTools {
      * Finds the persona change for the given {@link Steigerbar}.
      * 
      * @param character
+     * @param attribute
+     * @return
+     */
+    public static AttributeChange findCharacterAdvacements(ManagedCharacter character, EAttribute attribute) {
+        if (character == null || attribute == null)
+            return null;
+        
+        EList<Changes> changes = character.getChanges();
+        for (Changes change : changes) {
+            if (change instanceof AttributeChange) {
+                AttributeChange pc = (AttributeChange)change;
+                if (attribute.equals(pc.getAttibute()))
+                    return pc;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Finds the persona change for the given {@link Steigerbar}.
+     * 
+     * @param character
      * @param steigerbar
      * @return
      */
     public static PersonaChange findCharacterAdvacements(ManagedCharacter character, Steigerbar steigerbar) {
+        if (character == null || steigerbar == null)
+            return null;
+
         EList<Changes> changes = character.getChanges();
         for (Changes change : changes) {
             if (change instanceof PersonaChange) {

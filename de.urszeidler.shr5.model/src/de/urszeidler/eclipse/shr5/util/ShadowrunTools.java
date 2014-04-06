@@ -4,7 +4,9 @@
 package de.urszeidler.eclipse.shr5.util;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -27,6 +29,55 @@ import de.urszeidler.eclipse.shr5.Spezies;
  * @author urs
  */
 public class ShadowrunTools {
+
+    private static Map<EAttribute, EAttribute> base2SpeciesMin;
+    private static Map<EAttribute, EAttribute> base2SpeciesMax;
+
+    static {
+        base2SpeciesMin = new HashMap<EAttribute, EAttribute>();
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.SPEZIES__KONSTITUTION_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS, Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, Shr5Package.Literals.SPEZIES__REAKTION_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, Shr5Package.Literals.SPEZIES__STAERKE_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, Shr5Package.Literals.SPEZIES__CHARISMA_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, Shr5Package.Literals.SPEZIES__INTUITION_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.SPEZIES__LOGIK_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.SPEZIES__MAGIE_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.SPEZIES__RESONANZ_MIN);
+
+        base2SpeciesMax = new HashMap<EAttribute, EAttribute>();
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS, Shr5Package.Literals.SPEZIES__GESCHICKLICHKEIT_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, Shr5Package.Literals.SPEZIES__REAKTION_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, Shr5Package.Literals.SPEZIES__STAERKE_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, Shr5Package.Literals.SPEZIES__CHARISMA_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, Shr5Package.Literals.SPEZIES__INTUITION_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.SPEZIES__LOGIK_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.SPEZIES__MAGIE_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.SPEZIES__RESONANZ_MAX);
+
+    }
+
+    /**
+     * Get the species min attribute for a persona attribute.
+     * 
+     * @param attribute
+     * @return
+     */
+    public static EAttribute base2SpeciesMin(EAttribute attribute) {
+        return base2SpeciesMin.get(attribute);
+    }
+    /**
+     * Get the species max attribute for a persona attribute.
+     * 
+     * @param attribute
+     * @return
+     */
+    public static EAttribute base2SpeciesMax(EAttribute attribute) {
+        return base2SpeciesMax.get(attribute);
+    }
 
     /**
      * Creates and initalise a character with the given spezies.
@@ -190,7 +241,6 @@ public class ShadowrunTools {
         return false;
     }
 
-    
     /**
      * calcs a simple Karma costs.
      * 
@@ -207,10 +257,10 @@ public class ShadowrunTools {
             return 0;
 
         int sum = 0;
-        for (int i = from; i < to ; i++) {
+        for (int i = from; i < to; i++) {
             sum += (i + 1) * fac;
         }
-        return (int) sum;
+        return (int)sum;
     }
 
 }

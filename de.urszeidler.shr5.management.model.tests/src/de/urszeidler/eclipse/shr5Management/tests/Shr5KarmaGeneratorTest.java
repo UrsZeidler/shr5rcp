@@ -8,10 +8,13 @@ import java.math.BigDecimal;
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -22,7 +25,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
-import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
@@ -367,6 +369,85 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         findFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
         assertNull("5 spend", findFertigkeit);
         assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @generated not
+     */
+    public void testChangeFertigkeitsGruppeByAdvacement() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(3);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        AbstraktPersona persona = playerCharacter.getPersona();
+        FertigkeitsGruppe fertigkeit = Shr5Factory.eINSTANCE.createFertigkeitsGruppe();
+
+        ShadowrunEditingTools.changeFertigkeitsGruppeByAdvacement(playerCharacter, fertigkeit, 5);
+        PersonaFertigkeitsGruppe findFertigkeit = ShadowrunTools.findGruppe(fertigkeit, persona);
+        assertEquals("5 spend", 5, findFertigkeit.getStufe());
+        assertEquals("75 spend", 75, getFixture().getKarmaSpend());
+
+        ShadowrunEditingTools.changeFertigkeitsGruppeByAdvacement(playerCharacter, fertigkeit, 0);
+        findFertigkeit = ShadowrunTools.findGruppe(fertigkeit, persona);
+        assertNull("5 spend", findFertigkeit);
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        
+
+
+    }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @generated not
+     */
+    public void testChangeAttributeByAdvacement() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(3);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        AbstraktPersona persona = playerCharacter.getPersona();
+        
+
+        ShadowrunEditingTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 5);
+        
+        assertEquals("5 spend", 5, persona.getKonstitutionBasis());
+        assertEquals("75 spend", 75, getFixture().getKarmaSpend());
+
+        ShadowrunEditingTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 0);
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        
+        persona.getSpezies().setKonstitutionMin(2);
+        ShadowrunEditingTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 6);
+        assertEquals("5 spend", 6, persona.getKonstitutionBasis());
+        assertEquals("90 spend", 90, getFixture().getKarmaSpend());
+        
+        ShadowrunEditingTools.changeAttributeByAdvacement(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, 0);
+        assertEquals("2 spend", 2, persona.getKonstitutionBasis());
+        assertEquals("0 spend",0, getFixture().getKarmaSpend());
+        assertNull(ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS));
+     
 
     }
 
