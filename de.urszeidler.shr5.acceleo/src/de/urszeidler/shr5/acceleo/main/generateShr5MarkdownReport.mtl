@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateEcoreReport.
+ */]
+[module generateShr5MarkdownReport('http://www.eclipse.org/emf/2002/Ecore')]
+[import de::urszeidler::shr5::acceleo::main::ecoreToMarkdown /]
+
+[**
+ * The documentation of the template generateElement.
+ * @param anEPackage
+ */]
+[template public generateElement(anEPackage : EPackage)]
+[comment @main/]
+[file (anEPackage.name+'-model.md', false, 'UTF-8')]
+# concret classes in the model [anEPackage.name/]
+
+[printAllSubClassesAndTitel(anEPackage, 'AbstraktPersona')/]
+[printAllSubClassesAndTitel(anEPackage, 'Erlernbar')/]
+[printAllSubClassesAndTitel(anEPackage, 'AbstraktModifikatoren')/]
+[printAllSubClassesAndTitel(anEPackage, 'GeldWert')/]
+
+# all classes
+
+[printAllEClasses(anEPackage)/]
+
+[/file]
+[/template]
