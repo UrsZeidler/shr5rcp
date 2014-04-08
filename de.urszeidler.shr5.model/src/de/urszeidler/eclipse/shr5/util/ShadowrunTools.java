@@ -84,8 +84,8 @@ public class ShadowrunTools {
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS);
-        //orderedAttibutes.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
-        //orderedAttibutes.add(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
     }
 
     /**
@@ -95,6 +95,22 @@ public class ShadowrunTools {
      */
     public static List<EAttribute> getOrderedAttibutes() {
         return orderedAttibutes;
+    }
+
+    /**
+     * The ordered list of the attributes, filtered by the persona.
+     * 
+     * @return the orderedAttibutes
+     */
+    public static List<EAttribute> getOrderedAttibutes(AbstraktPersona persona) {
+        EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
+        ArrayList<EAttribute> list = new ArrayList<EAttribute>(orderedAttibutes.size());
+        for (EAttribute eAttribute : orderedAttibutes) {
+            if (eAllAttributes.contains(eAttribute))
+                list.add(eAttribute);
+        }
+
+        return list;
     }
 
     /**
