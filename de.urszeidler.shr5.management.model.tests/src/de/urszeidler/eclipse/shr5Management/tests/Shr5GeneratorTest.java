@@ -41,6 +41,7 @@ import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * <!-- begin-user-doc --> A test case for the model object ' <em><b>Shr5 Generator</b></em>'. <!-- end-user-doc -->
@@ -156,6 +157,27 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         return character;
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend() <em>Resource Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend()
+     * @generated not
+     */
+    public void testcalcKarma4Resource() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+        shr5System.setKarmaToResourceFactor(2000);
+       
+        assertEquals("Should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendByResources(character));
+        resourcen.setResource(10000);
+        assertEquals("is 5", 5, ShadowrunManagmentTools.calcKarmaSpendByResources(character));
+ 
+    }
+
+    
     /**
      * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
      * <em>Karma Spend</em>}' feature getter. <!-- begin-user-doc --> <!--

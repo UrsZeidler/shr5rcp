@@ -813,10 +813,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("6 spend", 6, ShadowrunManagmentTools.calcKarmaSpendByConnections(playerCharacter, shr5System));
         shr5System.setKarmaToConnectionFactor(1);
         assertEquals("3 spend", 3, ShadowrunManagmentTools.calcKarmaSpendByConnections(playerCharacter, shr5System));
-        
-        
-
     }
 
-    
+   
 } // Shr5KarmaGeneratorTest

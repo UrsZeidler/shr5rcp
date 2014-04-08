@@ -333,13 +333,34 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
-    public static int calcKarmaSpendByConnections(ManagedCharacter character, Shr5System system) {
-        if (character == null)
+    public static int calcKarmaSpendByResources(ManagedCharacter character) {
+        if (character == null || character.getChracterSource() == null)
             return 0;
-        
+
+        if (!Shr5Generator.class.isAssignableFrom(character.getChracterSource().getClass()))
+            return 0;
+
+        Shr5Generator generator = (Shr5Generator)character.getChracterSource();
+        int karmaToResourceFactor = generator.getShr5Generator().getKarmaToResourceFactor();
+        if (karmaToResourceFactor == 0)
+            return 0;
+        int resource = generator.getResourcen().getResource();
+        int karmaToResources = ShadowrunManagmentTools.calcKarmaToResources(generator, generator.getShr5Generator());
+        return (resource + karmaToResources) / karmaToResourceFactor;
+    }
+
+    /**
+     * Calcs the karma used for the attributes.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendByConnections(ManagedCharacter character, Shr5System system) {
+        if (character == null || system == null)
+            return 0;
+
         return ShadowrunManagmentTools.calcConnectionsSpend(character) * system.getKarmaToConnectionFactor();
     }
-    
 
     /**
      * Calcs the karma used for the attributes.
@@ -349,7 +370,7 @@ public class ShadowrunManagmentTools {
      */
     public static int calcKarmaSpendByAttributes(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
         AbstraktPersona persona = character.getPersona();
-        if (persona == null)
+        if (persona == null || advacmentSystem == null)
             return 0;
 
         int sum = 0;
@@ -377,6 +398,9 @@ public class ShadowrunManagmentTools {
      */
     public static int calcKarmaSpendByQuallities(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
         AbstraktPersona persona = character.getPersona();
+        if (persona == null || advacmentSystem == null)
+            return 0;
+
         int sum = 0;
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
@@ -400,6 +424,9 @@ public class ShadowrunManagmentTools {
      */
     public static int calcKarmaSpendBySkills(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
         AbstraktPersona persona = character.getPersona();
+        if (persona == null || advacmentSystem == null)
+            return 0;
+
         int sum = 0;
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
@@ -418,6 +445,9 @@ public class ShadowrunManagmentTools {
      */
     public static int calcKarmaSpendBySpecalism(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
         AbstraktPersona persona = character.getPersona();
+        if (persona == null || advacmentSystem == null)
+            return 0;
+
         int sum = 0;
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
         for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
@@ -438,6 +468,9 @@ public class ShadowrunManagmentTools {
      */
     public static int calcKarmaSpendBySkillGroups(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
         AbstraktPersona persona = character.getPersona();
+        if (persona == null || advacmentSystem == null)
+            return 0;
+
         int sum = 0;
         EList<PersonaFertigkeitsGruppe> fertigkeiten = persona.getFertigkeitsGruppen();
         for (PersonaFertigkeitsGruppe personaFertigkeit : fertigkeiten) {
