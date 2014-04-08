@@ -666,25 +666,20 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         assertEquals("42 spend", 42,
                 ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
         findFertigkeit.getSpezialisierungen().add("h");
-        assertEquals("49 spend", 49,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+        assertEquals("7 spend", 7,
+                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
 
         fertigkeit = Shr5Factory.eINSTANCE.createFertigkeit();
 
         ShadowrunManagmentTools.changeFertigkeitByAdvacement(playerCharacter, fertigkeit, 5);
         findFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
         assertEquals("5 spend", 5, findFertigkeit.getStufe());
-        assertEquals("79 spend", 79,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
-        findFertigkeit.setStufe(6);
-        assertEquals("91 spend", 91,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
-        findFertigkeit.getSpezialisierungen().add("h");
-        assertEquals("98 spend", 98,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+         findFertigkeit.getSpezialisierungen().add("h");
+        assertEquals("14 spend", 14,
+                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
         findFertigkeit.getSpezialisierungen().add("h1");
-        assertEquals("105 spend", 105,
-                ShadowrunManagmentTools.calcKarmaSpendBySkills(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+        assertEquals("21 spend", 21,
+                ShadowrunManagmentTools.calcKarmaSpendBySpecalism(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
       
     }
 

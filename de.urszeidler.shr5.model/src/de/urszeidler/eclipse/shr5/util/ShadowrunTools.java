@@ -36,6 +36,7 @@ public class ShadowrunTools {
     private static Map<EAttribute, EAttribute> base2Calced;
 
     private static List<EAttribute> orderedAttibutes;
+    private static List<EAttribute> orderedBasedAttibutes;
 
     // the static initaliser
     static {
@@ -50,6 +51,7 @@ public class ShadowrunTools {
         base2SpeciesMin.put(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MIN);
         base2SpeciesMin.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.SPEZIES__MAGIE_MIN);
         base2SpeciesMin.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.SPEZIES__RESONANZ_MIN);
+        base2SpeciesMin.put(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS, Shr5Package.Literals.SPEZIES__EDGE_MIN);
 
         base2SpeciesMax = new HashMap<EAttribute, EAttribute>();
         base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.SPEZIES__KONSTITUTION_MAX);
@@ -62,6 +64,7 @@ public class ShadowrunTools {
         base2SpeciesMax.put(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.SPEZIES__WILLENSKRAFT_MAX);
         base2SpeciesMax.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.SPEZIES__MAGIE_MAX);
         base2SpeciesMax.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.SPEZIES__RESONANZ_MAX);
+        base2SpeciesMax.put(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS, Shr5Package.Literals.SPEZIES__EDGE_MAX);
 
         base2Calced = new HashMap<EAttribute, EAttribute>();
         base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__KONSTITUTION);
@@ -74,6 +77,7 @@ public class ShadowrunTools {
         base2Calced.put(Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__WILLENSKRAFT);
         base2Calced.put(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE);
         base2Calced.put(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ);
+        base2Calced.put(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE);
 
         orderedAttibutes = new ArrayList<EAttribute>();
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS);
@@ -84,8 +88,13 @@ public class ShadowrunTools {
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS);
+        orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
+        
+        orderedBasedAttibutes = new ArrayList<EAttribute>(orderedAttibutes);
+        orderedBasedAttibutes.remove(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
+        orderedBasedAttibutes.remove(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
     }
 
     /**
