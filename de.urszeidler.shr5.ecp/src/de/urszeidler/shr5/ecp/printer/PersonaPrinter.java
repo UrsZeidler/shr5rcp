@@ -468,9 +468,9 @@ public class PersonaPrinter extends BasicPrinter {
         printPersonaFertigkeitsList(grid, persona, arrayList);
 
         // grid.add(new BreakPrint(),GridPrint.REMAINDER);
-        grid.addFooter(new LinePrint(), GridPrint.REMAINDER);
-        grid.addFooter(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 3);
-        grid.addFooter(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
+        grid.add(new LinePrint(), GridPrint.REMAINDER);
+        grid.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 3);
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
 
         return grid;
     }
@@ -499,16 +499,29 @@ public class PersonaPrinter extends BasicPrinter {
         grid.addHeader(new TextPrint(Messages.PersonaPrinter_rating, italicFontData));
         grid.addHeader(new TextPrint(Messages.PersonaPrinter_cost, italicFontData));
 
-        //        GridPrint grid1 = new GridPrint("d:g,d,d,d", look);//$NON-NLS-1$
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, spezies.getKonstitutionMin());
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS, spezies.getGeschicklichkeitMin());
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, spezies.getReaktionMin());
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, spezies.getStaerkeMin());
+        int sum =0;
+        List<EAttribute> orderedAttibutes = ShadowrunTools.getOrderedAttibutes(persona);
+        for (EAttribute eAttribute : orderedAttibutes) {
+            Integer min = (Integer)spezies.eGet(ShadowrunTools.base2SpeciesMin(eAttribute));
+            printGeneratorAttributeLine(grid, persona, eAttribute, min);
+            Integer value = (Integer)persona.eGet(eAttribute);
+            sum = sum + value-min;
+            // TODO : check later
+        }
+        grid.add(new LinePrint(), GridPrint.REMAINDER);
+        grid.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 3);
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
 
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, spezies.getCharismaMin());
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, spezies.getWillenskraftMin());
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, spezies.getIntuitionMin());
-        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, spezies.getLogikMin());
+        //        GridPrint grid1 = new GridPrint("d:g,d,d,d", look);//$NON-NLS-1$
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, spezies.getKonstitutionMin());
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS, spezies.getGeschicklichkeitMin());
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, spezies.getReaktionMin());
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, spezies.getStaerkeMin());
+//
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, spezies.getCharismaMin());
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, spezies.getWillenskraftMin());
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, spezies.getIntuitionMin());
+//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, spezies.getLogikMin());
 
         // grid.add(grid1);
         return grid;
@@ -613,6 +626,12 @@ public class PersonaPrinter extends BasicPrinter {
 
         grid.add(new TextPrint(Messages.PersonaPrinter_Start_Resources, attributeFont));
         grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(generator.getStartResources())), attributeFont));
+
+        grid.add(new TextPrint("Karma worth", attributeFont));
+        grid.add(
+                SWT.RIGHT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcCompleteKaramaSpend(character, generator.getGenerator()
+                        .getCharacterAdvancements())), attributeFont));
 
         outerGrid.add(grid);
 
@@ -1528,9 +1547,9 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_attributes, boldFontData), 1);
 
         GridPrint grid1 = new GridPrint("d,d,d,r:d", look);//$NON-NLS-1$
-        printeAttributes(persona, grid1, ShadowrunTools.getOrderedAttibutes());
-        //printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
-       // printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
+        printeAttributes(persona, grid1, ShadowrunTools.getOrderedAttibutes(persona));
+        // printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
+        // printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
         grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 2);
         grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
         grid1.add(new TextPrint(EMPTY, attributeFont), 1);
@@ -1704,10 +1723,10 @@ public class PersonaPrinter extends BasicPrinter {
 
         for (EAttribute eAttribute : eAttributes) {
             EAttribute base2Calced = ShadowrunTools.base2Calced(eAttribute);
-            if(base2Calced==null)
+            if (base2Calced == null)
                 continue;
-            
-            //String attName = itemDelegator.getText(base2Calced);
+
+            // String attName = itemDelegator.getText(base2Calced);
             String attName = toFeatureName(persona, base2Calced);
 
             Integer value = (Integer)persona.eGet(eAttribute);
