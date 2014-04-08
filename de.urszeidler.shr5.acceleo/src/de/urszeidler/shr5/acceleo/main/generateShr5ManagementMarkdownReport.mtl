@@ -15,11 +15,20 @@
 # concret classes in the model [anEPackage.name/]
 
 [printAllSubClassesAndTitel(anEPackage, 'CharacterGeneratorSystem')/]
+The Systems used to create characters.
+
 [printAllSubClassesAndTitel(anEPackage, 'Changes')/]
+The change system.
+
 [printAllSubClassesAndTitel(anEPackage, 'PriorityCategorie')/]
+All the proprity options for building a character.
+
 [printAllSubClassesAndTitel(anEPackage, 'CharacterGenerator')/]
+The character generators.
 
 # all classes
+
+The complete list of all EClasses in this package.
 
 [printAllEClasses(anEPackage)/]
 

@@ -15,11 +15,21 @@
 # concret classes in the model [anEPackage.name/]
 
 [printAllSubClassesAndTitel(anEPackage, 'AbstraktPersona')/]
+These are all the character types you can create.
+
 [printAllSubClassesAndTitel(anEPackage, 'Erlernbar')/]
-[printAllSubClassesAndTitel(anEPackage, 'AbstraktModifikatoren')/]
+All the things a character can learn.
+
 [printAllSubClassesAndTitel(anEPackage, 'GeldWert')/]
+All you can buy.
+
+[printAllSubClassesAndTitel(anEPackage, 'AbstraktModifikatoren')/]
+All the things that can modify the character.
+
 
 # all classes
+
+The complete list of all EClasses in this package.
 
 [printAllEClasses(anEPackage)/]
 

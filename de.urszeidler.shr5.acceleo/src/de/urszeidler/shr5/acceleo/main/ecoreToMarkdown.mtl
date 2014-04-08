@@ -57,6 +57,7 @@
 [toDocumentation(anEclass.eAnnotations)/]
 
 [if (not anEclass.eAllSuperTypes->isEmpty())]
+**all super types :**
 [for (it : EClass | anEclass.eAllSuperTypes)]
 |[printEClassLink(it)/][/for]| 
 

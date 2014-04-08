@@ -6,31 +6,21 @@
     <!-- The classpath with only the dependencies used by the project -->
     <path id="de.urszeidler.shr5.acceleo.libraryclasspath">
         <pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.acceleo/bin"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.9.100.v20131218-1515.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/javax.annotation_1.1.0.v201209060031.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/javax.inject_1.0.0.v20091030.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.9.1.v20140110-1610.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.5.300.v20130429-1813.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.200.v20130514-1256/runtime_registry_compatibility.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.5.301.v20130717-1549.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.5.100.v20130422-1538.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.4.200.v20130326-1255.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.3.100.v20130327-1442.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.9.2.v20131212-0545.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.9.2.v20131212-0545.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.xmi_2.9.1.v20131212-0545.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl_3.3.0.v20140120-1508.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/lpg.runtime.java_2.0.17.v201004271640.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.common_1.1.0.v20130531-0544.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.ecore_3.3.0.v20130520-1222.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.common_3.4.2.201401221203.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.model_3.4.2.201401221203.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.profiler_3.4.2.201401221203.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.engine_3.4.2.201401221203.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.9.1.v20140203-1126.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.9.0.v20140203-1126.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/dropins/com.google.guava_15.0.0.v201402241730.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.osgi_3.9.1.v20130814-1242.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.osgi.nl_de_4.3.0.v20131123020001.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.transforms.hook_1.0.401.v20130327-1442.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.weaving.hook_1.0.200.v20130327-1442.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.jobs_3.5.300.v20130429-1813.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.200.v20130514-1256/runtime_registry_compatibility.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.registry_3.5.301.v20130717-1549.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.preferences_3.5.100.v20130422-1538.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.contenttype_3.4.200.v20130326-1255.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.app_1.3.100.v20130327-1442.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.ecore_2.9.1.v20130827-0309.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.common_2.9.1.v20130827-0309.jar"/>
+        <pathelement location="${ECLIPSE_WORKSPACE}//.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.ecore.xmi_2.9.1.v20130827-0309.jar"/>
     </path>
 
     <path id="de.urszeidler.shr5.acceleo.classpath">
