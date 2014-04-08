@@ -20,6 +20,7 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -27,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
@@ -35,6 +37,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private AbstraktPersona object = Shr5Factory.eINSTANCE.createMysticAdept();
+    private ManagedCharacter character;
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
@@ -288,6 +291,9 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         emfFormBuilder.addTextEntry(Messages.AbstraktPersonaPage_MethaType, Shr5Package.Literals.ABSTRAKT_PERSONA__SPEZIES, compositeMetaType);
         if (object instanceof Zauberer) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ZAUBERER__TRADITION, compositeMetaType);
+        }
+        if (object instanceof AspektMagier) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ASPEKT_MAGIER__ASPEKT, compositeMetaType);
         }
         emfFormBuilder.buildinComposite(m_bindingContext, body, object);
 
