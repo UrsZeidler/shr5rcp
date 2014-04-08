@@ -784,4 +784,39 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
 
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @generated not
+     */
+    public void testCalcKarmaSpend_connections() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        shr5System.setKarmaToConnectionFactor(2);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+
+        Connection connection = Shr5managementFactory.eINSTANCE.createConnection();
+        connection.setInfluence(1);
+        playerCharacter.getConnections().add(connection);
+
+        assertEquals("2 spend", 2, ShadowrunManagmentTools.calcKarmaSpendByConnections(playerCharacter, shr5System));
+
+        connection.setLoyality(2);
+        assertEquals("6 spend", 6, ShadowrunManagmentTools.calcKarmaSpendByConnections(playerCharacter, shr5System));
+        shr5System.setKarmaToConnectionFactor(1);
+        assertEquals("3 spend", 3, ShadowrunManagmentTools.calcKarmaSpendByConnections(playerCharacter, shr5System));
+        
+        
+
+    }
+
+    
 } // Shr5KarmaGeneratorTest

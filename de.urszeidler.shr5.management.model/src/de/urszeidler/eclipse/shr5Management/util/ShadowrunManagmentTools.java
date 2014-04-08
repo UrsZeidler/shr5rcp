@@ -333,6 +333,20 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
+    public static int calcKarmaSpendByConnections(ManagedCharacter character, Shr5System system) {
+        if (character == null)
+            return 0;
+        
+        return ShadowrunManagmentTools.calcConnectionsSpend(character) * system.getKarmaToConnectionFactor();
+    }
+    
+
+    /**
+     * Calcs the karma used for the attributes.
+     * 
+     * @param object
+     * @return
+     */
     public static int calcKarmaSpendByAttributes(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
         AbstraktPersona persona = character.getPersona();
         if (persona == null)
