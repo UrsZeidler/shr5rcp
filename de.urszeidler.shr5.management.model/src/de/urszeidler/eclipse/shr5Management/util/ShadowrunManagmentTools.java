@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -197,8 +198,6 @@ public class ShadowrunManagmentTools {
         return false;
     }
 
- 
-    
     /**
      * Finds the persona change for the given {@link Steigerbar}.
      * 
@@ -209,7 +208,7 @@ public class ShadowrunManagmentTools {
     public static AttributeChange findCharacterAdvacements(ManagedCharacter character, EAttribute attribute) {
         if (character == null || attribute == null)
             return null;
-        
+
         EList<Changes> changes = character.getChanges();
         for (Changes change : changes) {
             if (change instanceof AttributeChange) {
@@ -313,6 +312,129 @@ public class ShadowrunManagmentTools {
     }
 
     /**
+     * Calc the complete Karma cost for a character.
+     * 
+     * @param character
+     * @param advacmentSystem
+     * @return
+     */
+    public static int calcCompleteKaramaSpend(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        int spendBySkills = calcKarmaSpendBySkills(character, advacmentSystem);
+        int spendBySkillGroups = calcKarmaSpendBySkillGroups(character, advacmentSystem);
+        int spendBySecalism = calcKarmaSpendBySpecalism(character, advacmentSystem);
+        int spendByQuallities = calcKarmaSpendByQuallities(character, advacmentSystem);
+        int spendByAttributes = calcKarmaSpendByAttributes(character, advacmentSystem);
+        return spendByQuallities + spendBySecalism + spendBySkillGroups + spendBySkills + spendByAttributes;
+    }
+
+    /**
+     * Calcs the karma used for the attributes.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendByAttributes(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        AbstraktPersona persona = character.getPersona();
+        if (persona == null)
+            return 0;
+
+        int sum = 0;
+        Spezies spezies = persona.getSpezies();
+        if (spezies == null)
+            return 0;
+
+        List<EAttribute> attibutes = ShadowrunTools.getOrderedAttibutes(persona);
+        for (EAttribute eAttribute : attibutes) {
+            EAttribute speciesMin = ShadowrunTools.base2SpeciesMin(eAttribute);
+            Integer specMin = (Integer)spezies.eGet(speciesMin);
+            Integer personaAttibuteValue = (Integer)persona.eGet(eAttribute);
+            IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), eAttribute.eClass());
+            if (advancment != null)
+                sum = sum + ShadowrunTools.calcKarmaCosts(specMin, personaAttibuteValue, advancment.getKarmaFactor());
+        }
+        return sum;
+    }
+
+    /**
+     * Calcs the karma used for the skills.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendByQuallities(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        AbstraktPersona persona = character.getPersona();
+        int sum = 0;
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
+            for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
+                IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), personaEigenschaft.eClass());
+                if (advancment != null)
+                    sum = sum + personaEigenschaft.getKarmaKosten() * advancment.getKarmaFactor() * -1;
+
+            }
+        }
+
+        return sum;
+    }
+
+    /**
+     * Calcs the karma used for the skills.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendBySkills(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        AbstraktPersona persona = character.getPersona();
+        int sum = 0;
+        EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+        for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+            IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), personaFertigkeit.getFertigkeit().eClass());
+            if (advancment != null)
+                sum = sum + ShadowrunTools.calcKarmaCosts(0, personaFertigkeit.getStufe(), advancment.getKarmaFactor());
+        }
+        return sum;// object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+    }
+
+    /**
+     * Calcs the karma used for the secalism.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendBySpecalism(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        AbstraktPersona persona = character.getPersona();
+        int sum = 0;
+        EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
+        for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+            sum = sum + personaFertigkeit.getSpezialisierungen().size();
+        }
+        IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), null);
+        if (advancment != null)
+            return sum * advancment.getKarmaFactor();
+
+        return sum * 7;// object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+    }
+
+    /**
+     * Calcs the karma used for the skill groups.
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendBySkillGroups(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        AbstraktPersona persona = character.getPersona();
+        int sum = 0;
+        EList<PersonaFertigkeitsGruppe> fertigkeiten = persona.getFertigkeitsGruppen();
+        for (PersonaFertigkeitsGruppe personaFertigkeit : fertigkeiten) {
+            IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), personaFertigkeit.getGruppe().eClass());
+            if (advancment != null)
+                sum = sum + ShadowrunTools.calcKarmaCosts(0, personaFertigkeit.getStufe(), advancment.getKarmaFactor());
+        }
+        return sum;// object.getShr5Generator().getKarmaPoints() - object.getKarmaSpend();
+    }
+
+    /**
      * Calcs the karma left for a generator.
      * 
      * @param object
@@ -397,8 +519,7 @@ public class ShadowrunManagmentTools {
         }
         return buffer.toString();
     }
-    
-    
+
     /**
      * Set the persona fertigkeit to the value by applying a persona change. It clears the persona fertigkeit and the advancement is set to 0.
      * 
@@ -456,7 +577,7 @@ public class ShadowrunManagmentTools {
 
         Integer eGet = (Integer)spezies.eGet(speciesMin);
         if (value < eGet)
-            value= eGet;
+            value = eGet;
 
         AttributeChange attributeChange = ShadowrunManagmentTools.findCharacterAdvacements(character, attribute);
         if (attributeChange == null) {
@@ -466,16 +587,14 @@ public class ShadowrunManagmentTools {
             attributeChange.setFrom((Integer)eGet);
             attributeChange.setTo(value);
             attributeChange.applyChanges();
-            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
-                    attribute, eGet, value));
-        }else if(eGet==value){
+            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
+        } else if (eGet == value) {
             character.getChanges().remove(attributeChange);
             persona.eSet(attribute, eGet);
-        }else{
+        } else {
             attributeChange.setTo((Integer)value);
             attributeChange.applyChanges();
-            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
-                    attribute, eGet, value));
+            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
         }
 
     }
@@ -519,6 +638,5 @@ public class ShadowrunManagmentTools {
         }
 
     }
-
 
 }
