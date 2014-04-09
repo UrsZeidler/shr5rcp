@@ -91,7 +91,7 @@ public class ShadowrunTools {
         orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
         orderedAttibutes.add(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
-        
+
         orderedBasedAttibutes = new ArrayList<EAttribute>(orderedAttibutes);
         orderedBasedAttibutes.remove(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
         orderedBasedAttibutes.remove(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
@@ -150,6 +150,32 @@ public class ShadowrunTools {
      */
     public static EAttribute base2SpeciesMax(EAttribute attribute) {
         return base2SpeciesMax.get(attribute);
+    }
+
+    /**
+     * Filters the skillgoups only having skill with the given attribute.
+     * 
+     * @param attribute the attribute
+     * @return the filtered list
+     */
+    public static ArrayList<FertigkeitsGruppe> filterSkillGroups(EAttribute attribute, List<FertigkeitsGruppe> list) {
+        ArrayList<FertigkeitsGruppe> arrayList = new ArrayList<FertigkeitsGruppe>(list.size());
+        boolean included = true;
+        for (FertigkeitsGruppe fertigkeitsGruppe : list) {
+            if(fertigkeitsGruppe==null)
+                continue;
+            EList<Fertigkeit> fertigkeiten = fertigkeitsGruppe.getFertigkeiten();
+            for (Fertigkeit fertigkeit : fertigkeiten) {
+                if (!attribute.equals(fertigkeit.getAttribut())) {
+                    included = false;
+                    break;
+                }
+            }
+            if (included)
+                arrayList.add(fertigkeitsGruppe);
+            included = true;
+        }
+        return arrayList;
     }
 
     /**

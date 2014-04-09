@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import de.urszeidler.eclipse.shr5.util.ShadowrunToolsTest;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -26,7 +27,7 @@ public class Shr5Tests extends TestSuite {
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public static Test suite() {
         TestSuite suite = new Shr5Tests("shr5 Tests");
@@ -37,6 +38,7 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(AspektMagierTest.class);
         suite.addTestSuite(TechnomancerTest.class);
         suite.addTestSuite(SpriteTest.class);
+        suite.addTestSuite(ShadowrunToolsTest.class);
         return suite;
     }
 

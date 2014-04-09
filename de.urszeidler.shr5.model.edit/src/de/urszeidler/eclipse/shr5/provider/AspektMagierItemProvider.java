@@ -22,9 +22,11 @@ import org.eclipse.swt.graphics.Image;
 
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.AspektMagier} object.
@@ -120,7 +122,7 @@ public class AspektMagierItemProvider
      */
 	protected void addAspektPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor //createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_AspektMagier_aspekt_feature"),
@@ -131,7 +133,14 @@ public class AspektMagierItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                public Collection<?> getChoiceOfValues(Object object) {
+                    Collection<?> choiceOfValues2 = super.getChoiceOfValues(object);
+                    return  ShadowrunTools.filterSkillGroups(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE, (List<FertigkeitsGruppe>)choiceOfValues2);
+                }
+                
+            });
     }
 
 	/**
