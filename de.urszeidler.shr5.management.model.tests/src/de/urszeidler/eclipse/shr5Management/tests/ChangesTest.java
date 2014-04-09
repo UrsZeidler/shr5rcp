@@ -108,7 +108,17 @@ public abstract class ChangesTest extends TestCase {
         part.setKarmaFactor(13);
         part.setType(Shr5Package.Literals.INITATION);
         shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
-    }
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(5);
+        part.setType(Shr5Package.Literals.ZAUBER);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(5);
+        part.setType(Shr5Package.Literals.KOMPLEXE_FORM);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+}
 
     /**
      * Sets the fixture for this Changes test case.
