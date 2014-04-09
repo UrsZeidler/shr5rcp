@@ -118,7 +118,7 @@ public class AspektMagierItemProvider
      * This adds a property descriptor for the Aspekt feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	protected void addAspektPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
