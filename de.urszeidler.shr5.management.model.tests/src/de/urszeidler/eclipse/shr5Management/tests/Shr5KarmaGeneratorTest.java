@@ -789,7 +789,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         KoerperPersona koerperPersona = (KoerperPersona)persona;
         koerperPersona.getEigenschaften().add(personaEigenschaft);
 
-        personaEigenschaft.setKarmaKosten(-10);
+        personaEigenschaft.setKarmaKosten(10);
         assertEquals("20 spend", 20,
                 ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
 
@@ -820,7 +820,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         KoerperPersona koerperPersona = (KoerperPersona)persona;
         koerperPersona.getEigenschaften().add(personaEigenschaft);
 
-        personaEigenschaft.setKarmaKosten(-10);
+        personaEigenschaft.setKarmaKosten(10);
         assertEquals("20 spend", 20,
                 ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
 
@@ -828,7 +828,7 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
         koerperPersona = (KoerperPersona)persona;
         koerperPersona.getEigenschaften().add(personaEigenschaft);
 
-        personaEigenschaft.setKarmaKosten(-10);
+        personaEigenschaft.setKarmaKosten(10);
         assertEquals("40 spend", 40,
                 ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
 

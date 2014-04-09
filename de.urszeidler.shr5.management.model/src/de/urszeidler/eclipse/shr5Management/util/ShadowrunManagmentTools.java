@@ -34,13 +34,13 @@ import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.Technomancer;
-import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.IncreaseCharacterPart;
@@ -328,7 +328,12 @@ public class ShadowrunManagmentTools {
         int spendBySecalism = calcKarmaSpendBySpecalism(character, advacmentSystem);
         int spendByQuallities = calcKarmaSpendByQuallities(character, advacmentSystem);
         int spendByAttributes = calcKarmaSpendByAttributes(character, advacmentSystem);
-        return spendByQuallities + spendBySecalism + spendBySkillGroups + spendBySkills + spendByAttributes;
+
+        int spendByConnections = calcKarmaSpendByConnections(character);
+        int spendByResources = calcKarmaSpendByResources(character);
+        int spendBySpellsOrForms = calcKarmaSpendBySpellsOrForms(character, advacmentSystem);
+        return spendBySpellsOrForms + spendByQuallities + spendBySecalism + spendBySkillGroups + spendBySkills + spendByAttributes
+                + spendByConnections + spendByResources;
     }
 
     /**
@@ -399,11 +404,32 @@ public class ShadowrunManagmentTools {
      * @param object
      * @return
      */
+    public static int calcKarmaSpendByConnections(ManagedCharacter character) {
+        if (character == null)
+            return 0;
+
+        CharacterGeneratorSystem generator = character.getChracterSource().getGenerator();
+        return calcKarmaSpendByConnections(character, generator);
+    }
+
+    /**
+     * Calcs the karma used for the attributes.
+     * 
+     * @param object
+     * @return
+     */
     public static int calcKarmaSpendByConnections(ManagedCharacter character, Shr5System system) {
         if (character == null || system == null)
             return 0;
 
         return ShadowrunManagmentTools.calcConnectionsSpend(character) * system.getKarmaToConnectionFactor();
+    }
+
+    public static int calcKarmaSpendByConnections(ManagedCharacter character, CharacterGeneratorSystem generator) {
+        if (Shr5System.class.isAssignableFrom(generator.getClass()))
+            return calcKarmaSpendByConnections(character, (Shr5System)generator);
+
+        return 0;
     }
 
     /**
@@ -452,7 +478,7 @@ public class ShadowrunManagmentTools {
             for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
                 IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), personaEigenschaft.eClass());
                 if (advancment != null)
-                    sum = sum + personaEigenschaft.getKarmaKosten() * advancment.getKarmaFactor() * -1;
+                    sum = sum + personaEigenschaft.getKarmaKosten() * advancment.getKarmaFactor() ;
 
             }
         }

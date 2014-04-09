@@ -57,6 +57,7 @@ import de.urszeidler.eclipse.shr5.impl.FertigkeitImpl;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Changes;
+import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
@@ -439,6 +440,8 @@ public class PersonaPrinter extends BasicPrinter {
 
         gridMid.add(new BorderPrint(printPersonaSkillForGenerator(persona, printer_skills, arrayList, sum), border));
 
+        grid.add(new BorderPrint(printCalculatedKarma(character), border),GridPrint.REMAINDER);
+
         return grid;
     }
 
@@ -499,13 +502,13 @@ public class PersonaPrinter extends BasicPrinter {
         grid.addHeader(new TextPrint(Messages.PersonaPrinter_rating, italicFontData));
         grid.addHeader(new TextPrint(Messages.PersonaPrinter_cost, italicFontData));
 
-        int sum =0;
+        int sum = 0;
         List<EAttribute> orderedAttibutes = ShadowrunTools.getOrderedAttibutes(persona);
         for (EAttribute eAttribute : orderedAttibutes) {
             Integer min = (Integer)spezies.eGet(ShadowrunTools.base2SpeciesMin(eAttribute));
             printGeneratorAttributeLine(grid, persona, eAttribute, min);
             Integer value = (Integer)persona.eGet(eAttribute);
-            sum = sum + value-min;
+            sum = sum + value - min;
             // TODO : check later
         }
         grid.add(new LinePrint(), GridPrint.REMAINDER);
@@ -513,15 +516,16 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
 
         //        GridPrint grid1 = new GridPrint("d:g,d,d,d", look);//$NON-NLS-1$
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, spezies.getKonstitutionMin());
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS, spezies.getGeschicklichkeitMin());
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, spezies.getReaktionMin());
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, spezies.getStaerkeMin());
-//
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, spezies.getCharismaMin());
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, spezies.getWillenskraftMin());
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, spezies.getIntuitionMin());
-//        printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, spezies.getLogikMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, spezies.getKonstitutionMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS,
+        // spezies.getGeschicklichkeitMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, spezies.getReaktionMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, spezies.getStaerkeMin());
+        //
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, spezies.getCharismaMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, spezies.getWillenskraftMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, spezies.getIntuitionMin());
+        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, spezies.getLogikMin());
 
         // grid.add(grid1);
         return grid;
@@ -839,7 +843,61 @@ public class PersonaPrinter extends BasicPrinter {
     }
 
     /**
-     * Prints the persona condition monitor.
+     * Prints the karma cost for a managed character.
+     * 
+     * @param persona
+     * @return
+     */
+    private GridPrint printCalculatedKarma(ManagedCharacter character) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
+
+        if (character == null || character.getChracterSource() == null || character.getChracterSource().getGenerator() == null
+                || character.getChracterSource().getGenerator().getCharacterAdvancements() == null)
+            return grid;
+
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Calculated Karma Cost", boldFontData), 2);
+        grid.addHeader(new TextPrint("cost part", italicFontData));
+        grid.addHeader(new TextPrint(Messages.Printer_karma, italicFontData));
+
+        CharacterAdvancementSystem advancementSystem = character.getChracterSource().getGenerator().getCharacterAdvancements();
+
+        grid.add(new TextPrint("karma spend by attributes", attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(
+                printInteger(ShadowrunManagmentTools.calcKarmaSpendByAttributes(character, advancementSystem)), attributeFont));
+
+        grid.add(new TextPrint("karma spend by quallities", attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(
+                printInteger(ShadowrunManagmentTools.calcKarmaSpendByQuallities(character, advancementSystem)), attributeFont));
+
+        grid.add(new TextPrint("karma spend by skills", attributeFont));
+        grid.add(
+                SWT.RIGHT,
+                SWT.DEFAULT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendBySkills(character, advancementSystem)
+                        + ShadowrunManagmentTools.calcKarmaSpendBySkillGroups(character, advancementSystem)
+                        + ShadowrunManagmentTools.calcKarmaSpendBySpecalism(character, advancementSystem)), attributeFont));
+
+        grid.add(new TextPrint("karma spend by spells/forms", attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, advancementSystem)), attributeFont));
+
+        grid.add(new TextPrint("karma spend by connections", attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendByConnections(character)), attributeFont));
+
+        grid.add(new TextPrint("karma spend by resorcen", attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendByResources(character)), attributeFont));
+
+        grid.add(new TextPrint("karma spend complete", attributeFont));
+        grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(ShadowrunManagmentTools.calcCompleteKaramaSpend(character, advancementSystem)),
+                attributeFont));
+
+        return grid;
+    }
+
+    /**
+     * Prints a list of qualities.
      * 
      * @param persona
      * @return
