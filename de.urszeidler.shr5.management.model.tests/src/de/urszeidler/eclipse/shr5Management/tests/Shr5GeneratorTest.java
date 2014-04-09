@@ -18,6 +18,7 @@ import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.MudanPersona;
@@ -29,6 +30,7 @@ import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -48,42 +50,64 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend() <em>Karma Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend() <em>Attribute Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend() <em>Resource Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend() <em>Connection Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend() <em>Skill Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend() <em>Special Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend() <em>Group Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend() <em>Knownlege Point Spend</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend() <em>Karma Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getAttributeSpend() <em>Attribute Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getResourceSpend() <em>Resource Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getConnectionSpend() <em>Connection Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSkillPointSpend() <em>Skill Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpecialPointSpend() <em>Special Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getGroupPointSpend() <em>Group Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKnownlegePointSpend() <em>Knownlege Point Spend</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Category Only Once</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Attributes Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Skill Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Special Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Special Type Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Connection Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Resource Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Magic Skills Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Magic Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Group Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Knowlege Skill Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Spell Points</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Power Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasCategoryOnlyOnce(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>
+ * Has Category Only Once</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllAttributesPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Attributes Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Skill Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Special Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpecialTypePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Special Type Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllConnectionPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Connection Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllResourcePoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Resource Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicSkillsPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Magic Skills Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllMagicPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Magic Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllGroupPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Group Points</em>}</li>
+ * <li>
+ * {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKnowlegeSkillPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Knowlege Skill Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Karma Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllSpellPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Spell Points</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#hasSpendAllPowerPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+ * <em>Has Spend All Power Points</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -134,6 +158,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -170,14 +195,100 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
         getFixture().setCharacter(character);
         shr5System.setKarmaToResourceFactor(2000);
-       
+
         assertEquals("Should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendByResources(character));
         resourcen.setResource(10000);
         assertEquals("is 5", 5, ShadowrunManagmentTools.calcKarmaSpendByResources(character));
- 
+
     }
 
-    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend()
+     * @generated not
+     */
+    public void testcalcKarma4Spells() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createZaubererCharacter();// .createMudanCharacter();
+        getFixture().setCharacter(character);
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+
+        assertEquals("should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
+
+        Zauberer z = (Zauberer)character.getPersona();
+        PersonaZauber personaZauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        z.getZauber().add(personaZauber);
+
+        personaZauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        z.getZauber().add(personaZauber);
+
+        assertEquals("should be 10", 10, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
+
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend()
+     * @generated not
+     */
+    public void testcalcKarma4Spells1() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createMysticAdeptCharacter();// .createMudanCharacter();
+        getFixture().setCharacter(character);
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+
+        assertEquals("should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
+
+        Zauberer z = (Zauberer)character.getPersona();
+        PersonaZauber personaZauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        z.getZauber().add(personaZauber);
+
+        personaZauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        z.getZauber().add(personaZauber);
+
+        assertEquals("should be 10", 10, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
+
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend() <em>Spell Point Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getSpellPointSpend()
+     * @generated not
+     */
+    public void testcalcKarma4KomplexForms() {
+        createBasicCategories();
+        PlayerCharacter character = PriorityCategorieTest.createTechnoCharacter();
+        getFixture().setCharacter(character);
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+
+        assertEquals("should be 0", 0, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
+
+        de.urszeidler.eclipse.shr5.Technomancer t = (de.urszeidler.eclipse.shr5.Technomancer)character.getPersona();
+        PersonaKomplexForm personaZauber = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
+        t.getComplexForms().add(personaZauber);
+
+        personaZauber = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
+        t.getComplexForms().add(personaZauber);
+
+        assertEquals("should be 10", 10, ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(character, shr5System.getCharacterAdvancements()));
+
+    }
+
     /**
      * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
      * <em>Karma Spend</em>}' feature getter. <!-- begin-user-doc --> <!--

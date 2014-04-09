@@ -27,11 +27,15 @@ import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Advancement;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -328,6 +332,33 @@ public class ShadowrunManagmentTools {
     }
 
     /**
+     * Calcs the karma used for the spells or forms. Return 0 if not an apply able .
+     * 
+     * @param object
+     * @return
+     */
+    public static int calcKarmaSpendBySpellsOrForms(ManagedCharacter character, CharacterAdvancementSystem advacmentSystem) {
+        AbstraktPersona persona = character.getPersona();
+        if (persona == null || advacmentSystem == null)
+            return 0;
+
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            EList<PersonaZauber> zauber = z.getZauber();
+            IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), Shr5Package.Literals.ZAUBER);
+            if (advancment != null)
+                return zauber.size() * advancment.getKarmaFactor();
+        } else if (persona instanceof Technomancer) {
+            Technomancer t = (Technomancer)persona;
+            IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), Shr5Package.Literals.KOMPLEXE_FORM);
+            if (advancment != null)
+                return t.getComplexForms().size() * advancment.getKarmaFactor();
+
+        }
+        return 0;
+    }
+
+    /**
      * Calcs the karma used for the attributes.
      * 
      * @param object
@@ -341,6 +372,19 @@ public class ShadowrunManagmentTools {
             return 0;
 
         Shr5Generator generator = (Shr5Generator)character.getChracterSource();
+        return calcKarmaSpendByResources(generator);
+    }
+
+    /**
+     * Calc the karma spend for the given {@link Shr5Generator}.
+     * 
+     * @param generator
+     * @return
+     */
+    public static int calcKarmaSpendByResources(Shr5Generator generator) {
+        if (generator == null || generator.getShr5Generator() == null)
+            return 0;
+
         int karmaToResourceFactor = generator.getShr5Generator().getKarmaToResourceFactor();
         if (karmaToResourceFactor == 0)
             return 0;
