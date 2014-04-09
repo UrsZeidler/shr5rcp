@@ -1,5 +1,7 @@
 2014-04-27 Version 0.1.5
 
+* added karma calculation section in the shr5Generator report
+* added skill group for aspect magicians
 * update to ecp 1.2
 * added ammunition as object type
 * import from chummer2 :
