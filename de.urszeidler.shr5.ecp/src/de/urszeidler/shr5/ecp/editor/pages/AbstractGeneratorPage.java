@@ -203,36 +203,26 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
 
         object.setCharacter(null);
         object.setState(GeneratorState.NEW);
+        removePages();
         validateChange();
     }
 
     protected void addPersonaPage(ManagedCharacter playerCharacter) {
         try {
-            if (this.getEditor().findPage(PERSONA_PRINTER) != null)
-                this.getEditor().removePage(4);
-            if (this.getEditor().findPage(PERSONA_ADVANCEMENT) != null)
-                this.getEditor().removePage(3);
-            if (this.getEditor().findPage(PERSONA_INVENTAR) != null)
-                this.getEditor().removePage(2);
-            if (this.getEditor().findPage(PERSONA) != null)
-                this.getEditor().removePage(1);
- 
+            removePages();
+
             CharacterGenerator chracterSource = playerCharacter.getChracterSource();
             if (chracterSource instanceof Shr5Generator) {
-                Shr5Generator new_name = (Shr5Generator)chracterSource;
                 this.getEditor().addPage(
                         1,
                         new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter.getPersona(),
                                 getEditingDomain(), mananger));
-            }else
-                if (chracterSource instanceof Shr5KarmaGenerator) {
-                    Shr5KarmaGenerator new_name = (Shr5KarmaGenerator)chracterSource;
-                    this.getEditor().addPage(
-                            1,
-                            new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter,
-                                    getEditingDomain(), mananger));
-                    
-                }
+            } else if (chracterSource instanceof Shr5KarmaGenerator) {
+                this.getEditor().addPage(
+                        1,
+                        new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter,
+                                getEditingDomain(), mananger));
+            }
             this.getEditor().addPage(
                     2,
                     new ManagedCharacterPage(this.getEditor(), PERSONA_INVENTAR, Messages.ShadowrunEditor_page_character, playerCharacter,
@@ -251,6 +241,20 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         } catch (PartInitException e1) {
             e1.printStackTrace();
         };
+    }
+
+    /**
+     * 
+     */
+    private void removePages() {
+        if (this.getEditor().findPage(PERSONA_PRINTER) != null)
+            this.getEditor().removePage(4);
+        if (this.getEditor().findPage(PERSONA_ADVANCEMENT) != null)
+            this.getEditor().removePage(3);
+        if (this.getEditor().findPage(PERSONA_INVENTAR) != null)
+            this.getEditor().removePage(2);
+        if (this.getEditor().findPage(PERSONA) != null)
+            this.getEditor().removePage(1);
     }
 
     protected void updateGeneratorState(Diagnostic diagnostic, CharacterGenerator generator) {
