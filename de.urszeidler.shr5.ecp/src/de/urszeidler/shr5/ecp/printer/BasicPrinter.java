@@ -251,6 +251,9 @@ public class BasicPrinter implements IPropertyChangeListener {
         if (be == null)
             return EMPTY;
 
+        if (be.getName() == null)
+            return EMPTY;
+
         return be.getName();
     }
 
