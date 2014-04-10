@@ -27,6 +27,8 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -160,9 +162,6 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
 
     }
 
-    
- 
-    
     /**
      * Create the managed character.
      * 
@@ -217,14 +216,28 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
                 this.getEditor().removePage(2);
             if (this.getEditor().findPage(PERSONA) != null)
                 this.getEditor().removePage(1);
-            this.getEditor().addPage(
-                    1,
-                    new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter.getPersona(),
-                            getEditingDomain(), mananger));
+ 
+            CharacterGenerator chracterSource = playerCharacter.getChracterSource();
+            if (chracterSource instanceof Shr5Generator) {
+                Shr5Generator new_name = (Shr5Generator)chracterSource;
+                this.getEditor().addPage(
+                        1,
+                        new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter.getPersona(),
+                                getEditingDomain(), mananger));
+            }else
+                if (chracterSource instanceof Shr5KarmaGenerator) {
+                    Shr5KarmaGenerator new_name = (Shr5KarmaGenerator)chracterSource;
+                    this.getEditor().addPage(
+                            1,
+                            new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter,
+                                    getEditingDomain(), mananger));
+                    
+                }
             this.getEditor().addPage(
                     2,
                     new ManagedCharacterPage(this.getEditor(), PERSONA_INVENTAR, Messages.ShadowrunEditor_page_character, playerCharacter,
                             getEditingDomain(), mananger));
+
             this.getEditor().addPage(
                     3,
                     new CharacterAdvancementPage(this.getEditor(), PERSONA_ADVANCEMENT, Messages.ShadowrunEditor_page_advacement, playerCharacter,

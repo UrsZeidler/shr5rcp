@@ -66,6 +66,14 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         this.editingDomain = editingDomain;
     }
 
+    public AbstraktPersonaPage(FormEditor editor, String id, String title, ManagedCharacter character, EditingDomain editingDomain,
+            ReferenceManager manager) {
+        super(editor, id, title, manager);
+        this.character = character;
+        this.object = character.getPersona();
+        this.editingDomain = editingDomain;
+    }
+
     /**
      * Create contents of the form.
      * 
@@ -173,27 +181,36 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         managedForm.getToolkit().paintBordersFor(sctnSkill);
         sctnSkill.setText(Messages.AbstraktPersonaPage_Fertigkeiten);
         sctnSkill.setExpanded(true);
-     
 
-        final PersonaFertigkeitenWidget personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, object, toolkit, editingDomain);
+        final PersonaFertigkeitenWidget personaFertigkeitenWidget;
+        if (character == null) {
+             personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, object, toolkit,
+                    editingDomain);
+        } else {
+            personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, character, toolkit,
+                    editingDomain);
+        }
+        //final PersonaFertigkeitenWidget = p;
+
         sctnSkill.setClient(personaFertigkeitenWidget);
         managedForm.getToolkit().adapt(personaFertigkeitenWidget);
         managedForm.getToolkit().paintBordersFor(personaFertigkeitenWidget);
-        
+
         ToolBar toolBar = new ToolBar(sctnSkill, SWT.FLAT | SWT.RIGHT);
-      
-//        managedForm.getToolkit().adapt(toolBar);
-//        managedForm.getToolkit().paintBordersFor(toolBar);
+
+        // managedForm.getToolkit().adapt(toolBar);
+        // managedForm.getToolkit().paintBordersFor(toolBar);
         sctnSkill.setTextClient(toolBar);
-        
+
         final ToolItem filterOnlyPersonaSkillsToolItem = new ToolItem(toolBar, SWT.CHECK);
         filterOnlyPersonaSkillsToolItem.setToolTipText(Messages.AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText);
         filterOnlyPersonaSkillsToolItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetDefaultSelected(SelectionEvent e) {
                 personaFertigkeitenWidget.setFilterOnlyPersona(filterOnlyPersonaSkillsToolItem.getSelection());
-                
+
             }
+
             @Override
             public void widgetSelected(SelectionEvent e) {
                 personaFertigkeitenWidget.setFilterOnlyPersona(filterOnlyPersonaSkillsToolItem.getSelection());
@@ -281,7 +298,14 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         m_bindingContext = initDataBindings();
 
-        PersonaUIToolkit personaUIToolkit = new PersonaUIToolkit(m_bindingContext, null, object, editingDomain, toolkit);
+        PersonaUIToolkit personaUIToolkit ;
+        if (character == null) {
+            personaUIToolkit = new PersonaUIToolkit(m_bindingContext, null, object, editingDomain, toolkit);
+        }else
+            personaUIToolkit = new PersonaUIToolkit(m_bindingContext, null, character, editingDomain, toolkit);
+
+        
+        
         personaUIToolkit.createKoerperlicheAttributes(grpKrperlicheAttribute);
         personaUIToolkit.createGeistigeAttributes(grpGeistigeAttribute);
         personaUIToolkit.createSpezielleAttributes(grpSpezielleAttribute);

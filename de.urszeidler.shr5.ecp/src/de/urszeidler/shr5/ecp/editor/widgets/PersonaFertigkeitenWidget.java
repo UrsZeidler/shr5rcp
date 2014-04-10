@@ -43,6 +43,7 @@ import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -56,7 +57,9 @@ import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -180,7 +183,7 @@ public class PersonaFertigkeitenWidget extends Composite {
     private IObservableList personaFertigkeiten;
 
     private IObservableList personaFertigkeitsGruppen;
-
+    private boolean karmaMode = false;
     private boolean filterOnlyPersona;
 
     /**
@@ -205,6 +208,22 @@ public class PersonaFertigkeitenWidget extends Composite {
         toolkit = toolkit2;
         persona = object;
         editingDomain = ed;
+
+        createWidgets();
+    }
+
+    public PersonaFertigkeitenWidget(Composite parent, int style, ManagedCharacter character2, FormToolkit toolkit2, EditingDomain editingDomain2) {
+        super(parent, style);
+        toolkit = toolkit2;
+        editingDomain = editingDomain2;
+        character = character2;
+        persona = character2.getPersona();
+
+        CharacterGenerator chracterSource = character2.getChracterSource();
+        if (chracterSource instanceof Shr5KarmaGenerator) {
+            Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
+            karmaMode = true;
+        }
 
         createWidgets();
     }
@@ -452,8 +471,10 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
 
             protected void setValue(Object element, Object value) {
-                changeFertigkeitsValue(element, value);
-                // changeFertigkeitsValueByAdvacement(element, value);
+                if (karmaMode)
+                    changeFertigkeitsValueByAdvacement(element, value);
+                else
+                    changeFertigkeitsValue(element, value);
                 treeViewer.refresh(true);
             }
         });
@@ -559,7 +580,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                     Command cmd = SetCommand.create(editingDomain, personaFertigkeitsGruppe, Shr5Package.Literals.STEIGERBAR__STUFE, value);
                     editingDomain.getCommandStack().execute(cmd);
                     persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
-                            Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, 0, 1));
+                            Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN, null, null));
                 }
             }
         }
