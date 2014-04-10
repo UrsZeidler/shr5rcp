@@ -478,7 +478,7 @@ public class ShadowrunManagmentTools {
             for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
                 IncreaseCharacterPart advancment = findAdvancment(advacmentSystem.getCharacterAdvancements(), personaEigenschaft.eClass());
                 if (advancment != null)
-                    sum = sum + personaEigenschaft.getKarmaKosten() * advancment.getKarmaFactor() ;
+                    sum = sum + personaEigenschaft.getKarmaKosten() * advancment.getKarmaFactor();
 
             }
         }
@@ -698,6 +698,8 @@ public class ShadowrunManagmentTools {
 
         AttributeChange attributeChange = ShadowrunManagmentTools.findCharacterAdvacements(character, attribute);
         if (attributeChange == null) {
+            if (value == eGet)
+                return;
             attributeChange = Shr5managementFactory.eINSTANCE.createAttributeChange();
             attributeChange.setAttibute(attribute);
             character.getChanges().add(attributeChange);
