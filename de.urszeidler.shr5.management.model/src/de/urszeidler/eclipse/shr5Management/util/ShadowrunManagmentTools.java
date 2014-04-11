@@ -247,6 +247,28 @@ public class ShadowrunManagmentTools {
     }
 
     /**
+     * Finds the persona change for the given {@link Steigerbar}.
+     * 
+     * @param character
+     * @param steigerbar
+     * @return
+     */
+    public static PersonaChange findCharacterAdvacements(ManagedCharacter character, Erlernbar steigerbar) {
+        if (character == null || steigerbar == null)
+            return null;
+
+        EList<Changes> changes = character.getChanges();
+        for (Changes change : changes) {
+            if (change instanceof PersonaChange) {
+                PersonaChange pc = (PersonaChange)change;
+                if (steigerbar.equals(pc.getChangeable()))
+                    return pc;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Finds the corresponding rule for a given type.
      * 
      * @param characterAdvancements the list
@@ -754,6 +776,26 @@ public class ShadowrunManagmentTools {
                             Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITEN, null, null));
                 }
             }
+        }
+
+    }
+
+    /**
+     * Set the erlernbar or remove it. 
+     * 
+     * @param character
+     * @param erlernbar
+     */
+    public static void changeErlernbarByAdvacement(ManagedCharacter character, Erlernbar erlernbar) {
+        PersonaChange advancements = ShadowrunManagmentTools.findCharacterAdvacements(character, erlernbar);
+        if (advancements == null) {
+            PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
+            character.getChanges().add(personaChange);
+            personaChange.setChangeable(erlernbar);
+            personaChange.applyChanges();            
+        } else {
+            character.getChanges().remove(advancements);
+            //TODO : remove
         }
 
     }

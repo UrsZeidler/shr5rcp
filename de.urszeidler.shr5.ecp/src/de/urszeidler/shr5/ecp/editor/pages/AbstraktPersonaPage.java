@@ -1,7 +1,16 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
+import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -19,21 +28,30 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
+import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
+import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.dialogs.FeatureEditorDialogWert;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private AbstraktPersona object = Shr5Factory.eINSTANCE.createMysticAdept();
@@ -43,6 +61,41 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private DataBindingContext m_bindingContext;
     private Composite compositeEigenschaften;
     private Composite compositeWares;
+
+    private ReferenceManager karmaBaseManager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
+
+        @Override
+        protected Object provideObject(FormbuilderEntry e, EObject object) {
+            if (Shr5Package.Literals.ZAUBERER__ZAUBER.equals(e.getFeature())) {
+                Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.ZAUBER);
+
+                ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
+
+                Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
+
+                FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(),
+                        basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(
+                                objectsOfType));
+
+                int result = dialog.open();
+                if (result == Window.OK) {
+                    EList<?> list = dialog.getResult();
+                    List<EObject> objectList = new ArrayList<EObject>();
+                    for (Object object1 : list) {
+                        if (object1 instanceof EObject) {
+                            //TODO :
+                            //objectList.add(transformer.transform((Zauber)object1));
+                        }
+                    }
+
+                    return objectList;
+                }
+            } else if (Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN.equals(e.getFeature())) {
+
+            }
+            return null;
+        }
+    };
 
     /**
      * Create the form page.
@@ -184,13 +237,11 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         final PersonaFertigkeitenWidget personaFertigkeitenWidget;
         if (character == null) {
-             personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, object, toolkit,
-                    editingDomain);
+            personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, object, toolkit, editingDomain);
         } else {
-            personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, character, toolkit,
-                    editingDomain);
+            personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, character, toolkit, editingDomain);
         }
-        //final PersonaFertigkeitenWidget = p;
+        // final PersonaFertigkeitenWidget = p;
 
         sctnSkill.setClient(personaFertigkeitenWidget);
         managedForm.getToolkit().adapt(personaFertigkeitenWidget);
@@ -298,14 +349,12 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         m_bindingContext = initDataBindings();
 
-        PersonaUIToolkit personaUIToolkit ;
+        PersonaUIToolkit personaUIToolkit;
         if (character == null) {
             personaUIToolkit = new PersonaUIToolkit(m_bindingContext, null, object, editingDomain, toolkit);
-        }else
+        } else
             personaUIToolkit = new PersonaUIToolkit(m_bindingContext, null, character, editingDomain, toolkit);
 
-        
-        
         personaUIToolkit.createKoerperlicheAttributes(grpKrperlicheAttribute);
         personaUIToolkit.createGeistigeAttributes(grpGeistigeAttribute);
         personaUIToolkit.createSpezielleAttributes(grpSpezielleAttribute);

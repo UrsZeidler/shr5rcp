@@ -457,6 +457,42 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
      * @generated not
      */
+    public void testChangeQuallityByAdvancement() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(3);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        AbstraktPersona persona = playerCharacter.getPersona();
+        PersonaEigenschaft personaEigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        personaEigenschaft.setKarmaKosten(10);
+        
+        ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaEigenschaft);
+        
+        KoerperPersona koerperPersona = (KoerperPersona)persona;
+
+        //koerperPersona.getEigenschaften().add(personaEigenschaft);
+        assertEquals("20 spend", 20,
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+
+        assertTrue(koerperPersona.getEigenschaften().contains(personaEigenschaft));
+    }
+    
+    
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @generated not
+     */
     public void testCalcKarma4Attribute() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMudanCharacter();
         shr5System = getFixture().getShr5Generator();
