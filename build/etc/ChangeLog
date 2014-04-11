@@ -1,5 +1,7 @@
 2014-04-27 Version 0.1.5
 
+
+* make the karma based generator usable like the normal generator
 * added karma calculation section in the shr5Generator report
 * added skill group for aspect magicians
 * update to ecp 1.2
@@ -22,7 +24,7 @@
 
 2014-03-09 Version 0.1.3
 
-* added specialism in persona
+* added specializations in persona
 * added simple application to add a basic menu and to gain the control
 * fixed several rounding and display errors
 * added grunts as described in the core rule book
