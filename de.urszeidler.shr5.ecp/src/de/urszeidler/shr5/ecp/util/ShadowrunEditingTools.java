@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
@@ -64,6 +65,25 @@ public class ShadowrunEditingTools {
         return null;
     }
 
+    
+    
+    /**
+     * Creates a transformer to make a copy of the input objects.
+     * 
+     * @return the transformer
+     */
+    public static Transformer<EObject, EObject> copyTransformer() {
+        Transformer<EObject, EObject> transformer = new Transformer<EObject, EObject>() {
+
+            @Override
+            public EObject transform(EObject input) {
+                EObject copy = EcoreUtil.copy(input);
+                return copy;
+            }
+         };
+         return transformer;
+    }
+    
     /**
      * Creates a transformer to make a {@link Zauber} object to a {@link PersonaZauber} object referencing the spell.
      * 

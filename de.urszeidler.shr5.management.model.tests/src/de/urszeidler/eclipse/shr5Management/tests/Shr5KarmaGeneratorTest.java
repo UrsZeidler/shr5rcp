@@ -11,12 +11,18 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.MetaType;
@@ -481,8 +487,113 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
                 ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
 
         assertTrue(koerperPersona.getEigenschaften().contains(personaEigenschaft));
+        PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaEigenschaft);
+        assertNotNull(advacements);
+        
+        ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaEigenschaft);
+        
+        assertEquals("0 spend", 0,
+                ShadowrunManagmentTools.calcKarmaSpendByQuallities(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+
+        assertFalse(koerperPersona.getEigenschaften().contains(personaEigenschaft));
+        advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaEigenschaft);
+        assertNull(advacements);
+    
     }
     
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @generated not
+     */
+    public void testChangeSpellByAdvancement() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createZaubererCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(3);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        AbstraktPersona persona = playerCharacter.getPersona();
+        PersonaZauber personaZauber = Shr5Factory.eINSTANCE.createPersonaZauber();
+        Zauber zauber = Shr5Factory.eINSTANCE.createZauber();
+        personaZauber.setFormel(zauber);
+        
+        ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaZauber);
+        
+        Zauberer koerperPersona = (Zauberer)persona;
+
+        //koerperPersona.getEigenschaften().add(personaEigenschaft);
+        assertEquals("5 spend", 5,
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+
+        assertTrue(koerperPersona.getZauber().contains(personaZauber));
+        PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
+        assertNotNull(advacements);
+        
+        ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaZauber);
+        
+        assertEquals("0 spend", 0,
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+
+        assertFalse(koerperPersona.getZauber().contains(personaZauber));
+        advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
+        assertNull(advacements);
+    
+    }
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend()
+     * @generated not
+     */
+    public void testChangeComplexformByAdvancement() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createTechnoCharacter();
+        shr5System = getFixture().getShr5Generator();
+        getFixture().setCharacter(playerCharacter);
+        getFixture().getShr5Generator().setMaxKarmaToKeep(1);
+        getFixture().getShr5Generator().setKarmaPoints(3);
+
+        shr5System.setCharacterAdvancements(Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem());
+        ChangesTest.createAdvacements(getFixture().getShr5Generator());
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+        AbstraktPersona persona = playerCharacter.getPersona();
+        PersonaKomplexForm personaZauber = Shr5Factory.eINSTANCE.createPersonaKomplexForm();
+        KomplexeForm zauber = Shr5Factory.eINSTANCE.createKomplexeForm();
+        personaZauber.setForm(zauber);
+        
+        ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaZauber);
+        
+        Technomancer koerperPersona = (Technomancer)persona;
+
+        //koerperPersona.getEigenschaften().add(personaEigenschaft);
+        assertEquals("5 spend", 5,
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+
+        assertTrue(koerperPersona.getComplexForms().contains(personaZauber));
+        PersonaChange advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
+        assertNotNull(advacements);
+        
+        ShadowrunManagmentTools.changeErlernbarByAdvacement(playerCharacter, personaZauber);
+        
+        assertEquals("0 spend", 0,
+                ShadowrunManagmentTools.calcKarmaSpendBySpellsOrForms(playerCharacter, getFixture().getShr5Generator().getCharacterAdvancements()));
+
+        assertFalse(koerperPersona.getComplexForms().contains(personaZauber));
+        advacements = ShadowrunManagmentTools.findCharacterAdvacements(playerCharacter, personaZauber);
+        assertNull(advacements);
+    
+    }
     
     
     /**

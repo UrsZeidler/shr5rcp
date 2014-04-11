@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -31,6 +32,7 @@ import org.eclipse.wb.swt.ResourceManager;
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AspektMagier;
+import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
@@ -67,31 +69,47 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         @Override
         protected Object provideObject(FormbuilderEntry e, EObject object) {
             if (Shr5Package.Literals.ZAUBERER__ZAUBER.equals(e.getFeature())) {
-                Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, Shr5Package.Literals.ZAUBER);
-
-                ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
-
                 Transformer<Zauber, PersonaZauber> transformer = ShadowrunEditingTools.zauber2PersonaZauberTransformer();
+                String displayName = Messages.ShadowrunEditor_dlg_select_spells;
+                EClass zauber = Shr5Package.Literals.ZAUBER;
 
-                FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(),
-                        basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_select_spells, new ArrayList<EObject>(
-                                objectsOfType));
-
-                int result = dialog.open();
-                if (result == Window.OK) {
-                    EList<?> list = dialog.getResult();
-                    List<EObject> objectList = new ArrayList<EObject>();
-                    for (Object object1 : list) {
-                        if (object1 instanceof EObject) {
-                            //TODO :
-                            //objectList.add(transformer.transform((Zauber)object1));
-                        }
-                    }
-
-                    return objectList;
-                }
+                return provideTransformedObject(object, transformer, displayName, zauber);
             } else if (Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN.equals(e.getFeature())) {
+                Transformer<EObject, EObject> transformer = ShadowrunEditingTools.copyTransformer();
+                String displayName = "Select quallities ...";
+                EClass quallity = Shr5Package.Literals.PERSONA_EIGENSCHAFT;
 
+                return provideTransformedObject(object, transformer, displayName, quallity);
+            }
+            return null;
+        }
+
+        /**
+         * @param the to provide the child for
+         * @param transformer the transformer
+         * @param displayName text for the dialog
+         * @param zauber
+         */
+        @SuppressWarnings("rawtypes")
+        private Object provideTransformedObject(EObject object, Transformer transformer, String displayName, EClass zauber) {
+            Collection<EObject> objectsOfType = ItemPropertyDescriptor.getReachableObjectsOfType(object, zauber);
+            ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
+
+            FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(),
+                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(
+                            objectsOfType));
+
+            int result = dialog.open();
+            if (result == Window.OK) {
+                EList<?> list = dialog.getResult();
+                List<EObject> objectList = new ArrayList<EObject>();
+                for (Object object1 : list) {
+                    if (object1 instanceof EObject) {
+                        ShadowrunManagmentTools.changeErlernbarByAdvacement(character, (Erlernbar)transformer.transform((EObject)object1));
+                    }
+                }
+
+                return objectList;
             }
             return null;
         }
@@ -283,9 +301,14 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             compositeEigenschaften.setLayout(new FillLayout(SWT.HORIZONTAL));
             toolkit.adapt(compositeEigenschaften);
             toolkit.paintBordersFor(compositeEigenschaften);
-
+            
+            
+            ReferenceManager mananger2 = mananger;
+            if(character!=null)
+                mananger2 = karmaBaseManager;
+            
             TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften, "Edges/Flaws", SWT.NONE, object,
-                    Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit, mananger, editingDomain);
+                    Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit, mananger2, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
 
@@ -326,8 +349,12 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.adapt(grpKikrfte);
             toolkit.paintBordersFor(grpKikrfte);
 
+            ReferenceManager mananger2 = mananger;
+            if(character!=null)
+                mananger2 = karmaBaseManager;
+            
             TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_Spells, SWT.NONE, object,
-                    Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger, editingDomain);
+                    Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger2, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
 
@@ -341,8 +368,12 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.adapt(grpKikrfte);
             toolkit.paintBordersFor(grpKikrfte);
 
+            ReferenceManager mananger2 = mananger;
+            if(character!=null)
+                mananger2 = karmaBaseManager;
+
             TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, "Complex forms", SWT.NONE, object,
-                    Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger, editingDomain);
+                    Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger2, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
         }
@@ -370,7 +401,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         }
         emfFormBuilder.buildinComposite(m_bindingContext, body, object);
 
-        managedForm.reflow(true);
+        //managedForm.getForm().pack();
+       managedForm.reflow(true);
 
     }
 

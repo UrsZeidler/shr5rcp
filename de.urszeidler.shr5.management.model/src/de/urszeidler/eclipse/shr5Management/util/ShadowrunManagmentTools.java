@@ -794,8 +794,9 @@ public class ShadowrunManagmentTools {
             personaChange.setChangeable(erlernbar);
             personaChange.applyChanges();            
         } else {
+            advancements.setTo(0);
+            advancements.applyChanges();
             character.getChanges().remove(advancements);
-            //TODO : remove
         }
 
     }
