@@ -273,6 +273,15 @@ public class BasicPrinter implements IPropertyChangeListener {
      * @param persona
      * @return
      */
+    protected String printIntegerMoney(Integer value) {
+        return String.format("%,.0f" + store.getString(PreferenceConstants.CURRENCY_SYMBOL), value.floatValue());//$NON-NLS-1$
+    }
+    /**
+     * Prints the money.
+     * 
+     * @param persona
+     * @return
+     */
     protected String printIntegerMoney(BigDecimal bigDecimal) {
         return String.format("%,.0f" + store.getString(PreferenceConstants.CURRENCY_SYMBOL), bigDecimal);//$NON-NLS-1$
     }

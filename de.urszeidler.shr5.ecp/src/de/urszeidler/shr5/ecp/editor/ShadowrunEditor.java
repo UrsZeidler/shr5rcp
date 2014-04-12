@@ -112,8 +112,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
     private ShrEditingState editingMode = ShrEditingState.CUSTOM;
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
 
-    
-    
     protected ReferenceManager manager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
         public void handleManage(FormbuilderEntry e, EObject object) {
             if (Shr5managementPackage.Literals.FREE_STYLE_GENERATOR__SELECTED_TYPE.equals(e.getFeature())) {
@@ -447,9 +445,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return null;
             }
 
-            
-           
-            
         };
 
         shadowrunSwitch.doSwitch(theEObject);
@@ -485,7 +480,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                 try {
-                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_Karama_Generator, object, editingDomain, manager));
+                    addPage(new Shr5KarmaGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_Karama_Generator, object, editingDomain,
+                            manager));
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_shr5_generator_sheet, PersonaPrinter
+                            .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
@@ -542,10 +540,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return super.caseCharacterGroup(object);
             }
 
-            
             @Override
             public Object caseCharacterGenerator(CharacterGenerator object) {
-                
+
                 GeneratorState state = object.getState();
                 switch (state) {
                     case COMMITED:
@@ -556,16 +553,14 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                         editingMode = ShrEditingState.EDITABLE;
                         break;
                 }
-                
+
                 return super.caseCharacterGenerator(object);
             }
         };
         shr5managementSwitch.doSwitch(theEObject);
 
-        
         try {
-            addPage(new DefaultEmfFormsPage(ShadowrunEditor.this, "Default_EMF_Form_Page", "default form",
-                                theEObject));
+            addPage(new DefaultEmfFormsPage(ShadowrunEditor.this, "Default_EMF_Form_Page", "default form", theEObject));
         } catch (PartInitException e) {
             logError("error creating DefaultEmfFormsPage", e);//$NON-NLS-1$
         }

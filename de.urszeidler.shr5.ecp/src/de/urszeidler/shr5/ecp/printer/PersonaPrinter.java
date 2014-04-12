@@ -58,14 +58,17 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
+import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.PersonaFertigkeitenWidget.GroupWrapper;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
@@ -144,18 +147,33 @@ public class PersonaPrinter extends BasicPrinter {
      * @param c
      * @return
      */
-    public PrintFactory createShr5CharacterGeneratorPrintFactory(final Shr5Generator c) {
+    public PrintFactory createShr5CharacterGeneratorPrintFactory(final CharacterGenerator c) {
         return new PrintFactory() {
-            private Shr5Generator shrGenerator = c;
+            private CharacterGenerator shrGenerator = c;
 
             @Override
             public Print createPrinter() {
-                return createPagePrint(printShr5GeneratorSheet(shrGenerator));
+                Shr5managementSwitch<Print> shr5managementSwitch = new Shr5managementSwitch<Print>() {
+                    @Override
+                    public Print caseShr5Generator(Shr5Generator object) {
+                        return createPagePrint(printShr5GeneratorSheet(object));
+                    }
+
+                    @Override
+                    public Print caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+                        return createPagePrint(printShr5GeneratorSheet(object));
+                    }
+                };
+
+                return shr5managementSwitch.doSwitch(shrGenerator);
+                //
+                // return createPagePrint(printShr5GeneratorSheet(shrGenerator));
             }
 
             @Override
             public String getPrintTitel() {
-                return Messages.PersonaPrinter_Shr_character_generator + c.getCharacterName();
+                return toName(shrGenerator.eClass()) + ONE_SPACE + shrGenerator.getCharacterName(); // Messages.PersonaPrinter_Shr_character_generator
+                                                                                                    // + c.getCharacterName();
             }
         };
     }
@@ -348,6 +366,100 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @return
      */
+    protected Print printShr5GeneratorSheet(Shr5KarmaGenerator generator) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
+
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+        if (generator == null || generator.getCharacter() == null || generator.getCharacter().getPersona() == null)
+            return grid;
+
+        ManagedCharacter character = generator.getCharacter();
+        AbstraktPersona persona = character.getPersona();
+
+        grid.add(new BorderPrint(printShr5KarmaGenerator(generator, character), border), GridPrint.REMAINDER);
+
+        grid.add(new BorderPrint(printCalculatedKarma(character), border), GridPrint.REMAINDER);
+        grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
+
+        printResourcesForGenerator(grid, border, character, persona);
+
+        return grid;
+    }
+
+    /**
+     * Print the karma generator head.
+     * 
+     * @param generator
+     * @param character
+     * @return
+     */
+    private Print printShr5KarmaGenerator(Shr5KarmaGenerator generator, ManagedCharacter character) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint outerGrid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+        if (generator == null)
+            return outerGrid;
+
+        outerGrid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Shr5 karma generator", boldFontData), GridPrint.REMAINDER);
+
+        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
+        grid.add(new TextPrint(printString(generator.getCharacterName()), attributeFont));
+
+        grid.add(new TextPrint(Messages.PersonaPrinter_Choosen_System, attributeFont));
+        grid.add(new TextPrint(toName(generator.getShr5Generator()), attributeFont));
+
+        grid.add(new TextPrint("Metatype", attributeFont));
+        grid.add(new TextPrint(toName(generator.getMetaType()), attributeFont), GridPrint.REMAINDER);
+        grid.add(new TextPrint("Character concept", attributeFont));
+        grid.add(new TextPrint(toName(generator.getCharacterConcept()), attributeFont), GridPrint.REMAINDER);
+
+        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_spend, attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getShr5Generator().getKarmaPoints()), attributeFont), GridPrint.REMAINDER);
+
+        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_resources, attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getKarmaToResource()), attributeFont));
+        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
+        int KarmaToRes = generator.getKarmaToResource() * generator.getShr5Generator().getKarmaToResourceFactor();
+        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(KarmaToRes)), attributeFont));
+
+        outerGrid.add(grid);
+
+        grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        grid.add(new TextPrint("Resources spend", attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(generator.getResourceSpend()), attributeFont));
+
+        grid.add(new TextPrint(Messages.PersonaPrinter_Start_Karma, attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getStartKarma()), attributeFont));
+
+        grid.add(new TextPrint(Messages.PersonaPrinter_Start_Resources, attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(generator.getStartResources())), attributeFont));
+
+        grid.add(new TextPrint("Karma worth", attributeFont));
+        grid.add(
+                SWT.RIGHT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcCompleteKaramaSpend(character, generator.getGenerator()
+                        .getCharacterAdvancements())), attributeFont));
+
+        outerGrid.add(grid);
+
+        return outerGrid;
+    }
+
+    /**
+     * Print the generator sheet.
+     * 
+     * @param character
+     * @return
+     */
     @SuppressWarnings("unchecked")
     protected Print printShr5GeneratorSheet(Shr5Generator generator) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
@@ -375,8 +487,8 @@ public class PersonaPrinter extends BasicPrinter {
         GridPrint characterConnections = printAllCharacterConnections(character);
         characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
         // characterConnections.add(new BreakPrint(), GridPrint.REMAINDER);
-        characterConnections.addFooter(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
-        characterConnections.addFooter(
+        characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
+        characterConnections.add(
                 SWT.RIGHT,
                 new TextPrint(printInteger(generator.getConnectionSpend()
                         - ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())), attributeFont));
@@ -389,8 +501,8 @@ public class PersonaPrinter extends BasicPrinter {
             int sum = ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften());
             personaEigenschaften.add(new LinePrint(), GridPrint.REMAINDER);
             // personaEigenschaften.add(new BreakPrint(), GridPrint.REMAINDER);
-            personaEigenschaften.addFooter(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont));
-            personaEigenschaften.addFooter(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
+            personaEigenschaften.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont));
+            personaEigenschaften.add(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
             // grid.add(new BorderPrint(personaEigenschaften, border), 1);
             grid.add(createBandPrint(new BorderPrint(characterConnections, border), new BorderPrint(personaEigenschaften, border)),
                     GridPrint.REMAINDER);
@@ -398,18 +510,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         // gridRight.add(new BorderPrint(printPersonaAttributes(persona), border), 1);
         // gridRight.add(new BorderPrint(printPersonaSkills(persona), border), 1);
-        grid.add(new BorderPrint(printWertListAndSumm(character.getInventar(), Messages.Printer_Items), border), GridPrint.REMAINDER);
-        if (persona instanceof KoerperPersona) {
-            KoerperPersona kp = (KoerperPersona)persona;
-            if (!kp.getKoerperMods().isEmpty())
-                grid.add(
-                        new BorderPrint(printWertListAndSumm((EList<? extends GeldWert>)kp.getKoerperMods(), Messages.PersonaPrinter_Wares), border),
-                        GridPrint.REMAINDER);
-        }
-        if (!character.getVehicels().isEmpty())
-            grid.add(new BorderPrint(printWertListAndSumm(character.getVehicels(), Messages.PersonaPrinter_Vehicles), border), GridPrint.REMAINDER);
-        if (!character.getContracts().isEmpty())
-            grid.add(new BorderPrint(printWertListAndSumm(character.getContracts(), Messages.Printer_contracts), border), GridPrint.REMAINDER);
+        printResourcesForGenerator(grid, border, character, persona);
 
         gridMid.add(new BorderPrint(printGeneratorAttributes(generator), border));
 
@@ -440,9 +541,32 @@ public class PersonaPrinter extends BasicPrinter {
 
         gridMid.add(new BorderPrint(printPersonaSkillForGenerator(persona, printer_skills, arrayList, sum), border));
 
-        grid.add(new BorderPrint(printCalculatedKarma(character), border),GridPrint.REMAINDER);
+        grid.add(new BorderPrint(printCalculatedKarma(character), border), GridPrint.REMAINDER);
 
         return grid;
+    }
+
+    /**
+     * Prints the items, the contracts and the vehicles.
+     * 
+     * @param grid
+     * @param border
+     * @param character
+     * @param persona
+     */
+    private void printResourcesForGenerator(GridPrint grid, LineBorder border, ManagedCharacter character, AbstraktPersona persona) {
+        grid.add(new BorderPrint(printWertListAndSumm(character.getInventar(), Messages.Printer_Items), border), GridPrint.REMAINDER);
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            if (!kp.getKoerperMods().isEmpty())
+                grid.add(
+                        new BorderPrint(printWertListAndSumm((EList<? extends GeldWert>)kp.getKoerperMods(), Messages.PersonaPrinter_Wares), border),
+                        GridPrint.REMAINDER);
+        }
+        if (!character.getVehicels().isEmpty())
+            grid.add(new BorderPrint(printWertListAndSumm(character.getVehicels(), Messages.PersonaPrinter_Vehicles), border), GridPrint.REMAINDER);
+        if (!character.getContracts().isEmpty())
+            grid.add(new BorderPrint(printWertListAndSumm(character.getContracts(), Messages.Printer_contracts), border), GridPrint.REMAINDER);
     }
 
     /**
@@ -580,7 +704,7 @@ public class PersonaPrinter extends BasicPrinter {
         GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
 
         grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
-        grid.add(new TextPrint(generator.getCharacterName(), attributeFont));
+        grid.add(new TextPrint(printString(generator.getCharacterName()), attributeFont));
         grid.add(new TextPrint(Messages.PersonaPrinter_Choosen_System, attributeFont));
         grid.add(new TextPrint(toName(generator.getShr5Generator()), attributeFont));
 
@@ -836,6 +960,8 @@ public class PersonaPrinter extends BasicPrinter {
 
         for (Koerpermods koerpermods2 : koerperMods) {
             grid.add(new TextPrint(itemDelegator.getText(koerpermods2), attributeFont));
+            
+            
             grid.add(new TextPrint(EMPTY, attributeFont));
         }
 
