@@ -14,7 +14,9 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
+import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GeldWert;
@@ -162,7 +164,7 @@ public class ShadowrunTools {
         ArrayList<FertigkeitsGruppe> arrayList = new ArrayList<FertigkeitsGruppe>(list.size());
         boolean included = true;
         for (FertigkeitsGruppe fertigkeitsGruppe : list) {
-            if(fertigkeitsGruppe==null)
+            if (fertigkeitsGruppe == null)
                 continue;
             EList<Fertigkeit> fertigkeiten = fertigkeitsGruppe.getFertigkeiten();
             for (Fertigkeit fertigkeit : fertigkeiten) {
@@ -176,6 +178,35 @@ public class ShadowrunTools {
             included = true;
         }
         return arrayList;
+    }
+
+    /**
+     * Returns the essence value for the modificator.
+     * 
+     * @param mod
+     * @return
+     */
+    public static int getEssencesValue(AbstraktModifikatoren mod) {
+        return getModificatorValue(mod, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ);
+    }
+
+    /**
+     * Returns the summ of modificator values for the given eattribute.
+     * 
+     * @param mod the modificator
+     * @param eattribute the attribute to get the value for
+     * @return the sum
+     */
+    public static int getModificatorValue(AbstraktModifikatoren mod, EAttribute eattribute) {
+        if (eattribute == null)
+            return 0;
+        int sum = 0;
+        EList<AttributModifikatorWert> mods = mod.getMods();
+        for (AttributModifikatorWert attributModifikatorWert : mods) {
+            if (eattribute.equals(attributModifikatorWert.getAttribut()))
+                sum = sum + attributModifikatorWert.getWert();
+        }
+        return sum;
     }
 
     /**
