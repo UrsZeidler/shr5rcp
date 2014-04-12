@@ -378,10 +378,10 @@ public class PersonaPrinter extends BasicPrinter {
 
         ManagedCharacter character = generator.getCharacter();
         AbstraktPersona persona = character.getPersona();
-               
+
         grid.add(new BorderPrint(printShr5KarmaGenerator(generator, character), border), GridPrint.REMAINDER);
         printGeneratorAttributesSkills(generator, grid, border, persona);
-        
+
         GridPrint characterConnections = printAllCharacterConnections(character);
         characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
         characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
@@ -390,10 +390,13 @@ public class PersonaPrinter extends BasicPrinter {
 
         grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
 
-
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
             printGeneratorKoerperPersona(grid, border, kp);
+        }
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            printGeneratorSpells(grid, border, z);
         }
 
         GridPrint printCalculatedKarma = printCalculatedKarma(character);
@@ -403,6 +406,22 @@ public class PersonaPrinter extends BasicPrinter {
         printResourcesForGenerator(grid, border, character, persona);
 
         return grid;
+    }
+
+    /**
+     * Prints the spells for a generator with sum.
+     * 
+     * @param grid
+     * @param border
+     * @param z
+     */
+    private void printGeneratorSpells(GridPrint grid, LineBorder border, Zauberer z) {
+        GridPrint printZauberList = printZauberList(z.getZauber());
+        printZauberList.add(new LinePrint(), GridPrint.REMAINDER);
+        printZauberList.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont));
+        printZauberList.add(SWT.RIGHT, new TextPrint(printInteger(z.getZauber().size()), attributeFont));
+
+        grid.add(createBandPrint(new BorderPrint(printZauberList, border)), GridPrint.REMAINDER);
     }
 
     /**
@@ -511,6 +530,10 @@ public class PersonaPrinter extends BasicPrinter {
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
             printGeneratorKoerperPersona(grid, border, kp);
+        }
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            printGeneratorSpells(grid, border, z);
         }
 
         printResourcesForGenerator(grid, border, character, persona);
@@ -954,7 +977,7 @@ public class PersonaPrinter extends BasicPrinter {
         return grid;
     }
 
-    private Print printZauberList(List<PersonaZauber> zauber) {
+    private GridPrint printZauberList(List<PersonaZauber> zauber) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
 
@@ -1075,7 +1098,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
             grid.add(new TextPrint(itemDelegator.getText(personaEigenschaft), attributeFont));
-            grid.add(new TextPrint(printInteger(personaEigenschaft.getKarmaKosten()), attributeFont));
+            grid.add(SWT.RIGHT, new TextPrint(printInteger(personaEigenschaft.getKarmaKosten()), attributeFont));
         }
 
         return grid;
