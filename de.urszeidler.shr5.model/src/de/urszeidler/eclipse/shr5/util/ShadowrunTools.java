@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -391,6 +392,20 @@ public class ShadowrunTools {
             sum += (i + 1) * fac;
         }
         return (int)sum;
+    }
+
+    /**
+     * Calculated the sum of essence in the given list.
+     * 
+     * @param koerperMods
+     * @return
+     */
+    public static int calcEssenceSum(EList<Koerpermods> koerperMods) {
+        int sum = 0;
+        for (Koerpermods koerpermods2 : koerperMods) {
+            sum = sum + getEssencesValue(koerpermods2);
+        }
+        return sum;
     }
 
 }
