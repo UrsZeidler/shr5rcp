@@ -854,11 +854,11 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), GridPrint.REMAINDER);
 
         if (store.getBoolean(PreferenceConstants.PRINT_USEABLE_SKILLS))
-            grid.add(printAllPersonaSkills(persona));
+            grid.add(new BorderPrint(printAllPersonaSkills(persona), border),1);
         else
-            grid.add(printPersonaSkills(persona));
+            grid.add(new BorderPrint(printPersonaSkills(persona), border), 1);
 
-        grid.add(printPersonaFormPart1(character));
+        grid.add(printPersonaFormPart1(character), 1);
 
         grid.add(new BorderPrint(printPersonaRangedWeapons1(character), border), 1);
         grid.add(new BorderPrint(printPersonaMeeleWeapons(character), border), 1);
@@ -899,8 +899,10 @@ public class PersonaPrinter extends BasicPrinter {
      * @return
      */
     private Print printPersonaFormPart1(ManagedCharacter character) {
-        DefaultGridLook look = new DefaultGridLook(0, 0);
+        DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g", look);//$NON-NLS-1$
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
 
         AbstraktPersona persona = character.getPersona();
         // grid.add(printPersonaCombatAttributes(persona));
@@ -910,33 +912,39 @@ public class PersonaPrinter extends BasicPrinter {
 
             EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
             if (!eigenschaften.isEmpty())
-                grid.add(printPersonaEigenschaften(eigenschaften));
+                grid.add(new BorderPrint(printPersonaEigenschaften(eigenschaften), border), GridPrint.REMAINDER);
             EList<Koerpermods> koerperMods = kp.getKoerperMods();
             if (!koerperMods.isEmpty())
-                grid.add(printPersonaBodyTec(koerperMods));
+                grid.add(new BorderPrint(printPersonaBodyTec(koerperMods), border), GridPrint.REMAINDER);
         }
 
         if (persona instanceof KiAdept) {
             KiAdept ka = (KiAdept)persona;
             EList<KiKraft> kikraft = ka.getKikraft();
             if (!kikraft.isEmpty())
-                grid.add(printKiKraftList(kikraft));
+                grid.add(new BorderPrint(printKiKraftList(kikraft), border), GridPrint.REMAINDER);
         }
         if (persona instanceof Zauberer) {
             Zauberer z = (Zauberer)persona;
             EList<PersonaZauber> zauber = z.getZauber();
             if (!zauber.isEmpty())
-                grid.add(printZauberList(zauber));
+                grid.add(new BorderPrint(printZauberList(zauber), border), GridPrint.REMAINDER);
 
         }
 
-        grid.add(printAllCharacterConnections(character));
-        grid.add(printPersonaContracts(character));
+        grid.add(new BorderPrint(printAllCharacterConnections(character), border), GridPrint.REMAINDER);
+        grid.add(new BorderPrint(printPersonaContracts(character), border), GridPrint.REMAINDER);
 
-        grid.add(printModList(persona));
+        grid.add(new BorderPrint(printModList(persona), border), GridPrint.REMAINDER);
         return grid;
     }
 
+    /**
+     * Print all the modifications active on this persona.
+     * 
+     * @param persona
+     * @return
+     */
     private Print printModList(AbstraktPersona persona) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
