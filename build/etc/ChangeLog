@@ -1,6 +1,6 @@
 2014-04-27 Version 0.1.5
 
-
+* added karma generator report
 * make the karma based generator usable like the normal generator
 * added karma calculation section in the shr5Generator report
 * added skill group for aspect magicians
