@@ -11,8 +11,6 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.nebula.paperclips.core.BreakPrint;
 import org.eclipse.nebula.paperclips.core.EmptyPrint;
 import org.eclipse.nebula.paperclips.core.ImagePrint;
@@ -31,7 +29,6 @@ import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
-import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -50,7 +47,6 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
-import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.Zauberer;
@@ -615,6 +611,7 @@ public class PersonaPrinter extends BasicPrinter {
      * @param character
      * @param persona
      */
+    @SuppressWarnings("unchecked")
     private void printResourcesForGenerator(GridPrint grid, LineBorder border, ManagedCharacter character, AbstraktPersona persona) {
         grid.add(new BorderPrint(printWertListAndSumm(character.getInventar(), Messages.Printer_Items), border), GridPrint.REMAINDER);
         if (persona instanceof KoerperPersona) {
@@ -700,19 +697,6 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 3);
         grid.add(SWT.RIGHT, new TextPrint(printInteger(sum), attributeFont));
 
-        //        GridPrint grid1 = new GridPrint("d:g,d,d,d", look);//$NON-NLS-1$
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__KONSTITUTION_BASIS, spezies.getKonstitutionMin());
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS,
-        // spezies.getGeschicklichkeitMin());
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, spezies.getReaktionMin());
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__STAERKE_BASIS, spezies.getStaerkeMin());
-        //
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__CHARISMA_BASIS, spezies.getCharismaMin());
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS, spezies.getWillenskraftMin());
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, spezies.getIntuitionMin());
-        // printGeneratorAttributeLine(grid, persona, Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, spezies.getLogikMin());
-
-        // grid.add(grid1);
         return grid;
     }
 
@@ -869,27 +853,6 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BreakPrint(), GridPrint.REMAINDER);
         if (store.getBoolean(PreferenceConstants.PRINT_CHARACTER_ADVACEMENTS))
             grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
-        return grid;
-    }
-
-    /**
-     * Prints the persona details.
-     * 
-     * @param persona
-     * @return
-     */
-    @Deprecated
-    private Print printPersonaDetails(AbstraktPersona persona) {
-        DefaultGridLook look = new DefaultGridLook(5, 5);
-        look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
-
-        grid.add(new EmptyPrint());
-        Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(BIG_SCALE, persona.getImage());
-        if (imageScaledBy != null) {
-            grid.add(SWT.RIGHT, SWT.TOP, new ImagePrint(imageScaledBy.getImageData()));
-        }
-
         return grid;
     }
 
@@ -1358,25 +1321,25 @@ public class PersonaPrinter extends BasicPrinter {
         return buffer.toString();
     }
 
-    @Deprecated
-    private String toMod(EList<AttributModifikatorWert> mods) {
-        StringBuffer buffer = new StringBuffer();
-
-        for (AttributModifikatorWert attributModifikatorWert : mods) {
-            EAttribute attribut = attributModifikatorWert.getAttribut();
-            buffer.append(itemDelegator.getText(attribut));
-
-            if (attribut.getEType() instanceof EEnum) {
-                EEnumLiteral eEnumLiteral = ((EEnum)attribut.getEType()).getEEnumLiteral(attributModifikatorWert.getWert());
-                buffer.append(":"); //$NON-NLS-1$
-                buffer.append(itemDelegator.getText(eEnumLiteral));
-
-            }
-            buffer.append(EOL);
-        }
-
-        return buffer.toString();
-    }
+    // @Deprecated
+    // private String toMod(EList<AttributModifikatorWert> mods) {
+    // StringBuffer buffer = new StringBuffer();
+    //
+    // for (AttributModifikatorWert attributModifikatorWert : mods) {
+    // EAttribute attribut = attributModifikatorWert.getAttribut();
+    // buffer.append(itemDelegator.getText(attribut));
+    //
+    // if (attribut.getEType() instanceof EEnum) {
+    // EEnumLiteral eEnumLiteral = ((EEnum)attribut.getEType()).getEEnumLiteral(attributModifikatorWert.getWert());
+    //                buffer.append(":"); //$NON-NLS-1$
+    // buffer.append(itemDelegator.getText(eEnumLiteral));
+    //
+    // }
+    // buffer.append(EOL);
+    // }
+    //
+    // return buffer.toString();
+    // }
 
     private String toReichweite(int min, int max) {
         return min + "-" + max;//$NON-NLS-1$
@@ -1388,8 +1351,6 @@ public class PersonaPrinter extends BasicPrinter {
         if (fw == null)
             return grid;
 
-        // grid.add(new TextPrint("Name", italicFontData), 5);
-        // grid.add(new TextPrint("Type", italicFontData), 3);
         grid.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
         grid.add(new TextPrint(toName(fw), attributeFont), 5);
@@ -1427,12 +1388,12 @@ public class PersonaPrinter extends BasicPrinter {
     }
 
     /**
-     * Prints the ranged weapons.
+     * Prints the contracts of the character.
      * 
      * @param persona
      * @return
      */
-    private Print printPersonaContracts(ManagedCharacter character) {
+    private GridPrint printPersonaContracts(ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
