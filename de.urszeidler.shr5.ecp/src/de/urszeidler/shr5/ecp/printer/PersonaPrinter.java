@@ -50,6 +50,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.Zauberer;
@@ -854,7 +855,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), GridPrint.REMAINDER);
 
         if (store.getBoolean(PreferenceConstants.PRINT_USEABLE_SKILLS))
-            grid.add(new BorderPrint(printAllPersonaSkills(persona), border),1);
+            grid.add(new BorderPrint(printAllPersonaSkills(persona), border), 1);
         else
             grid.add(new BorderPrint(printPersonaSkills(persona), border), 1);
 
@@ -1771,9 +1772,15 @@ public class PersonaPrinter extends BasicPrinter {
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
             grid1.add(new TextPrint(Messages.Printer_armor, attributeFont));
-            grid1.add(new TextPrint(printInteger(kp.getPanzer()), attributeFont));
+            grid1.add(SWT.RIGHT, new TextPrint(printInteger(kp.getPanzer()), attributeFont));
             grid1.add(new TextPrint(Messages.PersonaPrinter_Overflow_damage, attributeFont));
-            grid1.add(new TextPrint(printInteger(kp.getZustandGrenze()), attributeFont));
+            grid1.add(SWT.RIGHT, new TextPrint(printInteger(kp.getZustandGrenze()), attributeFont));
+
+        }
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            grid1.add(new TextPrint("Drain", attributeFont));
+            grid1.add(SWT.RIGHT, new TextPrint(printInteger(z.getEnzug()), attributeFont));
 
         }
 
