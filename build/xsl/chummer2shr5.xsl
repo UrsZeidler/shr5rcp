@@ -1372,7 +1372,7 @@
 	<!-- basic named templates -->
 	<xsl:template name="beschreibbar">
 		<xsl:choose>
-			<xsl:when test="$do_localization">
+			<xsl:when test="$do_localization='true'">
 				<xsl:variable name="aid" select="id/text()" />
 				<xsl:variable name="loc_name">
 					<xsl:call-template name="findLocalizedName">
@@ -1429,7 +1429,7 @@
 	<xsl:template name="quelle">
 		<xsl:if test="number(page/text())">
 		<xsl:choose>
-			<xsl:when test="$do_localization">
+			<xsl:when test="$do_localization='true'">
 				<xsl:variable name="aid" select="id/text()" />
 				<xsl:variable name="loc_page">
 					<xsl:call-template name="findLocalizedPage">
