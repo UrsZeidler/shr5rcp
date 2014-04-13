@@ -1339,7 +1339,7 @@
 		</characterAdvancements>
 		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
 			karmaFactor="5">
-			<type href="http://urszeidler.de/shr5/1.0#//Zauber" />
+			<type href="http://urszeidler.de/shr5/1.0#//PersonaZauber" />
 		</characterAdvancements>
 		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
 			karmaFactor="5">
