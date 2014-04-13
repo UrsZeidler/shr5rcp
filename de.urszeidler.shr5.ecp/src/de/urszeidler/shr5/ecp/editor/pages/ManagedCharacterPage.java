@@ -21,7 +21,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
-import org.eclipse.swt.widgets.Label;
 
 /**
  * This is a basic generic page to display eObjects in an form with an
