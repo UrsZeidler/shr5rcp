@@ -467,6 +467,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     addPage(new FreeStyleGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_freestyle_generator, object,
                             editingDomain, manager));
+                    
+                    addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_shr5_generator_sheet, PersonaPrinter
+                            .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
+
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }

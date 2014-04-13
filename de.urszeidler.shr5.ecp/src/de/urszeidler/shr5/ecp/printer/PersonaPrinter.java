@@ -58,6 +58,7 @@ import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Connection;
+import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.GruntMembers;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -158,6 +159,11 @@ public class PersonaPrinter extends BasicPrinter {
 
                     @Override
                     public Print caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
+                        return createPagePrint(printShr5GeneratorSheet(object));
+                    }
+                    
+                    @Override
+                    public Print caseFreeStyleGenerator(FreeStyleGenerator object) {
                         return createPagePrint(printShr5GeneratorSheet(object));
                     }
                 };
@@ -355,6 +361,116 @@ public class PersonaPrinter extends BasicPrinter {
 
         grid.add(innerGrid);
         return grid;
+    }
+
+    /**
+     * Print the generator sheet.
+     * 
+     * @param character
+     * @return
+     */
+    protected Print printShr5GeneratorSheet(FreeStyleGenerator generator) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint grid = new GridPrint("d:g,d:g", look);//$NON-NLS-1$
+
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+        if (generator == null || generator.getCharacter() == null || generator.getCharacter().getPersona() == null)
+            return grid;
+
+        ManagedCharacter character = generator.getCharacter();
+        AbstraktPersona persona = character.getPersona();
+
+        grid.add(new BorderPrint(printFreeStyleGenerator(generator, character), border), GridPrint.REMAINDER);
+        printGeneratorAttributesSkills(generator, grid, border, persona);
+
+        GridPrint characterConnections = printAllCharacterConnections(character);
+        characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
+        characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
+        characterConnections.add(SWT.RIGHT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendByConnections(character)), attributeFont));
+
+        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
+
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            printGeneratorKoerperPersona(grid, border, kp);
+        }
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            printGeneratorSpells(grid, border, z);
+        }
+
+        GridPrint printCalculatedKarma = printCalculatedKarma(character);
+        grid.add(createBandPrint(new BorderPrint(printCalculatedKarma, border)), GridPrint.REMAINDER);
+        grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
+
+        printResourcesForGenerator(grid, border, character, persona);
+
+        return grid;
+    }
+
+    
+    
+    private Print printFreeStyleGenerator(FreeStyleGenerator generator, ManagedCharacter character) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        look.setHeaderGap(5);
+        GridPrint outerGrid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        LineBorder border = new LineBorder();
+        border.setLineWidth(1);
+        if (generator == null)
+            return outerGrid;
+
+        outerGrid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint("Shr5 karma generator", boldFontData), GridPrint.REMAINDER);
+
+        GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+        grid.add(new TextPrint(Messages.Printer_Name, attributeFont));
+        grid.add(new TextPrint(printString(generator.getCharacterName()), attributeFont));
+
+        grid.add(new TextPrint(Messages.PersonaPrinter_Choosen_System, attributeFont));
+        grid.add(new TextPrint(toName(generator.getGenerator()), attributeFont));
+
+        if(generator.getSelectedPersona()==null){        
+        grid.add(new TextPrint("Metatype", attributeFont));
+        grid.add(new TextPrint(toName(generator.getSelectedSpecies()), attributeFont), GridPrint.REMAINDER);
+        grid.add(new TextPrint("Character concept", attributeFont));
+        grid.add(new TextPrint(toName(generator.getSelectedType()), attributeFont), GridPrint.REMAINDER);
+        }else{
+        grid.add(new TextPrint("Cloned persona", attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(toName(generator.getSelectedPersona()), attributeFont), GridPrint.REMAINDER);
+        }
+        
+//        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_resources, attributeFont));
+//        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getKarmaToResource()), attributeFont));
+//        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
+//        int KarmaToRes = generator.getKarmaToResource() * generator.getShr5Generator().getKarmaToResourceFactor();
+//        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(KarmaToRes)), attributeFont));
+//
+        outerGrid.add(grid);
+
+        grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
+
+//        grid.add(new TextPrint("Resources spend", attributeFont));
+//        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(generator.getResourceSpend()), attributeFont));
+//
+//        grid.add(new TextPrint(Messages.PersonaPrinter_Start_Karma, attributeFont));
+//        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getStartKarma()), attributeFont));
+//
+//        grid.add(new TextPrint(Messages.PersonaPrinter_Start_Resources, attributeFont));
+//        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(generator.getStartResources())), attributeFont));
+
+        grid.add(new TextPrint("Karma worth", attributeFont));
+        grid.add(
+                SWT.RIGHT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcCompleteKaramaSpend(character, generator.getGenerator()
+                        .getCharacterAdvancements())), attributeFont));
+
+        outerGrid.add(grid);
+
+        return outerGrid;
     }
 
     /**
