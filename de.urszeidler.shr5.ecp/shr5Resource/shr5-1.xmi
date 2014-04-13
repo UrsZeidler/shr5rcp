@@ -4415,6 +4415,15 @@
 <entries xsi:type="shr5:Wissensfertigkeit" name="Sprawle life">
 <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
 </entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Media Stars">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Street Rumors">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
+<entries xsi:type="shr5:Wissensfertigkeit" name="Trivia">
+<attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+</entries>
 </entries>
 </entries>
 <entries xsi:type="shr5mngt:PlayerManagement" name="my player">
@@ -4832,6 +4841,28 @@
 <eigenschaften name="Allergy Sun(Common, Mild)" page="78" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="-10"/>
 </persona>
 <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Delvil Rat" selectedSpecies="//@entries.0/@entries.17/@entries.208">
+<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+</generatorSrc>
+</members>
+<members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.3/@generatorSrc" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
+<persona xsi:type="shr5:MudanPersona" beschreibung="Ralf ist Barkeeper in der Kneipe im Vorderhaus von Gu's Wohnung. Gu hängt da regelmäßig ab. " name="Ralf" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="3" charismaBasis="4" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
+<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0">
+<spezialisierungen>Street</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.1"/>
+<fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1">
+<spezialisierungen>Shotguns</spezialisierungen>
+</fertigkeiten>
+<fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
+<fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
+<fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.40"/>
+<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.72"/>
+<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.19/@entries.4"/>
+<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.19/@entries.3"/>
+<fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.19/@entries.2"/>
+</persona>
+<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Ralf" selectedSpecies="//@entries.0/@entries.2/@entries.0">
 <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
 </generatorSrc>
 </members>

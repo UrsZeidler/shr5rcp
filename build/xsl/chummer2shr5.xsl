@@ -114,6 +114,19 @@
 						<attribut
 							href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" />
 					</entries>
+					<entries xsi:type="shr5:Wissensfertigkeit" name="Media Stars">
+						<attribut
+							href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" />
+					</entries>
+					<entries xsi:type="shr5:Wissensfertigkeit" name="Street Rumors">
+						<attribut
+							href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" />
+					</entries>
+					<entries xsi:type="shr5:Wissensfertigkeit" name="Trivia">
+						<attribut
+							href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" />
+					</entries>
+
 				</entries>
 			</entries>
 			<xsl:call-template name="examples" />
@@ -148,7 +161,8 @@
 				characterAdvancements="//@entries.0/@entries.16/@entries.2"
 				charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6"
 				numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2"
-				maxKarmaToKeep="7" numberOfMaxAttributes="1" karmaToConnectionFactor="2">
+				maxKarmaToKeep="7" numberOfMaxAttributes="1"
+				karmaToConnectionFactor="2">
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />
 				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
@@ -289,29 +303,31 @@
 			<xsl:attribute name="magic"><xsl:value-of select="mag/text()" /></xsl:attribute>
 			<xsl:call-template name="skill-options" />
 			<xsl:if test="$typename='magician'">
-					<xsl:if test="number(spells/text())">	
-			<xsl:attribute name="spellPoints"><xsl:value-of select="spells/text()" /></xsl:attribute>
-			</xsl:if>
+				<xsl:if test="number(spells/text())">
+					<xsl:attribute name="spellPoints"><xsl:value-of
+						select="spells/text()" /></xsl:attribute>
+				</xsl:if>
 				<xsl:attribute name="selectableSkills">//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0</xsl:attribute>
 				<selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier" />
 			</xsl:if>
 			<xsl:if test="$typename='mysticadept'">
-					<xsl:if test="number(spells/text())">	
-			<xsl:attribute name="spellPoints"><xsl:value-of select="spells/text()" /></xsl:attribute>
-			</xsl:if>
-			
+				<xsl:if test="number(spells/text())">
+					<xsl:attribute name="spellPoints"><xsl:value-of
+						select="spells/text()" /></xsl:attribute>
+				</xsl:if>
+
 				<xsl:attribute name="selectableSkills">//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0</xsl:attribute>
 				<selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept" />
 			</xsl:if>
-			<xsl:if test="$typename='aspected'">			
-			<xsl:attribute name="spellPoints"><xsl:value-of select="number(mag/text())*2" /></xsl:attribute>
+			<xsl:if test="$typename='aspected'">
+				<xsl:attribute name="spellPoints"><xsl:value-of
+					select="number(mag/text())*2" /></xsl:attribute>
 				<xsl:attribute name="selectableSkills">//@entries.0/@entries.3/@entries.7/@fertigkeiten.0 //@entries.0/@entries.3/@entries.4/@fertigkeiten.1 //@entries.0/@entries.3/@entries.4/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.2 //@entries.0/@entries.3/@entries.12/@fertigkeiten.0</xsl:attribute>
 				<selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier" />
 			</xsl:if>
 		</priorities>
 	</xsl:template>
-	<xsl:template
-		match="priorities/specials/special/adept"
+	<xsl:template match="priorities/specials/special/adept"
 		mode="gen">
 		<xsl:variable name="typename" select="name()" />
 		<priorities xsi:type="shr5mngt:Adept">
@@ -958,58 +974,123 @@
 						verfuegbarkeit="" fahrzeugTyp="Bike" />
 				</members>
 
-     <members xsi:type="shr5mngt:PlayerCharacter" chracterSource="//@entries.1/@groups.0/@members.4/@generatorSrc" choosenLifestyle="//@entries.1/@groups.0/@members.4/@contracts.0" nativeLanguage="//@entries.0/@entries.5/@entries.6">
-        <persona xsi:type="shr5:AspektMagier" name="Trojan" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="5" staerkeBasis="2" charismaBasis="6" willenskraftBasis="6" intuitionBasis="5" logikBasis="5" spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.1"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.8"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.12"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.4/@entries.27"/>
-          <fertigkeiten stufe="1" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.53"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.5/@entries.57"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.5/@entries.63"/>
-          <fertigkeiten stufe="2" fertigkeit="//@entries.0/@entries.5/@entries.39"/>
-          <fertigkeiten stufe="3" fertigkeit="//@entries.0/@entries.5/@entries.47"/>
-          <fertigkeitsGruppen stufe="1" gruppe="//@entries.0/@entries.3/@entries.1"/>
-          <fertigkeitsGruppen stufe="1" gruppe="//@entries.0/@entries.3/@entries.9"/>
-          <eigenschaften name="Will to Live" page="77" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3"/>
-          <eigenschaften name="Bilingual" page="72" srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="5"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.6"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.1"/>
-          <zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35"/>
-        </persona>
-        <inventar xsi:type="shr5:Feuerwaffe" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wert="350" verfuegbarkeit="6R" name="Fichetti Security 600" schadenscode="7P" praezision="6" reichweite="//@entries.0/@entries.1/@entries.2" munitionstyp="Streifen" kapazitaet="30">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau name="Laser Sight" page="432" srcBook="//@entries.0/@entries.0/@entries.0"/>
-        </inventar>
-        <inventar xsi:type="shr5:Gegenstand" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wert="1000" verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink"/>
-        <inventar xsi:type="shr5:Gegenstand" wert="8000" name="Spell foci" stufe="2"/>
-        <inventar xsi:type="shr5:Kleidung" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wert="900" verfuegbarkeit="4" name="Lined Coat" ruestung="9"/>
-        <inventar xsi:type="shr5:Credstick" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="20" verfuegbarkeit="0" name="Silver" maxValue="20000"/>
-        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="1150" verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices">
-          <mods wert="1">
-            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
-          </mods>
-        </inventar>
-        <inventar xsi:type="shr5:Munition" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wert="200" verfuegbarkeit="2R" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="//@entries.0/@entries.1/@entries.2"/>
-        <inventar xsi:type="shr5:Gegenstand" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="100" verfuegbarkeit="2" name="Micro-Transceiver" kategorie="Communications"/>
-        <inventar xsi:type="shr5:Gegenstand" page="450" srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating" name="Medkit" kategorie="Biotech"/>
-        <inventar xsi:type="shr5:Gegenstand" page="443" srcBook="//@entries.0/@entries.0/@entries.0" wert="500" verfuegbarkeit="0" name="Tool Kit" kategorie="Tools"/>
-        <inventar xsi:type="shr5:Gegenstand" page="441" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000" verfuegbarkeit="(Rating*3)F" name="Jammer, Area" kategorie="Communications" stufe="6"/>
-        <contracts xsi:type="shr5:Lifestyle" name="Low" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="2000" verfuegbarkeit=""/>
-        <contracts xsi:type="shr5:Sin" name="Daniel Silverbane" wert="5000" stufe="2" gefaelscht="true"/>
-        <contracts xsi:type="shr5:Lizenz" name="Adjunct professor of magical theory to carry spell foci" wert="800" gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.4/@contracts.1"/>
-        <connections influence="2" loyality="2"/>
-        <connections influence="4" loyality="2"/>
-        <connections influence="4" loyality="4"/>
-        <generatorSrc xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.4" generator="//@entries.0/@entries.16/@entries.0" state="commited" selectedGroup="//@entries.1/@groups.0" characterName="Trojan" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46" skills="//@entries.0/@entries.16/@entries.0/@priorities.39" attribute="//@entries.0/@entries.16/@entries.0/@priorities.17" metaType="//@entries.0/@entries.16/@entries.0/@priorities.6" magic="//@entries.0/@entries.16/@entries.0/@priorities.36" karmaToResource="10" startKarma="7" startResources="980"/>
-      </members>
+				<members xsi:type="shr5mngt:PlayerCharacter"
+					chracterSource="//@entries.1/@groups.0/@members.4/@generatorSrc"
+					choosenLifestyle="//@entries.1/@groups.0/@members.4/@contracts.0"
+					nativeLanguage="//@entries.0/@entries.5/@entries.6">
+					<persona xsi:type="shr5:AspektMagier" name="Trojan"
+						edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="3"
+						reaktionBasis="5" staerkeBasis="2" charismaBasis="6"
+						willenskraftBasis="6" intuitionBasis="5" logikBasis="5"
+						spezies="//@entries.0/@entries.2/@entries.1" magieBasis="6">
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.2" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.0" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.12/@fertigkeiten.1" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.12" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.4/@entries.27" />
+						<fertigkeiten stufe="1"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.5/@entries.53" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.5/@entries.57" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.5/@entries.63" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.5/@entries.39" />
+						<fertigkeiten stufe="3"
+							fertigkeit="//@entries.0/@entries.5/@entries.47" />
+						<fertigkeitsGruppen stufe="1"
+							gruppe="//@entries.0/@entries.3/@entries.1" />
+						<fertigkeitsGruppen stufe="1"
+							gruppe="//@entries.0/@entries.3/@entries.9" />
+						<eigenschaften name="Will to Live" page="77"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="3" />
+						<eigenschaften name="Bilingual" page="72"
+							srcBook="//@entries.0/@entries.0/@entries.0" karmaKosten="5" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.6" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.1" />
+						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35" />
+					</persona>
+					<inventar xsi:type="shr5:Feuerwaffe" page="426"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="350"
+						verfuegbarkeit="6R" name="Fichetti Security 600" schadenscode="7P"
+						praezision="6" reichweite="//@entries.0/@entries.1/@entries.2"
+						munitionstyp="Streifen" kapazitaet="30">
+						<modie>HM</modie>
+						<erweiterung>Lauf</erweiterung>
+						<erweiterung>Oben</erweiterung>
+						<einbau name="Laser Sight" page="432"
+							srcBook="//@entries.0/@entries.0/@entries.0" />
+					</inventar>
+					<inventar xsi:type="shr5:Gegenstand" page="439"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink" />
+					<inventar xsi:type="shr5:Gegenstand" wert="8000" name="Spell foci"
+						stufe="2" />
+					<inventar xsi:type="shr5:Kleidung" page="437"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="900"
+						verfuegbarkeit="4" name="Lined Coat" ruestung="9" />
+					<inventar xsi:type="shr5:Credstick" page="443"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="20"
+						verfuegbarkeit="0" name="Silver" maxValue="20000" />
+					<inventar xsi:type="shr5:Gegenstand" page="443"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="1150"
+						verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices">
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot" />
+						</mods>
+					</inventar>
+					<inventar xsi:type="shr5:Munition" page="434"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="200"
+						verfuegbarkeit="2R" name="Ammo: Regular Ammo" anzahl="100"
+						proAnzahl="10" type="//@entries.0/@entries.1/@entries.2" />
+					<inventar xsi:type="shr5:Gegenstand" page="441"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						verfuegbarkeit="2" name="Micro-Transceiver" kategorie="Communications" />
+					<inventar xsi:type="shr5:Gegenstand" page="450"
+						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"
+						name="Medkit" kategorie="Biotech" />
+					<inventar xsi:type="shr5:Gegenstand" page="443"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="500"
+						verfuegbarkeit="0" name="Tool Kit" kategorie="Tools" />
+					<inventar xsi:type="shr5:Gegenstand" page="441"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"
+						verfuegbarkeit="(Rating*3)F" name="Jammer, Area" kategorie="Communications"
+						stufe="6" />
+					<contracts xsi:type="shr5:Lifestyle" name="Low" page="95"
+						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						verfuegbarkeit="" />
+					<contracts xsi:type="shr5:Sin" name="Daniel Silverbane"
+						wert="5000" stufe="2" gefaelscht="true" />
+					<contracts xsi:type="shr5:Lizenz"
+						name="Adjunct professor of magical theory to carry spell foci"
+						wert="800" gefaelscht="true"
+						lizenzTraeger="//@entries.1/@groups.0/@members.4/@contracts.1" />
+					<connections influence="2" loyality="2" />
+					<connections influence="4" loyality="2" />
+					<connections influence="4" loyality="4" />
+					<generatorSrc xsi:type="shr5mngt:Shr5Generator"
+						character="//@entries.1/@groups.0/@members.4" generator="//@entries.0/@entries.16/@entries.0"
+						state="commited" selectedGroup="//@entries.1/@groups.0"
+						characterName="Trojan" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.46"
+						skills="//@entries.0/@entries.16/@entries.0/@priorities.39"
+						attribute="//@entries.0/@entries.16/@entries.0/@priorities.17"
+						metaType="//@entries.0/@entries.16/@entries.0/@priorities.6"
+						magic="//@entries.0/@entries.16/@entries.0/@priorities.36"
+						karmaToResource="10" startKarma="7" startResources="980" />
+				</members>
 
 
 
@@ -1038,11 +1119,25 @@
 				karmaToResource="10" metaType="//@entries.0/@entries.16/@entries.0/@priorities.15"
 				magic="//@entries.0/@entries.16/@entries.0/@priorities.23" />
 			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" />
-			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0" state="readyForCreation" selectedGroup="//@entries.1/@groups.0" characterName="Test-Aspekt-1" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.43" skills="//@entries.0/@entries.16/@entries.0/@priorities.37" attribute="//@entries.0/@entries.16/@entries.0/@priorities.19" metaType="//@entries.0/@entries.16/@entries.0/@priorities.16" magic="//@entries.0/@entries.16/@entries.0/@priorities.36"/>
-	
-	    	<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.5" generator="//@entries.0/@entries.16/@entries.0" state="personaCreated" selectedGroup="//@entries.1/@groups.0" characterName="Test-Aspekt-1" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.43" skills="//@entries.0/@entries.16/@entries.0/@priorities.37" attribute="//@entries.0/@entries.16/@entries.0/@priorities.19" metaType="//@entries.0/@entries.16/@entries.0/@priorities.16" magic="//@entries.0/@entries.16/@entries.0/@priorities.36"/>
-   		 	<generators xsi:type="shr5mngt:Shr5KarmaGenerator" generator="//@entries.0/@entries.16/@entries.3" state="readyForCreation" selectedGroup="//@entries.1/@groups.0" metaType="//@entries.0/@entries.16/@entries.3/@priorities.1" characterConcept="//@entries.0/@entries.16/@entries.3/@priorities.6"/>
-			
+			<generators xsi:type="shr5mngt:Shr5Generator" generator="//@entries.0/@entries.16/@entries.0"
+				state="readyForCreation" selectedGroup="//@entries.1/@groups.0"
+				characterName="Test-Aspekt-1" resourcen="//@entries.0/@entries.16/@entries.0/@priorities.43"
+				skills="//@entries.0/@entries.16/@entries.0/@priorities.37"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.19"
+				metaType="//@entries.0/@entries.16/@entries.0/@priorities.16" magic="//@entries.0/@entries.16/@entries.0/@priorities.36" />
+
+			<generators xsi:type="shr5mngt:Shr5Generator" character="//@entries.1/@groups.0/@members.5"
+				generator="//@entries.0/@entries.16/@entries.0" state="personaCreated"
+				selectedGroup="//@entries.1/@groups.0" characterName="Test-Aspekt-1"
+				resourcen="//@entries.0/@entries.16/@entries.0/@priorities.43"
+				skills="//@entries.0/@entries.16/@entries.0/@priorities.37"
+				attribute="//@entries.0/@entries.16/@entries.0/@priorities.19"
+				metaType="//@entries.0/@entries.16/@entries.0/@priorities.16" magic="//@entries.0/@entries.16/@entries.0/@priorities.36" />
+			<generators xsi:type="shr5mngt:Shr5KarmaGenerator"
+				generator="//@entries.0/@entries.16/@entries.3" state="readyForCreation"
+				selectedGroup="//@entries.1/@groups.0" metaType="//@entries.0/@entries.16/@entries.3/@priorities.1"
+				characterConcept="//@entries.0/@entries.16/@entries.3/@priorities.6" />
+
 		</entries>
 		<entries xsi:type="shr5mngt:GamemasterManagement" name="my game stuff">
 
@@ -1137,33 +1232,55 @@
 						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
 					</generatorSrc>
 				</members>
-					<members xsi:type="shr5mngt:NonPlayerCharacter"
-						chracterSource="//@entries.2/@groups.0/@members.2/@generatorSrc"
-						sex="male">
-						<persona xsi:type="shr5:MudanPersona" name="Delvil Rat"
-							edgeBasis="2" konstitutionBasis="2" geschicklichkeitBasis="5"
-							reaktionBasis="5" staerkeBasis="1" charismaBasis="5"
-							willenskraftBasis="3" intuitionBasis="5" logikBasis="2"
-							spezies="//@entries.0/@entries.17/@entries.208">
-							<fertigkeiten stufe="5"
-								fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0" />
-							<fertigkeiten stufe="2"
-								fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1" />
-							<fertigkeiten stufe="5"
-								fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
-							<fertigkeiten stufe="4"
-								fertigkeit="//@entries.0/@entries.4/@entries.8" />
-							<eigenschaften name="Allergy Sun(Common, Mild)"
-								page="78" srcBook="//@entries.0/@entries.0/@entries.0"
-								karmaKosten="-10" />
-						</persona>
-						<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator"
-							character="//@entries.2/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.1"
-							state="commited" selectedGroup="//@entries.2/@groups.0"
-							characterName="Delvil Rat" selectedSpecies="//@entries.0/@entries.17/@entries.208">
-							<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
-						</generatorSrc>
-					</members>
+				<members xsi:type="shr5mngt:NonPlayerCharacter"
+					chracterSource="//@entries.2/@groups.0/@members.2/@generatorSrc"
+					sex="male">
+					<persona xsi:type="shr5:MudanPersona" name="Delvil Rat"
+						edgeBasis="2" konstitutionBasis="2" geschicklichkeitBasis="5"
+						reaktionBasis="5" staerkeBasis="1" charismaBasis="5"
+						willenskraftBasis="3" intuitionBasis="5" logikBasis="2"
+						spezies="//@entries.0/@entries.17/@entries.208">
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.0" />
+						<fertigkeiten stufe="2"
+							fertigkeit="//@entries.0/@entries.3/@entries.1/@fertigkeiten.1" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.4/@entries.8" />
+						<eigenschaften name="Allergy Sun(Common, Mild)"
+							page="78" srcBook="//@entries.0/@entries.0/@entries.0"
+							karmaKosten="-10" />
+					</persona>
+					<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator"
+						character="//@entries.2/@groups.0/@members.2" generator="//@entries.0/@entries.16/@entries.1"
+						state="commited" selectedGroup="//@entries.2/@groups.0"
+						characterName="Delvil Rat" selectedSpecies="//@entries.0/@entries.17/@entries.208">
+						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+					</generatorSrc>
+				</members>
+      <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.3/@generatorSrc" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
+        <persona xsi:type="shr5:MudanPersona" beschreibung="Ralf ist Barkeeper in der Kneipe im Vorderhaus von Gu's Wohnung. Gu hängt da regelmäßig ab. " name="Ralf" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="3" charismaBasis="4" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0">
+            <spezialisierungen>Street</spezialisierungen>
+          </fertigkeiten>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.1"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1">
+            <spezialisierungen>Shotguns</spezialisierungen>
+          </fertigkeiten>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
+          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.40"/>
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.72"/>
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.19/@entries.4"/>
+          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.19/@entries.3"/>
+          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.19/@entries.2"/>
+        </persona>
+        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Ralf" selectedSpecies="//@entries.0/@entries.2/@entries.0">
+          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </generatorSrc>
+      </members>
 
 
 			</groups>
@@ -1727,7 +1844,8 @@
 	</xsl:template>
 	<xsl:template match="//gear">
 		<xsl:choose>
-			<xsl:when test="category/text()='Ammunition' and  starts-with(name/text(),'Ammo:' )">
+			<xsl:when
+				test="category/text()='Ammunition' and  starts-with(name/text(),'Ammo:' )">
 				<entries xsi:type="shr5:Munition">
 					<xsl:if test="number(costfor/text())">
 						<xsl:attribute name="proAnzahl">
