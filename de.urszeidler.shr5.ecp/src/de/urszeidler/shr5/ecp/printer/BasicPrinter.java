@@ -1,7 +1,6 @@
 package de.urszeidler.shr5.ecp.printer;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -21,7 +20,6 @@ import org.eclipse.nebula.paperclips.core.grid.GridLook;
 import org.eclipse.nebula.paperclips.core.grid.GridPrint;
 import org.eclipse.nebula.paperclips.core.page.PageDecoration;
 import org.eclipse.nebula.paperclips.core.page.PageNumber;
-import org.eclipse.nebula.paperclips.core.page.PageNumberPageDecoration;
 import org.eclipse.nebula.paperclips.core.page.PageNumberPrint;
 import org.eclipse.nebula.paperclips.core.page.PagePrint;
 import org.eclipse.nebula.paperclips.core.text.TextPrint;
