@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
@@ -404,6 +405,20 @@ public class ShadowrunTools {
         int sum = 0;
         for (Koerpermods koerpermods2 : koerperMods) {
             sum = sum + getEssencesValue(koerpermods2);
+        }
+        return sum;
+    }
+
+    /**
+     * Calcs the sum of ki power points.
+     * 
+     * @param kikraft
+     * @return 
+     */
+    public static int calcKiPowerSum(List<KiKraft> kikraft) {
+        int sum = 0;
+        for (KiKraft kiKraft2 : kikraft) {
+            sum = sum + kiKraft2.getKraftpunkte();
         }
         return sum;
     }

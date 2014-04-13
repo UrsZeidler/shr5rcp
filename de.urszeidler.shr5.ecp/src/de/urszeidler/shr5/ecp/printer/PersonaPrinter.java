@@ -385,6 +385,21 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printFreeStyleGenerator(generator, character), border), GridPrint.REMAINDER);
         printGeneratorAttributesSkills(generator, grid, border, persona);
 
+
+        if (persona instanceof KoerperPersona) {
+            KoerperPersona kp = (KoerperPersona)persona;
+            grid.add(printGeneratorKoerperPersona(border, kp), GridPrint.REMAINDER);
+        }
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            printGeneratorSpells(grid, border, z);
+        }
+        if (persona instanceof KiAdept) {
+            KiAdept ka = (KiAdept)persona;
+            printGeneratorKiPowers(grid, border, ka.getKikraft());
+        }
+        printResourcesForGenerator(grid, border, character, persona);
+        
         GridPrint characterConnections = printAllCharacterConnections(character);
         characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
         characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
@@ -393,20 +408,12 @@ public class PersonaPrinter extends BasicPrinter {
 
         grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
 
-        if (persona instanceof KoerperPersona) {
-            KoerperPersona kp = (KoerperPersona)persona;
-            printGeneratorKoerperPersona(grid, border, kp);
-        }
-        if (persona instanceof Zauberer) {
-            Zauberer z = (Zauberer)persona;
-            printGeneratorSpells(grid, border, z);
-        }
 
         GridPrint printCalculatedKarma = printCalculatedKarma(character);
         grid.add(createBandPrint(new BorderPrint(printCalculatedKarma, border)), GridPrint.REMAINDER);
         grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
 
-        printResourcesForGenerator(grid, border, character, persona);
+
 
         return grid;
     }
@@ -491,32 +498,53 @@ public class PersonaPrinter extends BasicPrinter {
         AbstraktPersona persona = character.getPersona();
 
         grid.add(new BorderPrint(printShr5KarmaGenerator(generator, character), border), GridPrint.REMAINDER);
+        
         printGeneratorAttributesSkills(generator, grid, border, persona);
-
-        GridPrint characterConnections = printAllCharacterConnections(character);
-        characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
-        characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
-        characterConnections.add(SWT.RIGHT,
-                new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendByConnections(character)), attributeFont));
-
-        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
-
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
-            printGeneratorKoerperPersona(grid, border, kp);
+            grid.add(printGeneratorKoerperPersona(border, kp), GridPrint.REMAINDER);
         }
         if (persona instanceof Zauberer) {
             Zauberer z = (Zauberer)persona;
             printGeneratorSpells(grid, border, z);
         }
-
-        GridPrint printCalculatedKarma = printCalculatedKarma(character);
-        grid.add(createBandPrint(new BorderPrint(printCalculatedKarma, border)), GridPrint.REMAINDER);
-        grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
-
+        if (persona instanceof KiAdept) {
+            KiAdept ka = (KiAdept)persona;
+            printGeneratorKiPowers(grid, border, ka.getKikraft());
+        }
         printResourcesForGenerator(grid, border, character, persona);
 
+        GridPrint printCalculatedKarma = printCalculatedKarma(character);
+ 
+
+        GridPrint characterConnections = printAllCharacterConnections(character);
+        characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
+        characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 3);
+        characterConnections.add(SWT.RIGHT,
+                new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendByConnections(character)), attributeFont));
+
+        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
+
+        grid.add(createBandPrint(new BorderPrint(printCalculatedKarma, border)), GridPrint.REMAINDER);
+        grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
         return grid;
+    }
+
+    /**
+     * Prints the spells for a generator with sum.
+     * 
+     * @param grid
+     * @param border
+     * @param z
+     */
+    private void printGeneratorKiPowers(GridPrint grid, LineBorder border, List<KiKraft> kikraft) {
+        GridPrint printZauberList = printKiKraftList(kikraft);
+        printZauberList.add(new LinePrint(), GridPrint.REMAINDER);
+        int kiPowerSum = ShadowrunTools.calcKiPowerSum(kikraft);
+        printZauberList.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont));
+        printZauberList.add(SWT.RIGHT, new TextPrint(essenzToFloat(kiPowerSum), attributeFont));
+
+        grid.add(createBandPrint(new BorderPrint(printZauberList, border)), GridPrint.REMAINDER);
     }
 
     /**
@@ -627,28 +655,29 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(gridLeft, 1);
 
         printGeneratorAttributesSkills(generator, grid, border, persona);
-
-        GridPrint characterConnections = printAllCharacterConnections(character);
-        characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
-        characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
-        characterConnections.add(
-                SWT.RIGHT,
-                new TextPrint(printInteger(generator.getConnectionSpend()
-                        - ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())), attributeFont));
-
-        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
-
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
-            printGeneratorKoerperPersona(grid, border, kp);
+            grid.add(printGeneratorKoerperPersona(border, kp), GridPrint.REMAINDER);
         }
         if (persona instanceof Zauberer) {
             Zauberer z = (Zauberer)persona;
             printGeneratorSpells(grid, border, z);
         }
-
+        if (persona instanceof KiAdept) {
+            KiAdept ka = (KiAdept)persona;
+            printGeneratorKiPowers(grid, border, ka.getKikraft());
+        }
         printResourcesForGenerator(grid, border, character, persona);
 
+        GridPrint characterConnections = printAllCharacterConnections(character);
+        characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
+        characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 3);
+        characterConnections.add(
+                SWT.RIGHT,
+                new TextPrint(printInteger(generator.getConnectionSpend()
+                        - ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())), attributeFont));
+
+        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);        
         grid.add(new BorderPrint(printCalculatedKarma(character), border), GridPrint.REMAINDER);
 
         return grid;
@@ -696,11 +725,14 @@ public class PersonaPrinter extends BasicPrinter {
     }
 
     /**
+     * Print qualities and bodytec together.
+     * 
      * @param grid
      * @param border
      * @param kp
+     * @return
      */
-    private void printGeneratorKoerperPersona(GridPrint grid, LineBorder border, KoerperPersona kp) {
+    private GridPrint printGeneratorKoerperPersona(LineBorder border, KoerperPersona kp) {
         EList<PersonaEigenschaft> eigenschaften = kp.getEigenschaften();
         GridPrint personaEigenschaften = printPersonaEigenschaften(eigenschaften);
         int sum = ShadowrunManagmentTools.calcQuallityKarmaCost(kp.getEigenschaften());
@@ -714,7 +746,7 @@ public class PersonaPrinter extends BasicPrinter {
         printPersonaBodyTec.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont));
         printPersonaBodyTec.add(SWT.RIGHT, new TextPrint(essenzToFloat(calcEssenceSum), attributeFont));
 
-        grid.add(createBandPrint(new BorderPrint(personaEigenschaften, border), new BorderPrint(printPersonaBodyTec, border)), GridPrint.REMAINDER);
+        return createBandPrint(new BorderPrint(personaEigenschaften, border), new BorderPrint(printPersonaBodyTec, border));
     }
 
     /**
@@ -838,8 +870,8 @@ public class PersonaPrinter extends BasicPrinter {
     private GridPrint printWertListAndSumm(EList<? extends GeldWert> list, String header) {
         GridPrint gegenstandList = printGegenstandList(list, header);
         gegenstandList.add(new LinePrint(), GridPrint.REMAINDER);
-        gegenstandList.addFooter(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 2);
-        gegenstandList.addFooter(SWT.RIGHT, new TextPrint(printIntegerMoney(ShadowrunTools.calcListenWert(list)), attributeFont));
+        gegenstandList.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 2);
+        gegenstandList.add(SWT.RIGHT, new TextPrint(printIntegerMoney(ShadowrunTools.calcListenWert(list)), attributeFont));
         return gegenstandList;
     }
 
@@ -1207,6 +1239,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint("karma spend by resorcen", attributeFont));
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(ShadowrunManagmentTools.calcKarmaSpendByResources(character)), attributeFont));
 
+        grid.add(new LinePrint(), GridPrint.REMAINDER);
         grid.add(new TextPrint("karma spend complete", attributeFont));
         grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(ShadowrunManagmentTools.calcCompleteKaramaSpend(character, advancementSystem)),
                 attributeFont));
@@ -1670,24 +1703,23 @@ public class PersonaPrinter extends BasicPrinter {
     private GridPrint printAllCharacterConnections(ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
-        GridPrint grid = new GridPrint("d:g,d,d,d,d", look);//$NON-NLS-1$
+        GridPrint grid = new GridPrint("d:g,d,d,d", look);//$NON-NLS-1$
         if (character == null)
             return grid;
 
-        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(EMPTY, boldFontData), 2);
-        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_connections, boldFontData), 3);
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_connections, boldFontData), GridPrint.REMAINDER);
 
         grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_Name, italicFontData), 2);
         grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_loyality, italicFontData));
         grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint(Messages.Printer_influence, italicFontData));
-        grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("---")); //$NON-NLS-1$
+        //grid.addHeader(SWT.LEFT, SWT.DEFAULT, new TextPrint("---")); //$NON-NLS-1$
 
         EList<Connection> connections = character.getConnections();
         for (Connection connection : connections) {
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(itemDelegator.getText(connection), attributeFont), 2);
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getLoyality()), attributeFont));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(printInteger(connection.getInfluence()), attributeFont));
-            grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint("---", attributeFont)); //$NON-NLS-1$
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(connection.getLoyality()), attributeFont));
+            grid.add(SWT.RIGHT, SWT.DEFAULT, new TextPrint(printInteger(connection.getInfluence()), attributeFont));
+            // grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toSimpleName(connection.getCharacter().getPersona()), attributeFont)); //$NON-NLS-1$
         }
 
         return grid;
