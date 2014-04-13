@@ -5,7 +5,6 @@ package de.urszeidler.shr5.ecp.editor;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.core.databinding.observable.IObservable;
@@ -15,18 +14,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecp.internal.wizards.SelectModelElementWizard;
-import org.eclipse.emf.ecp.ui.common.CompositeFactory;
-import org.eclipse.emf.ecp.ui.common.SelectionComposite;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.dialogs.Dialog;
-import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.window.Window;
-import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
@@ -239,7 +233,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             return defaultCreationDialog(e, object);
         }
 
-        @SuppressWarnings({ "restriction", "unchecked" })
         private EObject defaultCreationDialog(FormbuilderEntry e, EObject object) {
 
             Collection<EClass> filteredEClasses = ShadowrunEditingTools.provideNewClassTypes(object, e.getFeature(), editingDomain);// provideNewClassTypes(object,
@@ -249,21 +242,35 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return eClass.getEPackage().getEFactoryInstance().create(eClass);
             }
 
-            final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET, Collections.EMPTY_SET,
-                    filteredEClasses);
-
-            SelectModelElementWizard w = new SelectModelElementWizard(EMPTY, EMPTY, EMPTY, Messages.ShadowrunEditor_dlg_select_object_type); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-            w.setCompositeProvider(helper);
-            final WizardDialog wd = new WizardDialog(getSite().getShell(), w);
-
-            final int wizardResult = wd.open();
-            if (wizardResult == Window.OK) {
-                Object[] selection = helper.getSelection();
-                EClass eClass = (EClass)selection[0];
-                return eClass.getEPackage().getEFactoryInstance().create(eClass);
-                // return Shr5Factory.eINSTANCE.create(eClass);
+            OwnChooseDialog dialog = new OwnChooseDialog(getEditorSite().getShell(), filteredEClasses.toArray(new Object[]{}),
+                    Messages.ShadowrunEditor_dlg_select_type, Messages.ShadowrunEditor_dlg_select_persona_type);
+            dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
+            int open = dialog.open();
+            if (open == Dialog.OK) {
+                Object[] result = dialog.getResult();
+                if (result.length > 0) {
+                    EClass eClass = (EClass)result[0];
+                    return eClass.getEPackage().getEFactoryInstance().create(eClass);
+                }
             }
+
             return null;
+
+//            final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET, Collections.EMPTY_SET,
+//                    filteredEClasses);
+//
+//            SelectModelElementWizard w = new SelectModelElementWizard(EMPTY, EMPTY, EMPTY, Messages.ShadowrunEditor_dlg_select_object_type); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+//            w.setCompositeProvider(helper);
+//            final WizardDialog wd = new WizardDialog(getSite().getShell(), w);
+//
+//            final int wizardResult = wd.open();
+//            if (wizardResult == Window.OK) {
+//                Object[] selection = helper.getSelection();
+//                EClass eClass = (EClass)selection[0];
+//                return eClass.getEPackage().getEFactoryInstance().create(eClass);
+//                // return Shr5Factory.eINSTANCE.create(eClass);
+//            }
+//            return null;
         }
     };
 
@@ -350,7 +357,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {
@@ -467,7 +474,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     addPage(new FreeStyleGeneratorPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_freestyle_generator, object,
                             editingDomain, manager));
-                    
+
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_shr5_generator_sheet, PersonaPrinter
                             .getInstance().createShr5CharacterGeneratorPrintFactory(object)));
 
@@ -624,17 +631,17 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
     }
 
     /**
-     * @param abstaktPersona_Modifikator
+     * @param object_ref
      * @param orgObject
      * @return
      */
-    private List<EObject> handleCopyAddToPersona(EReference abstaktPersona_Modifikator, EObject orgObject) {
-        Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(getEObject(), abstaktPersona_Modifikator.getEType());
+    private List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
+        Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(getEObject(), object_ref.getEType());
 
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
-                Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_dlg_manage_inventory, new ArrayList<EObject>(collection));
+                Shr5Package.Literals.SHR_LIST__ENTRIES, "Add " + labelProvider.getText(object_ref), new ArrayList<EObject>(collection));
 
         int result = dialog.open();
         if (result == Window.OK) {
