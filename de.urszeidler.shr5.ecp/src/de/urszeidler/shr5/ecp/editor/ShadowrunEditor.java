@@ -41,6 +41,7 @@ import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
@@ -340,6 +341,16 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return null;
             }
 
+            @Override
+            public Object caseMunition(Munition object) {
+                try {
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_credstick, object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+            
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {

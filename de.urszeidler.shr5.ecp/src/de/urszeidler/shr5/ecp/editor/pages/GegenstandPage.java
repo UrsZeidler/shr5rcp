@@ -17,6 +17,7 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -128,6 +129,10 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             grpGegenstand.setText(Messages.ObjectPage_credstick);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURREN_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
+        } else if (object instanceof Munition) {
+            grpGegenstand.setText("Munition");
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpGegenstand);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
