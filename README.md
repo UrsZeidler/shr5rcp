@@ -26,13 +26,15 @@ shr5rcp
 3. Installation
 
  As the software is an eclipse product so you need to unpack the software and start the exe, you will need java installed.
-* [Installation and starting](https://github.com/UrsZeidler/shr5rcp/wiki/Installation-and-starting)
-* [faq](https://github.com/UrsZeidler/shr5rcp/wiki/faq)
+ 
+ * [Installation and starting](https://github.com/UrsZeidler/shr5rcp/wiki/Installation-and-starting)
+ * [faq](https://github.com/UrsZeidler/shr5rcp/wiki/faq)
  
  
 4. Technical stuff
 
  This project is based on the EMF modeling framework the EMF Client Platform and EMF Forms.
+ 
  [development](https://github.com/UrsZeidler/shr5rcp/wiki/Building-and-development)
  
  
