@@ -817,17 +817,18 @@ public class PersonaPrinter extends BasicPrinter {
     }
 
     /**
-     * @param grid
-     * @param persona
-     * @param eAttribute
-     * @param konstitutionMin
+     * Print a line of attribute.
+     * @param grid the grid to add to
+     * @param persona the persona
+     * @param eAttribute the attribute
+     * @param konstitutionMin the species min values
      */
-    private void printGeneratorAttributeLine(GridPrint grid, AbstraktPersona persona, EAttribute eAttribute, int konstitutionMin) {
+    private void printGeneratorAttributeLine(GridPrint grid, AbstraktPersona persona, EAttribute eAttribute, int min) {
         Integer value = (Integer)persona.eGet(eAttribute);
         grid.add(new TextPrint(toFeatureName(persona, eAttribute), attributeFont));
-        grid.add(SWT.RIGHT, new TextPrint(printInteger(konstitutionMin), attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(min), attributeFont));
         grid.add(SWT.RIGHT, new TextPrint(printInteger(value), attributeFont));
-        grid.add(SWT.RIGHT, new TextPrint(printInteger(value - konstitutionMin), attributeFont));
+        grid.add(SWT.RIGHT, new TextPrint(printInteger(value - min), attributeFont));
     }
 
     /**
