@@ -212,15 +212,15 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             removePages();
 
             CharacterGenerator chracterSource = playerCharacter.getChracterSource();
-            if (chracterSource instanceof Shr5Generator) {
-                this.getEditor().addPage(
-                        1,
-                        new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter.getPersona(),
-                                getEditingDomain(), mananger));
-            } else if (chracterSource instanceof Shr5KarmaGenerator) {
+            if (chracterSource instanceof Shr5KarmaGenerator) {
                 this.getEditor().addPage(
                         1,
                         new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter,
+                                getEditingDomain(), mananger));
+            } else {
+                this.getEditor().addPage(
+                        1,
+                        new AbstraktPersonaPage(this.getEditor(), PERSONA, Messages.ShadowrunEditor_page_persona, playerCharacter.getPersona(),
                                 getEditingDomain(), mananger));
             }
             this.getEditor().addPage(
