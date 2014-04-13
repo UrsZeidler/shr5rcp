@@ -1,5 +1,6 @@
 2014-04-27 Version 0.1.5
 
+* added freestyle generator report
 * added karma generator report
 * make the karma based generator usable like the normal generator
 * added karma calculation section in the shr5Generator report
@@ -8,6 +9,7 @@
 * added ammunition as object type
 * import from chummer2 :
 	* ammunition as object
+	* create german resource set from the localization file
 
 2014-03-30 Version 0.1.4
 
