@@ -4,12 +4,16 @@ import java.text.DateFormat;
 import java.util.Date;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
@@ -20,6 +24,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.ui.forms.IManagedForm;
@@ -31,7 +36,9 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.CharacterAdvacementWidget;
 
@@ -44,6 +51,8 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
     private DataBindingContext m_bindingContext;
     private Table table;
     private TableViewer tableViewer;
+    private Label lblKarmagaintvalue;
+    private Label lblKarmaspendvalue;
 
     /**
      * Create the form page.
@@ -135,18 +144,29 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
         
         TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
         TableColumn tblclmnName = tableViewerColumn.getColumn();
-        tblclmnName.setWidth(350);
+        tblclmnName.setWidth(300);
         tblclmnName.setText("name");
         
         TableViewerColumn tableViewerColumn_1 = new TableViewerColumn(tableViewer, SWT.NONE);
-        TableColumn tblclmnNewColumn = tableViewerColumn_1.getColumn();
-        tblclmnNewColumn.setWidth(141);
-        tblclmnNewColumn.setText("date");
+        TableColumn tblclmNDate = tableViewerColumn_1.getColumn();
+        tblclmNDate.setResizable(false);
+        tblclmNDate.setAlignment(SWT.CENTER);
+        tblclmNDate.setWidth(90);
+        tblclmNDate.setText("date");
         
         TableViewerColumn tableViewerColumn_2 = new TableViewerColumn(tableViewer, SWT.NONE);
-        TableColumn tblclmnNewColumn_1 = tableViewerColumn_2.getColumn();
-        tblclmnNewColumn_1.setWidth(100);
-        tblclmnNewColumn_1.setText("date applied");
+        TableColumn tblclmnDateApplied = tableViewerColumn_2.getColumn();
+        tblclmnDateApplied.setResizable(false);
+        tblclmnDateApplied.setAlignment(SWT.CENTER);
+        tblclmnDateApplied.setWidth(95);
+        tblclmnDateApplied.setText("date applied");
+        
+        TableViewerColumn tableViewerColumn_3 = new TableViewerColumn(tableViewer, SWT.NONE);
+        TableColumn tblclmnKarma = tableViewerColumn_3.getColumn();
+        tblclmnKarma.setResizable(false);
+        tblclmnKarma.setAlignment(SWT.RIGHT);
+        tblclmnKarma.setWidth(90);
+        tblclmnKarma.setText("karma cost");
 
 //        Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
 //        composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -160,10 +180,34 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
 //        managedForm.getToolkit().paintBordersFor(treeTableWidget);
 
         Group grpSummary = new Group(managedForm.getForm().getBody(), SWT.NONE);
+        grpSummary.setLayout(new GridLayout(1, false));
         grpSummary.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         grpSummary.setText("Summary");
         managedForm.getToolkit().adapt(grpSummary);
         managedForm.getToolkit().paintBordersFor(grpSummary);
+        
+        Composite composite_2 = new Composite(grpSummary, SWT.NONE);
+        composite_2.setLayout(new GridLayout(4, false));
+        composite_2.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+        composite_2.setBounds(0, 0, 570, 64);
+        managedForm.getToolkit().adapt(composite_2);
+        managedForm.getToolkit().paintBordersFor(composite_2);
+        
+        managedForm.getToolkit().createLabel(composite_2, "karma gaint :", SWT.NONE);
+        
+        lblKarmagaintvalue = managedForm.getToolkit().createLabel(composite_2, "karma_gaint_value", SWT.NONE);
+        lblKarmagaintvalue.setAlignment(SWT.RIGHT);
+        
+        managedForm.getToolkit().createLabel(composite_2, "karma spend :", SWT.NONE);
+        
+        lblKarmaspendvalue = managedForm.getToolkit().createLabel(composite_2, "karma_spend_value", SWT.NONE);
+        lblKarmaspendvalue.setAlignment(SWT.RIGHT);
+        
+        Composite composite = new Composite(grpSummary, SWT.NONE);
+        composite.setLayout(new GridLayout(1, false));
+        composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        managedForm.getToolkit().adapt(composite);
+        managedForm.getToolkit().paintBordersFor(composite);
 
         m_bindingContext = initDataBindings();
         // --------
@@ -179,9 +223,13 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
+        
+        
+        
+        //
         ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
         IObservableMap[] observeMaps = EMFEditObservables.observeMaps(editingDomain, listContentProvider.getKnownElements(),
-                new EStructuralFeature[]{ Literals.PERSONA_CHANGE__CHANGEABLE, Literals.CHANGES__DATE, Literals.CHANGES__DATE_APPLIED });
+                new EStructuralFeature[]{ Literals.PERSONA_CHANGE__CHANGEABLE, Literals.CHANGES__DATE, Literals.CHANGES__DATE_APPLIED, Literals.CHANGES__KARMA_COST });
         
         
         tableViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps){
@@ -207,6 +255,21 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
         IObservableList objectChangesObserveList = EMFEditObservables.observeList(Realm.getDefault(), editingDomain, object,
                 Literals.MANAGED_CHARACTER__CHANGES);
         tableViewer.setInput(objectChangesObserveList);
+        //
+        IObservableValue observeTextLblKarmagaintvalueObserveWidget = WidgetProperties.text().observe(lblKarmagaintvalue);
+        IObservableValue objectKarmaGaintObserveValue = EMFEditObservables.observeValue(editingDomain, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT);
+        bindingContext.bindValue(observeTextLblKarmagaintvalueObserveWidget, objectKarmaGaintObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
+        //
+        IObservableValue valueObserveWidget = WidgetProperties.text().observe(lblKarmaspendvalue);
+        IObservableValue objectObserveValue = EMFEditObservables.observeValue(editingDomain, object, Shr5managementPackage.Literals.MANAGED_CHARACTER__KARMA_GAINT);
+        bindingContext.bindValue(valueObserveWidget, objectObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy(){
+            @Override
+            public Object convert(Object value) {
+                int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(object) * -1;                
+                return super.convert(karmaSpend);
+            }            
+        });
+
         //
         return bindingContext;
     }
