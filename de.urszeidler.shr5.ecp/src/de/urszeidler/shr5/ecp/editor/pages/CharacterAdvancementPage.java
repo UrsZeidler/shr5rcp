@@ -48,7 +48,7 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
     
     private ManagedCharacter object;
     private EditingDomain editingDomain;
-    private DataBindingContext m_bindingContext;
+    protected DataBindingContext m_bindingContext;
     private Table table;
     private TableViewer tableViewer;
     private Label lblKarmagaintvalue;
