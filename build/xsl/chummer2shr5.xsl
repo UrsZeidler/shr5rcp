@@ -5,6 +5,10 @@
 	<xsl:output method="xml" indent="yes" encoding="UTF-8" />
 	<xsl:strip-space elements="*" />
 	<xsl:param name="path" select="'/home/urs/chummer2/Chummer2/data'" />
+	<xsl:param name="loc_path"
+		select="'/home/urs/chummer2/Chummer2/lang/de_data.xml'" />
+	<xsl:param name="do_localization" select="true" />
+	<xsl:variable name="loc_data" select="document($loc_path,/)" />
 	<xsl:variable name="powers"
 		select="document(concat($path,'/powers.xml'),/)" />
 	<xsl:variable name="armors"
@@ -1259,28 +1263,49 @@
 						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
 					</generatorSrc>
 				</members>
-      <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.3/@generatorSrc" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
-        <persona xsi:type="shr5:MudanPersona" beschreibung="Ralf ist Barkeeper in der Kneipe im Vorderhaus von Gu's Wohnung. Gu hängt da regelmäßig ab. " name="Ralf" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="3" charismaBasis="4" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0">
-            <spezialisierungen>Street</spezialisierungen>
-          </fertigkeiten>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.1"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1">
-            <spezialisierungen>Shotguns</spezialisierungen>
-          </fertigkeiten>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
-          <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.40"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.5/@entries.72"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.19/@entries.4"/>
-          <fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.19/@entries.3"/>
-          <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.19/@entries.2"/>
-        </persona>
-        <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" character="//@entries.2/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.1" state="commited" selectedGroup="//@entries.2/@groups.0" characterName="Ralf" selectedSpecies="//@entries.0/@entries.2/@entries.0">
-          <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
-        </generatorSrc>
-      </members>
+				<members xsi:type="shr5mngt:NonPlayerCharacter"
+					chracterSource="//@entries.2/@groups.0/@members.3/@generatorSrc"
+					nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
+					<persona xsi:type="shr5:MudanPersona"
+						beschreibung="Ralf ist Barkeeper in der Kneipe im Vorderhaus von Gu's Wohnung. Gu hängt da regelmäßig ab. "
+						name="Ralf" edgeBasis="2" konstitutionBasis="3"
+						geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="3"
+						charismaBasis="4" willenskraftBasis="4" intuitionBasis="3"
+						logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0">
+							<spezialisierungen>Street</spezialisierungen>
+						</fertigkeiten>
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.1" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1">
+							<spezialisierungen>Shotguns</spezialisierungen>
+						</fertigkeiten>
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2" />
+						<fertigkeiten stufe="4"
+							fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.5/@entries.40" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.5/@entries.72" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.19/@entries.4" />
+						<fertigkeiten stufe="6"
+							fertigkeit="//@entries.0/@entries.19/@entries.3" />
+						<fertigkeiten stufe="5"
+							fertigkeit="//@entries.0/@entries.19/@entries.2" />
+					</persona>
+					<generatorSrc xsi:type="shr5mngt:FreeStyleGenerator"
+						character="//@entries.2/@groups.0/@members.3" generator="//@entries.0/@entries.16/@entries.1"
+						state="commited" selectedGroup="//@entries.2/@groups.0"
+						characterName="Ralf" selectedSpecies="//@entries.0/@entries.2/@entries.0">
+						<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona" />
+					</generatorSrc>
+				</members>
 
 
 			</groups>
@@ -1346,14 +1371,90 @@
 	</xsl:template>
 	<!-- basic named templates -->
 	<xsl:template name="beschreibbar">
-		<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
+		<xsl:choose>
+			<xsl:when test="$do_localization">
+				<xsl:variable name="aid" select="id/text()" />
+				<xsl:variable name="loc_name">
+					<xsl:call-template name="findLocalizedName">
+						<xsl:with-param name="aid" select="$aid" />
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:choose>
+					<xsl:when test="$loc_name=''">
+						<xsl:attribute name="name"><xsl:value-of
+							select="name/text()" /></xsl:attribute>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:attribute name="name"><xsl:value-of
+							select="$loc_name" /></xsl:attribute>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:if test="string-length(doc/text())!=0">
 			<xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" /></xsl:attribute>
 		</xsl:if>
 	</xsl:template>
+	<!-- find the locaized name -->
+	<xsl:template name="findLocalizedName">
+		<xsl:param name="aid" />
+		<xsl:for-each select="$loc_data">
+			<xsl:for-each select="chummer/chummer/*/*">
+				<xsl:if test="id/text()=$aid">
+					<xsl:variable name="loc_name" select="translate/text()" />
+					<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
+						/></xsl:attribute> -->
+					<xsl:value-of select="$loc_name" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
+	<xsl:template name="findLocalizedPage">
+		<xsl:param name="aid" />
+		<xsl:for-each select="$loc_data">
+			<xsl:for-each select="chummer/chummer/*/*">
+				<xsl:if test="id/text()=$aid">
+					<xsl:variable name="loc_name" select="page/text()" />
+					<!-- <xsl:attribute name="name"><xsl:value-of select="translate/text()" 
+						/></xsl:attribute> -->
+					<xsl:value-of select="$loc_name" />
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:template>
+
 	<xsl:template name="quelle">
 		<xsl:if test="number(page/text())">
-			<xsl:attribute name="page"><xsl:value-of select="number(page/text())" /></xsl:attribute>
+		<xsl:choose>
+			<xsl:when test="$do_localization">
+				<xsl:variable name="aid" select="id/text()" />
+				<xsl:variable name="loc_page">
+					<xsl:call-template name="findLocalizedPage">
+						<xsl:with-param name="aid" select="$aid" />
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:choose>
+					<xsl:when test="$loc_page=''">
+						<xsl:attribute name="page"><xsl:value-of
+							select="number(page/text())" /></xsl:attribute>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:attribute name="page"><xsl:value-of
+							select="$loc_page" /></xsl:attribute>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+
+
+				<xsl:attribute name="page"><xsl:value-of
+					select="number(page/text())" /></xsl:attribute>
+
+			</xsl:otherwise>
+			</xsl:choose>
 		</xsl:if>
 		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 	</xsl:template>

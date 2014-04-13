@@ -72,6 +72,15 @@ public class Activator extends AbstractUIPlugin {
             ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME, ecpProperties);
             project.open();
         }
+        
+        ecpProperties = ECPUtil.createProperties();
+        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1-de.xmi");
+        ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-de");
+        if (ecpProject == null) {
+            logInfo("creating ECP project.... de");
+            ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-de", ecpProperties);
+            project.open();
+        }
     }
 
     public void createDefaultWorkspace() {

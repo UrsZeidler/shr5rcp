@@ -13,6 +13,7 @@
     </description>
 	<property name="out.path" value="out" />
 	<property name="out.filename" value="shr5.xmi"/>
+	<property name="do.localization" value="false"/>
 
 	<property name="chummer2shr5xsl" value="xsl/chummer2shr5.xsl" />
 	<property name="path.to.chummer.data" value="/home/urs/chummer2/Chummer2/data" />
@@ -23,6 +24,7 @@
 	<target name="createSHR5.resource" description="reads the chummer2 xml files and creates a shr5 resourceset">
 		<xslt force="true" style="${chummer2shr5xsl}" in="${chummer2shr5xsl}" out="${out.path}/${out.filename}">
 			<param name="path" expression="${path.to.chummer.data}" />
+			<param name="do_localization" expression="${do.localization}" />
 		</xslt>
 	</target>
 
