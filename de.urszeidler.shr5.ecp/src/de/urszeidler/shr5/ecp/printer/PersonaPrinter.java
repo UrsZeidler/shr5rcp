@@ -161,7 +161,7 @@ public class PersonaPrinter extends BasicPrinter {
                     public Print caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                         return createPagePrint(printShr5GeneratorSheet(object));
                     }
-                    
+
                     @Override
                     public Print caseFreeStyleGenerator(FreeStyleGenerator object) {
                         return createPagePrint(printShr5GeneratorSheet(object));
@@ -411,8 +411,6 @@ public class PersonaPrinter extends BasicPrinter {
         return grid;
     }
 
-    
-    
     private Print printFreeStyleGenerator(FreeStyleGenerator generator, ManagedCharacter character) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         look.setHeaderGap(5);
@@ -433,34 +431,34 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(Messages.PersonaPrinter_Choosen_System, attributeFont));
         grid.add(new TextPrint(toName(generator.getGenerator()), attributeFont));
 
-        if(generator.getSelectedPersona()==null){        
-        grid.add(new TextPrint("Metatype", attributeFont));
-        grid.add(new TextPrint(toName(generator.getSelectedSpecies()), attributeFont), GridPrint.REMAINDER);
-        grid.add(new TextPrint("Character concept", attributeFont));
-        grid.add(new TextPrint(toName(generator.getSelectedType()), attributeFont), GridPrint.REMAINDER);
-        }else{
-        grid.add(new TextPrint("Cloned persona", attributeFont));
-        grid.add(SWT.RIGHT, new TextPrint(toName(generator.getSelectedPersona()), attributeFont), GridPrint.REMAINDER);
+        if (generator.getSelectedPersona() == null) {
+            grid.add(new TextPrint("Metatype", attributeFont));
+            grid.add(new TextPrint(toName(generator.getSelectedSpecies()), attributeFont), GridPrint.REMAINDER);
+            grid.add(new TextPrint("Character concept", attributeFont));
+            grid.add(new TextPrint(toName(generator.getSelectedType()), attributeFont), GridPrint.REMAINDER);
+        } else {
+            grid.add(new TextPrint("Cloned persona", attributeFont));
+            grid.add(SWT.RIGHT, new TextPrint(toName(generator.getSelectedPersona()), attributeFont), GridPrint.REMAINDER);
         }
-        
-//        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_resources, attributeFont));
-//        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getKarmaToResource()), attributeFont));
-//        grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
-//        int KarmaToRes = generator.getKarmaToResource() * generator.getShr5Generator().getKarmaToResourceFactor();
-//        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(KarmaToRes)), attributeFont));
-//
+
+        // grid.add(new TextPrint(Messages.PersonaPrinter_Karma_to_resources, attributeFont));
+        // grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getKarmaToResource()), attributeFont));
+        // grid.add(new TextPrint(Messages.PersonaPrinter_Karma_in_resources, attributeFont));
+        // int KarmaToRes = generator.getKarmaToResource() * generator.getShr5Generator().getKarmaToResourceFactor();
+        // grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(KarmaToRes)), attributeFont));
+        //
         outerGrid.add(grid);
 
         grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
 
-//        grid.add(new TextPrint("Resources spend", attributeFont));
-//        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(generator.getResourceSpend()), attributeFont));
-//
-//        grid.add(new TextPrint(Messages.PersonaPrinter_Start_Karma, attributeFont));
-//        grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getStartKarma()), attributeFont));
-//
-//        grid.add(new TextPrint(Messages.PersonaPrinter_Start_Resources, attributeFont));
-//        grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(generator.getStartResources())), attributeFont));
+        // grid.add(new TextPrint("Resources spend", attributeFont));
+        // grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(generator.getResourceSpend()), attributeFont));
+        //
+        // grid.add(new TextPrint(Messages.PersonaPrinter_Start_Karma, attributeFont));
+        // grid.add(SWT.RIGHT, new TextPrint(printInteger(generator.getStartKarma()), attributeFont));
+        //
+        // grid.add(new TextPrint(Messages.PersonaPrinter_Start_Resources, attributeFont));
+        // grid.add(SWT.RIGHT, new TextPrint(printIntegerMoney(new BigDecimal(generator.getStartResources())), attributeFont));
 
         grid.add(new TextPrint("Karma worth", attributeFont));
         grid.add(
@@ -818,6 +816,7 @@ public class PersonaPrinter extends BasicPrinter {
 
     /**
      * Print a line of attribute.
+     * 
      * @param grid the grid to add to
      * @param persona the persona
      * @param eAttribute the attribute
@@ -954,7 +953,10 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(SWT.LEFT, SWT.FILL, new BorderPrint(printPersonaConditionMonitor(persona), border), 1);
 
         grid.add(new BorderPrint(printPersonaWeaponsDetailList(character), border), GridPrint.REMAINDER);
-
+        if (persona instanceof Zauberer) {
+            Zauberer z = (Zauberer)persona;
+            grid.add(new BorderPrint(printPersonaZauberList(z.getZauber()), border), GridPrint.REMAINDER);
+        }
         if (store.getBoolean(PreferenceConstants.PRINT_USEABLE_SKILLS))
             grid.add(new BorderPrint(printAllPersonaSkills(persona), border), 1);
         else
@@ -1005,13 +1007,13 @@ public class PersonaPrinter extends BasicPrinter {
             if (!kikraft.isEmpty())
                 grid.add(new BorderPrint(printKiKraftList(kikraft), border), GridPrint.REMAINDER);
         }
-        if (persona instanceof Zauberer) {
-            Zauberer z = (Zauberer)persona;
-            EList<PersonaZauber> zauber = z.getZauber();
-            if (!zauber.isEmpty())
-                grid.add(new BorderPrint(printZauberList(zauber), border), GridPrint.REMAINDER);
-
-        }
+        // if (persona instanceof Zauberer) {
+        // Zauberer z = (Zauberer)persona;
+        // EList<PersonaZauber> zauber = z.getZauber();
+        // if (!zauber.isEmpty())
+        // grid.add(new BorderPrint(printZauberList(zauber), border), GridPrint.REMAINDER);
+        //
+        // }
 
         grid.add(new BorderPrint(printAllCharacterConnections(character), border), GridPrint.REMAINDER);
         grid.add(new BorderPrint(printPersonaContracts(character), border), GridPrint.REMAINDER);
@@ -1066,6 +1068,48 @@ public class PersonaPrinter extends BasicPrinter {
         return grid;
     }
 
+    /**
+     * Print a zauber list with all the values.
+     * 
+     * @param zauber
+     * @return
+     */
+    private GridPrint printPersonaZauberList(List<PersonaZauber> zauber) {
+        DefaultGridLook look = new DefaultGridLook(5, 5);
+        GridPrint grid = new GridPrint("d:g,d,d,d,d,d,d,d", look);//$NON-NLS-1$
+
+        grid.addHeader(SWT.RIGHT, SWT.DEFAULT, new TextPrint(Messages.Printer_spells, boldFontData), GridPrint.REMAINDER);
+        grid.addHeader(new TextPrint(Messages.Printer_Name, italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__KATEGORIE), italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__ART), italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__REICHWEITE), italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__SCHADEN), italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__DAUER), italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__ENTZUG), italicFontData));
+        grid.addHeader(new TextPrint(toName(Shr5Package.Literals.ZAUBER__MERKMALE), italicFontData));
+        for (PersonaZauber z : zauber) {
+            grid.add(new TextPrint(toName(z.getFormel()), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getKategorie()), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getArt(), z.getFormel(), Shr5Package.Literals.ZAUBER__ART), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getReichweite(), z.getFormel(), Shr5Package.Literals.ZAUBER__REICHWEITE), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getSchaden()), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getDauer(), z.getFormel(), Shr5Package.Literals.ZAUBER__DAUER), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getEntzug()), attributeFont));
+            grid.add(new TextPrint(toName(z.getFormel().getMerkmale()), attributeFont));
+            if (!toName(z.getFormel().getBeschreibung()).isEmpty())
+                grid.add(new TextPrint(toName(z.getFormel().getBeschreibung()), attributeFont), GridPrint.REMAINDER);
+
+        }
+
+        return grid;
+    }
+
+    /**
+     * Print a simple zauber list.
+     * 
+     * @param zauber
+     * @return
+     */
     private GridPrint printZauberList(List<PersonaZauber> zauber) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
@@ -1079,7 +1123,7 @@ public class PersonaPrinter extends BasicPrinter {
         return grid;
     }
 
-    private Print printKiKraftList(List<KiKraft> kikraft) {
+    private GridPrint printKiKraftList(List<KiKraft> kikraft) {
         DefaultGridLook look = new DefaultGridLook(5, 5);
         GridPrint grid = new GridPrint("d:g,d", look);//$NON-NLS-1$
 
