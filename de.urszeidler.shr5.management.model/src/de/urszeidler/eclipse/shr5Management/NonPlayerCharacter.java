@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5Management;
  * A representation of the model object '<em><b>Non Player Character</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Is used to define npcs.
+ * <!-- end-model-doc -->
+ *
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getNonPlayerCharacter()
  * @model

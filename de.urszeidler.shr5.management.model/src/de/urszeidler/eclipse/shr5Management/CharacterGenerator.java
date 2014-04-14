@@ -10,6 +10,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Character Generator</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the basic character generator.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -63,6 +67,9 @@ public interface CharacterGenerator extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The generator system usesed to build the character.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Generator</em>' reference.
      * @see #setGenerator(CharacterGeneratorSystem)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGenerator_Generator()
@@ -118,6 +125,9 @@ public interface CharacterGenerator extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The group the character will be stored in.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Selected Group</em>' reference.
      * @see #setSelectedGroup(CharacterGroup)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGenerator_SelectedGroup()
@@ -147,7 +157,7 @@ public interface CharacterGenerator extends EObject {
      * @return the value of the '<em>Character Name</em>' attribute.
      * @see #setCharacterName(String)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGenerator_CharacterName()
-     * @model
+     * @model required="true"
      * @generated
      */
 	String getCharacterName();

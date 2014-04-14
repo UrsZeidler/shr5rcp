@@ -25,7 +25,6 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.Spellcaster} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class SpellcasterItemProvider extends AdeptItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -34,7 +33,6 @@ public class SpellcasterItemProvider extends AdeptItemProvider implements IEditi
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SpellcasterItemProvider(AdapterFactory adapterFactory) {
@@ -45,7 +43,6 @@ public class SpellcasterItemProvider extends AdeptItemProvider implements IEditi
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -62,23 +59,28 @@ public class SpellcasterItemProvider extends AdeptItemProvider implements IEditi
      * This adds a property descriptor for the Spell Points feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addSpellPointsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_Spellcaster_spellPoints_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_Spellcaster_spellPoints_feature", "_UI_Spellcaster_type"),
-                        Shr5managementPackage.Literals.SPELLCASTER__SPELL_POINTS, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Spellcaster_spellPoints_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Spellcaster_spellPoints_feature", "_UI_Spellcaster_type"),
+                 Shr5managementPackage.Literals.SPELLCASTER__SPELL_POINTS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This returns Spellcaster.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -127,7 +129,6 @@ public class SpellcasterItemProvider extends AdeptItemProvider implements IEditi
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -147,7 +148,6 @@ public class SpellcasterItemProvider extends AdeptItemProvider implements IEditi
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

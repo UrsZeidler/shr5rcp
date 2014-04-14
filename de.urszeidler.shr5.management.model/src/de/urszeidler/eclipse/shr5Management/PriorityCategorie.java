@@ -10,6 +10,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Priority Categorie</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the basic categories. They can be used to define a priotity or a cost for an option.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

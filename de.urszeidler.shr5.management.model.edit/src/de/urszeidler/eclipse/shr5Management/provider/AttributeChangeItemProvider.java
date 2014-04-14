@@ -6,7 +6,6 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EAttribute;
@@ -18,9 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -31,7 +28,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.AttributeChange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class AttributeChangeItemProvider extends PersonaValueChangeItemProvider implements IEditingDomainItemProvider,
@@ -40,7 +36,6 @@ public class AttributeChangeItemProvider extends PersonaValueChangeItemProvider 
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AttributeChangeItemProvider(AdapterFactory adapterFactory) {
@@ -51,7 +46,6 @@ public class AttributeChangeItemProvider extends PersonaValueChangeItemProvider 
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -102,7 +96,6 @@ public class AttributeChangeItemProvider extends PersonaValueChangeItemProvider 
      * This returns AttributeChange.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -139,7 +132,6 @@ public class AttributeChangeItemProvider extends PersonaValueChangeItemProvider 
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -153,7 +145,6 @@ public class AttributeChangeItemProvider extends PersonaValueChangeItemProvider 
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

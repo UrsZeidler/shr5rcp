@@ -5,14 +5,10 @@ package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import de.urszeidler.eclipse.shr5.KoerperPersona;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -25,10 +21,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.ResourcenImpl#getResource <em>Resource</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ResourcenImpl#getResource <em>Resource</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
@@ -36,7 +32,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
      * The default value of the '{@link #getResource() <em>Resource</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getResource()
      * @generated
      * @ordered
@@ -47,7 +42,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
      * The cached value of the '{@link #getResource() <em>Resource</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getResource()
      * @generated
      * @ordered
@@ -57,7 +51,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ResourcenImpl() {
@@ -67,7 +60,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -78,7 +70,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getResource() {
@@ -88,7 +79,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setResource(int newResource) {
@@ -115,7 +105,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -130,7 +119,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -146,7 +134,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -162,7 +149,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -177,7 +163,6 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -192,13 +177,11 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (resource: ");

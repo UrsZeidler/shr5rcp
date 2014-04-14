@@ -12,6 +12,10 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  * A representation of the model object '<em><b>Player Management</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The player management comtaints character groups and generators. 
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

@@ -14,6 +14,10 @@ import de.urszeidler.eclipse.shr5.Quelle;
  * A representation of the model object '<em><b>Character Generator System</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The basic character generator system defines the advacements system.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

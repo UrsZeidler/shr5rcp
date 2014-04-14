@@ -9,6 +9,12 @@ package de.urszeidler.eclipse.shr5Management;
  * A representation of the model object '<em><b>Shr5 System</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The shr5System describes the values of the different rule factors. 
+ * This is the main description of the character generator system for shr5.
+ * This system defenition is also used for the karma generator.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -40,6 +46,10 @@ public interface Shr5System extends PrioritySystem {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of resources for one karma.
+     * Used by Shr5Generator and the Shr5KarmaGenerator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Karma To Resource Factor</em>' attribute.
      * @see #setKarmaToResourceFactor(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_KarmaToResourceFactor()
@@ -66,6 +76,10 @@ public interface Shr5System extends PrioritySystem {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * For mystical adepts the exchange rate between karma to magic points.
+     * Used by Shr5Generator
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Karma To Magic Factor</em>' attribute.
      * @see #setKarmaToMagicFactor(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_KarmaToMagicFactor()
@@ -92,6 +106,11 @@ public interface Shr5System extends PrioritySystem {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of attributes as hight as the species maximum.
+     * Is used by the hasNotMoreMaxAttributes rule.
+     * 
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Number Of Max Attributes</em>' attribute.
      * @see #setNumberOfMaxAttributes(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_NumberOfMaxAttributes()
@@ -118,6 +137,10 @@ public interface Shr5System extends PrioritySystem {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The factor for free knowlege skills at the character generation.
+     * Used by Shr5Generator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Knowlege Skill Factor</em>' attribute.
      * @see #setKnowlegeSkillFactor(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_KnowlegeSkillFactor()
@@ -144,6 +167,10 @@ public interface Shr5System extends PrioritySystem {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The factor to calculate the conntection points for free.
+     * Used by Shr5Generator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Charisma To Connection Factor</em>' attribute.
      * @see #setCharismaToConnectionFactor(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_CharismaToConnectionFactor()
@@ -170,6 +197,10 @@ public interface Shr5System extends PrioritySystem {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of money can be keept at the commitment of the character.
+     * Used by Shr5Generator and the Shr5KarmaGenerator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Max Resource To Keep</em>' attribute.
      * @see #setMaxResourceToKeep(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxResourceToKeep()
@@ -196,6 +227,10 @@ public interface Shr5System extends PrioritySystem {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The maximum of karma that can be transformed in mones.
+     * Used by Shr5Generator and the Shr5KarmaGenerator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Max Karma To Resources</em>' attribute.
      * @see #setMaxKarmaToResources(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxKarmaToResources()
@@ -222,6 +257,10 @@ public interface Shr5System extends PrioritySystem {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The maximum of karma can be keep at committing the character.
+     * Used by Shr5Generator and the Shr5KarmaGenerator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Max Karma To Keep</em>' attribute.
      * @see #setMaxKarmaToKeep(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_MaxKarmaToKeep()
@@ -248,6 +287,10 @@ public interface Shr5System extends PrioritySystem {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The max value a skill can have.
+     * Is used by the rule hasNoSkillsOverMax.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Skill Max</em>' attribute.
      * @see #setSkillMax(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_SkillMax()
@@ -274,6 +317,10 @@ public interface Shr5System extends PrioritySystem {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The number of specalicies a character can have.
+     * Is used by the hasNotMoreSpecalism rule.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Number Of Specalism</em>' attribute.
      * @see #setNumberOfSpecalism(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_NumberOfSpecalism()
@@ -300,6 +347,10 @@ public interface Shr5System extends PrioritySystem {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The factor of Karma for a connection point.
+     * Used by the Shr5KarmaGenerator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Karma To Connection Factor</em>' attribute.
      * @see #setKarmaToConnectionFactor(int)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_KarmaToConnectionFactor()

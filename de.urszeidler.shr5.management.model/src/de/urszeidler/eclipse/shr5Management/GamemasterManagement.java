@@ -10,6 +10,10 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Gamemaster Management</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The gemmaster manager contains more stuff only interessting for gamemaster. 
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

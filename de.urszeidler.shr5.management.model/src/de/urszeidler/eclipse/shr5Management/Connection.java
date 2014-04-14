@@ -10,6 +10,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Connection</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A connection refers to a managed character and has the loy and influence value.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

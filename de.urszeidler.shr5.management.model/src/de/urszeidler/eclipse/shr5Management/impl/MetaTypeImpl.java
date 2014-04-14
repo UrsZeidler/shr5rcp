@@ -28,11 +28,11 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl#getChoosableTypes <em>Choosable Types</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl#getSpecialPoints <em>Special Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl#getChoosableTypes <em>Choosable Types</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl#getSpecialPoints <em>Special Points</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
@@ -40,7 +40,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * The cached value of the '{@link #getChoosableTypes() <em>Choosable Types</em>}' reference.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getChoosableTypes()
      * @generated
      * @ordered
@@ -51,7 +50,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * The default value of the '{@link #getSpecialPoints() <em>Special Points</em>}' attribute.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getSpecialPoints()
      * @generated
      * @ordered
@@ -62,7 +60,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * The cached value of the '{@link #getSpecialPoints() <em>Special Points</em>}' attribute.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getSpecialPoints()
      * @generated
      * @ordered
@@ -71,7 +68,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MetaTypeImpl() {
@@ -80,7 +76,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -90,7 +85,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Spezies getChoosableTypes() {
@@ -99,8 +93,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
             choosableTypes = (Spezies)eResolveProxy(oldChoosableTypes);
             if (choosableTypes != oldChoosableTypes) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.META_TYPE__CHOOSABLE_TYPES, oldChoosableTypes,
-                            choosableTypes));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.META_TYPE__CHOOSABLE_TYPES, oldChoosableTypes, choosableTypes));
             }
         }
         return choosableTypes;
@@ -108,7 +101,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Spezies basicGetChoosableTypes() {
@@ -117,7 +109,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setChoosableTypes(Spezies newChoosableTypes) {
@@ -129,7 +120,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getSpecialPoints() {
@@ -138,7 +128,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSpecialPoints(int newSpecialPoints) {
@@ -197,15 +186,13 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.META_TYPE__CHOOSABLE_TYPES:
-                if (resolve)
-                    return getChoosableTypes();
+                if (resolve) return getChoosableTypes();
                 return basicGetChoosableTypes();
             case Shr5managementPackage.META_TYPE__SPECIAL_POINTS:
                 return getSpecialPoints();
@@ -215,7 +202,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -233,7 +219,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -251,7 +236,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -267,7 +251,6 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -281,13 +264,11 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (specialPoints: ");

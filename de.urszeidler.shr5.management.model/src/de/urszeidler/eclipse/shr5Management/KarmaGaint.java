@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5Management;
  * A representation of the model object '<em><b>Karma Gaint</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Simply collects the karma gaint by the character.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

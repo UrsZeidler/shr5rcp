@@ -64,10 +64,19 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
      * @generated
      */
     protected void addChoosableTypesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_MetaType_choosableTypes_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_MetaType_choosableTypes_feature", "_UI_MetaType_type"),
-                Shr5managementPackage.Literals.META_TYPE__CHOOSABLE_TYPES, true, false, true, null, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MetaType_choosableTypes_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MetaType_choosableTypes_feature", "_UI_MetaType_type"),
+                 Shr5managementPackage.Literals.META_TYPE__CHOOSABLE_TYPES,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
@@ -77,18 +86,24 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
      * @generated
      */
     protected void addSpecialPointsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-                        getString("_UI_MetaType_specialPoints_feature"),
-                        getString("_UI_PropertyDescriptor_description", "_UI_MetaType_specialPoints_feature", "_UI_MetaType_type"),
-                        Shr5managementPackage.Literals.META_TYPE__SPECIAL_POINTS, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MetaType_specialPoints_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MetaType_specialPoints_feature", "_UI_MetaType_type"),
+                 Shr5managementPackage.Literals.META_TYPE__SPECIAL_POINTS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This returns MetaType.gif.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -132,7 +147,6 @@ public class MetaTypeItemProvider extends PriorityCategorieItemProvider implemen
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override

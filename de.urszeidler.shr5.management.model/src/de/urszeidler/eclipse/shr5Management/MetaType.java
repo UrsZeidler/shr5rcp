@@ -10,6 +10,10 @@ import de.urszeidler.eclipse.shr5.Spezies;
  * A representation of the model object '<em><b>Meta Type</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The generator system option for  a species.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -31,6 +35,9 @@ public interface MetaType extends PriorityCategorie {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Refers the species to be the option.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Choosable Types</em>' reference.
      * @see #setChoosableTypes(Spezies)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getMetaType_ChoosableTypes()

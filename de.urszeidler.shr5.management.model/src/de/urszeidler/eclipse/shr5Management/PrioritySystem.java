@@ -10,6 +10,10 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Priority System</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The priority system collects a set of generation options.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

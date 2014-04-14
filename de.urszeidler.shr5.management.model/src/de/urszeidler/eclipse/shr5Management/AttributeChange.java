@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EAttribute;
  * A representation of the model object '<em><b>Attribute Change</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This change defines an attribute change.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

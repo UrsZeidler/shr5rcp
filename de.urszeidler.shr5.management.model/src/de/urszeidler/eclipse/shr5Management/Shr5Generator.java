@@ -13,6 +13,10 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * A representation of the model object '<em><b>Shr5 Generator</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the core rule generator.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -387,6 +391,9 @@ public interface Shr5Generator extends Shr5RuleGenerator {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Check if the categies are correct.
+     * <!-- end-model-doc -->
      * @model
      * @generated
      */
@@ -403,6 +410,9 @@ public interface Shr5Generator extends Shr5RuleGenerator {
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Checks if all attribute points are spend.
+     * <!-- end-model-doc -->
      * @model
      * @generated
      */

@@ -12,6 +12,10 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  * A representation of the model object '<em><b>Character Group</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The character group us used to contains the characters.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

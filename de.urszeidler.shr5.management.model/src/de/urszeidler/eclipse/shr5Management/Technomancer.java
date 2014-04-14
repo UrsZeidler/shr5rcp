@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5Management;
  * A representation of the model object '<em><b>Technomancer</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The generator system option for a Technomanager.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

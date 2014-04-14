@@ -18,6 +18,10 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  * A representation of the model object '<em><b>Managed Character</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * the managed chracter contains the mudan parts of a character.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -99,6 +103,9 @@ public interface ManagedCharacter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Refers the generator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Chracter Source</em>' reference.
      * @see #setChracterSource(CharacterGenerator)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_ChracterSource()
@@ -204,6 +211,9 @@ public interface ManagedCharacter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The vehicles the character owns.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Vehicels</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_Vehicels()
      * @model containment="true"
@@ -219,6 +229,9 @@ public interface ManagedCharacter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The primary lifestyle.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Choosen Lifestyle</em>' reference.
      * @see #setChoosenLifestyle(Lifestyle)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_ChoosenLifestyle()
@@ -245,6 +258,9 @@ public interface ManagedCharacter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * One languageSkill is the nativ language.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Native Language</em>' reference.
      * @see #setNativeLanguage(Sprachfertigkeit)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_NativeLanguage()
@@ -383,6 +399,9 @@ public interface ManagedCharacter extends EObject {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * When commited contains the generator.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Generator Src</em>' containment reference.
      * @see #setGeneratorSrc(CharacterGenerator)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter_GeneratorSrc()

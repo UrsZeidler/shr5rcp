@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5Management;
  * A representation of the model object '<em><b>Spellcaster</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The generator system option for a spellcaster like magivcan or mystc adept.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

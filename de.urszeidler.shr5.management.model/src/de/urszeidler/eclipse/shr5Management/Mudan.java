@@ -9,6 +9,10 @@ package de.urszeidler.eclipse.shr5Management;
  * A representation of the model object '<em><b>Mudan</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The generator system option for a simple mudan character.
+ * <!-- end-model-doc -->
+ *
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getMudan()
  * @model

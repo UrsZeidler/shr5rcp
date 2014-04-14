@@ -12,6 +12,10 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * A representation of the model object '<em><b>Shr5 Karma Generator</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -38,6 +42,9 @@ public interface Shr5KarmaGenerator extends Shr5RuleGenerator {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The selected species.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Meta Type</em>' reference.
      * @see #setMetaType(MetaType)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5KarmaGenerator_MetaType()
@@ -64,6 +71,9 @@ public interface Shr5KarmaGenerator extends Shr5RuleGenerator {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The character concept.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Character Concept</em>' reference.
      * @see #setCharacterConcept(SpecialType)
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5KarmaGenerator_CharacterConcept()
@@ -193,6 +203,9 @@ public interface Shr5KarmaGenerator extends Shr5RuleGenerator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Checks if all karma points are spended.
+     * <!-- end-model-doc -->
      * @model
      * @generated
      */

@@ -13,6 +13,10 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * A representation of the model object '<em><b>Shr5 Rule Generator</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The shr5 rule generator collects the main rules for all character generation.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -33,6 +37,9 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The shr5Generator connects to the system.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Shr5 Generator</em>' reference.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5RuleGenerator_Shr5Generator()
      * @model transient="true" changeable="false" volatile="true" derived="true"
@@ -43,6 +50,9 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The basic rule indicating not all is satified.
+     * <!-- end-model-doc -->
      * @model
      * @generated
      */

@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This decribes the members of a grunt group.
+ * This decribes the members of a grunt group. So this defines a group of simular characters.
  * <!-- end-model-doc -->
  *
  * <p>

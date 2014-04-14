@@ -25,7 +25,6 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.Technomancer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class TechnomancerItemProvider extends SpecialTypeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -34,7 +33,6 @@ public class TechnomancerItemProvider extends SpecialTypeItemProvider implements
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public TechnomancerItemProvider(AdapterFactory adapterFactory) {
@@ -45,7 +43,6 @@ public class TechnomancerItemProvider extends SpecialTypeItemProvider implements
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -63,36 +60,50 @@ public class TechnomancerItemProvider extends SpecialTypeItemProvider implements
      * This adds a property descriptor for the Resonanz feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addResonanzPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Technomancer_resonanz_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Technomancer_resonanz_feature", "_UI_Technomancer_type"),
-                Shr5managementPackage.Literals.TECHNOMANCER__RESONANZ, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Technomancer_resonanz_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Technomancer_resonanz_feature", "_UI_Technomancer_type"),
+                 Shr5managementPackage.Literals.TECHNOMANCER__RESONANZ,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This adds a property descriptor for the Complex Forms feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addComplexFormsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Technomancer_complexForms_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Technomancer_complexForms_feature", "_UI_Technomancer_type"),
-                Shr5managementPackage.Literals.TECHNOMANCER__COMPLEX_FORMS, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null,
-                null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Technomancer_complexForms_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Technomancer_complexForms_feature", "_UI_Technomancer_type"),
+                 Shr5managementPackage.Literals.TECHNOMANCER__COMPLEX_FORMS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This returns Technomancer.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -133,7 +144,6 @@ public class TechnomancerItemProvider extends SpecialTypeItemProvider implements
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -154,7 +164,6 @@ public class TechnomancerItemProvider extends SpecialTypeItemProvider implements
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -25,7 +25,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5Management.Adept} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class AdeptItemProvider extends SpecialTypeItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -34,7 +33,6 @@ public class AdeptItemProvider extends SpecialTypeItemProvider implements IEditi
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AdeptItemProvider(AdapterFactory adapterFactory) {
@@ -45,7 +43,6 @@ public class AdeptItemProvider extends SpecialTypeItemProvider implements IEditi
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -62,21 +59,28 @@ public class AdeptItemProvider extends SpecialTypeItemProvider implements IEditi
      * This adds a property descriptor for the Magic feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addMagicPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_Adept_magic_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Adept_magic_feature", "_UI_Adept_type"),
-                Shr5managementPackage.Literals.ADEPT__MAGIC, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Adept_magic_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Adept_magic_feature", "_UI_Adept_type"),
+                 Shr5managementPackage.Literals.ADEPT__MAGIC,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This returns Adept.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -116,7 +120,6 @@ public class AdeptItemProvider extends SpecialTypeItemProvider implements IEditi
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -136,7 +139,6 @@ public class AdeptItemProvider extends SpecialTypeItemProvider implements IEditi
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

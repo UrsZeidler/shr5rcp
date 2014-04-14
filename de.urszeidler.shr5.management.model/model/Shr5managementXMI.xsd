@@ -20,17 +20,40 @@
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType abstract="true" name="ManagedCharacter">
+    <xsd:annotation>
+      <xsd:documentation>the managed chracter contains the mudan parts of a character.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="persona" type="shr5:AbstraktPersona"/>
       <xsd:element name="changes" type="shr5mngt:Changes"/>
-      <xsd:element name="chracterSource" type="shr5mngt:CharacterGenerator"/>
+      <xsd:element name="chracterSource" type="shr5mngt:CharacterGenerator">
+        <xsd:annotation>
+          <xsd:documentation>Refers the generator.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="inventar" type="shr5:AbstraktGegenstand"/>
       <xsd:element name="contracts" type="shr5:Vertrag"/>
       <xsd:element name="connections" type="shr5mngt:Connection"/>
-      <xsd:element name="vehicels" type="shr5:Fahrzeug"/>
-      <xsd:element name="choosenLifestyle" type="shr5:Lifestyle"/>
-      <xsd:element name="nativeLanguage" type="shr5:Sprachfertigkeit"/>
-      <xsd:element name="generatorSrc" type="shr5mngt:CharacterGenerator"/>
+      <xsd:element name="vehicels" type="shr5:Fahrzeug">
+        <xsd:annotation>
+          <xsd:documentation>The vehicles the character owns.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="choosenLifestyle" type="shr5:Lifestyle">
+        <xsd:annotation>
+          <xsd:documentation>The primary lifestyle.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="nativeLanguage" type="shr5:Sprachfertigkeit">
+        <xsd:annotation>
+          <xsd:documentation>One languageSkill is the nativ language.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="generatorSrc" type="shr5mngt:CharacterGenerator">
+        <xsd:annotation>
+          <xsd:documentation>When commited contains the generator.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
@@ -38,12 +61,31 @@
     <xsd:attribute name="sex" type="shr5mngt:Sex" use="required"/>
     <xsd:attribute name="notorietyBasic" type="xsd:int"/>
     <xsd:attribute name="publicAwareness" type="xsd:int"/>
-    <xsd:attribute name="chracterSource" type="xsd:string"/>
-    <xsd:attribute name="choosenLifestyle" type="xsd:string"/>
-    <xsd:attribute name="nativeLanguage" type="xsd:string"/>
+    <xsd:attribute name="chracterSource" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Refers the generator.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="choosenLifestyle" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The primary lifestyle.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="nativeLanguage" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>One languageSkill is the nativ language.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
-  <xsd:element name="ManagedCharacter" type="shr5mngt:ManagedCharacter"/>
+  <xsd:element name="ManagedCharacter" type="shr5mngt:ManagedCharacter">
+    <xsd:annotation>
+      <xsd:documentation>the managed chracter contains the mudan parts of a character.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="CharacterGeneratorSystem">
+    <xsd:annotation>
+      <xsd:documentation>The basic character generator system defines the advacements system.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -58,8 +100,15 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="CharacterGeneratorSystem" type="shr5mngt:CharacterGeneratorSystem"/>
+  <xsd:element name="CharacterGeneratorSystem" type="shr5mngt:CharacterGeneratorSystem">
+    <xsd:annotation>
+      <xsd:documentation>The basic character generator system defines the advacements system.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="PrioritySystem">
+    <xsd:annotation>
+      <xsd:documentation>The priority system collects a set of generation options.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:CharacterGeneratorSystem">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -69,14 +118,28 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="PrioritySystem" type="shr5mngt:PrioritySystem"/>
+  <xsd:element name="PrioritySystem" type="shr5mngt:PrioritySystem">
+    <xsd:annotation>
+      <xsd:documentation>The priority system collects a set of generation options.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="NonPlayerCharacter">
+    <xsd:annotation>
+      <xsd:documentation>Is used to define npcs.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:ManagedCharacter"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="NonPlayerCharacter" type="shr5mngt:NonPlayerCharacter"/>
+  <xsd:element name="NonPlayerCharacter" type="shr5mngt:NonPlayerCharacter">
+    <xsd:annotation>
+      <xsd:documentation>Is used to define npcs.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="Changes">
+    <xsd:annotation>
+      <xsd:documentation>Keeps track of the changes the character does.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
       <xsd:element ref="xmi:Extension"/>
@@ -88,22 +151,43 @@
     <xsd:attribute name="dateApplied" type="xsd:string"/>
     <xsd:attribute name="character" type="xsd:string"/>
   </xsd:complexType>
-  <xsd:element name="Changes" type="shr5mngt:Changes"/>
+  <xsd:element name="Changes" type="shr5mngt:Changes">
+    <xsd:annotation>
+      <xsd:documentation>Keeps track of the changes the character does.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="KarmaGaint">
+    <xsd:annotation>
+      <xsd:documentation>Simply collects the karma gaint by the character.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:Changes">
         <xsd:attribute name="karma" type="xsd:int" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="KarmaGaint" type="shr5mngt:KarmaGaint"/>
+  <xsd:element name="KarmaGaint" type="shr5mngt:KarmaGaint">
+    <xsd:annotation>
+      <xsd:documentation>Simply collects the karma gaint by the character.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="FreeStyle">
+    <xsd:annotation>
+      <xsd:documentation>The freestyle system has not values, as the generator has no constrains.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:CharacterGeneratorSystem"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="FreeStyle" type="shr5mngt:FreeStyle"/>
+  <xsd:element name="FreeStyle" type="shr5mngt:FreeStyle">
+    <xsd:annotation>
+      <xsd:documentation>The freestyle system has not values, as the generator has no constrains.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="PriorityCategorie">
+    <xsd:annotation>
+      <xsd:documentation>This is the basic categories. They can be used to define a priotity or a cost for an option.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
@@ -112,37 +196,123 @@
     <xsd:attribute name="categorieName" type="xsd:string"/>
     <xsd:attribute name="cost" type="xsd:int"/>
   </xsd:complexType>
-  <xsd:element name="PriorityCategorie" type="shr5mngt:PriorityCategorie"/>
+  <xsd:element name="PriorityCategorie" type="shr5mngt:PriorityCategorie">
+    <xsd:annotation>
+      <xsd:documentation>This is the basic categories. They can be used to define a priotity or a cost for an option.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Shr5System">
+    <xsd:annotation>
+      <xsd:documentation>The shr5System describes the values of the different rule factors. 
+This is the main description of the character generator system for shr5.
+This system defenition is also used for the karma generator.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PrioritySystem">
-        <xsd:attribute name="karmaToResourceFactor" type="xsd:int" use="required"/>
-        <xsd:attribute name="karmaToMagicFactor" type="xsd:int" use="required"/>
-        <xsd:attribute name="numberOfMaxAttributes" type="xsd:int" use="required"/>
-        <xsd:attribute name="knowlegeSkillFactor" type="xsd:int" use="required"/>
-        <xsd:attribute name="charismaToConnectionFactor" type="xsd:int" use="required"/>
-        <xsd:attribute name="maxResourceToKeep" type="xsd:int" use="required"/>
-        <xsd:attribute name="maxKarmaToResources" type="xsd:int" use="required"/>
-        <xsd:attribute name="maxKarmaToKeep" type="xsd:int"/>
-        <xsd:attribute name="skillMax" type="xsd:int"/>
-        <xsd:attribute name="numberOfSpecalism" type="xsd:int"/>
-        <xsd:attribute name="karmaToConnectionFactor" type="xsd:int"/>
+        <xsd:attribute name="karmaToResourceFactor" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The number of resources for one karma.
+Used by Shr5Generator and the Shr5KarmaGenerator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="karmaToMagicFactor" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>For mystical adepts the exchange rate between karma to magic points.
+Used by Shr5Generator</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="numberOfMaxAttributes" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The number of attributes as hight as the species maximum.
+Is used by the hasNotMoreMaxAttributes rule.
+</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="knowlegeSkillFactor" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The factor for free knowlege skills at the character generation.
+Used by Shr5Generator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="charismaToConnectionFactor" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The factor to calculate the conntection points for free.
+Used by Shr5Generator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="maxResourceToKeep" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The number of money can be keept at the commitment of the character.
+Used by Shr5Generator and the Shr5KarmaGenerator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="maxKarmaToResources" type="xsd:int" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The maximum of karma that can be transformed in mones.
+Used by Shr5Generator and the Shr5KarmaGenerator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="maxKarmaToKeep" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The maximum of karma can be keep at committing the character.
+Used by Shr5Generator and the Shr5KarmaGenerator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="skillMax" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The max value a skill can have.
+Is used by the rule hasNoSkillsOverMax.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="numberOfSpecalism" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The number of specalicies a character can have.
+Is used by the hasNotMoreSpecalism rule.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="karmaToConnectionFactor" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The factor of Karma for a connection point.
+Used by the Shr5KarmaGenerator.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Shr5System" type="shr5mngt:Shr5System"/>
+  <xsd:element name="Shr5System" type="shr5mngt:Shr5System">
+    <xsd:annotation>
+      <xsd:documentation>The shr5System describes the values of the different rule factors. 
+This is the main description of the character generator system for shr5.
+This system defenition is also used for the karma generator.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="MetaType">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for  a species.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PriorityCategorie">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="choosableTypes" type="shr5:Spezies"/>
+          <xsd:element name="choosableTypes" type="shr5:Spezies">
+            <xsd:annotation>
+              <xsd:documentation>Refers the species to be the option.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="specialPoints" type="xsd:int"/>
-        <xsd:attribute name="choosableTypes" type="xsd:string"/>
+        <xsd:attribute name="choosableTypes" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Refers the species to be the option.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="MetaType" type="shr5mngt:MetaType"/>
+  <xsd:element name="MetaType" type="shr5mngt:MetaType">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for  a species.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Attributes">
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PriorityCategorie">
@@ -186,6 +356,9 @@
   </xsd:complexType>
   <xsd:element name="SpecialType" type="shr5mngt:SpecialType"/>
   <xsd:complexType name="Technomancer">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a Technomanager.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:SpecialType">
         <xsd:attribute name="resonanz" type="xsd:int"/>
@@ -193,39 +366,80 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Technomancer" type="shr5mngt:Technomancer"/>
+  <xsd:element name="Technomancer" type="shr5mngt:Technomancer">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a Technomanager.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Spellcaster">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a spellcaster like magivcan or mystc adept.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:Adept">
         <xsd:attribute name="spellPoints" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Spellcaster" type="shr5mngt:Spellcaster"/>
+  <xsd:element name="Spellcaster" type="shr5mngt:Spellcaster">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a spellcaster like magivcan or mystc adept.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Adept">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a ki adept.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:SpecialType">
         <xsd:attribute name="magic" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Adept" type="shr5mngt:Adept"/>
+  <xsd:element name="Adept" type="shr5mngt:Adept">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a ki adept.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="CharacterGenerator">
+    <xsd:annotation>
+      <xsd:documentation>This is the basic character generator.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
-      <xsd:element name="generator" type="shr5mngt:CharacterGeneratorSystem"/>
-      <xsd:element name="selectedGroup" type="shr5mngt:CharacterGroup"/>
+      <xsd:element name="generator" type="shr5mngt:CharacterGeneratorSystem">
+        <xsd:annotation>
+          <xsd:documentation>The generator system usesed to build the character.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="selectedGroup" type="shr5mngt:CharacterGroup">
+        <xsd:annotation>
+          <xsd:documentation>The group the character will be stored in.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
     <xsd:attribute name="state" type="shr5mngt:GeneratorState"/>
-    <xsd:attribute name="characterName" type="xsd:string"/>
+    <xsd:attribute name="characterName" type="xsd:string" use="required"/>
     <xsd:attribute name="character" type="xsd:string"/>
-    <xsd:attribute name="generator" type="xsd:string"/>
-    <xsd:attribute name="selectedGroup" type="xsd:string"/>
+    <xsd:attribute name="generator" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The generator system usesed to build the character.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="selectedGroup" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The group the character will be stored in.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
-  <xsd:element name="CharacterGenerator" type="shr5mngt:CharacterGenerator"/>
+  <xsd:element name="CharacterGenerator" type="shr5mngt:CharacterGenerator">
+    <xsd:annotation>
+      <xsd:documentation>This is the basic character generator.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="FreeStyleGenerator">
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:CharacterGenerator">
@@ -242,6 +456,9 @@
   </xsd:complexType>
   <xsd:element name="FreeStyleGenerator" type="shr5mngt:FreeStyleGenerator"/>
   <xsd:complexType name="Shr5Generator">
+    <xsd:annotation>
+      <xsd:documentation>This is the core rule generator.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:Shr5RuleGenerator">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -262,8 +479,15 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Shr5Generator" type="shr5mngt:Shr5Generator"/>
+  <xsd:element name="Shr5Generator" type="shr5mngt:Shr5Generator">
+    <xsd:annotation>
+      <xsd:documentation>This is the core rule generator.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="AttributeChange">
+    <xsd:annotation>
+      <xsd:documentation>This change defines an attribute change.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PersonaValueChange">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -273,7 +497,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="AttributeChange" type="shr5mngt:AttributeChange"/>
+  <xsd:element name="AttributeChange" type="shr5mngt:AttributeChange">
+    <xsd:annotation>
+      <xsd:documentation>This change defines an attribute change.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="PlayerCharacter">
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:ManagedCharacter"/>
@@ -281,12 +509,22 @@
   </xsd:complexType>
   <xsd:element name="PlayerCharacter" type="shr5mngt:PlayerCharacter"/>
   <xsd:complexType name="Mudan">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a simple mudan character.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:SpecialType"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Mudan" type="shr5mngt:Mudan"/>
+  <xsd:element name="Mudan" type="shr5mngt:Mudan">
+    <xsd:annotation>
+      <xsd:documentation>The generator system option for a simple mudan character.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="CharacterGroup">
+    <xsd:annotation>
+      <xsd:documentation>The character group us used to contains the characters.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -295,8 +533,15 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="CharacterGroup" type="shr5mngt:CharacterGroup"/>
+  <xsd:element name="CharacterGroup" type="shr5mngt:CharacterGroup">
+    <xsd:annotation>
+      <xsd:documentation>The character group us used to contains the characters.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Connection">
+    <xsd:annotation>
+      <xsd:documentation>A connection refers to a managed character and has the loy and influence value.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="character" type="shr5mngt:ManagedCharacter"/>
       <xsd:element ref="xmi:Extension"/>
@@ -307,7 +552,11 @@
     <xsd:attribute name="loyality" type="xsd:int"/>
     <xsd:attribute name="character" type="xsd:string"/>
   </xsd:complexType>
-  <xsd:element name="Connection" type="shr5mngt:Connection"/>
+  <xsd:element name="Connection" type="shr5mngt:Connection">
+    <xsd:annotation>
+      <xsd:documentation>A connection refers to a managed character and has the loy and influence value.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="PersonaChange">
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PersonaValueChange">
@@ -401,7 +650,7 @@
   </xsd:element>
   <xsd:complexType name="GruntMembers">
     <xsd:annotation>
-      <xsd:documentation>This decribes the members of a grunt group.</xsd:documentation>
+      <xsd:documentation>This decribes the members of a grunt group. So this defines a group of simular characters.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="nsc" type="shr5mngt:NonPlayerCharacter"/>
@@ -414,10 +663,13 @@
   </xsd:complexType>
   <xsd:element name="GruntMembers" type="shr5mngt:GruntMembers">
     <xsd:annotation>
-      <xsd:documentation>This decribes the members of a grunt group.</xsd:documentation>
+      <xsd:documentation>This decribes the members of a grunt group. So this defines a group of simular characters.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType name="PlayerManagement">
+    <xsd:annotation>
+      <xsd:documentation>The player management comtaints character groups and generators. </xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -428,8 +680,15 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="PlayerManagement" type="shr5mngt:PlayerManagement"/>
+  <xsd:element name="PlayerManagement" type="shr5mngt:PlayerManagement">
+    <xsd:annotation>
+      <xsd:documentation>The player management comtaints character groups and generators. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="GamemasterManagement">
+    <xsd:annotation>
+      <xsd:documentation>The gemmaster manager contains more stuff only interessting for gamemaster. </xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PlayerManagement">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -438,7 +697,11 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="GamemasterManagement" type="shr5mngt:GamemasterManagement"/>
+  <xsd:element name="GamemasterManagement" type="shr5mngt:GamemasterManagement">
+    <xsd:annotation>
+      <xsd:documentation>The gemmaster manager contains more stuff only interessting for gamemaster. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="CharacterAdvancementSystem">
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
@@ -450,25 +713,55 @@
   </xsd:complexType>
   <xsd:element name="CharacterAdvancementSystem" type="shr5mngt:CharacterAdvancementSystem"/>
   <xsd:complexType abstract="true" name="Shr5RuleGenerator">
+    <xsd:annotation>
+      <xsd:documentation>The shr5 rule generator collects the main rules for all character generation.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:CharacterGenerator"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Shr5RuleGenerator" type="shr5mngt:Shr5RuleGenerator"/>
+  <xsd:element name="Shr5RuleGenerator" type="shr5mngt:Shr5RuleGenerator">
+    <xsd:annotation>
+      <xsd:documentation>The shr5 rule generator collects the main rules for all character generation.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Shr5KarmaGenerator">
+    <xsd:annotation>
+      <xsd:documentation>The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:Shr5RuleGenerator">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="metaType" type="shr5mngt:MetaType"/>
-          <xsd:element name="characterConcept" type="shr5mngt:SpecialType"/>
+          <xsd:element name="metaType" type="shr5mngt:MetaType">
+            <xsd:annotation>
+              <xsd:documentation>The selected species.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="characterConcept" type="shr5mngt:SpecialType">
+            <xsd:annotation>
+              <xsd:documentation>The character concept.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="karmaToResource" type="xsd:int"/>
         <xsd:attribute name="startKarma" type="xsd:int"/>
         <xsd:attribute name="startResources" type="xsd:int"/>
-        <xsd:attribute name="metaType" type="xsd:string"/>
-        <xsd:attribute name="characterConcept" type="xsd:string"/>
+        <xsd:attribute name="metaType" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The selected species.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="characterConcept" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The character concept.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator"/>
+  <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator">
+    <xsd:annotation>
+      <xsd:documentation>The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

@@ -41,19 +41,16 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend() <em>Resource Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getKarmaSpend() <em>Karma Spend</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#getResourceSpend() <em>Resource Spend</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>
- * {@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
- * <em>Has Spend All Karma Points</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator#hasSpendAllKarmaPoints(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Spend All Karma Points</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
@@ -61,7 +58,6 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -75,7 +71,6 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      * Constructs a new Shr5 Karma Generator test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Shr5KarmaGeneratorTest(String name) {
@@ -86,7 +81,6 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
      * Returns the fixture for this Shr5 Karma Generator test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -118,7 +112,6 @@ public class Shr5KarmaGeneratorTest extends Shr5RuleGeneratorTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

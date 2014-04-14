@@ -2,13 +2,20 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="shr5Management" nsURI="http://urszeidler.de/shr5mngt/1.0" nsPrefix="shr5mngt">
   <eClassifiers xsi:type="ecore:EClass" name="ManagedCharacter" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="the managed chracter contains the mudan parts of a character."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persona" lowerBound="1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktPersona"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
         eType="#//Changes" containment="true" eOpposite="#//Changes/character"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chracterSource" lowerBound="1"
-        eType="#//CharacterGenerator" eOpposite="#//CharacterGenerator/character"/>
+        eType="#//CharacterGenerator" eOpposite="#//CharacterGenerator/character">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Refers the generator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inventar" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//AbstraktGegenstand"
         containment="true"/>
@@ -19,11 +26,23 @@
         eType="#//Connection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vehicels" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Fahrzeug"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The vehicles the character owns."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choosenLifestyle" lowerBound="1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The primary lifestyle."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nativeLanguage" lowerBound="1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Sprachfertigkeit"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Sprachfertigkeit">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="One languageSkill is the nativ language."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" lowerBound="1" eType="#//Sex"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="streetCred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
@@ -36,10 +55,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatorSrc" eType="#//CharacterGenerator"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When commited contains the generator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CharacterGeneratorSystem" abstract="true"
       eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The basic character generator system defines the advacements system."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//GeneratorStateToEStringMapEntry" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lifestyleToStartMoney"
@@ -55,8 +81,15 @@
         eType="#//PriorityCategorie" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NonPlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NonPlayerCharacter" eSuperTypes="#//ManagedCharacter">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Is used to define npcs."/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Changes" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Keeps track of the changes the character does."/>
+    </eAnnotations>
     <eOperations name="applyChanges"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -68,43 +101,104 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateApplied" eType="ecore:EDataType ../../de.urszeidler.shr5.model/model/shr5.ecore#//ShrDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KarmaGaint" eSuperTypes="#//Changes">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Simply collects the karma gaint by the character."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karma" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FreeStyle" eSuperTypes="#//CharacterGeneratorSystem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeStyle" eSuperTypes="#//CharacterGeneratorSystem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The freestyle system has not values, as the generator has no constrains."/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PriorityCategorie" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the basic categories. They can be used to define a priotity or a cost for an option."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="categorieName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5System" eSuperTypes="#//PrioritySystem">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="The shr5System describes the values of the different rule factors. This is the main description of the character generator system for shr5."/>
+      <details key="documentation" value="The shr5System describes the values of the different rule factors. &#xA;This is the main description of the character generator system for shr5.&#xA;This system defenition is also used for the karma generator."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResourceFactor"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of resources for one karma.&#xA;Used by Shr5Generator and the Shr5KarmaGenerator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToMagicFactor" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="For mystical adepts the exchange rate between karma to magic points.&#xA;Used by Shr5Generator"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMaxAttributes"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of attributes as hight as the species maximum.&#xA;Is used by the hasNotMoreMaxAttributes rule.&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="knowlegeSkillFactor" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The factor for free knowlege skills at the character generation.&#xA;Used by Shr5Generator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="charismaToConnectionFactor"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The factor to calculate the conntection points for free.&#xA;Used by Shr5Generator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxResourceToKeep" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of money can be keept at the commitment of the character.&#xA;Used by Shr5Generator and the Shr5KarmaGenerator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxKarmaToResources" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxKarmaToKeep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSpecalism" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The maximum of karma that can be transformed in mones.&#xA;Used by Shr5Generator and the Shr5KarmaGenerator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxKarmaToKeep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The maximum of karma can be keep at committing the character.&#xA;Used by Shr5Generator and the Shr5KarmaGenerator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The max value a skill can have.&#xA;Is used by the rule hasNoSkillsOverMax."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSpecalism" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of specalicies a character can have.&#xA;Is used by the hasNotMoreSpecalism rule."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToConnectionFactor"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The factor of Karma for a connection point.&#xA;Used by the Shr5KarmaGenerator."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaType" eSuperTypes="#//PriorityCategorie">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The generator system option for  a species."/>
+    </eAnnotations>
     <eOperations name="calcSpecialPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choosableTypes" lowerBound="1"
-        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezies"/>
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Spezies">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Refers the species to be the option."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="specialPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attributes" eSuperTypes="#//PriorityCategorie">
@@ -153,6 +247,9 @@
         upperBound="-1" eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//FertigkeitsGruppe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Technomancer" eSuperTypes="#//SpecialType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The generator system option for a Technomanager."/>
+    </eAnnotations>
     <eOperations name="calcComplexFormsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
     </eOperations>
@@ -160,26 +257,44 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complexForms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spellcaster" eSuperTypes="#//Adept">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The generator system option for a spellcaster like magivcan or mystc adept."/>
+    </eAnnotations>
     <eOperations name="calcSpellPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="spellPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Adept" eSuperTypes="#//SpecialType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The generator system option for a ki adept."/>
+    </eAnnotations>
     <eOperations name="calcPowerPointsSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eParameters name="context" lowerBound="1" eType="#//ManagedCharacter"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="magic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CharacterGenerator" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the basic character generator."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
         eType="#//ManagedCharacter" eOpposite="#//ManagedCharacter/chracterSource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generator" lowerBound="1"
-        eType="#//CharacterGeneratorSystem"/>
+        eType="#//CharacterGeneratorSystem">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The generator system usesed to build the character."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//GeneratorState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedGroup" lowerBound="1"
-        eType="#//CharacterGroup"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="#//CharacterGroup">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The group the character will be stored in."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
@@ -191,7 +306,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedType" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator" eSuperTypes="#//Shr5RuleGenerator">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the core rule generator."/>
+    </eAnnotations>
     <eOperations name="hasCategoryOnlyOnce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Check if the categies are correct."/>
+      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
         <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
@@ -210,6 +331,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="hasSpendAllAttributesPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Checks if all attribute points are spend."/>
+      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
         <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
@@ -358,10 +482,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeChange" eSuperTypes="#//PersonaValueChange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This change defines an attribute change."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attibute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayerCharacter" eSuperTypes="#//ManagedCharacter"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Mudan" eSuperTypes="#//SpecialType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mudan" eSuperTypes="#//SpecialType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The generator system option for a simple mudan character."/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GeneratorState">
     <eLiterals name="new"/>
     <eLiterals name="readyForCreation" value="1"/>
@@ -369,6 +500,9 @@
     <eLiterals name="personaCreated" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CharacterGroup" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The character group us used to contains the characters."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
         eType="#//ManagedCharacter" containment="true"/>
   </eClassifiers>
@@ -379,6 +513,9 @@
     <eLiterals name="none" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A connection refers to a managed character and has the loy and influence value."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="influence" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loyality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="character" lowerBound="1"
@@ -426,12 +563,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GruntMembers">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This decribes the members of a grunt group."/>
+      <details key="documentation" value="This decribes the members of a grunt group. So this defines a group of simular characters."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nsc" lowerBound="1" eType="#//NonPlayerCharacter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayerManagement" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The player management comtaints character groups and generators. "/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
         eType="#//CharacterGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generators" upperBound="-1"
@@ -440,6 +580,9 @@
         eType="#//PlayerManagement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GamemasterManagement" eSuperTypes="#//PlayerManagement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The gemmaster manager contains more stuff only interessting for gamemaster. "/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="grunts" upperBound="-1"
         eType="#//GruntGroup" containment="true"/>
   </eClassifiers>
@@ -452,6 +595,9 @@
       <details key="documentation" value="The shr5 rule generator collects the main rules for all character generation."/>
     </eAnnotations>
     <eOperations name="hasSpendAllPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The basic rule indicating not all is satified."/>
+      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
         <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
@@ -509,13 +655,20 @@
       </eParameters>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="shr5Generator" eType="#//Shr5System"
-        changeable="false" volatile="true" transient="true" derived="true"/>
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The shr5Generator connects to the system."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator" eSuperTypes="#//Shr5RuleGenerator">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama."/>
     </eAnnotations>
     <eOperations name="hasSpendAllKarmaPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Checks if all karma points are spended."/>
+      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
       <eParameters name="context">
         <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
@@ -525,9 +678,17 @@
       </eParameters>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metaType" lowerBound="1"
-        eType="#//MetaType"/>
+        eType="#//MetaType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The selected species."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="characterConcept" lowerBound="1"
-        eType="#//SpecialType"/>
+        eType="#//SpecialType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The character concept."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaToResource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaSpend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true" derived="true"/>
