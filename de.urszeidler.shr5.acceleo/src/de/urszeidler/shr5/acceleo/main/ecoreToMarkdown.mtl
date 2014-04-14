@@ -16,6 +16,8 @@
  * Prints all concret subclasses.
 */]
 [template public printAllEClasses(anEPackage : EPackage)]
+[allEclassesAsLink(anEPackage)/]
+
 [for (it : EClass | anEPackage.eClassifiers->selectByType(EClass)
 )]
 [printEClass(it.oclAsType(EClass))/][/for][/template]
@@ -35,8 +37,17 @@
  * Print the eclass link.
 */]
 [template public printEClassLink(anEclass : EClass)]
-[ '[' /][anEclass.name/][ ']' /] ([anEclass.ePackage.name.toLower()/]-model#[anEclass.name.toLower()/])[/template]
+[ '[' /][anEclass.name/][ ']' /]([anEclass.ePackage.name.toLower()/]-model#[anEclass.name.toLower()/])[/template]
 
+
+[**
+ * Creates doc from the eannotations.
+ * 
+*/]
+[template public toDocumentationInTable(ann : Collection(EAnnotation))]
+[for (ea : EAnnotation | ann)]
+[for (it : EStringToStringMapEntry | ea.details)]
+[if (it.key='documentation')][it.value.substituteAll('\n', ' ').substituteAll('\r', ' ').trim() /][/if][/for][/for][/template]
 
 [**
  * Creates doc from the eannotations.
@@ -46,6 +57,13 @@
 [for (ea : EAnnotation | ann)]
 [for (it : EStringToStringMapEntry | ea.details)]
 [if (it.key='documentation')][it.value.trim()/][/if][/for][/for][/template]
+
+[template public allEclassesAsLink(pack : EPackage)]
+[for (it : EClass | pack.eClassifiers->selectByType(EClass) )]
+|[printEClassLink(it)/][/for]| 
+
+[/template]
+
 
 [**
  * Print the eclass.
@@ -65,22 +83,39 @@
 [if (not anEclass.eAllAttributes->isEmpty())]
 **attributes**
 
-name | type | cardinality | changeable 
-----|----|---|---
+name | type | cardinality | changeable | doc
+----|----|---|---|---
 [for (it : EAttribute | anEclass.eAllAttributes)]
-[it.name/]|[it.eType.name /]|[cardinality(it)/]|[it.changeable/]
+[it.name/]|[it.eType.name /]|[cardinality(it)/]|[it.changeable/]|[ toDocumentationInTable(it.eAnnotations)/]
 [/for][/if]	
 
 [if (not anEclass.eAllReferences->isEmpty())]
 **references**
 
-name | type | containment | cardinality | changeable
-----|---|---|---|---
+name | type | containment | cardinality | changeable | doc
+----|---|---|---|---|---
 [for (it : EReference | anEclass.eAllReferences)]
-[it.name/]|[printEClassLink(it.eReferenceType)/]|[it.containment/]|[cardinality(it)/]|[it.changeable/]
-[/for][/if]	
+[it.name/]|[printEClassLink(it.eReferenceType)/]|[it.containment/]|[cardinality(it)/]|[it.changeable/]|[ toDocumentationInTable(it.eAnnotations)/]
+[/for][/if]
+
+
+[if (not anEclass.eAllOperations->isEmpty())]
+**methods**
+
+name | doc
+----|---|---|---|---|---
+[for (it : EOperation | anEclass.eAllOperations)]
+[it.name/]|[ toDocumentationInTable(it.eAnnotations)/]
+[/for][/if]
+
+[linkToTop(eClass().ePackage)/]
+
 [/template]
 
+
+[template public linkToTop(anEPackage : EPackage)]
+[ '[' /]_back to top_[ ']' /](([anEPackage.name.toLower()/]-model#concret-classes-in-the-model-[anEPackage.name/]))
+[/template]
 
 [template public cardinality(feature : EStructuralFeature)]
 [feature.lowerBound/]-[if (feature.upperBound=-1)]*[else][feature.upperBound/][/if][/template]
