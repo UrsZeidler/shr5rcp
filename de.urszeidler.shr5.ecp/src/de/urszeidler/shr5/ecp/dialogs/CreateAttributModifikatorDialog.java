@@ -39,6 +39,7 @@ import de.urszeidler.emf.commons.ui.binding.BindingToolkit;
 import de.urszeidler.emf.commons.ui.binding.PlainBindingToolkit;
 import de.urszeidler.emf.commons.ui.dialogs.OwnChooseDialog;
 import de.urszeidler.emf.commons.ui.dialogs.SimpleEObjectDialog;
+import de.urszeidler.emf.commons.ui.util.NullObject;
 import de.urszeidler.emf.commons.ui.util.converter.ReferenceToStringConverter;
 import de.urszeidler.shr5.ecp.editor.widgets.AttributModifikatorWertWidget;
 
@@ -110,8 +111,9 @@ public class CreateAttributModifikatorDialog extends SimpleEObjectDialog {
 				IItemPropertyDescriptor itemPropertyDescriptor = ipd.getPropertyDescriptor(eObject,
 						Shr5Package.eINSTANCE.getAttributModifikatorWert_Attribut());
 
-				OwnChooseDialog dialog = new OwnChooseDialog(getShell(), itemPropertyDescriptor.getChoiceOfValues(eObject)
-						.toArray(new Object[] {}));
+				Object[] array = NullObject.toChoises( itemPropertyDescriptor.getChoiceOfValues(eObject));
+				
+				OwnChooseDialog dialog = new OwnChooseDialog(getShell(),array);
 				dialog.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
 				int open = dialog.open();
 				if (open == Dialog.OK) {
