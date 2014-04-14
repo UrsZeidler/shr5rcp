@@ -256,21 +256,22 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
 
             return null;
 
-//            final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET, Collections.EMPTY_SET,
-//                    filteredEClasses);
-//
-//            SelectModelElementWizard w = new SelectModelElementWizard(EMPTY, EMPTY, EMPTY, Messages.ShadowrunEditor_dlg_select_object_type); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-//            w.setCompositeProvider(helper);
-//            final WizardDialog wd = new WizardDialog(getSite().getShell(), w);
-//
-//            final int wizardResult = wd.open();
-//            if (wizardResult == Window.OK) {
-//                Object[] selection = helper.getSelection();
-//                EClass eClass = (EClass)selection[0];
-//                return eClass.getEPackage().getEFactoryInstance().create(eClass);
-//                // return Shr5Factory.eINSTANCE.create(eClass);
-//            }
-//            return null;
+            // final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET,
+            // Collections.EMPTY_SET,
+            // filteredEClasses);
+            //
+            //            SelectModelElementWizard w = new SelectModelElementWizard(EMPTY, EMPTY, EMPTY, Messages.ShadowrunEditor_dlg_select_object_type); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+            // w.setCompositeProvider(helper);
+            // final WizardDialog wd = new WizardDialog(getSite().getShell(), w);
+            //
+            // final int wizardResult = wd.open();
+            // if (wizardResult == Window.OK) {
+            // Object[] selection = helper.getSelection();
+            // EClass eClass = (EClass)selection[0];
+            // return eClass.getEPackage().getEFactoryInstance().create(eClass);
+            // // return Shr5Factory.eINSTANCE.create(eClass);
+            // }
+            // return null;
         }
     };
 
@@ -402,7 +403,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShrList(ShrList object) {
                 try {
-                    addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
+                    //addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
+                addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_character_group, object,
+                            editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES, "Entries"));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
@@ -551,7 +554,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             public Object caseCharacterGroup(CharacterGroup object) {
                 try {
                     addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_character_group, object,
-                            editingDomain, manager));
+                            editingDomain, manager, Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS, "Members"));
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER,
                             Messages.ShadowrunEditor_page_character_group_sheet, PersonaPrinter.getInstance()
                                     .createCharacterGroupPrintFactory(object)));

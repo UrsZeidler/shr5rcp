@@ -1,6 +1,7 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -24,6 +25,8 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
+    private EReference eReference;
+    private String titel;
 
     /**
      * Create the form page.
@@ -50,11 +53,14 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
         this.object = Shr5managementFactory.eINSTANCE.createCharacterGroup();
     }
 
-    public BeschreibbarContainterPage(FormEditor editor, String id, String title, Beschreibbar object,EditingDomain editingDomain, ReferenceManager manager) {
+    public BeschreibbarContainterPage(FormEditor editor, String id, String title, Beschreibbar object,EditingDomain editingDomain, ReferenceManager manager, EReference ref, String refTitel) {
         super(editor, id, title);
         this.object = object;
         this.editingDomain = editingDomain;
         this.mananger = manager;
+
+        this.eReference = ref;
+        this.titel = refTitel;
 
     }
 
@@ -81,8 +87,8 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
-        TreeTableWidget treeTableWidget = new TreeTableWidget(managedForm.getForm().getBody(), "Members", SWT.NONE, object,
-                Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS, toolkit, mananger, editingDomain);
+        TreeTableWidget treeTableWidget = new TreeTableWidget(managedForm.getForm().getBody(), titel, SWT.NONE, object,
+                eReference, toolkit, mananger, editingDomain);
         treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
