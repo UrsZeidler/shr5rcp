@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+import org.eclipse.swt.widgets.Label;
 
 /**
  * Manages {@link BioWare}, {@link Cyberware}, {@link PersonaEigenschaft}, {@link FernkampfwaffeModifikator}.
@@ -36,6 +37,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
+    private Composite composite_add;
 
     /**
      * Create the form page.
@@ -102,7 +104,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         // grpWert.setText("Wert");
         managedForm.getToolkit().adapt(grpWert);
         managedForm.getToolkit().paintBordersFor(grpWert);
-        grpWert.setLayout(new GridLayout(6, false));
+        grpWert.setLayout(new GridLayout(9, false));
 
         Group grpQuelle = new Group(composite, SWT.NONE);
         grpQuelle.setText(Messages.ObjectPage_source);
@@ -110,17 +112,25 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         managedForm.getToolkit().paintBordersFor(grpQuelle);
         grpQuelle.setLayout(new GridLayout(6, false));
 
+        composite_add = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        composite_add.setLayout(new GridLayout(3, false));
+        composite_add.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+        managedForm.getToolkit().adapt(composite_add);
+        managedForm.getToolkit().paintBordersFor(composite_add);
+
+        
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
 
         if (object instanceof Koerpermods) {
             grpWert.setText(Messages.ObjectPage_price);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
 
             if (object instanceof Cyberware) {
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, grpWert);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERWARE__EINBAU, composite_add);
             }
 
         } else if (object instanceof PersonaEigenschaft) {
@@ -140,6 +150,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        
     }
 
     protected DataBindingContext initDataBindings() {

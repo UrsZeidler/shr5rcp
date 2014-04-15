@@ -97,7 +97,7 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         grpWert.setText(Messages.ObjectPage_price);
         managedForm.getToolkit().adapt(grpWert);
         managedForm.getToolkit().paintBordersFor(grpWert);
-        grpWert.setLayout(new GridLayout(6, false));
+        grpWert.setLayout(new GridLayout(9, false));
 
         Group grpQuelle = new Group(composite, SWT.NONE);
         grpQuelle.setText(Messages.ObjectPage_source);
@@ -108,8 +108,9 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
 
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
