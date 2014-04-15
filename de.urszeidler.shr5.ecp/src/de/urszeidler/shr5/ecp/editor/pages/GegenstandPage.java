@@ -25,7 +25,7 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 
 /**
- * Manages {@link Gegenstand} and {@link Kleidung}.
+ * Manages {@link Gegenstand} and {@link Kleidung}, {@link Credstick} and {@link Munition}.
  * 
  * @author urs
  */
@@ -133,6 +133,10 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             grpGegenstand.setText("Munition");
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__TYPE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__DAMAGE_MOD, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__DAMAGE_TYPE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__ARMOR_MOD, grpGegenstand);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
