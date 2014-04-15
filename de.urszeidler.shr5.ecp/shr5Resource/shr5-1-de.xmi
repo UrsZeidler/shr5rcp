@@ -1830,21 +1830,21 @@
 <entries xsi:type="shr5:ShrList" name="gears">
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4R" name="Wurfwaffe: Shuriken" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2" name="Wurfwaffe: Wurfmesser" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="Rating" name="Munition: Pfeil" page="426" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="(Rating+2)R" name="Munition: Injektionspfeil" page="426" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="2" name="Munition: Bolzen" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="8R" name="Munition: Injektionsbolzen" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" armorMod="-4" verfuegbarkeit="12F" name="Munition: APDS" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="120"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="12F" name="Munition: Sturmkanonenmunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="400"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="1" armorMod="-1" verfuegbarkeit="9F" name="Munition: Explosivmunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="2" armorMod="5" verfuegbarkeit="6R" name="Munition: Flechettemunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="65"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" armorMod="1" verfuegbarkeit="2R" name="Munition: Gelmunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="1" armorMod="2" verfuegbarkeit="4F" name="Munition: Hohlspitzmunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="70"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="4R" name="Munition: Injektionspfeile" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="75"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="2R" name="Munition: Standardmunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="-2" armorMod="-5" verfuegbarkeit="6R" name="Munition: Schockermunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="6R" name="Munition: Leuchtspurmunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="60"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="3" name="Munition: Taserpfeile" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="Rating" name="Munition: Pfeil" page="426" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="(Rating+2)R" name="Munition: Injektionspfeil" page="426" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="2" name="Munition: Bolzen" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="8R" name="Munition: Injektionsbolzen" page="426" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" armorMod="-4" verfuegbarkeit="12F" name="Munition: APDS" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="120"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="12F" name="Munition: Sturmkanonenmunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="400"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="1" armorMod="-1" verfuegbarkeit="9F" name="Munition: Explosivmunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="2" armorMod="5" verfuegbarkeit="6R" name="Munition: Flechettemunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="65"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" armorMod="1" verfuegbarkeit="2R" name="Munition: Gelmunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="1" armorMod="2" verfuegbarkeit="4F" name="Munition: Hohlspitzmunition" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="70"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="4R" name="Munition: Injektionspfeile" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="75"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="2R" name="Munition: Standardmunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="-2" armorMod="-5" verfuegbarkeit="6R" name="Munition: Schockermunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="6R" name="Munition: Leuchtspurmunition" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="60"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="3" name="Munition: Taserpfeile" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Granate: Schock" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4" name="Granate: Flash-Pack" page="437" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="125"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="11F" name="Granate: Splitter" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>

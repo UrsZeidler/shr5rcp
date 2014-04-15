@@ -1952,6 +1952,9 @@
 						<xsl:attribute name="proAnzahl">
 					<xsl:value-of select="costfor/text()" />
 					</xsl:attribute>
+						<xsl:attribute name="anzahl">
+					<xsl:value-of select="costfor/text()" />
+					</xsl:attribute>
 					</xsl:if>
 					<xsl:if test="number(weaponbonus/damage/text())">
 						<xsl:attribute name="damageMod">

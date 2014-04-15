@@ -1830,21 +1830,21 @@
 <entries xsi:type="shr5:ShrList" name="gears">
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4R" name="Throwing: Shuriken" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="2" name="Throwing: Throwing Knife" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="Rating" name="Ammo: Arrow" page="423" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="(Rating+2)R" name="Ammo: Injection Arrow" page="424" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="2" name="Ammo: Bolt" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5"/>
-<entries xsi:type="shr5:Munition" proAnzahl="1" verfuegbarkeit="8R" name="Ammo: Injection Bolt" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" armorMod="-4" verfuegbarkeit="12F" name="Ammo: APDS" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="120"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="12F" name="Ammo: Assault Cannon" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="400"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="1" armorMod="-1" verfuegbarkeit="9F" name="Ammo: Explosive Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="2" armorMod="5" verfuegbarkeit="6R" name="Ammo: Flechette Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="65"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" armorMod="1" verfuegbarkeit="2R" name="Ammo: Gel Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="1" armorMod="2" verfuegbarkeit="4F" name="Ammo: Hollow Points" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="70"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="4R" name="Ammo: Injection Darts" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="75"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="2R" name="Ammo: Regular Ammo" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" damageMod="-2" armorMod="-5" verfuegbarkeit="6R" name="Ammo: Stick-n-Shock" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="6R" name="Ammo: Tracer" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="60"/>
-<entries xsi:type="shr5:Munition" proAnzahl="10" verfuegbarkeit="3" name="Ammo: Taser Dart" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="Rating" name="Ammo: Arrow" page="423" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="(Rating+2)R" name="Ammo: Injection Arrow" page="424" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="2" name="Ammo: Bolt" page="423" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5"/>
+<entries xsi:type="shr5:Munition" proAnzahl="1" anzahl="1" verfuegbarkeit="8R" name="Ammo: Injection Bolt" page="424" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" armorMod="-4" verfuegbarkeit="12F" name="Ammo: APDS" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="120"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="12F" name="Ammo: Assault Cannon" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="400"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="1" armorMod="-1" verfuegbarkeit="9F" name="Ammo: Explosive Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="2" armorMod="5" verfuegbarkeit="6R" name="Ammo: Flechette Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="65"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" armorMod="1" verfuegbarkeit="2R" name="Ammo: Gel Rounds" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="25"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="1" armorMod="2" verfuegbarkeit="4F" name="Ammo: Hollow Points" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="70"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="4R" name="Ammo: Injection Darts" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="75"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="2R" name="Ammo: Regular Ammo" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" damageMod="-2" armorMod="-5" verfuegbarkeit="6R" name="Ammo: Stick-n-Shock" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="80"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="6R" name="Ammo: Tracer" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="60"/>
+<entries xsi:type="shr5:Munition" proAnzahl="10" anzahl="10" verfuegbarkeit="3" name="Ammo: Taser Dart" page="434" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="50"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="6R" name="Grenade: Flash-Bang" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="4" name="Grenade: Flash-Pak" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="125"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Ammunition" verfuegbarkeit="11F" name="Grenade: Fragmentation" page="435" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>
