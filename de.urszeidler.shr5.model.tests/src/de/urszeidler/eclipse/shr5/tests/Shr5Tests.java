@@ -39,6 +39,14 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(TechnomancerTest.class);
         suite.addTestSuite(SpriteTest.class);
         suite.addTestSuite(ShadowrunToolsTest.class);
+        suite.addTestSuite(BioWareTest.class);
+        suite.addTestSuite(CyberwareTest.class);
+        suite.addTestSuite(BodenfahrzeugTest.class);
+        suite.addTestSuite(PassagierFahrzeugTest.class);
+        suite.addTestSuite(MunitionTest.class);
+        suite.addTestSuite(VertragTest.class);
+        
+        
         return suite;
     }
 

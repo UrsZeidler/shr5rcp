@@ -98,16 +98,16 @@
 
 				<entries xsi:type="shr5:ShrList" name="Credsticks">
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="0" wert="5" page="443" name="Standard" maxValue="5000" />
+						verfuegbarkeit="0" wertValue="5" page="443" name="Standard" maxValue="5000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="0" wert="20" page="443" name="Silver" maxValue="20000" />
+						verfuegbarkeit="0" wertValue="20" page="443" name="Silver" maxValue="20000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="5" wert="20" page="443" name="Gold" maxValue="100000" />
+						verfuegbarkeit="5" wertValue="20" page="443" name="Gold" maxValue="100000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="10" wert="500" page="443" name="Platinum"
+						verfuegbarkeit="10" wertValue="500" page="443" name="Platinum"
 						maxValue="500000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="10" wert="1000" page="443" name="Ebony" maxValue="1000000" />
+						verfuegbarkeit="10" wertValue="1000" page="443" name="Ebony" maxValue="1000000" />
 				</entries>
 				<entries xsi:type="shr5:ShrList" name="additional stuff">
 					<entries xsi:type="shr5:Wissensfertigkeit" name="Streetgangs Berlin">
@@ -513,7 +513,7 @@
 						from="1" to="2"
 						changeable="//@entries.1/@groups.0/@members.0/@persona/@fertigkeiten.14" />
 					<inventar xsi:type="shr5:Feuerwaffe" page="426"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="725"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="725"
 						verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P"
 						praezision="5" durchschlagsKraft="-1"
 						reichweite="//@entries.0/@entries.1/@entries.3">
@@ -524,15 +524,15 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="9R" image="/shr5Resource/images/katana.png" name="Katana"
 						schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" />
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="300"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="300"
 						verfuegbarkeit="4" name="Combat Knife" schadenscode="(STR+2)P"
 						praezision="6" durchschlagsKraft="-3" />
 					<inventar xsi:type="shr5:Feuerwaffe" page="429"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="2100"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="2100"
 						verfuegbarkeit="4R" name="Remington 950" schadenscode="12P"
 						praezision="7" durchschlagsKraft="-4"
 						reichweite="//@entries.0/@entries.1/@entries.9">
@@ -543,22 +543,22 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Kleidung" page="437"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="2" name="Armor Jacket" ruestung="12" />
 					<inventar xsi:type="shr5:Gegenstand" page="438"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="200"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="200"
 						verfuegbarkeit="2" name="Helmet">
 						<mods wert="2">
 							<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
 						</mods>
 					</inventar>
-					<inventar xsi:type="shr5:Gegenstand" wert="175"
+					<inventar xsi:type="shr5:Gegenstand" wertValue="175"
 						name="quickdraw holfter" />
 					<inventar xsi:type="shr5:Gegenstand" page="439"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"
 						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
 					<inventar xsi:type="shr5:Gegenstand" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="3750"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="3750"
 						verfuegbarkeit="0" name="Goggles" kategorie="Optical &amp; Imaging Devices">
 						<mods>
 							<attribut
@@ -570,7 +570,7 @@
 						</mods>
 					</inventar>
 					<contracts xsi:type="shr5:Lifestyle" name="Low" page="95"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="2000"
 						verfuegbarkeit="" />
 					<connections influence="3" loyality="2" />
 					<connections influence="4" loyality="2" />
@@ -665,7 +665,7 @@
 						<fertigkeitsGruppen stufe="2"
 							gruppe="//@entries.0/@entries.3/@entries.1" />
 						<koerperMods xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic"
-							page="454" srcBook="//@entries.0/@entries.0/@entries.0" wert="8000"
+							page="454" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="8000"
 							verfuegbarkeit="8R">
 							<mods wert="1">
 								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
@@ -676,7 +676,7 @@
 							</mods>
 						</koerperMods>
 						<koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers 2"
-							page="455" srcBook="//@entries.0/@entries.0/@entries.0" wert="26000"
+							page="455" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="26000"
 							verfuegbarkeit="10R">
 							<mods wert="2">
 								<attribut
@@ -713,7 +713,7 @@
 						from="2" to="3"
 						changeable="//@entries.1/@groups.0/@members.2/@persona/@fertigkeiten.9" />
 					<inventar xsi:type="shr5:Feuerwaffe" page="428"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1500"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1500"
 						verfuegbarkeit="8R" name="FN HAR" schadenscode="10P" praezision="5"
 						durchschlagsKraft="-2" reichweite="//@entries.0/@entries.1/@entries.6">
 						<modie>HM</modie>
@@ -728,7 +728,7 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Feuerwaffe" page="427"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="660"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="660"
 						verfuegbarkeit="5R" name="Colt Cobra TZ-120" schadenscode="7P"
 						praezision="4" reichweite="//@entries.0/@entries.1/@entries.5">
 						<modie>HM</modie>
@@ -743,7 +743,7 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Feuerwaffe" page="426"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="725"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="725"
 						verfuegbarkeit="5R" name="Ares Predator V" schadenscode="8P"
 						praezision="5" durchschlagsKraft="-1"
 						reichweite="//@entries.0/@entries.1/@entries.3">
@@ -754,49 +754,49 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="9R" name="Katana" schadenscode="(STR+3)P"
 						praezision="7" durchschlagsKraft="-3" />
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"
 						verfuegbarkeit="2R" name="Knucks" schadenscode="(STR+1)P" />
 					<inventar xsi:type="shr5:Kleidung" page="437"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="2000"
 						verfuegbarkeit="2" name="Armor Jacket" ruestung="12" />
 					<inventar xsi:type="shr5:Gegenstand" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1400"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1400"
 						verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices" />
 					<inventar xsi:type="shr5:Credstick" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="20"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"
 						verfuegbarkeit="0" name="Silver" maxValue="20000" />
 					<inventar xsi:type="shr5:Gegenstand" page="439"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink" />
 					<inventar xsi:type="shr5:Gegenstand" page="434"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="600"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="600"
 						verfuegbarkeit="2R" name="Ammo: Regular Ammo 300" kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" page="434"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="400"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="400"
 						verfuegbarkeit="9F" name="Ammo: Explosive Rounds 50" kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" page="434"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="140"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="140"
 						verfuegbarkeit="4F" name="Ammo: Hollow Points 20" kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" page="435"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="300"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="300"
 						verfuegbarkeit="11F" name="Minigrenade: High Explosive 3"
 						kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" page="435"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="500"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="500"
 						verfuegbarkeit="6R" name="Grenade: Flash-Bang 5" kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" srcBook="//@entries.0/@entries.0/@entries.0"
-						wert="45" name="SPare clip 9" />
-					<contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wert="10000"
+						wertValue="45" name="SPare clip 9" />
+					<contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wertValue="10000"
 						stufe="4" gefaelscht="true" />
 					<contracts xsi:type="shr5:Lifestyle" name="Low 3 month Troll"
-						page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="12000"
+						page="95" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="12000"
 						verfuegbarkeit="" faelligkeitsIntervall="30" />
 					<contracts xsi:type="shr5:Lizenz" name="Gun Licence"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="800" stufe="4"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="800" stufe="4"
 						gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.2/@contracts.0" />
 					<connections influence="2" loyality="3" />
 					<connections influence="2" loyality="2" />
@@ -897,7 +897,7 @@
 						changeable="//@entries.1/@groups.0/@members.3/@persona/@fertigkeiten.17" />
 
 					<inventar xsi:type="shr5:Feuerwaffe" page="426"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="640"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="640"
 						verfuegbarkeit="4R" name="Browning Ultra-Power" schadenscode="8P"
 						praezision="5" durchschlagsKraft="-1"
 						reichweite="//@entries.0/@entries.1/@entries.3" munitionstyp="Streifen"
@@ -909,7 +909,7 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Feuerwaffe" page="428"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="450"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="450"
 						verfuegbarkeit="4R" name="Uzi IV" schadenscode="7P" praezision="4"
 						reichweite="//@entries.0/@entries.1/@entries.5" munitionstyp="Streifen"
 						kapazitaet="24">
@@ -921,13 +921,13 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Kleidung" page="437"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="2" name="Armor Jacket" ruestung="12" />
 					<inventar xsi:type="shr5:Gegenstand" page="439"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink" />
 					<inventar xsi:type="shr5:Feuerwaffe" page="427"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="350"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="350"
 						verfuegbarkeit="8R" name="Steyr TMP" schadenscode="7P" praezision="4"
 						reichweite="//@entries.0/@entries.1/@entries.4" munitionstyp="Streifen"
 						kapazitaet="30">
@@ -940,41 +940,41 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Gegenstand" page="448"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="250"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="250"
 						verfuegbarkeit="2"
 						image="/shr5Resource/images/Aliens-Portable-Hand-Welder-1.jpg"
 						name="Miniwelder" kategorie="B&amp;E Gear" />
 					<inventar xsi:type="shr5:Credstick" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="20"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"
 						verfuegbarkeit="0" name="Silver" maxValue="20000" />
 					<inventar xsi:type="shr5:Gegenstand" page="434"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="400"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="400"
 						verfuegbarkeit="2R" name="Ammo: Regular Ammo 200" kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" page="434"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="175"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="175"
 						verfuegbarkeit="2R" name="Ammo: Gel Rounds 70" kategorie="Ammunition" />
-					<inventar xsi:type="shr5:Gegenstand" wert="75" name="5 x Bliss"
+					<inventar xsi:type="shr5:Gegenstand" wertValue="75" name="5 x Bliss"
 						kategorie="Drugs" />
 					<inventar xsi:type="shr5:Gegenstand" page="447"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1500"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1500"
 						verfuegbarkeit="8R" name="Autopicker 3" kategorie="B&amp;E Gear"
 						stufe="3" />
 					<contracts xsi:type="shr5:Lifestyle" name="Low 2 Month"
-						page="95" srcBook="//@entries.0/@entries.0/@entries.0" wert="4000"
+						page="95" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="4000"
 						verfuegbarkeit="" />
-					<contracts xsi:type="shr5:Sin" name="Sin 3" wert="7500"
+					<contracts xsi:type="shr5:Sin" name="Sin 3" wertValue="7500"
 						stufe="3" gefaelscht="true" />
 					<contracts xsi:type="shr5:Lizenz" name="Driver Licence"
-						wert="800" stufe="4" gefaelscht="true" lizenGegenstand="Driver Licence"
+						wertValue="800" stufe="4" gefaelscht="true" lizenGegenstand="Driver Licence"
 						lizenzTraeger="//@entries.1/@groups.0/@members.3/@contracts.1" />
-					<contracts xsi:type="shr5:Lizenz" name="Magic" wert="600"
+					<contracts xsi:type="shr5:Lizenz" name="Magic" wertValue="600"
 						stufe="3" gefaelscht="true"
 						lizenzTraeger="//@entries.1/@groups.0/@members.3/@contracts.1" />
 					<contracts xsi:type="shr5:Lizenz" name="Fake gun license (Rating 3)"
-						wert="600" gefaelscht="true"
+						wertValue="600" gefaelscht="true"
 						lizenzTraeger="//@entries.1/@groups.0/@members.3/@contracts.1" />
 					<vehicels xsi:type="shr5:Bodenfahrzeug" name="Yamaha Growler"
-						page="462" srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"
+						page="462" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5000"
 						verfuegbarkeit="" fahrzeugTyp="Bike" />
 				</members>
 
@@ -1027,7 +1027,7 @@
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35" />
 					</persona>
 					<inventar xsi:type="shr5:Feuerwaffe" page="426"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="350"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="350"
 						verfuegbarkeit="6R" name="Fichetti Security 600" schadenscode="7P"
 						praezision="6" reichweite="//@entries.0/@entries.1/@entries.2"
 						munitionstyp="Streifen" kapazitaet="30">
@@ -1038,18 +1038,18 @@
 							srcBook="//@entries.0/@entries.0/@entries.0" />
 					</inventar>
 					<inventar xsi:type="shr5:Gegenstand" page="439"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink" />
-					<inventar xsi:type="shr5:Gegenstand" wert="8000" name="Spell foci"
+					<inventar xsi:type="shr5:Gegenstand" wertValue="8000" name="Spell foci"
 						stufe="2" />
 					<inventar xsi:type="shr5:Kleidung" page="437"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="900"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="900"
 						verfuegbarkeit="4" name="Lined Coat" ruestung="9" />
 					<inventar xsi:type="shr5:Credstick" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="20"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="20"
 						verfuegbarkeit="0" name="Silver" maxValue="20000" />
 					<inventar xsi:type="shr5:Gegenstand" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="1150"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1150"
 						verfuegbarkeit="6" name="Contacts" kategorie="Optical &amp; Imaging Devices">
 						<mods wert="1">
 							<attribut
@@ -1057,30 +1057,30 @@
 						</mods>
 					</inventar>
 					<inventar xsi:type="shr5:Munition" page="434"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="200"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="200"
 						verfuegbarkeit="2R" name="Ammo: Regular Ammo" anzahl="100"
 						proAnzahl="10" type="//@entries.0/@entries.1/@entries.2" />
 					<inventar xsi:type="shr5:Gegenstand" page="441"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"
 						verfuegbarkeit="2" name="Micro-Transceiver" kategorie="Communications" />
 					<inventar xsi:type="shr5:Gegenstand" page="450"
 						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="Rating"
 						name="Medkit" kategorie="Biotech" />
 					<inventar xsi:type="shr5:Gegenstand" page="443"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="500"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="500"
 						verfuegbarkeit="0" name="Tool Kit" kategorie="Tools" />
 					<inventar xsi:type="shr5:Gegenstand" page="441"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="5000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5000"
 						verfuegbarkeit="(Rating*3)F" name="Jammer, Area" kategorie="Communications"
 						stufe="6" />
 					<contracts xsi:type="shr5:Lifestyle" name="Low" page="95"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="2000"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="2000"
 						verfuegbarkeit="" />
 					<contracts xsi:type="shr5:Sin" name="Daniel Silverbane"
-						wert="5000" stufe="2" gefaelscht="true" />
+						wertValue="5000" stufe="2" gefaelscht="true" />
 					<contracts xsi:type="shr5:Lizenz"
 						name="Adjunct professor of magical theory to carry spell foci"
-						wert="800" gefaelscht="true"
+						wertValue="800" gefaelscht="true"
 						lizenzTraeger="//@entries.1/@groups.0/@members.4/@contracts.1" />
 					<connections influence="2" loyality="2" />
 					<connections influence="4" loyality="2" />
@@ -1167,14 +1167,14 @@
 							fertigkeit="//@entries.0/@entries.4/@entries.10" />
 					</persona>
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="30"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="30"
 						verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4" />
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="10"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="10"
 						verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P"
 						praezision="5" durchschlagsKraft="-1" />
 					<inventar xsi:type="shr5:Gegenstand" page="439"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"
 						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
 					<contracts xsi:type="shr5:Lifestyle" name="Street" page="95"
 						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="" />
@@ -1210,10 +1210,10 @@
 							fertigkeit="//@entries.0/@entries.5/@entries.53" />
 					</persona>
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="30"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="30"
 						verfuegbarkeit="0" name="Club" schadenscode="(STR+3)P" praezision="4" />
 					<inventar xsi:type="shr5:Feuerwaffe" page="425"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="320"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="320"
 						verfuegbarkeit="4R" name="Colt America L36" schadenscode="7P"
 						praezision="7" reichweite="//@entries.0/@entries.1/@entries.2">
 						<modie>HM</modie>
@@ -1221,11 +1221,11 @@
 						<erweiterung>Oben</erweiterung>
 					</inventar>
 					<inventar xsi:type="shr5:Nahkampfwaffe" page="422"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="10"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="10"
 						verfuegbarkeit="0" name="Knife" schadenscode="(STR+1)P"
 						praezision="5" durchschlagsKraft="-1" />
 					<inventar xsi:type="shr5:Gegenstand" page="439"
-						srcBook="//@entries.0/@entries.0/@entries.0" wert="100"
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"
 						verfuegbarkeit="2" name="Meta Link" kategorie="Commlink" />
 					<contracts xsi:type="shr5:Lifestyle" name="Street" page="95"
 						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="" />
@@ -1463,7 +1463,7 @@
 		<xsl:call-template name="beschreibbar" />
 		<xsl:call-template name="quelle" />
 		<xsl:if test="number(cost/text())">
-			<xsl:attribute name="wert"><xsl:value-of select="number(cost/text())" /></xsl:attribute>
+			<xsl:attribute name="wertValue"><xsl:value-of select="number(cost/text())" /></xsl:attribute>
 		</xsl:if>
 	</xsl:template>
 	<xsl:template name="skill-options">

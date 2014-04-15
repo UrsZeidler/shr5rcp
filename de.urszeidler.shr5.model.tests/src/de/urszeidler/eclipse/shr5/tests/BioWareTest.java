@@ -2,6 +2,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -10,6 +12,12 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Bio Ware</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class BioWareTest extends KoerpermodsTest {
@@ -64,6 +72,18 @@ public class BioWareTest extends KoerpermodsTest {
 	@Override
 	protected void tearDown() throws Exception {
         setFixture(null);
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWert() {
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
     }
 
 } //BioWareTest

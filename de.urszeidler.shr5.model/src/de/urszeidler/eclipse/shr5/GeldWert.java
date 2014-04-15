@@ -11,11 +11,16 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Geld Wert</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This defines any object having a money value.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWertValue <em>Wert Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,23 +37,15 @@ public interface GeldWert extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The calculated money value.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Wert</em>' attribute.
-     * @see #setWert(BigDecimal)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getGeldWert_Wert()
-     * @model
+     * @model transient="true" changeable="false" volatile="true"
      * @generated
      */
 	BigDecimal getWert();
-
-	/**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert <em>Wert</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Wert</em>' attribute.
-     * @see #getWert()
-     * @generated
-     */
-	void setWert(BigDecimal value);
 
 	/**
      * Returns the value of the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -58,6 +55,9 @@ public interface GeldWert extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The availability for the object.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Verfuegbarkeit</em>' attribute.
      * @see #setVerfuegbarkeit(String)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getGeldWert_Verfuegbarkeit()
@@ -75,5 +75,30 @@ public interface GeldWert extends EObject {
      * @generated
      */
 	void setVerfuegbarkeit(String value);
+
+    /**
+     * Returns the value of the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * This is the setable value, it is used to calculate the wert property.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Wert Value</em>' attribute.
+     * @see #setWertValue(BigDecimal)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getGeldWert_WertValue()
+     * @model
+     * @generated
+     */
+    BigDecimal getWertValue();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWertValue <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Wert Value</em>' attribute.
+     * @see #getWertValue()
+     * @generated
+     */
+    void setWertValue(BigDecimal value);
 
 } // GeldWert

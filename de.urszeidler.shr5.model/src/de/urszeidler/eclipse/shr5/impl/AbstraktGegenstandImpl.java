@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getName <em>Name</em>}</li>
@@ -88,16 +89,6 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	protected static final BigDecimal WERT_EDEFAULT = null;
 
 	/**
-     * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getWert()
-     * @generated
-     * @ordered
-     */
-	protected BigDecimal wert = WERT_EDEFAULT;
-
-	/**
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,6 +109,26 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected static final BigDecimal WERT_VALUE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,22 +289,10 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public BigDecimal getWert() {
-        return wert;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public void setWert(BigDecimal newWert) {
-        BigDecimal oldWert = wert;
-        wert = newWert;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_GEGENSTAND__WERT, oldWert, wert));
+        return getWertValue();
     }
 
 	/**
@@ -318,6 +317,27 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BigDecimal getWertValue() {
+        return wertValue;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setWertValue(BigDecimal newWertValue) {
+        BigDecimal oldWertValue = wertValue;
+        wertValue = newWertValue;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE, oldWertValue, wertValue));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -476,6 +496,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
                 return getWert();
             case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT:
                 return getVerfuegbarkeit();
+            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE:
+                return getWertValue();
             case Shr5Package.ABSTRAKT_GEGENSTAND__BESCHREIBUNG:
                 return getBeschreibung();
             case Shr5Package.ABSTRAKT_GEGENSTAND__IMAGE:
@@ -506,11 +528,11 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
             case Shr5Package.ABSTRAKT_GEGENSTAND__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
                 return;
-            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT:
-                setWert((BigDecimal)newValue);
-                return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT:
                 setVerfuegbarkeit((String)newValue);
+                return;
+            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE:
+                setWertValue((BigDecimal)newValue);
                 return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
@@ -546,11 +568,11 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
             case Shr5Package.ABSTRAKT_GEGENSTAND__SRC_BOOK:
                 setSrcBook((SourceBook)null);
                 return;
-            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT:
-                setWert(WERT_EDEFAULT);
-                return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT:
                 setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
+                return;
+            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE:
+                setWertValue(WERT_VALUE_EDEFAULT);
                 return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
@@ -584,9 +606,11 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
             case Shr5Package.ABSTRAKT_GEGENSTAND__SRC_BOOK:
                 return srcBook != null;
             case Shr5Package.ABSTRAKT_GEGENSTAND__WERT:
-                return WERT_EDEFAULT == null ? wert != null : !WERT_EDEFAULT.equals(wert);
+                return WERT_EDEFAULT == null ? getWert() != null : !WERT_EDEFAULT.equals(getWert());
             case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT:
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
+            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE:
+                return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.ABSTRAKT_GEGENSTAND__BESCHREIBUNG:
                 return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
             case Shr5Package.ABSTRAKT_GEGENSTAND__IMAGE:
@@ -612,6 +636,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
             switch (derivedFeatureID) {
                 case Shr5Package.ABSTRAKT_GEGENSTAND__WERT: return Shr5Package.GELD_WERT__WERT;
                 case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
                 default: return -1;
             }
         }
@@ -649,6 +674,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
             switch (baseFeatureID) {
                 case Shr5Package.GELD_WERT__WERT: return Shr5Package.ABSTRAKT_GEGENSTAND__WERT;
                 case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE;
                 default: return -1;
             }
         }
@@ -687,10 +713,10 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (page: ");
         result.append(page);
-        result.append(", wert: ");
-        result.append(wert);
         result.append(", verfuegbarkeit: ");
         result.append(verfuegbarkeit);
+        result.append(", wertValue: ");
+        result.append(wertValue);
         result.append(", beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

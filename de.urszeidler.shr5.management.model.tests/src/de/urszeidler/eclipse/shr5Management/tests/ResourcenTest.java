@@ -92,17 +92,17 @@ public class ResourcenTest extends PriorityCategorieTest {
 		
 		assertEquals("0 points spend", 0,getFixture().calcResourceSpend(character));		
 		Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
-		gegenstand.setWert(new BigDecimal(100));
+		gegenstand.setWertValue(new BigDecimal(100));
 		character.getInventar().add(gegenstand);		
 		assertEquals("100 points spend", 100,getFixture().calcResourceSpend(character));		
 		
 		gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
-		gegenstand.setWert(new BigDecimal(100));
+		gegenstand.setWertValue(new BigDecimal(100));
 		character.getInventar().add(gegenstand);		
 		assertEquals("200 points spend", 200,getFixture().calcResourceSpend(character));		
 		
 		BioWare bioware = Shr5Factory.eINSTANCE.createBioWare();
-		bioware.setWert(new BigDecimal(100));
+		bioware.setWertValue(new BigDecimal(100));
 		((KoerperPersona)character.getPersona()).getKoerperMods().add(bioware);
 		assertEquals("300 points spend", 300,getFixture().calcResourceSpend(character));		
 

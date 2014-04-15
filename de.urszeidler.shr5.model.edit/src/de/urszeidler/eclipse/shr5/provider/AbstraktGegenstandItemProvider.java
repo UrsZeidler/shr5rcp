@@ -64,6 +64,7 @@ public class AbstraktGegenstandItemProvider
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
+            addWertValuePropertyDescriptor(object);
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
@@ -161,6 +162,28 @@ public class AbstraktGegenstandItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Wert Value feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWertValuePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_GeldWert_wertValue_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GeldWert_wertValue_feature", "_UI_GeldWert_type"),
+                 Shr5Package.Literals.GELD_WERT__WERT_VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Name feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -307,6 +330,7 @@ public class AbstraktGegenstandItemProvider
             case Shr5Package.ABSTRAKT_GEGENSTAND__PAGE:
             case Shr5Package.ABSTRAKT_GEGENSTAND__WERT:
             case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT:
+            case Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE:
             case Shr5Package.ABSTRAKT_GEGENSTAND__BESCHREIBUNG:
             case Shr5Package.ABSTRAKT_GEGENSTAND__IMAGE:
             case Shr5Package.ABSTRAKT_GEGENSTAND__NAME:

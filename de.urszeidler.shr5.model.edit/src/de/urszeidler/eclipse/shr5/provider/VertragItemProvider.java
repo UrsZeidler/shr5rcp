@@ -68,6 +68,7 @@ public class VertragItemProvider
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
+            addWertValuePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -227,6 +228,28 @@ public class VertragItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Wert Value feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWertValuePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_GeldWert_wertValue_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GeldWert_wertValue_feature", "_UI_GeldWert_type"),
+                 Shr5Package.Literals.GELD_WERT__WERT_VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This returns Vertrag.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,6 +299,7 @@ public class VertragItemProvider
             case Shr5Package.VERTRAG__PAGE:
             case Shr5Package.VERTRAG__WERT:
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:
+            case Shr5Package.VERTRAG__WERT_VALUE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

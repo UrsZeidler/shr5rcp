@@ -67,6 +67,7 @@ public class FahrzeugItemProvider
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
+            addWertValuePropertyDescriptor(object);
             addFertigkeitPropertyDescriptor(object);
             addHandlingPropertyDescriptor(object);
             addGeschwindigkeitPropertyDescriptor(object);
@@ -234,6 +235,28 @@ public class FahrzeugItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Wert Value feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWertValuePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_GeldWert_wertValue_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GeldWert_wertValue_feature", "_UI_GeldWert_type"),
+                 Shr5Package.Literals.GELD_WERT__WERT_VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Fertigkeit feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -471,6 +494,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__PAGE:
             case Shr5Package.FAHRZEUG__WERT:
             case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
+            case Shr5Package.FAHRZEUG__WERT_VALUE:
             case Shr5Package.FAHRZEUG__HANDLING:
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
             case Shr5Package.FAHRZEUG__BESCHLEUNIGUNG:

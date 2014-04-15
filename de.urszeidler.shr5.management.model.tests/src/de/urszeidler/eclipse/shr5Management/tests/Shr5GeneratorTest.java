@@ -381,12 +381,12 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
 
         assertEquals("Should be 0", 0, getFixture().getResourceSpend());
         Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
-        gegenstand.setWert(new BigDecimal(99));
+        gegenstand.setWertValue(new BigDecimal(99));
         character.getInventar().add(gegenstand);
         assertEquals("is 99", 99, getFixture().getResourceSpend());
 
         Lifestyle lifestyle = Shr5Factory.eINSTANCE.createLifestyle();
-        lifestyle.setWert(new BigDecimal(1));
+        lifestyle.setWertValue(new BigDecimal(1));
         character.getContracts().add(lifestyle);
 
         assertEquals("is 100", 100, getFixture().getResourceSpend());
@@ -810,7 +810,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         resourcen.setResource(100);
         assertEquals("is false", false, getFixture().hasSpendAllPoints(diagnostics, context));
         Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
-        gegenstand.setWert(new BigDecimal(100));
+        gegenstand.setWertValue(new BigDecimal(100));
         character.getInventar().add(gegenstand);
         assertEquals("is true", true, getFixture().hasSpendAllPoints(diagnostics, context));
     }
@@ -970,7 +970,7 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         resourcen.setResource(100);
         assertEquals("is false", false, getFixture().hasSpendAllResourcePoints(diagnostics, context));
         Gegenstand gegenstand = Shr5Factory.eINSTANCE.createGegenstand();
-        gegenstand.setWert(new BigDecimal(99));
+        gegenstand.setWertValue(new BigDecimal(99));
         character.getInventar().add(gegenstand);
         assertEquals("is true", true, getFixture().hasSpendAllResourcePoints(diagnostics, context));
 

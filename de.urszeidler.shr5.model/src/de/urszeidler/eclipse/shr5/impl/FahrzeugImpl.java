@@ -23,6 +23,7 @@ import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,6 +39,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
@@ -154,16 +156,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 	protected static final BigDecimal WERT_EDEFAULT = null;
 
 	/**
-     * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getWert()
-     * @generated
-     * @ordered
-     */
-	protected BigDecimal wert = WERT_EDEFAULT;
-
-	/**
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +176,26 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 	protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected static final BigDecimal WERT_VALUE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
+
+    /**
      * The cached value of the '{@link #getFertigkeit() <em>Fertigkeit</em>}' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -487,22 +499,14 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public BigDecimal getWert() {
-        return wert;
-    }
+        if (getWertValue() == null)
+            return null;
 
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public void setWert(BigDecimal newWert) {
-        BigDecimal oldWert = wert;
-        wert = newWert;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__WERT, oldWert, wert));
+        BigDecimal listenWert = ShadowrunTools.calcListenWert(getModifizierungen());
+       return getWertValue().add(listenWert);
     }
 
 	/**
@@ -527,6 +531,27 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BigDecimal getWertValue() {
+        return wertValue;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setWertValue(BigDecimal newWertValue) {
+        BigDecimal oldWertValue = wertValue;
+        wertValue = newWertValue;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__WERT_VALUE, oldWertValue, wertValue));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -760,6 +785,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return getWert();
             case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
                 return getVerfuegbarkeit();
+            case Shr5Package.FAHRZEUG__WERT_VALUE:
+                return getWertValue();
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
@@ -807,11 +834,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
                 return;
-            case Shr5Package.FAHRZEUG__WERT:
-                setWert((BigDecimal)newValue);
-                return;
             case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
                 setVerfuegbarkeit((String)newValue);
+                return;
+            case Shr5Package.FAHRZEUG__WERT_VALUE:
+                setWertValue((BigDecimal)newValue);
                 return;
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)newValue);
@@ -868,11 +895,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__SRC_BOOK:
                 setSrcBook((SourceBook)null);
                 return;
-            case Shr5Package.FAHRZEUG__WERT:
-                setWert(WERT_EDEFAULT);
-                return;
             case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
                 setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
+                return;
+            case Shr5Package.FAHRZEUG__WERT_VALUE:
+                setWertValue(WERT_VALUE_EDEFAULT);
                 return;
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)null);
@@ -924,9 +951,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__SRC_BOOK:
                 return srcBook != null;
             case Shr5Package.FAHRZEUG__WERT:
-                return WERT_EDEFAULT == null ? wert != null : !WERT_EDEFAULT.equals(wert);
+                return WERT_EDEFAULT == null ? getWert() != null : !WERT_EDEFAULT.equals(getWert());
             case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
+            case Shr5Package.FAHRZEUG__WERT_VALUE:
+                return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 return fertigkeit != null;
             case Shr5Package.FAHRZEUG__HANDLING:
@@ -967,6 +996,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             switch (derivedFeatureID) {
                 case Shr5Package.FAHRZEUG__WERT: return Shr5Package.GELD_WERT__WERT;
                 case Shr5Package.FAHRZEUG__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.FAHRZEUG__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
                 default: return -1;
             }
         }
@@ -997,6 +1027,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             switch (baseFeatureID) {
                 case Shr5Package.GELD_WERT__WERT: return Shr5Package.FAHRZEUG__WERT;
                 case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.FAHRZEUG__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.FAHRZEUG__WERT_VALUE;
                 default: return -1;
             }
         }
@@ -1027,10 +1058,10 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         result.append(name);
         result.append(", page: ");
         result.append(page);
-        result.append(", wert: ");
-        result.append(wert);
         result.append(", verfuegbarkeit: ");
         result.append(verfuegbarkeit);
+        result.append(", wertValue: ");
+        result.append(wertValue);
         result.append(", handling: ");
         result.append(handling);
         result.append(", geschwindigkeit: ");

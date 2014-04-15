@@ -595,13 +595,22 @@ public interface Shr5Package extends EPackage {
 	int ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT = QUELLE_FEATURE_COUNT + 1;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_GEGENSTAND__WERT_VALUE = QUELLE_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND__BESCHREIBUNG = QUELLE_FEATURE_COUNT + 2;
+	int ABSTRAKT_GEGENSTAND__BESCHREIBUNG = QUELLE_FEATURE_COUNT + 3;
 
 	/**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -610,7 +619,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND__IMAGE = QUELLE_FEATURE_COUNT + 3;
+	int ABSTRAKT_GEGENSTAND__IMAGE = QUELLE_FEATURE_COUNT + 4;
 
 	/**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -619,7 +628,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND__NAME = QUELLE_FEATURE_COUNT + 4;
+	int ABSTRAKT_GEGENSTAND__NAME = QUELLE_FEATURE_COUNT + 5;
 
 	/**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -628,7 +637,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND__MODS = QUELLE_FEATURE_COUNT + 5;
+	int ABSTRAKT_GEGENSTAND__MODS = QUELLE_FEATURE_COUNT + 6;
 
 	/**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -637,7 +646,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND__FERTIGKEIT = QUELLE_FEATURE_COUNT + 6;
+	int ABSTRAKT_GEGENSTAND__FERTIGKEIT = QUELLE_FEATURE_COUNT + 7;
 
 	/**
      * The number of structural features of the '<em>Abstrakt Gegenstand</em>' class.
@@ -646,7 +655,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_GEGENSTAND_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 7;
+	int ABSTRAKT_GEGENSTAND_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 8;
 
 	/**
      * The number of operations of the '<em>Abstrakt Gegenstand</em>' class.
@@ -704,6 +713,15 @@ public interface Shr5Package extends EPackage {
 	int GEGENSTAND__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEGENSTAND__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -813,13 +831,22 @@ public interface Shr5Package extends EPackage {
 	int GELD_WERT__VERFUEGBARKEIT = 1;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GELD_WERT__WERT_VALUE = 2;
+
+    /**
      * The number of structural features of the '<em>Geld Wert</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int GELD_WERT_FEATURE_COUNT = 2;
+	int GELD_WERT_FEATURE_COUNT = 3;
 
 	/**
      * The number of operations of the '<em>Geld Wert</em>' class.
@@ -1215,6 +1242,15 @@ public interface Shr5Package extends EPackage {
 	int ABSTAKT_WAFFE__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_WAFFE__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1360,6 +1396,15 @@ public interface Shr5Package extends EPackage {
 	int ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT = ABSTAKT_WAFFE__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_FERN_KAMPFWAFFE__WERT_VALUE = ABSTAKT_WAFFE__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1514,6 +1559,15 @@ public interface Shr5Package extends EPackage {
 	int NAHKAMPFWAFFE__VERFUEGBARKEIT = ABSTAKT_WAFFE__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NAHKAMPFWAFFE__WERT_VALUE = ABSTAKT_WAFFE__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1668,6 +1722,15 @@ public interface Shr5Package extends EPackage {
 	int FEUERWAFFE__VERFUEGBARKEIT = ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FEUERWAFFE__WERT_VALUE = ABSTAKT_FERN_KAMPFWAFFE__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1885,6 +1948,15 @@ public interface Shr5Package extends EPackage {
 	int WURFWAFFE__VERFUEGBARKEIT = ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WURFWAFFE__WERT_VALUE = ABSTAKT_FERN_KAMPFWAFFE__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2103,6 +2175,15 @@ public interface Shr5Package extends EPackage {
 	int PROJEKTILWAFFE__VERFUEGBARKEIT = ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROJEKTILWAFFE__WERT_VALUE = ABSTAKT_FERN_KAMPFWAFFE__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2814,13 +2895,22 @@ public interface Shr5Package extends EPackage {
 	int CYBERWARE__VERFUEGBARKEIT = KOERPERMODS_FEATURE_COUNT + 1;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__WERT_VALUE = KOERPERMODS_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Persona</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CYBERWARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 2;
+	int CYBERWARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 3;
 
 	/**
      * The feature id for the '<em><b>Einbau</b></em>' containment reference list.
@@ -2829,7 +2919,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int CYBERWARE__EINBAU = KOERPERMODS_FEATURE_COUNT + 3;
+	int CYBERWARE__EINBAU = KOERPERMODS_FEATURE_COUNT + 4;
 
 	/**
      * The number of structural features of the '<em>Cyberware</em>' class.
@@ -2838,7 +2928,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int CYBERWARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 4;
+	int CYBERWARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 5;
 
 	/**
      * The number of operations of the '<em>Cyberware</em>' class.
@@ -2932,13 +3022,22 @@ public interface Shr5Package extends EPackage {
 	int BIO_WARE__VERFUEGBARKEIT = KOERPERMODS_FEATURE_COUNT + 1;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BIO_WARE__WERT_VALUE = KOERPERMODS_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Persona</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int BIO_WARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 2;
+	int BIO_WARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 3;
 
 	/**
      * The number of structural features of the '<em>Bio Ware</em>' class.
@@ -2947,7 +3046,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int BIO_WARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 3;
+	int BIO_WARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 4;
 
 	/**
      * The number of operations of the '<em>Bio Ware</em>' class.
@@ -5474,6 +5573,15 @@ public interface Shr5Package extends EPackage {
 	int KLEIDUNG__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KLEIDUNG__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8093,13 +8201,22 @@ public interface Shr5Package extends EPackage {
 	int FAHRZEUG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
 	/**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
@@ -8108,7 +8225,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 6;
 
 	/**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
@@ -8117,7 +8234,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
 	/**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
@@ -8126,7 +8243,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 8;
 
 	/**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
@@ -8135,7 +8252,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 9;
 
 	/**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
@@ -8144,7 +8261,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 10;
 
 	/**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -8153,7 +8270,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 11;
 
 	/**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
@@ -8162,7 +8279,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 12;
 
 	/**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
@@ -8171,7 +8288,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 13;
 
 	/**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
@@ -8180,7 +8297,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 14;
 
 	/**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -8265,6 +8382,15 @@ public interface Shr5Package extends EPackage {
 	int PASSAGIER_FAHRZEUG__VERFUEGBARKEIT = FAHRZEUG__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__WERT_VALUE = FAHRZEUG__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8446,6 +8572,15 @@ public interface Shr5Package extends EPackage {
 	int BODENFAHRZEUG__VERFUEGBARKEIT = PASSAGIER_FAHRZEUG__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__WERT_VALUE = PASSAGIER_FAHRZEUG__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8645,6 +8780,15 @@ public interface Shr5Package extends EPackage {
 	int DROHNE__VERFUEGBARKEIT = FAHRZEUG__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__WERT_VALUE = FAHRZEUG__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8817,13 +8961,22 @@ public interface Shr5Package extends EPackage {
 	int FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG_MODIFIKATION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Funktion</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__FUNKTION = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FAHRZEUG_MODIFIKATION__FUNKTION = BESCHREIBBAR_FEATURE_COUNT + 5;
 
 	/**
      * The number of structural features of the '<em>Fahrzeug Modifikation</em>' class.
@@ -8832,7 +8985,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
 
 	/**
      * The number of operations of the '<em>Fahrzeug Modifikation</em>' class.
@@ -9895,13 +10048,22 @@ public interface Shr5Package extends EPackage {
 	int VERTRAG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int VERTRAG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Vertrag</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
 	/**
      * The number of operations of the '<em>Vertrag</em>' class.
@@ -9984,6 +10146,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int INTERVALL_VERTRAG__VERFUEGBARKEIT = VERTRAG__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__WERT_VALUE = VERTRAG__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Faelligkeits Intervall</b></em>' attribute.
@@ -10086,6 +10257,15 @@ public interface Shr5Package extends EPackage {
 	int LIFESTYLE__VERFUEGBARKEIT = INTERVALL_VERTRAG__VERFUEGBARKEIT;
 
 	/**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__WERT_VALUE = INTERVALL_VERTRAG__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Faelligkeits Intervall</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10802,6 +10982,15 @@ public interface Shr5Package extends EPackage {
     int FAKEABLE__VERFUEGBARKEIT = VERTRAG__VERFUEGBARKEIT;
 
     /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__WERT_VALUE = VERTRAG__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10909,6 +11098,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SIN__VERFUEGBARKEIT = FAKEABLE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__WERT_VALUE = FAKEABLE__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
@@ -11020,6 +11218,15 @@ public interface Shr5Package extends EPackage {
     int LIZENZ__VERFUEGBARKEIT = FAKEABLE__VERFUEGBARKEIT;
 
     /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__WERT_VALUE = FAKEABLE__WERT_VALUE;
+
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11118,6 +11325,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CREDSTICK__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -11291,6 +11507,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MUNITION__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -11885,6 +12110,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getGeldWert_Verfuegbarkeit();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.GeldWert#getWertValue <em>Wert Value</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Wert Value</em>'.
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWertValue()
+     * @see #getGeldWert()
+     * @generated
+     */
+    EAttribute getGeldWert_WertValue();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Reichweite <em>Reichweite</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15152,6 +15388,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute GELD_WERT__VERFUEGBARKEIT = eINSTANCE.getGeldWert_Verfuegbarkeit();
 
 		/**
+         * The meta object literal for the '<em><b>Wert Value</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute GELD_WERT__WERT_VALUE = eINSTANCE.getGeldWert_WertValue();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl <em>Reichweite</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

@@ -2,13 +2,23 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Fahrzeug</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public abstract class FahrzeugTest extends TestCase {
@@ -49,6 +59,36 @@ public abstract class FahrzeugTest extends TestCase {
      */
 	protected Fahrzeug getFixture() {
         return fixture;
+    }
+
+	   /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWert() {
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWert1() {
+        getFixture().setWertValue(new BigDecimal(10));        
+        assertEquals(10,getFixture().getWert().intValue());
+        
+        FahrzeugModifikation mod = Shr5Factory.eINSTANCE.createFahrzeugModifikation();
+        mod.setWertValue(new BigDecimal(11));
+        getFixture().getModifizierungen().add(mod);
+        assertEquals(21,getFixture().getWert().intValue());
+
     }
 
 } //FahrzeugTest

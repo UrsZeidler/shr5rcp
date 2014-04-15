@@ -1137,6 +1137,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeldWert_WertValue() {
+        return (EAttribute)geldWertEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3726,6 +3735,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         geldWertEClass = createEClass(GELD_WERT);
         createEAttribute(geldWertEClass, GELD_WERT__WERT);
         createEAttribute(geldWertEClass, GELD_WERT__VERFUEGBARKEIT);
+        createEAttribute(geldWertEClass, GELD_WERT__WERT_VALUE);
 
         reichweiteEClass = createEClass(REICHWEITE);
         createEAttribute(reichweiteEClass, REICHWEITE__MIN);
@@ -4252,8 +4262,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getGegenstand_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, Gegenstand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(geldWertEClass, GeldWert.class, "GeldWert", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getGeldWert_Wert(), ecorePackage.getEBigDecimal(), "wert", null, 0, 1, GeldWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeldWert_Wert(), ecorePackage.getEBigDecimal(), "wert", null, 0, 1, GeldWert.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getGeldWert_Verfuegbarkeit(), ecorePackage.getEString(), "verfuegbarkeit", null, 0, 1, GeldWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeldWert_WertValue(), ecorePackage.getEBigDecimal(), "wertValue", null, 0, 1, GeldWert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(reichweiteEClass, Reichweite.class, "Reichweite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getReichweite_Min(), ecorePackage.getEInt(), "min", null, 1, 1, Reichweite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

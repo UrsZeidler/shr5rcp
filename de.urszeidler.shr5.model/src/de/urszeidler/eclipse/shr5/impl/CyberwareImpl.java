@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,143 +28,182 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWertValue <em>Wert Value</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
-	/**
+    /**
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getWert()
      * @generated
      * @ordered
      */
-	protected static final BigDecimal WERT_EDEFAULT = null;
+    protected static final BigDecimal WERT_EDEFAULT = null;
 
-	/**
-     * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getWert()
-     * @generated
-     * @ordered
-     */
-	protected BigDecimal wert = WERT_EDEFAULT;
-
-	/**
+    /**
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
      */
-	protected static final String VERFUEGBARKEIT_EDEFAULT = null;
+    protected static final String VERFUEGBARKEIT_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
      */
-	protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
+    protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
 
-	/**
+    /**
+     * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected static final BigDecimal WERT_VALUE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
+
+    /**
      * The cached value of the '{@link #getPersona() <em>Persona</em>}' reference.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getPersona()
      * @generated
      * @ordered
      */
-	protected AbstraktPersona persona;
+    protected AbstraktPersona persona;
 
-	/**
+    /**
      * The cached value of the '{@link #getEinbau() <em>Einbau</em>}' containment reference list.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getEinbau()
      * @generated
      * @ordered
      */
-	protected EList<AbstraktGegenstand> einbau;
+    protected EList<AbstraktGegenstand> einbau;
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected CyberwareImpl() {
+    protected CyberwareImpl() {
         super();
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return Shr5Package.Literals.CYBERWARE;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
      */
-	public BigDecimal getWert() {
-        return wert;
+    public BigDecimal getWert() {
+        if (getWertValue() == null)
+            return null;
+
+        BigDecimal listenWert = ShadowrunTools.calcListenWert(getEinbau());
+        return getWertValue().add(listenWert);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setWert(BigDecimal newWert) {
-        BigDecimal oldWert = wert;
-        wert = newWert;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__WERT, oldWert, wert));
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public String getVerfuegbarkeit() {
+    public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setVerfuegbarkeit(String newVerfuegbarkeit) {
+    public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__VERFUEGBARKEIT, oldVerfuegbarkeit, verfuegbarkeit));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public AbstraktPersona getPersona() {
+    public BigDecimal getWertValue() {
+        return wertValue;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public void setWertValue(BigDecimal newWertValue) {
+        BigDecimal oldWertValue = wertValue;
+        wertValue = newWertValue;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__WERT_VALUE, oldWertValue, wertValue));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public AbstraktPersona getPersona() {
         if (persona != null && persona.eIsProxy()) {
             InternalEObject oldPersona = (InternalEObject)persona;
             persona = (AbstraktPersona)eResolveProxy(oldPersona);
@@ -175,46 +215,50 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
         return persona;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public AbstraktPersona basicGetPersona() {
+    public AbstraktPersona basicGetPersona() {
         return persona;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setPersona(AbstraktPersona newPersona) {
+    public void setPersona(AbstraktPersona newPersona) {
         AbstraktPersona oldPersona = persona;
         persona = newPersona;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__PERSONA, oldPersona, persona));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public EList<AbstraktGegenstand> getEinbau() {
+    public EList<AbstraktGegenstand> getEinbau() {
         if (einbau == null) {
             einbau = new EObjectContainmentEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, Shr5Package.CYBERWARE__EINBAU);
         }
         return einbau;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.CYBERWARE__EINBAU:
                 return ((InternalEList<?>)getEinbau()).basicRemove(otherEnd, msgs);
@@ -222,20 +266,24 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.CYBERWARE__WERT:
                 return getWert();
             case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
                 return getVerfuegbarkeit();
+            case Shr5Package.CYBERWARE__WERT_VALUE:
+                return getWertValue();
             case Shr5Package.CYBERWARE__PERSONA:
-                if (resolve) return getPersona();
+                if (resolve)
+                    return getPersona();
                 return basicGetPersona();
             case Shr5Package.CYBERWARE__EINBAU:
                 return getEinbau();
@@ -243,20 +291,21 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
         return super.eGet(featureID, resolve, coreType);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.CYBERWARE__WERT:
-                setWert((BigDecimal)newValue);
-                return;
             case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
                 setVerfuegbarkeit((String)newValue);
+                return;
+            case Shr5Package.CYBERWARE__WERT_VALUE:
+                setWertValue((BigDecimal)newValue);
                 return;
             case Shr5Package.CYBERWARE__PERSONA:
                 setPersona((AbstraktPersona)newValue);
@@ -269,19 +318,20 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
         super.eSet(featureID, newValue);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eUnset(int featureID) {
+    @Override
+    public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.CYBERWARE__WERT:
-                setWert(WERT_EDEFAULT);
-                return;
             case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
                 setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
+                return;
+            case Shr5Package.CYBERWARE__WERT_VALUE:
+                setWertValue(WERT_VALUE_EDEFAULT);
                 return;
             case Shr5Package.CYBERWARE__PERSONA:
                 setPersona((AbstraktPersona)null);
@@ -293,18 +343,21 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
         super.eUnset(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean eIsSet(int featureID) {
+    @Override
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
             case Shr5Package.CYBERWARE__WERT:
-                return WERT_EDEFAULT == null ? wert != null : !WERT_EDEFAULT.equals(wert);
+                return WERT_EDEFAULT == null ? getWert() != null : !WERT_EDEFAULT.equals(getWert());
             case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
+            case Shr5Package.CYBERWARE__WERT_VALUE:
+                return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.CYBERWARE__PERSONA:
                 return persona != null;
             case Shr5Package.CYBERWARE__EINBAU:
@@ -313,56 +366,70 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
         return super.eIsSet(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == GeldWert.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.CYBERWARE__WERT: return Shr5Package.GELD_WERT__WERT;
-                case Shr5Package.CYBERWARE__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-                default: return -1;
+                case Shr5Package.CYBERWARE__WERT:
+                    return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
+                    return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.CYBERWARE__WERT_VALUE:
+                    return Shr5Package.GELD_WERT__WERT_VALUE;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == GeldWert.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GELD_WERT__WERT: return Shr5Package.CYBERWARE__WERT;
-                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
-                default: return -1;
+                case Shr5Package.GELD_WERT__WERT:
+                    return Shr5Package.CYBERWARE__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT:
+                    return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE:
+                    return Shr5Package.CYBERWARE__WERT_VALUE;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public String toString() {
-        if (eIsProxy()) return super.toString();
+    @Override
+    public String toString() {
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (wert: ");
-        result.append(wert);
-        result.append(", verfuegbarkeit: ");
+        result.append(" (verfuegbarkeit: ");
         result.append(verfuegbarkeit);
+        result.append(", wertValue: ");
+        result.append(wertValue);
         result.append(')');
         return result.toString();
     }
 
-} //CyberwareImpl
+} // CyberwareImpl

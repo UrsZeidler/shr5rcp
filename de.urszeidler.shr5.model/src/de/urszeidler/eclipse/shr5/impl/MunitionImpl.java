@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
+
 import de.urszeidler.eclipse.shr5.Menge;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Reichweite;
@@ -10,10 +12,8 @@ import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -23,15 +23,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getAnzahl <em>Anzahl</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getProAnzahl <em>Pro Anzahl</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getDamageType <em>Damage Type</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getDamageMod <em>Damage Mod</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getArmorMod <em>Armor Mod</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getType <em>Type</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getAnzahl <em>Anzahl</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getProAnzahl <em>Pro Anzahl</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getDamageType <em>Damage Type</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getDamageMod <em>Damage Mod</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getArmorMod <em>Armor Mod</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
@@ -39,6 +39,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The default value of the '{@link #getAnzahl() <em>Anzahl</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAnzahl()
      * @generated
      * @ordered
@@ -49,6 +50,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The cached value of the '{@link #getAnzahl() <em>Anzahl</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAnzahl()
      * @generated
      * @ordered
@@ -59,6 +61,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The default value of the '{@link #getProAnzahl() <em>Pro Anzahl</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getProAnzahl()
      * @generated
      * @ordered
@@ -69,6 +72,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The cached value of the '{@link #getProAnzahl() <em>Pro Anzahl</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getProAnzahl()
      * @generated
      * @ordered
@@ -79,6 +83,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The default value of the '{@link #getDamageType() <em>Damage Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDamageType()
      * @generated
      * @ordered
@@ -89,6 +94,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The cached value of the '{@link #getDamageType() <em>Damage Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDamageType()
      * @generated
      * @ordered
@@ -99,6 +105,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The default value of the '{@link #getDamageMod() <em>Damage Mod</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDamageMod()
      * @generated
      * @ordered
@@ -109,6 +116,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The cached value of the '{@link #getDamageMod() <em>Damage Mod</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getDamageMod()
      * @generated
      * @ordered
@@ -119,6 +127,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The default value of the '{@link #getArmorMod() <em>Armor Mod</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getArmorMod()
      * @generated
      * @ordered
@@ -129,6 +138,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The cached value of the '{@link #getArmorMod() <em>Armor Mod</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getArmorMod()
      * @generated
      * @ordered
@@ -139,6 +149,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * The cached value of the '{@link #getType() <em>Type</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getType()
      * @generated
      * @ordered
@@ -148,6 +159,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MunitionImpl() {
@@ -157,6 +169,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -167,6 +180,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getAnzahl() {
@@ -176,6 +190,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setAnzahl(int newAnzahl) {
@@ -188,6 +203,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getProAnzahl() {
@@ -197,6 +213,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setProAnzahl(int newProAnzahl) {
@@ -209,6 +226,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public SchadensTyp getDamageType() {
@@ -218,6 +236,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDamageType(SchadensTyp newDamageType) {
@@ -230,6 +249,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getDamageMod() {
@@ -239,6 +259,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setDamageMod(int newDamageMod) {
@@ -251,6 +272,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getArmorMod() {
@@ -260,6 +282,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setArmorMod(int newArmorMod) {
@@ -272,6 +295,26 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        if (getProAnzahl() == 0)
+            return new BigDecimal(0);
+
+        if (getWertValue() == null)
+            return null;
+
+        BigDecimal bigDecimal = new BigDecimal(getAnzahl());
+        BigDecimal factor = bigDecimal.divide(new BigDecimal(getProAnzahl()));
+
+        return getWertValue().multiply(factor).setScale(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Reichweite getType() {
@@ -289,6 +332,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Reichweite basicGetType() {
@@ -298,6 +342,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setType(Reichweite newType) {
@@ -310,6 +355,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -326,7 +372,8 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
             case Shr5Package.MUNITION__ARMOR_MOD:
                 return getArmorMod();
             case Shr5Package.MUNITION__TYPE:
-                if (resolve) return getType();
+                if (resolve)
+                    return getType();
                 return basicGetType();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -335,6 +382,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -365,6 +413,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -395,6 +444,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -419,15 +469,19 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Menge.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.MUNITION__ANZAHL: return Shr5Package.MENGE__ANZAHL;
-                case Shr5Package.MUNITION__PRO_ANZAHL: return Shr5Package.MENGE__PRO_ANZAHL;
-                default: return -1;
+                case Shr5Package.MUNITION__ANZAHL:
+                    return Shr5Package.MENGE__ANZAHL;
+                case Shr5Package.MUNITION__PRO_ANZAHL:
+                    return Shr5Package.MENGE__PRO_ANZAHL;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -436,15 +490,19 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Menge.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MENGE__ANZAHL: return Shr5Package.MUNITION__ANZAHL;
-                case Shr5Package.MENGE__PRO_ANZAHL: return Shr5Package.MUNITION__PRO_ANZAHL;
-                default: return -1;
+                case Shr5Package.MENGE__ANZAHL:
+                    return Shr5Package.MUNITION__ANZAHL;
+                case Shr5Package.MENGE__PRO_ANZAHL:
+                    return Shr5Package.MUNITION__PRO_ANZAHL;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -453,11 +511,13 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (anzahl: ");
@@ -474,4 +534,4 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
         return result.toString();
     }
 
-} //MunitionImpl
+} // MunitionImpl

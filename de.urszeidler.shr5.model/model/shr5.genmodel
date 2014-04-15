@@ -118,6 +118,7 @@
     <genClasses image="false" ecoreClass="shr5.ecore#//GeldWert">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wert"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/verfuegbarkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wertValue"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Reichweite">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Reichweite/min"/>

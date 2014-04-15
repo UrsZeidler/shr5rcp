@@ -61,6 +61,7 @@ public class BioWareItemProvider
 
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
+            addWertValuePropertyDescriptor(object);
             addPersonaPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -111,6 +112,28 @@ public class BioWareItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Wert Value feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWertValuePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_GeldWert_wertValue_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_GeldWert_wertValue_feature", "_UI_GeldWert_type"),
+                 Shr5Package.Literals.GELD_WERT__WERT_VALUE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Persona feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,6 +200,7 @@ public class BioWareItemProvider
         switch (notification.getFeatureID(BioWare.class)) {
             case Shr5Package.BIO_WARE__WERT:
             case Shr5Package.BIO_WARE__VERFUEGBARKEIT:
+            case Shr5Package.BIO_WARE__WERT_VALUE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
