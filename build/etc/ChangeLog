@@ -1,5 +1,7 @@
 2014-04-27 Version 0.1.5
 
+* added type ref in amunition see
+* changed the Wert(money value) interface to support calculated values also
 * added freestyle generator report
 * added karma generator report
 * make the karma based generator usable like the normal generator
