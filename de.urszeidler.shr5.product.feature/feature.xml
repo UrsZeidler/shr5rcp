@@ -38,23 +38,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.custom.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.view.group.feature"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.emf.ecp.view.groupedgrid.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.horizontal.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.label.feature"
          version="0.0.0"/>
 
    <includes
@@ -71,14 +59,6 @@
 
    <includes
          id="org.eclipse.emf.ecp.view.validation.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.view.vertical.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.viewmodel.feature"
          version="0.0.0"/>
 
    <includes
@@ -134,10 +114,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.categorization.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.view.model.controls.feature"
          version="0.0.0"/>
 
@@ -146,19 +122,15 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.template.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.view.template.helper.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.treemasterdetail.feature"
+         id="org.eclipse.emf.ecp.view.unset.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.unset.feature"
+         id="de.urszeidler.shr5.ecp.feature"
          version="0.0.0"/>
 
    <plugin

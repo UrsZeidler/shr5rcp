@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.urszeidler.shr5.ecp.feature"
+      label="collecting ecp Feature"
+      version="1.0.0.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.custom.model"
+         download-size="34"
+         install-size="61"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.custom.model.edit"
+         download-size="22"
+         install-size="36"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.custom.ui"
+         download-size="15"
+         install-size="28"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.custom.ui.swt"
+         download-size="16"
+         install-size="27"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.categorization.model"
+         download-size="40"
+         install-size="85"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.categorization.model.edit"
+         download-size="41"
+         install-size="70"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.categorization.swt"
+         download-size="29"
+         install-size="54"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.treemasterdetail.model"
+         download-size="22"
+         install-size="40"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.treemasterdetail.model.edit"
+         download-size="22"
+         install-size="37"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.treemasterdetail.ui.swt"
+         download-size="26"
+         install-size="52"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.template.model"
+         download-size="29"
+         install-size="62"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.template.model.edit"
+         download-size="21"
+         install-size="39"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.template.service"
+         download-size="11"
+         install-size="16"
+         version="0.0.0"
+         unpack="false"/>
+         
+           <plugin
+         id="org.eclipse.emf.ecp.view.vertical.model"
+         download-size="21"
+         install-size="34"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.vertical.model.edit"
+         download-size="21"
+         install-size="34"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.vertical.ui.swt"
+         download-size="10"
+         install-size="14"
+         version="0.0.0"
+         unpack="false"/>
+         
+     <plugin
+         id="org.eclipse.emf.ecp.view.label.model"
+         download-size="29"
+         install-size="50"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.label.model.edit"
+         download-size="21"
+         install-size="34"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.label.ui.swt"
+         download-size="9"
+         install-size="13"
+         version="0.0.0"
+         unpack="false"/>
+
+ 
+   <plugin
+         id="org.eclipse.emf.ecp.view.horizontal.model"
+         download-size="21"
+         install-size="35"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.horizontal.model.edit"
+         download-size="22"
+         install-size="35"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.horizontal.ui.swt"
+         download-size="10"
+         install-size="15"
+         version="0.0.0"
+         unpack="false"/>
+         
+         
+   <plugin
+         id="org.eclipse.emf.ecp.view.model"
+         download-size="56"
+         install-size="127"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.model.edit"
+         download-size="36"
+         install-size="68"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.view"
+         download-size="21"
+         install-size="36"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.view.swt"
+         download-size="56"
+         install-size="111"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.model.provider.generator"
+         download-size="10"
+         install-size="15"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.model.provider.xmi"
+         download-size="23"
+         install-size="35"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.context"
+         download-size="20"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.core.swt"
+         download-size="17"
+         install-size="31"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.edit"
+         download-size="30"
+         install-size="59"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.edit.swt"
+         download-size="198"
+         install-size="423"
+                 version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.context.locale"
+         download-size="9"
+         install-size="11"
+                version="0.0.0"
+         unpack="false"/>
+
+         
+
+</feature>
