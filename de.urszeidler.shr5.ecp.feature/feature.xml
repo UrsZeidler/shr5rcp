@@ -5,7 +5,7 @@
       version="1.0.0.qualifier">
 
    <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+      A collection of ecp plugins.
    </description>
 
    <copyright url="http://www.example.com/copyright">
@@ -106,8 +106,8 @@
          install-size="16"
          version="0.0.0"
          unpack="false"/>
-         
-           <plugin
+
+   <plugin
          id="org.eclipse.emf.ecp.view.vertical.model"
          download-size="21"
          install-size="34"
@@ -127,8 +127,8 @@
          install-size="14"
          version="0.0.0"
          unpack="false"/>
-         
-     <plugin
+
+   <plugin
          id="org.eclipse.emf.ecp.view.label.model"
          download-size="29"
          install-size="50"
@@ -149,7 +149,6 @@
          version="0.0.0"
          unpack="false"/>
 
- 
    <plugin
          id="org.eclipse.emf.ecp.view.horizontal.model"
          download-size="21"
@@ -170,123 +169,110 @@
          install-size="15"
          version="0.0.0"
          unpack="false"/>
-         
-         
+
    <plugin
          id="org.eclipse.emf.ecp.view.model"
          download-size="56"
          install-size="127"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.view.model.edit"
          download-size="36"
          install-size="68"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.ui.view"
          download-size="21"
          install-size="36"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.ui.view.swt"
          download-size="56"
          install-size="111"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.view.model.provider.generator"
          download-size="10"
          install-size="15"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.view.model.provider.xmi"
          download-size="23"
          install-size="35"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.view.context"
          download-size="20"
-                 version="0.0.0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.view.core.swt"
          download-size="17"
          install-size="31"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.edit"
          download-size="30"
          install-size="59"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.edit.swt"
          download-size="198"
          install-size="423"
-                 version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="org.eclipse.emf.ecp.view.context.locale"
          download-size="9"
          install-size="11"
-                version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecp.editor.e3"
          download-size="48"
          install-size="95"
-               version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecp.ui.e3"
          download-size="88"
          install-size="155"
-               version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.emf.ecp.validation.connector"
          download-size="14"
          install-size="23"
-               version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
 
-
-   
    <plugin
          id="org.eclipse.emf.ecp.view.template.controls.swt"
          download-size="22"
          install-size="41"
-                version="0.0.0"
+         version="0.0.0"
          unpack="false"/>
-         
 
 </feature>
