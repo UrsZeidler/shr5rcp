@@ -258,6 +258,28 @@
                 version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="org.eclipse.emf.ecp.editor.e3"
+         download-size="48"
+         install-size="95"
+               version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.e3"
+         download-size="88"
+         install-size="155"
+               version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.validation.connector"
+         download-size="14"
+         install-size="23"
+               version="0.0.0"
+         unpack="false"/>
+
+
          
 
 </feature>
