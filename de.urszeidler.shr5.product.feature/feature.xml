@@ -114,10 +114,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.view.template.helper.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.view.unset.feature"
          version="0.0.0"/>
 

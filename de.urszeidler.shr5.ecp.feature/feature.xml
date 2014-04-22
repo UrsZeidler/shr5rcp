@@ -280,6 +280,13 @@
          unpack="false"/>
 
 
+   
+   <plugin
+         id="org.eclipse.emf.ecp.view.template.controls.swt"
+         download-size="22"
+         install-size="41"
+                version="0.0.0"
+         unpack="false"/>
          
 
 </feature>
