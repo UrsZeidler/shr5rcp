@@ -246,7 +246,7 @@ public class ShadowrunTools {
      * @param list
      * @return
      */
-    public static String calcListenWertToString(EList<Object> list) {
+    public static String calcListenWertToString(List<Object> list) {
         BigDecimal summ = calcListenWert(list);
         return summ.longValue() + "";
     }
@@ -401,7 +401,7 @@ public class ShadowrunTools {
      * @param koerperMods
      * @return
      */
-    public static int calcEssenceSum(EList<Koerpermods> koerperMods) {
+    public static int calcEssenceSum(List<Koerpermods> koerperMods) {
         int sum = 0;
         for (Koerpermods koerpermods2 : koerperMods) {
             sum = sum + getEssencesValue(koerpermods2);
