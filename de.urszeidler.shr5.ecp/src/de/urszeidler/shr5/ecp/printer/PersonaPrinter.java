@@ -1962,8 +1962,8 @@ public class PersonaPrinter extends BasicPrinter {
         printeAttributes(persona, grid1, ShadowrunTools.getOrderedAttibutes(persona));
         // printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
         // printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
-        grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 2);
-        grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
+//        grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 2);
+//        grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
         grid1.add(new TextPrint(EMPTY, attributeFont), 1);
 
         grid.add(grid1);
