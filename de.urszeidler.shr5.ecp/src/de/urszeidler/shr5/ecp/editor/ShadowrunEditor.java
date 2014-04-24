@@ -459,7 +459,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
                 try {
-                    addPage(new ModifikatorPage(ShadowrunEditor.this, EMPTY, object.eClass().getName(), object, editingDomain, manager));
+                    addPage(new ModifikatorPage(ShadowrunEditor.this, EMPTY,labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }
