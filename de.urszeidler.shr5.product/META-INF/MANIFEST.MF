@@ -6,7 +6,7 @@ Bundle-Version: 0.1.5.qualifier
 Bundle-Activator: de.urszeidler.shr5.product.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.emf.ecp.application.e3;bundle-version="1.1.1"
+ org.eclipse.emf.ecp.application.e3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.product.application
