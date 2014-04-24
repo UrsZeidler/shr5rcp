@@ -1,0 +1,274 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module ShadowrunManagmentTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ * @param arg2
+ */]
+[query public countSpendByKarma(arg0 : Sequence(OclAny), arg1 : EClass, arg2 : EClass) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'countSpendByKarma(java.util.List, org.eclipse.emf.ecore.EClass, org.eclipse.emf.ecore.EClass)', Sequence{arg0, arg1, arg2})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public getKarmaSpend(arg0 : ManagedCharacter) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'getKarmaSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public getKarmaGaint(arg0 : ManagedCharacter) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'getKarmaGaint(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcQuallityKarmaCost(arg0 : Sequence(OclAny)) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcQuallityKarmaCost(java.util.List)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcResourcesSpend(arg0 : ManagedCharacter) : Real
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcResourcesSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcConnectionsSpend(arg0 : ManagedCharacter) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcConnectionsSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcConnectionsPoints(arg0 : ManagedCharacter, arg1 : Shr5System) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcConnectionsPoints(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.Shr5System)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public hasEigenschaft(arg0 : ManagedCharacter, arg1 : PersonaEigenschaft) : Boolean
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'hasEigenschaft(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5.PersonaEigenschaft)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findCharacterAdvacements(arg0 : ManagedCharacter, arg1 : EAttribute) : AttributeChange
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'findCharacterAdvacements(de.urszeidler.eclipse.shr5Management.ManagedCharacter, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findCharacterAdvacements(arg0 : ManagedCharacter, arg1 : Steigerbar) : PersonaChange
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'findCharacterAdvacements(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5.Steigerbar)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findCharacterAdvacements(arg0 : ManagedCharacter, arg1 : Erlernbar) : PersonaChange
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'findCharacterAdvacements(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5.Erlernbar)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findAdvancment(arg0 : Sequence(OclAny), arg1 : EClass) : IncreaseCharacterPart
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'findAdvancment(java.util.List, org.eclipse.emf.ecore.EClass)', Sequence{arg0, arg1})
+/]
+
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcKarmaLeft(arg0 : Shr5Generator) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaLeft(de.urszeidler.eclipse.shr5Management.Shr5Generator)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcCompleteKaramaSpend(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcCompleteKaramaSpend(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendBySpellsOrForms(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendBySpellsOrForms(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcKarmaSpendByResources(arg0 : ManagedCharacter) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByResources(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcKarmaSpendByResources(arg0 : Shr5Generator) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByResources(de.urszeidler.eclipse.shr5Management.Shr5Generator)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcKarmaSpendByConnections(arg0 : ManagedCharacter) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByConnections(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendByConnections(arg0 : ManagedCharacter, arg1 : Shr5System) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByConnections(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.Shr5System)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendByConnections(arg0 : ManagedCharacter, arg1 : CharacterGeneratorSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByConnections(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendByAttributes(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByAttributes(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendByQuallities(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendByQuallities(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendBySkills(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendBySkills(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendBySpecalism(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendBySpecalism(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaSpendBySkillGroups(arg0 : ManagedCharacter, arg1 : CharacterAdvancementSystem) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaSpendBySkillGroups(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcKarmaLeft(arg0 : Shr5KarmaGenerator) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaLeft(de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcResourcesLeft(arg0 : Shr5Generator) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcResourcesLeft(de.urszeidler.eclipse.shr5Management.Shr5Generator)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKarmaToResources(arg0 : Shr5Generator, arg1 : Shr5System) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKarmaToResources(de.urszeidler.eclipse.shr5Management.Shr5Generator, de.urszeidler.eclipse.shr5Management.Shr5System)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcKnownlegeSkillPoints(arg0 : ManagedCharacter, arg1 : Shr5System) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcKnownlegeSkillPoints(de.urszeidler.eclipse.shr5Management.ManagedCharacter, de.urszeidler.eclipse.shr5Management.Shr5System)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcResourcesLeft(arg0 : Shr5KarmaGenerator) : Integer
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'calcResourcesLeft(de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public beschreibarListToString(arg0 : Sequence(OclAny)) : String
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'beschreibarListToString(java.util.List)', Sequence{arg0})
+/]
+

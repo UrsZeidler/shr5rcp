@@ -1,0 +1,177 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module ShadowrunTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[**
+ * The documentation of the query
+ */]
+[query public getOrderedAttibutes(anOclAny: OclAny) : Sequence(EAttribute)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getOrderedAttibutes()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public getOrderedAttibutes(arg0 : AbstraktPersona) : Sequence(EAttribute)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getOrderedAttibutes(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public base2Calced(arg0 : EAttribute) : EAttribute
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'base2Calced(org.eclipse.emf.ecore.EAttribute)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public base2SpeciesMin(arg0 : EAttribute) : EAttribute
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'base2SpeciesMin(org.eclipse.emf.ecore.EAttribute)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public base2SpeciesMax(arg0 : EAttribute) : EAttribute
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'base2SpeciesMax(org.eclipse.emf.ecore.EAttribute)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public filterSkillGroups(arg0 : EAttribute, arg1 : Sequence(OclAny)) : Sequence(OclAny)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'filterSkillGroups(org.eclipse.emf.ecore.EAttribute, java.util.List)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public getEssencesValue(arg0 : AbstraktModifikatoren) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getEssencesValue(de.urszeidler.eclipse.shr5.AbstraktModifikatoren)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public getModificatorValue(arg0 : AbstraktModifikatoren, arg1 : EAttribute) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getModificatorValue(de.urszeidler.eclipse.shr5.AbstraktModifikatoren, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ * @param arg2
+ */]
+[query public createPersona(arg0 : Spezies, arg1 : EClass, arg2 : Integer) : AbstraktPersona
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'createPersona(de.urszeidler.eclipse.shr5.Spezies, org.eclipse.emf.ecore.EClass, )', Sequence{arg0, arg1, arg2})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcListenWertToString(arg0 : Sequence(OclAny)) : String
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcListenWertToString(java.util.List)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcListenWert(arg0 : Sequence(OclAny)) : Real
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcListenWert(java.util.List)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findFertigkeitValue(arg0 : FertigkeitsGruppe, arg1 : AbstraktPersona) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'findFertigkeitValue(de.urszeidler.eclipse.shr5.FertigkeitsGruppe, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findGruppe(arg0 : FertigkeitsGruppe, arg1 : AbstraktPersona) : PersonaFertigkeitsGruppe
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'findGruppe(de.urszeidler.eclipse.shr5.FertigkeitsGruppe, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findFertigkeitValue(arg0 : Fertigkeit, arg1 : AbstraktPersona) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'findFertigkeitValue(de.urszeidler.eclipse.shr5.Fertigkeit, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public findFertigkeit(arg0 : Fertigkeit, arg1 : AbstraktPersona) : PersonaFertigkeit
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'findFertigkeit(de.urszeidler.eclipse.shr5.Fertigkeit, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public calcRaceMaximum(arg0 : AbstraktPersona, arg1 : EAttribute) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcRaceMaximum(de.urszeidler.eclipse.shr5.AbstraktPersona, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
+[query public hasFertigkeitUnderGroup(arg0 : FertigkeitsGruppe, arg1 : AbstraktPersona) : Boolean
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'hasFertigkeitUnderGroup(de.urszeidler.eclipse.shr5.FertigkeitsGruppe, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ * @param arg2
+ */]
+[query public calcKarmaCosts(arg0 : Integer, arg1 : Integer, arg2 : Integer) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcKarmaCosts(, , )', Sequence{arg0, arg1, arg2})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcEssenceSum(arg0 : Sequence(OclAny)) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcEssenceSum(java.util.List)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public calcKiPowerSum(arg0 : Sequence(OclAny)) : Integer
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcKiPowerSum(java.util.List)', Sequence{arg0})
+/]
+

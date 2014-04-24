@@ -1,0 +1,161 @@
+[comment encoding = UTF-8 /]
+[**
+ * The module helper to localize the eenum literal of th epackage shr5.
+ */]
+[module shr5EEnumhelper('http://www.eclipse.org/emf/2002/Ecore', 'http://urszeidler.de/shr5/1.0')/]
+
+
+
+[**
+ * print the localized enum for the FeuerModus.
+*/]
+[template public toLocalizedFeuerModusString(ee : FeuerModus,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_FeuerModus_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_FeuerModus_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the SchadensTyp.
+*/]
+[template public toLocalizedSchadensTypString(ee : SchadensTyp,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_SchadensTyp_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_SchadensTyp_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the MagazinTyp.
+*/]
+[template public toLocalizedMagazinTypString(ee : MagazinTyp,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_MagazinTyp_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_MagazinTyp_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the FeuwerwaffenErweiterung.
+*/]
+[template public toLocalizedFeuwerwaffenErweiterungString(ee : FeuwerwaffenErweiterung,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_FeuwerwaffenErweiterung_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_FeuwerwaffenErweiterung_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the ModifikatorType.
+*/]
+[template public toLocalizedModifikatorTypeString(ee : ModifikatorType,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_ModifikatorType_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_ModifikatorType_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the SmartgunType.
+*/]
+[template public toLocalizedSmartgunTypeString(ee : SmartgunType,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_SmartgunType_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_SmartgunType_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the ZauberArt.
+*/]
+[template public toLocalizedZauberArtString(ee : ZauberArt,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_ZauberArt_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_ZauberArt_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the ZauberReichweite.
+*/]
+[template public toLocalizedZauberReichweiteString(ee : ZauberReichweite,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_ZauberReichweite_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_ZauberReichweite_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the ZauberDauer.
+*/]
+[template public toLocalizedZauberDauerString(ee : ZauberDauer,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_ZauberDauer_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_ZauberDauer_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the MagischeTradition.
+*/]
+[template public toLocalizedMagischeTraditionString(ee : MagischeTradition,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_MagischeTradition_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_MagischeTradition_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the CritterHandlung.
+*/]
+[template public toLocalizedCritterHandlungString(ee : CritterHandlung,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_CritterHandlung_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_CritterHandlung_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the CritterReichweite.
+*/]
+[template public toLocalizedCritterReichweiteString(ee : CritterReichweite,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_CritterReichweite_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_CritterReichweite_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the CritterDauer.
+*/]
+[template public toLocalizedCritterDauerString(ee : CritterDauer,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_CritterDauer_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_CritterDauer_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the ResonanzZiel.
+*/]
+[template public toLocalizedResonanzZielString(ee : ResonanzZiel,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_ResonanzZiel_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_ResonanzZiel_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+

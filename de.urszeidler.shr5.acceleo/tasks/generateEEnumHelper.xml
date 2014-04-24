@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="generateShr5ManagementMarkdownReport" name="de.urszeidler.shr5.acceleo">
+<project default="generateEEnumHelper" name="de.urszeidler.shr5.acceleo">
     <property name="ECLIPSE_HOME" value="../../../../programme/eclipse_4.3.2/eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../../../../eclipse_workspaces/workspace_E4.3_shr_git"/>
 
@@ -60,8 +60,8 @@
     </path>
 
     <!-- The default task with the jars used by this project -->
-    <target name="generateShr5ManagementMarkdownReport">
-        <java classname="de.urszeidler.shr5.acceleo.main.GenerateShr5ManagementMarkdownReport" classpathref="de.urszeidler.shr5.acceleo.classpath">
+    <target name="generateEEnumHelper">
+        <java classname="de.urszeidler.shr5.acceleo.main.GenerateEEnumHelper" classpathref="de.urszeidler.shr5.acceleo.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -71,8 +71,8 @@
         In case of problem you can also try with all the jar available in your Eclipse
         Keep in mind that having two versions of the same jar can create problems
     -->
-    <target name="generateShr5ManagementMarkdownReport.alljars">
-        <java classname="de.urszeidler.shr5.acceleo.main.GenerateShr5ManagementMarkdownReport" classpathref="de.urszeidler.shr5.acceleo.classpath">
+    <target name="generateEEnumHelper.alljars">
+        <java classname="de.urszeidler.shr5.acceleo.main.GenerateEEnumHelper" classpathref="de.urszeidler.shr5.acceleo.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>

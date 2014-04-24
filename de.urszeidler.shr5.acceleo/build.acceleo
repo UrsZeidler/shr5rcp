@@ -18,7 +18,7 @@
         <acceleoCompiler 
             sourceFolder="${target.folder}"
             outputFolder="${target.folder}"
-            dependencies=""
+            dependencies="${target.folder}/../../de.urszeidler.shr5.management.model.edit;${target.folder}/../../de.urszeidler.shr5.management.model;${target.folder}/../../de.urszeidler.shr5.model;${target.folder}/../../de.urszeidler.shr5.model.edit;${target.folder}/../../de.urszeidler.emf.commons.ui;"
             binaryResource="false"
             packagesToRegister="">
         </acceleoCompiler>

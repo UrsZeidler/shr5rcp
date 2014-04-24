@@ -5,7 +5,7 @@ Bundle-SymbolicName: de.urszeidler.shr5.acceleo
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.urszeidler.shr5.acceleo.Activator
 Bundle-Vendor: Eclipse Modeling Project
-Require-Bundle: org.eclipse.core.runtime, 
+Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.ocl,
@@ -14,9 +14,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.acceleo.model;bundle-version="3.3.0",
  org.eclipse.acceleo.profiler;bundle-version="3.3.0",
  org.eclipse.acceleo.engine;bundle-version="3.3.0",
- com.google.guava
+ com.google.guava,
+ de.urszeidler.shr5.management.model.edit;bundle-version="1.0.0",
+ de.urszeidler.shr5.model.edit;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: de.urszeidler.shr5.acceleo.main
+Export-Package: de.urszeidler.shr5.acceleo.main,
+ de.urszeidler.shr5.acceleo.sheets
 

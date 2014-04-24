@@ -1,0 +1,37 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module generateEEnumHelper('http://www.eclipse.org/emf/2002/Ecore', 'http://urszeidler.de/shr5/1.0')/]
+
+[**
+ * The documentation of the template.
+ * @param aEClass
+ */]
+[template public generate(aEPackage : EPackage)]
+[comment @main/]
+[file (aEPackage.name.concat('EEnumhelper.mtl'), false, 'UTF-8')]
+['['/]comment encoding = UTF-8 /[']'/]
+['['/]**
+ * The module helper to localize the eenum literal of th epackage [aEPackage.name/].
+ */[']'/]
+['['/]module [ aEPackage.name.concat('EEnumhelper')/]('http://www.eclipse.org/emf/2002/Ecore', '[aEPackage.nsURI/]')/[']'/]
+
+[for (it : EClassifier | aEPackage.eClassifiers)]
+[if (it.oclIsTypeOf(EEnum))]
+
+
+['['/]**
+ * print the localized enum for the [it.name/].
+*/[']'/]
+['['/]template public toLocalized[it.name/]String(ee : [it.name/],loc : String)[']'/]
+['['/]let val : String = getProperty('plugin_'+loc+'.properties','_UI_[it.name/]_'+ ee.toString() +'_literal')[']'/]
+['['/]if (val.size()=0)[']'/]
+['['/]getProperty('plugin.properties','_UI_[it.name/]_'+ ee.toString() +'_literal')/[']'/]['['/]else[']'/]
+['['/]val /[']'/]['['/]/if[']'/]
+['['/]/let[']'/]['['/]/template[']'/]
+[/if]
+[/for]
+
+[/file]
+[/template]

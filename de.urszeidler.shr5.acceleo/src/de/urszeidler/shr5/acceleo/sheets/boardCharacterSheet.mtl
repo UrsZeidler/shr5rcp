@@ -1,0 +1,125 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module boardCharacterSheet.
+ */]
+[module boardCharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+
+
+[**
+ * The documentation of the template generateCharacterSheet.
+ * @param anAbstaktFernKampfwaffe
+ */]
+[template public generateCharacterSheet(aManagedCharacter : ManagedCharacter)]
+[comment @main/]
+[file (aManagedCharacter.persona.name, false, 'UTF-8')]
+
+Name : [aManagedCharacter.persona.name /]
+
+['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
+Body			[persona.konstitutionBasis/][if(not (persona.konstitutionBasis=persona.konstitution))]([persona.konstitution/])[/if]
+Agility			[persona.geschicklichkeitBasis/][if(not (persona.geschicklichkeitBasis=persona.geschicklichkeit))]([persona.geschicklichkeit/])[/if]
+Reaction		[persona.reaktionBasis/][if(not (persona.reaktionBasis=persona.reaktion))]([persona.reaktion/])[/if]
+Strength		[persona.staerkeBasis/][if(not (persona.staerkeBasis=persona.staerke))]([persona.staerke/])[/if]
+Will			[persona.willenskraftBasis/][if(not (persona.willenskraftBasis=persona.willenskraft))]([persona.willenskraft/])[/if]
+Logic		 	[persona.logikBasis/][if(not (persona.logikBasis=persona.logik))]([persona.logik/])[/if]
+Intuition		[persona.intuitionBasis/][if(not (persona.intuitionBasis=persona.intuition))]([persona.intuition/])[/if]
+Charisma		[persona.charismaBasis/][if(not (persona.charismaBasis=persona.charisma))]([persona.charisma/])[/if]
+Edge 			[persona.edgeBasis/]
+
+
+[ '[' /]b[']'/]Negative Qualities[ '[' /]/b[']'/]
+Insomnia +10 karma
+Prejudiced (Outspoken vs Technomancers) +5 karma
+
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+[let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
+[printSpells(z)/]
+[/let]
+[/if]
+
+[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen)/]
+
+[printActiveSkills(aManagedCharacter.persona.fertigkeiten)/]
+
+[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
+
+[printGear(aManagedCharacter.inventar->asSequence())/]
+
+[printConnections(aManagedCharacter.connections)/]
+
+[printVehicles(aManagedCharacter.vehicels
+)/]
+[ '[' /]b[']'/]Money:[ '[' /]/b[']'/]
+
+
+[ '[' /]b[']'/]Augmentations:[ '[' /]/b[']'/]
+Control Rig Rating 1 (Used)
+Smartlink (Used)
+
+
+[/file]
+[/template]
+
+[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe))]
+[ '[' /]b[']'/]Skill Groups:[ '[' /]/b[']'/]
+[for (pfg : PersonaFertigkeitsGruppe | sg)]
+[pfg.gruppe.name/] [pfg.stufe/]
+[/for]
+[/template]
+
+[template public printVehicles(sg : OrderedSet(Fahrzeug))]
+[ '[' /]b[']'/]Vehicles[ '[' /]/b[']'/]
+[for (pfg : Fahrzeug | sg)]
+[pfg.name/] [pfg.wert/]
+[/for]
+----
+[calcListenWertToString(sg->asSequence()) /]
+[/template]
+
+
+[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit))]
+[ '[' /]b[']'/]Active Skills:[ '[' /]/b[']'/]
+[for (pfg : PersonaFertigkeit | sg)]
+[if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
+[pfg.fertigkeit.name/] [pfg.stufe/]
+[/if]
+[/for]
+[/template]
+
+[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit))]
+[ '[' /]b[']'/]Knowledge Skills:[ '[' /]/b[']'/]
+[for (pfg : PersonaFertigkeit | sg)]
+[if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
+[pfg.fertigkeit.name/] [pfg.stufe/]
+[/if]
+[/for]
+[/template]
+
+
+[template public printConnections(c : OrderedSet(Connection))]
+[ '[' /]b[']'/]Contacts:[ '[' /]/b[']'/]
+[for (connection : Connection | c)]
+[connection.character.persona.name /]  [connection.influence/]/[connection.loyality/]
+[/for]
+[/template]
+
+[template public printSpells(z : Zauberer)]
+[ '[' /]b[']'/]Spells:[ '[' /]/b[']'/]
+[for (pz : PersonaZauber | z.zauber)]
+[pz.formel.name/] | [toLocalizedZauberArtString(pz.formel.art, 'de') /] | [toLocalizedZauberDauerString(pz.formel.dauer, 'de') /]| [toLocalizedZauberReichweiteString(pz.formel.reichweite, 'de') /]
+[pz.formel.art.toString()  /]
+[/for]
+[/template]
+
+[template public printGear(gears : Sequence(AbstraktGegenstand))]
+[ '[' /]b[']'/]Gear:[ '[' /]/b[']'/]
+[for (ag : AbstraktGegenstand | gears)]
+[ag.name  /]		[ag.wert/]
+[/for]
+----
+[calcListenWertToString(gears) /]
+[/template]
+
