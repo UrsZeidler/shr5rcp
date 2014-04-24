@@ -73,11 +73,11 @@ public class CreateAttributModifikatorDialog extends SimpleEObjectDialog {
 		}
 	}
 	
-	public CreateAttributModifikatorDialog(Shell parentShell, AttributModifikatorWert object, Modifizierbar modifizierbar) {
+	public CreateAttributModifikatorDialog(Shell parentShell, AttributModifikatorWert object, Modifizierbar modifizierbar, String message) {
 		super(parentShell, object);
 		binding = new SimpleBindingToolkit(ctx, eObject);
 		this.modifizierbar = modifizierbar;
-		this.message = "Einen Attributs Modifikator bestimmen";
+		this.message = message;
 	}
 
 	

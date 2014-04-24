@@ -82,7 +82,6 @@ import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FreeStyleGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
-import de.urszeidler.shr5.ecp.editor.pages.GenericBasicBeschreibbarPage;
 import de.urszeidler.shr5.ecp.editor.pages.GruntGroupPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
@@ -138,7 +137,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
         protected Object provideObject(FormbuilderEntry e, EObject object) {
             if (Shr5Package.Literals.MODIFIZIERBAR__MODS.equals(e.getFeature())) {
                 de.urszeidler.eclipse.shr5.AttributModifikatorWert amw = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
-                CreateAttributModifikatorDialog dialog = new CreateAttributModifikatorDialog(getSite().getShell(), amw, (Modifizierbar)object);
+                CreateAttributModifikatorDialog dialog = new CreateAttributModifikatorDialog(getSite().getShell(), amw, (Modifizierbar)object,Messages.ShadowrunEditor_dlg_add_AttibuteModificator);
 
                 if (dialog.open() == Dialog.OK)
                     return amw;
@@ -404,8 +403,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             public Object caseShrList(ShrList object) {
                 try {
                     //addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
-                addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_character_group, object,
-                            editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES, "Entries"));
+                addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_entries));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
@@ -554,7 +553,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             public Object caseCharacterGroup(CharacterGroup object) {
                 try {
                     addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_character_group, object,
-                            editingDomain, manager, Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS, "Members"));
+                            editingDomain, manager, Shr5managementPackage.Literals.CHARACTER_GROUP__MEMBERS, Messages.ShadowrunEditor_members));
                     addPage(new PrintPreviewPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA_PRINTER,
                             Messages.ShadowrunEditor_page_character_group_sheet, PersonaPrinter.getInstance()
                                     .createCharacterGroupPrintFactory(object)));
@@ -585,7 +584,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
         shr5managementSwitch.doSwitch(theEObject);
 
         try {
-            addPage(new DefaultEmfFormsPage(ShadowrunEditor.this, "Default_EMF_Form_Page", "default form", theEObject));
+            addPage(new DefaultEmfFormsPage(ShadowrunEditor.this, "Default_EMF_Form_Page", "default form", theEObject)); //$NON-NLS-1$
         } catch (PartInitException e) {
             logError("error creating DefaultEmfFormsPage", e);//$NON-NLS-1$
         }

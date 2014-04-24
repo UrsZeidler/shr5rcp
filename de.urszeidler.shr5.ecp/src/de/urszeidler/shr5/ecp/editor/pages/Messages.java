@@ -86,12 +86,15 @@ public class Messages extends NLS {
     public static String AbstraktPersonaPage_sctnSkill_text;
     public static String PersonaFertigkeitenWidget_trclmnNewColumn_text;
     public static String PersonaFertigkeitenWidget_trclmnSpecs_text;
+    public static String ShadowrunEditor_dlg_add_AttibuteModificator;
     public static String ShadowrunEditor_dlg_manage_inventory;
     public static String ShadowrunEditor_dlg_select_object_type;
     public static String ShadowrunEditor_dlg_select_persona_type;
     public static String ShadowrunEditor_dlg_select_spells;
     public static String ShadowrunEditor_dlg_select_type;
+    public static String ShadowrunEditor_entries;
     public static String ShadowrunEditor_Karama_Generator;
+    public static String ShadowrunEditor_members;
     public static String ShadowrunEditor_page_advacement;
     public static String ShadowrunEditor_page_armor;
     public static String ShadowrunEditor_page_character;
@@ -117,6 +120,9 @@ public class Messages extends NLS {
     public static String ShadowrunEditor_shr5_generator_sheet;
     public static String Shr5KarmaGeneratorPage_grpResources_text;
     public static String AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText;
+
+    public static String AttributModifikatorWertWidget_mod_attribute;
+    public static String AttributModifikatorWertWidget_mod_rating;
 
     static {
         // initialize resource bundle
