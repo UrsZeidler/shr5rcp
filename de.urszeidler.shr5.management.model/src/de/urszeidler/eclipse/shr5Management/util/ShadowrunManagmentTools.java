@@ -66,7 +66,7 @@ public class ShadowrunManagmentTools {
      * @param type the type of the {@link Erlernbar} to look after
      * @return
      */
-    public static int countSpendByKarma(EList<Changes> changes, EClass erlernbar, EClass type) {
+    public static int countSpendByKarma(List<Changes> changes, EClass erlernbar, EClass type) {
         int counter = 0;
         for (Changes change : changes) {
             if (change.isChangeApplied())
@@ -127,7 +127,7 @@ public class ShadowrunManagmentTools {
      * @param managedCharacter
      * @return
      */
-    public static int calcQuallityKarmaCost(EList<PersonaEigenschaft> eigenschaften) {
+    public static int calcQuallityKarmaCost(List<PersonaEigenschaft> eigenschaften) {
         int karmaKosten = 0;
         for (PersonaEigenschaft personaEigenschaft : eigenschaften) {
             karmaKosten = karmaKosten + personaEigenschaft.getKarmaKosten();
@@ -275,7 +275,7 @@ public class ShadowrunManagmentTools {
      * @param eClass
      * @return
      */
-    public static IncreaseCharacterPart findAdvancment(EList<Advancement> characterAdvancements, EClass eClass) {
+    public static IncreaseCharacterPart findAdvancment(List<Advancement> characterAdvancements, EClass eClass) {
         for (Advancement advancement : characterAdvancements) {
             if (advancement instanceof IncreaseCharacterPart) {
                 IncreaseCharacterPart icp = (IncreaseCharacterPart)advancement;
