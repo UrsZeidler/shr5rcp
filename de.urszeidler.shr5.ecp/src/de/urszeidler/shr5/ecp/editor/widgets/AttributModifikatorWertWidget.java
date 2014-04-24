@@ -12,6 +12,7 @@ import org.eclipse.swt.widgets.Text;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.emf.commons.ui.binding.BindingToolkit;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 
 
@@ -50,7 +51,7 @@ public class AttributModifikatorWertWidget extends Composite {
 		Label label;
 
 		label = new Label(this, SWT.NONE);
-		label.setText("wert");
+		label.setText(Messages.AttributModifikatorWertWidget_mod_rating);
 
 		gridData = new GridData();
 		gridData.horizontalAlignment = GridData.FILL;
@@ -58,7 +59,7 @@ public class AttributModifikatorWertWidget extends Composite {
 		gridData.verticalAlignment = GridData.CENTER;
 		gridData.horizontalSpan = 2;
 
-		Text wertComp = new Text(this, SWT.SINGLE); //toolkit.createText(this, "");
+		Text wertComp = new Text(this, SWT.SINGLE|SWT.BORDER); //toolkit.createText(this, "");
 		wertComp.setLayoutData(gridData);
 		bindingToolkit.bindTextFeature(wertComp, Shr5Package.eINSTANCE
 				.getAttributModifikatorWert_Wert());
@@ -74,7 +75,7 @@ public class AttributModifikatorWertWidget extends Composite {
 		Label label;
 
 		label = new Label(this, SWT.NONE);
-		label.setText("attribut");
+		label.setText(Messages.AttributModifikatorWertWidget_mod_attribute);
 
 		gridData = new GridData();
 		gridData.horizontalAlignment = GridData.FILL;
@@ -86,7 +87,7 @@ public class AttributModifikatorWertWidget extends Composite {
 		attributComp.setLayoutData(gridData);
 
 		Button attributChooseBtn = new Button(this, SWT.PUSH);
-		attributChooseBtn.setText("...");
+		attributChooseBtn.setText("..."); //$NON-NLS-1$
 		attributChooseBtn.addSelectionListener(new SelectionAdapter() {
 
 			@Override
@@ -108,7 +109,7 @@ public class AttributModifikatorWertWidget extends Composite {
 		Label label;
 
 		label = new Label(this, SWT.NONE);
-		label.setText("modifiziertes");
+		label.setText("modifiziertes"); //$NON-NLS-1$
 
 		gridData = new GridData();
 		gridData.horizontalAlignment = GridData.FILL;
@@ -120,7 +121,7 @@ public class AttributModifikatorWertWidget extends Composite {
 		modifiziertesComp.setLayoutData(gridData);
 
 		Button modifiziertesChooseBtn = new Button(this, SWT.PUSH);
-		modifiziertesChooseBtn.setText("...");
+		modifiziertesChooseBtn.setText("..."); //$NON-NLS-1$
 		modifiziertesChooseBtn.addSelectionListener(new SelectionAdapter() {
 
 			@Override
