@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module ShadowrunSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[**
+ * The documentation of the query
+ */]
+[query public getText(anOclAny: OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.sheets.ShadowrunSheetTools', 'getObjectText(java.lang.Object)', Sequence{anOclAny})
+/]

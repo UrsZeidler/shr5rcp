@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[**
+ * The module helper to localize the eenum literal of th epackage shr5Management.
+ */]
+[module shr5ManagementEEnumhelper('http://www.eclipse.org/emf/2002/Ecore', 'http://urszeidler.de/shr5mngt/1.0')/]
+
+
+
+[**
+ * print the localized enum for the GeneratorState.
+*/]
+[template public toLocalizedGeneratorStateString(ee : GeneratorState,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_GeneratorState_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_GeneratorState_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
+
+[**
+ * print the localized enum for the Sex.
+*/]
+[template public toLocalizedSexString(ee : Sex,loc : String)]
+[let val : String = getProperty('plugin_'+loc+'.properties','_UI_Sex_'+ ee.toString() +'_literal')]
+[if (val.size()=0)]
+[getProperty('plugin.properties','_UI_Sex_'+ ee.toString() +'_literal')/][else]
+[val /][/if]
+[/let][/template]
+
