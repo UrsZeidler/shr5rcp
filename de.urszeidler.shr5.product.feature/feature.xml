@@ -806,4 +806,53 @@
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="org.eclipse.acceleo.engine"
+         download-size="190"
+         install-size="427"
+         version="3.4.2.201401221203"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.model"
+         download-size="153"
+         install-size="383"
+         version="3.4.2.201401221203"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.common"
+         download-size="129"
+         install-size="262"
+         version="3.4.2.201401221203"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.profiler"
+         download-size="35"
+         install-size="71"
+         version="3.4.2.201401221203"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.guava"
+         download-size="1555"
+         install-size="3542"
+         version="10.0.1.v201203051515"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.ecore"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
