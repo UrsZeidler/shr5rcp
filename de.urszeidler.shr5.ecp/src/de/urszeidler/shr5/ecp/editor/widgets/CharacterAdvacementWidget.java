@@ -49,7 +49,6 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
 import de.urszeidler.eclipse.shr5Management.KarmaGaint;

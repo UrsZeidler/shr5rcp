@@ -14,6 +14,7 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -98,13 +99,16 @@ public class ManagedCharacterPage extends FormPage {
         form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
-        form.getToolBarManager().add(new Action("text") {
+        Action action = new Action("") {
             @Override
             public void run() {
                 ModelToTextExportDialog toTextExportDialog = new ModelToTextExportDialog(form.getShell(), object);
                 toTextExportDialog.open();
             }
-        });
+        };
+        action.setToolTipText("Transform to text");
+        action.setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/print_edit.gif"));
+        form.getToolBarManager().add(action);
 
         form.getToolBarManager().update(true);
 
