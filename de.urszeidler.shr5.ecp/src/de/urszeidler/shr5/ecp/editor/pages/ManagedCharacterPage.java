@@ -2,6 +2,7 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.action.Action;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -20,6 +21,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.dialogs.ModelToTextExportDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
 /**
@@ -92,10 +94,20 @@ public class ManagedCharacterPage extends FormPage {
     @Override
     protected void createFormContent(IManagedForm managedForm) {
         FormToolkit toolkit = managedForm.getToolkit();
-        ScrolledForm form = managedForm.getForm();
+        final ScrolledForm form = managedForm.getForm();
         form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
+        form.getToolBarManager().add(new Action("text") {
+            @Override
+            public void run() {
+                ModelToTextExportDialog toTextExportDialog = new ModelToTextExportDialog(form.getShell(), object);
+                toTextExportDialog.open();
+            }
+        });
+
+        form.getToolBarManager().update(true);
+
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 

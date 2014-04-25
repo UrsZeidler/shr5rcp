@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateEEnumHelper" name="de.urszeidler.shr5.acceleo">
-    <property name="ECLIPSE_HOME" value="../../../../programme/eclipse_4.3/eclipse"/>
+    <property name="ECLIPSE_HOME" value="../../../../programme/eclipse_4.3.2/eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../../../../eclipse_workspaces/workspace_E4.3_shr_git"/>
 
     <!-- The classpath with only the dependencies used by the project -->
