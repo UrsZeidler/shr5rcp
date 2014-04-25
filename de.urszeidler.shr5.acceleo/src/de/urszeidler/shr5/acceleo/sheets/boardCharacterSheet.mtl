@@ -5,7 +5,9 @@
 [module boardCharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
 [import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
 
 
 [**
@@ -15,9 +17,110 @@
 [template public generateCharacterSheet(aManagedCharacter : ManagedCharacter)]
 [comment @main/]
 [file (aManagedCharacter.persona.name, false, 'UTF-8')]
+[printBoardCharacterReport(aManagedCharacter)/]
+[/file]
+[/template]
 
-Name : [aManagedCharacter.persona.name /]
+[**
+ * Print the chracter as a board txt.
+*/]
+[template public printBoardCharacterReport(aManagedCharacter : ManagedCharacter)]
+[printBasicCharacterData(aManagedCharacter)/]
+[printPersonaBasic(aManagedCharacter.persona)/]
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+[let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
+[printSpells(z,'en')/]
+[/let]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
+[printKiPowers( aManagedCharacter.persona.oclAsType(KiAdept).kikraft)/]
+[/if]
 
+[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen)/]
+
+[printActiveSkills(aManagedCharacter.persona.fertigkeiten)/]
+
+[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
+
+[if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
+[let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
+[printQualities(kp.eigenschaften)/]
+[printAugmentations(kp.koerperMods)/]
+[/let]
+[/if]
+
+[printGear(aManagedCharacter.inventar->asSequence())/]
+[printContracts(aManagedCharacter.contracts->asSequence())/]
+
+[printConnections(aManagedCharacter.connections)/]
+
+[printVehicles(aManagedCharacter.vehicels)/]
+
+[/template]
+
+[template public printPersonaBasic(persona : AbstraktPersona)]
+['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
+[printAttributes(persona)/]
+Essence			[persona.essenz   /]
+Initiative [persona.initative/]+[persona.initativWuerfel/]d6
+Condition [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
+Armor [persona.oclAsType(KoerperPersona).panzer/]
+Composure [persona.willenskraft + persona.charisma  /]
+Judge Intentions [persona.intuition + persona.charisma  /]
+Memory [persona.willenskraft + persona.logik  /]
+Lifting/Carrying [persona.staerke  * 15 /]/[persona.staerke  * 10/]
+Movement [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
+
+Limits
+Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclAsType(KoerperPersona).geistig/] / Social [persona.oclAsType(KoerperPersona).sozial/]
+
+[/template]
+
+
+[**
+ * Print the qualities
+*/]
+[template public printQualities(gears : OrderedSet(PersonaEigenschaft)) ? (not gears->isEmpty())]
+[ '[' /]b[']'/]Qualities:[ '[' /]/b[']'/]
+[for (ag : PersonaEigenschaft | gears)]
+[ag.name  /]
+[/for]
+[/template]
+
+[**
+ * Print the qualities
+*/]
+[template public printKiPowers(gears : OrderedSet(KiKraft)) ? (not gears->isEmpty())]
+[ '[' /]b[']'/]KiPowers :[ '[' /]/b[']'/]
+[for (ag : KiKraft | gears)]
+[ag.name  /]
+[/for]
+[/template]
+
+
+[**
+ * Print the wares
+*/]
+[template public printAugmentations(gears : OrderedSet(Koerpermods)) ? (not gears->isEmpty())]
+[ '[' /]b[']'/]Augmentations:[ '[' /]/b[']'/]
+[for (ag : Koerpermods | gears)]
+[ag.name  /]
+[/for]
+----
+sum :[calcListenWertToString(gears->asSequence()) /]
+[/template]
+
+[template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
+[let persona : AbstraktPersona = aManagedCharacter.persona]
+Name 		: [persona.name /]  Sex : [toLocalizedSexString(aManagedCharacter.sex, 'en')    /]
+Metatype 	: [persona.spezies.name/] Type : [persona.eClass().name /]
+[/let]
+[/template]
+
+[**
+ * Print the attributes with name
+*/]
+[template public printAttributesSimple(persona : AbstraktPersona)]
 ['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
 Body			[persona.konstitutionBasis/][if(not (persona.konstitutionBasis=persona.konstitution))]([persona.konstitution/])[/if]
 Agility			[persona.geschicklichkeitBasis/][if(not (persona.geschicklichkeitBasis=persona.geschicklichkeit))]([persona.geschicklichkeit/])[/if]
@@ -28,55 +131,42 @@ Logic		 	[persona.logikBasis/][if(not (persona.logikBasis=persona.logik))]([pers
 Intuition		[persona.intuitionBasis/][if(not (persona.intuitionBasis=persona.intuition))]([persona.intuition/])[/if]
 Charisma		[persona.charismaBasis/][if(not (persona.charismaBasis=persona.charisma))]([persona.charisma/])[/if]
 Edge 			[persona.edgeBasis/]
-
-
-[ '[' /]b[']'/]Negative Qualities[ '[' /]/b[']'/]
-Insomnia +10 karma
-Prejudiced (Outspoken vs Technomancers) +5 karma
-
-[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
-[let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
-[printSpells(z)/]
-[/let]
-[/if]
-
-[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen)/]
-
-[printActiveSkills(aManagedCharacter.persona.fertigkeiten)/]
-
-[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
-
-[printGear(aManagedCharacter.inventar->asSequence())/]
-
-[printConnections(aManagedCharacter.connections)/]
-
-[printVehicles(aManagedCharacter.vehicels
-)/]
-[ '[' /]b[']'/]Money:[ '[' /]/b[']'/]
-
-
-[ '[' /]b[']'/]Augmentations:[ '[' /]/b[']'/]
-Control Rig Rating 1 (Used)
-Smartlink (Used)
-
-
-[/file]
+Essence			[persona.essenz   /]
 [/template]
 
-[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe))]
-[ '[' /]b[']'/]Skill Groups:[ '[' /]/b[']'/]
-[for (pfg : PersonaFertigkeitsGruppe | sg)]
-[pfg.gruppe.name/] [pfg.stufe/]
+[**
+ * print the attributes the persona, uses the localized text.
+*/]
+[template public printAttributes(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+[let attributeName : String = getText(base2Calced(ea))]
+[printTextPlusSpace(attributeName, emtpty)/] : [persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if]
+[/let]
 [/for]
 [/template]
 
-[template public printVehicles(sg : OrderedSet(Fahrzeug))]
+[**
+ * Simple template to create engougth space. 
+*/]
+[template private printTextPlusSpace(text : String,emtpty :String )]
+[text/][for (it : String | emtpty.substring(text.size()).tokenize(' ',true))] [/for]
+[/template]
+
+
+[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe)){ emtpty :String = '               ' ;}]
+[ '[' /]b[']'/]Skill Groups:[ '[' /]/b[']'/]
+[for (pfg : PersonaFertigkeitsGruppe | sg)]
+[printTextPlusSpace(pfg.gruppe.name, emtpty)/] [pfg.stufe/]
+[/for]
+[/template]
+
+[template public printVehicles(sg : OrderedSet(Fahrzeug))? (not sg->isEmpty()) ]
 [ '[' /]b[']'/]Vehicles[ '[' /]/b[']'/]
 [for (pfg : Fahrzeug | sg)]
 [pfg.name/] [pfg.wert/]
 [/for]
 ----
-[calcListenWertToString(sg->asSequence()) /]
+sum :[calcListenWertToString(sg->asSequence()) /]
 [/template]
 
 
@@ -84,7 +174,7 @@ Smartlink (Used)
 [ '[' /]b[']'/]Active Skills:[ '[' /]/b[']'/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[pfg.fertigkeit.name/] [pfg.stufe/]
+[pfg.fertigkeit.name/] 	[pfg.stufe/]
 [/if]
 [/for]
 [/template]
@@ -93,33 +183,41 @@ Smartlink (Used)
 [ '[' /]b[']'/]Knowledge Skills:[ '[' /]/b[']'/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[pfg.fertigkeit.name/] [pfg.stufe/]
+[pfg.fertigkeit.name/] 		[pfg.stufe/]
 [/if]
 [/for]
 [/template]
 
 
-[template public printConnections(c : OrderedSet(Connection))]
+[template public printConnections(c : OrderedSet(Connection))? (not c->isEmpty())]
 [ '[' /]b[']'/]Contacts:[ '[' /]/b[']'/]
 [for (connection : Connection | c)]
 [connection.character.persona.name /]  [connection.influence/]/[connection.loyality/]
 [/for]
 [/template]
 
-[template public printSpells(z : Zauberer)]
+[template public printSpells(z : Zauberer,loc : String) ? (not z.zauber->isEmpty())]
 [ '[' /]b[']'/]Spells:[ '[' /]/b[']'/]
 [for (pz : PersonaZauber | z.zauber)]
-[pz.formel.name/] | [toLocalizedZauberArtString(pz.formel.art, 'de') /] | [toLocalizedZauberDauerString(pz.formel.dauer, 'de') /]| [toLocalizedZauberReichweiteString(pz.formel.reichweite, 'de') /]
-[pz.formel.art.toString()  /]
+[pz.formel.name/] | [toLocalizedZauberArtString(pz.formel.art, loc) /] | [toLocalizedZauberDauerString(pz.formel.dauer, loc) /]| [toLocalizedZauberReichweiteString(pz.formel.reichweite, loc) /]
 [/for]
 [/template]
 
-[template public printGear(gears : Sequence(AbstraktGegenstand))]
+[template public printGear(gears : Sequence(AbstraktGegenstand))? (not gears->isEmpty())]
 [ '[' /]b[']'/]Gear:[ '[' /]/b[']'/]
 [for (ag : AbstraktGegenstand | gears)]
-[ag.name  /]		[ag.wert/]
+[ag.name  /]			[ag.wert/]
 [/for]
 ----
-[calcListenWertToString(gears) /]
+sum :[calcListenWertToString(gears) /]
+[/template]
+
+[template public printContracts(gears : Sequence(Vertrag))? (not gears->isEmpty())]
+[ '[' /]b[']'/]Contracts:[ '[' /]/b[']'/]
+[for (ag : Vertrag | gears)]
+[ag.name  /]			[ag.wert/]
+[/for]
+----
+sum :[calcListenWertToString(gears) /]
 [/template]
 
