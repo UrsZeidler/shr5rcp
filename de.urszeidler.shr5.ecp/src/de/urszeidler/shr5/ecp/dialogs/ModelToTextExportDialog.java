@@ -35,6 +35,7 @@ import org.eclipse.swt.widgets.Text;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
+import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.OfficalCharacterSheet;
 import de.urszeidler.shr5.ecp.Activator;
 
@@ -72,7 +73,16 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
 
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
+   
+
+        HashMap<String, AbstractAcceleoGenerator> hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+        hashMap1.put("phpB shr5 generator sheet", new BoardShr5GeneratorSheet());
+        transformerMap.put(Shr5managementPackage.Literals.SHR5_GENERATOR, hashMap1);
+        
+        hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);
+        hashMap.putAll(hashMap1);
         transformerMap.put(Shr5managementPackage.Literals.CHARACTER_GROUP, hashMap);
+
 
         dialogSettings = Activator.getDefault().getDialogSettings();
 

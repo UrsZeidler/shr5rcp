@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module boardShr5GeneratorSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+[import de::urszeidler::shr5::acceleo::sheets::boardCharacterSheet/]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+
+[template public boardShr5GeneratorSheetManagedCharacter(aShr5Generator : Shr5Generator)]	
+	[comment @main /]
+[file ('Shr5Generator-'+aShr5Generator.characterName+'.txt', false, 'UTF-8')]
+[generateShr5GeneratorSheet(aShr5Generator)/]
+[/file]
+
+	
+[/template]
+
+
+[template public generateShr5GeneratorSheet(aShr5Generator : Shr5Generator) {aManagedCharacter : ManagedCharacter = aShr5Generator.character;}]
+[printGeneratorReport(aShr5Generator)/]
+
+[printBoardCharacterReport(aManagedCharacter)/]
+[/template]
+
+[template public printGeneratorReport(aShr5Generator : Shr5Generator )]
+[ '[' /]b[']'/]Priorities[ '[' /]/b[']'/]
+[getText(aShr5Generator.attribute)/]
+[getText(aShr5Generator.skills)/]
+[getText(aShr5Generator.metaType)/]
+[getText(aShr5Generator.magic)/]
+[getText(aShr5Generator.resourcen)/]
+[/template]
