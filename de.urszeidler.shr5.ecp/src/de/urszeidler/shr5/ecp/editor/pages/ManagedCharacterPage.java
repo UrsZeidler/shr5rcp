@@ -2,7 +2,6 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.action.Action;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -14,7 +13,6 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
-import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
@@ -22,7 +20,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
-import de.urszeidler.shr5.ecp.dialogs.ModelToTextExportDialog;
+import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
 /**
@@ -99,17 +97,7 @@ public class ManagedCharacterPage extends FormPage {
         form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
-        Action action = new Action("") {
-            @Override
-            public void run() {
-                ModelToTextExportDialog toTextExportDialog = new ModelToTextExportDialog(form.getShell(), object);
-                toTextExportDialog.open();
-            }
-        };
-        action.setToolTipText("Transform to text");
-        action.setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/print_edit.gif"));
-        form.getToolBarManager().add(action);
-
+        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(),object));
         form.getToolBarManager().update(true);
 
         toolkit.paintBordersFor(body);

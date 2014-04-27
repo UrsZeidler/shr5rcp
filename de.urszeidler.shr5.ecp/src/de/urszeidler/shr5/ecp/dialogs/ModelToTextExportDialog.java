@@ -70,9 +70,9 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap.put("phpBCharacter Sheet", new BoardCharacterSheet());
         hashMap.put("offical Sheet svg", new OfficalCharacterSheet());
 
-        transformerMap.put(Shr5managementPackage.Literals.MANAGED_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
+        transformerMap.put(Shr5managementPackage.Literals.CHARACTER_GROUP, hashMap);
 
         dialogSettings = Activator.getDefault().getDialogSettings();
 

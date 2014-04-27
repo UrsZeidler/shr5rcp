@@ -63,6 +63,7 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.AttributeGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
@@ -169,6 +170,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(),object));
+        form.getToolBarManager().update(true);
+
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         ToolBar toolBar = new ToolBar(managedForm.getForm().getBody(), SWT.FLAT | SWT.RIGHT | SWT.SHADOW_OUT);
