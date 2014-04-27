@@ -65,7 +65,7 @@
 [template public printPersonaBasic(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
 ['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
 [printAttributes(persona)/]
-[printTextPlusSpace('Essence', emtpty)/] [persona.essenz   /]
+[printTextPlusSpace('Essence', emtpty)/] [   (persona.essenz)/100  /]
 [printTextPlusSpace('Initiative', emtpty)/] [persona.initative/]+[persona.initativWuerfel/]d6
 [printTextPlusSpace('Condition', emtpty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
 [printTextPlusSpace('Armor', emtpty)/] [persona.oclAsType(KoerperPersona).panzer/]
@@ -82,7 +82,7 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 [**
  * Print the qualities
 */]
-[template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { emtpty :String = '                                   ' ;}]
+[template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { emtpty :String = '                                             ' ;}]
 [ '[' /]b[']'/]Karma:[ '[' /]/b[']'/]
 [for (ag : Changes | gears)]
 [ printTextPlusSpace(getText(ag),emtpty)  /] [ag.karmaCost/]

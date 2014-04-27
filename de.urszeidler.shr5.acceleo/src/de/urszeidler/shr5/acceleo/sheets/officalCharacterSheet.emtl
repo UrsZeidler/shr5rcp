@@ -11,10 +11,10 @@
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
     <imports href="../common/ShadowrunTools.emtl#/0"/>
-    <imports href="../common/ShadowrunManagmentTools.emtl#/0"/>
-    <imports href="../common/ShadowrunSheetTools.emtl#/0"/>
-    <imports href="../common/shr5EEnumhelper.emtl#/0"/>
-    <imports href="../common/shr5ManagementEEnumhelper.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5EEnumhelper.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="officalCharacterSheetManagedCharacter" visibility="Public" main="true">
       <body xsi:type="mtl:TemplateInvocation" definition="/0/printPageOne">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -611,7 +611,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -703,7 +703,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/tspan>&lt;/text>&#xA;&lt;text&#xA;   style=&quot;font-size:12px;line-height:185.00000238%&quot;&#xA;   y=&quot;-626&quot;&#xA;   x=&quot;115&quot;&#xA;   id=&quot;name-sex-8&quot;&#xA;   sodipodi:linespacing=&quot;185%&quot;&#xA;   transform=&quot;scale(1,-1)&quot;>&lt;tspan&#xA;     style=&quot;font-size:7px;font-variant:normal;font-weight:bold;font-stretch:condensed;line-height:185.00000238%;writing-mode:lr-tb;fill:#272425;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Univers LT Std 47 Cn Lt;-inkscape-font-specification:UniversLTStd-BoldCn&quot;&#xA;     x=&quot;115&quot;&#xA;     y=&quot;-626&quot;&#xA;     sodipodi:role=&quot;line&quot;&#xA;     id=&quot;tspan5996-5-1-0&quot;>"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="../common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5mngt/1.0#//Sex"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printCharacterData/aManagedCharacter">
@@ -1497,7 +1497,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="text">
@@ -1512,7 +1512,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="ee">

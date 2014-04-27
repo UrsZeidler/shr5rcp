@@ -158,6 +158,15 @@
 [query public calcKarmaCosts(arg0 : Integer, arg1 : Integer, arg2 : Integer) : Integer
 	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'calcKarmaCosts(, , )', Sequence{arg0, arg1, arg2})
 /]
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ * @param arg2
+ */]
+[query public essenzToFloat(arg0 : Integer) : String
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'essenzToFloat(,)', Sequence{arg0})
+/]
 
 [**
  * The documentation of the query

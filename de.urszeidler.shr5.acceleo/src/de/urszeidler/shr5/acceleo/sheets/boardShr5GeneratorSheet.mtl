@@ -1,5 +1,7 @@
 [comment encoding = UTF-8 /]
 [module boardShr5GeneratorSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
 [import de::urszeidler::shr5::acceleo::sheets::boardCharacterSheet/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
 
@@ -20,7 +22,15 @@
 [/template]
 
 [template private printGeneratorValues(aShr5Generator : Shr5Generator){aManagedCharacter : ManagedCharacter = aShr5Generator.character;}]
-Generator system [getText(aShr5Generator.generator)/]
+Generator system 	  [getText(aShr5Generator.generator)/] 	Karma to spend   [aShr5Generator.shr5Generator.karmaPoints  /] 
+Karma to resource 	  [aShr5Generator.karmaToResource/]
+Resources complete 	  [aShr5Generator.resourcen.resource + calcKarmaToResources(aShr5Generator, aShr5Generator.shr5Generator)  /]
+Connections points 	  [calcConnectionsPoints(aManagedCharacter, aShr5Generator.shr5Generator) /]
+Knowledge skills 	  [calcKnownlegeSkillPoints(aManagedCharacter, aShr5Generator.shr5Generator) /]
+karma worth 		  [calcCompleteKaramaSpend(aManagedCharacter, aShr5Generator.shr5Generator.characterAdvancements)/]
+
+Start Karma			  [aShr5Generator.startKarma /]
+Start Resources		  [aShr5Generator.startResources /]
 [/template]
 
 [**
@@ -33,4 +43,6 @@ Generator system [getText(aShr5Generator.generator)/]
 [getText(aShr5Generator.metaType)/]
 [getText(aShr5Generator.magic)/]
 [getText(aShr5Generator.resourcen)/]
+
+[printGeneratorValues(aShr5Generator)/]
 [/template]

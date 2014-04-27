@@ -29,7 +29,7 @@
  -->
 	<!-- Change the value of the property SOURCE_FOLDERS to match the configuration of your project. -->
 	<target name="compile">
-		<copy todir="${SOURCE_FOLDER}">
+		<copy overwrite="true" todir="${SOURCE_FOLDER}">
 			<fileset dir="${OUTPUT_FOLDER}/" id="id">
 				<include name="**/*emtl" />
 

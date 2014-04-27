@@ -701,9 +701,47 @@
       </expression>
       <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
     </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="essenzToFloat" visibility="Public">
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="5723" endPosition="5805" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
+        <parametersDocumentation name="arg0">
+          <body value=""/>
+        </parametersDocumentation>
+        <parametersDocumentation name="arg1">
+          <body value=""/>
+        </parametersDocumentation>
+        <parametersDocumentation name="arg2">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="arg0">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/59">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </source>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="essenzToFloat(,)">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(Integer)" kind="Sequence">
+          <part xsi:type="ocl.ecore:CollectionItem">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <item xsi:type="ocl.ecore:VariableExp" name="arg0" referredVariable="/0/essenzToFloat/arg0">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </item>
+          </part>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcEssenceSum" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="5724" endPosition="5776" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="5964" endPosition="6016" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -711,7 +749,7 @@
       <parameter name="arg0" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/59"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/62"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -728,7 +766,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcKiPowerSum" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="5960" endPosition="6012" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="6200" endPosition="6252" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -736,7 +774,7 @@
       <parameter name="arg0" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/62"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/65"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -976,6 +1014,16 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         </eParameters>
         <eParameters name="arg2">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="essenzToFloat">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/essenzToFloat"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="arg0">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         </eParameters>
       </eOperations>
@@ -1231,6 +1279,15 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -2330,104 +2387,164 @@
       <details key="end" value="5714"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.215" references="/0/calcEssenceSum">
-      <details key="start" value="5779"/>
-      <details key="end" value="5955"/>
-      <details key="line" value="166"/>
-    </eAnnotations>
-    <eAnnotations source="positions.216" references="/0/calcEssenceSum/%">
-      <details key="start" value="5721"/>
-      <details key="end" value="5778"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.217" references="/0/calcEssenceSum/%/arg0">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.218" references="/0/calcEssenceSum/arg0">
+    <eAnnotations source="positions.215" references="/0/essenzToFloat">
       <details key="start" value="5808"/>
-      <details key="end" value="5831"/>
-      <details key="line" value="166"/>
+      <details key="end" value="5959"/>
+      <details key="line" value="167"/>
     </eAnnotations>
-    <eAnnotations source="positions.219" references="/0/calcEssenceSum/%.1">
-      <details key="start" value="5846"/>
-      <details key="end" value="5952"/>
+    <eAnnotations source="positions.216" references="/0/essenzToFloat/%">
+      <details key="start" value="5720"/>
+      <details key="end" value="5807"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.220" references="/0/calcEssenceSum/%.1/self">
+    <eAnnotations source="positions.217" references="/0/essenzToFloat/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.221" references="/0/calcEssenceSum/%.1/%">
-      <details key="start" value="5853"/>
-      <details key="end" value="5901"/>
+    <eAnnotations source="positions.218" references="/0/essenzToFloat/%/arg1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.222" references="/0/calcEssenceSum/%.1/%.1">
-      <details key="start" value="5903"/>
-      <details key="end" value="5935"/>
+    <eAnnotations source="positions.219" references="/0/essenzToFloat/%/arg2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.223" references="/0/calcEssenceSum/%.1/%.2">
-      <details key="start" value="5937"/>
-      <details key="end" value="5951"/>
+    <eAnnotations source="positions.220" references="/0/essenzToFloat/arg0">
+      <details key="start" value="5836"/>
+      <details key="end" value="5850"/>
+      <details key="line" value="167"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/essenzToFloat/%.1">
+      <details key="start" value="5864"/>
+      <details key="end" value="5956"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.224" references="/0/calcEssenceSum/%.1/%.2/%/arg0">
-      <details key="start" value="5946"/>
-      <details key="end" value="5950"/>
+    <eAnnotations source="positions.222" references="/0/essenzToFloat/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.225" references="/0/calcKiPowerSum">
-      <details key="start" value="6015"/>
+    <eAnnotations source="positions.223" references="/0/essenzToFloat/%.1/%">
+      <details key="start" value="5871"/>
+      <details key="end" value="5919"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.224" references="/0/essenzToFloat/%.1/%.1">
+      <details key="start" value="5921"/>
+      <details key="end" value="5939"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.225" references="/0/essenzToFloat/%.1/%.2">
+      <details key="start" value="5941"/>
+      <details key="end" value="5955"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.226" references="/0/essenzToFloat/%.1/%.2/%/arg0">
+      <details key="start" value="5950"/>
+      <details key="end" value="5954"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.227" references="/0/calcEssenceSum">
+      <details key="start" value="6019"/>
+      <details key="end" value="6195"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.228" references="/0/calcEssenceSum/%">
+      <details key="start" value="5961"/>
+      <details key="end" value="6018"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.229" references="/0/calcEssenceSum/%/arg0">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.230" references="/0/calcEssenceSum/arg0">
+      <details key="start" value="6048"/>
+      <details key="end" value="6071"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.231" references="/0/calcEssenceSum/%.1">
+      <details key="start" value="6086"/>
+      <details key="end" value="6192"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.232" references="/0/calcEssenceSum/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/calcEssenceSum/%.1/%">
+      <details key="start" value="6093"/>
+      <details key="end" value="6141"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.234" references="/0/calcEssenceSum/%.1/%.1">
+      <details key="start" value="6143"/>
+      <details key="end" value="6175"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.235" references="/0/calcEssenceSum/%.1/%.2">
+      <details key="start" value="6177"/>
       <details key="end" value="6191"/>
-      <details key="line" value="174"/>
-    </eAnnotations>
-    <eAnnotations source="positions.226" references="/0/calcKiPowerSum/%">
-      <details key="start" value="5957"/>
-      <details key="end" value="6014"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.227" references="/0/calcKiPowerSum/%/arg0">
+    <eAnnotations source="positions.236" references="/0/calcEssenceSum/%.1/%.2/%/arg0">
+      <details key="start" value="6186"/>
+      <details key="end" value="6190"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.237" references="/0/calcKiPowerSum">
+      <details key="start" value="6255"/>
+      <details key="end" value="6431"/>
+      <details key="line" value="183"/>
+    </eAnnotations>
+    <eAnnotations source="positions.238" references="/0/calcKiPowerSum/%">
+      <details key="start" value="6197"/>
+      <details key="end" value="6254"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.239" references="/0/calcKiPowerSum/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.228" references="/0/calcKiPowerSum/arg0">
-      <details key="start" value="6044"/>
-      <details key="end" value="6067"/>
-      <details key="line" value="174"/>
+    <eAnnotations source="positions.240" references="/0/calcKiPowerSum/arg0">
+      <details key="start" value="6284"/>
+      <details key="end" value="6307"/>
+      <details key="line" value="183"/>
     </eAnnotations>
-    <eAnnotations source="positions.229" references="/0/calcKiPowerSum/%.1">
-      <details key="start" value="6082"/>
-      <details key="end" value="6188"/>
+    <eAnnotations source="positions.241" references="/0/calcKiPowerSum/%.1">
+      <details key="start" value="6322"/>
+      <details key="end" value="6428"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.230" references="/0/calcKiPowerSum/%.1/self">
+    <eAnnotations source="positions.242" references="/0/calcKiPowerSum/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.231" references="/0/calcKiPowerSum/%.1/%">
-      <details key="start" value="6089"/>
-      <details key="end" value="6137"/>
+    <eAnnotations source="positions.243" references="/0/calcKiPowerSum/%.1/%">
+      <details key="start" value="6329"/>
+      <details key="end" value="6377"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.232" references="/0/calcKiPowerSum/%.1/%.1">
-      <details key="start" value="6139"/>
-      <details key="end" value="6171"/>
+    <eAnnotations source="positions.244" references="/0/calcKiPowerSum/%.1/%.1">
+      <details key="start" value="6379"/>
+      <details key="end" value="6411"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.233" references="/0/calcKiPowerSum/%.1/%.2">
-      <details key="start" value="6173"/>
-      <details key="end" value="6187"/>
+    <eAnnotations source="positions.245" references="/0/calcKiPowerSum/%.1/%.2">
+      <details key="start" value="6413"/>
+      <details key="end" value="6427"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.234" references="/0/calcKiPowerSum/%.1/%.2/%/arg0">
-      <details key="start" value="6182"/>
-      <details key="end" value="6186"/>
+    <eAnnotations source="positions.246" references="/0/calcKiPowerSum/%.1/%.2/%/arg0">
+      <details key="start" value="6422"/>
+      <details key="end" value="6426"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>
