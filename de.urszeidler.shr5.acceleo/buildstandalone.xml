@@ -37,7 +37,7 @@
 		
 		<acceleoCompiler sourceFolder="${SOURCE_FOLDER}" 
 			outputFolder="${OUTPUT_FOLDER}" 
-			dependencies="${parent.dir}/de.urszeidler.shr5.management.model/model;${parent.dir}/de.urszeidler.shr5.model/model;${parent.dir}/de.urszeidler.shr5.management.model;${parent.dir}/de.urszeidler.shr5.management.model/;${parent.dir}/" 
+			dependencies="${parent.dir}/de.urszeidler.shr5.management.model/model;${parent.dir}/de.urszeidler.shr5.model/model;${parent.dir}/de.urszeidler.shr5.management.model;${parent.dir}/de.urszeidler.shr5.management.model/;${parent.dir}/;de.urszeidler.shr5.model/model;de.urszeidler.shr5.model" 
 			binaryResource="false" 
 			packagesToRegister="">
 		</acceleoCompiler>
