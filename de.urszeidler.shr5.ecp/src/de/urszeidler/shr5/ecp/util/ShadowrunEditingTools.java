@@ -328,9 +328,7 @@ public class ShadowrunEditingTools {
      * @return
      */
     public static String essenzToFloat(int essenz) {
-        float f = essenz / 100f;
-        String string = String.format("%.2f", f);//$NON-NLS-1$
-        return string;
+        return ShadowrunTools.essenzToFloat(essenz);
     }
 
     /**

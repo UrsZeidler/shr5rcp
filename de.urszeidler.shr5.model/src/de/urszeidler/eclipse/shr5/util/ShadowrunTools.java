@@ -423,4 +423,16 @@ public class ShadowrunTools {
         return sum;
     }
 
+    /**
+     * Create a float string from an int with base 100.
+     * 
+     * @param essenz
+     * @return
+     */
+    public static String essenzToFloat(int essenz) {
+        float f = essenz / 100f;
+        String string = String.format("%.2f", f);//$NON-NLS-1$
+        return string;
+    }
+
 }
