@@ -19,6 +19,13 @@
 [printBoardCharacterReport(aManagedCharacter)/]
 [/template]
 
+[template private printGeneratorValues(aShr5Generator : Shr5Generator){aManagedCharacter : ManagedCharacter = aShr5Generator.character;}]
+Generator system [getText(aShr5Generator.generator)/]
+[/template]
+
+[**
+ * Print the chosen prorities.
+*/]
 [template public printGeneratorReport(aShr5Generator : Shr5Generator )]
 [ '[' /]b[']'/]Priorities[ '[' /]/b[']'/]
 [getText(aShr5Generator.attribute)/]
