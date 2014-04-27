@@ -14,7 +14,11 @@
     <!-- The classpath with only the dependencies used by the project (a dependency with the parser is required) -->
     <path id="de.urszeidler.shr5.acceleo.libraryclasspath">
         <pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.acceleo/bin"/>
-   	
+   		<fileset dir="${PLATFORM}" id="id">
+    <include name="*.jar"/>
+
+</fileset>
+
         <pathelement location="${PLATFORM}"/>
      </path>
 
