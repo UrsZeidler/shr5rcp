@@ -100,5 +100,4 @@ Export-Package: de.urszeidler.shr5.dice,
  org.eclipse.wb.rcp.databinding,
  org.eclipse.wb.swt
 Bundle-Vendor: Urs Zeidler
-Bundle-ClassPath: .,
- swing2swt.jar
+Bundle-ClassPath: .
