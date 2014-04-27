@@ -28,9 +28,9 @@
 	<target name="compile">
 		<acceleoCompiler sourceFolder="${SOURCE_FOLDER}" 
 			outputFolder="${OUTPUT_FOLDER}" 
-			dependencies="../de.urszeidler.shr5.management.model:../de.urszeidler.shr5.management.model.edit:../de.urszeidler.shr5.model:../de.urszeidler.shr5.model.edit" 
+			dependencies="../de.urszeidler.shr5.management.model;../de.urszeidler.shr5.management.model.edit;../de.urszeidler.shr5.model;../de.urszeidler.shr5.model.edit" 
 			binaryResource="false" 
-			packagesToRegister="de.urszeidler.eclipse.shr5.Shr5Package,de.urszeidler.eclipse.shr5Management.Shr5managementPackage">
+			packagesToRegister="de.urszeidler.eclipse.shr5.Shr5Package;de.urszeidler.eclipse.shr5Management.Shr5managementPackage">
 		</acceleoCompiler>
 	</target>
 </project>
