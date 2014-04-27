@@ -318,7 +318,7 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
@@ -330,14 +330,6 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
          * revert your modifications.
          */
         
-        /*
-         * TODO If you need additional resource factories registrations, you can register them here. the following line
-         * (in comment) is an example of the resource factory registration for UML.
-         *
-         * If you want to use the generator in stand alone, the resource factory registration will be required.
-         *  
-         * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
-         */ 
         
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }

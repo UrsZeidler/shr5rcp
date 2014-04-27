@@ -171,7 +171,7 @@ public class OfficalCharacterSheet extends AbstractAcceleoGenerator {
      *            This will be used to display progress information to the user.
      * @throws IOException
      *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * @generated not
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
@@ -197,7 +197,7 @@ public class OfficalCharacterSheet extends AbstractAcceleoGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
@@ -250,7 +250,7 @@ public class OfficalCharacterSheet extends AbstractAcceleoGenerator {
      * 
      * @return The list of properties file we need to add to the generation context.
      * @see java.util.ResourceBundle#getBundle(String)
-     * @generated
+     * @generated not
      */
     @Override
     public List<String> getProperties() {
@@ -305,7 +305,7 @@ public class OfficalCharacterSheet extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
@@ -352,7 +352,7 @@ public class OfficalCharacterSheet extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {

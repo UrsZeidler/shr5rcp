@@ -171,7 +171,7 @@ public class GenerateEEnumHelper extends AbstractAcceleoGenerator {
      *            This will be used to display progress information to the user.
      * @throws IOException
      *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * @generated not
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
@@ -182,7 +182,7 @@ public class GenerateEEnumHelper extends AbstractAcceleoGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
@@ -235,7 +235,7 @@ public class GenerateEEnumHelper extends AbstractAcceleoGenerator {
      * 
      * @return The list of properties file we need to add to the generation context.
      * @see java.util.ResourceBundle#getBundle(String)
-     * @generated
+     * @generated not
      */
     @Override
     public List<String> getProperties() {
@@ -271,7 +271,7 @@ public class GenerateEEnumHelper extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
@@ -318,7 +318,7 @@ public class GenerateEEnumHelper extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
@@ -330,15 +330,7 @@ public class GenerateEEnumHelper extends AbstractAcceleoGenerator {
          * revert your modifications.
          */
         
-        /*
-         * TODO If you need additional resource factories registrations, you can register them here. the following line
-         * (in comment) is an example of the resource factory registration for UML.
-         *
-         * If you want to use the generator in stand alone, the resource factory registration will be required.
-         *  
-         * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
-         */ 
-        
+         
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
     

@@ -58,6 +58,8 @@
 
 [printVehicles(aManagedCharacter.vehicels)/]
 
+[printAdvacements(aManagedCharacter.changes)/]
+
 [/template]
 
 [template public printPersonaBasic(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
@@ -77,6 +79,15 @@ Limits
 Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclAsType(KoerperPersona).geistig/] / Social [persona.oclAsType(KoerperPersona).sozial/]
 [/template]
 
+[**
+ * Print the qualities
+*/]
+[template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { emtpty :String = '                                   ' ;}]
+[ '[' /]b[']'/]Karma:[ '[' /]/b[']'/]
+[for (ag : Changes | gears)]
+[ printTextPlusSpace(getText(ag),emtpty)  /] [ag.karmaCost/]
+[/for]
+[/template]
 
 [**
  * Print the qualities
@@ -108,13 +119,13 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 [printTextPlusSpace(ag.name,emtpty)  /] [ag.oclAsType(GeldWert).wert/]
 [/for]
 ----
-[printTextPlusSpace(' sum :', emtpty)/] [calcListenWertToString(gears->asSequence()) /]
+[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(gears->asSequence()) /]
 [/template]
 
 [template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
 [let persona : AbstraktPersona = aManagedCharacter.persona]
 Name 		: [persona.name /]  Sex : [toLocalizedSexString(aManagedCharacter.sex, 'en')    /]
-Metatype 	: [persona.spezies.name/] Type : [persona.eClass().name /]
+Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass()) /]
 [/let]
 [/template]
 
@@ -125,16 +136,9 @@ Metatype 	: [persona.spezies.name/] Type : [persona.eClass().name /]
 [template public printAttributes(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
 [for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
 [let attributeName : String = getText(base2Calced(ea))]
-[printTextPlusSpace(attributeName, emtpty)/] : [persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if]
+[printTextPlusSpace(attributeName, emtpty)/] [persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if]
 [/let]
 [/for]
-[/template]
-
-[**
- * Simple template to create engougth space. 
-*/]
-[template private printTextPlusSpace(text : String,emtpty :String )]
-[text/][for (it : String | emtpty.substring(text.size()).tokenize(' ',true))] [/for]
 [/template]
 
 

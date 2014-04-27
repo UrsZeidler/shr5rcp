@@ -235,7 +235,7 @@ public class GenerateShr5MarkdownReport extends AbstractAcceleoGenerator {
      * 
      * @return The list of properties file we need to add to the generation context.
      * @see java.util.ResourceBundle#getBundle(String)
-     * @generated
+     * @generated not
      */
     @Override
     public List<String> getProperties() {
@@ -271,7 +271,7 @@ public class GenerateShr5MarkdownReport extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
@@ -318,7 +318,7 @@ public class GenerateShr5MarkdownReport extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {

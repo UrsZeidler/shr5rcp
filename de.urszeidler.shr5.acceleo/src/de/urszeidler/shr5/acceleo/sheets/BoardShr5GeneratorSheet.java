@@ -171,11 +171,25 @@ public class BoardShr5GeneratorSheet extends AbstractAcceleoGenerator {
      *            This will be used to display progress information to the user.
      * @throws IOException
      *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * @generated not
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
-   
+    
+        //org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(model);
+
+        /*
+         * If you want to check for potential errors in your models before the launch of the generation, you
+         * use the code below.
+         */
+
+        //if (model != null && model.eResource() != null) {
+        //    List<org.eclipse.emf.ecore.resource.Resource.Diagnostic> errors = model.eResource().getErrors();
+        //    for (org.eclipse.emf.ecore.resource.Resource.Diagnostic diagnostic : errors) {
+        //        System.err.println(diagnostic.toString());
+        //    }
+        //}
+
         super.doGenerate(monitor);
     }
     
@@ -183,7 +197,7 @@ public class BoardShr5GeneratorSheet extends AbstractAcceleoGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
@@ -330,7 +344,7 @@ public class BoardShr5GeneratorSheet extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
@@ -342,7 +356,7 @@ public class BoardShr5GeneratorSheet extends AbstractAcceleoGenerator {
          * revert your modifications.
          */
         
-        
+         
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
     
