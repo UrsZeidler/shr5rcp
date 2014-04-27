@@ -8,10 +8,12 @@ shr5rcp
  It is dedicated to create and manage characters, providing game master aid and reporting.
 
  
- * editors for the resources objects
- * shadowrun 5 character generator after the core rule book 
- * a simple character sheet
- * grunt editor and sheet
+* karma based character generator
+* editors for the resources objects
+* shadowrun 5 character generator after the core rule book 
+* a simple character sheet
+* grunt editor and sheet
+* various text exports like svg or phpB
 
  
 2. Motivation
@@ -22,6 +24,9 @@ shr5rcp
  a kind of technology study, working with an model driven approach.
  
  Find out more in the [wiki](https://github.com/UrsZeidler/shr5rcp/wiki).
+ 
+ and checkout the [constribute](https://github.com/UrsZeidler/shr5rcp/wiki/Building%20and%20development#contributing)
+ section
  
 3. Installation
 
