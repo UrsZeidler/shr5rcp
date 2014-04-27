@@ -175,7 +175,31 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
-         super.doGenerate(monitor);
+        /*
+         * TODO if you wish to change the generation as a whole, override this. The default behavior should
+         * be sufficient in most cases. If you want to change the content of this method, do NOT forget to
+         * change the "@generated" tag in the Javadoc of this method to "@generated NOT". Without this new tag,
+         * any compilation of the Acceleo module with the main template that has caused the creation of this
+         * class will revert your modifications. If you encounter a problem with an unresolved proxy during the
+         * generation, you can remove the comments in the following instructions to check for problems. Please
+         * note that those instructions may have a significant impact on the performances.
+         */
+
+        //org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(model);
+
+        /*
+         * If you want to check for potential errors in your models before the launch of the generation, you
+         * use the code below.
+         */
+
+        //if (model != null && model.eResource() != null) {
+        //    List<org.eclipse.emf.ecore.resource.Resource.Diagnostic> errors = model.eResource().getErrors();
+        //    for (org.eclipse.emf.ecore.resource.Resource.Diagnostic diagnostic : errors) {
+        //        System.err.println(diagnostic.toString());
+        //    }
+        //}
+
+        super.doGenerate(monitor);
     }
     
     /**
@@ -187,6 +211,12 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
         List<IAcceleoTextGenerationListener> listeners = super.getGenerationListeners();
+        /*
+         * TODO if you need to listen to generation event, add listeners to the list here. If you want to change
+         * the content of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method
+         * to "@generated NOT". Without this new tag, any compilation of the Acceleo module with the main template
+         * that has caused the creation of this class will revert your modifications.
+         */
         return listeners;
     }
     
@@ -239,6 +269,40 @@ public class GenerateShr5ManagementMarkdownReport extends AbstractAcceleoGenerat
      */
     @Override
     public List<String> getProperties() {
+        /*
+         * If you want to change the content of this method, do NOT forget to change the "@generated"
+         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
+         * of the Acceleo module with the main template that has caused the creation of this class will
+         * revert your modifications.
+         */
+
+        /*
+         * TODO if your generation module requires access to properties files, add their qualified path to the list here.
+         * 
+         * Properties files can be located in an Eclipse plug-in or in the file system (all Acceleo projects are Eclipse
+         * plug-in). In order to use properties files located in an Eclipse plugin, you need to add the path of the properties
+         * files to the "propertiesFiles" list:
+         * 
+         * final String prefix = "platform:/plugin/";
+         * final String pluginName = "org.eclipse.acceleo.module.sample";
+         * final String packagePath = "/org/eclipse/acceleo/module/sample/properties/";
+         * final String fileName = "default.properties";
+         * propertiesFiles.add(prefix + pluginName + packagePath + fileName);
+         * 
+         * With this mechanism, you can load properties files from your plugin or from another plugin.
+         * 
+         * You may want to load properties files from the file system, for that you need to add the absolute path of the file:
+         * 
+         * propertiesFiles.add("C:\Users\MyName\MyFile.properties");
+         * 
+         * If you want to let your users add properties files located in the same folder as the model:
+         *
+         * if (EMFPlugin.IS_ECLIPSE_RUNNING && model != null && model.eResource() != null) { 
+         *     propertiesFiles.addAll(AcceleoEngineUtils.getPropertiesFilesNearModel(model.eResource()));
+         * }
+         * 
+         * To learn more about Properties Files, have a look at the Acceleo documentation (Help -> Help Contents).
+         */
         return propertiesFiles;
     }
     
