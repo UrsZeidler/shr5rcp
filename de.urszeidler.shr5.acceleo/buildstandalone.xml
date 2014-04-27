@@ -32,8 +32,7 @@
                          outputFolder="${OUTPUT_FOLDER}"
                          dependencies=""
                          binaryResource="false"
-                         packagesToRegister="" 
-                         trimPosition="false">
+                         packagesToRegister="">
         </acceleoCompiler>
     </target>
 </project>
