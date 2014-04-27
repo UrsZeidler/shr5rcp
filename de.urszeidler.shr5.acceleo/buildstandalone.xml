@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="compile" name="de.urszeidler.shr5.acceleo">
+    
+    <property name="ECLIPSE_HOME" value="../../../programme/eclipse_4.3.2/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../eclipse_workspaces/workspace_E4.3_shr_git"/>
+
+    <property name="SOURCE_FOLDER" value="${basedir}/src/"/>    
+    <property name="OUTPUT_FOLDER" value="${basedir}/bin/"/>
+
+    <path id="de.urszeidler.shr5.acceleo.classpath">
+        <path refid="de.urszeidler.shr5.acceleo.libraryclasspath" />
+    </path>
+
+    <!-- The classpath with only the dependencies used by the project (a dependency with the parser is required) -->
+    <path id="de.urszeidler.shr5.acceleo.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.acceleo/bin"/>
+   	
+        <pathelement location="${PLATFORM}"/>
+     </path>
+
+    
+    <taskdef id="acceleoCompiler" name="acceleoCompiler" classname="org.eclipse.acceleo.parser.compiler.AcceleoCompiler" classpathref="de.urszeidler.shr5.acceleo.libraryclasspath" >
+    </taskdef>
+
+    <!-- Change the value of the property SOURCE_FOLDERS to match the configuration of your project. -->
+    <target name="compile">
+        <acceleoCompiler sourceFolder="${SOURCE_FOLDER}"
+                         outputFolder="${OUTPUT_FOLDER}"
+                         dependencies=""
+                         binaryResource="false"
+                         packagesToRegister="" 
+                         trimPosition="false">
+        </acceleoCompiler>
+    </target>
+</project>
