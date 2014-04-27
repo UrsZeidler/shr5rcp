@@ -35,6 +35,7 @@ import org.eclipse.swt.widgets.Text;
 
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
+import de.urszeidler.shr5.acceleo.sheets.OfficalCharacterSheet;
 import de.urszeidler.shr5.ecp.Activator;
 
 public class ModelToTextExportDialog extends TitleAreaDialog {
@@ -67,6 +68,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
 
         HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
         hashMap.put("phpBCharacter Sheet", new BoardCharacterSheet());
+        hashMap.put("offical Sheet svg", new OfficalCharacterSheet());
 
         transformerMap.put(Shr5managementPackage.Literals.MANAGED_CHARACTER, hashMap);
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
