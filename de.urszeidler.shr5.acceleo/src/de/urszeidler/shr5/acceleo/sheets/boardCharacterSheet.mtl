@@ -1,6 +1,6 @@
 [comment encoding = UTF-8 /]
 [**
- * The documentation of the module boardCharacterSheet.
+ * Prints a character as boardCharacterSheet.
  */]
 [module boardCharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
@@ -16,7 +16,7 @@
  */]
 [template public generateCharacterSheet(aManagedCharacter : ManagedCharacter)]
 [comment @main/]
-[file (aManagedCharacter.persona.name, false, 'UTF-8')]
+[file (aManagedCharacter.persona.name+'.txt', false, 'UTF-8')]
 [printBoardCharacterReport(aManagedCharacter)/]
 [/file]
 [/template]
@@ -27,6 +27,7 @@
 [template public printBoardCharacterReport(aManagedCharacter : ManagedCharacter)]
 [printBasicCharacterData(aManagedCharacter)/]
 [printPersonaBasic(aManagedCharacter.persona)/]
+
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
 [let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
 [printSpells(z,'en')/]
@@ -50,6 +51,7 @@
 [/if]
 
 [printGear(aManagedCharacter.inventar->asSequence())/]
+
 [printContracts(aManagedCharacter.contracts->asSequence())/]
 
 [printConnections(aManagedCharacter.connections)/]
@@ -58,22 +60,21 @@
 
 [/template]
 
-[template public printPersonaBasic(persona : AbstraktPersona)]
+[template public printPersonaBasic(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
 ['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
 [printAttributes(persona)/]
-Essence			[persona.essenz   /]
-Initiative [persona.initative/]+[persona.initativWuerfel/]d6
-Condition [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
-Armor [persona.oclAsType(KoerperPersona).panzer/]
-Composure [persona.willenskraft + persona.charisma  /]
-Judge Intentions [persona.intuition + persona.charisma  /]
-Memory [persona.willenskraft + persona.logik  /]
-Lifting/Carrying [persona.staerke  * 15 /]/[persona.staerke  * 10/]
-Movement [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
+[printTextPlusSpace('Essence', emtpty)/] [persona.essenz   /]
+[printTextPlusSpace('Initiative', emtpty)/] [persona.initative/]+[persona.initativWuerfel/]d6
+[printTextPlusSpace('Condition', emtpty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
+[printTextPlusSpace('Armor', emtpty)/] [persona.oclAsType(KoerperPersona).panzer/]
+[printTextPlusSpace('Composure', emtpty)/] [persona.willenskraft + persona.charisma  /]
+[printTextPlusSpace('Judge Intentions', emtpty)/] [persona.intuition + persona.charisma  /]
+[printTextPlusSpace('Memory', emtpty)/] [persona.willenskraft + persona.logik  /]
+[printTextPlusSpace('Lifting/Carrying', emtpty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
+[printTextPlusSpace('Movement', emtpty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
 
 Limits
 Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclAsType(KoerperPersona).geistig/] / Social [persona.oclAsType(KoerperPersona).sozial/]
-
 [/template]
 
 
@@ -101,13 +102,13 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 [**
  * Print the wares
 */]
-[template public printAugmentations(gears : OrderedSet(Koerpermods)) ? (not gears->isEmpty())]
+[template public printAugmentations(gears : OrderedSet(Koerpermods)) ? (not gears->isEmpty()){ emtpty :String = '                    ' ;}]
 [ '[' /]b[']'/]Augmentations:[ '[' /]/b[']'/]
 [for (ag : Koerpermods | gears)]
-[ag.name  /]
+[printTextPlusSpace(ag.name,emtpty)  /] [ag.oclAsType(GeldWert).wert/]
 [/for]
 ----
-sum :[calcListenWertToString(gears->asSequence()) /]
+[printTextPlusSpace(' sum :', emtpty)/] [calcListenWertToString(gears->asSequence()) /]
 [/template]
 
 [template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
@@ -117,22 +118,6 @@ Metatype 	: [persona.spezies.name/] Type : [persona.eClass().name /]
 [/let]
 [/template]
 
-[**
- * Print the attributes with name
-*/]
-[template public printAttributesSimple(persona : AbstraktPersona)]
-['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
-Body			[persona.konstitutionBasis/][if(not (persona.konstitutionBasis=persona.konstitution))]([persona.konstitution/])[/if]
-Agility			[persona.geschicklichkeitBasis/][if(not (persona.geschicklichkeitBasis=persona.geschicklichkeit))]([persona.geschicklichkeit/])[/if]
-Reaction		[persona.reaktionBasis/][if(not (persona.reaktionBasis=persona.reaktion))]([persona.reaktion/])[/if]
-Strength		[persona.staerkeBasis/][if(not (persona.staerkeBasis=persona.staerke))]([persona.staerke/])[/if]
-Will			[persona.willenskraftBasis/][if(not (persona.willenskraftBasis=persona.willenskraft))]([persona.willenskraft/])[/if]
-Logic		 	[persona.logikBasis/][if(not (persona.logikBasis=persona.logik))]([persona.logik/])[/if]
-Intuition		[persona.intuitionBasis/][if(not (persona.intuitionBasis=persona.intuition))]([persona.intuition/])[/if]
-Charisma		[persona.charismaBasis/][if(not (persona.charismaBasis=persona.charisma))]([persona.charisma/])[/if]
-Edge 			[persona.edgeBasis/]
-Essence			[persona.essenz   /]
-[/template]
 
 [**
  * print the attributes the persona, uses the localized text.
@@ -160,39 +145,39 @@ Essence			[persona.essenz   /]
 [/for]
 [/template]
 
-[template public printVehicles(sg : OrderedSet(Fahrzeug))? (not sg->isEmpty()) ]
+[template public printVehicles(sg : OrderedSet(Fahrzeug))? (not sg->isEmpty()) { emtpty :String = '               ' ;}]
 [ '[' /]b[']'/]Vehicles[ '[' /]/b[']'/]
 [for (pfg : Fahrzeug | sg)]
-[pfg.name/] [pfg.wert/]
+[printTextPlusSpace(pfg.name   ,emtpty)/] [pfg.wert/]
 [/for]
 ----
-sum :[calcListenWertToString(sg->asSequence()) /]
+[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(sg->asSequence()) /]
 [/template]
 
 
-[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit))]
+[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit)) { emtpty :String = '               ' ;}]
 [ '[' /]b[']'/]Active Skills:[ '[' /]/b[']'/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[pfg.fertigkeit.name/] 	[pfg.stufe/]
+[printTextPlusSpace(pfg.fertigkeit.name,emtpty)/] 	[pfg.stufe/]
 [/if]
 [/for]
 [/template]
 
-[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit))]
+[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit)){ emtpty :String = '               ' ;}]
 [ '[' /]b[']'/]Knowledge Skills:[ '[' /]/b[']'/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[pfg.fertigkeit.name/] 		[pfg.stufe/]
+[printTextPlusSpace(pfg.fertigkeit.name,emtpty )/] [pfg.stufe/]
 [/if]
 [/for]
 [/template]
 
 
-[template public printConnections(c : OrderedSet(Connection))? (not c->isEmpty())]
+[template public printConnections(c : OrderedSet(Connection))? (not c->isEmpty()){ emtpty :String = '               ' ;}]
 [ '[' /]b[']'/]Contacts:[ '[' /]/b[']'/]
 [for (connection : Connection | c)]
-[connection.character.persona.name /]  [connection.influence/]/[connection.loyality/]
+[printTextPlusSpace(connection.character.persona.name,emtpty) /]  [connection.influence/]/[connection.loyality/]
 [/for]
 [/template]
 
@@ -203,21 +188,21 @@ sum :[calcListenWertToString(sg->asSequence()) /]
 [/for]
 [/template]
 
-[template public printGear(gears : Sequence(AbstraktGegenstand))? (not gears->isEmpty())]
+[template public printGear(gears : Sequence(AbstraktGegenstand))? (not gears->isEmpty()) { emtpty :String = '               ' ;}]
 [ '[' /]b[']'/]Gear:[ '[' /]/b[']'/]
 [for (ag : AbstraktGegenstand | gears)]
-[ag.name  /]			[ag.wert/]
+[printTextPlusSpace(ag.name,emtpty)  /]	[ag.wert/]
 [/for]
 ----
-sum :[calcListenWertToString(gears) /]
+[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(gears) /]
 [/template]
 
-[template public printContracts(gears : Sequence(Vertrag))? (not gears->isEmpty())]
+[template public printContracts(gears : Sequence(Vertrag))? (not gears->isEmpty()){ emtpty :String = '               ' ;}]
 [ '[' /]b[']'/]Contracts:[ '[' /]/b[']'/]
 [for (ag : Vertrag | gears)]
-[ag.name  /]			[ag.wert/]
+[printTextPlusSpace(ag.name,emtpty)  /]	[ag.wert/]
 [/for]
 ----
-sum :[calcListenWertToString(gears) /]
+[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(gears) /]
 [/template]
 
