@@ -30,7 +30,7 @@
 	<target name="compile">
 		<acceleoCompiler sourceFolder="${SOURCE_FOLDER}" 
 			outputFolder="${OUTPUT_FOLDER}" 
-			dependencies="../de.urszeidler.shr5.management.model;../de.urszeidler.shr5.management.model.edit;../de.urszeidler.shr5.model;../de.urszeidler.shr5.model.edit" 
+			dependencies="../de.urszeidler.shr5.management.model/;../de.urszeidler.shr5.model/" 
 			binaryResource="false" 
 			packagesToRegister="">
 		</acceleoCompiler>
