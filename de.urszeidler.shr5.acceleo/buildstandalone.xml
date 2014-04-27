@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="compile" name="de.urszeidler.shr5.acceleo">
 
-	<property name="parentdir" location=".."/> 
+	<property name="parentdir" location=".." />
 	<property name="ECLIPSE_HOME" value="../../../programme/eclipse_4.3.2/eclipse" />
 	<property name="ECLIPSE_WORKSPACE" value="../../../eclipse_workspaces/workspace_E4.3_shr_git" />
 
@@ -12,11 +12,11 @@
 		<path refid="de.urszeidler.shr5.acceleo.libraryclasspath" />
 	</path>
 
-	<!-- The classpath with only the dependencies used by the project (a dependency with the parser is required) -->
+	<!-- The classpath with only the dependencies used by the project (a dependency with the parser is required)
 	<path id="de.urszeidler.shr5.acceleo.libraryclasspath">
 		<pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.acceleo/bin" />
-			<pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.management.model/bin" />
-			<pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.management.model.edit/bin" />
+		<pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.management.model/bin" />
+		<pathelement location="${ECLIPSE_WORKSPACE}/de.urszeidler.shr5.management.model.edit/bin" />
 		<fileset dir="${PLATFORM}" id="id">
 			<include name="*.jar" />
 		</fileset>
@@ -26,9 +26,18 @@
 
 	<taskdef id="acceleoCompiler" name="acceleoCompiler" classname="org.eclipse.acceleo.parser.compiler.AcceleoCompiler" classpathref="de.urszeidler.shr5.acceleo.libraryclasspath">
 	</taskdef>
-
+ -->
 	<!-- Change the value of the property SOURCE_FOLDERS to match the configuration of your project. -->
 	<target name="compile">
+		<copy todir="${SOURCE_FOLDER}">
+			<fileset dir="${OUTPUT_FOLDER}/" id="id">
+				<include name="**/*emtl" />
+
+			</fileset>
+
+		</copy>
+
+		<!--
 		<property name="d1" location="${parent.dir}/de.urszeidler.shr5.model/model"/> 
 		<property name="d2" location="${parent.dir}/de.urszeidler.shr5.model/"/> 
 		
@@ -47,5 +56,7 @@ de.urszeidler.shr5.model;"
 			binaryResource="false" 
 			packagesToRegister="">
 		</acceleoCompiler>
+	
+	-->
 	</target>
 </project>
