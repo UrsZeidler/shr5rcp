@@ -19,7 +19,7 @@ shr5rcp
 2. Motivation
   
  As I used to play shadowrun for a very long time, I started with an editor in Delphi for shadowrun 2.0, 
- many year later I started a technologie study with emf for the 3.01 version, as my group has now moved
+ many year later I started a technology study with emf for the 3.01 version, as my group has now moved
  to 5.0 and the chummer project don't work well on linux I have moved some of the model to 5.0. This is
  a kind of technology study, working with an model driven approach.
  
