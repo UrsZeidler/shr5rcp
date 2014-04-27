@@ -130,7 +130,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
                 }
             }
         });
-        btnNewButton.setText("directory");
+        btnNewButton.setText("...");
 
         Map<String, AbstractAcceleoGenerator> map = transformerMap.get(object.eClass());
         if (map != null) {
