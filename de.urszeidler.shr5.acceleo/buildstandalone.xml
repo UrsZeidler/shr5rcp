@@ -29,15 +29,28 @@
 
 	<!-- Change the value of the property SOURCE_FOLDERS to match the configuration of your project. -->
 	<target name="compile">
+		<property name="d1" location="${parent.dir}/de.urszeidler.shr5.model/model"/> 
+		<property name="d2" location="${parent.dir}/de.urszeidler.shr5.model/"/> 
+		
 		<echo>
 		${basedir}
 		${parentdir}
+		${d1}
+		${d2}
 		</echo>
 		
 		
 		<acceleoCompiler sourceFolder="${SOURCE_FOLDER}" 
 			outputFolder="${OUTPUT_FOLDER}" 
-			dependencies="${parent.dir}/de.urszeidler.shr5.management.model/model;${parent.dir}/de.urszeidler.shr5.model/model;${parent.dir}/de.urszeidler.shr5.management.model;${parent.dir}/de.urszeidler.shr5.management.model/;${parent.dir}/;de.urszeidler.shr5.model/model;de.urszeidler.shr5.model" 
+			dependencies="${parent.dir}/de.urszeidler.shr5.management.model/model;
+${parent.dir}/de.urszeidler.shr5.model/model;
+${parent.dir}/de.urszeidler.shr5.model/model/;
+${parent.dir}/de.urszeidler.shr5.management.model;
+${parent.dir}/de.urszeidler.shr5.management.model/;
+${parent.dir}/;
+de.urszeidler.shr5.model/model;
+de.urszeidler.shr5.model;
+{basedir}" 
 			binaryResource="false" 
 			packagesToRegister="">
 		</acceleoCompiler>
