@@ -11,9 +11,9 @@
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
     <imports href="../common/ShadowrunTools.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
+    <imports href="../common/ShadowrunManagmentTools.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0"/>
+    <imports href="../common/ShadowrunSheetTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="boardShr5GeneratorSheetManagedCharacter" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/generateShr5GeneratorSheet">
@@ -98,7 +98,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Generator system &#x9;  "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGeneratorSystem"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorValues/aShr5Generator">
@@ -143,7 +143,7 @@
         </source>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
+          <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorValues/aShr5Generator">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
           </argument>
@@ -160,7 +160,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Connections points &#x9;  "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printGeneratorValues/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -175,7 +175,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Knowledge skills &#x9;  "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printGeneratorValues/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -190,7 +190,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;karma worth &#x9;&#x9;  "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printGeneratorValues/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -245,7 +245,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Attributes"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorReport/aShr5Generator">
@@ -257,7 +257,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Skill"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorReport/aShr5Generator">
@@ -269,7 +269,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//MetaType"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorReport/aShr5Generator">
@@ -281,7 +281,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//SpecialType"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorReport/aShr5Generator">
@@ -293,7 +293,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Resourcen"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorReport/aShr5Generator">
@@ -389,7 +389,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -404,7 +404,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -419,7 +419,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -434,7 +434,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -461,7 +461,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+          <references href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="anOclAny">

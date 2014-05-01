@@ -27,6 +27,15 @@
 	<taskdef id="acceleoCompiler" name="acceleoCompiler" classname="org.eclipse.acceleo.parser.compiler.AcceleoCompiler" classpathref="de.urszeidler.shr5.acceleo.libraryclasspath">
 	</taskdef>
  -->
+	<target name="clean">
+		<delete>
+			<fileset dir="${SOURCE_FOLDER}/" id="id">
+				<include name="**/*emtl" />
+			</fileset>
+		</delete>
+	</target>
+
+
 	<!-- Change the value of the property SOURCE_FOLDERS to match the configuration of your project. -->
 	<target name="compile">
 		<copy overwrite="true" todir="${SOURCE_FOLDER}">
