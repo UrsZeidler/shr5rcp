@@ -72,49 +72,59 @@
 
 ## [anEclass.name/]
 
+abstract | interface 
+----|----
+[anEclass.abstract/]|[anEclass.interface/]
+
 [toDocumentation(anEclass.eAnnotations)/]
 
-[if (not anEclass.eAllSuperTypes->isEmpty())]
-**all super types :**
-[for (it : EClass | anEclass.eAllSuperTypes)]
-|[printEClassLink(it)/][/for]| 
-
+[if (not anEclass.eSuperTypes->isEmpty())]
+**direct super types :**
+[for (it : EClass | anEclass.eSuperTypes)]
+|[printEClassLink(it)/][/for]|
 [/if]
-[if (not anEclass.eAllAttributes->isEmpty())]
+
+[if (not anEclass.eAllSuperTypes->removeAll(anEclass.eSuperTypes)->isEmpty())]
+**all super types :**
+[for (it : EClass | anEclass.eAllSuperTypes->removeAll(anEclass.eSuperTypes)  )]
+|[printEClassLink(it)/][/for]| 
+[/if]
+[if (not anEclass.eAttributes->isEmpty())]
+
 **attributes**
 
 name | type | cardinality | changeable | doc
 ----|----|---|---|---
-[for (it : EAttribute | anEclass.eAllAttributes)]
+[for (it : EAttribute | anEclass.eAttributes)]
 [it.name/]|[it.eType.name /]|[cardinality(it)/]|[it.changeable/]|[ toDocumentationInTable(it.eAnnotations)/]
 [/for][/if]	
 
-[if (not anEclass.eAllReferences->isEmpty())]
+[if (not anEclass.eReferences->isEmpty())]
 **references**
 
 name | type | containment | cardinality | changeable | doc
 ----|---|---|---|---|---
-[for (it : EReference | anEclass.eAllReferences)]
+[for (it : EReference | anEclass.eReferences)]
 [it.name/]|[printEClassLink(it.eReferenceType)/]|[it.containment/]|[cardinality(it)/]|[it.changeable/]|[ toDocumentationInTable(it.eAnnotations)/]
 [/for][/if]
 
 
-[if (not anEclass.eAllOperations->isEmpty())]
+[if (not anEclass.eOperations->isEmpty())]
 **methods**
 
 name | doc
 ----|---|---|---|---|---
-[for (it : EOperation | anEclass.eAllOperations)]
+[for (it : EOperation | anEclass.eOperations)]
 [it.name/]|[ toDocumentationInTable(it.eAnnotations)/]
 [/for][/if]
 
-[linkToTop(eClass().ePackage)/]
+[linkToTop(anEclass.ePackage)/]
 
 [/template]
 
 
 [template public linkToTop(anEPackage : EPackage)]
-[ '[' /]_back to top_[ ']' /](([anEPackage.name.toLower()/]-model#concret-classes-in-the-model-[anEPackage.name/]))
+[ '[' /]_back to top_[ ']' /]([anEPackage.name.toLower()/]-model#concret-classes-in-the-model-[anEPackage.name.toLower()/])
 [/template]
 
 [template public cardinality(feature : EStructuralFeature)]
