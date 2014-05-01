@@ -12,7 +12,9 @@
 [printPageOne(aManagedCharacter)/]
 [/template]
 
-
+[**
+ * Prints the first page.
+*/]
 [template public printPageOne(aManagedCharacter : ManagedCharacter)]
 [file (aManagedCharacter.persona.name+'.svg', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -362,7 +364,6 @@ id="tspan[x/]-[pos/]">[ printTextPlusSpace( pf.fertigkeit.name, empty)  /] [pf.s
        height="1"
        id="mask3630"><g
          id="g3632"><g
-           clip-path="url(#clipPath3616)"
            id="g3634"><g
              id="g3636"><g
                id="g3638"><path
@@ -1082,19 +1083,9 @@ id="tspan[x/]-[pos/]">[ printTextPlusSpace( pf.fertigkeit.name, empty)  /] [pf.s
      id="g3114"
      inkscape:groupmode="layer"
      inkscape:label="CAT27000_Shadowrun 5_CharacterSheet"
-     transform="matrix(1.25,0,0,-1.25,0,956.25)"><g
-   id="g3116"><g
-     id="g3118"><g
-       id="g3120"
-       clip-path="url(#clipPath3122)"><g
-         id="g3126"><g
-           id="g3128"
-           clip-path="url(#clipPath3130)"><g
-             id="g3134"><g
-               id="g3136"
-               transform="matrix(642.667,0,0,783.00006,-10.030234,-9.0000622)" /></g></g></g></g></g></g><g
-   id="g3144"
-   clip-path="url(#clipPath3146)"><text
+     transform="matrix(1.25,0,0,-1.25,0,956.25)">
+<g
+   id="g3116"><text
    transform="matrix(1,0,0,-1,366.2256,728.18)"
    id="text3150"><tspan
      style="font-size:8px;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;fill:#272425;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Armadura Solid;-inkscape-font-specification:ArmaduraSolid"
@@ -1118,10 +1109,7 @@ id="tspan[x/]-[pos/]">[ printTextPlusSpace( pf.fertigkeit.name, empty)  /] [pf.s
 <g
    id="g3226"><g
      id="g3228" /><g
-     id="g3234"><g
-       clip-path="url(#clipPath3230)"
-       id="g3236"
-       style="opacity:0.75"><text
+     id="g3234"><text
    transform="matrix(1,0,0,-1,84.9193,14.656)"
    id="text3238"><tspan
      style="font-size:6px;font-variant:normal;font-weight:normal;font-stretch:condensed;writing-mode:lr-tb;fill:#272425;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Univers LT Std 57 Cn;-inkscape-font-specification:UniversLTStd-Cn"
@@ -1132,7 +1120,7 @@ id="tspan[x/]-[pos/]">[ printTextPlusSpace( pf.fertigkeit.name, empty)  /] [pf.s
 
 
 
-</g></g></g></g><g
+</g></g></g><g
    id="g3242"
    transform="translate(296.4375,679.5)"><path
      d="m 0,0 0,-13.2 -129.04,0 19,13.2 L 0,0 z"
@@ -1165,59 +1153,43 @@ id="tspan[x/]-[pos/]">[ printTextPlusSpace( pf.fertigkeit.name, empty)  /] [pf.s
      id="path3394" /></g><g
    id="g3422"><g
      id="g3424"
-     clip-path="url(#clipPath3426)"><g
+     ><g
        id="g3430"><g
          id="g3432" /><g
-         id="g3460"
-         mask="url(#mask3448)"><g
            id="g3462" /><g
            id="g3468"><g
-             clip-path="url(#clipPath3464)"
-             id="g3470"><g
                transform="translate(296.4375,679.4999)"
                id="g3472"><path
                  d="M 0,0 0,-86.892"
                  style="fill:none;stroke:#7e0f12;stroke-opacity:1;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
-                 id="path3474" /></g></g></g></g></g><g
+                 id="path3474" /></g></g></g><g
        id="g3476"><g
          id="g3478" /><g
-         id="g3506"
-         mask="url(#mask3494)"><g
            id="g3508" /><g
            id="g3514"><g
-             clip-path="url(#clipPath3510)"
-             id="g3516"><g
                transform="translate(296.4375,142.02)"
                id="g3518"><path
                  d="M 0,0 0,-101.326"
                  style="fill:none;stroke:#7e0f12;stroke-opacity:1;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
-                 id="path3520" /></g></g></g></g></g><g
+                 id="path3520" /></g></g></g><g
        id="g3522"><g
          id="g3524" /><g
-         id="g3552"
-         mask="url(#mask3540)"><g
            id="g3554" /><g
            id="g3560"><g
-             clip-path="url(#clipPath3556)"
-             id="g3562"><g
                transform="translate(314.9375,142.02)"
                id="g3564"><path
                  d="M 0,0 0,-101.326"
                  style="fill:none;stroke:#7e0f12;stroke-opacity:1;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
-                 id="path3566" /></g></g></g></g></g><g
+                 id="path3566" /></g></g></g><g
        id="g3568"><g
          id="g3570" /><g
-         id="g3596"
-         mask="url(#mask3584)"><g
            id="g3598" /><g
            id="g3604"><g
-             clip-path="url(#clipPath3600)"
-             id="g3606"><g
                transform="translate(296.4375,583.9844)"
                id="g3608"><path
                  d="M 0,0 0,-164.892"
                  style="fill:none;stroke:#7e0f12;stroke-opacity:1;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
-                 id="path3610" /></g></g></g></g></g><g
+                 id="path3610" /></g></g></g><g
        id="g3612"><g
          id="g3614" /><g
          id="g3642"
