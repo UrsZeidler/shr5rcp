@@ -971,6 +971,53 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.GEBUNDENER_GEIST: {
+                GebundenerGeist gebundenerGeist = (GebundenerGeist)theEObject;
+                T result = caseGebundenerGeist(gebundenerGeist);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.STUFEN_PERSONA: {
+                StufenPersona stufenPersona = (StufenPersona)theEObject;
+                T result = caseStufenPersona(stufenPersona);
+                if (result == null) result = caseQuelle(stufenPersona);
+                if (result == null) result = caseSpezielleAttribute(stufenPersona);
+                if (result == null) result = caseGeistigeAttribute(stufenPersona);
+                if (result == null) result = caseKoerperlicheAttribute(stufenPersona);
+                if (result == null) result = caseBeschreibbar(stufenPersona);
+                if (result == null) result = caseChrakterLimits(stufenPersona);
+                if (result == null) result = casePanzerung(stufenPersona);
+                if (result == null) result = caseModifikatorAttribute(stufenPersona);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GEIST: {
+                Geist geist = (Geist)theEObject;
+                T result = caseGeist(geist);
+                if (result == null) result = caseStufenPersona(geist);
+                if (result == null) result = caseAstraleProjektion(geist);
+                if (result == null) result = caseQuelle(geist);
+                if (result == null) result = caseSpezielleAttribute(geist);
+                if (result == null) result = caseGeistigeAttribute(geist);
+                if (result == null) result = caseKoerperlicheAttribute(geist);
+                if (result == null) result = caseBeschreibbar(geist);
+                if (result == null) result = caseChrakterLimits(geist);
+                if (result == null) result = casePanzerung(geist);
+                if (result == null) result = caseModifikatorAttribute(geist);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.GEISTER_ART: {
+                GeisterArt geisterArt = (GeisterArt)theEObject;
+                T result = caseGeisterArt(geisterArt);
+                if (result == null) result = caseCritter(geisterArt);
+                if (result == null) result = caseSpezies(geisterArt);
+                if (result == null) result = caseBeschreibbar(geisterArt);
+                if (result == null) result = caseModifizierbar(geisterArt);
+                if (result == null) result = caseQuelle(geisterArt);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2232,6 +2279,66 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseModifikatorAttribute(ModifikatorAttribute object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Gebundener Geist</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Gebundener Geist</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGebundenerGeist(GebundenerGeist object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Stufen Persona</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Stufen Persona</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseStufenPersona(StufenPersona object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Geist</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Geist</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGeist(Geist object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Geister Art</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Geister Art</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseGeisterArt(GeisterArt object) {
         return null;
     }
 

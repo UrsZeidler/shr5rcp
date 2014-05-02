@@ -140,9 +140,21 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="fertigkeiten" type="shr5:PersonaFertigkeit"/>
-          <xsd:element name="fertigkeitsGruppen" type="shr5:PersonaFertigkeitsGruppe"/>
-          <xsd:element name="spezies" type="shr5:Spezies"/>
+          <xsd:element name="fertigkeiten" type="shr5:PersonaFertigkeit">
+            <xsd:annotation>
+              <xsd:documentation>Contains the fertigkeiten.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fertigkeitsGruppen" type="shr5:PersonaFertigkeitsGruppe">
+            <xsd:annotation>
+              <xsd:documentation>Contains the skillgroups.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="spezies" type="shr5:Spezies">
+            <xsd:annotation>
+              <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="edgeBasis" type="xsd:int"/>
         <xsd:attribute name="konstitutionBasis" type="xsd:int"/>
@@ -153,7 +165,11 @@
         <xsd:attribute name="willenskraftBasis" type="xsd:int"/>
         <xsd:attribute name="intuitionBasis" type="xsd:int"/>
         <xsd:attribute name="logikBasis" type="xsd:int"/>
-        <xsd:attribute name="spezies" type="xsd:string"/>
+        <xsd:attribute name="spezies" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -678,6 +694,11 @@
       <xsd:extension base="shr5:MagischePersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+          <xsd:element name="gebundeneGeister" type="shr5:GebundenerGeist">
+            <xsd:annotation>
+              <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
       </xsd:extension>
@@ -687,6 +708,11 @@
   <xsd:complexType abstract="true" name="Zauberer">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+      <xsd:element name="gebundeneGeister" type="shr5:GebundenerGeist">
+        <xsd:annotation>
+          <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
@@ -699,6 +725,11 @@
       <xsd:extension base="shr5:KiAdept">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+          <xsd:element name="gebundeneGeister" type="shr5:GebundenerGeist">
+            <xsd:annotation>
+              <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
       </xsd:extension>
@@ -737,13 +768,20 @@
   </xsd:complexType>
   <xsd:element name="Zauber" type="shr5:Zauber"/>
   <xsd:complexType abstract="true" name="ChrakterLimits">
+    <xsd:annotation>
+      <xsd:documentation>Defines the limits.</xsd:documentation>
+    </xsd:annotation>
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
   </xsd:complexType>
-  <xsd:element name="ChrakterLimits" type="shr5:ChrakterLimits"/>
+  <xsd:element name="ChrakterLimits" type="shr5:ChrakterLimits">
+    <xsd:annotation>
+      <xsd:documentation>Defines the limits.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="Panzerung">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
@@ -757,6 +795,11 @@
       <xsd:extension base="shr5:MagischePersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="zauber" type="shr5:PersonaZauber"/>
+          <xsd:element name="gebundeneGeister" type="shr5:GebundenerGeist">
+            <xsd:annotation>
+              <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="aspekt" type="shr5:FertigkeitsGruppe"/>
         </xsd:choice>
         <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
@@ -1154,6 +1197,89 @@
   <xsd:element name="ModifikatorAttribute" type="shr5:ModifikatorAttribute">
     <xsd:annotation>
       <xsd:documentation>Modificator attributes are used to define additional aspects.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GebundenerGeist">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="geist" type="shr5:Geist"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="dienste" type="xsd:int"/>
+    <xsd:attribute name="geist" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="GebundenerGeist" type="shr5:GebundenerGeist"/>
+  <xsd:complexType abstract="true" name="StufenPersona">
+    <xsd:annotation>
+      <xsd:documentation>The rating defines the attribute values.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Quelle">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="fertigkeiten" type="shr5:PersonaFertigkeit">
+            <xsd:annotation>
+              <xsd:documentation>Contains the fertigkeiten.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fertigkeitsGruppen" type="shr5:PersonaFertigkeitsGruppe">
+            <xsd:annotation>
+              <xsd:documentation>Contains the skillgroups.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="edgeBasis" type="xsd:int"/>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="stufe" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="StufenPersona" type="shr5:StufenPersona">
+    <xsd:annotation>
+      <xsd:documentation>The rating defines the attribute values.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Geist">
+    <xsd:annotation>
+      <xsd:documentation>This defines a spirit.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:StufenPersona">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="spezies" type="shr5:GeisterArt">
+            <xsd:annotation>
+              <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="spezies" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Geist" type="shr5:Geist">
+    <xsd:annotation>
+      <xsd:documentation>This defines a spirit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GeisterArt">
+    <xsd:annotation>
+      <xsd:documentation>This is the type of the spririt, it defines the mod of the attribute and the powers.
+Here the attribute min as additional rating.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Critter"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GeisterArt" type="shr5:GeisterArt">
+    <xsd:annotation>
+      <xsd:documentation>This is the type of the spririt, it defines the mod of the attribute and the powers.
+Here the attribute min as additional rating.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
 </xsd:schema>

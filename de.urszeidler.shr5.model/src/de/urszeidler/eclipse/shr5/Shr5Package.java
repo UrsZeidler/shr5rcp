@@ -6380,13 +6380,22 @@ public interface Shr5Package extends EPackage {
 	int MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
 
 	/**
+     * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Astrales Limit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALES_LIMIT = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+	int MAGIER__ASTRALES_LIMIT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
 
 	/**
      * The feature id for the '<em><b>Astrale Konstitution</b></em>' attribute.
@@ -6395,7 +6404,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_KONSTITUTION = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+	int MAGIER__ASTRALE_KONSTITUTION = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
 
 	/**
      * The feature id for the '<em><b>Astrale Geschicklichkeit</b></em>' attribute.
@@ -6404,7 +6413,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_GESCHICKLICHKEIT = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
+	int MAGIER__ASTRALE_GESCHICKLICHKEIT = MAGISCHE_PERSONA_FEATURE_COUNT + 6;
 
 	/**
      * The feature id for the '<em><b>Astrale Reaktion</b></em>' attribute.
@@ -6413,7 +6422,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_REAKTION = MAGISCHE_PERSONA_FEATURE_COUNT + 6;
+	int MAGIER__ASTRALE_REAKTION = MAGISCHE_PERSONA_FEATURE_COUNT + 7;
 
 	/**
      * The feature id for the '<em><b>Astrale Staerke</b></em>' attribute.
@@ -6422,7 +6431,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_STAERKE = MAGISCHE_PERSONA_FEATURE_COUNT + 7;
+	int MAGIER__ASTRALE_STAERKE = MAGISCHE_PERSONA_FEATURE_COUNT + 8;
 
 	/**
      * The feature id for the '<em><b>Astrale Initative</b></em>' attribute.
@@ -6431,7 +6440,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_INITATIVE = MAGISCHE_PERSONA_FEATURE_COUNT + 8;
+	int MAGIER__ASTRALE_INITATIVE = MAGISCHE_PERSONA_FEATURE_COUNT + 9;
 
 	/**
      * The feature id for the '<em><b>Astrale Initativ Wuerfel</b></em>' attribute.
@@ -6440,7 +6449,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_INITATIV_WUERFEL = MAGISCHE_PERSONA_FEATURE_COUNT + 9;
+	int MAGIER__ASTRALE_INITATIV_WUERFEL = MAGISCHE_PERSONA_FEATURE_COUNT + 10;
 
 	/**
      * The feature id for the '<em><b>Astrale Panzerung</b></em>' attribute.
@@ -6449,7 +6458,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_PANZERUNG = MAGISCHE_PERSONA_FEATURE_COUNT + 10;
+	int MAGIER__ASTRALE_PANZERUNG = MAGISCHE_PERSONA_FEATURE_COUNT + 11;
 
 	/**
      * The number of structural features of the '<em>Magier</em>' class.
@@ -6458,7 +6467,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 11;
+	int MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 12;
 
 	/**
      * The number of operations of the '<em>Magier</em>' class.
@@ -6507,13 +6516,22 @@ public interface Shr5Package extends EPackage {
 	int ZAUBERER__TRADITION = 2;
 
 	/**
+     * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ZAUBERER__GEBUNDENE_GEISTER = 3;
+
+    /**
      * The number of structural features of the '<em>Zauberer</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBERER_FEATURE_COUNT = 3;
+	int ZAUBERER_FEATURE_COUNT = 4;
 
 	/**
      * The number of operations of the '<em>Zauberer</em>' class.
@@ -6967,13 +6985,22 @@ public interface Shr5Package extends EPackage {
 	int MYSTIC_ADEPT__TRADITION = KI_ADEPT_FEATURE_COUNT + 2;
 
 	/**
+     * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__GEBUNDENE_GEISTER = KI_ADEPT_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Mystic Adept</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MYSTIC_ADEPT_FEATURE_COUNT = KI_ADEPT_FEATURE_COUNT + 3;
+	int MYSTIC_ADEPT_FEATURE_COUNT = KI_ADEPT_FEATURE_COUNT + 4;
 
 	/**
      * The number of operations of the '<em>Mystic Adept</em>' class.
@@ -7692,13 +7719,22 @@ public interface Shr5Package extends EPackage {
 	int ASPEKT_MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
 
 	/**
+     * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Aspekt</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ASPEKT_MAGIER__ASPEKT = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
+	int ASPEKT_MAGIER__ASPEKT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
 
 	/**
      * The number of structural features of the '<em>Aspekt Magier</em>' class.
@@ -7707,7 +7743,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ASPEKT_MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+	int ASPEKT_MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
 
 	/**
      * The number of operations of the '<em>Aspekt Magier</em>' class.
@@ -11663,6 +11699,1000 @@ public interface Shr5Package extends EPackage {
     int MUNITION_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl <em>Gebundener Geist</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGebundenerGeist()
+     * @generated
+     */
+    int GEBUNDENER_GEIST = 84;
+
+    /**
+     * The feature id for the '<em><b>Dienste</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEBUNDENER_GEIST__DIENSTE = 0;
+
+    /**
+     * The feature id for the '<em><b>Geist</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEBUNDENER_GEIST__GEIST = 1;
+
+    /**
+     * The number of structural features of the '<em>Gebundener Geist</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEBUNDENER_GEIST_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Gebundener Geist</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEBUNDENER_GEIST_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl <em>Stufen Persona</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getStufenPersona()
+     * @generated
+     */
+    int STUFEN_PERSONA = 85;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__PAGE = QUELLE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__SRC_BOOK = QUELLE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Initative</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__INITATIVE = QUELLE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__INITATIV_WUERFEL = QUELLE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__AUSWEICHEN = QUELLE_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Essenz</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__ESSENZ = QUELLE_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__EDGE_BASIS = QUELLE_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Edge</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__EDGE = QUELLE_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Charisma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__CHARISMA = QUELLE_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__WILLENSKRAFT = QUELLE_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Intuition</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__INTUITION = QUELLE_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Logik</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__LOGIK = QUELLE_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Konstitution</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__KONSTITUTION = QUELLE_FEATURE_COUNT + 10;
+
+    /**
+     * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__GESCHICKLICHKEIT = QUELLE_FEATURE_COUNT + 11;
+
+    /**
+     * The feature id for the '<em><b>Reaktion</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__REAKTION = QUELLE_FEATURE_COUNT + 12;
+
+    /**
+     * The feature id for the '<em><b>Staerke</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__STAERKE = QUELLE_FEATURE_COUNT + 13;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__BESCHREIBUNG = QUELLE_FEATURE_COUNT + 14;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__IMAGE = QUELLE_FEATURE_COUNT + 15;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__NAME = QUELLE_FEATURE_COUNT + 16;
+
+    /**
+     * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__KOERPERLICH = QUELLE_FEATURE_COUNT + 17;
+
+    /**
+     * The feature id for the '<em><b>Geistig</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__GEISTIG = QUELLE_FEATURE_COUNT + 18;
+
+    /**
+     * The feature id for the '<em><b>Sozial</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__SOZIAL = QUELLE_FEATURE_COUNT + 19;
+
+    /**
+     * The feature id for the '<em><b>Panzer</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__PANZER = QUELLE_FEATURE_COUNT + 20;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__STUFE = QUELLE_FEATURE_COUNT + 21;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__FERTIGKEITEN = QUELLE_FEATURE_COUNT + 22;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__FERTIGKEITS_GRUPPEN = QUELLE_FEATURE_COUNT + 23;
+
+    /**
+     * The number of structural features of the '<em>Stufen Persona</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 24;
+
+    /**
+     * The number of operations of the '<em>Stufen Persona</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA_OPERATION_COUNT = QUELLE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GeistImpl <em>Geist</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GeistImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeist()
+     * @generated
+     */
+    int GEIST = 86;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__PAGE = STUFEN_PERSONA__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__SRC_BOOK = STUFEN_PERSONA__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Initative</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__INITATIVE = STUFEN_PERSONA__INITATIVE;
+
+    /**
+     * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__INITATIV_WUERFEL = STUFEN_PERSONA__INITATIV_WUERFEL;
+
+    /**
+     * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__AUSWEICHEN = STUFEN_PERSONA__AUSWEICHEN;
+
+    /**
+     * The feature id for the '<em><b>Essenz</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ESSENZ = STUFEN_PERSONA__ESSENZ;
+
+    /**
+     * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__EDGE_BASIS = STUFEN_PERSONA__EDGE_BASIS;
+
+    /**
+     * The feature id for the '<em><b>Edge</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__EDGE = STUFEN_PERSONA__EDGE;
+
+    /**
+     * The feature id for the '<em><b>Charisma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__CHARISMA = STUFEN_PERSONA__CHARISMA;
+
+    /**
+     * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__WILLENSKRAFT = STUFEN_PERSONA__WILLENSKRAFT;
+
+    /**
+     * The feature id for the '<em><b>Intuition</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__INTUITION = STUFEN_PERSONA__INTUITION;
+
+    /**
+     * The feature id for the '<em><b>Logik</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__LOGIK = STUFEN_PERSONA__LOGIK;
+
+    /**
+     * The feature id for the '<em><b>Konstitution</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__KONSTITUTION = STUFEN_PERSONA__KONSTITUTION;
+
+    /**
+     * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__GESCHICKLICHKEIT = STUFEN_PERSONA__GESCHICKLICHKEIT;
+
+    /**
+     * The feature id for the '<em><b>Reaktion</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__REAKTION = STUFEN_PERSONA__REAKTION;
+
+    /**
+     * The feature id for the '<em><b>Staerke</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__STAERKE = STUFEN_PERSONA__STAERKE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__BESCHREIBUNG = STUFEN_PERSONA__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__IMAGE = STUFEN_PERSONA__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__NAME = STUFEN_PERSONA__NAME;
+
+    /**
+     * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__KOERPERLICH = STUFEN_PERSONA__KOERPERLICH;
+
+    /**
+     * The feature id for the '<em><b>Geistig</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__GEISTIG = STUFEN_PERSONA__GEISTIG;
+
+    /**
+     * The feature id for the '<em><b>Sozial</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__SOZIAL = STUFEN_PERSONA__SOZIAL;
+
+    /**
+     * The feature id for the '<em><b>Panzer</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__PANZER = STUFEN_PERSONA__PANZER;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__STUFE = STUFEN_PERSONA__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__FERTIGKEITEN = STUFEN_PERSONA__FERTIGKEITEN;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__FERTIGKEITS_GRUPPEN = STUFEN_PERSONA__FERTIGKEITS_GRUPPEN;
+
+    /**
+     * The feature id for the '<em><b>Astrales Limit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALES_LIMIT = STUFEN_PERSONA_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Astrale Konstitution</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_KONSTITUTION = STUFEN_PERSONA_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Astrale Geschicklichkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_GESCHICKLICHKEIT = STUFEN_PERSONA_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Astrale Reaktion</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_REAKTION = STUFEN_PERSONA_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Astrale Staerke</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_STAERKE = STUFEN_PERSONA_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Astrale Initative</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_INITATIVE = STUFEN_PERSONA_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Astrale Initativ Wuerfel</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_INITATIV_WUERFEL = STUFEN_PERSONA_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Astrale Panzerung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__ASTRALE_PANZERUNG = STUFEN_PERSONA_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Spezies</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__SPEZIES = STUFEN_PERSONA_FEATURE_COUNT + 8;
+
+    /**
+     * The number of structural features of the '<em>Geist</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST_FEATURE_COUNT = STUFEN_PERSONA_FEATURE_COUNT + 9;
+
+    /**
+     * The number of operations of the '<em>Geist</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST_OPERATION_COUNT = STUFEN_PERSONA_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GeisterArtImpl <em>Geister Art</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GeisterArtImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeisterArt()
+     * @generated
+     */
+    int GEISTER_ART = 87;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__BESCHREIBUNG = CRITTER__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__IMAGE = CRITTER__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__NAME = CRITTER__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__MODS = CRITTER__MODS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__PAGE = CRITTER__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__SRC_BOOK = CRITTER__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Konstitution Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__KONSTITUTION_MIN = CRITTER__KONSTITUTION_MIN;
+
+    /**
+     * The feature id for the '<em><b>Geschicklichkeit Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__GESCHICKLICHKEIT_MIN = CRITTER__GESCHICKLICHKEIT_MIN;
+
+    /**
+     * The feature id for the '<em><b>Reaktion Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__REAKTION_MIN = CRITTER__REAKTION_MIN;
+
+    /**
+     * The feature id for the '<em><b>Staerke Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__STAERKE_MIN = CRITTER__STAERKE_MIN;
+
+    /**
+     * The feature id for the '<em><b>Charisma Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__CHARISMA_MIN = CRITTER__CHARISMA_MIN;
+
+    /**
+     * The feature id for the '<em><b>Willenskraft Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__WILLENSKRAFT_MIN = CRITTER__WILLENSKRAFT_MIN;
+
+    /**
+     * The feature id for the '<em><b>Intuition Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__INTUITION_MIN = CRITTER__INTUITION_MIN;
+
+    /**
+     * The feature id for the '<em><b>Logik Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__LOGIK_MIN = CRITTER__LOGIK_MIN;
+
+    /**
+     * The feature id for the '<em><b>Edge Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__EDGE_MIN = CRITTER__EDGE_MIN;
+
+    /**
+     * The feature id for the '<em><b>Magie Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__MAGIE_MIN = CRITTER__MAGIE_MIN;
+
+    /**
+     * The feature id for the '<em><b>Resonanz Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__RESONANZ_MIN = CRITTER__RESONANZ_MIN;
+
+    /**
+     * The feature id for the '<em><b>Essenz Min</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__ESSENZ_MIN = CRITTER__ESSENZ_MIN;
+
+    /**
+     * The feature id for the '<em><b>Konstitution Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__KONSTITUTION_MAX = CRITTER__KONSTITUTION_MAX;
+
+    /**
+     * The feature id for the '<em><b>Geschicklichkeit Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__GESCHICKLICHKEIT_MAX = CRITTER__GESCHICKLICHKEIT_MAX;
+
+    /**
+     * The feature id for the '<em><b>Reaktion Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__REAKTION_MAX = CRITTER__REAKTION_MAX;
+
+    /**
+     * The feature id for the '<em><b>Staerke Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__STAERKE_MAX = CRITTER__STAERKE_MAX;
+
+    /**
+     * The feature id for the '<em><b>Charisma Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__CHARISMA_MAX = CRITTER__CHARISMA_MAX;
+
+    /**
+     * The feature id for the '<em><b>Willenskraft Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__WILLENSKRAFT_MAX = CRITTER__WILLENSKRAFT_MAX;
+
+    /**
+     * The feature id for the '<em><b>Intuition Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__INTUITION_MAX = CRITTER__INTUITION_MAX;
+
+    /**
+     * The feature id for the '<em><b>Logik Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__LOGIK_MAX = CRITTER__LOGIK_MAX;
+
+    /**
+     * The feature id for the '<em><b>Edge Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__EDGE_MAX = CRITTER__EDGE_MAX;
+
+    /**
+     * The feature id for the '<em><b>Magie Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__MAGIE_MAX = CRITTER__MAGIE_MAX;
+
+    /**
+     * The feature id for the '<em><b>Resonanz Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__RESONANZ_MAX = CRITTER__RESONANZ_MAX;
+
+    /**
+     * The feature id for the '<em><b>Essenz Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__ESSENZ_MAX = CRITTER__ESSENZ_MAX;
+
+    /**
+     * The feature id for the '<em><b>Laufen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__LAUFEN = CRITTER__LAUFEN;
+
+    /**
+     * The feature id for the '<em><b>Rennen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__RENNEN = CRITTER__RENNEN;
+
+    /**
+     * The feature id for the '<em><b>Sprinten</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__SPRINTEN = CRITTER__SPRINTEN;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__ANGRIFF = CRITTER__ANGRIFF;
+
+    /**
+     * The feature id for the '<em><b>Kraefte</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__KRAEFTE = CRITTER__KRAEFTE;
+
+    /**
+     * The number of structural features of the '<em>Geister Art</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART_FEATURE_COUNT = CRITTER_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Geister Art</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART_OPERATION_COUNT = CRITTER_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11670,7 +12700,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 84;
+	int FEUER_MODUS = 88;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -11680,7 +12710,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 85;
+	int SCHADENS_TYP = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -11690,7 +12720,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 86;
+	int MAGAZIN_TYP = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -11700,7 +12730,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 87;
+	int FEUWERWAFFEN_ERWEITERUNG = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -11710,7 +12740,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 88;
+	int MODIFIKATOR_TYPE = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -11720,7 +12750,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 89;
+	int SMARTGUN_TYPE = 93;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -11730,7 +12760,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 90;
+	int ZAUBER_ART = 94;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -11740,7 +12770,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 91;
+	int ZAUBER_REICHWEITE = 95;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -11750,7 +12780,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 92;
+	int ZAUBER_DAUER = 96;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -11760,7 +12790,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 93;
+	int MAGISCHE_TRADITION = 97;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -11770,7 +12800,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 94;
+	int CRITTER_HANDLUNG = 98;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -11780,7 +12810,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 95;
+	int CRITTER_REICHWEITE = 99;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -11790,7 +12820,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 96;
+	int CRITTER_DAUER = 100;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -11800,7 +12830,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 97;
+	int RESONANZ_ZIEL = 101;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -11810,7 +12840,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 98;
+	int SHR_DATE = 102;
 
 
 	/**
@@ -11821,7 +12851,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 99;
+	int MODIFICATION_MANAGER = 103;
 
 
 	/**
@@ -13748,6 +14778,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getZauberer_Tradition();
 
 	/**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Zauberer#getGebundeneGeister <em>Gebundene Geister</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Gebundene Geister</em>'.
+     * @see de.urszeidler.eclipse.shr5.Zauberer#getGebundeneGeister()
+     * @see #getZauberer()
+     * @generated
+     */
+    EReference getZauberer_GebundeneGeister();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MysticAdept <em>Mystic Adept</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14995,6 +16036,112 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EClass getModifikatorAttribute();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.GebundenerGeist <em>Gebundener Geist</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Gebundener Geist</em>'.
+     * @see de.urszeidler.eclipse.shr5.GebundenerGeist
+     * @generated
+     */
+    EClass getGebundenerGeist();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.GebundenerGeist#getDienste <em>Dienste</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Dienste</em>'.
+     * @see de.urszeidler.eclipse.shr5.GebundenerGeist#getDienste()
+     * @see #getGebundenerGeist()
+     * @generated
+     */
+    EAttribute getGebundenerGeist_Dienste();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist <em>Geist</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Geist</em>'.
+     * @see de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist()
+     * @see #getGebundenerGeist()
+     * @generated
+     */
+    EReference getGebundenerGeist_Geist();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.StufenPersona <em>Stufen Persona</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Stufen Persona</em>'.
+     * @see de.urszeidler.eclipse.shr5.StufenPersona
+     * @generated
+     */
+    EClass getStufenPersona();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.StufenPersona#getStufe <em>Stufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Stufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.StufenPersona#getStufe()
+     * @see #getStufenPersona()
+     * @generated
+     */
+    EAttribute getStufenPersona_Stufe();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeiten <em>Fertigkeiten</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Fertigkeiten</em>'.
+     * @see de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeiten()
+     * @see #getStufenPersona()
+     * @generated
+     */
+    EReference getStufenPersona_Fertigkeiten();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeitsGruppen <em>Fertigkeits Gruppen</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Fertigkeits Gruppen</em>'.
+     * @see de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeitsGruppen()
+     * @see #getStufenPersona()
+     * @generated
+     */
+    EReference getStufenPersona_FertigkeitsGruppen();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Geist <em>Geist</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Geist</em>'.
+     * @see de.urszeidler.eclipse.shr5.Geist
+     * @generated
+     */
+    EClass getGeist();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Geist#getSpezies <em>Spezies</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Spezies</em>'.
+     * @see de.urszeidler.eclipse.shr5.Geist#getSpezies()
+     * @see #getGeist()
+     * @generated
+     */
+    EReference getGeist_Spezies();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.GeisterArt <em>Geister Art</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Geister Art</em>'.
+     * @see de.urszeidler.eclipse.shr5.GeisterArt
+     * @generated
+     */
+    EClass getGeisterArt();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
@@ -16706,6 +17853,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute ZAUBERER__TRADITION = eINSTANCE.getZauberer_Tradition();
 
 		/**
+         * The meta object literal for the '<em><b>Gebundene Geister</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ZAUBERER__GEBUNDENE_GEISTER = eINSTANCE.getZauberer_GebundeneGeister();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl <em>Mystic Adept</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17716,6 +18871,94 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass MODIFIKATOR_ATTRIBUTE = eINSTANCE.getModifikatorAttribute();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl <em>Gebundener Geist</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGebundenerGeist()
+         * @generated
+         */
+        EClass GEBUNDENER_GEIST = eINSTANCE.getGebundenerGeist();
+
+        /**
+         * The meta object literal for the '<em><b>Dienste</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute GEBUNDENER_GEIST__DIENSTE = eINSTANCE.getGebundenerGeist_Dienste();
+
+        /**
+         * The meta object literal for the '<em><b>Geist</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GEBUNDENER_GEIST__GEIST = eINSTANCE.getGebundenerGeist_Geist();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl <em>Stufen Persona</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getStufenPersona()
+         * @generated
+         */
+        EClass STUFEN_PERSONA = eINSTANCE.getStufenPersona();
+
+        /**
+         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute STUFEN_PERSONA__STUFE = eINSTANCE.getStufenPersona_Stufe();
+
+        /**
+         * The meta object literal for the '<em><b>Fertigkeiten</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference STUFEN_PERSONA__FERTIGKEITEN = eINSTANCE.getStufenPersona_Fertigkeiten();
+
+        /**
+         * The meta object literal for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference STUFEN_PERSONA__FERTIGKEITS_GRUPPEN = eINSTANCE.getStufenPersona_FertigkeitsGruppen();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.GeistImpl <em>Geist</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.GeistImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeist()
+         * @generated
+         */
+        EClass GEIST = eINSTANCE.getGeist();
+
+        /**
+         * The meta object literal for the '<em><b>Spezies</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GEIST__SPEZIES = eINSTANCE.getGeist_Spezies();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.GeisterArtImpl <em>Geister Art</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.GeisterArtImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeisterArt()
+         * @generated
+         */
+        EClass GEISTER_ART = eINSTANCE.getGeisterArt();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

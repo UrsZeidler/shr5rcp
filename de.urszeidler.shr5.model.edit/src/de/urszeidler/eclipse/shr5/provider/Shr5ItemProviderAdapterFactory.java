@@ -1198,6 +1198,75 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.GebundenerGeist} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GebundenerGeistItemProvider gebundenerGeistItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.GebundenerGeist}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGebundenerGeistAdapter() {
+        if (gebundenerGeistItemProvider == null) {
+            gebundenerGeistItemProvider = new GebundenerGeistItemProvider(this);
+        }
+
+        return gebundenerGeistItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Geist} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GeistItemProvider geistItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Geist}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGeistAdapter() {
+        if (geistItemProvider == null) {
+            geistItemProvider = new GeistItemProvider(this);
+        }
+
+        return geistItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.GeisterArt} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GeisterArtItemProvider geisterArtItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.GeisterArt}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createGeisterArtAdapter() {
+        if (geisterArtItemProvider == null) {
+            geisterArtItemProvider = new GeisterArtItemProvider(this);
+        }
+
+        return geisterArtItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1345,6 +1414,9 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (lizenzItemProvider != null) lizenzItemProvider.dispose();
         if (credstickItemProvider != null) credstickItemProvider.dispose();
         if (munitionItemProvider != null) munitionItemProvider.dispose();
+        if (gebundenerGeistItemProvider != null) gebundenerGeistItemProvider.dispose();
+        if (geistItemProvider != null) geistItemProvider.dispose();
+        if (geisterArtItemProvider != null) geisterArtItemProvider.dispose();
     }
 
 }

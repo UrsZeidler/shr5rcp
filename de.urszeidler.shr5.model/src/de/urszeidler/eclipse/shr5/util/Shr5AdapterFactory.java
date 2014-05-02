@@ -483,6 +483,22 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createModifikatorAttributeAdapter();
             }
             @Override
+            public Adapter caseGebundenerGeist(GebundenerGeist object) {
+                return createGebundenerGeistAdapter();
+            }
+            @Override
+            public Adapter caseStufenPersona(StufenPersona object) {
+                return createStufenPersonaAdapter();
+            }
+            @Override
+            public Adapter caseGeist(Geist object) {
+                return createGeistAdapter();
+            }
+            @Override
+            public Adapter caseGeisterArt(GeisterArt object) {
+                return createGeisterArtAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1675,6 +1691,62 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createModifikatorAttributeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.GebundenerGeist <em>Gebundener Geist</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.GebundenerGeist
+     * @generated
+     */
+    public Adapter createGebundenerGeistAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.StufenPersona <em>Stufen Persona</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.StufenPersona
+     * @generated
+     */
+    public Adapter createStufenPersonaAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Geist <em>Geist</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Geist
+     * @generated
+     */
+    public Adapter createGeistAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.GeisterArt <em>Geister Art</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.GeisterArt
+     * @generated
+     */
+    public Adapter createGeisterArtAdapter() {
         return null;
     }
 

@@ -359,15 +359,18 @@
     <nested inputs="shr5.ecore#//Magier" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44"/>
     <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Magier" outputs="Shr5XMI.xsd#//Magier;XSDElementDeclaration=44"/>
     <nested inputs="shr5.ecore#//Zauberer" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45">
       <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//Zauberer;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Zauberer" outputs="Shr5XMI.xsd#//Zauberer;XSDElementDeclaration=45"/>
     <nested inputs="shr5.ecore#//MysticAdept" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46"/>
     <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//MysticAdept;XSDComplexTypeDefinition=46/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//MysticAdept" outputs="Shr5XMI.xsd#//MysticAdept;XSDElementDeclaration=46"/>
     <nested inputs="shr5.ecore#//PersonaZauber" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47">
       <nested inputs="shr5.ecore#//PersonaZauber/stufe" outputs="Shr5XMI.xsd#//PersonaZauber;XSDComplexTypeDefinition=47/XSDAttributeUse"/>
@@ -394,10 +397,11 @@
     <nested inputs="shr5.ecore#//Panzerung" outputs="Shr5XMI.xsd#//Panzerung;XSDElementDeclaration=50"/>
     <nested inputs="shr5.ecore#//AspektMagier" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51">
       <nested inputs="shr5.ecore#//AspektMagier/aspekt" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//AspektMagier/aspekt" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//AspektMagier/aspekt" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//Zauberer/tradition" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Zauberer/zauber" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Zauberer/gebundeneGeister" outputs="Shr5XMI.xsd#//AspektMagier;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//AspektMagier" outputs="Shr5XMI.xsd#//AspektMagier;XSDElementDeclaration=51"/>
     <nested inputs="shr5.ecore#//AstraleProjektion" outputs="Shr5XMI.xsd#//AstraleProjektion;XSDComplexTypeDefinition=52"/>
     <nested inputs="shr5.ecore#//AstraleProjektion" outputs="Shr5XMI.xsd#//AstraleProjektion;XSDElementDeclaration=52"/>
@@ -567,5 +571,28 @@
     <nested inputs="shr5.ecore#//Munition" outputs="Shr5XMI.xsd#//Munition;XSDElementDeclaration=82"/>
     <nested inputs="shr5.ecore#//ModifikatorAttribute" outputs="Shr5XMI.xsd#//ModifikatorAttribute;XSDComplexTypeDefinition=83"/>
     <nested inputs="shr5.ecore#//ModifikatorAttribute" outputs="Shr5XMI.xsd#//ModifikatorAttribute;XSDElementDeclaration=83"/>
+    <nested inputs="shr5.ecore#//GebundenerGeist" outputs="Shr5XMI.xsd#//GebundenerGeist;XSDComplexTypeDefinition=84">
+      <nested inputs="shr5.ecore#//GebundenerGeist/dienste" outputs="Shr5XMI.xsd#//GebundenerGeist;XSDComplexTypeDefinition=84/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//GebundenerGeist/geist" outputs="Shr5XMI.xsd#//GebundenerGeist;XSDComplexTypeDefinition=84/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//GebundenerGeist/geist" outputs="Shr5XMI.xsd#//GebundenerGeist;XSDComplexTypeDefinition=84/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//GebundenerGeist" outputs="Shr5XMI.xsd#//GebundenerGeist;XSDElementDeclaration=84"/>
+    <nested inputs="shr5.ecore#//StufenPersona" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85">
+      <nested inputs="shr5.ecore#//StufenPersona/stufe" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//StufenPersona/fertigkeiten" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//StufenPersona/fertigkeitsGruppen" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//StufenPersona" outputs="Shr5XMI.xsd#//StufenPersona;XSDElementDeclaration=85"/>
+    <nested inputs="shr5.ecore#//Geist" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86">
+      <nested inputs="shr5.ecore#//Geist/spezies" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Geist/spezies" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Geist" outputs="Shr5XMI.xsd#//Geist;XSDElementDeclaration=86"/>
+    <nested inputs="shr5.ecore#//GeisterArt" outputs="Shr5XMI.xsd#//GeisterArt;XSDComplexTypeDefinition=87"/>
+    <nested inputs="shr5.ecore#//GeisterArt" outputs="Shr5XMI.xsd#//GeisterArt;XSDElementDeclaration=87"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

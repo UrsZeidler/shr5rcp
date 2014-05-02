@@ -156,6 +156,7 @@ public class AspektMagierItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.ZAUBERER__ZAUBER);
+            childrenFeatures.add(Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER);
         }
         return childrenFeatures;
     }
@@ -222,6 +223,7 @@ public class AspektMagierItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.ASPEKT_MAGIER__ZAUBER:
+            case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -243,6 +245,11 @@ public class AspektMagierItemProvider
             (createChildParameter
                 (Shr5Package.Literals.ZAUBERER__ZAUBER,
                  Shr5Factory.eINSTANCE.createPersonaZauber()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER,
+                 Shr5Factory.eINSTANCE.createGebundenerGeist()));
     }
 
 }

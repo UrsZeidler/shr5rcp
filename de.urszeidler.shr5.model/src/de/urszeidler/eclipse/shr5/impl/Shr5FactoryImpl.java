@@ -168,6 +168,9 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.LIZENZ: return createLizenz();
             case Shr5Package.CREDSTICK: return createCredstick();
             case Shr5Package.MUNITION: return createMunition();
+            case Shr5Package.GEBUNDENER_GEIST: return createGebundenerGeist();
+            case Shr5Package.GEIST: return createGeist();
+            case Shr5Package.GEISTER_ART: return createGeisterArt();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -747,6 +750,36 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Munition createMunition() {
         MunitionImpl munition = new MunitionImpl();
         return munition;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GebundenerGeist createGebundenerGeist() {
+        GebundenerGeistImpl gebundenerGeist = new GebundenerGeistImpl();
+        return gebundenerGeist;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Geist createGeist() {
+        GeistImpl geist = new GeistImpl();
+        return geist;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GeisterArt createGeisterArt() {
+        GeisterArtImpl geisterArt = new GeisterArtImpl();
+        return geisterArt;
     }
 
     /**

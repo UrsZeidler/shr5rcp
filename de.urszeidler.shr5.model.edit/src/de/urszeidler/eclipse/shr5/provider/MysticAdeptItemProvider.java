@@ -124,6 +124,7 @@ public class MysticAdeptItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.ZAUBERER__ZAUBER);
+            childrenFeatures.add(Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER);
         }
         return childrenFeatures;
     }
@@ -190,6 +191,7 @@ public class MysticAdeptItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.MYSTIC_ADEPT__ZAUBER:
+            case Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -211,6 +213,11 @@ public class MysticAdeptItemProvider
             (createChildParameter
                 (Shr5Package.Literals.ZAUBERER__ZAUBER,
                  Shr5Factory.eINSTANCE.createPersonaZauber()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER,
+                 Shr5Factory.eINSTANCE.createGebundenerGeist()));
     }
 
 }

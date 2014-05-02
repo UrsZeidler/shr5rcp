@@ -46,8 +46,11 @@ import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
+import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.GegenstandStufen;
+import de.urszeidler.eclipse.shr5.Geist;
+import de.urszeidler.eclipse.shr5.GeisterArt;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Initation;
@@ -104,6 +107,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Sprite;
 import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.StufenPersona;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
@@ -708,6 +712,34 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass modifikatorAttributeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass gebundenerGeistEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass stufenPersonaEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass geistEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass geisterArtEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2495,6 +2527,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getZauberer_GebundeneGeister() {
+        return (EReference)zaubererEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3548,6 +3589,96 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGebundenerGeist() {
+        return gebundenerGeistEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGebundenerGeist_Dienste() {
+        return (EAttribute)gebundenerGeistEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGebundenerGeist_Geist() {
+        return (EReference)gebundenerGeistEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getStufenPersona() {
+        return stufenPersonaEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getStufenPersona_Stufe() {
+        return (EAttribute)stufenPersonaEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getStufenPersona_Fertigkeiten() {
+        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getStufenPersona_FertigkeitsGruppen() {
+        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGeist() {
+        return geistEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGeist_Spezies() {
+        return (EReference)geistEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getGeisterArt() {
+        return geisterArtEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3942,6 +4073,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(zaubererEClass, ZAUBERER__ZAUBER);
         createEAttribute(zaubererEClass, ZAUBERER__ENZUG);
         createEAttribute(zaubererEClass, ZAUBERER__TRADITION);
+        createEReference(zaubererEClass, ZAUBERER__GEBUNDENE_GEISTER);
 
         mysticAdeptEClass = createEClass(MYSTIC_ADEPT);
 
@@ -4097,6 +4229,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(munitionEClass, MUNITION__TYPE);
 
         modifikatorAttributeEClass = createEClass(MODIFIKATOR_ATTRIBUTE);
+
+        gebundenerGeistEClass = createEClass(GEBUNDENER_GEIST);
+        createEAttribute(gebundenerGeistEClass, GEBUNDENER_GEIST__DIENSTE);
+        createEReference(gebundenerGeistEClass, GEBUNDENER_GEIST__GEIST);
+
+        stufenPersonaEClass = createEClass(STUFEN_PERSONA);
+        createEAttribute(stufenPersonaEClass, STUFEN_PERSONA__STUFE);
+        createEReference(stufenPersonaEClass, STUFEN_PERSONA__FERTIGKEITEN);
+        createEReference(stufenPersonaEClass, STUFEN_PERSONA__FERTIGKEITS_GRUPPEN);
+
+        geistEClass = createEClass(GEIST);
+        createEReference(geistEClass, GEIST__SPEZIES);
+
+        geisterArtEClass = createEClass(GEISTER_ART);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -4254,6 +4400,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         credstickEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         munitionEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         munitionEClass.getESuperTypes().add(this.getMenge());
+        stufenPersonaEClass.getESuperTypes().add(this.getQuelle());
+        stufenPersonaEClass.getESuperTypes().add(this.getSpezielleAttribute());
+        stufenPersonaEClass.getESuperTypes().add(this.getGeistigeAttribute());
+        stufenPersonaEClass.getESuperTypes().add(this.getKoerperlicheAttribute());
+        stufenPersonaEClass.getESuperTypes().add(this.getBeschreibbar());
+        stufenPersonaEClass.getESuperTypes().add(this.getChrakterLimits());
+        stufenPersonaEClass.getESuperTypes().add(this.getPanzerung());
+        geistEClass.getESuperTypes().add(this.getStufenPersona());
+        geistEClass.getESuperTypes().add(this.getAstraleProjektion());
+        geisterArtEClass.getESuperTypes().add(this.getCritter());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4480,6 +4636,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getZauberer_Zauber(), this.getPersonaZauber(), null, "zauber", null, 0, -1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getZauberer_Enzug(), ecorePackage.getEInt(), "enzug", null, 0, 1, Zauberer.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getZauberer_Tradition(), this.getMagischeTradition(), "tradition", null, 0, 1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getZauberer_GebundeneGeister(), this.getGebundenerGeist(), null, "gebundeneGeister", null, 0, -1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(mysticAdeptEClass, MysticAdept.class, "MysticAdept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4635,6 +4792,20 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getMunition_Type(), this.getReichweite(), null, "type", null, 1, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(modifikatorAttributeEClass, ModifikatorAttribute.class, "ModifikatorAttribute", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(gebundenerGeistEClass, GebundenerGeist.class, "GebundenerGeist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getGebundenerGeist_Dienste(), ecorePackage.getEInt(), "dienste", null, 0, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGebundenerGeist_Geist(), this.getGeist(), null, "geist", null, 1, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(stufenPersonaEClass, StufenPersona.class, "StufenPersona", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getStufenPersona_Stufe(), ecorePackage.getEInt(), "stufe", null, 1, 1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getStufenPersona_Fertigkeiten(), this.getPersonaFertigkeit(), null, "fertigkeiten", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getStufenPersona_FertigkeitsGruppen(), this.getPersonaFertigkeitsGruppe(), null, "fertigkeitsGruppen", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(geistEClass, Geist.class, "Geist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getGeist_Spezies(), this.getGeisterArt(), null, "spezies", null, 1, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(geisterArtEClass, GeisterArt.class, "GeisterArt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

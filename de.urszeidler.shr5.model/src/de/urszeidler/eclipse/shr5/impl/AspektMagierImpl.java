@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -30,6 +31,7 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getEnzug <em>Enzug</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getTradition <em>Tradition</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getGebundeneGeister <em>Gebundene Geister</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getAspekt <em>Aspekt</em>}</li>
  * </ul>
  * </p>
@@ -78,6 +80,16 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
 	protected MagischeTradition tradition = TRADITION_EDEFAULT;
 
 	/**
+     * The cached value of the '{@link #getGebundeneGeister() <em>Gebundene Geister</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getGebundeneGeister()
+     * @generated
+     * @ordered
+     */
+    protected EList<GebundenerGeist> gebundeneGeister;
+
+    /**
      * The cached value of the '{@link #getAspekt() <em>Aspekt</em>}' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,6 +170,18 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<GebundenerGeist> getGebundeneGeister() {
+        if (gebundeneGeister == null) {
+            gebundeneGeister = new EObjectContainmentEList<GebundenerGeist>(GebundenerGeist.class, this, Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER);
+        }
+        return gebundeneGeister;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -204,6 +228,8 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
         switch (featureID) {
             case Shr5Package.ASPEKT_MAGIER__ZAUBER:
                 return ((InternalEList<?>)getZauber()).basicRemove(otherEnd, msgs);
+            case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
+                return ((InternalEList<?>)getGebundeneGeister()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -222,6 +248,8 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
                 return getEnzug();
             case Shr5Package.ASPEKT_MAGIER__TRADITION:
                 return getTradition();
+            case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
+                return getGebundeneGeister();
             case Shr5Package.ASPEKT_MAGIER__ASPEKT:
                 if (resolve) return getAspekt();
                 return basicGetAspekt();
@@ -245,6 +273,10 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
             case Shr5Package.ASPEKT_MAGIER__TRADITION:
                 setTradition((MagischeTradition)newValue);
                 return;
+            case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
+                getGebundeneGeister().clear();
+                getGebundeneGeister().addAll((Collection<? extends GebundenerGeist>)newValue);
+                return;
             case Shr5Package.ASPEKT_MAGIER__ASPEKT:
                 setAspekt((FertigkeitsGruppe)newValue);
                 return;
@@ -265,6 +297,9 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
                 return;
             case Shr5Package.ASPEKT_MAGIER__TRADITION:
                 setTradition(TRADITION_EDEFAULT);
+                return;
+            case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
+                getGebundeneGeister().clear();
                 return;
             case Shr5Package.ASPEKT_MAGIER__ASPEKT:
                 setAspekt((FertigkeitsGruppe)null);
@@ -287,6 +322,8 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
                 return getEnzug() != ENZUG_EDEFAULT;
             case Shr5Package.ASPEKT_MAGIER__TRADITION:
                 return tradition != TRADITION_EDEFAULT;
+            case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
+                return gebundeneGeister != null && !gebundeneGeister.isEmpty();
             case Shr5Package.ASPEKT_MAGIER__ASPEKT:
                 return aspekt != null;
         }
@@ -305,6 +342,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
                 case Shr5Package.ASPEKT_MAGIER__ZAUBER: return Shr5Package.ZAUBERER__ZAUBER;
                 case Shr5Package.ASPEKT_MAGIER__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
                 case Shr5Package.ASPEKT_MAGIER__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
+                case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER: return Shr5Package.ZAUBERER__GEBUNDENE_GEISTER;
                 default: return -1;
             }
         }
@@ -323,6 +361,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
                 case Shr5Package.ZAUBERER__ZAUBER: return Shr5Package.ASPEKT_MAGIER__ZAUBER;
                 case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.ASPEKT_MAGIER__ENZUG;
                 case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.ASPEKT_MAGIER__TRADITION;
+                case Shr5Package.ZAUBERER__GEBUNDENE_GEISTER: return Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER;
                 default: return -1;
             }
         }

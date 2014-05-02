@@ -249,6 +249,9 @@ public interface AbstraktPersona extends Beschreibbar, KoerperlicheAttribute, Sp
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Contains the fertigkeiten.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Fertigkeiten</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktPersona_Fertigkeiten()
      * @model containment="true"
@@ -265,6 +268,9 @@ public interface AbstraktPersona extends Beschreibbar, KoerperlicheAttribute, Sp
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Contains the skillgroups.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Fertigkeits Gruppen</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktPersona_FertigkeitsGruppen()
      * @model containment="true"
@@ -280,6 +286,9 @@ public interface AbstraktPersona extends Beschreibbar, KoerperlicheAttribute, Sp
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Refers the metatyp or species the persona represent.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Spezies</em>' reference.
      * @see #setSpezies(Spezies)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktPersona_Spezies()
@@ -306,6 +315,9 @@ public interface AbstraktPersona extends Beschreibbar, KoerperlicheAttribute, Sp
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Keeps track of the modicators.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Mod Manager</em>' attribute.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktPersona_ModManager()
      * @model dataType="de.urszeidler.eclipse.shr5.ModificationManager" required="true" transient="true" changeable="false"

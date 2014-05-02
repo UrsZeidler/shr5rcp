@@ -463,6 +463,33 @@ public interface Shr5Factory extends EFactory {
     Munition createMunition();
 
     /**
+     * Returns a new object of class '<em>Gebundener Geist</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Gebundener Geist</em>'.
+     * @generated
+     */
+    GebundenerGeist createGebundenerGeist();
+
+    /**
+     * Returns a new object of class '<em>Geist</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Geist</em>'.
+     * @generated
+     */
+    Geist createGeist();
+
+    /**
+     * Returns a new object of class '<em>Geister Art</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Geister Art</em>'.
+     * @generated
+     */
+    GeisterArt createGeisterArt();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

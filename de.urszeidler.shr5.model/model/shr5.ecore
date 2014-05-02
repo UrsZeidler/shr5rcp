@@ -26,13 +26,29 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intuitionBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logikBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeiten" upperBound="-1"
-        eType="#//PersonaFertigkeit" containment="true"/>
+        eType="#//PersonaFertigkeit" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contains the fertigkeiten."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeitsGruppen" upperBound="-1"
-        eType="#//PersonaFertigkeitsGruppe" containment="true"/>
+        eType="#//PersonaFertigkeitsGruppe" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contains the skillgroups."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="spezies" lowerBound="1"
-        eType="#//Spezies"/>
+        eType="#//Spezies">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Refers the metatyp or species the persona represent."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modManager" lowerBound="1"
-        eType="#//ModificationManager" changeable="false" transient="true"/>
+        eType="#//ModificationManager" changeable="false" transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Keeps track of the modicators."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gegenstand" eSuperTypes="#//AbstraktGegenstand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -336,6 +352,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enzug" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tradition" eType="#//MagischeTradition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gebundeneGeister" upperBound="-1"
+        eType="#//GebundenerGeist" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The bound spirits are hold here."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MysticAdept" eSuperTypes="#//KiAdept #//Zauberer"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaZauber" eSuperTypes="#//Erlernbar">
@@ -370,6 +392,9 @@
     <eLiterals name="Permanent" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChrakterLimits" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the limits."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="koerperlich" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
         volatile="true" transient="true"/>
@@ -584,6 +609,44 @@
       interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Modificator attributes are used to define additional aspects."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GebundenerGeist">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dienste" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geist" lowerBound="1" eType="#//Geist"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StufenPersona" abstract="true" eSuperTypes="#//Quelle #//SpezielleAttribute #//GeistigeAttribute #//KoerperlicheAttribute #//Beschreibbar #//ChrakterLimits #//Panzerung">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The rating defines the attribute values."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeiten" upperBound="-1"
+        eType="#//PersonaFertigkeit" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contains the fertigkeiten."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeitsGruppen" upperBound="-1"
+        eType="#//PersonaFertigkeitsGruppe" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contains the skillgroups."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Geist" eSuperTypes="#//StufenPersona #//AstraleProjektion">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This defines a spirit."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spezies" lowerBound="1"
+        eType="#//GeisterArt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Refers the metatyp or species the persona represent."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeisterArt" eSuperTypes="#//Critter">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the type of the spririt, it defines the mod of the attribute and the powers.&#xA;Here the attribute min as additional rating."/>
     </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

@@ -300,6 +300,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/zauber"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/gebundeneGeister"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//MysticAdept"/>
     <genClasses ecoreClass="shr5.ecore#//PersonaZauber">
@@ -445,5 +446,18 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Munition/type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//ModifikatorAttribute"/>
+    <genClasses ecoreClass="shr5.ecore#//GebundenerGeist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GebundenerGeist/dienste"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//GebundenerGeist/geist"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//StufenPersona">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//StufenPersona/stufe"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/fertigkeiten"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/fertigkeitsGruppen"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Geist">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Geist/spezies"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//GeisterArt"/>
   </genPackages>
 </genmodel:GenModel>

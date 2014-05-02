@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug <em>Enzug</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getGebundeneGeister <em>Gebundene Geister</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,5 +84,20 @@ public interface Zauberer extends EObject {
      * @generated
      */
 	void setTradition(MagischeTradition value);
+
+    /**
+     * Returns the value of the '<em><b>Gebundene Geister</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.GebundenerGeist}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The bound spirits are hold here.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Gebundene Geister</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getZauberer_GebundeneGeister()
+     * @model containment="true"
+     * @generated
+     */
+    EList<GebundenerGeist> getGebundeneGeister();
 
 } // Zauberer
