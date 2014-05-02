@@ -5,6 +5,7 @@
 2014-05-18 Version 0.1.6-rc
 
 * added binding of spirits
+* Switch the reference from Xpath to xsid
 
 
 2014-04-27 Version 0.1.5
