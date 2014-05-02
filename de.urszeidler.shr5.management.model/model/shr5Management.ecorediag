@@ -658,7 +658,6 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_WSciV5WrEeOnJvhwxPhm0w"/>
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_WSKOcZWrEeOnJvhwxPhm0w" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-      <element xmi:type="ecore:EClass" href="shr5Management.ecore#//ShrMgmtList"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WSKOcpWrEeOnJvhwxPhm0w" x="755" y="85"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_30MbgKt0EeOiQoX4sqSgGw" type="1001">
@@ -1682,6 +1681,22 @@
           <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_BT5ZgYHbEeOOPsd_i6NWrA"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_yO5RQNITEeOMTv7GFd0lug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/skillMax"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yO5RQdITEeOMTv7GFd0lug"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yO5RQtITEeOMTv7GFd0lug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/numberOfSpecalism"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yO5RQ9ITEeOMTv7GFd0lug"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yO54UNITEeOMTv7GFd0lug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/karmaToConnectionFactor"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yO54UdITEeOMTv7GFd0lug"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yOu5MNITEeOMTv7GFd0lug" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/boundSprititServiceCost"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yOu5MdITEeOMTv7GFd0lug"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_dRUDcoHXEeOOPsd_i6NWrA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_dRUDc4HXEeOOPsd_i6NWrA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_dRUDdIHXEeOOPsd_i6NWrA"/>
@@ -1833,7 +1848,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_r1amEYHXEeOOPsd_i6NWrA" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5Management.ecore#//Resourcen"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r1amEoHXEeOOPsd_i6NWrA" x="125" y="320"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r1amEoHXEeOOPsd_i6NWrA" x="230" y="340"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_wYo5oIHXEeOOPsd_i6NWrA" type="1001">
       <children xmi:type="notation:Node" xmi:id="_wYqHwIHXEeOOPsd_i6NWrA" type="4001"/>

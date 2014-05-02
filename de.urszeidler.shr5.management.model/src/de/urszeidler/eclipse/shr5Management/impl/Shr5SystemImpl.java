@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getSkillMax <em>Skill Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
  * </ul>
  * </p>
  *
@@ -238,6 +239,25 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected int karmaToConnectionFactor = KARMA_TO_CONNECTION_FACTOR_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBoundSprititServiceCost() <em>Bound Spritit Service Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBoundSprititServiceCost()
+     * @generated
+     * @ordered
+     */
+    protected static final int BOUND_SPRITIT_SERVICE_COST_EDEFAULT = 0;
+    /**
+     * The cached value of the '{@link #getBoundSprititServiceCost() <em>Bound Spritit Service Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBoundSprititServiceCost()
+     * @generated
+     * @ordered
+     */
+    protected int boundSprititServiceCost = BOUND_SPRITIT_SERVICE_COST_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -491,6 +511,27 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getBoundSprititServiceCost() {
+        return boundSprititServiceCost;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBoundSprititServiceCost(int newBoundSprititServiceCost) {
+        int oldBoundSprititServiceCost = boundSprititServiceCost;
+        boundSprititServiceCost = newBoundSprititServiceCost;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST, oldBoundSprititServiceCost, boundSprititServiceCost));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -519,6 +560,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getNumberOfSpecalism();
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
                 return getKarmaToConnectionFactor();
+            case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
+                return getBoundSprititServiceCost();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -563,6 +606,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return;
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
                 setKarmaToConnectionFactor((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
+                setBoundSprititServiceCost((Integer)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -609,6 +655,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
                 setKarmaToConnectionFactor(KARMA_TO_CONNECTION_FACTOR_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
+                setBoundSprititServiceCost(BOUND_SPRITIT_SERVICE_COST_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -643,6 +692,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return numberOfSpecalism != NUMBER_OF_SPECALISM_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR:
                 return karmaToConnectionFactor != KARMA_TO_CONNECTION_FACTOR_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
+                return boundSprititServiceCost != BOUND_SPRITIT_SERVICE_COST_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -679,6 +730,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
         result.append(numberOfSpecalism);
         result.append(", karmaToConnectionFactor: ");
         result.append(karmaToConnectionFactor);
+        result.append(", boundSprititServiceCost: ");
+        result.append(boundSprititServiceCost);
         result.append(')');
         return result.toString();
     }

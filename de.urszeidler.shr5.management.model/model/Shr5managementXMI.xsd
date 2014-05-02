@@ -276,6 +276,11 @@ Is used by the hasNotMoreSpecalism rule.</xsd:documentation>
 Used by the Shr5KarmaGenerator.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="boundSprititServiceCost" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>THis is the cost for a service of a bound spirit at chracter creation.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -619,16 +624,6 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     <xsd:attribute name="lifeStyles" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="LifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>
-  <xsd:complexType name="ShrMgmtList">
-    <xsd:complexContent>
-      <xsd:extension base="shr5:Beschreibbar">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="entries" type="ecore:EObject"/>
-        </xsd:choice>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="ShrMgmtList" type="shr5mngt:ShrMgmtList"/>
   <xsd:complexType name="GruntGroup">
     <xsd:annotation>
       <xsd:documentation>This is a grunt group.</xsd:documentation>

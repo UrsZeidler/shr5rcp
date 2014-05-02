@@ -1160,13 +1160,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR = PRIORITY_SYSTEM_FEATURE_COUNT + 10;
 
     /**
+     * The feature id for the '<em><b>Bound Spritit Service Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST = PRIORITY_SYSTEM_FEATURE_COUNT + 11;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 11;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 12;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -2167,7 +2176,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5RuleGenerator()
      * @generated
      */
-    int SHR5_RULE_GENERATOR = 37;
+    int SHR5_RULE_GENERATOR = 36;
 
     /**
      * The feature id for the '<em><b>Character</b></em>' reference.
@@ -3615,70 +3624,6 @@ public interface Shr5managementPackage extends EPackage {
     int LIFESTYLE_TO_START_MONEY_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl <em>Shr Mgmt List</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl
-     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShrMgmtList()
-     * @generated
-     */
-    int SHR_MGMT_LIST = 31;
-
-    /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR_MGMT_LIST__BESCHREIBUNG = Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR_MGMT_LIST__IMAGE = Shr5Package.BESCHREIBBAR__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR_MGMT_LIST__NAME = Shr5Package.BESCHREIBBAR__NAME;
-
-    /**
-     * The feature id for the '<em><b>Entries</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR_MGMT_LIST__ENTRIES = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
-
-    /**
-     * The number of structural features of the '<em>Shr Mgmt List</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR_MGMT_LIST_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
-
-    /**
-     * The number of operations of the '<em>Shr Mgmt List</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SHR_MGMT_LIST_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
-
-    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl <em>Grunt Group</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3686,7 +3631,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntGroup()
      * @generated
      */
-    int GRUNT_GROUP = 32;
+    int GRUNT_GROUP = 31;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -3768,7 +3713,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGruntMembers()
      * @generated
      */
-    int GRUNT_MEMBERS = 33;
+    int GRUNT_MEMBERS = 32;
 
     /**
      * The feature id for the '<em><b>Count</b></em>' attribute.
@@ -3814,7 +3759,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getPlayerManagement()
      * @generated
      */
-    int PLAYER_MANAGEMENT = 34;
+    int PLAYER_MANAGEMENT = 33;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -3896,7 +3841,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGamemasterManagement()
      * @generated
      */
-    int GAMEMASTER_MANAGEMENT = 35;
+    int GAMEMASTER_MANAGEMENT = 34;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -3987,7 +3932,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getCharacterAdvancementSystem()
      * @generated
      */
-    int CHARACTER_ADVANCEMENT_SYSTEM = 36;
+    int CHARACTER_ADVANCEMENT_SYSTEM = 35;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -4051,7 +3996,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShr5KarmaGenerator()
      * @generated
      */
-    int SHR5_KARMA_GENERATOR = 38;
+    int SHR5_KARMA_GENERATOR = 37;
 
     /**
      * The feature id for the '<em><b>Character</b></em>' reference.
@@ -4259,7 +4204,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 39;
+	int GENERATOR_STATE = 38;
 
 
 	/**
@@ -4270,7 +4215,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 40;
+	int SEX = 39;
 
 
 	/**
@@ -4823,6 +4768,17 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      */
     EAttribute getShr5System_KarmaToConnectionFactor();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Bound Spritit Service Cost</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost()
+     * @see #getShr5System()
+     * @generated
+     */
+    EAttribute getShr5System_BoundSprititServiceCost();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
@@ -5934,27 +5890,6 @@ public interface Shr5managementPackage extends EPackage {
     EReference getLifestyleToStartMoney_LifeStyles();
 
     /**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ShrMgmtList <em>Shr Mgmt List</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Shr Mgmt List</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ShrMgmtList
-     * @generated
-     */
-    EClass getShrMgmtList();
-
-    /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.ShrMgmtList#getEntries <em>Entries</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Entries</em>'.
-     * @see de.urszeidler.eclipse.shr5Management.ShrMgmtList#getEntries()
-     * @see #getShrMgmtList()
-     * @generated
-     */
-    EReference getShrMgmtList_Entries();
-
-    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.GruntGroup <em>Grunt Group</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6750,6 +6685,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR = eINSTANCE.getShr5System_KarmaToConnectionFactor();
+
+        /**
+         * The meta object literal for the '<em><b>Bound Spritit Service Cost</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST = eINSTANCE.getShr5System_BoundSprititServiceCost();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.
@@ -7634,24 +7577,6 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EReference LIFESTYLE_TO_START_MONEY__LIFE_STYLES = eINSTANCE.getLifestyleToStartMoney_LifeStyles();
-
-        /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl <em>Shr Mgmt List</em>}' class.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5Management.impl.ShrMgmtListImpl
-         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getShrMgmtList()
-         * @generated
-         */
-        EClass SHR_MGMT_LIST = eINSTANCE.getShrMgmtList();
-
-        /**
-         * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SHR_MGMT_LIST__ENTRIES = eINSTANCE.getShrMgmtList_Entries();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl <em>Grunt Group</em>}' class.

@@ -185,6 +185,12 @@
         <details key="documentation" value="The factor of Karma for a connection point.&#xA;Used by the Shr5KarmaGenerator."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="boundSprititServiceCost"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="THis is the cost for a service of a bound spirit at chracter creation."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaType" eSuperTypes="#//PriorityCategorie">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -546,10 +552,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moneyFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lifeStyles" upperBound="-1"
         eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Lifestyle"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ShrMgmtList" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GruntGroup" eSuperTypes="../../de.urszeidler.shr5.model/model/shr5.ecore#//Beschreibbar">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

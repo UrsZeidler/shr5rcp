@@ -46,7 +46,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.ShrMgmtList;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
@@ -354,8 +353,6 @@ public class Shr5managementValidator extends EObjectValidator {
                 return validateIncreaseCharacterPart((IncreaseCharacterPart)value, diagnostics, context);
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY:
                 return validateLifestyleToStartMoney((LifestyleToStartMoney)value, diagnostics, context);
-            case Shr5managementPackage.SHR_MGMT_LIST:
-                return validateShrMgmtList((ShrMgmtList)value, diagnostics, context);
             case Shr5managementPackage.GRUNT_GROUP:
                 return validateGruntGroup((GruntGroup)value, diagnostics, context);
             case Shr5managementPackage.GRUNT_MEMBERS:
@@ -834,15 +831,6 @@ public class Shr5managementValidator extends EObjectValidator {
      */
     public boolean validateLifestyleToStartMoney(LifestyleToStartMoney lifestyleToStartMoney, DiagnosticChain diagnostics, Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(lifestyleToStartMoney, diagnostics, context);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public boolean validateShrMgmtList(ShrMgmtList shrMgmtList, DiagnosticChain diagnostics, Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(shrMgmtList, diagnostics, context);
     }
 
     /**

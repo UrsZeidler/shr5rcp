@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -14,7 +13,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Advancement;
@@ -53,7 +51,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.ShrMgmtList;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.SpecialType;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
@@ -283,13 +280,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * @generated
      */
     private EClass lifestyleToStartMoneyEClass = null;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    private EClass shrMgmtListEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -884,6 +874,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      */
     public EAttribute getShr5System_KarmaToConnectionFactor() {
         return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(10);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getShr5System_BoundSprititServiceCost() {
+        return (EAttribute)shr5SystemEClass.getEStructuralFeatures().get(11);
     }
 
     /**
@@ -1836,24 +1835,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getShrMgmtList() {
-        return shrMgmtListEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EReference getShrMgmtList_Entries() {
-        return (EReference)shrMgmtListEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EClass getGruntGroup() {
         return gruntGroupEClass;
     }
@@ -2233,6 +2214,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__SKILL_MAX);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__NUMBER_OF_SPECALISM);
         createEAttribute(shr5SystemEClass, SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR);
+        createEAttribute(shr5SystemEClass, SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST);
 
         metaTypeEClass = createEClass(META_TYPE);
         createEReference(metaTypeEClass, META_TYPE__CHOOSABLE_TYPES);
@@ -2361,9 +2343,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__MONEY_FACTOR);
         createEReference(lifestyleToStartMoneyEClass, LIFESTYLE_TO_START_MONEY__LIFE_STYLES);
 
-        shrMgmtListEClass = createEClass(SHR_MGMT_LIST);
-        createEReference(shrMgmtListEClass, SHR_MGMT_LIST__ENTRIES);
-
         gruntGroupEClass = createEClass(GRUNT_GROUP);
         createEReference(gruntGroupEClass, GRUNT_GROUP__MEMBERS);
         createEReference(gruntGroupEClass, GRUNT_GROUP__LEADER);
@@ -2462,7 +2441,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         personaChangeEClass.getESuperTypes().add(this.getPersonaValueChange());
         personaValueChangeEClass.getESuperTypes().add(this.getChanges());
         increaseCharacterPartEClass.getESuperTypes().add(this.getAdvancement());
-        shrMgmtListEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         gruntGroupEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         playerManagementEClass.getESuperTypes().add(theShr5Package.getBeschreibbar());
         gamemasterManagementEClass.getESuperTypes().add(this.getPlayerManagement());
@@ -2531,6 +2509,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getShr5System_SkillMax(), ecorePackage.getEInt(), "skillMax", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_NumberOfSpecalism(), ecorePackage.getEInt(), "numberOfSpecalism", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getShr5System_KarmaToConnectionFactor(), ecorePackage.getEInt(), "karmaToConnectionFactor", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getShr5System_BoundSprititServiceCost(), ecorePackage.getEInt(), "boundSprititServiceCost", null, 0, 1, Shr5System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(metaTypeEClass, MetaType.class, "MetaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getMetaType_ChoosableTypes(), theShr5Package.getSpezies(), null, "choosableTypes", null, 1, 1, MetaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2800,9 +2779,6 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEAttribute(getLifestyleToStartMoney_NumberOfW(), ecorePackage.getEInt(), "numberOfW", null, 0, 1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getLifestyleToStartMoney_MoneyFactor(), ecorePackage.getEInt(), "moneyFactor", null, 0, 1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getLifestyleToStartMoney_LifeStyles(), theShr5Package.getLifestyle(), null, "lifeStyles", null, 0, -1, LifestyleToStartMoney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-        initEClass(shrMgmtListEClass, ShrMgmtList.class, "ShrMgmtList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getShrMgmtList_Entries(), ecorePackage.getEObject(), null, "entries", null, 0, -1, ShrMgmtList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(gruntGroupEClass, GruntGroup.class, "GruntGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getGruntGroup_Members(), this.getGruntMembers(), null, "members", null, 0, -1, GruntGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

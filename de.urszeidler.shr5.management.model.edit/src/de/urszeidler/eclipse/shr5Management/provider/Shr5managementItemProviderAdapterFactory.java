@@ -589,29 +589,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.ShrMgmtList} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected ShrMgmtListItemProvider shrMgmtListItemProvider;
-
-    /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.ShrMgmtList}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createShrMgmtListAdapter() {
-        if (shrMgmtListItemProvider == null) {
-            shrMgmtListItemProvider = new ShrMgmtListItemProvider(this);
-        }
-
-        return shrMgmtListItemProvider;
-    }
-
-    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.GruntGroup} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -870,7 +847,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (generatorStateToEStringMapEntryItemProvider != null) generatorStateToEStringMapEntryItemProvider.dispose();
         if (increaseCharacterPartItemProvider != null) increaseCharacterPartItemProvider.dispose();
         if (lifestyleToStartMoneyItemProvider != null) lifestyleToStartMoneyItemProvider.dispose();
-        if (shrMgmtListItemProvider != null) shrMgmtListItemProvider.dispose();
         if (gruntGroupItemProvider != null) gruntGroupItemProvider.dispose();
         if (gruntMembersItemProvider != null) gruntMembersItemProvider.dispose();
         if (playerManagementItemProvider != null) playerManagementItemProvider.dispose();
@@ -1035,11 +1011,6 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
-
-                newChildDescriptors.add
-                    (createChildParameter
-                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                         Shr5managementFactory.eINSTANCE.createShrMgmtList()));
 
                 newChildDescriptors.add
                     (createChildParameter

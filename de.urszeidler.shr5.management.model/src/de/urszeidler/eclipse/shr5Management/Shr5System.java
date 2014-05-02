@@ -29,6 +29,7 @@ package de.urszeidler.eclipse.shr5Management;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getSkillMax <em>Skill Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
  * </ul>
  * </p>
  *
@@ -368,4 +369,29 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     void setKarmaToConnectionFactor(int value);
+
+    /**
+     * Returns the value of the '<em><b>Bound Spritit Service Cost</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * THis is the cost for a service of a bound spirit at chracter creation.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Bound Spritit Service Cost</em>' attribute.
+     * @see #setBoundSprititServiceCost(int)
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_BoundSprititServiceCost()
+     * @model
+     * @generated
+     */
+    int getBoundSprititServiceCost();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Bound Spritit Service Cost</em>' attribute.
+     * @see #getBoundSprititServiceCost()
+     * @generated
+     */
+    void setBoundSprititServiceCost(int value);
 } // Shr5System

@@ -38,7 +38,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.ShrMgmtList;
 import de.urszeidler.eclipse.shr5Management.Skill;
 import de.urszeidler.eclipse.shr5Management.Spellcaster;
 import de.urszeidler.eclipse.shr5Management.Technomancer;
@@ -109,7 +108,6 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY: return (EObject)createGeneratorStateToEStringMapEntry();
             case Shr5managementPackage.INCREASE_CHARACTER_PART: return createIncreaseCharacterPart();
             case Shr5managementPackage.LIFESTYLE_TO_START_MONEY: return createLifestyleToStartMoney();
-            case Shr5managementPackage.SHR_MGMT_LIST: return createShrMgmtList();
             case Shr5managementPackage.GRUNT_GROUP: return createGruntGroup();
             case Shr5managementPackage.GRUNT_MEMBERS: return createGruntMembers();
             case Shr5managementPackage.PLAYER_MANAGEMENT: return createPlayerManagement();
@@ -373,16 +371,6 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     public LifestyleToStartMoney createLifestyleToStartMoney() {
         LifestyleToStartMoneyImpl lifestyleToStartMoney = new LifestyleToStartMoneyImpl();
         return lifestyleToStartMoney;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public ShrMgmtList createShrMgmtList() {
-        ShrMgmtListImpl shrMgmtList = new ShrMgmtListImpl();
-        return shrMgmtList;
     }
 
     /**
