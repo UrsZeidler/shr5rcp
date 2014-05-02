@@ -202,8 +202,19 @@ public class ShadowrunTools {
     public static int getModificatorValue(AbstraktModifikatoren mod, EAttribute eattribute) {
         if (eattribute == null)
             return 0;
-        int sum = 0;
         EList<AttributModifikatorWert> mods = mod.getMods();
+        return getModificatorValue(eattribute, mods);
+    }
+
+    /**
+     * Returns the summ of modificator values for the given eattribute.
+     * 
+     * @param mod the modificator
+     * @param eattribute the attribute to get the value for
+     * @return the sum
+     */
+    public static int getModificatorValue(EAttribute eattribute, EList<AttributModifikatorWert> mods) {
+        int sum = 0;
         for (AttributModifikatorWert attributModifikatorWert : mods) {
             if (eattribute.equals(attributModifikatorWert.getAttribut()))
                 sum = sum + attributModifikatorWert.getWert();

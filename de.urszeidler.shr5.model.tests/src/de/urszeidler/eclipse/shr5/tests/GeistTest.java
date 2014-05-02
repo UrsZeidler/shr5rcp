@@ -68,6 +68,8 @@ public class GeistTest extends StufenPersonaTest {
     @Override
     protected void setUp() throws Exception {
         setFixture(Shr5Factory.eINSTANCE.createGeist());
+        getFixture().setStufe(1);
+        getFixture().setSpezies(Shr5Factory.eINSTANCE.createGeisterArt());
     }
 
     /**
@@ -86,12 +88,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstralesLimit()
-     * @generated
+     * @generated not
      */
     public void testGetAstralesLimit() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(2, getFixture().getAstralesLimit());
     }
 
     /**
@@ -99,12 +99,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleKonstitution()
-     * @generated
+     * @generated not
      */
     public void testGetAstraleKonstitution() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(1, getFixture().getAstraleKonstitution());
     }
 
     /**
@@ -112,12 +110,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleGeschicklichkeit()
-     * @generated
+     * @generated not
      */
     public void testGetAstraleGeschicklichkeit() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(1, getFixture().getAstraleGeschicklichkeit());
     }
 
     /**
@@ -125,12 +121,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleReaktion()
-     * @generated
+     * @generated not
      */
     public void testGetAstraleReaktion() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(1, getFixture().getAstraleReaktion());
     }
 
     /**
@@ -138,12 +132,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleStaerke()
-     * @generated
+     * @generated not
      */
     public void testGetAstraleStaerke() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(1, getFixture().getAstraleStaerke());
     }
 
     /**
@@ -151,12 +143,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleInitative()
-     * @generated
+     * @generated not
      */
     public void testGetAstraleInitative() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(2, getFixture().getAstraleInitative());
     }
 
     /**
@@ -164,12 +154,10 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleInitativWuerfel()
-     * @generated
+     * @generated not
      */
     public void testGetAstraleInitativWuerfel() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(3, getFixture().getAstraleInitativWuerfel());
     }
 
     /**
@@ -177,12 +165,200 @@ public class GeistTest extends StufenPersonaTest {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.AstraleProjektion#getAstralePanzerung()
-     * @generated
+     * @generated not
      */
     public void testGetAstralePanzerung() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(0, getFixture().getAstralePanzerung());
     }
 
+    
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative() <em>Initative</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative()
+     * @generated not
+     */
+    public void testGetInitative() {
+        assertEquals(2, getFixture().getInitative());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel() <em>Initativ Wuerfel</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel()
+     * @generated not
+     */
+    public void testGetInitativWuerfel() {
+        assertEquals(2, getFixture().getInitativWuerfel());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getAusweichen() <em>Ausweichen</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getAusweichen()
+     * @generated not
+     */
+    public void testGetAusweichen() {
+        assertEquals(2, getFixture().getAusweichen());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEssenz() <em>Essenz</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getEssenz()
+     * @generated not
+     */
+    public void testGetEssenz() {
+        assertEquals(100, getFixture().getEssenz());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge() <em>Edge</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge()
+     * @generated not
+     */
+    public void testGetEdge() {
+        assertEquals(0, getFixture().getEdge());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma() <em>Charisma</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma()
+     * @generated not
+     */
+    public void testGetCharisma() {
+        assertEquals(1, getFixture().getCharisma());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft() <em>Willenskraft</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft()
+     * @generated not
+     */
+    public void testGetWillenskraft() {
+        assertEquals(1, getFixture().getWillenskraft());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition() <em>Intuition</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition()
+     * @generated not
+     */
+    public void testGetIntuition() {
+        assertEquals(1, getFixture().getIntuition());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik() <em>Logik</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik()
+     * @generated not
+     */
+    public void testGetLogik() {
+        assertEquals(1, getFixture().getLogik());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution() <em>Konstitution</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution()
+     * @generated not
+     */
+    public void testGetKonstitution() {
+        assertEquals(1, getFixture().getKonstitution());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit() <em>Geschicklichkeit</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit()
+     * @generated not
+     */
+    public void testGetGeschicklichkeit() {
+        assertEquals(1, getFixture().getGeschicklichkeit());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion() <em>Reaktion</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion()
+     * @generated not
+     */
+    public void testGetReaktion() {
+        assertEquals(1, getFixture().getReaktion());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke() <em>Staerke</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke()
+     * @generated not
+     */
+    public void testGetStaerke() {
+        assertEquals(1, getFixture().getStaerke());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich() <em>Koerperlich</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich()
+     * @generated not
+     */
+    public void testGetKoerperlich() {
+        assertEquals(2, getFixture().getKoerperlich());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getGeistig() <em>Geistig</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ChrakterLimits#getGeistig()
+     * @generated not
+     */
+    public void testGetGeistig() {
+        assertEquals(2, getFixture().getGeistig());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getSozial() <em>Sozial</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ChrakterLimits#getSozial()
+     * @generated not
+     */
+    public void testGetSozial() {
+        assertEquals(2, getFixture().getSozial());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Panzerung#getPanzer() <em>Panzer</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Panzerung#getPanzer()
+     * @generated not
+     */
+    public void testGetPanzer() {
+        assertEquals(0, getFixture().getPanzer());
+    }
+
+    
 } //GeistTest

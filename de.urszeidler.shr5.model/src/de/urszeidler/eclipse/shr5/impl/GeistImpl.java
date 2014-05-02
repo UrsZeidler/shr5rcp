@@ -7,12 +7,11 @@ import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.GeisterArt;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -22,18 +21,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleReaktion <em>Astrale Reaktion</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleStaerke <em>Astrale Staerke</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitative <em>Astrale Initative</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSpezies <em>Spezies</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleReaktion <em>Astrale Reaktion</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleStaerke <em>Astrale Staerke</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitative <em>Astrale Initative</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSpezies <em>Spezies</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class GeistImpl extends StufenPersonaImpl implements Geist {
@@ -41,6 +40,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstralesLimit() <em>Astrales Limit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstralesLimit()
      * @generated
      * @ordered
@@ -51,6 +51,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleKonstitution() <em>Astrale Konstitution</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstraleKonstitution()
      * @generated
      * @ordered
@@ -61,6 +62,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleGeschicklichkeit() <em>Astrale Geschicklichkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstraleGeschicklichkeit()
      * @generated
      * @ordered
@@ -71,6 +73,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleReaktion() <em>Astrale Reaktion</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstraleReaktion()
      * @generated
      * @ordered
@@ -81,6 +84,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleStaerke() <em>Astrale Staerke</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstraleStaerke()
      * @generated
      * @ordered
@@ -91,6 +95,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleInitative() <em>Astrale Initative</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstraleInitative()
      * @generated
      * @ordered
@@ -101,6 +106,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleInitativWuerfel() <em>Astrale Initativ Wuerfel</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstraleInitativWuerfel()
      * @generated
      * @ordered
@@ -111,6 +117,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstralePanzerung() <em>Astrale Panzerung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getAstralePanzerung()
      * @generated
      * @ordered
@@ -121,6 +128,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The cached value of the '{@link #getSpezies() <em>Spezies</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getSpezies()
      * @generated
      * @ordered
@@ -130,6 +138,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected GeistImpl() {
@@ -139,104 +148,103 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return Shr5Package.Literals.GEIST;
     }
-
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public int getAstralesLimit() {
-        // TODO: implement this method to return the 'Astrales Limit' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return Math.max(getSozial(), getGeistig());
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public int getAstraleKonstitution() {
-        // TODO: implement this method to return the 'Astrale Konstitution' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getWillenskraft();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public int getAstraleGeschicklichkeit() {
-        // TODO: implement this method to return the 'Astrale Geschicklichkeit' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getLogik();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public int getAstraleReaktion() {
-        // TODO: implement this method to return the 'Astrale Reaktion' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getIntuition();
+                
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public int getAstraleStaerke() {
-        // TODO: implement this method to return the 'Astrale Staerke' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getCharisma();
     }
+
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getAstraleInitative() {
-        // TODO: implement this method to return the 'Astrale Initative' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        int value = getStufe() * 2;
+        if (getSpezies() != null) {
+            value = value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ASTRALE_PROJEKTION__ASTRALE_INITATIVE, getSpezies().getMods());
+        }
+        return value;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getAstraleInitativWuerfel() {
-        // TODO: implement this method to return the 'Astrale Initativ Wuerfel' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return 3;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     public int getAstralePanzerung() {
-        // TODO: implement this method to return the 'Astrale Panzerung' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        int value = 0;
+        if (getSpezies() != null) {
+            value = value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG, getSpezies().getMods());
+        }
+        return value;
+
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public GeisterArt getSpezies() {
@@ -254,6 +262,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public GeisterArt basicGetSpezies() {
@@ -263,6 +272,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setSpezies(GeisterArt newSpezies) {
@@ -275,6 +285,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -297,7 +308,8 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
             case Shr5Package.GEIST__ASTRALE_PANZERUNG:
                 return getAstralePanzerung();
             case Shr5Package.GEIST__SPEZIES:
-                if (resolve) return getSpezies();
+                if (resolve)
+                    return getSpezies();
                 return basicGetSpezies();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -306,6 +318,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -321,6 +334,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -336,6 +350,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -366,21 +381,31 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == AstraleProjektion.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__ASTRALES_LIMIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
-                case Shr5Package.GEIST__ASTRALE_KONSTITUTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
-                case Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
-                case Shr5Package.GEIST__ASTRALE_REAKTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
-                case Shr5Package.GEIST__ASTRALE_STAERKE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
-                case Shr5Package.GEIST__ASTRALE_INITATIVE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
-                case Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
-                case Shr5Package.GEIST__ASTRALE_PANZERUNG: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
-                default: return -1;
+                case Shr5Package.GEIST__ASTRALES_LIMIT:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
+                case Shr5Package.GEIST__ASTRALE_KONSTITUTION:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
+                case Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.GEIST__ASTRALE_REAKTION:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
+                case Shr5Package.GEIST__ASTRALE_STAERKE:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
+                case Shr5Package.GEIST__ASTRALE_INITATIVE:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
+                case Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.GEIST__ASTRALE_PANZERUNG:
+                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -389,24 +414,254 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == AstraleProjektion.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT: return Shr5Package.GEIST__ASTRALES_LIMIT;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION: return Shr5Package.GEIST__ASTRALE_KONSTITUTION;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION: return Shr5Package.GEIST__ASTRALE_REAKTION;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE: return Shr5Package.GEIST__ASTRALE_STAERKE;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE: return Shr5Package.GEIST__ASTRALE_INITATIVE;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL: return Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG: return Shr5Package.GEIST__ASTRALE_PANZERUNG;
-                default: return -1;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT:
+                    return Shr5Package.GEIST__ASTRALES_LIMIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION:
+                    return Shr5Package.GEIST__ASTRALE_KONSTITUTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT:
+                    return Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION:
+                    return Shr5Package.GEIST__ASTRALE_REAKTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE:
+                    return Shr5Package.GEIST__ASTRALE_STAERKE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE:
+                    return Shr5Package.GEIST__ASTRALE_INITATIVE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL:
+                    return Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG:
+                    return Shr5Package.GEIST__ASTRALE_PANZERUNG;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
-} //GeistImpl
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getCharisma() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getCharismaMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getWillenskraft() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getWillenskraftMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getIntuition() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getIntuitionMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getLogik() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getLogikMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getKonstitution() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getKonstitutionMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getGeschicklichkeit() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getGeschicklichkeitMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getReaktion() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getReaktionMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getStaerke() {
+        int value = getStufe();
+        if (getSpezies() != null) {
+            value = value + getSpezies().getStaerkeMin();
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getKoerperlich() {
+        double baselimit1 = ((getStaerke() * 2) + getKonstitution() + getReaktion()) / 3.0;
+        int baselimit = (int)Math.ceil(baselimit1);
+        return baselimit;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getGeistig() {
+        double baselimit1 = ((getLogik() * 2) + getIntuition() + getWillenskraft()) / 3.0;
+        int baselimit = (int)Math.ceil(baselimit1);
+        return baselimit;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getSozial() {
+        double baselimit1 = ((getCharisma() * 2) + getWillenskraft() + (getEssenz() / 100)) / 3.0;
+        int baselimit = (int)Math.ceil(baselimit1);
+        return baselimit;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getInitative() {
+        int value = getStufe() * 2;
+        if (getSpezies() != null) {
+            value = value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, getSpezies().getMods());
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated  not
+     */
+    public int getEdge() {
+        int stufe2 = getStufe();
+
+        int baselimit = (int)Math.ceil(stufe2 / 2);
+        return baselimit;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getInitativWuerfel() {
+        return 2;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getAusweichen() {
+        int value = getReaktion() + getIntuition();
+        if (getSpezies() != null) {
+            value = value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN, getSpezies().getMods());
+        }
+        return value;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public int getEssenz() {
+        int stufe2 = getStufe();
+        return stufe2 * 100;
+    }
+
+    
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getPanzer() {
+        int value = 0;
+        if (getSpezies() != null) {
+            value = value + ShadowrunTools.getModificatorValue(Shr5Package.Literals.PANZERUNG__PANZER, getSpezies().getMods());
+        }
+        return value;
+    }
+
+} // GeistImpl

@@ -628,8 +628,6 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
      * @generated
      */
     public int getStaerke() {
-        // TODO: implement this method to return the 'Staerke' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();
     }
 

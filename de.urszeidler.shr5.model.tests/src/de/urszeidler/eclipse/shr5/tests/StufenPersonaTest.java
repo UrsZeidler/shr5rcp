@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import de.urszeidler.eclipse.shr5.StufenPersona;
-
 import junit.framework.TestCase;
 
 /**
@@ -75,6 +74,7 @@ public abstract class StufenPersonaTest extends TestCase {
         return fixture;
     }
 
+    
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative() <em>Initative</em>}' feature getter.
      * <!-- begin-user-doc -->
