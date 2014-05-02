@@ -359,7 +359,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
             
             treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, "bound spirits", SWT.NONE, object,
-                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger2, editingDomain);
+                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
 

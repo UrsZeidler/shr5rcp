@@ -214,8 +214,11 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 // else
                 // return null;
 
-            } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())) {
-                EObject eObject = Shr5managementFactory.eINSTANCE.createConnection();
+            } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature()) ||
+                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
+                    ) {
+                EClass eClass = (EClass)e.getFeature().getEType();//  .eClass();
+                EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass);  //Shr5managementFactory.eINSTANCE.createConnection();
                 GenericEObjectDialog dialog = new GenericEObjectDialog(getSite().getShell(), eObject, itemDelegator, this, this);
 
                 if (dialog.open() == Dialog.OK)

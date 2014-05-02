@@ -889,6 +889,8 @@
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35" />
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40" />
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.58" />
+          				<gebundeneGeister dienste="3"/>
+          				<gebundeneGeister dienste="4"/>
 
 					</persona>
 
