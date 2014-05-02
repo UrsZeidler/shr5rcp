@@ -165,7 +165,7 @@
 				characterAdvancements="//@entries.0/@entries.16/@entries.2"
 				charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6"
 				numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2"
-				maxKarmaToKeep="7" numberOfMaxAttributes="1"
+				maxKarmaToKeep="7" numberOfMaxAttributes="1" boundSprititServiceCost="1"
 				karmaToConnectionFactor="2">
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />

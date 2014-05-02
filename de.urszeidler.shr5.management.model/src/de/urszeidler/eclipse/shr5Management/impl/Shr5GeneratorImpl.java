@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -15,11 +16,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
 import de.urszeidler.eclipse.shr5.MysticAdept;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5Management.Adept;
 import de.urszeidler.eclipse.shr5Management.Attributes;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -501,6 +505,17 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
 
             karmaKosten = karmaKosten + (sum * getShr5Generator().getKarmaToMagicFactor() * -1);
         }
+        if (persona instanceof Zauberer) {
+            Zauberer zauberer = (Zauberer)persona;
+            EList<GebundenerGeist> gebundeneGeister = zauberer.getGebundeneGeister();
+            int sum = 0;
+            for (GebundenerGeist gebundenerGeist : gebundeneGeister) {
+                sum = sum + gebundenerGeist.getDienste();
+            }
+            karmaKosten = karmaKosten + (sum * getShr5Generator().getBoundSprititServiceCost() );
+        }
+        
+        
         int karmaSpend = ShadowrunManagmentTools.getKarmaSpend(getCharacter()) * -1;
         karmaKosten = karmaKosten + karmaSpend;
 

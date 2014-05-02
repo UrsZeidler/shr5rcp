@@ -6,11 +6,16 @@ package de.urszeidler.eclipse.shr5Management.tests;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.Map;
+
 import junit.textui.TestRunner;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
+
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
@@ -331,6 +336,38 @@ public class Shr5GeneratorTest extends Shr5RuleGeneratorTest {
         kiKraft.setKraftpunkte(-80);
         ka.getKikraft().add(kiKraft);
         assertEquals("7 spend", 7, getFixture().getKarmaSpend());
+
+    }
+
+    /**
+     * Tests the ' {@link de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
+     * <em>Karma Spend</em>}' feature getter. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Shr5Generator#getKarmaSpend()
+     * @generated not
+     */
+    public void testGetKarmaSpend_Zauberer_BoundSpirit() {
+        createBasicCategories();
+        shr5System.setBoundSprititServiceCost(1);
+
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(playerCharacter);
+
+        assertEquals("0 spend", 0, getFixture().getKarmaSpend());
+
+        
+        MysticAdept persona = (MysticAdept)playerCharacter.getPersona();
+        GebundenerGeist gebundenerGeist = Shr5Factory.eINSTANCE.createGebundenerGeist();       
+        gebundenerGeist.setDienste(2);
+        persona.getGebundeneGeister().add(gebundenerGeist);
+        
+        assertEquals("2 spend", 2, getFixture().getKarmaSpend());
+ 
+        gebundenerGeist = Shr5Factory.eINSTANCE.createGebundenerGeist();       
+        gebundenerGeist.setDienste(3);
+        persona.getGebundeneGeister().add(gebundenerGeist);
+        assertEquals("5 spend", 5, getFixture().getKarmaSpend());
 
     }
 
