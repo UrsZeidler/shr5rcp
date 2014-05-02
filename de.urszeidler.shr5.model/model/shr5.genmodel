@@ -444,5 +444,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Munition/armorMod"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Munition/type"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//ModifikatorAttribute"/>
   </genPackages>
 </genmodel:GenModel>

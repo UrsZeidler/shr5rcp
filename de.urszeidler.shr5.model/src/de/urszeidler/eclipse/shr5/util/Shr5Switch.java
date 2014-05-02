@@ -173,6 +173,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(abstraktPersona);
                 if (result == null) result = caseGeistigeAttribute(abstraktPersona);
                 if (result == null) result = caseChrakterLimits(abstraktPersona);
+                if (result == null) result = caseModifikatorAttribute(abstraktPersona);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -216,12 +217,14 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.KOERPERLICHE_ATTRIBUTE: {
                 KoerperlicheAttribute koerperlicheAttribute = (KoerperlicheAttribute)theEObject;
                 T result = caseKoerperlicheAttribute(koerperlicheAttribute);
+                if (result == null) result = caseModifikatorAttribute(koerperlicheAttribute);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.SPEZIELLE_ATTRIBUTE: {
                 SpezielleAttribute spezielleAttribute = (SpezielleAttribute)theEObject;
                 T result = caseSpezielleAttribute(spezielleAttribute);
+                if (result == null) result = caseModifikatorAttribute(spezielleAttribute);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -401,6 +404,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.GEISTIGE_ATTRIBUTE: {
                 GeistigeAttribute geistigeAttribute = (GeistigeAttribute)theEObject;
                 T result = caseGeistigeAttribute(geistigeAttribute);
+                if (result == null) result = caseModifikatorAttribute(geistigeAttribute);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -416,6 +420,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(mudanPersona);
                 if (result == null) result = caseGeistigeAttribute(mudanPersona);
                 if (result == null) result = caseChrakterLimits(mudanPersona);
+                if (result == null) result = caseModifikatorAttribute(mudanPersona);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -430,6 +435,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(koerperPersona);
                 if (result == null) result = caseGeistigeAttribute(koerperPersona);
                 if (result == null) result = caseChrakterLimits(koerperPersona);
+                if (result == null) result = caseModifikatorAttribute(koerperPersona);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -468,6 +474,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(magischePersona);
                 if (result == null) result = caseGeistigeAttribute(magischePersona);
                 if (result == null) result = caseChrakterLimits(magischePersona);
+                if (result == null) result = caseModifikatorAttribute(magischePersona);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -480,12 +487,14 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.FERNKAMPFWAFFEN_MODIFIKATOREN: {
                 FernkampfwaffenModifikatoren fernkampfwaffenModifikatoren = (FernkampfwaffenModifikatoren)theEObject;
                 T result = caseFernkampfwaffenModifikatoren(fernkampfwaffenModifikatoren);
+                if (result == null) result = caseModifikatorAttribute(fernkampfwaffenModifikatoren);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.SICHTVERHAELTNISSE: {
                 Sichtverhaeltnisse sichtverhaeltnisse = (Sichtverhaeltnisse)theEObject;
                 T result = caseSichtverhaeltnisse(sichtverhaeltnisse);
+                if (result == null) result = caseModifikatorAttribute(sichtverhaeltnisse);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -501,6 +510,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.GEGENSTAND_STUFEN: {
                 GegenstandStufen gegenstandStufen = (GegenstandStufen)theEObject;
                 T result = caseGegenstandStufen(gegenstandStufen);
+                if (result == null) result = caseModifikatorAttribute(gegenstandStufen);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -518,6 +528,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(kiAdept);
                 if (result == null) result = caseGeistigeAttribute(kiAdept);
                 if (result == null) result = caseChrakterLimits(kiAdept);
+                if (result == null) result = caseModifikatorAttribute(kiAdept);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -563,6 +574,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.PROBEN_MODIFIKATOREN: {
                 ProbenModifikatoren probenModifikatoren = (ProbenModifikatoren)theEObject;
                 T result = caseProbenModifikatoren(probenModifikatoren);
+                if (result == null) result = caseModifikatorAttribute(probenModifikatoren);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -582,6 +594,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(magier);
                 if (result == null) result = caseGeistigeAttribute(magier);
                 if (result == null) result = caseChrakterLimits(magier);
+                if (result == null) result = caseModifikatorAttribute(magier);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -607,6 +620,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(mysticAdept);
                 if (result == null) result = caseGeistigeAttribute(mysticAdept);
                 if (result == null) result = caseChrakterLimits(mysticAdept);
+                if (result == null) result = caseModifikatorAttribute(mysticAdept);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -652,6 +666,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(aspektMagier);
                 if (result == null) result = caseGeistigeAttribute(aspektMagier);
                 if (result == null) result = caseChrakterLimits(aspektMagier);
+                if (result == null) result = caseModifikatorAttribute(aspektMagier);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -765,6 +780,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(technomancer);
                 if (result == null) result = caseGeistigeAttribute(technomancer);
                 if (result == null) result = caseChrakterLimits(technomancer);
+                if (result == null) result = caseModifikatorAttribute(technomancer);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -946,6 +962,12 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(munition);
                 if (result == null) result = caseModifizierbar(munition);
                 if (result == null) result = caseAnwendbar(munition);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MODIFIKATOR_ATTRIBUTE: {
+                ModifikatorAttribute modifikatorAttribute = (ModifikatorAttribute)theEObject;
+                T result = caseModifikatorAttribute(modifikatorAttribute);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2195,6 +2217,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseMunition(Munition object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Modifikator Attribute</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Modifikator Attribute</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModifikatorAttribute(ModifikatorAttribute object) {
         return null;
     }
 

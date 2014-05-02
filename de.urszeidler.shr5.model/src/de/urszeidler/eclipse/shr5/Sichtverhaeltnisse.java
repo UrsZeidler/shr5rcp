@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface Sichtverhaeltnisse extends EObject {
+public interface Sichtverhaeltnisse extends ModifikatorAttribute {
 	/**
      * Returns the value of the '<em><b>Restlichtverstaerkung</b></em>' attribute.
      * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.ModifikatorType}.

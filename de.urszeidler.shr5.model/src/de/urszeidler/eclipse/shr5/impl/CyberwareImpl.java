@@ -28,14 +28,14 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWertValue <em>Wert Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getPersona <em>Persona</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getEinbau <em>Einbau</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
@@ -43,7 +43,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWert()
      * @generated
      * @ordered
@@ -54,7 +53,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -65,7 +63,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -76,7 +73,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -87,7 +83,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -98,7 +93,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getPersona() <em>Persona</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPersona()
      * @generated
      * @ordered
@@ -109,7 +103,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * The cached value of the '{@link #getEinbau() <em>Einbau</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEinbau()
      * @generated
      * @ordered
@@ -119,7 +112,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CyberwareImpl() {
@@ -129,7 +121,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -154,7 +145,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getVerfuegbarkeit() {
@@ -164,7 +154,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
@@ -177,7 +166,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BigDecimal getWertValue() {
@@ -187,7 +175,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setWertValue(BigDecimal newWertValue) {
@@ -200,7 +187,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstraktPersona getPersona() {
@@ -218,7 +204,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstraktPersona basicGetPersona() {
@@ -228,7 +213,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPersona(AbstraktPersona newPersona) {
@@ -241,7 +225,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<AbstraktGegenstand> getEinbau() {
@@ -254,7 +237,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -269,7 +251,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -282,8 +263,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
             case Shr5Package.CYBERWARE__WERT_VALUE:
                 return getWertValue();
             case Shr5Package.CYBERWARE__PERSONA:
-                if (resolve)
-                    return getPersona();
+                if (resolve) return getPersona();
                 return basicGetPersona();
             case Shr5Package.CYBERWARE__EINBAU:
                 return getEinbau();
@@ -294,7 +274,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -321,7 +300,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -346,7 +324,6 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -369,21 +346,16 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == GeldWert.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.CYBERWARE__WERT:
-                    return Shr5Package.GELD_WERT__WERT;
-                case Shr5Package.CYBERWARE__VERFUEGBARKEIT:
-                    return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-                case Shr5Package.CYBERWARE__WERT_VALUE:
-                    return Shr5Package.GELD_WERT__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.CYBERWARE__WERT: return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.CYBERWARE__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.CYBERWARE__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -392,21 +364,16 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == GeldWert.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GELD_WERT__WERT:
-                    return Shr5Package.CYBERWARE__WERT;
-                case Shr5Package.GELD_WERT__VERFUEGBARKEIT:
-                    return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
-                case Shr5Package.GELD_WERT__WERT_VALUE:
-                    return Shr5Package.CYBERWARE__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.GELD_WERT__WERT: return Shr5Package.CYBERWARE__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.CYBERWARE__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.CYBERWARE__WERT_VALUE;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -415,13 +382,11 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (verfuegbarkeit: ");

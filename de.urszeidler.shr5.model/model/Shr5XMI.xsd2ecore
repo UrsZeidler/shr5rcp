@@ -143,7 +143,7 @@
     <nested inputs="shr5.ecore#//KoerperlicheAttribute" outputs="Shr5XMI.xsd#//KoerperlicheAttribute;XSDComplexTypeDefinition=9"/>
     <nested inputs="shr5.ecore#//KoerperlicheAttribute" outputs="Shr5XMI.xsd#//KoerperlicheAttribute;XSDElementDeclaration=9"/>
     <nested inputs="shr5.ecore#//SpezielleAttribute" outputs="Shr5XMI.xsd#//SpezielleAttribute;XSDComplexTypeDefinition=10">
-      <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//SpezielleAttribute;XSDComplexTypeDefinition=10/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//SpezielleAttribute;XSDComplexTypeDefinition=10/XSDAttributeUse"/>
     </nested>
     <nested inputs="shr5.ecore#//SpezielleAttribute" outputs="Shr5XMI.xsd#//SpezielleAttribute;XSDElementDeclaration=10"/>
     <nested inputs="shr5.ecore#//AbstraktGegenstand" outputs="Shr5XMI.xsd#//AbstraktGegenstand;XSDComplexTypeDefinition=11"/>
@@ -273,17 +273,17 @@
     </nested>
     <nested inputs="shr5.ecore#//BaseMagischePersona" outputs="Shr5XMI.xsd#//BaseMagischePersona;XSDElementDeclaration=33"/>
     <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34">
-      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/smartgun" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/rueckstoss" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=2"/>
-      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/lasterPointer" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=3"/>
-      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/schalldaempfer" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=4"/>
-      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/vergroesserung" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=5"/>
+      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/smartgun" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/rueckstoss" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/lasterPointer" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/schalldaempfer" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/vergroesserung" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=4"/>
     </nested>
     <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDElementDeclaration=34"/>
     <nested inputs="shr5.ecore#//Sichtverhaeltnisse" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35">
-      <nested inputs="shr5.ecore#//Sichtverhaeltnisse/restlichtverstaerkung" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//Sichtverhaeltnisse/infrarot" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35/XSDAttributeUse=2"/>
-      <nested inputs="shr5.ecore#//Sichtverhaeltnisse/ultrasound" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Sichtverhaeltnisse/restlichtverstaerkung" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Sichtverhaeltnisse/infrarot" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Sichtverhaeltnisse/ultrasound" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35/XSDAttributeUse=2"/>
     </nested>
     <nested inputs="shr5.ecore#//Sichtverhaeltnisse" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDElementDeclaration=35"/>
     <nested inputs="shr5.ecore#//Spezies" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36">
@@ -322,12 +322,12 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Spezies" outputs="Shr5XMI.xsd#//Spezies;XSDElementDeclaration=36"/>
     <nested inputs="shr5.ecore#//GegenstandStufen" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37">
-      <nested inputs="shr5.ecore#//GegenstandStufen/computer" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//GegenstandStufen/elektronik" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=2"/>
-      <nested inputs="shr5.ecore#//GegenstandStufen/tracing" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=3"/>
-      <nested inputs="shr5.ecore#//GegenstandStufen/antiTracing" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=4"/>
-      <nested inputs="shr5.ecore#//GegenstandStufen/protection" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=5"/>
-      <nested inputs="shr5.ecore#//GegenstandStufen/antiProtection" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=6"/>
+      <nested inputs="shr5.ecore#//GegenstandStufen/computer" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//GegenstandStufen/elektronik" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//GegenstandStufen/tracing" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//GegenstandStufen/antiTracing" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//GegenstandStufen/protection" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//GegenstandStufen/antiProtection" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse=5"/>
     </nested>
     <nested inputs="shr5.ecore#//GegenstandStufen" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDElementDeclaration=37"/>
     <nested inputs="shr5.ecore#//KiAdept" outputs="Shr5XMI.xsd#//KiAdept;XSDComplexTypeDefinition=38">
@@ -352,8 +352,8 @@
     </nested>
     <nested inputs="shr5.ecore#//PersonaEigenschaft" outputs="Shr5XMI.xsd#//PersonaEigenschaft;XSDElementDeclaration=42"/>
     <nested inputs="shr5.ecore#//ProbenModifikatoren" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDComplexTypeDefinition=43">
-      <nested inputs="shr5.ecore#//ProbenModifikatoren/schadenswiederstand" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDComplexTypeDefinition=43/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//ProbenModifikatoren/heilung" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDComplexTypeDefinition=43/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//ProbenModifikatoren/schadenswiederstand" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDComplexTypeDefinition=43/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//ProbenModifikatoren/heilung" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDComplexTypeDefinition=43/XSDAttributeUse=1"/>
     </nested>
     <nested inputs="shr5.ecore#//ProbenModifikatoren" outputs="Shr5XMI.xsd#//ProbenModifikatoren;XSDElementDeclaration=43"/>
     <nested inputs="shr5.ecore#//Magier" outputs="Shr5XMI.xsd#//Magier;XSDComplexTypeDefinition=44"/>
@@ -565,5 +565,7 @@
     <nested inputs="shr5.ecore#//Menge/anzahl" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Menge/proAnzahl" outputs="Shr5XMI.xsd#//Munition;XSDComplexTypeDefinition=82/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Munition" outputs="Shr5XMI.xsd#//Munition;XSDElementDeclaration=82"/>
+    <nested inputs="shr5.ecore#//ModifikatorAttribute" outputs="Shr5XMI.xsd#//ModifikatorAttribute;XSDComplexTypeDefinition=83"/>
+    <nested inputs="shr5.ecore#//ModifikatorAttribute" outputs="Shr5XMI.xsd#//ModifikatorAttribute;XSDElementDeclaration=83"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface KoerperlicheAttribute extends EObject {
+public interface KoerperlicheAttribute extends ModifikatorAttribute {
 	/**
      * Returns the value of the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->

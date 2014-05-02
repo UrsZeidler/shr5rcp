@@ -238,20 +238,17 @@
   </xsd:complexType>
   <xsd:element name="Modifizierbar" type="shr5:Modifizierbar"/>
   <xsd:complexType abstract="true" name="KoerperlicheAttribute">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute"/>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="KoerperlicheAttribute" type="shr5:KoerperlicheAttribute"/>
   <xsd:complexType abstract="true" name="SpezielleAttribute">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="edgeBasis" type="xsd:int"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute">
+        <xsd:attribute name="edgeBasis" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="SpezielleAttribute" type="shr5:SpezielleAttribute"/>
   <xsd:complexType abstract="true" name="AbstraktGegenstand">
@@ -472,11 +469,9 @@
   </xsd:complexType>
   <xsd:element name="AbstraktModifikatoren" type="shr5:AbstraktModifikatoren"/>
   <xsd:complexType abstract="true" name="GeistigeAttribute">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute"/>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="GeistigeAttribute" type="shr5:GeistigeAttribute"/>
   <xsd:complexType name="MudanPersona">
@@ -536,27 +531,32 @@
   </xsd:complexType>
   <xsd:element name="BaseMagischePersona" type="shr5:BaseMagischePersona"/>
   <xsd:complexType abstract="true" name="FernkampfwaffenModifikatoren">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="smartgun" type="shr5:SmartgunType"/>
-    <xsd:attribute name="rueckstoss" type="xsd:int"/>
-    <xsd:attribute name="lasterPointer" type="xsd:boolean"/>
-    <xsd:attribute name="schalldaempfer" type="xsd:boolean"/>
-    <xsd:attribute name="vergroesserung" type="xsd:int"/>
+    <xsd:annotation>
+      <xsd:documentation>Modificators for ranged weapons.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute">
+        <xsd:attribute name="smartgun" type="shr5:SmartgunType"/>
+        <xsd:attribute name="rueckstoss" type="xsd:int"/>
+        <xsd:attribute name="lasterPointer" type="xsd:boolean"/>
+        <xsd:attribute name="schalldaempfer" type="xsd:boolean"/>
+        <xsd:attribute name="vergroesserung" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="FernkampfwaffenModifikatoren" type="shr5:FernkampfwaffenModifikatoren"/>
+  <xsd:element name="FernkampfwaffenModifikatoren" type="shr5:FernkampfwaffenModifikatoren">
+    <xsd:annotation>
+      <xsd:documentation>Modificators for ranged weapons.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="Sichtverhaeltnisse">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="restlichtverstaerkung" type="shr5:ModifikatorType"/>
-    <xsd:attribute name="infrarot" type="shr5:ModifikatorType"/>
-    <xsd:attribute name="ultrasound" type="shr5:ModifikatorType"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute">
+        <xsd:attribute name="restlichtverstaerkung" type="shr5:ModifikatorType"/>
+        <xsd:attribute name="infrarot" type="shr5:ModifikatorType"/>
+        <xsd:attribute name="ultrasound" type="shr5:ModifikatorType"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Sichtverhaeltnisse" type="shr5:Sichtverhaeltnisse"/>
   <xsd:complexType name="Spezies">
@@ -601,17 +601,16 @@
   </xsd:complexType>
   <xsd:element name="Spezies" type="shr5:Spezies"/>
   <xsd:complexType abstract="true" name="GegenstandStufen">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="computer" type="xsd:int"/>
-    <xsd:attribute name="elektronik" type="xsd:int"/>
-    <xsd:attribute name="tracing" type="xsd:int"/>
-    <xsd:attribute name="antiTracing" type="xsd:int"/>
-    <xsd:attribute name="protection" type="xsd:int"/>
-    <xsd:attribute name="antiProtection" type="xsd:int"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute">
+        <xsd:attribute name="computer" type="xsd:int"/>
+        <xsd:attribute name="elektronik" type="xsd:int"/>
+        <xsd:attribute name="tracing" type="xsd:int"/>
+        <xsd:attribute name="antiTracing" type="xsd:int"/>
+        <xsd:attribute name="protection" type="xsd:int"/>
+        <xsd:attribute name="antiProtection" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="GegenstandStufen" type="shr5:GegenstandStufen"/>
   <xsd:complexType name="KiAdept">
@@ -659,15 +658,21 @@
   </xsd:complexType>
   <xsd:element name="PersonaEigenschaft" type="shr5:PersonaEigenschaft"/>
   <xsd:complexType abstract="true" name="ProbenModifikatoren">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="schadenswiederstand" type="xsd:int"/>
-    <xsd:attribute name="heilung" type="xsd:int"/>
+    <xsd:annotation>
+      <xsd:documentation>Modificators changing a test.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute">
+        <xsd:attribute name="schadenswiederstand" type="xsd:int"/>
+        <xsd:attribute name="heilung" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="ProbenModifikatoren" type="shr5:ProbenModifikatoren"/>
+  <xsd:element name="ProbenModifikatoren" type="shr5:ProbenModifikatoren">
+    <xsd:annotation>
+      <xsd:documentation>Modificators changing a test.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="Magier">
     <xsd:complexContent>
       <xsd:extension base="shr5:MagischePersona">
@@ -1136,4 +1141,19 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Munition" type="shr5:Munition"/>
+  <xsd:complexType abstract="true" name="ModifikatorAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Modificator attributes are used to define additional aspects.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="ModifikatorAttribute" type="shr5:ModifikatorAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Modificator attributes are used to define additional aspects.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

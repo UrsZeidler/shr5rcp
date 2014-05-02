@@ -2,12 +2,15 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Proben Modifikatoren</b></em>'.
  * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * Modificators changing a test.
+ * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
@@ -21,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface ProbenModifikatoren extends EObject {
+public interface ProbenModifikatoren extends ModifikatorAttribute {
 	/**
      * Returns the value of the '<em><b>Schadenswiederstand</b></em>' attribute.
      * <!-- begin-user-doc -->

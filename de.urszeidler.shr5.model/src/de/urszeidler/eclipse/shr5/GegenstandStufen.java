@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface GegenstandStufen extends EObject {
+public interface GegenstandStufen extends ModifikatorAttribute {
 	/**
      * Returns the value of the '<em><b>Computer</b></em>' attribute.
      * <!-- begin-user-doc -->

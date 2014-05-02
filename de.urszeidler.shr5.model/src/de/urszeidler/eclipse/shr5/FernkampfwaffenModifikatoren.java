@@ -2,12 +2,15 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Fernkampfwaffen Modifikatoren</b></em>'.
  * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * Modificators for ranged weapons.
+ * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
@@ -24,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface FernkampfwaffenModifikatoren extends EObject {
+public interface FernkampfwaffenModifikatoren extends ModifikatorAttribute {
 	/**
      * Returns the value of the '<em><b>Smartgun</b></em>' attribute.
      * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.SmartgunType}.

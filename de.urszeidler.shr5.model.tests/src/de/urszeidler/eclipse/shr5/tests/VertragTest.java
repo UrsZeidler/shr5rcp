@@ -2,8 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import java.math.BigDecimal;
-
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -100,8 +98,9 @@ public class VertragTest extends TestCase {
      * @generated
      */
     public void testGetWert() {
-        getFixture().setWertValue(new BigDecimal(10));        
-        assertEquals(10,getFixture().getWert().intValue());
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
 } //VertragTest

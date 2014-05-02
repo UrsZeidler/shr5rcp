@@ -2,9 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import java.math.BigDecimal;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -23,7 +20,6 @@ import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
 import de.urszeidler.eclipse.shr5.Munition;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * <!-- begin-user-doc -->

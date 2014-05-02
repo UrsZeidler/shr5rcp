@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.ChrakterLimits;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.KoerperlicheAttribute;
 import de.urszeidler.eclipse.shr5.ModSetter;
+import de.urszeidler.eclipse.shr5.ModifikatorAttribute;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -1329,6 +1330,11 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == ModifikatorAttribute.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
         if (baseClass == KoerperlicheAttribute.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.ABSTRAKT_PERSONA__KONSTITUTION: return Shr5Package.KOERPERLICHE_ATTRIBUTE__KONSTITUTION;
@@ -1375,6 +1381,11 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == ModifikatorAttribute.class) {
+            switch (baseFeatureID) {
+                default: return -1;
+            }
+        }
         if (baseClass == KoerperlicheAttribute.class) {
             switch (baseFeatureID) {
                 case Shr5Package.KOERPERLICHE_ATTRIBUTE__KONSTITUTION: return Shr5Package.ABSTRAKT_PERSONA__KONSTITUTION;

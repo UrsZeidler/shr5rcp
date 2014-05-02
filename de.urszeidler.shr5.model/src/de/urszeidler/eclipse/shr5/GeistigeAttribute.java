@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface GeistigeAttribute extends EObject {
+public interface GeistigeAttribute extends ModifikatorAttribute {
 	/**
      * Returns the value of the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->

@@ -88,7 +88,7 @@
         containment="true" eOpposite="#//AttributModifikatorWert/modifiziertes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KoerperlicheAttribute" abstract="true"
-      interface="true">
+      interface="true" eSuperTypes="#//ModifikatorAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="konstitution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschicklichkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -99,7 +99,7 @@
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezielleAttribute" abstract="true"
-      interface="true">
+      interface="true" eSuperTypes="#//ModifikatorAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initative" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
         volatile="true" transient="true"/>
@@ -201,7 +201,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Koerpermods" abstract="true" eSuperTypes="#//AbstraktModifikatoren"/>
   <eClassifiers xsi:type="ecore:EClass" name="AbstraktModifikatoren" abstract="true"
       eSuperTypes="#//Beschreibbar #//Modifizierbar #//Quelle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GeistigeAttribute" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="GeistigeAttribute" abstract="true" interface="true"
+      eSuperTypes="#//ModifikatorAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="charisma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="willenskraft" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -237,7 +238,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffenModifikatoren" abstract="true"
-      interface="true">
+      interface="true" eSuperTypes="#//ModifikatorAttribute">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Modificators for ranged weapons."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="smartgun" eType="#//SmartgunType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rueckstoss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lasterPointer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -245,7 +249,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vergroesserung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sichtverhaeltnisse" abstract="true"
-      interface="true">
+      interface="true" eSuperTypes="#//ModifikatorAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="restlichtverstaerkung"
         eType="#//ModifikatorType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="infrarot" eType="#//ModifikatorType"/>
@@ -282,7 +286,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="angriff" lowerBound="1"
         eType="#//Nahkampfwaffe" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GegenstandStufen" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="GegenstandStufen" abstract="true" interface="true"
+      eSuperTypes="#//ModifikatorAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="computer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="elektronik" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tracing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -317,7 +322,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="karmaKosten" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProbenModifikatoren" abstract="true"
-      interface="true">
+      interface="true" eSuperTypes="#//ModifikatorAttribute">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Modificators changing a test."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="schadenswiederstand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="heilung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -571,5 +579,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="damageMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="armorMod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Reichweite"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifikatorAttribute" abstract="true"
+      interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Modificator attributes are used to define additional aspects."/>
+    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

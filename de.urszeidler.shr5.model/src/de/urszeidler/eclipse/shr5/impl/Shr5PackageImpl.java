@@ -69,6 +69,7 @@ import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.Menge;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.ModSetter;
+import de.urszeidler.eclipse.shr5.ModifikatorAttribute;
 import de.urszeidler.eclipse.shr5.ModifikatorType;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.MudanPersona;
@@ -700,6 +701,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass munitionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass modifikatorAttributeEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3531,6 +3539,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getModifikatorAttribute() {
+        return modifikatorAttributeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4079,6 +4096,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(munitionEClass, MUNITION__ARMOR_MOD);
         createEReference(munitionEClass, MUNITION__TYPE);
 
+        modifikatorAttributeEClass = createEClass(MODIFIKATOR_ATTRIBUTE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4136,6 +4155,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         abstraktPersonaEClass.getESuperTypes().add(this.getChrakterLimits());
         gegenstandEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         reichweiteEClass.getESuperTypes().add(this.getBeschreibbar());
+        koerperlicheAttributeEClass.getESuperTypes().add(this.getModifikatorAttribute());
+        spezielleAttributeEClass.getESuperTypes().add(this.getModifikatorAttribute());
         abstraktGegenstandEClass.getESuperTypes().add(this.getQuelle());
         abstraktGegenstandEClass.getESuperTypes().add(this.getGeldWert());
         abstraktGegenstandEClass.getESuperTypes().add(this.getBeschreibbar());
@@ -4162,6 +4183,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         abstraktModifikatorenEClass.getESuperTypes().add(this.getBeschreibbar());
         abstraktModifikatorenEClass.getESuperTypes().add(this.getModifizierbar());
         abstraktModifikatorenEClass.getESuperTypes().add(this.getQuelle());
+        geistigeAttributeEClass.getESuperTypes().add(this.getModifikatorAttribute());
         mudanPersonaEClass.getESuperTypes().add(this.getKoerperPersona());
         koerperPersonaEClass.getESuperTypes().add(this.getAbstraktPersona());
         koerperPersonaEClass.getESuperTypes().add(this.getPanzerung());
@@ -4171,14 +4193,18 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         kiKraftEClass.getESuperTypes().add(this.getErlernbar());
         magischePersonaEClass.getESuperTypes().add(this.getKoerperPersona());
         magischePersonaEClass.getESuperTypes().add(this.getBaseMagischePersona());
+        fernkampfwaffenModifikatorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
+        sichtverhaeltnisseEClass.getESuperTypes().add(this.getModifikatorAttribute());
         speziesEClass.getESuperTypes().add(this.getBeschreibbar());
         speziesEClass.getESuperTypes().add(this.getModifizierbar());
         speziesEClass.getESuperTypes().add(this.getQuelle());
+        gegenstandStufenEClass.getESuperTypes().add(this.getModifikatorAttribute());
         kiAdeptEClass.getESuperTypes().add(this.getMagischePersona());
         kleidungEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         fernkampfwaffeModifikatorEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         personaEigenschaftEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         personaEigenschaftEClass.getESuperTypes().add(this.getErlernbar());
+        probenModifikatorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
         magierEClass.getESuperTypes().add(this.getMagischePersona());
         magierEClass.getESuperTypes().add(this.getZauberer());
         magierEClass.getESuperTypes().add(this.getAstraleProjektion());
@@ -4607,6 +4633,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getMunition_DamageMod(), ecorePackage.getEInt(), "damageMod", null, 0, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getMunition_ArmorMod(), ecorePackage.getEInt(), "armorMod", null, 0, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getMunition_Type(), this.getReichweite(), null, "type", null, 1, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(modifikatorAttributeEClass, ModifikatorAttribute.class, "ModifikatorAttribute", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

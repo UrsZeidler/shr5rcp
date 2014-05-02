@@ -1050,6 +1050,34 @@ public interface Shr5Package extends EPackage {
 	int MODIFIZIERBAR_OPERATION_COUNT = 0;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorAttribute <em>Modifikator Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ModifikatorAttribute
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorAttribute()
+     * @generated
+     */
+    int MODIFIKATOR_ATTRIBUTE = 83;
+
+    /**
+     * The number of structural features of the '<em>Modifikator Attribute</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT = 0;
+
+    /**
+     * The number of operations of the '<em>Modifikator Attribute</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute <em>Koerperliche Attribute</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1066,7 +1094,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPERLICHE_ATTRIBUTE__KONSTITUTION = 0;
+	int KOERPERLICHE_ATTRIBUTE__KONSTITUTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
@@ -1075,7 +1103,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT = 1;
+	int KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
@@ -1084,7 +1112,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPERLICHE_ATTRIBUTE__REAKTION = 2;
+	int KOERPERLICHE_ATTRIBUTE__REAKTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
@@ -1093,7 +1121,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPERLICHE_ATTRIBUTE__STAERKE = 3;
+	int KOERPERLICHE_ATTRIBUTE__STAERKE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
      * The number of structural features of the '<em>Koerperliche Attribute</em>' class.
@@ -1102,7 +1130,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPERLICHE_ATTRIBUTE_FEATURE_COUNT = 4;
+	int KOERPERLICHE_ATTRIBUTE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
      * The number of operations of the '<em>Koerperliche Attribute</em>' class.
@@ -1111,7 +1139,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPERLICHE_ATTRIBUTE_OPERATION_COUNT = 0;
+	int KOERPERLICHE_ATTRIBUTE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute <em>Spezielle Attribute</em>}' class.
@@ -1130,7 +1158,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE__INITATIVE = 0;
+	int SPEZIELLE_ATTRIBUTE__INITATIVE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
@@ -1139,7 +1167,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL = 1;
+	int SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
@@ -1148,7 +1176,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE__AUSWEICHEN = 2;
+	int SPEZIELLE_ATTRIBUTE__AUSWEICHEN = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
@@ -1157,7 +1185,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE__ESSENZ = 3;
+	int SPEZIELLE_ATTRIBUTE__ESSENZ = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
@@ -1166,7 +1194,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE__EDGE_BASIS = 4;
+	int SPEZIELLE_ATTRIBUTE__EDGE_BASIS = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
@@ -1175,7 +1203,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE__EDGE = 5;
+	int SPEZIELLE_ATTRIBUTE__EDGE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
 	/**
      * The number of structural features of the '<em>Spezielle Attribute</em>' class.
@@ -1184,7 +1212,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE_FEATURE_COUNT = 6;
+	int SPEZIELLE_ATTRIBUTE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 6;
 
 	/**
      * The number of operations of the '<em>Spezielle Attribute</em>' class.
@@ -1193,7 +1221,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIELLE_ATTRIBUTE_OPERATION_COUNT = 0;
+	int SPEZIELLE_ATTRIBUTE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl <em>Abstakt Waffe</em>}' class.
@@ -3074,7 +3102,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEISTIGE_ATTRIBUTE__CHARISMA = 0;
+	int GEISTIGE_ATTRIBUTE__CHARISMA = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
@@ -3083,7 +3111,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEISTIGE_ATTRIBUTE__WILLENSKRAFT = 1;
+	int GEISTIGE_ATTRIBUTE__WILLENSKRAFT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
@@ -3092,7 +3120,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEISTIGE_ATTRIBUTE__INTUITION = 2;
+	int GEISTIGE_ATTRIBUTE__INTUITION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
@@ -3101,7 +3129,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEISTIGE_ATTRIBUTE__LOGIK = 3;
+	int GEISTIGE_ATTRIBUTE__LOGIK = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
      * The number of structural features of the '<em>Geistige Attribute</em>' class.
@@ -3110,7 +3138,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEISTIGE_ATTRIBUTE_FEATURE_COUNT = 4;
+	int GEISTIGE_ATTRIBUTE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
      * The number of operations of the '<em>Geistige Attribute</em>' class.
@@ -3119,7 +3147,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEISTIGE_ATTRIBUTE_OPERATION_COUNT = 0;
+	int GEISTIGE_ATTRIBUTE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl <em>Koerper Persona</em>}' class.
@@ -4566,7 +4594,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN__SMARTGUN = 0;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN__SMARTGUN = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Rueckstoss</b></em>' attribute.
@@ -4575,7 +4603,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN__RUECKSTOSS = 1;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN__RUECKSTOSS = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The feature id for the '<em><b>Laster Pointer</b></em>' attribute.
@@ -4584,7 +4612,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN__LASTER_POINTER = 2;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN__LASTER_POINTER = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The feature id for the '<em><b>Schalldaempfer</b></em>' attribute.
@@ -4593,7 +4621,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN__SCHALLDAEMPFER = 3;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN__SCHALLDAEMPFER = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
      * The feature id for the '<em><b>Vergroesserung</b></em>' attribute.
@@ -4602,7 +4630,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN__VERGROESSERUNG = 4;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN__VERGROESSERUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
      * The number of structural features of the '<em>Fernkampfwaffen Modifikatoren</em>' class.
@@ -4611,7 +4639,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN_FEATURE_COUNT = 5;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
 	/**
      * The number of operations of the '<em>Fernkampfwaffen Modifikatoren</em>' class.
@@ -4620,7 +4648,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN_OPERATION_COUNT = 0;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse <em>Sichtverhaeltnisse</em>}' class.
@@ -4639,7 +4667,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SICHTVERHAELTNISSE__RESTLICHTVERSTAERKUNG = 0;
+	int SICHTVERHAELTNISSE__RESTLICHTVERSTAERKUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Infrarot</b></em>' attribute.
@@ -4648,7 +4676,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SICHTVERHAELTNISSE__INFRAROT = 1;
+	int SICHTVERHAELTNISSE__INFRAROT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The feature id for the '<em><b>Ultrasound</b></em>' attribute.
@@ -4657,7 +4685,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SICHTVERHAELTNISSE__ULTRASOUND = 2;
+	int SICHTVERHAELTNISSE__ULTRASOUND = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The number of structural features of the '<em>Sichtverhaeltnisse</em>' class.
@@ -4666,7 +4694,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SICHTVERHAELTNISSE_FEATURE_COUNT = 3;
+	int SICHTVERHAELTNISSE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
      * The number of operations of the '<em>Sichtverhaeltnisse</em>' class.
@@ -4675,7 +4703,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SICHTVERHAELTNISSE_OPERATION_COUNT = 0;
+	int SICHTVERHAELTNISSE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl <em>Spezies</em>}' class.
@@ -5028,7 +5056,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN__COMPUTER = 0;
+	int GEGENSTAND_STUFEN__COMPUTER = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Elektronik</b></em>' attribute.
@@ -5037,7 +5065,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN__ELEKTRONIK = 1;
+	int GEGENSTAND_STUFEN__ELEKTRONIK = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The feature id for the '<em><b>Tracing</b></em>' attribute.
@@ -5046,7 +5074,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN__TRACING = 2;
+	int GEGENSTAND_STUFEN__TRACING = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The feature id for the '<em><b>Anti Tracing</b></em>' attribute.
@@ -5055,7 +5083,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN__ANTI_TRACING = 3;
+	int GEGENSTAND_STUFEN__ANTI_TRACING = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
      * The feature id for the '<em><b>Protection</b></em>' attribute.
@@ -5064,7 +5092,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN__PROTECTION = 4;
+	int GEGENSTAND_STUFEN__PROTECTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
      * The feature id for the '<em><b>Anti Protection</b></em>' attribute.
@@ -5073,7 +5101,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN__ANTI_PROTECTION = 5;
+	int GEGENSTAND_STUFEN__ANTI_PROTECTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
 	/**
      * The number of structural features of the '<em>Gegenstand Stufen</em>' class.
@@ -5082,7 +5110,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN_FEATURE_COUNT = 6;
+	int GEGENSTAND_STUFEN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 6;
 
 	/**
      * The number of operations of the '<em>Gegenstand Stufen</em>' class.
@@ -5091,7 +5119,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int GEGENSTAND_STUFEN_OPERATION_COUNT = 0;
+	int GEGENSTAND_STUFEN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KiAdeptImpl <em>Ki Adept</em>}' class.
@@ -5889,7 +5917,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PROBEN_MODIFIKATOREN__SCHADENSWIEDERSTAND = 0;
+	int PROBEN_MODIFIKATOREN__SCHADENSWIEDERSTAND = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
      * The feature id for the '<em><b>Heilung</b></em>' attribute.
@@ -5898,7 +5926,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PROBEN_MODIFIKATOREN__HEILUNG = 1;
+	int PROBEN_MODIFIKATOREN__HEILUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
      * The number of structural features of the '<em>Proben Modifikatoren</em>' class.
@@ -5907,7 +5935,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PROBEN_MODIFIKATOREN_FEATURE_COUNT = 2;
+	int PROBEN_MODIFIKATOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
      * The number of operations of the '<em>Proben Modifikatoren</em>' class.
@@ -5916,7 +5944,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int PROBEN_MODIFIKATOREN_OPERATION_COUNT = 0;
+	int PROBEN_MODIFIKATOREN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagierImpl <em>Magier</em>}' class.
@@ -11642,7 +11670,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 83;
+	int FEUER_MODUS = 84;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -11652,7 +11680,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 84;
+	int SCHADENS_TYP = 85;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -11662,7 +11690,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 85;
+	int MAGAZIN_TYP = 86;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -11672,7 +11700,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 86;
+	int FEUWERWAFFEN_ERWEITERUNG = 87;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -11682,7 +11710,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 87;
+	int MODIFIKATOR_TYPE = 88;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -11692,7 +11720,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 88;
+	int SMARTGUN_TYPE = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -11702,7 +11730,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 89;
+	int ZAUBER_ART = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -11712,7 +11740,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 90;
+	int ZAUBER_REICHWEITE = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -11722,7 +11750,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 91;
+	int ZAUBER_DAUER = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -11732,7 +11760,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 92;
+	int MAGISCHE_TRADITION = 93;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -11742,7 +11770,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 93;
+	int CRITTER_HANDLUNG = 94;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -11752,7 +11780,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 94;
+	int CRITTER_REICHWEITE = 95;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -11762,7 +11790,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 95;
+	int CRITTER_DAUER = 96;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -11772,7 +11800,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 96;
+	int RESONANZ_ZIEL = 97;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -11782,7 +11810,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 97;
+	int SHR_DATE = 98;
 
 
 	/**
@@ -11793,7 +11821,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 98;
+	int MODIFICATION_MANAGER = 99;
 
 
 	/**
@@ -14959,6 +14987,16 @@ public interface Shr5Package extends EPackage {
     EReference getMunition_Type();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ModifikatorAttribute <em>Modifikator Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Modifikator Attribute</em>'.
+     * @see de.urszeidler.eclipse.shr5.ModifikatorAttribute
+     * @generated
+     */
+    EClass getModifikatorAttribute();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17668,6 +17706,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference MUNITION__TYPE = eINSTANCE.getMunition_Type();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ModifikatorAttribute <em>Modifikator Attribute</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.ModifikatorAttribute
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorAttribute()
+         * @generated
+         */
+        EClass MODIFIKATOR_ATTRIBUTE = eINSTANCE.getModifikatorAttribute();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

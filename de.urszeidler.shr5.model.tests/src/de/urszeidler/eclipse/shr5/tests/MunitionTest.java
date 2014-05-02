@@ -13,7 +13,6 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Munition</b></em>'.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class MunitionTest extends AbstraktGegenstandTest {
@@ -21,7 +20,6 @@ public class MunitionTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -32,7 +30,6 @@ public class MunitionTest extends AbstraktGegenstandTest {
      * Constructs a new Munition test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public MunitionTest(String name) {
@@ -43,7 +40,6 @@ public class MunitionTest extends AbstraktGegenstandTest {
      * Returns the fixture for this Munition test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -54,7 +50,6 @@ public class MunitionTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -66,7 +61,6 @@ public class MunitionTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
