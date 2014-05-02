@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.ZauberDauer;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getBeschreibung <em>Beschreibung</em>}</li>
@@ -37,6 +38,26 @@ import de.urszeidler.eclipse.shr5.ZauberDauer;
  */
 public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements KomplexeForm {
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,6 +227,27 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.KOMPLEXE_FORM__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -398,6 +440,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
+                return getParentId();
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 return getPage();
             case Shr5Package.KOMPLEXE_FORM__SRC_BOOK:
@@ -427,6 +471,9 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	@Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
+                setParentId((String)newValue);
+                return;
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 setPage((String)newValue);
                 return;
@@ -463,6 +510,9 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	@Override
 	public void eUnset(int featureID) {
         switch (featureID) {
+            case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -499,6 +549,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.KOMPLEXE_FORM__SRC_BOOK:
@@ -565,7 +617,9 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (page: ");
+        result.append(" (parentId: ");
+        result.append(parentId);
+        result.append(", page: ");
         result.append(page);
         result.append(", beschreibung: ");
         result.append(beschreibung);

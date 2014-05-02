@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Quelle;
@@ -33,6 +34,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getMods <em>Mods</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getKonstitutionMin <em>Konstitution Min</em>}</li>
@@ -140,6 +142,26 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	protected EList<AttributModifikatorWert> mods;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -814,6 +836,27 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SPEZIES__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -1529,6 +1572,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return getName();
             case Shr5Package.SPEZIES__MODS:
                 return getMods();
+            case Shr5Package.SPEZIES__PARENT_ID:
+                return getParentId();
             case Shr5Package.SPEZIES__PAGE:
                 return getPage();
             case Shr5Package.SPEZIES__SRC_BOOK:
@@ -1615,6 +1660,9 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
             case Shr5Package.SPEZIES__MODS:
                 getMods().clear();
                 getMods().addAll((Collection<? extends AttributModifikatorWert>)newValue);
+                return;
+            case Shr5Package.SPEZIES__PARENT_ID:
+                setParentId((String)newValue);
                 return;
             case Shr5Package.SPEZIES__PAGE:
                 setPage((String)newValue);
@@ -1730,6 +1778,9 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
             case Shr5Package.SPEZIES__MODS:
                 getMods().clear();
                 return;
+            case Shr5Package.SPEZIES__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.SPEZIES__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -1840,6 +1891,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.SPEZIES__MODS:
                 return mods != null && !mods.isEmpty();
+            case Shr5Package.SPEZIES__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.SPEZIES__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.SPEZIES__SRC_BOOK:
@@ -1917,6 +1970,12 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 default: return -1;
             }
         }
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.SPEZIES__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.SPEZIES__PAGE: return Shr5Package.QUELLE__PAGE;
@@ -1937,6 +1996,12 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
         if (baseClass == Modifizierbar.class) {
             switch (baseFeatureID) {
                 case Shr5Package.MODIFIZIERBAR__MODS: return Shr5Package.SPEZIES__MODS;
+                default: return -1;
+            }
+        }
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.SPEZIES__PARENT_ID;
                 default: return -1;
             }
         }
@@ -1966,6 +2031,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(", page: ");
         result.append(page);
         result.append(", konstitutionMin: ");

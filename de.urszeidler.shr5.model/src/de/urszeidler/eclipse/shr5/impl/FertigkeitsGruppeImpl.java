@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -30,6 +31,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getFertigkeiten <em>Fertigkeiten</em>}</li>
@@ -100,6 +102,26 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -180,6 +202,27 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -320,6 +363,8 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
                 return getImage();
             case Shr5Package.FERTIGKEITS_GRUPPE__NAME:
                 return getName();
+            case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
+                return getParentId();
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 return getPage();
             case Shr5Package.FERTIGKEITS_GRUPPE__SRC_BOOK:
@@ -348,6 +393,9 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.FERTIGKEITS_GRUPPE__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
+                setParentId((String)newValue);
                 return;
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 setPage((String)newValue);
@@ -380,6 +428,9 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FERTIGKEITS_GRUPPE__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -407,6 +458,8 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5Package.FERTIGKEITS_GRUPPE__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.FERTIGKEITS_GRUPPE__SRC_BOOK:
@@ -424,6 +477,12 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
      */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.FERTIGKEITS_GRUPPE__PAGE: return Shr5Package.QUELLE__PAGE;
@@ -441,6 +500,12 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
      */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.FERTIGKEITS_GRUPPE__PAGE;
@@ -467,6 +532,8 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(", page: ");
         result.append(page);
         result.append(')');

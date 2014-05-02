@@ -64,6 +64,7 @@ public class ZauberItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addArtPropertyDescriptor(object);
@@ -100,6 +101,28 @@ public class ZauberItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Beschreibung feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -388,6 +411,7 @@ public class ZauberItemProvider
             case Shr5Package.ZAUBER__BESCHREIBUNG:
             case Shr5Package.ZAUBER__IMAGE:
             case Shr5Package.ZAUBER__NAME:
+            case Shr5Package.ZAUBER__PARENT_ID:
             case Shr5Package.ZAUBER__PAGE:
             case Shr5Package.ZAUBER__ART:
             case Shr5Package.ZAUBER__REICHWEITE:

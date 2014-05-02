@@ -14,4 +14,11 @@
             genModel="model/shr5.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated shr5 -->
+      <parser
+            type="shr5"
+            class="de.urszeidler.eclipse.shr5.util.Shr5ResourceFactoryImpl"/>
+   </extension>
+
 </plugin>

@@ -65,6 +65,7 @@ public class CharacterGeneratorSystemItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
         }
@@ -94,6 +95,28 @@ public class CharacterGeneratorSystemItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Beschreibung feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +265,7 @@ public class CharacterGeneratorSystemItemProvider
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__BESCHREIBUNG:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__IMAGE:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__NAME:
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;

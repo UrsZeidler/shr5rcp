@@ -155,6 +155,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.QUELLE: {
                 Quelle quelle = (Quelle)theEObject;
                 T result = caseQuelle(quelle);
+                if (result == null) result = caseIdentifiable(quelle);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -186,6 +187,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(gegenstand);
                 if (result == null) result = caseModifizierbar(gegenstand);
                 if (result == null) result = caseAnwendbar(gegenstand);
+                if (result == null) result = caseIdentifiable(gegenstand);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -236,6 +238,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(abstraktGegenstand);
                 if (result == null) result = caseModifizierbar(abstraktGegenstand);
                 if (result == null) result = caseAnwendbar(abstraktGegenstand);
+                if (result == null) result = caseIdentifiable(abstraktGegenstand);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -249,6 +252,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(abstaktFernKampfwaffe);
                 if (result == null) result = caseModifizierbar(abstaktFernKampfwaffe);
                 if (result == null) result = caseAnwendbar(abstaktFernKampfwaffe);
+                if (result == null) result = caseIdentifiable(abstaktFernKampfwaffe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -261,6 +265,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(abstaktWaffe);
                 if (result == null) result = caseModifizierbar(abstaktWaffe);
                 if (result == null) result = caseAnwendbar(abstaktWaffe);
+                if (result == null) result = caseIdentifiable(abstaktWaffe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -274,6 +279,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(nahkampfwaffe);
                 if (result == null) result = caseModifizierbar(nahkampfwaffe);
                 if (result == null) result = caseAnwendbar(nahkampfwaffe);
+                if (result == null) result = caseIdentifiable(nahkampfwaffe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -288,6 +294,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(feuerwaffe);
                 if (result == null) result = caseModifizierbar(feuerwaffe);
                 if (result == null) result = caseAnwendbar(feuerwaffe);
+                if (result == null) result = caseIdentifiable(feuerwaffe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -302,6 +309,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(wurfwaffe);
                 if (result == null) result = caseModifizierbar(wurfwaffe);
                 if (result == null) result = caseAnwendbar(wurfwaffe);
+                if (result == null) result = caseIdentifiable(wurfwaffe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -323,6 +331,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(projektilwaffe);
                 if (result == null) result = caseModifizierbar(projektilwaffe);
                 if (result == null) result = caseAnwendbar(projektilwaffe);
+                if (result == null) result = caseIdentifiable(projektilwaffe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -331,6 +340,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseFertigkeitsGruppe(fertigkeitsGruppe);
                 if (result == null) result = caseBeschreibbar(fertigkeitsGruppe);
                 if (result == null) result = caseQuelle(fertigkeitsGruppe);
+                if (result == null) result = caseIdentifiable(fertigkeitsGruppe);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -339,6 +349,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseFertigkeit(fertigkeit);
                 if (result == null) result = caseBeschreibbar(fertigkeit);
                 if (result == null) result = caseQuelle(fertigkeit);
+                if (result == null) result = caseIdentifiable(fertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -367,6 +378,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(cyberware);
                 if (result == null) result = caseModifizierbar(cyberware);
                 if (result == null) result = caseQuelle(cyberware);
+                if (result == null) result = caseIdentifiable(cyberware);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -379,6 +391,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(bioWare);
                 if (result == null) result = caseModifizierbar(bioWare);
                 if (result == null) result = caseQuelle(bioWare);
+                if (result == null) result = caseIdentifiable(bioWare);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -389,6 +402,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(koerpermods);
                 if (result == null) result = caseModifizierbar(koerpermods);
                 if (result == null) result = caseQuelle(koerpermods);
+                if (result == null) result = caseIdentifiable(koerpermods);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -398,6 +412,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(abstraktModifikatoren);
                 if (result == null) result = caseModifizierbar(abstraktModifikatoren);
                 if (result == null) result = caseQuelle(abstraktModifikatoren);
+                if (result == null) result = caseIdentifiable(abstraktModifikatoren);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -446,6 +461,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(magischeMods);
                 if (result == null) result = caseModifizierbar(magischeMods);
                 if (result == null) result = caseQuelle(magischeMods);
+                if (result == null) result = caseIdentifiable(magischeMods);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -458,6 +474,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(kiKraft);
                 if (result == null) result = caseModifizierbar(kiKraft);
                 if (result == null) result = caseQuelle(kiKraft);
+                if (result == null) result = caseIdentifiable(kiKraft);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -504,6 +521,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(spezies);
                 if (result == null) result = caseModifizierbar(spezies);
                 if (result == null) result = caseQuelle(spezies);
+                if (result == null) result = caseIdentifiable(spezies);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -541,6 +559,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(kleidung);
                 if (result == null) result = caseModifizierbar(kleidung);
                 if (result == null) result = caseAnwendbar(kleidung);
+                if (result == null) result = caseIdentifiable(kleidung);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -551,6 +570,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(fernkampfwaffeModifikator);
                 if (result == null) result = caseModifizierbar(fernkampfwaffeModifikator);
                 if (result == null) result = caseQuelle(fernkampfwaffeModifikator);
+                if (result == null) result = caseIdentifiable(fernkampfwaffeModifikator);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -568,6 +588,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(personaEigenschaft);
                 if (result == null) result = caseModifizierbar(personaEigenschaft);
                 if (result == null) result = caseQuelle(personaEigenschaft);
+                if (result == null) result = caseIdentifiable(personaEigenschaft);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -636,6 +657,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseZauber(zauber);
                 if (result == null) result = caseBeschreibbar(zauber);
                 if (result == null) result = caseQuelle(zauber);
+                if (result == null) result = caseIdentifiable(zauber);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -684,6 +706,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(schutzgeist);
                 if (result == null) result = caseModifizierbar(schutzgeist);
                 if (result == null) result = caseQuelle(schutzgeist);
+                if (result == null) result = caseIdentifiable(schutzgeist);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -700,6 +723,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseMetaMagie(metaMagie);
                 if (result == null) result = caseBeschreibbar(metaMagie);
                 if (result == null) result = caseQuelle(metaMagie);
+                if (result == null) result = caseIdentifiable(metaMagie);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -711,6 +735,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(critterKraft);
                 if (result == null) result = caseModifizierbar(critterKraft);
                 if (result == null) result = caseQuelle(critterKraft);
+                if (result == null) result = caseIdentifiable(critterKraft);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -721,6 +746,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(fahrzeug);
                 if (result == null) result = caseGeldWert(fahrzeug);
                 if (result == null) result = caseAnwendbar(fahrzeug);
+                if (result == null) result = caseIdentifiable(fahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -733,6 +759,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(bodenfahrzeug);
                 if (result == null) result = caseGeldWert(bodenfahrzeug);
                 if (result == null) result = caseAnwendbar(bodenfahrzeug);
+                if (result == null) result = caseIdentifiable(bodenfahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -744,6 +771,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(passagierFahrzeug);
                 if (result == null) result = caseGeldWert(passagierFahrzeug);
                 if (result == null) result = caseAnwendbar(passagierFahrzeug);
+                if (result == null) result = caseIdentifiable(passagierFahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -755,6 +783,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(drohne);
                 if (result == null) result = caseGeldWert(drohne);
                 if (result == null) result = caseAnwendbar(drohne);
+                if (result == null) result = caseIdentifiable(drohne);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -764,6 +793,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(fahrzeugModifikation);
                 if (result == null) result = caseQuelle(fahrzeugModifikation);
                 if (result == null) result = caseGeldWert(fahrzeugModifikation);
+                if (result == null) result = caseIdentifiable(fahrzeugModifikation);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -795,6 +825,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 T result = caseKomplexeForm(komplexeForm);
                 if (result == null) result = caseQuelle(komplexeForm);
                 if (result == null) result = caseBeschreibbar(komplexeForm);
+                if (result == null) result = caseIdentifiable(komplexeForm);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -811,6 +842,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseResonanzPersona(sprite);
                 if (result == null) result = caseBeschreibbar(sprite);
                 if (result == null) result = caseQuelle(sprite);
+                if (result == null) result = caseIdentifiable(sprite);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -821,6 +853,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(echo);
                 if (result == null) result = caseModifizierbar(echo);
                 if (result == null) result = caseQuelle(echo);
+                if (result == null) result = caseIdentifiable(echo);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -830,6 +863,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(vertrag);
                 if (result == null) result = caseQuelle(vertrag);
                 if (result == null) result = caseGeldWert(vertrag);
+                if (result == null) result = caseIdentifiable(vertrag);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -841,6 +875,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(lifestyle);
                 if (result == null) result = caseQuelle(lifestyle);
                 if (result == null) result = caseGeldWert(lifestyle);
+                if (result == null) result = caseIdentifiable(lifestyle);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -850,6 +885,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseFertigkeit(wissensfertigkeit);
                 if (result == null) result = caseBeschreibbar(wissensfertigkeit);
                 if (result == null) result = caseQuelle(wissensfertigkeit);
+                if (result == null) result = caseIdentifiable(wissensfertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -860,6 +896,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseFertigkeit(sprachfertigkeit);
                 if (result == null) result = caseBeschreibbar(sprachfertigkeit);
                 if (result == null) result = caseQuelle(sprachfertigkeit);
+                if (result == null) result = caseIdentifiable(sprachfertigkeit);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -876,6 +913,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(critter);
                 if (result == null) result = caseModifizierbar(critter);
                 if (result == null) result = caseQuelle(critter);
+                if (result == null) result = caseIdentifiable(critter);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -886,6 +924,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(intervallVertrag);
                 if (result == null) result = caseQuelle(intervallVertrag);
                 if (result == null) result = caseGeldWert(intervallVertrag);
+                if (result == null) result = caseIdentifiable(intervallVertrag);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -897,6 +936,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(sin);
                 if (result == null) result = caseQuelle(sin);
                 if (result == null) result = caseGeldWert(sin);
+                if (result == null) result = caseIdentifiable(sin);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -908,6 +948,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(lizenz);
                 if (result == null) result = caseQuelle(lizenz);
                 if (result == null) result = caseGeldWert(lizenz);
+                if (result == null) result = caseIdentifiable(lizenz);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -918,6 +959,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(fakeable);
                 if (result == null) result = caseQuelle(fakeable);
                 if (result == null) result = caseGeldWert(fakeable);
+                if (result == null) result = caseIdentifiable(fakeable);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -943,6 +985,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(credstick);
                 if (result == null) result = caseModifizierbar(credstick);
                 if (result == null) result = caseAnwendbar(credstick);
+                if (result == null) result = caseIdentifiable(credstick);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -962,6 +1005,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(munition);
                 if (result == null) result = caseModifizierbar(munition);
                 if (result == null) result = caseAnwendbar(munition);
+                if (result == null) result = caseIdentifiable(munition);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -987,6 +1031,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(stufenPersona);
                 if (result == null) result = caseChrakterLimits(stufenPersona);
                 if (result == null) result = casePanzerung(stufenPersona);
+                if (result == null) result = caseIdentifiable(stufenPersona);
                 if (result == null) result = caseModifikatorAttribute(stufenPersona);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1003,6 +1048,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(geist);
                 if (result == null) result = caseChrakterLimits(geist);
                 if (result == null) result = casePanzerung(geist);
+                if (result == null) result = caseIdentifiable(geist);
                 if (result == null) result = caseModifikatorAttribute(geist);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1015,6 +1061,13 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(geisterArt);
                 if (result == null) result = caseModifizierbar(geisterArt);
                 if (result == null) result = caseQuelle(geisterArt);
+                if (result == null) result = caseIdentifiable(geisterArt);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.IDENTIFIABLE: {
+                Identifiable identifiable = (Identifiable)theEObject;
+                T result = caseIdentifiable(identifiable);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2339,6 +2392,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseGeisterArt(GeisterArt object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Identifiable</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Identifiable</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseIdentifiable(Identifiable object) {
         return null;
     }
 

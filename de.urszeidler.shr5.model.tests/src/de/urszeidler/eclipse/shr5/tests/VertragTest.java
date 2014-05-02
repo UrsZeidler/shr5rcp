@@ -16,10 +16,9 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class VertragTest extends TestCase {
@@ -28,7 +27,6 @@ public class VertragTest extends TestCase {
      * The fixture for this Vertrag test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Vertrag fixture = null;
@@ -36,7 +34,6 @@ public class VertragTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -47,7 +44,6 @@ public class VertragTest extends TestCase {
      * Constructs a new Vertrag test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public VertragTest(String name) {
@@ -58,7 +54,6 @@ public class VertragTest extends TestCase {
      * Sets the fixture for this Vertrag test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void setFixture(Vertrag fixture) {
@@ -69,7 +64,6 @@ public class VertragTest extends TestCase {
      * Returns the fixture for this Vertrag test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Vertrag getFixture() {
@@ -79,7 +73,6 @@ public class VertragTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -91,7 +84,6 @@ public class VertragTest extends TestCase {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

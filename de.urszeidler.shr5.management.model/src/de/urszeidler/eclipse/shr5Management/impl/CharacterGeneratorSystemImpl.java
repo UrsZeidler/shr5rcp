@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -37,6 +38,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getInstructions <em>Instructions</em>}</li>
@@ -109,6 +111,26 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	protected String name = NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,6 +231,27 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -401,6 +444,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return getImage();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__NAME:
                 return getName();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
+                return getParentId();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 return getPage();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__SRC_BOOK:
@@ -435,6 +480,9 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
+                setParentId((String)newValue);
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 setPage((String)newValue);
@@ -473,6 +521,9 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -506,6 +557,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__SRC_BOOK:
@@ -527,6 +580,12 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
                 case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE: return Shr5Package.QUELLE__PAGE;
@@ -544,6 +603,12 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE;
@@ -570,6 +635,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(", page: ");
         result.append(page);
         result.append(')');

@@ -1429,10 +1429,13 @@
 	</xsl:template>
 
 	<xsl:template name="quelle">
+		<xsl:variable name="aid" select="id/text()" />
+				<xsl:attribute name="xmi:id"><xsl:value-of
+							select="$aid" /></xsl:attribute>
+		
 		<xsl:if test="number(page/text())">
 		<xsl:choose>
 			<xsl:when test="$do_localization='true'">
-				<xsl:variable name="aid" select="id/text()" />
 				<xsl:variable name="loc_page">
 					<xsl:call-template name="findLocalizedPage">
 						<xsl:with-param name="aid" select="$aid" />
@@ -1450,11 +1453,8 @@
 				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
-
-
 				<xsl:attribute name="page"><xsl:value-of
 					select="number(page/text())" /></xsl:attribute>
-
 			</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>

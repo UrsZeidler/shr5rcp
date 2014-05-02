@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5Management.*;
 
@@ -79,6 +80,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 T result = caseCharacterGeneratorSystem(characterGeneratorSystem);
                 if (result == null) result = caseBeschreibbar(characterGeneratorSystem);
                 if (result == null) result = caseQuelle(characterGeneratorSystem);
+                if (result == null) result = caseIdentifiable(characterGeneratorSystem);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -88,6 +90,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = caseCharacterGeneratorSystem(prioritySystem);
                 if (result == null) result = caseBeschreibbar(prioritySystem);
                 if (result == null) result = caseQuelle(prioritySystem);
+                if (result == null) result = caseIdentifiable(prioritySystem);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -117,6 +120,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = caseCharacterGeneratorSystem(freeStyle);
                 if (result == null) result = caseBeschreibbar(freeStyle);
                 if (result == null) result = caseQuelle(freeStyle);
+                if (result == null) result = caseIdentifiable(freeStyle);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -133,6 +137,7 @@ public class Shr5managementSwitch<T> extends Switch<T> {
                 if (result == null) result = caseCharacterGeneratorSystem(shr5System);
                 if (result == null) result = caseBeschreibbar(shr5System);
                 if (result == null) result = caseQuelle(shr5System);
+                if (result == null) result = caseIdentifiable(shr5System);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -933,6 +938,21 @@ public class Shr5managementSwitch<T> extends Switch<T> {
     }
 
 	/**
+     * Returns the result of interpreting the object as an instance of '<em>Identifiable</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Identifiable</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseIdentifiable(Identifiable object) {
+        return null;
+    }
+
+    /**
      * Returns the result of interpreting the object as an instance of '<em>Quelle</em>'.
      * <!-- begin-user-doc -->
 	 * This implementation returns null;

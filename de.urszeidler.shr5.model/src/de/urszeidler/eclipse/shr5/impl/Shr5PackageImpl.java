@@ -53,6 +53,7 @@ import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.GeisterArt;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.KiAdept;
@@ -740,6 +741,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass geisterArtEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass identifiableEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3679,6 +3687,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getIdentifiable() {
+        return identifiableEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getIdentifiable_ParentId() {
+        return (EAttribute)identifiableEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4244,6 +4270,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         geisterArtEClass = createEClass(GEISTER_ART);
 
+        identifiableEClass = createEClass(IDENTIFIABLE);
+        createEAttribute(identifiableEClass, IDENTIFIABLE__PARENT_ID);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4293,6 +4322,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         // Set bounds for type parameters
 
         // Add supertypes to classes
+        quelleEClass.getESuperTypes().add(this.getIdentifiable());
         sourceBookEClass.getESuperTypes().add(this.getBeschreibbar());
         abstraktPersonaEClass.getESuperTypes().add(this.getBeschreibbar());
         abstraktPersonaEClass.getESuperTypes().add(this.getKoerperlicheAttribute());
@@ -4806,6 +4836,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getGeist_Spezies(), this.getGeisterArt(), null, "spezies", null, 1, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(geisterArtEClass, GeisterArt.class, "GeisterArt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(identifiableEClass, Identifiable.class, "Identifiable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getIdentifiable_ParentId(), ecorePackage.getEString(), "parentId", null, 0, 1, Identifiable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

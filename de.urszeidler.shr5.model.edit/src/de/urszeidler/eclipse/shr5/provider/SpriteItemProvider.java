@@ -71,6 +71,7 @@ public class SpriteItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addStufePropertyDescriptor(object);
@@ -304,6 +305,28 @@ public class SpriteItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Page feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -533,6 +556,7 @@ public class SpriteItemProvider
             case Shr5Package.SPRITE__BESCHREIBUNG:
             case Shr5Package.SPRITE__IMAGE:
             case Shr5Package.SPRITE__NAME:
+            case Shr5Package.SPRITE__PARENT_ID:
             case Shr5Package.SPRITE__PAGE:
             case Shr5Package.SPRITE__STUFE:
             case Shr5Package.SPRITE__ANGRIFF_MOD:

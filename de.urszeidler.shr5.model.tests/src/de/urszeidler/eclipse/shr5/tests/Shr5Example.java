@@ -4,7 +4,6 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -12,11 +11,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.util.Shr5ResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +39,7 @@ public class Shr5Example {
         //
         resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
             (Resource.Factory.Registry.DEFAULT_EXTENSION, 
-             new XMIResourceFactoryImpl());
+             new Shr5ResourceFactoryImpl());
 
         // Register the package to ensure it is available during loading.
         //

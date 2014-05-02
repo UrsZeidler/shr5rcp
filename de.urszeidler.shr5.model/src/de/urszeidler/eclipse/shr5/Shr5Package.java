@@ -124,42 +124,6 @@ public interface Shr5Package extends EPackage {
 	int QUELLE = 1;
 
 	/**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int QUELLE__PAGE = 0;
-
-	/**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int QUELLE__SRC_BOOK = 1;
-
-	/**
-     * The number of structural features of the '<em>Quelle</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int QUELLE_FEATURE_COUNT = 2;
-
-	/**
-     * The number of operations of the '<em>Quelle</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int QUELLE_OPERATION_COUNT = 0;
-
-	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl <em>Source Book</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,69 +132,6 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
 	int SOURCE_BOOK = 2;
-
-	/**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
-
-	/**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK__IMAGE = BESCHREIBBAR__IMAGE;
-
-	/**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK__NAME = BESCHREIBBAR__NAME;
-
-	/**
-     * The feature id for the '<em><b>Start Shr Time</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK__START_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 0;
-
-	/**
-     * The feature id for the '<em><b>End Shr Time</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK__END_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 1;
-
-	/**
-     * The number of structural features of the '<em>Source Book</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 2;
-
-	/**
-     * The number of operations of the '<em>Source Book</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SOURCE_BOOK_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl <em>Abstrakt Persona</em>}' class.
@@ -243,312 +144,6 @@ public interface Shr5Package extends EPackage {
 	int ABSTRAKT_PERSONA = 3;
 
 	/**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
-
-	/**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__IMAGE = BESCHREIBBAR__IMAGE;
-
-	/**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__NAME = BESCHREIBBAR__NAME;
-
-	/**
-     * The feature id for the '<em><b>Konstitution</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__KONSTITUTION = BESCHREIBBAR_FEATURE_COUNT + 0;
-
-	/**
-     * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__GESCHICKLICHKEIT = BESCHREIBBAR_FEATURE_COUNT + 1;
-
-	/**
-     * The feature id for the '<em><b>Reaktion</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__REAKTION = BESCHREIBBAR_FEATURE_COUNT + 2;
-
-	/**
-     * The feature id for the '<em><b>Staerke</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__STAERKE = BESCHREIBBAR_FEATURE_COUNT + 3;
-
-	/**
-     * The feature id for the '<em><b>Initative</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__INITATIVE = BESCHREIBBAR_FEATURE_COUNT + 4;
-
-	/**
-     * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__INITATIV_WUERFEL = BESCHREIBBAR_FEATURE_COUNT + 5;
-
-	/**
-     * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__AUSWEICHEN = BESCHREIBBAR_FEATURE_COUNT + 6;
-
-	/**
-     * The feature id for the '<em><b>Essenz</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__ESSENZ = BESCHREIBBAR_FEATURE_COUNT + 7;
-
-	/**
-     * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__EDGE_BASIS = BESCHREIBBAR_FEATURE_COUNT + 8;
-
-	/**
-     * The feature id for the '<em><b>Edge</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__EDGE = BESCHREIBBAR_FEATURE_COUNT + 9;
-
-	/**
-     * The feature id for the '<em><b>Charisma</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__CHARISMA = BESCHREIBBAR_FEATURE_COUNT + 10;
-
-	/**
-     * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__WILLENSKRAFT = BESCHREIBBAR_FEATURE_COUNT + 11;
-
-	/**
-     * The feature id for the '<em><b>Intuition</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__INTUITION = BESCHREIBBAR_FEATURE_COUNT + 12;
-
-	/**
-     * The feature id for the '<em><b>Logik</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__LOGIK = BESCHREIBBAR_FEATURE_COUNT + 13;
-
-	/**
-     * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__KOERPERLICH = BESCHREIBBAR_FEATURE_COUNT + 14;
-
-	/**
-     * The feature id for the '<em><b>Geistig</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__GEISTIG = BESCHREIBBAR_FEATURE_COUNT + 15;
-
-	/**
-     * The feature id for the '<em><b>Sozial</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__SOZIAL = BESCHREIBBAR_FEATURE_COUNT + 16;
-
-	/**
-     * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__KONSTITUTION_BASIS = BESCHREIBBAR_FEATURE_COUNT + 17;
-
-	/**
-     * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS = BESCHREIBBAR_FEATURE_COUNT + 18;
-
-	/**
-     * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__REAKTION_BASIS = BESCHREIBBAR_FEATURE_COUNT + 19;
-
-	/**
-     * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__STAERKE_BASIS = BESCHREIBBAR_FEATURE_COUNT + 20;
-
-	/**
-     * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__CHARISMA_BASIS = BESCHREIBBAR_FEATURE_COUNT + 21;
-
-	/**
-     * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS = BESCHREIBBAR_FEATURE_COUNT + 22;
-
-	/**
-     * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__INTUITION_BASIS = BESCHREIBBAR_FEATURE_COUNT + 23;
-
-	/**
-     * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__LOGIK_BASIS = BESCHREIBBAR_FEATURE_COUNT + 24;
-
-	/**
-     * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__FERTIGKEITEN = BESCHREIBBAR_FEATURE_COUNT + 25;
-
-	/**
-     * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN = BESCHREIBBAR_FEATURE_COUNT + 26;
-
-	/**
-     * The feature id for the '<em><b>Spezies</b></em>' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__SPEZIES = BESCHREIBBAR_FEATURE_COUNT + 27;
-
-	/**
-     * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA__MOD_MANAGER = BESCHREIBBAR_FEATURE_COUNT + 28;
-
-	/**
-     * The number of structural features of the '<em>Abstrakt Persona</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 29;
-
-	/**
-     * The number of operations of the '<em>Abstrakt Persona</em>' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int ABSTRAKT_PERSONA_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
-
-	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl <em>Abstrakt Gegenstand</em>}' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -559,6 +154,1296 @@ public interface Shr5Package extends EPackage {
 	int ABSTRAKT_GEGENSTAND = 11;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GegenstandImpl <em>Gegenstand</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GegenstandImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGegenstand()
+     * @generated
+     */
+	int GEGENSTAND = 4;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.GeldWert <em>Geld Wert</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeldWert()
+     * @generated
+     */
+	int GELD_WERT = 5;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl <em>Reichweite</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ReichweiteImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getReichweite()
+     * @generated
+     */
+	int REICHWEITE = 6;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl <em>Attribut Modifikator Wert</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAttributModifikatorWert()
+     * @generated
+     */
+	int ATTRIBUT_MODIFIKATOR_WERT = 7;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Modifizierbar <em>Modifizierbar</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Modifizierbar
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifizierbar()
+     * @generated
+     */
+	int MODIFIZIERBAR = 8;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorAttribute <em>Modifikator Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ModifikatorAttribute
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorAttribute()
+     * @generated
+     */
+    int MODIFIKATOR_ATTRIBUTE = 83;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute <em>Koerperliche Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKoerperlicheAttribute()
+     * @generated
+     */
+	int KOERPERLICHE_ATTRIBUTE = 9;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute <em>Spezielle Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSpezielleAttribute()
+     * @generated
+     */
+	int SPEZIELLE_ATTRIBUTE = 10;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl <em>Abstakt Waffe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstaktWaffe()
+     * @generated
+     */
+	int ABSTAKT_WAFFE = 13;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstaktFernKampfwaffeImpl <em>Abstakt Fern Kampfwaffe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AbstaktFernKampfwaffeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstaktFernKampfwaffe()
+     * @generated
+     */
+	int ABSTAKT_FERN_KAMPFWAFFE = 12;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.NahkampfwaffeImpl <em>Nahkampfwaffe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.NahkampfwaffeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getNahkampfwaffe()
+     * @generated
+     */
+	int NAHKAMPFWAFFE = 14;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl <em>Feuerwaffe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerwaffe()
+     * @generated
+     */
+	int FEUERWAFFE = 15;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl <em>Wurfwaffe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWurfwaffe()
+     * @generated
+     */
+	int WURFWAFFE = 16;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl <em>Shr List</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ShrListImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrList()
+     * @generated
+     */
+	int SHR_LIST = 17;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ProjektilwaffeImpl <em>Projektilwaffe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ProjektilwaffeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProjektilwaffe()
+     * @generated
+     */
+	int PROJEKTILWAFFE = 18;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl <em>Fertigkeits Gruppe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFertigkeitsGruppe()
+     * @generated
+     */
+	int FERTIGKEITS_GRUPPE = 19;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl <em>Fertigkeit</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FertigkeitImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFertigkeit()
+     * @generated
+     */
+	int FERTIGKEIT = 20;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Erlernbar <em>Erlernbar</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Erlernbar
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getErlernbar()
+     * @generated
+     */
+    int ERLERNBAR = 79;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Steigerbar <em>Steigerbar</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Steigerbar
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSteigerbar()
+     * @generated
+     */
+    int STEIGERBAR = 78;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl <em>Persona Fertigkeit</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaFertigkeit()
+     * @generated
+     */
+	int PERSONA_FERTIGKEIT = 21;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl <em>Persona Fertigkeits Gruppe</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaFertigkeitsGruppe()
+     * @generated
+     */
+	int PERSONA_FERTIGKEITS_GRUPPE = 22;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl <em>Abstrakt Modifikatoren</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstraktModifikatoren()
+     * @generated
+     */
+	int ABSTRAKT_MODIFIKATOREN = 26;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KoerpermodsImpl <em>Koerpermods</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.KoerpermodsImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKoerpermods()
+     * @generated
+     */
+	int KOERPERMODS = 25;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl <em>Cyberware</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CyberwareImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberware()
+     * @generated
+     */
+	int CYBERWARE = 23;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl <em>Bio Ware</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.BioWareImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBioWare()
+     * @generated
+     */
+	int BIO_WARE = 24;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute <em>Geistige Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeistigeAttribute
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeistigeAttribute()
+     * @generated
+     */
+	int GEISTIGE_ATTRIBUTE = 27;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl <em>Koerper Persona</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKoerperPersona()
+     * @generated
+     */
+	int KOERPER_PERSONA = 29;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MudanPersonaImpl <em>Mudan Persona</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MudanPersonaImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMudanPersona()
+     * @generated
+     */
+	int MUDAN_PERSONA = 28;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeModsImpl <em>Magische Mods</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MagischeModsImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeMods()
+     * @generated
+     */
+	int MAGISCHE_MODS = 30;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KiKraftImpl <em>Ki Kraft</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.KiKraftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKiKraft()
+     * @generated
+     */
+	int KI_KRAFT = 31;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl <em>Magische Persona</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischePersona()
+     * @generated
+     */
+	int MAGISCHE_PERSONA = 32;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.BaseMagischePersona <em>Base Magische Persona</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.BaseMagischePersona
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBaseMagischePersona()
+     * @generated
+     */
+	int BASE_MAGISCHE_PERSONA = 33;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren <em>Fernkampfwaffen Modifikatoren</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFernkampfwaffenModifikatoren()
+     * @generated
+     */
+	int FERNKAMPFWAFFEN_MODIFIKATOREN = 34;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse <em>Sichtverhaeltnisse</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Sichtverhaeltnisse
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSichtverhaeltnisse()
+     * @generated
+     */
+	int SICHTVERHAELTNISSE = 35;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl <em>Spezies</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SpeziesImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSpezies()
+     * @generated
+     */
+	int SPEZIES = 36;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.GegenstandStufen <em>Gegenstand Stufen</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GegenstandStufen
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGegenstandStufen()
+     * @generated
+     */
+	int GEGENSTAND_STUFEN = 37;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KiAdeptImpl <em>Ki Adept</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.KiAdeptImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKiAdept()
+     * @generated
+     */
+	int KI_ADEPT = 38;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KleidungImpl <em>Kleidung</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.KleidungImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKleidung()
+     * @generated
+     */
+	int KLEIDUNG = 39;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl <em>Fernkampfwaffe Modifikator</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFernkampfwaffeModifikator()
+     * @generated
+     */
+	int FERNKAMPFWAFFE_MODIFIKATOR = 40;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Anwendbar <em>Anwendbar</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Anwendbar
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAnwendbar()
+     * @generated
+     */
+	int ANWENDBAR = 41;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaEigenschaftImpl <em>Persona Eigenschaft</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaEigenschaftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaEigenschaft()
+     * @generated
+     */
+	int PERSONA_EIGENSCHAFT = 42;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProbenModifikatoren <em>Proben Modifikatoren</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ProbenModifikatoren
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProbenModifikatoren()
+     * @generated
+     */
+	int PROBEN_MODIFIKATOREN = 43;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagierImpl <em>Magier</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MagierImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagier()
+     * @generated
+     */
+	int MAGIER = 44;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Zauberer <em>Zauberer</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Zauberer
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberer()
+     * @generated
+     */
+	int ZAUBERER = 45;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl <em>Mystic Adept</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMysticAdept()
+     * @generated
+     */
+	int MYSTIC_ADEPT = 46;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaZauberImpl <em>Persona Zauber</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaZauberImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaZauber()
+     * @generated
+     */
+	int PERSONA_ZAUBER = 47;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl <em>Zauber</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ZauberImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauber()
+     * @generated
+     */
+	int ZAUBER = 48;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ChrakterLimits <em>Chrakter Limits</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ChrakterLimits
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getChrakterLimits()
+     * @generated
+     */
+	int CHRAKTER_LIMITS = 49;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Panzerung <em>Panzerung</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Panzerung
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPanzerung()
+     * @generated
+     */
+	int PANZERUNG = 50;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl <em>Aspekt Magier</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AspektMagierImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAspektMagier()
+     * @generated
+     */
+	int ASPEKT_MAGIER = 51;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AstraleProjektion <em>Astrale Projektion</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.AstraleProjektion
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAstraleProjektion()
+     * @generated
+     */
+	int ASTRALE_PROJEKTION = 52;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SchutzgeistImpl <em>Schutzgeist</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SchutzgeistImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchutzgeist()
+     * @generated
+     */
+	int SCHUTZGEIST = 53;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.InitationImpl <em>Initation</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.InitationImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInitation()
+     * @generated
+     */
+	int INITATION = 54;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl <em>Meta Magie</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MetaMagieImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMetaMagie()
+     * @generated
+     */
+	int META_MAGIE = 55;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CritterKraftImpl <em>Critter Kraft</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CritterKraftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterKraft()
+     * @generated
+     */
+	int CRITTER_KRAFT = 56;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl <em>Fahrzeug</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FahrzeugImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFahrzeug()
+     * @generated
+     */
+	int FAHRZEUG = 57;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PassagierFahrzeugImpl <em>Passagier Fahrzeug</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PassagierFahrzeugImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPassagierFahrzeug()
+     * @generated
+     */
+	int PASSAGIER_FAHRZEUG = 59;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl <em>Bodenfahrzeug</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBodenfahrzeug()
+     * @generated
+     */
+	int BODENFAHRZEUG = 58;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl <em>Drohne</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.DrohneImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDrohne()
+     * @generated
+     */
+	int DROHNE = 60;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl <em>Fahrzeug Modifikation</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFahrzeugModifikation()
+     * @generated
+     */
+	int FAHRZEUG_MODIFIKATION = 61;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl <em>Technomancer</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.TechnomancerImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTechnomancer()
+     * @generated
+     */
+	int TECHNOMANCER = 62;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona <em>Resonanz Persona</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ResonanzPersona
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzPersona()
+     * @generated
+     */
+	int RESONANZ_PERSONA = 63;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl <em>Komplexe Form</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKomplexeForm()
+     * @generated
+     */
+	int KOMPLEXE_FORM = 64;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaKomplexFormImpl <em>Persona Komplex Form</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PersonaKomplexFormImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaKomplexForm()
+     * @generated
+     */
+	int PERSONA_KOMPLEX_FORM = 65;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl <em>Sprite</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SpriteImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSprite()
+     * @generated
+     */
+	int SPRITE = 66;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.EchoImpl <em>Echo</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.EchoImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEcho()
+     * @generated
+     */
+	int ECHO = 67;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.VertragImpl <em>Vertrag</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.VertragImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getVertrag()
+     * @generated
+     */
+	int VERTRAG = 68;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl <em>Intervall Vertrag</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getIntervallVertrag()
+     * @generated
+     */
+    int INTERVALL_VERTRAG = 74;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl <em>Lifestyle</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.LifestyleImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLifestyle()
+     * @generated
+     */
+	int LIFESTYLE = 69;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WissensfertigkeitImpl <em>Wissensfertigkeit</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.WissensfertigkeitImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWissensfertigkeit()
+     * @generated
+     */
+	int WISSENSFERTIGKEIT = 70;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SprachfertigkeitImpl <em>Sprachfertigkeit</em>}' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SprachfertigkeitImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSprachfertigkeit()
+     * @generated
+     */
+	int SPRACHFERTIGKEIT = 71;
+
+	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.PersonaZustand <em>Persona Zustand</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.PersonaZustand
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaZustand()
+     * @generated
+     */
+    int PERSONA_ZUSTAND = 72;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CritterImpl <em>Critter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CritterImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritter()
+     * @generated
+     */
+    int CRITTER = 73;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FakeableImpl <em>Fakeable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FakeableImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFakeable()
+     * @generated
+     */
+    int FAKEABLE = 77;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SinImpl <em>Sin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SinImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSin()
+     * @generated
+     */
+    int SIN = 75;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl <em>Lizenz</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.LizenzImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLizenz()
+     * @generated
+     */
+    int LIZENZ = 76;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl <em>Credstick</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CredstickImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCredstick()
+     * @generated
+     */
+    int CREDSTICK = 80;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Menge <em>Menge</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Menge
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMenge()
+     * @generated
+     */
+    int MENGE = 81;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl <em>Munition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MunitionImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMunition()
+     * @generated
+     */
+    int MUNITION = 82;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl <em>Gebundener Geist</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGebundenerGeist()
+     * @generated
+     */
+    int GEBUNDENER_GEIST = 84;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl <em>Stufen Persona</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getStufenPersona()
+     * @generated
+     */
+    int STUFEN_PERSONA = 85;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GeistImpl <em>Geist</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GeistImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeist()
+     * @generated
+     */
+    int GEIST = 86;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GeisterArtImpl <em>Geister Art</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.GeisterArtImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeisterArt()
+     * @generated
+     */
+    int GEISTER_ART = 87;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Identifiable <em>Identifiable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Identifiable
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getIdentifiable()
+     * @generated
+     */
+    int IDENTIFIABLE = 88;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int IDENTIFIABLE__PARENT_ID = 0;
+
+    /**
+     * The number of structural features of the '<em>Identifiable</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int IDENTIFIABLE_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Identifiable</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int IDENTIFIABLE_OPERATION_COUNT = 0;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLE__PARENT_ID = IDENTIFIABLE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int QUELLE__PAGE = IDENTIFIABLE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int QUELLE__SRC_BOOK = IDENTIFIABLE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Quelle</em>' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int QUELLE_FEATURE_COUNT = IDENTIFIABLE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Quelle</em>' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int QUELLE_OPERATION_COUNT = IDENTIFIABLE_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Start Shr Time</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK__START_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>End Shr Time</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK__END_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Source Book</em>' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Source Book</em>' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SOURCE_BOOK_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Konstitution</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__KONSTITUTION = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__GESCHICKLICHKEIT = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Reaktion</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__REAKTION = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Staerke</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__STAERKE = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Initative</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__INITATIVE = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__INITATIV_WUERFEL = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__AUSWEICHEN = BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Essenz</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__ESSENZ = BESCHREIBBAR_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__EDGE_BASIS = BESCHREIBBAR_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Edge</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__EDGE = BESCHREIBBAR_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Charisma</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__CHARISMA = BESCHREIBBAR_FEATURE_COUNT + 10;
+
+    /**
+     * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__WILLENSKRAFT = BESCHREIBBAR_FEATURE_COUNT + 11;
+
+    /**
+     * The feature id for the '<em><b>Intuition</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__INTUITION = BESCHREIBBAR_FEATURE_COUNT + 12;
+
+    /**
+     * The feature id for the '<em><b>Logik</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__LOGIK = BESCHREIBBAR_FEATURE_COUNT + 13;
+
+    /**
+     * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__KOERPERLICH = BESCHREIBBAR_FEATURE_COUNT + 14;
+
+    /**
+     * The feature id for the '<em><b>Geistig</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__GEISTIG = BESCHREIBBAR_FEATURE_COUNT + 15;
+
+    /**
+     * The feature id for the '<em><b>Sozial</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__SOZIAL = BESCHREIBBAR_FEATURE_COUNT + 16;
+
+    /**
+     * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__KONSTITUTION_BASIS = BESCHREIBBAR_FEATURE_COUNT + 17;
+
+    /**
+     * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS = BESCHREIBBAR_FEATURE_COUNT + 18;
+
+    /**
+     * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__REAKTION_BASIS = BESCHREIBBAR_FEATURE_COUNT + 19;
+
+    /**
+     * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__STAERKE_BASIS = BESCHREIBBAR_FEATURE_COUNT + 20;
+
+    /**
+     * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__CHARISMA_BASIS = BESCHREIBBAR_FEATURE_COUNT + 21;
+
+    /**
+     * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS = BESCHREIBBAR_FEATURE_COUNT + 22;
+
+    /**
+     * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__INTUITION_BASIS = BESCHREIBBAR_FEATURE_COUNT + 23;
+
+    /**
+     * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__LOGIK_BASIS = BESCHREIBBAR_FEATURE_COUNT + 24;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__FERTIGKEITEN = BESCHREIBBAR_FEATURE_COUNT + 25;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN = BESCHREIBBAR_FEATURE_COUNT + 26;
+
+    /**
+     * The feature id for the '<em><b>Spezies</b></em>' reference.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__SPEZIES = BESCHREIBBAR_FEATURE_COUNT + 27;
+
+    /**
+     * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA__MOD_MANAGER = BESCHREIBBAR_FEATURE_COUNT + 28;
+
+    /**
+     * The number of structural features of the '<em>Abstrakt Persona</em>' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 29;
+
+    /**
+     * The number of operations of the '<em>Abstrakt Persona</em>' class.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int ABSTRAKT_PERSONA_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_GEGENSTAND__PARENT_ID = QUELLE__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -567,7 +1452,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__PAGE = QUELLE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -576,7 +1461,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__SRC_BOOK = QUELLE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -585,7 +1470,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__WERT = QUELLE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -594,7 +1479,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT = QUELLE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -612,7 +1497,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__BESCHREIBUNG = QUELLE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -621,7 +1506,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__IMAGE = QUELLE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -630,7 +1515,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__NAME = QUELLE_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -639,7 +1524,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__MODS = QUELLE_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -648,7 +1533,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND__FERTIGKEIT = QUELLE_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The number of structural features of the '<em>Abstrakt Gegenstand</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -657,7 +1542,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The number of operations of the '<em>Abstrakt Gegenstand</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -666,17 +1551,16 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_GEGENSTAND_OPERATION_COUNT = QUELLE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GegenstandImpl <em>Gegenstand</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.GegenstandImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGegenstand()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int GEGENSTAND = 4;
+    int GEGENSTAND__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -685,7 +1569,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -694,7 +1578,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -703,7 +1587,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__WERT = ABSTRAKT_GEGENSTAND__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -712,7 +1596,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -730,7 +1614,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -739,7 +1623,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -748,7 +1632,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__NAME = ABSTRAKT_GEGENSTAND__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,7 +1641,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__MODS = ABSTRAKT_GEGENSTAND__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -766,7 +1650,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -775,7 +1659,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__KATEGORIE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -784,7 +1668,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND__STUFE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of structural features of the '<em>Gegenstand</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -793,7 +1677,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Gegenstand</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -802,17 +1686,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.GeldWert <em>Geld Wert</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.GeldWert
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeldWert()
-     * @generated
-     */
-	int GELD_WERT = 5;
-
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,7 +1695,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GELD_WERT__WERT = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -830,7 +1704,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GELD_WERT__VERFUEGBARKEIT = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -848,7 +1722,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GELD_WERT_FEATURE_COUNT = 3;
 
-	/**
+    /**
      * The number of operations of the '<em>Geld Wert</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -857,17 +1731,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GELD_WERT_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl <em>Reichweite</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.ReichweiteImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getReichweite()
-     * @generated
-     */
-	int REICHWEITE = 6;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -876,7 +1740,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -885,7 +1749,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -894,7 +1758,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -903,7 +1767,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__MIN = BESCHREIBBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kurz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -912,7 +1776,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__KURZ = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mittel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -921,7 +1785,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__MITTEL = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Weit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -930,7 +1794,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__WEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Extrem</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -939,7 +1803,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE__EXTREM = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of structural features of the '<em>Reichweite</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -948,7 +1812,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of operations of the '<em>Reichweite</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -957,17 +1821,7 @@ public interface Shr5Package extends EPackage {
      */
 	int REICHWEITE_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl <em>Attribut Modifikator Wert</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAttributModifikatorWert()
-     * @generated
-     */
-	int ATTRIBUT_MODIFIKATOR_WERT = 7;
-
-	/**
+    /**
      * The feature id for the '<em><b>Attribut</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -976,7 +1830,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ATTRIBUT_MODIFIKATOR_WERT__ATTRIBUT = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -985,7 +1839,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ATTRIBUT_MODIFIKATOR_WERT__WERT = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Modifiziertes</b></em>' container reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -994,7 +1848,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES = 2;
 
-	/**
+    /**
      * The number of structural features of the '<em>Attribut Modifikator Wert</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1003,7 +1857,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ATTRIBUT_MODIFIKATOR_WERT_FEATURE_COUNT = 3;
 
-	/**
+    /**
      * The number of operations of the '<em>Attribut Modifikator Wert</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1012,17 +1866,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ATTRIBUT_MODIFIKATOR_WERT_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Modifizierbar <em>Modifizierbar</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Modifizierbar
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifizierbar()
-     * @generated
-     */
-	int MODIFIZIERBAR = 8;
-
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1031,7 +1875,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MODIFIZIERBAR__MODS = 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Modifizierbar</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1040,7 +1884,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MODIFIZIERBAR_FEATURE_COUNT = 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Modifizierbar</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1048,16 +1892,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int MODIFIZIERBAR_OPERATION_COUNT = 0;
-
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorAttribute <em>Modifikator Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ModifikatorAttribute
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorAttribute()
-     * @generated
-     */
-    int MODIFIKATOR_ATTRIBUTE = 83;
 
     /**
      * The number of structural features of the '<em>Modifikator Attribute</em>' class.
@@ -1078,16 +1912,6 @@ public interface Shr5Package extends EPackage {
     int MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute <em>Koerperliche Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKoerperlicheAttribute()
-     * @generated
-     */
-	int KOERPERLICHE_ATTRIBUTE = 9;
-
-	/**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1096,7 +1920,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERLICHE_ATTRIBUTE__KONSTITUTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1105,7 +1929,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1114,7 +1938,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERLICHE_ATTRIBUTE__REAKTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1123,7 +1947,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERLICHE_ATTRIBUTE__STAERKE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Koerperliche Attribute</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1132,7 +1956,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERLICHE_ATTRIBUTE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Koerperliche Attribute</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1141,17 +1965,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERLICHE_ATTRIBUTE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SpezielleAttribute <em>Spezielle Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.SpezielleAttribute
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSpezielleAttribute()
-     * @generated
-     */
-	int SPEZIELLE_ATTRIBUTE = 10;
-
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1160,7 +1974,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE__INITATIVE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1169,7 +1983,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1178,7 +1992,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE__AUSWEICHEN = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1187,7 +2001,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE__ESSENZ = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1196,7 +2010,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE__EDGE_BASIS = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1205,7 +2019,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE__EDGE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of structural features of the '<em>Spezielle Attribute</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1214,7 +2028,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The number of operations of the '<em>Spezielle Attribute</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1223,17 +2037,16 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIELLE_ATTRIBUTE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl <em>Abstakt Waffe</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstaktWaffe()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int ABSTAKT_WAFFE = 13;
+    int ABSTAKT_WAFFE__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1242,7 +2055,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1251,7 +2064,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1260,7 +2073,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__WERT = ABSTRAKT_GEGENSTAND__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1269,7 +2082,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1287,7 +2100,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1296,7 +2109,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1305,7 +2118,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__NAME = ABSTRAKT_GEGENSTAND__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1314,7 +2127,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__MODS = ABSTRAKT_GEGENSTAND__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1323,7 +2136,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1332,7 +2145,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__SCHADENSCODE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1341,7 +2154,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__SCHADES_TYP = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Praezision</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1350,7 +2163,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__PRAEZISION = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1359,7 +2172,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Abstakt Waffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1368,7 +2181,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Abstakt Waffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1377,17 +2190,16 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_WAFFE_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstaktFernKampfwaffeImpl <em>Abstakt Fern Kampfwaffe</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.AbstaktFernKampfwaffeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstaktFernKampfwaffe()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int ABSTAKT_FERN_KAMPFWAFFE = 12;
+    int ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID = ABSTAKT_WAFFE__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1396,7 +2208,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__PAGE = ABSTAKT_WAFFE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1405,7 +2217,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__SRC_BOOK = ABSTAKT_WAFFE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1414,7 +2226,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__WERT = ABSTAKT_WAFFE__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1423,7 +2235,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT = ABSTAKT_WAFFE__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1441,7 +2253,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__BESCHREIBUNG = ABSTAKT_WAFFE__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1450,7 +2262,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__IMAGE = ABSTAKT_WAFFE__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1459,7 +2271,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__NAME = ABSTAKT_WAFFE__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1468,7 +2280,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__MODS = ABSTAKT_WAFFE__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1477,7 +2289,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT = ABSTAKT_WAFFE__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1486,7 +2298,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__SCHADENSCODE = ABSTAKT_WAFFE__SCHADENSCODE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1495,7 +2307,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__SCHADES_TYP = ABSTAKT_WAFFE__SCHADES_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Praezision</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1504,7 +2316,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__PRAEZISION = ABSTAKT_WAFFE__PRAEZISION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1513,7 +2325,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__DURCHSCHLAGS_KRAFT = ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1522,7 +2334,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE = ABSTAKT_WAFFE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Abstakt Fern Kampfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1531,7 +2343,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT = ABSTAKT_WAFFE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Abstakt Fern Kampfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1540,17 +2352,16 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTAKT_FERN_KAMPFWAFFE_OPERATION_COUNT = ABSTAKT_WAFFE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.NahkampfwaffeImpl <em>Nahkampfwaffe</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.NahkampfwaffeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getNahkampfwaffe()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int NAHKAMPFWAFFE = 14;
+    int NAHKAMPFWAFFE__PARENT_ID = ABSTAKT_WAFFE__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1559,7 +2370,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__PAGE = ABSTAKT_WAFFE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1568,7 +2379,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__SRC_BOOK = ABSTAKT_WAFFE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1577,7 +2388,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__WERT = ABSTAKT_WAFFE__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1586,7 +2397,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__VERFUEGBARKEIT = ABSTAKT_WAFFE__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1604,7 +2415,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__BESCHREIBUNG = ABSTAKT_WAFFE__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1613,7 +2424,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__IMAGE = ABSTAKT_WAFFE__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1622,7 +2433,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__NAME = ABSTAKT_WAFFE__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1631,7 +2442,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__MODS = ABSTAKT_WAFFE__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1640,7 +2451,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__FERTIGKEIT = ABSTAKT_WAFFE__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1649,7 +2460,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__SCHADENSCODE = ABSTAKT_WAFFE__SCHADENSCODE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1658,7 +2469,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__SCHADES_TYP = ABSTAKT_WAFFE__SCHADES_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Praezision</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1667,7 +2478,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__PRAEZISION = ABSTAKT_WAFFE__PRAEZISION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1676,7 +2487,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__DURCHSCHLAGS_KRAFT = ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1685,7 +2496,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE__REICHWEITE = ABSTAKT_WAFFE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Nahkampfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1694,7 +2505,7 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE_FEATURE_COUNT = ABSTAKT_WAFFE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Nahkampfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1703,17 +2514,16 @@ public interface Shr5Package extends EPackage {
      */
 	int NAHKAMPFWAFFE_OPERATION_COUNT = ABSTAKT_WAFFE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl <em>Feuerwaffe</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerwaffe()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int FEUERWAFFE = 15;
+    int FEUERWAFFE__PARENT_ID = ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1722,7 +2532,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__PAGE = ABSTAKT_FERN_KAMPFWAFFE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1731,7 +2541,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__SRC_BOOK = ABSTAKT_FERN_KAMPFWAFFE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1740,7 +2550,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__WERT = ABSTAKT_FERN_KAMPFWAFFE__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1749,7 +2559,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__VERFUEGBARKEIT = ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1767,7 +2577,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__BESCHREIBUNG = ABSTAKT_FERN_KAMPFWAFFE__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1776,7 +2586,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__IMAGE = ABSTAKT_FERN_KAMPFWAFFE__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1785,7 +2595,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__NAME = ABSTAKT_FERN_KAMPFWAFFE__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1794,7 +2604,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__MODS = ABSTAKT_FERN_KAMPFWAFFE__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1803,7 +2613,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__FERTIGKEIT = ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1812,7 +2622,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__SCHADENSCODE = ABSTAKT_FERN_KAMPFWAFFE__SCHADENSCODE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1821,7 +2631,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__SCHADES_TYP = ABSTAKT_FERN_KAMPFWAFFE__SCHADES_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Praezision</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1830,7 +2640,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__PRAEZISION = ABSTAKT_FERN_KAMPFWAFFE__PRAEZISION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1839,7 +2649,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__DURCHSCHLAGS_KRAFT = ABSTAKT_FERN_KAMPFWAFFE__DURCHSCHLAGS_KRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1848,7 +2658,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__REICHWEITE = ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Munitionstyp</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1857,7 +2667,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__MUNITIONSTYP = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Modie</b></em>' attribute list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1866,7 +2676,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__MODIE = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kapazitaet</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1875,7 +2685,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__KAPAZITAET = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Erweiterung</b></em>' attribute list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1884,7 +2694,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__ERWEITERUNG = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rueckstoss</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1893,7 +2703,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__RUECKSTOSS = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Einbau</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1902,7 +2712,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE__EINBAU = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magazin</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1920,7 +2730,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The number of operations of the '<em>Feuerwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1929,17 +2739,16 @@ public interface Shr5Package extends EPackage {
      */
 	int FEUERWAFFE_OPERATION_COUNT = ABSTAKT_FERN_KAMPFWAFFE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl <em>Wurfwaffe</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWurfwaffe()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int WURFWAFFE = 16;
+    int WURFWAFFE__PARENT_ID = ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1948,7 +2757,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__PAGE = ABSTAKT_FERN_KAMPFWAFFE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1957,7 +2766,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__SRC_BOOK = ABSTAKT_FERN_KAMPFWAFFE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1966,7 +2775,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__WERT = ABSTAKT_FERN_KAMPFWAFFE__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1975,7 +2784,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__VERFUEGBARKEIT = ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1993,7 +2802,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__BESCHREIBUNG = ABSTAKT_FERN_KAMPFWAFFE__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2002,7 +2811,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__IMAGE = ABSTAKT_FERN_KAMPFWAFFE__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2011,7 +2820,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__NAME = ABSTAKT_FERN_KAMPFWAFFE__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2020,7 +2829,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__MODS = ABSTAKT_FERN_KAMPFWAFFE__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2029,7 +2838,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__FERTIGKEIT = ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2038,7 +2847,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__SCHADENSCODE = ABSTAKT_FERN_KAMPFWAFFE__SCHADENSCODE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2047,7 +2856,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__SCHADES_TYP = ABSTAKT_FERN_KAMPFWAFFE__SCHADES_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Praezision</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2056,7 +2865,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__PRAEZISION = ABSTAKT_FERN_KAMPFWAFFE__PRAEZISION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2065,7 +2874,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__DURCHSCHLAGS_KRAFT = ABSTAKT_FERN_KAMPFWAFFE__DURCHSCHLAGS_KRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2074,7 +2883,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE__REICHWEITE = ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE;
 
-	/**
+    /**
      * The number of structural features of the '<em>Wurfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2083,7 +2892,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Wurfwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2092,17 +2901,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WURFWAFFE_OPERATION_COUNT = ABSTAKT_FERN_KAMPFWAFFE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl <em>Shr List</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.ShrListImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrList()
-     * @generated
-     */
-	int SHR_LIST = 17;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2111,7 +2910,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SHR_LIST__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2120,7 +2919,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SHR_LIST__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2129,7 +2928,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SHR_LIST__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Entries</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2138,7 +2937,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SHR_LIST__ENTRIES = BESCHREIBBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Shr List</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2147,7 +2946,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SHR_LIST_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Shr List</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2156,17 +2955,16 @@ public interface Shr5Package extends EPackage {
      */
 	int SHR_LIST_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ProjektilwaffeImpl <em>Projektilwaffe</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.ProjektilwaffeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProjektilwaffe()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int PROJEKTILWAFFE = 18;
+    int PROJEKTILWAFFE__PARENT_ID = ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2175,7 +2973,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__PAGE = ABSTAKT_FERN_KAMPFWAFFE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2184,7 +2982,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__SRC_BOOK = ABSTAKT_FERN_KAMPFWAFFE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2193,7 +2991,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__WERT = ABSTAKT_FERN_KAMPFWAFFE__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2202,7 +3000,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__VERFUEGBARKEIT = ABSTAKT_FERN_KAMPFWAFFE__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2220,7 +3018,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__BESCHREIBUNG = ABSTAKT_FERN_KAMPFWAFFE__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2229,7 +3027,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__IMAGE = ABSTAKT_FERN_KAMPFWAFFE__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2238,7 +3036,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__NAME = ABSTAKT_FERN_KAMPFWAFFE__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2247,7 +3045,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__MODS = ABSTAKT_FERN_KAMPFWAFFE__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2256,7 +3054,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__FERTIGKEIT = ABSTAKT_FERN_KAMPFWAFFE__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2265,7 +3063,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__SCHADENSCODE = ABSTAKT_FERN_KAMPFWAFFE__SCHADENSCODE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2274,7 +3072,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__SCHADES_TYP = ABSTAKT_FERN_KAMPFWAFFE__SCHADES_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Praezision</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2283,7 +3081,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__PRAEZISION = ABSTAKT_FERN_KAMPFWAFFE__PRAEZISION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2292,7 +3090,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__DURCHSCHLAGS_KRAFT = ABSTAKT_FERN_KAMPFWAFFE__DURCHSCHLAGS_KRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2301,7 +3099,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE__REICHWEITE = ABSTAKT_FERN_KAMPFWAFFE__REICHWEITE;
 
-	/**
+    /**
      * The number of structural features of the '<em>Projektilwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2310,7 +3108,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE_FEATURE_COUNT = ABSTAKT_FERN_KAMPFWAFFE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Projektilwaffe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2319,17 +3117,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROJEKTILWAFFE_OPERATION_COUNT = ABSTAKT_FERN_KAMPFWAFFE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl <em>Fertigkeits Gruppe</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFertigkeitsGruppe()
-     * @generated
-     */
-	int FERTIGKEITS_GRUPPE = 19;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2338,7 +3126,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEITS_GRUPPE__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2347,7 +3135,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEITS_GRUPPE__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2356,43 +3144,52 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEITS_GRUPPE__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEITS_GRUPPE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int FERTIGKEITS_GRUPPE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FERTIGKEITS_GRUPPE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE__FERTIGKEITEN = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FERTIGKEITS_GRUPPE__FERTIGKEITEN = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Fertigkeits Gruppe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FERTIGKEITS_GRUPPE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Fertigkeits Gruppe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2401,17 +3198,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEITS_GRUPPE_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl <em>Fertigkeit</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FertigkeitImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFertigkeit()
-     * @generated
-     */
-	int FERTIGKEIT = 20;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2420,7 +3207,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEIT__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2429,7 +3216,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEIT__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2438,70 +3225,79 @@ public interface Shr5Package extends EPackage {
      */
 	int FERTIGKEIT__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEIT__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int FERTIGKEIT__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FERTIGKEIT__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FERTIGKEIT__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__AUSWEICHEN = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FERTIGKEIT__AUSWEICHEN = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Attribut</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__ATTRIBUT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FERTIGKEIT__ATTRIBUT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__SPEZIALISIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int FERTIGKEIT__SPEZIALISIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The number of structural features of the '<em>Fertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FERTIGKEIT_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The number of operations of the '<em>Fertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2509,16 +3305,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int FERTIGKEIT_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
-
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Erlernbar <em>Erlernbar</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Erlernbar
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getErlernbar()
-     * @generated
-     */
-    int ERLERNBAR = 79;
 
     /**
      * The number of structural features of the '<em>Erlernbar</em>' class.
@@ -2537,16 +3323,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int ERLERNBAR_OPERATION_COUNT = 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Steigerbar <em>Steigerbar</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Steigerbar
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSteigerbar()
-     * @generated
-     */
-    int STEIGERBAR = 78;
 
     /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
@@ -2576,16 +3352,6 @@ public interface Shr5Package extends EPackage {
     int STEIGERBAR_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl <em>Persona Fertigkeit</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaFertigkeit()
-     * @generated
-     */
-	int PERSONA_FERTIGKEIT = 21;
-
-	/**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2603,7 +3369,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_FERTIGKEIT__FERTIGKEIT = STEIGERBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2621,7 +3387,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_FERTIGKEIT_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Persona Fertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2630,17 +3396,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_FERTIGKEIT_OPERATION_COUNT = STEIGERBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl <em>Persona Fertigkeits Gruppe</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaFertigkeitsGruppe()
-     * @generated
-     */
-	int PERSONA_FERTIGKEITS_GRUPPE = 22;
-
-	/**
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2658,7 +3414,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_FERTIGKEITS_GRUPPE__GRUPPE = STEIGERBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Persona Fertigkeits Gruppe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2667,7 +3423,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_FERTIGKEITS_GRUPPE_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Persona Fertigkeits Gruppe</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2676,17 +3432,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_FERTIGKEITS_GRUPPE_OPERATION_COUNT = STEIGERBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl <em>Abstrakt Modifikatoren</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstraktModifikatoren()
-     * @generated
-     */
-	int ABSTRAKT_MODIFIKATOREN = 26;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2695,7 +3441,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_MODIFIKATOREN__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2704,7 +3450,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_MODIFIKATOREN__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2713,7 +3459,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_MODIFIKATOREN__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2722,34 +3468,43 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_MODIFIKATOREN__MODS = BESCHREIBBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_MODIFIKATOREN__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_MODIFIKATOREN__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int ABSTRAKT_MODIFIKATOREN__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_MODIFIKATOREN__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int ABSTRAKT_MODIFIKATOREN__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Abstrakt Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Abstrakt Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2758,17 +3513,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ABSTRAKT_MODIFIKATOREN_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KoerpermodsImpl <em>Koerpermods</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.KoerpermodsImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKoerpermods()
-     * @generated
-     */
-	int KOERPERMODS = 25;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2777,7 +3522,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS__BESCHREIBUNG = ABSTRAKT_MODIFIKATOREN__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2786,7 +3531,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS__IMAGE = ABSTRAKT_MODIFIKATOREN__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2795,7 +3540,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS__NAME = ABSTRAKT_MODIFIKATOREN__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2804,7 +3549,16 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS__MODS = ABSTRAKT_MODIFIKATOREN__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOERPERMODS__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2813,7 +3567,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS__PAGE = ABSTRAKT_MODIFIKATOREN__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2822,7 +3576,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS__SRC_BOOK = ABSTRAKT_MODIFIKATOREN__SRC_BOOK;
 
-	/**
+    /**
      * The number of structural features of the '<em>Koerpermods</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2831,7 +3585,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Koerpermods</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2840,17 +3594,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPERMODS_OPERATION_COUNT = ABSTRAKT_MODIFIKATOREN_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl <em>Cyberware</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.CyberwareImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberware()
-     * @generated
-     */
-	int CYBERWARE = 23;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2859,7 +3603,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__BESCHREIBUNG = KOERPERMODS__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2868,7 +3612,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__IMAGE = KOERPERMODS__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2877,7 +3621,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__NAME = KOERPERMODS__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2886,7 +3630,16 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__MODS = KOERPERMODS__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__PARENT_ID = KOERPERMODS__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2895,7 +3648,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__PAGE = KOERPERMODS__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2904,7 +3657,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__SRC_BOOK = KOERPERMODS__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2913,7 +3666,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__WERT = KOERPERMODS_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2922,7 +3675,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__VERFUEGBARKEIT = KOERPERMODS_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2940,7 +3693,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Einbau</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2949,7 +3702,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE__EINBAU = KOERPERMODS_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of structural features of the '<em>Cyberware</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2958,7 +3711,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of operations of the '<em>Cyberware</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2967,17 +3720,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CYBERWARE_OPERATION_COUNT = KOERPERMODS_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl <em>Bio Ware</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.BioWareImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBioWare()
-     * @generated
-     */
-	int BIO_WARE = 24;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2986,7 +3729,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__BESCHREIBUNG = KOERPERMODS__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2995,7 +3738,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__IMAGE = KOERPERMODS__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3004,7 +3747,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__NAME = KOERPERMODS__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3013,7 +3756,16 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__MODS = KOERPERMODS__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BIO_WARE__PARENT_ID = KOERPERMODS__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3022,7 +3774,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__PAGE = KOERPERMODS__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3031,7 +3783,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__SRC_BOOK = KOERPERMODS__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3040,7 +3792,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__WERT = KOERPERMODS_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3049,7 +3801,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__VERFUEGBARKEIT = KOERPERMODS_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3067,7 +3819,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE__PERSONA = KOERPERMODS_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Bio Ware</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3076,7 +3828,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE_FEATURE_COUNT = KOERPERMODS_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Bio Ware</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3085,17 +3837,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BIO_WARE_OPERATION_COUNT = KOERPERMODS_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.GeistigeAttribute <em>Geistige Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.GeistigeAttribute
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeistigeAttribute()
-     * @generated
-     */
-	int GEISTIGE_ATTRIBUTE = 27;
-
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3104,7 +3846,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEISTIGE_ATTRIBUTE__CHARISMA = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3113,7 +3855,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEISTIGE_ATTRIBUTE__WILLENSKRAFT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3122,7 +3864,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEISTIGE_ATTRIBUTE__INTUITION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3131,7 +3873,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEISTIGE_ATTRIBUTE__LOGIK = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Geistige Attribute</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3140,7 +3882,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEISTIGE_ATTRIBUTE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Geistige Attribute</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3149,17 +3891,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEISTIGE_ATTRIBUTE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl <em>Koerper Persona</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKoerperPersona()
-     * @generated
-     */
-	int KOERPER_PERSONA = 29;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3168,7 +3900,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__BESCHREIBUNG = ABSTRAKT_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3177,7 +3909,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__IMAGE = ABSTRAKT_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3186,7 +3918,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__NAME = ABSTRAKT_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3195,7 +3927,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__KONSTITUTION = ABSTRAKT_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3204,7 +3936,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__GESCHICKLICHKEIT = ABSTRAKT_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3213,7 +3945,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__REAKTION = ABSTRAKT_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3222,7 +3954,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__STAERKE = ABSTRAKT_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3231,7 +3963,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__INITATIVE = ABSTRAKT_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3240,7 +3972,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__INITATIV_WUERFEL = ABSTRAKT_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3249,7 +3981,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__AUSWEICHEN = ABSTRAKT_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3258,7 +3990,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__ESSENZ = ABSTRAKT_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3267,7 +3999,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__EDGE_BASIS = ABSTRAKT_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3276,7 +4008,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__EDGE = ABSTRAKT_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3285,7 +4017,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__CHARISMA = ABSTRAKT_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3294,7 +4026,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__WILLENSKRAFT = ABSTRAKT_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3303,7 +4035,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__INTUITION = ABSTRAKT_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3312,7 +4044,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__LOGIK = ABSTRAKT_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3321,7 +4053,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__KOERPERLICH = ABSTRAKT_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3330,7 +4062,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__GEISTIG = ABSTRAKT_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3339,7 +4071,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__SOZIAL = ABSTRAKT_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3348,7 +4080,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__KONSTITUTION_BASIS = ABSTRAKT_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3357,7 +4089,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__GESCHICKLICHKEIT_BASIS = ABSTRAKT_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3366,7 +4098,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__REAKTION_BASIS = ABSTRAKT_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3375,7 +4107,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__STAERKE_BASIS = ABSTRAKT_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3384,7 +4116,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__CHARISMA_BASIS = ABSTRAKT_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3393,7 +4125,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__WILLENSKRAFT_BASIS = ABSTRAKT_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3402,7 +4134,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__INTUITION_BASIS = ABSTRAKT_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3411,7 +4143,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__LOGIK_BASIS = ABSTRAKT_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3420,7 +4152,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__FERTIGKEITEN = ABSTRAKT_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3429,7 +4161,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__FERTIGKEITS_GRUPPEN = ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3438,7 +4170,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__SPEZIES = ABSTRAKT_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3447,7 +4179,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__MOD_MANAGER = ABSTRAKT_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3456,7 +4188,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__PANZER = ABSTRAKT_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3492,7 +4224,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__KOERPER_MODS = ABSTRAKT_PERSONA_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3501,7 +4233,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA__EIGENSCHAFTEN = ABSTRAKT_PERSONA_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3528,7 +4260,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA_FEATURE_COUNT = ABSTRAKT_PERSONA_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The number of operations of the '<em>Koerper Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3537,17 +4269,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOERPER_PERSONA_OPERATION_COUNT = ABSTRAKT_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MudanPersonaImpl <em>Mudan Persona</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MudanPersonaImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMudanPersona()
-     * @generated
-     */
-	int MUDAN_PERSONA = 28;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3556,7 +4278,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__BESCHREIBUNG = KOERPER_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3565,7 +4287,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__IMAGE = KOERPER_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3574,7 +4296,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__NAME = KOERPER_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3583,7 +4305,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__KONSTITUTION = KOERPER_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3592,7 +4314,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__GESCHICKLICHKEIT = KOERPER_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3601,7 +4323,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__REAKTION = KOERPER_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3610,7 +4332,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__STAERKE = KOERPER_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3619,7 +4341,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__INITATIVE = KOERPER_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3628,7 +4350,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__INITATIV_WUERFEL = KOERPER_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3637,7 +4359,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__AUSWEICHEN = KOERPER_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3646,7 +4368,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__ESSENZ = KOERPER_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3655,7 +4377,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__EDGE_BASIS = KOERPER_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3664,7 +4386,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__EDGE = KOERPER_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3673,7 +4395,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__CHARISMA = KOERPER_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3682,7 +4404,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__WILLENSKRAFT = KOERPER_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3691,7 +4413,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__INTUITION = KOERPER_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3700,7 +4422,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__LOGIK = KOERPER_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3709,7 +4431,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__KOERPERLICH = KOERPER_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3718,7 +4440,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__GEISTIG = KOERPER_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3727,7 +4449,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__SOZIAL = KOERPER_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3736,7 +4458,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__KONSTITUTION_BASIS = KOERPER_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3745,7 +4467,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__GESCHICKLICHKEIT_BASIS = KOERPER_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3754,7 +4476,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__REAKTION_BASIS = KOERPER_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3763,7 +4485,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__STAERKE_BASIS = KOERPER_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3772,7 +4494,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__CHARISMA_BASIS = KOERPER_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3781,7 +4503,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__WILLENSKRAFT_BASIS = KOERPER_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3790,7 +4512,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__INTUITION_BASIS = KOERPER_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3799,7 +4521,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__LOGIK_BASIS = KOERPER_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3808,7 +4530,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__FERTIGKEITEN = KOERPER_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3817,7 +4539,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__FERTIGKEITS_GRUPPEN = KOERPER_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3826,7 +4548,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__SPEZIES = KOERPER_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3835,7 +4557,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__MOD_MANAGER = KOERPER_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3844,7 +4566,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__PANZER = KOERPER_PERSONA__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3880,7 +4602,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__KOERPER_MODS = KOERPER_PERSONA__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3889,7 +4611,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA__EIGENSCHAFTEN = KOERPER_PERSONA__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3916,7 +4638,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Mudan Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3925,17 +4647,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MUDAN_PERSONA_OPERATION_COUNT = KOERPER_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischeModsImpl <em>Magische Mods</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MagischeModsImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeMods()
-     * @generated
-     */
-	int MAGISCHE_MODS = 30;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3944,7 +4656,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS__BESCHREIBUNG = ABSTRAKT_MODIFIKATOREN__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3953,7 +4665,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS__IMAGE = ABSTRAKT_MODIFIKATOREN__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3962,7 +4674,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS__NAME = ABSTRAKT_MODIFIKATOREN__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3971,7 +4683,16 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS__MODS = ABSTRAKT_MODIFIKATOREN__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_MODS__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3980,7 +4701,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS__PAGE = ABSTRAKT_MODIFIKATOREN__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3989,7 +4710,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS__SRC_BOOK = ABSTRAKT_MODIFIKATOREN__SRC_BOOK;
 
-	/**
+    /**
      * The number of structural features of the '<em>Magische Mods</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3998,7 +4719,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Magische Mods</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4007,17 +4728,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_MODS_OPERATION_COUNT = ABSTRAKT_MODIFIKATOREN_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KiKraftImpl <em>Ki Kraft</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.KiKraftImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKiKraft()
-     * @generated
-     */
-	int KI_KRAFT = 31;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4026,7 +4737,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__BESCHREIBUNG = MAGISCHE_MODS__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4035,7 +4746,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__IMAGE = MAGISCHE_MODS__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4044,7 +4755,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__NAME = MAGISCHE_MODS__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4053,7 +4764,16 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__MODS = MAGISCHE_MODS__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_KRAFT__PARENT_ID = MAGISCHE_MODS__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4062,7 +4782,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__PAGE = MAGISCHE_MODS__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4071,7 +4791,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__SRC_BOOK = MAGISCHE_MODS__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kraftpunkte</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4080,7 +4800,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT__KRAFTPUNKTE = MAGISCHE_MODS_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Ki Kraft</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4089,7 +4809,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT_FEATURE_COUNT = MAGISCHE_MODS_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Ki Kraft</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4098,17 +4818,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_KRAFT_OPERATION_COUNT = MAGISCHE_MODS_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl <em>Magische Persona</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischePersona()
-     * @generated
-     */
-	int MAGISCHE_PERSONA = 32;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4117,7 +4827,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__BESCHREIBUNG = KOERPER_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4126,7 +4836,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__IMAGE = KOERPER_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4135,7 +4845,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__NAME = KOERPER_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4144,7 +4854,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__KONSTITUTION = KOERPER_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4153,7 +4863,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__GESCHICKLICHKEIT = KOERPER_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4162,7 +4872,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__REAKTION = KOERPER_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4171,7 +4881,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__STAERKE = KOERPER_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4180,7 +4890,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__INITATIVE = KOERPER_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4189,7 +4899,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__INITATIV_WUERFEL = KOERPER_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4198,7 +4908,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__AUSWEICHEN = KOERPER_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4207,7 +4917,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__ESSENZ = KOERPER_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4216,7 +4926,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__EDGE_BASIS = KOERPER_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4225,7 +4935,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__EDGE = KOERPER_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4234,7 +4944,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__CHARISMA = KOERPER_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4243,7 +4953,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__WILLENSKRAFT = KOERPER_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4252,7 +4962,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__INTUITION = KOERPER_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4261,7 +4971,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__LOGIK = KOERPER_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4270,7 +4980,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__KOERPERLICH = KOERPER_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4279,7 +4989,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__GEISTIG = KOERPER_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4288,7 +4998,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__SOZIAL = KOERPER_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4297,7 +5007,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__KONSTITUTION_BASIS = KOERPER_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4306,7 +5016,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__GESCHICKLICHKEIT_BASIS = KOERPER_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4315,7 +5025,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__REAKTION_BASIS = KOERPER_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4324,7 +5034,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__STAERKE_BASIS = KOERPER_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4333,7 +5043,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__CHARISMA_BASIS = KOERPER_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4342,7 +5052,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__WILLENSKRAFT_BASIS = KOERPER_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4351,7 +5061,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__INTUITION_BASIS = KOERPER_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4360,7 +5070,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__LOGIK_BASIS = KOERPER_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4369,7 +5079,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__FERTIGKEITEN = KOERPER_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4378,7 +5088,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__FERTIGKEITS_GRUPPEN = KOERPER_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4387,7 +5097,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__SPEZIES = KOERPER_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4396,7 +5106,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__MOD_MANAGER = KOERPER_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4405,7 +5115,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__PANZER = KOERPER_PERSONA__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4441,7 +5151,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__KOERPER_MODS = KOERPER_PERSONA__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4450,7 +5160,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__EIGENSCHAFTEN = KOERPER_PERSONA__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4477,7 +5187,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__MAGIE = KOERPER_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initationen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4486,7 +5196,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__INITATIONEN = KOERPER_PERSONA_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4495,7 +5205,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__MAGIE_BASIS = KOERPER_PERSONA_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4504,7 +5214,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA__MENTOR = KOERPER_PERSONA_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Magische Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4513,7 +5223,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Magische Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4522,17 +5232,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGISCHE_PERSONA_OPERATION_COUNT = KOERPER_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.BaseMagischePersona <em>Base Magische Persona</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.BaseMagischePersona
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBaseMagischePersona()
-     * @generated
-     */
-	int BASE_MAGISCHE_PERSONA = 33;
-
-	/**
+    /**
      * The feature id for the '<em><b>Magie</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4541,7 +5241,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BASE_MAGISCHE_PERSONA__MAGIE = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initationen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4550,7 +5250,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BASE_MAGISCHE_PERSONA__INITATIONEN = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4559,7 +5259,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BASE_MAGISCHE_PERSONA__MAGIE_BASIS = 2;
 
-	/**
+    /**
      * The number of structural features of the '<em>Base Magische Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4568,7 +5268,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BASE_MAGISCHE_PERSONA_FEATURE_COUNT = 3;
 
-	/**
+    /**
      * The number of operations of the '<em>Base Magische Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4577,17 +5277,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BASE_MAGISCHE_PERSONA_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren <em>Fernkampfwaffen Modifikatoren</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFernkampfwaffenModifikatoren()
-     * @generated
-     */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN = 34;
-
-	/**
+    /**
      * The feature id for the '<em><b>Smartgun</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4596,7 +5286,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN__SMARTGUN = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rueckstoss</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4605,7 +5295,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN__RUECKSTOSS = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Laster Pointer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4614,7 +5304,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN__LASTER_POINTER = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schalldaempfer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4623,7 +5313,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN__SCHALLDAEMPFER = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Vergroesserung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4632,7 +5322,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN__VERGROESSERUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of structural features of the '<em>Fernkampfwaffen Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4641,7 +5331,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of operations of the '<em>Fernkampfwaffen Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4650,17 +5340,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFEN_MODIFIKATOREN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse <em>Sichtverhaeltnisse</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Sichtverhaeltnisse
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSichtverhaeltnisse()
-     * @generated
-     */
-	int SICHTVERHAELTNISSE = 35;
-
-	/**
+    /**
      * The feature id for the '<em><b>Restlichtverstaerkung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4669,7 +5349,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SICHTVERHAELTNISSE__RESTLICHTVERSTAERKUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Infrarot</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4678,7 +5358,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SICHTVERHAELTNISSE__INFRAROT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ultrasound</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4687,7 +5367,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SICHTVERHAELTNISSE__ULTRASOUND = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of structural features of the '<em>Sichtverhaeltnisse</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4696,7 +5376,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SICHTVERHAELTNISSE_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of operations of the '<em>Sichtverhaeltnisse</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4705,17 +5385,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SICHTVERHAELTNISSE_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl <em>Spezies</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.SpeziesImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSpezies()
-     * @generated
-     */
-	int SPEZIES = 36;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4724,7 +5394,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIES__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4733,7 +5403,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIES__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4742,7 +5412,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIES__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4751,275 +5421,284 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIES__MODS = BESCHREIBBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIES__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int SPEZIES__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int SPEZIES__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__KONSTITUTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int SPEZIES__KONSTITUTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__GESCHICKLICHKEIT_MIN = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int SPEZIES__GESCHICKLICHKEIT_MIN = BESCHREIBBAR_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__REAKTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int SPEZIES__REAKTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__STAERKE_MIN = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int SPEZIES__STAERKE_MIN = BESCHREIBBAR_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__CHARISMA_MIN = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int SPEZIES__CHARISMA_MIN = BESCHREIBBAR_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__WILLENSKRAFT_MIN = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int SPEZIES__WILLENSKRAFT_MIN = BESCHREIBBAR_FEATURE_COUNT + 9;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__INTUITION_MIN = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int SPEZIES__INTUITION_MIN = BESCHREIBBAR_FEATURE_COUNT + 10;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__LOGIK_MIN = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int SPEZIES__LOGIK_MIN = BESCHREIBBAR_FEATURE_COUNT + 11;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__EDGE_MIN = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int SPEZIES__EDGE_MIN = BESCHREIBBAR_FEATURE_COUNT + 12;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__MAGIE_MIN = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int SPEZIES__MAGIE_MIN = BESCHREIBBAR_FEATURE_COUNT + 13;
 
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__RESONANZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int SPEZIES__RESONANZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 14;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__ESSENZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int SPEZIES__ESSENZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 15;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__KONSTITUTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 15;
+	int SPEZIES__KONSTITUTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 16;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__GESCHICKLICHKEIT_MAX = BESCHREIBBAR_FEATURE_COUNT + 16;
+	int SPEZIES__GESCHICKLICHKEIT_MAX = BESCHREIBBAR_FEATURE_COUNT + 17;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__REAKTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 17;
+	int SPEZIES__REAKTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 18;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__STAERKE_MAX = BESCHREIBBAR_FEATURE_COUNT + 18;
+	int SPEZIES__STAERKE_MAX = BESCHREIBBAR_FEATURE_COUNT + 19;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__CHARISMA_MAX = BESCHREIBBAR_FEATURE_COUNT + 19;
+	int SPEZIES__CHARISMA_MAX = BESCHREIBBAR_FEATURE_COUNT + 20;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__WILLENSKRAFT_MAX = BESCHREIBBAR_FEATURE_COUNT + 20;
+	int SPEZIES__WILLENSKRAFT_MAX = BESCHREIBBAR_FEATURE_COUNT + 21;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__INTUITION_MAX = BESCHREIBBAR_FEATURE_COUNT + 21;
+	int SPEZIES__INTUITION_MAX = BESCHREIBBAR_FEATURE_COUNT + 22;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__LOGIK_MAX = BESCHREIBBAR_FEATURE_COUNT + 22;
+	int SPEZIES__LOGIK_MAX = BESCHREIBBAR_FEATURE_COUNT + 23;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__EDGE_MAX = BESCHREIBBAR_FEATURE_COUNT + 23;
+	int SPEZIES__EDGE_MAX = BESCHREIBBAR_FEATURE_COUNT + 24;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__MAGIE_MAX = BESCHREIBBAR_FEATURE_COUNT + 24;
+	int SPEZIES__MAGIE_MAX = BESCHREIBBAR_FEATURE_COUNT + 25;
 
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__RESONANZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 25;
+	int SPEZIES__RESONANZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 26;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz Max</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__ESSENZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 26;
+	int SPEZIES__ESSENZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 27;
 
-	/**
+    /**
      * The feature id for the '<em><b>Laufen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__LAUFEN = BESCHREIBBAR_FEATURE_COUNT + 27;
+	int SPEZIES__LAUFEN = BESCHREIBBAR_FEATURE_COUNT + 28;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rennen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__RENNEN = BESCHREIBBAR_FEATURE_COUNT + 28;
+	int SPEZIES__RENNEN = BESCHREIBBAR_FEATURE_COUNT + 29;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sprinten</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__SPRINTEN = BESCHREIBBAR_FEATURE_COUNT + 29;
+	int SPEZIES__SPRINTEN = BESCHREIBBAR_FEATURE_COUNT + 30;
 
-	/**
+    /**
      * The feature id for the '<em><b>Angriff</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SPEZIES__ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 30;
+    int SPEZIES__ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 31;
 
     /**
      * The number of structural features of the '<em>Spezies</em>' class.
@@ -5028,9 +5707,9 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 31;
+	int SPEZIES_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 32;
 
-	/**
+    /**
      * The number of operations of the '<em>Spezies</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5039,17 +5718,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPEZIES_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.GegenstandStufen <em>Gegenstand Stufen</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.GegenstandStufen
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGegenstandStufen()
-     * @generated
-     */
-	int GEGENSTAND_STUFEN = 37;
-
-	/**
+    /**
      * The feature id for the '<em><b>Computer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5058,7 +5727,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN__COMPUTER = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Elektronik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5067,7 +5736,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN__ELEKTRONIK = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Tracing</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5076,7 +5745,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN__TRACING = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Anti Tracing</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5085,7 +5754,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN__ANTI_TRACING = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Protection</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5094,7 +5763,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN__PROTECTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Anti Protection</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5103,7 +5772,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN__ANTI_PROTECTION = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of structural features of the '<em>Gegenstand Stufen</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5112,7 +5781,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The number of operations of the '<em>Gegenstand Stufen</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5121,17 +5790,7 @@ public interface Shr5Package extends EPackage {
      */
 	int GEGENSTAND_STUFEN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KiAdeptImpl <em>Ki Adept</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.KiAdeptImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKiAdept()
-     * @generated
-     */
-	int KI_ADEPT = 38;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5140,7 +5799,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__BESCHREIBUNG = MAGISCHE_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5149,7 +5808,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__IMAGE = MAGISCHE_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5158,7 +5817,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__NAME = MAGISCHE_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5167,7 +5826,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__KONSTITUTION = MAGISCHE_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5176,7 +5835,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__GESCHICKLICHKEIT = MAGISCHE_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5185,7 +5844,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__REAKTION = MAGISCHE_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5194,7 +5853,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__STAERKE = MAGISCHE_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5203,7 +5862,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__INITATIVE = MAGISCHE_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5212,7 +5871,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__INITATIV_WUERFEL = MAGISCHE_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5221,7 +5880,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__AUSWEICHEN = MAGISCHE_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5230,7 +5889,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__ESSENZ = MAGISCHE_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5239,7 +5898,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__EDGE_BASIS = MAGISCHE_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5248,7 +5907,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__EDGE = MAGISCHE_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5257,7 +5916,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__CHARISMA = MAGISCHE_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5266,7 +5925,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__WILLENSKRAFT = MAGISCHE_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5275,7 +5934,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__INTUITION = MAGISCHE_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5284,7 +5943,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__LOGIK = MAGISCHE_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5293,7 +5952,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__KOERPERLICH = MAGISCHE_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5302,7 +5961,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__GEISTIG = MAGISCHE_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5311,7 +5970,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__SOZIAL = MAGISCHE_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5320,7 +5979,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__KONSTITUTION_BASIS = MAGISCHE_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5329,7 +5988,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__GESCHICKLICHKEIT_BASIS = MAGISCHE_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5338,7 +5997,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__REAKTION_BASIS = MAGISCHE_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5347,7 +6006,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__STAERKE_BASIS = MAGISCHE_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5356,7 +6015,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__CHARISMA_BASIS = MAGISCHE_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5365,7 +6024,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__WILLENSKRAFT_BASIS = MAGISCHE_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5374,7 +6033,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__INTUITION_BASIS = MAGISCHE_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5383,7 +6042,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__LOGIK_BASIS = MAGISCHE_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5392,7 +6051,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__FERTIGKEITEN = MAGISCHE_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5401,7 +6060,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__FERTIGKEITS_GRUPPEN = MAGISCHE_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5410,7 +6069,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__SPEZIES = MAGISCHE_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5419,7 +6078,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__MOD_MANAGER = MAGISCHE_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5428,7 +6087,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__PANZER = MAGISCHE_PERSONA__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5464,7 +6123,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__KOERPER_MODS = MAGISCHE_PERSONA__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5473,7 +6132,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__EIGENSCHAFTEN = MAGISCHE_PERSONA__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5500,7 +6159,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__MAGIE = MAGISCHE_PERSONA__MAGIE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initationen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5509,7 +6168,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__INITATIONEN = MAGISCHE_PERSONA__INITATIONEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5518,7 +6177,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__MAGIE_BASIS = MAGISCHE_PERSONA__MAGIE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5527,7 +6186,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__MENTOR = MAGISCHE_PERSONA__MENTOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kikraft</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5536,7 +6195,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT__KIKRAFT = MAGISCHE_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Ki Adept</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5545,7 +6204,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Ki Adept</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5554,17 +6213,16 @@ public interface Shr5Package extends EPackage {
      */
 	int KI_ADEPT_OPERATION_COUNT = MAGISCHE_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KleidungImpl <em>Kleidung</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.KleidungImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKleidung()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int KLEIDUNG = 39;
+    int KLEIDUNG__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5573,7 +6231,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5582,7 +6240,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5591,7 +6249,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__WERT = ABSTRAKT_GEGENSTAND__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5600,7 +6258,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5618,7 +6276,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5627,7 +6285,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5636,7 +6294,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__NAME = ABSTRAKT_GEGENSTAND__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5645,7 +6303,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__MODS = ABSTRAKT_GEGENSTAND__MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5654,7 +6312,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ruestung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5663,7 +6321,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG__RUESTUNG = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Kleidung</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5672,7 +6330,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Kleidung</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5681,17 +6339,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KLEIDUNG_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl <em>Fernkampfwaffe Modifikator</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFernkampfwaffeModifikator()
-     * @generated
-     */
-	int FERNKAMPFWAFFE_MODIFIKATOR = 40;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5700,7 +6348,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__BESCHREIBUNG = ABSTRAKT_MODIFIKATOREN__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5709,7 +6357,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__IMAGE = ABSTRAKT_MODIFIKATOREN__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5718,7 +6366,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__NAME = ABSTRAKT_MODIFIKATOREN__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5727,7 +6375,16 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__MODS = ABSTRAKT_MODIFIKATOREN__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERNKAMPFWAFFE_MODIFIKATOR__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5736,7 +6393,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__PAGE = ABSTRAKT_MODIFIKATOREN__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5745,7 +6402,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__SRC_BOOK = ABSTRAKT_MODIFIKATOREN__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ep</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5754,7 +6411,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR__EP = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Fernkampfwaffe Modifikator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5763,7 +6420,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Fernkampfwaffe Modifikator</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5772,17 +6429,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FERNKAMPFWAFFE_MODIFIKATOR_OPERATION_COUNT = ABSTRAKT_MODIFIKATOREN_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Anwendbar <em>Anwendbar</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Anwendbar
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAnwendbar()
-     * @generated
-     */
-	int ANWENDBAR = 41;
-
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5791,7 +6438,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ANWENDBAR__FERTIGKEIT = 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Anwendbar</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5800,7 +6447,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ANWENDBAR_FEATURE_COUNT = 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Anwendbar</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5809,17 +6456,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ANWENDBAR_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaEigenschaftImpl <em>Persona Eigenschaft</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.PersonaEigenschaftImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaEigenschaft()
-     * @generated
-     */
-	int PERSONA_EIGENSCHAFT = 42;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5828,7 +6465,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__BESCHREIBUNG = ABSTRAKT_MODIFIKATOREN__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5837,7 +6474,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__IMAGE = ABSTRAKT_MODIFIKATOREN__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5846,7 +6483,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__NAME = ABSTRAKT_MODIFIKATOREN__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5855,7 +6492,16 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__MODS = ABSTRAKT_MODIFIKATOREN__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_EIGENSCHAFT__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5864,7 +6510,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__PAGE = ABSTRAKT_MODIFIKATOREN__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5873,7 +6519,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__SRC_BOOK = ABSTRAKT_MODIFIKATOREN__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Karma Kosten</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5882,7 +6528,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT__KARMA_KOSTEN = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Persona Eigenschaft</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5891,7 +6537,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Persona Eigenschaft</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5900,17 +6546,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_EIGENSCHAFT_OPERATION_COUNT = ABSTRAKT_MODIFIKATOREN_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProbenModifikatoren <em>Proben Modifikatoren</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ProbenModifikatoren
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProbenModifikatoren()
-     * @generated
-     */
-	int PROBEN_MODIFIKATOREN = 43;
-
-	/**
+    /**
      * The feature id for the '<em><b>Schadenswiederstand</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5919,7 +6555,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROBEN_MODIFIKATOREN__SCHADENSWIEDERSTAND = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Heilung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5928,7 +6564,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROBEN_MODIFIKATOREN__HEILUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of structural features of the '<em>Proben Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5937,7 +6573,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROBEN_MODIFIKATOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Proben Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5946,17 +6582,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PROBEN_MODIFIKATOREN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagierImpl <em>Magier</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MagierImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagier()
-     * @generated
-     */
-	int MAGIER = 44;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5965,7 +6591,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__BESCHREIBUNG = MAGISCHE_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5974,7 +6600,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__IMAGE = MAGISCHE_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5983,7 +6609,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__NAME = MAGISCHE_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5992,7 +6618,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__KONSTITUTION = MAGISCHE_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6001,7 +6627,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__GESCHICKLICHKEIT = MAGISCHE_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6010,7 +6636,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__REAKTION = MAGISCHE_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6019,7 +6645,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__STAERKE = MAGISCHE_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6028,7 +6654,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__INITATIVE = MAGISCHE_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6037,7 +6663,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__INITATIV_WUERFEL = MAGISCHE_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6046,7 +6672,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__AUSWEICHEN = MAGISCHE_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6055,7 +6681,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ESSENZ = MAGISCHE_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6064,7 +6690,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__EDGE_BASIS = MAGISCHE_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6073,7 +6699,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__EDGE = MAGISCHE_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6082,7 +6708,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__CHARISMA = MAGISCHE_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6091,7 +6717,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__WILLENSKRAFT = MAGISCHE_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6100,7 +6726,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__INTUITION = MAGISCHE_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6109,7 +6735,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__LOGIK = MAGISCHE_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6118,7 +6744,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__KOERPERLICH = MAGISCHE_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6127,7 +6753,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__GEISTIG = MAGISCHE_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6136,7 +6762,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__SOZIAL = MAGISCHE_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6145,7 +6771,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__KONSTITUTION_BASIS = MAGISCHE_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6154,7 +6780,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__GESCHICKLICHKEIT_BASIS = MAGISCHE_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6163,7 +6789,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__REAKTION_BASIS = MAGISCHE_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6172,7 +6798,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__STAERKE_BASIS = MAGISCHE_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6181,7 +6807,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__CHARISMA_BASIS = MAGISCHE_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6190,7 +6816,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__WILLENSKRAFT_BASIS = MAGISCHE_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6199,7 +6825,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__INTUITION_BASIS = MAGISCHE_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6208,7 +6834,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__LOGIK_BASIS = MAGISCHE_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6217,7 +6843,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__FERTIGKEITEN = MAGISCHE_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6226,7 +6852,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__FERTIGKEITS_GRUPPEN = MAGISCHE_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6235,7 +6861,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__SPEZIES = MAGISCHE_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6244,7 +6870,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__MOD_MANAGER = MAGISCHE_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6253,7 +6879,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__PANZER = MAGISCHE_PERSONA__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6289,7 +6915,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__KOERPER_MODS = MAGISCHE_PERSONA__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6298,7 +6924,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__EIGENSCHAFTEN = MAGISCHE_PERSONA__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6325,7 +6951,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__MAGIE = MAGISCHE_PERSONA__MAGIE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initationen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6334,7 +6960,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__INITATIONEN = MAGISCHE_PERSONA__INITATIONEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6343,7 +6969,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__MAGIE_BASIS = MAGISCHE_PERSONA__MAGIE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6352,7 +6978,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__MENTOR = MAGISCHE_PERSONA__MENTOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zauber</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6361,7 +6987,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ZAUBER = MAGISCHE_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Enzug</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6370,7 +6996,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ENZUG = MAGISCHE_PERSONA_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Tradition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6379,7 +7005,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6397,7 +7023,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALES_LIMIT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6406,7 +7032,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_KONSTITUTION = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6415,7 +7041,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_GESCHICKLICHKEIT = MAGISCHE_PERSONA_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6424,7 +7050,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_REAKTION = MAGISCHE_PERSONA_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6433,7 +7059,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_STAERKE = MAGISCHE_PERSONA_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6442,7 +7068,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_INITATIVE = MAGISCHE_PERSONA_FEATURE_COUNT + 9;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6451,7 +7077,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_INITATIV_WUERFEL = MAGISCHE_PERSONA_FEATURE_COUNT + 10;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Panzerung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6460,7 +7086,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER__ASTRALE_PANZERUNG = MAGISCHE_PERSONA_FEATURE_COUNT + 11;
 
-	/**
+    /**
      * The number of structural features of the '<em>Magier</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6469,7 +7095,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 12;
 
-	/**
+    /**
      * The number of operations of the '<em>Magier</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6478,17 +7104,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MAGIER_OPERATION_COUNT = MAGISCHE_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Zauberer <em>Zauberer</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Zauberer
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberer()
-     * @generated
-     */
-	int ZAUBERER = 45;
-
-	/**
+    /**
      * The feature id for the '<em><b>Zauber</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6497,7 +7113,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBERER__ZAUBER = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Enzug</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6506,7 +7122,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBERER__ENZUG = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Tradition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6515,7 +7131,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBERER__TRADITION = 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6533,7 +7149,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBERER_FEATURE_COUNT = 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Zauberer</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6542,17 +7158,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBERER_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl <em>Mystic Adept</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMysticAdept()
-     * @generated
-     */
-	int MYSTIC_ADEPT = 46;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6561,7 +7167,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__BESCHREIBUNG = KI_ADEPT__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6570,7 +7176,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__IMAGE = KI_ADEPT__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6579,7 +7185,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__NAME = KI_ADEPT__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6588,7 +7194,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__KONSTITUTION = KI_ADEPT__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6597,7 +7203,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__GESCHICKLICHKEIT = KI_ADEPT__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6606,7 +7212,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__REAKTION = KI_ADEPT__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6615,7 +7221,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__STAERKE = KI_ADEPT__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6624,7 +7230,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__INITATIVE = KI_ADEPT__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6633,7 +7239,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__INITATIV_WUERFEL = KI_ADEPT__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6642,7 +7248,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__AUSWEICHEN = KI_ADEPT__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6651,7 +7257,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__ESSENZ = KI_ADEPT__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6660,7 +7266,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__EDGE_BASIS = KI_ADEPT__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6669,7 +7275,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__EDGE = KI_ADEPT__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6678,7 +7284,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__CHARISMA = KI_ADEPT__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6687,7 +7293,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__WILLENSKRAFT = KI_ADEPT__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6696,7 +7302,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__INTUITION = KI_ADEPT__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6705,7 +7311,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__LOGIK = KI_ADEPT__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6714,7 +7320,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__KOERPERLICH = KI_ADEPT__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6723,7 +7329,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__GEISTIG = KI_ADEPT__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6732,7 +7338,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__SOZIAL = KI_ADEPT__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6741,7 +7347,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__KONSTITUTION_BASIS = KI_ADEPT__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6750,7 +7356,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__GESCHICKLICHKEIT_BASIS = KI_ADEPT__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6759,7 +7365,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__REAKTION_BASIS = KI_ADEPT__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6768,7 +7374,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__STAERKE_BASIS = KI_ADEPT__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6777,7 +7383,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__CHARISMA_BASIS = KI_ADEPT__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6786,7 +7392,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__WILLENSKRAFT_BASIS = KI_ADEPT__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6795,7 +7401,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__INTUITION_BASIS = KI_ADEPT__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6804,7 +7410,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__LOGIK_BASIS = KI_ADEPT__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6813,7 +7419,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__FERTIGKEITEN = KI_ADEPT__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6822,7 +7428,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__FERTIGKEITS_GRUPPEN = KI_ADEPT__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6831,7 +7437,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__SPEZIES = KI_ADEPT__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6840,7 +7446,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__MOD_MANAGER = KI_ADEPT__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6849,7 +7455,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__PANZER = KI_ADEPT__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6885,7 +7491,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__KOERPER_MODS = KI_ADEPT__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6894,7 +7500,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__EIGENSCHAFTEN = KI_ADEPT__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6921,7 +7527,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__MAGIE = KI_ADEPT__MAGIE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initationen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6930,7 +7536,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__INITATIONEN = KI_ADEPT__INITATIONEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6939,7 +7545,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__MAGIE_BASIS = KI_ADEPT__MAGIE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6948,7 +7554,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__MENTOR = KI_ADEPT__MENTOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kikraft</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6957,7 +7563,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__KIKRAFT = KI_ADEPT__KIKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zauber</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6966,7 +7572,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__ZAUBER = KI_ADEPT_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Enzug</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6975,7 +7581,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__ENZUG = KI_ADEPT_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Tradition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6984,7 +7590,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT__TRADITION = KI_ADEPT_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7002,7 +7608,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT_FEATURE_COUNT = KI_ADEPT_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Mystic Adept</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7011,17 +7617,7 @@ public interface Shr5Package extends EPackage {
      */
 	int MYSTIC_ADEPT_OPERATION_COUNT = KI_ADEPT_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaZauberImpl <em>Persona Zauber</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.PersonaZauberImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaZauber()
-     * @generated
-     */
-	int PERSONA_ZAUBER = 47;
-
-	/**
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7030,7 +7626,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_ZAUBER__STUFE = ERLERNBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Formel</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7039,7 +7635,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_ZAUBER__FORMEL = ERLERNBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of structural features of the '<em>Persona Zauber</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7048,7 +7644,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_ZAUBER_FEATURE_COUNT = ERLERNBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Persona Zauber</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7057,17 +7653,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_ZAUBER_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl <em>Zauber</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.ZauberImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauber()
-     * @generated
-     */
-	int ZAUBER = 48;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7076,7 +7662,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBER__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7085,7 +7671,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBER__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7094,97 +7680,106 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBER__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ZAUBER__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int ZAUBER__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int ZAUBER__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Art</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__ART = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int ZAUBER__ART = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__REICHWEITE = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int ZAUBER__REICHWEITE = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schaden</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__SCHADEN = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int ZAUBER__SCHADEN = BESCHREIBBAR_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Dauer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__DAUER = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int ZAUBER__DAUER = BESCHREIBBAR_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Entzug</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__ENTZUG = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int ZAUBER__ENTZUG = BESCHREIBBAR_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int ZAUBER__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The feature id for the '<em><b>Merkmale</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__MERKMALE = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int ZAUBER__MERKMALE = BESCHREIBBAR_FEATURE_COUNT + 9;
 
-	/**
+    /**
      * The number of structural features of the '<em>Zauber</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int ZAUBER_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 10;
 
-	/**
+    /**
      * The number of operations of the '<em>Zauber</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7193,17 +7788,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ZAUBER_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ChrakterLimits <em>Chrakter Limits</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ChrakterLimits
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getChrakterLimits()
-     * @generated
-     */
-	int CHRAKTER_LIMITS = 49;
-
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7212,7 +7797,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CHRAKTER_LIMITS__KOERPERLICH = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7221,7 +7806,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CHRAKTER_LIMITS__GEISTIG = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7230,7 +7815,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CHRAKTER_LIMITS__SOZIAL = 2;
 
-	/**
+    /**
      * The number of structural features of the '<em>Chrakter Limits</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7239,7 +7824,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CHRAKTER_LIMITS_FEATURE_COUNT = 3;
 
-	/**
+    /**
      * The number of operations of the '<em>Chrakter Limits</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7248,17 +7833,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CHRAKTER_LIMITS_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Panzerung <em>Panzerung</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Panzerung
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPanzerung()
-     * @generated
-     */
-	int PANZERUNG = 50;
-
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7267,7 +7842,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PANZERUNG__PANZER = 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Panzerung</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7276,7 +7851,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PANZERUNG_FEATURE_COUNT = 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Panzerung</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7285,17 +7860,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PANZERUNG_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl <em>Aspekt Magier</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.AspektMagierImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAspektMagier()
-     * @generated
-     */
-	int ASPEKT_MAGIER = 51;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7304,7 +7869,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__BESCHREIBUNG = MAGISCHE_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7313,7 +7878,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__IMAGE = MAGISCHE_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7322,7 +7887,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__NAME = MAGISCHE_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7331,7 +7896,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__KONSTITUTION = MAGISCHE_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7340,7 +7905,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__GESCHICKLICHKEIT = MAGISCHE_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7349,7 +7914,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__REAKTION = MAGISCHE_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7358,7 +7923,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__STAERKE = MAGISCHE_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7367,7 +7932,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__INITATIVE = MAGISCHE_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7376,7 +7941,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__INITATIV_WUERFEL = MAGISCHE_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7385,7 +7950,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__AUSWEICHEN = MAGISCHE_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7394,7 +7959,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__ESSENZ = MAGISCHE_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7403,7 +7968,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__EDGE_BASIS = MAGISCHE_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7412,7 +7977,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__EDGE = MAGISCHE_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7421,7 +7986,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__CHARISMA = MAGISCHE_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7430,7 +7995,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__WILLENSKRAFT = MAGISCHE_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7439,7 +8004,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__INTUITION = MAGISCHE_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7448,7 +8013,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__LOGIK = MAGISCHE_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7457,7 +8022,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__KOERPERLICH = MAGISCHE_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7466,7 +8031,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__GEISTIG = MAGISCHE_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7475,7 +8040,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__SOZIAL = MAGISCHE_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7484,7 +8049,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__KONSTITUTION_BASIS = MAGISCHE_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7493,7 +8058,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__GESCHICKLICHKEIT_BASIS = MAGISCHE_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7502,7 +8067,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__REAKTION_BASIS = MAGISCHE_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7511,7 +8076,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__STAERKE_BASIS = MAGISCHE_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7520,7 +8085,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__CHARISMA_BASIS = MAGISCHE_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7529,7 +8094,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__WILLENSKRAFT_BASIS = MAGISCHE_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7538,7 +8103,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__INTUITION_BASIS = MAGISCHE_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7547,7 +8112,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__LOGIK_BASIS = MAGISCHE_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7556,7 +8121,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__FERTIGKEITEN = MAGISCHE_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7565,7 +8130,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__FERTIGKEITS_GRUPPEN = MAGISCHE_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7574,7 +8139,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__SPEZIES = MAGISCHE_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7583,7 +8148,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__MOD_MANAGER = MAGISCHE_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7592,7 +8157,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__PANZER = MAGISCHE_PERSONA__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7628,7 +8193,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__KOERPER_MODS = MAGISCHE_PERSONA__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7637,7 +8202,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__EIGENSCHAFTEN = MAGISCHE_PERSONA__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7664,7 +8229,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__MAGIE = MAGISCHE_PERSONA__MAGIE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initationen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7673,7 +8238,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__INITATIONEN = MAGISCHE_PERSONA__INITATIONEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Magie Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7682,7 +8247,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__MAGIE_BASIS = MAGISCHE_PERSONA__MAGIE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7691,7 +8256,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__MENTOR = MAGISCHE_PERSONA__MENTOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zauber</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7700,7 +8265,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__ZAUBER = MAGISCHE_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Enzug</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7709,7 +8274,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__ENZUG = MAGISCHE_PERSONA_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Tradition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7718,7 +8283,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__TRADITION = MAGISCHE_PERSONA_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Gebundene Geister</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7736,7 +8301,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER__ASPEKT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of structural features of the '<em>Aspekt Magier</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7745,7 +8310,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of operations of the '<em>Aspekt Magier</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7754,17 +8319,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASPEKT_MAGIER_OPERATION_COUNT = MAGISCHE_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AstraleProjektion <em>Astrale Projektion</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.AstraleProjektion
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAstraleProjektion()
-     * @generated
-     */
-	int ASTRALE_PROJEKTION = 52;
-
-	/**
+    /**
      * The feature id for the '<em><b>Astrales Limit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7773,7 +8328,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALES_LIMIT = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7782,7 +8337,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7791,7 +8346,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT = 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7800,7 +8355,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_REAKTION = 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7809,7 +8364,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_STAERKE = 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7818,7 +8373,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_INITATIVE = 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7827,7 +8382,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL = 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Astrale Panzerung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7836,7 +8391,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION__ASTRALE_PANZERUNG = 7;
 
-	/**
+    /**
      * The number of structural features of the '<em>Astrale Projektion</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7845,7 +8400,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION_FEATURE_COUNT = 8;
 
-	/**
+    /**
      * The number of operations of the '<em>Astrale Projektion</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7854,17 +8409,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ASTRALE_PROJEKTION_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SchutzgeistImpl <em>Schutzgeist</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.SchutzgeistImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchutzgeist()
-     * @generated
-     */
-	int SCHUTZGEIST = 53;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7873,7 +8418,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__BESCHREIBUNG = MAGISCHE_MODS__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7882,7 +8427,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__IMAGE = MAGISCHE_MODS__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7891,7 +8436,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__NAME = MAGISCHE_MODS__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7900,7 +8445,16 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__MODS = MAGISCHE_MODS__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCHUTZGEIST__PARENT_ID = MAGISCHE_MODS__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7909,7 +8463,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__PAGE = MAGISCHE_MODS__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7918,7 +8472,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__SRC_BOOK = MAGISCHE_MODS__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Vorteile</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7927,7 +8481,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__VORTEILE = MAGISCHE_MODS_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Nachteile</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7936,7 +8490,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST__NACHTEILE = MAGISCHE_MODS_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of structural features of the '<em>Schutzgeist</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7945,7 +8499,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST_FEATURE_COUNT = MAGISCHE_MODS_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Schutzgeist</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7954,17 +8508,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SCHUTZGEIST_OPERATION_COUNT = MAGISCHE_MODS_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.InitationImpl <em>Initation</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.InitationImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInitation()
-     * @generated
-     */
-	int INITATION = 54;
-
-	/**
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7973,7 +8517,7 @@ public interface Shr5Package extends EPackage {
      */
 	int INITATION__STUFE = STEIGERBAR__STUFE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Erlernt</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7982,7 +8526,7 @@ public interface Shr5Package extends EPackage {
      */
 	int INITATION__ERLERNT = STEIGERBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Initation</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7991,7 +8535,7 @@ public interface Shr5Package extends EPackage {
      */
 	int INITATION_FEATURE_COUNT = STEIGERBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Initation</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8000,17 +8544,7 @@ public interface Shr5Package extends EPackage {
      */
 	int INITATION_OPERATION_COUNT = STEIGERBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl <em>Meta Magie</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MetaMagieImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMetaMagie()
-     * @generated
-     */
-	int META_MAGIE = 55;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8019,7 +8553,7 @@ public interface Shr5Package extends EPackage {
      */
 	int META_MAGIE__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8028,7 +8562,7 @@ public interface Shr5Package extends EPackage {
      */
 	int META_MAGIE__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8037,34 +8571,43 @@ public interface Shr5Package extends EPackage {
      */
 	int META_MAGIE__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int META_MAGIE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int META_MAGIE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int META_MAGIE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int META_MAGIE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int META_MAGIE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of structural features of the '<em>Meta Magie</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int META_MAGIE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int META_MAGIE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of operations of the '<em>Meta Magie</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8073,17 +8616,7 @@ public interface Shr5Package extends EPackage {
      */
 	int META_MAGIE_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CritterKraftImpl <em>Critter Kraft</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.CritterKraftImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterKraft()
-     * @generated
-     */
-	int CRITTER_KRAFT = 56;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8092,7 +8625,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__BESCHREIBUNG = MAGISCHE_MODS__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8101,7 +8634,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__IMAGE = MAGISCHE_MODS__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8110,7 +8643,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__NAME = MAGISCHE_MODS__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8119,7 +8652,16 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__MODS = MAGISCHE_MODS__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CRITTER_KRAFT__PARENT_ID = MAGISCHE_MODS__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8128,7 +8670,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__PAGE = MAGISCHE_MODS__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8137,7 +8679,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__SRC_BOOK = MAGISCHE_MODS__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Art</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8146,7 +8688,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__ART = MAGISCHE_MODS_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Handlung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8155,7 +8697,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__HANDLUNG = MAGISCHE_MODS_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reichweite</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8164,7 +8706,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__REICHWEITE = MAGISCHE_MODS_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Dauer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8173,7 +8715,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT__DAUER = MAGISCHE_MODS_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The number of structural features of the '<em>Critter Kraft</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8182,7 +8724,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT_FEATURE_COUNT = MAGISCHE_MODS_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The number of operations of the '<em>Critter Kraft</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8191,17 +8733,7 @@ public interface Shr5Package extends EPackage {
      */
 	int CRITTER_KRAFT_OPERATION_COUNT = MAGISCHE_MODS_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl <em>Fahrzeug</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FahrzeugImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFahrzeug()
-     * @generated
-     */
-	int FAHRZEUG = 57;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8210,7 +8742,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8219,7 +8751,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8228,50 +8760,59 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int FAHRZEUG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FAHRZEUG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__WERT = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FAHRZEUG__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FAHRZEUG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int FAHRZEUG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 4;
+    int FAHRZEUG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -8280,90 +8821,90 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 9;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 10;
 
-	/**
+    /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 11;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 12;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 13;
 
-	/**
+    /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 14;
 
-	/**
+    /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 15;
 
-	/**
+    /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8372,17 +8913,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PassagierFahrzeugImpl <em>Passagier Fahrzeug</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.PassagierFahrzeugImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPassagierFahrzeug()
-     * @generated
-     */
-	int PASSAGIER_FAHRZEUG = 59;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8391,7 +8922,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__BESCHREIBUNG = FAHRZEUG__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8400,7 +8931,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__IMAGE = FAHRZEUG__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8409,7 +8940,16 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__NAME = FAHRZEUG__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__PARENT_ID = FAHRZEUG__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8418,7 +8958,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__PAGE = FAHRZEUG__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8427,7 +8967,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__SRC_BOOK = FAHRZEUG__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8436,7 +8976,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__WERT = FAHRZEUG__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8445,7 +8985,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__VERFUEGBARKEIT = FAHRZEUG__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8463,7 +9003,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__FERTIGKEIT = FAHRZEUG__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8472,7 +9012,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__HANDLING = FAHRZEUG__HANDLING;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8481,7 +9021,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__GESCHWINDIGKEIT = FAHRZEUG__GESCHWINDIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8490,7 +9030,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__BESCHLEUNIGUNG = FAHRZEUG__BESCHLEUNIGUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8499,7 +9039,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__RUMPF = FAHRZEUG__RUMPF;
 
-	/**
+    /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8508,7 +9048,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__PILOT = FAHRZEUG__PILOT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8517,7 +9057,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__SENSOR = FAHRZEUG__SENSOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8526,7 +9066,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__FAHRZEUG_TYP = FAHRZEUG__FAHRZEUG_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8535,7 +9075,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__MODIFIZIERUNGEN = FAHRZEUG__MODIFIZIERUNGEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sitze</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8544,7 +9084,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG__SITZE = FAHRZEUG_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of structural features of the '<em>Passagier Fahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8553,7 +9093,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of operations of the '<em>Passagier Fahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8562,17 +9102,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PASSAGIER_FAHRZEUG_OPERATION_COUNT = FAHRZEUG_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl <em>Bodenfahrzeug</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBodenfahrzeug()
-     * @generated
-     */
-	int BODENFAHRZEUG = 58;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8581,7 +9111,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__BESCHREIBUNG = PASSAGIER_FAHRZEUG__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8590,7 +9120,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__IMAGE = PASSAGIER_FAHRZEUG__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8599,7 +9129,16 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__NAME = PASSAGIER_FAHRZEUG__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__PARENT_ID = PASSAGIER_FAHRZEUG__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8608,7 +9147,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__PAGE = PASSAGIER_FAHRZEUG__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8617,7 +9156,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__SRC_BOOK = PASSAGIER_FAHRZEUG__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8626,7 +9165,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__WERT = PASSAGIER_FAHRZEUG__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8635,7 +9174,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__VERFUEGBARKEIT = PASSAGIER_FAHRZEUG__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8653,7 +9192,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__FERTIGKEIT = PASSAGIER_FAHRZEUG__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8662,7 +9201,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__HANDLING = PASSAGIER_FAHRZEUG__HANDLING;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8671,7 +9210,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__GESCHWINDIGKEIT = PASSAGIER_FAHRZEUG__GESCHWINDIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8680,7 +9219,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__BESCHLEUNIGUNG = PASSAGIER_FAHRZEUG__BESCHLEUNIGUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8689,7 +9228,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__RUMPF = PASSAGIER_FAHRZEUG__RUMPF;
 
-	/**
+    /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8698,7 +9237,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__PILOT = PASSAGIER_FAHRZEUG__PILOT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8707,7 +9246,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__SENSOR = PASSAGIER_FAHRZEUG__SENSOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8716,7 +9255,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__FAHRZEUG_TYP = PASSAGIER_FAHRZEUG__FAHRZEUG_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8725,7 +9264,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__MODIFIZIERUNGEN = PASSAGIER_FAHRZEUG__MODIFIZIERUNGEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sitze</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8734,7 +9273,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__SITZE = PASSAGIER_FAHRZEUG__SITZE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Handling Gelaende</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8743,7 +9282,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG__HANDLING_GELAENDE = PASSAGIER_FAHRZEUG_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschwindigkeit Gelaende</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8761,7 +9300,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG_FEATURE_COUNT = PASSAGIER_FAHRZEUG_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Bodenfahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8770,17 +9309,7 @@ public interface Shr5Package extends EPackage {
      */
 	int BODENFAHRZEUG_OPERATION_COUNT = PASSAGIER_FAHRZEUG_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl <em>Drohne</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.DrohneImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDrohne()
-     * @generated
-     */
-	int DROHNE = 60;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8789,7 +9318,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__BESCHREIBUNG = FAHRZEUG__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8798,7 +9327,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__IMAGE = FAHRZEUG__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8807,7 +9336,16 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__NAME = FAHRZEUG__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__PARENT_ID = FAHRZEUG__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8816,7 +9354,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__PAGE = FAHRZEUG__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8825,7 +9363,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__SRC_BOOK = FAHRZEUG__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8834,7 +9372,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__WERT = FAHRZEUG__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8843,7 +9381,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__VERFUEGBARKEIT = FAHRZEUG__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8861,7 +9399,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__FERTIGKEIT = FAHRZEUG__FERTIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8870,7 +9408,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__HANDLING = FAHRZEUG__HANDLING;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8879,7 +9417,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__GESCHWINDIGKEIT = FAHRZEUG__GESCHWINDIGKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8888,7 +9426,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__BESCHLEUNIGUNG = FAHRZEUG__BESCHLEUNIGUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8897,7 +9435,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__RUMPF = FAHRZEUG__RUMPF;
 
-	/**
+    /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8906,7 +9444,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__PILOT = FAHRZEUG__PILOT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8915,7 +9453,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__SENSOR = FAHRZEUG__SENSOR;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8924,7 +9462,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__FAHRZEUG_TYP = FAHRZEUG__FAHRZEUG_TYP;
 
-	/**
+    /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8933,7 +9471,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE__MODIFIZIERUNGEN = FAHRZEUG__MODIFIZIERUNGEN;
 
-	/**
+    /**
      * The number of structural features of the '<em>Drohne</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8942,7 +9480,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Drohne</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8951,17 +9489,7 @@ public interface Shr5Package extends EPackage {
      */
 	int DROHNE_OPERATION_COUNT = FAHRZEUG_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl <em>Fahrzeug Modifikation</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFahrzeugModifikation()
-     * @generated
-     */
-	int FAHRZEUG_MODIFIKATION = 61;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8970,7 +9498,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG_MODIFIKATION__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8979,7 +9507,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG_MODIFIKATION__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8988,50 +9516,59 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG_MODIFIKATION__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG_MODIFIKATION__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int FAHRZEUG_MODIFIKATION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FAHRZEUG_MODIFIKATION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__WERT = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FAHRZEUG_MODIFIKATION__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int FAHRZEUG_MODIFIKATION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 4;
+    int FAHRZEUG_MODIFIKATION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Funktion</b></em>' containment reference list.
@@ -9040,18 +9577,18 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__FUNKTION = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int FAHRZEUG_MODIFIKATION__FUNKTION = BESCHREIBBAR_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The number of structural features of the '<em>Fahrzeug Modifikation</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The number of operations of the '<em>Fahrzeug Modifikation</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9060,17 +9597,7 @@ public interface Shr5Package extends EPackage {
      */
 	int FAHRZEUG_MODIFIKATION_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl <em>Technomancer</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.TechnomancerImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTechnomancer()
-     * @generated
-     */
-	int TECHNOMANCER = 62;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9079,7 +9606,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__BESCHREIBUNG = KOERPER_PERSONA__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9088,7 +9615,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__IMAGE = KOERPER_PERSONA__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9097,7 +9624,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__NAME = KOERPER_PERSONA__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9106,7 +9633,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__KONSTITUTION = KOERPER_PERSONA__KONSTITUTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9115,7 +9642,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__GESCHICKLICHKEIT = KOERPER_PERSONA__GESCHICKLICHKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9124,7 +9651,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__REAKTION = KOERPER_PERSONA__REAKTION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9133,7 +9660,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__STAERKE = KOERPER_PERSONA__STAERKE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9142,7 +9669,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__INITATIVE = KOERPER_PERSONA__INITATIVE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initativ Wuerfel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9151,7 +9678,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__INITATIV_WUERFEL = KOERPER_PERSONA__INITATIV_WUERFEL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9160,7 +9687,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__AUSWEICHEN = KOERPER_PERSONA__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Essenz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9169,7 +9696,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__ESSENZ = KOERPER_PERSONA__ESSENZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9178,7 +9705,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__EDGE_BASIS = KOERPER_PERSONA__EDGE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Edge</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9187,7 +9714,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__EDGE = KOERPER_PERSONA__EDGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9196,7 +9723,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__CHARISMA = KOERPER_PERSONA__CHARISMA;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9205,7 +9732,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__WILLENSKRAFT = KOERPER_PERSONA__WILLENSKRAFT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9214,7 +9741,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__INTUITION = KOERPER_PERSONA__INTUITION;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9223,7 +9750,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__LOGIK = KOERPER_PERSONA__LOGIK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9232,7 +9759,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__KOERPERLICH = KOERPER_PERSONA__KOERPERLICH;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geistig</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9241,7 +9768,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__GEISTIG = KOERPER_PERSONA__GEISTIG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Sozial</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9250,7 +9777,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__SOZIAL = KOERPER_PERSONA__SOZIAL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Konstitution Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9259,7 +9786,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__KONSTITUTION_BASIS = KOERPER_PERSONA__KONSTITUTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geschicklichkeit Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9268,7 +9795,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__GESCHICKLICHKEIT_BASIS = KOERPER_PERSONA__GESCHICKLICHKEIT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Reaktion Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9277,7 +9804,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__REAKTION_BASIS = KOERPER_PERSONA__REAKTION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Staerke Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9286,7 +9813,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__STAERKE_BASIS = KOERPER_PERSONA__STAERKE_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Charisma Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9295,7 +9822,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__CHARISMA_BASIS = KOERPER_PERSONA__CHARISMA_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Willenskraft Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9304,7 +9831,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__WILLENSKRAFT_BASIS = KOERPER_PERSONA__WILLENSKRAFT_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Intuition Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9313,7 +9840,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__INTUITION_BASIS = KOERPER_PERSONA__INTUITION_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Logik Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9322,7 +9849,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__LOGIK_BASIS = KOERPER_PERSONA__LOGIK_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9331,7 +9858,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__FERTIGKEITEN = KOERPER_PERSONA__FERTIGKEITEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9340,7 +9867,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__FERTIGKEITS_GRUPPEN = KOERPER_PERSONA__FERTIGKEITS_GRUPPEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezies</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9349,7 +9876,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__SPEZIES = KOERPER_PERSONA__SPEZIES;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mod Manager</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9358,7 +9885,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__MOD_MANAGER = KOERPER_PERSONA__MOD_MANAGER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9367,7 +9894,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__PANZER = KOERPER_PERSONA__PANZER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9403,7 +9930,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__KOERPER_MODS = KOERPER_PERSONA__KOERPER_MODS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9412,7 +9939,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__EIGENSCHAFTEN = KOERPER_PERSONA__EIGENSCHAFTEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9439,7 +9966,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__RESONANZ = KOERPER_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9448,7 +9975,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__GERAETESTUFE = KOERPER_PERSONA_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9457,7 +9984,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__ANGRIFF = KOERPER_PERSONA_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9466,7 +9993,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__SCHLEICHER = KOERPER_PERSONA_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9475,7 +10002,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__DATENVERARBEITUNG = KOERPER_PERSONA_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9484,7 +10011,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__FIREWALL = KOERPER_PERSONA_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9493,7 +10020,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__RESONANZ_BASIS = KOERPER_PERSONA_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Complex Forms</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9502,7 +10029,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__COMPLEX_FORMS = KOERPER_PERSONA_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The feature id for the '<em><b>Echos</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9511,7 +10038,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER__ECHOS = KOERPER_PERSONA_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The number of structural features of the '<em>Technomancer</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9520,7 +10047,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 9;
 
-	/**
+    /**
      * The number of operations of the '<em>Technomancer</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9529,17 +10056,7 @@ public interface Shr5Package extends EPackage {
      */
 	int TECHNOMANCER_OPERATION_COUNT = KOERPER_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona <em>Resonanz Persona</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzPersona()
-     * @generated
-     */
-	int RESONANZ_PERSONA = 63;
-
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9548,7 +10065,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__RESONANZ = 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9557,7 +10074,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__GERAETESTUFE = 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9566,7 +10083,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__ANGRIFF = 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9575,7 +10092,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__SCHLEICHER = 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9584,7 +10101,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__DATENVERARBEITUNG = 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9593,7 +10110,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__FIREWALL = 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9602,7 +10119,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA__RESONANZ_BASIS = 6;
 
-	/**
+    /**
      * The number of structural features of the '<em>Resonanz Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9611,7 +10128,7 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA_FEATURE_COUNT = 7;
 
-	/**
+    /**
      * The number of operations of the '<em>Resonanz Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9620,17 +10137,16 @@ public interface Shr5Package extends EPackage {
      */
 	int RESONANZ_PERSONA_OPERATION_COUNT = 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl <em>Komplexe Form</em>}' class.
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getKomplexeForm()
+     * <!-- end-user-doc -->
      * @generated
+     * @ordered
      */
-	int KOMPLEXE_FORM = 64;
+    int KOMPLEXE_FORM__PARENT_ID = QUELLE__PARENT_ID;
 
-	/**
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9639,7 +10155,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__PAGE = QUELLE__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9648,7 +10164,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__SRC_BOOK = QUELLE__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9657,7 +10173,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__BESCHREIBUNG = QUELLE_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9666,7 +10182,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__IMAGE = QUELLE_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9675,7 +10191,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__NAME = QUELLE_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ziel</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9684,7 +10200,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__ZIEL = QUELLE_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Dauer</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9693,7 +10209,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__DAUER = QUELLE_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schwund</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9702,7 +10218,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM__SCHWUND = QUELLE_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The number of structural features of the '<em>Komplexe Form</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9711,7 +10227,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The number of operations of the '<em>Komplexe Form</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9720,17 +10236,7 @@ public interface Shr5Package extends EPackage {
      */
 	int KOMPLEXE_FORM_OPERATION_COUNT = QUELLE_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaKomplexFormImpl <em>Persona Komplex Form</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.PersonaKomplexFormImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaKomplexForm()
-     * @generated
-     */
-	int PERSONA_KOMPLEX_FORM = 65;
-
-	/**
+    /**
      * The feature id for the '<em><b>Form</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9739,7 +10245,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_KOMPLEX_FORM__FORM = ERLERNBAR_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9748,7 +10254,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_KOMPLEX_FORM__STUFE = ERLERNBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The number of structural features of the '<em>Persona Komplex Form</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9757,7 +10263,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_KOMPLEX_FORM_FEATURE_COUNT = ERLERNBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The number of operations of the '<em>Persona Komplex Form</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9766,17 +10272,7 @@ public interface Shr5Package extends EPackage {
      */
 	int PERSONA_KOMPLEX_FORM_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl <em>Sprite</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.SpriteImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSprite()
-     * @generated
-     */
-	int SPRITE = 66;
-
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9785,7 +10281,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__RESONANZ = RESONANZ_PERSONA__RESONANZ;
 
-	/**
+    /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9794,7 +10290,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__GERAETESTUFE = RESONANZ_PERSONA__GERAETESTUFE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9803,7 +10299,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__ANGRIFF = RESONANZ_PERSONA__ANGRIFF;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9812,7 +10308,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__SCHLEICHER = RESONANZ_PERSONA__SCHLEICHER;
 
-	/**
+    /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9821,7 +10317,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__DATENVERARBEITUNG = RESONANZ_PERSONA__DATENVERARBEITUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9830,7 +10326,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__FIREWALL = RESONANZ_PERSONA__FIREWALL;
 
-	/**
+    /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9839,7 +10335,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__RESONANZ_BASIS = RESONANZ_PERSONA__RESONANZ_BASIS;
 
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9848,7 +10344,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__BESCHREIBUNG = RESONANZ_PERSONA_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9857,7 +10353,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__IMAGE = RESONANZ_PERSONA_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9866,88 +10362,97 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE__NAME = RESONANZ_PERSONA_FEATURE_COUNT + 2;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPRITE__PARENT_ID = RESONANZ_PERSONA_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__PAGE = RESONANZ_PERSONA_FEATURE_COUNT + 3;
+	int SPRITE__PAGE = RESONANZ_PERSONA_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__SRC_BOOK = RESONANZ_PERSONA_FEATURE_COUNT + 4;
+	int SPRITE__SRC_BOOK = RESONANZ_PERSONA_FEATURE_COUNT + 5;
 
-	/**
+    /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__STUFE = RESONANZ_PERSONA_FEATURE_COUNT + 5;
+	int SPRITE__STUFE = RESONANZ_PERSONA_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The feature id for the '<em><b>Angriff Mod</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__ANGRIFF_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 6;
+	int SPRITE__ANGRIFF_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 7;
 
-	/**
+    /**
      * The feature id for the '<em><b>Schleicher Mod</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__SCHLEICHER_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 7;
+	int SPRITE__SCHLEICHER_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 8;
 
-	/**
+    /**
      * The feature id for the '<em><b>Datenverarbeitung Mod</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__DATENVERARBEITUNG_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 8;
+	int SPRITE__DATENVERARBEITUNG_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 9;
 
-	/**
+    /**
      * The feature id for the '<em><b>Firewall Mod</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__FIREWALL_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 9;
+	int SPRITE__FIREWALL_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 10;
 
-	/**
+    /**
      * The feature id for the '<em><b>Initative Mod</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__INITATIVE_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 10;
+	int SPRITE__INITATIVE_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 11;
 
-	/**
+    /**
      * The number of structural features of the '<em>Sprite</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE_FEATURE_COUNT = RESONANZ_PERSONA_FEATURE_COUNT + 11;
+	int SPRITE_FEATURE_COUNT = RESONANZ_PERSONA_FEATURE_COUNT + 12;
 
-	/**
+    /**
      * The number of operations of the '<em>Sprite</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9956,17 +10461,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRITE_OPERATION_COUNT = RESONANZ_PERSONA_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.EchoImpl <em>Echo</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.EchoImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getEcho()
-     * @generated
-     */
-	int ECHO = 67;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9975,7 +10470,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO__BESCHREIBUNG = ABSTRAKT_MODIFIKATOREN__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9984,7 +10479,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO__IMAGE = ABSTRAKT_MODIFIKATOREN__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9993,7 +10488,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO__NAME = ABSTRAKT_MODIFIKATOREN__NAME;
 
-	/**
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10002,7 +10497,16 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO__MODS = ABSTRAKT_MODIFIKATOREN__MODS;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ECHO__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10011,7 +10515,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO__PAGE = ABSTRAKT_MODIFIKATOREN__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10020,7 +10524,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO__SRC_BOOK = ABSTRAKT_MODIFIKATOREN__SRC_BOOK;
 
-	/**
+    /**
      * The number of structural features of the '<em>Echo</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10029,7 +10533,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO_FEATURE_COUNT = ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Echo</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10038,17 +10542,7 @@ public interface Shr5Package extends EPackage {
      */
 	int ECHO_OPERATION_COUNT = ABSTRAKT_MODIFIKATOREN_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.VertragImpl <em>Vertrag</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.VertragImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getVertrag()
-     * @generated
-     */
-	int VERTRAG = 68;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10057,7 +10551,7 @@ public interface Shr5Package extends EPackage {
      */
 	int VERTRAG__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10066,7 +10560,7 @@ public interface Shr5Package extends EPackage {
      */
 	int VERTRAG__IMAGE = BESCHREIBBAR__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10075,50 +10569,59 @@ public interface Shr5Package extends EPackage {
      */
 	int VERTRAG__NAME = BESCHREIBBAR__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int VERTRAG__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int VERTRAG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int VERTRAG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG__WERT = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int VERTRAG__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int VERTRAG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int VERTRAG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 4;
+    int VERTRAG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of structural features of the '<em>Vertrag</em>' class.
@@ -10127,9 +10630,9 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
 
-	/**
+    /**
      * The number of operations of the '<em>Vertrag</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10137,16 +10640,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int VERTRAG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
-
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl <em>Intervall Vertrag</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getIntervallVertrag()
-     * @generated
-     */
-    int INTERVALL_VERTRAG = 74;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -10174,6 +10667,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int INTERVALL_VERTRAG__NAME = VERTRAG__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__PARENT_ID = VERTRAG__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -10248,16 +10750,6 @@ public interface Shr5Package extends EPackage {
     int INTERVALL_VERTRAG_OPERATION_COUNT = VERTRAG_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl <em>Lifestyle</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.LifestyleImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLifestyle()
-     * @generated
-     */
-	int LIFESTYLE = 69;
-
-	/**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10266,7 +10758,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__BESCHREIBUNG = INTERVALL_VERTRAG__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10275,7 +10767,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__IMAGE = INTERVALL_VERTRAG__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10284,7 +10776,16 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__NAME = INTERVALL_VERTRAG__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__PARENT_ID = INTERVALL_VERTRAG__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10293,7 +10794,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__PAGE = INTERVALL_VERTRAG__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10302,7 +10803,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__SRC_BOOK = INTERVALL_VERTRAG__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10311,7 +10812,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__WERT = INTERVALL_VERTRAG__WERT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10320,7 +10821,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__VERFUEGBARKEIT = INTERVALL_VERTRAG__VERFUEGBARKEIT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10338,7 +10839,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE__FAELLIGKEITS_INTERVALL = INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL;
 
-	/**
+    /**
      * The number of structural features of the '<em>Lifestyle</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10347,7 +10848,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE_FEATURE_COUNT = INTERVALL_VERTRAG_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Lifestyle</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10356,17 +10857,7 @@ public interface Shr5Package extends EPackage {
      */
 	int LIFESTYLE_OPERATION_COUNT = INTERVALL_VERTRAG_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WissensfertigkeitImpl <em>Wissensfertigkeit</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.WissensfertigkeitImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWissensfertigkeit()
-     * @generated
-     */
-	int WISSENSFERTIGKEIT = 70;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10375,7 +10866,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__BESCHREIBUNG = FERTIGKEIT__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10384,7 +10875,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__IMAGE = FERTIGKEIT__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10393,7 +10884,16 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__NAME = FERTIGKEIT__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WISSENSFERTIGKEIT__PARENT_ID = FERTIGKEIT__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10402,7 +10902,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__PAGE = FERTIGKEIT__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10411,7 +10911,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__SRC_BOOK = FERTIGKEIT__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10420,7 +10920,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__KATEGORIE = FERTIGKEIT__KATEGORIE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10429,7 +10929,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__AUSWEICHEN = FERTIGKEIT__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Attribut</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10438,7 +10938,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__ATTRIBUT = FERTIGKEIT__ATTRIBUT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10447,7 +10947,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT__SPEZIALISIERUNGEN = FERTIGKEIT__SPEZIALISIERUNGEN;
 
-	/**
+    /**
      * The number of structural features of the '<em>Wissensfertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10456,7 +10956,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT_FEATURE_COUNT = FERTIGKEIT_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Wissensfertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10465,17 +10965,7 @@ public interface Shr5Package extends EPackage {
      */
 	int WISSENSFERTIGKEIT_OPERATION_COUNT = FERTIGKEIT_OPERATION_COUNT + 0;
 
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SprachfertigkeitImpl <em>Sprachfertigkeit</em>}' class.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.SprachfertigkeitImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSprachfertigkeit()
-     * @generated
-     */
-	int SPRACHFERTIGKEIT = 71;
-
-	/**
+    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10484,7 +10974,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__BESCHREIBUNG = WISSENSFERTIGKEIT__BESCHREIBUNG;
 
-	/**
+    /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10493,7 +10983,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__IMAGE = WISSENSFERTIGKEIT__IMAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10502,7 +10992,16 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__NAME = WISSENSFERTIGKEIT__NAME;
 
-	/**
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPRACHFERTIGKEIT__PARENT_ID = WISSENSFERTIGKEIT__PARENT_ID;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10511,7 +11010,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__PAGE = WISSENSFERTIGKEIT__PAGE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10520,7 +11019,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__SRC_BOOK = WISSENSFERTIGKEIT__SRC_BOOK;
 
-	/**
+    /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10529,7 +11028,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__KATEGORIE = WISSENSFERTIGKEIT__KATEGORIE;
 
-	/**
+    /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10538,7 +11037,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__AUSWEICHEN = WISSENSFERTIGKEIT__AUSWEICHEN;
 
-	/**
+    /**
      * The feature id for the '<em><b>Attribut</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10547,7 +11046,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__ATTRIBUT = WISSENSFERTIGKEIT__ATTRIBUT;
 
-	/**
+    /**
      * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10556,7 +11055,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT__SPEZIALISIERUNGEN = WISSENSFERTIGKEIT__SPEZIALISIERUNGEN;
 
-	/**
+    /**
      * The number of structural features of the '<em>Sprachfertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10565,7 +11064,7 @@ public interface Shr5Package extends EPackage {
      */
 	int SPRACHFERTIGKEIT_FEATURE_COUNT = WISSENSFERTIGKEIT_FEATURE_COUNT + 0;
 
-	/**
+    /**
      * The number of operations of the '<em>Sprachfertigkeit</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10573,16 +11072,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int SPRACHFERTIGKEIT_OPERATION_COUNT = WISSENSFERTIGKEIT_OPERATION_COUNT + 0;
-
-	/**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.PersonaZustand <em>Persona Zustand</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.PersonaZustand
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonaZustand()
-     * @generated
-     */
-    int PERSONA_ZUSTAND = 72;
 
     /**
      * The feature id for the '<em><b>Zustand Koerperlich Max</b></em>' attribute.
@@ -10630,16 +11119,6 @@ public interface Shr5Package extends EPackage {
     int PERSONA_ZUSTAND_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CritterImpl <em>Critter</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.CritterImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritter()
-     * @generated
-     */
-    int CRITTER = 73;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10674,6 +11153,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CRITTER__MODS = SPEZIES__MODS;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CRITTER__PARENT_ID = SPEZIES__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -10973,16 +11461,6 @@ public interface Shr5Package extends EPackage {
     int CRITTER_OPERATION_COUNT = SPEZIES_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FakeableImpl <em>Fakeable</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.FakeableImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFakeable()
-     * @generated
-     */
-    int FAKEABLE = 77;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11008,6 +11486,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int FAKEABLE__NAME = VERTRAG__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__PARENT_ID = VERTRAG__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11091,16 +11578,6 @@ public interface Shr5Package extends EPackage {
     int FAKEABLE_OPERATION_COUNT = VERTRAG_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SinImpl <em>Sin</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.SinImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSin()
-     * @generated
-     */
-    int SIN = 75;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11126,6 +11603,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SIN__NAME = FAKEABLE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__PARENT_ID = FAKEABLE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11209,16 +11695,6 @@ public interface Shr5Package extends EPackage {
     int SIN_OPERATION_COUNT = FAKEABLE_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl <em>Lizenz</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.LizenzImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLizenz()
-     * @generated
-     */
-    int LIZENZ = 76;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11244,6 +11720,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int LIZENZ__NAME = FAKEABLE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__PARENT_ID = FAKEABLE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11345,14 +11830,13 @@ public interface Shr5Package extends EPackage {
     int LIZENZ_OPERATION_COUNT = FAKEABLE_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl <em>Credstick</em>}' class.
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.CredstickImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCredstick()
      * @generated
+     * @ordered
      */
-    int CREDSTICK = 80;
+    int CREDSTICK__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11481,16 +11965,6 @@ public interface Shr5Package extends EPackage {
     int CREDSTICK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Menge <em>Menge</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.Menge
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMenge()
-     * @generated
-     */
-    int MENGE = 81;
-
-    /**
      * The feature id for the '<em><b>Anzahl</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11527,14 +12001,13 @@ public interface Shr5Package extends EPackage {
     int MENGE_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl <em>Munition</em>}' class.
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.MunitionImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMunition()
      * @generated
+     * @ordered
      */
-    int MUNITION = 82;
+    int MUNITION__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11699,16 +12172,6 @@ public interface Shr5Package extends EPackage {
     int MUNITION_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl <em>Gebundener Geist</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGebundenerGeist()
-     * @generated
-     */
-    int GEBUNDENER_GEIST = 84;
-
-    /**
      * The feature id for the '<em><b>Dienste</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11745,14 +12208,13 @@ public interface Shr5Package extends EPackage {
     int GEBUNDENER_GEIST_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl <em>Stufen Persona</em>}' class.
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getStufenPersona()
      * @generated
+     * @ordered
      */
-    int STUFEN_PERSONA = 85;
+    int STUFEN_PERSONA__PARENT_ID = QUELLE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12007,14 +12469,13 @@ public interface Shr5Package extends EPackage {
     int STUFEN_PERSONA_OPERATION_COUNT = QUELLE_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GeistImpl <em>Geist</em>}' class.
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.GeistImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeist()
      * @generated
+     * @ordered
      */
-    int GEIST = 86;
+    int GEIST__PARENT_ID = STUFEN_PERSONA__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12350,16 +12811,6 @@ public interface Shr5Package extends EPackage {
     int GEIST_OPERATION_COUNT = STUFEN_PERSONA_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.GeisterArtImpl <em>Geister Art</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.GeisterArtImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getGeisterArt()
-     * @generated
-     */
-    int GEISTER_ART = 87;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12394,6 +12845,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int GEISTER_ART__MODS = CRITTER__MODS;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEISTER_ART__PARENT_ID = CRITTER__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12700,7 +13160,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 88;
+	int FEUER_MODUS = 89;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -12710,7 +13170,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 89;
+	int SCHADENS_TYP = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -12720,7 +13180,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 90;
+	int MAGAZIN_TYP = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -12730,7 +13190,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 91;
+	int FEUWERWAFFEN_ERWEITERUNG = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -12740,7 +13200,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 92;
+	int MODIFIKATOR_TYPE = 93;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -12750,7 +13210,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 93;
+	int SMARTGUN_TYPE = 94;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -12760,7 +13220,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 94;
+	int ZAUBER_ART = 95;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -12770,7 +13230,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 95;
+	int ZAUBER_REICHWEITE = 96;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -12780,7 +13240,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 96;
+	int ZAUBER_DAUER = 97;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -12790,7 +13250,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 97;
+	int MAGISCHE_TRADITION = 98;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -12800,7 +13260,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 98;
+	int CRITTER_HANDLUNG = 99;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -12810,7 +13270,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 99;
+	int CRITTER_REICHWEITE = 100;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -12820,7 +13280,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 100;
+	int CRITTER_DAUER = 101;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -12830,7 +13290,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 101;
+	int RESONANZ_ZIEL = 102;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -12840,7 +13300,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 102;
+	int SHR_DATE = 103;
 
 
 	/**
@@ -12851,7 +13311,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 103;
+	int MODIFICATION_MANAGER = 104;
 
 
 	/**
@@ -16144,6 +16604,27 @@ public interface Shr5Package extends EPackage {
     EClass getGeisterArt();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Identifiable <em>Identifiable</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Identifiable</em>'.
+     * @see de.urszeidler.eclipse.shr5.Identifiable
+     * @generated
+     */
+    EClass getIdentifiable();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Identifiable#getParentId <em>Parent Id</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Parent Id</em>'.
+     * @see de.urszeidler.eclipse.shr5.Identifiable#getParentId()
+     * @see #getIdentifiable()
+     * @generated
+     */
+    EAttribute getIdentifiable_ParentId();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18959,6 +19440,24 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass GEISTER_ART = eINSTANCE.getGeisterArt();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Identifiable <em>Identifiable</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Identifiable
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getIdentifiable()
+         * @generated
+         */
+        EClass IDENTIFIABLE = eINSTANCE.getIdentifiable();
+
+        /**
+         * The meta object literal for the '<em><b>Parent Id</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute IDENTIFIABLE__PARENT_ID = eINSTANCE.getIdentifiable_ParentId();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

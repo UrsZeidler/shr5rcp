@@ -64,6 +64,7 @@ public class VertragItemProvider
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
+            addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
@@ -140,6 +141,28 @@ public class VertragItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Page feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,6 +319,7 @@ public class VertragItemProvider
             case Shr5Package.VERTRAG__BESCHREIBUNG:
             case Shr5Package.VERTRAG__IMAGE:
             case Shr5Package.VERTRAG__NAME:
+            case Shr5Package.VERTRAG__PARENT_ID:
             case Shr5Package.VERTRAG__PAGE:
             case Shr5Package.VERTRAG__WERT:
             case Shr5Package.VERTRAG__VERFUEGBARKEIT:

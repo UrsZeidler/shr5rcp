@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.ui.celleditor.FeatureEditorDialog;
@@ -33,6 +34,7 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Gegenstand;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Munition;
@@ -642,7 +644,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
      */
     private List<EObject> handleCopyAddToPersona(EReference object_ref, EObject orgObject) {
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(getEObject(), object_ref.getEType());
-
         ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
         FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), labelProvider, basicList,
@@ -656,6 +657,14 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 if (object instanceof EObject) {
                     EObject eo = (EObject)object;
                     EObject copy = EcoreUtil.copy(eo);
+                    if (eo.eResource() instanceof XMLResource) {
+                        XMLResource xmlRes = (XMLResource)eo.eResource();
+                        String id = xmlRes.getID(eo);
+                        if (copy instanceof Identifiable) {
+                            Identifiable iden = (Identifiable)copy;
+                            iden.setParentId(id);
+                        }
+                    }
                     objectList.add(copy);
                 }
             }

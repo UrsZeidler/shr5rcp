@@ -60,6 +60,7 @@ public class AbstraktGegenstandItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
@@ -74,6 +75,28 @@ public class AbstraktGegenstandItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Page feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -327,6 +350,7 @@ public class AbstraktGegenstandItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(AbstraktGegenstand.class)) {
+            case Shr5Package.ABSTRAKT_GEGENSTAND__PARENT_ID:
             case Shr5Package.ABSTRAKT_GEGENSTAND__PAGE:
             case Shr5Package.ABSTRAKT_GEGENSTAND__WERT:
             case Shr5Package.ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT:

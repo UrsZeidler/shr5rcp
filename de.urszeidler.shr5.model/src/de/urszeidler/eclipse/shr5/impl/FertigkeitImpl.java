@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -28,6 +29,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getKategorie <em>Kategorie</em>}</li>
@@ -101,6 +103,26 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	protected String name = NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,7 +132,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      */
 	protected static final String PAGE_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,7 +142,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      */
 	protected String page = PAGE_EDEFAULT;
 
-	/**
+    /**
      * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,7 +152,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      */
 	protected SourceBook srcBook;
 
-	/**
+    /**
      * The default value of the '{@link #getKategorie() <em>Kategorie</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -333,6 +355,27 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FERTIGKEIT__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -437,6 +480,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
                 return getImage();
             case Shr5Package.FERTIGKEIT__NAME:
                 return getName();
+            case Shr5Package.FERTIGKEIT__PARENT_ID:
+                return getParentId();
             case Shr5Package.FERTIGKEIT__PAGE:
                 return getPage();
             case Shr5Package.FERTIGKEIT__SRC_BOOK:
@@ -472,6 +517,9 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
                 return;
             case Shr5Package.FERTIGKEIT__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5Package.FERTIGKEIT__PARENT_ID:
+                setParentId((String)newValue);
                 return;
             case Shr5Package.FERTIGKEIT__PAGE:
                 setPage((String)newValue);
@@ -513,6 +561,9 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
             case Shr5Package.FERTIGKEIT__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case Shr5Package.FERTIGKEIT__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.FERTIGKEIT__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -549,6 +600,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5Package.FERTIGKEIT__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.FERTIGKEIT__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.FERTIGKEIT__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.FERTIGKEIT__SRC_BOOK:
@@ -572,6 +625,12 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.FERTIGKEIT__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.FERTIGKEIT__PAGE: return Shr5Package.QUELLE__PAGE;
@@ -589,6 +648,12 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.FERTIGKEIT__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.FERTIGKEIT__PAGE;
@@ -615,6 +680,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(", page: ");
         result.append(page);
         result.append(", kategorie: ");

@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.StufenPersonaImpl#getInitative <em>Initative</em>}</li>
@@ -71,6 +72,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container implements StufenPersona {
+    /**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -415,6 +436,27 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.STUFEN_PERSONA__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public String getPage() {
         return page;
     }
@@ -628,6 +670,8 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
      * @generated
      */
     public int getStaerke() {
+        // TODO: implement this method to return the 'Staerke' attribute
+        // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();
     }
 
@@ -807,6 +851,8 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.STUFEN_PERSONA__PARENT_ID:
+                return getParentId();
             case Shr5Package.STUFEN_PERSONA__PAGE:
                 return getPage();
             case Shr5Package.STUFEN_PERSONA__SRC_BOOK:
@@ -873,6 +919,9 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case Shr5Package.STUFEN_PERSONA__PARENT_ID:
+                setParentId((String)newValue);
+                return;
             case Shr5Package.STUFEN_PERSONA__PAGE:
                 setPage((String)newValue);
                 return;
@@ -914,6 +963,9 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+            case Shr5Package.STUFEN_PERSONA__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.STUFEN_PERSONA__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -953,6 +1005,8 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.STUFEN_PERSONA__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.STUFEN_PERSONA__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.STUFEN_PERSONA__SRC_BOOK:
@@ -1151,7 +1205,9 @@ public abstract class StufenPersonaImpl extends MinimalEObjectImpl.Container imp
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (page: ");
+        result.append(" (parentId: ");
+        result.append(parentId);
+        result.append(", page: ");
         result.append(page);
         result.append(", edgeBasis: ");
         result.append(edgeBasis);

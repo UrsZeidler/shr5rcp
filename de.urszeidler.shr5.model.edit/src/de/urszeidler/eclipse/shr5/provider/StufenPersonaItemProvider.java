@@ -64,6 +64,7 @@ public class StufenPersonaItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addInitativePropertyDescriptor(object);
@@ -90,6 +91,28 @@ public class StufenPersonaItemProvider
             addStufePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -677,6 +700,7 @@ public class StufenPersonaItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(StufenPersona.class)) {
+            case Shr5Package.STUFEN_PERSONA__PARENT_ID:
             case Shr5Package.STUFEN_PERSONA__PAGE:
             case Shr5Package.STUFEN_PERSONA__INITATIVE:
             case Shr5Package.STUFEN_PERSONA__INITATIV_WUERFEL:

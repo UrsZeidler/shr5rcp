@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -23,6 +24,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MetaMagieImpl#getSrcBook <em>Src Book</em>}</li>
  * </ul>
@@ -92,6 +94,26 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
 	protected String name = NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -162,6 +184,27 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.META_MAGIE__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -276,6 +319,8 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
                 return getImage();
             case Shr5Package.META_MAGIE__NAME:
                 return getName();
+            case Shr5Package.META_MAGIE__PARENT_ID:
+                return getParentId();
             case Shr5Package.META_MAGIE__PAGE:
                 return getPage();
             case Shr5Package.META_MAGIE__SRC_BOOK:
@@ -301,6 +346,9 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
                 return;
             case Shr5Package.META_MAGIE__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5Package.META_MAGIE__PARENT_ID:
+                setParentId((String)newValue);
                 return;
             case Shr5Package.META_MAGIE__PAGE:
                 setPage((String)newValue);
@@ -329,6 +377,9 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
             case Shr5Package.META_MAGIE__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case Shr5Package.META_MAGIE__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.META_MAGIE__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -353,6 +404,8 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5Package.META_MAGIE__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.META_MAGIE__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.META_MAGIE__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.META_MAGIE__SRC_BOOK:
@@ -368,6 +421,12 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
      */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.META_MAGIE__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.META_MAGIE__PAGE: return Shr5Package.QUELLE__PAGE;
@@ -385,6 +444,12 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
      */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.META_MAGIE__PARENT_ID;
+                default: return -1;
+            }
+        }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.META_MAGIE__PAGE;
@@ -411,6 +476,8 @@ public class MetaMagieImpl extends MinimalEObjectImpl.Container implements MetaM
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(", page: ");
         result.append(page);
         result.append(')');

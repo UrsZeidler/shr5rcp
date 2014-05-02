@@ -94,6 +94,7 @@
           <xsd:element name="lifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>
           <xsd:element name="characterAdvancements" type="shr5mngt:CharacterAdvancementSystem"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="characterAdvancements" type="xsd:string"/>

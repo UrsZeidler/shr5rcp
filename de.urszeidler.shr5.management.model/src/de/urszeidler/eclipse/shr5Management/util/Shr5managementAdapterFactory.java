@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5Management.*;
 
@@ -223,6 +224,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
+            }
+            @Override
+            public Adapter caseIdentifiable(Identifiable object) {
+                return createIdentifiableAdapter();
             }
             @Override
             public Adapter caseQuelle(Quelle object) {
@@ -795,6 +800,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
     }
 
 	/**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Identifiable <em>Identifiable</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Identifiable
+     * @generated
+     */
+    public Adapter createIdentifiableAdapter() {
+        return null;
+    }
+
+    /**
      * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Quelle <em>Quelle</em>}'.
      * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;

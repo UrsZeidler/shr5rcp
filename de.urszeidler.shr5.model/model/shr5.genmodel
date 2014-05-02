@@ -5,7 +5,7 @@
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>shr5.ecore</foreignModel>
-  <genPackages prefix="Shr5" basePackage="de.urszeidler.eclipse" disposableProviderFactory="true"
+  <genPackages prefix="Shr5" basePackage="de.urszeidler.eclipse" resource="XMI" disposableProviderFactory="true"
       ecorePackage="shr5.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//FeuerModus">
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//FeuerModus/EM"/>
@@ -459,5 +459,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Geist/spezies"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//GeisterArt"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Identifiable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Identifiable/parentId"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

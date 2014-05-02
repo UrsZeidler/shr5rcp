@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getWert <em>Wert</em>}</li>
@@ -49,6 +50,26 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  */
 public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Container implements AbstraktGegenstand {
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -228,6 +249,27 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_GEGENSTAND__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -487,6 +529,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.ABSTRAKT_GEGENSTAND__PARENT_ID:
+                return getParentId();
             case Shr5Package.ABSTRAKT_GEGENSTAND__PAGE:
                 return getPage();
             case Shr5Package.ABSTRAKT_GEGENSTAND__SRC_BOOK:
@@ -522,6 +566,9 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case Shr5Package.ABSTRAKT_GEGENSTAND__PARENT_ID:
+                setParentId((String)newValue);
+                return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__PAGE:
                 setPage((String)newValue);
                 return;
@@ -562,6 +609,9 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
         switch (featureID) {
+            case Shr5Package.ABSTRAKT_GEGENSTAND__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
             case Shr5Package.ABSTRAKT_GEGENSTAND__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -601,6 +651,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.ABSTRAKT_GEGENSTAND__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
             case Shr5Package.ABSTRAKT_GEGENSTAND__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.ABSTRAKT_GEGENSTAND__SRC_BOOK:
@@ -711,7 +763,9 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (page: ");
+        result.append(" (parentId: ");
+        result.append(parentId);
+        result.append(", page: ");
         result.append(page);
         result.append(", verfuegbarkeit: ");
         result.append(verfuegbarkeit);

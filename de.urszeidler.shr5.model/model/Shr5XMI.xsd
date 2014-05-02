@@ -117,14 +117,15 @@
   </xsd:complexType>
   <xsd:element name="Beschreibbar" type="shr5:Beschreibbar"/>
   <xsd:complexType abstract="true" name="Quelle">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element name="srcBook" type="shr5:SourceBook"/>
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="page" type="xsd:string"/>
-    <xsd:attribute name="srcBook" type="xsd:string"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Identifiable">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Quelle" type="shr5:Quelle"/>
   <xsd:complexType name="SourceBook">
@@ -376,6 +377,7 @@
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="fertigkeiten" type="shr5:Fertigkeit"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
       </xsd:extension>
@@ -390,6 +392,7 @@
           <xsd:element name="spezialisierungen" nillable="true" type="xsd:string"/>
           <xsd:element name="attribut" type="ecore:EAttribute"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="kategorie" type="xsd:string"/>
@@ -478,6 +481,7 @@
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
       </xsd:extension>
@@ -583,6 +587,7 @@
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="angriff" type="shr5:Nahkampfwaffe"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="konstitutionMin" type="xsd:int"/>
@@ -754,6 +759,7 @@
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="art" type="shr5:ZauberArt"/>
@@ -842,6 +848,7 @@
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
       </xsd:extension>
@@ -867,6 +874,7 @@
           <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
           <xsd:element name="modifizierungen" type="shr5:FahrzeugModifikation"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string">
@@ -921,6 +929,7 @@
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="funktion" type="shr5:AbstraktGegenstand"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string">
@@ -992,6 +1001,7 @@
         <xsd:attribute name="beschreibung" type="xsd:string"/>
         <xsd:attribute name="image" type="xsd:string"/>
         <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="stufe" type="xsd:int"/>
@@ -1016,6 +1026,7 @@
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
         <xsd:attribute name="verfuegbarkeit" type="xsd:string">
@@ -1282,4 +1293,13 @@ Here the attribute min as additional rating.</xsd:documentation>
 Here the attribute min as additional rating.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType abstract="true" name="Identifiable">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="parentId" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Identifiable" type="shr5:Identifiable"/>
 </xsd:schema>

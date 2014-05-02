@@ -21,18 +21,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleReaktion <em>Astrale Reaktion</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleStaerke <em>Astrale Staerke</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitative <em>Astrale Initative</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSpezies <em>Spezies</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleReaktion <em>Astrale Reaktion</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleStaerke <em>Astrale Staerke</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitative <em>Astrale Initative</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSpezies <em>Spezies</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class GeistImpl extends StufenPersonaImpl implements Geist {
@@ -40,7 +40,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstralesLimit() <em>Astrales Limit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstralesLimit()
      * @generated
      * @ordered
@@ -51,7 +50,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleKonstitution() <em>Astrale Konstitution</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleKonstitution()
      * @generated
      * @ordered
@@ -62,7 +60,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleGeschicklichkeit() <em>Astrale Geschicklichkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleGeschicklichkeit()
      * @generated
      * @ordered
@@ -73,7 +70,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleReaktion() <em>Astrale Reaktion</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleReaktion()
      * @generated
      * @ordered
@@ -84,7 +80,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleStaerke() <em>Astrale Staerke</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleStaerke()
      * @generated
      * @ordered
@@ -95,7 +90,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleInitative() <em>Astrale Initative</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleInitative()
      * @generated
      * @ordered
@@ -106,7 +100,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstraleInitativWuerfel() <em>Astrale Initativ Wuerfel</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleInitativWuerfel()
      * @generated
      * @ordered
@@ -117,7 +110,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The default value of the '{@link #getAstralePanzerung() <em>Astrale Panzerung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstralePanzerung()
      * @generated
      * @ordered
@@ -128,7 +120,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
      * The cached value of the '{@link #getSpezies() <em>Spezies</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSpezies()
      * @generated
      * @ordered
@@ -138,7 +129,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GeistImpl() {
@@ -148,7 +138,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -244,7 +233,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public GeisterArt getSpezies() {
@@ -262,7 +250,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public GeisterArt basicGetSpezies() {
@@ -272,7 +259,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSpezies(GeisterArt newSpezies) {
@@ -285,7 +271,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -308,8 +293,7 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
             case Shr5Package.GEIST__ASTRALE_PANZERUNG:
                 return getAstralePanzerung();
             case Shr5Package.GEIST__SPEZIES:
-                if (resolve)
-                    return getSpezies();
+                if (resolve) return getSpezies();
                 return basicGetSpezies();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -318,7 +302,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -334,7 +317,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -350,7 +332,6 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -381,31 +362,21 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == AstraleProjektion.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__ASTRALES_LIMIT:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
-                case Shr5Package.GEIST__ASTRALE_KONSTITUTION:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
-                case Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
-                case Shr5Package.GEIST__ASTRALE_REAKTION:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
-                case Shr5Package.GEIST__ASTRALE_STAERKE:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
-                case Shr5Package.GEIST__ASTRALE_INITATIVE:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
-                case Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
-                case Shr5Package.GEIST__ASTRALE_PANZERUNG:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__ASTRALES_LIMIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
+                case Shr5Package.GEIST__ASTRALE_KONSTITUTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
+                case Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.GEIST__ASTRALE_REAKTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
+                case Shr5Package.GEIST__ASTRALE_STAERKE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
+                case Shr5Package.GEIST__ASTRALE_INITATIVE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
+                case Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.GEIST__ASTRALE_PANZERUNG: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -414,31 +385,21 @@ public class GeistImpl extends StufenPersonaImpl implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == AstraleProjektion.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT:
-                    return Shr5Package.GEIST__ASTRALES_LIMIT;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION:
-                    return Shr5Package.GEIST__ASTRALE_KONSTITUTION;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT:
-                    return Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION:
-                    return Shr5Package.GEIST__ASTRALE_REAKTION;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE:
-                    return Shr5Package.GEIST__ASTRALE_STAERKE;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE:
-                    return Shr5Package.GEIST__ASTRALE_INITATIVE;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL:
-                    return Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG:
-                    return Shr5Package.GEIST__ASTRALE_PANZERUNG;
-                default:
-                    return -1;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT: return Shr5Package.GEIST__ASTRALES_LIMIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION: return Shr5Package.GEIST__ASTRALE_KONSTITUTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION: return Shr5Package.GEIST__ASTRALE_REAKTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE: return Shr5Package.GEIST__ASTRALE_STAERKE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE: return Shr5Package.GEIST__ASTRALE_INITATIVE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL: return Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG: return Shr5Package.GEIST__ASTRALE_PANZERUNG;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
