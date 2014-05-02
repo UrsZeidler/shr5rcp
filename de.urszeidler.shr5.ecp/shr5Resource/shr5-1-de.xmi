@@ -3752,79 +3752,79 @@
 <entries xsi:type="shr5:Critter" konstitutionMin="3" konstitutionMax="3" geschicklichkeitMin="4" geschicklichkeitMax="4" reaktionMax="3" reaktionMin="3" staerkeMax="2" staerkeMin="2" charismaMax="2" charismaMin="2" willenskraftMax="4" willenskraftMin="4" intuitionMax="4" intuitionMin="4" logikMax="2" logikMin="2" edgeMax="2" edgeMin="2" resonanzMax="6" essenzMax="6" name="Stymphalian" page="159" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" edgeMax="12" edgeMin="1" resonanzMax="6" essenzMax="6" name="Ally Spirit" page="103" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" edgeMax="12" edgeMin="1" resonanzMax="6" essenzMax="6" name="Ally Spirit" page="103" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Luftgeist" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Luftgeist" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Spirit of Air, Greater Form" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Spirit of Air, Greater Form" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Geist des Tieres" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Geist des Tieres" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Spirit of Beasts, Greater Form" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Spirit of Beasts, Greater Form" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Erdgeist" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Erdgeist" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Spirit of Earth, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Spirit of Earth, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Feuergeist" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Feuergeist" page="302" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Spirit of Fire, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Spirit of Fire, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Geist des Menschen" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Geist des Menschen" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Spirit of Man, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Spirit of Man, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Wassergeist" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Wassergeist" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Spirit of Water, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Spirit of Water, Greater Form" page="303" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" konstitutionMin="1" konstitutionMax="1" geschicklichkeitMin="1" geschicklichkeitMax="1" reaktionMax="1" reaktionMin="1" staerkeMax="1" staerkeMin="1" charismaMax="1" charismaMin="1" willenskraftMax="1" willenskraftMin="1" intuitionMax="1" intuitionMin="1" logikMax="1" logikMin="1" resonanzMax="6" essenzMax="6" name="Watcher" page="297" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" konstitutionMin="1" konstitutionMax="1" geschicklichkeitMin="1" geschicklichkeitMax="1" reaktionMax="1" reaktionMin="1" staerkeMax="1" staerkeMin="1" charismaMax="1" charismaMin="1" willenskraftMax="1" willenskraftMin="1" intuitionMax="1" intuitionMin="1" logikMax="1" logikMin="1" resonanzMax="6" essenzMax="6" name="Watcher" page="297" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" konstitutionMin="1" konstitutionMax="1" geschicklichkeitMin="1" geschicklichkeitMax="1" reaktionMax="1" reaktionMin="1" staerkeMax="1" staerkeMin="1" charismaMax="1" charismaMin="1" willenskraftMax="1" willenskraftMin="1" intuitionMax="1" intuitionMin="1" logikMax="1" logikMin="1" resonanzMax="6" essenzMax="6" name="Homunkulus" page="297" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" konstitutionMin="1" konstitutionMax="1" geschicklichkeitMin="1" geschicklichkeitMax="1" reaktionMax="1" reaktionMin="1" staerkeMax="1" staerkeMin="1" charismaMax="1" charismaMin="1" willenskraftMax="1" willenskraftMin="1" intuitionMax="1" intuitionMin="1" logikMax="1" logikMin="1" resonanzMax="6" essenzMax="6" name="Homunkulus" page="297" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Guardian Spirit" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Guardian Spirit" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Guardian Spirit, Greater Form" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Guardian Spirit, Greater Form" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Guidance Spirit" page="97" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Guidance Spirit" page="97" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Guidance Spirit, Greater Form" page="97" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Guidance Spirit, Greater Form" page="97" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Plant Spirit" page="98" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Plant Spirit" page="98" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Plant Spirit, Greater Form" page="98" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Plant Spirit, Greater Form" page="98" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Task Spirit" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Task Spirit" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Task Spirit, Greater Form" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Task Spirit, Greater Form" page="96" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Abomination Spirit" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Abomination Spirit" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Acid Spirit" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Acid Spirit" page="144" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
 <entries xsi:type="shr5:Critter" konstitutionMin="1" konstitutionMax="1" geschicklichkeitMin="3" geschicklichkeitMax="3" reaktionMax="3" reaktionMin="3" staerkeMax="3" staerkeMin="3" charismaMax="3" charismaMin="3" willenskraftMax="3" willenskraftMin="3" intuitionMax="2" intuitionMin="2" logikMax="1" logikMin="1" resonanzMax="6" essenzMax="4" name="Blood Dog" page="163" srcBook="//@entries.0/@entries.0/@entries.0">
@@ -3905,25 +3905,25 @@
 <entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Grim Reaper" page="179" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Harbinger Spirit" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Harbinger Spirit" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Harrow Spirit" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Harrow Spirit" page="145" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Nuclear Spirit" page="146" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Nuclear Spirit" page="146" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Sludge Spirit" page="146" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Sludge Spirit" page="146" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Carnage Spirit" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Carnage Spirit" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Contagion Spirit" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Contagion Spirit" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Smog Spirit" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" resonanzMax="6" essenzMax="6" name="Smog Spirit" page="147" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
 <entries xsi:type="shr5:Critter" resonanzMax="6" essenzMax="6" name="Caretaker Spirit" page="152" srcBook="//@entries.0/@entries.0/@entries.0">
@@ -4325,7 +4325,7 @@
 <entries xsi:type="shr5:Critter" name="Money Trie" page="201" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
-<entries xsi:type="shr5:Critter" name="Free Spirit" page="91" srcBook="//@entries.0/@entries.0/@entries.0">
+<entries xsi:type="shr5:GeisterArt" name="Free Spirit" page="91" srcBook="//@entries.0/@entries.0/@entries.0">
 <angriff name="unarmed" schadenscode="(STR)P"/>
 </entries>
 <entries xsi:type="shr5:Critter" konstitutionMin="2" konstitutionMax="2" geschicklichkeitMin="5" geschicklichkeitMax="5" reaktionMax="4" reaktionMin="4" staerkeMax="2" staerkeMin="2" charismaMax="3" charismaMin="3" willenskraftMax="3" willenskraftMin="3" intuitionMax="4" intuitionMin="4" logikMax="1" logikMin="1" edgeMax="4" edgeMin="4" resonanzMax="6" essenzMax="6" name="Arctic Fox" page="72" srcBook="//@entries.0/@entries.0/@entries.0">

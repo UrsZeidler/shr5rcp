@@ -1659,11 +1659,39 @@
 		</entries>
 	</xsl:template>
 	<xsl:template match="//metatype" mode="critter">
+	<xsl:choose>
+			<xsl:when test="category/text()='Spirits'">
+		<entries xsi:type="shr5:GeisterArt">
+		<xsl:call-template name="species-data" />
+		<xsl:call-template name="geist-species" />
+		</entries>			
+		</xsl:when>
+			<xsl:when test="category/text()='Toxic Spirits'">
+		<entries xsi:type="shr5:GeisterArt">
+			<xsl:call-template name="species-data" />
+			<xsl:call-template name="geist-species" />
+		</entries>			
+		</xsl:when>
+		<xsl:otherwise>
 		<entries xsi:type="shr5:Critter">
 			<xsl:call-template name="species-data" />
-
-		</entries>
+		</entries>		
+		</xsl:otherwise>
+</xsl:choose>	
 	</xsl:template>
+
+<xsl:template name="geist-species" >
+			<xsl:if test="number(substring-after(bodmin/text(),'F'))">
+			<xsl:attribute name="konstitutionMin"><xsl:value-of
+				select="number(substring-after(bodmin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
+			<xsl:if test="number(substring-after(agimin/text(),'F'))">
+			<xsl:attribute name="geschicklichkeitMin"><xsl:value-of
+				select="number(substring-after(agimin/text(),'F'))" /></xsl:attribute>
+				</xsl:if>	
+
+</xsl:template>
+
 
 	<xsl:template name="species-data">
 		<xsl:if test="number(bodmin/text())">
