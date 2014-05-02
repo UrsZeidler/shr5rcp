@@ -85,7 +85,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         }
 
         /**
-         * @param the to provide the child for
+         * @param object the object to provide the child for
          * @param transformer the transformer
          * @param displayName text for the dialog
          * @param zauber
@@ -355,6 +355,11 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             
             TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_Spells, SWT.NONE, object,
                     Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger2, editingDomain);
+            managedForm.getToolkit().adapt(treeTableWidgetKiPower);
+            managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
+            
+            treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, "bound spirits", SWT.NONE, object,
+                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger2, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
 
