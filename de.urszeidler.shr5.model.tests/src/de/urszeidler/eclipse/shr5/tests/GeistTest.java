@@ -4,8 +4,8 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import de.urszeidler.eclipse.shr5.Geist;
+import de.urszeidler.eclipse.shr5.GeisterArt;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
-
 import junit.textui.TestRunner;
 
 /**
@@ -357,6 +357,44 @@ public class GeistTest extends StufenPersonaTest {
      * @generated not
      */
     public void testGetPanzer() {
+        assertEquals(0, getFixture().getPanzer());
+    }
+
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Panzerung#getPanzer() <em>Panzer</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Panzerung#getPanzer()
+     * @generated not
+     */
+    public void testGeistComplete() {
+        GeisterArt geisterArt = getFixture().getSpezies();
+        geisterArt.setKonstitutionMin(1);
+        assertEquals(2, getFixture().getKonstitution());
+        
+        geisterArt.setGeschicklichkeitMin(2);
+        assertEquals(3, getFixture().getGeschicklichkeit());
+        
+        geisterArt.setReaktionMin(3);
+        assertEquals(4, getFixture().getReaktion());
+        
+        geisterArt.setStaerkeMin(2);
+        assertEquals(3, getFixture().getStaerke());
+        
+        geisterArt.setIntuitionMin(1);
+        assertEquals(2, getFixture().getIntuition());
+        
+        geisterArt.setIntuitionMin(2);
+        assertEquals(3, getFixture().getIntuition());
+        
+        geisterArt.setWillenskraftMin(3);
+        assertEquals(4, getFixture().getWillenskraft());
+        
+        geisterArt.setCharismaMin(2);
+        assertEquals(3, getFixture().getCharisma());
+        
+        
         assertEquals(0, getFixture().getPanzer());
     }
 
