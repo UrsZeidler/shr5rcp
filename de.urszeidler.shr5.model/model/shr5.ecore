@@ -555,7 +555,7 @@
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Critter" eSuperTypes="#//Spezies">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kraefte" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="powers" upperBound="-1"
         eType="#//CritterKraft" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntervallVertrag" abstract="true" eSuperTypes="#//Vertrag">

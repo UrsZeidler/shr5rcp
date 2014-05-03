@@ -23,7 +23,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterImpl#getKraefte <em>Kraefte</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterImpl#getPowers <em>Powers</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,15 +31,14 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  */
 public class CritterImpl extends SpeziesImpl implements Critter {
     /**
-     * The cached value of the '{@link #getKraefte() <em>Kraefte</em>}' containment reference list.
+     * The cached value of the '{@link #getPowers() <em>Powers</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getKraefte()
+     * @see #getPowers()
      * @generated
      * @ordered
      */
-    protected EList<CritterKraft> kraefte;
-
+    protected EList<CritterKraft> powers;
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -64,11 +63,11 @@ public class CritterImpl extends SpeziesImpl implements Critter {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<CritterKraft> getKraefte() {
-        if (kraefte == null) {
-            kraefte = new EObjectContainmentEList<CritterKraft>(CritterKraft.class, this, Shr5Package.CRITTER__KRAEFTE);
+    public EList<CritterKraft> getPowers() {
+        if (powers == null) {
+            powers = new EObjectContainmentEList<CritterKraft>(CritterKraft.class, this, Shr5Package.CRITTER__POWERS);
         }
-        return kraefte;
+        return powers;
     }
 
     /**
@@ -79,8 +78,8 @@ public class CritterImpl extends SpeziesImpl implements Critter {
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case Shr5Package.CRITTER__KRAEFTE:
-                return ((InternalEList<?>)getKraefte()).basicRemove(otherEnd, msgs);
+            case Shr5Package.CRITTER__POWERS:
+                return ((InternalEList<?>)getPowers()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -93,8 +92,8 @@ public class CritterImpl extends SpeziesImpl implements Critter {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5Package.CRITTER__KRAEFTE:
-                return getKraefte();
+            case Shr5Package.CRITTER__POWERS:
+                return getPowers();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -108,9 +107,9 @@ public class CritterImpl extends SpeziesImpl implements Critter {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.CRITTER__KRAEFTE:
-                getKraefte().clear();
-                getKraefte().addAll((Collection<? extends CritterKraft>)newValue);
+            case Shr5Package.CRITTER__POWERS:
+                getPowers().clear();
+                getPowers().addAll((Collection<? extends CritterKraft>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -124,8 +123,8 @@ public class CritterImpl extends SpeziesImpl implements Critter {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.CRITTER__KRAEFTE:
-                getKraefte().clear();
+            case Shr5Package.CRITTER__POWERS:
+                getPowers().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -139,8 +138,8 @@ public class CritterImpl extends SpeziesImpl implements Critter {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.CRITTER__KRAEFTE:
-                return kraefte != null && !kraefte.isEmpty();
+            case Shr5Package.CRITTER__POWERS:
+                return powers != null && !powers.isEmpty();
         }
         return super.eIsSet(featureID);
     }

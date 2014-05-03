@@ -11424,13 +11424,13 @@ public interface Shr5Package extends EPackage {
     int CRITTER__ANGRIFF = SPEZIES__ANGRIFF;
 
     /**
-     * The feature id for the '<em><b>Kraefte</b></em>' containment reference list.
+     * The feature id for the '<em><b>Powers</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CRITTER__KRAEFTE = SPEZIES_FEATURE_COUNT + 0;
+    int CRITTER__POWERS = SPEZIES_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Critter</em>' class.
@@ -16017,15 +16017,15 @@ public interface Shr5Package extends EPackage {
     EClass getCritter();
 
     /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Critter#getKraefte <em>Kraefte</em>}'.
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Critter#getPowers <em>Powers</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Kraefte</em>'.
-     * @see de.urszeidler.eclipse.shr5.Critter#getKraefte()
+     * @return the meta object for the containment reference list '<em>Powers</em>'.
+     * @see de.urszeidler.eclipse.shr5.Critter#getPowers()
      * @see #getCritter()
      * @generated
      */
-    EReference getCritter_Kraefte();
+    EReference getCritter_Powers();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.IntervallVertrag <em>Intervall Vertrag</em>}'.
@@ -19050,12 +19050,12 @@ public interface Shr5Package extends EPackage {
         EClass CRITTER = eINSTANCE.getCritter();
 
         /**
-         * The meta object literal for the '<em><b>Kraefte</b></em>' containment reference list feature.
+         * The meta object literal for the '<em><b>Powers</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference CRITTER__KRAEFTE = eINSTANCE.getCritter_Kraefte();
+        EReference CRITTER__POWERS = eINSTANCE.getCritter_Powers();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl <em>Intervall Vertrag</em>}' class.

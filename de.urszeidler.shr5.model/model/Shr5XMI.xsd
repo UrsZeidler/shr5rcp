@@ -1073,7 +1073,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Spezies">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="kraefte" type="shr5:CritterKraft"/>
+          <xsd:element name="powers" type="shr5:CritterKraft"/>
         </xsd:choice>
       </xsd:extension>
     </xsd:complexContent>

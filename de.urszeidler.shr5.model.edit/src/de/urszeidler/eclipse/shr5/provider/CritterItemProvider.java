@@ -76,7 +76,7 @@ public class CritterItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.CRITTER__KRAEFTE);
+            childrenFeatures.add(Shr5Package.Literals.CRITTER__POWERS);
         }
         return childrenFeatures;
     }
@@ -138,7 +138,7 @@ public class CritterItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Critter.class)) {
-            case Shr5Package.CRITTER__KRAEFTE:
+            case Shr5Package.CRITTER__POWERS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -158,7 +158,7 @@ public class CritterItemProvider
 
         newChildDescriptors.add
             (createChildParameter
-                (Shr5Package.Literals.CRITTER__KRAEFTE,
+                (Shr5Package.Literals.CRITTER__POWERS,
                  Shr5Factory.eINSTANCE.createCritterKraft()));
     }
 

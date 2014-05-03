@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.Critter#getKraefte <em>Kraefte</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Critter#getPowers <em>Powers</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,19 +23,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Critter extends Spezies {
     /**
-     * Returns the value of the '<em><b>Kraefte</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Powers</b></em>' containment reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5.CritterKraft}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Kraefte</em>' containment reference list isn't clear,
+     * If the meaning of the '<em>Powers</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Kraefte</em>' containment reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCritter_Kraefte()
+     * @return the value of the '<em>Powers</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCritter_Powers()
      * @model containment="true"
      * @generated
      */
-    EList<CritterKraft> getKraefte();
+    EList<CritterKraft> getPowers();
 
 } // Critter

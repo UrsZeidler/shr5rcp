@@ -38,6 +38,8 @@
 		select="document(concat($path,'/lifestyles.xml'),/)" />
 	<xsl:variable name="critter-species"
 		select="document(concat($path,'/critters.xml'),/)" />
+	<xsl:variable name="critter-powers"
+		select="document(concat($path,'/critterpowers.xml'),/)" />
 	<xsl:template match="/">
 		<shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shr5="http://urszeidler.de/shr5/1.0"
@@ -98,16 +100,19 @@
 
 				<entries xsi:type="shr5:ShrList" name="Credsticks">
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="0" wertValue="5" page="443" name="Standard" maxValue="5000" />
+						verfuegbarkeit="0" wertValue="5" page="443" name="Standard"
+						maxValue="5000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="0" wertValue="20" page="443" name="Silver" maxValue="20000" />
+						verfuegbarkeit="0" wertValue="20" page="443" name="Silver"
+						maxValue="20000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
 						verfuegbarkeit="5" wertValue="20" page="443" name="Gold" maxValue="100000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
 						verfuegbarkeit="10" wertValue="500" page="443" name="Platinum"
 						maxValue="500000" />
 					<entries xsi:type="shr5:Credstick" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="10" wertValue="1000" page="443" name="Ebony" maxValue="1000000" />
+						verfuegbarkeit="10" wertValue="1000" page="443" name="Ebony"
+						maxValue="1000000" />
 				</entries>
 				<entries xsi:type="shr5:ShrList" name="additional stuff">
 					<entries xsi:type="shr5:Wissensfertigkeit" name="Streetgangs Berlin">
@@ -165,8 +170,8 @@
 				characterAdvancements="//@entries.0/@entries.16/@entries.2"
 				charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6"
 				numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2"
-				maxKarmaToKeep="7" numberOfMaxAttributes="1" boundSprititServiceCost="1"
-				karmaToConnectionFactor="2">
+				maxKarmaToKeep="7" numberOfMaxAttributes="1"
+				boundSprititServiceCost="1" karmaToConnectionFactor="2">
 				<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 				<xsl:apply-templates mode="gen" />
 				<priorities xsi:type="shr5mngt:Mudan" categorieName="E">
@@ -665,8 +670,8 @@
 						<fertigkeitsGruppen stufe="2"
 							gruppe="//@entries.0/@entries.3/@entries.1" />
 						<koerperMods xsi:type="shr5:Cyberware" name="Bone Lacing, Plastic"
-							page="454" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="8000"
-							verfuegbarkeit="8R">
+							page="454" srcBook="//@entries.0/@entries.0/@entries.0"
+							wertValue="8000" verfuegbarkeit="8R">
 							<mods wert="1">
 								<attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer" />
 							</mods>
@@ -676,8 +681,8 @@
 							</mods>
 						</koerperMods>
 						<koerperMods xsi:type="shr5:Cyberware" name="Reaction Enhancers 2"
-							page="455" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="26000"
-							verfuegbarkeit="10R">
+							page="455" srcBook="//@entries.0/@entries.0/@entries.0"
+							wertValue="26000" verfuegbarkeit="10R">
 							<mods wert="2">
 								<attribut
 									href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion" />
@@ -790,14 +795,15 @@
 						verfuegbarkeit="6R" name="Grenade: Flash-Bang 5" kategorie="Ammunition" />
 					<inventar xsi:type="shr5:Gegenstand" srcBook="//@entries.0/@entries.0/@entries.0"
 						wertValue="45" name="SPare clip 9" />
-					<contracts xsi:type="shr5:Sin" name="Sin Stufe 4" wertValue="10000"
-						stufe="4" gefaelscht="true" />
+					<contracts xsi:type="shr5:Sin" name="Sin Stufe 4"
+						wertValue="10000" stufe="4" gefaelscht="true" />
 					<contracts xsi:type="shr5:Lifestyle" name="Low 3 month Troll"
 						page="95" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="12000"
 						verfuegbarkeit="" faelligkeitsIntervall="30" />
 					<contracts xsi:type="shr5:Lizenz" name="Gun Licence"
-						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="800" stufe="4"
-						gefaelscht="true" lizenzTraeger="//@entries.1/@groups.0/@members.2/@contracts.0" />
+						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="800"
+						stufe="4" gefaelscht="true"
+						lizenzTraeger="//@entries.1/@groups.0/@members.2/@contracts.0" />
 					<connections influence="2" loyality="3" />
 					<connections influence="2" loyality="2" />
 				</members>
@@ -889,8 +895,8 @@
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.35" />
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.40" />
 						<zauber stufe="1" formel="//@entries.0/@entries.11/@entries.58" />
-          				<gebundeneGeister dienste="4"/>
-          				<gebundeneGeister dienste="4"/>
+						<gebundeneGeister dienste="4" />
+						<gebundeneGeister dienste="4" />
 
 					</persona>
 
@@ -1042,8 +1048,8 @@
 					<inventar xsi:type="shr5:Gegenstand" page="439"
 						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"
 						verfuegbarkeit="6" name="Renraku Sensei" kategorie="Commlink" />
-					<inventar xsi:type="shr5:Gegenstand" wertValue="8000" name="Spell foci"
-						stufe="2" />
+					<inventar xsi:type="shr5:Gegenstand" wertValue="8000"
+						name="Spell foci" stufe="2" />
 					<inventar xsi:type="shr5:Kleidung" page="437"
 						srcBook="//@entries.0/@entries.0/@entries.0" wertValue="900"
 						verfuegbarkeit="4" name="Lined Coat" ruestung="9" />
@@ -1431,32 +1437,31 @@
 	<xsl:template name="quelle">
 		<xsl:variable name="aid" select="id/text()" />
 		<xsl:if test="$aid!=''">
-				<xsl:attribute name="xmi:id"><xsl:value-of
-							select="$aid" /></xsl:attribute>
+			<xsl:attribute name="xmi:id"><xsl:value-of select="$aid" /></xsl:attribute>
 		</xsl:if>
 		<xsl:if test="number(page/text())">
-		<xsl:choose>
-			<xsl:when test="$do_localization='true'">
-				<xsl:variable name="loc_page">
-					<xsl:call-template name="findLocalizedPage">
-						<xsl:with-param name="aid" select="$aid" />
-					</xsl:call-template>
-				</xsl:variable>
-				<xsl:choose>
-					<xsl:when test="$loc_page=''">
-						<xsl:attribute name="page"><xsl:value-of
-							select="number(page/text())" /></xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="page"><xsl:value-of
-							select="$loc_page" /></xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:attribute name="page"><xsl:value-of
-					select="number(page/text())" /></xsl:attribute>
-			</xsl:otherwise>
+			<xsl:choose>
+				<xsl:when test="$do_localization='true'">
+					<xsl:variable name="loc_page">
+						<xsl:call-template name="findLocalizedPage">
+							<xsl:with-param name="aid" select="$aid" />
+						</xsl:call-template>
+					</xsl:variable>
+					<xsl:choose>
+						<xsl:when test="$loc_page=''">
+							<xsl:attribute name="page"><xsl:value-of
+								select="number(page/text())" /></xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="page"><xsl:value-of
+								select="$loc_page" /></xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="page"><xsl:value-of
+						select="number(page/text())" /></xsl:attribute>
+				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
 		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
@@ -1662,67 +1667,145 @@
 		</entries>
 	</xsl:template>
 	<xsl:template match="//metatype" mode="critter">
-	<xsl:choose>
+		<xsl:choose>
 			<xsl:when test="category/text()='Spirits'">
-		<entries xsi:type="shr5:Geist">
-				<xsl:call-template name="beschreibbar" />
-		<xsl:call-template name="quelle" />
-		<xsl:call-template name="mods" />
-		<xsl:call-template name="geist-species" />
-		</entries>			
-		</xsl:when>
+				<xsl:call-template name="geist" />
+			</xsl:when>
 			<xsl:when test="category/text()='Toxic Spirits'">
-		<entries xsi:type="shr5:Geist">
-					<xsl:call-template name="beschreibbar" />
-		<xsl:call-template name="quelle" />
-		<xsl:call-template name="mods" />
-			
-			<xsl:call-template name="geist-species" />
-		</entries>			
-		</xsl:when>
-		<xsl:otherwise>
-		<entries xsi:type="shr5:Critter">
-			<xsl:call-template name="species-data" />
-		</entries>		
-		</xsl:otherwise>
-</xsl:choose>	
+				<xsl:call-template name="geist" />
+			</xsl:when>
+			<xsl:otherwise>
+				<entries xsi:type="shr5:Critter">
+					<xsl:call-template name="species-data" />
+					<xsl:call-template name="critter-power" />
+				</entries>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
-<xsl:template name="geist-species" >
-			<xsl:if test="number(substring-after(bodmin/text(),'F'))">
-			<xsl:attribute name="konstitutionBasis"><xsl:value-of
-				select="number(substring-after(bodmin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(agimin/text(),'F'))">
-			<xsl:attribute name="geschicklichkeitBasis"><xsl:value-of
-				select="number(substring-after(agimin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(reamin/text(),'F'))">
-			<xsl:attribute name="reaktionBasis"><xsl:value-of
-				select="number(substring-after(reamin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(strmin/text(),'F'))">
-			<xsl:attribute name="staerkeBasis"><xsl:value-of
-				select="number(substring-after(strmin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(chamin/text(),'F'))">
-			<xsl:attribute name="charismaBasis"><xsl:value-of
-				select="number(substring-after(chamin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(wilmin/text(),'F'))">
-			<xsl:attribute name="willenskraftBasis"><xsl:value-of
-				select="number(substring-after(wilmin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(intmin/text(),'F'))">
-			<xsl:attribute name="intuitionBasis"><xsl:value-of
-				select="number(substring-after(intmin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
-			<xsl:if test="number(substring-after(logmin/text(),'F'))">
-			<xsl:attribute name="logikBasis"><xsl:value-of
-				select="number(substring-after(logmin/text(),'F'))" /></xsl:attribute>
-			</xsl:if>	
+	<xsl:template name="geist">
+		<entries xsi:type="shr5:Geist">
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+
+			<xsl:call-template name="geist-species" />
+			<xsl:call-template name="critter-power" />
+
+			<xsl:for-each select="skills/*">
+				<xsl:variable name="name" select="text()" />
+				<xsl:for-each select="$skills">
+					<xsl:for-each select="chummer/skills/*">
+						<xsl:if test="name/text()=$name">
+							<skills>
+								<xsl:attribute name="href">
+								<xsl:value-of select="concat('#', id/text())" />
+							</xsl:attribute>
+							</skills>
+
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+			</xsl:for-each>
+
+		</entries>
+	</xsl:template>
+
+<xsl:template name="critter-power">
+			<xsl:for-each select="powers/*">
+				<xsl:variable name="name" select="text()" />
+				<xsl:for-each select="$critter-powers">
+					<xsl:for-each select="chummer/powers/*">
+						<xsl:if test="name/text()=$name">
+							<powers>
+								<xsl:choose>
+									<xsl:when test="action/text()='Complex'">
+										<xsl:attribute name="handlung">komplex</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="range/text()='Auto'">
+										<xsl:attribute name="handlung">auto</xsl:attribute>
+									</xsl:when>
+								</xsl:choose>
+								<xsl:choose>
+									<xsl:when test="range/text()='LOS'">
+										<xsl:attribute name="reichweite">blickfeld</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="range/text()='Special'">
+										<xsl:attribute name="reichweite">speziell</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="range/text()='Self'">
+										<xsl:attribute name="reichweite">selbst</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="range/text()='Touch'">
+										<xsl:attribute name="reichweite">beruehrung</xsl:attribute>
+									</xsl:when>
+								</xsl:choose>
+								<xsl:choose>
+									<xsl:when test="type/text()='M'">
+										<xsl:attribute name="art">Mana</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="type/text()='P'">
+										<xsl:attribute name="art">Physisch</xsl:attribute>
+									</xsl:when>
+								</xsl:choose>
+								<xsl:choose>
+									<xsl:when test="duration/text()='Always'">
+										<xsl:attribute name="dauer">immer</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="duration/text()='Instant'">
+										<xsl:attribute name="dauer">sofort</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="duration/text()='Sustained'">
+										<xsl:attribute name="dauer">aufrechterhalten</xsl:attribute>
+									</xsl:when>
+									<xsl:when test="duration/text()='Permanent'">
+										<xsl:attribute name="dauer">permanent</xsl:attribute>
+									</xsl:when>
+								</xsl:choose>
+								<xsl:call-template name="beschreibbar" />
+								<xsl:call-template name="quelle" />
+							</powers>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:for-each>
+			</xsl:for-each>
 
 </xsl:template>
+
+	<xsl:template name="geist-species">
+		<xsl:if test="number(substring-after(bodmin/text(),'F'))">
+			<xsl:attribute name="konstitutionBasis"><xsl:value-of
+				select="number(substring-after(bodmin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(agimin/text(),'F'))">
+			<xsl:attribute name="geschicklichkeitBasis"><xsl:value-of
+				select="number(substring-after(agimin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(reamin/text(),'F'))">
+			<xsl:attribute name="reaktionBasis"><xsl:value-of
+				select="number(substring-after(reamin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(strmin/text(),'F'))">
+			<xsl:attribute name="staerkeBasis"><xsl:value-of
+				select="number(substring-after(strmin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(chamin/text(),'F'))">
+			<xsl:attribute name="charismaBasis"><xsl:value-of
+				select="number(substring-after(chamin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(wilmin/text(),'F'))">
+			<xsl:attribute name="willenskraftBasis"><xsl:value-of
+				select="number(substring-after(wilmin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(intmin/text(),'F'))">
+			<xsl:attribute name="intuitionBasis"><xsl:value-of
+				select="number(substring-after(intmin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+		<xsl:if test="number(substring-after(logmin/text(),'F'))">
+			<xsl:attribute name="logikBasis"><xsl:value-of
+				select="number(substring-after(logmin/text(),'F'))" /></xsl:attribute>
+		</xsl:if>
+
+	</xsl:template>
 
 
 	<xsl:template name="species-data">
@@ -1841,41 +1924,48 @@
 			<xsl:attribute name="kategorie"><xsl:value-of select="category/text()" /></xsl:attribute>
 			<xsl:attribute name="schaden"><xsl:value-of select="damage/text()" /></xsl:attribute>
 			<xsl:attribute name="entzug"><xsl:value-of select="dv/text()" /></xsl:attribute>
-			<xsl:choose>
-				<xsl:when test="range/text()='LOS'">
-					<xsl:attribute name="reichweite">Blickfeld</xsl:attribute>
-				</xsl:when>
-				<xsl:when test="range/text()='T'">
-					<xsl:attribute name="reichweite">Beruehrung</xsl:attribute>
-				</xsl:when>
-				<xsl:when test="range/text()='T'">
-					<xsl:attribute name="reichweite">Beruehrung</xsl:attribute>
-				</xsl:when>
-			</xsl:choose>
-			<xsl:choose>
-				<xsl:when test="type/text()='M'">
-					<xsl:attribute name="art">Mana</xsl:attribute>
-				</xsl:when>
-				<xsl:when test="type/text()='P'">
-					<xsl:attribute name="art">Physisch</xsl:attribute>
-				</xsl:when>
-			</xsl:choose>
-			<xsl:choose>
-				<xsl:when test="duration/text()='I'">
-					<xsl:attribute name="dauer">Sofort</xsl:attribute>
-				</xsl:when>
-				<xsl:when test="duration/text()='S'">
-					<xsl:attribute name="dauer">Aufrechterhalten</xsl:attribute>
-				</xsl:when>
-				<xsl:when test="duration/text()='P'">
-					<xsl:attribute name="dauer">Permanent</xsl:attribute>
-				</xsl:when>
-			</xsl:choose>
+
+			<xsl:call-template name="zauber-types" />
 			<xsl:call-template name="beschreibbar" />
 			<xsl:call-template name="quelle" />
 		</entries>
 
 	</xsl:template>
+	<xsl:template name="zauber-types">
+		<xsl:choose>
+			<xsl:when test="range/text()='LOS'">
+				<xsl:attribute name="reichweite">Blickfeld</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="range/text()='T'">
+				<xsl:attribute name="reichweite">Beruehrung</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="range/text()='T'">
+				<xsl:attribute name="reichweite">Beruehrung</xsl:attribute>
+			</xsl:when>
+		</xsl:choose>
+		<xsl:choose>
+			<xsl:when test="type/text()='M'">
+				<xsl:attribute name="art">Mana</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="type/text()='P'">
+				<xsl:attribute name="art">Physisch</xsl:attribute>
+			</xsl:when>
+		</xsl:choose>
+		<xsl:choose>
+			<xsl:when test="duration/text()='I'">
+				<xsl:attribute name="dauer">Sofort</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="duration/text()='S'">
+				<xsl:attribute name="dauer">Aufrechterhalten</xsl:attribute>
+			</xsl:when>
+			<xsl:when test="duration/text()='P'">
+				<xsl:attribute name="dauer">Permanent</xsl:attribute>
+			</xsl:when>
+		</xsl:choose>
+
+	</xsl:template>
+
+
 	<!-- kikraft -->
 	<xsl:template match="//power">
 		<xsl:if test="string-length(skillgroup/text())=0">

@@ -413,7 +413,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaZustand/zustandGrenze"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Critter">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Critter/kraefte"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Critter/powers"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//IntervallVertrag">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//IntervallVertrag/faelligkeitsIntervall"/>

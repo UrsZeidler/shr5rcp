@@ -3373,7 +3373,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getCritter_Kraefte() {
+    public EReference getCritter_Powers() {
         return (EReference)critterEClass.getEStructuralFeatures().get(0);
     }
 
@@ -4326,7 +4326,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(personaZustandEClass, PERSONA_ZUSTAND__ZUSTAND_GRENZE);
 
         critterEClass = createEClass(CRITTER);
-        createEReference(critterEClass, CRITTER__KRAEFTE);
+        createEReference(critterEClass, CRITTER__POWERS);
 
         intervallVertragEClass = createEClass(INTERVALL_VERTRAG);
         createEAttribute(intervallVertragEClass, INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL);
@@ -4904,7 +4904,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getPersonaZustand_ZustandGrenze(), ecorePackage.getEInt(), "zustandGrenze", null, 0, 1, PersonaZustand.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(critterEClass, Critter.class, "Critter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getCritter_Kraefte(), this.getCritterKraft(), null, "kraefte", null, 0, -1, Critter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCritter_Powers(), this.getCritterKraft(), null, "powers", null, 0, -1, Critter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(intervallVertragEClass, IntervallVertrag.class, "IntervallVertrag", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIntervallVertrag_FaelligkeitsIntervall(), ecorePackage.getEInt(), "faelligkeitsIntervall", null, 0, 1, IntervallVertrag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -533,7 +533,7 @@
     <nested inputs="shr5.ecore#//PersonaZustand" outputs="Shr5XMI.xsd#//PersonaZustand;XSDComplexTypeDefinition=72"/>
     <nested inputs="shr5.ecore#//PersonaZustand" outputs="Shr5XMI.xsd#//PersonaZustand;XSDElementDeclaration=72"/>
     <nested inputs="shr5.ecore#//Critter" outputs="Shr5XMI.xsd#//Critter;XSDComplexTypeDefinition=73">
-      <nested inputs="shr5.ecore#//Critter/kraefte" outputs="Shr5XMI.xsd#//Critter;XSDComplexTypeDefinition=73/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Critter/powers" outputs="Shr5XMI.xsd#//Critter;XSDComplexTypeDefinition=73/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Critter" outputs="Shr5XMI.xsd#//Critter;XSDElementDeclaration=73"/>
     <nested inputs="shr5.ecore#//IntervallVertrag" outputs="Shr5XMI.xsd#//IntervallVertrag;XSDComplexTypeDefinition=74">

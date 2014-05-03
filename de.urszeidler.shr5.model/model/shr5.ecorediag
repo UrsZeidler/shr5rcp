@@ -806,7 +806,7 @@
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_ubjLsXGNEeO_E4jIzaF87A" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_ubjLsnGNEeO_E4jIzaF87A" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-      <element xmi:type="ecore:EReference" href="shr5.ecore#//Critter/kraefte"/>
+      <element xmi:type="ecore:EReference" href="shr5.ecore#//Critter/powers"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ubjLs3GNEeO_E4jIzaF87A" points="[-50, 10, 135, -20]$[-180, 50, 5, 20]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_z6CtAIGZEeOvYq73uims3A" type="3003" source="_QYoA0GEJEeOhYK3BBsrmZg" target="_YG4kkIGYEeOvYq73uims3A">
@@ -4415,7 +4415,7 @@
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_c1YXIbWlEeO7BpFRjLFkRw" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_c1YXIrWlEeO7BpFRjLFkRw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-      <element xmi:type="ecore:EReference" href="shr5.ecore#//Critter/kraefte"/>
+      <element xmi:type="ecore:EReference" href="shr5.ecore#//Critter/powers"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_c1YXI7WlEeO7BpFRjLFkRw" points="[1, 1, -565, -518]$[514, 472, -52, -47]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_c1bacLWlEeO7BpFRjLFkRw" type="3003" source="_c1GqULWlEeO7BpFRjLFkRw" target="_YIjboLWlEeO7BpFRjLFkRw">
@@ -4776,7 +4776,7 @@
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_sorwQdLPEeOZ1NHkpxFArw" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_sorwQtLPEeOZ1NHkpxFArw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
-      <element xmi:type="ecore:EReference" href="shr5.ecore#//Critter/kraefte"/>
+      <element xmi:type="ecore:EReference" href="shr5.ecore#//Critter/powers"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sorwQ9LPEeOZ1NHkpxFArw" points="[-7, -20, 119, 386]$[-126, -405, 0, 1]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_72kPsNLPEeOZ1NHkpxFArw" type="3002" source="_AYGHkNHHEeOoDM7qXBGbYQ" target="_soeU4NLPEeOZ1NHkpxFArw">
