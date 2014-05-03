@@ -491,11 +491,6 @@ public class ShrListItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                 Shr5Factory.eINSTANCE.createGeisterArt()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createCredstickTransaction()));
     }
 

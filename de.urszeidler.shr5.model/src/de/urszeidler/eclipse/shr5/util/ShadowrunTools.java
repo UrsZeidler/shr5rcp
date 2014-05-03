@@ -202,18 +202,33 @@ public class ShadowrunTools {
     public static int getModificatorValue(AbstraktModifikatoren mod, EAttribute eattribute) {
         if (eattribute == null)
             return 0;
-        EList<AttributModifikatorWert> mods = mod.getMods();
+        List<AttributModifikatorWert> mods = mod.getMods();
         return getModificatorValue(eattribute, mods);
     }
 
     /**
-     * Returns the summ of modificator values for the given eattribute.
+     * Returns the sum of a list of {@link AbstraktModifikatoren} values for the given eattribute.
+     * 
+     * @param eattribute the attribute to get the value for
+     * @param mod list of {@link AbstraktModifikatoren}
+     * @return the sum
+     */
+    public static int getModificatorenValue(EAttribute eattribute, List<? extends AbstraktModifikatoren> mods) {
+        int sum = 0;
+        for (AbstraktModifikatoren attributModifikatorWert : mods) {           
+                sum = sum + getModificatorValue(eattribute, attributModifikatorWert.getMods());
+        }
+        return sum;
+    }
+
+    /**
+     * Returns the sum of modificator values for the given eattribute.
      * 
      * @param mod the modificator
      * @param eattribute the attribute to get the value for
      * @return the sum
      */
-    public static int getModificatorValue(EAttribute eattribute, EList<AttributModifikatorWert> mods) {
+    public static int getModificatorValue(EAttribute eattribute, List<AttributModifikatorWert> mods) {
         int sum = 0;
         for (AttributModifikatorWert attributModifikatorWert : mods) {
             if (eattribute.equals(attributModifikatorWert.getAttribut()))
@@ -222,6 +237,7 @@ public class ShadowrunTools {
         return sum;
     }
 
+    
     /**
      * Creates and initalise a character with the given spezies.
      * 

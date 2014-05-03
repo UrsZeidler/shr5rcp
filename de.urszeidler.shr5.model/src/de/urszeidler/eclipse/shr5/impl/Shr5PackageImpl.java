@@ -3,7 +3,6 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Date;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,7 +10,6 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
 import de.urszeidler.eclipse.shr5.AbstaktWaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
@@ -51,7 +49,6 @@ import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.GegenstandStufen;
 import de.urszeidler.eclipse.shr5.Geist;
-import de.urszeidler.eclipse.shr5.GeisterArt;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -735,13 +732,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass geistEClass = null;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    private EClass geisterArtEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3680,6 +3670,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getStufenPersona_SkillGroups() {
+        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getStufenPersona_Skills() {
+        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getGeist() {
         return geistEClass;
     }
@@ -3689,8 +3697,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getGeist_Spezies() {
-        return (EReference)geistEClass.getEStructuralFeatures().get(0);
+    public EAttribute getGeist_KonstitutionBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -3698,8 +3706,71 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getGeisterArt() {
-        return geisterArtEClass;
+    public EAttribute getGeist_GeschicklichkeitBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeist_ReaktionBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeist_StaerkeBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeist_CharismaBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeist_WillenskraftBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeist_IntuitionBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getGeist_LogikBasis() {
+        return (EAttribute)geistEClass.getEStructuralFeatures().get(7);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getGeist_Powers() {
+        return (EReference)geistEClass.getEStructuralFeatures().get(8);
     }
 
     /**
@@ -4318,11 +4389,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(stufenPersonaEClass, STUFEN_PERSONA__STUFE);
         createEReference(stufenPersonaEClass, STUFEN_PERSONA__FERTIGKEITEN);
         createEReference(stufenPersonaEClass, STUFEN_PERSONA__FERTIGKEITS_GRUPPEN);
+        createEReference(stufenPersonaEClass, STUFEN_PERSONA__SKILL_GROUPS);
+        createEReference(stufenPersonaEClass, STUFEN_PERSONA__SKILLS);
 
         geistEClass = createEClass(GEIST);
-        createEReference(geistEClass, GEIST__SPEZIES);
-
-        geisterArtEClass = createEClass(GEISTER_ART);
+        createEAttribute(geistEClass, GEIST__KONSTITUTION_BASIS);
+        createEAttribute(geistEClass, GEIST__GESCHICKLICHKEIT_BASIS);
+        createEAttribute(geistEClass, GEIST__REAKTION_BASIS);
+        createEAttribute(geistEClass, GEIST__STAERKE_BASIS);
+        createEAttribute(geistEClass, GEIST__CHARISMA_BASIS);
+        createEAttribute(geistEClass, GEIST__WILLENSKRAFT_BASIS);
+        createEAttribute(geistEClass, GEIST__INTUITION_BASIS);
+        createEAttribute(geistEClass, GEIST__LOGIK_BASIS);
+        createEReference(geistEClass, GEIST__POWERS);
 
         identifiableEClass = createEClass(IDENTIFIABLE);
         createEAttribute(identifiableEClass, IDENTIFIABLE__PARENT_ID);
@@ -4498,7 +4577,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         stufenPersonaEClass.getESuperTypes().add(this.getPanzerung());
         geistEClass.getESuperTypes().add(this.getStufenPersona());
         geistEClass.getESuperTypes().add(this.getAstraleProjektion());
-        geisterArtEClass.getESuperTypes().add(this.getCritter());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4887,15 +4965,23 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getGebundenerGeist_Dienste(), ecorePackage.getEInt(), "dienste", null, 0, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getGebundenerGeist_Geist(), this.getGeist(), null, "geist", null, 1, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(stufenPersonaEClass, StufenPersona.class, "StufenPersona", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEClass(stufenPersonaEClass, StufenPersona.class, "StufenPersona", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getStufenPersona_Stufe(), ecorePackage.getEInt(), "stufe", null, 1, 1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getStufenPersona_Fertigkeiten(), this.getPersonaFertigkeit(), null, "fertigkeiten", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getStufenPersona_FertigkeitsGruppen(), this.getPersonaFertigkeitsGruppe(), null, "fertigkeitsGruppen", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getStufenPersona_SkillGroups(), this.getFertigkeitsGruppe(), null, "skillGroups", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getStufenPersona_Skills(), this.getFertigkeit(), null, "skills", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(geistEClass, Geist.class, "Geist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getGeist_Spezies(), this.getGeisterArt(), null, "spezies", null, 1, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-        initEClass(geisterArtEClass, GeisterArt.class, "GeisterArt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getGeist_KonstitutionBasis(), ecorePackage.getEInt(), "konstitutionBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_GeschicklichkeitBasis(), ecorePackage.getEInt(), "geschicklichkeitBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_ReaktionBasis(), ecorePackage.getEInt(), "reaktionBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_StaerkeBasis(), ecorePackage.getEInt(), "staerkeBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_CharismaBasis(), ecorePackage.getEInt(), "charismaBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_WillenskraftBasis(), ecorePackage.getEInt(), "willenskraftBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_IntuitionBasis(), ecorePackage.getEInt(), "intuitionBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getGeist_LogikBasis(), ecorePackage.getEInt(), "logikBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGeist_Powers(), this.getCritterKraft(), null, "powers", null, 0, -1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(identifiableEClass, Identifiable.class, "Identifiable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIdentifiable_ParentId(), ecorePackage.getEString(), "parentId", null, 0, 1, Identifiable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

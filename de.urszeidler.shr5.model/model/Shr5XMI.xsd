@@ -1251,12 +1251,16 @@
               <xsd:documentation>Contains the skillgroups.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="skillGroups" type="shr5:FertigkeitsGruppe"/>
+          <xsd:element name="skills" type="shr5:Fertigkeit"/>
         </xsd:choice>
         <xsd:attribute name="edgeBasis" type="xsd:int"/>
         <xsd:attribute name="beschreibung" type="xsd:string"/>
         <xsd:attribute name="image" type="xsd:string"/>
         <xsd:attribute name="name" type="xsd:string" use="required"/>
         <xsd:attribute name="stufe" type="xsd:int" use="required"/>
+        <xsd:attribute name="skillGroups" type="xsd:string"/>
+        <xsd:attribute name="skills" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1272,38 +1276,22 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:StufenPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="spezies" type="shr5:GeisterArt">
-            <xsd:annotation>
-              <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
+          <xsd:element name="powers" type="shr5:CritterKraft"/>
         </xsd:choice>
-        <xsd:attribute name="spezies" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Refers the metatyp or species the persona represent.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+        <xsd:attribute name="konstitutionBasis" type="xsd:int"/>
+        <xsd:attribute name="geschicklichkeitBasis" type="xsd:int"/>
+        <xsd:attribute name="reaktionBasis" type="xsd:int"/>
+        <xsd:attribute name="staerkeBasis" type="xsd:int"/>
+        <xsd:attribute name="charismaBasis" type="xsd:int"/>
+        <xsd:attribute name="willenskraftBasis" type="xsd:int"/>
+        <xsd:attribute name="intuitionBasis" type="xsd:int"/>
+        <xsd:attribute name="logikBasis" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Geist" type="shr5:Geist">
     <xsd:annotation>
       <xsd:documentation>This defines a spirit.</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:complexType name="GeisterArt">
-    <xsd:annotation>
-      <xsd:documentation>This is the type of the spririt, it defines the mod of the attribute and the powers.
-Here the attribute min as additional rating.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="shr5:Critter"/>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="GeisterArt" type="shr5:GeisterArt">
-    <xsd:annotation>
-      <xsd:documentation>This is the type of the spririt, it defines the mod of the attribute and the powers.
-Here the attribute min as additional rating.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType abstract="true" name="Identifiable">

@@ -495,10 +495,6 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createGeistAdapter();
             }
             @Override
-            public Adapter caseGeisterArt(GeisterArt object) {
-                return createGeisterArtAdapter();
-            }
-            @Override
             public Adapter caseIdentifiable(Identifiable object) {
                 return createIdentifiableAdapter();
             }
@@ -1741,20 +1737,6 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createGeistAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.GeisterArt <em>Geister Art</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5.GeisterArt
-     * @generated
-     */
-    public Adapter createGeisterArtAdapter() {
         return null;
     }
 

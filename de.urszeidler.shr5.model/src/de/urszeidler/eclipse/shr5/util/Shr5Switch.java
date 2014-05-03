@@ -1053,18 +1053,6 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5Package.GEISTER_ART: {
-                GeisterArt geisterArt = (GeisterArt)theEObject;
-                T result = caseGeisterArt(geisterArt);
-                if (result == null) result = caseCritter(geisterArt);
-                if (result == null) result = caseSpezies(geisterArt);
-                if (result == null) result = caseBeschreibbar(geisterArt);
-                if (result == null) result = caseModifizierbar(geisterArt);
-                if (result == null) result = caseQuelle(geisterArt);
-                if (result == null) result = caseIdentifiable(geisterArt);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
             case Shr5Package.IDENTIFIABLE: {
                 Identifiable identifiable = (Identifiable)theEObject;
                 T result = caseIdentifiable(identifiable);
@@ -2383,21 +2371,6 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseGeist(Geist object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Geister Art</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Geister Art</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseGeisterArt(GeisterArt object) {
         return null;
     }
 

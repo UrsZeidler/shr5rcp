@@ -3,10 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.Geist;
-import de.urszeidler.eclipse.shr5.GeisterArt;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
+import junit.framework.TestCase;
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.Geist;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +15,23 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative() <em>Initative</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel() <em>Initativ Wuerfel</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getAusweichen() <em>Ausweichen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEssenz() <em>Essenz</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge() <em>Edge</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma() <em>Charisma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft() <em>Willenskraft</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition() <em>Intuition</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik() <em>Logik</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution() <em>Konstitution</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit() <em>Geschicklichkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion() <em>Reaktion</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke() <em>Staerke</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich() <em>Koerperlich</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getGeistig() <em>Geistig</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ChrakterLimits#getSozial() <em>Sozial</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Panzerung#getPanzer() <em>Panzer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstralesLimit() <em>Astrales Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleKonstitution() <em>Astrale Konstitution</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleGeschicklichkeit() <em>Astrale Geschicklichkeit</em>}</li>
@@ -27,7 +44,16 @@ import junit.textui.TestRunner;
  * </p>
  * @generated
  */
-public class GeistTest extends StufenPersonaTest {
+public class GeistTest extends TestCase {
+
+    /**
+     * The fixture for this Geist test case.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected Geist fixture = null;
+
 
     /**
      * <!-- begin-user-doc -->
@@ -49,14 +75,23 @@ public class GeistTest extends StufenPersonaTest {
     }
 
     /**
+     * Sets the fixture for this Geist test case.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void setFixture(Geist fixture) {
+        this.fixture = fixture;
+    }
+
+    /**
      * Returns the fixture for this Geist test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
     protected Geist getFixture() {
-        return (Geist)fixture;
+        return fixture;
     }
 
     /**
@@ -69,7 +104,6 @@ public class GeistTest extends StufenPersonaTest {
     protected void setUp() throws Exception {
         setFixture(Shr5Factory.eINSTANCE.createGeist());
         getFixture().setStufe(1);
-        getFixture().setSpezies(Shr5Factory.eINSTANCE.createGeisterArt());
     }
 
     /**
@@ -369,29 +403,29 @@ public class GeistTest extends StufenPersonaTest {
      * @generated not
      */
     public void testGeistComplete() {
-        GeisterArt geisterArt = getFixture().getSpezies();
-        geisterArt.setKonstitutionMin(1);
+        Geist geisterArt = getFixture();
+        geisterArt.setKonstitutionBasis(1);
         assertEquals(2, getFixture().getKonstitution());
         
-        geisterArt.setGeschicklichkeitMin(2);
+        geisterArt.setGeschicklichkeitBasis(2);
         assertEquals(3, getFixture().getGeschicklichkeit());
         
-        geisterArt.setReaktionMin(3);
+        geisterArt.setReaktionBasis(3);
         assertEquals(4, getFixture().getReaktion());
         
-        geisterArt.setStaerkeMin(2);
+        geisterArt.setStaerkeBasis(2);
         assertEquals(3, getFixture().getStaerke());
         
-        geisterArt.setIntuitionMin(1);
+        geisterArt.setIntuitionBasis(1);
         assertEquals(2, getFixture().getIntuition());
         
-        geisterArt.setIntuitionMin(2);
+        geisterArt.setIntuitionBasis(2);
         assertEquals(3, getFixture().getIntuition());
         
-        geisterArt.setWillenskraftMin(3);
+        geisterArt.setWillenskraftBasis(3);
         assertEquals(4, getFixture().getWillenskraft());
         
-        geisterArt.setCharismaMin(2);
+        geisterArt.setCharismaBasis(2);
         assertEquals(3, getFixture().getCharisma());
         
         

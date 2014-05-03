@@ -455,11 +455,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//StufenPersona/stufe"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/fertigkeiten"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/fertigkeitsGruppen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/skillGroups"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/skills"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Geist">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Geist/spezies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/konstitutionBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/geschicklichkeitBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/reaktionBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/staerkeBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/charismaBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/willenskraftBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/intuitionBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/logikBasis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Geist/powers"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//GeisterArt"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Identifiable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Identifiable/parentId"/>
     </genClasses>

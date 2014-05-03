@@ -591,6 +591,10 @@
       <nested inputs="shr5.ecore#//StufenPersona/stufe" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=4"/>
       <nested inputs="shr5.ecore#//StufenPersona/fertigkeiten" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//StufenPersona/fertigkeitsGruppen" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//StufenPersona/skillGroups" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=5"/>
+      <nested inputs="shr5.ecore#//StufenPersona/skillGroups" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//StufenPersona/skills" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=6"/>
+      <nested inputs="shr5.ecore#//StufenPersona/skills" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=1"/>
@@ -598,21 +602,26 @@
     <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//StufenPersona" outputs="Shr5XMI.xsd#//StufenPersona;XSDElementDeclaration=85"/>
     <nested inputs="shr5.ecore#//Geist" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86">
-      <nested inputs="shr5.ecore#//Geist/spezies" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse"/>
-      <nested inputs="shr5.ecore#//Geist/spezies" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Geist/konstitutionBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Geist/geschicklichkeitBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Geist/reaktionBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Geist/staerkeBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Geist/charismaBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//Geist/willenskraftBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=5"/>
+      <nested inputs="shr5.ecore#//Geist/intuitionBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=6"/>
+      <nested inputs="shr5.ecore#//Geist/logikBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=7"/>
+      <nested inputs="shr5.ecore#//Geist/powers" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Geist" outputs="Shr5XMI.xsd#//Geist;XSDElementDeclaration=86"/>
-    <nested inputs="shr5.ecore#//GeisterArt" outputs="Shr5XMI.xsd#//GeisterArt;XSDComplexTypeDefinition=87"/>
-    <nested inputs="shr5.ecore#//GeisterArt" outputs="Shr5XMI.xsd#//GeisterArt;XSDElementDeclaration=87"/>
-    <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=88">
-      <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=88/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=87">
+      <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=87/XSDAttributeUse=1"/>
     </nested>
-    <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDElementDeclaration=88"/>
-    <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89">
-      <nested inputs="shr5.ecore#//CredstickTransaction/amount" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//CredstickTransaction/date" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89/XSDAttributeUse=2"/>
-      <nested inputs="shr5.ecore#//CredstickTransaction/description" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDElementDeclaration=87"/>
+    <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=88">
+      <nested inputs="shr5.ecore#//CredstickTransaction/amount" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=88/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//CredstickTransaction/date" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=88/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//CredstickTransaction/description" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=88/XSDAttributeUse=3"/>
     </nested>
-    <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDElementDeclaration=89"/>
+    <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDElementDeclaration=88"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

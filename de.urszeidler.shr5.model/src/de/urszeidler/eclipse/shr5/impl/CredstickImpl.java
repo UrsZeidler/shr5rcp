@@ -11,12 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-
 import java.math.BigDecimal;
 import java.util.Collection;
 

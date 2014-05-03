@@ -481,15 +481,6 @@ public interface Shr5Factory extends EFactory {
     Geist createGeist();
 
     /**
-     * Returns a new object of class '<em>Geister Art</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Geister Art</em>'.
-     * @generated
-     */
-    GeisterArt createGeisterArt();
-
-    /**
      * Returns a new object of class '<em>Credstick Transaction</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
