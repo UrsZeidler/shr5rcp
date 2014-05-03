@@ -1071,6 +1071,12 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.CREDSTICK_TRANSACTION: {
+                CredstickTransaction credstickTransaction = (CredstickTransaction)theEObject;
+                T result = caseCredstickTransaction(credstickTransaction);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2407,6 +2413,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseIdentifiable(Identifiable object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Credstick Transaction</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Credstick Transaction</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCredstickTransaction(CredstickTransaction object) {
         return null;
     }
 

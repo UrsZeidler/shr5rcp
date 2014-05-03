@@ -1267,6 +1267,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CredstickTransaction} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CredstickTransactionItemProvider credstickTransactionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CredstickTransaction}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCredstickTransactionAdapter() {
+        if (credstickTransactionItemProvider == null) {
+            credstickTransactionItemProvider = new CredstickTransactionItemProvider(this);
+        }
+
+        return credstickTransactionItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1417,6 +1440,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (gebundenerGeistItemProvider != null) gebundenerGeistItemProvider.dispose();
         if (geistItemProvider != null) geistItemProvider.dispose();
         if (geisterArtItemProvider != null) geisterArtItemProvider.dispose();
+        if (credstickTransactionItemProvider != null) credstickTransactionItemProvider.dispose();
     }
 
 }

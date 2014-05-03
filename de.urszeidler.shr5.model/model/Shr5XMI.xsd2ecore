@@ -560,8 +560,8 @@
     <nested inputs="shr5.ecore#//Erlernbar" outputs="Shr5XMI.xsd#//Erlernbar;XSDComplexTypeDefinition=79"/>
     <nested inputs="shr5.ecore#//Erlernbar" outputs="Shr5XMI.xsd#//Erlernbar;XSDElementDeclaration=79"/>
     <nested inputs="shr5.ecore#//Credstick" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80">
-      <nested inputs="shr5.ecore#//Credstick/currenValue" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDAttributeUse"/>
-      <nested inputs="shr5.ecore#//Credstick/maxValue" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Credstick/maxValue" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Credstick/transactionlog" outputs="Shr5XMI.xsd#//Credstick;XSDComplexTypeDefinition=80/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Credstick" outputs="Shr5XMI.xsd#//Credstick;XSDElementDeclaration=80"/>
     <nested inputs="shr5.ecore#//Menge" outputs="Shr5XMI.xsd#//Menge;XSDComplexTypeDefinition=81">
@@ -608,5 +608,11 @@
       <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=88/XSDAttributeUse=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDElementDeclaration=88"/>
+    <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89">
+      <nested inputs="shr5.ecore#//CredstickTransaction/amount" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//CredstickTransaction/date" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//CredstickTransaction/description" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=89/XSDAttributeUse=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDElementDeclaration=89"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

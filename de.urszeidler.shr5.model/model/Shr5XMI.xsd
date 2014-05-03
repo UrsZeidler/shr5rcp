@@ -1138,14 +1138,27 @@
     </xsd:annotation>
   </xsd:element>
   <xsd:complexType name="Credstick">
+    <xsd:annotation>
+      <xsd:documentation>A credstick can hold money and has a transactions log.</xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
-        <xsd:attribute name="currenValue" type="xsd:int"/>
-        <xsd:attribute name="maxValue" type="xsd:int"/>
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="transactionlog" type="shr5:CredstickTransaction">
+            <xsd:annotation>
+              <xsd:documentation>The sum of the entries is the current wertValue.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="maxValue" type="xsd:int" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Credstick" type="shr5:Credstick"/>
+  <xsd:element name="Credstick" type="shr5:Credstick">
+    <xsd:annotation>
+      <xsd:documentation>A credstick can hold money and has a transactions log.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType abstract="true" name="Menge">
     <xsd:annotation>
       <xsd:documentation>This interface is used to define items coming in great numbers like amunition and others.</xsd:documentation>
@@ -1302,4 +1315,22 @@ Here the attribute min as additional rating.</xsd:documentation>
     <xsd:attribute name="parentId" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="Identifiable" type="shr5:Identifiable"/>
+  <xsd:complexType name="CredstickTransaction">
+    <xsd:annotation>
+      <xsd:documentation>This is an entry in the log.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="amount" type="xsd:string" use="required"/>
+    <xsd:attribute name="date" type="xsd:string" use="required"/>
+    <xsd:attribute name="description" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="CredstickTransaction" type="shr5:CredstickTransaction">
+    <xsd:annotation>
+      <xsd:documentation>This is an entry in the log.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

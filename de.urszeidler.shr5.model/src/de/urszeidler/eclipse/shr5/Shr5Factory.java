@@ -490,6 +490,15 @@ public interface Shr5Factory extends EFactory {
     GeisterArt createGeisterArt();
 
     /**
+     * Returns a new object of class '<em>Credstick Transaction</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Credstick Transaction</em>'.
+     * @generated
+     */
+    CredstickTransaction createCredstickTransaction();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

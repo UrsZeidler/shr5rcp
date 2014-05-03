@@ -432,8 +432,9 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Erlernbar"/>
     <genClasses ecoreClass="shr5.ecore#//Credstick">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/currenValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/maxValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Credstick/transactionlog"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Credstick/currentValue"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Menge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Menge/anzahl"/>
@@ -461,6 +462,11 @@
     <genClasses ecoreClass="shr5.ecore#//GeisterArt"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Identifiable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Identifiable/parentId"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//CredstickTransaction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

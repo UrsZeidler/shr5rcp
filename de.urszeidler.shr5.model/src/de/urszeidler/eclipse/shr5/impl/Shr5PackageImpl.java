@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
 import de.urszeidler.eclipse.shr5.ChrakterLimits;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Critter;
 import de.urszeidler.eclipse.shr5.CritterDauer;
 import de.urszeidler.eclipse.shr5.CritterHandlung;
@@ -748,6 +749,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass identifiableEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass credstickTransactionEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3501,7 +3509,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getCredstick_CurrenValue() {
+    public EAttribute getCredstick_MaxValue() {
         return (EAttribute)credstickEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3510,8 +3518,17 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getCredstick_MaxValue() {
-        return (EAttribute)credstickEClass.getEStructuralFeatures().get(1);
+    public EReference getCredstick_Transactionlog() {
+        return (EReference)credstickEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCredstick_CurrentValue() {
+        return (EAttribute)credstickEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -3701,6 +3718,42 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EAttribute getIdentifiable_ParentId() {
         return (EAttribute)identifiableEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCredstickTransaction() {
+        return credstickTransactionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCredstickTransaction_Amount() {
+        return (EAttribute)credstickTransactionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCredstickTransaction_Date() {
+        return (EAttribute)credstickTransactionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCredstickTransaction_Description() {
+        return (EAttribute)credstickTransactionEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4241,8 +4294,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         erlernbarEClass = createEClass(ERLERNBAR);
 
         credstickEClass = createEClass(CREDSTICK);
-        createEAttribute(credstickEClass, CREDSTICK__CURREN_VALUE);
         createEAttribute(credstickEClass, CREDSTICK__MAX_VALUE);
+        createEReference(credstickEClass, CREDSTICK__TRANSACTIONLOG);
+        createEAttribute(credstickEClass, CREDSTICK__CURRENT_VALUE);
 
         mengeEClass = createEClass(MENGE);
         createEAttribute(mengeEClass, MENGE__ANZAHL);
@@ -4272,6 +4326,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         identifiableEClass = createEClass(IDENTIFIABLE);
         createEAttribute(identifiableEClass, IDENTIFIABLE__PARENT_ID);
+
+        credstickTransactionEClass = createEClass(CREDSTICK_TRANSACTION);
+        createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__AMOUNT);
+        createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__DATE);
+        createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__DESCRIPTION);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -4808,8 +4867,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(erlernbarEClass, Erlernbar.class, "Erlernbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(credstickEClass, Credstick.class, "Credstick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getCredstick_CurrenValue(), ecorePackage.getEInt(), "currenValue", null, 0, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getCredstick_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 0, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCredstick_MaxValue(), ecorePackage.getEInt(), "maxValue", null, 1, 1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCredstick_Transactionlog(), this.getCredstickTransaction(), null, "transactionlog", null, 0, -1, Credstick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCredstick_CurrentValue(), ecorePackage.getEBigDecimal(), "currentValue", null, 0, 1, Credstick.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(mengeEClass, Menge.class, "Menge", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getMenge_Anzahl(), ecorePackage.getEInt(), "anzahl", null, 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4839,6 +4899,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(identifiableEClass, Identifiable.class, "Identifiable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIdentifiable_ParentId(), ecorePackage.getEString(), "parentId", null, 0, 1, Identifiable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(credstickTransactionEClass, CredstickTransaction.class, "CredstickTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCredstickTransaction_Amount(), ecorePackage.getEBigDecimal(), "amount", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCredstickTransaction_Date(), this.getShrDate(), "date", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCredstickTransaction_Description(), ecorePackage.getEString(), "description", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

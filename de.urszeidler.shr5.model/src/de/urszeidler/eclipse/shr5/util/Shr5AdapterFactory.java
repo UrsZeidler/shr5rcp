@@ -503,6 +503,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createIdentifiableAdapter();
             }
             @Override
+            public Adapter caseCredstickTransaction(CredstickTransaction object) {
+                return createCredstickTransactionAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1765,6 +1769,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createIdentifiableAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.CredstickTransaction <em>Credstick Transaction</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.CredstickTransaction
+     * @generated
+     */
+    public Adapter createCredstickTransactionAdapter() {
         return null;
     }
 

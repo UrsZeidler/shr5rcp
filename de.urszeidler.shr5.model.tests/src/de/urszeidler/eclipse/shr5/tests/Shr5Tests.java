@@ -46,6 +46,7 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(MunitionTest.class);
         suite.addTestSuite(VertragTest.class);
         suite.addTestSuite(GeistTest.class);
+        suite.addTestSuite(CredstickTest.class);        
         
         return suite;
     }

@@ -127,8 +127,9 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEIDUNG__RUESTUNG, grpGegenstand);
         } else if (object instanceof Credstick) {
             grpGegenstand.setText(Messages.ObjectPage_credstick);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURREN_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURRENT_VALUE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, grpGegenstand);
         } else if (object instanceof Munition) {
             grpGegenstand.setText("Munition");
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);
