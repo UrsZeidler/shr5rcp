@@ -1430,9 +1430,10 @@
 
 	<xsl:template name="quelle">
 		<xsl:variable name="aid" select="id/text()" />
+		<xsl:if test="$aid!=''">
 				<xsl:attribute name="xmi:id"><xsl:value-of
 							select="$aid" /></xsl:attribute>
-		
+		</xsl:if>
 		<xsl:if test="number(page/text())">
 		<xsl:choose>
 			<xsl:when test="$do_localization='true'">
@@ -1663,14 +1664,19 @@
 	<xsl:template match="//metatype" mode="critter">
 	<xsl:choose>
 			<xsl:when test="category/text()='Spirits'">
-		<entries xsi:type="shr5:GeisterArt">
-		<xsl:call-template name="species-data" />
+		<entries xsi:type="shr5:Geist">
+				<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
+		<xsl:call-template name="mods" />
 		<xsl:call-template name="geist-species" />
 		</entries>			
 		</xsl:when>
 			<xsl:when test="category/text()='Toxic Spirits'">
-		<entries xsi:type="shr5:GeisterArt">
-			<xsl:call-template name="species-data" />
+		<entries xsi:type="shr5:Geist">
+					<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
+		<xsl:call-template name="mods" />
+			
 			<xsl:call-template name="geist-species" />
 		</entries>			
 		</xsl:when>
@@ -1684,13 +1690,37 @@
 
 <xsl:template name="geist-species" >
 			<xsl:if test="number(substring-after(bodmin/text(),'F'))">
-			<xsl:attribute name="konstitutionMin"><xsl:value-of
+			<xsl:attribute name="konstitutionBasis"><xsl:value-of
 				select="number(substring-after(bodmin/text(),'F'))" /></xsl:attribute>
 			</xsl:if>	
 			<xsl:if test="number(substring-after(agimin/text(),'F'))">
-			<xsl:attribute name="geschicklichkeitMin"><xsl:value-of
+			<xsl:attribute name="geschicklichkeitBasis"><xsl:value-of
 				select="number(substring-after(agimin/text(),'F'))" /></xsl:attribute>
-				</xsl:if>	
+			</xsl:if>	
+			<xsl:if test="number(substring-after(reamin/text(),'F'))">
+			<xsl:attribute name="reaktionBasis"><xsl:value-of
+				select="number(substring-after(reamin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
+			<xsl:if test="number(substring-after(strmin/text(),'F'))">
+			<xsl:attribute name="staerkeBasis"><xsl:value-of
+				select="number(substring-after(strmin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
+			<xsl:if test="number(substring-after(chamin/text(),'F'))">
+			<xsl:attribute name="charismaBasis"><xsl:value-of
+				select="number(substring-after(chamin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
+			<xsl:if test="number(substring-after(wilmin/text(),'F'))">
+			<xsl:attribute name="willenskraftBasis"><xsl:value-of
+				select="number(substring-after(wilmin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
+			<xsl:if test="number(substring-after(intmin/text(),'F'))">
+			<xsl:attribute name="intuitionBasis"><xsl:value-of
+				select="number(substring-after(intmin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
+			<xsl:if test="number(substring-after(logmin/text(),'F'))">
+			<xsl:attribute name="logikBasis"><xsl:value-of
+				select="number(substring-after(logmin/text(),'F'))" /></xsl:attribute>
+			</xsl:if>	
 
 </xsl:template>
 

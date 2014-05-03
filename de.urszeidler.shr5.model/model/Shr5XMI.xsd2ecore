@@ -589,12 +589,10 @@
     <nested inputs="shr5.ecore#//GebundenerGeist" outputs="Shr5XMI.xsd#//GebundenerGeist;XSDElementDeclaration=84"/>
     <nested inputs="shr5.ecore#//StufenPersona" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85">
       <nested inputs="shr5.ecore#//StufenPersona/stufe" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=4"/>
-      <nested inputs="shr5.ecore#//StufenPersona/fertigkeiten" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//StufenPersona/fertigkeitsGruppen" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=1"/>
       <nested inputs="shr5.ecore#//StufenPersona/skillGroups" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=5"/>
-      <nested inputs="shr5.ecore#//StufenPersona/skillGroups" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//StufenPersona/skillGroups" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//StufenPersona/skills" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=6"/>
-      <nested inputs="shr5.ecore#//StufenPersona/skills" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="shr5.ecore#//StufenPersona/skills" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//SpezielleAttribute/edgeBasis" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//StufenPersona;XSDComplexTypeDefinition=85/XSDAttributeUse=1"/>

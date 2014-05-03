@@ -12432,31 +12432,13 @@ public interface Shr5Package extends EPackage {
     int STUFEN_PERSONA__STUFE = QUELLE_FEATURE_COUNT + 21;
 
     /**
-     * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int STUFEN_PERSONA__FERTIGKEITEN = QUELLE_FEATURE_COUNT + 22;
-
-    /**
-     * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int STUFEN_PERSONA__FERTIGKEITS_GRUPPEN = QUELLE_FEATURE_COUNT + 23;
-
-    /**
      * The feature id for the '<em><b>Skill Groups</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int STUFEN_PERSONA__SKILL_GROUPS = QUELLE_FEATURE_COUNT + 24;
+    int STUFEN_PERSONA__SKILL_GROUPS = QUELLE_FEATURE_COUNT + 22;
 
     /**
      * The feature id for the '<em><b>Skills</b></em>' reference list.
@@ -12465,7 +12447,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int STUFEN_PERSONA__SKILLS = QUELLE_FEATURE_COUNT + 25;
+    int STUFEN_PERSONA__SKILLS = QUELLE_FEATURE_COUNT + 23;
 
     /**
      * The number of structural features of the '<em>Stufen Persona</em>' class.
@@ -12474,7 +12456,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int STUFEN_PERSONA_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 26;
+    int STUFEN_PERSONA_FEATURE_COUNT = QUELLE_FEATURE_COUNT + 24;
 
     /**
      * The number of operations of the '<em>Stufen Persona</em>' class.
@@ -12709,24 +12691,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int GEIST__STUFE = STUFEN_PERSONA__STUFE;
-
-    /**
-     * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GEIST__FERTIGKEITEN = STUFEN_PERSONA__FERTIGKEITEN;
-
-    /**
-     * The feature id for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int GEIST__FERTIGKEITS_GRUPPEN = STUFEN_PERSONA__FERTIGKEITS_GRUPPEN;
 
     /**
      * The feature id for the '<em><b>Skill Groups</b></em>' reference list.
@@ -16382,28 +16346,6 @@ public interface Shr5Package extends EPackage {
     EAttribute getStufenPersona_Stufe();
 
     /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeiten <em>Fertigkeiten</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Fertigkeiten</em>'.
-     * @see de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeiten()
-     * @see #getStufenPersona()
-     * @generated
-     */
-    EReference getStufenPersona_Fertigkeiten();
-
-    /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeitsGruppen <em>Fertigkeits Gruppen</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Fertigkeits Gruppen</em>'.
-     * @see de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeitsGruppen()
-     * @see #getStufenPersona()
-     * @generated
-     */
-    EReference getStufenPersona_FertigkeitsGruppen();
-
-    /**
      * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.StufenPersona#getSkillGroups <em>Skill Groups</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -19378,22 +19320,6 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute STUFEN_PERSONA__STUFE = eINSTANCE.getStufenPersona_Stufe();
-
-        /**
-         * The meta object literal for the '<em><b>Fertigkeiten</b></em>' containment reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference STUFEN_PERSONA__FERTIGKEITEN = eINSTANCE.getStufenPersona_Fertigkeiten();
-
-        /**
-         * The meta object literal for the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference STUFEN_PERSONA__FERTIGKEITS_GRUPPEN = eINSTANCE.getStufenPersona_FertigkeitsGruppen();
 
         /**
          * The meta object literal for the '<em><b>Skill Groups</b></em>' reference list feature.

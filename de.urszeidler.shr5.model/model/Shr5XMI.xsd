@@ -1241,16 +1241,6 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Quelle">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="fertigkeiten" type="shr5:PersonaFertigkeit">
-            <xsd:annotation>
-              <xsd:documentation>Contains the fertigkeiten.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="fertigkeitsGruppen" type="shr5:PersonaFertigkeitsGruppe">
-            <xsd:annotation>
-              <xsd:documentation>Contains the skillgroups.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
           <xsd:element name="skillGroups" type="shr5:FertigkeitsGruppe"/>
           <xsd:element name="skills" type="shr5:Fertigkeit"/>
         </xsd:choice>

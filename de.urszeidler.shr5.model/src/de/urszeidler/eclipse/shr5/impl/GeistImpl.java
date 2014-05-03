@@ -14,8 +14,6 @@ import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.KoerperlicheAttribute;
 import de.urszeidler.eclipse.shr5.ModifikatorAttribute;
 import de.urszeidler.eclipse.shr5.Panzerung;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
-import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.SpezielleAttribute;
@@ -39,55 +37,53 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getParentId <em>Parent Id</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPage <em>Page</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSrcBook <em>Src Book</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getInitative <em>Initative</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getInitativWuerfel <em>Initativ Wuerfel</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAusweichen <em>Ausweichen</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getEssenz <em>Essenz</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getEdgeBasis <em>Edge Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getEdge <em>Edge</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getCharisma <em>Charisma</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getWillenskraft <em>Willenskraft</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getIntuition <em>Intuition</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLogik <em>Logik</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getKonstitution <em>Konstitution</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getGeschicklichkeit <em>Geschicklichkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getReaktion <em>Reaktion</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getStaerke <em>Staerke</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getBeschreibung <em>Beschreibung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getImage <em>Image</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getName <em>Name</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getKoerperlich <em>Koerperlich</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getGeistig <em>Geistig</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSozial <em>Sozial</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPanzer <em>Panzer</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getStufe <em>Stufe</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getFertigkeiten <em>Fertigkeiten</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getFertigkeitsGruppen <em>Fertigkeits Gruppen</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSkillGroups <em>Skill Groups</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSkills <em>Skills</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleReaktion <em>Astrale Reaktion</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleStaerke <em>Astrale Staerke</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitative <em>Astrale Initative</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getKonstitutionBasis <em>Konstitution Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getGeschicklichkeitBasis <em>Geschicklichkeit Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getReaktionBasis <em>Reaktion Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getStaerkeBasis <em>Staerke Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getCharismaBasis <em>Charisma Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getWillenskraftBasis <em>Willenskraft Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getIntuitionBasis <em>Intuition Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLogikBasis <em>Logik Basis</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPowers <em>Powers</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getInitative <em>Initative</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getInitativWuerfel <em>Initativ Wuerfel</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAusweichen <em>Ausweichen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getEssenz <em>Essenz</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getEdgeBasis <em>Edge Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getEdge <em>Edge</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getCharisma <em>Charisma</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getWillenskraft <em>Willenskraft</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getIntuition <em>Intuition</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLogik <em>Logik</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getKonstitution <em>Konstitution</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getGeschicklichkeit <em>Geschicklichkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getReaktion <em>Reaktion</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getStaerke <em>Staerke</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getKoerperlich <em>Koerperlich</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getGeistig <em>Geistig</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSozial <em>Sozial</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPanzer <em>Panzer</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getStufe <em>Stufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSkillGroups <em>Skill Groups</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSkills <em>Skills</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralesLimit <em>Astrales Limit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleGeschicklichkeit <em>Astrale Geschicklichkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleReaktion <em>Astrale Reaktion</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleStaerke <em>Astrale Staerke</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitative <em>Astrale Initative</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getKonstitutionBasis <em>Konstitution Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getGeschicklichkeitBasis <em>Geschicklichkeit Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getReaktionBasis <em>Reaktion Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getStaerkeBasis <em>Staerke Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getCharismaBasis <em>Charisma Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getWillenskraftBasis <em>Willenskraft Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getIntuitionBasis <em>Intuition Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLogikBasis <em>Logik Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPowers <em>Powers</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
@@ -95,7 +91,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -106,7 +101,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -117,7 +111,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -128,7 +121,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -139,7 +131,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSrcBook()
      * @generated
      * @ordered
@@ -150,7 +141,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getInitative() <em>Initative</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getInitative()
      * @generated
      * @ordered
@@ -161,7 +151,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getInitativWuerfel() <em>Initativ Wuerfel</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getInitativWuerfel()
      * @generated
      * @ordered
@@ -172,7 +161,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAusweichen() <em>Ausweichen</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAusweichen()
      * @generated
      * @ordered
@@ -183,7 +171,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getEssenz() <em>Essenz</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEssenz()
      * @generated
      * @ordered
@@ -194,7 +181,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getEdgeBasis() <em>Edge Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEdgeBasis()
      * @generated
      * @ordered
@@ -205,7 +191,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getEdgeBasis() <em>Edge Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEdgeBasis()
      * @generated
      * @ordered
@@ -216,7 +201,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getEdge() <em>Edge</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getEdge()
      * @generated
      * @ordered
@@ -227,7 +211,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getCharisma() <em>Charisma</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCharisma()
      * @generated
      * @ordered
@@ -238,7 +221,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getWillenskraft() <em>Willenskraft</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWillenskraft()
      * @generated
      * @ordered
@@ -249,7 +231,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getIntuition() <em>Intuition</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getIntuition()
      * @generated
      * @ordered
@@ -260,7 +241,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getLogik() <em>Logik</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getLogik()
      * @generated
      * @ordered
@@ -271,7 +251,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getKonstitution() <em>Konstitution</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKonstitution()
      * @generated
      * @ordered
@@ -282,7 +261,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getGeschicklichkeit() <em>Geschicklichkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeschicklichkeit()
      * @generated
      * @ordered
@@ -293,7 +271,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getReaktion() <em>Reaktion</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getReaktion()
      * @generated
      * @ordered
@@ -304,7 +281,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getStaerke() <em>Staerke</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStaerke()
      * @generated
      * @ordered
@@ -315,7 +291,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -326,7 +301,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -337,7 +311,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -348,7 +321,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -359,7 +331,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -370,7 +341,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -381,7 +351,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getKoerperlich() <em>Koerperlich</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKoerperlich()
      * @generated
      * @ordered
@@ -392,7 +361,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getGeistig() <em>Geistig</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeistig()
      * @generated
      * @ordered
@@ -403,7 +371,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getSozial() <em>Sozial</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSozial()
      * @generated
      * @ordered
@@ -414,7 +381,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPanzer()
      * @generated
      * @ordered
@@ -425,7 +391,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStufe()
      * @generated
      * @ordered
@@ -436,7 +401,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getStufe() <em>Stufe</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStufe()
      * @generated
      * @ordered
@@ -444,32 +408,9 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     protected int stufe = STUFE_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getFertigkeiten() <em>Fertigkeiten</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getFertigkeiten()
-     * @generated
-     * @ordered
-     */
-    protected EList<PersonaFertigkeit> fertigkeiten;
-
-    /**
-     * The cached value of the '{@link #getFertigkeitsGruppen() <em>Fertigkeits Gruppen</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getFertigkeitsGruppen()
-     * @generated
-     * @ordered
-     */
-    protected EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen;
-
-    /**
      * The cached value of the '{@link #getSkillGroups() <em>Skill Groups</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSkillGroups()
      * @generated
      * @ordered
@@ -480,7 +421,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getSkills() <em>Skills</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSkills()
      * @generated
      * @ordered
@@ -491,7 +431,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstralesLimit() <em>Astrales Limit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstralesLimit()
      * @generated
      * @ordered
@@ -502,7 +441,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstraleKonstitution() <em>Astrale Konstitution</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleKonstitution()
      * @generated
      * @ordered
@@ -513,7 +451,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstraleGeschicklichkeit() <em>Astrale Geschicklichkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleGeschicklichkeit()
      * @generated
      * @ordered
@@ -524,7 +461,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstraleReaktion() <em>Astrale Reaktion</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleReaktion()
      * @generated
      * @ordered
@@ -535,7 +471,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstraleStaerke() <em>Astrale Staerke</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleStaerke()
      * @generated
      * @ordered
@@ -546,7 +481,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstraleInitative() <em>Astrale Initative</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleInitative()
      * @generated
      * @ordered
@@ -557,7 +491,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstraleInitativWuerfel() <em>Astrale Initativ Wuerfel</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstraleInitativWuerfel()
      * @generated
      * @ordered
@@ -568,7 +501,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getAstralePanzerung() <em>Astrale Panzerung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getAstralePanzerung()
      * @generated
      * @ordered
@@ -579,7 +511,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getKonstitutionBasis() <em>Konstitution Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKonstitutionBasis()
      * @generated
      * @ordered
@@ -590,7 +521,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getKonstitutionBasis() <em>Konstitution Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getKonstitutionBasis()
      * @generated
      * @ordered
@@ -601,7 +531,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getGeschicklichkeitBasis() <em>Geschicklichkeit Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeschicklichkeitBasis()
      * @generated
      * @ordered
@@ -612,7 +541,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getGeschicklichkeitBasis() <em>Geschicklichkeit Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeschicklichkeitBasis()
      * @generated
      * @ordered
@@ -623,7 +551,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getReaktionBasis() <em>Reaktion Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getReaktionBasis()
      * @generated
      * @ordered
@@ -634,7 +561,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getReaktionBasis() <em>Reaktion Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getReaktionBasis()
      * @generated
      * @ordered
@@ -645,7 +571,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getStaerkeBasis() <em>Staerke Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStaerkeBasis()
      * @generated
      * @ordered
@@ -656,7 +581,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getStaerkeBasis() <em>Staerke Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStaerkeBasis()
      * @generated
      * @ordered
@@ -667,7 +591,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getCharismaBasis() <em>Charisma Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCharismaBasis()
      * @generated
      * @ordered
@@ -678,7 +601,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getCharismaBasis() <em>Charisma Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCharismaBasis()
      * @generated
      * @ordered
@@ -689,7 +611,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getWillenskraftBasis() <em>Willenskraft Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWillenskraftBasis()
      * @generated
      * @ordered
@@ -700,7 +621,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getWillenskraftBasis() <em>Willenskraft Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWillenskraftBasis()
      * @generated
      * @ordered
@@ -711,7 +631,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getIntuitionBasis() <em>Intuition Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getIntuitionBasis()
      * @generated
      * @ordered
@@ -722,7 +641,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getIntuitionBasis() <em>Intuition Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getIntuitionBasis()
      * @generated
      * @ordered
@@ -733,7 +651,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The default value of the '{@link #getLogikBasis() <em>Logik Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getLogikBasis()
      * @generated
      * @ordered
@@ -744,7 +661,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getLogikBasis() <em>Logik Basis</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getLogikBasis()
      * @generated
      * @ordered
@@ -755,7 +671,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * The cached value of the '{@link #getPowers() <em>Powers</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPowers()
      * @generated
      * @ordered
@@ -765,7 +680,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GeistImpl() {
@@ -775,7 +689,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -786,7 +699,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getParentId() {
@@ -796,7 +708,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setParentId(String newParentId) {
@@ -809,7 +720,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getPage() {
@@ -819,7 +729,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPage(String newPage) {
@@ -832,7 +741,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook getSrcBook() {
@@ -850,7 +758,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook basicGetSrcBook() {
@@ -860,7 +767,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSrcBook(SourceBook newSrcBook) {
@@ -959,7 +865,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getKonstitutionBasis() {
@@ -969,7 +874,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setKonstitutionBasis(int newKonstitutionBasis) {
@@ -982,7 +886,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getGeschicklichkeitBasis() {
@@ -992,21 +895,18 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setGeschicklichkeitBasis(int newGeschicklichkeitBasis) {
         int oldGeschicklichkeitBasis = geschicklichkeitBasis;
         geschicklichkeitBasis = newGeschicklichkeitBasis;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GEIST__GESCHICKLICHKEIT_BASIS, oldGeschicklichkeitBasis,
-                    geschicklichkeitBasis));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GEIST__GESCHICKLICHKEIT_BASIS, oldGeschicklichkeitBasis, geschicklichkeitBasis));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getReaktionBasis() {
@@ -1016,7 +916,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setReaktionBasis(int newReaktionBasis) {
@@ -1029,7 +928,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getStaerkeBasis() {
@@ -1039,7 +937,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setStaerkeBasis(int newStaerkeBasis) {
@@ -1052,7 +949,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getCharismaBasis() {
@@ -1062,7 +958,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setCharismaBasis(int newCharismaBasis) {
@@ -1075,7 +970,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getWillenskraftBasis() {
@@ -1085,7 +979,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setWillenskraftBasis(int newWillenskraftBasis) {
@@ -1098,7 +991,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getIntuitionBasis() {
@@ -1108,7 +1000,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setIntuitionBasis(int newIntuitionBasis) {
@@ -1121,7 +1012,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getLogikBasis() {
@@ -1131,7 +1021,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setLogikBasis(int newLogikBasis) {
@@ -1144,7 +1033,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<CritterKraft> getPowers() {
@@ -1157,16 +1045,11 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case Shr5Package.GEIST__FERTIGKEITEN:
-                return ((InternalEList<?>)getFertigkeiten()).basicRemove(otherEnd, msgs);
-            case Shr5Package.GEIST__FERTIGKEITS_GRUPPEN:
-                return ((InternalEList<?>)getFertigkeitsGruppen()).basicRemove(otherEnd, msgs);
             case Shr5Package.GEIST__POWERS:
                 return ((InternalEList<?>)getPowers()).basicRemove(otherEnd, msgs);
         }
@@ -1176,7 +1059,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1187,8 +1069,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
             case Shr5Package.GEIST__PAGE:
                 return getPage();
             case Shr5Package.GEIST__SRC_BOOK:
-                if (resolve)
-                    return getSrcBook();
+                if (resolve) return getSrcBook();
                 return basicGetSrcBook();
             case Shr5Package.GEIST__INITATIVE:
                 return getInitative();
@@ -1234,10 +1115,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return getPanzer();
             case Shr5Package.GEIST__STUFE:
                 return getStufe();
-            case Shr5Package.GEIST__FERTIGKEITEN:
-                return getFertigkeiten();
-            case Shr5Package.GEIST__FERTIGKEITS_GRUPPEN:
-                return getFertigkeitsGruppen();
             case Shr5Package.GEIST__SKILL_GROUPS:
                 return getSkillGroups();
             case Shr5Package.GEIST__SKILLS:
@@ -1283,7 +1160,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1313,14 +1189,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return;
             case Shr5Package.GEIST__STUFE:
                 setStufe((Integer)newValue);
-                return;
-            case Shr5Package.GEIST__FERTIGKEITEN:
-                getFertigkeiten().clear();
-                getFertigkeiten().addAll((Collection<? extends PersonaFertigkeit>)newValue);
-                return;
-            case Shr5Package.GEIST__FERTIGKEITS_GRUPPEN:
-                getFertigkeitsGruppen().clear();
-                getFertigkeitsGruppen().addAll((Collection<? extends PersonaFertigkeitsGruppe>)newValue);
                 return;
             case Shr5Package.GEIST__SKILL_GROUPS:
                 getSkillGroups().clear();
@@ -1365,7 +1233,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1394,12 +1261,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return;
             case Shr5Package.GEIST__STUFE:
                 setStufe(STUFE_EDEFAULT);
-                return;
-            case Shr5Package.GEIST__FERTIGKEITEN:
-                getFertigkeiten().clear();
-                return;
-            case Shr5Package.GEIST__FERTIGKEITS_GRUPPEN:
-                getFertigkeitsGruppen().clear();
                 return;
             case Shr5Package.GEIST__SKILL_GROUPS:
                 getSkillGroups().clear();
@@ -1441,7 +1302,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1497,10 +1357,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return getPanzer() != PANZER_EDEFAULT;
             case Shr5Package.GEIST__STUFE:
                 return stufe != STUFE_EDEFAULT;
-            case Shr5Package.GEIST__FERTIGKEITEN:
-                return fertigkeiten != null && !fertigkeiten.isEmpty();
-            case Shr5Package.GEIST__FERTIGKEITS_GRUPPEN:
-                return fertigkeitsGruppen != null && !fertigkeitsGruppen.isEmpty();
             case Shr5Package.GEIST__SKILL_GROUPS:
                 return skillGroups != null && !skillGroups.isEmpty();
             case Shr5Package.GEIST__SKILLS:
@@ -1546,115 +1402,77 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == ModifikatorAttribute.class) {
             switch (derivedFeatureID) {
-                default:
-                    return -1;
+                default: return -1;
             }
         }
         if (baseClass == SpezielleAttribute.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__INITATIVE:
-                    return Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIVE;
-                case Shr5Package.GEIST__INITATIV_WUERFEL:
-                    return Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL;
-                case Shr5Package.GEIST__AUSWEICHEN:
-                    return Shr5Package.SPEZIELLE_ATTRIBUTE__AUSWEICHEN;
-                case Shr5Package.GEIST__ESSENZ:
-                    return Shr5Package.SPEZIELLE_ATTRIBUTE__ESSENZ;
-                case Shr5Package.GEIST__EDGE_BASIS:
-                    return Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE_BASIS;
-                case Shr5Package.GEIST__EDGE:
-                    return Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__INITATIVE: return Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIVE;
+                case Shr5Package.GEIST__INITATIV_WUERFEL: return Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL;
+                case Shr5Package.GEIST__AUSWEICHEN: return Shr5Package.SPEZIELLE_ATTRIBUTE__AUSWEICHEN;
+                case Shr5Package.GEIST__ESSENZ: return Shr5Package.SPEZIELLE_ATTRIBUTE__ESSENZ;
+                case Shr5Package.GEIST__EDGE_BASIS: return Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE_BASIS;
+                case Shr5Package.GEIST__EDGE: return Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE;
+                default: return -1;
             }
         }
         if (baseClass == GeistigeAttribute.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__CHARISMA:
-                    return Shr5Package.GEISTIGE_ATTRIBUTE__CHARISMA;
-                case Shr5Package.GEIST__WILLENSKRAFT:
-                    return Shr5Package.GEISTIGE_ATTRIBUTE__WILLENSKRAFT;
-                case Shr5Package.GEIST__INTUITION:
-                    return Shr5Package.GEISTIGE_ATTRIBUTE__INTUITION;
-                case Shr5Package.GEIST__LOGIK:
-                    return Shr5Package.GEISTIGE_ATTRIBUTE__LOGIK;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__CHARISMA: return Shr5Package.GEISTIGE_ATTRIBUTE__CHARISMA;
+                case Shr5Package.GEIST__WILLENSKRAFT: return Shr5Package.GEISTIGE_ATTRIBUTE__WILLENSKRAFT;
+                case Shr5Package.GEIST__INTUITION: return Shr5Package.GEISTIGE_ATTRIBUTE__INTUITION;
+                case Shr5Package.GEIST__LOGIK: return Shr5Package.GEISTIGE_ATTRIBUTE__LOGIK;
+                default: return -1;
             }
         }
         if (baseClass == KoerperlicheAttribute.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__KONSTITUTION:
-                    return Shr5Package.KOERPERLICHE_ATTRIBUTE__KONSTITUTION;
-                case Shr5Package.GEIST__GESCHICKLICHKEIT:
-                    return Shr5Package.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT;
-                case Shr5Package.GEIST__REAKTION:
-                    return Shr5Package.KOERPERLICHE_ATTRIBUTE__REAKTION;
-                case Shr5Package.GEIST__STAERKE:
-                    return Shr5Package.KOERPERLICHE_ATTRIBUTE__STAERKE;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__KONSTITUTION: return Shr5Package.KOERPERLICHE_ATTRIBUTE__KONSTITUTION;
+                case Shr5Package.GEIST__GESCHICKLICHKEIT: return Shr5Package.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT;
+                case Shr5Package.GEIST__REAKTION: return Shr5Package.KOERPERLICHE_ATTRIBUTE__REAKTION;
+                case Shr5Package.GEIST__STAERKE: return Shr5Package.KOERPERLICHE_ATTRIBUTE__STAERKE;
+                default: return -1;
             }
         }
         if (baseClass == Beschreibbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__BESCHREIBUNG:
-                    return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
-                case Shr5Package.GEIST__IMAGE:
-                    return Shr5Package.BESCHREIBBAR__IMAGE;
-                case Shr5Package.GEIST__NAME:
-                    return Shr5Package.BESCHREIBBAR__NAME;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+                case Shr5Package.GEIST__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
+                case Shr5Package.GEIST__NAME: return Shr5Package.BESCHREIBBAR__NAME;
+                default: return -1;
             }
         }
         if (baseClass == ChrakterLimits.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__KOERPERLICH:
-                    return Shr5Package.CHRAKTER_LIMITS__KOERPERLICH;
-                case Shr5Package.GEIST__GEISTIG:
-                    return Shr5Package.CHRAKTER_LIMITS__GEISTIG;
-                case Shr5Package.GEIST__SOZIAL:
-                    return Shr5Package.CHRAKTER_LIMITS__SOZIAL;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__KOERPERLICH: return Shr5Package.CHRAKTER_LIMITS__KOERPERLICH;
+                case Shr5Package.GEIST__GEISTIG: return Shr5Package.CHRAKTER_LIMITS__GEISTIG;
+                case Shr5Package.GEIST__SOZIAL: return Shr5Package.CHRAKTER_LIMITS__SOZIAL;
+                default: return -1;
             }
         }
         if (baseClass == Panzerung.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__PANZER:
-                    return Shr5Package.PANZERUNG__PANZER;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__PANZER: return Shr5Package.PANZERUNG__PANZER;
+                default: return -1;
             }
         }
         if (baseClass == AstraleProjektion.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.GEIST__ASTRALES_LIMIT:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
-                case Shr5Package.GEIST__ASTRALE_KONSTITUTION:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
-                case Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
-                case Shr5Package.GEIST__ASTRALE_REAKTION:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
-                case Shr5Package.GEIST__ASTRALE_STAERKE:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
-                case Shr5Package.GEIST__ASTRALE_INITATIVE:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
-                case Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
-                case Shr5Package.GEIST__ASTRALE_PANZERUNG:
-                    return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
-                default:
-                    return -1;
+                case Shr5Package.GEIST__ASTRALES_LIMIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT;
+                case Shr5Package.GEIST__ASTRALE_KONSTITUTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION;
+                case Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.GEIST__ASTRALE_REAKTION: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION;
+                case Shr5Package.GEIST__ASTRALE_STAERKE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE;
+                case Shr5Package.GEIST__ASTRALE_INITATIVE: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE;
+                case Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.GEIST__ASTRALE_PANZERUNG: return Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -1663,115 +1481,77 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == ModifikatorAttribute.class) {
             switch (baseFeatureID) {
-                default:
-                    return -1;
+                default: return -1;
             }
         }
         if (baseClass == SpezielleAttribute.class) {
             switch (baseFeatureID) {
-                case Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIVE:
-                    return Shr5Package.GEIST__INITATIVE;
-                case Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL:
-                    return Shr5Package.GEIST__INITATIV_WUERFEL;
-                case Shr5Package.SPEZIELLE_ATTRIBUTE__AUSWEICHEN:
-                    return Shr5Package.GEIST__AUSWEICHEN;
-                case Shr5Package.SPEZIELLE_ATTRIBUTE__ESSENZ:
-                    return Shr5Package.GEIST__ESSENZ;
-                case Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE_BASIS:
-                    return Shr5Package.GEIST__EDGE_BASIS;
-                case Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE:
-                    return Shr5Package.GEIST__EDGE;
-                default:
-                    return -1;
+                case Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIVE: return Shr5Package.GEIST__INITATIVE;
+                case Shr5Package.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL: return Shr5Package.GEIST__INITATIV_WUERFEL;
+                case Shr5Package.SPEZIELLE_ATTRIBUTE__AUSWEICHEN: return Shr5Package.GEIST__AUSWEICHEN;
+                case Shr5Package.SPEZIELLE_ATTRIBUTE__ESSENZ: return Shr5Package.GEIST__ESSENZ;
+                case Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE_BASIS: return Shr5Package.GEIST__EDGE_BASIS;
+                case Shr5Package.SPEZIELLE_ATTRIBUTE__EDGE: return Shr5Package.GEIST__EDGE;
+                default: return -1;
             }
         }
         if (baseClass == GeistigeAttribute.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GEISTIGE_ATTRIBUTE__CHARISMA:
-                    return Shr5Package.GEIST__CHARISMA;
-                case Shr5Package.GEISTIGE_ATTRIBUTE__WILLENSKRAFT:
-                    return Shr5Package.GEIST__WILLENSKRAFT;
-                case Shr5Package.GEISTIGE_ATTRIBUTE__INTUITION:
-                    return Shr5Package.GEIST__INTUITION;
-                case Shr5Package.GEISTIGE_ATTRIBUTE__LOGIK:
-                    return Shr5Package.GEIST__LOGIK;
-                default:
-                    return -1;
+                case Shr5Package.GEISTIGE_ATTRIBUTE__CHARISMA: return Shr5Package.GEIST__CHARISMA;
+                case Shr5Package.GEISTIGE_ATTRIBUTE__WILLENSKRAFT: return Shr5Package.GEIST__WILLENSKRAFT;
+                case Shr5Package.GEISTIGE_ATTRIBUTE__INTUITION: return Shr5Package.GEIST__INTUITION;
+                case Shr5Package.GEISTIGE_ATTRIBUTE__LOGIK: return Shr5Package.GEIST__LOGIK;
+                default: return -1;
             }
         }
         if (baseClass == KoerperlicheAttribute.class) {
             switch (baseFeatureID) {
-                case Shr5Package.KOERPERLICHE_ATTRIBUTE__KONSTITUTION:
-                    return Shr5Package.GEIST__KONSTITUTION;
-                case Shr5Package.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT:
-                    return Shr5Package.GEIST__GESCHICKLICHKEIT;
-                case Shr5Package.KOERPERLICHE_ATTRIBUTE__REAKTION:
-                    return Shr5Package.GEIST__REAKTION;
-                case Shr5Package.KOERPERLICHE_ATTRIBUTE__STAERKE:
-                    return Shr5Package.GEIST__STAERKE;
-                default:
-                    return -1;
+                case Shr5Package.KOERPERLICHE_ATTRIBUTE__KONSTITUTION: return Shr5Package.GEIST__KONSTITUTION;
+                case Shr5Package.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT: return Shr5Package.GEIST__GESCHICKLICHKEIT;
+                case Shr5Package.KOERPERLICHE_ATTRIBUTE__REAKTION: return Shr5Package.GEIST__REAKTION;
+                case Shr5Package.KOERPERLICHE_ATTRIBUTE__STAERKE: return Shr5Package.GEIST__STAERKE;
+                default: return -1;
             }
         }
         if (baseClass == Beschreibbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG:
-                    return Shr5Package.GEIST__BESCHREIBUNG;
-                case Shr5Package.BESCHREIBBAR__IMAGE:
-                    return Shr5Package.GEIST__IMAGE;
-                case Shr5Package.BESCHREIBBAR__NAME:
-                    return Shr5Package.GEIST__NAME;
-                default:
-                    return -1;
+                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.GEIST__BESCHREIBUNG;
+                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.GEIST__IMAGE;
+                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.GEIST__NAME;
+                default: return -1;
             }
         }
         if (baseClass == ChrakterLimits.class) {
             switch (baseFeatureID) {
-                case Shr5Package.CHRAKTER_LIMITS__KOERPERLICH:
-                    return Shr5Package.GEIST__KOERPERLICH;
-                case Shr5Package.CHRAKTER_LIMITS__GEISTIG:
-                    return Shr5Package.GEIST__GEISTIG;
-                case Shr5Package.CHRAKTER_LIMITS__SOZIAL:
-                    return Shr5Package.GEIST__SOZIAL;
-                default:
-                    return -1;
+                case Shr5Package.CHRAKTER_LIMITS__KOERPERLICH: return Shr5Package.GEIST__KOERPERLICH;
+                case Shr5Package.CHRAKTER_LIMITS__GEISTIG: return Shr5Package.GEIST__GEISTIG;
+                case Shr5Package.CHRAKTER_LIMITS__SOZIAL: return Shr5Package.GEIST__SOZIAL;
+                default: return -1;
             }
         }
         if (baseClass == Panzerung.class) {
             switch (baseFeatureID) {
-                case Shr5Package.PANZERUNG__PANZER:
-                    return Shr5Package.GEIST__PANZER;
-                default:
-                    return -1;
+                case Shr5Package.PANZERUNG__PANZER: return Shr5Package.GEIST__PANZER;
+                default: return -1;
             }
         }
         if (baseClass == AstraleProjektion.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT:
-                    return Shr5Package.GEIST__ASTRALES_LIMIT;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION:
-                    return Shr5Package.GEIST__ASTRALE_KONSTITUTION;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT:
-                    return Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION:
-                    return Shr5Package.GEIST__ASTRALE_REAKTION;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE:
-                    return Shr5Package.GEIST__ASTRALE_STAERKE;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE:
-                    return Shr5Package.GEIST__ASTRALE_INITATIVE;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL:
-                    return Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL;
-                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG:
-                    return Shr5Package.GEIST__ASTRALE_PANZERUNG;
-                default:
-                    return -1;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALES_LIMIT: return Shr5Package.GEIST__ASTRALES_LIMIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_KONSTITUTION: return Shr5Package.GEIST__ASTRALE_KONSTITUTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_GESCHICKLICHKEIT: return Shr5Package.GEIST__ASTRALE_GESCHICKLICHKEIT;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_REAKTION: return Shr5Package.GEIST__ASTRALE_REAKTION;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_STAERKE: return Shr5Package.GEIST__ASTRALE_STAERKE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIVE: return Shr5Package.GEIST__ASTRALE_INITATIVE;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_INITATIV_WUERFEL: return Shr5Package.GEIST__ASTRALE_INITATIV_WUERFEL;
+                case Shr5Package.ASTRALE_PROJEKTION__ASTRALE_PANZERUNG: return Shr5Package.GEIST__ASTRALE_PANZERUNG;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -1780,13 +1560,11 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (parentId: ");
@@ -1922,7 +1700,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getBeschreibung() {
@@ -1932,7 +1709,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setBeschreibung(String newBeschreibung) {
@@ -1945,7 +1721,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getImage() {
@@ -1955,7 +1730,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setImage(String newImage) {
@@ -1968,7 +1742,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
@@ -1978,7 +1751,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setName(String newName) {
@@ -2083,7 +1855,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getEdgeBasis() {
@@ -2093,7 +1864,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setEdgeBasis(int newEdgeBasis) {
@@ -2118,7 +1888,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getStufe() {
@@ -2128,7 +1897,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setStufe(int newStufe) {
@@ -2141,34 +1909,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<PersonaFertigkeit> getFertigkeiten() {
-        if (fertigkeiten == null) {
-            fertigkeiten = new EObjectContainmentEList<PersonaFertigkeit>(PersonaFertigkeit.class, this, Shr5Package.GEIST__FERTIGKEITEN);
-        }
-        return fertigkeiten;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<PersonaFertigkeitsGruppe> getFertigkeitsGruppen() {
-        if (fertigkeitsGruppen == null) {
-            fertigkeitsGruppen = new EObjectContainmentEList<PersonaFertigkeitsGruppe>(PersonaFertigkeitsGruppe.class, this,
-                    Shr5Package.GEIST__FERTIGKEITS_GRUPPEN);
-        }
-        return fertigkeitsGruppen;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<FertigkeitsGruppe> getSkillGroups() {
@@ -2181,7 +1921,6 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<Fertigkeit> getSkills() {

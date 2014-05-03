@@ -655,9 +655,7 @@ public class StufenPersonaItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.STUFEN_PERSONA__FERTIGKEITEN);
-            childrenFeatures.add(Shr5Package.Literals.STUFEN_PERSONA__FERTIGKEITS_GRUPPEN);
-        }
+         }
         return childrenFeatures;
     }
 
@@ -726,10 +724,6 @@ public class StufenPersonaItemProvider
             case Shr5Package.STUFEN_PERSONA__STUFE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5Package.STUFEN_PERSONA__FERTIGKEITEN:
-            case Shr5Package.STUFEN_PERSONA__FERTIGKEITS_GRUPPEN:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
         }
         super.notifyChanged(notification);
     }
@@ -744,16 +738,6 @@ public class StufenPersonaItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.STUFEN_PERSONA__FERTIGKEITEN,
-                 Shr5Factory.eINSTANCE.createPersonaFertigkeit()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.STUFEN_PERSONA__FERTIGKEITS_GRUPPEN,
-                 Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe()));
     }
 
     /**

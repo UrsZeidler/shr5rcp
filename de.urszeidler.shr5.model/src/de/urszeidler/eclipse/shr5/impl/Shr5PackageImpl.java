@@ -3652,7 +3652,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getStufenPersona_Fertigkeiten() {
+    public EReference getStufenPersona_SkillGroups() {
         return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3661,26 +3661,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getStufenPersona_FertigkeitsGruppen() {
-        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EReference getStufenPersona_SkillGroups() {
-        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(3);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EReference getStufenPersona_Skills() {
-        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(4);
+        return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4387,8 +4369,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         stufenPersonaEClass = createEClass(STUFEN_PERSONA);
         createEAttribute(stufenPersonaEClass, STUFEN_PERSONA__STUFE);
-        createEReference(stufenPersonaEClass, STUFEN_PERSONA__FERTIGKEITEN);
-        createEReference(stufenPersonaEClass, STUFEN_PERSONA__FERTIGKEITS_GRUPPEN);
         createEReference(stufenPersonaEClass, STUFEN_PERSONA__SKILL_GROUPS);
         createEReference(stufenPersonaEClass, STUFEN_PERSONA__SKILLS);
 
@@ -4967,8 +4947,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(stufenPersonaEClass, StufenPersona.class, "StufenPersona", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getStufenPersona_Stufe(), ecorePackage.getEInt(), "stufe", null, 1, 1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getStufenPersona_Fertigkeiten(), this.getPersonaFertigkeit(), null, "fertigkeiten", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getStufenPersona_FertigkeitsGruppen(), this.getPersonaFertigkeitsGruppe(), null, "fertigkeitsGruppen", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getStufenPersona_SkillGroups(), this.getFertigkeitsGruppe(), null, "skillGroups", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getStufenPersona_Skills(), this.getFertigkeit(), null, "skills", null, 0, -1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

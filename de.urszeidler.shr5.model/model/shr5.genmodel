@@ -453,8 +453,6 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//StufenPersona">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//StufenPersona/stufe"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/fertigkeiten"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/fertigkeitsGruppen"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/skillGroups"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//StufenPersona/skills"/>
     </genClasses>

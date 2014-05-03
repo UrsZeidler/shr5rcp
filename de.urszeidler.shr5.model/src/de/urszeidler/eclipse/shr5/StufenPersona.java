@@ -18,8 +18,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.StufenPersona#getStufe <em>Stufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeiten <em>Fertigkeiten</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.StufenPersona#getFertigkeitsGruppen <em>Fertigkeits Gruppen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.StufenPersona#getSkillGroups <em>Skill Groups</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.StufenPersona#getSkills <em>Skills</em>}</li>
  * </ul>
@@ -55,36 +53,6 @@ public interface StufenPersona extends Quelle, SpezielleAttribute, GeistigeAttri
      * @generated
      */
     void setStufe(int value);
-
-    /**
-     * Returns the value of the '<em><b>Fertigkeiten</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * Contains the fertigkeiten.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Fertigkeiten</em>' containment reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getStufenPersona_Fertigkeiten()
-     * @model containment="true"
-     * @generated
-     */
-    EList<PersonaFertigkeit> getFertigkeiten();
-
-    /**
-     * Returns the value of the '<em><b>Fertigkeits Gruppen</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * Contains the skillgroups.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Fertigkeits Gruppen</em>' containment reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getStufenPersona_FertigkeitsGruppen()
-     * @model containment="true"
-     * @generated
-     */
-    EList<PersonaFertigkeitsGruppe> getFertigkeitsGruppen();
 
     /**
      * Returns the value of the '<em><b>Skill Groups</b></em>' reference list.
