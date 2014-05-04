@@ -20,7 +20,31 @@
 
 [for (it : EClass | anEPackage.eClassifiers->selectByType(EClass)
 )]
-[printEClass(it.oclAsType(EClass))/][/for][/template]
+[printEClass(it.oclAsType(EClass))/][/for]
+
+# all enums
+
+The complete list of all EEnums in this package.
+
+[allEclassesAsLink(anEPackage.eClassifiers->selectByType(EEnum))/]
+
+[for (it : EEnum | anEPackage.eClassifiers->selectByType(EEnum)
+)]
+[printEEnum(it.oclAsType(EEnum))/][/for]
+
+# all edatatypes
+
+The complete list of all EDataTypes in this package.
+
+[allEclassesAsLink(anEPackage.eClassifiers->selectByType(EDataType))/]
+
+[for (it : EDataType | anEPackage.eClassifiers->selectByType(EDataType)
+)]
+[printEDataType(it.oclAsType(EDataType))/][/for]
+
+
+
+[/template]
 
 [**
  * Prints all concret subclasses.
@@ -36,7 +60,7 @@
 [**
  * Print the eclass link.
 */]
-[template public printEClassLink(anEclass : EClass)]
+[template public printEClassLink(anEclass : EClassifier)]
 [ '[' /][anEclass.name/][ ']' /]([anEclass.ePackage.name.toLower()/]-model#[anEclass.name.toLower()/])[/template]
 
 
@@ -64,6 +88,59 @@
 
 [/template]
 
+
+[template public allEclassesAsLink(pack : Collection(EClassifier))]
+[for (it : EClassifier | pack )]
+|[printEClassLink(it)/][/for]| 
+
+[/template]
+
+
+[**
+ * Print an eenum.
+*/]
+[template public printEEnum(ee : EEnum)]
+## [ee.name/]
+
+[toDocumentation(ee.eAnnotations)/]
+
+name | literal | value | doc
+----|----|---|---
+[for (it : EEnumLiteral | ee.eLiterals)]
+[it.name/]|[it.literal/]|[it.value/]|[toDocumentation(it.eAnnotations)/]
+[/for]
+
+[linkToTop(ee.ePackage)/]
+
+
+[/template]
+
+[**
+ * Print the edatatypes.
+*/]
+[template public printEDataType(ee : EDataType)]
+## [ee.name/]
+
+[toDocumentation(ee.eAnnotations)/]
+
+instanceTypeName | instanceClassName | serializable | doc
+----|----|---|---
+[ee.instanceTypeName/]|[ee.instanceClassName/]|[ee.serializable/]|[toDocumentation(ee.eAnnotations) /]
+
+[linkToTop(ee.ePackage)/]
+
+
+[/template]
+
+
+[**
+ * Links to a type if it is not an ecore type.
+*/]
+[template private printAttributeLink(attribute : EAttribute)]
+[if (not (attribute.eType.ePackage.name='ecore'))]
+[printEClassLink(attribute.eType)/][else]
+[attribute.eType.name/][/if]
+[/template]
 
 [**
  * Print the eclass.
@@ -96,7 +173,7 @@ abstract | interface
 name | type | cardinality | changeable | doc
 ----|----|---|---|---
 [for (it : EAttribute | anEclass.eAttributes)]
-[it.name/]|[it.eType.name /]|[cardinality(it)/]|[it.changeable/]|[ toDocumentationInTable(it.eAnnotations)/]
+[it.name/]|[printAttributeLink(it) /]|[cardinality(it)/]|[it.changeable/]|[ toDocumentationInTable(it.eAnnotations)/]
 [/for][/if]	
 
 [if (not anEclass.eReferences->isEmpty())]
@@ -127,5 +204,5 @@ name | doc
 [ '[' /]_back to top_[ ']' /]([anEPackage.name.toLower()/]-model#concret-classes-in-the-model-[anEPackage.name.toLower()/])
 [/template]
 
-[template public cardinality(feature : EStructuralFeature)]
+[template private cardinality(feature : EStructuralFeature)]
 [feature.lowerBound/]-[if (feature.upperBound=-1)]*[else][feature.upperBound/][/if][/template]
