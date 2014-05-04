@@ -704,6 +704,7 @@
               <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
         </xsd:choice>
         <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
       </xsd:extension>
@@ -718,6 +719,7 @@
           <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
@@ -735,6 +737,7 @@
               <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
         </xsd:choice>
         <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
       </xsd:extension>
@@ -806,6 +809,7 @@
               <xsd:documentation>The bound spirits are hold here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="ungebundenerGeist" type="shr5:GebundenerGeist"/>
           <xsd:element name="aspekt" type="shr5:FertigkeitsGruppe"/>
         </xsd:choice>
         <xsd:attribute name="tradition" type="shr5:MagischeTradition"/>
@@ -1231,7 +1235,6 @@
     <xsd:attribute ref="xmi:id"/>
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
     <xsd:attribute name="dienste" type="xsd:int"/>
-    <xsd:attribute name="geist" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="GebundenerGeist" type="shr5:GebundenerGeist"/>
   <xsd:complexType abstract="true" name="StufenPersona">

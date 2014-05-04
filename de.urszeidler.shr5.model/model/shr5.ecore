@@ -359,6 +359,8 @@
         <details key="documentation" value="The bound spirits are hold here."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ungebundenerGeist" eType="#//GebundenerGeist"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MysticAdept" eSuperTypes="#//KiAdept #//Zauberer"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaZauber" eSuperTypes="#//Erlernbar">
@@ -625,7 +627,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GebundenerGeist">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dienste" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="geist" lowerBound="1" eType="#//Geist"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geist" lowerBound="1" eType="#//Geist"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StufenPersona" abstract="true" interface="true"
       eSuperTypes="#//Quelle #//SpezielleAttribute #//GeistigeAttribute #//KoerperlicheAttribute #//Beschreibbar #//ChrakterLimits #//Panzerung">

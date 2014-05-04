@@ -50,26 +50,26 @@ public interface GebundenerGeist extends EObject {
     void setDienste(int value);
 
     /**
-     * Returns the value of the '<em><b>Geist</b></em>' reference.
+     * Returns the value of the '<em><b>Geist</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Geist</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Geist</em>' reference.
+     * @return the value of the '<em>Geist</em>' containment reference.
      * @see #setGeist(Geist)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getGebundenerGeist_Geist()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     Geist getGeist();
 
     /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist <em>Geist</em>}' reference.
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist <em>Geist</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Geist</em>' reference.
+     * @param value the new value of the '<em>Geist</em>' containment reference.
      * @see #getGeist()
      * @generated
      */

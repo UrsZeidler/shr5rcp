@@ -157,6 +157,7 @@ public class AspektMagierItemProvider
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.ZAUBERER__ZAUBER);
             childrenFeatures.add(Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER);
+            childrenFeatures.add(Shr5Package.Literals.ZAUBERER__UNGEBUNDENER_GEIST);
         }
         return childrenFeatures;
     }
@@ -224,6 +225,7 @@ public class AspektMagierItemProvider
                 return;
             case Shr5Package.ASPEKT_MAGIER__ZAUBER:
             case Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER:
+            case Shr5Package.ASPEKT_MAGIER__UNGEBUNDENER_GEIST:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -250,6 +252,34 @@ public class AspektMagierItemProvider
             (createChildParameter
                 (Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER,
                  Shr5Factory.eINSTANCE.createGebundenerGeist()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.ZAUBERER__UNGEBUNDENER_GEIST,
+                 Shr5Factory.eINSTANCE.createGebundenerGeist()));
+    }
+
+    /**
+     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+        Object childFeature = feature;
+        Object childObject = child;
+
+        boolean qualify =
+            childFeature == Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER ||
+            childFeature == Shr5Package.Literals.ZAUBERER__UNGEBUNDENER_GEIST;
+
+        if (qualify) {
+            return getString
+                ("_UI_CreateChild_text2",
+                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+        }
+        return super.getCreateChildText(owner, feature, child, selection);
     }
 
 }

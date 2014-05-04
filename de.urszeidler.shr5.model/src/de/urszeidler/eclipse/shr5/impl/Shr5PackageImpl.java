@@ -2542,6 +2542,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getZauberer_UngebundenerGeist() {
+        return (EReference)zaubererEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4215,6 +4224,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(zaubererEClass, ZAUBERER__ENZUG);
         createEAttribute(zaubererEClass, ZAUBERER__TRADITION);
         createEReference(zaubererEClass, ZAUBERER__GEBUNDENE_GEISTER);
+        createEReference(zaubererEClass, ZAUBERER__UNGEBUNDENER_GEIST);
 
         mysticAdeptEClass = createEClass(MYSTIC_ADEPT);
 
@@ -4794,6 +4804,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getZauberer_Enzug(), ecorePackage.getEInt(), "enzug", null, 0, 1, Zauberer.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getZauberer_Tradition(), this.getMagischeTradition(), "tradition", null, 0, 1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getZauberer_GebundeneGeister(), this.getGebundenerGeist(), null, "gebundeneGeister", null, 0, -1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getZauberer_UngebundenerGeist(), this.getGebundenerGeist(), null, "ungebundenerGeist", null, 0, 1, Zauberer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(mysticAdeptEClass, MysticAdept.class, "MysticAdept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4953,7 +4964,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(gebundenerGeistEClass, GebundenerGeist.class, "GebundenerGeist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getGebundenerGeist_Dienste(), ecorePackage.getEInt(), "dienste", null, 0, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getGebundenerGeist_Geist(), this.getGeist(), null, "geist", null, 1, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGebundenerGeist_Geist(), this.getGeist(), null, "geist", null, 1, 1, GebundenerGeist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(stufenPersonaEClass, StufenPersona.class, "StufenPersona", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getStufenPersona_Stufe(), ecorePackage.getEInt(), "stufe", null, 1, 1, StufenPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

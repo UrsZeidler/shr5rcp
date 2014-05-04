@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug <em>Enzug</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getGebundeneGeister <em>Gebundene Geister</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getUngebundenerGeist <em>Ungebundener Geist</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,5 +100,31 @@ public interface Zauberer extends EObject {
      * @generated
      */
     EList<GebundenerGeist> getGebundeneGeister();
+
+    /**
+     * Returns the value of the '<em><b>Ungebundener Geist</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Ungebundener Geist</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Ungebundener Geist</em>' containment reference.
+     * @see #setUngebundenerGeist(GebundenerGeist)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getZauberer_UngebundenerGeist()
+     * @model containment="true"
+     * @generated
+     */
+    GebundenerGeist getUngebundenerGeist();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Zauberer#getUngebundenerGeist <em>Ungebundener Geist</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Ungebundener Geist</em>' containment reference.
+     * @see #getUngebundenerGeist()
+     * @generated
+     */
+    void setUngebundenerGeist(GebundenerGeist value);
 
 } // Zauberer

@@ -131,7 +131,17 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     }
                 }
                 return;
+            } else if (Shr5Package.Literals.GEBUNDENER_GEIST__GEIST.equals(e.getFeature())) {
+                List<EObject> copyAddToPersona = handleCopyAddToPersona((EReference)e.getFeature(), object);
+                if (!copyAddToPersona.isEmpty()) {
+                    IObservable observable = e.getObservable();
+                    if (observable instanceof IObservableValue) {
+                        IObservableValue ov = (IObservableValue)e.getObservable();
+                        ov.setValue(copyAddToPersona.get(0));
+                    }
+                }
             }
+
             super.handleManage(e, object);
         }
 
@@ -139,7 +149,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
         protected Object provideObject(FormbuilderEntry e, EObject object) {
             if (Shr5Package.Literals.MODIFIZIERBAR__MODS.equals(e.getFeature())) {
                 de.urszeidler.eclipse.shr5.AttributModifikatorWert amw = Shr5Factory.eINSTANCE.createAttributModifikatorWert();
-                CreateAttributModifikatorDialog dialog = new CreateAttributModifikatorDialog(getSite().getShell(), amw, (Modifizierbar)object,Messages.ShadowrunEditor_dlg_add_AttibuteModificator);
+                CreateAttributModifikatorDialog dialog = new CreateAttributModifikatorDialog(getSite().getShell(), amw, (Modifizierbar)object,
+                        Messages.ShadowrunEditor_dlg_add_AttibuteModificator);
 
                 if (dialog.open() == Dialog.OK)
                     return amw;
@@ -216,11 +227,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 // else
                 // return null;
 
-            } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature()) ||
-                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
-                    ) {
-                EClass eClass = (EClass)e.getFeature().getEType();//  .eClass();
-                EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass);  //Shr5managementFactory.eINSTANCE.createConnection();
+            } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())
+                    || Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())) {
+                EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
+                EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
                 GenericEObjectDialog dialog = new GenericEObjectDialog(getSite().getShell(), eObject, itemDelegator, this, this);
 
                 if (dialog.open() == Dialog.OK)
@@ -407,8 +417,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseShrList(ShrList object) {
                 try {
-                    //addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
-                addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                    // addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
+                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
                             editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_entries));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
@@ -463,7 +473,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Integer caseAbstraktModifikatoren(AbstraktModifikatoren object) {
                 try {
-                    addPage(new ModifikatorPage(ShadowrunEditor.this, EMPTY,labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                    addPage(new ModifikatorPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ModifizierbarPage", e);//$NON-NLS-1$
                 }

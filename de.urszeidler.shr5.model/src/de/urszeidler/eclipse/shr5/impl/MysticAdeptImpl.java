@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getEnzug <em>Enzug</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getTradition <em>Tradition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getGebundeneGeister <em>Gebundene Geister</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getUngebundenerGeist <em>Ungebundener Geist</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +85,16 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
      * @ordered
      */
     protected EList<GebundenerGeist> gebundeneGeister;
+
+    /**
+     * The cached value of the '{@link #getUngebundenerGeist() <em>Ungebundener Geist</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getUngebundenerGeist()
+     * @generated
+     * @ordered
+     */
+    protected GebundenerGeist ungebundenerGeist;
 
     /**
      * <!-- begin-user-doc -->
@@ -168,6 +179,49 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public GebundenerGeist getUngebundenerGeist() {
+        return ungebundenerGeist;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetUngebundenerGeist(GebundenerGeist newUngebundenerGeist, NotificationChain msgs) {
+        GebundenerGeist oldUngebundenerGeist = ungebundenerGeist;
+        ungebundenerGeist = newUngebundenerGeist;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST, oldUngebundenerGeist, newUngebundenerGeist);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setUngebundenerGeist(GebundenerGeist newUngebundenerGeist) {
+        if (newUngebundenerGeist != ungebundenerGeist) {
+            NotificationChain msgs = null;
+            if (ungebundenerGeist != null)
+                msgs = ((InternalEObject)ungebundenerGeist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST, null, msgs);
+            if (newUngebundenerGeist != null)
+                msgs = ((InternalEObject)newUngebundenerGeist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST, null, msgs);
+            msgs = basicSetUngebundenerGeist(newUngebundenerGeist, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST, newUngebundenerGeist, newUngebundenerGeist));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -178,6 +232,8 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
                 return ((InternalEList<?>)getZauber()).basicRemove(otherEnd, msgs);
             case Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER:
                 return ((InternalEList<?>)getGebundeneGeister()).basicRemove(otherEnd, msgs);
+            case Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST:
+                return basicSetUngebundenerGeist(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -198,6 +254,8 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
                 return getTradition();
             case Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER:
                 return getGebundeneGeister();
+            case Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST:
+                return getUngebundenerGeist();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -222,6 +280,9 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
                 getGebundeneGeister().clear();
                 getGebundeneGeister().addAll((Collection<? extends GebundenerGeist>)newValue);
                 return;
+            case Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST:
+                setUngebundenerGeist((GebundenerGeist)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -243,6 +304,9 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
             case Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER:
                 getGebundeneGeister().clear();
                 return;
+            case Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST:
+                setUngebundenerGeist((GebundenerGeist)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -263,6 +327,8 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
                 return tradition != TRADITION_EDEFAULT;
             case Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER:
                 return gebundeneGeister != null && !gebundeneGeister.isEmpty();
+            case Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST:
+                return ungebundenerGeist != null;
         }
         return super.eIsSet(featureID);
     }
@@ -280,6 +346,7 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
                 case Shr5Package.MYSTIC_ADEPT__ENZUG: return Shr5Package.ZAUBERER__ENZUG;
                 case Shr5Package.MYSTIC_ADEPT__TRADITION: return Shr5Package.ZAUBERER__TRADITION;
                 case Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER: return Shr5Package.ZAUBERER__GEBUNDENE_GEISTER;
+                case Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST: return Shr5Package.ZAUBERER__UNGEBUNDENER_GEIST;
                 default: return -1;
             }
         }
@@ -299,6 +366,7 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
                 case Shr5Package.ZAUBERER__ENZUG: return Shr5Package.MYSTIC_ADEPT__ENZUG;
                 case Shr5Package.ZAUBERER__TRADITION: return Shr5Package.MYSTIC_ADEPT__TRADITION;
                 case Shr5Package.ZAUBERER__GEBUNDENE_GEISTER: return Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER;
+                case Shr5Package.ZAUBERER__UNGEBUNDENER_GEIST: return Shr5Package.MYSTIC_ADEPT__UNGEBUNDENER_GEIST;
                 default: return -1;
             }
         }

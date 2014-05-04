@@ -9,6 +9,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -51,7 +52,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
     protected int dienste = DIENSTE_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getGeist() <em>Geist</em>}' reference.
+     * The cached value of the '{@link #getGeist() <em>Geist</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getGeist()
@@ -106,14 +107,6 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * @generated
      */
     public Geist getGeist() {
-        if (geist != null && geist.eIsProxy()) {
-            InternalEObject oldGeist = (InternalEObject)geist;
-            geist = (Geist)eResolveProxy(oldGeist);
-            if (geist != oldGeist) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.GEBUNDENER_GEIST__GEIST, oldGeist, geist));
-            }
-        }
         return geist;
     }
 
@@ -122,8 +115,14 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public Geist basicGetGeist() {
-        return geist;
+    public NotificationChain basicSetGeist(Geist newGeist, NotificationChain msgs) {
+        Geist oldGeist = geist;
+        geist = newGeist;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.GEBUNDENER_GEIST__GEIST, oldGeist, newGeist);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
     }
 
     /**
@@ -132,10 +131,31 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * @generated
      */
     public void setGeist(Geist newGeist) {
-        Geist oldGeist = geist;
-        geist = newGeist;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GEBUNDENER_GEIST__GEIST, oldGeist, geist));
+        if (newGeist != geist) {
+            NotificationChain msgs = null;
+            if (geist != null)
+                msgs = ((InternalEObject)geist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.GEBUNDENER_GEIST__GEIST, null, msgs);
+            if (newGeist != null)
+                msgs = ((InternalEObject)newGeist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.GEBUNDENER_GEIST__GEIST, null, msgs);
+            msgs = basicSetGeist(newGeist, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GEBUNDENER_GEIST__GEIST, newGeist, newGeist));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.GEBUNDENER_GEIST__GEIST:
+                return basicSetGeist(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -149,8 +169,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
             case Shr5Package.GEBUNDENER_GEIST__DIENSTE:
                 return getDienste();
             case Shr5Package.GEBUNDENER_GEIST__GEIST:
-                if (resolve) return getGeist();
-                return basicGetGeist();
+                return getGeist();
         }
         return super.eGet(featureID, resolve, coreType);
     }

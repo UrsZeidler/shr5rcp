@@ -301,6 +301,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/enzug"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Zauberer/tradition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/gebundeneGeister"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Zauberer/ungebundenerGeist"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//MysticAdept"/>
     <genClasses ecoreClass="shr5.ecore#//PersonaZauber">

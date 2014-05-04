@@ -2434,7 +2434,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_SGSUoW5_EeOdavkCEZv1Mg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5.ecore#//Zauberer"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SGSUom5_EeOdavkCEZv1Mg" x="-10" y="190"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SGSUom5_EeOdavkCEZv1Mg" x="-35" y="185"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_gGIToG5_EeOdavkCEZv1Mg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_gGITo25_EeOdavkCEZv1Mg" type="4001"/>
@@ -2742,7 +2742,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_KbJagdG_EeOoDM7qXBGbYQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5.ecore#//GebundenerGeist"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KbJagtG_EeOoDM7qXBGbYQ" x="-170" y="80"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KbJagtG_EeOoDM7qXBGbYQ" x="-85" y="70"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_hUlr4NHJEeOoDM7qXBGbYQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_hUmS8NHJEeOoDM7qXBGbYQ" type="4001"/>
@@ -2946,16 +2946,17 @@
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_NwtoING_EeOoDM7qXBGbYQ" type="3002" source="_SGSUoG5_EeOdavkCEZv1Mg" target="_KbJagNG_EeOoDM7qXBGbYQ">
       <children xmi:type="notation:Node" xmi:id="_Nwu2QNG_EeOoDM7qXBGbYQ" type="4011">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nwu2QdG_EeOoDM7qXBGbYQ" x="-10" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nwu2QdG_EeOoDM7qXBGbYQ" x="-36" y="-12"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Nwu2QtG_EeOoDM7qXBGbYQ" type="4012">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nwu2Q9G_EeOoDM7qXBGbYQ" x="10" y="10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nwu2Q9G_EeOoDM7qXBGbYQ" x="-5" y="-2"/>
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_NwtoIdG_EeOoDM7qXBGbYQ" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_NwtoItG_EeOoDM7qXBGbYQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="shr5.ecore#//Zauberer/gebundeneGeister"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NwtoI9G_EeOoDM7qXBGbYQ" points="[-12, -14, 86, 85]$[-36, -102, 62, -3]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NwwrcNG_EeOoDM7qXBGbYQ" id="(0.17733990147783252,0.23076923076923078)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NwwrcNG_EeOoDM7qXBGbYQ" id="(0.08866995073891626,0.03076923076923077)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VyUn0NNkEeOZ1NHkpxFArw" id="(0.5,0.8775510204081632)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_hUtAoNHJEeOoDM7qXBGbYQ" type="3003" source="_hUlr4NHJEeOoDM7qXBGbYQ" target="_BW9w0HFiEeO7bNTz9EtKHw">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_hUtAodHJEeOoDM7qXBGbYQ" routing="Rectilinear" lineColor="4210752"/>
@@ -2965,7 +2966,7 @@
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_jF9i4NHJEeOoDM7qXBGbYQ" type="3002" source="_KbJagNG_EeOoDM7qXBGbYQ" target="_hUlr4NHJEeOoDM7qXBGbYQ">
       <children xmi:type="notation:Node" xmi:id="_jF-J8NHJEeOoDM7qXBGbYQ" type="4011">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_jF-J8dHJEeOoDM7qXBGbYQ" x="-10" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_jF-J8dHJEeOoDM7qXBGbYQ" x="-40" y="-9"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_jF-J8tHJEeOoDM7qXBGbYQ" type="4012">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_jF-J89HJEeOoDM7qXBGbYQ" x="10" y="10"/>
@@ -2975,7 +2976,21 @@
       <element xmi:type="ecore:EReference" href="shr5.ecore#//GebundenerGeist/geist"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jF9i49HJEeOoDM7qXBGbYQ" points="[-6, -3, 174, 81]$[-178, -89, 2, -5]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jGAmMNHJEeOoDM7qXBGbYQ" id="(0.05555555555555555,0.20408163265306123)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jGAmMdHJEeOoDM7qXBGbYQ" id="(0.5196078431372549,0.14285714285714285)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jGAmMdHJEeOoDM7qXBGbYQ" id="(0.9578947368421052,0.5217391304347826)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_Pnlj4NNkEeOZ1NHkpxFArw" type="3002" source="_SGSUoG5_EeOdavkCEZv1Mg" target="_KbJagNG_EeOoDM7qXBGbYQ">
+      <children xmi:type="notation:Node" xmi:id="_PnrqgNNkEeOZ1NHkpxFArw" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PnrqgdNkEeOZ1NHkpxFArw" x="-31" y="68"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_PnrqgtNkEeOZ1NHkpxFArw" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Pnrqg9NkEeOZ1NHkpxFArw" x="-1" y="9"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_Pnlj4dNkEeOZ1NHkpxFArw" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Pnlj4tNkEeOZ1NHkpxFArw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="shr5.ecore#//Zauberer/ungebundenerGeist"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Pnlj49NkEeOZ1NHkpxFArw" points="[-8, -6, 123, 94]$[-129, -121, 2, -21]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Pns4oNNkEeOZ1NHkpxFArw" id="(0.31527093596059114,0.09230769230769231)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Pns4odNkEeOZ1NHkpxFArw" id="(0.9047619047619048,0.9387755102040817)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_ZoRSkHGkEeO_E4jIzaF87A" type="EcoreTools" name="vehicles" measurementUnit="Pixel">

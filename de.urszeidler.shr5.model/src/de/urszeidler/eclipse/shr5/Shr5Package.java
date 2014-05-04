@@ -7005,13 +7005,22 @@ public interface Shr5Package extends EPackage {
     int MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__UNGEBUNDENER_GEIST = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Astrales Limit</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALES_LIMIT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+	int MAGIER__ASTRALES_LIMIT = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Astrale Konstitution</b></em>' attribute.
@@ -7020,7 +7029,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_KONSTITUTION = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
+	int MAGIER__ASTRALE_KONSTITUTION = MAGISCHE_PERSONA_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Astrale Geschicklichkeit</b></em>' attribute.
@@ -7029,7 +7038,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_GESCHICKLICHKEIT = MAGISCHE_PERSONA_FEATURE_COUNT + 6;
+	int MAGIER__ASTRALE_GESCHICKLICHKEIT = MAGISCHE_PERSONA_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Astrale Reaktion</b></em>' attribute.
@@ -7038,7 +7047,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_REAKTION = MAGISCHE_PERSONA_FEATURE_COUNT + 7;
+	int MAGIER__ASTRALE_REAKTION = MAGISCHE_PERSONA_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Astrale Staerke</b></em>' attribute.
@@ -7047,7 +7056,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_STAERKE = MAGISCHE_PERSONA_FEATURE_COUNT + 8;
+	int MAGIER__ASTRALE_STAERKE = MAGISCHE_PERSONA_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Astrale Initative</b></em>' attribute.
@@ -7056,7 +7065,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_INITATIVE = MAGISCHE_PERSONA_FEATURE_COUNT + 9;
+	int MAGIER__ASTRALE_INITATIVE = MAGISCHE_PERSONA_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Astrale Initativ Wuerfel</b></em>' attribute.
@@ -7065,7 +7074,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_INITATIV_WUERFEL = MAGISCHE_PERSONA_FEATURE_COUNT + 10;
+	int MAGIER__ASTRALE_INITATIV_WUERFEL = MAGISCHE_PERSONA_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Astrale Panzerung</b></em>' attribute.
@@ -7074,7 +7083,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER__ASTRALE_PANZERUNG = MAGISCHE_PERSONA_FEATURE_COUNT + 11;
+	int MAGIER__ASTRALE_PANZERUNG = MAGISCHE_PERSONA_FEATURE_COUNT + 12;
 
     /**
      * The number of structural features of the '<em>Magier</em>' class.
@@ -7083,7 +7092,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 12;
+	int MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 13;
 
     /**
      * The number of operations of the '<em>Magier</em>' class.
@@ -7131,13 +7140,22 @@ public interface Shr5Package extends EPackage {
     int ZAUBERER__GEBUNDENE_GEISTER = 3;
 
     /**
+     * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ZAUBERER__UNGEBUNDENER_GEIST = 4;
+
+    /**
      * The number of structural features of the '<em>Zauberer</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBERER_FEATURE_COUNT = 4;
+	int ZAUBERER_FEATURE_COUNT = 5;
 
     /**
      * The number of operations of the '<em>Zauberer</em>' class.
@@ -7590,13 +7608,22 @@ public interface Shr5Package extends EPackage {
     int MYSTIC_ADEPT__GEBUNDENE_GEISTER = KI_ADEPT_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__UNGEBUNDENER_GEIST = KI_ADEPT_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Mystic Adept</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MYSTIC_ADEPT_FEATURE_COUNT = KI_ADEPT_FEATURE_COUNT + 4;
+	int MYSTIC_ADEPT_FEATURE_COUNT = KI_ADEPT_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Mystic Adept</em>' class.
@@ -8283,13 +8310,22 @@ public interface Shr5Package extends EPackage {
     int ASPEKT_MAGIER__GEBUNDENE_GEISTER = MAGISCHE_PERSONA_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Ungebundener Geist</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__UNGEBUNDENER_GEIST = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Aspekt</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ASPEKT_MAGIER__ASPEKT = MAGISCHE_PERSONA_FEATURE_COUNT + 4;
+	int ASPEKT_MAGIER__ASPEKT = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
 
     /**
      * The number of structural features of the '<em>Aspekt Magier</em>' class.
@@ -8298,7 +8334,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ASPEKT_MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 5;
+	int ASPEKT_MAGIER_FEATURE_COUNT = MAGISCHE_PERSONA_FEATURE_COUNT + 6;
 
     /**
      * The number of operations of the '<em>Aspekt Magier</em>' class.
@@ -12180,7 +12216,7 @@ public interface Shr5Package extends EPackage {
     int GEBUNDENER_GEIST__DIENSTE = 0;
 
     /**
-     * The feature id for the '<em><b>Geist</b></em>' reference.
+     * The feature id for the '<em><b>Geist</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -15042,6 +15078,17 @@ public interface Shr5Package extends EPackage {
     EReference getZauberer_GebundeneGeister();
 
     /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.Zauberer#getUngebundenerGeist <em>Ungebundener Geist</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Ungebundener Geist</em>'.
+     * @see de.urszeidler.eclipse.shr5.Zauberer#getUngebundenerGeist()
+     * @see #getZauberer()
+     * @generated
+     */
+    EReference getZauberer_UngebundenerGeist();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MysticAdept <em>Mystic Adept</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16323,10 +16370,10 @@ public interface Shr5Package extends EPackage {
     EAttribute getGebundenerGeist_Dienste();
 
     /**
-     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist <em>Geist</em>}'.
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist <em>Geist</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Geist</em>'.
+     * @return the meta object for the containment reference '<em>Geist</em>'.
      * @see de.urszeidler.eclipse.shr5.GebundenerGeist#getGeist()
      * @see #getGebundenerGeist()
      * @generated
@@ -18278,6 +18325,14 @@ public interface Shr5Package extends EPackage {
         EReference ZAUBERER__GEBUNDENE_GEISTER = eINSTANCE.getZauberer_GebundeneGeister();
 
         /**
+         * The meta object literal for the '<em><b>Ungebundener Geist</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference ZAUBERER__UNGEBUNDENER_GEIST = eINSTANCE.getZauberer_UngebundenerGeist();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl <em>Mystic Adept</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19316,7 +19371,7 @@ public interface Shr5Package extends EPackage {
         EAttribute GEBUNDENER_GEIST__DIENSTE = eINSTANCE.getGebundenerGeist_Dienste();
 
         /**
-         * The meta object literal for the '<em><b>Geist</b></em>' reference feature.
+         * The meta object literal for the '<em><b>Geist</b></em>' containment reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
