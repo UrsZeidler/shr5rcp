@@ -4,6 +4,7 @@
 
 2014-05-18 Version 0.1.6-rc
 
+* added definable constrains for the generator system
 * added spirits
 * added binding of spirits
 * Switch the reference from Xpath to xsid
