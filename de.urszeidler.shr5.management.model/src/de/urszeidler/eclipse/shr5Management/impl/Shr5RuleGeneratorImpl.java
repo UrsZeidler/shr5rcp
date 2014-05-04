@@ -8,23 +8,34 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.ModelPlugin;
+import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
+import de.urszeidler.eclipse.shr5Management.QuellenConstrainType;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
@@ -38,16 +49,17 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -57,6 +69,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -67,6 +80,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Shr5System getShr5Generator() {
@@ -90,6 +104,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasSpendAllPoints(DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -241,6 +256,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public boolean hasNoAttributesOverSpeciesAtt(DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -293,13 +309,81 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasNoConstrainVoilation(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (getShr5Generator() == null)
+            return true;
+        ManagedCharacter managedCharacter = getCharacter();
+        if (managedCharacter == null)
+            return true;
+        AbstraktPersona persona = managedCharacter.getPersona();
+        if (persona == null)
+            return true;
+
+        EList<QuellenConstrain> additionalConstrains = getShr5Generator().getAdditionalConstrains();
+
+        XMLResource eResource = (XMLResource)managedCharacter.eResource();
+        ArrayList<Identifiable> list = new ArrayList<Identifiable>();
+        for (Iterator<EObject> iterator = managedCharacter.eAllContents(); iterator.hasNext();) {
+            EObject o = iterator.next();
+            if (o instanceof Identifiable) {
+                Identifiable id = (Identifiable)o;
+                if (id.getParentId() != null && eResource != null)
+                    id = (Identifiable)eResource.getEObject(id.getParentId());
+
+                list.add(id);
+            }
+        }
+
+        Identifiable source = null;
+        Identifiable tar = null;
+
+        ArrayList<Identifiable[]> arrayList = new ArrayList<Identifiable[]>();
+        for (Identifiable identifiable : list) {
+            for (QuellenConstrain quellenConstrain : additionalConstrains) {
+                if (quellenConstrain.getSource().equals(identifiable)) {
+                    if (quellenConstrain.getConstrainType() == QuellenConstrainType.NOT_TOGETHER) {
+                        EList<Quelle> targets = quellenConstrain.getTargets();
+                        for (Quelle quelle : targets) {
+                            if (list.contains(quelle)) {
+                                Identifiable[] id = new Identifiable[]{source,tar }; 
+                                arrayList.add(id);                                
+                            }
+                        }
+                    } else if (quellenConstrain.getConstrainType() == QuellenConstrainType.NEED_ONE_OF) {
+
+                    }
+                }
+            }
+
+        }
+
+        if (!arrayList.isEmpty()) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_NO_CONSTRAIN_VOILATION, ModelPlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasNoConstrainVoilation", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                if (resolve) return getShr5Generator();
+                if (resolve)
+                    return getShr5Generator();
                 return basicGetShr5Generator();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -308,6 +392,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -322,6 +407,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -338,6 +424,8 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
                 return hasNotMoreSpecalism((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP:
                 return hasNoAttributesOverSpeciesAtt((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP:
+                return hasNoConstrainVoilation((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }

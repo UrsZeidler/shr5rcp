@@ -43,6 +43,8 @@ import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
 import de.urszeidler.eclipse.shr5Management.PrioritySystem;
+import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
+import de.urszeidler.eclipse.shr5Management.QuellenConstrainType;
 import de.urszeidler.eclipse.shr5Management.Resourcen;
 import de.urszeidler.eclipse.shr5Management.Sex;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
@@ -332,6 +334,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass quellenConstrainEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -345,6 +354,13 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 	private EEnum sexEEnum = null;
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum quellenConstrainTypeEEnum = null;
+
+    /**
      * Creates an instance of the model <b>Package</b>, registered with
      * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
      * package URI value.
@@ -607,6 +623,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCharacterGeneratorSystem_AdditionalConstrains() {
+        return (EReference)characterGeneratorSystemEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -2033,6 +2058,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    public EOperation getShr5RuleGenerator__HasNoConstrainVoilation__DiagnosticChain_Map() {
+        return shr5RuleGeneratorEClass.getEOperations().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getShr5KarmaGenerator() {
         return shr5KarmaGeneratorEClass;
     }
@@ -2111,6 +2145,42 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getQuellenConstrain() {
+        return quellenConstrainEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getQuellenConstrain_Source() {
+        return (EReference)quellenConstrainEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getQuellenConstrain_Targets() {
+        return (EReference)quellenConstrainEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getQuellenConstrain_ConstrainType() {
+        return (EAttribute)quellenConstrainEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -2128,6 +2198,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getQuellenConstrainType() {
+        return quellenConstrainTypeEEnum;
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -2178,6 +2257,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
         createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
+        createEReference(characterGeneratorSystemEClass, CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
 
         prioritySystemEClass = createEClass(PRIORITY_SYSTEM);
         createEReference(prioritySystemEClass, PRIORITY_SYSTEM__PRIORITIES);
@@ -2370,6 +2450,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_SKILLS_OVER_MAX__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NOT_MORE_SPECALISM__DIAGNOSTICCHAIN_MAP);
         createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP);
+        createEOperation(shr5RuleGeneratorEClass, SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP);
 
         shr5KarmaGeneratorEClass = createEClass(SHR5_KARMA_GENERATOR);
         createEReference(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__META_TYPE);
@@ -2381,9 +2462,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         createEAttribute(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR__START_RESOURCES);
         createEOperation(shr5KarmaGeneratorEClass, SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP);
 
+        quellenConstrainEClass = createEClass(QUELLEN_CONSTRAIN);
+        createEReference(quellenConstrainEClass, QUELLEN_CONSTRAIN__SOURCE);
+        createEReference(quellenConstrainEClass, QUELLEN_CONSTRAIN__TARGETS);
+        createEAttribute(quellenConstrainEClass, QUELLEN_CONSTRAIN__CONSTRAIN_TYPE);
+
         // Create enums
         generatorStateEEnum = createEEnum(GENERATOR_STATE);
         sexEEnum = createEEnum(SEX);
+        quellenConstrainTypeEEnum = createEEnum(QUELLEN_CONSTRAIN_TYPE);
     }
 
 	/**
@@ -2472,6 +2559,7 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         initEReference(getCharacterGeneratorSystem_Instructions(), this.getGeneratorStateToEStringMapEntry(), null, "instructions", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCharacterGeneratorSystem_LifestyleToStartMoney(), this.getLifestyleToStartMoney(), null, "lifestyleToStartMoney", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCharacterGeneratorSystem_CharacterAdvancements(), this.getCharacterAdvancementSystem(), null, "characterAdvancements", null, 1, 1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCharacterGeneratorSystem_AdditionalConstrains(), this.getQuellenConstrain(), null, "additionalConstrains", null, 0, -1, CharacterGeneratorSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(prioritySystemEClass, PrioritySystem.class, "PrioritySystem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPrioritySystem_Priorities(), this.getPriorityCategorie(), null, "priorities", null, 0, -1, PrioritySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2848,6 +2936,15 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+        op = initEOperation(getShr5RuleGenerator__HasNoConstrainVoilation__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasNoConstrainVoilation", 0, 1, IS_UNIQUE, IS_ORDERED);
+        addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+        g1 = createEGenericType(ecorePackage.getEMap());
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        g2 = createEGenericType(ecorePackage.getEJavaObject());
+        g1.getETypeArguments().add(g2);
+        addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
         initEClass(shr5KarmaGeneratorEClass, Shr5KarmaGenerator.class, "Shr5KarmaGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getShr5KarmaGenerator_MetaType(), this.getMetaType(), null, "metaType", null, 1, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getShr5KarmaGenerator_CharacterConcept(), this.getSpecialType(), null, "characterConcept", null, 1, 1, Shr5KarmaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2866,6 +2963,11 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         g1.getETypeArguments().add(g2);
         addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+        initEClass(quellenConstrainEClass, QuellenConstrain.class, "QuellenConstrain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getQuellenConstrain_Source(), theShr5Package.getQuelle(), null, "source", null, 1, 1, QuellenConstrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getQuellenConstrain_Targets(), theShr5Package.getQuelle(), null, "targets", null, 0, -1, QuellenConstrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getQuellenConstrain_ConstrainType(), this.getQuellenConstrainType(), "constrainType", null, 0, 1, QuellenConstrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(generatorStateEEnum, GeneratorState.class, "GeneratorState");
         addEEnumLiteral(generatorStateEEnum, GeneratorState.NEW);
@@ -2878,6 +2980,10 @@ public class Shr5managementPackageImpl extends EPackageImpl implements Shr5manag
         addEEnumLiteral(sexEEnum, Sex.MALE);
         addEEnumLiteral(sexEEnum, Sex.UNDEFINDE);
         addEEnumLiteral(sexEEnum, Sex.NONE);
+
+        initEEnum(quellenConstrainTypeEEnum, QuellenConstrainType.class, "QuellenConstrainType");
+        addEEnumLiteral(quellenConstrainTypeEEnum, QuellenConstrainType.NOT_TOGETHER);
+        addEEnumLiteral(quellenConstrainTypeEEnum, QuellenConstrainType.NEED_ONE_OF);
 
         // Create resource
         createResource(eNS_URI);

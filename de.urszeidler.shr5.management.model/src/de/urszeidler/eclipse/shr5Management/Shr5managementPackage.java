@@ -334,13 +334,22 @@ public interface Shr5managementPackage extends EPackage {
 	int CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
+     * The feature id for the '<em><b>Additional Constrains</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
      * The number of structural features of the '<em>Character Generator System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
+	int CHARACTER_GENERATOR_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
 
 	/**
      * The number of operations of the '<em>Character Generator System</em>' class.
@@ -441,6 +450,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
 	int PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
+
+    /**
+     * The feature id for the '<em><b>Additional Constrains</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PRIORITY_SYSTEM__ADDITIONAL_CONSTRAINS = CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS;
 
     /**
      * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
@@ -924,6 +942,15 @@ public interface Shr5managementPackage extends EPackage {
 	int FREE_STYLE__CHARACTER_ADVANCEMENTS = CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS;
 
     /**
+     * The feature id for the '<em><b>Additional Constrains</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_STYLE__ADDITIONAL_CONSTRAINS = CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS;
+
+    /**
      * The number of structural features of the '<em>Free Style</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1077,6 +1104,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
 	int SHR5_SYSTEM__CHARACTER_ADVANCEMENTS = PRIORITY_SYSTEM__CHARACTER_ADVANCEMENTS;
+
+    /**
+     * The feature id for the '<em><b>Additional Constrains</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__ADDITIONAL_CONSTRAINS = PRIORITY_SYSTEM__ADDITIONAL_CONSTRAINS;
 
     /**
      * The feature id for the '<em><b>Priorities</b></em>' containment reference list.
@@ -2332,13 +2368,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 4;
 
     /**
+     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = CHARACTER_GENERATOR_OPERATION_COUNT + 5;
+
+    /**
      * The number of operations of the '<em>Shr5 Rule Generator</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SHR5_RULE_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 5;
+    int SHR5_RULE_GENERATOR_OPERATION_COUNT = CHARACTER_GENERATOR_OPERATION_COUNT + 6;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl <em>Shr5 Generator</em>}' class.
@@ -2610,6 +2655,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int SHR5_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
+
+    /**
+     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
 
     /**
      * The operation id for the '<em>Has Category Only Once</em>' operation.
@@ -4215,6 +4269,15 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP;
 
     /**
+     * The operation id for the '<em>Has No Constrain Voilation</em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_KARMA_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP;
+
+    /**
      * The operation id for the '<em>Has Spend All Karma Points</em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4233,6 +4296,61 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_KARMA_GENERATOR_OPERATION_COUNT = SHR5_RULE_GENERATOR_OPERATION_COUNT + 1;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrain()
+     * @generated
+     */
+    int QUELLEN_CONSTRAIN = 38;
+
+    /**
+     * The feature id for the '<em><b>Source</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLEN_CONSTRAIN__SOURCE = 0;
+
+    /**
+     * The feature id for the '<em><b>Targets</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLEN_CONSTRAIN__TARGETS = 1;
+
+    /**
+     * The feature id for the '<em><b>Constrain Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLEN_CONSTRAIN__CONSTRAIN_TYPE = 2;
+
+    /**
+     * The number of structural features of the '<em>Quellen Constrain</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLEN_CONSTRAIN_FEATURE_COUNT = 3;
+
+    /**
+     * The number of operations of the '<em>Quellen Constrain</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLEN_CONSTRAIN_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4240,7 +4358,7 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getGeneratorState()
      * @generated
      */
-	int GENERATOR_STATE = 38;
+	int GENERATOR_STATE = 39;
 
 
 	/**
@@ -4251,10 +4369,21 @@ public interface Shr5managementPackage extends EPackage {
      * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getSex()
      * @generated
      */
-	int SEX = 39;
+	int SEX = 40;
 
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrainType <em>Quellen Constrain Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrainType
+     * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
+     * @generated
+     */
+    int QUELLEN_CONSTRAIN_TYPE = 41;
+
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter <em>Managed Character</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4484,6 +4613,17 @@ public interface Shr5managementPackage extends EPackage {
 	EReference getCharacterGeneratorSystem_CharacterAdvancements();
 
 	/**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getAdditionalConstrains <em>Additional Constrains</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Additional Constrains</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getAdditionalConstrains()
+     * @see #getCharacterGeneratorSystem()
+     * @generated
+     */
+    EReference getCharacterGeneratorSystem_AdditionalConstrains();
+
+    /**
      * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6157,6 +6297,16 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map();
 
     /**
+     * Returns the meta object for the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Constrain Voilation</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the '<em>Has No Constrain Voilation</em>' operation.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated
+     */
+    EOperation getShr5RuleGenerator__HasNoConstrainVoilation__DiagnosticChain_Map();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator <em>Shr5 Karma Generator</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6254,6 +6404,49 @@ public interface Shr5managementPackage extends EPackage {
     EOperation getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Quellen Constrain</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrain
+     * @generated
+     */
+    EClass getQuellenConstrain();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain#getSource <em>Source</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Source</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrain#getSource()
+     * @see #getQuellenConstrain()
+     * @generated
+     */
+    EReference getQuellenConstrain_Source();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain#getTargets <em>Targets</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Targets</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrain#getTargets()
+     * @see #getQuellenConstrain()
+     * @generated
+     */
+    EReference getQuellenConstrain_Targets();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain#getConstrainType <em>Constrain Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Constrain Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrain#getConstrainType()
+     * @see #getQuellenConstrain()
+     * @generated
+     */
+    EAttribute getQuellenConstrain_ConstrainType();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6274,6 +6467,16 @@ public interface Shr5managementPackage extends EPackage {
 	EEnum getSex();
 
 	/**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrainType <em>Quellen Constrain Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Quellen Constrain Type</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrainType
+     * @generated
+     */
+    EEnum getQuellenConstrainType();
+
+    /**
      * Returns the factory that creates the instances of the model.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6469,6 +6672,14 @@ public interface Shr5managementPackage extends EPackage {
 		EReference CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = eINSTANCE.getCharacterGeneratorSystem_CharacterAdvancements();
 
 		/**
+         * The meta object literal for the '<em><b>Additional Constrains</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS = eINSTANCE.getCharacterGeneratorSystem_AdditionalConstrains();
+
+        /**
          * The meta object literal for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -7803,6 +8014,14 @@ public interface Shr5managementPackage extends EPackage {
         EOperation SHR5_RULE_GENERATOR___HAS_NO_ATTRIBUTES_OVER_SPECIES_ATT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNoAttributesOverSpeciesAtt__DiagnosticChain_Map();
 
         /**
+         * The meta object literal for the '<em><b>Has No Constrain Voilation</b></em>' operation.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EOperation SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5RuleGenerator__HasNoConstrainVoilation__DiagnosticChain_Map();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.Shr5KarmaGeneratorImpl <em>Shr5 Karma Generator</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -7877,6 +8096,40 @@ public interface Shr5managementPackage extends EPackage {
         EOperation SHR5_KARMA_GENERATOR___HAS_SPEND_ALL_KARMA_POINTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getShr5KarmaGenerator__HasSpendAllKarmaPoints__DiagnosticChain_Map();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl <em>Quellen Constrain</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrain()
+         * @generated
+         */
+        EClass QUELLEN_CONSTRAIN = eINSTANCE.getQuellenConstrain();
+
+        /**
+         * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference QUELLEN_CONSTRAIN__SOURCE = eINSTANCE.getQuellenConstrain_Source();
+
+        /**
+         * The meta object literal for the '<em><b>Targets</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference QUELLEN_CONSTRAIN__TARGETS = eINSTANCE.getQuellenConstrain_Targets();
+
+        /**
+         * The meta object literal for the '<em><b>Constrain Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute QUELLEN_CONSTRAIN__CONSTRAIN_TYPE = eINSTANCE.getQuellenConstrain_ConstrainType();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.GeneratorState <em>Generator State</em>}' enum.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7895,6 +8148,16 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
 		EEnum SEX = eINSTANCE.getSex();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrainType <em>Quellen Constrain Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5Management.QuellenConstrainType
+         * @see de.urszeidler.eclipse.shr5Management.impl.Shr5managementPackageImpl#getQuellenConstrainType()
+         * @generated
+         */
+        EEnum QUELLEN_CONSTRAIN_TYPE = eINSTANCE.getQuellenConstrainType();
 
 	}
 

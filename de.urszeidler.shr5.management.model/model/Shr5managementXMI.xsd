@@ -19,6 +19,23 @@
       <xsd:enumeration value="none"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="QuellenConstrainType">
+    <xsd:annotation>
+      <xsd:documentation>Defines the mode of the constrain.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="notTogether">
+        <xsd:annotation>
+          <xsd:documentation>No element refers in targets are allow to be in the character togther with the source.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="needOneOf">
+        <xsd:annotation>
+          <xsd:documentation>One or ore element refers in targets need  to be in the character togther with the source.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="ManagedCharacter">
     <xsd:annotation>
       <xsd:documentation>the managed chracter contains the mudan parts of a character.</xsd:documentation>
@@ -93,6 +110,11 @@
           <xsd:element name="instructions" type="shr5mngt:GeneratorStateToEStringMapEntry"/>
           <xsd:element name="lifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>
           <xsd:element name="characterAdvancements" type="shr5mngt:CharacterAdvancementSystem"/>
+          <xsd:element name="additionalConstrains" type="shr5mngt:QuellenConstrain">
+            <xsd:annotation>
+              <xsd:documentation>A system can define additional constrains for elements.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
@@ -758,6 +780,26 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   <xsd:element name="Shr5KarmaGenerator" type="shr5mngt:Shr5KarmaGenerator">
     <xsd:annotation>
       <xsd:documentation>The karma generator supports only two choises, one for the meta type and another for the persona type. All other changes are direcly handled throu karama.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="QuellenConstrain">
+    <xsd:annotation>
+      <xsd:documentation>Defines a constrain for the source element by holding a list of other elements and an constrain type.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="shr5:Quelle"/>
+      <xsd:element name="targets" type="shr5:Quelle"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="constrainType" type="shr5mngt:QuellenConstrainType"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="targets" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="QuellenConstrain" type="shr5mngt:QuellenConstrain">
+    <xsd:annotation>
+      <xsd:documentation>Defines a constrain for the source element by holding a list of other elements and an constrain type.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
 </xsd:schema>

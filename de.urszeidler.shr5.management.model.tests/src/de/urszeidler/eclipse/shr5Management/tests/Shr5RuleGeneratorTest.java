@@ -18,6 +18,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
+import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -40,6 +41,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoSkillsOverMax(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Skills Over Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Attributes Over Species Att</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Constrain Voilation</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -254,6 +256,39 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         ((KoerperPersona)persona).getEigenschaften().add(eigenschaft);
 
         assertEquals(true, getFixture().hasNoAttributesOverSpeciesAtt(diagnostics, context));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Constrain Voilation</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasNoConstrainVoilation__DiagnosticChain_Map() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+        AbstraktPersona persona = character.getPersona();
+        
+        assertEquals(true, getFixture().hasNoConstrainVoilation(diagnostics, context));
+
+        
+        PersonaEigenschaft eigenschaft = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        eigenschaft.setParentId("id1");
+        
+        QuellenConstrain quellenConstrain = Shr5managementFactory.eINSTANCE.createQuellenConstrain();
+        quellenConstrain.setSource(eigenschaft);
+        
+        PersonaEigenschaft eigenschaft1 = Shr5Factory.eINSTANCE.createPersonaEigenschaft();
+        eigenschaft1.setParentId("id2");
+        quellenConstrain.getTargets().add(eigenschaft1);
+        
+        getFixture().getShr5Generator().getAdditionalConstrains().add(quellenConstrain);
+        
+        ((KoerperPersona)persona).getEigenschaften().add(eigenschaft);
+        ((KoerperPersona)persona).getEigenschaften().add(eigenschaft1);
+        
+        assertEquals(false, getFixture().hasNoConstrainVoilation(diagnostics, context));
     }
 
 } // Shr5RuleGeneratorTest

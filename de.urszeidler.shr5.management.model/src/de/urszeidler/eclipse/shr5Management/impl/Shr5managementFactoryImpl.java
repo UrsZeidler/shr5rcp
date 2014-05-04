@@ -114,6 +114,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
             case Shr5managementPackage.GAMEMASTER_MANAGEMENT: return createGamemasterManagement();
             case Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM: return createCharacterAdvancementSystem();
             case Shr5managementPackage.SHR5_KARMA_GENERATOR: return createShr5KarmaGenerator();
+            case Shr5managementPackage.QUELLEN_CONSTRAIN: return createQuellenConstrain();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -131,6 +132,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
                 return createGeneratorStateFromString(eDataType, initialValue);
             case Shr5managementPackage.SEX:
                 return createSexFromString(eDataType, initialValue);
+            case Shr5managementPackage.QUELLEN_CONSTRAIN_TYPE:
+                return createQuellenConstrainTypeFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -148,6 +151,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
                 return convertGeneratorStateToString(eDataType, instanceValue);
             case Shr5managementPackage.SEX:
                 return convertSexToString(eDataType, instanceValue);
+            case Shr5managementPackage.QUELLEN_CONSTRAIN_TYPE:
+                return convertQuellenConstrainTypeToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -435,6 +440,16 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public QuellenConstrain createQuellenConstrain() {
+        QuellenConstrainImpl quellenConstrain = new QuellenConstrainImpl();
+        return quellenConstrain;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -474,6 +489,26 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public QuellenConstrainType createQuellenConstrainTypeFromString(EDataType eDataType, String initialValue) {
+        QuellenConstrainType result = QuellenConstrainType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertQuellenConstrainTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated

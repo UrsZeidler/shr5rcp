@@ -222,6 +222,10 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
                 return createShr5KarmaGeneratorAdapter();
             }
             @Override
+            public Adapter caseQuellenConstrain(QuellenConstrain object) {
+                return createQuellenConstrainAdapter();
+            }
+            @Override
             public Adapter caseBeschreibbar(Beschreibbar object) {
                 return createBeschreibbarAdapter();
             }
@@ -782,6 +786,20 @@ public class Shr5managementAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createShr5KarmaGeneratorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5Management.QuellenConstrain <em>Quellen Constrain</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5Management.QuellenConstrain
+     * @generated
+     */
+    public Adapter createQuellenConstrainAdapter() {
         return null;
     }
 

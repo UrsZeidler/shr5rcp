@@ -103,4 +103,16 @@ public interface Shr5RuleGenerator extends CharacterGenerator {
      */
     boolean hasNoAttributesOverSpeciesAtt(DiagnosticChain diagnostics, Map<Object, Object> context);
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * No attribute over the defined species max value.
+     * There could be an exception defined by a modificator with the species max attributes.
+     * <!-- end-model-doc -->
+     * @model
+     * @generated
+     */
+    boolean hasNoConstrainVoilation(DiagnosticChain diagnostics, Map<Object, Object> context);
+
 } // Shr5RuleGenerator

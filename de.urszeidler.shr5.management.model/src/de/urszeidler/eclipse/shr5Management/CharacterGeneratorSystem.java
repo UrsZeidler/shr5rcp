@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.Quelle;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getAdditionalConstrains <em>Additional Constrains</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,6 +76,21 @@ public interface CharacterGeneratorSystem extends Beschreibbar, Quelle {
      * @generated
      */
     void setCharacterAdvancements(CharacterAdvancementSystem value);
+
+    /**
+     * Returns the value of the '<em><b>Additional Constrains</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.QuellenConstrain}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * A system can define additional constrains for elements.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Additional Constrains</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGeneratorSystem_AdditionalConstrains()
+     * @model containment="true"
+     * @generated
+     */
+    EList<QuellenConstrain> getAdditionalConstrains();
 
     /**
      * Returns the value of the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.

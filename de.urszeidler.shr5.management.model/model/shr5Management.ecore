@@ -72,6 +72,12 @@
         upperBound="-1" eType="#//LifestyleToStartMoney" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="characterAdvancements"
         lowerBound="1" eType="#//CharacterAdvancementSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalConstrains" upperBound="-1"
+        eType="#//QuellenConstrain" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A system can define additional constrains for elements."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrioritySystem" abstract="true" eSuperTypes="#//CharacterGeneratorSystem">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -656,6 +662,18 @@
         </eGenericType>
       </eParameters>
     </eOperations>
+    <eOperations name="hasNoConstrainVoilation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="No attribute over the defined species max value.&#xA;There could be an exception defined by a modificator with the species max attributes."/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="shr5Generator" eType="#//Shr5System"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -698,5 +716,30 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startKarma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuellenConstrain">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines a constrain for the source element by holding a list of other elements and an constrain type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targets" upperBound="-1"
+        eType="ecore:EClass ../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constrainType" eType="#//QuellenConstrainType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QuellenConstrainType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the mode of the constrain."/>
+    </eAnnotations>
+    <eLiterals name="notTogether">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="No element refers in targets are allow to be in the character togther with the source."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="needOneOf" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="One or ore element refers in targets need  to be in the character togther with the source."/>
+      </eAnnotations>
+    </eLiterals>
   </eClassifiers>
 </ecore:EPackage>

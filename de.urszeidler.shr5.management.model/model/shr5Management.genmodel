@@ -21,6 +21,10 @@
       <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//Sex/undefinde"/>
       <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//Sex/none"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5Management.ecore#//QuellenConstrainType">
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//QuellenConstrainType/notTogether"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5Management.ecore#//QuellenConstrainType/needOneOf"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//ManagedCharacter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/persona"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//ManagedCharacter/changes"/>
@@ -44,6 +48,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/instructions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//CharacterGeneratorSystem/additionalConstrains"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5Management.ecore#//PrioritySystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5Management.ecore#//PrioritySystem/priorities"/>
@@ -314,6 +319,10 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoAttributesOverSpeciesAtt/context"/>
       </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/metaType"/>
@@ -327,6 +336,11 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5KarmaGenerator/hasSpendAllKarmaPoints/context"/>
       </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="shr5Management.ecore#//QuellenConstrain">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//QuellenConstrain/targets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5Management.ecore#//QuellenConstrain/constrainType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

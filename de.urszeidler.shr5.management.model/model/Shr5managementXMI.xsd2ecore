@@ -14,6 +14,10 @@
       <nested inputs="shr5Management.ecore#//Sex/undefinde" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=2"/>
       <nested inputs="shr5Management.ecore#//Sex/none" outputs="Shr5managementXMI.xsd#//Sex;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=3"/>
     </nested>
+    <nested inputs="shr5Management.ecore#//QuellenConstrainType" outputs="Shr5managementXMI.xsd#//QuellenConstrainType;XSDSimpleTypeDefinition=2">
+      <nested inputs="shr5Management.ecore#//QuellenConstrainType/notTogether" outputs="Shr5managementXMI.xsd#//QuellenConstrainType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet"/>
+      <nested inputs="shr5Management.ecore#//QuellenConstrainType/needOneOf" outputs="Shr5managementXMI.xsd#//QuellenConstrainType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet=1"/>
+    </nested>
     <nested inputs="shr5Management.ecore#//ManagedCharacter" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition">
       <nested inputs="shr5Management.ecore#//ManagedCharacter/sex" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
       <nested inputs="shr5Management.ecore#//ManagedCharacter/notorietyBasic" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
@@ -42,6 +46,8 @@
           outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse=3"/>
       <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"
           outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/additionalConstrains"
+          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=4"/>
     </nested>
     <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDElementDeclaration=1"/>
     <nested inputs="shr5Management.ecore#//PrioritySystem" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDComplexTypeDefinition=2">
@@ -259,6 +265,14 @@
           outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Shr5KarmaGenerator" outputs="Shr5managementXMI.xsd#//Shr5KarmaGenerator;XSDElementDeclaration=37"/>
+    <nested inputs="shr5Management.ecore#//QuellenConstrain" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38">
+      <nested inputs="shr5Management.ecore#//QuellenConstrain/constrainType" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDAttributeUse=1"/>
+      <nested inputs="shr5Management.ecore#//QuellenConstrain/source" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDAttributeUse=2"/>
+      <nested inputs="shr5Management.ecore#//QuellenConstrain/source" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5Management.ecore#//QuellenConstrain/targets" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDAttributeUse=3"/>
+      <nested inputs="shr5Management.ecore#//QuellenConstrain/targets" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5Management.ecore#//QuellenConstrain" outputs="Shr5managementXMI.xsd#//QuellenConstrain;XSDElementDeclaration=38"/>
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>

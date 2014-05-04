@@ -727,6 +727,29 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5Management.QuellenConstrain} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected QuellenConstrainItemProvider quellenConstrainItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5Management.QuellenConstrain}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createQuellenConstrainAdapter() {
+        if (quellenConstrainItemProvider == null) {
+            quellenConstrainItemProvider = new QuellenConstrainItemProvider(this);
+        }
+
+        return quellenConstrainItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -853,6 +876,7 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
         if (gamemasterManagementItemProvider != null) gamemasterManagementItemProvider.dispose();
         if (characterAdvancementSystemItemProvider != null) characterAdvancementSystemItemProvider.dispose();
         if (shr5KarmaGeneratorItemProvider != null) shr5KarmaGeneratorItemProvider.dispose();
+        if (quellenConstrainItemProvider != null) quellenConstrainItemProvider.dispose();
     }
 
 	/**
@@ -1041,6 +1065,11 @@ public class Shr5managementItemProviderAdapterFactory extends Shr5managementAdap
                     (createChildParameter
                         (Shr5Package.Literals.SHR_LIST__ENTRIES,
                          Shr5managementFactory.eINSTANCE.createShr5KarmaGenerator()));
+
+                newChildDescriptors.add
+                    (createChildParameter
+                        (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                         Shr5managementFactory.eINSTANCE.createQuellenConstrain()));
 
                 return null;
             }

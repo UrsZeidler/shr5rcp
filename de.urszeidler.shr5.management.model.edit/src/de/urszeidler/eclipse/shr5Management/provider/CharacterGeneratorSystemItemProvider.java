@@ -219,6 +219,7 @@ public class CharacterGeneratorSystemItemProvider
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
+            childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
         }
         return childrenFeatures;
     }
@@ -272,6 +273,7 @@ public class CharacterGeneratorSystemItemProvider
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -303,6 +305,11 @@ public class CharacterGeneratorSystemItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS,
                  Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS,
+                 Shr5managementFactory.eINSTANCE.createQuellenConstrain()));
     }
 
 	/**

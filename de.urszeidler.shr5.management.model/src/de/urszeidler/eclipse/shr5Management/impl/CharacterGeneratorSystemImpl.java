@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
+import de.urszeidler.eclipse.shr5Management.QuellenConstrain;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
@@ -44,6 +45,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getCharacterAdvancements <em>Character Advancements</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getAdditionalConstrains <em>Additional Constrains</em>}</li>
  * </ul>
  * </p>
  *
@@ -189,6 +191,16 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * @ordered
      */
 	protected CharacterAdvancementSystem characterAdvancements;
+
+    /**
+     * The cached value of the '{@link #getAdditionalConstrains() <em>Additional Constrains</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAdditionalConstrains()
+     * @generated
+     * @ordered
+     */
+    protected EList<QuellenConstrain> additionalConstrains;
 
     /**
      * <!-- begin-user-doc -->
@@ -407,6 +419,18 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<QuellenConstrain> getAdditionalConstrains() {
+        if (additionalConstrains == null) {
+            additionalConstrains = new EObjectContainmentEList<QuellenConstrain>(QuellenConstrain.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
+        }
+        return additionalConstrains;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EList<LifestyleToStartMoney> getLifestyleToStartMoney() {
         if (lifestyleToStartMoney == null) {
             lifestyleToStartMoney = new EObjectContainmentEList<LifestyleToStartMoney>(LifestyleToStartMoney.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
@@ -426,6 +450,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return ((InternalEList<?>)getInstructions()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
                 return ((InternalEList<?>)getLifestyleToStartMoney()).basicRemove(otherEnd, msgs);
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
+                return ((InternalEList<?>)getAdditionalConstrains()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -459,6 +485,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 if (resolve) return getCharacterAdvancements();
                 return basicGetCharacterAdvancements();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
+                return getAdditionalConstrains();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -500,6 +528,10 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 setCharacterAdvancements((CharacterAdvancementSystem)newValue);
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
+                getAdditionalConstrains().clear();
+                getAdditionalConstrains().addAll((Collection<? extends QuellenConstrain>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -539,6 +571,9 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 setCharacterAdvancements((CharacterAdvancementSystem)null);
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
+                getAdditionalConstrains().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -569,6 +604,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return lifestyleToStartMoney != null && !lifestyleToStartMoney.isEmpty();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
                 return characterAdvancements != null;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
+                return additionalConstrains != null && !additionalConstrains.isEmpty();
         }
         return super.eIsSet(featureID);
     }
