@@ -3760,6 +3760,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getGeist_OptionalPowers() {
+        return (EReference)geistEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getIdentifiable() {
         return identifiableEClass;
     }
@@ -4382,6 +4391,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(geistEClass, GEIST__INTUITION_BASIS);
         createEAttribute(geistEClass, GEIST__LOGIK_BASIS);
         createEReference(geistEClass, GEIST__POWERS);
+        createEReference(geistEClass, GEIST__OPTIONAL_POWERS);
 
         identifiableEClass = createEClass(IDENTIFIABLE);
         createEAttribute(identifiableEClass, IDENTIFIABLE__PARENT_ID);
@@ -4960,6 +4970,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getGeist_IntuitionBasis(), ecorePackage.getEInt(), "intuitionBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getGeist_LogikBasis(), ecorePackage.getEInt(), "logikBasis", null, 0, 1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getGeist_Powers(), this.getCritterKraft(), null, "powers", null, 0, -1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getGeist_OptionalPowers(), this.getCritterKraft(), null, "optionalPowers", null, 0, -1, Geist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(identifiableEClass, Identifiable.class, "Identifiable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIdentifiable_ParentId(), ecorePackage.getEString(), "parentId", null, 0, 1, Identifiable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

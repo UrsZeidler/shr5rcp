@@ -1677,7 +1677,11 @@
 			<xsl:otherwise>
 				<entries xsi:type="shr5:Critter">
 					<xsl:call-template name="species-data" />
-					<xsl:call-template name="critter-power" />
+					<xsl:call-template name="critter-power">
+						<xsl:with-param name="tagName" select="'powers'" />
+						<xsl:with-param name="path" select="powers/*" />
+					</xsl:call-template>
+
 				</entries>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -1689,7 +1693,14 @@
 			<xsl:call-template name="quelle" />
 
 			<xsl:call-template name="geist-species" />
-			<xsl:call-template name="critter-power" />
+			<xsl:call-template name="critter-power">
+				<xsl:with-param name="tagName" select="'powers'" />
+				<xsl:with-param name="path" select="powers/*" />
+			</xsl:call-template>
+			<xsl:call-template name="critter-power">
+				<xsl:with-param name="tagName" select="'optionalPowers'" />
+				<xsl:with-param name="path" select="optionalpowers/*" />
+			</xsl:call-template>
 
 			<xsl:for-each select="skills/*">
 				<xsl:variable name="name" select="text()" />
@@ -1710,66 +1721,68 @@
 		</entries>
 	</xsl:template>
 
-<xsl:template name="critter-power">
-			<xsl:for-each select="powers/*">
-				<xsl:variable name="name" select="text()" />
-				<xsl:for-each select="$critter-powers">
-					<xsl:for-each select="chummer/powers/*">
-						<xsl:if test="name/text()=$name">
-							<powers>
-								<xsl:choose>
-									<xsl:when test="action/text()='Complex'">
-										<xsl:attribute name="handlung">komplex</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="range/text()='Auto'">
-										<xsl:attribute name="handlung">auto</xsl:attribute>
-									</xsl:when>
-								</xsl:choose>
-								<xsl:choose>
-									<xsl:when test="range/text()='LOS'">
-										<xsl:attribute name="reichweite">blickfeld</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="range/text()='Special'">
-										<xsl:attribute name="reichweite">speziell</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="range/text()='Self'">
-										<xsl:attribute name="reichweite">selbst</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="range/text()='Touch'">
-										<xsl:attribute name="reichweite">beruehrung</xsl:attribute>
-									</xsl:when>
-								</xsl:choose>
-								<xsl:choose>
-									<xsl:when test="type/text()='M'">
-										<xsl:attribute name="art">Mana</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="type/text()='P'">
-										<xsl:attribute name="art">Physisch</xsl:attribute>
-									</xsl:when>
-								</xsl:choose>
-								<xsl:choose>
-									<xsl:when test="duration/text()='Always'">
-										<xsl:attribute name="dauer">immer</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="duration/text()='Instant'">
-										<xsl:attribute name="dauer">sofort</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="duration/text()='Sustained'">
-										<xsl:attribute name="dauer">aufrechterhalten</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="duration/text()='Permanent'">
-										<xsl:attribute name="dauer">permanent</xsl:attribute>
-									</xsl:when>
-								</xsl:choose>
-								<xsl:call-template name="beschreibbar" />
-								<xsl:call-template name="quelle" />
-							</powers>
-						</xsl:if>
-					</xsl:for-each>
+	<xsl:template name="critter-power">
+		<xsl:param name="tagName" />
+		<xsl:param name="path" />
+		<xsl:for-each select="$path">
+			<xsl:variable name="name" select="text()" />
+			<xsl:for-each select="$critter-powers">
+				<xsl:for-each select="chummer/powers/*">
+					<xsl:if test="name/text()=$name">
+						<xsl:element name="{$tagName}">
+							<xsl:choose>
+								<xsl:when test="action/text()='Complex'">
+									<xsl:attribute name="handlung">komplex</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="range/text()='Auto'">
+									<xsl:attribute name="handlung">auto</xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:choose>
+								<xsl:when test="range/text()='LOS'">
+									<xsl:attribute name="reichweite">blickfeld</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="range/text()='Special'">
+									<xsl:attribute name="reichweite">speziell</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="range/text()='Self'">
+									<xsl:attribute name="reichweite">selbst</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="range/text()='Touch'">
+									<xsl:attribute name="reichweite">beruehrung</xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:choose>
+								<xsl:when test="type/text()='M'">
+									<xsl:attribute name="art">Mana</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="type/text()='P'">
+									<xsl:attribute name="art">Physisch</xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:choose>
+								<xsl:when test="duration/text()='Always'">
+									<xsl:attribute name="dauer">immer</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="duration/text()='Instant'">
+									<xsl:attribute name="dauer">sofort</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="duration/text()='Sustained'">
+									<xsl:attribute name="dauer">aufrechterhalten</xsl:attribute>
+								</xsl:when>
+								<xsl:when test="duration/text()='Permanent'">
+									<xsl:attribute name="dauer">permanent</xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:call-template name="beschreibbar" />
+							<xsl:call-template name="quelle" />
+						</xsl:element>
+					</xsl:if>
 				</xsl:for-each>
 			</xsl:for-each>
+		</xsl:for-each>
 
-</xsl:template>
+	</xsl:template>
 
 	<xsl:template name="geist-species">
 		<xsl:if test="number(substring-after(bodmin/text(),'F'))">

@@ -1068,6 +1068,7 @@ public class GeistItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.GEIST__POWERS);
+            childrenFeatures.add(Shr5Package.Literals.GEIST__OPTIONAL_POWERS);
         }
         return childrenFeatures;
     }
@@ -1165,6 +1166,7 @@ public class GeistItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.GEIST__POWERS:
+            case Shr5Package.GEIST__OPTIONAL_POWERS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -1186,6 +1188,34 @@ public class GeistItemProvider
             (createChildParameter
                 (Shr5Package.Literals.GEIST__POWERS,
                  Shr5Factory.eINSTANCE.createCritterKraft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.GEIST__OPTIONAL_POWERS,
+                 Shr5Factory.eINSTANCE.createCritterKraft()));
+    }
+
+    /**
+     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+        Object childFeature = feature;
+        Object childObject = child;
+
+        boolean qualify =
+            childFeature == Shr5Package.Literals.GEIST__POWERS ||
+            childFeature == Shr5Package.Literals.GEIST__OPTIONAL_POWERS;
+
+        if (qualify) {
+            return getString
+                ("_UI_CreateChild_text2",
+                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+        }
+        return super.getCreateChildText(owner, feature, child, selection);
     }
 
     /**

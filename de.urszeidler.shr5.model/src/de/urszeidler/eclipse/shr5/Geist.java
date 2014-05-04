@@ -27,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getIntuitionBasis <em>Intuition Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getLogikBasis <em>Logik Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getPowers <em>Powers</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getOptionalPowers <em>Optional Powers</em>}</li>
  * </ul>
  * </p>
  *
@@ -258,5 +259,21 @@ public interface Geist extends StufenPersona, AstraleProjektion {
      * @generated
      */
     EList<CritterKraft> getPowers();
+
+    /**
+     * Returns the value of the '<em><b>Optional Powers</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.CritterKraft}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Optional Powers</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Optional Powers</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getGeist_OptionalPowers()
+     * @model containment="true"
+     * @generated
+     */
+    EList<CritterKraft> getOptionalPowers();
 
 } // Geist

@@ -81,6 +81,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getIntuitionBasis <em>Intuition Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLogikBasis <em>Logik Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPowers <em>Powers</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getOptionalPowers <em>Optional Powers</em>}</li>
  * </ul>
  * </p>
  *
@@ -678,6 +679,16 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     protected EList<CritterKraft> powers;
 
     /**
+     * The cached value of the '{@link #getOptionalPowers() <em>Optional Powers</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOptionalPowers()
+     * @generated
+     * @ordered
+     */
+    protected EList<CritterKraft> optionalPowers;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1047,11 +1058,25 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<CritterKraft> getOptionalPowers() {
+        if (optionalPowers == null) {
+            optionalPowers = new EObjectContainmentEList<CritterKraft>(CritterKraft.class, this, Shr5Package.GEIST__OPTIONAL_POWERS);
+        }
+        return optionalPowers;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.GEIST__POWERS:
                 return ((InternalEList<?>)getPowers()).basicRemove(otherEnd, msgs);
+            case Shr5Package.GEIST__OPTIONAL_POWERS:
+                return ((InternalEList<?>)getOptionalPowers()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -1153,6 +1178,8 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return getLogikBasis();
             case Shr5Package.GEIST__POWERS:
                 return getPowers();
+            case Shr5Package.GEIST__OPTIONAL_POWERS:
+                return getOptionalPowers();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -1226,6 +1253,10 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 getPowers().clear();
                 getPowers().addAll((Collection<? extends CritterKraft>)newValue);
                 return;
+            case Shr5Package.GEIST__OPTIONAL_POWERS:
+                getOptionalPowers().clear();
+                getOptionalPowers().addAll((Collection<? extends CritterKraft>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -1294,6 +1325,9 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return;
             case Shr5Package.GEIST__POWERS:
                 getPowers().clear();
+                return;
+            case Shr5Package.GEIST__OPTIONAL_POWERS:
+                getOptionalPowers().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -1395,6 +1429,8 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
                 return logikBasis != LOGIK_BASIS_EDEFAULT;
             case Shr5Package.GEIST__POWERS:
                 return powers != null && !powers.isEmpty();
+            case Shr5Package.GEIST__OPTIONAL_POWERS:
+                return optionalPowers != null && !optionalPowers.isEmpty();
         }
         return super.eIsSet(featureID);
     }

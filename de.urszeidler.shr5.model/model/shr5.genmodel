@@ -466,6 +466,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/intuitionBasis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Geist/logikBasis"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Geist/powers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Geist/optionalPowers"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Identifiable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Identifiable/parentId"/>

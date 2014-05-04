@@ -609,6 +609,7 @@
       <nested inputs="shr5.ecore#//Geist/intuitionBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=6"/>
       <nested inputs="shr5.ecore#//Geist/logikBasis" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDAttributeUse=7"/>
       <nested inputs="shr5.ecore#//Geist/powers" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Geist/optionalPowers" outputs="Shr5XMI.xsd#//Geist;XSDComplexTypeDefinition=86/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//Geist" outputs="Shr5XMI.xsd#//Geist;XSDElementDeclaration=86"/>
     <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=87">

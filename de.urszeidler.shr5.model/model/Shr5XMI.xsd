@@ -1267,6 +1267,7 @@
       <xsd:extension base="shr5:StufenPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="powers" type="shr5:CritterKraft"/>
+          <xsd:element name="optionalPowers" type="shr5:CritterKraft"/>
         </xsd:choice>
         <xsd:attribute name="konstitutionBasis" type="xsd:int"/>
         <xsd:attribute name="geschicklichkeitBasis" type="xsd:int"/>

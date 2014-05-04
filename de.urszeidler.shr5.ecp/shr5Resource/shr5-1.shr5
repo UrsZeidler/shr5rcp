@@ -4423,6 +4423,12 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Energy Aura" xmi:id="8521293f-fe93-446c-90ab-79a5db86333a" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4439,6 +4445,12 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Energy Aura" xmi:id="8521293f-fe93-446c-90ab-79a5db86333a" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4453,6 +4465,13 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="sofort" name="Natural Weapon" xmi:id="ec6444e9-4c33-455e-94fd-b78660eb3bde" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="beruehrung" art="Physisch" dauer="sofort" name="Venom" xmi:id="72d6e962-9f52-4af4-877b-391226b0e939" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -4467,6 +4486,13 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Paralyzing Howl" xmi:id="4deebb68-3374-405d-b2fc-4cafdddc14dd" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="sofort" name="Natural Weapon" xmi:id="ec6444e9-4c33-455e-94fd-b78660eb3bde" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="beruehrung" art="Physisch" dauer="sofort" name="Venom" xmi:id="72d6e962-9f52-4af4-877b-391226b0e939" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -4480,6 +4506,11 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="aufrechterhalten" name="Engulf" xmi:id="61e8e923-7293-40e9-9163-66468759ab1c" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4494,6 +4525,11 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="aufrechterhalten" name="Engulf" xmi:id="61e8e923-7293-40e9-9163-66468759ab1c" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4510,6 +4546,10 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers name="Allergy" xmi:id="5cf0ea89-c2ab-4208-9682-cec070a08a8a" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4526,6 +4566,10 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers name="Allergy" xmi:id="5cf0ea89-c2ab-4208-9682-cec070a08a8a" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4543,6 +4587,10 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" name="Innate Spell" xmi:id="ddabe3d5-8b45-42ea-85ee-fcdc936cea2d" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -4561,6 +4609,10 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" name="Innate Spell" xmi:id="ddabe3d5-8b45-42ea-85ee-fcdc936cea2d" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -4577,6 +4629,12 @@
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers name="Allergy" xmi:id="5cf0ea89-c2ab-4208-9682-cec070a08a8a" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Binding" xmi:id="79f2a08f-36de-4bc4-ac84-3304ccab2c48" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Energy Aura" xmi:id="8521293f-fe93-446c-90ab-79a5db86333a" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Weather Control" xmi:id="29a4e4e2-8e70-4218-b53d-152023ef1a94" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4593,6 +4651,12 @@
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers name="Allergy" xmi:id="5cf0ea89-c2ab-4208-9682-cec070a08a8a" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Binding" xmi:id="79f2a08f-36de-4bc4-ac84-3304ccab2c48" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Energy Aura" xmi:id="8521293f-fe93-446c-90ab-79a5db86333a" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Weather Control" xmi:id="29a4e4e2-8e70-4218-b53d-152023ef1a94" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4621,6 +4685,11 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Animal Control" xmi:id="d966c5aa-eb7d-4af2-84de-d89eade82994" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="sofort" name="Natural Weapon" xmi:id="ec6444e9-4c33-455e-94fd-b78660eb3bde" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#fdaa958a-7097-4280-bf26-995298fec618"/>
@@ -4637,6 +4706,11 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Animal Control" xmi:id="d966c5aa-eb7d-4af2-84de-d89eade82994" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="sofort" name="Natural Weapon" xmi:id="ec6444e9-4c33-455e-94fd-b78660eb3bde" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#fdaa958a-7097-4280-bf26-995298fec618"/>
@@ -4653,6 +4727,13 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="aufrechterhalten" name="Engulf" xmi:id="61e8e923-7293-40e9-9163-66468759ab1c" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="sofort" name="Influence" xmi:id="1927e1ef-d1e5-4623-b043-934679b05e1a" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#ba5c0556-20c1-42f0-bca7-347a265e4733"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
@@ -4667,6 +4748,13 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="aufrechterhalten" name="Engulf" xmi:id="61e8e923-7293-40e9-9163-66468759ab1c" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="sofort" name="Influence" xmi:id="1927e1ef-d1e5-4623-b043-934679b05e1a" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#ba5c0556-20c1-42f0-bca7-347a265e4733"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
@@ -4682,6 +4770,11 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#8f9c9f42-41e4-4e4e-bfbd-ec96febd1900"/>
@@ -4696,6 +4789,12 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Regeneration" xmi:id="ad5a8055-8295-4761-ae67-71f044d05dcc" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#8f9c9f42-41e4-4e4e-bfbd-ec96febd1900"/>
@@ -4710,6 +4809,13 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="sofort" name="Influence" xmi:id="1927e1ef-d1e5-4623-b043-934679b05e1a" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -4723,6 +4829,13 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="sofort" name="Influence" xmi:id="1927e1ef-d1e5-4623-b043-934679b05e1a" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -4736,6 +4849,13 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="sofort" name="Natural Weapon" xmi:id="ec6444e9-4c33-455e-94fd-b78660eb3bde" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="beruehrung" art="Physisch" dauer="sofort" name="Venom" xmi:id="72d6e962-9f52-4af4-877b-391226b0e939" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -4752,6 +4872,10 @@
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers name="Allergy" xmi:id="5cf0ea89-c2ab-4208-9682-cec070a08a8a" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Binding" xmi:id="79f2a08f-36de-4bc4-ac84-3304ccab2c48" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -5002,6 +5126,13 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Enhanced Senses" xmi:id="ad0eb290-1cf2-470b-9974-b2817f1f9c29" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="sofort" name="Influence" xmi:id="1927e1ef-d1e5-4623-b043-934679b05e1a" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#ba5c0556-20c1-42f0-bca7-347a265e4733"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
@@ -5021,6 +5152,10 @@
 <powers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="sofort" name="Influence" xmi:id="1927e1ef-d1e5-4623-b043-934679b05e1a" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" name="Innate Spell" xmi:id="ddabe3d5-8b45-42ea-85ee-fcdc936cea2d" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -5035,6 +5170,10 @@
 <powers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="aufrechterhalten" name="Engulf" xmi:id="61e8e923-7293-40e9-9163-66468759ab1c" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -5048,6 +5187,13 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="sofort" name="Accident" xmi:id="8c49dafa-e931-46e5-9d08-d1d482c64fb1" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Confusion" xmi:id="d220e2cb-cc12-4d60-96e0-1fc6537720dd" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Corrosive Spit" xmi:id="c2b08789-cd85-4282-885f-06216f0aca15" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>
@@ -5062,6 +5208,11 @@
 <powers handlung="komplex" reichweite="selbst" art="Mana" dauer="aufrechterhalten" name="Materialization" xmi:id="f59a23d9-d709-485a-9e13-cdbb36186567" page="398" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" dauer="aufrechterhalten" name="Animal Control" xmi:id="d966c5aa-eb7d-4af2-84de-d89eade82994" page="394" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Concealment" xmi:id="e8d40591-3c16-4154-82fa-b37fafcf9140" page="395" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="beruehrung" art="Physisch" dauer="sofort" name="Natural Weapon" xmi:id="ec6444e9-4c33-455e-94fd-b78660eb3bde" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#fdaa958a-7097-4280-bf26-995298fec618"/>
@@ -5082,6 +5233,9 @@
 <powers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Movement" xmi:id="b5199703-32ac-459f-b2f6-c33633eedcab" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#132783c1-780e-4021-875c-c8763e729e2d"/>
@@ -5098,6 +5252,12 @@
 <powers reichweite="selbst" art="Physisch" dauer="immer" name="Sapience" xmi:id="d48cd539-7c38-4fac-8aae-e357ef61a45a" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="speziell" art="Physisch" name="Search" xmi:id="0ca020a6-48d4-47b6-b02b-c0221ba84d74" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <powers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Weather Control" xmi:id="29a4e4e2-8e70-4218-b53d-152023ef1a94" page="401" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Elemental Attack" xmi:id="89d9ebcc-4b94-49e3-bf01-61290a5bfa31" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers reichweite="selbst" art="Physisch" dauer="immer" name="Energy Aura" xmi:id="8521293f-fe93-446c-90ab-79a5db86333a" page="396" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Mana" name="Fear" xmi:id="14a11cbc-ca04-42f1-8b0c-5754ade512ae" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Guard" xmi:id="227f6eda-c0e1-46c4-abf9-5301c9bffe33" page="397" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="speziell" art="Physisch" dauer="sofort" name="Noxious Breath" xmi:id="4a524ca0-4681-47e5-96a1-e3e6f29cc812" page="399" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<optionalPowers handlung="komplex" reichweite="blickfeld" art="Physisch" dauer="aufrechterhalten" name="Psychokinesis" xmi:id="872dc5a7-c646-4220-aaf0-7c87d4147b72" page="400" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <skills href="#e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
 <skills href="#42b12381-1fb1-4b41-9cf8-8b8d31277a8c"/>
 <skills href="#9f84eebb-9325-447c-85f9-bdccdc2da3af"/>

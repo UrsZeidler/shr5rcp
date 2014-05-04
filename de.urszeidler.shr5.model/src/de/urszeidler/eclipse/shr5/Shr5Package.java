@@ -12864,13 +12864,22 @@ public interface Shr5Package extends EPackage {
     int GEIST__POWERS = STUFEN_PERSONA_FEATURE_COUNT + 16;
 
     /**
+     * The feature id for the '<em><b>Optional Powers</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__OPTIONAL_POWERS = STUFEN_PERSONA_FEATURE_COUNT + 17;
+
+    /**
      * The number of structural features of the '<em>Geist</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int GEIST_FEATURE_COUNT = STUFEN_PERSONA_FEATURE_COUNT + 17;
+    int GEIST_FEATURE_COUNT = STUFEN_PERSONA_FEATURE_COUNT + 18;
 
     /**
      * The number of operations of the '<em>Geist</em>' class.
@@ -16477,6 +16486,17 @@ public interface Shr5Package extends EPackage {
     EReference getGeist_Powers();
 
     /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Geist#getOptionalPowers <em>Optional Powers</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Optional Powers</em>'.
+     * @see de.urszeidler.eclipse.shr5.Geist#getOptionalPowers()
+     * @see #getGeist()
+     * @generated
+     */
+    EReference getGeist_OptionalPowers();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Identifiable <em>Identifiable</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -19418,6 +19438,14 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference GEIST__POWERS = eINSTANCE.getGeist_Powers();
+
+        /**
+         * The meta object literal for the '<em><b>Optional Powers</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference GEIST__OPTIONAL_POWERS = eINSTANCE.getGeist_OptionalPowers();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Identifiable <em>Identifiable</em>}' class.

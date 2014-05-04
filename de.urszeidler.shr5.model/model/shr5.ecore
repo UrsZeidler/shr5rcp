@@ -653,6 +653,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logikBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="powers" upperBound="-1"
         eType="#//CritterKraft" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionalPowers" upperBound="-1"
+        eType="#//CritterKraft" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Identifiable" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parentId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
