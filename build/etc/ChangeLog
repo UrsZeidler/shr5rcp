@@ -7,6 +7,9 @@
 * added spirits
 * added binding of spirits
 * Switch the reference from Xpath to xsid
+* import from chummer2 :
+	* import the spirits
+	* import the critter powers
 
 
 2014-04-27 Version 0.1.5
