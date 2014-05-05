@@ -2952,7 +2952,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_BdjTkZIoEeOQ9-iFo3HglQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5Management.ecore#//KarmaGaint"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BdjTkpIoEeOQ9-iFo3HglQ" x="115" y="390"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BdjTkpIoEeOQ9-iFo3HglQ" x="135" y="390"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_DiHMUJIoEeOQ9-iFo3HglQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_DiJBgJIoEeOQ9-iFo3HglQ" type="4001"/>
@@ -3016,7 +3016,7 @@
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_HDx8QZIoEeOQ9-iFo3HglQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
       <element xmi:type="ecore:EClass" href="shr5Management.ecore#//IncreaseCharacterPart"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HDx8QpIoEeOQ9-iFo3HglQ" x="785" y="350"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HDx8QpIoEeOQ9-iFo3HglQ" x="910" y="345"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_MEYvYJIoEeOQ9-iFo3HglQ" type="1001">
       <children xmi:type="notation:Node" xmi:id="_MEZ9gJIoEeOQ9-iFo3HglQ" type="4001"/>
@@ -3123,7 +3123,7 @@
       <styles xmi:type="notation:TextStyle" xmi:id="_O3hI4ZIpEeOQ9-iFo3HglQ"/>
       <styles xmi:type="notation:LineTypeStyle" xmi:id="_O3hI4pIpEeOQ9-iFo3HglQ"/>
       <element xsi:nil="true"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O3hI45IpEeOQ9-iFo3HglQ" x="785" y="405" width="181" height="76"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O3hI45IpEeOQ9-iFo3HglQ" x="920" y="400" width="181" height="76"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_iOb6QJIpEeOQ9-iFo3HglQ" type="Note" fontName="Ubuntu" description="The factor will be multiplied with the to value from PersonaValueChange." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
       <children xmi:type="notation:BasicDecorationNode" xmi:id="_iOdIYJIpEeOQ9-iFo3HglQ" type="DiagramName">
@@ -3177,7 +3177,7 @@
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_D6Tp4ZIoEeOQ9-iFo3HglQ" routing="Rectilinear" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_D6Tp4pIoEeOQ9-iFo3HglQ" fontName="Ubuntu"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_D6Tp45IoEeOQ9-iFo3HglQ" points="[1, 1, -291, -275]$[238, 225, -54, -51]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_D6Tp45IoEeOQ9-iFo3HglQ" points="[-12, -31, 14, 115]$[-12, -95, 14, 51]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_D6U4AJIoEeOQ9-iFo3HglQ" type="3003" source="_DiHMUJIoEeOQ9-iFo3HglQ" target="_D5-5wJIoEeOQ9-iFo3HglQ">
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_D6U4AZIoEeOQ9-iFo3HglQ" routing="Rectilinear" lineColor="4210752"/>
@@ -3255,10 +3255,10 @@
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_VOBNYJIoEeOQ9-iFo3HglQ" type="3002" source="_1urw0KlhEeOXV8up9GzuQQ" target="_GpZGUJIoEeOQ9-iFo3HglQ">
       <children xmi:type="notation:Node" xmi:id="_VOB0cJIoEeOQ9-iFo3HglQ" type="4011">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_VOB0cZIoEeOQ9-iFo3HglQ" x="-10" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VOB0cZIoEeOQ9-iFo3HglQ" x="-27" y="-4"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_VOB0cpIoEeOQ9-iFo3HglQ" type="4012">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_VOB0c5IoEeOQ9-iFo3HglQ" x="10" y="10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VOB0c5IoEeOQ9-iFo3HglQ" x="-2" y="13"/>
       </children>
       <styles xmi:type="notation:ConnectorStyle" xmi:id="_VOBNYZIoEeOQ9-iFo3HglQ" lineColor="4210752"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_VOBNYpIoEeOQ9-iFo3HglQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
