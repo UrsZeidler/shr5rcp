@@ -3,21 +3,22 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 
 /**
  * <!-- begin-user-doc -->
@@ -203,14 +204,14 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	protected EAttribute attribut;
 
 	/**
-     * The cached value of the '{@link #getSpezialisierungen() <em>Spezialisierungen</em>}' attribute list.
+     * The cached value of the '{@link #getSpezialisierungen() <em>Spezialisierungen</em>}' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @see #getSpezialisierungen()
      * @generated
      * @ordered
      */
-	protected EList<String> spezialisierungen;
+	protected EList<Spezialisierung> spezialisierungen;
 
 	/**
      * <!-- begin-user-doc -->
@@ -459,14 +460,28 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<String> getSpezialisierungen() {
+	public EList<Spezialisierung> getSpezialisierungen() {
         if (spezialisierungen == null) {
-            spezialisierungen = new EDataTypeUniqueEList<String>(String.class, this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN);
+            spezialisierungen = new EObjectContainmentEList<Spezialisierung>(Spezialisierung.class, this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN);
         }
         return spezialisierungen;
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
+                return ((InternalEList<?>)getSpezialisierungen()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -538,7 +553,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
                 return;
             case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
                 getSpezialisierungen().clear();
-                getSpezialisierungen().addAll((Collection<? extends String>)newValue);
+                getSpezialisierungen().addAll((Collection<? extends Spezialisierung>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -688,8 +703,6 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
         result.append(kategorie);
         result.append(", ausweichen: ");
         result.append(ausweichen);
-        result.append(", spezialisierungen: ");
-        result.append(spezialisierungen);
         result.append(')');
         return result.toString();
     }

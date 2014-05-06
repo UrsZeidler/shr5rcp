@@ -101,6 +101,7 @@ import de.urszeidler.eclipse.shr5.Sichtverhaeltnisse;
 import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.SmartgunType;
 import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.SpezielleAttribute;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
@@ -746,6 +747,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass credstickTransactionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass spezialisierungEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1663,8 +1671,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFertigkeit_Spezialisierungen() {
-        return (EAttribute)fertigkeitEClass.getEStructuralFeatures().get(3);
+	public EReference getFertigkeit_Spezialisierungen() {
+        return (EReference)fertigkeitEClass.getEStructuralFeatures().get(3);
     }
 
 	/**
@@ -1690,8 +1698,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getPersonaFertigkeit_Spezialisierungen() {
-        return (EAttribute)personaFertigkeitEClass.getEStructuralFeatures().get(1);
+    public EReference getPersonaFertigkeit_Spezialisierungen() {
+        return (EReference)personaFertigkeitEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -3829,6 +3837,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSpezialisierung() {
+        return spezialisierungEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4101,11 +4118,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(fertigkeitEClass, FERTIGKEIT__KATEGORIE);
         createEAttribute(fertigkeitEClass, FERTIGKEIT__AUSWEICHEN);
         createEReference(fertigkeitEClass, FERTIGKEIT__ATTRIBUT);
-        createEAttribute(fertigkeitEClass, FERTIGKEIT__SPEZIALISIERUNGEN);
+        createEReference(fertigkeitEClass, FERTIGKEIT__SPEZIALISIERUNGEN);
 
         personaFertigkeitEClass = createEClass(PERSONA_FERTIGKEIT);
         createEReference(personaFertigkeitEClass, PERSONA_FERTIGKEIT__FERTIGKEIT);
-        createEAttribute(personaFertigkeitEClass, PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
+        createEReference(personaFertigkeitEClass, PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
 
         personaFertigkeitsGruppeEClass = createEClass(PERSONA_FERTIGKEITS_GRUPPE);
         createEReference(personaFertigkeitsGruppeEClass, PERSONA_FERTIGKEITS_GRUPPE__GRUPPE);
@@ -4411,6 +4428,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__DATE);
         createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__DESCRIPTION);
 
+        spezialisierungEClass = createEClass(SPEZIALISIERUNG);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4577,6 +4596,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         stufenPersonaEClass.getESuperTypes().add(this.getPanzerung());
         geistEClass.getESuperTypes().add(this.getStufenPersona());
         geistEClass.getESuperTypes().add(this.getAstraleProjektion());
+        spezialisierungEClass.getESuperTypes().add(this.getBeschreibbar());
+        spezialisierungEClass.getESuperTypes().add(this.getQuelle());
+        spezialisierungEClass.getESuperTypes().add(this.getErlernbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4681,11 +4703,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFertigkeit_Kategorie(), ecorePackage.getEString(), "kategorie", null, 0, 1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFertigkeit_Ausweichen(), ecorePackage.getEBoolean(), "ausweichen", null, 0, 1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFertigkeit_Attribut(), ecorePackage.getEAttribute(), null, "attribut", null, 0, 1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getFertigkeit_Spezialisierungen(), ecorePackage.getEString(), "spezialisierungen", null, 0, -1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getFertigkeit_Spezialisierungen(), this.getSpezialisierung(), null, "spezialisierungen", null, 0, -1, Fertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaFertigkeitEClass, PersonaFertigkeit.class, "PersonaFertigkeit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaFertigkeit_Fertigkeit(), this.getFertigkeit(), null, "fertigkeit", null, 0, 1, PersonaFertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getPersonaFertigkeit_Spezialisierungen(), ecorePackage.getEString(), "spezialisierungen", null, 0, -1, PersonaFertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPersonaFertigkeit_Spezialisierungen(), this.getSpezialisierung(), null, "spezialisierungen", null, 0, -1, PersonaFertigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(personaFertigkeitsGruppeEClass, PersonaFertigkeitsGruppe.class, "PersonaFertigkeitsGruppe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getPersonaFertigkeitsGruppe_Gruppe(), this.getFertigkeitsGruppe(), null, "gruppe", null, 0, 1, PersonaFertigkeitsGruppe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4990,6 +5012,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getCredstickTransaction_Amount(), ecorePackage.getEBigDecimal(), "amount", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCredstickTransaction_Date(), this.getShrDate(), "date", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCredstickTransaction_Description(), ecorePackage.getEString(), "description", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(spezialisierungEClass, Spezialisierung.class, "Spezialisierung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -98,7 +98,7 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
                  true,
                  false,
                  false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
                  null,
                  null));
     }

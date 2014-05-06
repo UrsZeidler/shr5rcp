@@ -3,18 +3,17 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,14 +62,14 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	protected Fertigkeit fertigkeit;
 
 	/**
-     * The cached value of the '{@link #getSpezialisierungen() <em>Spezialisierungen</em>}' attribute list.
+     * The cached value of the '{@link #getSpezialisierungen() <em>Spezialisierungen</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getSpezialisierungen()
      * @generated
      * @ordered
      */
-    protected EList<String> spezialisierungen;
+    protected EList<Spezialisierung> spezialisierungen;
 
     /**
      * <!-- begin-user-doc -->
@@ -134,9 +133,9 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<String> getSpezialisierungen() {
+    public EList<Spezialisierung> getSpezialisierungen() {
         if (spezialisierungen == null) {
-            spezialisierungen = new EDataTypeUniqueEList<String>(String.class, this, Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
+            spezialisierungen = new EObjectResolvingEList<Spezialisierung>(Spezialisierung.class, this, Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
         }
         return spezialisierungen;
     }
@@ -198,7 +197,7 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
                 getSpezialisierungen().clear();
-                getSpezialisierungen().addAll((Collection<? extends String>)newValue);
+                getSpezialisierungen().addAll((Collection<? extends Spezialisierung>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -255,8 +254,6 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
-        result.append(", spezialisierungen: ");
-        result.append(spezialisierungen);
         result.append(')');
         return result.toString();
     }

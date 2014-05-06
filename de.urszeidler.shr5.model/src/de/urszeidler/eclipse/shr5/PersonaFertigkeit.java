@@ -50,19 +50,19 @@ public interface PersonaFertigkeit extends Steigerbar {
 	void setFertigkeit(Fertigkeit value);
 
     /**
-     * Returns the value of the '<em><b>Spezialisierungen</b></em>' attribute list.
-     * The list contents are of type {@link java.lang.String}.
+     * Returns the value of the '<em><b>Spezialisierungen</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Spezialisierung}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Spezialisierungen</em>' attribute list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Spezialisierungen</em>' attribute list.
+     * @return the value of the '<em>Spezialisierungen</em>' reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getPersonaFertigkeit_Spezialisierungen()
      * @model
      * @generated
      */
-    EList<String> getSpezialisierungen();
+    EList<Spezialisierung> getSpezialisierungen();
 
 } // PersonaFertigkeit

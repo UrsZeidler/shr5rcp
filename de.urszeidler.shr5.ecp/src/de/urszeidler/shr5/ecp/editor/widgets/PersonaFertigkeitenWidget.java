@@ -52,6 +52,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Shr5Package.Literals;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -59,6 +60,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -170,7 +172,7 @@ public class PersonaFertigkeitenWidget extends Composite {
         }
     }
 
-    private DataBindingContext m_bindingContext;
+    protected DataBindingContext m_bindingContext;
 
     private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
     private AbstraktPersona persona;
@@ -220,7 +222,7 @@ public class PersonaFertigkeitenWidget extends Composite {
 
         CharacterGenerator chracterSource = character2.getChracterSource();
         if (chracterSource instanceof Shr5KarmaGenerator) {
-            Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
+            //Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
             karmaMode = true;
         }
 
@@ -345,7 +347,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                     Fertigkeit fertigkeit = (Fertigkeit)object;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
                     if (personaFertigkeit != null && !personaFertigkeit.getSpezialisierungen().isEmpty())
-                        return personaFertigkeit.getSpezialisierungen().toString();
+                        return AdapterFactoryUtil.getInstance().getLabelProvider().getText(personaFertigkeit.getSpezialisierungen());// .toString();
                 }
                 return EMPTY;
             }
@@ -368,10 +370,13 @@ public class PersonaFertigkeitenWidget extends Composite {
                         protected Object openDialogBox(Control cellEditorWindow) {
                             FeatureEditorDialog featureEditorDialog = new FeatureEditorDialog(getShell(), AdapterFactoryUtil.getInstance()
                                     .getLabelProvider(), personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN,
-                                    "Select Specali", fertigkeit.getSpezialisierungen());
+                                    "Select specialism", fertigkeit.getSpezialisierungen());
                             int result = featureEditorDialog.open();
                             if (result == Window.OK) {
-                                return featureEditorDialog.getResult();
+                                EList<?> list = featureEditorDialog.getResult();
+                                if (list.size() > 0) {
+                                    return list.get(0);
+                                }
                             }
                             return null;
                         }
@@ -406,6 +411,11 @@ public class PersonaFertigkeitenWidget extends Composite {
 
             @Override
             protected void setValue(Object element, Object value) {
+
+                if (karmaMode)
+                    changeFertigkeitsValueByAdvacement(element, value);
+                else
+
                 if (element instanceof Fertigkeit) {
                     Fertigkeit fertigkeit = (Fertigkeit)element;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
@@ -594,7 +604,11 @@ public class PersonaFertigkeitenWidget extends Composite {
     private void changeFertigkeitsValueByAdvacement(Object element, Object value) {
         if (element instanceof Fertigkeit) {
             Fertigkeit f = (Fertigkeit)element;
-            ShadowrunEditingTools.changeFertigkeitByAdvacement(character, f, (Integer)value);
+            if (value instanceof Spezialisierung) {
+                Spezialisierung s = (Spezialisierung)value;
+                ShadowrunManagmentTools.changeErlernbarByAdvacement(character, s);
+            } else
+                ShadowrunEditingTools.changeFertigkeitByAdvacement(character, f, (Integer)value);
         } else if (element instanceof FertigkeitsGruppe) {
             FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
             ShadowrunEditingTools.changeFertigkeitsGruppeByAdvacement(character, fg, (Integer)value);

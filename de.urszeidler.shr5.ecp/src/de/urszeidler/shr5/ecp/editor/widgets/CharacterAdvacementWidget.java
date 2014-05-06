@@ -48,6 +48,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
@@ -127,20 +128,23 @@ public class CharacterAdvacementWidget extends Composite {
                     Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(),
                             Shr5Package.Literals.FERTIGKEIT);
                     Transformer<Fertigkeit, PersonaFertigkeit> transformer = ShadowrunEditingTools.fertigkeit2PersonafertigkeitTransformer(character);
-//                            
-//                            new Transformer<Fertigkeit, PersonaFertigkeit>() {
-//                        @Override
-//                        public PersonaFertigkeit transform(Fertigkeit input) {
-//                            PersonaFertigkeit fertigkeit = ShadowrunTools.findFertigkeit(input, character.getPersona());
-//                            if (fertigkeit == null) {
-//                                fertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
-//                                fertigkeit.setFertigkeit(input);
-//                            }
-//                            return fertigkeit;
-//                        }
-//
-//                    };
                     handleSingleReference(transformer, e, list, getShell());
+                    updateToolbars();
+                    return;
+                }
+                else if (Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN.equals(currentOperation.feature)) {
+                     
+                    EList<PersonaFertigkeit> fertigkeiten = character.getPersona().getFertigkeiten();
+                    ArrayList<Spezialisierung> arrayList = new ArrayList<Spezialisierung>();
+                    for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
+                        Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
+                        if(fertigkeit!=null){
+                            arrayList.addAll(fertigkeit.getSpezialisierungen());
+                        }
+                    }
+                    
+                   // Transformer<Fertigkeit, PersonaFertigkeit> transformer = ShadowrunEditingTools.fertigkeit2PersonafertigkeitTransformer(character);
+                    handleSingleReference(e, arrayList, getShell());
                     updateToolbars();
                     return;
                 }
@@ -567,6 +571,11 @@ public class CharacterAdvacementWidget extends Composite {
                 }
         }
 
+        op = new ChangeOperation();
+        op.type = Shr5managementPackage.Literals.PERSONA_CHANGE;
+        op.add = true;
+        op.feature = Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN;
+        selectableChanges.add(op);
         op = new ChangeOperation();
         op.type = Shr5managementPackage.Literals.PERSONA_CHANGE;
         op.add = true;

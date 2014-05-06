@@ -3270,7 +3270,7 @@ public interface Shr5Package extends EPackage {
 	int FERTIGKEIT__ATTRIBUT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
-     * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
+     * The feature id for the '<em><b>Spezialisierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -3360,7 +3360,7 @@ public interface Shr5Package extends EPackage {
 	int PERSONA_FERTIGKEIT__FERTIGKEIT = STEIGERBAR_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
+     * The feature id for the '<em><b>Spezialisierungen</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -10965,7 +10965,7 @@ public interface Shr5Package extends EPackage {
 	int WISSENSFERTIGKEIT__ATTRIBUT = FERTIGKEIT__ATTRIBUT;
 
     /**
-     * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
+     * The feature id for the '<em><b>Spezialisierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -11073,7 +11073,7 @@ public interface Shr5Package extends EPackage {
 	int SPRACHFERTIGKEIT__ATTRIBUT = WISSENSFERTIGKEIT__ATTRIBUT;
 
     /**
-     * The feature id for the '<em><b>Spezialisierungen</b></em>' attribute list.
+     * The feature id for the '<em><b>Spezialisierungen</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -12982,6 +12982,88 @@ public interface Shr5Package extends EPackage {
     int CREDSTICK_TRANSACTION_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl <em>Spezialisierung</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSpezialisierung()
+     * @generated
+     */
+    int SPEZIALISIERUNG = 89;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Spezialisierung</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Spezialisierung</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12989,7 +13071,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 89;
+	int FEUER_MODUS = 90;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -12999,7 +13081,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 90;
+	int SCHADENS_TYP = 91;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -13009,7 +13091,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 91;
+	int MAGAZIN_TYP = 92;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -13019,7 +13101,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 92;
+	int FEUWERWAFFEN_ERWEITERUNG = 93;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -13029,7 +13111,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 93;
+	int MODIFIKATOR_TYPE = 94;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -13039,7 +13121,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 94;
+	int SMARTGUN_TYPE = 95;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -13049,7 +13131,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 95;
+	int ZAUBER_ART = 96;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -13059,7 +13141,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 96;
+	int ZAUBER_REICHWEITE = 97;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -13069,7 +13151,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 97;
+	int ZAUBER_DAUER = 98;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -13079,7 +13161,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 98;
+	int MAGISCHE_TRADITION = 99;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -13089,7 +13171,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 99;
+	int CRITTER_HANDLUNG = 100;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -13099,7 +13181,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 100;
+	int CRITTER_REICHWEITE = 101;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -13109,7 +13191,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 101;
+	int CRITTER_DAUER = 102;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -13119,7 +13201,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 102;
+	int RESONANZ_ZIEL = 103;
 
 	/**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -13129,7 +13211,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 103;
+	int SHR_DATE = 104;
 
 
 	/**
@@ -13140,7 +13222,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 104;
+	int MODIFICATION_MANAGER = 105;
 
 
 	/**
@@ -14025,15 +14107,15 @@ public interface Shr5Package extends EPackage {
 	EReference getFertigkeit_Attribut();
 
 	/**
-     * Returns the meta object for the attribute list '{@link de.urszeidler.eclipse.shr5.Fertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}'.
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Fertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>Spezialisierungen</em>'.
+     * @return the meta object for the containment reference list '<em>Spezialisierungen</em>'.
      * @see de.urszeidler.eclipse.shr5.Fertigkeit#getSpezialisierungen()
      * @see #getFertigkeit()
      * @generated
      */
-	EAttribute getFertigkeit_Spezialisierungen();
+	EReference getFertigkeit_Spezialisierungen();
 
 	/**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit <em>Persona Fertigkeit</em>}'.
@@ -14057,15 +14139,15 @@ public interface Shr5Package extends EPackage {
 	EReference getPersonaFertigkeit_Fertigkeit();
 
 	/**
-     * Returns the meta object for the attribute list '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}'.
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>Spezialisierungen</em>'.
+     * @return the meta object for the reference list '<em>Spezialisierungen</em>'.
      * @see de.urszeidler.eclipse.shr5.PersonaFertigkeit#getSpezialisierungen()
      * @see #getPersonaFertigkeit()
      * @generated
      */
-    EAttribute getPersonaFertigkeit_Spezialisierungen();
+    EReference getPersonaFertigkeit_Spezialisierungen();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe <em>Persona Fertigkeits Gruppe</em>}'.
@@ -16608,6 +16690,16 @@ public interface Shr5Package extends EPackage {
     EAttribute getCredstickTransaction_Description();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Spezialisierung <em>Spezialisierung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Spezialisierung</em>'.
+     * @see de.urszeidler.eclipse.shr5.Spezialisierung
+     * @generated
+     */
+    EClass getSpezialisierung();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17491,12 +17583,12 @@ public interface Shr5Package extends EPackage {
 		EReference FERTIGKEIT__ATTRIBUT = eINSTANCE.getFertigkeit_Attribut();
 
 		/**
-         * The meta object literal for the '<em><b>Spezialisierungen</b></em>' attribute list feature.
+         * The meta object literal for the '<em><b>Spezialisierungen</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
          * @generated
          */
-		EAttribute FERTIGKEIT__SPEZIALISIERUNGEN = eINSTANCE.getFertigkeit_Spezialisierungen();
+		EReference FERTIGKEIT__SPEZIALISIERUNGEN = eINSTANCE.getFertigkeit_Spezialisierungen();
 
 		/**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl <em>Persona Fertigkeit</em>}' class.
@@ -17517,12 +17609,12 @@ public interface Shr5Package extends EPackage {
 		EReference PERSONA_FERTIGKEIT__FERTIGKEIT = eINSTANCE.getPersonaFertigkeit_Fertigkeit();
 
 		/**
-         * The meta object literal for the '<em><b>Spezialisierungen</b></em>' attribute list feature.
+         * The meta object literal for the '<em><b>Spezialisierungen</b></em>' reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN = eINSTANCE.getPersonaFertigkeit_Spezialisierungen();
+        EReference PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN = eINSTANCE.getPersonaFertigkeit_Spezialisierungen();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl <em>Persona Fertigkeits Gruppe</em>}' class.
@@ -19553,6 +19645,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute CREDSTICK_TRANSACTION__DESCRIPTION = eINSTANCE.getCredstickTransaction_Description();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl <em>Spezialisierung</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSpezialisierung()
+         * @generated
+         */
+        EClass SPEZIALISIERUNG = eINSTANCE.getSpezialisierung();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

@@ -389,8 +389,8 @@
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
-          <xsd:element name="spezialisierungen" nillable="true" type="xsd:string"/>
           <xsd:element name="attribut" type="ecore:EAttribute"/>
+          <xsd:element name="spezialisierungen" type="shr5:Spezialisierung"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
@@ -406,10 +406,11 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Steigerbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="spezialisierungen" nillable="true" type="xsd:string"/>
           <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+          <xsd:element name="spezialisierungen" type="shr5:Spezialisierung"/>
         </xsd:choice>
         <xsd:attribute name="fertigkeit" type="xsd:string"/>
+        <xsd:attribute name="spezialisierungen" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1315,4 +1316,17 @@
       <xsd:documentation>This is an entry in the log.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="Spezialisierung">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Spezialisierung" type="shr5:Spezialisierung"/>
 </xsd:schema>

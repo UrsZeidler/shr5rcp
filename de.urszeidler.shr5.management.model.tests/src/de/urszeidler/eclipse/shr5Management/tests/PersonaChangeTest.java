@@ -18,6 +18,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
@@ -155,6 +156,28 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         getFixture().applyChanges();
         assertEquals(value + 1, personaFertigkeit.getStufe());
     }
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testGetKarmaCost_SkillSpecialism() {
+        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+        int value = personaFertigkeit.getStufe();
+        Spezialisierung spezialisierung = personaFertigkeit.getFertigkeit().getSpezialisierungen().get(0);
+        getFixture().setChangeable(spezialisierung);
+        // getFixture().setFrom(2);
+        // getFixture().setTo(3);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-7, getFixture().getKarmaCost());
+
+        getFixture().applyChanges();
+        assertEquals(true, personaFertigkeit.getSpezialisierungen().contains(spezialisierung));
+    }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#applyChanges() <em>Apply Changes</em>}' operation.
@@ -240,6 +263,26 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
 
         getFixture().applyChanges();
         assertEquals(value + 1, personaFertigkeit.getStufe());
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+    }
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testApplyChanges_SkillSpecalism_Add() {
+        PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
+        int value = personaFertigkeit.getStufe();
+        Spezialisierung spezialisierung = personaFertigkeit.getFertigkeit().getSpezialisierungen().get(0);
+        getFixture().setChangeable(spezialisierung);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-7, getFixture().getKarmaCost());
+        assertEquals(getFixture().getFrom(), 0);
+        assertEquals(getFixture().getTo(),  1);
+
+        getFixture().applyChanges();
+        assertEquals(true, personaFertigkeit.getSpezialisierungen().contains(spezialisierung));
         assertEquals(true, getFixture().isChangeApplied());
         assertNotNull(getFixture().getDateApplied());
     }

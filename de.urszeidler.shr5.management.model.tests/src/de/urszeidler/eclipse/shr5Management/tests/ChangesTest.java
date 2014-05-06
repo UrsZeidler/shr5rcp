@@ -71,7 +71,8 @@ public abstract class ChangesTest extends TestCase {
         fertigkeit.setFertigkeit(wfertigkeit);
         fertigkeit.setStufe(1);
         playerCharacter.getPersona().getFertigkeiten().add(fertigkeit);
-
+        
+        wfertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
     }
 
     /**
@@ -87,6 +88,11 @@ public abstract class ChangesTest extends TestCase {
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
         part.setKarmaFactor(1);
         part.setType(Shr5Package.Literals.SPRACHFERTIGKEIT);
+        shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
+
+        part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();
+        part.setKarmaFactor(7);
+        part.setType(Shr5Package.Literals.SPEZIALISIERUNG);
         shr5System1.getCharacterAdvancements().getCharacterAdvancements().add(part);
 
         part = Shr5managementFactory.eINSTANCE.createIncreaseCharacterPart();

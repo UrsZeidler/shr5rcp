@@ -183,11 +183,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/kategorie"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/ausweichen"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Fertigkeit/attribut"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/spezialisierungen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//Fertigkeit/spezialisierungen"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeit">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/fertigkeit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonaFertigkeit/spezialisierungen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/spezialisierungen"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeitsGruppe">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeitsGruppe/gruppe"/>
@@ -477,5 +477,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/date"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
     </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Spezialisierung"/>
   </genPackages>
 </genmodel:GenModel>

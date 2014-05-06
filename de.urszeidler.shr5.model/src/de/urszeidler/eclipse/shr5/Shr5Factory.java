@@ -490,6 +490,15 @@ public interface Shr5Factory extends EFactory {
     CredstickTransaction createCredstickTransaction();
 
     /**
+     * Returns a new object of class '<em>Spezialisierung</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Spezialisierung</em>'.
+     * @generated
+     */
+    Spezialisierung createSpezialisierung();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

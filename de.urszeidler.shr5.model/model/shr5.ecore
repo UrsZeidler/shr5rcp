@@ -196,13 +196,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kategorie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ausweichen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribut" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spezialisierungen" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spezialisierungen" upperBound="-1"
+        eType="#//Spezialisierung" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeit" eSuperTypes="#//Steigerbar">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fertigkeit" eType="#//Fertigkeit"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spezialisierungen" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spezialisierungen" upperBound="-1"
+        eType="#//Spezialisierung"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeitsGruppe" eSuperTypes="#//Steigerbar">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gruppe" eType="#//FertigkeitsGruppe"/>
@@ -672,4 +672,5 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Spezialisierung" eSuperTypes="#//Beschreibbar #//Quelle #//Erlernbar"/>
 </ecore:EPackage>

@@ -171,6 +171,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.GEBUNDENER_GEIST: return createGebundenerGeist();
             case Shr5Package.GEIST: return createGeist();
             case Shr5Package.CREDSTICK_TRANSACTION: return createCredstickTransaction();
+            case Shr5Package.SPEZIALISIERUNG: return createSpezialisierung();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -780,6 +781,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public CredstickTransaction createCredstickTransaction() {
         CredstickTransactionImpl credstickTransaction = new CredstickTransactionImpl();
         return credstickTransaction;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Spezialisierung createSpezialisierung() {
+        SpezialisierungImpl spezialisierung = new SpezialisierungImpl();
+        return spezialisierung;
     }
 
     /**

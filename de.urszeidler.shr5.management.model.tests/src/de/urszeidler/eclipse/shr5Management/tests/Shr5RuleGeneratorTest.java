@@ -200,11 +200,11 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         PersonaFertigkeit personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaFertigkeit();
         personaFertigkeit.setFertigkeit(Shr5Factory.eINSTANCE.createFertigkeit());
         personaFertigkeit.setStufe(1);
-        personaFertigkeit.getSpezialisierungen().add("1");
+        personaFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
         persona.getFertigkeiten().add(personaFertigkeit);
 
         assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));
-        personaFertigkeit.getSpezialisierungen().add("2");
+        personaFertigkeit.getSpezialisierungen().add(Shr5Factory.eINSTANCE.createSpezialisierung());
         assertEquals(false, getFixture().hasNotMoreSpecalism(diagnostics, context));
         getFixture().getShr5Generator().setNumberOfSpecalism(2);
         assertEquals(true, getFixture().hasNotMoreSpecalism(diagnostics, context));

@@ -1346,6 +1346,10 @@
 			<type href="http://urszeidler.de/shr5/1.0#//Sprachfertigkeit" />
 		</characterAdvancements>
 		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
+			karmaFactor="7">
+			<type href="http://urszeidler.de/shr5/1.0#//Spezialisierung" />
+		</characterAdvancements>
+		<characterAdvancements xsi:type="shr5mngt:IncreaseCharacterPart"
 			karmaFactor="5">
 			<type href="http://urszeidler.de/shr5/1.0#//PersonaZauber" />
 		</characterAdvancements>
@@ -1594,7 +1598,9 @@
 
 		<xsl:for-each select="specs/*">
 			<spezialisierungen>
+			<xsl:attribute name="name">
 				<xsl:value-of select="text()" />
+			</xsl:attribute>
 			</spezialisierungen>
 
 		</xsl:for-each>
