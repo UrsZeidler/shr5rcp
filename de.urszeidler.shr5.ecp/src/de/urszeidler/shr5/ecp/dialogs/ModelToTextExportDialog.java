@@ -37,7 +37,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.OfficalCharacterSheet;
-import de.urszeidler.shr5.acceleo.sheets.SimpleSvg;
 import de.urszeidler.shr5.ecp.Activator;
 
 public class ModelToTextExportDialog extends TitleAreaDialog {
