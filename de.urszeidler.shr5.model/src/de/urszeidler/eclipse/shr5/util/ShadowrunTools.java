@@ -215,8 +215,8 @@ public class ShadowrunTools {
      */
     public static int getModificatorenValue(EAttribute eattribute, List<? extends AbstraktModifikatoren> mods) {
         int sum = 0;
-        for (AbstraktModifikatoren attributModifikatorWert : mods) {           
-                sum = sum + getModificatorValue(eattribute, attributModifikatorWert.getMods());
+        for (AbstraktModifikatoren attributModifikatorWert : mods) {
+            sum = sum + getModificatorValue(eattribute, attributModifikatorWert.getMods());
         }
         return sum;
     }
@@ -237,7 +237,6 @@ public class ShadowrunTools {
         return sum;
     }
 
-    
     /**
      * Creates and initalise a character with the given spezies.
      * 
@@ -326,6 +325,31 @@ public class ShadowrunTools {
                 return personaFertigkeitsGruppe;
         }
         return null;
+    }
+
+    /**
+     * Returns the dicepool for the fertigkeit or -1.
+     * 
+     * @param fertigkeit
+     * @param persona
+     * @return
+     */
+    public static Integer fertigkeitDicePoolValue(PersonaFertigkeit personaFertigkeit, AbstraktPersona persona) {
+        if (personaFertigkeit == null || persona == null)
+            return -1;
+
+        Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
+        if (fertigkeit != null) {
+            Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
+            Integer fertigkeitValue = personaFertigkeit.getStufe();
+            if (fertigkeitValue == 0)
+                return value - 1;
+
+            value = value + fertigkeitValue;
+            return value;
+        }
+
+        return -1;
     }
 
     /**
@@ -440,7 +464,7 @@ public class ShadowrunTools {
      * Calcs the sum of ki power points.
      * 
      * @param kikraft
-     * @return 
+     * @return
      */
     public static int calcKiPowerSum(List<KiKraft> kikraft) {
         int sum = 0;

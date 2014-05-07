@@ -1841,10 +1841,9 @@ public class PersonaPrinter extends BasicPrinter {
             Fertigkeit fertigkeit = pfertigkeit.getFertigkeit();
             if (fertigkeit == null)
                 continue;
-            Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
-
+            
+            Integer value =ShadowrunTools.fertigkeitDicePoolValue(pfertigkeit, persona);
             Integer fertigkeitValue = pfertigkeit.getStufe();
-            value = value + fertigkeitValue;
 
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toFertigkeitAndSpec(pfertigkeit), attributeFont), 2);
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toName(fertigkeit.getAttribut()), attributeFont), 1);
