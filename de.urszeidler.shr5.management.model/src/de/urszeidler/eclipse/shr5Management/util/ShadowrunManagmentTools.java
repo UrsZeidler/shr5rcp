@@ -59,6 +59,40 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 public class ShadowrunManagmentTools {
 
     /**
+     * Checks if the character has a matrix initiative.
+     * @param character
+     * @return
+     */
+    public static String getMatrixInitative(ManagedCharacter character) {
+        if (character == null || character.getPersona() == null)
+            return "";
+
+        if (character.getPersona() instanceof Technomancer) {
+            Technomancer t = (Technomancer)character.getPersona();
+            
+            return t.getDatenverarbeitung()+t.getIntuition()+"4d6";
+        }
+        // TODO : check for deck
+        return "";
+    }
+    /**
+     * Checks if the character has a matrix initiative.
+     * @param character
+     * @return
+     */
+    public static boolean hasMatrixInitative(ManagedCharacter character) {
+        if (character == null || character.getPersona() == null)
+            return false;
+
+        if (character.getPersona() instanceof Technomancer) {
+            Technomancer t = (Technomancer)character.getPersona();
+            return true;
+        }
+        // TODO : check for deck
+        return false;
+    }
+
+    /**
      * Count the number of {@link Erlernbar} spend with Karma.
      * 
      * @param changes the changes of a character
@@ -781,7 +815,7 @@ public class ShadowrunManagmentTools {
     }
 
     /**
-     * Set the erlernbar or remove it. 
+     * Set the erlernbar or remove it.
      * 
      * @param character
      * @param erlernbar
@@ -792,7 +826,7 @@ public class ShadowrunManagmentTools {
             PersonaChange personaChange = Shr5managementFactory.eINSTANCE.createPersonaChange();
             character.getChanges().add(personaChange);
             personaChange.setChangeable(erlernbar);
-            personaChange.applyChanges();            
+            personaChange.applyChanges();
         } else {
             advancements.setTo(0);
             advancements.applyChanges();
