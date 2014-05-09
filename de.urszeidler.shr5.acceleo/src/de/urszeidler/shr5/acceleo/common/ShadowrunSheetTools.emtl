@@ -84,6 +84,756 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </parameter>
     </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="vehicleHanding" visibility="Public">
+      <parameter name="aFahrzeug">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleHanding/aFahrzeug">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Fahrzeug/geschwindigkeit"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="vehicleHanding" visibility="Public">
+      <parameter name="aFahrzeug">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleHanding.1/aFahrzeug">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Fahrzeug/handling"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleHanding.1/aFahrzeug">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug/handlingGelaende"/>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="vehicleSpeed" visibility="Public">
+      <parameter name="aFahrzeug">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleSpeed/aFahrzeug">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Fahrzeug/geschwindigkeit"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="vehicleSpeed" visibility="Public">
+      <parameter name="aFahrzeug">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleSpeed.1/aFahrzeug">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Fahrzeug/geschwindigkeit"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleSpeed.1/aFahrzeug">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug/geschwindigkeitGelaende"/>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="vehicleBody" visibility="Public">
+      <parameter name="aFahrzeug">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aFahrzeug" referredVariable="/0/vehicleBody/aFahrzeug">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Fahrzeug/rumpf"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printReichweite" visibility="Public">
+      <init>
+        <variable name="r">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="fw" referredVariable="/0/printReichweite/fw">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe/reichweite"/>
+          </initExpression>
+        </variable>
+      </init>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/min"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweite/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/kurz"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep1" referredVariable="/0/printReichweite/sep1.3">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/kurz"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweite/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/mittel"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep1" referredVariable="/0/printReichweite/sep1.3">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/mittel"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweite/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/weit"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep1" referredVariable="/0/printReichweite/sep1.3">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/weit"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweite/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweite/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/extrem"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <parameter name="fw">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+      </parameter>
+      <parameter name="sep">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <parameter name="sep1">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printReichweiteCompact" visibility="Public">
+      <init>
+        <variable name="r">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="fw" referredVariable="/0/printReichweiteCompact/fw">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe/reichweite"/>
+          </initExpression>
+        </variable>
+      </init>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweiteCompact/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/min"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweiteCompact/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweiteCompact/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/kurz"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweiteCompact/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweiteCompact/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/mittel"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweiteCompact/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweiteCompact/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/weit"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <body xsi:type="ocl.ecore:VariableExp" name="sep" referredVariable="/0/printReichweiteCompact/sep.4">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/printReichweiteCompact/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Reichweite"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Reichweite/extrem"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+      </body>
+      <parameter name="fw">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+      </parameter>
+      <parameter name="sep">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printEssence" visibility="Public">
+      <body xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printEssence/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </source>
+        <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="100">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%2F"/>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printBody" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printBody/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printBody/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printBody/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/konstitutionBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printBody/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printWillpower" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printWillpower/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printWillpower/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printWillpower/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/willenskraftBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printWillpower/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printAbility" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAbility/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/geschicklichkeitBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAbility/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAbility/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/geschicklichkeitBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAbility/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printLogic" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printLogic/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printLogic/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printLogic/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/logikBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printLogic/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printReaction" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printReaction/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printReaction/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printReaction/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/reaktionBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printReaction/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printIntuition" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printIntuition/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/intuitionBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printIntuition/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printIntuition/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/intuitionBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printIntuition/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printCharisma" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printCharisma/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printCharisma/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printCharisma/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/charismaBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printCharisma/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printStrength" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printStrength/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/staerkeBasis"/>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printStrength/persona">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printStrength/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/staerkeBasis"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printStrength/persona">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </ifExpr>
+      </body>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printInitative" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printInitative/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initative"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="+"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printInitative/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="d6"/>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printInitativeDE" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printInitativeDE/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initative"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="+"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printInitativeDE/persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="w6"/>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+    </ownedModuleElement>
   </mtl:Module>
   <ecore:EPackage name="additions">
     <eClassifiers xsi:type="ecore:EClass" name="String_Class">
@@ -95,6 +845,13 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="startIndex">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </eParameters>
       </eOperations>
     </eClassifiers>
@@ -135,6 +892,195 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </eParameters>
       </eOperations>
+      <eOperations name="vehicleHanding">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/vehicleHanding"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aFahrzeug">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="vehicleHanding">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/vehicleHanding.1"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aFahrzeug">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="vehicleSpeed">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/vehicleSpeed"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aFahrzeug">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="vehicleSpeed">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/vehicleSpeed.1"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aFahrzeug">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="vehicleBody">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/vehicleBody"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aFahrzeug">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printReichweite">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printReichweite"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="fw">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+        </eParameters>
+        <eParameters name="sep">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="sep1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printReichweiteCompact">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printReichweiteCompact"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="fw">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+        </eParameters>
+        <eParameters name="sep">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printEssence">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printEssence"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printBody">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printBody"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printWillpower">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printWillpower"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printAbility">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printAbility"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printLogic">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printLogic"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printReaction">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printReaction"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printIntuition">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printIntuition"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printCharisma">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printCharisma"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printStrength">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printStrength"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printInitative">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printInitative"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printInitativeDE">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printInitativeDE"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -153,6 +1099,13 @@
           <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
         </eParameters>
       </eOperations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -167,6 +1120,26 @@
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstaktFernKampfwaffe_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstraktPersona_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
       </eAnnotations>
     </eClassifiers>
   </ecore:EPackage>
@@ -213,6 +1186,372 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="i">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -342,6 +1681,1211 @@
       <details key="start" value="538"/>
       <details key="end" value="552"/>
       <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/vehicleHanding">
+      <details key="start" value="655"/>
+      <details key="end" value="759"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/vehicleHanding/aFahrzeug">
+      <details key="start" value="685"/>
+      <details key="end" value="705"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/vehicleHanding/%">
+      <details key="start" value="719"/>
+      <details key="end" value="755"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/vehicleHanding/%/%">
+      <details key="start" value="719"/>
+      <details key="end" value="744"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/vehicleHanding/%/%/aFahrzeug">
+      <details key="start" value="719"/>
+      <details key="end" value="728"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/vehicleHanding.1">
+      <details key="start" value="760"/>
+      <details key="end" value="882"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/vehicleHanding.1/aFahrzeug">
+      <details key="start" value="790"/>
+      <details key="end" value="815"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/vehicleHanding.1/%">
+      <details key="start" value="829"/>
+      <details key="end" value="878"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/vehicleHanding.1/%/%">
+      <details key="start" value="829"/>
+      <details key="end" value="851"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/vehicleHanding.1/%/%/%">
+      <details key="start" value="829"/>
+      <details key="end" value="847"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/vehicleHanding.1/%/%/%/aFahrzeug">
+      <details key="start" value="829"/>
+      <details key="end" value="838"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/vehicleHanding.1/%/%/%.1">
+      <details key="start" value="848"/>
+      <details key="end" value="851"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/vehicleHanding.1/%/%.1">
+      <details key="start" value="852"/>
+      <details key="end" value="878"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/vehicleHanding.1/%/%.1/aFahrzeug">
+      <details key="start" value="852"/>
+      <details key="end" value="861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/vehicleSpeed">
+      <details key="start" value="883"/>
+      <details key="end" value="985"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/vehicleSpeed/aFahrzeug">
+      <details key="start" value="911"/>
+      <details key="end" value="931"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/vehicleSpeed/%">
+      <details key="start" value="945"/>
+      <details key="end" value="981"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/vehicleSpeed/%/%">
+      <details key="start" value="945"/>
+      <details key="end" value="970"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/vehicleSpeed/%/%/aFahrzeug">
+      <details key="start" value="945"/>
+      <details key="end" value="954"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/vehicleSpeed.1">
+      <details key="start" value="986"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/vehicleSpeed.1/aFahrzeug">
+      <details key="start" value="1014"/>
+      <details key="end" value="1039"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/vehicleSpeed.1/%">
+      <details key="start" value="1053"/>
+      <details key="end" value="1116"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/vehicleSpeed.1/%/%">
+      <details key="start" value="1053"/>
+      <details key="end" value="1082"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/vehicleSpeed.1/%/%/%">
+      <details key="start" value="1053"/>
+      <details key="end" value="1078"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/vehicleSpeed.1/%/%/%/aFahrzeug">
+      <details key="start" value="1053"/>
+      <details key="end" value="1062"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/vehicleSpeed.1/%/%/%.1">
+      <details key="start" value="1079"/>
+      <details key="end" value="1082"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/vehicleSpeed.1/%/%.1">
+      <details key="start" value="1083"/>
+      <details key="end" value="1116"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/vehicleSpeed.1/%/%.1/aFahrzeug">
+      <details key="start" value="1083"/>
+      <details key="end" value="1092"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/vehicleBody">
+      <details key="start" value="1121"/>
+      <details key="end" value="1212"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/vehicleBody/aFahrzeug">
+      <details key="start" value="1148"/>
+      <details key="end" value="1168"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/vehicleBody/%">
+      <details key="start" value="1182"/>
+      <details key="end" value="1208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/vehicleBody/%/%">
+      <details key="start" value="1182"/>
+      <details key="end" value="1197"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/vehicleBody/%/%/aFahrzeug">
+      <details key="start" value="1182"/>
+      <details key="end" value="1191"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/printReichweite">
+      <details key="start" value="1215"/>
+      <details key="end" value="1555"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/printReichweite/@init">
+      <details key="start" value="1298"/>
+      <details key="end" value="1332"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/printReichweite/@init/@variable.0">
+      <details key="start" value="1300"/>
+      <details key="end" value="1330"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/printReichweite/@init/@variable.0/%">
+      <details key="start" value="1317"/>
+      <details key="end" value="1330"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/printReichweite/@init/@variable.0/%/fw">
+      <details key="start" value="1317"/>
+      <details key="end" value="1319"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/printReichweite/%">
+      <details key="start" value="1335"/>
+      <details key="end" value="1351"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/printReichweite/%/%">
+      <details key="start" value="1335"/>
+      <details key="end" value="1340"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/printReichweite/%/%/r">
+      <details key="start" value="1335"/>
+      <details key="end" value="1336"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/printReichweite/sep">
+      <details key="start" value="1354"/>
+      <details key="end" value="1357"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/printReichweite/%.1">
+      <details key="start" value="1360"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/printReichweite/%.1/%">
+      <details key="start" value="1360"/>
+      <details key="end" value="1366"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/printReichweite/%.1/%/r">
+      <details key="start" value="1360"/>
+      <details key="end" value="1361"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/printReichweite/sep1">
+      <details key="start" value="1380"/>
+      <details key="end" value="1384"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/printReichweite/%.2">
+      <details key="start" value="1387"/>
+      <details key="end" value="1404"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/printReichweite/%.2/%">
+      <details key="start" value="1387"/>
+      <details key="end" value="1393"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/printReichweite/%.2/%/r">
+      <details key="start" value="1387"/>
+      <details key="end" value="1388"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/printReichweite/sep.1">
+      <details key="start" value="1407"/>
+      <details key="end" value="1410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/printReichweite/%.3">
+      <details key="start" value="1413"/>
+      <details key="end" value="1432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/printReichweite/%.3/%">
+      <details key="start" value="1413"/>
+      <details key="end" value="1421"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/printReichweite/%.3/%/r">
+      <details key="start" value="1413"/>
+      <details key="end" value="1414"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/printReichweite/sep1.1">
+      <details key="start" value="1435"/>
+      <details key="end" value="1439"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/printReichweite/%.4">
+      <details key="start" value="1442"/>
+      <details key="end" value="1461"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/printReichweite/%.4/%">
+      <details key="start" value="1442"/>
+      <details key="end" value="1450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/printReichweite/%.4/%/r">
+      <details key="start" value="1442"/>
+      <details key="end" value="1443"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/printReichweite/sep.2">
+      <details key="start" value="1464"/>
+      <details key="end" value="1467"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/printReichweite/%.5">
+      <details key="start" value="1470"/>
+      <details key="end" value="1487"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/printReichweite/%.5/%">
+      <details key="start" value="1470"/>
+      <details key="end" value="1476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/printReichweite/%.5/%/r">
+      <details key="start" value="1470"/>
+      <details key="end" value="1471"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/printReichweite/sep1.2">
+      <details key="start" value="1490"/>
+      <details key="end" value="1494"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/printReichweite/%.6">
+      <details key="start" value="1497"/>
+      <details key="end" value="1514"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/printReichweite/%.6/%">
+      <details key="start" value="1497"/>
+      <details key="end" value="1503"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/printReichweite/%.6/%/r">
+      <details key="start" value="1497"/>
+      <details key="end" value="1498"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/printReichweite/sep.3">
+      <details key="start" value="1517"/>
+      <details key="end" value="1520"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/printReichweite/%.7">
+      <details key="start" value="1523"/>
+      <details key="end" value="1542"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/printReichweite/%.7/%">
+      <details key="start" value="1523"/>
+      <details key="end" value="1531"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/printReichweite/%.7/%/r">
+      <details key="start" value="1523"/>
+      <details key="end" value="1524"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/printReichweite/fw">
+      <details key="start" value="1248"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/printReichweite/sep.4">
+      <details key="start" value="1275"/>
+      <details key="end" value="1285"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/printReichweite/sep1.3">
+      <details key="start" value="1286"/>
+      <details key="end" value="1297"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/printReichweiteCompact">
+      <details key="start" value="1557"/>
+      <details key="end" value="1809"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/printReichweiteCompact/@init">
+      <details key="start" value="1635"/>
+      <details key="end" value="1669"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/printReichweiteCompact/@init/@variable.0">
+      <details key="start" value="1637"/>
+      <details key="end" value="1667"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/printReichweiteCompact/@init/@variable.0/%">
+      <details key="start" value="1654"/>
+      <details key="end" value="1667"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/printReichweiteCompact/@init/@variable.0/%/fw">
+      <details key="start" value="1654"/>
+      <details key="end" value="1656"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/printReichweiteCompact/%">
+      <details key="start" value="1672"/>
+      <details key="end" value="1688"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/printReichweiteCompact/%/%">
+      <details key="start" value="1672"/>
+      <details key="end" value="1677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/printReichweiteCompact/%/%/r">
+      <details key="start" value="1672"/>
+      <details key="end" value="1673"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/printReichweiteCompact/sep">
+      <details key="start" value="1691"/>
+      <details key="end" value="1694"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/printReichweiteCompact/%.1">
+      <details key="start" value="1697"/>
+      <details key="end" value="1714"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/printReichweiteCompact/%.1/%">
+      <details key="start" value="1697"/>
+      <details key="end" value="1703"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/printReichweiteCompact/%.1/%/r">
+      <details key="start" value="1697"/>
+      <details key="end" value="1698"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/printReichweiteCompact/sep.1">
+      <details key="start" value="1717"/>
+      <details key="end" value="1720"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/printReichweiteCompact/%.2">
+      <details key="start" value="1723"/>
+      <details key="end" value="1742"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/printReichweiteCompact/%.2/%">
+      <details key="start" value="1723"/>
+      <details key="end" value="1731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/printReichweiteCompact/%.2/%/r">
+      <details key="start" value="1723"/>
+      <details key="end" value="1724"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/printReichweiteCompact/sep.2">
+      <details key="start" value="1745"/>
+      <details key="end" value="1748"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/printReichweiteCompact/%.3">
+      <details key="start" value="1751"/>
+      <details key="end" value="1768"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/printReichweiteCompact/%.3/%">
+      <details key="start" value="1751"/>
+      <details key="end" value="1757"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/printReichweiteCompact/%.3/%/r">
+      <details key="start" value="1751"/>
+      <details key="end" value="1752"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/printReichweiteCompact/sep.3">
+      <details key="start" value="1771"/>
+      <details key="end" value="1774"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/printReichweiteCompact/%.4">
+      <details key="start" value="1777"/>
+      <details key="end" value="1796"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/printReichweiteCompact/%.4/%">
+      <details key="start" value="1777"/>
+      <details key="end" value="1785"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/printReichweiteCompact/%.4/%/r">
+      <details key="start" value="1777"/>
+      <details key="end" value="1778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/printReichweiteCompact/fw">
+      <details key="start" value="1597"/>
+      <details key="end" value="1623"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/printReichweiteCompact/sep.4">
+      <details key="start" value="1624"/>
+      <details key="end" value="1634"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/printEssence">
+      <details key="start" value="1811"/>
+      <details key="end" value="1903"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/printEssence/%">
+      <details key="start" value="1872"/>
+      <details key="end" value="1890"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/printEssence/%/%">
+      <details key="start" value="1872"/>
+      <details key="end" value="1886"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/printEssence/%/%/persona">
+      <details key="start" value="1872"/>
+      <details key="end" value="1879"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/printEssence/%/%.1">
+      <details key="start" value="1887"/>
+      <details key="end" value="1890"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/printEssence/persona">
+      <details key="start" value="1842"/>
+      <details key="end" value="1867"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/printBody">
+      <details key="start" value="1905"/>
+      <details key="end" value="2087"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/printBody/%">
+      <details key="start" value="1961"/>
+      <details key="end" value="1986"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/printBody/%/persona">
+      <details key="start" value="1961"/>
+      <details key="end" value="1968"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/printBody/%.1">
+      <details key="start" value="1988"/>
+      <details key="end" value="2076"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/printBody/%.1/%">
+      <details key="start" value="2046"/>
+      <details key="end" value="2047"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/printBody/%.1/%.1">
+      <details key="start" value="2048"/>
+      <details key="end" value="2068"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/printBody/%.1/%.1/persona">
+      <details key="start" value="2048"/>
+      <details key="end" value="2055"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/printBody/%.1/%.2">
+      <details key="start" value="2070"/>
+      <details key="end" value="2071"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/printBody/%.1/%.3">
+      <details key="start" value="1991"/>
+      <details key="end" value="2045"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/printBody/%.1/%.3/%">
+      <details key="start" value="1996"/>
+      <details key="end" value="2044"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/printBody/%.1/%.3/%/%">
+      <details key="start" value="1997"/>
+      <details key="end" value="2022"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/printBody/%.1/%.3/%/%/persona">
+      <details key="start" value="1997"/>
+      <details key="end" value="2004"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/printBody/%.1/%.3/%/%.1">
+      <details key="start" value="2023"/>
+      <details key="end" value="2043"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/printBody/%.1/%.3/%/%.1/persona">
+      <details key="start" value="2023"/>
+      <details key="end" value="2030"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/printBody/persona">
+      <details key="start" value="1932"/>
+      <details key="end" value="1957"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/printWillpower">
+      <details key="start" value="2089"/>
+      <details key="end" value="2276"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/printWillpower/%">
+      <details key="start" value="2150"/>
+      <details key="end" value="2175"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/printWillpower/%/persona">
+      <details key="start" value="2150"/>
+      <details key="end" value="2157"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/printWillpower/%.1">
+      <details key="start" value="2177"/>
+      <details key="end" value="2265"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/printWillpower/%.1/%">
+      <details key="start" value="2235"/>
+      <details key="end" value="2236"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/printWillpower/%.1/%.1">
+      <details key="start" value="2237"/>
+      <details key="end" value="2257"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/printWillpower/%.1/%.1/persona">
+      <details key="start" value="2237"/>
+      <details key="end" value="2244"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/printWillpower/%.1/%.2">
+      <details key="start" value="2259"/>
+      <details key="end" value="2260"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/printWillpower/%.1/%.3">
+      <details key="start" value="2180"/>
+      <details key="end" value="2234"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/printWillpower/%.1/%.3/%">
+      <details key="start" value="2185"/>
+      <details key="end" value="2233"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/printWillpower/%.1/%.3/%/%">
+      <details key="start" value="2186"/>
+      <details key="end" value="2211"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/printWillpower/%.1/%.3/%/%/persona">
+      <details key="start" value="2186"/>
+      <details key="end" value="2193"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/printWillpower/%.1/%.3/%/%.1">
+      <details key="start" value="2212"/>
+      <details key="end" value="2232"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/printWillpower/%.1/%.3/%/%.1/persona">
+      <details key="start" value="2212"/>
+      <details key="end" value="2219"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/printWillpower/persona">
+      <details key="start" value="2121"/>
+      <details key="end" value="2146"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/printAbility">
+      <details key="start" value="2278"/>
+      <details key="end" value="2481"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/printAbility/%">
+      <details key="start" value="2337"/>
+      <details key="end" value="2366"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/printAbility/%/persona">
+      <details key="start" value="2337"/>
+      <details key="end" value="2344"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/printAbility/%.1">
+      <details key="start" value="2368"/>
+      <details key="end" value="2468"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/printAbility/%.1/%">
+      <details key="start" value="2434"/>
+      <details key="end" value="2435"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/printAbility/%.1/%.1">
+      <details key="start" value="2436"/>
+      <details key="end" value="2460"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/printAbility/%.1/%.1/persona">
+      <details key="start" value="2436"/>
+      <details key="end" value="2443"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/printAbility/%.1/%.2">
+      <details key="start" value="2462"/>
+      <details key="end" value="2463"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/printAbility/%.1/%.3">
+      <details key="start" value="2371"/>
+      <details key="end" value="2433"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/printAbility/%.1/%.3/%">
+      <details key="start" value="2376"/>
+      <details key="end" value="2432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/printAbility/%.1/%.3/%/%">
+      <details key="start" value="2377"/>
+      <details key="end" value="2406"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/printAbility/%.1/%.3/%/%/persona">
+      <details key="start" value="2377"/>
+      <details key="end" value="2384"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/printAbility/%.1/%.3/%/%.1">
+      <details key="start" value="2407"/>
+      <details key="end" value="2431"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/printAbility/%.1/%.3/%/%.1/persona">
+      <details key="start" value="2407"/>
+      <details key="end" value="2414"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/printAbility/%.2">
+      <details key="start" value="2468"/>
+      <details key="end" value="2469"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/printAbility/persona">
+      <details key="start" value="2308"/>
+      <details key="end" value="2333"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/printLogic">
+      <details key="start" value="2483"/>
+      <details key="end" value="2638"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/printLogic/%">
+      <details key="start" value="2540"/>
+      <details key="end" value="2558"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/printLogic/%/persona">
+      <details key="start" value="2540"/>
+      <details key="end" value="2547"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/printLogic/%.1">
+      <details key="start" value="2560"/>
+      <details key="end" value="2627"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/printLogic/%.1/%">
+      <details key="start" value="2604"/>
+      <details key="end" value="2605"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/printLogic/%.1/%.1">
+      <details key="start" value="2606"/>
+      <details key="end" value="2619"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/printLogic/%.1/%.1/persona">
+      <details key="start" value="2606"/>
+      <details key="end" value="2613"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/printLogic/%.1/%.2">
+      <details key="start" value="2621"/>
+      <details key="end" value="2622"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/printLogic/%.1/%.3">
+      <details key="start" value="2563"/>
+      <details key="end" value="2603"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/printLogic/%.1/%.3/%">
+      <details key="start" value="2568"/>
+      <details key="end" value="2602"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/printLogic/%.1/%.3/%/%">
+      <details key="start" value="2569"/>
+      <details key="end" value="2587"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/printLogic/%.1/%.3/%/%/persona">
+      <details key="start" value="2569"/>
+      <details key="end" value="2576"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/printLogic/%.1/%.3/%/%.1">
+      <details key="start" value="2588"/>
+      <details key="end" value="2601"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.188" references="/0/printLogic/%.1/%.3/%/%.1/persona">
+      <details key="start" value="2588"/>
+      <details key="end" value="2595"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/printLogic/persona">
+      <details key="start" value="2511"/>
+      <details key="end" value="2536"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/printReaction">
+      <details key="start" value="2640"/>
+      <details key="end" value="2810"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/printReaction/%">
+      <details key="start" value="2700"/>
+      <details key="end" value="2721"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/printReaction/%/persona">
+      <details key="start" value="2700"/>
+      <details key="end" value="2707"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/printReaction/%.1">
+      <details key="start" value="2723"/>
+      <details key="end" value="2799"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/printReaction/%.1/%">
+      <details key="start" value="2773"/>
+      <details key="end" value="2774"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/printReaction/%.1/%.1">
+      <details key="start" value="2775"/>
+      <details key="end" value="2791"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/printReaction/%.1/%.1/persona">
+      <details key="start" value="2775"/>
+      <details key="end" value="2782"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/printReaction/%.1/%.2">
+      <details key="start" value="2793"/>
+      <details key="end" value="2794"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/printReaction/%.1/%.3">
+      <details key="start" value="2726"/>
+      <details key="end" value="2772"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/printReaction/%.1/%.3/%">
+      <details key="start" value="2731"/>
+      <details key="end" value="2771"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/printReaction/%.1/%.3/%/%">
+      <details key="start" value="2732"/>
+      <details key="end" value="2753"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/printReaction/%.1/%.3/%/%/persona">
+      <details key="start" value="2732"/>
+      <details key="end" value="2739"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/printReaction/%.1/%.3/%/%.1">
+      <details key="start" value="2754"/>
+      <details key="end" value="2770"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/printReaction/%.1/%.3/%/%.1/persona">
+      <details key="start" value="2754"/>
+      <details key="end" value="2761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/printReaction/persona">
+      <details key="start" value="2671"/>
+      <details key="end" value="2696"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/printIntuition">
+      <details key="start" value="2812"/>
+      <details key="end" value="2987"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/printIntuition/%">
+      <details key="start" value="2873"/>
+      <details key="end" value="2895"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/printIntuition/%/persona">
+      <details key="start" value="2873"/>
+      <details key="end" value="2880"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/printIntuition/%.1">
+      <details key="start" value="2897"/>
+      <details key="end" value="2976"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/printIntuition/%.1/%">
+      <details key="start" value="2949"/>
+      <details key="end" value="2950"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/printIntuition/%.1/%.1">
+      <details key="start" value="2951"/>
+      <details key="end" value="2968"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/printIntuition/%.1/%.1/persona">
+      <details key="start" value="2951"/>
+      <details key="end" value="2958"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/printIntuition/%.1/%.2">
+      <details key="start" value="2970"/>
+      <details key="end" value="2971"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/printIntuition/%.1/%.3">
+      <details key="start" value="2900"/>
+      <details key="end" value="2948"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.214" references="/0/printIntuition/%.1/%.3/%">
+      <details key="start" value="2905"/>
+      <details key="end" value="2947"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/printIntuition/%.1/%.3/%/%">
+      <details key="start" value="2906"/>
+      <details key="end" value="2928"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/printIntuition/%.1/%.3/%/%/persona">
+      <details key="start" value="2906"/>
+      <details key="end" value="2913"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/printIntuition/%.1/%.3/%/%.1">
+      <details key="start" value="2929"/>
+      <details key="end" value="2946"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.218" references="/0/printIntuition/%.1/%.3/%/%.1/persona">
+      <details key="start" value="2929"/>
+      <details key="end" value="2936"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.219" references="/0/printIntuition/persona">
+      <details key="start" value="2844"/>
+      <details key="end" value="2869"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.220" references="/0/printCharisma">
+      <details key="start" value="2990"/>
+      <details key="end" value="3162"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/printCharisma/%">
+      <details key="start" value="3052"/>
+      <details key="end" value="3073"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.222" references="/0/printCharisma/%/persona">
+      <details key="start" value="3052"/>
+      <details key="end" value="3059"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.223" references="/0/printCharisma/%.1">
+      <details key="start" value="3075"/>
+      <details key="end" value="3151"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.224" references="/0/printCharisma/%.1/%">
+      <details key="start" value="3125"/>
+      <details key="end" value="3126"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.225" references="/0/printCharisma/%.1/%.1">
+      <details key="start" value="3127"/>
+      <details key="end" value="3143"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.226" references="/0/printCharisma/%.1/%.1/persona">
+      <details key="start" value="3127"/>
+      <details key="end" value="3134"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.227" references="/0/printCharisma/%.1/%.2">
+      <details key="start" value="3145"/>
+      <details key="end" value="3146"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.228" references="/0/printCharisma/%.1/%.3">
+      <details key="start" value="3078"/>
+      <details key="end" value="3124"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.229" references="/0/printCharisma/%.1/%.3/%">
+      <details key="start" value="3083"/>
+      <details key="end" value="3123"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.230" references="/0/printCharisma/%.1/%.3/%/%">
+      <details key="start" value="3084"/>
+      <details key="end" value="3105"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.231" references="/0/printCharisma/%.1/%.3/%/%/persona">
+      <details key="start" value="3084"/>
+      <details key="end" value="3091"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.232" references="/0/printCharisma/%.1/%.3/%/%.1">
+      <details key="start" value="3106"/>
+      <details key="end" value="3122"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/printCharisma/%.1/%.3/%/%.1/persona">
+      <details key="start" value="3106"/>
+      <details key="end" value="3113"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.234" references="/0/printCharisma/persona">
+      <details key="start" value="3022"/>
+      <details key="end" value="3047"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.235" references="/0/printStrength">
+      <details key="start" value="3164"/>
+      <details key="end" value="3332"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.236" references="/0/printStrength/%">
+      <details key="start" value="3226"/>
+      <details key="end" value="3246"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.237" references="/0/printStrength/%/persona">
+      <details key="start" value="3226"/>
+      <details key="end" value="3233"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.238" references="/0/printStrength/%.1">
+      <details key="start" value="3248"/>
+      <details key="end" value="3321"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.239" references="/0/printStrength/%.1/%">
+      <details key="start" value="3296"/>
+      <details key="end" value="3297"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.240" references="/0/printStrength/%.1/%.1">
+      <details key="start" value="3298"/>
+      <details key="end" value="3313"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.241" references="/0/printStrength/%.1/%.1/persona">
+      <details key="start" value="3298"/>
+      <details key="end" value="3305"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.242" references="/0/printStrength/%.1/%.2">
+      <details key="start" value="3315"/>
+      <details key="end" value="3316"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.243" references="/0/printStrength/%.1/%.3">
+      <details key="start" value="3251"/>
+      <details key="end" value="3295"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.244" references="/0/printStrength/%.1/%.3/%">
+      <details key="start" value="3256"/>
+      <details key="end" value="3294"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.245" references="/0/printStrength/%.1/%.3/%/%">
+      <details key="start" value="3257"/>
+      <details key="end" value="3277"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.246" references="/0/printStrength/%.1/%.3/%/%/persona">
+      <details key="start" value="3257"/>
+      <details key="end" value="3264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.247" references="/0/printStrength/%.1/%.3/%/%.1">
+      <details key="start" value="3278"/>
+      <details key="end" value="3293"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.248" references="/0/printStrength/%.1/%.3/%/%.1/persona">
+      <details key="start" value="3278"/>
+      <details key="end" value="3285"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.249" references="/0/printStrength/persona">
+      <details key="start" value="3196"/>
+      <details key="end" value="3221"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.250" references="/0/printInitative">
+      <details key="start" value="3335"/>
+      <details key="end" value="3455"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.251" references="/0/printInitative/%">
+      <details key="start" value="3396"/>
+      <details key="end" value="3413"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.252" references="/0/printInitative/%/persona">
+      <details key="start" value="3396"/>
+      <details key="end" value="3403"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.253" references="/0/printInitative/%.1">
+      <details key="start" value="3415"/>
+      <details key="end" value="3416"/>
+      <details key="line" value="76"/>
+    </eAnnotations>
+    <eAnnotations source="positions.254" references="/0/printInitative/%.2">
+      <details key="start" value="3417"/>
+      <details key="end" value="3440"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.255" references="/0/printInitative/%.2/persona">
+      <details key="start" value="3417"/>
+      <details key="end" value="3424"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.256" references="/0/printInitative/%.3">
+      <details key="start" value="3442"/>
+      <details key="end" value="3444"/>
+      <details key="line" value="76"/>
+    </eAnnotations>
+    <eAnnotations source="positions.257" references="/0/printInitative/persona">
+      <details key="start" value="3367"/>
+      <details key="end" value="3392"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.258" references="/0/printInitativeDE">
+      <details key="start" value="3457"/>
+      <details key="end" value="3579"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.259" references="/0/printInitativeDE/%">
+      <details key="start" value="3520"/>
+      <details key="end" value="3537"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.260" references="/0/printInitativeDE/%/persona">
+      <details key="start" value="3520"/>
+      <details key="end" value="3527"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.261" references="/0/printInitativeDE/%.1">
+      <details key="start" value="3539"/>
+      <details key="end" value="3540"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.262" references="/0/printInitativeDE/%.2">
+      <details key="start" value="3541"/>
+      <details key="end" value="3564"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.263" references="/0/printInitativeDE/%.2/persona">
+      <details key="start" value="3541"/>
+      <details key="end" value="3548"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.264" references="/0/printInitativeDE/%.3">
+      <details key="start" value="3566"/>
+      <details key="end" value="3568"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.265" references="/0/printInitativeDE/persona">
+      <details key="start" value="3491"/>
+      <details key="end" value="3516"/>
+      <details key="line" value="78"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

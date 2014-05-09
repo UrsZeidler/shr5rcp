@@ -109,6 +109,15 @@
  * @param arg0
  * @param arg1
  */]
+[query public fertigkeitDicePoolValue(arg0 : PersonaFertigkeit, arg1 : AbstraktPersona) : PersonaFertigkeitsGruppe
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'fertigkeitDicePoolValue(de.urszeidler.eclipse.shr5.PersonaFertigkeit, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ * @param arg1
+ */]
 [query public findGruppe(arg0 : FertigkeitsGruppe, arg1 : AbstraktPersona) : PersonaFertigkeitsGruppe
 	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'findGruppe(de.urszeidler.eclipse.shr5.FertigkeitsGruppe, de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0, arg1})
 /]

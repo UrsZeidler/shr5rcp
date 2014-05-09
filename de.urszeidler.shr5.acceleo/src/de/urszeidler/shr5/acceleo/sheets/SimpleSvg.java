@@ -25,33 +25,31 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
- * Entry point of the 'OfficalCharacterSheet' generation module.
+ * Entry point of the 'Generate' generation module.
  * 
  * @generated not
  */
-public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
+public class SimpleSvg extends AbstractSvg2PdfGenerator {
     /**
      * The name of the module.
      * 
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/de/urszeidler/shr5/acceleo/sheets/officalCharacterSheet";
+    public static final String MODULE_FILE_NAME = "/de/urszeidler/shr5/acceleo/sheets/simpleSvg";
 
     /**
      * The name of the templates that are to be generated.
      * 
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "officalCharacterSheetManagedCharacter" };
-
+    public static final String[] TEMPLATE_NAMES = { "simpleSvgSheetManagedCharacter" };
 
     /**
      * The list of properties files from the launch parameters (Launch configuration).
-     *
+     * 
      * @generated
      */
     private List<String> propertiesFiles = new ArrayList<String>();
-
 
     /**
      * Allows the public constructor to be used. Note that a generator created
@@ -64,7 +62,7 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * 
      * @generated
      */
-    public OfficalCharacterSheet() {
+    public SimpleSvg() {
         // Empty implementation
     }
 
@@ -84,7 +82,7 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * the model cannot be loaded.
      * @generated
      */
-    public OfficalCharacterSheet(URI modelURI, File targetFolder, List<? extends Object> arguments) throws IOException {
+    public SimpleSvg(URI modelURI, File targetFolder, List<? extends Object> arguments) throws IOException {
         initialize(modelURI, targetFolder, arguments);
     }
 
@@ -104,16 +102,15 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * This can be thrown in two scenarios : the module cannot be found, or it cannot be loaded.
      * @generated
      */
-    public OfficalCharacterSheet(EObject model, File targetFolder, List<? extends Object> arguments) throws IOException {
+    public SimpleSvg(EObject model, File targetFolder, List<? extends Object> arguments) throws IOException {
         initialize(model, targetFolder, arguments);
     }
-
 
     /**
      * This can be used to launch the generation from a standalone application.
      * 
      * @param args
-     *            Arguments of the generation.
+     * Arguments of the generation.
      * @generated
      */
     public static void main(String[] args) {
@@ -139,7 +136,7 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
                  * add in "arguments" this "String" attribute.
                  */
                 
-                OfficalCharacterSheet generator = new OfficalCharacterSheet(modelURI, folder, arguments);
+                SimpleSvg generator = new SimpleSvg(modelURI, folder, arguments);
                 
                 /*
                  * Add the properties from the launch arguments.
@@ -166,37 +163,13 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * Launches the generation described by this instance.
      * 
      * @param monitor
-     *            This will be used to display progress information to the user.
+     * This will be used to display progress information to the user.
      * @throws IOException
-     *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * This will be thrown if any of the output files cannot be saved to disk.
+     * @generated not
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
-        /*
-         * TODO if you wish to change the generation as a whole, override this. The default behavior should
-         * be sufficient in most cases. If you want to change the content of this method, do NOT forget to
-         * change the "@generated" tag in the Javadoc of this method to "@generated NOT". Without this new tag,
-         * any compilation of the Acceleo module with the main template that has caused the creation of this
-         * class will revert your modifications. If you encounter a problem with an unresolved proxy during the
-         * generation, you can remove the comments in the following instructions to check for problems. Please
-         * note that those instructions may have a significant impact on the performances.
-         */
-
-        //org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(model);
-
-        /*
-         * If you want to check for potential errors in your models before the launch of the generation, you
-         * use the code below.
-         */
-
-        //if (model != null && model.eResource() != null) {
-        //    List<org.eclipse.emf.ecore.resource.Resource.Diagnostic> errors = model.eResource().getErrors();
-        //    for (org.eclipse.emf.ecore.resource.Resource.Diagnostic diagnostic : errors) {
-        //        System.err.println(diagnostic.toString());
-        //    }
-        //}
-
         super.doGenerate(monitor);
     }
 
@@ -204,33 +177,25 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
-        List<IAcceleoTextGenerationListener> listeners = super.getGenerationListeners();
-        /*
-         * TODO if you need to listen to generation event, add listeners to the list here. If you want to change
-         * the content of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method
-         * to "@generated NOT". Without this new tag, any compilation of the Acceleo module with the main template
-         * that has caused the creation of this class will revert your modifications.
-         */
-        return listeners;
+        return super.getGenerationListeners();
     }
 
     /**
      * If you need to change the way files are generated, this is your entry point.
      * <p>
-     * The default is {@link org.eclipse.acceleo.engine.generation.strategy.DefaultStrategy}; it generates
-     * files on the fly. If you only need to preview the results, return a new
-     * {@link org.eclipse.acceleo.engine.generation.strategy.PreviewStrategy}. Both of these aren't aware of
-     * the running Eclipse and can be used standalone.
+     * The default is {@link org.eclipse.acceleo.engine.generation.strategy.DefaultStrategy}; it generates files on the fly. If you only need to
+     * preview the results, return a new {@link org.eclipse.acceleo.engine.generation.strategy.PreviewStrategy}. Both of these aren't aware of the
+     * running Eclipse and can be used standalone.
      * </p>
      * <p>
-     * If you need the file generation to be aware of the workspace (A typical example is when you wanna
-     * override files that are under clear case or any other VCS that could forbid the overriding), then
-     * return a new {@link org.eclipse.acceleo.engine.generation.strategy.WorkspaceAwareStrategy}.
-     * <b>Note</b>, however, that this <b>cannot</b> be used standalone.
+     * If you need the file generation to be aware of the workspace (A typical example is when you wanna override files that are under clear case or
+     * any other VCS that could forbid the overriding), then return a new
+     * {@link org.eclipse.acceleo.engine.generation.strategy.WorkspaceAwareStrategy}. <b>Note</b>, however, that this <b>cannot</b> be used
+     * standalone.
      * </p>
      * <p>
      * All three of these default strategies support merging through JMerge.
@@ -256,7 +221,6 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
         return MODULE_FILE_NAME;
     }
 
-
     /**
      * If the module(s) called by this launcher require properties files, return their qualified path from
      * here.Take note that the first added properties files will take precedence over subsequent ones if they
@@ -264,58 +228,24 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * 
      * @return The list of properties file we need to add to the generation context.
      * @see java.util.ResourceBundle#getBundle(String)
-     * @generated
+     * @generated not
      */
     @Override
     public List<String> getProperties() {
-        /*
-         * If you want to change the content of this method, do NOT forget to change the "@generated"
-         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
-         * of the Acceleo module with the main template that has caused the creation of this class will
-         * revert your modifications.
-         */
-
-        /*
-         * TODO if your generation module requires access to properties files, add their qualified path to the list here.
-         * 
-         * Properties files can be located in an Eclipse plug-in or in the file system (all Acceleo projects are Eclipse
-         * plug-in). In order to use properties files located in an Eclipse plugin, you need to add the path of the properties
-         * files to the "propertiesFiles" list:
-         * 
-         * final String prefix = "platform:/plugin/";
-         * final String pluginName = "org.eclipse.acceleo.module.sample";
-         * final String packagePath = "/org/eclipse/acceleo/module/sample/properties/";
-         * final String fileName = "default.properties";
-         * propertiesFiles.add(prefix + pluginName + packagePath + fileName);
-         * 
-         * With this mechanism, you can load properties files from your plugin or from another plugin.
-         * 
-         * You may want to load properties files from the file system, for that you need to add the absolute path of the file:
-         * 
-         * propertiesFiles.add("C:\Users\MyName\MyFile.properties");
-         * 
-         * If you want to let your users add properties files located in the same folder as the model:
-         *
-         * if (EMFPlugin.IS_ECLIPSE_RUNNING && model != null && model.eResource() != null) { 
-         *     propertiesFiles.addAll(AcceleoEngineUtils.getPropertiesFilesNearModel(model.eResource()));
-         * }
-         * 
-         * To learn more about Properties Files, have a look at the Acceleo documentation (Help -> Help Contents).
-         */
-        return propertiesFiles;
+        return super.getProperties();
     }
 
     /**
      * Adds a properties file in the list of properties files.
      * 
      * @param propertiesFile
-     *            The properties file to add.
-     * @generated
+     * The properties file to add.
+     * @generated not
      * @since 3.1
      */
     @Override
     public void addPropertiesFile(String propertiesFile) {
-        this.propertiesFiles.add(propertiesFile);
+        super.addPropertiesFile(propertiesFile);
     }
 
     /**
@@ -333,7 +263,7 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * This can be used to update the resource set's package registry with all needed EPackages.
      * 
      * @param resourceSet
-     *            The resource set which registry has to be updated.
+     * The resource set which registry has to be updated.
      * @generated
      */
     @Override
@@ -380,31 +310,12 @@ public class OfficalCharacterSheet extends AbstractSvg2PdfGenerator {
      * This can be used to update the resource set's resource factory registry with all needed factories.
      * 
      * @param resourceSet
-     *            The resource set which registry has to be updated.
-     * @generated
+     * The resource set which registry has to be updated.
+     * @generated not
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
         super.registerResourceFactories(resourceSet);
-        /*
-         * If you want to change the content of this method, do NOT forget to change the "@generated"
-         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
-         * of the Acceleo module with the main template that has caused the creation of this class will
-         * revert your modifications.
-         */
-        
-        /*
-         * TODO If you need additional resource factories registrations, you can register them here. the following line
-         * (in comment) is an example of the resource factory registration for UML.
-         *
-         * If you want to use the generator in stand alone, the resource factory registration will be required.
-         *  
-         * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
-         */ 
-        
-        // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
-
-
 
 }
