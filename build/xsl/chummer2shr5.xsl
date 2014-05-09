@@ -1282,13 +1282,11 @@
 						logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
 						<fertigkeiten stufe="6"
 							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0">
-							<spezialisierungen>Street</spezialisierungen>
 						</fertigkeiten>
 						<fertigkeiten stufe="5"
 							fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.1" />
 						<fertigkeiten stufe="4"
 							fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1">
-							<spezialisierungen>Shotguns</spezialisierungen>
 						</fertigkeiten>
 						<fertigkeiten stufe="5"
 							fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2" />
