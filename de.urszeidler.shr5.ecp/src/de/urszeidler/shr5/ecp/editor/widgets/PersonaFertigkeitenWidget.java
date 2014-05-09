@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -420,7 +421,8 @@ public class PersonaFertigkeitenWidget extends Composite {
                     Fertigkeit fertigkeit = (Fertigkeit)element;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
                     if (personaFertigkeit != null) {
-                        Command command = SetCommand.create(editingDomain, personaFertigkeit,
+                        
+                        Command command = AddCommand.create(editingDomain, personaFertigkeit,
                                 Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, value);
                         editingDomain.getCommandStack().execute(command);
                     }
