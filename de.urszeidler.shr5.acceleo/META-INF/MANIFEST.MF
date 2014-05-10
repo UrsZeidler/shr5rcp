@@ -25,6 +25,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: de.urszeidler.shr5.acceleo,
+ de.urszeidler.shr5.acceleo.common,
  de.urszeidler.shr5.acceleo.main,
- de.urszeidler.shr5.acceleo.sheets
+ de.urszeidler.shr5.acceleo.sheets,
+ de.urszeidler.shr5.acceleo.util
 

@@ -9,7 +9,7 @@
  * The documentation of the query
  */]
 [query public getText(anOclAny: OclAny) : String
-	= invoke('de.urszeidler.shr5.acceleo.sheets.ShadowrunSheetTools', 'getObjectText(java.lang.Object)', Sequence{anOclAny})
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'getObjectText(java.lang.Object)', Sequence{anOclAny})
 /]
 
 [query public sumAttributes(persona : AbstraktPersona) : Integer = 
