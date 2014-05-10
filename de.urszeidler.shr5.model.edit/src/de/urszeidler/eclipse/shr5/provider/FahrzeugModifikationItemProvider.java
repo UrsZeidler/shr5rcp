@@ -415,6 +415,16 @@ public class FahrzeugModifikationItemProvider
             (createChildParameter
                 (Shr5Package.Literals.FAHRZEUG_MODIFIKATION__FUNKTION,
                  Shr5Factory.eINSTANCE.createMunition()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FAHRZEUG_MODIFIKATION__FUNKTION,
+                 Shr5Factory.eINSTANCE.createComlink()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FAHRZEUG_MODIFIKATION__FUNKTION,
+                 Shr5Factory.eINSTANCE.createCyberdeck()));
     }
 
 	/**

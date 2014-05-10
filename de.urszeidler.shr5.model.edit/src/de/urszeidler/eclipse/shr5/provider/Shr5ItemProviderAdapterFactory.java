@@ -1290,6 +1290,121 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Comlink} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ComlinkItemProvider comlinkItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Comlink}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createComlinkAdapter() {
+        if (comlinkItemProvider == null) {
+            comlinkItemProvider = new ComlinkItemProvider(this);
+        }
+
+        return comlinkItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberdeck} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CyberdeckItemProvider cyberdeckItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberdeck}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCyberdeckAdapter() {
+        if (cyberdeckItemProvider == null) {
+            cyberdeckItemProvider = new CyberdeckItemProvider(this);
+        }
+
+        return cyberdeckItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Program} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ProgramItemProvider programItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Program}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createProgramAdapter() {
+        if (programItemProvider == null) {
+            programItemProvider = new ProgramItemProvider(this);
+        }
+
+        return programItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SoftwareAgent} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SoftwareAgentItemProvider softwareAgentItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SoftwareAgent}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSoftwareAgentAdapter() {
+        if (softwareAgentItemProvider == null) {
+            softwareAgentItemProvider = new SoftwareAgentItemProvider(this);
+        }
+
+        return softwareAgentItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Host} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected HostItemProvider hostItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Host}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createHostAdapter() {
+        if (hostItemProvider == null) {
+            hostItemProvider = new HostItemProvider(this);
+        }
+
+        return hostItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1441,6 +1556,11 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (geistItemProvider != null) geistItemProvider.dispose();
         if (credstickTransactionItemProvider != null) credstickTransactionItemProvider.dispose();
         if (spezialisierungItemProvider != null) spezialisierungItemProvider.dispose();
+        if (comlinkItemProvider != null) comlinkItemProvider.dispose();
+        if (cyberdeckItemProvider != null) cyberdeckItemProvider.dispose();
+        if (programItemProvider != null) programItemProvider.dispose();
+        if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();
+        if (hostItemProvider != null) hostItemProvider.dispose();
     }
 
 }

@@ -12,12 +12,12 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  * <p>
  * The following features are tested:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz() <em>Resonanz</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff() <em>Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher() <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall() <em>Firewall</em>}</li>
  * </ul>
  * </p>
  * @generated

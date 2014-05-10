@@ -292,6 +292,16 @@ public class CyberwareItemProvider
             (createChildParameter
                 (Shr5Package.Literals.CYBERWARE__EINBAU,
                  Shr5Factory.eINSTANCE.createMunition()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CYBERWARE__EINBAU,
+                 Shr5Factory.eINSTANCE.createComlink()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.CYBERWARE__EINBAU,
+                 Shr5Factory.eINSTANCE.createCyberdeck()));
     }
 
 }

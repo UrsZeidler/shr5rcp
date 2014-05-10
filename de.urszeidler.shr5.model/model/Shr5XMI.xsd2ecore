@@ -77,6 +77,11 @@
       <nested inputs="shr5.ecore#//ResonanzZiel/persona" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=3"/>
       <nested inputs="shr5.ecore#//ResonanzZiel/sprite" outputs="Shr5XMI.xsd#//ResonanzZiel;XSDSimpleTypeDefinition=13/XSDEnumerationFacet=4"/>
     </nested>
+    <nested inputs="shr5.ecore#//InterfaceModus" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14">
+      <nested inputs="shr5.ecore#//InterfaceModus/augmentedReality" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//InterfaceModus/coldSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//InterfaceModus/hotSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=2"/>
+    </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
@@ -485,7 +490,7 @@
     <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Technomancer" outputs="Shr5XMI.xsd#//Technomancer;XSDElementDeclaration=62"/>
     <nested inputs="shr5.ecore#//ResonanzPersona" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDComplexTypeDefinition=63">
-      <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDComplexTypeDefinition=63/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDComplexTypeDefinition=63/XSDAttributeUse"/>
     </nested>
     <nested inputs="shr5.ecore#//ResonanzPersona" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDElementDeclaration=63"/>
     <nested inputs="shr5.ecore#//KomplexeForm" outputs="Shr5XMI.xsd#//KomplexeForm;XSDComplexTypeDefinition=64">
@@ -632,5 +637,43 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDElementDeclaration=89"/>
+    <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90"/>
+    <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDElementDeclaration=90"/>
+    <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDComplexTypeDefinition=91"/>
+    <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDElementDeclaration=91"/>
+    <nested inputs="shr5.ecore#//Comlink" outputs="Shr5XMI.xsd#//Comlink;XSDComplexTypeDefinition=92">
+      <nested inputs="shr5.ecore#//Comlink/deviceRating" outputs="Shr5XMI.xsd#//Comlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Comlink" outputs="Shr5XMI.xsd#//Comlink;XSDElementDeclaration=92"/>
+    <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDComplexTypeDefinition=93"/>
+    <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDElementDeclaration=93"/>
+    <nested inputs="shr5.ecore#//Cyberdeck" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94">
+      <nested inputs="shr5.ecore#//Cyberdeck/programSlots" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Cyberdeck/attributes" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Cyberdeck/runningProgramms" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Cyberdeck/runningProgramms" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Cyberdeck/stroredProgramm" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Cyberdeck" outputs="Shr5XMI.xsd#//Cyberdeck;XSDElementDeclaration=94"/>
+    <nested inputs="shr5.ecore#//Program" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95">
+      <nested inputs="shr5.ecore#//Program/category" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=6"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=4"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=5"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Program" outputs="Shr5XMI.xsd#//Program;XSDElementDeclaration=95"/>
+    <nested inputs="shr5.ecore#//SoftwareAgent" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDComplexTypeDefinition=96">
+      <nested inputs="shr5.ecore#//SoftwareAgent/rating" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDComplexTypeDefinition=96/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="shr5.ecore#//SoftwareAgent" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDElementDeclaration=96"/>
+    <nested inputs="shr5.ecore#//Host" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=97"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=97/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=97/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=97/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Host" outputs="Shr5XMI.xsd#//Host;XSDElementDeclaration=97"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

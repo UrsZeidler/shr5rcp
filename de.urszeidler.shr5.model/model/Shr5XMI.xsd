@@ -105,6 +105,13 @@
       <xsd:enumeration value="sprite"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="InterfaceModus">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="augmentedReality"/>
+      <xsd:enumeration value="coldSim"/>
+      <xsd:enumeration value="hotSim"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
@@ -964,12 +971,11 @@
   </xsd:complexType>
   <xsd:element name="Technomancer" type="shr5:Technomancer"/>
   <xsd:complexType abstract="true" name="ResonanzPersona">
-    <xsd:choice maxOccurs="unbounded" minOccurs="0">
-      <xsd:element ref="xmi:Extension"/>
-    </xsd:choice>
-    <xsd:attribute ref="xmi:id"/>
-    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
-    <xsd:attribute name="resonanzBasis" type="xsd:int"/>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ActiveMatixDevice">
+        <xsd:attribute name="resonanzBasis" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ResonanzPersona" type="shr5:ResonanzPersona"/>
   <xsd:complexType name="KomplexeForm">
@@ -1329,4 +1335,124 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Spezialisierung" type="shr5:Spezialisierung"/>
+  <xsd:complexType abstract="true" name="MatrixDevice">
+    <xsd:annotation>
+      <xsd:documentation>Defines the interface for all passive matix devices.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MatixConditionMonitor"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MatrixDevice" type="shr5:MatrixDevice">
+    <xsd:annotation>
+      <xsd:documentation>Defines the interface for all passive matix devices.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="ActiveMatixDevice">
+    <xsd:annotation>
+      <xsd:documentation>All active Matrix defice are defined thou this interface.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MatrixDevice"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ActiveMatixDevice" type="shr5:ActiveMatixDevice">
+    <xsd:annotation>
+      <xsd:documentation>All active Matrix defice are defined thou this interface.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Comlink">
+    <xsd:annotation>
+      <xsd:documentation>This defines the complink.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:attribute name="deviceRating" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Comlink" type="shr5:Comlink">
+    <xsd:annotation>
+      <xsd:documentation>This defines the complink.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="MatixConditionMonitor">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="MatixConditionMonitor" type="shr5:MatixConditionMonitor"/>
+  <xsd:complexType name="Cyberdeck">
+    <xsd:annotation>
+      <xsd:documentation>This defines the cyberdeck.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Comlink">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="attributes" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Contains the attribute ratings.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="runningProgramms" type="shr5:Program"/>
+          <xsd:element name="stroredProgramm" type="shr5:Program"/>
+        </xsd:choice>
+        <xsd:attribute name="programSlots" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The number probrams the deck can run concuntrly.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="runningProgramms" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Cyberdeck" type="shr5:Cyberdeck">
+    <xsd:annotation>
+      <xsd:documentation>This defines the cyberdeck.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Program">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:GeldWert">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="category" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Program" type="shr5:Program"/>
+  <xsd:complexType name="SoftwareAgent">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Program">
+        <xsd:attribute name="rating" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SoftwareAgent" type="shr5:SoftwareAgent"/>
+  <xsd:complexType name="Host">
+    <xsd:annotation>
+      <xsd:documentation>This defines a host.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ActiveMatixDevice">
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Host" type="shr5:Host">
+    <xsd:annotation>
+      <xsd:documentation>This defines a host.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

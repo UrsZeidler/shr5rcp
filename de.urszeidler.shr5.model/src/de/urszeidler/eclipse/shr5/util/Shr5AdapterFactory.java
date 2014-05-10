@@ -507,6 +507,38 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createSpezialisierungAdapter();
             }
             @Override
+            public Adapter caseMatrixDevice(MatrixDevice object) {
+                return createMatrixDeviceAdapter();
+            }
+            @Override
+            public Adapter caseActiveMatixDevice(ActiveMatixDevice object) {
+                return createActiveMatixDeviceAdapter();
+            }
+            @Override
+            public Adapter caseComlink(Comlink object) {
+                return createComlinkAdapter();
+            }
+            @Override
+            public Adapter caseMatixConditionMonitor(MatixConditionMonitor object) {
+                return createMatixConditionMonitorAdapter();
+            }
+            @Override
+            public Adapter caseCyberdeck(Cyberdeck object) {
+                return createCyberdeckAdapter();
+            }
+            @Override
+            public Adapter caseProgram(Program object) {
+                return createProgramAdapter();
+            }
+            @Override
+            public Adapter caseSoftwareAgent(SoftwareAgent object) {
+                return createSoftwareAgentAdapter();
+            }
+            @Override
+            public Adapter caseHost(Host object) {
+                return createHostAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1783,6 +1815,118 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createSpezialisierungAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice
+     * @generated
+     */
+    public Adapter createMatrixDeviceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice
+     * @generated
+     */
+    public Adapter createActiveMatixDeviceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Comlink <em>Comlink</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Comlink
+     * @generated
+     */
+    public Adapter createComlinkAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor
+     * @generated
+     */
+    public Adapter createMatixConditionMonitorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Cyberdeck <em>Cyberdeck</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck
+     * @generated
+     */
+    public Adapter createCyberdeckAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Program <em>Program</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Program
+     * @generated
+     */
+    public Adapter createProgramAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.SoftwareAgent <em>Software Agent</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.SoftwareAgent
+     * @generated
+     */
+    public Adapter createSoftwareAgentAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Host <em>Host</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Host
+     * @generated
+     */
+    public Adapter createHostAdapter() {
         return null;
     }
 

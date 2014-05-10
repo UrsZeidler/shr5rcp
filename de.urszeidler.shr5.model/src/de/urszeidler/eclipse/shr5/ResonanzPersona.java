@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,11 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz <em>Resonanz</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff <em>Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanzBasis <em>Resonanz Basis</em>}</li>
  * </ul>
  * </p>
@@ -26,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface ResonanzPersona extends EObject {
+public interface ResonanzPersona extends ActiveMatixDevice {
 	/**
      * Returns the value of the '<em><b>Resonanz</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -41,81 +35,6 @@ public interface ResonanzPersona extends EObject {
      * @generated
      */
 	int getResonanz();
-
-	/**
-     * Returns the value of the '<em><b>Geraetestufe</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Geraetestufe</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Geraetestufe</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getResonanzPersona_Geraetestufe()
-     * @model transient="true" changeable="false" volatile="true"
-     * @generated
-     */
-	int getGeraetestufe();
-
-	/**
-     * Returns the value of the '<em><b>Angriff</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Angriff</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Angriff</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getResonanzPersona_Angriff()
-     * @model transient="true" changeable="false" volatile="true"
-     * @generated
-     */
-	int getAngriff();
-
-	/**
-     * Returns the value of the '<em><b>Schleicher</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Schleicher</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Schleicher</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getResonanzPersona_Schleicher()
-     * @model transient="true" changeable="false" volatile="true"
-     * @generated
-     */
-	int getSchleicher();
-
-	/**
-     * Returns the value of the '<em><b>Datenverarbeitung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Datenverarbeitung</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Datenverarbeitung</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getResonanzPersona_Datenverarbeitung()
-     * @model transient="true" changeable="false" volatile="true"
-     * @generated
-     */
-	int getDatenverarbeitung();
-
-	/**
-     * Returns the value of the '<em><b>Firewall</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Firewall</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Firewall</em>' attribute.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getResonanzPersona_Firewall()
-     * @model transient="true" changeable="false" volatile="true"
-     * @generated
-     */
-	int getFirewall();
 
 	/**
      * Returns the value of the '<em><b>Resonanz Basis</b></em>' attribute.

@@ -9984,49 +9984,13 @@ public interface Shr5Package extends EPackage {
     int TECHNOMANCER__ZUSTAND_GEISTIG = KOERPER_PERSONA__ZUSTAND_GEISTIG;
 
     /**
-     * The feature id for the '<em><b>Resonanz</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int TECHNOMANCER__RESONANZ = KOERPER_PERSONA_FEATURE_COUNT + 0;
-
-    /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__GERAETESTUFE = KOERPER_PERSONA_FEATURE_COUNT + 1;
-
-    /**
-     * The feature id for the '<em><b>Angriff</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int TECHNOMANCER__ANGRIFF = KOERPER_PERSONA_FEATURE_COUNT + 2;
-
-    /**
-     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int TECHNOMANCER__SCHLEICHER = KOERPER_PERSONA_FEATURE_COUNT + 3;
-
-    /**
-     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int TECHNOMANCER__DATENVERARBEITUNG = KOERPER_PERSONA_FEATURE_COUNT + 4;
+	int TECHNOMANCER__GERAETESTUFE = KOERPER_PERSONA_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -10035,7 +9999,43 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__FIREWALL = KOERPER_PERSONA_FEATURE_COUNT + 5;
+	int TECHNOMANCER__FIREWALL = KOERPER_PERSONA_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int TECHNOMANCER__DATENVERARBEITUNG = KOERPER_PERSONA_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int TECHNOMANCER__ANGRIFF = KOERPER_PERSONA_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int TECHNOMANCER__SCHLEICHER = KOERPER_PERSONA_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Resonanz</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int TECHNOMANCER__RESONANZ = KOERPER_PERSONA_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
@@ -10083,13 +10083,160 @@ public interface Shr5Package extends EPackage {
 	int TECHNOMANCER_OPERATION_COUNT = KOERPER_PERSONA_OPERATION_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Resonanz</b></em>' attribute.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}' class.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatixConditionMonitor()
+     * @generated
+     */
+    int MATIX_CONDITION_MONITOR = 93;
+
+    /**
+     * The number of structural features of the '<em>Matix Condition Monitor</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int RESONANZ_PERSONA__RESONANZ = 0;
+    int MATIX_CONDITION_MONITOR_FEATURE_COUNT = 0;
+
+    /**
+     * The number of operations of the '<em>Matix Condition Monitor</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATIX_CONDITION_MONITOR_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixDevice()
+     * @generated
+     */
+    int MATRIX_DEVICE = 90;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__GERAETESTUFE = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__FIREWALL = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__DATENVERARBEITUNG = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Matrix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE_FEATURE_COUNT = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Matrix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE_OPERATION_COUNT = MATIX_CONDITION_MONITOR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getActiveMatixDevice()
+     * @generated
+     */
+    int ACTIVE_MATIX_DEVICE = 91;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE__GERAETESTUFE = MATRIX_DEVICE__GERAETESTUFE;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE__FIREWALL = MATRIX_DEVICE__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE__DATENVERARBEITUNG = MATRIX_DEVICE__DATENVERARBEITUNG;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE__ANGRIFF = MATRIX_DEVICE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE__SCHLEICHER = MATRIX_DEVICE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Active Matix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE_FEATURE_COUNT = MATRIX_DEVICE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Active Matix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ACTIVE_MATIX_DEVICE_OPERATION_COUNT = MATRIX_DEVICE_OPERATION_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -10098,34 +10245,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int RESONANZ_PERSONA__GERAETESTUFE = 1;
-
-    /**
-     * The feature id for the '<em><b>Angriff</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int RESONANZ_PERSONA__ANGRIFF = 2;
-
-    /**
-     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int RESONANZ_PERSONA__SCHLEICHER = 3;
-
-    /**
-     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int RESONANZ_PERSONA__DATENVERARBEITUNG = 4;
+	int RESONANZ_PERSONA__GERAETESTUFE = ACTIVE_MATIX_DEVICE__GERAETESTUFE;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -10134,7 +10254,43 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int RESONANZ_PERSONA__FIREWALL = 5;
+	int RESONANZ_PERSONA__FIREWALL = ACTIVE_MATIX_DEVICE__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int RESONANZ_PERSONA__DATENVERARBEITUNG = ACTIVE_MATIX_DEVICE__DATENVERARBEITUNG;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int RESONANZ_PERSONA__ANGRIFF = ACTIVE_MATIX_DEVICE__ANGRIFF;
+
+    /**
+     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int RESONANZ_PERSONA__SCHLEICHER = ACTIVE_MATIX_DEVICE__SCHLEICHER;
+
+    /**
+     * The feature id for the '<em><b>Resonanz</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int RESONANZ_PERSONA__RESONANZ = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
@@ -10143,7 +10299,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int RESONANZ_PERSONA__RESONANZ_BASIS = 6;
+	int RESONANZ_PERSONA__RESONANZ_BASIS = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Resonanz Persona</em>' class.
@@ -10152,7 +10308,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int RESONANZ_PERSONA_FEATURE_COUNT = 7;
+	int RESONANZ_PERSONA_FEATURE_COUNT = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Resonanz Persona</em>' class.
@@ -10161,7 +10317,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int RESONANZ_PERSONA_OPERATION_COUNT = 0;
+	int RESONANZ_PERSONA_OPERATION_COUNT = ACTIVE_MATIX_DEVICE_OPERATION_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -10299,15 +10455,6 @@ public interface Shr5Package extends EPackage {
 	int PERSONA_KOMPLEX_FORM_OPERATION_COUNT = ERLERNBAR_OPERATION_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Resonanz</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SPRITE__RESONANZ = RESONANZ_PERSONA__RESONANZ;
-
-    /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10315,6 +10462,24 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int SPRITE__GERAETESTUFE = RESONANZ_PERSONA__GERAETESTUFE;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SPRITE__FIREWALL = RESONANZ_PERSONA__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+	int SPRITE__DATENVERARBEITUNG = RESONANZ_PERSONA__DATENVERARBEITUNG;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
@@ -10335,22 +10500,13 @@ public interface Shr5Package extends EPackage {
 	int SPRITE__SCHLEICHER = RESONANZ_PERSONA__SCHLEICHER;
 
     /**
-     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * The feature id for the '<em><b>Resonanz</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__DATENVERARBEITUNG = RESONANZ_PERSONA__DATENVERARBEITUNG;
-
-    /**
-     * The feature id for the '<em><b>Firewall</b></em>' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int SPRITE__FIREWALL = RESONANZ_PERSONA__FIREWALL;
+	int SPRITE__RESONANZ = RESONANZ_PERSONA__RESONANZ;
 
     /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
@@ -13064,6 +13220,731 @@ public interface Shr5Package extends EPackage {
     int SPEZIALISIERUNG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl <em>Comlink</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ComlinkImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getComlink()
+     * @generated
+     */
+    int COMLINK = 92;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__WERT = ABSTRAKT_GEGENSTAND__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__NAME = ABSTRAKT_GEGENSTAND__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__MODS = ABSTRAKT_GEGENSTAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__GERAETESTUFE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__FIREWALL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__DATENVERARBEITUNG = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Device Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK__DEVICE_RATING = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
+
+    /**
+     * The number of structural features of the '<em>Comlink</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
+
+    /**
+     * The number of operations of the '<em>Comlink</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMLINK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl <em>Cyberdeck</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CyberdeckImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberdeck()
+     * @generated
+     */
+    int CYBERDECK = 94;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__PARENT_ID = COMLINK__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__PAGE = COMLINK__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__SRC_BOOK = COMLINK__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__WERT = COMLINK__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__VERFUEGBARKEIT = COMLINK__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__WERT_VALUE = COMLINK__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__BESCHREIBUNG = COMLINK__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__IMAGE = COMLINK__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__NAME = COMLINK__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__MODS = COMLINK__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__FERTIGKEIT = COMLINK__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__GERAETESTUFE = COMLINK__GERAETESTUFE;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__FIREWALL = COMLINK__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__DATENVERARBEITUNG = COMLINK__DATENVERARBEITUNG;
+
+    /**
+     * The feature id for the '<em><b>Device Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__DEVICE_RATING = COMLINK__DEVICE_RATING;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__ANGRIFF = COMLINK_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__SCHLEICHER = COMLINK_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Program Slots</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__PROGRAM_SLOTS = COMLINK_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Attributes</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__ATTRIBUTES = COMLINK_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Running Programms</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__RUNNING_PROGRAMMS = COMLINK_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__STRORED_PROGRAMM = COMLINK_FEATURE_COUNT + 5;
+
+    /**
+     * The number of structural features of the '<em>Cyberdeck</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK_FEATURE_COUNT = COMLINK_FEATURE_COUNT + 6;
+
+    /**
+     * The number of operations of the '<em>Cyberdeck</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK_OPERATION_COUNT = COMLINK_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl <em>Program</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ProgramImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgram()
+     * @generated
+     */
+    int PROGRAM = 95;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__WERT = GELD_WERT__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__VERFUEGBARKEIT = GELD_WERT__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__WERT_VALUE = GELD_WERT__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__BESCHREIBUNG = GELD_WERT_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__IMAGE = GELD_WERT_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__NAME = GELD_WERT_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__PARENT_ID = GELD_WERT_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__PAGE = GELD_WERT_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__SRC_BOOK = GELD_WERT_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Category</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__CATEGORY = GELD_WERT_FEATURE_COUNT + 6;
+
+    /**
+     * The number of structural features of the '<em>Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 7;
+
+    /**
+     * The number of operations of the '<em>Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM_OPERATION_COUNT = GELD_WERT_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSoftwareAgent()
+     * @generated
+     */
+    int SOFTWARE_AGENT = 96;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__WERT = PROGRAM__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__VERFUEGBARKEIT = PROGRAM__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__WERT_VALUE = PROGRAM__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__BESCHREIBUNG = PROGRAM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__IMAGE = PROGRAM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__NAME = PROGRAM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__PARENT_ID = PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__PAGE = PROGRAM__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__SRC_BOOK = PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Category</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__CATEGORY = PROGRAM__CATEGORY;
+
+    /**
+     * The feature id for the '<em><b>Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__RATING = PROGRAM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Software Agent</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT_FEATURE_COUNT = PROGRAM_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Software Agent</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT_OPERATION_COUNT = PROGRAM_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.HostImpl <em>Host</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.HostImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getHost()
+     * @generated
+     */
+    int HOST = 97;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__GERAETESTUFE = ACTIVE_MATIX_DEVICE__GERAETESTUFE;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__FIREWALL = ACTIVE_MATIX_DEVICE__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__DATENVERARBEITUNG = ACTIVE_MATIX_DEVICE__DATENVERARBEITUNG;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__ANGRIFF = ACTIVE_MATIX_DEVICE__ANGRIFF;
+
+    /**
+     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__SCHLEICHER = ACTIVE_MATIX_DEVICE__SCHLEICHER;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__BESCHREIBUNG = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__IMAGE = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__NAME = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Host</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST_FEATURE_COUNT = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Host</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST_OPERATION_COUNT = ACTIVE_MATIX_DEVICE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13071,7 +13952,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 90;
+	int FEUER_MODUS = 98;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -13081,7 +13962,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 91;
+	int SCHADENS_TYP = 99;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -13091,7 +13972,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 92;
+	int MAGAZIN_TYP = 100;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -13101,7 +13982,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 93;
+	int FEUWERWAFFEN_ERWEITERUNG = 101;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -13111,7 +13992,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 94;
+	int MODIFIKATOR_TYPE = 102;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -13121,7 +14002,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 95;
+	int SMARTGUN_TYPE = 103;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -13131,7 +14012,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 96;
+	int ZAUBER_ART = 104;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -13141,7 +14022,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 97;
+	int ZAUBER_REICHWEITE = 105;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -13151,7 +14032,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 98;
+	int ZAUBER_DAUER = 106;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -13161,7 +14042,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 99;
+	int MAGISCHE_TRADITION = 107;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -13171,7 +14052,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 100;
+	int CRITTER_HANDLUNG = 108;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -13181,7 +14062,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 101;
+	int CRITTER_REICHWEITE = 109;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -13191,7 +14072,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 102;
+	int CRITTER_DAUER = 110;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -13201,9 +14082,19 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 103;
+	int RESONANZ_ZIEL = 111;
 
 	/**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.InterfaceModus
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
+     * @generated
+     */
+    int INTERFACE_MODUS = 112;
+
+    /**
      * The meta object id for the '<em>Shr Date</em>' data type.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13211,7 +14102,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 104;
+	int SHR_DATE = 113;
 
 
 	/**
@@ -13222,7 +14113,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 105;
+	int MODIFICATION_MANAGER = 114;
 
 
 	/**
@@ -15835,61 +16726,6 @@ public interface Shr5Package extends EPackage {
 	EAttribute getResonanzPersona_Resonanz();
 
 	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe <em>Geraetestufe</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Geraetestufe</em>'.
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe()
-     * @see #getResonanzPersona()
-     * @generated
-     */
-	EAttribute getResonanzPersona_Geraetestufe();
-
-	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff <em>Angriff</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Angriff</em>'.
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff()
-     * @see #getResonanzPersona()
-     * @generated
-     */
-	EAttribute getResonanzPersona_Angriff();
-
-	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher <em>Schleicher</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Schleicher</em>'.
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher()
-     * @see #getResonanzPersona()
-     * @generated
-     */
-	EAttribute getResonanzPersona_Schleicher();
-
-	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung <em>Datenverarbeitung</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Datenverarbeitung</em>'.
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung()
-     * @see #getResonanzPersona()
-     * @generated
-     */
-	EAttribute getResonanzPersona_Datenverarbeitung();
-
-	/**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall <em>Firewall</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Firewall</em>'.
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall()
-     * @see #getResonanzPersona()
-     * @generated
-     */
-	EAttribute getResonanzPersona_Firewall();
-
-	/**
      * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanzBasis <em>Resonanz Basis</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16700,6 +17536,218 @@ public interface Shr5Package extends EPackage {
     EClass getSpezialisierung();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Matrix Device</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice
+     * @generated
+     */
+    EClass getMatrixDevice();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe <em>Geraetestufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Geraetestufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe()
+     * @see #getMatrixDevice()
+     * @generated
+     */
+    EAttribute getMatrixDevice_Geraetestufe();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall <em>Firewall</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Firewall</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall()
+     * @see #getMatrixDevice()
+     * @generated
+     */
+    EAttribute getMatrixDevice_Firewall();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung <em>Datenverarbeitung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Datenverarbeitung</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung()
+     * @see #getMatrixDevice()
+     * @generated
+     */
+    EAttribute getMatrixDevice_Datenverarbeitung();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Active Matix Device</em>'.
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice
+     * @generated
+     */
+    EClass getActiveMatixDevice();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff <em>Angriff</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Angriff</em>'.
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff()
+     * @see #getActiveMatixDevice()
+     * @generated
+     */
+    EAttribute getActiveMatixDevice_Angriff();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher <em>Schleicher</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Schleicher</em>'.
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher()
+     * @see #getActiveMatixDevice()
+     * @generated
+     */
+    EAttribute getActiveMatixDevice_Schleicher();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Comlink <em>Comlink</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Comlink</em>'.
+     * @see de.urszeidler.eclipse.shr5.Comlink
+     * @generated
+     */
+    EClass getComlink();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Comlink#getDeviceRating <em>Device Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Device Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.Comlink#getDeviceRating()
+     * @see #getComlink()
+     * @generated
+     */
+    EAttribute getComlink_DeviceRating();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Matix Condition Monitor</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor
+     * @generated
+     */
+    EClass getMatixConditionMonitor();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Cyberdeck <em>Cyberdeck</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Cyberdeck</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck
+     * @generated
+     */
+    EClass getCyberdeck();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getProgramSlots <em>Program Slots</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Program Slots</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getProgramSlots()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_ProgramSlots();
+
+    /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttributes <em>Attributes</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Attributes</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getAttributes()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_Attributes();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningProgramms <em>Running Programms</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Running Programms</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getRunningProgramms()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EReference getCyberdeck_RunningProgramms();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getStroredProgramm <em>Strored Programm</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Strored Programm</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getStroredProgramm()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EReference getCyberdeck_StroredProgramm();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Program <em>Program</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Program</em>'.
+     * @see de.urszeidler.eclipse.shr5.Program
+     * @generated
+     */
+    EClass getProgram();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Program#getCategory <em>Category</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Category</em>'.
+     * @see de.urszeidler.eclipse.shr5.Program#getCategory()
+     * @see #getProgram()
+     * @generated
+     */
+    EAttribute getProgram_Category();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SoftwareAgent <em>Software Agent</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Software Agent</em>'.
+     * @see de.urszeidler.eclipse.shr5.SoftwareAgent
+     * @generated
+     */
+    EClass getSoftwareAgent();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.SoftwareAgent#getRating <em>Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.SoftwareAgent#getRating()
+     * @see #getSoftwareAgent()
+     * @generated
+     */
+    EAttribute getSoftwareAgent_Rating();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Host <em>Host</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Host</em>'.
+     * @see de.urszeidler.eclipse.shr5.Host
+     * @generated
+     */
+    EClass getHost();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16840,6 +17888,16 @@ public interface Shr5Package extends EPackage {
 	EEnum getResonanzZiel();
 
 	/**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Interface Modus</em>'.
+     * @see de.urszeidler.eclipse.shr5.InterfaceModus
+     * @generated
+     */
+    EEnum getInterfaceModus();
+
+    /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18957,46 +20015,6 @@ public interface Shr5Package extends EPackage {
 		EAttribute RESONANZ_PERSONA__RESONANZ = eINSTANCE.getResonanzPersona_Resonanz();
 
 		/**
-         * The meta object literal for the '<em><b>Geraetestufe</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute RESONANZ_PERSONA__GERAETESTUFE = eINSTANCE.getResonanzPersona_Geraetestufe();
-
-		/**
-         * The meta object literal for the '<em><b>Angriff</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute RESONANZ_PERSONA__ANGRIFF = eINSTANCE.getResonanzPersona_Angriff();
-
-		/**
-         * The meta object literal for the '<em><b>Schleicher</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute RESONANZ_PERSONA__SCHLEICHER = eINSTANCE.getResonanzPersona_Schleicher();
-
-		/**
-         * The meta object literal for the '<em><b>Datenverarbeitung</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute RESONANZ_PERSONA__DATENVERARBEITUNG = eINSTANCE.getResonanzPersona_Datenverarbeitung();
-
-		/**
-         * The meta object literal for the '<em><b>Firewall</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EAttribute RESONANZ_PERSONA__FIREWALL = eINSTANCE.getResonanzPersona_Firewall();
-
-		/**
          * The meta object literal for the '<em><b>Resonanz Basis</b></em>' attribute feature.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19657,6 +20675,182 @@ public interface Shr5Package extends EPackage {
         EClass SPEZIALISIERUNG = eINSTANCE.getSpezialisierung();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.MatrixDevice
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixDevice()
+         * @generated
+         */
+        EClass MATRIX_DEVICE = eINSTANCE.getMatrixDevice();
+
+        /**
+         * The meta object literal for the '<em><b>Geraetestufe</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_DEVICE__GERAETESTUFE = eINSTANCE.getMatrixDevice_Geraetestufe();
+
+        /**
+         * The meta object literal for the '<em><b>Firewall</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_DEVICE__FIREWALL = eINSTANCE.getMatrixDevice_Firewall();
+
+        /**
+         * The meta object literal for the '<em><b>Datenverarbeitung</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_DEVICE__DATENVERARBEITUNG = eINSTANCE.getMatrixDevice_Datenverarbeitung();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getActiveMatixDevice()
+         * @generated
+         */
+        EClass ACTIVE_MATIX_DEVICE = eINSTANCE.getActiveMatixDevice();
+
+        /**
+         * The meta object literal for the '<em><b>Angriff</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute ACTIVE_MATIX_DEVICE__ANGRIFF = eINSTANCE.getActiveMatixDevice_Angriff();
+
+        /**
+         * The meta object literal for the '<em><b>Schleicher</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute ACTIVE_MATIX_DEVICE__SCHLEICHER = eINSTANCE.getActiveMatixDevice_Schleicher();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl <em>Comlink</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.ComlinkImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getComlink()
+         * @generated
+         */
+        EClass COMLINK = eINSTANCE.getComlink();
+
+        /**
+         * The meta object literal for the '<em><b>Device Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute COMLINK__DEVICE_RATING = eINSTANCE.getComlink_DeviceRating();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatixConditionMonitor()
+         * @generated
+         */
+        EClass MATIX_CONDITION_MONITOR = eINSTANCE.getMatixConditionMonitor();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl <em>Cyberdeck</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.CyberdeckImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberdeck()
+         * @generated
+         */
+        EClass CYBERDECK = eINSTANCE.getCyberdeck();
+
+        /**
+         * The meta object literal for the '<em><b>Program Slots</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__PROGRAM_SLOTS = eINSTANCE.getCyberdeck_ProgramSlots();
+
+        /**
+         * The meta object literal for the '<em><b>Attributes</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__ATTRIBUTES = eINSTANCE.getCyberdeck_Attributes();
+
+        /**
+         * The meta object literal for the '<em><b>Running Programms</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CYBERDECK__RUNNING_PROGRAMMS = eINSTANCE.getCyberdeck_RunningProgramms();
+
+        /**
+         * The meta object literal for the '<em><b>Strored Programm</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CYBERDECK__STRORED_PROGRAMM = eINSTANCE.getCyberdeck_StroredProgramm();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl <em>Program</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.ProgramImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgram()
+         * @generated
+         */
+        EClass PROGRAM = eINSTANCE.getProgram();
+
+        /**
+         * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute PROGRAM__CATEGORY = eINSTANCE.getProgram_Category();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSoftwareAgent()
+         * @generated
+         */
+        EClass SOFTWARE_AGENT = eINSTANCE.getSoftwareAgent();
+
+        /**
+         * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SOFTWARE_AGENT__RATING = eINSTANCE.getSoftwareAgent_Rating();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.HostImpl <em>Host</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.HostImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getHost()
+         * @generated
+         */
+        EClass HOST = eINSTANCE.getHost();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19797,6 +20991,16 @@ public interface Shr5Package extends EPackage {
 		EEnum RESONANZ_ZIEL = eINSTANCE.getResonanzZiel();
 
 		/**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.InterfaceModus
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
+         * @generated
+         */
+        EEnum INTERFACE_MODUS = eINSTANCE.getInterfaceModus();
+
+        /**
          * The meta object literal for the '<em>Shr Date</em>' data type.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

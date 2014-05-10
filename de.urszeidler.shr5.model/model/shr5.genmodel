@@ -82,6 +82,11 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/persona"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ResonanzZiel/sprite"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//InterfaceModus">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//InterfaceModus/augmentedReality"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//InterfaceModus/coldSim"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//InterfaceModus/hotSim"/>
+    </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Beschreibbar">
@@ -379,11 +384,6 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//ResonanzPersona">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/resonanz"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/geraetestufe"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/angriff"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/schleicher"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/datenverarbeitung"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/firewall"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ResonanzPersona/resonanzBasis"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//KomplexeForm">
@@ -478,5 +478,31 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Spezialisierung"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixDevice">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/geraetestufe"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/firewall"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/datenverarbeitung"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//ActiveMatixDevice">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ActiveMatixDevice/angriff"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ActiveMatixDevice/schleicher"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Comlink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Comlink/deviceRating"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatixConditionMonitor"/>
+    <genClasses ecoreClass="shr5.ecore#//Cyberdeck">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/programSlots"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/runningProgramms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/stroredProgramm"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Program">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Program/category"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//SoftwareAgent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SoftwareAgent/rating"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Host"/>
   </genPackages>
 </genmodel:GenModel>

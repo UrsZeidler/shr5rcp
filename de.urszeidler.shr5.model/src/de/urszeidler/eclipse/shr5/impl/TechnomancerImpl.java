@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,6 +15,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Echo;
+import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.ResonanzPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -26,12 +29,12 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getResonanz <em>Resonanz</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getFirewall <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getSchleicher <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getFirewall <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getResonanz <em>Resonanz</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getResonanzBasis <em>Resonanz Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getComplexForms <em>Complex Forms</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getEchos <em>Echos</em>}</li>
@@ -41,16 +44,6 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  * @generated
  */
 public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer {
-	/**
-     * The default value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getResonanz()
-     * @generated
-     * @ordered
-     */
-	protected static final int RESONANZ_EDEFAULT = 0;
-
 	/**
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -62,26 +55,16 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	protected static final int GERAETESTUFE_EDEFAULT = 0;
 
 	/**
-     * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
+     * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getAngriff()
+     * @see #getFirewall()
      * @generated
      * @ordered
      */
-	protected static final int ANGRIFF_EDEFAULT = 0;
+	protected static final int FIREWALL_EDEFAULT = 0;
 
-	/**
-     * The default value of the '{@link #getSchleicher() <em>Schleicher</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getSchleicher()
-     * @generated
-     * @ordered
-     */
-	protected static final int SCHLEICHER_EDEFAULT = 0;
-
-	/**
+    /**
      * The default value of the '{@link #getDatenverarbeitung() <em>Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,15 +74,35 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      */
 	protected static final int DATENVERARBEITUNG_EDEFAULT = 0;
 
-	/**
-     * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
+    /**
+     * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getFirewall()
+     * @see #getAngriff()
      * @generated
      * @ordered
      */
-	protected static final int FIREWALL_EDEFAULT = 0;
+	protected static final int ANGRIFF_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getSchleicher() <em>Schleicher</em>}' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getSchleicher()
+     * @generated
+     * @ordered
+     */
+	protected static final int SCHLEICHER_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getResonanz()
+     * @generated
+     * @ordered
+     */
+	protected static final int RESONANZ_EDEFAULT = 0;
 
 	/**
      * The default value of the '{@link #getResonanzBasis() <em>Resonanz Basis</em>}' attribute.
@@ -283,18 +286,18 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5Package.TECHNOMANCER__RESONANZ:
-                return getResonanz();
             case Shr5Package.TECHNOMANCER__GERAETESTUFE:
                 return getGeraetestufe();
+            case Shr5Package.TECHNOMANCER__FIREWALL:
+                return getFirewall();
+            case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
+                return getDatenverarbeitung();
             case Shr5Package.TECHNOMANCER__ANGRIFF:
                 return getAngriff();
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
                 return getSchleicher();
-            case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
-                return getDatenverarbeitung();
-            case Shr5Package.TECHNOMANCER__FIREWALL:
-                return getFirewall();
+            case Shr5Package.TECHNOMANCER__RESONANZ:
+                return getResonanz();
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 return getResonanzBasis();
             case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
@@ -358,18 +361,18 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.TECHNOMANCER__RESONANZ:
-                return getResonanz() != RESONANZ_EDEFAULT;
             case Shr5Package.TECHNOMANCER__GERAETESTUFE:
                 return getGeraetestufe() != GERAETESTUFE_EDEFAULT;
+            case Shr5Package.TECHNOMANCER__FIREWALL:
+                return getFirewall() != FIREWALL_EDEFAULT;
+            case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
+                return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.TECHNOMANCER__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
                 return getSchleicher() != SCHLEICHER_EDEFAULT;
-            case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
-                return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
-            case Shr5Package.TECHNOMANCER__FIREWALL:
-                return getFirewall() != FIREWALL_EDEFAULT;
+            case Shr5Package.TECHNOMANCER__RESONANZ:
+                return getResonanz() != RESONANZ_EDEFAULT;
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 return resonanzBasis != RESONANZ_BASIS_EDEFAULT;
             case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
@@ -387,14 +390,29 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == MatixConditionMonitor.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixDevice.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.TECHNOMANCER__GERAETESTUFE: return Shr5Package.MATRIX_DEVICE__GERAETESTUFE;
+                case Shr5Package.TECHNOMANCER__FIREWALL: return Shr5Package.MATRIX_DEVICE__FIREWALL;
+                case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG: return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
+                default: return -1;
+            }
+        }
+        if (baseClass == ActiveMatixDevice.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.TECHNOMANCER__ANGRIFF: return Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF;
+                case Shr5Package.TECHNOMANCER__SCHLEICHER: return Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER;
+                default: return -1;
+            }
+        }
         if (baseClass == ResonanzPersona.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.TECHNOMANCER__RESONANZ: return Shr5Package.RESONANZ_PERSONA__RESONANZ;
-                case Shr5Package.TECHNOMANCER__GERAETESTUFE: return Shr5Package.RESONANZ_PERSONA__GERAETESTUFE;
-                case Shr5Package.TECHNOMANCER__ANGRIFF: return Shr5Package.RESONANZ_PERSONA__ANGRIFF;
-                case Shr5Package.TECHNOMANCER__SCHLEICHER: return Shr5Package.RESONANZ_PERSONA__SCHLEICHER;
-                case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG: return Shr5Package.RESONANZ_PERSONA__DATENVERARBEITUNG;
-                case Shr5Package.TECHNOMANCER__FIREWALL: return Shr5Package.RESONANZ_PERSONA__FIREWALL;
                 case Shr5Package.TECHNOMANCER__RESONANZ_BASIS: return Shr5Package.RESONANZ_PERSONA__RESONANZ_BASIS;
                 default: return -1;
             }
@@ -409,14 +427,29 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == MatixConditionMonitor.class) {
+            switch (baseFeatureID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixDevice.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.MATRIX_DEVICE__GERAETESTUFE: return Shr5Package.TECHNOMANCER__GERAETESTUFE;
+                case Shr5Package.MATRIX_DEVICE__FIREWALL: return Shr5Package.TECHNOMANCER__FIREWALL;
+                case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG: return Shr5Package.TECHNOMANCER__DATENVERARBEITUNG;
+                default: return -1;
+            }
+        }
+        if (baseClass == ActiveMatixDevice.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF: return Shr5Package.TECHNOMANCER__ANGRIFF;
+                case Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER: return Shr5Package.TECHNOMANCER__SCHLEICHER;
+                default: return -1;
+            }
+        }
         if (baseClass == ResonanzPersona.class) {
             switch (baseFeatureID) {
                 case Shr5Package.RESONANZ_PERSONA__RESONANZ: return Shr5Package.TECHNOMANCER__RESONANZ;
-                case Shr5Package.RESONANZ_PERSONA__GERAETESTUFE: return Shr5Package.TECHNOMANCER__GERAETESTUFE;
-                case Shr5Package.RESONANZ_PERSONA__ANGRIFF: return Shr5Package.TECHNOMANCER__ANGRIFF;
-                case Shr5Package.RESONANZ_PERSONA__SCHLEICHER: return Shr5Package.TECHNOMANCER__SCHLEICHER;
-                case Shr5Package.RESONANZ_PERSONA__DATENVERARBEITUNG: return Shr5Package.TECHNOMANCER__DATENVERARBEITUNG;
-                case Shr5Package.RESONANZ_PERSONA__FIREWALL: return Shr5Package.TECHNOMANCER__FIREWALL;
                 case Shr5Package.RESONANZ_PERSONA__RESONANZ_BASIS: return Shr5Package.TECHNOMANCER__RESONANZ_BASIS;
                 default: return -1;
             }

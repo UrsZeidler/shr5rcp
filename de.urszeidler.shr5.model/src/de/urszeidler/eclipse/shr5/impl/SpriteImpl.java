@@ -22,12 +22,12 @@ import de.urszeidler.eclipse.shr5.Sprite;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getResonanz <em>Resonanz</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getFirewall <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getSchleicher <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getFirewall <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getResonanz <em>Resonanz</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getResonanzBasis <em>Resonanz Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getImage <em>Image</em>}</li>
@@ -48,16 +48,6 @@ import de.urszeidler.eclipse.shr5.Sprite;
  */
 public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	/**
-     * The default value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getResonanz()
-     * @generated
-     * @ordered
-     */
-	protected static final int RESONANZ_EDEFAULT = 0;
-
-	/**
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,26 +58,16 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	protected static final int GERAETESTUFE_EDEFAULT = 0;
 
 	/**
-     * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
+     * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getAngriff()
+     * @see #getFirewall()
      * @generated
      * @ordered
      */
-	protected static final int ANGRIFF_EDEFAULT = 0;
+	protected static final int FIREWALL_EDEFAULT = 0;
 
-	/**
-     * The default value of the '{@link #getSchleicher() <em>Schleicher</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @see #getSchleicher()
-     * @generated
-     * @ordered
-     */
-	protected static final int SCHLEICHER_EDEFAULT = 0;
-
-	/**
+    /**
      * The default value of the '{@link #getDatenverarbeitung() <em>Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,15 +77,35 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      */
 	protected static final int DATENVERARBEITUNG_EDEFAULT = 0;
 
-	/**
-     * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
+    /**
+     * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getFirewall()
+     * @see #getAngriff()
      * @generated
      * @ordered
      */
-	protected static final int FIREWALL_EDEFAULT = 0;
+	protected static final int ANGRIFF_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getSchleicher() <em>Schleicher</em>}' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getSchleicher()
+     * @generated
+     * @ordered
+     */
+	protected static final int SCHLEICHER_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getResonanz() <em>Resonanz</em>}' attribute.
+     * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * @see #getResonanz()
+     * @generated
+     * @ordered
+     */
+	protected static final int RESONANZ_EDEFAULT = 0;
 
 	/**
      * The default value of the '{@link #getResonanzBasis() <em>Resonanz Basis</em>}' attribute.
@@ -728,18 +728,18 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5Package.SPRITE__RESONANZ:
-                return getResonanz();
             case Shr5Package.SPRITE__GERAETESTUFE:
                 return getGeraetestufe();
+            case Shr5Package.SPRITE__FIREWALL:
+                return getFirewall();
+            case Shr5Package.SPRITE__DATENVERARBEITUNG:
+                return getDatenverarbeitung();
             case Shr5Package.SPRITE__ANGRIFF:
                 return getAngriff();
             case Shr5Package.SPRITE__SCHLEICHER:
                 return getSchleicher();
-            case Shr5Package.SPRITE__DATENVERARBEITUNG:
-                return getDatenverarbeitung();
-            case Shr5Package.SPRITE__FIREWALL:
-                return getFirewall();
+            case Shr5Package.SPRITE__RESONANZ:
+                return getResonanz();
             case Shr5Package.SPRITE__RESONANZ_BASIS:
                 return getResonanzBasis();
             case Shr5Package.SPRITE__BESCHREIBUNG:
@@ -881,18 +881,18 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.SPRITE__RESONANZ:
-                return getResonanz() != RESONANZ_EDEFAULT;
             case Shr5Package.SPRITE__GERAETESTUFE:
                 return getGeraetestufe() != GERAETESTUFE_EDEFAULT;
+            case Shr5Package.SPRITE__FIREWALL:
+                return getFirewall() != FIREWALL_EDEFAULT;
+            case Shr5Package.SPRITE__DATENVERARBEITUNG:
+                return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.SPRITE__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.SPRITE__SCHLEICHER:
                 return getSchleicher() != SCHLEICHER_EDEFAULT;
-            case Shr5Package.SPRITE__DATENVERARBEITUNG:
-                return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
-            case Shr5Package.SPRITE__FIREWALL:
-                return getFirewall() != FIREWALL_EDEFAULT;
+            case Shr5Package.SPRITE__RESONANZ:
+                return getResonanz() != RESONANZ_EDEFAULT;
             case Shr5Package.SPRITE__RESONANZ_BASIS:
                 return resonanzBasis != RESONANZ_BASIS_EDEFAULT;
             case Shr5Package.SPRITE__BESCHREIBUNG:

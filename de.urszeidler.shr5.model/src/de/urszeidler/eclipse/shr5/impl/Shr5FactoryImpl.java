@@ -172,6 +172,11 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.GEIST: return createGeist();
             case Shr5Package.CREDSTICK_TRANSACTION: return createCredstickTransaction();
             case Shr5Package.SPEZIALISIERUNG: return createSpezialisierung();
+            case Shr5Package.COMLINK: return createComlink();
+            case Shr5Package.CYBERDECK: return createCyberdeck();
+            case Shr5Package.PROGRAM: return createProgram();
+            case Shr5Package.SOFTWARE_AGENT: return createSoftwareAgent();
+            case Shr5Package.HOST: return createHost();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -213,6 +218,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createCritterDauerFromString(eDataType, initialValue);
             case Shr5Package.RESONANZ_ZIEL:
                 return createResonanzZielFromString(eDataType, initialValue);
+            case Shr5Package.INTERFACE_MODUS:
+                return createInterfaceModusFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -256,6 +263,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertCritterDauerToString(eDataType, instanceValue);
             case Shr5Package.RESONANZ_ZIEL:
                 return convertResonanzZielToString(eDataType, instanceValue);
+            case Shr5Package.INTERFACE_MODUS:
+                return convertInterfaceModusToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -795,6 +804,56 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Comlink createComlink() {
+        ComlinkImpl comlink = new ComlinkImpl();
+        return comlink;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Cyberdeck createCyberdeck() {
+        CyberdeckImpl cyberdeck = new CyberdeckImpl();
+        return cyberdeck;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Program createProgram() {
+        ProgramImpl program = new ProgramImpl();
+        return program;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SoftwareAgent createSoftwareAgent() {
+        SoftwareAgentImpl softwareAgent = new SoftwareAgentImpl();
+        return softwareAgent;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Host createHost() {
+        HostImpl host = new HostImpl();
+        return host;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1074,6 +1133,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InterfaceModus createInterfaceModusFromString(EDataType eDataType, String initialValue) {
+        InterfaceModus result = InterfaceModus.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertInterfaceModusToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated

@@ -15,6 +15,7 @@ import de.urszeidler.eclipse.shr5.AbstaktWaffe;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
 import de.urszeidler.eclipse.shr5.Anwendbar;
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
@@ -24,6 +25,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
 import de.urszeidler.eclipse.shr5.ChrakterLimits;
+import de.urszeidler.eclipse.shr5.Comlink;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Critter;
@@ -31,6 +33,7 @@ import de.urszeidler.eclipse.shr5.CritterDauer;
 import de.urszeidler.eclipse.shr5.CritterHandlung;
 import de.urszeidler.eclipse.shr5.CritterKraft;
 import de.urszeidler.eclipse.shr5.CritterReichweite;
+import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Echo;
@@ -51,8 +54,10 @@ import de.urszeidler.eclipse.shr5.GegenstandStufen;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.Host;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
@@ -68,6 +73,8 @@ import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.MagischeMods;
 import de.urszeidler.eclipse.shr5.MagischePersona;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
+import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.Menge;
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.ModSetter;
@@ -87,6 +94,7 @@ import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.PersonaZustand;
 import de.urszeidler.eclipse.shr5.ProbenModifikatoren;
+import de.urszeidler.eclipse.shr5.Program;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Reichweite;
@@ -100,6 +108,7 @@ import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Sichtverhaeltnisse;
 import de.urszeidler.eclipse.shr5.Sin;
 import de.urszeidler.eclipse.shr5.SmartgunType;
+import de.urszeidler.eclipse.shr5.SoftwareAgent;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.SpezielleAttribute;
@@ -757,6 +766,62 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass matrixDeviceEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass activeMatixDeviceEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass comlinkEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass matixConditionMonitorEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass cyberdeckEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass programEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass softwareAgentEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass hostEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -854,6 +919,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	private EEnum resonanzZielEEnum = null;
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum interfaceModusEEnum = null;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -3120,53 +3192,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getResonanzPersona_Geraetestufe() {
-        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(1);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EAttribute getResonanzPersona_Angriff() {
-        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(2);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EAttribute getResonanzPersona_Schleicher() {
-        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(3);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EAttribute getResonanzPersona_Datenverarbeitung() {
-        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(4);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EAttribute getResonanzPersona_Firewall() {
-        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(5);
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	public EAttribute getResonanzPersona_ResonanzBasis() {
-        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(1);
     }
 
 	/**
@@ -3846,6 +3873,186 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMatrixDevice() {
+        return matrixDeviceEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMatrixDevice_Geraetestufe() {
+        return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMatrixDevice_Firewall() {
+        return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMatrixDevice_Datenverarbeitung() {
+        return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getActiveMatixDevice() {
+        return activeMatixDeviceEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getActiveMatixDevice_Angriff() {
+        return (EAttribute)activeMatixDeviceEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getActiveMatixDevice_Schleicher() {
+        return (EAttribute)activeMatixDeviceEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getComlink() {
+        return comlinkEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getComlink_DeviceRating() {
+        return (EAttribute)comlinkEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMatixConditionMonitor() {
+        return matixConditionMonitorEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCyberdeck() {
+        return cyberdeckEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberdeck_ProgramSlots() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberdeck_Attributes() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCyberdeck_RunningProgramms() {
+        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCyberdeck_StroredProgramm() {
+        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getProgram() {
+        return programEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getProgram_Category() {
+        return (EAttribute)programEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSoftwareAgent() {
+        return softwareAgentEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSoftwareAgent_Rating() {
+        return (EAttribute)softwareAgentEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getHost() {
+        return hostEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3971,6 +4178,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getInterfaceModus() {
+        return interfaceModusEEnum;
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4322,11 +4538,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         resonanzPersonaEClass = createEClass(RESONANZ_PERSONA);
         createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__RESONANZ);
-        createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__GERAETESTUFE);
-        createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__ANGRIFF);
-        createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__SCHLEICHER);
-        createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__DATENVERARBEITUNG);
-        createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__FIREWALL);
         createEAttribute(resonanzPersonaEClass, RESONANZ_PERSONA__RESONANZ_BASIS);
 
         komplexeFormEClass = createEClass(KOMPLEXE_FORM);
@@ -4430,6 +4641,34 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         spezialisierungEClass = createEClass(SPEZIALISIERUNG);
 
+        matrixDeviceEClass = createEClass(MATRIX_DEVICE);
+        createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__GERAETESTUFE);
+        createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__FIREWALL);
+        createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__DATENVERARBEITUNG);
+
+        activeMatixDeviceEClass = createEClass(ACTIVE_MATIX_DEVICE);
+        createEAttribute(activeMatixDeviceEClass, ACTIVE_MATIX_DEVICE__ANGRIFF);
+        createEAttribute(activeMatixDeviceEClass, ACTIVE_MATIX_DEVICE__SCHLEICHER);
+
+        comlinkEClass = createEClass(COMLINK);
+        createEAttribute(comlinkEClass, COMLINK__DEVICE_RATING);
+
+        matixConditionMonitorEClass = createEClass(MATIX_CONDITION_MONITOR);
+
+        cyberdeckEClass = createEClass(CYBERDECK);
+        createEAttribute(cyberdeckEClass, CYBERDECK__PROGRAM_SLOTS);
+        createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTES);
+        createEReference(cyberdeckEClass, CYBERDECK__RUNNING_PROGRAMMS);
+        createEReference(cyberdeckEClass, CYBERDECK__STRORED_PROGRAMM);
+
+        programEClass = createEClass(PROGRAM);
+        createEAttribute(programEClass, PROGRAM__CATEGORY);
+
+        softwareAgentEClass = createEClass(SOFTWARE_AGENT);
+        createEAttribute(softwareAgentEClass, SOFTWARE_AGENT__RATING);
+
+        hostEClass = createEClass(HOST);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4445,6 +4684,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         critterReichweiteEEnum = createEEnum(CRITTER_REICHWEITE);
         critterDauerEEnum = createEEnum(CRITTER_DAUER);
         resonanzZielEEnum = createEEnum(RESONANZ_ZIEL);
+        interfaceModusEEnum = createEEnum(INTERFACE_MODUS);
 
         // Create data types
         shrDateEDataType = createEDataType(SHR_DATE);
@@ -4565,6 +4805,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fahrzeugModifikationEClass.getESuperTypes().add(this.getGeldWert());
         technomancerEClass.getESuperTypes().add(this.getKoerperPersona());
         technomancerEClass.getESuperTypes().add(this.getResonanzPersona());
+        resonanzPersonaEClass.getESuperTypes().add(this.getActiveMatixDevice());
         komplexeFormEClass.getESuperTypes().add(this.getQuelle());
         komplexeFormEClass.getESuperTypes().add(this.getBeschreibbar());
         personaKomplexFormEClass.getESuperTypes().add(this.getErlernbar());
@@ -4599,6 +4840,18 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         spezialisierungEClass.getESuperTypes().add(this.getBeschreibbar());
         spezialisierungEClass.getESuperTypes().add(this.getQuelle());
         spezialisierungEClass.getESuperTypes().add(this.getErlernbar());
+        matrixDeviceEClass.getESuperTypes().add(this.getMatixConditionMonitor());
+        activeMatixDeviceEClass.getESuperTypes().add(this.getMatrixDevice());
+        comlinkEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        comlinkEClass.getESuperTypes().add(this.getMatrixDevice());
+        cyberdeckEClass.getESuperTypes().add(this.getComlink());
+        cyberdeckEClass.getESuperTypes().add(this.getActiveMatixDevice());
+        programEClass.getESuperTypes().add(this.getGeldWert());
+        programEClass.getESuperTypes().add(this.getBeschreibbar());
+        programEClass.getESuperTypes().add(this.getQuelle());
+        softwareAgentEClass.getESuperTypes().add(this.getProgram());
+        hostEClass.getESuperTypes().add(this.getActiveMatixDevice());
+        hostEClass.getESuperTypes().add(this.getBeschreibbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4907,11 +5160,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(resonanzPersonaEClass, ResonanzPersona.class, "ResonanzPersona", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getResonanzPersona_Resonanz(), ecorePackage.getEInt(), "resonanz", null, 0, 1, ResonanzPersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getResonanzPersona_Geraetestufe(), ecorePackage.getEInt(), "geraetestufe", null, 0, 1, ResonanzPersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getResonanzPersona_Angriff(), ecorePackage.getEInt(), "angriff", null, 0, 1, ResonanzPersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getResonanzPersona_Schleicher(), ecorePackage.getEInt(), "schleicher", null, 0, 1, ResonanzPersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getResonanzPersona_Datenverarbeitung(), ecorePackage.getEInt(), "datenverarbeitung", null, 0, 1, ResonanzPersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getResonanzPersona_Firewall(), ecorePackage.getEInt(), "firewall", null, 0, 1, ResonanzPersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getResonanzPersona_ResonanzBasis(), ecorePackage.getEInt(), "resonanzBasis", null, 0, 1, ResonanzPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(komplexeFormEClass, KomplexeForm.class, "KomplexeForm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5015,6 +5263,34 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(spezialisierungEClass, Spezialisierung.class, "Spezialisierung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+        initEClass(matrixDeviceEClass, MatrixDevice.class, "MatrixDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMatrixDevice_Geraetestufe(), ecorePackage.getEInt(), "geraetestufe", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMatrixDevice_Firewall(), ecorePackage.getEInt(), "firewall", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMatrixDevice_Datenverarbeitung(), ecorePackage.getEInt(), "datenverarbeitung", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(activeMatixDeviceEClass, ActiveMatixDevice.class, "ActiveMatixDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getActiveMatixDevice_Angriff(), ecorePackage.getEInt(), "angriff", null, 0, 1, ActiveMatixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getActiveMatixDevice_Schleicher(), ecorePackage.getEInt(), "schleicher", null, 0, 1, ActiveMatixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(comlinkEClass, Comlink.class, "Comlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getComlink_DeviceRating(), ecorePackage.getEInt(), "deviceRating", null, 1, 1, Comlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(matixConditionMonitorEClass, MatixConditionMonitor.class, "MatixConditionMonitor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(cyberdeckEClass, Cyberdeck.class, "Cyberdeck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCyberdeck_ProgramSlots(), ecorePackage.getEInt(), "programSlots", null, 0, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberdeck_Attributes(), ecorePackage.getEInt(), "attributes", null, 4, 4, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCyberdeck_RunningProgramms(), this.getProgram(), null, "runningProgramms", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCyberdeck_StroredProgramm(), this.getProgram(), null, "stroredProgramm", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getProgram_Category(), ecorePackage.getEString(), "category", null, 1, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(softwareAgentEClass, SoftwareAgent.class, "SoftwareAgent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSoftwareAgent_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SoftwareAgent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(hostEClass, Host.class, "Host", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
         addEEnumLiteral(feuerModusEEnum, FeuerModus.EM);
@@ -5090,6 +5366,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(resonanzZielEEnum, ResonanzZiel.SELBST);
         addEEnumLiteral(resonanzZielEEnum, ResonanzZiel.PERSONA);
         addEEnumLiteral(resonanzZielEEnum, ResonanzZiel.SPRITE);
+
+        initEEnum(interfaceModusEEnum, InterfaceModus.class, "InterfaceModus");
+        addEEnumLiteral(interfaceModusEEnum, InterfaceModus.AUGMENTED_REALITY);
+        addEEnumLiteral(interfaceModusEEnum, InterfaceModus.COLD_SIM);
+        addEEnumLiteral(interfaceModusEEnum, InterfaceModus.HOT_SIM);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

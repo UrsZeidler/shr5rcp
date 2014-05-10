@@ -499,6 +499,51 @@ public interface Shr5Factory extends EFactory {
     Spezialisierung createSpezialisierung();
 
     /**
+     * Returns a new object of class '<em>Comlink</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Comlink</em>'.
+     * @generated
+     */
+    Comlink createComlink();
+
+    /**
+     * Returns a new object of class '<em>Cyberdeck</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Cyberdeck</em>'.
+     * @generated
+     */
+    Cyberdeck createCyberdeck();
+
+    /**
+     * Returns a new object of class '<em>Program</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Program</em>'.
+     * @generated
+     */
+    Program createProgram();
+
+    /**
+     * Returns a new object of class '<em>Software Agent</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Software Agent</em>'.
+     * @generated
+     */
+    SoftwareAgent createSoftwareAgent();
+
+    /**
+     * Returns a new object of class '<em>Host</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Host</em>'.
+     * @generated
+     */
+    Host createHost();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

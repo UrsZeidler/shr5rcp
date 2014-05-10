@@ -61,12 +61,12 @@ public class SpriteItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addResonanzPropertyDescriptor(object);
             addGeraetestufePropertyDescriptor(object);
+            addFirewallPropertyDescriptor(object);
+            addDatenverarbeitungPropertyDescriptor(object);
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
-            addDatenverarbeitungPropertyDescriptor(object);
-            addFirewallPropertyDescriptor(object);
+            addResonanzPropertyDescriptor(object);
             addResonanzBasisPropertyDescriptor(object);
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
@@ -117,9 +117,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_ResonanzPersona_geraetestufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_geraetestufe_feature", "_UI_ResonanzPersona_type"),
-                 Shr5Package.Literals.RESONANZ_PERSONA__GERAETESTUFE,
+                 getString("_UI_MatrixDevice_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_geraetestufe_feature", "_UI_MatrixDevice_type"),
+                 Shr5Package.Literals.MATRIX_DEVICE__GERAETESTUFE,
                  false,
                  false,
                  false,
@@ -139,9 +139,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_ResonanzPersona_angriff_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_angriff_feature", "_UI_ResonanzPersona_type"),
-                 Shr5Package.Literals.RESONANZ_PERSONA__ANGRIFF,
+                 getString("_UI_ActiveMatixDevice_angriff_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ActiveMatixDevice_angriff_feature", "_UI_ActiveMatixDevice_type"),
+                 Shr5Package.Literals.ACTIVE_MATIX_DEVICE__ANGRIFF,
                  false,
                  false,
                  false,
@@ -161,9 +161,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_ResonanzPersona_schleicher_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_schleicher_feature", "_UI_ResonanzPersona_type"),
-                 Shr5Package.Literals.RESONANZ_PERSONA__SCHLEICHER,
+                 getString("_UI_ActiveMatixDevice_schleicher_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_ActiveMatixDevice_schleicher_feature", "_UI_ActiveMatixDevice_type"),
+                 Shr5Package.Literals.ACTIVE_MATIX_DEVICE__SCHLEICHER,
                  false,
                  false,
                  false,
@@ -183,9 +183,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_ResonanzPersona_datenverarbeitung_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_datenverarbeitung_feature", "_UI_ResonanzPersona_type"),
-                 Shr5Package.Literals.RESONANZ_PERSONA__DATENVERARBEITUNG,
+                 getString("_UI_MatrixDevice_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_datenverarbeitung_feature", "_UI_MatrixDevice_type"),
+                 Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG,
                  false,
                  false,
                  false,
@@ -205,9 +205,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_ResonanzPersona_firewall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_ResonanzPersona_firewall_feature", "_UI_ResonanzPersona_type"),
-                 Shr5Package.Literals.RESONANZ_PERSONA__FIREWALL,
+                 getString("_UI_MatrixDevice_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_firewall_feature", "_UI_MatrixDevice_type"),
+                 Shr5Package.Literals.MATRIX_DEVICE__FIREWALL,
                  false,
                  false,
                  false,
@@ -546,12 +546,12 @@ public class SpriteItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Sprite.class)) {
-            case Shr5Package.SPRITE__RESONANZ:
             case Shr5Package.SPRITE__GERAETESTUFE:
+            case Shr5Package.SPRITE__FIREWALL:
+            case Shr5Package.SPRITE__DATENVERARBEITUNG:
             case Shr5Package.SPRITE__ANGRIFF:
             case Shr5Package.SPRITE__SCHLEICHER:
-            case Shr5Package.SPRITE__DATENVERARBEITUNG:
-            case Shr5Package.SPRITE__FIREWALL:
+            case Shr5Package.SPRITE__RESONANZ:
             case Shr5Package.SPRITE__RESONANZ_BASIS:
             case Shr5Package.SPRITE__BESCHREIBUNG:
             case Shr5Package.SPRITE__IMAGE:

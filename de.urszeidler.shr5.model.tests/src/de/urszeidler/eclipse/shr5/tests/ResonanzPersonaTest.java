@@ -12,12 +12,12 @@ import de.urszeidler.eclipse.shr5.ResonanzPersona;
  * <p>
  * The following features are tested:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz() <em>Resonanz</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff() <em>Angriff</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher() <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall() <em>Firewall</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -76,10 +76,10 @@ public abstract class ResonanzPersonaTest extends TestCase {
     }
 
 	/**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getGeraetestufe()
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe()
      * @generated
      */
 	public void testGetGeraetestufe() {
@@ -89,10 +89,10 @@ public abstract class ResonanzPersonaTest extends TestCase {
     }
 
 	/**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff() <em>Angriff</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}' feature getter.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getAngriff()
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff()
      * @generated
      */
 	public void testGetAngriff() {
@@ -102,10 +102,10 @@ public abstract class ResonanzPersonaTest extends TestCase {
     }
 
 	/**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher() <em>Schleicher</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}' feature getter.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getSchleicher()
+     * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher()
      * @generated
      */
 	public void testGetSchleicher() {
@@ -115,10 +115,10 @@ public abstract class ResonanzPersonaTest extends TestCase {
     }
 
 	/**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getDatenverarbeitung()
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung()
      * @generated
      */
 	public void testGetDatenverarbeitung() {
@@ -128,10 +128,10 @@ public abstract class ResonanzPersonaTest extends TestCase {
     }
 
 	/**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall() <em>Firewall</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}' feature getter.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.ResonanzPersona#getFirewall()
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall()
      * @generated
      */
 	public void testGetFirewall() {

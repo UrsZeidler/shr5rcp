@@ -503,18 +503,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="echos" upperBound="-1"
         eType="#//Echo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResonanzPersona" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ResonanzPersona" abstract="true" interface="true"
+      eSuperTypes="#//ActiveMatixDevice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geraetestufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angriff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schleicher" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datenverarbeitung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" volatile="true" transient="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firewall" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resonanzBasis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -673,4 +664,73 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spezialisierung" eSuperTypes="#//Beschreibbar #//Quelle #//Erlernbar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MatrixDevice" abstract="true" interface="true"
+      eSuperTypes="#//MatixConditionMonitor">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the interface for all passive matix devices."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geraetestufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firewall" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datenverarbeitung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActiveMatixDevice" abstract="true" interface="true"
+      eSuperTypes="#//MatrixDevice">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="All active Matrix defice are defined thou this interface."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angriff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schleicher" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comlink" eSuperTypes="#//AbstraktGegenstand #//MatrixDevice">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This defines the complink."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceRating" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MatixConditionMonitor" abstract="true"
+      interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//Comlink #//ActiveMatixDevice">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This defines the cyberdeck."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="programSlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number probrams the deck can run concuntrly."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributes" lowerBound="4"
+        upperBound="4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contains the attribute ratings."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runningProgramms" upperBound="-1"
+        eType="#//Program"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stroredProgramm" upperBound="-1"
+        eType="#//Program" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//GeldWert #//Beschreibbar #//Quelle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="InterfaceModus">
+    <eLiterals name="augmentedReality"/>
+    <eLiterals name="coldSim" value="1"/>
+    <eLiterals name="hotSim" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoftwareAgent" eSuperTypes="#//Program">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Host" eSuperTypes="#//ActiveMatixDevice #//Beschreibbar">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This defines a host."/>
+    </eAnnotations>
+  </eClassifiers>
 </ecore:EPackage>
