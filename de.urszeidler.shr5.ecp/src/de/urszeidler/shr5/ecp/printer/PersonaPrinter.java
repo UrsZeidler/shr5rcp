@@ -831,7 +831,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.addHeader(new TextPrint(Messages.PersonaPrinter_cost, italicFontData));
 
         int sum = 0;
-        List<EAttribute> orderedAttibutes = ShadowrunTools.getOrderedAttibutes(persona);
+        List<EAttribute> orderedAttibutes = ShadowrunTools.getOrderedBaseAttibutes(persona);
         for (EAttribute eAttribute : orderedAttibutes) {
             Integer min = (Integer)spezies.eGet(ShadowrunTools.base2SpeciesMin(eAttribute));
             printGeneratorAttributeLine(grid, persona, eAttribute, min);
