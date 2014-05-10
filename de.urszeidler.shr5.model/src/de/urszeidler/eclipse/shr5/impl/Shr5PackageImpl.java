@@ -25,7 +25,7 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
 import de.urszeidler.eclipse.shr5.ChrakterLimits;
-import de.urszeidler.eclipse.shr5.Comlink;
+import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Critter;
@@ -783,7 +783,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass comlinkEClass = null;
+    private EClass commlinkEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3939,8 +3939,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getComlink() {
-        return comlinkEClass;
+    public EClass getCommlink() {
+        return commlinkEClass;
     }
 
     /**
@@ -3948,8 +3948,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getComlink_DeviceRating() {
-        return (EAttribute)comlinkEClass.getEStructuralFeatures().get(0);
+    public EAttribute getCommlink_DeviceRating() {
+        return (EAttribute)commlinkEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4686,8 +4686,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(activeMatixDeviceEClass, ACTIVE_MATIX_DEVICE__ANGRIFF);
         createEAttribute(activeMatixDeviceEClass, ACTIVE_MATIX_DEVICE__SCHLEICHER);
 
-        comlinkEClass = createEClass(COMLINK);
-        createEAttribute(comlinkEClass, COMLINK__DEVICE_RATING);
+        commlinkEClass = createEClass(COMMLINK);
+        createEAttribute(commlinkEClass, COMMLINK__DEVICE_RATING);
 
         matixConditionMonitorEClass = createEClass(MATIX_CONDITION_MONITOR);
 
@@ -4882,9 +4882,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         spezialisierungEClass.getESuperTypes().add(this.getErlernbar());
         matrixDeviceEClass.getESuperTypes().add(this.getMatixConditionMonitor());
         activeMatixDeviceEClass.getESuperTypes().add(this.getMatrixDevice());
-        comlinkEClass.getESuperTypes().add(this.getAbstraktGegenstand());
-        comlinkEClass.getESuperTypes().add(this.getMatrixDevice());
-        cyberdeckEClass.getESuperTypes().add(this.getComlink());
+        commlinkEClass.getESuperTypes().add(this.getAbstraktGegenstand());
+        commlinkEClass.getESuperTypes().add(this.getMatrixDevice());
+        cyberdeckEClass.getESuperTypes().add(this.getCommlink());
         cyberdeckEClass.getESuperTypes().add(this.getActiveMatixDevice());
         programEClass.getESuperTypes().add(this.getGeldWert());
         programEClass.getESuperTypes().add(this.getBeschreibbar());
@@ -5312,8 +5312,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getActiveMatixDevice_Angriff(), ecorePackage.getEInt(), "angriff", null, 0, 1, ActiveMatixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getActiveMatixDevice_Schleicher(), ecorePackage.getEInt(), "schleicher", null, 0, 1, ActiveMatixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(comlinkEClass, Comlink.class, "Comlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getComlink_DeviceRating(), ecorePackage.getEInt(), "deviceRating", null, 1, 1, Comlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(commlinkEClass, Commlink.class, "Commlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCommlink_DeviceRating(), ecorePackage.getEInt(), "deviceRating", null, 1, 1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(matixConditionMonitorEClass, MatixConditionMonitor.class, "MatixConditionMonitor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

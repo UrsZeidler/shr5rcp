@@ -419,7 +419,7 @@ public class FahrzeugModifikationItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.FAHRZEUG_MODIFIKATION__FUNKTION,
-                 Shr5Factory.eINSTANCE.createComlink()));
+                 Shr5Factory.eINSTANCE.createCommlink()));
 
         newChildDescriptors.add
             (createChildParameter

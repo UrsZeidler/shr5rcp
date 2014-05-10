@@ -172,7 +172,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.GEIST: return createGeist();
             case Shr5Package.CREDSTICK_TRANSACTION: return createCredstickTransaction();
             case Shr5Package.SPEZIALISIERUNG: return createSpezialisierung();
-            case Shr5Package.COMLINK: return createComlink();
+            case Shr5Package.COMMLINK: return createCommlink();
             case Shr5Package.CYBERDECK: return createCyberdeck();
             case Shr5Package.PROGRAM: return createProgram();
             case Shr5Package.SOFTWARE_AGENT: return createSoftwareAgent();
@@ -807,9 +807,9 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Comlink createComlink() {
-        ComlinkImpl comlink = new ComlinkImpl();
-        return comlink;
+    public Commlink createCommlink() {
+        CommlinkImpl commlink = new CommlinkImpl();
+        return commlink;
     }
 
     /**

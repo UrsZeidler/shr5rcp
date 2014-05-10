@@ -1290,26 +1290,26 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Comlink} instances.
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Commlink} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected ComlinkItemProvider comlinkItemProvider;
+    protected CommlinkItemProvider commlinkItemProvider;
 
     /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Comlink}.
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Commlink}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createComlinkAdapter() {
-        if (comlinkItemProvider == null) {
-            comlinkItemProvider = new ComlinkItemProvider(this);
+    public Adapter createCommlinkAdapter() {
+        if (commlinkItemProvider == null) {
+            commlinkItemProvider = new CommlinkItemProvider(this);
         }
 
-        return comlinkItemProvider;
+        return commlinkItemProvider;
     }
 
     /**
@@ -1556,7 +1556,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (geistItemProvider != null) geistItemProvider.dispose();
         if (credstickTransactionItemProvider != null) credstickTransactionItemProvider.dispose();
         if (spezialisierungItemProvider != null) spezialisierungItemProvider.dispose();
-        if (comlinkItemProvider != null) comlinkItemProvider.dispose();
+        if (commlinkItemProvider != null) commlinkItemProvider.dispose();
         if (cyberdeckItemProvider != null) cyberdeckItemProvider.dispose();
         if (programItemProvider != null) programItemProvider.dispose();
         if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();

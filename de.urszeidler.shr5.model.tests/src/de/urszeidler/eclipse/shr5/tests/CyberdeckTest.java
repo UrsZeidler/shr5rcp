@@ -21,7 +21,7 @@ import junit.textui.TestRunner;
  * </p>
  * @generated
  */
-public class CyberdeckTest extends ComlinkTest {
+public class CyberdeckTest extends CommlinkTest {
 
     /**
      * <!-- begin-user-doc -->

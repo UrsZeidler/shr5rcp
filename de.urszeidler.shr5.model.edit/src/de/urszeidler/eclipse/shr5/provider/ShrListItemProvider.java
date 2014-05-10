@@ -501,7 +501,7 @@ public class ShrListItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                 Shr5Factory.eINSTANCE.createComlink()));
+                 Shr5Factory.eINSTANCE.createCommlink()));
 
         newChildDescriptors.add
             (createChildParameter

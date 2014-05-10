@@ -3,7 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.Comlink;
+import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 import junit.textui.TestRunner;
@@ -22,7 +22,7 @@ import junit.textui.TestRunner;
  * </p>
  * @generated
  */
-public class ComlinkTest extends AbstraktGegenstandTest {
+public class CommlinkTest extends AbstraktGegenstandTest {
 
     /**
      * <!-- begin-user-doc -->
@@ -30,28 +30,28 @@ public class ComlinkTest extends AbstraktGegenstandTest {
      * @generated
      */
     public static void main(String[] args) {
-        TestRunner.run(ComlinkTest.class);
+        TestRunner.run(CommlinkTest.class);
     }
 
     /**
-     * Constructs a new Comlink test case with the given name.
+     * Constructs a new Commlink test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public ComlinkTest(String name) {
+    public CommlinkTest(String name) {
         super(name);
     }
 
     /**
-     * Returns the fixture for this Comlink test case.
+     * Returns the fixture for this Commlink test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    protected Comlink getFixture() {
-        return (Comlink)fixture;
+    protected Commlink getFixture() {
+        return (Commlink)fixture;
     }
 
     /**
@@ -63,7 +63,7 @@ public class ComlinkTest extends AbstraktGegenstandTest {
      */
     @Override
     protected void setUp() throws Exception {
-        setFixture(Shr5Factory.eINSTANCE.createComlink());
+        setFixture(Shr5Factory.eINSTANCE.createCommlink());
         getFixture().setDeviceRating(2);
     }
 

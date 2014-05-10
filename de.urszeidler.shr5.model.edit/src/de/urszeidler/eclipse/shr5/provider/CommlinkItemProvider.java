@@ -4,7 +4,7 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
-import de.urszeidler.eclipse.shr5.Comlink;
+import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 import java.util.Collection;
@@ -24,12 +24,12 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Comlink} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Commlink} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComlinkItemProvider
+public class CommlinkItemProvider
     extends AbstraktGegenstandItemProvider
     implements
         IEditingDomainItemProvider,
@@ -43,7 +43,7 @@ public class ComlinkItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public ComlinkItemProvider(AdapterFactory adapterFactory) {
+    public CommlinkItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -143,9 +143,9 @@ public class ComlinkItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Comlink_deviceRating_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Comlink_deviceRating_feature", "_UI_Comlink_type"),
-                 Shr5Package.Literals.COMLINK__DEVICE_RATING,
+                 getString("_UI_Commlink_deviceRating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Commlink_deviceRating_feature", "_UI_Commlink_type"),
+                 Shr5Package.Literals.COMMLINK__DEVICE_RATING,
                  true,
                  false,
                  false,
@@ -155,14 +155,14 @@ public class ComlinkItemProvider
     }
 
     /**
-     * This returns Comlink.gif.
+     * This returns Commlink.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Comlink"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Commlink"));
     }
 
     /**
@@ -173,10 +173,10 @@ public class ComlinkItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((Comlink)object).getName();
+        String label = ((Commlink)object).getName();
         return label == null || label.length() == 0 ?
-            getString("_UI_Comlink_type") :
-            getString("_UI_Comlink_type") + " " + label;
+            getString("_UI_Commlink_type") :
+            getString("_UI_Commlink_type") + " " + label;
     }
 
     /**
@@ -190,11 +190,11 @@ public class ComlinkItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(Comlink.class)) {
-            case Shr5Package.COMLINK__GERAETESTUFE:
-            case Shr5Package.COMLINK__FIREWALL:
-            case Shr5Package.COMLINK__DATENVERARBEITUNG:
-            case Shr5Package.COMLINK__DEVICE_RATING:
+        switch (notification.getFeatureID(Commlink.class)) {
+            case Shr5Package.COMMLINK__GERAETESTUFE:
+            case Shr5Package.COMMLINK__FIREWALL:
+            case Shr5Package.COMMLINK__DATENVERARBEITUNG:
+            case Shr5Package.COMMLINK__DEVICE_RATING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EAttribute;
  * @model
  * @generated
  */
-public interface Cyberdeck extends Comlink, ActiveMatixDevice {
+public interface Cyberdeck extends Commlink, ActiveMatixDevice {
     /**
      * Returns the value of the '<em><b>Program Slots</b></em>' attribute.
      * <!-- begin-user-doc -->

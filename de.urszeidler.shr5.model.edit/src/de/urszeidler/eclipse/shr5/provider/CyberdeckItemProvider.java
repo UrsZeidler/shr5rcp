@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class CyberdeckItemProvider
-    extends ComlinkItemProvider
+    extends CommlinkItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,

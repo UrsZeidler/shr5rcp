@@ -686,7 +686,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="schleicher" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Comlink" eSuperTypes="#//AbstraktGegenstand #//MatrixDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="Commlink" eSuperTypes="#//AbstraktGegenstand #//MatrixDevice">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This defines the complink."/>
     </eAnnotations>
@@ -695,7 +695,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MatixConditionMonitor" abstract="true"
       interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//Comlink #//ActiveMatixDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//Commlink #//ActiveMatixDevice">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This defines the cyberdeck."/>
     </eAnnotations>

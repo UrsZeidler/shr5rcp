@@ -499,13 +499,13 @@ public interface Shr5Factory extends EFactory {
     Spezialisierung createSpezialisierung();
 
     /**
-     * Returns a new object of class '<em>Comlink</em>'.
+     * Returns a new object of class '<em>Commlink</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Comlink</em>'.
+     * @return a new object of class '<em>Commlink</em>'.
      * @generated
      */
-    Comlink createComlink();
+    Commlink createCommlink();
 
     /**
      * Returns a new object of class '<em>Cyberdeck</em>'.

@@ -13220,14 +13220,14 @@ public interface Shr5Package extends EPackage {
     int SPEZIALISIERUNG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl <em>Comlink</em>}' class.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl <em>Commlink</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.ComlinkImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getComlink()
+     * @see de.urszeidler.eclipse.shr5.impl.CommlinkImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCommlink()
      * @generated
      */
-    int COMLINK = 92;
+    int COMMLINK = 92;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -13236,7 +13236,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+    int COMMLINK__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13245,7 +13245,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+    int COMMLINK__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -13254,7 +13254,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+    int COMMLINK__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -13263,7 +13263,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__WERT = ABSTRAKT_GEGENSTAND__WERT;
+    int COMMLINK__WERT = ABSTRAKT_GEGENSTAND__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -13272,7 +13272,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+    int COMMLINK__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -13281,7 +13281,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+    int COMMLINK__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -13290,7 +13290,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+    int COMMLINK__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -13299,7 +13299,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+    int COMMLINK__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13308,7 +13308,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__NAME = ABSTRAKT_GEGENSTAND__NAME;
+    int COMMLINK__NAME = ABSTRAKT_GEGENSTAND__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -13317,7 +13317,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__MODS = ABSTRAKT_GEGENSTAND__MODS;
+    int COMMLINK__MODS = ABSTRAKT_GEGENSTAND__MODS;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -13326,7 +13326,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+    int COMMLINK__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -13335,7 +13335,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__GERAETESTUFE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+    int COMMLINK__GERAETESTUFE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -13344,7 +13344,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__FIREWALL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+    int COMMLINK__FIREWALL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -13353,7 +13353,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__DATENVERARBEITUNG = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+    int COMMLINK__DATENVERARBEITUNG = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Device Rating</b></em>' attribute.
@@ -13362,25 +13362,25 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMLINK__DEVICE_RATING = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
+    int COMMLINK__DEVICE_RATING = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
 
     /**
-     * The number of structural features of the '<em>Comlink</em>' class.
+     * The number of structural features of the '<em>Commlink</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMLINK_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
+    int COMMLINK_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
 
     /**
-     * The number of operations of the '<em>Comlink</em>' class.
+     * The number of operations of the '<em>Commlink</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMLINK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+    int COMMLINK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl <em>Cyberdeck</em>}' class.
@@ -13399,7 +13399,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PARENT_ID = COMLINK__PARENT_ID;
+    int CYBERDECK__PARENT_ID = COMMLINK__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13408,7 +13408,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PAGE = COMLINK__PAGE;
+    int CYBERDECK__PAGE = COMMLINK__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -13417,7 +13417,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__SRC_BOOK = COMLINK__SRC_BOOK;
+    int CYBERDECK__SRC_BOOK = COMMLINK__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -13426,7 +13426,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__WERT = COMLINK__WERT;
+    int CYBERDECK__WERT = COMMLINK__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -13435,7 +13435,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__VERFUEGBARKEIT = COMLINK__VERFUEGBARKEIT;
+    int CYBERDECK__VERFUEGBARKEIT = COMMLINK__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -13444,7 +13444,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__WERT_VALUE = COMLINK__WERT_VALUE;
+    int CYBERDECK__WERT_VALUE = COMMLINK__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -13453,7 +13453,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__BESCHREIBUNG = COMLINK__BESCHREIBUNG;
+    int CYBERDECK__BESCHREIBUNG = COMMLINK__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -13462,7 +13462,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__IMAGE = COMLINK__IMAGE;
+    int CYBERDECK__IMAGE = COMMLINK__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13471,7 +13471,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__NAME = COMLINK__NAME;
+    int CYBERDECK__NAME = COMMLINK__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -13480,7 +13480,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__MODS = COMLINK__MODS;
+    int CYBERDECK__MODS = COMMLINK__MODS;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -13489,7 +13489,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__FERTIGKEIT = COMLINK__FERTIGKEIT;
+    int CYBERDECK__FERTIGKEIT = COMMLINK__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -13498,7 +13498,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__GERAETESTUFE = COMLINK__GERAETESTUFE;
+    int CYBERDECK__GERAETESTUFE = COMMLINK__GERAETESTUFE;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -13507,7 +13507,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__FIREWALL = COMLINK__FIREWALL;
+    int CYBERDECK__FIREWALL = COMMLINK__FIREWALL;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -13516,7 +13516,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__DATENVERARBEITUNG = COMLINK__DATENVERARBEITUNG;
+    int CYBERDECK__DATENVERARBEITUNG = COMMLINK__DATENVERARBEITUNG;
 
     /**
      * The feature id for the '<em><b>Device Rating</b></em>' attribute.
@@ -13525,7 +13525,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__DEVICE_RATING = COMLINK__DEVICE_RATING;
+    int CYBERDECK__DEVICE_RATING = COMMLINK__DEVICE_RATING;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
@@ -13534,7 +13534,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ANGRIFF = COMLINK_FEATURE_COUNT + 0;
+    int CYBERDECK__ANGRIFF = COMMLINK_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
@@ -13543,7 +13543,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__SCHLEICHER = COMLINK_FEATURE_COUNT + 1;
+    int CYBERDECK__SCHLEICHER = COMMLINK_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Program Slots</b></em>' attribute.
@@ -13552,7 +13552,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PROGRAM_SLOTS = COMLINK_FEATURE_COUNT + 2;
+    int CYBERDECK__PROGRAM_SLOTS = COMMLINK_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Running Programms</b></em>' reference list.
@@ -13561,7 +13561,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__RUNNING_PROGRAMMS = COMLINK_FEATURE_COUNT + 3;
+    int CYBERDECK__RUNNING_PROGRAMMS = COMMLINK_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
@@ -13570,7 +13570,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__STRORED_PROGRAMM = COMLINK_FEATURE_COUNT + 4;
+    int CYBERDECK__STRORED_PROGRAMM = COMMLINK_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Attribute1</b></em>' attribute.
@@ -13579,7 +13579,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE1 = COMLINK_FEATURE_COUNT + 5;
+    int CYBERDECK__ATTRIBUTE1 = COMMLINK_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Attribute2</b></em>' attribute.
@@ -13588,7 +13588,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE2 = COMLINK_FEATURE_COUNT + 6;
+    int CYBERDECK__ATTRIBUTE2 = COMMLINK_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Attribute3</b></em>' attribute.
@@ -13597,7 +13597,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE3 = COMLINK_FEATURE_COUNT + 7;
+    int CYBERDECK__ATTRIBUTE3 = COMMLINK_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Attribute4</b></em>' attribute.
@@ -13606,7 +13606,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE4 = COMLINK_FEATURE_COUNT + 8;
+    int CYBERDECK__ATTRIBUTE4 = COMMLINK_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Configuration</b></em>' reference list.
@@ -13615,7 +13615,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__CONFIGURATION = COMLINK_FEATURE_COUNT + 9;
+    int CYBERDECK__CONFIGURATION = COMMLINK_FEATURE_COUNT + 9;
 
     /**
      * The number of structural features of the '<em>Cyberdeck</em>' class.
@@ -13624,7 +13624,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK_FEATURE_COUNT = COMLINK_FEATURE_COUNT + 10;
+    int CYBERDECK_FEATURE_COUNT = COMMLINK_FEATURE_COUNT + 10;
 
     /**
      * The number of operations of the '<em>Cyberdeck</em>' class.
@@ -13633,7 +13633,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK_OPERATION_COUNT = COMLINK_OPERATION_COUNT + 0;
+    int CYBERDECK_OPERATION_COUNT = COMMLINK_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl <em>Program</em>}' class.
@@ -17647,25 +17647,25 @@ public interface Shr5Package extends EPackage {
     EAttribute getActiveMatixDevice_Schleicher();
 
     /**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Comlink <em>Comlink</em>}'.
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Commlink <em>Commlink</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Comlink</em>'.
-     * @see de.urszeidler.eclipse.shr5.Comlink
+     * @return the meta object for class '<em>Commlink</em>'.
+     * @see de.urszeidler.eclipse.shr5.Commlink
      * @generated
      */
-    EClass getComlink();
+    EClass getCommlink();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Comlink#getDeviceRating <em>Device Rating</em>}'.
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Commlink#getDeviceRating <em>Device Rating</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Device Rating</em>'.
-     * @see de.urszeidler.eclipse.shr5.Comlink#getDeviceRating()
-     * @see #getComlink()
+     * @see de.urszeidler.eclipse.shr5.Commlink#getDeviceRating()
+     * @see #getCommlink()
      * @generated
      */
-    EAttribute getComlink_DeviceRating();
+    EAttribute getCommlink_DeviceRating();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}'.
@@ -20815,14 +20815,14 @@ public interface Shr5Package extends EPackage {
         EAttribute ACTIVE_MATIX_DEVICE__SCHLEICHER = eINSTANCE.getActiveMatixDevice_Schleicher();
 
         /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl <em>Comlink</em>}' class.
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl <em>Commlink</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.impl.ComlinkImpl
-         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getComlink()
+         * @see de.urszeidler.eclipse.shr5.impl.CommlinkImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCommlink()
          * @generated
          */
-        EClass COMLINK = eINSTANCE.getComlink();
+        EClass COMMLINK = eINSTANCE.getCommlink();
 
         /**
          * The meta object literal for the '<em><b>Device Rating</b></em>' attribute feature.
@@ -20830,7 +20830,7 @@ public interface Shr5Package extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute COMLINK__DEVICE_RATING = eINSTANCE.getComlink_DeviceRating();
+        EAttribute COMMLINK__DEVICE_RATING = eINSTANCE.getCommlink_DeviceRating();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}' class.

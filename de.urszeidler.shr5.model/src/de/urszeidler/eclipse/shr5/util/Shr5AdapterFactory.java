@@ -515,8 +515,8 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createActiveMatixDeviceAdapter();
             }
             @Override
-            public Adapter caseComlink(Comlink object) {
-                return createComlinkAdapter();
+            public Adapter caseCommlink(Commlink object) {
+                return createCommlinkAdapter();
             }
             @Override
             public Adapter caseMatixConditionMonitor(MatixConditionMonitor object) {
@@ -1847,16 +1847,16 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Comlink <em>Comlink</em>}'.
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Commlink <em>Commlink</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5.Comlink
+     * @see de.urszeidler.eclipse.shr5.Commlink
      * @generated
      */
-    public Adapter createComlinkAdapter() {
+    public Adapter createCommlinkAdapter() {
         return null;
     }
 

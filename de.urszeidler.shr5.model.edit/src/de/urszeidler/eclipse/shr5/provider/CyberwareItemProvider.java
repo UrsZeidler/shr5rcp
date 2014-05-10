@@ -296,7 +296,7 @@ public class CyberwareItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.CYBERWARE__EINBAU,
-                 Shr5Factory.eINSTANCE.createComlink()));
+                 Shr5Factory.eINSTANCE.createCommlink()));
 
         newChildDescriptors.add
             (createChildParameter

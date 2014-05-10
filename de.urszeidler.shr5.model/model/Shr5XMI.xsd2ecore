@@ -641,10 +641,10 @@
     <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDElementDeclaration=90"/>
     <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDComplexTypeDefinition=91"/>
     <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDElementDeclaration=91"/>
-    <nested inputs="shr5.ecore#//Comlink" outputs="Shr5XMI.xsd#//Comlink;XSDComplexTypeDefinition=92">
-      <nested inputs="shr5.ecore#//Comlink/deviceRating" outputs="Shr5XMI.xsd#//Comlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92">
+      <nested inputs="shr5.ecore#//Commlink/deviceRating" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
     </nested>
-    <nested inputs="shr5.ecore#//Comlink" outputs="Shr5XMI.xsd#//Comlink;XSDElementDeclaration=92"/>
+    <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDElementDeclaration=92"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDComplexTypeDefinition=93"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDElementDeclaration=93"/>
     <nested inputs="shr5.ecore#//Cyberdeck" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94">

@@ -1099,18 +1099,18 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5Package.COMLINK: {
-                Comlink comlink = (Comlink)theEObject;
-                T result = caseComlink(comlink);
-                if (result == null) result = caseAbstraktGegenstand(comlink);
-                if (result == null) result = caseMatrixDevice(comlink);
-                if (result == null) result = caseQuelle(comlink);
-                if (result == null) result = caseGeldWert(comlink);
-                if (result == null) result = caseBeschreibbar(comlink);
-                if (result == null) result = caseModifizierbar(comlink);
-                if (result == null) result = caseAnwendbar(comlink);
-                if (result == null) result = caseMatixConditionMonitor(comlink);
-                if (result == null) result = caseIdentifiable(comlink);
+            case Shr5Package.COMMLINK: {
+                Commlink commlink = (Commlink)theEObject;
+                T result = caseCommlink(commlink);
+                if (result == null) result = caseAbstraktGegenstand(commlink);
+                if (result == null) result = caseMatrixDevice(commlink);
+                if (result == null) result = caseQuelle(commlink);
+                if (result == null) result = caseGeldWert(commlink);
+                if (result == null) result = caseBeschreibbar(commlink);
+                if (result == null) result = caseModifizierbar(commlink);
+                if (result == null) result = caseAnwendbar(commlink);
+                if (result == null) result = caseMatixConditionMonitor(commlink);
+                if (result == null) result = caseIdentifiable(commlink);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1123,7 +1123,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.CYBERDECK: {
                 Cyberdeck cyberdeck = (Cyberdeck)theEObject;
                 T result = caseCyberdeck(cyberdeck);
-                if (result == null) result = caseComlink(cyberdeck);
+                if (result == null) result = caseCommlink(cyberdeck);
                 if (result == null) result = caseActiveMatixDevice(cyberdeck);
                 if (result == null) result = caseAbstraktGegenstand(cyberdeck);
                 if (result == null) result = caseMatrixDevice(cyberdeck);
@@ -2553,17 +2553,17 @@ public class Shr5Switch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Comlink</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Commlink</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Comlink</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Commlink</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseComlink(Comlink object) {
+    public T caseCommlink(Commlink object) {
         return null;
     }
 

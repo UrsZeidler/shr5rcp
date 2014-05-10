@@ -1361,7 +1361,7 @@
       <xsd:documentation>All active Matrix defice are defined thou this interface.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:complexType name="Comlink">
+  <xsd:complexType name="Commlink">
     <xsd:annotation>
       <xsd:documentation>This defines the complink.</xsd:documentation>
     </xsd:annotation>
@@ -1371,7 +1371,7 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="Comlink" type="shr5:Comlink">
+  <xsd:element name="Commlink" type="shr5:Commlink">
     <xsd:annotation>
       <xsd:documentation>This defines the complink.</xsd:documentation>
     </xsd:annotation>
@@ -1389,7 +1389,7 @@
       <xsd:documentation>This defines the cyberdeck.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:Comlink">
+      <xsd:extension base="shr5:Commlink">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="runningProgramms" type="shr5:Program"/>
           <xsd:element name="stroredProgramm" type="shr5:Program"/>

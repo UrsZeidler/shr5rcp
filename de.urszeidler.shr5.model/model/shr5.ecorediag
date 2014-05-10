@@ -3664,7 +3664,7 @@
       <children xmi:type="notation:Node" xmi:id="_XKopINhHEeOz3qWt8pJlAw" type="4001"/>
       <children xmi:type="notation:Node" xmi:id="_XKopIdhHEeOz3qWt8pJlAw" type="5001">
         <children xmi:type="notation:Node" xmi:id="_8m8cINhTEeOz3qWt8pJlAw" type="2001">
-          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Comlink/deviceRating"/>
+          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Commlink/deviceRating"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_8m8cIdhTEeOz3qWt8pJlAw"/>
         </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_XKopIthHEeOz3qWt8pJlAw"/>
@@ -3677,7 +3677,7 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_XKopKNhHEeOz3qWt8pJlAw"/>
       </children>
       <styles xmi:type="notation:ShapeStyle" xmi:id="_XKoCEdhHEeOz3qWt8pJlAw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-      <element xmi:type="ecore:EClass" href="shr5.ecore#//Comlink"/>
+      <element xmi:type="ecore:EClass" href="shr5.ecore#//Commlink"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XKoCEthHEeOz3qWt8pJlAw" x="-385" y="10"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_u5uUoNhHEeOz3qWt8pJlAw" type="1001">
