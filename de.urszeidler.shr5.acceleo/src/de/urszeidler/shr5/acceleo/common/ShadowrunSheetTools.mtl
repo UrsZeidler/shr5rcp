@@ -3,6 +3,7 @@
  * The documentation of the module.
  */]
 [module ShadowrunSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 
 [**
  * The documentation of the query
@@ -11,12 +12,41 @@
 	= invoke('de.urszeidler.shr5.acceleo.sheets.ShadowrunSheetTools', 'getObjectText(java.lang.Object)', Sequence{anOclAny})
 /]
 
+[query public sumAttributes(persona : AbstraktPersona) : Integer = 
+getOrderedBasedAttibutesForPersona(persona)
+	->collect(ea|persona.eGet(ea).oclAsType(Integer)- persona.spezies.eGet(ea.base2SpeciesMin()).oclAsType(Integer)      )->sum() 
+/]
+
+[query public sumSkillGroups(persona : AbstraktPersona) : Integer = 
+persona.fertigkeitsGruppen ->collect(pfg| pfg.stufe    )->sum() 
+/]
+
+[query public sumActiveSkills(persona : AbstraktPersona) : Integer = 
+persona.fertigkeiten->select(pf | not pf.fertigkeit.oclIsTypeOf(Wissensfertigkeit)) ->collect(pfg| pfg.stufe    )->sum() 
+/]
+
+[query public sumKnowSkills(persona : AbstraktPersona) : Integer = 
+persona.fertigkeiten->select(pf | pf.fertigkeit.oclIsTypeOf(Wissensfertigkeit)) ->collect(pfg| pfg.stufe    )->sum() 
+/]
+
+[query public sumQuallitiyKarma(persona : KoerperPersona) : Integer = 
+persona.eigenschaften->collect(pfg| pfg.karmaKosten    )->sum() 
+/]
+
+[query public sumQuallitiyKarma(pe : OrderedSet(PersonaEigenschaft)) : Integer = 
+pe->collect(pfg| pfg.karmaKosten    )->sum() 
+/]
+
 [**
  * Simple template to create engougth space. 
 */]
-[template public printTextPlusSpace(text : String,emtpty :String )]
-[text/][for (it : String | emtpty.substring(text.size()).tokenize(' ',true))] [/for]
-[/template]
+[template public printTextPlusSpace(text : String,emtpty :String )
+{ rest : Integer = emtpty.size() -  text.size() ;
+}]
+[if (rest>0)]
+[text.concat(emtpty.substring(text.size()))  /][else]
+[text/][/if][/template]
+
 
 
 [query public vehicleHanding (aFahrzeug : Fahrzeug) : String = 

@@ -4,6 +4,7 @@
 [import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
 [import de::urszeidler::shr5::acceleo::sheets::boardCharacterSheet/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
 
 [template public boardShr5GeneratorSheetManagedCharacter(aShr5Generator : Shr5Generator)]	
 	[comment @main /]
@@ -15,19 +16,72 @@
 [/template]
 
 
-[template public generateShr5GeneratorSheet(aShr5Generator : Shr5Generator) {aManagedCharacter : ManagedCharacter = aShr5Generator.character;}]
+[template public generateShr5GeneratorSheet(aShr5Generator : Shr5Generator) 
+{aManagedCharacter : ManagedCharacter = aShr5Generator.character;
+empty :String =  '.........................' ;
+empty1 :String = '....' ;
+}]
 [printGeneratorReport(aShr5Generator)/]
+
+[printAttributeSum(aShr5Generator,empty,empty1)/]
+
+Skillgroup sum     : [sumSkillGroups(aManagedCharacter.persona)/]
+Skill      sum     : [sumActiveSkills(aManagedCharacter.persona)/]
+Knowlege skill/sum : [calcKnownlegeSkillPoints(aManagedCharacter, aShr5Generator.shr5Generator) /]/[sumKnowSkills(aManagedCharacter.persona)/]
+Quallity sum       : [sumQuallitiyKarma(aManagedCharacter.persona.oclAsType(KoerperPersona))/]
+Connections        : [calcConnectionsPoints(aManagedCharacter, aShr5Generator.shr5Generator)/]/[calcConnectionsSpend(aManagedCharacter)/]
+Resources spend    : [calcResourcesSpend(aManagedCharacter)/]
+
+[printKarmaBase(aShr5Generator)/]
 
 [printBoardCharacterReport(aManagedCharacter)/]
 [/template]
 
+[template public printKarmaBase (aShr5Generator : Shr5Generator) 
+{aManagedCharacter : ManagedCharacter = aShr5Generator.character;
+a : CharacterAdvancementSystem = aShr5Generator.shr5Generator.characterAdvancements
+}]
+['Calculated Karma Cost'.italicText()/]
+Karma spend by attributes   : [calcKarmaSpendByAttributes(aManagedCharacter, a)/]
+Karma spend by skillgroups  : [calcKarmaSpendBySkillGroups(aManagedCharacter, a)/]
+Karma spend by skills       : [calcKarmaSpendBySkills(aManagedCharacter, a)/]
+Karma spend by specalism    : [calcKarmaSpendBySpecalism(aManagedCharacter, a)/]
+Karma spend by resourcen    : [calcKarmaSpendByResources(aShr5Generator)/]
+Karma spend by quallities   : [calcKarmaSpendByQuallities(aManagedCharacter, a)/]
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+Karma spend by spells       : [calcKarmaSpendBySpellsOrForms(aManagedCharacter, a)/]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(Technomancer) )]
+Karma spend by complex forms: [calcKarmaSpendBySpellsOrForms(aManagedCharacter, a)/]
+[/if]
+Karma spend by connections  : [calcKarmaSpendByConnections(aManagedCharacter)/]
+
+karma worth                 : [calcCompleteKaramaSpend(aManagedCharacter, aShr5Generator.shr5Generator.characterAdvancements)/]
+
+[/template]
+
+[template public printAttributeSum (aShr5Generator : Shr5Generator,emtpty :String,empty1 :String)
+{aManagedCharacter : ManagedCharacter = aShr5Generator.character;
+species : Spezies =  aShr5Generator.character.persona.spezies ;
+persona : AbstraktPersona = aShr5Generator.character.persona ;} ]
+['Attribute points'.titelText()/]
+[printTextPlusSpace('      ', emtpty)/][printTextPlusSpace('rtg', empty1) /]pt
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+[let attributeName : String = getText(base2Calced(ea))]
+[printTextPlusSpace(attributeName, emtpty)/][printTextPlusSpace(persona.eGet(ea).toString(), empty1) /][persona.eGet(ea).oclAsType(Integer)- species.eGet(ea.base2SpeciesMin()).oclAsType(Integer)/]  
+[/let]
+[/for]
+
+[printTextPlusSpace('sum', emtpty)/][printTextPlusSpace('.', empty1) /][sumAttributes(aManagedCharacter.persona)/]
+[/template]
+
 [template private printGeneratorValues(aShr5Generator : Shr5Generator){aManagedCharacter : ManagedCharacter = aShr5Generator.character;}]
-Generator system 	  [getText(aShr5Generator.generator)/] 	Karma to spend   [aShr5Generator.shr5Generator.karmaPoints  /] 
+Generator system 	  [getText(aShr5Generator.generator)/] 	
+Karma to spend   	  [aShr5Generator.shr5Generator.karmaPoints  /] 
 Karma to resource 	  [aShr5Generator.karmaToResource/]
 Resources complete 	  [aShr5Generator.resourcen.resource + calcKarmaToResources(aShr5Generator, aShr5Generator.shr5Generator)  /]
 Connections points 	  [calcConnectionsPoints(aManagedCharacter, aShr5Generator.shr5Generator) /]
 Knowledge skills 	  [calcKnownlegeSkillPoints(aManagedCharacter, aShr5Generator.shr5Generator) /]
-karma worth 		  [calcCompleteKaramaSpend(aManagedCharacter, aShr5Generator.shr5Generator.characterAdvancements)/]
 
 Start Karma			  [aShr5Generator.startKarma /]
 Start Resources		  [aShr5Generator.startResources /]
@@ -37,7 +91,7 @@ Start Resources		  [aShr5Generator.startResources /]
  * Print the chosen prorities.
 */]
 [template public printGeneratorReport(aShr5Generator : Shr5Generator )]
-[ '[' /]b[']'/]Priorities[ '[' /]/b[']'/]
+['Priorities'.titelText()/]
 [getText(aShr5Generator.attribute)/]
 [getText(aShr5Generator.skills)/]
 [getText(aShr5Generator.metaType)/]

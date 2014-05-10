@@ -6,8 +6,10 @@
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
 [import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
 [import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
 
 [**
@@ -16,64 +18,89 @@
  */]
 [template public generateCharacterSheet(aManagedCharacter : ManagedCharacter)]
 [comment @main/]
-[file (aManagedCharacter.persona.name+'.txt', false, 'UTF-8')]
+[file (aManagedCharacter.persona.name+'BB.txt', false, 'UTF-8')]
 [printBoardCharacterReport(aManagedCharacter)/]
 [/file]
 [/template]
 
+
+
 [**
- * Print the chracter as a board txt.
+ * Print the chracter as a BB board txt.
+ * 
 */]
-[template public printBoardCharacterReport(aManagedCharacter : ManagedCharacter)]
+[template public printBoardCharacterReport(aManagedCharacter : ManagedCharacter)
+{ empty :String =  '.........................' ;
+  empty1 :String =  '....................' ;
+}]
 [printBasicCharacterData(aManagedCharacter)/]
-[printPersonaBasic(aManagedCharacter.persona)/]
+[printPersonaBasic(aManagedCharacter,empty)/]
+
+[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen,empty)/]
+
+[printActiveSkills(aManagedCharacter.persona.fertigkeiten,empty)/]
+
+[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten,empty)/]
 
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
 [let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
-[printSpells(z,'en')/]
+[printSpells(z,'',empty1)/]
 [/let]
 [/if]
 [if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
 [printKiPowers( aManagedCharacter.persona.oclAsType(KiAdept).kikraft)/]
 [/if]
-
-[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen)/]
-
-[printActiveSkills(aManagedCharacter.persona.fertigkeiten)/]
-
-[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
+[if (aManagedCharacter.persona.oclIsKindOf(Technomancer))]
+[printComplexForms( aManagedCharacter.persona.oclAsType(Technomancer).complexForms )/]
+[/if]
 
 [if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
 [let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
-[printQualities(kp.eigenschaften)/]
-[printAugmentations(kp.koerperMods)/]
+[printQualities(kp.eigenschaften, empty)/]
+[printAugmentations(kp.koerperMods, empty)/]
 [/let]
 [/if]
 
-[printGear(aManagedCharacter.inventar->asSequence())/]
+[printGear(aManagedCharacter.inventar->asSequence(),empty)/]
 
-[printContracts(aManagedCharacter.contracts->asSequence())/]
+[printContracts(aManagedCharacter.contracts->asSequence(),empty)/]
 
-[printConnections(aManagedCharacter.connections)/]
+[printConnections(aManagedCharacter.connections,empty)/]
 
-[printVehicles(aManagedCharacter.vehicels)/]
+[printVehicles(aManagedCharacter.vehicels,empty)/]
 
 [printAdvacements(aManagedCharacter.changes)/]
 
 [/template]
 
-[template public printPersonaBasic(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
-['['/]b[']'/]Attributes:[ '[' /]/b[']'/]
-[printAttributes(persona)/]
-[printTextPlusSpace('Essence', emtpty)/] [   (persona.essenz)/100  /]
-[printTextPlusSpace('Initiative', emtpty)/] [persona.initative/]+[persona.initativWuerfel/]d6
-[printTextPlusSpace('Condition', emtpty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
-[printTextPlusSpace('Armor', emtpty)/] [persona.oclAsType(KoerperPersona).panzer/]
-[printTextPlusSpace('Composure', emtpty)/] [persona.willenskraft + persona.charisma  /]
-[printTextPlusSpace('Judge Intentions', emtpty)/] [persona.intuition + persona.charisma  /]
-[printTextPlusSpace('Memory', emtpty)/] [persona.willenskraft + persona.logik  /]
-[printTextPlusSpace('Lifting/Carrying', emtpty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
-[printTextPlusSpace('Movement', emtpty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
+[template public printComplexForms (pcf : OrderedSet(PersonaKomplexForm)) ? (not pcf->isEmpty()) ]
+['Complex Forms'.titelText()/]
+[for (it : PersonaKomplexForm | pcf)]
+[it.form.name/]
+[/for]
+[/template]
+
+[template public printPersonaBasic(aManagedCharacter : ManagedCharacter,empty :String)
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+['Attributes'.titelText()/]
+[printAttributes(persona,empty)/]
+[printTextPlusSpace('Essence', empty)/] [   (persona.essenz)/100  /]
+[printTextPlusSpace('Initiative', empty)/] [persona.initative/]+[persona.initativWuerfel/]d6
+[if(persona.oclIsKindOf(AstraleProjektion))]
+[let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
+[printTextPlusSpace('Astral Ini', empty)/] [ap.astraleInitative/]+[ap.astraleInitativWuerfel/]d6
+[/let][/if]
+[if (aManagedCharacter.hasMatrixInitative())]
+[printTextPlusSpace('Matrix Ini cold', empty)/] [aManagedCharacter.getMatrixInitative()/]+3d6
+[printTextPlusSpace('Matrix Ini hot', empty)/] [aManagedCharacter.getMatrixInitative()/]+4d6
+[/if]
+[printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
+[printTextPlusSpace('Armor', empty)/] [persona.oclAsType(KoerperPersona).panzer/]
+[printTextPlusSpace('Composure', empty)/] [persona.willenskraft + persona.charisma  /]
+[printTextPlusSpace('Judge Intentions', empty)/] [persona.intuition + persona.charisma  /]
+[printTextPlusSpace('Memory', empty)/] [persona.willenskraft + persona.logik  /]
+[printTextPlusSpace('Lifting/Carrying', empty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
+[printTextPlusSpace('Movement', empty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
 
 Limits
 Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclAsType(KoerperPersona).geistig/] / Social [persona.oclAsType(KoerperPersona).sozial/]
@@ -82,28 +109,30 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 [**
  * Print the qualities
 */]
-[template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { emtpty :String = '                                             ' ;}]
-[ '[' /]b[']'/]Karma:[ '[' /]/b[']'/]
+[template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { empty :String = '                                             ' ;}]
+['Karma'.titelText()/]
 [for (ag : Changes | gears)]
-[ printTextPlusSpace(getText(ag),emtpty)  /] [ag.karmaCost/]
+[ printTextPlusSpace(ag.date.getText()+' '+  getText(ag),empty)  /] [ag.karmaCost/]
 [/for]
 [/template]
 
 [**
  * Print the qualities
 */]
-[template public printQualities(gears : OrderedSet(PersonaEigenschaft)) ? (not gears->isEmpty())]
-[ '[' /]b[']'/]Qualities:[ '[' /]/b[']'/]
+[template public printQualities(gears : OrderedSet(PersonaEigenschaft),empty :String) ? (not gears->isEmpty())]
+['Qualities'.titelText()/]
 [for (ag : PersonaEigenschaft | gears)]
-[ag.name  /]
+[printTextPlusSpace(ag.name,empty)/][ag.karmaKosten/]
 [/for]
+
+[printTextPlusSpace('sum :', empty)/][sumQuallitiyKarma(gears)/]
 [/template]
 
 [**
- * Print the qualities
+ * Print the kipowers
 */]
 [template public printKiPowers(gears : OrderedSet(KiKraft)) ? (not gears->isEmpty())]
-[ '[' /]b[']'/]KiPowers :[ '[' /]/b[']'/]
+['KiPowers'.titelText()/]
 [for (ag : KiKraft | gears)]
 [ag.name  /]
 [/for]
@@ -113,19 +142,25 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 [**
  * Print the wares
 */]
-[template public printAugmentations(gears : OrderedSet(Koerpermods)) ? (not gears->isEmpty()){ emtpty :String = '                    ' ;}]
-[ '[' /]b[']'/]Augmentations:[ '[' /]/b[']'/]
+[template public printAugmentations(gears : OrderedSet(Koerpermods),empty :String) ? (not gears->isEmpty())
+]
+['Augmentations'.titelText()/]
 [for (ag : Koerpermods | gears)]
-[printTextPlusSpace(ag.name,emtpty)  /] [ag.oclAsType(GeldWert).wert/]
+[printTextPlusSpace(ag.name,empty)/][ag.oclAsType(GeldWert).wert/]
 [/for]
-----
-[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(gears->asSequence()) /]
+
+[printTextPlusSpace('sum :', empty)/][calcListenWertToString(gears->asSequence())/]
 [/template]
 
 [template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
+['Basic Data'.titelText()/]
 [let persona : AbstraktPersona = aManagedCharacter.persona]
-Name 		: [persona.name /]  Sex : [toLocalizedSexString(aManagedCharacter.sex, 'en')    /]
-Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass()) /]
+Name 		: [persona.name /]  Sex : [toLocalizedSexString(aManagedCharacter.sex, 'en')/]
+Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
+
+[if (not (persona.beschreibung.size()=0 ) )]
+[persona.beschreibung.tagText('quote')/]
+[/if]
 [/let]
 [/template]
 
@@ -133,80 +168,80 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass()) /]
 [**
  * print the attributes the persona, uses the localized text.
 */]
-[template public printAttributes(persona : AbstraktPersona){ emtpty :String = '                    ' ;}]
+[template public printAttributes(persona : AbstraktPersona,empty :String)]
 [for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
 [let attributeName : String = getText(base2Calced(ea))]
-[printTextPlusSpace(attributeName, emtpty)/] [persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if]
+[printTextPlusSpace(attributeName, empty)/] [persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if]
 [/let]
 [/for]
 [/template]
 
 
-[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe)){ emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Skill Groups:[ '[' /]/b[']'/]
+[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe),empty :String)]
+['Skill Groups'.titelText()/]
 [for (pfg : PersonaFertigkeitsGruppe | sg)]
-[printTextPlusSpace(pfg.gruppe.name, emtpty)/] [pfg.stufe/]
+[printTextPlusSpace(pfg.gruppe.name, empty)/] [pfg.stufe/]
 [/for]
 [/template]
 
-[template public printVehicles(sg : OrderedSet(Fahrzeug))? (not sg->isEmpty()) { emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Vehicles[ '[' /]/b[']'/]
+[template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
+['Vehicles'.titelText()/]
 [for (pfg : Fahrzeug | sg)]
-[printTextPlusSpace(pfg.name   ,emtpty)/] [pfg.wert/]
+[printTextPlusSpace(pfg.name   ,empty)/] [pfg.wert/]
 [/for]
-----
-[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(sg->asSequence()) /]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(sg->asSequence()) /]
 [/template]
 
 
-[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit)) { emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Active Skills:[ '[' /]/b[']'/]
+[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit),empty :String)]
+['Active Skills'.titelText()/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[printTextPlusSpace(pfg.fertigkeit.name,emtpty)/] 	[pfg.stufe/]
+[printTextPlusSpace(pfg.fertigkeit.name,empty)/] [pfg.stufe/]
 [/if]
 [/for]
 [/template]
 
-[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit)){ emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Knowledge Skills:[ '[' /]/b[']'/]
+[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit),empty :String)]
+['Knowledge Skills'.titelText()/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[printTextPlusSpace(pfg.fertigkeit.name,emtpty )/] [pfg.stufe/]
+[printTextPlusSpace(pfg.fertigkeit.name,empty )/] [pfg.stufe/]
 [/if]
 [/for]
 [/template]
 
 
-[template public printConnections(c : OrderedSet(Connection))? (not c->isEmpty()){ emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Contacts:[ '[' /]/b[']'/]
+[template public printConnections(c : OrderedSet(Connection),empty :String)? (not c->isEmpty())]
+['Connections'.titelText()/]
 [for (connection : Connection | c)]
-[printTextPlusSpace(connection.character.persona.name,emtpty) /]  [connection.influence/]/[connection.loyality/]
+[printTextPlusSpace(connection.character.persona.name,empty)/]  [connection.influence/]/[connection.loyality/]
 [/for]
 [/template]
 
-[template public printSpells(z : Zauberer,loc : String) ? (not z.zauber->isEmpty())]
-[ '[' /]b[']'/]Spells:[ '[' /]/b[']'/]
+[template public printSpells(z : Zauberer,loc : String,empty :String) ? (not z.zauber->isEmpty())]
+['Spells'.titelText()/]
 [for (pz : PersonaZauber | z.zauber)]
-[pz.formel.name/] | [toLocalizedZauberArtString(pz.formel.art, loc) /] | [toLocalizedZauberDauerString(pz.formel.dauer, loc) /]| [toLocalizedZauberReichweiteString(pz.formel.reichweite, loc) /]
+[printTextPlusSpace(pz.formel.name, empty)/]
 [/for]
 [/template]
 
-[template public printGear(gears : Sequence(AbstraktGegenstand))? (not gears->isEmpty()) { emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Gear:[ '[' /]/b[']'/]
+[template public printGear(gears : Sequence(AbstraktGegenstand), empty :String)? (not gears->isEmpty())]
+['Gear'.titelText()/]
 [for (ag : AbstraktGegenstand | gears)]
-[printTextPlusSpace(ag.name,emtpty)  /]	[ag.wert/]
+[printTextPlusSpace(ag.name,empty)/][ag.wert/]
 [/for]
-----
-[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(gears) /]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
 [/template]
 
-[template public printContracts(gears : Sequence(Vertrag))? (not gears->isEmpty()){ emtpty :String = '               ' ;}]
-[ '[' /]b[']'/]Contracts:[ '[' /]/b[']'/]
+[template public printContracts(gears : Sequence(Vertrag),empty :String)? (not gears->isEmpty())]
+['Contracts'.titelText()/]
 [for (ag : Vertrag | gears)]
-[printTextPlusSpace(ag.name,emtpty)  /]	[ag.wert/]
+[printTextPlusSpace(ag.name,empty)/] [ag.wert/]
 [/for]
-----
-[printTextPlusSpace('sum :', emtpty)/] [calcListenWertToString(gears) /]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
 [/template]
 

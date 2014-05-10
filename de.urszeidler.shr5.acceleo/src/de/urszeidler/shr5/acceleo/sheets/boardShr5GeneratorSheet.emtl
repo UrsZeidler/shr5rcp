@@ -10,10 +10,11 @@
     <input>
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0"/>
+    <imports href="../common/ShadowrunTools.emtl#/0"/>
+    <imports href="../common/ShadowrunManagmentTools.emtl#/0"/>
+    <imports href="boardCharacterSheet.emtl#/0"/>
     <imports href="../common/ShadowrunSheetTools.emtl#/0"/>
+    <imports href="../common/ShadowrunBBSheetTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="boardShr5GeneratorSheetManagedCharacter" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/generateShr5GeneratorSheet">
@@ -63,6 +64,18 @@
             <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGenerator/character"/>
           </initExpression>
         </variable>
+        <variable name="empty">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <initExpression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".........................">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </initExpression>
+        </variable>
+        <variable name="empty1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <initExpression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="....">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </initExpression>
+        </variable>
       </init>
       <body xsi:type="mtl:TemplateInvocation" definition="/0/printGeneratorReport">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -71,15 +84,538 @@
         </argument>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/printAttributeSum">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/generateShr5GeneratorSheet/aShr5Generator">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="empty" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="empty1" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.2">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;Skillgroup sum     : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/sumSkillGroups"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Skill      sum     : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/sumActiveSkills"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Knowlege skill/sum : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5System"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/generateShr5GeneratorSheet/aShr5Generator">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//Shr5RuleGenerator/shr5Generator"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/sumKnowSkills"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Quallity sum       : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/sumQuallitiyKarma"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/22/KoerperPersona">
+            <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Connections        : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5System"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/generateShr5GeneratorSheet/aShr5Generator">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//Shr5RuleGenerator/shr5Generator"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsSpend"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Resources spend    : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcResourcesSpend"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/printKarmaBase">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/generateShr5GeneratorSheet/aShr5Generator">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
+        <definition href="boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/generateShr5GeneratorSheet/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
       </body>
       <parameter name="aShr5Generator">
         <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printKarmaBase" visibility="Public">
+      <init>
+        <variable name="aManagedCharacter">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printKarmaBase/aShr5Generator">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGenerator/character"/>
+          </initExpression>
+        </variable>
+        <variable name="a">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5System"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printKarmaBase/aShr5Generator">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//Shr5RuleGenerator/shr5Generator"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGeneratorSystem/characterAdvancements"/>
+          </initExpression>
+        </variable>
+      </init>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Calculated Karma Cost">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Karma spend by attributes   : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByAttributes"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Karma spend by skillgroups  : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySkillGroups"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Karma spend by skills       : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySkills"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Karma spend by specalism    : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySpecalism"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Karma spend by resourcen    : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByResources.1"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printKarmaBase/aShr5Generator">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Karma spend by quallities   : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByQuallities"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Karma spend by spells       : "/>
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySpellsOrForms"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          </argument>
+          <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/22/Zauberer">
+            <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Zauberer"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
+        </ifExpr>
+      </body>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Karma spend by complex forms: "/>
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySpellsOrForms"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          </argument>
+          <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/printKarmaBase/@init/@variable.1">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/22/Technomancer">
+            <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
+        </ifExpr>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Karma spend by connections  : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByConnections"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;karma worth                 : "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printKarmaBase/@init/@variable.0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5System"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printKarmaBase/aShr5Generator">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//Shr5RuleGenerator/shr5Generator"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGeneratorSystem/characterAdvancements"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <parameter name="aShr5Generator">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printAttributeSum" visibility="Public">
+      <init>
+        <variable name="aManagedCharacter">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printAttributeSum/aShr5Generator">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGenerator/character"/>
+          </initExpression>
+        </variable>
+        <variable name="species">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Spezies"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Spezies"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printAttributeSum/aShr5Generator">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGenerator/character"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/spezies"/>
+          </initExpression>
+        </variable>
+        <variable name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printAttributeSum/aShr5Generator">
+                <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGenerator/character"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+          </initExpression>
+        </variable>
+      </init>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Attribute points">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="      ">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="emtpty" referredVariable="/0/printAttributeSum/emtpty">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="rtg">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="empty1" referredVariable="/0/printAttributeSum/empty1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="pt&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:LetBlock">
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="attributeName" referredVariable="/0/printAttributeSum/%.5/%/attributeName">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="emtpty" referredVariable="/0/printAttributeSum/emtpty">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </body>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+            <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/toString">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeSum/@init/@variable.2">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+                </source>
+                <argument xsi:type="ocl.ecore:VariableExp" name="ea" referredVariable="/0/printAttributeSum/%.5/ea">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eGet"/>
+              </source>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="empty1" referredVariable="/0/printAttributeSum/empty1">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeSum/@init/@variable.2">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+                </source>
+                <argument xsi:type="ocl.ecore:VariableExp" name="ea" referredVariable="/0/printAttributeSum/%.5/ea">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eGet"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/22/Integer">
+                <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </source>
+            <argument xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="species" referredVariable="/0/printAttributeSum/@init/@variable.1">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Spezies"/>
+                </source>
+                <argument xsi:type="mtl:QueryInvocation">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                  <definition href="../common/ShadowrunTools.emtl#/0/base2SpeciesMin"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="ea" referredVariable="/0/printAttributeSum/%.5/ea">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                  </argument>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eGet"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/22/Integer">
+                <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/-"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &#xA;"/>
+          <letVariable name="attributeName">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <initExpression xsi:type="mtl:QueryInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="../common/ShadowrunSheetTools.emtl#/0/getText"/>
+              <argument xsi:type="mtl:QueryInvocation">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                <definition href="../common/ShadowrunTools.emtl#/0/base2Calced"/>
+                <argument xsi:type="ocl.ecore:VariableExp" name="ea" referredVariable="/0/printAttributeSum/%.5/ea">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                </argument>
+              </argument>
+            </initExpression>
+          </letVariable>
+        </body>
+        <loopVariable name="ea">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        </loopVariable>
+        <iterSet xsi:type="mtl:QueryInvocation" eType="/23/Sequence(EAttribute)">
+          <definition href="../common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/printAttributeSum/@init/@variable.2">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          </argument>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="sum">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="emtpty" referredVariable="/0/printAttributeSum/emtpty">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:VariableExp" name="empty1" referredVariable="/0/printAttributeSum/empty1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <definition href="../common/ShadowrunSheetTools.emtl#/0/sumAttributes"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printAttributeSum/@init/@variable.0">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter/persona"/>
+        </argument>
+      </body>
+      <parameter name="aShr5Generator">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+      </parameter>
+      <parameter name="emtpty">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <parameter name="empty1">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="printGeneratorValues">
@@ -107,7 +643,7 @@
           <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGenerator/generator"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#x9;Karma to spend   "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#x9;&#xA;Karma to spend   &#x9;  "/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -143,7 +679,7 @@
         </source>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
+          <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorValues/aShr5Generator">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
           </argument>
@@ -160,7 +696,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Connections points &#x9;  "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printGeneratorValues/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -175,7 +711,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;Knowledge skills &#x9;  "/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
+        <definition href="../common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printGeneratorValues/@init/@variable.0">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -185,25 +721,6 @@
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
           </source>
           <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//Shr5RuleGenerator/shr5Generator"/>
-        </argument>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;karma worth &#x9;&#x9;  "/>
-      <body xsi:type="mtl:QueryInvocation">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
-        <argument xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printGeneratorValues/@init/@variable.0">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
-          <source xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5System"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aShr5Generator" referredVariable="/0/printGeneratorValues/aShr5Generator">
-              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
-            </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//Shr5RuleGenerator/shr5Generator"/>
-          </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5mngt/1.0#//CharacterGeneratorSystem/characterAdvancements"/>
         </argument>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;Start Karma&#x9;&#x9;&#x9;  "/>
@@ -227,20 +744,12 @@
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="printGeneratorReport" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+      <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="b"/>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Priorities"/>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/b"/>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Priorities">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
@@ -310,7 +819,7 @@
         </argument>
       </body>
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="1831" endPosition="1864" value="&#xA;Print the chosen prorities.&#xA;&#xA;"/>
+        <body startPosition="4657" endPosition="4690" value="&#xA;Print the chosen prorities.&#xA;&#xA;"/>
       </documentation>
       <parameter name="aShr5Generator">
         <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
@@ -364,6 +873,32 @@
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
         </eParameters>
       </eOperations>
+      <eOperations name="printKarmaBase">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printKarmaBase"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aShr5Generator">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printAttributeSum">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printAttributeSum"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aShr5Generator">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </eParameters>
+        <eParameters name="emtpty">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="empty1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
       <eOperations name="printGeneratorValues">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
@@ -384,12 +919,72 @@
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
         </eParameters>
       </eOperations>
+      <eOperations name="getOrderedAttibutesForPersona">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunTools.emtl#/0/getOrderedAttibutesForPersona"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:SequenceType" href="../common/ShadowrunTools.emtl#/3/Sequence(EAttribute)"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="base2Calced">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunTools.emtl#/0/base2Calced"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="base2SpeciesMin">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunTools.emtl#/0/base2SpeciesMin"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcResourcesSpend">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcResourcesSpend"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcConnectionsSpend">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsSpend"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+      </eOperations>
       <eOperations name="calcConnectionsPoints">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcConnectionsPoints"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -404,7 +999,121 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcCompleteKaramaSpend"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendBySpellsOrForms">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySpellsOrForms"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendByResources">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByResources.1"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendByConnections">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByConnections"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendByAttributes">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByAttributes"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendByQuallities">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendByQuallities"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendBySkills">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySkills"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendBySpecalism">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySpecalism"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//CharacterAdvancementSystem"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="calcKarmaSpendBySkillGroups">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaSpendBySkillGroups"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -419,7 +1128,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKarmaToResources"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -434,7 +1143,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
+          <references href="../common/ShadowrunManagmentTools.emtl#/0/calcKnownlegeSkillPoints"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         <eParameters name="arg0">
@@ -449,7 +1158,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
+          <references href="boardCharacterSheet.emtl#/0/printBoardCharacterReport"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aManagedCharacter">
@@ -468,11 +1177,114 @@
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </eParameters>
       </eOperations>
+      <eOperations name="sumAttributes">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunSheetTools.emtl#/0/sumAttributes"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="sumSkillGroups">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunSheetTools.emtl#/0/sumSkillGroups"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="sumActiveSkills">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunSheetTools.emtl#/0/sumActiveSkills"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="sumKnowSkills">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunSheetTools.emtl#/0/sumKnowSkills"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="sumQuallitiyKarma">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunSheetTools.emtl#/0/sumQuallitiyKarma"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printTextPlusSpace">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunSheetTools.emtl#/0/printTextPlusSpace"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="text">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="emtpty">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="titelText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunBBSheetTools.emtl#/0/titelText"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="txt">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="italicText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="txt">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
       </eAnnotations>
+      <eOperations name="toString">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -516,7 +1328,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(OclAny)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
+        <references href="../common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe_Class">
@@ -544,44 +1356,49 @@
         <references href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaKomplexForm)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaKomplexForm)"/>
+      </eAnnotations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Changes)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Changes)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Changes)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaEigenschaft)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(KiKraft)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(KiKraft)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(KiKraft)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Koerpermods)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Koerpermods)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Koerpermods)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaFertigkeitsGruppe)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeitsGruppe)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeitsGruppe)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Fahrzeug)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Fahrzeug)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Fahrzeug)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaFertigkeit)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeit)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(PersonaFertigkeit)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Connection)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/OrderedSet(Connection)"/>
+        <references href="boardCharacterSheet.emtl#/3/OrderedSet(Connection)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Zauberer_Class">
@@ -591,12 +1408,17 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(AbstraktGegenstand)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/Sequence(AbstraktGegenstand)"/>
+        <references href="boardCharacterSheet.emtl#/3/Sequence(AbstraktGegenstand)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(Vertrag)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/boardCharacterSheet.emtl#/3/Sequence(Vertrag)"/>
+        <references href="boardCharacterSheet.emtl#/3/Sequence(Vertrag)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug_Class">
@@ -612,6 +1434,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="AbstaktFernKampfwaffe_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(String)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="../common/ShadowrunBBSheetTools.emtl#/3/Sequence(String)"/>
       </eAnnotations>
     </eClassifiers>
   </ecore:EPackage>
@@ -658,6 +1485,64 @@
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="KoerperPersona">
+      <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Zauberer">
+      <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Zauberer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Technomancer">
+      <referredType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Integer">
+      <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(PersonaEigenschaft)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(EAttribute)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -700,6 +1585,21 @@
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -716,6 +1616,99 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
@@ -746,534 +1739,1379 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/boardShr5GeneratorSheetManagedCharacter">
-      <details key="start" value="456"/>
-      <details key="end" value="712"/>
-      <details key="line" value="8"/>
+      <details key="start" value="529"/>
+      <details key="end" value="785"/>
+      <details key="line" value="9"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/boardShr5GeneratorSheetManagedCharacter/%">
-      <details key="start" value="566"/>
-      <details key="end" value="697"/>
-      <details key="line" value="10"/>
+      <details key="start" value="639"/>
+      <details key="end" value="770"/>
+      <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%">
-      <details key="start" value="645"/>
-      <details key="end" value="687"/>
+      <details key="start" value="718"/>
+      <details key="end" value="760"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%/aShr5Generator">
-      <details key="start" value="672"/>
-      <details key="end" value="686"/>
+      <details key="start" value="745"/>
+      <details key="end" value="759"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.1">
-      <details key="start" value="689"/>
-      <details key="end" value="690"/>
-      <details key="line" value="12"/>
+      <details key="start" value="762"/>
+      <details key="end" value="763"/>
+      <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.2">
-      <details key="start" value="573"/>
-      <details key="end" value="625"/>
+      <details key="start" value="646"/>
+      <details key="end" value="698"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.2/%">
-      <details key="start" value="573"/>
-      <details key="end" value="618"/>
+      <details key="start" value="646"/>
+      <details key="end" value="691"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.2/%/%">
-      <details key="start" value="573"/>
-      <details key="end" value="589"/>
+      <details key="start" value="646"/>
+      <details key="end" value="662"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.2/%/%.1">
-      <details key="start" value="590"/>
-      <details key="end" value="618"/>
+      <details key="start" value="663"/>
+      <details key="end" value="691"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.2/%/%.1/aShr5Generator">
-      <details key="start" value="590"/>
-      <details key="end" value="604"/>
+      <details key="start" value="663"/>
+      <details key="end" value="677"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.2/%.1">
-      <details key="start" value="619"/>
-      <details key="end" value="625"/>
+      <details key="start" value="692"/>
+      <details key="end" value="698"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/boardShr5GeneratorSheetManagedCharacter/%/%.3">
-      <details key="start" value="634"/>
-      <details key="end" value="641"/>
+      <details key="start" value="707"/>
+      <details key="end" value="714"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/boardShr5GeneratorSheetManagedCharacter/%.1">
-      <details key="start" value="698"/>
-      <details key="end" value="700"/>
-      <details key="line" value="13"/>
+      <details key="start" value="771"/>
+      <details key="end" value="773"/>
+      <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/boardShr5GeneratorSheetManagedCharacter/aShr5Generator">
-      <details key="start" value="513"/>
-      <details key="end" value="543"/>
-      <details key="line" value="8"/>
+      <details key="start" value="586"/>
+      <details key="end" value="616"/>
+      <details key="line" value="9"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateShr5GeneratorSheet">
-      <details key="start" value="715"/>
-      <details key="end" value="959"/>
-      <details key="line" value="18"/>
+      <details key="start" value="788"/>
+      <details key="end" value="1765"/>
+      <details key="line" value="19"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateShr5GeneratorSheet/@init">
-      <details key="start" value="791"/>
-      <details key="end" value="857"/>
-      <details key="line" value="18"/>
+      <details key="start" value="865"/>
+      <details key="end" value="1005"/>
+      <details key="line" value="20"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateShr5GeneratorSheet/@init/@variable.0">
-      <details key="start" value="792"/>
-      <details key="end" value="855"/>
-      <details key="line" value="18"/>
+      <details key="start" value="866"/>
+      <details key="end" value="929"/>
+      <details key="line" value="20"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateShr5GeneratorSheet/@init/@variable.0/%">
-      <details key="start" value="831"/>
-      <details key="end" value="855"/>
+      <details key="start" value="905"/>
+      <details key="end" value="929"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateShr5GeneratorSheet/@init/@variable.0/%/aShr5Generator">
-      <details key="start" value="831"/>
-      <details key="end" value="845"/>
+      <details key="start" value="905"/>
+      <details key="end" value="919"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/generateShr5GeneratorSheet/%">
-      <details key="start" value="860"/>
-      <details key="end" value="896"/>
+    <eAnnotations source="positions.19" references="/0/generateShr5GeneratorSheet/@init/@variable.1">
+      <details key="start" value="931"/>
+      <details key="end" value="975"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateShr5GeneratorSheet/@init/@variable.1/%">
+      <details key="start" value="948"/>
+      <details key="end" value="975"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/generateShr5GeneratorSheet/%/aShr5Generator">
-      <details key="start" value="881"/>
-      <details key="end" value="895"/>
+    <eAnnotations source="positions.21" references="/0/generateShr5GeneratorSheet/@init/@variable.2">
+      <details key="start" value="978"/>
+      <details key="end" value="1001"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateShr5GeneratorSheet/@init/@variable.2/%">
+      <details key="start" value="995"/>
+      <details key="end" value="1001"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generateShr5GeneratorSheet/%.1">
-      <details key="start" value="898"/>
-      <details key="end" value="900"/>
-      <details key="line" value="20"/>
-    </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generateShr5GeneratorSheet/%.2">
-      <details key="start" value="901"/>
-      <details key="end" value="945"/>
+    <eAnnotations source="positions.23" references="/0/generateShr5GeneratorSheet/%">
+      <details key="start" value="1008"/>
+      <details key="end" value="1044"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateShr5GeneratorSheet/%.2/aManagedCharacter">
-      <details key="start" value="927"/>
-      <details key="end" value="944"/>
+    <eAnnotations source="positions.24" references="/0/generateShr5GeneratorSheet/%/aShr5Generator">
+      <details key="start" value="1029"/>
+      <details key="end" value="1043"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateShr5GeneratorSheet/aShr5Generator">
-      <details key="start" value="759"/>
-      <details key="end" value="789"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/printGeneratorValues">
-      <details key="start" value="961"/>
-      <details key="end" value="1826"/>
-      <details key="line" value="24"/>
-    </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/printGeneratorValues/@init">
-      <details key="start" value="1031"/>
-      <details key="end" value="1097"/>
-      <details key="line" value="24"/>
-    </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/printGeneratorValues/@init/@variable.0">
-      <details key="start" value="1032"/>
-      <details key="end" value="1095"/>
-      <details key="line" value="24"/>
-    </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/printGeneratorValues/@init/@variable.0/%">
-      <details key="start" value="1071"/>
-      <details key="end" value="1095"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/printGeneratorValues/@init/@variable.0/%/aShr5Generator">
-      <details key="start" value="1071"/>
-      <details key="end" value="1085"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/printGeneratorValues/%">
-      <details key="start" value="1099"/>
-      <details key="end" value="1119"/>
+    <eAnnotations source="positions.25" references="/0/generateShr5GeneratorSheet/%.1">
+      <details key="start" value="1046"/>
+      <details key="end" value="1048"/>
       <details key="line" value="25"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/printGeneratorValues/%.1">
-      <details key="start" value="1120"/>
+    <eAnnotations source="positions.26" references="/0/generateShr5GeneratorSheet/%.2">
+      <details key="start" value="1049"/>
+      <details key="end" value="1095"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateShr5GeneratorSheet/%.2/aShr5Generator">
+      <details key="start" value="1067"/>
+      <details key="end" value="1081"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateShr5GeneratorSheet/%.2/empty">
+      <details key="start" value="1082"/>
+      <details key="end" value="1087"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateShr5GeneratorSheet/%.2/empty1">
+      <details key="start" value="1088"/>
+      <details key="end" value="1094"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateShr5GeneratorSheet/%.3">
+      <details key="start" value="1097"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateShr5GeneratorSheet/%.4">
+      <details key="start" value="1121"/>
+      <details key="end" value="1162"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateShr5GeneratorSheet/%.4/%">
+      <details key="start" value="1136"/>
+      <details key="end" value="1161"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateShr5GeneratorSheet/%.4/%/aManagedCharacter">
+      <details key="start" value="1136"/>
       <details key="end" value="1153"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/printGeneratorValues/%.1/%">
-      <details key="start" value="1128"/>
-      <details key="end" value="1152"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/printGeneratorValues/%.1/%/aShr5Generator">
-      <details key="start" value="1128"/>
-      <details key="end" value="1142"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/printGeneratorValues/%.2">
-      <details key="start" value="1155"/>
-      <details key="end" value="1174"/>
-      <details key="line" value="25"/>
-    </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/printGeneratorValues/%.3">
-      <details key="start" value="1175"/>
-      <details key="end" value="1215"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/printGeneratorValues/%.3/%">
-      <details key="start" value="1175"/>
-      <details key="end" value="1203"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/printGeneratorValues/%.3/%/aShr5Generator">
-      <details key="start" value="1175"/>
-      <details key="end" value="1189"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/printGeneratorValues/%.4">
-      <details key="start" value="1219"/>
-      <details key="end" value="1242"/>
-      <details key="line" value="25"/>
-    </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/printGeneratorValues/%.5">
-      <details key="start" value="1243"/>
-      <details key="end" value="1273"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/printGeneratorValues/%.5/aShr5Generator">
-      <details key="start" value="1243"/>
-      <details key="end" value="1257"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/printGeneratorValues/%.6">
-      <details key="start" value="1275"/>
-      <details key="end" value="1298"/>
-      <details key="line" value="27"/>
-    </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/printGeneratorValues/%.7">
-      <details key="start" value="1299"/>
-      <details key="end" value="1401"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/printGeneratorValues/%.7/%">
-      <details key="start" value="1299"/>
-      <details key="end" value="1332"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/printGeneratorValues/%.7/%/%">
-      <details key="start" value="1299"/>
-      <details key="end" value="1323"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/printGeneratorValues/%.7/%/%/aShr5Generator">
-      <details key="start" value="1299"/>
-      <details key="end" value="1313"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/printGeneratorValues/%.7/%.1">
-      <details key="start" value="1335"/>
-      <details key="end" value="1401"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/printGeneratorValues/%.7/%.1/aShr5Generator">
-      <details key="start" value="1356"/>
-      <details key="end" value="1370"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/printGeneratorValues/%.7/%.1/%">
-      <details key="start" value="1372"/>
-      <details key="end" value="1400"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/printGeneratorValues/%.7/%.1/%/aShr5Generator">
-      <details key="start" value="1372"/>
-      <details key="end" value="1386"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/printGeneratorValues/%.8">
-      <details key="start" value="1405"/>
-      <details key="end" value="1428"/>
-      <details key="line" value="28"/>
-    </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/printGeneratorValues/%.9">
-      <details key="start" value="1429"/>
-      <details key="end" value="1499"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/printGeneratorValues/%.9/aManagedCharacter">
-      <details key="start" value="1451"/>
-      <details key="end" value="1468"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/printGeneratorValues/%.9/%">
-      <details key="start" value="1470"/>
-      <details key="end" value="1498"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/printGeneratorValues/%.9/%/aShr5Generator">
-      <details key="start" value="1470"/>
-      <details key="end" value="1484"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/printGeneratorValues/%.10">
-      <details key="start" value="1502"/>
-      <details key="end" value="1523"/>
+    <eAnnotations source="positions.34" references="/0/generateShr5GeneratorSheet/%.5">
+      <details key="start" value="1164"/>
+      <details key="end" value="1186"/>
       <details key="line" value="29"/>
     </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/printGeneratorValues/%.11">
-      <details key="start" value="1524"/>
-      <details key="end" value="1597"/>
+    <eAnnotations source="positions.35" references="/0/generateShr5GeneratorSheet/%.6">
+      <details key="start" value="1187"/>
+      <details key="end" value="1229"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/printGeneratorValues/%.11/aManagedCharacter">
-      <details key="start" value="1549"/>
-      <details key="end" value="1566"/>
+    <eAnnotations source="positions.36" references="/0/generateShr5GeneratorSheet/%.6/%">
+      <details key="start" value="1203"/>
+      <details key="end" value="1228"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/printGeneratorValues/%.11/%">
-      <details key="start" value="1568"/>
-      <details key="end" value="1596"/>
+    <eAnnotations source="positions.37" references="/0/generateShr5GeneratorSheet/%.6/%/aManagedCharacter">
+      <details key="start" value="1203"/>
+      <details key="end" value="1220"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/printGeneratorValues/%.11/%/aShr5Generator">
-      <details key="start" value="1568"/>
-      <details key="end" value="1582"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/printGeneratorValues/%.12">
-      <details key="start" value="1600"/>
-      <details key="end" value="1617"/>
+    <eAnnotations source="positions.38" references="/0/generateShr5GeneratorSheet/%.7">
+      <details key="start" value="1231"/>
+      <details key="end" value="1253"/>
       <details key="line" value="30"/>
     </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/printGeneratorValues/%.13">
-      <details key="start" value="1618"/>
-      <details key="end" value="1712"/>
+    <eAnnotations source="positions.39" references="/0/generateShr5GeneratorSheet/%.8">
+      <details key="start" value="1254"/>
+      <details key="end" value="1327"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/printGeneratorValues/%.13/aManagedCharacter">
-      <details key="start" value="1642"/>
-      <details key="end" value="1659"/>
+    <eAnnotations source="positions.40" references="/0/generateShr5GeneratorSheet/%.8/aManagedCharacter">
+      <details key="start" value="1279"/>
+      <details key="end" value="1296"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/printGeneratorValues/%.13/%">
-      <details key="start" value="1661"/>
-      <details key="end" value="1711"/>
+    <eAnnotations source="positions.41" references="/0/generateShr5GeneratorSheet/%.8/%">
+      <details key="start" value="1298"/>
+      <details key="end" value="1326"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/printGeneratorValues/%.13/%/%">
-      <details key="start" value="1661"/>
-      <details key="end" value="1689"/>
+    <eAnnotations source="positions.42" references="/0/generateShr5GeneratorSheet/%.8/%/aShr5Generator">
+      <details key="start" value="1298"/>
+      <details key="end" value="1312"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/printGeneratorValues/%.13/%/%/aShr5Generator">
-      <details key="start" value="1661"/>
-      <details key="end" value="1675"/>
+    <eAnnotations source="positions.43" references="/0/generateShr5GeneratorSheet/%.9">
+      <details key="start" value="1330"/>
+      <details key="end" value="1331"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateShr5GeneratorSheet/%.10">
+      <details key="start" value="1332"/>
+      <details key="end" value="1372"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/printGeneratorValues/%.14">
-      <details key="start" value="1714"/>
-      <details key="end" value="1732"/>
+    <eAnnotations source="positions.45" references="/0/generateShr5GeneratorSheet/%.10/%">
+      <details key="start" value="1346"/>
+      <details key="end" value="1371"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateShr5GeneratorSheet/%.10/%/aManagedCharacter">
+      <details key="start" value="1346"/>
+      <details key="end" value="1363"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateShr5GeneratorSheet/%.11">
+      <details key="start" value="1374"/>
+      <details key="end" value="1396"/>
       <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/printGeneratorValues/%.15">
-      <details key="start" value="1733"/>
-      <details key="end" value="1758"/>
+    <eAnnotations source="positions.48" references="/0/generateShr5GeneratorSheet/%.12">
+      <details key="start" value="1397"/>
+      <details key="end" value="1467"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/printGeneratorValues/%.15/aShr5Generator">
-      <details key="start" value="1733"/>
-      <details key="end" value="1747"/>
+    <eAnnotations source="positions.49" references="/0/generateShr5GeneratorSheet/%.12/%">
+      <details key="start" value="1415"/>
+      <details key="end" value="1466"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/printGeneratorValues/%.16">
-      <details key="start" value="1761"/>
-      <details key="end" value="1781"/>
+    <eAnnotations source="positions.50" references="/0/generateShr5GeneratorSheet/%.12/%/%">
+      <details key="start" value="1415"/>
+      <details key="end" value="1440"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateShr5GeneratorSheet/%.12/%/%/aManagedCharacter">
+      <details key="start" value="1415"/>
+      <details key="end" value="1432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateShr5GeneratorSheet/%.12/%/%.1">
+      <details key="start" value="1451"/>
+      <details key="end" value="1465"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateShr5GeneratorSheet/%.13">
+      <details key="start" value="1469"/>
+      <details key="end" value="1491"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateShr5GeneratorSheet/%.14">
+      <details key="start" value="1492"/>
+      <details key="end" value="1562"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateShr5GeneratorSheet/%.14/aManagedCharacter">
+      <details key="start" value="1514"/>
+      <details key="end" value="1531"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateShr5GeneratorSheet/%.14/%">
+      <details key="start" value="1533"/>
+      <details key="end" value="1561"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateShr5GeneratorSheet/%.14/%/aShr5Generator">
+      <details key="start" value="1533"/>
+      <details key="end" value="1547"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateShr5GeneratorSheet/%.15">
+      <details key="start" value="1564"/>
+      <details key="end" value="1565"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateShr5GeneratorSheet/%.16">
+      <details key="start" value="1566"/>
+      <details key="end" value="1605"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateShr5GeneratorSheet/%.16/aManagedCharacter">
+      <details key="start" value="1587"/>
+      <details key="end" value="1604"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateShr5GeneratorSheet/%.17">
+      <details key="start" value="1607"/>
+      <details key="end" value="1629"/>
       <details key="line" value="33"/>
     </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/printGeneratorValues/%.17">
-      <details key="start" value="1782"/>
-      <details key="end" value="1811"/>
+    <eAnnotations source="positions.62" references="/0/generateShr5GeneratorSheet/%.18">
+      <details key="start" value="1630"/>
+      <details key="end" value="1667"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/printGeneratorValues/%.17/aShr5Generator">
-      <details key="start" value="1782"/>
-      <details key="end" value="1796"/>
+    <eAnnotations source="positions.63" references="/0/generateShr5GeneratorSheet/%.18/aManagedCharacter">
+      <details key="start" value="1649"/>
+      <details key="end" value="1666"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/printGeneratorValues/aShr5Generator">
-      <details key="start" value="1000"/>
-      <details key="end" value="1030"/>
-      <details key="line" value="24"/>
+    <eAnnotations source="positions.64" references="/0/generateShr5GeneratorSheet/%.19">
+      <details key="start" value="1669"/>
+      <details key="end" value="1671"/>
+      <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/printGeneratorReport">
-      <details key="start" value="1867"/>
-      <details key="end" value="2210"/>
-      <details key="line" value="39"/>
-    </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/printGeneratorReport/%">
-      <details key="start" value="1941"/>
-      <details key="end" value="1944"/>
+    <eAnnotations source="positions.65" references="/0/generateShr5GeneratorSheet/%.20">
+      <details key="start" value="1672"/>
+      <details key="end" value="1702"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/printGeneratorReport/%.1">
-      <details key="start" value="1947"/>
-      <details key="end" value="1948"/>
+    <eAnnotations source="positions.66" references="/0/generateShr5GeneratorSheet/%.20/aShr5Generator">
+      <details key="start" value="1687"/>
+      <details key="end" value="1701"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateShr5GeneratorSheet/%.21">
+      <details key="start" value="1704"/>
+      <details key="end" value="1706"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateShr5GeneratorSheet/%.22">
+      <details key="start" value="1707"/>
+      <details key="end" value="1751"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateShr5GeneratorSheet/%.22/aManagedCharacter">
+      <details key="start" value="1733"/>
+      <details key="end" value="1750"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateShr5GeneratorSheet/aShr5Generator">
+      <details key="start" value="832"/>
+      <details key="end" value="862"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/printKarmaBase">
+      <details key="start" value="1767"/>
+      <details key="end" value="3025"/>
       <details key="line" value="40"/>
     </eAnnotations>
-    <eAnnotations source="positions.76" references="/0/printGeneratorReport/%.2">
-      <details key="start" value="1949"/>
-      <details key="end" value="1952"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.77" references="/0/printGeneratorReport/%.3">
-      <details key="start" value="1954"/>
-      <details key="end" value="1964"/>
-      <details key="line" value="40"/>
-    </eAnnotations>
-    <eAnnotations source="positions.78" references="/0/printGeneratorReport/%.4">
-      <details key="start" value="1966"/>
-      <details key="end" value="1969"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.79" references="/0/printGeneratorReport/%.5">
-      <details key="start" value="1972"/>
-      <details key="end" value="1974"/>
-      <details key="line" value="40"/>
-    </eAnnotations>
-    <eAnnotations source="positions.80" references="/0/printGeneratorReport/%.6">
-      <details key="start" value="1975"/>
-      <details key="end" value="1978"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.81" references="/0/printGeneratorReport/%.7">
-      <details key="start" value="1980"/>
-      <details key="end" value="1981"/>
+    <eAnnotations source="positions.72" references="/0/printKarmaBase/@init">
+      <details key="start" value="1833"/>
+      <details key="end" value="1984"/>
       <details key="line" value="41"/>
     </eAnnotations>
-    <eAnnotations source="positions.82" references="/0/printGeneratorReport/%.8">
-      <details key="start" value="1982"/>
-      <details key="end" value="2015"/>
+    <eAnnotations source="positions.73" references="/0/printKarmaBase/@init/@variable.0">
+      <details key="start" value="1834"/>
+      <details key="end" value="1897"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/printKarmaBase/@init/@variable.0/%">
+      <details key="start" value="1873"/>
+      <details key="end" value="1897"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.83" references="/0/printGeneratorReport/%.8/%">
-      <details key="start" value="1990"/>
-      <details key="end" value="2014"/>
+    <eAnnotations source="positions.75" references="/0/printKarmaBase/@init/@variable.0/%/aShr5Generator">
+      <details key="start" value="1873"/>
+      <details key="end" value="1887"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.84" references="/0/printGeneratorReport/%.8/%/aShr5Generator">
-      <details key="start" value="1990"/>
-      <details key="end" value="2004"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.85" references="/0/printGeneratorReport/%.9">
-      <details key="start" value="2017"/>
-      <details key="end" value="2018"/>
+    <eAnnotations source="positions.76" references="/0/printKarmaBase/@init/@variable.1">
+      <details key="start" value="1899"/>
+      <details key="end" value="1982"/>
       <details key="line" value="42"/>
     </eAnnotations>
-    <eAnnotations source="positions.86" references="/0/printGeneratorReport/%.10">
-      <details key="start" value="2019"/>
-      <details key="end" value="2049"/>
+    <eAnnotations source="positions.77" references="/0/printKarmaBase/@init/@variable.1/%">
+      <details key="start" value="1932"/>
+      <details key="end" value="1982"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.87" references="/0/printGeneratorReport/%.10/%">
-      <details key="start" value="2027"/>
-      <details key="end" value="2048"/>
+    <eAnnotations source="positions.78" references="/0/printKarmaBase/@init/@variable.1/%/%">
+      <details key="start" value="1932"/>
+      <details key="end" value="1960"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.88" references="/0/printGeneratorReport/%.10/%/aShr5Generator">
-      <details key="start" value="2027"/>
-      <details key="end" value="2041"/>
+    <eAnnotations source="positions.79" references="/0/printKarmaBase/@init/@variable.1/%/%/aShr5Generator">
+      <details key="start" value="1932"/>
+      <details key="end" value="1946"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.89" references="/0/printGeneratorReport/%.11">
-      <details key="start" value="2051"/>
-      <details key="end" value="2052"/>
-      <details key="line" value="43"/>
-    </eAnnotations>
-    <eAnnotations source="positions.90" references="/0/printGeneratorReport/%.12">
-      <details key="start" value="2053"/>
-      <details key="end" value="2085"/>
+    <eAnnotations source="positions.80" references="/0/printKarmaBase/%">
+      <details key="start" value="1987"/>
+      <details key="end" value="2023"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.91" references="/0/printGeneratorReport/%.12/%">
-      <details key="start" value="2061"/>
-      <details key="end" value="2084"/>
+    <eAnnotations source="positions.81" references="/0/printKarmaBase/%/%">
+      <details key="start" value="1987"/>
+      <details key="end" value="2010"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.92" references="/0/printGeneratorReport/%.12/%/aShr5Generator">
-      <details key="start" value="2061"/>
-      <details key="end" value="2075"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.93" references="/0/printGeneratorReport/%.13">
-      <details key="start" value="2087"/>
-      <details key="end" value="2088"/>
-      <details key="line" value="44"/>
-    </eAnnotations>
-    <eAnnotations source="positions.94" references="/0/printGeneratorReport/%.14">
-      <details key="start" value="2089"/>
-      <details key="end" value="2118"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.95" references="/0/printGeneratorReport/%.14/%">
-      <details key="start" value="2097"/>
-      <details key="end" value="2117"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.96" references="/0/printGeneratorReport/%.14/%/aShr5Generator">
-      <details key="start" value="2097"/>
-      <details key="end" value="2111"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.97" references="/0/printGeneratorReport/%.15">
-      <details key="start" value="2120"/>
-      <details key="end" value="2121"/>
+    <eAnnotations source="positions.82" references="/0/printKarmaBase/%.1">
+      <details key="start" value="2025"/>
+      <details key="end" value="2056"/>
       <details key="line" value="45"/>
     </eAnnotations>
-    <eAnnotations source="positions.98" references="/0/printGeneratorReport/%.16">
-      <details key="start" value="2122"/>
-      <details key="end" value="2155"/>
+    <eAnnotations source="positions.83" references="/0/printKarmaBase/%.2">
+      <details key="start" value="2057"/>
+      <details key="end" value="2105"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.99" references="/0/printGeneratorReport/%.16/%">
-      <details key="start" value="2130"/>
-      <details key="end" value="2154"/>
+    <eAnnotations source="positions.84" references="/0/printKarmaBase/%.2/aManagedCharacter">
+      <details key="start" value="2084"/>
+      <details key="end" value="2101"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.100" references="/0/printGeneratorReport/%.16/%/aShr5Generator">
-      <details key="start" value="2130"/>
-      <details key="end" value="2144"/>
+    <eAnnotations source="positions.85" references="/0/printKarmaBase/%.2/a">
+      <details key="start" value="2103"/>
+      <details key="end" value="2104"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.101" references="/0/printGeneratorReport/%.17">
-      <details key="start" value="2157"/>
-      <details key="end" value="2159"/>
+    <eAnnotations source="positions.86" references="/0/printKarmaBase/%.3">
+      <details key="start" value="2107"/>
+      <details key="end" value="2138"/>
       <details key="line" value="46"/>
     </eAnnotations>
-    <eAnnotations source="positions.102" references="/0/printGeneratorReport/%.18">
-      <details key="start" value="2160"/>
-      <details key="end" value="2196"/>
+    <eAnnotations source="positions.87" references="/0/printKarmaBase/%.4">
+      <details key="start" value="2139"/>
+      <details key="end" value="2188"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.103" references="/0/printGeneratorReport/%.18/aShr5Generator">
-      <details key="start" value="2181"/>
-      <details key="end" value="2195"/>
+    <eAnnotations source="positions.88" references="/0/printKarmaBase/%.4/aManagedCharacter">
+      <details key="start" value="2167"/>
+      <details key="end" value="2184"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.104" references="/0/printGeneratorReport/%.19">
-      <details key="start" value="1828"/>
-      <details key="end" value="1866"/>
+    <eAnnotations source="positions.89" references="/0/printKarmaBase/%.4/a">
+      <details key="start" value="2186"/>
+      <details key="end" value="2187"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.105" references="/0/printGeneratorReport/aShr5Generator">
-      <details key="start" value="1905"/>
-      <details key="end" value="1935"/>
-      <details key="line" value="39"/>
+    <eAnnotations source="positions.90" references="/0/printKarmaBase/%.5">
+      <details key="start" value="2190"/>
+      <details key="end" value="2221"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/printKarmaBase/%.6">
+      <details key="start" value="2222"/>
+      <details key="end" value="2266"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/printKarmaBase/%.6/aManagedCharacter">
+      <details key="start" value="2245"/>
+      <details key="end" value="2262"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/printKarmaBase/%.6/a">
+      <details key="start" value="2264"/>
+      <details key="end" value="2265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/printKarmaBase/%.7">
+      <details key="start" value="2268"/>
+      <details key="end" value="2299"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/printKarmaBase/%.8">
+      <details key="start" value="2300"/>
+      <details key="end" value="2347"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/printKarmaBase/%.8/aManagedCharacter">
+      <details key="start" value="2326"/>
+      <details key="end" value="2343"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/printKarmaBase/%.8/a">
+      <details key="start" value="2345"/>
+      <details key="end" value="2346"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/printKarmaBase/%.9">
+      <details key="start" value="2349"/>
+      <details key="end" value="2380"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/printKarmaBase/%.10">
+      <details key="start" value="2381"/>
+      <details key="end" value="2422"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/printKarmaBase/%.10/aShr5Generator">
+      <details key="start" value="2407"/>
+      <details key="end" value="2421"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/printKarmaBase/%.11">
+      <details key="start" value="2424"/>
+      <details key="end" value="2455"/>
+      <details key="line" value="50"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/printKarmaBase/%.12">
+      <details key="start" value="2456"/>
+      <details key="end" value="2504"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/printKarmaBase/%.12/aManagedCharacter">
+      <details key="start" value="2483"/>
+      <details key="end" value="2500"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/printKarmaBase/%.12/a">
+      <details key="start" value="2502"/>
+      <details key="end" value="2503"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/printKarmaBase/%.13">
+      <details key="start" value="2506"/>
+      <details key="end" value="2507"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/printKarmaBase/%.14">
+      <details key="start" value="2507"/>
+      <details key="end" value="2652"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/printKarmaBase/%.14/%">
+      <details key="start" value="2562"/>
+      <details key="end" value="2592"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/printKarmaBase/%.14/%.1">
+      <details key="start" value="2593"/>
+      <details key="end" value="2644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/printKarmaBase/%.14/%.1/aManagedCharacter">
+      <details key="start" value="2623"/>
+      <details key="end" value="2640"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/printKarmaBase/%.14/%.1/a">
+      <details key="start" value="2642"/>
+      <details key="end" value="2643"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/printKarmaBase/%.14/%.2">
+      <details key="start" value="2646"/>
+      <details key="end" value="2647"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/printKarmaBase/%.14/%.3">
+      <details key="start" value="2511"/>
+      <details key="end" value="2560"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/printKarmaBase/%.14/%.3/%">
+      <details key="start" value="2512"/>
+      <details key="end" value="2537"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/printKarmaBase/%.14/%.3/%/aManagedCharacter">
+      <details key="start" value="2512"/>
+      <details key="end" value="2529"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/printKarmaBase/%.14/%.3/%.1">
+      <details key="start" value="2550"/>
+      <details key="end" value="2558"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/printKarmaBase/%.15">
+      <details key="start" value="2653"/>
+      <details key="end" value="2803"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/printKarmaBase/%.15/%">
+      <details key="start" value="2713"/>
+      <details key="end" value="2743"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/printKarmaBase/%.15/%.1">
+      <details key="start" value="2744"/>
+      <details key="end" value="2795"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/printKarmaBase/%.15/%.1/aManagedCharacter">
+      <details key="start" value="2774"/>
+      <details key="end" value="2791"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/printKarmaBase/%.15/%.1/a">
+      <details key="start" value="2793"/>
+      <details key="end" value="2794"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/printKarmaBase/%.15/%.2">
+      <details key="start" value="2797"/>
+      <details key="end" value="2798"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/printKarmaBase/%.15/%.3">
+      <details key="start" value="2657"/>
+      <details key="end" value="2711"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/printKarmaBase/%.15/%.3/%">
+      <details key="start" value="2658"/>
+      <details key="end" value="2683"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/printKarmaBase/%.15/%.3/%/aManagedCharacter">
+      <details key="start" value="2658"/>
+      <details key="end" value="2675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/printKarmaBase/%.15/%.3/%.1">
+      <details key="start" value="2696"/>
+      <details key="end" value="2708"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/printKarmaBase/%.16">
+      <details key="start" value="2804"/>
+      <details key="end" value="2834"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/printKarmaBase/%.17">
+      <details key="start" value="2835"/>
+      <details key="end" value="2881"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/printKarmaBase/%.17/aManagedCharacter">
+      <details key="start" value="2863"/>
+      <details key="end" value="2880"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/printKarmaBase/%.18">
+      <details key="start" value="2883"/>
+      <details key="end" value="2915"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/printKarmaBase/%.19">
+      <details key="start" value="2916"/>
+      <details key="end" value="3010"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/printKarmaBase/%.19/aManagedCharacter">
+      <details key="start" value="2940"/>
+      <details key="end" value="2957"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/printKarmaBase/%.19/%">
+      <details key="start" value="2959"/>
+      <details key="end" value="3009"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/printKarmaBase/%.19/%/%">
+      <details key="start" value="2959"/>
+      <details key="end" value="2987"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/printKarmaBase/%.19/%/%/aShr5Generator">
+      <details key="start" value="2959"/>
+      <details key="end" value="2973"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/printKarmaBase/%.20">
+      <details key="start" value="3012"/>
+      <details key="end" value="3013"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/printKarmaBase/aShr5Generator">
+      <details key="start" value="1800"/>
+      <details key="end" value="1830"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/printAttributeSum">
+      <details key="start" value="3027"/>
+      <details key="end" value="3895"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/printAttributeSum/@init">
+      <details key="start" value="3125"/>
+      <details key="end" value="3318"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/printAttributeSum/@init/@variable.0">
+      <details key="start" value="3126"/>
+      <details key="end" value="3189"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/printAttributeSum/@init/@variable.0/%">
+      <details key="start" value="3165"/>
+      <details key="end" value="3189"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/printAttributeSum/@init/@variable.0/%/aShr5Generator">
+      <details key="start" value="3165"/>
+      <details key="end" value="3179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/printAttributeSum/@init/@variable.1">
+      <details key="start" value="3191"/>
+      <details key="end" value="3252"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/printAttributeSum/@init/@variable.1/%">
+      <details key="start" value="3212"/>
+      <details key="end" value="3252"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/printAttributeSum/@init/@variable.1/%/%">
+      <details key="start" value="3212"/>
+      <details key="end" value="3244"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/printAttributeSum/@init/@variable.1/%/%/%">
+      <details key="start" value="3212"/>
+      <details key="end" value="3236"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/printAttributeSum/@init/@variable.1/%/%/%/aShr5Generator">
+      <details key="start" value="3212"/>
+      <details key="end" value="3226"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/printAttributeSum/@init/@variable.2">
+      <details key="start" value="3255"/>
+      <details key="end" value="3315"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/printAttributeSum/@init/@variable.2/%">
+      <details key="start" value="3283"/>
+      <details key="end" value="3315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/printAttributeSum/@init/@variable.2/%/%">
+      <details key="start" value="3283"/>
+      <details key="end" value="3307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/printAttributeSum/@init/@variable.2/%/%/aShr5Generator">
+      <details key="start" value="3283"/>
+      <details key="end" value="3297"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/printAttributeSum/%">
+      <details key="start" value="3322"/>
+      <details key="end" value="3352"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/printAttributeSum/%/%">
+      <details key="start" value="3322"/>
+      <details key="end" value="3340"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/printAttributeSum/%.1">
+      <details key="start" value="3354"/>
+      <details key="end" value="3355"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/printAttributeSum/%.2">
+      <details key="start" value="3356"/>
+      <details key="end" value="3392"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/printAttributeSum/%.2/%">
+      <details key="start" value="3375"/>
+      <details key="end" value="3383"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/printAttributeSum/%.2/emtpty">
+      <details key="start" value="3385"/>
+      <details key="end" value="3391"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/printAttributeSum/%.3">
+      <details key="start" value="3395"/>
+      <details key="end" value="3428"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/printAttributeSum/%.3/%">
+      <details key="start" value="3414"/>
+      <details key="end" value="3419"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/printAttributeSum/%.3/empty1">
+      <details key="start" value="3421"/>
+      <details key="end" value="3427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/printAttributeSum/%.4">
+      <details key="start" value="3431"/>
+      <details key="end" value="3434"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/printAttributeSum/%.5">
+      <details key="start" value="3434"/>
+      <details key="end" value="3767"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/printAttributeSum/%.5/%">
+      <details key="start" value="3499"/>
+      <details key="end" value="3760"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/printAttributeSum/%.5/%/%">
+      <details key="start" value="3556"/>
+      <details key="end" value="3597"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/printAttributeSum/%.5/%/%/attributeName">
+      <details key="start" value="3575"/>
+      <details key="end" value="3588"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/printAttributeSum/%.5/%/%/emtpty">
+      <details key="start" value="3590"/>
+      <details key="end" value="3596"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/printAttributeSum/%.5/%/%.1">
+      <details key="start" value="3600"/>
+      <details key="end" value="3655"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/printAttributeSum/%.5/%/%.1/%">
+      <details key="start" value="3619"/>
+      <details key="end" value="3646"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/printAttributeSum/%.5/%/%.1/%/%">
+      <details key="start" value="3619"/>
+      <details key="end" value="3635"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/printAttributeSum/%.5/%/%.1/%/%/persona">
+      <details key="start" value="3619"/>
+      <details key="end" value="3626"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/printAttributeSum/%.5/%/%.1/%/%/ea">
+      <details key="start" value="3632"/>
+      <details key="end" value="3634"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/printAttributeSum/%.5/%/%.1/empty1">
+      <details key="start" value="3648"/>
+      <details key="end" value="3654"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/printAttributeSum/%.5/%/%.2">
+      <details key="start" value="3659"/>
+      <details key="end" value="3749"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/printAttributeSum/%.5/%/%.2/%">
+      <details key="start" value="3659"/>
+      <details key="end" value="3694"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/printAttributeSum/%.5/%/%.2/%/%">
+      <details key="start" value="3659"/>
+      <details key="end" value="3675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/printAttributeSum/%.5/%/%.2/%/%/persona">
+      <details key="start" value="3659"/>
+      <details key="end" value="3666"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/printAttributeSum/%.5/%/%.2/%/%/ea">
+      <details key="start" value="3672"/>
+      <details key="end" value="3674"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/printAttributeSum/%.5/%/%.2/%/%.1">
+      <details key="start" value="3686"/>
+      <details key="end" value="3693"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/printAttributeSum/%.5/%/%.2/%.1">
+      <details key="start" value="3696"/>
+      <details key="end" value="3749"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/printAttributeSum/%.5/%/%.2/%.1/%">
+      <details key="start" value="3696"/>
+      <details key="end" value="3730"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/printAttributeSum/%.5/%/%.2/%.1/%/species">
+      <details key="start" value="3696"/>
+      <details key="end" value="3703"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/printAttributeSum/%.5/%/%.2/%.1/%/%">
+      <details key="start" value="3709"/>
+      <details key="end" value="3729"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/printAttributeSum/%.5/%/%.2/%.1/%/%/ea">
+      <details key="start" value="3709"/>
+      <details key="end" value="3711"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/printAttributeSum/%.5/%/%.2/%.1/%.1">
+      <details key="start" value="3741"/>
+      <details key="end" value="3748"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/printAttributeSum/%.5/%/%.3">
+      <details key="start" value="3751"/>
+      <details key="end" value="3754"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/printAttributeSum/%.5/%/attributeName">
+      <details key="start" value="3504"/>
+      <details key="end" value="3553"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/printAttributeSum/%.5/%/attributeName/%">
+      <details key="start" value="3530"/>
+      <details key="end" value="3554"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/printAttributeSum/%.5/%/attributeName/%/%">
+      <details key="start" value="3538"/>
+      <details key="end" value="3553"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.188" references="/0/printAttributeSum/%.5/%/attributeName/%/%/ea">
+      <details key="start" value="3550"/>
+      <details key="end" value="3552"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/printAttributeSum/%.5/ea">
+      <details key="start" value="3440"/>
+      <details key="end" value="3455"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/printAttributeSum/%.5/%.1">
+      <details key="start" value="3458"/>
+      <details key="end" value="3496"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/printAttributeSum/%.5/%.1/persona">
+      <details key="start" value="3488"/>
+      <details key="end" value="3495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/printAttributeSum/%.6">
+      <details key="start" value="3768"/>
+      <details key="end" value="3769"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/printAttributeSum/%.7">
+      <details key="start" value="3770"/>
+      <details key="end" value="3803"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/printAttributeSum/%.7/%">
+      <details key="start" value="3789"/>
+      <details key="end" value="3794"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/printAttributeSum/%.7/emtpty">
+      <details key="start" value="3796"/>
+      <details key="end" value="3802"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/printAttributeSum/%.8">
+      <details key="start" value="3806"/>
+      <details key="end" value="3837"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/printAttributeSum/%.8/%">
+      <details key="start" value="3825"/>
+      <details key="end" value="3828"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/printAttributeSum/%.8/empty1">
+      <details key="start" value="3830"/>
+      <details key="end" value="3836"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/printAttributeSum/%.9">
+      <details key="start" value="3841"/>
+      <details key="end" value="3881"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/printAttributeSum/%.9/%">
+      <details key="start" value="3855"/>
+      <details key="end" value="3880"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/printAttributeSum/%.9/%/aManagedCharacter">
+      <details key="start" value="3855"/>
+      <details key="end" value="3872"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/printAttributeSum/aShr5Generator">
+      <details key="start" value="3063"/>
+      <details key="end" value="3093"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/printAttributeSum/emtpty">
+      <details key="start" value="3094"/>
+      <details key="end" value="3108"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/printAttributeSum/empty1">
+      <details key="start" value="3109"/>
+      <details key="end" value="3123"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/printGeneratorValues">
+      <details key="start" value="3897"/>
+      <details key="end" value="4652"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/printGeneratorValues/@init">
+      <details key="start" value="3967"/>
+      <details key="end" value="4033"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/printGeneratorValues/@init/@variable.0">
+      <details key="start" value="3968"/>
+      <details key="end" value="4031"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/printGeneratorValues/@init/@variable.0/%">
+      <details key="start" value="4007"/>
+      <details key="end" value="4031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/printGeneratorValues/@init/@variable.0/%/aShr5Generator">
+      <details key="start" value="4007"/>
+      <details key="end" value="4021"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/printGeneratorValues/%">
+      <details key="start" value="4035"/>
+      <details key="end" value="4055"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/printGeneratorValues/%.1">
+      <details key="start" value="4056"/>
+      <details key="end" value="4089"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/printGeneratorValues/%.1/%">
+      <details key="start" value="4064"/>
+      <details key="end" value="4088"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/printGeneratorValues/%.1/%/aShr5Generator">
+      <details key="start" value="4064"/>
+      <details key="end" value="4078"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.214" references="/0/printGeneratorValues/%.2">
+      <details key="start" value="4091"/>
+      <details key="end" value="4114"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/printGeneratorValues/%.3">
+      <details key="start" value="4115"/>
+      <details key="end" value="4155"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/printGeneratorValues/%.3/%">
+      <details key="start" value="4115"/>
+      <details key="end" value="4143"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/printGeneratorValues/%.3/%/aShr5Generator">
+      <details key="start" value="4115"/>
+      <details key="end" value="4129"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.218" references="/0/printGeneratorValues/%.4">
+      <details key="start" value="4159"/>
+      <details key="end" value="4182"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.219" references="/0/printGeneratorValues/%.5">
+      <details key="start" value="4183"/>
+      <details key="end" value="4213"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.220" references="/0/printGeneratorValues/%.5/aShr5Generator">
+      <details key="start" value="4183"/>
+      <details key="end" value="4197"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/printGeneratorValues/%.6">
+      <details key="start" value="4215"/>
+      <details key="end" value="4238"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.222" references="/0/printGeneratorValues/%.7">
+      <details key="start" value="4239"/>
+      <details key="end" value="4341"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.223" references="/0/printGeneratorValues/%.7/%">
+      <details key="start" value="4239"/>
+      <details key="end" value="4272"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.224" references="/0/printGeneratorValues/%.7/%/%">
+      <details key="start" value="4239"/>
+      <details key="end" value="4263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.225" references="/0/printGeneratorValues/%.7/%/%/aShr5Generator">
+      <details key="start" value="4239"/>
+      <details key="end" value="4253"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.226" references="/0/printGeneratorValues/%.7/%.1">
+      <details key="start" value="4275"/>
+      <details key="end" value="4341"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.227" references="/0/printGeneratorValues/%.7/%.1/aShr5Generator">
+      <details key="start" value="4296"/>
+      <details key="end" value="4310"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.228" references="/0/printGeneratorValues/%.7/%.1/%">
+      <details key="start" value="4312"/>
+      <details key="end" value="4340"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.229" references="/0/printGeneratorValues/%.7/%.1/%/aShr5Generator">
+      <details key="start" value="4312"/>
+      <details key="end" value="4326"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.230" references="/0/printGeneratorValues/%.8">
+      <details key="start" value="4345"/>
+      <details key="end" value="4368"/>
+      <details key="line" value="83"/>
+    </eAnnotations>
+    <eAnnotations source="positions.231" references="/0/printGeneratorValues/%.9">
+      <details key="start" value="4369"/>
+      <details key="end" value="4439"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.232" references="/0/printGeneratorValues/%.9/aManagedCharacter">
+      <details key="start" value="4391"/>
+      <details key="end" value="4408"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/printGeneratorValues/%.9/%">
+      <details key="start" value="4410"/>
+      <details key="end" value="4438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.234" references="/0/printGeneratorValues/%.9/%/aShr5Generator">
+      <details key="start" value="4410"/>
+      <details key="end" value="4424"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.235" references="/0/printGeneratorValues/%.10">
+      <details key="start" value="4442"/>
+      <details key="end" value="4463"/>
+      <details key="line" value="84"/>
+    </eAnnotations>
+    <eAnnotations source="positions.236" references="/0/printGeneratorValues/%.11">
+      <details key="start" value="4464"/>
+      <details key="end" value="4537"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.237" references="/0/printGeneratorValues/%.11/aManagedCharacter">
+      <details key="start" value="4489"/>
+      <details key="end" value="4506"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.238" references="/0/printGeneratorValues/%.11/%">
+      <details key="start" value="4508"/>
+      <details key="end" value="4536"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.239" references="/0/printGeneratorValues/%.11/%/aShr5Generator">
+      <details key="start" value="4508"/>
+      <details key="end" value="4522"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.240" references="/0/printGeneratorValues/%.12">
+      <details key="start" value="4540"/>
+      <details key="end" value="4558"/>
+      <details key="line" value="85"/>
+    </eAnnotations>
+    <eAnnotations source="positions.241" references="/0/printGeneratorValues/%.13">
+      <details key="start" value="4559"/>
+      <details key="end" value="4584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.242" references="/0/printGeneratorValues/%.13/aShr5Generator">
+      <details key="start" value="4559"/>
+      <details key="end" value="4573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.243" references="/0/printGeneratorValues/%.14">
+      <details key="start" value="4587"/>
+      <details key="end" value="4607"/>
+      <details key="line" value="87"/>
+    </eAnnotations>
+    <eAnnotations source="positions.244" references="/0/printGeneratorValues/%.15">
+      <details key="start" value="4608"/>
+      <details key="end" value="4637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.245" references="/0/printGeneratorValues/%.15/aShr5Generator">
+      <details key="start" value="4608"/>
+      <details key="end" value="4622"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.246" references="/0/printGeneratorValues/aShr5Generator">
+      <details key="start" value="3936"/>
+      <details key="end" value="3966"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.247" references="/0/printGeneratorReport">
+      <details key="start" value="4693"/>
+      <details key="end" value="5022"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.248" references="/0/printGeneratorReport/%">
+      <details key="start" value="4766"/>
+      <details key="end" value="4790"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.249" references="/0/printGeneratorReport/%/%">
+      <details key="start" value="4766"/>
+      <details key="end" value="4778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.250" references="/0/printGeneratorReport/%.1">
+      <details key="start" value="4792"/>
+      <details key="end" value="4793"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.251" references="/0/printGeneratorReport/%.2">
+      <details key="start" value="4794"/>
+      <details key="end" value="4827"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.252" references="/0/printGeneratorReport/%.2/%">
+      <details key="start" value="4802"/>
+      <details key="end" value="4826"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.253" references="/0/printGeneratorReport/%.2/%/aShr5Generator">
+      <details key="start" value="4802"/>
+      <details key="end" value="4816"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.254" references="/0/printGeneratorReport/%.3">
+      <details key="start" value="4829"/>
+      <details key="end" value="4830"/>
+      <details key="line" value="96"/>
+    </eAnnotations>
+    <eAnnotations source="positions.255" references="/0/printGeneratorReport/%.4">
+      <details key="start" value="4831"/>
+      <details key="end" value="4861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.256" references="/0/printGeneratorReport/%.4/%">
+      <details key="start" value="4839"/>
+      <details key="end" value="4860"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.257" references="/0/printGeneratorReport/%.4/%/aShr5Generator">
+      <details key="start" value="4839"/>
+      <details key="end" value="4853"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.258" references="/0/printGeneratorReport/%.5">
+      <details key="start" value="4863"/>
+      <details key="end" value="4864"/>
+      <details key="line" value="97"/>
+    </eAnnotations>
+    <eAnnotations source="positions.259" references="/0/printGeneratorReport/%.6">
+      <details key="start" value="4865"/>
+      <details key="end" value="4897"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.260" references="/0/printGeneratorReport/%.6/%">
+      <details key="start" value="4873"/>
+      <details key="end" value="4896"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.261" references="/0/printGeneratorReport/%.6/%/aShr5Generator">
+      <details key="start" value="4873"/>
+      <details key="end" value="4887"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.262" references="/0/printGeneratorReport/%.7">
+      <details key="start" value="4899"/>
+      <details key="end" value="4900"/>
+      <details key="line" value="98"/>
+    </eAnnotations>
+    <eAnnotations source="positions.263" references="/0/printGeneratorReport/%.8">
+      <details key="start" value="4901"/>
+      <details key="end" value="4930"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.264" references="/0/printGeneratorReport/%.8/%">
+      <details key="start" value="4909"/>
+      <details key="end" value="4929"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.265" references="/0/printGeneratorReport/%.8/%/aShr5Generator">
+      <details key="start" value="4909"/>
+      <details key="end" value="4923"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.266" references="/0/printGeneratorReport/%.9">
+      <details key="start" value="4932"/>
+      <details key="end" value="4933"/>
+      <details key="line" value="99"/>
+    </eAnnotations>
+    <eAnnotations source="positions.267" references="/0/printGeneratorReport/%.10">
+      <details key="start" value="4934"/>
+      <details key="end" value="4967"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.268" references="/0/printGeneratorReport/%.10/%">
+      <details key="start" value="4942"/>
+      <details key="end" value="4966"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.269" references="/0/printGeneratorReport/%.10/%/aShr5Generator">
+      <details key="start" value="4942"/>
+      <details key="end" value="4956"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.270" references="/0/printGeneratorReport/%.11">
+      <details key="start" value="4969"/>
+      <details key="end" value="4971"/>
+      <details key="line" value="100"/>
+    </eAnnotations>
+    <eAnnotations source="positions.271" references="/0/printGeneratorReport/%.12">
+      <details key="start" value="4972"/>
+      <details key="end" value="5008"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.272" references="/0/printGeneratorReport/%.12/aShr5Generator">
+      <details key="start" value="4993"/>
+      <details key="end" value="5007"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.273" references="/0/printGeneratorReport/%.13">
+      <details key="start" value="4654"/>
+      <details key="end" value="4692"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.274" references="/0/printGeneratorReport/aShr5Generator">
+      <details key="start" value="4731"/>
+      <details key="end" value="4761"/>
+      <details key="line" value="93"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

@@ -49,11 +49,13 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractAcceleoGenerator 
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
         super.doGenerate(monitor);
-    
+        
+        monitor.subTask("transforming to pdf");
         try {
             for (String fname : svgFiles) {
                 File file = new File(fname);
                 storeAsPdf(file);
+                monitor.subTask("writing :"+fname);
             }
     
         } catch (TranscoderException e) {

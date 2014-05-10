@@ -18,6 +18,13 @@
 [query public getOrderedAttibutesForPersona(arg0 : AbstraktPersona) : Sequence(EAttribute)
 	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getOrderedAttibutes(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0})
 /]
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public getOrderedBasedAttibutesForPersona(arg0 : AbstraktPersona) : Sequence(EAttribute)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'getOrderedBaseAttibutes(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0})
+/]
 
 [**
  * The documentation of the query

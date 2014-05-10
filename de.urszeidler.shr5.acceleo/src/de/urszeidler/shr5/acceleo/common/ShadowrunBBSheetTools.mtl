@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module ShadowrunBBSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[query public titelText(txt : String) : String = self.boldText() /]
+
+[query public boldText(txt : String) : String = self.tagText('b') /]
+[query public italicText(txt : String) : String = self.tagText('i') /]
+[query public underlineText(txt : String) : String = self.tagText('u') /]
+[query public tagText(txt : String,tag : String) : String = '['+ tag + ']'+self+'[/'+tag+']' /]
+
+[query public startTag(txt : String,) : String = '['+ self + ']' /]
+[query public endTag(txt : String,) : String = '[/'+ self + ']' /]
+
+[query public cellText(txt : String) : String = self.tagText('td') /]
+[query public tableRow(row : Sequence(String)) : String = self->collect(e| e.cellText()).tagText('tr') /]
+

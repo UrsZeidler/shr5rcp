@@ -13,11 +13,11 @@
     <input>
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
+    <imports href="../common/ShadowrunTools.emtl#/0"/>
+    <imports href="../common/ShadowrunManagmentTools.emtl#/0"/>
     <imports href="../common/ShadowrunSheetTools.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5EEnumhelper.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0"/>
+    <imports href="../common/shr5EEnumhelper.emtl#/0"/>
+    <imports href="../common/shr5ManagementEEnumhelper.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="simpleSvgSheetManagedCharacter" visibility="Public" main="true">
       <body xsi:type="mtl:TemplateInvocation" definition="/0/printPageOne">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -2563,7 +2563,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="mtl:QueryInvocation">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeitsGruppe"/>
-            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/fertigkeitDicePoolValue"/>
+            <definition href="../common/ShadowrunTools.emtl#/0/fertigkeitDicePoolValue"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="pf" referredVariable="/0/printSkill/pf">
               <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeit"/>
             </argument>
@@ -4305,7 +4305,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/tspan>&lt;/text>&#xA;&lt;path&#xA;       d=&quot;m 111.12,678.84 78.54,0 0,0.42 -78.54,0 0,-0.42 z&quot;&#xA;       style=&quot;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none&quot;&#xA;       id=&quot;path3813&quot; />&lt;text&#xA;       transform=&quot;matrix(1,0,0,-1,32.16,669.48)&quot;&#xA;       id=&quot;text3815&quot;>&lt;tspan&#xA;         style=&quot;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Francis;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9;writing-mode:lr;-inkscape-font-specification:FrancisBold&quot;&#xA;         x=&quot;0 5.7573 8.2926 11.1879 15.9102 18.4455 22.7988&quot;&#xA;         y=&quot;0&quot;&#xA;         sodipodi:role=&quot;line&quot;&#xA;         id=&quot;tspan3817&quot;>Vitals &lt;/tspan>&lt;tspan&#xA;         style=&quot;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Francis;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9;writing-mode:lr;-inkscape-font-specification:FrancisBold&quot;&#xA;         x=&quot;4.4973 10.9818 15.6573 17.8128 23.0283 27.8838 30.7593 33.2748 80.8587 89.3232 93.9987 96.1542 101.3697 106.2252 109.1007 111.6162&quot;&#xA;         y=&quot;10.503&quot;&#xA;         sodipodi:role=&quot;line&quot;&#xA;         id=&quot;tspan3819&quot;>Height: Weight: &lt;/tspan>&lt;/text>&#xA;&lt;path&#xA;       d=&quot;m 68.22,657.66 35.94,0 0,0.42 -35.94,0 0,-0.42 z&quot;&#xA;       style=&quot;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none&quot;&#xA;       id=&quot;path3821&quot; />&lt;path&#xA;       d=&quot;m 146.58,657.66 43.08,0 0,0.42 -43.08,0 0,-0.42 z&quot;&#xA;       style=&quot;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none&quot;&#xA;       id=&quot;path3823&quot; />&lt;text&#xA;       transform=&quot;matrix(1,0,0,-1,36.66,648.42)&quot;&#xA;       id=&quot;text3825&quot;>&lt;tspan&#xA;         style=&quot;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Francis;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9;writing-mode:lr;-inkscape-font-specification:FrancisBold&quot;&#xA;         x=&quot;0 6.4827 11.7054 16.3881 18.9018 76.3848 81.0675 85.7502 90.4329 92.9466&quot;&#xA;         y=&quot;0&quot;&#xA;         sodipodi:role=&quot;line&quot;&#xA;         id=&quot;tspan3827&quot;>Age: Sex: "/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
+        <definition href="../common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EEnum" href="http://urszeidler.de/shr5mngt/1.0#//Sex"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aManagedCharacter" referredVariable="/0/printManagedCharacterOverview/aManagedCharacter">
@@ -4641,7 +4641,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0/fertigkeitDicePoolValue"/>
+          <references href="../common/ShadowrunTools.emtl#/0/fertigkeitDicePoolValue"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeitsGruppe"/>
         <eParameters name="arg0">
@@ -4839,7 +4839,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
+          <references href="../common/shr5ManagementEEnumhelper.emtl#/0/toLocalizedSexString"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="ee">
@@ -4916,7 +4916,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sequence(OclAny)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
+        <references href="../common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe_Class">
@@ -4937,6 +4937,16 @@
     <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaEigenschaft)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="../common/ShadowrunSheetTools.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug_Class">

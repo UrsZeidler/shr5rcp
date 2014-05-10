@@ -4,6 +4,24 @@
  */]
 [module ShadowrunManagmentTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
 
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public hasMatrixInitative(arg0 : ManagedCharacter) : Boolean
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'hasMatrixInitative(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public getMatrixInitative(arg0 : ManagedCharacter) : String
+	= invoke('de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools', 'getMatrixInitative(de.urszeidler.eclipse.shr5Management.ManagedCharacter)', Sequence{arg0})
+/]
+
+
 [**
  * The documentation of the query
  * @param arg0

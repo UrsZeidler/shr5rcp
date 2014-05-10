@@ -36,7 +36,6 @@ import org.eclipse.swt.widgets.Text;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
-import de.urszeidler.shr5.acceleo.sheets.OfficalCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.SimpleSvg;
 import de.urszeidler.shr5.ecp.Activator;
 
@@ -69,8 +68,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         this.object = object;
 
         HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap.put("phpBCharacter Sheet", new BoardCharacterSheet());
-        hashMap.put("offical Sheet svg", new OfficalCharacterSheet());
+        hashMap.put("BB Character Sheet", new BoardCharacterSheet());
         hashMap.put("simple svg", new SimpleSvg());
 
         transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
@@ -78,7 +76,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
    
 
         HashMap<String, AbstractAcceleoGenerator> hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put("phpB shr5 generator sheet", new BoardShr5GeneratorSheet());
+        hashMap1.put("BB shr5 generator sheet", new BoardShr5GeneratorSheet());
         transformerMap.put(Shr5managementPackage.Literals.SHR5_GENERATOR, hashMap1);
         
         hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);

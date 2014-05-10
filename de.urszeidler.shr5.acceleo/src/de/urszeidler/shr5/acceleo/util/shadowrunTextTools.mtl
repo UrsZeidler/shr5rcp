@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module shadowrunTextTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[query public toFeatureName(arg0 : EObject, arg1 : EStructuralFeature) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toFeatureName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature)', Sequence{arg0, arg1})
+/]
+
+[query public toName(arg0 : OclAny, arg1 : EObject, arg2 : EAttribute) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toName(java.lang.Object, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1, arg2})
+/]
+
+[query public zauberArtToName(arg0 : ZauberArt) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(de.urszeidler.eclipse.shr5.ZauberArt)', Sequence{arg0})
+/]
+
