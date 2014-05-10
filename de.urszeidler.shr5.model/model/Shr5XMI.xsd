@@ -1391,20 +1391,29 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Comlink">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="attributes" type="xsd:int">
-            <xsd:annotation>
-              <xsd:documentation>Contains the attribute ratings.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
           <xsd:element name="runningProgramms" type="shr5:Program"/>
           <xsd:element name="stroredProgramm" type="shr5:Program"/>
+          <xsd:element name="configuration" type="ecore:EAttribute">
+            <xsd:annotation>
+              <xsd:documentation>Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="programSlots" type="xsd:int">
           <xsd:annotation>
             <xsd:documentation>The number probrams the deck can run concuntrly.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="attribute1" type="xsd:int" use="required"/>
+        <xsd:attribute name="attribute2" type="xsd:int" use="required"/>
+        <xsd:attribute name="attribute3" type="xsd:int" use="required"/>
+        <xsd:attribute name="attribute4" type="xsd:int" use="required"/>
         <xsd:attribute name="runningProgramms" type="xsd:string"/>
+        <xsd:attribute name="configuration" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

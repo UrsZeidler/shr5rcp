@@ -3703,9 +3703,9 @@
           <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberdeck/programSlots"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_fHsUYdhJEeOz3qWt8pJlAw"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_iDy5INhJEeOz3qWt8pJlAw" type="2001">
-          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberdeck/attributes"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_iDy5IdhJEeOz3qWt8pJlAw"/>
+        <children xmi:type="notation:Node" xmi:id="_BPSW4NhtEeOz3qWt8pJlAw" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Cyberdeck/attribute1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BPSW4dhtEeOz3qWt8pJlAw"/>
         </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_UynzcthIEeOz3qWt8pJlAw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Uynzc9hIEeOz3qWt8pJlAw"/>
@@ -3968,6 +3968,7 @@
       <styles xmi:type="notation:FontStyle" xmi:id="__WFSAdhKEeOz3qWt8pJlAw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
       <element xmi:type="ecore:EReference" href="shr5.ecore#//Cyberdeck/stroredProgramm"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__WFSAthKEeOz3qWt8pJlAw" points="[-72, -1, 230, 2]$[-301, 4, 1, 7]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lo1koNhtEeOz3qWt8pJlAw" id="(0.04081632653061224,0.37168141592920356)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__WGgINhKEeOz3qWt8pJlAw" id="(0.20588235294117646,0.8333333333333334)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_19riwNhLEeOz3qWt8pJlAw" type="3003" source="_zgjZANhLEeOz3qWt8pJlAw" target="_-0qR4NhIEeOz3qWt8pJlAw">

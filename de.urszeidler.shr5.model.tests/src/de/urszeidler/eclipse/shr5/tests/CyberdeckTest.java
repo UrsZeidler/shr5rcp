@@ -64,13 +64,11 @@ public class CyberdeckTest extends ComlinkTest {
         setFixture(Shr5Factory.eINSTANCE.createCyberdeck());
         getFixture().setDeviceRating(2);
         
-        getFixture().getAttributes().add(2);
-        getFixture().getAttributes().add(2);
-        getFixture().getAttributes().add(2);
-        getFixture().getAttributes().add(2);
-
-        getFixture().getAttributes().add(2);
-
+        getFixture().setAttribute1(1);
+        getFixture().setAttribute2(2);
+        getFixture().setAttribute3(3);
+        getFixture().setAttribute4(4);        
+ 
     }
 
     /**
@@ -92,7 +90,7 @@ public class CyberdeckTest extends ComlinkTest {
      * @generated not
      */
     public void testGetAngriff() {
-        assertEquals(2, getFixture().getAngriff());
+        assertEquals(4, getFixture().getAngriff());
     }
 
     /**
@@ -103,7 +101,7 @@ public class CyberdeckTest extends ComlinkTest {
      * @generated not
      */
     public void testGetSchleicher() {
-        assertEquals(2, getFixture().getSchleicher());
+        assertEquals(3, getFixture().getSchleicher());
     }
 
     /**
@@ -115,7 +113,7 @@ public class CyberdeckTest extends ComlinkTest {
      * @generated not
      */
     public void testGetFirewall() {
-        assertEquals(2, getFixture().getFirewall());
+        assertEquals(1, getFixture().getFirewall());
     }
 
     /**
@@ -128,6 +126,27 @@ public class CyberdeckTest extends ComlinkTest {
      */
     public void testGetDatenverarbeitung() {
         assertEquals(2, getFixture().getDatenverarbeitung());
+    }
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung()
+     * @generated not
+     */
+    public void testCyberdeckReconfigure() {
+        assertEquals(1, getFixture().getFirewall());
+        assertEquals(2, getFixture().getDatenverarbeitung());        
+        assertEquals(3, getFixture().getSchleicher());
+        assertEquals(4, getFixture().getAngriff());
+        
+        getFixture().getConfiguration().move(3, 0);
+        assertEquals(2, getFixture().getFirewall());
+        assertEquals(3, getFixture().getDatenverarbeitung());        
+        assertEquals(4, getFixture().getSchleicher());
+        assertEquals(1, getFixture().getAngriff());        
     }
 
 } //CyberdeckTest

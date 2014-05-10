@@ -3984,17 +3984,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getCyberdeck_Attributes() {
-        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EReference getCyberdeck_RunningProgramms() {
-        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(2);
+        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4003,7 +3994,52 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EReference getCyberdeck_StroredProgramm() {
-        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(3);
+        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberdeck_Attribute1() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberdeck_Attribute2() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberdeck_Attribute3() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberdeck_Attribute4() {
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCyberdeck_Configuration() {
+        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(7);
     }
 
     /**
@@ -4657,9 +4693,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         cyberdeckEClass = createEClass(CYBERDECK);
         createEAttribute(cyberdeckEClass, CYBERDECK__PROGRAM_SLOTS);
-        createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTES);
         createEReference(cyberdeckEClass, CYBERDECK__RUNNING_PROGRAMMS);
         createEReference(cyberdeckEClass, CYBERDECK__STRORED_PROGRAMM);
+        createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE1);
+        createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE2);
+        createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE3);
+        createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE4);
+        createEReference(cyberdeckEClass, CYBERDECK__CONFIGURATION);
 
         programEClass = createEClass(PROGRAM);
         createEAttribute(programEClass, PROGRAM__CATEGORY);
@@ -5279,9 +5319,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(cyberdeckEClass, Cyberdeck.class, "Cyberdeck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCyberdeck_ProgramSlots(), ecorePackage.getEInt(), "programSlots", null, 0, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getCyberdeck_Attributes(), ecorePackage.getEInt(), "attributes", null, 4, 4, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCyberdeck_RunningProgramms(), this.getProgram(), null, "runningProgramms", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getCyberdeck_StroredProgramm(), this.getProgram(), null, "stroredProgramm", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberdeck_Attribute1(), ecorePackage.getEInt(), "attribute1", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberdeck_Attribute2(), ecorePackage.getEInt(), "attribute2", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberdeck_Attribute3(), ecorePackage.getEInt(), "attribute3", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberdeck_Attribute4(), ecorePackage.getEInt(), "attribute4", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCyberdeck_Configuration(), ecorePackage.getEAttribute(), null, "configuration", null, 4, 4, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getProgram_Category(), ecorePackage.getEString(), "category", null, 1, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +19,13 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getProgramSlots <em>Program Slots</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningProgramms <em>Running Programms</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getStroredProgramm <em>Strored Programm</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute1 <em>Attribute1</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute2 <em>Attribute2</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute3 <em>Attribute3</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute4 <em>Attribute4</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getConfiguration <em>Configuration</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,25 +64,6 @@ public interface Cyberdeck extends Comlink, ActiveMatixDevice {
     void setProgramSlots(int value);
 
     /**
-     * Returns the value of the '<em><b>Attributes</b></em>' attribute list.
-     * The list contents are of type {@link java.lang.Integer}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Attributes</em>' attribute list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * Contains the attribute ratings.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Attributes</em>' attribute list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_Attributes()
-     * @model lower="4" upper="4"
-     * @generated
-     */
-    EList<Integer> getAttributes();
-
-    /**
      * Returns the value of the '<em><b>Running Programms</b></em>' reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
      * <!-- begin-user-doc -->
@@ -108,5 +94,124 @@ public interface Cyberdeck extends Comlink, ActiveMatixDevice {
      * @generated
      */
     EList<Program> getStroredProgramm();
+
+    /**
+     * Returns the value of the '<em><b>Attribute1</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Attribute1</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Attribute1</em>' attribute.
+     * @see #setAttribute1(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_Attribute1()
+     * @model required="true"
+     * @generated
+     */
+    int getAttribute1();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute1 <em>Attribute1</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Attribute1</em>' attribute.
+     * @see #getAttribute1()
+     * @generated
+     */
+    void setAttribute1(int value);
+
+    /**
+     * Returns the value of the '<em><b>Attribute2</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Attribute2</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Attribute2</em>' attribute.
+     * @see #setAttribute2(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_Attribute2()
+     * @model required="true"
+     * @generated
+     */
+    int getAttribute2();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute2 <em>Attribute2</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Attribute2</em>' attribute.
+     * @see #getAttribute2()
+     * @generated
+     */
+    void setAttribute2(int value);
+
+    /**
+     * Returns the value of the '<em><b>Attribute3</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Attribute3</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Attribute3</em>' attribute.
+     * @see #setAttribute3(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_Attribute3()
+     * @model required="true"
+     * @generated
+     */
+    int getAttribute3();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute3 <em>Attribute3</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Attribute3</em>' attribute.
+     * @see #getAttribute3()
+     * @generated
+     */
+    void setAttribute3(int value);
+
+    /**
+     * Returns the value of the '<em><b>Attribute4</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Attribute4</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Attribute4</em>' attribute.
+     * @see #setAttribute4(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_Attribute4()
+     * @model required="true"
+     * @generated
+     */
+    int getAttribute4();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute4 <em>Attribute4</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Attribute4</em>' attribute.
+     * @see #getAttribute4()
+     * @generated
+     */
+    void setAttribute4(int value);
+
+    /**
+     * Returns the value of the '<em><b>Configuration</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.EAttribute}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.
+     * <!-- end-model-doc -->
+     * @return the value of the '<em>Configuration</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_Configuration()
+     * @model lower="4" upper="4"
+     * @generated
+     */
+    EList<EAttribute> getConfiguration();
 
 } // Cyberdeck

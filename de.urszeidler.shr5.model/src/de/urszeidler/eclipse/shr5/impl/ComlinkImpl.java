@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getFirewall <em>Firewall</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getDeviceRating <em>Device Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getFirewall <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ComlinkImpl#getDeviceRating <em>Device Rating</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
@@ -34,7 +34,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeraetestufe()
      * @generated
      * @ordered
@@ -45,7 +44,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
      * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFirewall()
      * @generated
      * @ordered
@@ -56,7 +54,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
      * The default value of the '{@link #getDatenverarbeitung() <em>Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDatenverarbeitung()
      * @generated
      * @ordered
@@ -67,7 +64,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
      * The default value of the '{@link #getDeviceRating() <em>Device Rating</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDeviceRating()
      * @generated
      * @ordered
@@ -78,7 +74,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
      * The cached value of the '{@link #getDeviceRating() <em>Device Rating</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDeviceRating()
      * @generated
      * @ordered
@@ -88,7 +83,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ComlinkImpl() {
@@ -98,7 +92,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -139,7 +132,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getDeviceRating() {
@@ -149,7 +141,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setDeviceRating(int newDeviceRating) {
@@ -162,7 +153,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -183,7 +173,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -199,7 +188,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -215,7 +203,6 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -236,27 +223,21 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (derivedFeatureID) {
-                default:
-                    return -1;
+                default: return -1;
             }
         }
         if (baseClass == MatrixDevice.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.COMLINK__GERAETESTUFE:
-                    return Shr5Package.MATRIX_DEVICE__GERAETESTUFE;
-                case Shr5Package.COMLINK__FIREWALL:
-                    return Shr5Package.MATRIX_DEVICE__FIREWALL;
-                case Shr5Package.COMLINK__DATENVERARBEITUNG:
-                    return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
-                default:
-                    return -1;
+                case Shr5Package.COMLINK__GERAETESTUFE: return Shr5Package.MATRIX_DEVICE__GERAETESTUFE;
+                case Shr5Package.COMLINK__FIREWALL: return Shr5Package.MATRIX_DEVICE__FIREWALL;
+                case Shr5Package.COMLINK__DATENVERARBEITUNG: return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -265,27 +246,21 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (baseFeatureID) {
-                default:
-                    return -1;
+                default: return -1;
             }
         }
         if (baseClass == MatrixDevice.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATRIX_DEVICE__GERAETESTUFE:
-                    return Shr5Package.COMLINK__GERAETESTUFE;
-                case Shr5Package.MATRIX_DEVICE__FIREWALL:
-                    return Shr5Package.COMLINK__FIREWALL;
-                case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG:
-                    return Shr5Package.COMLINK__DATENVERARBEITUNG;
-                default:
-                    return -1;
+                case Shr5Package.MATRIX_DEVICE__GERAETESTUFE: return Shr5Package.COMLINK__GERAETESTUFE;
+                case Shr5Package.MATRIX_DEVICE__FIREWALL: return Shr5Package.COMLINK__FIREWALL;
+                case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG: return Shr5Package.COMLINK__DATENVERARBEITUNG;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -294,13 +269,11 @@ public class ComlinkImpl extends AbstraktGegenstandImpl implements Comlink {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (deviceRating: ");

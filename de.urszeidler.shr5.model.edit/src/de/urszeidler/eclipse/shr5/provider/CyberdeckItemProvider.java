@@ -60,8 +60,12 @@ public class CyberdeckItemProvider
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
             addProgramSlotsPropertyDescriptor(object);
-            addAttributesPropertyDescriptor(object);
             addRunningProgrammsPropertyDescriptor(object);
+            addAttribute1PropertyDescriptor(object);
+            addAttribute2PropertyDescriptor(object);
+            addAttribute3PropertyDescriptor(object);
+            addAttribute4PropertyDescriptor(object);
+            addConfigurationPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -133,28 +137,6 @@ public class CyberdeckItemProvider
     }
 
     /**
-     * This adds a property descriptor for the Attributes feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addAttributesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Cyberdeck_attributes_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_attributes_feature", "_UI_Cyberdeck_type"),
-                 Shr5Package.Literals.CYBERDECK__ATTRIBUTES,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
-    }
-
-    /**
      * This adds a property descriptor for the Running Programms feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -168,6 +150,116 @@ public class CyberdeckItemProvider
                  getString("_UI_Cyberdeck_runningProgramms_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_runningProgramms_feature", "_UI_Cyberdeck_type"),
                  Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMMS,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Attribute1 feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAttribute1PropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberdeck_attribute1_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_attribute1_feature", "_UI_Cyberdeck_type"),
+                 Shr5Package.Literals.CYBERDECK__ATTRIBUTE1,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Attribute2 feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAttribute2PropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberdeck_attribute2_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_attribute2_feature", "_UI_Cyberdeck_type"),
+                 Shr5Package.Literals.CYBERDECK__ATTRIBUTE2,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Attribute3 feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAttribute3PropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberdeck_attribute3_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_attribute3_feature", "_UI_Cyberdeck_type"),
+                 Shr5Package.Literals.CYBERDECK__ATTRIBUTE3,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Attribute4 feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addAttribute4PropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberdeck_attribute4_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_attribute4_feature", "_UI_Cyberdeck_type"),
+                 Shr5Package.Literals.CYBERDECK__ATTRIBUTE4,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Configuration feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addConfigurationPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Cyberdeck_configuration_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_configuration_feature", "_UI_Cyberdeck_type"),
+                 Shr5Package.Literals.CYBERDECK__CONFIGURATION,
                  true,
                  false,
                  true,
@@ -246,7 +338,10 @@ public class CyberdeckItemProvider
             case Shr5Package.CYBERDECK__ANGRIFF:
             case Shr5Package.CYBERDECK__SCHLEICHER:
             case Shr5Package.CYBERDECK__PROGRAM_SLOTS:
-            case Shr5Package.CYBERDECK__ATTRIBUTES:
+            case Shr5Package.CYBERDECK__ATTRIBUTE1:
+            case Shr5Package.CYBERDECK__ATTRIBUTE2:
+            case Shr5Package.CYBERDECK__ATTRIBUTE3:
+            case Shr5Package.CYBERDECK__ATTRIBUTE4:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.CYBERDECK__STRORED_PROGRAMM:

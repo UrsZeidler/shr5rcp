@@ -13555,22 +13555,13 @@ public interface Shr5Package extends EPackage {
     int CYBERDECK__PROGRAM_SLOTS = COMLINK_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Attributes</b></em>' attribute list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CYBERDECK__ATTRIBUTES = COMLINK_FEATURE_COUNT + 3;
-
-    /**
      * The feature id for the '<em><b>Running Programms</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CYBERDECK__RUNNING_PROGRAMMS = COMLINK_FEATURE_COUNT + 4;
+    int CYBERDECK__RUNNING_PROGRAMMS = COMLINK_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
@@ -13579,7 +13570,52 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__STRORED_PROGRAMM = COMLINK_FEATURE_COUNT + 5;
+    int CYBERDECK__STRORED_PROGRAMM = COMLINK_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Attribute1</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__ATTRIBUTE1 = COMLINK_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Attribute2</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__ATTRIBUTE2 = COMLINK_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Attribute3</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__ATTRIBUTE3 = COMLINK_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Attribute4</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__ATTRIBUTE4 = COMLINK_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Configuration</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__CONFIGURATION = COMLINK_FEATURE_COUNT + 9;
 
     /**
      * The number of structural features of the '<em>Cyberdeck</em>' class.
@@ -13588,7 +13624,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK_FEATURE_COUNT = COMLINK_FEATURE_COUNT + 6;
+    int CYBERDECK_FEATURE_COUNT = COMLINK_FEATURE_COUNT + 10;
 
     /**
      * The number of operations of the '<em>Cyberdeck</em>' class.
@@ -17663,17 +17699,6 @@ public interface Shr5Package extends EPackage {
     EAttribute getCyberdeck_ProgramSlots();
 
     /**
-     * Returns the meta object for the attribute list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttributes <em>Attributes</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute list '<em>Attributes</em>'.
-     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getAttributes()
-     * @see #getCyberdeck()
-     * @generated
-     */
-    EAttribute getCyberdeck_Attributes();
-
-    /**
      * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningProgramms <em>Running Programms</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17694,6 +17719,61 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EReference getCyberdeck_StroredProgramm();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute1 <em>Attribute1</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Attribute1</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute1()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_Attribute1();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute2 <em>Attribute2</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Attribute2</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute2()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_Attribute2();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute3 <em>Attribute3</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Attribute3</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute3()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_Attribute3();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute4 <em>Attribute4</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Attribute4</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute4()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EAttribute getCyberdeck_Attribute4();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getConfiguration <em>Configuration</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Configuration</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getConfiguration()
+     * @see #getCyberdeck()
+     * @generated
+     */
+    EReference getCyberdeck_Configuration();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Program <em>Program</em>}'.
@@ -20781,14 +20861,6 @@ public interface Shr5Package extends EPackage {
         EAttribute CYBERDECK__PROGRAM_SLOTS = eINSTANCE.getCyberdeck_ProgramSlots();
 
         /**
-         * The meta object literal for the '<em><b>Attributes</b></em>' attribute list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute CYBERDECK__ATTRIBUTES = eINSTANCE.getCyberdeck_Attributes();
-
-        /**
          * The meta object literal for the '<em><b>Running Programms</b></em>' reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -20803,6 +20875,46 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EReference CYBERDECK__STRORED_PROGRAMM = eINSTANCE.getCyberdeck_StroredProgramm();
+
+        /**
+         * The meta object literal for the '<em><b>Attribute1</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__ATTRIBUTE1 = eINSTANCE.getCyberdeck_Attribute1();
+
+        /**
+         * The meta object literal for the '<em><b>Attribute2</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__ATTRIBUTE2 = eINSTANCE.getCyberdeck_Attribute2();
+
+        /**
+         * The meta object literal for the '<em><b>Attribute3</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__ATTRIBUTE3 = eINSTANCE.getCyberdeck_Attribute3();
+
+        /**
+         * The meta object literal for the '<em><b>Attribute4</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERDECK__ATTRIBUTE4 = eINSTANCE.getCyberdeck_Attribute4();
+
+        /**
+         * The meta object literal for the '<em><b>Configuration</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference CYBERDECK__CONFIGURATION = eINSTANCE.getCyberdeck_Configuration();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl <em>Program</em>}' class.
