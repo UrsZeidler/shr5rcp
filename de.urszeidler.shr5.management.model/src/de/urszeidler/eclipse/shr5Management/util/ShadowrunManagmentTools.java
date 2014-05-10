@@ -70,7 +70,7 @@ public class ShadowrunManagmentTools {
         if (character.getPersona() instanceof Technomancer) {
             Technomancer t = (Technomancer)character.getPersona();
             
-            return t.getDatenverarbeitung()+t.getIntuition()+"4d6";
+            return (t.getDatenverarbeitung()+t.getIntuition())+"";
         }
         // TODO : check for deck
         return "";
@@ -85,7 +85,6 @@ public class ShadowrunManagmentTools {
             return false;
 
         if (character.getPersona() instanceof Technomancer) {
-            Technomancer t = (Technomancer)character.getPersona();
             return true;
         }
         // TODO : check for deck
