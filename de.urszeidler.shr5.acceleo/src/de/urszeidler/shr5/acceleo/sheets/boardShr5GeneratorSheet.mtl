@@ -65,7 +65,7 @@ karma worth                 : [calcCompleteKaramaSpend(aManagedCharacter, aShr5G
 species : Spezies =  aShr5Generator.character.persona.spezies ;
 persona : AbstraktPersona = aShr5Generator.character.persona ;} ]
 ['Attribute points'.titelText()/]
-[printTextPlusSpace('      ', emtpty)/][printTextPlusSpace('rtg', empty1) /]pt
+[printTextPlusSpace('.', emtpty)/][printTextPlusSpace('rtg', empty1) /]pt
 [for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
 [let attributeName : String = getText(base2Calced(ea))]
 [printTextPlusSpace(attributeName, emtpty)/][printTextPlusSpace(persona.eGet(ea).toString(), empty1) /][persona.eGet(ea).oclAsType(Integer)- species.eGet(ea.base2SpeciesMin()).oclAsType(Integer)/]  
