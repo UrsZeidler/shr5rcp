@@ -6387,6 +6387,12 @@
 <entries xsi:type="shr5:Wissensfertigkeit" name="Trivia">
 <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
 </entries>
+<entries xsi:type="shr5:Cyberdeck" xmi:id="_tQZ84NiIEeOPDpSEFDGK4g" name="Erika MCD-1" deviceRating="1" attribute1="4" attribute2="3" attribute3="2" attribute4="1">
+<configuration href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute1"/>
+<configuration href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute2"/>
+<configuration href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute3"/>
+<configuration href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute4"/>
+</entries>
 </entries>
 </entries>
 <entries xsi:type="shr5mngt:PlayerManagement" name="my player">

@@ -4,6 +4,7 @@
 
 2014-05-18 Version 0.1.6-rc
 
+* added commlinks
 * added advancements for specialism
 * added definable constrains for the generator system
 * added spirits
@@ -12,6 +13,7 @@
 * import from chummer2 :
 	* import the spirits
 	* import the critter powers
+	* import commlinks
 
 
 2014-04-27 Version 0.1.5
