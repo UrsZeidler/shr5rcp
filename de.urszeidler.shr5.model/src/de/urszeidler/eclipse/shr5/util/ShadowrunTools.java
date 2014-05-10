@@ -99,6 +99,7 @@ public class ShadowrunTools {
         orderedBasedAttibutes = new ArrayList<EAttribute>(orderedAttibutes);
         orderedBasedAttibutes.remove(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
         orderedBasedAttibutes.remove(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
+        orderedBasedAttibutes.remove(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
     }
 
     /**
@@ -116,9 +117,26 @@ public class ShadowrunTools {
      * @return the orderedAttibutes
      */
     public static List<EAttribute> getOrderedAttibutes(AbstraktPersona persona) {
+        List<EAttribute> attributes = orderedAttibutes;
+        return filterAttributesForPersona(persona, attributes);
+    }
+    
+    /**
+     * The ordered list of the base attributes (without edge and resonance or magic), filtered by the persona.
+     * 
+     * @return the orderedAttibutes
+     */
+    public static List<EAttribute> getOrderedBaseAttibutes(AbstraktPersona persona) {
+        List<EAttribute> attributes = orderedBasedAttibutes;
+        return filterAttributesForPersona(persona, attributes);
+    }
+
+    
+    private static List<EAttribute> filterAttributesForPersona(AbstraktPersona persona, List<EAttribute> attributes) {
         EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
-        ArrayList<EAttribute> list = new ArrayList<EAttribute>(orderedAttibutes.size());
-        for (EAttribute eAttribute : orderedAttibutes) {
+
+        ArrayList<EAttribute> list = new ArrayList<EAttribute>(attributes.size());
+        for (EAttribute eAttribute : attributes) {
             if (eAllAttributes.contains(eAttribute))
                 list.add(eAttribute);
         }
