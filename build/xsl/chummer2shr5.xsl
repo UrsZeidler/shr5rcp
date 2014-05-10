@@ -1596,7 +1596,7 @@
 
 		<xsl:for-each select="specs/*">
 			<spezialisierungen>
-			<xsl:attribute name="name">
+				<xsl:attribute name="name">
 				<xsl:value-of select="text()" />
 			</xsl:attribute>
 			</spezialisierungen>
@@ -2131,6 +2131,16 @@
 					<xsl:if test="number(weaponbonus/ap/text())">
 						<xsl:attribute name="armorMod">
 					<xsl:value-of select="weaponbonus/ap/text()" />
+					</xsl:attribute>
+					</xsl:if>
+					<xsl:call-template name="gegenstand-basis" />
+				</entries>
+			</xsl:when>
+			<xsl:when test="category/text()='Commlink'">
+				<entries xsi:type="shr5:Commlink">
+					<xsl:if test="number(devicerating/text())">
+						<xsl:attribute name="deviceRating">
+					<xsl:value-of select="devicerating/text()" />
 					</xsl:attribute>
 					</xsl:if>
 					<xsl:call-template name="gegenstand-basis" />

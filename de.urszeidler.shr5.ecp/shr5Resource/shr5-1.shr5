@@ -1871,13 +1871,13 @@
 <entries xsi:type="shr5:Gegenstand" kategorie="Detonators" verfuegbarkeit="8R" name="Detonator Cap" xmi:id="9e4dc530-c734-4cee-801e-197ead36e9fd" page="436" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="75"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" verfuegbarkeit="0" name="Sim Module (Cold)" xmi:id="c25bcc4e-31fe-4702-9c56-c5446dc1a6da" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Commlink Accessories" verfuegbarkeit="+4F" name="Sim Module (Hot)" xmi:id="55126720-21c4-4d3d-969a-58bee7b62151" page="438" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="250"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="2" name="Meta Link" xmi:id="73882e4e-fbc7-44a4-b26a-fb63249d6074" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="4" name="Sony Emperor" xmi:id="3246484d-1007-4718-b7b3-150af398e7e1" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="700"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="6" name="Renraku Sensei" xmi:id="9b684cfb-8bd9-4c53-a230-52e040cc305b" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="8" name="Erika Elite" xmi:id="53d5bd35-60de-417c-9dd9-af0f0b83d696" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="2500"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="10" name="Hermes Ikon" xmi:id="0969e4ff-01d9-448e-b45d-073bdcdcf541" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="3000"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="12" name="Transys Avalon" xmi:id="7e2996ed-697a-4359-b3e7-1bdbc65ae574" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5000"/>
-<entries xsi:type="shr5:Gegenstand" kategorie="Commlink" verfuegbarkeit="14" name="Fairlight Caliban" xmi:id="cad7d442-3166-4099-9ea2-9713e7747f8b" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="8000"/>
+<entries xsi:type="shr5:Commlink" deviceRating="1" verfuegbarkeit="2" name="Meta Link" xmi:id="73882e4e-fbc7-44a4-b26a-fb63249d6074" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100"/>
+<entries xsi:type="shr5:Commlink" deviceRating="2" verfuegbarkeit="4" name="Sony Emperor" xmi:id="3246484d-1007-4718-b7b3-150af398e7e1" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="700"/>
+<entries xsi:type="shr5:Commlink" deviceRating="3" verfuegbarkeit="6" name="Renraku Sensei" xmi:id="9b684cfb-8bd9-4c53-a230-52e040cc305b" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="1000"/>
+<entries xsi:type="shr5:Commlink" deviceRating="4" verfuegbarkeit="8" name="Erika Elite" xmi:id="53d5bd35-60de-417c-9dd9-af0f0b83d696" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="2500"/>
+<entries xsi:type="shr5:Commlink" deviceRating="5" verfuegbarkeit="10" name="Hermes Ikon" xmi:id="0969e4ff-01d9-448e-b45d-073bdcdcf541" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="3000"/>
+<entries xsi:type="shr5:Commlink" deviceRating="6" verfuegbarkeit="12" name="Transys Avalon" xmi:id="7e2996ed-697a-4359-b3e7-1bdbc65ae574" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5000"/>
+<entries xsi:type="shr5:Commlink" deviceRating="7" verfuegbarkeit="14" name="Fairlight Caliban" xmi:id="cad7d442-3166-4099-9ea2-9713e7747f8b" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="8000"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="AR Gloves" xmi:id="6179493a-7dcd-4354-8292-408a16be2b92" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="150"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="4" name="Biometric Reader" xmi:id="2e69f544-231b-48ef-988a-539ec7868bd5" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="200"/>
 <entries xsi:type="shr5:Gegenstand" kategorie="Electronics Accessories" verfuegbarkeit="0" name="Electronic Paper" xmi:id="dc7288df-5066-43f9-b322-0def5becf403" page="439" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5"/>
@@ -6811,13 +6811,9 @@
 </members>
 <members xsi:type="shr5mngt:NonPlayerCharacter" chracterSource="//@entries.2/@groups.0/@members.3/@generatorSrc" nativeLanguage="//@entries.0/@entries.5/@entries.8" sex="male">
 <persona xsi:type="shr5:MudanPersona" beschreibung="Ralf ist Barkeeper in der Kneipe im Vorderhaus von Gu's Wohnung. Gu hängt da regelmäßig ab. " name="Ralf" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="3" staerkeBasis="3" charismaBasis="4" willenskraftBasis="4" intuitionBasis="3" logikBasis="3" spezies="//@entries.0/@entries.2/@entries.0">
-<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0">
-<spezialisierungen>Street</spezialisierungen>
-</fertigkeiten>
+<fertigkeiten stufe="6" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.0"/>
 <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.0/@fertigkeiten.1"/>
-<fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1">
-<spezialisierungen>Shotguns</spezialisierungen>
-</fertigkeiten>
+<fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.1"/>
 <fertigkeiten stufe="5" fertigkeit="//@entries.0/@entries.3/@entries.10/@fertigkeiten.2"/>
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.9/@fertigkeiten.2"/>
 <fertigkeiten stufe="4" fertigkeit="//@entries.0/@entries.3/@entries.3/@fertigkeiten.2"/>
