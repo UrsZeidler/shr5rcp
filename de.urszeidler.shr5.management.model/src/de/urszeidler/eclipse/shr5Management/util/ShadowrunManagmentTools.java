@@ -18,8 +18,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
@@ -60,23 +62,42 @@ public class ShadowrunManagmentTools {
 
     /**
      * Checks if the character has a matrix initiative.
+     * 
      * @param character
      * @return
      */
     public static String getMatrixInitative(ManagedCharacter character) {
+        return getMatrixInitativeValue(character) + "";
+
+    }
+
+    /**
+     * Checks if the character has a matrix initiative.
+     * 
+     * @param character
+     * @return
+     */
+    public static int getMatrixInitativeValue(ManagedCharacter character) {
         if (character == null || character.getPersona() == null)
-            return "";
+            return -1;
 
         if (character.getPersona() instanceof Technomancer) {
             Technomancer t = (Technomancer)character.getPersona();
-            
-            return (t.getDatenverarbeitung()+t.getIntuition())+"";
+            return (t.getDatenverarbeitung() + t.getIntuition());
+        } else {
+            EList<AbstraktGegenstand> inventar = character.getInventar();
+            for (AbstraktGegenstand abstraktGegenstand : inventar) {
+                if (abstraktGegenstand instanceof Cyberdeck) {
+                    return ((Cyberdeck)abstraktGegenstand).getDatenverarbeitung() + character.getPersona().getIntuition();
+                }
+            }
         }
-        // TODO : check for deck
-        return "";
+        return -1;
     }
+
     /**
      * Checks if the character has a matrix initiative.
+     * 
      * @param character
      * @return
      */
@@ -86,9 +107,29 @@ public class ShadowrunManagmentTools {
 
         if (character.getPersona() instanceof Technomancer) {
             return true;
+        } else {
+            EList<AbstraktGegenstand> inventar = character.getInventar();
+            for (AbstraktGegenstand abstraktGegenstand : inventar) {
+                if (abstraktGegenstand instanceof Cyberdeck) {
+                    return true;
+                }
+            }
         }
-        // TODO : check for deck
         return false;
+    }
+
+    /**
+     * Checks if the character has a matrix initiative.
+     * 
+     * @param character
+     * @return
+     */
+    public static boolean hasControllRig(ManagedCharacter character) {
+        if (character == null || character.getPersona() == null)
+            return false;
+
+        int modWert = character.getPersona().getModManager().getmodWert(Shr5Package.Literals.CYBERWARE_MODIFIKATIOREN__CONTROL_RIG);
+        return modWert > 0;
     }
 
     /**
