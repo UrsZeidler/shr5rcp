@@ -327,6 +327,11 @@ public class CommlinkItemProvider
             (createChildParameter
                 (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
                  Shr5Factory.eINSTANCE.createSoftwareAgent()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
+                 Shr5Factory.eINSTANCE.createAutoSoft()));
     }
 
 }

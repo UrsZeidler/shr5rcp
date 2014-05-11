@@ -20,6 +20,7 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isUniversalDataConnector <em>Universal Data Connector</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getControlRig <em>Control Rig</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getSimRig <em>Sim Rig</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isRiggerInterface <em>Rigger Interface</em>}</li>
  * </ul>
  * </p>
  *
@@ -128,5 +129,31 @@ public interface CyberwareModifikatioren extends ModifikatorAttribute {
      * @generated
      */
     void setSimRig(int value);
+
+    /**
+     * Returns the value of the '<em><b>Rigger Interface</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Rigger Interface</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Rigger Interface</em>' attribute.
+     * @see #setRiggerInterface(boolean)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberwareModifikatioren_RiggerInterface()
+     * @model
+     * @generated
+     */
+    boolean isRiggerInterface();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isRiggerInterface <em>Rigger Interface</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Rigger Interface</em>' attribute.
+     * @see #isRiggerInterface()
+     * @generated
+     */
+    void setRiggerInterface(boolean value);
 
 } // CyberwareModifikatioren

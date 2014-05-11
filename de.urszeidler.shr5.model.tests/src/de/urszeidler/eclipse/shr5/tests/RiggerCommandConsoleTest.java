@@ -15,11 +15,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRauschunterdrueckung() <em>Rauschunterdrueckung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriff() <em>Zugriff</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRauschunterdrueckung() <em>Rauschunterdrueckung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriff() <em>Zugriff</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class RiggerCommandConsoleTest extends CommlinkTest {
@@ -27,7 +26,6 @@ public class RiggerCommandConsoleTest extends CommlinkTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -38,7 +36,6 @@ public class RiggerCommandConsoleTest extends CommlinkTest {
      * Constructs a new Rigger Command Console test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public RiggerCommandConsoleTest(String name) {
@@ -49,7 +46,6 @@ public class RiggerCommandConsoleTest extends CommlinkTest {
      * Returns the fixture for this Rigger Command Console test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -73,7 +69,6 @@ public class RiggerCommandConsoleTest extends CommlinkTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

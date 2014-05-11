@@ -553,6 +553,15 @@ public interface Shr5Factory extends EFactory {
     RiggerCommandConsole createRiggerCommandConsole();
 
     /**
+     * Returns a new object of class '<em>Auto Soft</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Auto Soft</em>'.
+     * @generated
+     */
+    AutoSoft createAutoSoft();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

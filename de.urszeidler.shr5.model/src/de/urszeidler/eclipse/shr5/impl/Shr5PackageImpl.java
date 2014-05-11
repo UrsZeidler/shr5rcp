@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.Anwendbar;
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.AutoSoft;
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.BioWare;
@@ -835,6 +836,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass riggerCommandConsoleEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass autoSoftEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3151,6 +3159,33 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDrohne_ProgramSlotCount() {
+        return (EAttribute)drohneEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getDrohne_RunningProgramms() {
+        return (EReference)drohneEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getDrohne_StroredProgramm() {
+        return (EReference)drohneEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4180,6 +4215,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getCyberwareModifikatioren_RiggerInterface() {
+        return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getRiggerCommandConsole() {
         return riggerCommandConsoleEClass;
     }
@@ -4227,6 +4271,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EAttribute getRiggerCommandConsole_ZugriffBasis() {
         return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getAutoSoft() {
+        return autoSoftEClass;
     }
 
     /**
@@ -4707,6 +4760,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(passagierFahrzeugEClass, PASSAGIER_FAHRZEUG__SITZE);
 
         drohneEClass = createEClass(DROHNE);
+        createEAttribute(drohneEClass, DROHNE__PROGRAM_SLOT_COUNT);
+        createEReference(drohneEClass, DROHNE__RUNNING_PROGRAMMS);
+        createEReference(drohneEClass, DROHNE__STRORED_PROGRAMM);
 
         fahrzeugModifikationEClass = createEClass(FAHRZEUG_MODIFIKATION);
         createEReference(fahrzeugModifikationEClass, FAHRZEUG_MODIFIKATION__FUNKTION);
@@ -4859,6 +4915,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__UNIVERSAL_DATA_CONNECTOR);
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__CONTROL_RIG);
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__SIM_RIG);
+        createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__RIGGER_INTERFACE);
 
         riggerCommandConsoleEClass = createEClass(RIGGER_COMMAND_CONSOLE);
         createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG);
@@ -4866,6 +4923,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS);
         createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS);
         createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS);
+
+        autoSoftEClass = createEClass(AUTO_SOFT);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -4995,9 +5054,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fahrzeugEClass.getESuperTypes().add(this.getQuelle());
         fahrzeugEClass.getESuperTypes().add(this.getGeldWert());
         fahrzeugEClass.getESuperTypes().add(this.getAnwendbar());
+        fahrzeugEClass.getESuperTypes().add(this.getModifizierbar());
         bodenfahrzeugEClass.getESuperTypes().add(this.getPassagierFahrzeug());
         passagierFahrzeugEClass.getESuperTypes().add(this.getFahrzeug());
         drohneEClass.getESuperTypes().add(this.getFahrzeug());
+        drohneEClass.getESuperTypes().add(this.getMatrixDevice());
         fahrzeugModifikationEClass.getESuperTypes().add(this.getBeschreibbar());
         fahrzeugModifikationEClass.getESuperTypes().add(this.getQuelle());
         fahrzeugModifikationEClass.getESuperTypes().add(this.getGeldWert());
@@ -5052,6 +5113,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         hostEClass.getESuperTypes().add(this.getBeschreibbar());
         cyberwareModifikatiorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
         riggerCommandConsoleEClass.getESuperTypes().add(this.getCommlink());
+        autoSoftEClass.getESuperTypes().add(this.getProgram());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5351,6 +5413,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getPassagierFahrzeug_Sitze(), ecorePackage.getEInt(), "sitze", null, 0, 1, PassagierFahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(drohneEClass, Drohne.class, "Drohne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDrohne_ProgramSlotCount(), ecorePackage.getEInt(), "programSlotCount", null, 0, 1, Drohne.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDrohne_RunningProgramms(), this.getAutoSoft(), null, "runningProgramms", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDrohne_StroredProgramm(), this.getAutoSoft(), null, "stroredProgramm", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(fahrzeugModifikationEClass, FahrzeugModifikation.class, "FahrzeugModifikation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getFahrzeugModifikation_Funktion(), this.getAbstraktGegenstand(), null, "funktion", null, 0, -1, FahrzeugModifikation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5503,6 +5568,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getCyberwareModifikatioren_UniversalDataConnector(), ecorePackage.getEBoolean(), "universalDataConnector", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberwareModifikatioren_ControlRig(), ecorePackage.getEInt(), "controlRig", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberwareModifikatioren_SimRig(), ecorePackage.getEInt(), "simRig", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberwareModifikatioren_RiggerInterface(), ecorePackage.getEBoolean(), "riggerInterface", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(riggerCommandConsoleEClass, RiggerCommandConsole.class, "RiggerCommandConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getRiggerCommandConsole_Rauschunterdrueckung(), ecorePackage.getEInt(), "rauschunterdrueckung", null, 0, 1, RiggerCommandConsole.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5510,6 +5576,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getRiggerCommandConsole_DatenverarbeitungBasis(), ecorePackage.getEInt(), "datenverarbeitungBasis", null, 1, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getRiggerCommandConsole_FirewallBasis(), ecorePackage.getEInt(), "firewallBasis", null, 1, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getRiggerCommandConsole_ZugriffBasis(), ecorePackage.getEInt(), "zugriffBasis", null, 0, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(autoSoftEClass, AutoSoft.class, "AutoSoft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -746,6 +746,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(fahrzeug);
                 if (result == null) result = caseGeldWert(fahrzeug);
                 if (result == null) result = caseAnwendbar(fahrzeug);
+                if (result == null) result = caseModifizierbar(fahrzeug);
                 if (result == null) result = caseIdentifiable(fahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -759,6 +760,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(bodenfahrzeug);
                 if (result == null) result = caseGeldWert(bodenfahrzeug);
                 if (result == null) result = caseAnwendbar(bodenfahrzeug);
+                if (result == null) result = caseModifizierbar(bodenfahrzeug);
                 if (result == null) result = caseIdentifiable(bodenfahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -771,6 +773,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(passagierFahrzeug);
                 if (result == null) result = caseGeldWert(passagierFahrzeug);
                 if (result == null) result = caseAnwendbar(passagierFahrzeug);
+                if (result == null) result = caseModifizierbar(passagierFahrzeug);
                 if (result == null) result = caseIdentifiable(passagierFahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -779,10 +782,13 @@ public class Shr5Switch<T> extends Switch<T> {
                 Drohne drohne = (Drohne)theEObject;
                 T result = caseDrohne(drohne);
                 if (result == null) result = caseFahrzeug(drohne);
+                if (result == null) result = caseMatrixDevice(drohne);
                 if (result == null) result = caseBeschreibbar(drohne);
                 if (result == null) result = caseQuelle(drohne);
                 if (result == null) result = caseGeldWert(drohne);
                 if (result == null) result = caseAnwendbar(drohne);
+                if (result == null) result = caseModifizierbar(drohne);
+                if (result == null) result = caseMatixConditionMonitor(drohne);
                 if (result == null) result = caseIdentifiable(drohne);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1188,6 +1194,17 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAnwendbar(riggerCommandConsole);
                 if (result == null) result = caseMatixConditionMonitor(riggerCommandConsole);
                 if (result == null) result = caseIdentifiable(riggerCommandConsole);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.AUTO_SOFT: {
+                AutoSoft autoSoft = (AutoSoft)theEObject;
+                T result = caseAutoSoft(autoSoft);
+                if (result == null) result = caseProgram(autoSoft);
+                if (result == null) result = caseGeldWert(autoSoft);
+                if (result == null) result = caseBeschreibbar(autoSoft);
+                if (result == null) result = caseQuelle(autoSoft);
+                if (result == null) result = caseIdentifiable(autoSoft);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2692,6 +2709,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseRiggerCommandConsole(RiggerCommandConsole object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Auto Soft</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Auto Soft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseAutoSoft(AutoSoft object) {
         return null;
     }
 

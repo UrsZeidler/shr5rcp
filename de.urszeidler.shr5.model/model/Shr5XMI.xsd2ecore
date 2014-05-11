@@ -453,7 +453,7 @@
       <nested inputs="shr5.ecore#//Fahrzeug/pilot" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=10"/>
       <nested inputs="shr5.ecore#//Fahrzeug/sensor" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=11"/>
       <nested inputs="shr5.ecore#//Fahrzeug/fahrzeugTyp" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=12"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=1"/>
@@ -463,6 +463,7 @@
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=5"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     <nested inputs="shr5.ecore#//Fahrzeug" outputs="Shr5XMI.xsd#//Fahrzeug;XSDElementDeclaration=57"/>
     <nested inputs="shr5.ecore#//Bodenfahrzeug" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58">
       <nested inputs="shr5.ecore#//Bodenfahrzeug/handlingGelaende" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58/XSDAttributeUse"/>
@@ -473,7 +474,12 @@
       <nested inputs="shr5.ecore#//PassagierFahrzeug/sitze" outputs="Shr5XMI.xsd#//PassagierFahrzeug;XSDComplexTypeDefinition=59/XSDAttributeUse"/>
     </nested>
     <nested inputs="shr5.ecore#//PassagierFahrzeug" outputs="Shr5XMI.xsd#//PassagierFahrzeug;XSDElementDeclaration=59"/>
-    <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60"/>
+    <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60">
+      <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Drohne/stroredProgramm" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDElementDeclaration=60"/>
     <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61">
       <nested inputs="shr5.ecore#//FahrzeugModifikation/funktion" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle=1"/>
@@ -693,6 +699,7 @@
           outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//CyberwareModifikatioren/controlRig" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=2"/>
       <nested inputs="shr5.ecore#//CyberwareModifikatioren/simRig" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//CyberwareModifikatioren/riggerInterface" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=4"/>
     </nested>
     <nested inputs="shr5.ecore#//CyberwareModifikatioren" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDElementDeclaration=98"/>
     <nested inputs="shr5.ecore#//RiggerCommandConsole" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99">
@@ -701,5 +708,7 @@
       <nested inputs="shr5.ecore#//RiggerCommandConsole/zugriffBasis" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99/XSDAttributeUse=2"/>
     </nested>
     <nested inputs="shr5.ecore#//RiggerCommandConsole" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDElementDeclaration=99"/>
+    <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=100"/>
+    <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDElementDeclaration=100"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

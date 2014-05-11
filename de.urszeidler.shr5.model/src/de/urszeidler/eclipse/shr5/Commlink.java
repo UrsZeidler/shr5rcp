@@ -65,6 +65,9 @@ public interface Commlink extends AbstraktGegenstand, MatrixDevice {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The running programms are stored here.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Running Programms</em>' reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_RunningProgramms()
      * @model
@@ -81,6 +84,9 @@ public interface Commlink extends AbstraktGegenstand, MatrixDevice {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * The stored programs defines the programs to choose from when selecting the running programms.
+     * <!-- end-model-doc -->
      * @return the value of the '<em>Strored Programm</em>' containment reference list.
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_StroredProgramm()
      * @model containment="true"

@@ -97,7 +97,7 @@ public class SpriteTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
-     * @generated
+     * @generated not
      */
     public void testGetMatrixZustandMax() {
         getFixture().setStufe(5);

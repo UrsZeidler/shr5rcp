@@ -467,6 +467,7 @@ public class FahrzeugItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
             childrenFeatures.add(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN);
         }
         return childrenFeatures;
@@ -528,6 +529,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__FAHRZEUG_TYP:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.FAHRZEUG__MODS:
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -545,6 +547,11 @@ public class FahrzeugItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.MODIFIZIERBAR__MODS,
+                 Shr5Factory.eINSTANCE.createAttributModifikatorWert()));
 
         newChildDescriptors.add
             (createChildParameter

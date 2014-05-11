@@ -13,14 +13,17 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Anwendbar;
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -43,6 +46,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
@@ -228,6 +232,16 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 	protected Fertigkeit fertigkeit;
 
 	/**
+     * The cached value of the '{@link #getMods() <em>Mods</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMods()
+     * @generated
+     * @ordered
+     */
+    protected EList<AttributModifikatorWert> mods;
+
+    /**
      * The default value of the '{@link #getHandling() <em>Handling</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -634,6 +648,18 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<AttributModifikatorWert> getMods() {
+        if (mods == null) {
+            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
+        }
+        return mods;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -793,12 +819,29 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.FAHRZEUG__MODS:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getMods()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.FAHRZEUG__MODS:
+                return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 return ((InternalEList<?>)getModifizierungen()).basicRemove(otherEnd, msgs);
         }
@@ -835,6 +878,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
+            case Shr5Package.FAHRZEUG__MODS:
+                return getMods();
             case Shr5Package.FAHRZEUG__HANDLING:
                 return getHandling();
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
@@ -890,6 +935,10 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)newValue);
+                return;
+            case Shr5Package.FAHRZEUG__MODS:
+                getMods().clear();
+                getMods().addAll((Collection<? extends AttributModifikatorWert>)newValue);
                 return;
             case Shr5Package.FAHRZEUG__HANDLING:
                 setHandling((Integer)newValue);
@@ -955,6 +1004,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 setFertigkeit((Fertigkeit)null);
                 return;
+            case Shr5Package.FAHRZEUG__MODS:
+                getMods().clear();
+                return;
             case Shr5Package.FAHRZEUG__HANDLING:
                 setHandling(HANDLING_EDEFAULT);
                 return;
@@ -1011,6 +1063,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
                 return fertigkeit != null;
+            case Shr5Package.FAHRZEUG__MODS:
+                return mods != null && !mods.isEmpty();
             case Shr5Package.FAHRZEUG__HANDLING:
                 return handling != HANDLING_EDEFAULT;
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
@@ -1065,6 +1119,12 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 default: return -1;
             }
         }
+        if (baseClass == Modifizierbar.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.FAHRZEUG__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -1099,6 +1159,12 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Anwendbar.class) {
             switch (baseFeatureID) {
                 case Shr5Package.ANWENDBAR__FERTIGKEIT: return Shr5Package.FAHRZEUG__FERTIGKEIT;
+                default: return -1;
+            }
+        }
+        if (baseClass == Modifizierbar.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.MODIFIZIERBAR__MODS: return Shr5Package.FAHRZEUG__MODS;
                 default: return -1;
             }
         }

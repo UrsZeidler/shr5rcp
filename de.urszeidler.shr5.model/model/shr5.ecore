@@ -474,7 +474,7 @@
     <eLiterals name="permanent" value="3"/>
     <eLiterals name="speziell" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar">
+  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar #//Modifizierbar">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handling" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschwindigkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschleunigung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -493,7 +493,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="PassagierFahrzeug" eSuperTypes="#//Fahrzeug">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sitze" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Drohne" eSuperTypes="#//Fahrzeug"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Drohne" eSuperTypes="#//Fahrzeug #//MatrixDevice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="programSlotCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runningProgramms" upperBound="-1"
+        eType="#//AutoSoft">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The running programms are stored here."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stroredProgramm" upperBound="-1"
+        eType="#//AutoSoft" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The stored programs defines the programs to choose from when selecting the running programms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FahrzeugModifikation" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
     <eStructuralFeatures xsi:type="ecore:EReference" name="funktion" upperBound="-1"
         eType="#//AbstraktGegenstand" containment="true"/>
@@ -695,9 +710,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceRating" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="runningProgramms" upperBound="-1"
-        eType="#//Program"/>
+        eType="#//Program">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The running programms are stored here."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stroredProgramm" upperBound="-1"
-        eType="#//Program" containment="true"/>
+        eType="#//Program" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The stored programs defines the programs to choose from when selecting the running programms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MatixConditionMonitor" abstract="true"
       interface="true">
@@ -769,6 +792,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="simRig" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="riggerInterface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RiggerCommandConsole" eSuperTypes="#//Commlink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rauschunterdrueckung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -784,5 +808,10 @@
         <details key="documentation" value="This value is for the zugriff feature, the rauchunter. is calculated as deviceRating-zugriffBasis."/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AutoSoft" eSuperTypes="#//Program">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the software for drones."/>
+    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

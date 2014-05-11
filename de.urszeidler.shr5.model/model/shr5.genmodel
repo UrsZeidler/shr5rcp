@@ -375,7 +375,11 @@
     <genClasses ecoreClass="shr5.ecore#//PassagierFahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PassagierFahrzeug/sitze"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//Drohne"/>
+    <genClasses ecoreClass="shr5.ecore#//Drohne">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drohne/programSlotCount"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/runningProgramms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/stroredProgramm"/>
+    </genClasses>
     <genClasses ecoreClass="shr5.ecore#//FahrzeugModifikation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//FahrzeugModifikation/funktion"/>
     </genClasses>
@@ -517,6 +521,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/universalDataConnector"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/controlRig"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/simRig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/riggerInterface"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//RiggerCommandConsole">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/rauschunterdrueckung"/>
@@ -525,5 +530,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/firewallBasis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/zugriffBasis"/>
     </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//AutoSoft"/>
   </genPackages>
 </genmodel:GenModel>

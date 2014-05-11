@@ -885,6 +885,7 @@
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
           <xsd:element name="modifizierungen" type="shr5:FahrzeugModifikation"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -931,7 +932,26 @@
   <xsd:element name="PassagierFahrzeug" type="shr5:PassagierFahrzeug"/>
   <xsd:complexType name="Drohne">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Fahrzeug"/>
+      <xsd:extension base="shr5:Fahrzeug">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="runningProgramms" type="shr5:AutoSoft">
+            <xsd:annotation>
+              <xsd:documentation>The running programms are stored here.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="stroredProgramm" type="shr5:AutoSoft">
+            <xsd:annotation>
+              <xsd:documentation>The stored programs defines the programs to choose from when selecting the running programms.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
+        <xsd:attribute name="runningProgramms" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The running programms are stored here.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Drohne" type="shr5:Drohne"/>
@@ -1372,12 +1392,24 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="runningProgramms" type="shr5:Program"/>
-          <xsd:element name="stroredProgramm" type="shr5:Program"/>
+          <xsd:element name="runningProgramms" type="shr5:Program">
+            <xsd:annotation>
+              <xsd:documentation>The running programms are stored here.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="stroredProgramm" type="shr5:Program">
+            <xsd:annotation>
+              <xsd:documentation>The stored programs defines the programs to choose from when selecting the running programms.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:choice>
         <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
         <xsd:attribute name="deviceRating" type="xsd:int" use="required"/>
-        <xsd:attribute name="runningProgramms" type="xsd:string"/>
+        <xsd:attribute name="runningProgramms" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The running programms are stored here.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1493,6 +1525,7 @@
           </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="simRig" type="xsd:int"/>
+        <xsd:attribute name="riggerInterface" type="xsd:boolean"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1515,4 +1548,17 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="RiggerCommandConsole" type="shr5:RiggerCommandConsole"/>
+  <xsd:complexType name="AutoSoft">
+    <xsd:annotation>
+      <xsd:documentation>Defines the software for drones.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Program"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AutoSoft" type="shr5:AutoSoft">
+    <xsd:annotation>
+      <xsd:documentation>Defines the software for drones.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

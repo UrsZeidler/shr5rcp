@@ -8859,13 +8859,22 @@ public interface Shr5Package extends EPackage {
 	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__MODS = BESCHREIBBAR_FEATURE_COUNT + 7;
+
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
@@ -8874,7 +8883,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
@@ -8883,7 +8892,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
@@ -8892,7 +8901,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
@@ -8901,7 +8910,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 12;
 
     /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -8910,7 +8919,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 13;
 
     /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
@@ -8919,7 +8928,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 14;
 
     /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
@@ -8928,7 +8937,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 15;
 
     /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
@@ -8937,7 +8946,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 15;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 16;
 
     /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -9037,6 +9046,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int PASSAGIER_FAHRZEUG__FERTIGKEIT = FAHRZEUG__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__MODS = FAHRZEUG__MODS;
 
     /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
@@ -9226,6 +9244,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int BODENFAHRZEUG__FERTIGKEIT = PASSAGIER_FAHRZEUG__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__MODS = PASSAGIER_FAHRZEUG__MODS;
 
     /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
@@ -9435,6 +9462,15 @@ public interface Shr5Package extends EPackage {
 	int DROHNE__FERTIGKEIT = FAHRZEUG__FERTIGKEIT;
 
     /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__MODS = FAHRZEUG__MODS;
+
+    /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9507,13 +9543,85 @@ public interface Shr5Package extends EPackage {
 	int DROHNE__MODIFIZIERUNGEN = FAHRZEUG__MODIFIZIERUNGEN;
 
     /**
+     * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__MATRIX_ZUSTAND_MAX = FAHRZEUG_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__GERAETESTUFE = FAHRZEUG_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__FIREWALL = FAHRZEUG_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__DATENVERARBEITUNG = FAHRZEUG_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Current Modus</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__CURRENT_MODUS = FAHRZEUG_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Program Slot Count</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__PROGRAM_SLOT_COUNT = FAHRZEUG_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Running Programms</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__RUNNING_PROGRAMMS = FAHRZEUG_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__STRORED_PROGRAMM = FAHRZEUG_FEATURE_COUNT + 7;
+
+    /**
      * The number of structural features of the '<em>Drohne</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int DROHNE_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 0;
+	int DROHNE_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 8;
 
     /**
      * The number of operations of the '<em>Drohne</em>' class.
@@ -14207,13 +14315,22 @@ public interface Shr5Package extends EPackage {
     int CYBERWARE_MODIFIKATIOREN__SIM_RIG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Rigger Interface</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN__RIGGER_INTERFACE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Cyberware Modifikatioren</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CYBERWARE_MODIFIKATIOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
+    int CYBERWARE_MODIFIKATIOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Cyberware Modifikatioren</em>' class.
@@ -14469,6 +14586,124 @@ public interface Shr5Package extends EPackage {
     int RIGGER_COMMAND_CONSOLE_OPERATION_COUNT = COMMLINK_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl <em>Auto Soft</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AutoSoftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAutoSoft()
+     * @generated
+     */
+    int AUTO_SOFT = 100;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__WERT = PROGRAM__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__VERFUEGBARKEIT = PROGRAM__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__WERT_VALUE = PROGRAM__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__BESCHREIBUNG = PROGRAM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__IMAGE = PROGRAM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__NAME = PROGRAM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__PARENT_ID = PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__PAGE = PROGRAM__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__SRC_BOOK = PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Category</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__CATEGORY = PROGRAM__CATEGORY;
+
+    /**
+     * The number of structural features of the '<em>Auto Soft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT_FEATURE_COUNT = PROGRAM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Auto Soft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT_OPERATION_COUNT = PROGRAM_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14476,7 +14711,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 100;
+	int FEUER_MODUS = 101;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -14486,7 +14721,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 101;
+	int SCHADENS_TYP = 102;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -14496,7 +14731,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 102;
+	int MAGAZIN_TYP = 103;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -14506,7 +14741,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 103;
+	int FEUWERWAFFEN_ERWEITERUNG = 104;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -14516,7 +14751,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 104;
+	int MODIFIKATOR_TYPE = 105;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -14526,7 +14761,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 105;
+	int SMARTGUN_TYPE = 106;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -14536,7 +14771,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 106;
+	int ZAUBER_ART = 107;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -14546,7 +14781,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 107;
+	int ZAUBER_REICHWEITE = 108;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -14556,7 +14791,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 108;
+	int ZAUBER_DAUER = 109;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -14566,7 +14801,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 109;
+	int MAGISCHE_TRADITION = 110;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -14576,7 +14811,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 110;
+	int CRITTER_HANDLUNG = 111;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -14586,7 +14821,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 111;
+	int CRITTER_REICHWEITE = 112;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -14596,7 +14831,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 112;
+	int CRITTER_DAUER = 113;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -14606,7 +14841,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 113;
+	int RESONANZ_ZIEL = 114;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -14616,7 +14851,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 114;
+    int INTERFACE_MODUS = 115;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -14626,7 +14861,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 115;
+	int SHR_DATE = 116;
 
 
 	/**
@@ -14637,7 +14872,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 116;
+	int MODIFICATION_MANAGER = 117;
 
 
 	/**
@@ -17187,6 +17422,39 @@ public interface Shr5Package extends EPackage {
 	EClass getDrohne();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Drohne#getProgramSlotCount <em>Program Slot Count</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Program Slot Count</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drohne#getProgramSlotCount()
+     * @see #getDrohne()
+     * @generated
+     */
+    EAttribute getDrohne_ProgramSlotCount();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Drohne#getRunningProgramms <em>Running Programms</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Running Programms</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drohne#getRunningProgramms()
+     * @see #getDrohne()
+     * @generated
+     */
+    EReference getDrohne_RunningProgramms();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Drohne#getStroredProgramm <em>Strored Programm</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Strored Programm</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drohne#getStroredProgramm()
+     * @see #getDrohne()
+     * @generated
+     */
+    EReference getDrohne_StroredProgramm();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.FahrzeugModifikation <em>Fahrzeug Modifikation</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18403,6 +18671,17 @@ public interface Shr5Package extends EPackage {
     EAttribute getCyberwareModifikatioren_SimRig();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isRiggerInterface <em>Rigger Interface</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Rigger Interface</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isRiggerInterface()
+     * @see #getCyberwareModifikatioren()
+     * @generated
+     */
+    EAttribute getCyberwareModifikatioren_RiggerInterface();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole <em>Rigger Command Console</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -18466,6 +18745,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getRiggerCommandConsole_ZugriffBasis();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AutoSoft <em>Auto Soft</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Auto Soft</em>'.
+     * @see de.urszeidler.eclipse.shr5.AutoSoft
+     * @generated
+     */
+    EClass getAutoSoft();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
@@ -20681,6 +20970,30 @@ public interface Shr5Package extends EPackage {
 		EClass DROHNE = eINSTANCE.getDrohne();
 
 		/**
+         * The meta object literal for the '<em><b>Program Slot Count</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DROHNE__PROGRAM_SLOT_COUNT = eINSTANCE.getDrohne_ProgramSlotCount();
+
+        /**
+         * The meta object literal for the '<em><b>Running Programms</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference DROHNE__RUNNING_PROGRAMMS = eINSTANCE.getDrohne_RunningProgramms();
+
+        /**
+         * The meta object literal for the '<em><b>Strored Programm</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference DROHNE__STRORED_PROGRAMM = eINSTANCE.getDrohne_StroredProgramm();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl <em>Fahrzeug Modifikation</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -21669,6 +21982,14 @@ public interface Shr5Package extends EPackage {
         EAttribute CYBERWARE_MODIFIKATIOREN__SIM_RIG = eINSTANCE.getCyberwareModifikatioren_SimRig();
 
         /**
+         * The meta object literal for the '<em><b>Rigger Interface</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE_MODIFIKATIOREN__RIGGER_INTERFACE = eINSTANCE.getCyberwareModifikatioren_RiggerInterface();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.RiggerCommandConsoleImpl <em>Rigger Command Console</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -21717,6 +22038,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS = eINSTANCE.getRiggerCommandConsole_ZugriffBasis();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl <em>Auto Soft</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.AutoSoftImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAutoSoft()
+         * @generated
+         */
+        EClass AUTO_SOFT = eINSTANCE.getAutoSoft();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
