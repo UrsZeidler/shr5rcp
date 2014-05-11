@@ -2242,6 +2242,12 @@
 	<xsl:template match="//vehicle">
 		<xsl:choose>
 			<xsl:when
+				test="starts-with(category/text(),'Drone:')">
+				<xsl:call-template name="vehicle">
+					<xsl:with-param name="typeName" select="'Drohne'" />
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:when
 				test="category/text()='Bike' or category/text()='Car' or category/text()='Truck'">
 				<xsl:call-template name="vehicle">
 					<xsl:with-param name="typeName" select="'Bodenfahrzeug'" />
