@@ -177,6 +177,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.PROGRAM: return createProgram();
             case Shr5Package.SOFTWARE_AGENT: return createSoftwareAgent();
             case Shr5Package.HOST: return createHost();
+            case Shr5Package.RIGGER_COMMAND_CONSOLE: return createRiggerCommandConsole();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -850,6 +851,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Host createHost() {
         HostImpl host = new HostImpl();
         return host;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public RiggerCommandConsole createRiggerCommandConsole() {
+        RiggerCommandConsoleImpl riggerCommandConsole = new RiggerCommandConsoleImpl();
+        return riggerCommandConsole;
     }
 
     /**

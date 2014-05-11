@@ -61,9 +61,11 @@ public class TechnomancerItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addMatrixZustandMaxPropertyDescriptor(object);
             addGeraetestufePropertyDescriptor(object);
             addFirewallPropertyDescriptor(object);
             addDatenverarbeitungPropertyDescriptor(object);
+            addCurrentModusPropertyDescriptor(object);
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
             addResonanzPropertyDescriptor(object);
@@ -73,6 +75,28 @@ public class TechnomancerItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Matrix Zustand Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMatrixZustandMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatixConditionMonitor_matrixZustandMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatixConditionMonitor_matrixZustandMax_feature", "_UI_MatixConditionMonitor_type"),
+                 Shr5Package.Literals.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Resonanz feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,6 +207,28 @@ public class TechnomancerItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Current Modus feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCurrentModusPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatrixDevice_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_currentModus_feature", "_UI_MatrixDevice_type"),
+                 Shr5Package.Literals.MATRIX_DEVICE__CURRENT_MODUS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Firewall feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -301,9 +347,11 @@ public class TechnomancerItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Technomancer.class)) {
+            case Shr5Package.TECHNOMANCER__MATRIX_ZUSTAND_MAX:
             case Shr5Package.TECHNOMANCER__GERAETESTUFE:
             case Shr5Package.TECHNOMANCER__FIREWALL:
             case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
+            case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
             case Shr5Package.TECHNOMANCER__ANGRIFF:
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
             case Shr5Package.TECHNOMANCER__RESONANZ:

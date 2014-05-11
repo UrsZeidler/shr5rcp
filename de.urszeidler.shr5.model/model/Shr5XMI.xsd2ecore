@@ -489,7 +489,8 @@
       <nested inputs="shr5.ecore#//Technomancer/complexForms" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle"/>
       <nested inputs="shr5.ecore#//Technomancer/echos" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
-    <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Technomancer" outputs="Shr5XMI.xsd#//Technomancer;XSDElementDeclaration=62"/>
     <nested inputs="shr5.ecore#//ResonanzPersona" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDComplexTypeDefinition=63">
       <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDComplexTypeDefinition=63/XSDAttributeUse"/>
@@ -639,13 +640,19 @@
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDElementDeclaration=89"/>
-    <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90"/>
+    <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90">
+      <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90/XSDAttributeUse"/>
+    </nested>
     <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDElementDeclaration=90"/>
     <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDComplexTypeDefinition=91"/>
     <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDElementDeclaration=91"/>
     <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92">
-      <nested inputs="shr5.ecore#//Commlink/deviceRating" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Commlink/deviceRating" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Commlink/runningProgramms" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Commlink/runningProgramms" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Commlink/stroredProgramm" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
+    <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDElementDeclaration=92"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDComplexTypeDefinition=93"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDElementDeclaration=93"/>
@@ -655,11 +662,8 @@
       <nested inputs="shr5.ecore#//Cyberdeck/attribute2" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=2"/>
       <nested inputs="shr5.ecore#//Cyberdeck/attribute3" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=3"/>
       <nested inputs="shr5.ecore#//Cyberdeck/attribute4" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=4"/>
-      <nested inputs="shr5.ecore#//Cyberdeck/runningProgramms" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=5"/>
-      <nested inputs="shr5.ecore#//Cyberdeck/runningProgramms" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//Cyberdeck/stroredProgramm" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-      <nested inputs="shr5.ecore#//Cyberdeck/configuration" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=6"/>
-      <nested inputs="shr5.ecore#//Cyberdeck/configuration" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Cyberdeck/configuration" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDAttributeUse=5"/>
+      <nested inputs="shr5.ecore#//Cyberdeck/configuration" outputs="Shr5XMI.xsd#//Cyberdeck;XSDComplexTypeDefinition=94/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Cyberdeck" outputs="Shr5XMI.xsd#//Cyberdeck;XSDElementDeclaration=94"/>
     <nested inputs="shr5.ecore#//Program" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95">
@@ -691,5 +695,11 @@
       <nested inputs="shr5.ecore#//CyberwareModifikatioren/simRig" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=3"/>
     </nested>
     <nested inputs="shr5.ecore#//CyberwareModifikatioren" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDElementDeclaration=98"/>
+    <nested inputs="shr5.ecore#//RiggerCommandConsole" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99">
+      <nested inputs="shr5.ecore#//RiggerCommandConsole/datenverarbeitungBasis" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//RiggerCommandConsole/firewallBasis" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//RiggerCommandConsole/zugriffBasis" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="shr5.ecore#//RiggerCommandConsole" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDElementDeclaration=99"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

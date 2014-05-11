@@ -13,6 +13,7 @@ import de.urszeidler.eclipse.shr5.Sprite;
  * <p>
  * The following features are tested:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
@@ -92,6 +93,18 @@ public class SpriteTest extends TestCase {
     }
 
 	/**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
+     * @generated
+     */
+    public void testGetMatrixZustandMax() {
+        getFixture().setStufe(5);
+        assertEquals("should be 11", 11, getFixture().getMatrixZustandMax());
+    }
+
+    /**
 	 * Tests the '
 	 * {@link de.urszeidler.eclipse.shr5.ResonanzPersona#getResonanz()
 	 * <em>Resonanz</em>}' feature getter. <!-- begin-user-doc --> <!--

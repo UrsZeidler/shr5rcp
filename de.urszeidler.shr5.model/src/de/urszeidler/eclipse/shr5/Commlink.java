@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +19,8 @@ package de.urszeidler.eclipse.shr5;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getDeviceRating <em>Device Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getRunningProgramms <em>Running Programms</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getStroredProgramm <em>Strored Programm</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,4 +55,36 @@ public interface Commlink extends AbstraktGegenstand, MatrixDevice {
      * @generated
      */
     void setDeviceRating(int value);
+
+    /**
+     * Returns the value of the '<em><b>Running Programms</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Running Programms</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Running Programms</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_RunningProgramms()
+     * @model
+     * @generated
+     */
+    EList<Program> getRunningProgramms();
+
+    /**
+     * Returns the value of the '<em><b>Strored Programm</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Strored Programm</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Strored Programm</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_StroredProgramm()
+     * @model containment="true"
+     * @generated
+     */
+    EList<Program> getStroredProgramm();
 } // Comlink

@@ -19,6 +19,7 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getCurrentModus <em>Current Modus</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,5 +72,34 @@ public interface MatrixDevice extends MatixConditionMonitor {
      * @generated
      */
     int getDatenverarbeitung();
+
+    /**
+     * Returns the value of the '<em><b>Current Modus</b></em>' attribute.
+     * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.InterfaceModus}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Current Modus</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Current Modus</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.InterfaceModus
+     * @see #setCurrentModus(InterfaceModus)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getMatrixDevice_CurrentModus()
+     * @model
+     * @generated
+     */
+    InterfaceModus getCurrentModus();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getCurrentModus <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Current Modus</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.InterfaceModus
+     * @see #getCurrentModus()
+     * @generated
+     */
+    void setCurrentModus(InterfaceModus value);
 
 } // MatrixDevice

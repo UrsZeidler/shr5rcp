@@ -101,6 +101,7 @@ import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ResonanzPersona;
 import de.urszeidler.eclipse.shr5.ResonanzZiel;
+import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.SchadensTyp;
 import de.urszeidler.eclipse.shr5.Schutzgeist;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
@@ -827,6 +828,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass cyberwareModifikatiorenEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass riggerCommandConsoleEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -3929,6 +3937,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getMatrixDevice_CurrentModus() {
+        return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -3974,8 +3991,35 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getCommlink_RunningProgramms() {
+        return (EReference)commlinkEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getCommlink_StroredProgramm() {
+        return (EReference)commlinkEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getMatixConditionMonitor() {
         return matixConditionMonitorEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMatixConditionMonitor_MatrixZustandMax() {
+        return (EAttribute)matixConditionMonitorEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -4001,26 +4045,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getCyberdeck_RunningProgramms() {
-        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EReference getCyberdeck_StroredProgramm() {
-        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EAttribute getCyberdeck_Attribute1() {
-        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -4029,7 +4055,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EAttribute getCyberdeck_Attribute2() {
-        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4038,7 +4064,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EAttribute getCyberdeck_Attribute3() {
-        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -4047,7 +4073,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EAttribute getCyberdeck_Attribute4() {
-        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -4056,7 +4082,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     public EReference getCyberdeck_Configuration() {
-        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(7);
+        return (EReference)cyberdeckEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -4147,6 +4173,60 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EAttribute getCyberwareModifikatioren_SimRig() {
         return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getRiggerCommandConsole() {
+        return riggerCommandConsoleEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRiggerCommandConsole_Rauschunterdrueckung() {
+        return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRiggerCommandConsole_Zugriff() {
+        return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRiggerCommandConsole_DatenverarbeitungBasis() {
+        return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRiggerCommandConsole_FirewallBasis() {
+        return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getRiggerCommandConsole_ZugriffBasis() {
+        return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -4744,6 +4824,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__GERAETESTUFE);
         createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__FIREWALL);
         createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__DATENVERARBEITUNG);
+        createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__CURRENT_MODUS);
 
         activeMatixDeviceEClass = createEClass(ACTIVE_MATIX_DEVICE);
         createEAttribute(activeMatixDeviceEClass, ACTIVE_MATIX_DEVICE__ANGRIFF);
@@ -4751,13 +4832,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         commlinkEClass = createEClass(COMMLINK);
         createEAttribute(commlinkEClass, COMMLINK__DEVICE_RATING);
+        createEReference(commlinkEClass, COMMLINK__RUNNING_PROGRAMMS);
+        createEReference(commlinkEClass, COMMLINK__STRORED_PROGRAMM);
 
         matixConditionMonitorEClass = createEClass(MATIX_CONDITION_MONITOR);
+        createEAttribute(matixConditionMonitorEClass, MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX);
 
         cyberdeckEClass = createEClass(CYBERDECK);
         createEAttribute(cyberdeckEClass, CYBERDECK__PROGRAM_SLOTS);
-        createEReference(cyberdeckEClass, CYBERDECK__RUNNING_PROGRAMMS);
-        createEReference(cyberdeckEClass, CYBERDECK__STRORED_PROGRAMM);
         createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE1);
         createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE2);
         createEAttribute(cyberdeckEClass, CYBERDECK__ATTRIBUTE3);
@@ -4777,6 +4859,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__UNIVERSAL_DATA_CONNECTOR);
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__CONTROL_RIG);
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__SIM_RIG);
+
+        riggerCommandConsoleEClass = createEClass(RIGGER_COMMAND_CONSOLE);
+        createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG);
+        createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__ZUGRIFF);
+        createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS);
+        createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS);
+        createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -4962,6 +5051,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         hostEClass.getESuperTypes().add(this.getActiveMatixDevice());
         hostEClass.getESuperTypes().add(this.getBeschreibbar());
         cyberwareModifikatiorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
+        riggerCommandConsoleEClass.getESuperTypes().add(this.getCommlink());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5378,6 +5468,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getMatrixDevice_Geraetestufe(), ecorePackage.getEInt(), "geraetestufe", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getMatrixDevice_Firewall(), ecorePackage.getEInt(), "firewall", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getMatrixDevice_Datenverarbeitung(), ecorePackage.getEInt(), "datenverarbeitung", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMatrixDevice_CurrentModus(), this.getInterfaceModus(), "currentModus", null, 0, 1, MatrixDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(activeMatixDeviceEClass, ActiveMatixDevice.class, "ActiveMatixDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getActiveMatixDevice_Angriff(), ecorePackage.getEInt(), "angriff", null, 0, 1, ActiveMatixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5385,13 +5476,14 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(commlinkEClass, Commlink.class, "Commlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCommlink_DeviceRating(), ecorePackage.getEInt(), "deviceRating", null, 1, 1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCommlink_RunningProgramms(), this.getProgram(), null, "runningProgramms", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCommlink_StroredProgramm(), this.getProgram(), null, "stroredProgramm", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(matixConditionMonitorEClass, MatixConditionMonitor.class, "MatixConditionMonitor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMatixConditionMonitor_MatrixZustandMax(), ecorePackage.getEInt(), "matrixZustandMax", null, 0, 1, MatixConditionMonitor.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(cyberdeckEClass, Cyberdeck.class, "Cyberdeck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCyberdeck_ProgramSlots(), ecorePackage.getEInt(), "programSlots", null, 0, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCyberdeck_RunningProgramms(), this.getProgram(), null, "runningProgramms", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCyberdeck_StroredProgramm(), this.getProgram(), null, "stroredProgramm", null, 0, -1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberdeck_Attribute1(), ecorePackage.getEInt(), "attribute1", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberdeck_Attribute2(), ecorePackage.getEInt(), "attribute2", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberdeck_Attribute3(), ecorePackage.getEInt(), "attribute3", null, 1, 1, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5411,6 +5503,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getCyberwareModifikatioren_UniversalDataConnector(), ecorePackage.getEBoolean(), "universalDataConnector", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberwareModifikatioren_ControlRig(), ecorePackage.getEInt(), "controlRig", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getCyberwareModifikatioren_SimRig(), ecorePackage.getEInt(), "simRig", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(riggerCommandConsoleEClass, RiggerCommandConsole.class, "RiggerCommandConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRiggerCommandConsole_Rauschunterdrueckung(), ecorePackage.getEInt(), "rauschunterdrueckung", null, 0, 1, RiggerCommandConsole.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRiggerCommandConsole_Zugriff(), ecorePackage.getEInt(), "zugriff", null, 0, 1, RiggerCommandConsole.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRiggerCommandConsole_DatenverarbeitungBasis(), ecorePackage.getEInt(), "datenverarbeitungBasis", null, 1, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRiggerCommandConsole_FirewallBasis(), ecorePackage.getEInt(), "firewallBasis", null, 1, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRiggerCommandConsole_ZugriffBasis(), ecorePackage.getEInt(), "zugriffBasis", null, 0, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -1405,6 +1405,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.RiggerCommandConsole} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected RiggerCommandConsoleItemProvider riggerCommandConsoleItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.RiggerCommandConsole}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createRiggerCommandConsoleAdapter() {
+        if (riggerCommandConsoleItemProvider == null) {
+            riggerCommandConsoleItemProvider = new RiggerCommandConsoleItemProvider(this);
+        }
+
+        return riggerCommandConsoleItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1561,6 +1584,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (programItemProvider != null) programItemProvider.dispose();
         if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();
         if (hostItemProvider != null) hostItemProvider.dispose();
+        if (riggerCommandConsoleItemProvider != null) riggerCommandConsoleItemProvider.dispose();
     }
 
 }

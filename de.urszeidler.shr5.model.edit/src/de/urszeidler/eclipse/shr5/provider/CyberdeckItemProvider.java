@@ -5,13 +5,11 @@ package de.urszeidler.eclipse.shr5.provider;
 
 
 import de.urszeidler.eclipse.shr5.Cyberdeck;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -60,7 +58,6 @@ public class CyberdeckItemProvider
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
             addProgramSlotsPropertyDescriptor(object);
-            addRunningProgrammsPropertyDescriptor(object);
             addAttribute1PropertyDescriptor(object);
             addAttribute2PropertyDescriptor(object);
             addAttribute3PropertyDescriptor(object);
@@ -132,28 +129,6 @@ public class CyberdeckItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Running Programms feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addRunningProgrammsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Cyberdeck_runningProgramms_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Cyberdeck_runningProgramms_feature", "_UI_Cyberdeck_type"),
-                 Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMMS,
-                 true,
-                 false,
-                 true,
-                 null,
                  null,
                  null));
     }
@@ -269,36 +244,6 @@ public class CyberdeckItemProvider
     }
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.CYBERDECK__STRORED_PROGRAMM);
-        }
-        return childrenFeatures;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
-
-        return super.getChildFeature(object, child);
-    }
-
-    /**
      * This returns Cyberdeck.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -344,9 +289,6 @@ public class CyberdeckItemProvider
             case Shr5Package.CYBERDECK__ATTRIBUTE4:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5Package.CYBERDECK__STRORED_PROGRAMM:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
         }
         super.notifyChanged(notification);
     }
@@ -361,16 +303,6 @@ public class CyberdeckItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERDECK__STRORED_PROGRAMM,
-                 Shr5Factory.eINSTANCE.createProgram()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.CYBERDECK__STRORED_PROGRAMM,
-                 Shr5Factory.eINSTANCE.createSoftwareAgent()));
     }
 
 }

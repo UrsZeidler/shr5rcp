@@ -3,56 +3,58 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.Commlink;
+import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Comlink</b></em>'.
+ * A test case for the model object '<em><b>Rigger Command Console</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRauschunterdrueckung() <em>Rauschunterdrueckung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriff() <em>Zugriff</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
-public class CommlinkTest extends AbstraktGegenstandTest {
+public class RiggerCommandConsoleTest extends CommlinkTest {
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
-        TestRunner.run(CommlinkTest.class);
+        TestRunner.run(RiggerCommandConsoleTest.class);
     }
 
     /**
-     * Constructs a new Commlink test case with the given name.
+     * Constructs a new Rigger Command Console test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public CommlinkTest(String name) {
+    public RiggerCommandConsoleTest(String name) {
         super(name);
     }
 
     /**
-     * Returns the fixture for this Commlink test case.
+     * Returns the fixture for this Rigger Command Console test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    protected Commlink getFixture() {
-        return (Commlink)fixture;
+    protected RiggerCommandConsole getFixture() {
+        return (RiggerCommandConsole)fixture;
     }
 
     /**
@@ -64,13 +66,14 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      */
     @Override
     protected void setUp() throws Exception {
-        setFixture(Shr5Factory.eINSTANCE.createCommlink());
+        setFixture(Shr5Factory.eINSTANCE.createRiggerCommandConsole());
         getFixture().setDeviceRating(2);
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -80,26 +83,33 @@ public class CommlinkTest extends AbstraktGegenstandTest {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
-     * @generated not
-     */
-    public void testGetMatrixZustandMax() {
-        assertEquals(9, getFixture().getMatrixZustandMax());
-    }
-
-    /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRauschunterdrueckung() <em>Rauschunterdrueckung</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe()
+     * @see de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRauschunterdrueckung()
      * @generated not
      */
-    public void testGetGeraetestufe() {
-        assertEquals(2, getFixture().getGeraetestufe());
+    public void testGetRauschunterdrueckung() {
+        getFixture().setZugriffBasis(1);
+        assertEquals(1, getFixture().getRauschunterdrueckung());
+        
+        getFixture().setDeviceRating(4);
+        assertEquals(3, getFixture().getRauschunterdrueckung());    
+        getFixture().setDeviceRating(2);
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriff() <em>Zugriff</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriff()
+     * @generated not
+     */
+    public void testGetZugriff() {
+        getFixture().setZugriffBasis(1);
+        assertEquals(1, getFixture().getZugriff());
     }
 
     /**
@@ -111,7 +121,8 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      * @generated not
      */
     public void testGetFirewall() {
-        assertEquals(2, getFixture().getFirewall());
+        getFixture().setFirewallBasis(4);
+        assertEquals(4, getFixture().getFirewall());
     }
 
     /**
@@ -123,7 +134,8 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      * @generated not
      */
     public void testGetDatenverarbeitung() {
-        assertEquals(2, getFixture().getDatenverarbeitung());
+        getFixture().setDatenverarbeitungBasis(3);
+        assertEquals(3, getFixture().getDatenverarbeitung());
     }
 
-} // ComlinkTest
+} // RiggerCommandConsoleTest

@@ -19,8 +19,6 @@ import org.eclipse.emf.ecore.EAttribute;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getProgramSlots <em>Program Slots</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningProgramms <em>Running Programms</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getStroredProgramm <em>Strored Programm</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute1 <em>Attribute1</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute2 <em>Attribute2</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute3 <em>Attribute3</em>}</li>
@@ -62,38 +60,6 @@ public interface Cyberdeck extends Commlink, ActiveMatixDevice {
      * @generated
      */
     void setProgramSlots(int value);
-
-    /**
-     * Returns the value of the '<em><b>Running Programms</b></em>' reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Running Programms</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Running Programms</em>' reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_RunningProgramms()
-     * @model
-     * @generated
-     */
-    EList<Program> getRunningProgramms();
-
-    /**
-     * Returns the value of the '<em><b>Strored Programm</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Strored Programm</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Strored Programm</em>' containment reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck_StroredProgramm()
-     * @model containment="true"
-     * @generated
-     */
-    EList<Program> getStroredProgramm();
 
     /**
      * Returns the value of the '<em><b>Attribute1</b></em>' attribute.

@@ -483,6 +483,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/geraetestufe"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/firewall"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/datenverarbeitung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/currentModus"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//ActiveMatixDevice">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ActiveMatixDevice/angriff"/>
@@ -490,12 +491,14 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Commlink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Commlink/deviceRating"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/runningProgramms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/stroredProgramm"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="shr5.ecore#//MatixConditionMonitor"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatixConditionMonitor">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatixConditionMonitor/matrixZustandMax"/>
+    </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Cyberdeck">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/programSlots"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/runningProgramms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/stroredProgramm"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/attribute1"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/attribute2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/attribute3"/>
@@ -514,6 +517,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/universalDataConnector"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/controlRig"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/simRig"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//RiggerCommandConsole">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/rauschunterdrueckung"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/zugriff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/datenverarbeitungBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/firewallBasis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/zugriffBasis"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

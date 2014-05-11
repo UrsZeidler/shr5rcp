@@ -543,6 +543,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createCyberwareModifikatiorenAdapter();
             }
             @Override
+            public Adapter caseRiggerCommandConsole(RiggerCommandConsole object) {
+                return createRiggerCommandConsoleAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1945,6 +1949,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCyberwareModifikatiorenAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole <em>Rigger Command Console</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.RiggerCommandConsole
+     * @generated
+     */
+    public Adapter createRiggerCommandConsoleAdapter() {
         return null;
     }
 

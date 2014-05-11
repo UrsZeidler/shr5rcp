@@ -5,6 +5,7 @@ package de.urszeidler.eclipse.shr5.impl;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Host;
+import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,9 +22,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getCurrentModus <em>Current Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
@@ -35,6 +38,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class HostImpl extends MinimalEObjectImpl.Container implements Host {
+    /**
+     * The default value of the '{@link #getMatrixZustandMax() <em>Matrix Zustand Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMatrixZustandMax()
+     * @generated
+     * @ordered
+     */
+    protected static final int MATRIX_ZUSTAND_MAX_EDEFAULT = 0;
+
     /**
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -64,6 +77,26 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * @ordered
      */
     protected static final int DATENVERARBEITUNG_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCurrentModus()
+     * @generated
+     * @ordered
+     */
+    protected static final InterfaceModus CURRENT_MODUS_EDEFAULT = InterfaceModus.AUGMENTED_REALITY;
+
+    /**
+     * The cached value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCurrentModus()
+     * @generated
+     * @ordered
+     */
+    protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
 
     /**
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
@@ -169,6 +202,17 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getMatrixZustandMax() {
+        // TODO: implement this method to return the 'Matrix Zustand Max' attribute
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getGeraetestufe() {
         // TODO: implement this method to return the 'Geraetestufe' attribute
         // Ensure that you remove @generated or mark it @generated NOT
@@ -195,6 +239,27 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         // TODO: implement this method to return the 'Datenverarbeitung' attribute
         // Ensure that you remove @generated or mark it @generated NOT
         throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InterfaceModus getCurrentModus() {
+        return currentModus;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCurrentModus(InterfaceModus newCurrentModus) {
+        InterfaceModus oldCurrentModus = currentModus;
+        currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__CURRENT_MODUS, oldCurrentModus, currentModus));
     }
 
     /**
@@ -290,12 +355,16 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
+                return getMatrixZustandMax();
             case Shr5Package.HOST__GERAETESTUFE:
                 return getGeraetestufe();
             case Shr5Package.HOST__FIREWALL:
                 return getFirewall();
             case Shr5Package.HOST__DATENVERARBEITUNG:
                 return getDatenverarbeitung();
+            case Shr5Package.HOST__CURRENT_MODUS:
+                return getCurrentModus();
             case Shr5Package.HOST__ANGRIFF:
                 return getAngriff();
             case Shr5Package.HOST__SCHLEICHER:
@@ -318,6 +387,9 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case Shr5Package.HOST__CURRENT_MODUS:
+                setCurrentModus((InterfaceModus)newValue);
+                return;
             case Shr5Package.HOST__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
                 return;
@@ -339,6 +411,9 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+            case Shr5Package.HOST__CURRENT_MODUS:
+                setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
             case Shr5Package.HOST__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
                 return;
@@ -360,12 +435,16 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
+                return getMatrixZustandMax() != MATRIX_ZUSTAND_MAX_EDEFAULT;
             case Shr5Package.HOST__GERAETESTUFE:
                 return getGeraetestufe() != GERAETESTUFE_EDEFAULT;
             case Shr5Package.HOST__FIREWALL:
                 return getFirewall() != FIREWALL_EDEFAULT;
             case Shr5Package.HOST__DATENVERARBEITUNG:
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
+            case Shr5Package.HOST__CURRENT_MODUS:
+                return currentModus != CURRENT_MODUS_EDEFAULT;
             case Shr5Package.HOST__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.HOST__SCHLEICHER:
@@ -426,7 +505,9 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (beschreibung: ");
+        result.append(" (currentModus: ");
+        result.append(currentModus);
+        result.append(", beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");
         result.append(image);

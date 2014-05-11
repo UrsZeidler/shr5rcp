@@ -1175,6 +1175,22 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.RIGGER_COMMAND_CONSOLE: {
+                RiggerCommandConsole riggerCommandConsole = (RiggerCommandConsole)theEObject;
+                T result = caseRiggerCommandConsole(riggerCommandConsole);
+                if (result == null) result = caseCommlink(riggerCommandConsole);
+                if (result == null) result = caseAbstraktGegenstand(riggerCommandConsole);
+                if (result == null) result = caseMatrixDevice(riggerCommandConsole);
+                if (result == null) result = caseQuelle(riggerCommandConsole);
+                if (result == null) result = caseGeldWert(riggerCommandConsole);
+                if (result == null) result = caseBeschreibbar(riggerCommandConsole);
+                if (result == null) result = caseModifizierbar(riggerCommandConsole);
+                if (result == null) result = caseAnwendbar(riggerCommandConsole);
+                if (result == null) result = caseMatixConditionMonitor(riggerCommandConsole);
+                if (result == null) result = caseIdentifiable(riggerCommandConsole);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2661,6 +2677,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseCyberwareModifikatioren(CyberwareModifikatioren object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Rigger Command Console</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Rigger Command Console</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseRiggerCommandConsole(RiggerCommandConsole object) {
         return null;
     }
 

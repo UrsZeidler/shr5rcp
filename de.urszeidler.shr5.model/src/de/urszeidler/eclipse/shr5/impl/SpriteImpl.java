@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -22,9 +23,11 @@ import de.urszeidler.eclipse.shr5.Sprite;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getCurrentModus <em>Current Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getResonanz <em>Resonanz</em>}</li>
@@ -48,6 +51,16 @@ import de.urszeidler.eclipse.shr5.Sprite;
  */
 public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	/**
+     * The default value of the '{@link #getMatrixZustandMax() <em>Matrix Zustand Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMatrixZustandMax()
+     * @generated
+     * @ordered
+     */
+    protected static final int MATRIX_ZUSTAND_MAX_EDEFAULT = 0;
+
+    /**
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,6 +89,26 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * @ordered
      */
 	protected static final int DATENVERARBEITUNG_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCurrentModus()
+     * @generated
+     * @ordered
+     */
+    protected static final InterfaceModus CURRENT_MODUS_EDEFAULT = InterfaceModus.AUGMENTED_REALITY;
+
+    /**
+     * The cached value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCurrentModus()
+     * @generated
+     * @ordered
+     */
+    protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
 
     /**
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
@@ -377,6 +410,16 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getMatrixZustandMax() {
+        int value = (int)Math.ceil(getStufe() / 2.0D);
+        return 8 + value;
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated not
@@ -422,6 +465,27 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	}
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InterfaceModus getCurrentModus() {
+        return currentModus;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCurrentModus(InterfaceModus newCurrentModus) {
+        InterfaceModus oldCurrentModus = currentModus;
+        currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SPRITE__CURRENT_MODUS, oldCurrentModus, currentModus));
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated not
@@ -728,12 +792,16 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.SPRITE__MATRIX_ZUSTAND_MAX:
+                return getMatrixZustandMax();
             case Shr5Package.SPRITE__GERAETESTUFE:
                 return getGeraetestufe();
             case Shr5Package.SPRITE__FIREWALL:
                 return getFirewall();
             case Shr5Package.SPRITE__DATENVERARBEITUNG:
                 return getDatenverarbeitung();
+            case Shr5Package.SPRITE__CURRENT_MODUS:
+                return getCurrentModus();
             case Shr5Package.SPRITE__ANGRIFF:
                 return getAngriff();
             case Shr5Package.SPRITE__SCHLEICHER:
@@ -779,6 +847,9 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	@Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case Shr5Package.SPRITE__CURRENT_MODUS:
+                setCurrentModus((InterfaceModus)newValue);
+                return;
             case Shr5Package.SPRITE__RESONANZ_BASIS:
                 setResonanzBasis((Integer)newValue);
                 return;
@@ -830,6 +901,9 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	@Override
 	public void eUnset(int featureID) {
         switch (featureID) {
+            case Shr5Package.SPRITE__CURRENT_MODUS:
+                setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
             case Shr5Package.SPRITE__RESONANZ_BASIS:
                 setResonanzBasis(RESONANZ_BASIS_EDEFAULT);
                 return;
@@ -881,12 +955,16 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.SPRITE__MATRIX_ZUSTAND_MAX:
+                return getMatrixZustandMax() != MATRIX_ZUSTAND_MAX_EDEFAULT;
             case Shr5Package.SPRITE__GERAETESTUFE:
                 return getGeraetestufe() != GERAETESTUFE_EDEFAULT;
             case Shr5Package.SPRITE__FIREWALL:
                 return getFirewall() != FIREWALL_EDEFAULT;
             case Shr5Package.SPRITE__DATENVERARBEITUNG:
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
+            case Shr5Package.SPRITE__CURRENT_MODUS:
+                return currentModus != CURRENT_MODUS_EDEFAULT;
             case Shr5Package.SPRITE__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.SPRITE__SCHLEICHER:
@@ -995,7 +1073,9 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (resonanzBasis: ");
+        result.append(" (currentModus: ");
+        result.append(currentModus);
+        result.append(", resonanzBasis: ");
         result.append(resonanzBasis);
         result.append(", beschreibung: ");
         result.append(beschreibung);

@@ -966,6 +966,7 @@
           <xsd:element name="complexForms" type="shr5:PersonaKomplexForm"/>
           <xsd:element name="echos" type="shr5:Echo"/>
         </xsd:choice>
+        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
         <xsd:attribute name="resonanzBasis" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1341,7 +1342,9 @@
       <xsd:documentation>Defines the interface for all passive matix devices.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:MatixConditionMonitor"/>
+      <xsd:extension base="shr5:MatixConditionMonitor">
+        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="MatrixDevice" type="shr5:MatrixDevice">
@@ -1368,7 +1371,13 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="runningProgramms" type="shr5:Program"/>
+          <xsd:element name="stroredProgramm" type="shr5:Program"/>
+        </xsd:choice>
+        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
         <xsd:attribute name="deviceRating" type="xsd:int" use="required"/>
+        <xsd:attribute name="runningProgramms" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1392,8 +1401,6 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Commlink">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="runningProgramms" type="shr5:Program"/>
-          <xsd:element name="stroredProgramm" type="shr5:Program"/>
           <xsd:element name="configuration" type="ecore:EAttribute">
             <xsd:annotation>
               <xsd:documentation>Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.</xsd:documentation>
@@ -1409,7 +1416,6 @@
         <xsd:attribute name="attribute2" type="xsd:int" use="required"/>
         <xsd:attribute name="attribute3" type="xsd:int" use="required"/>
         <xsd:attribute name="attribute4" type="xsd:int" use="required"/>
-        <xsd:attribute name="runningProgramms" type="xsd:string"/>
         <xsd:attribute name="configuration" type="xsd:string">
           <xsd:annotation>
             <xsd:documentation>Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.</xsd:documentation>
@@ -1495,4 +1501,18 @@
       <xsd:documentation>Collects the cyberware related modificators.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="RiggerCommandConsole">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Commlink">
+        <xsd:attribute name="datenverarbeitungBasis" type="xsd:int" use="required"/>
+        <xsd:attribute name="firewallBasis" type="xsd:int" use="required"/>
+        <xsd:attribute name="zugriffBasis" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>This value is for the zugriff feature, the rauchunter. is calculated as deviceRating-zugriffBasis.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RiggerCommandConsole" type="shr5:RiggerCommandConsole"/>
 </xsd:schema>

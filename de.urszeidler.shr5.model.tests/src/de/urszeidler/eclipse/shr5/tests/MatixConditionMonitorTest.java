@@ -11,6 +11,12 @@ import junit.framework.TestCase;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Matix Condition Monitor</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public abstract class MatixConditionMonitorTest extends TestCase {
@@ -51,6 +57,19 @@ public abstract class MatixConditionMonitorTest extends TestCase {
      */
     protected MatixConditionMonitor getFixture() {
         return fixture;
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
+     * @generated
+     */
+    public void testGetMatrixZustandMax() {
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
 } //MatixConditionMonitorTest

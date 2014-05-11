@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Echo;
+import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
@@ -29,9 +30,11 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getCurrentModus <em>Current Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getResonanz <em>Resonanz</em>}</li>
@@ -45,6 +48,16 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  */
 public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer {
 	/**
+     * The default value of the '{@link #getMatrixZustandMax() <em>Matrix Zustand Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMatrixZustandMax()
+     * @generated
+     * @ordered
+     */
+    protected static final int MATRIX_ZUSTAND_MAX_EDEFAULT = 0;
+
+    /**
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,6 +86,26 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      * @ordered
      */
 	protected static final int DATENVERARBEITUNG_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCurrentModus()
+     * @generated
+     * @ordered
+     */
+    protected static final InterfaceModus CURRENT_MODUS_EDEFAULT = InterfaceModus.AUGMENTED_REALITY;
+
+    /**
+     * The cached value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCurrentModus()
+     * @generated
+     * @ordered
+     */
+    protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
 
     /**
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
@@ -164,6 +197,15 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getMatrixZustandMax() {
+        return getZustandGeistigMax();
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated not
@@ -209,6 +251,27 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	}
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InterfaceModus getCurrentModus() {
+        return currentModus;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCurrentModus(InterfaceModus newCurrentModus) {
+        InterfaceModus oldCurrentModus = currentModus;
+        currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TECHNOMANCER__CURRENT_MODUS, oldCurrentModus, currentModus));
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated not
@@ -286,12 +349,16 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.TECHNOMANCER__MATRIX_ZUSTAND_MAX:
+                return getMatrixZustandMax();
             case Shr5Package.TECHNOMANCER__GERAETESTUFE:
                 return getGeraetestufe();
             case Shr5Package.TECHNOMANCER__FIREWALL:
                 return getFirewall();
             case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
                 return getDatenverarbeitung();
+            case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
+                return getCurrentModus();
             case Shr5Package.TECHNOMANCER__ANGRIFF:
                 return getAngriff();
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
@@ -317,6 +384,9 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	@Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
+                setCurrentModus((InterfaceModus)newValue);
+                return;
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 setResonanzBasis((Integer)newValue);
                 return;
@@ -340,6 +410,9 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	@Override
 	public void eUnset(int featureID) {
         switch (featureID) {
+            case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
+                setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 setResonanzBasis(RESONANZ_BASIS_EDEFAULT);
                 return;
@@ -361,12 +434,16 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	@Override
 	public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.TECHNOMANCER__MATRIX_ZUSTAND_MAX:
+                return getMatrixZustandMax() != MATRIX_ZUSTAND_MAX_EDEFAULT;
             case Shr5Package.TECHNOMANCER__GERAETESTUFE:
                 return getGeraetestufe() != GERAETESTUFE_EDEFAULT;
             case Shr5Package.TECHNOMANCER__FIREWALL:
                 return getFirewall() != FIREWALL_EDEFAULT;
             case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG:
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
+            case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
+                return currentModus != CURRENT_MODUS_EDEFAULT;
             case Shr5Package.TECHNOMANCER__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
@@ -392,6 +469,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (derivedFeatureID) {
+                case Shr5Package.TECHNOMANCER__MATRIX_ZUSTAND_MAX: return Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
                 default: return -1;
             }
         }
@@ -400,6 +478,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
                 case Shr5Package.TECHNOMANCER__GERAETESTUFE: return Shr5Package.MATRIX_DEVICE__GERAETESTUFE;
                 case Shr5Package.TECHNOMANCER__FIREWALL: return Shr5Package.MATRIX_DEVICE__FIREWALL;
                 case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG: return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
+                case Shr5Package.TECHNOMANCER__CURRENT_MODUS: return Shr5Package.MATRIX_DEVICE__CURRENT_MODUS;
                 default: return -1;
             }
         }
@@ -429,6 +508,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (baseFeatureID) {
+                case Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX: return Shr5Package.TECHNOMANCER__MATRIX_ZUSTAND_MAX;
                 default: return -1;
             }
         }
@@ -437,6 +517,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
                 case Shr5Package.MATRIX_DEVICE__GERAETESTUFE: return Shr5Package.TECHNOMANCER__GERAETESTUFE;
                 case Shr5Package.MATRIX_DEVICE__FIREWALL: return Shr5Package.TECHNOMANCER__FIREWALL;
                 case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG: return Shr5Package.TECHNOMANCER__DATENVERARBEITUNG;
+                case Shr5Package.MATRIX_DEVICE__CURRENT_MODUS: return Shr5Package.TECHNOMANCER__CURRENT_MODUS;
                 default: return -1;
             }
         }
@@ -467,7 +548,9 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (resonanzBasis: ");
+        result.append(" (currentModus: ");
+        result.append(currentModus);
+        result.append(", resonanzBasis: ");
         result.append(resonanzBasis);
         result.append(')');
         return result.toString();
