@@ -569,6 +569,7 @@
         <xsd:attribute name="lasterPointer" type="xsd:boolean"/>
         <xsd:attribute name="schalldaempfer" type="xsd:boolean"/>
         <xsd:attribute name="vergroesserung" type="xsd:int"/>
+        <xsd:attribute name="sichtverbesserung" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1462,6 +1463,36 @@
   <xsd:element name="Host" type="shr5:Host">
     <xsd:annotation>
       <xsd:documentation>This defines a host.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="CyberwareModifikatioren">
+    <xsd:annotation>
+      <xsd:documentation>Collects the cyberware related modificators.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:ModifikatorAttribute">
+        <xsd:attribute name="directNeuralInterface" type="xsd:boolean">
+          <xsd:annotation>
+            <xsd:documentation>Defnies a DNI.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="universalDataConnector" type="xsd:boolean">
+          <xsd:annotation>
+            <xsd:documentation>Defines the UDC.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="controlRig" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>Defines a rigger controll. The value is the grade.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="simRig" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CyberwareModifikatioren" type="shr5:CyberwareModifikatioren">
+    <xsd:annotation>
+      <xsd:documentation>Collects the cyberware related modificators.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
 </xsd:schema>

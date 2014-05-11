@@ -20,6 +20,7 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#isLasterPointer <em>Laster Pointer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#isSchalldaempfer <em>Schalldaempfer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#getVergroesserung <em>Vergroesserung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#getSichtverbesserung <em>Sichtverbesserung</em>}</li>
  * </ul>
  * </p>
  *
@@ -160,5 +161,31 @@ public interface FernkampfwaffenModifikatoren extends ModifikatorAttribute {
      * @generated
      */
 	void setVergroesserung(int value);
+
+    /**
+     * Returns the value of the '<em><b>Sichtverbesserung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Sichtverbesserung</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Sichtverbesserung</em>' attribute.
+     * @see #setSichtverbesserung(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getFernkampfwaffenModifikatoren_Sichtverbesserung()
+     * @model
+     * @generated
+     */
+    int getSichtverbesserung();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#getSichtverbesserung <em>Sichtverbesserung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Sichtverbesserung</em>' attribute.
+     * @see #getSichtverbesserung()
+     * @generated
+     */
+    void setSichtverbesserung(int value);
 
 } // FernkampfwaffenModifikatoren

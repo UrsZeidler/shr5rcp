@@ -1168,6 +1168,13 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.CYBERWARE_MODIFIKATIOREN: {
+                CyberwareModifikatioren cyberwareModifikatioren = (CyberwareModifikatioren)theEObject;
+                T result = caseCyberwareModifikatioren(cyberwareModifikatioren);
+                if (result == null) result = caseModifikatorAttribute(cyberwareModifikatioren);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2639,6 +2646,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseHost(Host object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Cyberware Modifikatioren</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Cyberware Modifikatioren</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCyberwareModifikatioren(CyberwareModifikatioren object) {
         return null;
     }
 

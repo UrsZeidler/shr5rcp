@@ -135,9 +135,10 @@
 						<attribut
 							href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition" />
 					</entries>
-					<entries xsi:type="shr5:Cyberdeck" xmi:id="_tQZ84NiIEeOPDpSEFDGK4g"
-						name="Erika MCD-1" deviceRating="1" attribute1="4" attribute2="3"
-						attribute3="2" attribute4="1">
+					<entries xsi:type="shr5:Cyberdeck" name="Erika MCD-1"
+						deviceRating="1" attribute1="4" attribute2="3" attribute3="2"
+						attribute4="1" programSlots="1" srcBook="//@entries.0/@entries.0/@entries.0"
+						verfuegbarkeit="3R" wertValue="49500" page="227">
 						<configuration
 							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute1" />
 						<configuration
@@ -146,6 +147,69 @@
 							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute3" />
 						<configuration
 							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute4" />
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+						</mods>
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/simRig" />
+						</mods>
+						</entries>
+						<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
+							name="Control Rig 1" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
+							verfuegbarkeit="5E">
+							<mods wert="-100">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
+							</mods>
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+							</mods>
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig" />
+							</mods>
+						</entries>
+						<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
+							name="Control Rig 2" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
+							wertValue="97000" verfuegbarkeit="10R">
+							<mods wert="-200">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
+							</mods>
+							<mods wert="1">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+							</mods>
+							<mods wert="2">
+								<attribut
+									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig" />
+							</mods>
+						
+					</entries>
+					<entries xsi:type="shr5:Cyberdeck" name="Microdeck Summit"
+						deviceRating="1" attribute1="4" attribute2="3" attribute3="3"
+						attribute4="1" programSlots="1" srcBook="//@entries.0/@entries.0/@entries.0"
+						verfuegbarkeit="3R" wertValue="58000" page="227">
+						<configuration
+							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute1" />
+						<configuration
+							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute2" />
+						<configuration
+							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute3" />
+						<configuration
+							href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute4" />
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+						</mods>
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/simRig" />
+						</mods>
+
 					</entries>
 				</entries>
 			</entries>

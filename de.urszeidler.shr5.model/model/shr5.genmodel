@@ -237,6 +237,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/lasterPointer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/schalldaempfer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/vergroesserung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/sichtverbesserung"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Sichtverhaeltnisse">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Sichtverhaeltnisse/restlichtverstaerkung"/>
@@ -508,5 +509,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SoftwareAgent/rating"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Host"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//CyberwareModifikatioren">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/directNeuralInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/universalDataConnector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/controlRig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/simRig"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

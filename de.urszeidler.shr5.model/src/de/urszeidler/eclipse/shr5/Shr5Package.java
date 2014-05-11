@@ -5313,13 +5313,22 @@ public interface Shr5Package extends EPackage {
 	int FERNKAMPFWAFFEN_MODIFIKATOREN__VERGROESSERUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
 
     /**
+     * The feature id for the '<em><b>Sichtverbesserung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERNKAMPFWAFFEN_MODIFIKATOREN__SICHTVERBESSERUNG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
+
+    /**
      * The number of structural features of the '<em>Fernkampfwaffen Modifikatoren</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERNKAMPFWAFFEN_MODIFIKATOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 5;
+	int FERNKAMPFWAFFEN_MODIFIKATOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 6;
 
     /**
      * The number of operations of the '<em>Fernkampfwaffen Modifikatoren</em>' class.
@@ -13981,6 +13990,70 @@ public interface Shr5Package extends EPackage {
     int HOST_OPERATION_COUNT = ACTIVE_MATIX_DEVICE_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren <em>Cyberware Modifikatioren</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareModifikatioren()
+     * @generated
+     */
+    int CYBERWARE_MODIFIKATIOREN = 98;
+
+    /**
+     * The feature id for the '<em><b>Direct Neural Interface</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN__DIRECT_NEURAL_INTERFACE = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Universal Data Connector</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN__UNIVERSAL_DATA_CONNECTOR = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Control Rig</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN__CONTROL_RIG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Sim Rig</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN__SIM_RIG = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of structural features of the '<em>Cyberware Modifikatioren</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN_FEATURE_COUNT = MODIFIKATOR_ATTRIBUTE_FEATURE_COUNT + 4;
+
+    /**
+     * The number of operations of the '<em>Cyberware Modifikatioren</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE_MODIFIKATIOREN_OPERATION_COUNT = MODIFIKATOR_ATTRIBUTE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13988,7 +14061,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 98;
+	int FEUER_MODUS = 99;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -13998,7 +14071,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 99;
+	int SCHADENS_TYP = 100;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -14008,7 +14081,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 100;
+	int MAGAZIN_TYP = 101;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -14018,7 +14091,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 101;
+	int FEUWERWAFFEN_ERWEITERUNG = 102;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -14028,7 +14101,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 102;
+	int MODIFIKATOR_TYPE = 103;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -14038,7 +14111,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 103;
+	int SMARTGUN_TYPE = 104;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -14048,7 +14121,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 104;
+	int ZAUBER_ART = 105;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -14058,7 +14131,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 105;
+	int ZAUBER_REICHWEITE = 106;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -14068,7 +14141,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 106;
+	int ZAUBER_DAUER = 107;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -14078,7 +14151,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 107;
+	int MAGISCHE_TRADITION = 108;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -14088,7 +14161,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 108;
+	int CRITTER_HANDLUNG = 109;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -14098,7 +14171,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 109;
+	int CRITTER_REICHWEITE = 110;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -14108,7 +14181,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 110;
+	int CRITTER_DAUER = 111;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -14118,7 +14191,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 111;
+	int RESONANZ_ZIEL = 112;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -14128,7 +14201,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 112;
+    int INTERFACE_MODUS = 113;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -14138,7 +14211,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 113;
+	int SHR_DATE = 114;
 
 
 	/**
@@ -14149,7 +14222,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 114;
+	int MODIFICATION_MANAGER = 115;
 
 
 	/**
@@ -15449,6 +15522,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getFernkampfwaffenModifikatoren_Vergroesserung();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#getSichtverbesserung <em>Sichtverbesserung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Sichtverbesserung</em>'.
+     * @see de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren#getSichtverbesserung()
+     * @see #getFernkampfwaffenModifikatoren()
+     * @generated
+     */
+    EAttribute getFernkampfwaffenModifikatoren_Sichtverbesserung();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse <em>Sichtverhaeltnisse</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17828,6 +17912,60 @@ public interface Shr5Package extends EPackage {
     EClass getHost();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren <em>Cyberware Modifikatioren</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Cyberware Modifikatioren</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren
+     * @generated
+     */
+    EClass getCyberwareModifikatioren();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isDirectNeuralInterface <em>Direct Neural Interface</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Direct Neural Interface</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isDirectNeuralInterface()
+     * @see #getCyberwareModifikatioren()
+     * @generated
+     */
+    EAttribute getCyberwareModifikatioren_DirectNeuralInterface();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isUniversalDataConnector <em>Universal Data Connector</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Universal Data Connector</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isUniversalDataConnector()
+     * @see #getCyberwareModifikatioren()
+     * @generated
+     */
+    EAttribute getCyberwareModifikatioren_UniversalDataConnector();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getControlRig <em>Control Rig</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Control Rig</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getControlRig()
+     * @see #getCyberwareModifikatioren()
+     * @generated
+     */
+    EAttribute getCyberwareModifikatioren_ControlRig();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getSimRig <em>Sim Rig</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Sim Rig</em>'.
+     * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getSimRig()
+     * @see #getCyberwareModifikatioren()
+     * @generated
+     */
+    EAttribute getCyberwareModifikatioren_SimRig();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19061,6 +19199,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute FERNKAMPFWAFFEN_MODIFIKATOREN__VERGROESSERUNG = eINSTANCE.getFernkampfwaffenModifikatoren_Vergroesserung();
 
 		/**
+         * The meta object literal for the '<em><b>Sichtverbesserung</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FERNKAMPFWAFFEN_MODIFIKATOREN__SICHTVERBESSERUNG = eINSTANCE.getFernkampfwaffenModifikatoren_Sichtverbesserung();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse <em>Sichtverhaeltnisse</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -20961,6 +21107,48 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass HOST = eINSTANCE.getHost();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren <em>Cyberware Modifikatioren</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.CyberwareModifikatioren
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareModifikatioren()
+         * @generated
+         */
+        EClass CYBERWARE_MODIFIKATIOREN = eINSTANCE.getCyberwareModifikatioren();
+
+        /**
+         * The meta object literal for the '<em><b>Direct Neural Interface</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE_MODIFIKATIOREN__DIRECT_NEURAL_INTERFACE = eINSTANCE.getCyberwareModifikatioren_DirectNeuralInterface();
+
+        /**
+         * The meta object literal for the '<em><b>Universal Data Connector</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE_MODIFIKATIOREN__UNIVERSAL_DATA_CONNECTOR = eINSTANCE.getCyberwareModifikatioren_UniversalDataConnector();
+
+        /**
+         * The meta object literal for the '<em><b>Control Rig</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE_MODIFIKATIOREN__CONTROL_RIG = eINSTANCE.getCyberwareModifikatioren_ControlRig();
+
+        /**
+         * The meta object literal for the '<em><b>Sim Rig</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CYBERWARE_MODIFIKATIOREN__SIM_RIG = eINSTANCE.getCyberwareModifikatioren_SimRig();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.

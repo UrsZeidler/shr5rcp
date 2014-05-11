@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.CritterKraft;
 import de.urszeidler.eclipse.shr5.CritterReichweite;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareModifikatioren;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Echo;
 import de.urszeidler.eclipse.shr5.Erlernbar;
@@ -819,6 +820,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EClass hostEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass cyberwareModifikatiorenEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -2090,6 +2098,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFernkampfwaffenModifikatoren_Sichtverbesserung() {
+        return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4089,6 +4106,51 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getCyberwareModifikatioren() {
+        return cyberwareModifikatiorenEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberwareModifikatioren_DirectNeuralInterface() {
+        return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberwareModifikatioren_UniversalDataConnector() {
+        return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberwareModifikatioren_ControlRig() {
+        return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getCyberwareModifikatioren_SimRig() {
+        return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4423,6 +4485,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(fernkampfwaffenModifikatorenEClass, FERNKAMPFWAFFEN_MODIFIKATOREN__LASTER_POINTER);
         createEAttribute(fernkampfwaffenModifikatorenEClass, FERNKAMPFWAFFEN_MODIFIKATOREN__SCHALLDAEMPFER);
         createEAttribute(fernkampfwaffenModifikatorenEClass, FERNKAMPFWAFFEN_MODIFIKATOREN__VERGROESSERUNG);
+        createEAttribute(fernkampfwaffenModifikatorenEClass, FERNKAMPFWAFFEN_MODIFIKATOREN__SICHTVERBESSERUNG);
 
         sichtverhaeltnisseEClass = createEClass(SICHTVERHAELTNISSE);
         createEAttribute(sichtverhaeltnisseEClass, SICHTVERHAELTNISSE__RESTLICHTVERSTAERKUNG);
@@ -4709,6 +4772,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         hostEClass = createEClass(HOST);
 
+        cyberwareModifikatiorenEClass = createEClass(CYBERWARE_MODIFIKATIOREN);
+        createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__DIRECT_NEURAL_INTERFACE);
+        createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__UNIVERSAL_DATA_CONNECTOR);
+        createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__CONTROL_RIG);
+        createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__SIM_RIG);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -4892,6 +4961,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         softwareAgentEClass.getESuperTypes().add(this.getProgram());
         hostEClass.getESuperTypes().add(this.getActiveMatixDevice());
         hostEClass.getESuperTypes().add(this.getBeschreibbar());
+        cyberwareModifikatiorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5049,6 +5119,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFernkampfwaffenModifikatoren_LasterPointer(), ecorePackage.getEBoolean(), "lasterPointer", null, 0, 1, FernkampfwaffenModifikatoren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFernkampfwaffenModifikatoren_Schalldaempfer(), ecorePackage.getEBoolean(), "schalldaempfer", null, 0, 1, FernkampfwaffenModifikatoren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFernkampfwaffenModifikatoren_Vergroesserung(), ecorePackage.getEInt(), "vergroesserung", null, 0, 1, FernkampfwaffenModifikatoren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getFernkampfwaffenModifikatoren_Sichtverbesserung(), ecorePackage.getEInt(), "sichtverbesserung", null, 0, 1, FernkampfwaffenModifikatoren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(sichtverhaeltnisseEClass, Sichtverhaeltnisse.class, "Sichtverhaeltnisse", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSichtverhaeltnisse_Restlichtverstaerkung(), this.getModifikatorType(), "restlichtverstaerkung", null, 0, 1, Sichtverhaeltnisse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5334,6 +5405,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getSoftwareAgent_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SoftwareAgent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(hostEClass, Host.class, "Host", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(cyberwareModifikatiorenEClass, CyberwareModifikatioren.class, "CyberwareModifikatioren", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getCyberwareModifikatioren_DirectNeuralInterface(), ecorePackage.getEBoolean(), "directNeuralInterface", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberwareModifikatioren_UniversalDataConnector(), ecorePackage.getEBoolean(), "universalDataConnector", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberwareModifikatioren_ControlRig(), ecorePackage.getEInt(), "controlRig", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getCyberwareModifikatioren_SimRig(), ecorePackage.getEInt(), "simRig", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

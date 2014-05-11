@@ -287,6 +287,8 @@
       <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/lasterPointer" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=2"/>
       <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/schalldaempfer" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=3"/>
       <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/vergroesserung" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren/sichtverbesserung"
+          outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDComplexTypeDefinition=34/XSDAttributeUse=5"/>
     </nested>
     <nested inputs="shr5.ecore#//FernkampfwaffenModifikatoren" outputs="Shr5XMI.xsd#//FernkampfwaffenModifikatoren;XSDElementDeclaration=34"/>
     <nested inputs="shr5.ecore#//Sichtverhaeltnisse" outputs="Shr5XMI.xsd#//Sichtverhaeltnisse;XSDComplexTypeDefinition=35">
@@ -680,5 +682,14 @@
     <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=97/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=97/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Host" outputs="Shr5XMI.xsd#//Host;XSDElementDeclaration=97"/>
+    <nested inputs="shr5.ecore#//CyberwareModifikatioren" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98">
+      <nested inputs="shr5.ecore#//CyberwareModifikatioren/directNeuralInterface"
+          outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//CyberwareModifikatioren/universalDataConnector"
+          outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//CyberwareModifikatioren/controlRig" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//CyberwareModifikatioren/simRig" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDComplexTypeDefinition=98/XSDAttributeUse=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//CyberwareModifikatioren" outputs="Shr5XMI.xsd#//CyberwareModifikatioren;XSDElementDeclaration=98"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>
