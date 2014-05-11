@@ -31,7 +31,6 @@ import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Credstick;
-import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -358,7 +357,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseCredstick(Credstick object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_credstick, object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.CREDSTICK), object,
+                            editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
@@ -368,7 +368,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseMunition(Munition object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY,"amunition", object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.MUNITION), object,
+                            editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
@@ -378,23 +379,25 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseCommlink(Commlink object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.COMMLINK), object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.COMMLINK), object,
+                            editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
-            @Override
-            public Object caseCyberdeck(Cyberdeck object) {
-                try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.CYBERDECK), object, editingDomain, manager));
-                } catch (PartInitException e) {
-                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
-                }
-                return null;
-            }
-            
+
+            // @Override
+            // public Object caseCyberdeck(Cyberdeck object) {
+            // try {
+            // addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.CYBERDECK), object, editingDomain,
+            // manager));
+            // } catch (PartInitException e) {
+            //                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
+            // }
+            // return null;
+            // }
+
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {

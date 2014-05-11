@@ -156,6 +156,14 @@
 								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/simRig" />
 						</mods>
 						</entries>
+					<entries xsi:type="shr5:RiggerCommandConsole" name="Build from crab."
+						deviceRating="1" firewallBasis="2" datenverarbeitungBasis="3" srcBook="//@entries.0/@entries.0/@entries.0"
+						verfuegbarkeit="2R" wertValue="1400" page="265">
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+						</mods>
+						</entries>
 						<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
 							name="Control Rig 1" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
 							verfuegbarkeit="5E">
