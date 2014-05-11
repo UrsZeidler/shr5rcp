@@ -2554,17 +2554,17 @@
 <entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" verfuegbarkeit="" name="Ares Venture" xmi:id="408d98be-3e26-43f8-ab66-71bec26da002" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" verfuegbarkeit="" name="GMC Banshee" xmi:id="2921cc99-d625-4a13-b43f-09b011040303" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="VTOL/VSTOL" verfuegbarkeit="" name="Federated Boeing Commuter" xmi:id="2f8eac50-2794-4364-89b9-ae7b51b00a9e" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" verfuegbarkeit="" name="Shiawase Kanmushi" xmi:id="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Micro" verfuegbarkeit="" name="Sikorsky-Bell Microskimmer" xmi:id="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" verfuegbarkeit="" name="Horizon Flying Eye" xmi:id="1c17e7c0-8909-4e90-a96f-56c4dd62004f" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Mini" verfuegbarkeit="" name="MCT Fly-Spy" xmi:id="49cc79e7-89c5-4a97-9405-11eb817bf97e" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" verfuegbarkeit="" name="Aztechnology Crawler" xmi:id="c83126b4-1b74-471e-9578-83b0ab451190" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Small" verfuegbarkeit="" name="Lockheed Optic-X2" xmi:id="4128d715-8bbd-4d08-92e8-71ff705763f4" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="Ares Duelist" xmi:id="a0e3a887-999e-4aeb-bdde-928af7c7e60e" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="GM-Nissan Doberman" xmi:id="6ceca942-38bf-4042-8179-36836d6daffc" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="MCT-Nissan Roto-Drone" xmi:id="b5f6f209-3601-4108-a7e3-b6b274dc7e5e" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" verfuegbarkeit="" name="Cyberspace Designs Dalmatian" xmi:id="01b548bc-6a75-4fae-af7c-008244c16904" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:PassagierFahrzeug" fahrzeugTyp="Drone: Large" verfuegbarkeit="" name="Steel Lynx Combat Drone" xmi:id="693a7423-0f31-4066-931c-84fd1261d4d5" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Micro" verfuegbarkeit="" name="Shiawase Kanmushi" xmi:id="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Micro" verfuegbarkeit="" name="Sikorsky-Bell Microskimmer" xmi:id="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Mini" verfuegbarkeit="" name="Horizon Flying Eye" xmi:id="1c17e7c0-8909-4e90-a96f-56c4dd62004f" page="465" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Mini" verfuegbarkeit="" name="MCT Fly-Spy" xmi:id="49cc79e7-89c5-4a97-9405-11eb817bf97e" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Small" verfuegbarkeit="" name="Aztechnology Crawler" xmi:id="c83126b4-1b74-471e-9578-83b0ab451190" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Small" verfuegbarkeit="" name="Lockheed Optic-X2" xmi:id="4128d715-8bbd-4d08-92e8-71ff705763f4" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="Ares Duelist" xmi:id="a0e3a887-999e-4aeb-bdde-928af7c7e60e" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="GM-Nissan Doberman" xmi:id="6ceca942-38bf-4042-8179-36836d6daffc" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Medium" verfuegbarkeit="" name="MCT-Nissan Roto-Drone" xmi:id="b5f6f209-3601-4108-a7e3-b6b274dc7e5e" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Large" verfuegbarkeit="" name="Cyberspace Designs Dalmatian" xmi:id="01b548bc-6a75-4fae-af7c-008244c16904" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:Drohne" fahrzeugTyp="Drone: Large" verfuegbarkeit="" name="Steel Lynx Combat Drone" xmi:id="693a7423-0f31-4066-931c-84fd1261d4d5" page="466" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="lifestyles">
 <entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Street" xmi:id="bf7be148-f387-4214-aa61-37237d3393fd" page="95" srcBook="//@entries.0/@entries.0/@entries.0"/>
