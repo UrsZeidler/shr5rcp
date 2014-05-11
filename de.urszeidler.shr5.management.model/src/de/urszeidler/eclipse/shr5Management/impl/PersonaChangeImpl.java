@@ -44,10 +44,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class PersonaChangeImpl extends PersonaValueChangeImpl implements PersonaChange {
@@ -55,7 +55,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * The cached value of the '{@link #getChangeable() <em>Changeable</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getChangeable()
      * @generated
      * @ordered
@@ -65,7 +64,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaChangeImpl() {
@@ -75,7 +73,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -86,7 +83,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Erlernbar getChangeable() {
@@ -95,8 +91,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             changeable = (Erlernbar)eResolveProxy(oldChangeable);
             if (changeable != oldChangeable) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable,
-                            changeable));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE, oldChangeable, changeable));
             }
         }
         return changeable;
@@ -105,7 +100,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Erlernbar basicGetChangeable() {
@@ -164,15 +158,13 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.PERSONA_CHANGE__CHANGEABLE:
-                if (resolve)
-                    return getChangeable();
+                if (resolve) return getChangeable();
                 return basicGetChangeable();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -181,7 +173,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -197,7 +188,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -213,7 +203,6 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

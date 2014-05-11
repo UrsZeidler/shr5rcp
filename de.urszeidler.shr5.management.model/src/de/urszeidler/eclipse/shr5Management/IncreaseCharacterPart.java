@@ -10,6 +10,10 @@ import org.eclipse.emf.ecore.EClass;
  * A representation of the model object '<em><b>Increase Character Part</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The type is defined by the eclass of the persona part and need to be a Erlernbar or an attribute.   
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>

@@ -68,6 +68,7 @@ public class CharacterGeneratorSystemItemProvider
             addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
+            addCharacterAdvancementsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -205,6 +206,28 @@ public class CharacterGeneratorSystemItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Character Advancements feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCharacterAdvancementsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_CharacterGeneratorSystem_characterAdvancements_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_CharacterGeneratorSystem_characterAdvancements_feature", "_UI_CharacterGeneratorSystem_type"),
+                 Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -218,7 +241,6 @@ public class CharacterGeneratorSystemItemProvider
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
-            childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
         }
         return childrenFeatures;
@@ -272,7 +294,6 @@ public class CharacterGeneratorSystemItemProvider
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
-            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -300,11 +321,6 @@ public class CharacterGeneratorSystemItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY,
                  Shr5managementFactory.eINSTANCE.createLifestyleToStartMoney()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS,
-                 Shr5managementFactory.eINSTANCE.createCharacterAdvancementSystem()));
 
         newChildDescriptors.add
             (createChildParameter

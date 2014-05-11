@@ -625,6 +625,9 @@ This system defenition is also used for the karma generator.</xsd:documentation>
   </xsd:complexType>
   <xsd:element name="Advancement" type="shr5mngt:Advancement"/>
   <xsd:complexType name="IncreaseCharacterPart">
+    <xsd:annotation>
+      <xsd:documentation>The type is defined by the eclass of the persona part and need to be a Erlernbar or an attribute.   </xsd:documentation>
+    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:Advancement">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
@@ -634,7 +637,11 @@ This system defenition is also used for the karma generator.</xsd:documentation>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="IncreaseCharacterPart" type="shr5mngt:IncreaseCharacterPart"/>
+  <xsd:element name="IncreaseCharacterPart" type="shr5mngt:IncreaseCharacterPart">
+    <xsd:annotation>
+      <xsd:documentation>The type is defined by the eclass of the persona part and need to be a Erlernbar or an attribute.   </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="LifestyleToStartMoney">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="lifeStyles" type="shr5:Lifestyle"/>
