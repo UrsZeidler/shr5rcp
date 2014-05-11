@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5;
 
 import java.math.BigDecimal;
+
 import org.eclipse.emf.common.util.EList;
 
 

@@ -3,16 +3,10 @@
  */
 package de.urszeidler.eclipse.shr5Management.impl;
 
-import de.urszeidler.eclipse.shr5Management.MetaType;
-import de.urszeidler.eclipse.shr5Management.ModelPlugin;
-import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.eclipse.shr5Management.SpecialType;
-import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
-import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -22,6 +16,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+
+import de.urszeidler.eclipse.shr5Management.MetaType;
+import de.urszeidler.eclipse.shr5Management.ModelPlugin;
+import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import de.urszeidler.eclipse.shr5Management.SpecialType;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 
 /**
  * <!-- begin-user-doc -->

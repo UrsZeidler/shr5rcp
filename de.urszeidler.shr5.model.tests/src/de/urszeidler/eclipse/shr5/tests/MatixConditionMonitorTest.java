@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
 
 /**
  * <!-- begin-user-doc -->

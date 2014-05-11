@@ -6,9 +6,12 @@ package de.urszeidler.eclipse.shr5Management.tests;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.Map;
+
 import junit.textui.TestRunner;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
+
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;

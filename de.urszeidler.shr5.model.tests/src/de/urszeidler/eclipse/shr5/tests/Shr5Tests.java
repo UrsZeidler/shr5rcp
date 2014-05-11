@@ -2,10 +2,10 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.util.ShadowrunToolsTest;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.util.ShadowrunToolsTest;
 
 /**
  * <!-- begin-user-doc -->

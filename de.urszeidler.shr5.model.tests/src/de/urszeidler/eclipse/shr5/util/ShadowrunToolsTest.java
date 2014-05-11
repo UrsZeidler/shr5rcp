@@ -2,11 +2,11 @@ package de.urszeidler.eclipse.shr5.util;
 
 import java.util.ArrayList;
 
+import junit.framework.TestCase;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import junit.framework.TestCase;
 
 public class ShadowrunToolsTest extends TestCase {
 
