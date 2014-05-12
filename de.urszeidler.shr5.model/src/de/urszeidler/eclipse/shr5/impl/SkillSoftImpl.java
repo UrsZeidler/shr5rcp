@@ -137,12 +137,10 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public BigDecimal getWert() {
-        // TODO: implement this method to return the 'Wert' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return getWertValue().multiply(new BigDecimal(getRating()));
     }
 
     /**

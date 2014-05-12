@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.SoftwareAgent;
@@ -98,12 +100,13 @@ public class SoftwareAgentTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
-     * @generated
+     * @generated not
      */
     public void testGetWert() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setWertValue(new BigDecimal(10));   
+        getFixture().setRating(2);
+        assertEquals(20,getFixture().getWert().intValue());
+
     }
 
 } //SoftwareAgentTest
