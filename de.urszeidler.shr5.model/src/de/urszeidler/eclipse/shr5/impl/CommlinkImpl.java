@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -456,6 +457,16 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
         result.append(deviceRating);
         result.append(')');
         return result.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        BigDecimal calcListenWert = ShadowrunTools.calcListenWert(getStroredProgramm());
+        return getWertValue().add(calcListenWert);
     }
 
 } // ComlinkImpl
