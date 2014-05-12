@@ -208,11 +208,11 @@ public class DrohneItemProvider
      * This adds a property descriptor for the Running Programms feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addRunningProgrammsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Drohne_runningProgramms_feature"),
@@ -223,7 +223,13 @@ public class DrohneItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                public Collection<?> getChoiceOfValues(Object object) {
+                    return ((Drohne)(object)).getStroredProgramm();
+                }
+                
+            });
     }
 
     /**

@@ -21,8 +21,10 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.Commlink;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Commlink} object.
@@ -206,11 +208,11 @@ public class CommlinkItemProvider
      * This adds a property descriptor for the Running Programms feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addRunningProgrammsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_Commlink_runningProgramms_feature"),
@@ -221,7 +223,13 @@ public class CommlinkItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                public Collection<?> getChoiceOfValues(Object object) {
+                    return ((Commlink)(object)).getStroredProgramm();
+                }
+                
+            });
     }
 
     /**
@@ -311,7 +319,7 @@ public class CommlinkItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
@@ -322,15 +330,15 @@ public class CommlinkItemProvider
                 (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
                  Shr5Factory.eINSTANCE.createProgram()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
-                 Shr5Factory.eINSTANCE.createSoftwareAgent()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
-                 Shr5Factory.eINSTANCE.createAutoSoft()));
+//        newChildDescriptors.add
+//            (createChildParameter
+//                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
+//                 Shr5Factory.eINSTANCE.createSoftwareAgent()));
+//
+//        newChildDescriptors.add
+//            (createChildParameter
+//                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
+//                 Shr5Factory.eINSTANCE.createAutoSoft()));
     }
 
 }

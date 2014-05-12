@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import de.urszeidler.eclipse.shr5.Cyberdeck;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
@@ -300,11 +301,17 @@ public class CyberdeckItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+        newChildDescriptors.add
+        (createChildParameter
+            (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
+             Shr5Factory.eINSTANCE.createSoftwareAgent()));
+
+
     }
 
 }

@@ -118,7 +118,8 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE);
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 							arrayList.addAll(Shr5Package.Literals.CHRAKTER_LIMITS.getEAttributes());
-							arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
+                            arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
+                            arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
 
 							return arrayList;
 
@@ -131,6 +132,10 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE);
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 							arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
+	                         arrayList.addAll(Shr5Package.Literals.CYBERWARE_MODIFIKATIOREN.getEAttributes());
+                            arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
+                            arrayList.addAll(Shr5Package.Literals.SICHTVERHAELTNISSE.getEAttributes());
+
 							return arrayList;
 
 						}
@@ -144,6 +149,8 @@ public class AttributModifikatorWertItemProvider extends ItemProviderAdapter imp
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE);
 							arrayList.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
 							arrayList.addAll(Shr5Package.Literals.PANZERUNG.getEAttributes());
+                            arrayList.addAll(Shr5Package.Literals.PROBEN_MODIFIKATOREN.getEAttributes());
+
 							return arrayList;
 
 						}
