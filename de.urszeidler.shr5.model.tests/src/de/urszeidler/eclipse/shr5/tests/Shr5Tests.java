@@ -51,7 +51,11 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(CyberdeckTest.class);    
         suite.addTestSuite(RiggerCommandConsoleTest.class);         
         suite.addTestSuite(DrohneTest.class);    
-        suite.addTestSuite(ProgramTest.class);    
+        suite.addTestSuite(ProgramTest.class);   
+        suite.addTestSuite(AutoSoftTest.class);   
+        suite.addTestSuite(SkillSoftTest.class);   
+        suite.addTestSuite(TutorsoftTest.class);   
+        suite.addTestSuite(SoftwareAgentTest.class);   
         //suite.addTestSuite(HostTest.class);    
         
         

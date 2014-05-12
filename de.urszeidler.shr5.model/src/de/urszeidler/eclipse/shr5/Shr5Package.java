@@ -13916,40 +13916,13 @@ public interface Shr5Package extends EPackage {
     int PROGRAM = 95;
 
     /**
-     * The feature id for the '<em><b>Wert</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__WERT = GELD_WERT__WERT;
-
-    /**
-     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__VERFUEGBARKEIT = GELD_WERT__VERFUEGBARKEIT;
-
-    /**
-     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__WERT_VALUE = GELD_WERT__WERT_VALUE;
-
-    /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PROGRAM__BESCHREIBUNG = GELD_WERT_FEATURE_COUNT + 0;
+    int PROGRAM__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -13958,7 +13931,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM__IMAGE = GELD_WERT_FEATURE_COUNT + 1;
+    int PROGRAM__IMAGE = BESCHREIBBAR__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13967,7 +13940,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM__NAME = GELD_WERT_FEATURE_COUNT + 2;
+    int PROGRAM__NAME = BESCHREIBBAR__NAME;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -13976,7 +13949,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM__PARENT_ID = GELD_WERT_FEATURE_COUNT + 3;
+    int PROGRAM__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13985,7 +13958,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM__PAGE = GELD_WERT_FEATURE_COUNT + 4;
+    int PROGRAM__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -13994,7 +13967,34 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM__SRC_BOOK = GELD_WERT_FEATURE_COUNT + 5;
+    int PROGRAM__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Category</b></em>' attribute.
@@ -14003,7 +14003,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM__CATEGORY = GELD_WERT_FEATURE_COUNT + 6;
+    int PROGRAM__CATEGORY = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Program</em>' class.
@@ -14012,7 +14012,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 7;
+    int PROGRAM_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Program</em>' class.
@@ -14021,7 +14021,117 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int PROGRAM_OPERATION_COUNT = GELD_WERT_OPERATION_COUNT + 0;
+    int PROGRAM_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Software
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSoftware()
+     * @generated
+     */
+    int SOFTWARE = 101;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__WERT = GELD_WERT__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__VERFUEGBARKEIT = GELD_WERT__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__WERT_VALUE = GELD_WERT__WERT_VALUE;
+
+    /**
+     * The number of structural features of the '<em>Software</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Software</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_OPERATION_COUNT = GELD_WERT_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatrixPrograms
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixPrograms()
+     * @generated
+     */
+    int MATRIX_PROGRAMS = 102;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__WERT = SOFTWARE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__WERT_VALUE = SOFTWARE__WERT_VALUE;
+
+    /**
+     * The number of structural features of the '<em>Matrix Programs</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Matrix Programs</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
@@ -14040,7 +14150,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__WERT = PROGRAM__WERT;
+    int SOFTWARE_AGENT__WERT = MATRIX_PROGRAMS__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -14049,7 +14159,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__VERFUEGBARKEIT = PROGRAM__VERFUEGBARKEIT;
+    int SOFTWARE_AGENT__VERFUEGBARKEIT = MATRIX_PROGRAMS__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -14058,70 +14168,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__WERT_VALUE = PROGRAM__WERT_VALUE;
-
-    /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__BESCHREIBUNG = PROGRAM__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__IMAGE = PROGRAM__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__NAME = PROGRAM__NAME;
-
-    /**
-     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__PARENT_ID = PROGRAM__PARENT_ID;
-
-    /**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__PAGE = PROGRAM__PAGE;
-
-    /**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__SRC_BOOK = PROGRAM__SRC_BOOK;
-
-    /**
-     * The feature id for the '<em><b>Category</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SOFTWARE_AGENT__CATEGORY = PROGRAM__CATEGORY;
+    int SOFTWARE_AGENT__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -14130,7 +14177,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__RATING = PROGRAM_FEATURE_COUNT + 0;
+    int SOFTWARE_AGENT__RATING = MATRIX_PROGRAMS_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Software Agent</em>' class.
@@ -14139,7 +14186,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT_FEATURE_COUNT = PROGRAM_FEATURE_COUNT + 1;
+    int SOFTWARE_AGENT_FEATURE_COUNT = MATRIX_PROGRAMS_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Software Agent</em>' class.
@@ -14148,7 +14195,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT_OPERATION_COUNT = PROGRAM_OPERATION_COUNT + 0;
+    int SOFTWARE_AGENT_OPERATION_COUNT = MATRIX_PROGRAMS_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.HostImpl <em>Host</em>}' class.
@@ -14602,7 +14649,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__WERT = PROGRAM__WERT;
+    int AUTO_SOFT__WERT = SOFTWARE__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -14611,7 +14658,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__VERFUEGBARKEIT = PROGRAM__VERFUEGBARKEIT;
+    int AUTO_SOFT__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -14620,70 +14667,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__WERT_VALUE = PROGRAM__WERT_VALUE;
+    int AUTO_SOFT__WERT_VALUE = SOFTWARE__WERT_VALUE;
 
     /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * The feature id for the '<em><b>Rating</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__BESCHREIBUNG = PROGRAM__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUTO_SOFT__IMAGE = PROGRAM__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUTO_SOFT__NAME = PROGRAM__NAME;
-
-    /**
-     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUTO_SOFT__PARENT_ID = PROGRAM__PARENT_ID;
-
-    /**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUTO_SOFT__PAGE = PROGRAM__PAGE;
-
-    /**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUTO_SOFT__SRC_BOOK = PROGRAM__SRC_BOOK;
-
-    /**
-     * The feature id for the '<em><b>Category</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int AUTO_SOFT__CATEGORY = PROGRAM__CATEGORY;
+    int AUTO_SOFT__RATING = SOFTWARE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Auto Soft</em>' class.
@@ -14692,7 +14685,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT_FEATURE_COUNT = PROGRAM_FEATURE_COUNT + 0;
+    int AUTO_SOFT_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Auto Soft</em>' class.
@@ -14701,7 +14694,153 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT_OPERATION_COUNT = PROGRAM_OPERATION_COUNT + 0;
+    int AUTO_SOFT_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl <em>Tutorsoft</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.TutorsoftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTutorsoft()
+     * @generated
+     */
+    int TUTORSOFT = 103;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__WERT = MATRIX_PROGRAMS__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__VERFUEGBARKEIT = MATRIX_PROGRAMS__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__RATING = MATRIX_PROGRAMS_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__SKILL = MATRIX_PROGRAMS_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Tutorsoft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT_FEATURE_COUNT = MATRIX_PROGRAMS_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Tutorsoft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT_OPERATION_COUNT = MATRIX_PROGRAMS_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl <em>Skill Soft</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SkillSoftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSkillSoft()
+     * @generated
+     */
+    int SKILL_SOFT = 104;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__WERT = SOFTWARE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__WERT_VALUE = SOFTWARE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__SKILL = SOFTWARE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__RATING = SOFTWARE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Skill Soft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Skill Soft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
@@ -14711,7 +14850,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 101;
+	int FEUER_MODUS = 105;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -14721,7 +14860,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 102;
+	int SCHADENS_TYP = 106;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -14731,7 +14870,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 103;
+	int MAGAZIN_TYP = 107;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -14741,7 +14880,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 104;
+	int FEUWERWAFFEN_ERWEITERUNG = 108;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -14751,7 +14890,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 105;
+	int MODIFIKATOR_TYPE = 109;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -14761,7 +14900,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 106;
+	int SMARTGUN_TYPE = 110;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -14771,7 +14910,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 107;
+	int ZAUBER_ART = 111;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -14781,7 +14920,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 108;
+	int ZAUBER_REICHWEITE = 112;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -14791,7 +14930,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 109;
+	int ZAUBER_DAUER = 113;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -14801,7 +14940,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 110;
+	int MAGISCHE_TRADITION = 114;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -14811,7 +14950,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 111;
+	int CRITTER_HANDLUNG = 115;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -14821,7 +14960,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 112;
+	int CRITTER_REICHWEITE = 116;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -14831,7 +14970,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 113;
+	int CRITTER_DAUER = 117;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -14841,7 +14980,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 114;
+	int RESONANZ_ZIEL = 118;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -14851,7 +14990,17 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 115;
+    int INTERFACE_MODUS = 119;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.ProgramType
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
+     * @generated
+     */
+    int PROGRAM_TYPE = 120;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -14861,7 +15010,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 116;
+	int SHR_DATE = 121;
 
 
 	/**
@@ -14872,7 +15021,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 117;
+	int MODIFICATION_MANAGER = 122;
 
 
 	/**
@@ -18757,6 +18906,101 @@ public interface Shr5Package extends EPackage {
     EClass getAutoSoft();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.AutoSoft#getRating <em>Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.AutoSoft#getRating()
+     * @see #getAutoSoft()
+     * @generated
+     */
+    EAttribute getAutoSoft_Rating();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Software</em>'.
+     * @see de.urszeidler.eclipse.shr5.Software
+     * @generated
+     */
+    EClass getSoftware();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Matrix Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixPrograms
+     * @generated
+     */
+    EClass getMatrixPrograms();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Tutorsoft <em>Tutorsoft</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Tutorsoft</em>'.
+     * @see de.urszeidler.eclipse.shr5.Tutorsoft
+     * @generated
+     */
+    EClass getTutorsoft();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Tutorsoft#getRating <em>Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.Tutorsoft#getRating()
+     * @see #getTutorsoft()
+     * @generated
+     */
+    EAttribute getTutorsoft_Rating();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Tutorsoft#getSkill <em>Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5.Tutorsoft#getSkill()
+     * @see #getTutorsoft()
+     * @generated
+     */
+    EReference getTutorsoft_Skill();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SkillSoft <em>Skill Soft</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Skill Soft</em>'.
+     * @see de.urszeidler.eclipse.shr5.SkillSoft
+     * @generated
+     */
+    EClass getSkillSoft();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.SkillSoft#getSkill <em>Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5.SkillSoft#getSkill()
+     * @see #getSkillSoft()
+     * @generated
+     */
+    EReference getSkillSoft_Skill();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.SkillSoft#getRating <em>Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.SkillSoft#getRating()
+     * @see #getSkillSoft()
+     * @generated
+     */
+    EAttribute getSkillSoft_Rating();
+
+    /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18905,6 +19149,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EEnum getInterfaceModus();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Program Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.ProgramType
+     * @generated
+     */
+    EEnum getProgramType();
 
     /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
@@ -22050,6 +22304,86 @@ public interface Shr5Package extends EPackage {
         EClass AUTO_SOFT = eINSTANCE.getAutoSoft();
 
         /**
+         * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute AUTO_SOFT__RATING = eINSTANCE.getAutoSoft_Rating();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Software
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSoftware()
+         * @generated
+         */
+        EClass SOFTWARE = eINSTANCE.getSoftware();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.MatrixPrograms
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixPrograms()
+         * @generated
+         */
+        EClass MATRIX_PROGRAMS = eINSTANCE.getMatrixPrograms();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl <em>Tutorsoft</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.TutorsoftImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTutorsoft()
+         * @generated
+         */
+        EClass TUTORSOFT = eINSTANCE.getTutorsoft();
+
+        /**
+         * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TUTORSOFT__RATING = eINSTANCE.getTutorsoft_Rating();
+
+        /**
+         * The meta object literal for the '<em><b>Skill</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference TUTORSOFT__SKILL = eINSTANCE.getTutorsoft_Skill();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl <em>Skill Soft</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SkillSoftImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSkillSoft()
+         * @generated
+         */
+        EClass SKILL_SOFT = eINSTANCE.getSkillSoft();
+
+        /**
+         * The meta object literal for the '<em><b>Skill</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SKILL_SOFT__SKILL = eINSTANCE.getSkillSoft_Skill();
+
+        /**
+         * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SKILL_SOFT__RATING = eINSTANCE.getSkillSoft_Rating();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -22198,6 +22532,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EEnum INTERFACE_MODUS = eINSTANCE.getInterfaceModus();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.ProgramType
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
+         * @generated
+         */
+        EEnum PROGRAM_TYPE = eINSTANCE.getProgramType();
 
         /**
          * The meta object literal for the '<em>Shr Date</em>' data type.

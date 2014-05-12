@@ -20,7 +20,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface SoftwareAgent extends Program {
+public interface SoftwareAgent extends MatrixPrograms {
     /**
      * Returns the value of the '<em><b>Rating</b></em>' attribute.
      * <!-- begin-user-doc -->

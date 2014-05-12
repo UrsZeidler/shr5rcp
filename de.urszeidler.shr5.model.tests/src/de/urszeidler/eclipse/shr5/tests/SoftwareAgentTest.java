@@ -6,14 +6,29 @@ package de.urszeidler.eclipse.shr5.tests;
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.SoftwareAgent;
+import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Software Agent</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
-public class SoftwareAgentTest extends ProgramTest {
+public class SoftwareAgentTest extends TestCase {
+
+    /**
+     * The fixture for this Software Agent test case.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SoftwareAgent fixture = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -35,14 +50,25 @@ public class SoftwareAgentTest extends ProgramTest {
     }
 
     /**
+     * Sets the fixture for this Software Agent test case.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void setFixture(SoftwareAgent fixture) {
+        this.fixture = fixture;
+    }
+
+
+
+    /**
      * Returns the fixture for this Software Agent test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
     protected SoftwareAgent getFixture() {
-        return (SoftwareAgent)fixture;
+        return fixture;
     }
 
     /**
@@ -65,6 +91,19 @@ public class SoftwareAgentTest extends ProgramTest {
     @Override
     protected void tearDown() throws Exception {
         setFixture(null);
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated
+     */
+    public void testGetWert() {
+        // TODO: implement this feature getter test method
+        // Ensure that you remove @generated or mark it @generated NOT
+        fail();
     }
 
 } //SoftwareAgentTest

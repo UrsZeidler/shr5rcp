@@ -4,12 +4,19 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SkillSoft;
+
+import java.math.BigDecimal;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -20,21 +27,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.Image;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.SoftwareAgent;
-import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import java.math.BigDecimal;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.SoftwareAgent} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.SkillSoft} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SoftwareAgentItemProvider
+public class SkillSoftItemProvider
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -48,7 +48,7 @@ public class SoftwareAgentItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public SoftwareAgentItemProvider(AdapterFactory adapterFactory) {
+    public SkillSoftItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -66,6 +66,7 @@ public class SoftwareAgentItemProvider
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
+            addSkillPropertyDescriptor(object);
             addRatingPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -138,6 +139,28 @@ public class SoftwareAgentItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Skill feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSkillPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SkillSoft_skill_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SkillSoft_skill_feature", "_UI_SkillSoft_type"),
+                 Shr5Package.Literals.SKILL_SOFT__SKILL,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Rating feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -148,9 +171,9 @@ public class SoftwareAgentItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_SoftwareAgent_rating_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SoftwareAgent_rating_feature", "_UI_SoftwareAgent_type"),
-                 Shr5Package.Literals.SOFTWARE_AGENT__RATING,
+                 getString("_UI_SkillSoft_rating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SkillSoft_rating_feature", "_UI_SkillSoft_type"),
+                 Shr5Package.Literals.SKILL_SOFT__RATING,
                  true,
                  false,
                  false,
@@ -160,21 +183,14 @@ public class SoftwareAgentItemProvider
     }
 
     /**
-     * This returns SoftwareAgent.gif.
+     * This returns SkillSoft.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated not
+     * @generated
      */
     @Override
     public Object getImage(Object object) {
-        Beschreibbar beschreibbar = (Beschreibbar) object;
-        if (beschreibbar.getImage() != null) {
-            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
-            if (image != null)
-                return image;
-        }
-
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/SoftwareAgent"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/SkillSoft"));
     }
 
     /**
@@ -185,11 +201,11 @@ public class SoftwareAgentItemProvider
      */
     @Override
     public String getText(Object object) {
-        BigDecimal labelValue = ((SoftwareAgent)object).getWert();
+        BigDecimal labelValue = ((SkillSoft)object).getWert();
         String label = labelValue == null ? null : labelValue.toString();
         return label == null || label.length() == 0 ?
-            getString("_UI_SoftwareAgent_type") :
-            getString("_UI_SoftwareAgent_type") + " " + label;
+            getString("_UI_SkillSoft_type") :
+            getString("_UI_SkillSoft_type") + " " + label;
     }
 
     /**
@@ -203,11 +219,11 @@ public class SoftwareAgentItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(SoftwareAgent.class)) {
-            case Shr5Package.SOFTWARE_AGENT__WERT:
-            case Shr5Package.SOFTWARE_AGENT__VERFUEGBARKEIT:
-            case Shr5Package.SOFTWARE_AGENT__WERT_VALUE:
-            case Shr5Package.SOFTWARE_AGENT__RATING:
+        switch (notification.getFeatureID(SkillSoft.class)) {
+            case Shr5Package.SKILL_SOFT__WERT:
+            case Shr5Package.SKILL_SOFT__VERFUEGBARKEIT:
+            case Shr5Package.SKILL_SOFT__WERT_VALUE:
+            case Shr5Package.SKILL_SOFT__RATING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

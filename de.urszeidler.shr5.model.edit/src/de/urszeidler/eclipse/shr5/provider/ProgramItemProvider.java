@@ -62,15 +62,15 @@ public class ProgramItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addWertPropertyDescriptor(object);
-            addVerfuegbarkeitPropertyDescriptor(object);
-            addWertValuePropertyDescriptor(object);
             addBeschreibungPropertyDescriptor(object);
             addImagePropertyDescriptor(object);
             addNamePropertyDescriptor(object);
             addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
+            addWertPropertyDescriptor(object);
+            addVerfuegbarkeitPropertyDescriptor(object);
+            addWertValuePropertyDescriptor(object);
             addCategoryPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -340,14 +340,14 @@ public class ProgramItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Program.class)) {
-            case Shr5Package.PROGRAM__WERT:
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
-            case Shr5Package.PROGRAM__WERT_VALUE:
             case Shr5Package.PROGRAM__BESCHREIBUNG:
             case Shr5Package.PROGRAM__IMAGE:
             case Shr5Package.PROGRAM__NAME:
             case Shr5Package.PROGRAM__PARENT_ID:
             case Shr5Package.PROGRAM__PAGE:
+            case Shr5Package.PROGRAM__WERT:
+            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+            case Shr5Package.PROGRAM__WERT_VALUE:
             case Shr5Package.PROGRAM__CATEGORY:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;

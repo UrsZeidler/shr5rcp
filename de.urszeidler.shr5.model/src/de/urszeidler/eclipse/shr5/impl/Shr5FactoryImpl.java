@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
@@ -193,6 +194,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.HOST: return createHost();
             case Shr5Package.RIGGER_COMMAND_CONSOLE: return createRiggerCommandConsole();
             case Shr5Package.AUTO_SOFT: return createAutoSoft();
+            case Shr5Package.TUTORSOFT: return createTutorsoft();
+            case Shr5Package.SKILL_SOFT: return createSkillSoft();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -236,6 +239,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createResonanzZielFromString(eDataType, initialValue);
             case Shr5Package.INTERFACE_MODUS:
                 return createInterfaceModusFromString(eDataType, initialValue);
+            case Shr5Package.PROGRAM_TYPE:
+                return createProgramTypeFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -281,6 +286,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertResonanzZielToString(eDataType, instanceValue);
             case Shr5Package.INTERFACE_MODUS:
                 return convertInterfaceModusToString(eDataType, instanceValue);
+            case Shr5Package.PROGRAM_TYPE:
+                return convertProgramTypeToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -890,6 +897,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Tutorsoft createTutorsoft() {
+        TutorsoftImpl tutorsoft = new TutorsoftImpl();
+        return tutorsoft;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SkillSoft createSkillSoft() {
+        SkillSoftImpl skillSoft = new SkillSoftImpl();
+        return skillSoft;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1185,6 +1212,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertInterfaceModusToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ProgramType createProgramTypeFromString(EDataType eDataType, String initialValue) {
+        ProgramType result = ProgramType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertProgramTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

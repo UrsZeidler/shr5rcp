@@ -112,6 +112,15 @@
       <xsd:enumeration value="hotSim"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="ProgramType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="defaultSoft"/>
+      <xsd:enumeration value="hackingSoft"/>
+      <xsd:enumeration value="dataSoft"/>
+      <xsd:enumeration value="mapSoft"/>
+      <xsd:enumeration value="shopSoft"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
@@ -1392,12 +1401,12 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="runningProgramms" type="shr5:Program">
+          <xsd:element name="runningProgramms" type="shr5:MatrixPrograms">
             <xsd:annotation>
               <xsd:documentation>The running programms are stored here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="stroredProgramm" type="shr5:Program">
+          <xsd:element name="stroredProgramm" type="shr5:MatrixPrograms">
             <xsd:annotation>
               <xsd:documentation>The stored programs defines the programs to choose from when selecting the running programms.</xsd:documentation>
             </xsd:annotation>
@@ -1463,24 +1472,31 @@
   </xsd:element>
   <xsd:complexType name="Program">
     <xsd:complexContent>
-      <xsd:extension base="shr5:GeldWert">
+      <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
-        <xsd:attribute name="beschreibung" type="xsd:string"/>
-        <xsd:attribute name="image" type="xsd:string"/>
-        <xsd:attribute name="name" type="xsd:string" use="required"/>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
-        <xsd:attribute name="category" type="xsd:string" use="required"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="category" type="shr5:ProgramType" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Program" type="shr5:Program"/>
   <xsd:complexType name="SoftwareAgent">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Program">
+      <xsd:extension base="shr5:MatrixPrograms">
         <xsd:attribute name="rating" type="xsd:int" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1553,7 +1569,9 @@
       <xsd:documentation>Defines the software for drones.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:Program"/>
+      <xsd:extension base="shr5:Software">
+        <xsd:attribute name="rating" type="xsd:int" use="required"/>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="AutoSoft" type="shr5:AutoSoft">
@@ -1561,4 +1579,40 @@
       <xsd:documentation>Defines the software for drones.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType abstract="true" name="Software">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:GeldWert"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Software" type="shr5:Software"/>
+  <xsd:complexType abstract="true" name="MatrixPrograms">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Software"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MatrixPrograms" type="shr5:MatrixPrograms"/>
+  <xsd:complexType name="Tutorsoft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MatrixPrograms">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="skill" type="shr5:Fertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="rating" type="xsd:int" use="required"/>
+        <xsd:attribute name="skill" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Tutorsoft" type="shr5:Tutorsoft"/>
+  <xsd:complexType name="SkillSoft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Software">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="skill" type="shr5:Fertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="rating" type="xsd:int" use="required"/>
+        <xsd:attribute name="skill" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SkillSoft" type="shr5:SkillSoft"/>
 </xsd:schema>

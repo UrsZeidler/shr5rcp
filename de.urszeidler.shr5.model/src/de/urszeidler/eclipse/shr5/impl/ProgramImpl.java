@@ -4,18 +4,19 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.math.BigDecimal;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.MatrixPrograms;
 import de.urszeidler.eclipse.shr5.Program;
+import de.urszeidler.eclipse.shr5.ProgramType;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.SourceBook;
 
 /**
@@ -25,15 +26,15 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getWert <em>Wert</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getCategory <em>Category</em>}</li>
  * </ul>
  * </p>
@@ -41,56 +42,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * @generated
  */
 public class ProgramImpl extends MinimalEObjectImpl.Container implements Program {
-    /**
-     * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWert()
-     * @generated
-     * @ordered
-     */
-    protected static final BigDecimal WERT_EDEFAULT = null;
-
-    /**
-     * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getVerfuegbarkeit()
-     * @generated
-     * @ordered
-     */
-    protected static final String VERFUEGBARKEIT_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getVerfuegbarkeit()
-     * @generated
-     * @ordered
-     */
-    protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWertValue()
-     * @generated
-     * @ordered
-     */
-    protected static final BigDecimal WERT_VALUE_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWertValue()
-     * @generated
-     * @ordered
-     */
-    protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
-
     /**
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -202,6 +153,56 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     protected SourceBook srcBook;
 
     /**
+     * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWert()
+     * @generated
+     * @ordered
+     */
+    protected static final BigDecimal WERT_EDEFAULT = null;
+
+    /**
+     * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getVerfuegbarkeit()
+     * @generated
+     * @ordered
+     */
+    protected static final String VERFUEGBARKEIT_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getVerfuegbarkeit()
+     * @generated
+     * @ordered
+     */
+    protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected static final BigDecimal WERT_VALUE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWertValue()
+     * @generated
+     * @ordered
+     */
+    protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -209,7 +210,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      * @generated
      * @ordered
      */
-    protected static final String CATEGORY_EDEFAULT = null;
+    protected static final ProgramType CATEGORY_EDEFAULT = ProgramType.DEFAULT_SOFT;
 
     /**
      * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
@@ -219,7 +220,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      * @generated
      * @ordered
      */
-    protected String category = CATEGORY_EDEFAULT;
+    protected ProgramType category = CATEGORY_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -439,7 +440,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      * <!-- end-user-doc -->
      * @generated
      */
-    public String getCategory() {
+    public ProgramType getCategory() {
         return category;
     }
 
@@ -448,9 +449,9 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setCategory(String newCategory) {
-        String oldCategory = category;
-        category = newCategory;
+    public void setCategory(ProgramType newCategory) {
+        ProgramType oldCategory = category;
+        category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__CATEGORY, oldCategory, category));
     }
@@ -463,12 +464,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__WERT:
-                return getWert();
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
-                return getVerfuegbarkeit();
-            case Shr5Package.PROGRAM__WERT_VALUE:
-                return getWertValue();
             case Shr5Package.PROGRAM__BESCHREIBUNG:
                 return getBeschreibung();
             case Shr5Package.PROGRAM__IMAGE:
@@ -482,6 +477,12 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
             case Shr5Package.PROGRAM__SRC_BOOK:
                 if (resolve) return getSrcBook();
                 return basicGetSrcBook();
+            case Shr5Package.PROGRAM__WERT:
+                return getWert();
+            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+                return getVerfuegbarkeit();
+            case Shr5Package.PROGRAM__WERT_VALUE:
+                return getWertValue();
             case Shr5Package.PROGRAM__CATEGORY:
                 return getCategory();
         }
@@ -496,12 +497,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
-                setVerfuegbarkeit((String)newValue);
-                return;
-            case Shr5Package.PROGRAM__WERT_VALUE:
-                setWertValue((BigDecimal)newValue);
-                return;
             case Shr5Package.PROGRAM__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
                 return;
@@ -520,8 +515,14 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
             case Shr5Package.PROGRAM__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
                 return;
+            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+                setVerfuegbarkeit((String)newValue);
+                return;
+            case Shr5Package.PROGRAM__WERT_VALUE:
+                setWertValue((BigDecimal)newValue);
+                return;
             case Shr5Package.PROGRAM__CATEGORY:
-                setCategory((String)newValue);
+                setCategory((ProgramType)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -535,12 +536,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
-                setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
-                return;
-            case Shr5Package.PROGRAM__WERT_VALUE:
-                setWertValue(WERT_VALUE_EDEFAULT);
-                return;
             case Shr5Package.PROGRAM__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
                 return;
@@ -559,6 +554,12 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
             case Shr5Package.PROGRAM__SRC_BOOK:
                 setSrcBook((SourceBook)null);
                 return;
+            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+                setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
+                return;
+            case Shr5Package.PROGRAM__WERT_VALUE:
+                setWertValue(WERT_VALUE_EDEFAULT);
+                return;
             case Shr5Package.PROGRAM__CATEGORY:
                 setCategory(CATEGORY_EDEFAULT);
                 return;
@@ -574,12 +575,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__WERT:
-                return WERT_EDEFAULT == null ? getWert() != null : !WERT_EDEFAULT.equals(getWert());
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
-                return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
-            case Shr5Package.PROGRAM__WERT_VALUE:
-                return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.PROGRAM__BESCHREIBUNG:
                 return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
             case Shr5Package.PROGRAM__IMAGE:
@@ -592,8 +587,14 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.PROGRAM__SRC_BOOK:
                 return srcBook != null;
+            case Shr5Package.PROGRAM__WERT:
+                return WERT_EDEFAULT == null ? getWert() != null : !WERT_EDEFAULT.equals(getWert());
+            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+                return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
+            case Shr5Package.PROGRAM__WERT_VALUE:
+                return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
             case Shr5Package.PROGRAM__CATEGORY:
-                return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
+                return category != CATEGORY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -605,14 +606,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-        if (baseClass == Beschreibbar.class) {
-            switch (derivedFeatureID) {
-                case Shr5Package.PROGRAM__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
-                case Shr5Package.PROGRAM__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
-                case Shr5Package.PROGRAM__NAME: return Shr5Package.BESCHREIBBAR__NAME;
-                default: return -1;
-            }
-        }
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.PROGRAM__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
@@ -626,6 +619,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
                 default: return -1;
             }
         }
+        if (baseClass == GeldWert.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.PROGRAM__WERT: return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.PROGRAM__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.PROGRAM__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
+                default: return -1;
+            }
+        }
+        if (baseClass == Software.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixPrograms.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -636,14 +647,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-        if (baseClass == Beschreibbar.class) {
-            switch (baseFeatureID) {
-                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.PROGRAM__BESCHREIBUNG;
-                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.PROGRAM__IMAGE;
-                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.PROGRAM__NAME;
-                default: return -1;
-            }
-        }
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.PROGRAM__PARENT_ID;
@@ -654,6 +657,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
             switch (baseFeatureID) {
                 case Shr5Package.QUELLE__PAGE: return Shr5Package.PROGRAM__PAGE;
                 case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.PROGRAM__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        if (baseClass == GeldWert.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.GELD_WERT__WERT: return Shr5Package.PROGRAM__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.PROGRAM__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.PROGRAM__WERT_VALUE;
+                default: return -1;
+            }
+        }
+        if (baseClass == Software.class) {
+            switch (baseFeatureID) {
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixPrograms.class) {
+            switch (baseFeatureID) {
                 default: return -1;
             }
         }
@@ -670,11 +691,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (verfuegbarkeit: ");
-        result.append(verfuegbarkeit);
-        result.append(", wertValue: ");
-        result.append(wertValue);
-        result.append(", beschreibung: ");
+        result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");
         result.append(image);
@@ -684,6 +701,10 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         result.append(parentId);
         result.append(", page: ");
         result.append(page);
+        result.append(", verfuegbarkeit: ");
+        result.append(verfuegbarkeit);
+        result.append(", wertValue: ");
+        result.append(wertValue);
         result.append(", category: ");
         result.append(category);
         result.append(')');

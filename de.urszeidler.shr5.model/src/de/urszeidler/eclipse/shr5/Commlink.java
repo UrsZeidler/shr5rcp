@@ -58,7 +58,7 @@ public interface Commlink extends AbstraktGegenstand, MatrixDevice {
 
     /**
      * Returns the value of the '<em><b>Running Programms</b></em>' reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.MatrixPrograms}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Running Programms</em>' reference list isn't clear,
@@ -73,11 +73,11 @@ public interface Commlink extends AbstraktGegenstand, MatrixDevice {
      * @model
      * @generated
      */
-    EList<Program> getRunningProgramms();
+    EList<MatrixPrograms> getRunningProgramms();
 
     /**
      * Returns the value of the '<em><b>Strored Programm</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.Program}.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.MatrixPrograms}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Strored Programm</em>' containment reference list isn't clear,
@@ -92,5 +92,5 @@ public interface Commlink extends AbstraktGegenstand, MatrixDevice {
      * @model containment="true"
      * @generated
      */
-    EList<Program> getStroredProgramm();
+    EList<MatrixPrograms> getStroredProgramm();
 } // Comlink

@@ -82,6 +82,13 @@
       <nested inputs="shr5.ecore#//InterfaceModus/coldSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=1"/>
       <nested inputs="shr5.ecore#//InterfaceModus/hotSim" outputs="Shr5XMI.xsd#//InterfaceModus;XSDSimpleTypeDefinition=14/XSDEnumerationFacet=2"/>
     </nested>
+    <nested inputs="shr5.ecore#//ProgramType" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15">
+      <nested inputs="shr5.ecore#//ProgramType/defaultSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//ProgramType/hackingSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//ProgramType/dataSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//ProgramType/mapSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=3"/>
+      <nested inputs="shr5.ecore#//ProgramType/shopSoft" outputs="Shr5XMI.xsd#//ProgramType;XSDSimpleTypeDefinition=15/XSDEnumerationFacet=4"/>
+    </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
@@ -673,15 +680,14 @@
     </nested>
     <nested inputs="shr5.ecore#//Cyberdeck" outputs="Shr5XMI.xsd#//Cyberdeck;XSDElementDeclaration=94"/>
     <nested inputs="shr5.ecore#//Program" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95">
-      <nested inputs="shr5.ecore#//Program/category" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=6"/>
+      <nested inputs="shr5.ecore#//Program/category" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=5"/>
     </nested>
-    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse"/>
-    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=1"/>
-    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=3"/>
-    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=4"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=5"/>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Program;XSDComplexTypeDefinition=95/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Program" outputs="Shr5XMI.xsd#//Program;XSDElementDeclaration=95"/>
     <nested inputs="shr5.ecore#//SoftwareAgent" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDComplexTypeDefinition=96">
       <nested inputs="shr5.ecore#//SoftwareAgent/rating" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDComplexTypeDefinition=96/XSDAttributeUse"/>
@@ -708,7 +714,25 @@
       <nested inputs="shr5.ecore#//RiggerCommandConsole/zugriffBasis" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDComplexTypeDefinition=99/XSDAttributeUse=2"/>
     </nested>
     <nested inputs="shr5.ecore#//RiggerCommandConsole" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDElementDeclaration=99"/>
-    <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=100"/>
+    <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=100">
+      <nested inputs="shr5.ecore#//AutoSoft/rating" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=100/XSDAttributeUse"/>
+    </nested>
     <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDElementDeclaration=100"/>
+    <nested inputs="shr5.ecore#//Software" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=101"/>
+    <nested inputs="shr5.ecore#//Software" outputs="Shr5XMI.xsd#//Software;XSDElementDeclaration=101"/>
+    <nested inputs="shr5.ecore#//MatrixPrograms" outputs="Shr5XMI.xsd#//MatrixPrograms;XSDComplexTypeDefinition=102"/>
+    <nested inputs="shr5.ecore#//MatrixPrograms" outputs="Shr5XMI.xsd#//MatrixPrograms;XSDElementDeclaration=102"/>
+    <nested inputs="shr5.ecore#//Tutorsoft" outputs="Shr5XMI.xsd#//Tutorsoft;XSDComplexTypeDefinition=103">
+      <nested inputs="shr5.ecore#//Tutorsoft/rating" outputs="Shr5XMI.xsd#//Tutorsoft;XSDComplexTypeDefinition=103/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Tutorsoft/skill" outputs="Shr5XMI.xsd#//Tutorsoft;XSDComplexTypeDefinition=103/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Tutorsoft/skill" outputs="Shr5XMI.xsd#//Tutorsoft;XSDComplexTypeDefinition=103/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Tutorsoft" outputs="Shr5XMI.xsd#//Tutorsoft;XSDElementDeclaration=103"/>
+    <nested inputs="shr5.ecore#//SkillSoft" outputs="Shr5XMI.xsd#//SkillSoft;XSDComplexTypeDefinition=104">
+      <nested inputs="shr5.ecore#//SkillSoft/rating" outputs="Shr5XMI.xsd#//SkillSoft;XSDComplexTypeDefinition=104/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//SkillSoft/skill" outputs="Shr5XMI.xsd#//SkillSoft;XSDComplexTypeDefinition=104/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//SkillSoft/skill" outputs="Shr5XMI.xsd#//SkillSoft;XSDComplexTypeDefinition=104/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//SkillSoft" outputs="Shr5XMI.xsd#//SkillSoft;XSDElementDeclaration=104"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

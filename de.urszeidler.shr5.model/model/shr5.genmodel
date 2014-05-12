@@ -87,6 +87,13 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//InterfaceModus/coldSim"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//InterfaceModus/hotSim"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ProgramType">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/defaultSoft"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/hackingSoft"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/dataSoft"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/mapSoft"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/shopSoft"/>
+    </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Beschreibbar">
@@ -530,6 +537,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/firewallBasis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/zugriffBasis"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//AutoSoft"/>
+    <genClasses ecoreClass="shr5.ecore#//AutoSoft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AutoSoft/rating"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Software"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixPrograms"/>
+    <genClasses ecoreClass="shr5.ecore#//Tutorsoft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Tutorsoft/rating"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Tutorsoft/skill"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//SkillSoft">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//SkillSoft/skill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SkillSoft/rating"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

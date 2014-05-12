@@ -730,6 +730,34 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass softwareEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass matrixProgramsEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass tutorsoftEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass skillSoftEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -832,6 +860,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EEnum interfaceModusEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum programTypeEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -4168,6 +4203,87 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getAutoSoft_Rating() {
+        return (EAttribute)autoSoftEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSoftware() {
+        return softwareEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMatrixPrograms() {
+        return matrixProgramsEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getTutorsoft() {
+        return tutorsoftEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getTutorsoft_Rating() {
+        return (EAttribute)tutorsoftEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getTutorsoft_Skill() {
+        return (EReference)tutorsoftEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSkillSoft() {
+        return skillSoftEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSkillSoft_Skill() {
+        return (EReference)skillSoftEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSkillSoft_Rating() {
+        return (EAttribute)skillSoftEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4299,6 +4415,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EEnum getInterfaceModus() {
         return interfaceModusEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getProgramType() {
+        return programTypeEEnum;
     }
 
     /**
@@ -4809,6 +4934,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(riggerCommandConsoleEClass, RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS);
 
         autoSoftEClass = createEClass(AUTO_SOFT);
+        createEAttribute(autoSoftEClass, AUTO_SOFT__RATING);
+
+        softwareEClass = createEClass(SOFTWARE);
+
+        matrixProgramsEClass = createEClass(MATRIX_PROGRAMS);
+
+        tutorsoftEClass = createEClass(TUTORSOFT);
+        createEAttribute(tutorsoftEClass, TUTORSOFT__RATING);
+        createEReference(tutorsoftEClass, TUTORSOFT__SKILL);
+
+        skillSoftEClass = createEClass(SKILL_SOFT);
+        createEReference(skillSoftEClass, SKILL_SOFT__SKILL);
+        createEAttribute(skillSoftEClass, SKILL_SOFT__RATING);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -4826,6 +4964,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         critterDauerEEnum = createEEnum(CRITTER_DAUER);
         resonanzZielEEnum = createEEnum(RESONANZ_ZIEL);
         interfaceModusEEnum = createEEnum(INTERFACE_MODUS);
+        programTypeEEnum = createEEnum(PROGRAM_TYPE);
 
         // Create data types
         shrDateEDataType = createEDataType(SHR_DATE);
@@ -4989,15 +5128,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         commlinkEClass.getESuperTypes().add(this.getMatrixDevice());
         cyberdeckEClass.getESuperTypes().add(this.getCommlink());
         cyberdeckEClass.getESuperTypes().add(this.getActiveMatixDevice());
-        programEClass.getESuperTypes().add(this.getGeldWert());
         programEClass.getESuperTypes().add(this.getBeschreibbar());
         programEClass.getESuperTypes().add(this.getQuelle());
-        softwareAgentEClass.getESuperTypes().add(this.getProgram());
+        programEClass.getESuperTypes().add(this.getMatrixPrograms());
+        softwareAgentEClass.getESuperTypes().add(this.getMatrixPrograms());
         hostEClass.getESuperTypes().add(this.getActiveMatixDevice());
         hostEClass.getESuperTypes().add(this.getBeschreibbar());
         cyberwareModifikatiorenEClass.getESuperTypes().add(this.getModifikatorAttribute());
         riggerCommandConsoleEClass.getESuperTypes().add(this.getCommlink());
-        autoSoftEClass.getESuperTypes().add(this.getProgram());
+        autoSoftEClass.getESuperTypes().add(this.getSoftware());
+        softwareEClass.getESuperTypes().add(this.getGeldWert());
+        matrixProgramsEClass.getESuperTypes().add(this.getSoftware());
+        tutorsoftEClass.getESuperTypes().add(this.getMatrixPrograms());
+        skillSoftEClass.getESuperTypes().add(this.getSoftware());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5425,8 +5568,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(commlinkEClass, Commlink.class, "Commlink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCommlink_DeviceRating(), ecorePackage.getEInt(), "deviceRating", null, 1, 1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCommlink_RunningProgramms(), this.getProgram(), null, "runningProgramms", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getCommlink_StroredProgramm(), this.getProgram(), null, "stroredProgramm", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCommlink_RunningProgramms(), this.getMatrixPrograms(), null, "runningProgramms", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getCommlink_StroredProgramm(), this.getMatrixPrograms(), null, "stroredProgramm", null, 0, -1, Commlink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(matixConditionMonitorEClass, MatixConditionMonitor.class, "MatixConditionMonitor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getMatixConditionMonitor_MatrixZustandMax(), ecorePackage.getEInt(), "matrixZustandMax", null, 0, 1, MatixConditionMonitor.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5440,7 +5583,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getCyberdeck_Configuration(), ecorePackage.getEAttribute(), null, "configuration", null, 4, 4, Cyberdeck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getProgram_Category(), ecorePackage.getEString(), "category", null, 1, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getProgram_Category(), this.getProgramType(), "category", null, 1, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(softwareAgentEClass, SoftwareAgent.class, "SoftwareAgent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSoftwareAgent_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SoftwareAgent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5462,6 +5605,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getRiggerCommandConsole_ZugriffBasis(), ecorePackage.getEInt(), "zugriffBasis", null, 0, 1, RiggerCommandConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(autoSoftEClass, AutoSoft.class, "AutoSoft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getAutoSoft_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, AutoSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(softwareEClass, Software.class, "Software", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(matrixProgramsEClass, MatrixPrograms.class, "MatrixPrograms", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(tutorsoftEClass, Tutorsoft.class, "Tutorsoft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getTutorsoft_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, Tutorsoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getTutorsoft_Skill(), this.getFertigkeit(), null, "skill", null, 1, 1, Tutorsoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(skillSoftEClass, SkillSoft.class, "SkillSoft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSkillSoft_Skill(), this.getFertigkeit(), null, "skill", null, 1, 1, SkillSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSkillSoft_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SkillSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
@@ -5543,6 +5699,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         addEEnumLiteral(interfaceModusEEnum, InterfaceModus.AUGMENTED_REALITY);
         addEEnumLiteral(interfaceModusEEnum, InterfaceModus.COLD_SIM);
         addEEnumLiteral(interfaceModusEEnum, InterfaceModus.HOT_SIM);
+
+        initEEnum(programTypeEEnum, ProgramType.class, "ProgramType");
+        addEEnumLiteral(programTypeEEnum, ProgramType.DEFAULT_SOFT);
+        addEEnumLiteral(programTypeEEnum, ProgramType.HACKING_SOFT);
+        addEEnumLiteral(programTypeEEnum, ProgramType.DATA_SOFT);
+        addEEnumLiteral(programTypeEEnum, ProgramType.MAP_SOFT);
+        addEEnumLiteral(programTypeEEnum, ProgramType.SHOP_SOFT);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

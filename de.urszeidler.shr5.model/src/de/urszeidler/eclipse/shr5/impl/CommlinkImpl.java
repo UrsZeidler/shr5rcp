@@ -5,7 +5,6 @@ package de.urszeidler.eclipse.shr5.impl;
 
 import java.math.BigDecimal;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,12 +14,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
-import de.urszeidler.eclipse.shr5.Program;
+import de.urszeidler.eclipse.shr5.MatrixPrograms;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
@@ -133,7 +131,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * @generated
      * @ordered
      */
-    protected EList<Program> runningProgramms;
+    protected EList<MatrixPrograms> runningProgramms;
 
     /**
      * The cached value of the '{@link #getStroredProgramm() <em>Strored Programm</em>}' containment reference list.
@@ -143,7 +141,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * @generated
      * @ordered
      */
-    protected EList<Program> stroredProgramm;
+    protected EList<MatrixPrograms> stroredProgramm;
 
     /**
      * <!-- begin-user-doc -->
@@ -251,9 +249,9 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Program> getRunningProgramms() {
+    public EList<MatrixPrograms> getRunningProgramms() {
         if (runningProgramms == null) {
-            runningProgramms = new EObjectResolvingEList<Program>(Program.class, this, Shr5Package.COMMLINK__RUNNING_PROGRAMMS);
+            runningProgramms = new EObjectResolvingEList<MatrixPrograms>(MatrixPrograms.class, this, Shr5Package.COMMLINK__RUNNING_PROGRAMMS);
         }
         return runningProgramms;
     }
@@ -263,9 +261,9 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Program> getStroredProgramm() {
+    public EList<MatrixPrograms> getStroredProgramm() {
         if (stroredProgramm == null) {
-            stroredProgramm = new EObjectContainmentEList<Program>(Program.class, this, Shr5Package.COMMLINK__STRORED_PROGRAMM);
+            stroredProgramm = new EObjectContainmentEList<MatrixPrograms>(MatrixPrograms.class, this, Shr5Package.COMMLINK__STRORED_PROGRAMM);
         }
         return stroredProgramm;
     }
@@ -329,11 +327,11 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 return;
             case Shr5Package.COMMLINK__RUNNING_PROGRAMMS:
                 getRunningProgramms().clear();
-                getRunningProgramms().addAll((Collection<? extends Program>)newValue);
+                getRunningProgramms().addAll((Collection<? extends MatrixPrograms>)newValue);
                 return;
             case Shr5Package.COMMLINK__STRORED_PROGRAMM:
                 getStroredProgramm().clear();
-                getStroredProgramm().addAll((Collection<? extends Program>)newValue);
+                getStroredProgramm().addAll((Collection<? extends MatrixPrograms>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);

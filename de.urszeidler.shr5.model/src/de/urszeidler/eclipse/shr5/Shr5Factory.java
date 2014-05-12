@@ -562,6 +562,24 @@ public interface Shr5Factory extends EFactory {
     AutoSoft createAutoSoft();
 
     /**
+     * Returns a new object of class '<em>Tutorsoft</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Tutorsoft</em>'.
+     * @generated
+     */
+    Tutorsoft createTutorsoft();
+
+    /**
+     * Returns a new object of class '<em>Skill Soft</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Skill Soft</em>'.
+     * @generated
+     */
+    SkillSoft createSkillSoft();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

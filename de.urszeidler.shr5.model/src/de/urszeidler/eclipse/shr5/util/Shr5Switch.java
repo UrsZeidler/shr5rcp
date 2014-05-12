@@ -1065,21 +1065,21 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.PROGRAM: {
                 Program program = (Program)theEObject;
                 T result = caseProgram(program);
-                if (result == null) result = caseGeldWert(program);
                 if (result == null) result = caseBeschreibbar(program);
                 if (result == null) result = caseQuelle(program);
+                if (result == null) result = caseMatrixPrograms(program);
                 if (result == null) result = caseIdentifiable(program);
+                if (result == null) result = caseSoftware(program);
+                if (result == null) result = caseGeldWert(program);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.SOFTWARE_AGENT: {
                 SoftwareAgent softwareAgent = (SoftwareAgent)theEObject;
                 T result = caseSoftwareAgent(softwareAgent);
-                if (result == null) result = caseProgram(softwareAgent);
+                if (result == null) result = caseMatrixPrograms(softwareAgent);
+                if (result == null) result = caseSoftware(softwareAgent);
                 if (result == null) result = caseGeldWert(softwareAgent);
-                if (result == null) result = caseBeschreibbar(softwareAgent);
-                if (result == null) result = caseQuelle(softwareAgent);
-                if (result == null) result = caseIdentifiable(softwareAgent);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1119,11 +1119,40 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.AUTO_SOFT: {
                 AutoSoft autoSoft = (AutoSoft)theEObject;
                 T result = caseAutoSoft(autoSoft);
-                if (result == null) result = caseProgram(autoSoft);
+                if (result == null) result = caseSoftware(autoSoft);
                 if (result == null) result = caseGeldWert(autoSoft);
-                if (result == null) result = caseBeschreibbar(autoSoft);
-                if (result == null) result = caseQuelle(autoSoft);
-                if (result == null) result = caseIdentifiable(autoSoft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SOFTWARE: {
+                Software software = (Software)theEObject;
+                T result = caseSoftware(software);
+                if (result == null) result = caseGeldWert(software);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MATRIX_PROGRAMS: {
+                MatrixPrograms matrixPrograms = (MatrixPrograms)theEObject;
+                T result = caseMatrixPrograms(matrixPrograms);
+                if (result == null) result = caseSoftware(matrixPrograms);
+                if (result == null) result = caseGeldWert(matrixPrograms);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.TUTORSOFT: {
+                Tutorsoft tutorsoft = (Tutorsoft)theEObject;
+                T result = caseTutorsoft(tutorsoft);
+                if (result == null) result = caseMatrixPrograms(tutorsoft);
+                if (result == null) result = caseSoftware(tutorsoft);
+                if (result == null) result = caseGeldWert(tutorsoft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.SKILL_SOFT: {
+                SkillSoft skillSoft = (SkillSoft)theEObject;
+                T result = caseSkillSoft(skillSoft);
+                if (result == null) result = caseSoftware(skillSoft);
+                if (result == null) result = caseGeldWert(skillSoft);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2643,6 +2672,66 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseAutoSoft(AutoSoft object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Software</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Software</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSoftware(Software object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Matrix Programs</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Matrix Programs</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMatrixPrograms(MatrixPrograms object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Tutorsoft</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Tutorsoft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseTutorsoft(Tutorsoft object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Skill Soft</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Skill Soft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSkillSoft(SkillSoft object) {
         return null;
     }
 

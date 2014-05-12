@@ -470,6 +470,22 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createAutoSoftAdapter();
             }
             @Override
+            public Adapter caseSoftware(Software object) {
+                return createSoftwareAdapter();
+            }
+            @Override
+            public Adapter caseMatrixPrograms(MatrixPrograms object) {
+                return createMatrixProgramsAdapter();
+            }
+            @Override
+            public Adapter caseTutorsoft(Tutorsoft object) {
+                return createTutorsoftAdapter();
+            }
+            @Override
+            public Adapter caseSkillSoft(SkillSoft object) {
+                return createSkillSoftAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1900,6 +1916,62 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createAutoSoftAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Software
+     * @generated
+     */
+    public Adapter createSoftwareAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MatrixPrograms
+     * @generated
+     */
+    public Adapter createMatrixProgramsAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Tutorsoft <em>Tutorsoft</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Tutorsoft
+     * @generated
+     */
+    public Adapter createTutorsoftAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.SkillSoft <em>Skill Soft</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.SkillSoft
+     * @generated
+     */
+    public Adapter createSkillSoftAdapter() {
         return null;
     }
 
