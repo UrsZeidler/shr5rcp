@@ -32,6 +32,8 @@
 		select="document(concat($path,'/bioware.xml'),/)" />
 	<xsl:variable name="vehicles"
 		select="document(concat($path,'/vehicles.xml'),/)" />
+	<xsl:variable name="software"
+		select="document(concat($path,'/programs.xml'),/)" />
 	<xsl:variable name="shr5CharacterBuilder"
 		select="document(concat($path,'/priorities.xml'),/)" />
 	<xsl:variable name="lifestyle"
@@ -155,47 +157,48 @@
 							<attribut
 								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/simRig" />
 						</mods>
-						</entries>
+					</entries>
 					<entries xsi:type="shr5:RiggerCommandConsole" name="Build from crab."
-						deviceRating="1" firewallBasis="2" datenverarbeitungBasis="3" srcBook="//@entries.0/@entries.0/@entries.0"
-						verfuegbarkeit="2R" wertValue="1400" page="265">
+						deviceRating="1" firewallBasis="2" datenverarbeitungBasis="3"
+						srcBook="//@entries.0/@entries.0/@entries.0" verfuegbarkeit="2R"
+						wertValue="1400" page="265">
 						<mods wert="1">
 							<attribut
 								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
 						</mods>
-						</entries>
-						<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
-							name="Control Rig 1" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
-							verfuegbarkeit="5E">
-							<mods wert="-100">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
-							</mods>
-							<mods wert="1">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
-							</mods>
-							<mods wert="1">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig" />
-							</mods>
-						</entries>
-						<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
-							name="Control Rig 2" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
-							wertValue="97000" verfuegbarkeit="10R">
-							<mods wert="-200">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
-							</mods>
-							<mods wert="1">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
-							</mods>
-							<mods wert="2">
-								<attribut
-									href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig" />
-							</mods>
-						
+					</entries>
+					<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
+						name="Control Rig 1" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
+						verfuegbarkeit="5E">
+						<mods wert="-100">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
+						</mods>
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+						</mods>
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig" />
+						</mods>
+					</entries>
+					<entries xsi:type="shr5:Cyberware" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab"
+						name="Control Rig 2" page="452" srcBook="//@entries.0/@entries.0/@entries.0"
+						wertValue="97000" verfuegbarkeit="10R">
+						<mods wert="-200">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz" />
+						</mods>
+						<mods wert="1">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector" />
+						</mods>
+						<mods wert="2">
+							<attribut
+								href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig" />
+						</mods>
+
 					</entries>
 					<entries xsi:type="shr5:Cyberdeck" name="Microdeck Summit"
 						deviceRating="1" attribute1="4" attribute2="3" attribute3="3"
@@ -219,6 +222,11 @@
 						</mods>
 
 					</entries>
+
+					<xsl:for-each select="$software">
+						<xsl:apply-templates select="node()" />
+					</xsl:for-each>
+
 				</entries>
 			</entries>
 			<xsl:call-template name="examples" />
@@ -2193,6 +2201,29 @@
 			</mods>
 		</entries>
 	</xsl:template>
+	<xsl:template match="//program">
+		<entries xsi:type="shr5:Program">
+			<xsl:attribute name="category">
+					<xsl:value-of select="category/text()" />
+									</xsl:attribute>
+			<xsl:choose>
+				<xsl:when test="category/text()='Hacking'">
+					<xsl:attribute name="verfuegbarkeit"><xsl:value-of
+						select="'6R'" /></xsl:attribute>
+					<xsl:attribute name="wertValue"><xsl:value-of
+						select="250" /></xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="wertValue"><xsl:value-of
+						select="80" /></xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<xsl:call-template name="beschreibbar" />
+			<xsl:call-template name="quelle" />
+		</entries>
+	</xsl:template>
+
+
 	<xsl:template match="//gear">
 		<xsl:choose>
 			<xsl:when
@@ -2241,8 +2272,7 @@
 	</xsl:template>
 	<xsl:template match="//vehicle">
 		<xsl:choose>
-			<xsl:when
-				test="starts-with(category/text(),'Drone:')">
+			<xsl:when test="starts-with(category/text(),'Drone:')">
 				<xsl:call-template name="vehicle">
 					<xsl:with-param name="typeName" select="'Drohne'" />
 				</xsl:call-template>
