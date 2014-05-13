@@ -13,6 +13,7 @@ import org.eclipse.ui.PlatformUI;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.KiAdept;
@@ -113,12 +114,16 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
             public Integer caseSoftware(Software object) {
                 return RET;
             }
-            
+
             @Override
             public Integer caseKiAdept(KiAdept object) {
                 return RET;
             }
 
+            @Override
+            public Integer caseFahrzeug(Fahrzeug object) {
+                return RET;
+            }
         };
         Integer doSwitch = shr5Switch.doSwitch((EObject)eObject);
         if (doSwitch != null)
@@ -140,7 +145,7 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
             public Integer caseShr5KarmaGenerator(Shr5KarmaGenerator object) {
                 return RET;
             }
-            
+
             @Override
             public Integer caseManagedCharacter(ManagedCharacter object) {
                 return RET;

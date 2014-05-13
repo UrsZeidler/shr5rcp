@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+import org.eclipse.swt.widgets.Label;
 
 /**
  * Manages {@link Gegenstand} and {@link Kleidung}, {@link Credstick} and {@link Munition}.
@@ -100,6 +101,12 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         grpGegenstand.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().adapt(grpGegenstand);
         managedForm.getToolkit().paintBordersFor(grpGegenstand);
+        
+        Composite composite_Additional = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+        composite_Additional.setLayout(new GridLayout(3, false));
+        composite_Additional.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+        managedForm.getToolkit().adapt(composite_Additional);
+        managedForm.getToolkit().paintBordersFor(composite_Additional);
 
         Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
         composite.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -145,20 +152,23 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__ARMOR_MOD, grpGegenstand);
         } else if (object instanceof Cyberdeck) {
             grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.CYBERDECK));
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE1, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE2, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE3, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE4, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__CONFIGURATION, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__CONFIGURATION, composite_Additional);
         } else if (object instanceof RiggerCommandConsole) {
             grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM, composite_Additional);
         } else if (object instanceof Commlink) {
             grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.COMMLINK));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM, composite_Additional);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);

@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
@@ -96,8 +97,9 @@ import de.urszeidler.shr5.ecp.editor.pages.PrintPreviewPage;
 import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5KarmaGeneratorPage;
-import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
 import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
+import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
+import de.urszeidler.shr5.ecp.editor.pages.VehiclePage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -162,6 +164,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             } else if (Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS.equals(e.getFeature())
                     || Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN.equals(e.getFeature())
                     || Shr5Package.Literals.KI_ADEPT__KIKRAFT.equals(e.getFeature())
+                    || Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {
@@ -362,10 +365,21 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     addPage(new SoftwarePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
                             editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
+                    logError("error creating SoftwarePage", e);//$NON-NLS-1$
                 }
                 return null;
 
+            }
+            
+            @Override
+            public Object caseFahrzeug(Fahrzeug object) {
+                try {
+                    addPage(new VehiclePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating VehiclePage", e);//$NON-NLS-1$
+                }
+                return null;
             }
             
             @Override
