@@ -18,6 +18,7 @@ import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
@@ -108,6 +109,11 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
                 return RET;
             }
 
+            @Override
+            public Integer caseSoftware(Software object) {
+                return RET;
+            }
+            
             @Override
             public Integer caseKiAdept(KiAdept object) {
                 return RET;

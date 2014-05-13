@@ -48,6 +48,7 @@ import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
@@ -96,6 +97,7 @@ import de.urszeidler.shr5.ecp.editor.pages.ReichweitePage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5KarmaGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
+import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
@@ -354,6 +356,18 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return null;
             }
 
+            @Override
+            public Object caseSoftware(Software object) {
+                try {
+                    addPage(new SoftwarePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
+                }
+                return null;
+
+            }
+            
             @Override
             public Object caseCredstick(Credstick object) {
                 try {

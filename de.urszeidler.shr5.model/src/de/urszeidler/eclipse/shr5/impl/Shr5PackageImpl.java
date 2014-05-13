@@ -5128,8 +5128,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         commlinkEClass.getESuperTypes().add(this.getMatrixDevice());
         cyberdeckEClass.getESuperTypes().add(this.getCommlink());
         cyberdeckEClass.getESuperTypes().add(this.getActiveMatixDevice());
-        programEClass.getESuperTypes().add(this.getBeschreibbar());
-        programEClass.getESuperTypes().add(this.getQuelle());
         programEClass.getESuperTypes().add(this.getMatrixPrograms());
         softwareAgentEClass.getESuperTypes().add(this.getMatrixPrograms());
         hostEClass.getESuperTypes().add(this.getActiveMatixDevice());
@@ -5138,6 +5136,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         riggerCommandConsoleEClass.getESuperTypes().add(this.getCommlink());
         autoSoftEClass.getESuperTypes().add(this.getSoftware());
         softwareEClass.getESuperTypes().add(this.getGeldWert());
+        softwareEClass.getESuperTypes().add(this.getBeschreibbar());
+        softwareEClass.getESuperTypes().add(this.getQuelle());
         matrixProgramsEClass.getESuperTypes().add(this.getSoftware());
         tutorsoftEClass.getESuperTypes().add(this.getMatrixPrograms());
         skillSoftEClass.getESuperTypes().add(this.getSoftware());

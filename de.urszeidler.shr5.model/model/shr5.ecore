@@ -751,7 +751,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//Beschreibbar #//Quelle #//MatrixPrograms">
+  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//MatrixPrograms">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" lowerBound="1"
         eType="#//ProgramType"/>
   </eClassifiers>
@@ -817,7 +817,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Software" abstract="true" interface="true"
-      eSuperTypes="#//GeldWert"/>
+      eSuperTypes="#//GeldWert #//Beschreibbar #//Quelle"/>
   <eClassifiers xsi:type="ecore:EEnum" name="ProgramType">
     <eLiterals name="defaultSoft" literal="defaultSoft"/>
     <eLiterals name="hackingSoft" value="1" literal="hackingSoft"/>

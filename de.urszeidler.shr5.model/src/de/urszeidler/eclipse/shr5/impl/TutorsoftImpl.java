@@ -3,8 +3,12 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Tutorsoft;
 
 import java.math.BigDecimal;
@@ -27,6 +31,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getRating <em>Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getSkill <em>Skill</em>}</li>
  * </ul>
@@ -84,6 +94,116 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
      * @ordered
      */
     protected BigDecimal wertValue = WERT_VALUE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
+    protected static final String BESCHREIBUNG_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
+    protected String beschreibung = BESCHREIBUNG_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
+    protected static final String IMAGE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
+    protected String image = IMAGE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected String name = NAME_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPage()
+     * @generated
+     * @ordered
+     */
+    protected static final String PAGE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPage()
+     * @generated
+     * @ordered
+     */
+    protected String page = PAGE_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSrcBook()
+     * @generated
+     * @ordered
+     */
+    protected SourceBook srcBook;
 
     /**
      * The default value of the '{@link #getRating() <em>Rating</em>}' attribute.
@@ -190,6 +310,149 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
      * <!-- end-user-doc -->
      * @generated
      */
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBeschreibung(String newBeschreibung) {
+        String oldBeschreibung = beschreibung;
+        beschreibung = newBeschreibung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__BESCHREIBUNG, oldBeschreibung, beschreibung));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getImage() {
+        return image;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setImage(String newImage) {
+        String oldImage = image;
+        image = newImage;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__IMAGE, oldImage, image));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__NAME, oldName, name));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getPage() {
+        return page;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPage(String newPage) {
+        String oldPage = page;
+        page = newPage;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__PAGE, oldPage, page));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SourceBook getSrcBook() {
+        if (srcBook != null && srcBook.eIsProxy()) {
+            InternalEObject oldSrcBook = (InternalEObject)srcBook;
+            srcBook = (SourceBook)eResolveProxy(oldSrcBook);
+            if (srcBook != oldSrcBook) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.TUTORSOFT__SRC_BOOK, oldSrcBook, srcBook));
+            }
+        }
+        return srcBook;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SourceBook basicGetSrcBook() {
+        return srcBook;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSrcBook(SourceBook newSrcBook) {
+        SourceBook oldSrcBook = srcBook;
+        srcBook = newSrcBook;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__SRC_BOOK, oldSrcBook, srcBook));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getRating() {
         return rating;
     }
@@ -258,6 +521,19 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
                 return getVerfuegbarkeit();
             case Shr5Package.TUTORSOFT__WERT_VALUE:
                 return getWertValue();
+            case Shr5Package.TUTORSOFT__BESCHREIBUNG:
+                return getBeschreibung();
+            case Shr5Package.TUTORSOFT__IMAGE:
+                return getImage();
+            case Shr5Package.TUTORSOFT__NAME:
+                return getName();
+            case Shr5Package.TUTORSOFT__PARENT_ID:
+                return getParentId();
+            case Shr5Package.TUTORSOFT__PAGE:
+                return getPage();
+            case Shr5Package.TUTORSOFT__SRC_BOOK:
+                if (resolve) return getSrcBook();
+                return basicGetSrcBook();
             case Shr5Package.TUTORSOFT__RATING:
                 return getRating();
             case Shr5Package.TUTORSOFT__SKILL:
@@ -280,6 +556,24 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
                 return;
             case Shr5Package.TUTORSOFT__WERT_VALUE:
                 setWertValue((BigDecimal)newValue);
+                return;
+            case Shr5Package.TUTORSOFT__BESCHREIBUNG:
+                setBeschreibung((String)newValue);
+                return;
+            case Shr5Package.TUTORSOFT__IMAGE:
+                setImage((String)newValue);
+                return;
+            case Shr5Package.TUTORSOFT__NAME:
+                setName((String)newValue);
+                return;
+            case Shr5Package.TUTORSOFT__PARENT_ID:
+                setParentId((String)newValue);
+                return;
+            case Shr5Package.TUTORSOFT__PAGE:
+                setPage((String)newValue);
+                return;
+            case Shr5Package.TUTORSOFT__SRC_BOOK:
+                setSrcBook((SourceBook)newValue);
                 return;
             case Shr5Package.TUTORSOFT__RATING:
                 setRating((Integer)newValue);
@@ -305,6 +599,24 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
             case Shr5Package.TUTORSOFT__WERT_VALUE:
                 setWertValue(WERT_VALUE_EDEFAULT);
                 return;
+            case Shr5Package.TUTORSOFT__BESCHREIBUNG:
+                setBeschreibung(BESCHREIBUNG_EDEFAULT);
+                return;
+            case Shr5Package.TUTORSOFT__IMAGE:
+                setImage(IMAGE_EDEFAULT);
+                return;
+            case Shr5Package.TUTORSOFT__NAME:
+                setName(NAME_EDEFAULT);
+                return;
+            case Shr5Package.TUTORSOFT__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
+            case Shr5Package.TUTORSOFT__PAGE:
+                setPage(PAGE_EDEFAULT);
+                return;
+            case Shr5Package.TUTORSOFT__SRC_BOOK:
+                setSrcBook((SourceBook)null);
+                return;
             case Shr5Package.TUTORSOFT__RATING:
                 setRating(RATING_EDEFAULT);
                 return;
@@ -329,12 +641,86 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
             case Shr5Package.TUTORSOFT__WERT_VALUE:
                 return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
+            case Shr5Package.TUTORSOFT__BESCHREIBUNG:
+                return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
+            case Shr5Package.TUTORSOFT__IMAGE:
+                return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
+            case Shr5Package.TUTORSOFT__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.TUTORSOFT__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.TUTORSOFT__PAGE:
+                return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
+            case Shr5Package.TUTORSOFT__SRC_BOOK:
+                return srcBook != null;
             case Shr5Package.TUTORSOFT__RATING:
                 return rating != RATING_EDEFAULT;
             case Shr5Package.TUTORSOFT__SKILL:
                 return skill != null;
         }
         return super.eIsSet(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Beschreibbar.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.TUTORSOFT__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+                case Shr5Package.TUTORSOFT__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
+                case Shr5Package.TUTORSOFT__NAME: return Shr5Package.BESCHREIBBAR__NAME;
+                default: return -1;
+            }
+        }
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.TUTORSOFT__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
+            }
+        }
+        if (baseClass == Quelle.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.TUTORSOFT__PAGE: return Shr5Package.QUELLE__PAGE;
+                case Shr5Package.TUTORSOFT__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Beschreibbar.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.TUTORSOFT__BESCHREIBUNG;
+                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.TUTORSOFT__IMAGE;
+                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.TUTORSOFT__NAME;
+                default: return -1;
+            }
+        }
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.TUTORSOFT__PARENT_ID;
+                default: return -1;
+            }
+        }
+        if (baseClass == Quelle.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.QUELLE__PAGE: return Shr5Package.TUTORSOFT__PAGE;
+                case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.TUTORSOFT__SRC_BOOK;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
     /**
@@ -351,6 +737,16 @@ public class TutorsoftImpl extends MinimalEObjectImpl.Container implements Tutor
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");
         result.append(wertValue);
+        result.append(", beschreibung: ");
+        result.append(beschreibung);
+        result.append(", image: ");
+        result.append(image);
+        result.append(", name: ");
+        result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
+        result.append(", page: ");
+        result.append(page);
         result.append(", rating: ");
         result.append(rating);
         result.append(')');

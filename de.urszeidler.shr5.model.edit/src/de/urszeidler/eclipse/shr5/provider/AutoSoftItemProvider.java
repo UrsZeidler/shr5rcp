@@ -6,7 +6,6 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -17,13 +16,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.AutoSoft;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import java.math.BigDecimal;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.AutoSoft} object.
@@ -63,6 +60,12 @@ public class AutoSoftItemProvider
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
+            addParentIdPropertyDescriptor(object);
+            addPagePropertyDescriptor(object);
+            addSrcBookPropertyDescriptor(object);
             addRatingPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
@@ -135,6 +138,138 @@ public class AutoSoftItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Beschreibung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBeschreibungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_beschreibung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_beschreibung_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__BESCHREIBUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Image feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addImagePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_image_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_image_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__IMAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Name feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addNamePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Beschreibbar_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Beschreibbar_name_feature", "_UI_Beschreibbar_type"),
+                 Shr5Package.Literals.BESCHREIBBAR__NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Parent Id feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addParentIdPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Identifiable_parentId_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Identifiable_parentId_feature", "_UI_Identifiable_type"),
+                 Shr5Package.Literals.IDENTIFIABLE__PARENT_ID,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Page feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addPagePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Quelle_page_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Quelle_page_feature", "_UI_Quelle_type"),
+                 Shr5Package.Literals.QUELLE__PAGE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Src Book feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSrcBookPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Quelle_srcBook_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Quelle_srcBook_feature", "_UI_Quelle_type"),
+                 Shr5Package.Literals.QUELLE__SRC_BOOK,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Rating feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -175,8 +310,7 @@ public class AutoSoftItemProvider
      */
     @Override
     public String getText(Object object) {
-        BigDecimal labelValue = ((AutoSoft)object).getWert();
-        String label = labelValue == null ? null : labelValue.toString();
+        String label = ((AutoSoft)object).getName();
         return label == null || label.length() == 0 ?
             getString("_UI_AutoSoft_type") :
             getString("_UI_AutoSoft_type") + " " + label;
@@ -197,6 +331,11 @@ public class AutoSoftItemProvider
             case Shr5Package.AUTO_SOFT__WERT:
             case Shr5Package.AUTO_SOFT__VERFUEGBARKEIT:
             case Shr5Package.AUTO_SOFT__WERT_VALUE:
+            case Shr5Package.AUTO_SOFT__BESCHREIBUNG:
+            case Shr5Package.AUTO_SOFT__IMAGE:
+            case Shr5Package.AUTO_SOFT__NAME:
+            case Shr5Package.AUTO_SOFT__PARENT_ID:
+            case Shr5Package.AUTO_SOFT__PAGE:
             case Shr5Package.AUTO_SOFT__RATING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;

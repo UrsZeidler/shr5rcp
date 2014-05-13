@@ -13916,114 +13916,6 @@ public interface Shr5Package extends EPackage {
     int PROGRAM = 95;
 
     /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__IMAGE = BESCHREIBBAR__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__NAME = BESCHREIBBAR__NAME;
-
-    /**
-     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
-
-    /**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
-
-    /**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
-
-    /**
-     * The feature id for the '<em><b>Wert</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
-
-    /**
-     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
-
-    /**
-     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
-
-    /**
-     * The feature id for the '<em><b>Category</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__CATEGORY = BESCHREIBBAR_FEATURE_COUNT + 6;
-
-    /**
-     * The number of structural features of the '<em>Program</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
-
-    /**
-     * The number of operations of the '<em>Program</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
-
-    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14061,13 +13953,67 @@ public interface Shr5Package extends EPackage {
     int SOFTWARE__WERT_VALUE = GELD_WERT__WERT_VALUE;
 
     /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__BESCHREIBUNG = GELD_WERT_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__IMAGE = GELD_WERT_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__NAME = GELD_WERT_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__PARENT_ID = GELD_WERT_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__PAGE = GELD_WERT_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__SRC_BOOK = GELD_WERT_FEATURE_COUNT + 5;
+
+    /**
      * The number of structural features of the '<em>Software</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SOFTWARE_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 0;
+    int SOFTWARE_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 6;
 
     /**
      * The number of operations of the '<em>Software</em>' class.
@@ -14116,6 +14062,60 @@ public interface Shr5Package extends EPackage {
     int MATRIX_PROGRAMS__WERT_VALUE = SOFTWARE__WERT_VALUE;
 
     /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__IMAGE = SOFTWARE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__NAME = SOFTWARE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__PAGE = SOFTWARE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAMS__SRC_BOOK = SOFTWARE__SRC_BOOK;
+
+    /**
      * The number of structural features of the '<em>Matrix Programs</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14132,6 +14132,114 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MATRIX_PROGRAMS_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__WERT = MATRIX_PROGRAMS__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__VERFUEGBARKEIT = MATRIX_PROGRAMS__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__BESCHREIBUNG = MATRIX_PROGRAMS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__IMAGE = MATRIX_PROGRAMS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__NAME = MATRIX_PROGRAMS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__PARENT_ID = MATRIX_PROGRAMS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__PAGE = MATRIX_PROGRAMS__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__SRC_BOOK = MATRIX_PROGRAMS__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Category</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM__CATEGORY = MATRIX_PROGRAMS_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM_FEATURE_COUNT = MATRIX_PROGRAMS_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROGRAM_OPERATION_COUNT = MATRIX_PROGRAMS_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
@@ -14169,6 +14277,60 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SOFTWARE_AGENT__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__BESCHREIBUNG = MATRIX_PROGRAMS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__IMAGE = MATRIX_PROGRAMS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__NAME = MATRIX_PROGRAMS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__PARENT_ID = MATRIX_PROGRAMS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__PAGE = MATRIX_PROGRAMS__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__SRC_BOOK = MATRIX_PROGRAMS__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -14670,6 +14832,60 @@ public interface Shr5Package extends EPackage {
     int AUTO_SOFT__WERT_VALUE = SOFTWARE__WERT_VALUE;
 
     /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__IMAGE = SOFTWARE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__NAME = SOFTWARE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__PAGE = SOFTWARE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__SRC_BOOK = SOFTWARE__SRC_BOOK;
+
+    /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -14732,6 +14948,60 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int TUTORSOFT__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__BESCHREIBUNG = MATRIX_PROGRAMS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__IMAGE = MATRIX_PROGRAMS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__NAME = MATRIX_PROGRAMS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__PARENT_ID = MATRIX_PROGRAMS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__PAGE = MATRIX_PROGRAMS__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__SRC_BOOK = MATRIX_PROGRAMS__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -14805,6 +15075,60 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SKILL_SOFT__WERT_VALUE = SOFTWARE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__IMAGE = SOFTWARE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__NAME = SOFTWARE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__PAGE = SOFTWARE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__SRC_BOOK = SOFTWARE__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Skill</b></em>' reference.

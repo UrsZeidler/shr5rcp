@@ -20,7 +20,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Program extends Beschreibbar, Quelle, MatrixPrograms {
+public interface Program extends MatrixPrograms {
     /**
      * Returns the value of the '<em><b>Category</b></em>' attribute.
      * The literals are from the enumeration {@link de.urszeidler.eclipse.shr5.ProgramType}.

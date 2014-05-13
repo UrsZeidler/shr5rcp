@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface Software extends GeldWert {
+public interface Software extends GeldWert, Beschreibbar, Quelle {
 } // Software

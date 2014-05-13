@@ -1472,23 +1472,7 @@
   </xsd:element>
   <xsd:complexType name="Program">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Beschreibbar">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="srcBook" type="shr5:SourceBook"/>
-        </xsd:choice>
-        <xsd:attribute name="parentId" type="xsd:string"/>
-        <xsd:attribute name="page" type="xsd:string"/>
-        <xsd:attribute name="srcBook" type="xsd:string"/>
-        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>The availability for the object.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <xsd:attribute name="wertValue" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="shr5:MatrixPrograms">
         <xsd:attribute name="category" type="shr5:ProgramType" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1581,7 +1565,17 @@
   </xsd:element>
   <xsd:complexType abstract="true" name="Software">
     <xsd:complexContent>
-      <xsd:extension base="shr5:GeldWert"/>
+      <xsd:extension base="shr5:GeldWert">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Software" type="shr5:Software"/>
