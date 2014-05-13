@@ -226,6 +226,12 @@
 					<xsl:for-each select="$software">
 						<xsl:apply-templates select="node()" />
 					</xsl:for-each>
+					<entries xsi:type="shr5:Tutorsoft" wertValue="400" rating="1"
+						name="Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16"
+						page="442" srcBook="//@entries.0/@entries.0/@entries.0" />
+					<entries xsi:type="shr5:SoftwareAgent" wertValue="1000"
+						rating="1" name="Agent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b"
+						page="442" srcBook="//@entries.0/@entries.0/@entries.0" />
 
 				</entries>
 			</entries>
@@ -2203,17 +2209,21 @@
 	</xsl:template>
 	<xsl:template match="//program">
 		<entries xsi:type="shr5:Program">
-			<xsl:attribute name="category">
-					<xsl:value-of select="category/text()" />
-									</xsl:attribute>
 			<xsl:choose>
 				<xsl:when test="category/text()='Hacking'">
+					<xsl:attribute name="category">
+					<xsl:value-of select="'hackingSoft'" />
+									</xsl:attribute>
 					<xsl:attribute name="verfuegbarkeit"><xsl:value-of
 						select="'6R'" /></xsl:attribute>
 					<xsl:attribute name="wertValue"><xsl:value-of
 						select="250" /></xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
+					<xsl:attribute name="category">
+					<xsl:value-of select="'defaultSoft'" />
+									</xsl:attribute>
+
 					<xsl:attribute name="wertValue"><xsl:value-of
 						select="80" /></xsl:attribute>
 				</xsl:otherwise>
@@ -2260,6 +2270,62 @@
 					<xsl:call-template name="gegenstand-basis" />
 				</entries>
 			</xsl:when>
+			<xsl:when test="category/text()='Software'">
+				<xsl:choose>
+					<xsl:when test="name/text()='Datasoft'">
+						<entries xsi:type="shr5:Program">
+							<xsl:attribute name="category">
+								<xsl:value-of select="'dataSoft'" />
+									</xsl:attribute>
+							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
+								select="'4'" /></xsl:attribute>
+							<xsl:attribute name="wertValue"><xsl:value-of
+								select="120" /></xsl:attribute>
+							<xsl:call-template name="beschreibbar" />
+							<xsl:call-template name="quelle" />
+						</entries>
+					</xsl:when>
+					<xsl:when test="name/text()='Mapsoft'">
+						<entries xsi:type="shr5:Program">
+							<xsl:attribute name="category">
+								<xsl:value-of select="'mapSoft'" />
+									</xsl:attribute>
+							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
+								select="'4'" /></xsl:attribute>
+							<xsl:attribute name="wertValue"><xsl:value-of
+								select="150" /></xsl:attribute>
+							<xsl:call-template name="beschreibbar" />
+							<xsl:call-template name="quelle" />
+						</entries>
+					</xsl:when>
+					<xsl:when test="name/text()='Shopsoft'">
+						<entries xsi:type="shr5:Program">
+							<xsl:attribute name="category">
+								<xsl:value-of select="'shopSoft'" />
+									</xsl:attribute>
+							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
+								select="'4'" /></xsl:attribute>
+							<xsl:attribute name="wertValue"><xsl:value-of
+								select="150" /></xsl:attribute>
+							<xsl:call-template name="beschreibbar" />
+							<xsl:call-template name="quelle" />
+						</entries>
+					</xsl:when>
+
+					<xsl:otherwise>
+						<xsl:attribute name="category">
+					<xsl:value-of select="'defaultSoft'" />
+									</xsl:attribute>
+
+						<xsl:attribute name="wertValue"><xsl:value-of
+							select="80" /></xsl:attribute>
+					</xsl:otherwise>
+				</xsl:choose>
+
+
+			</xsl:when>
+
+
 			<xsl:otherwise>
 				<entries xsi:type="shr5:Gegenstand">
 					<xsl:attribute name="kategorie"><xsl:value-of
