@@ -10,6 +10,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,6 +25,7 @@ import org.eclipse.swt.graphics.Image;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
@@ -71,7 +73,6 @@ public class FertigkeitItemProvider
             addKategoriePropertyDescriptor(object);
             addAusweichenPropertyDescriptor(object);
             addAttributPropertyDescriptor(object);
-            addSpezialisierungenPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -291,28 +292,36 @@ public class FertigkeitItemProvider
 	}
 
 	/**
-     * This adds a property descriptor for the Spezialisierungen feature.
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	protected void addSpezialisierungenPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Fertigkeit_spezialisierungen_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Fertigkeit_spezialisierungen_feature", "_UI_Fertigkeit_type"),
-                 Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN,
-                 true,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN);
+        }
+        return childrenFeatures;
     }
 
-	/**
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
+    }
+
+    /**
 	 * This returns Fertigkeit.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,8 +371,10 @@ public class FertigkeitItemProvider
             case Shr5Package.FERTIGKEIT__PAGE:
             case Shr5Package.FERTIGKEIT__KATEGORIE:
             case Shr5Package.FERTIGKEIT__AUSWEICHEN:
-            case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
         super.notifyChanged(notification);
@@ -379,6 +390,11 @@ public class FertigkeitItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN,
+                 Shr5Factory.eINSTANCE.createSpezialisierung()));
     }
 
 	/**

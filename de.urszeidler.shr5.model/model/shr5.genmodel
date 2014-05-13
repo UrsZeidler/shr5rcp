@@ -195,7 +195,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/kategorie"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fertigkeit/ausweichen"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Fertigkeit/attribut"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//Fertigkeit/spezialisierungen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Fertigkeit/spezialisierungen"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeit">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/fertigkeit"/>
