@@ -123,7 +123,9 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__GESCHWINDIGKEIT, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__PILOT, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__RUMPF, grpGegenstand);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__PANZER, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__SENSOR, grpGegenstand);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN, grpGegenstand);
 
         if (object instanceof Drohne) {
