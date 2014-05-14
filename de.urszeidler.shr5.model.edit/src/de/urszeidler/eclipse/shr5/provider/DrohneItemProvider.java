@@ -2,7 +2,6 @@
  */
 package de.urszeidler.eclipse.shr5.provider;
 
-
 import java.util.Collection;
 import java.util.List;
 
@@ -32,32 +31,26 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DrohneItemProvider
-	extends FahrzeugItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
-	/**
+public class DrohneItemProvider extends FahrzeugItemProvider implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+    /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public DrohneItemProvider(AdapterFactory adapterFactory) {
+    public DrohneItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
-	/**
+    /**
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
+    @Override
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
@@ -67,12 +60,12 @@ public class DrohneItemProvider
             addDatenverarbeitungPropertyDescriptor(object);
             addCurrentModusPropertyDescriptor(object);
             addProgramSlotCountPropertyDescriptor(object);
-            addRunningProgrammsPropertyDescriptor(object);
+            addRunningProgramsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
-	/**
+    /**
      * This adds a property descriptor for the Matrix Zustand Max feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -205,31 +198,24 @@ public class DrohneItemProvider
     }
 
     /**
-     * This adds a property descriptor for the Running Programms feature.
+     * This adds a property descriptor for the Running Programs feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
-    protected void addRunningProgrammsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (new ItemPropertyDescriptor//createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Drohne_runningProgramms_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Drohne_runningProgramms_feature", "_UI_Drohne_type"),
-                 Shr5Package.Literals.DROHNE__RUNNING_PROGRAMMS,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null){
-                @Override
-                public Collection<?> getChoiceOfValues(Object object) {
-                    return ((Drohne)(object)).getStroredProgramm();
-                }
-                
-            });
+    protected void addRunningProgramsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(new ItemPropertyDescriptor// createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                        getString("_UI_Drohne_runningPrograms_feature"), getString("_UI_PropertyDescriptor_description",
+                                "_UI_Drohne_runningPrograms_feature", "_UI_Drohne_type"), Shr5Package.Literals.DROHNE__RUNNING_PROGRAMS, true, false,
+                        true, null, null, null) {
+                    @Override
+                    public Collection<?> getChoiceOfValues(Object object) {
+                        return ((Drohne)(object)).getStoredPrograms();
+                    }
+
+                });
     }
 
     /**
@@ -244,7 +230,7 @@ public class DrohneItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.DROHNE__STRORED_PROGRAMM);
+            childrenFeatures.add(Shr5Package.Literals.DROHNE__STORED_PROGRAMS);
         }
         return childrenFeatures;
     }
@@ -265,44 +251,45 @@ public class DrohneItemProvider
     /**
      * This returns Drohne.gif.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated not
      */
-	@Override
-	public Object getImage(Object object) {
-	       Beschreibbar beschreibbar = (Beschreibbar) object;
-	        if (beschreibbar.getImage() != null) {
-	            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
-	            if (image != null)
-	                return image;
-	        }
+    @Override
+    public Object getImage(Object object) {
+        Beschreibbar beschreibbar = (Beschreibbar)object;
+        if (beschreibbar.getImage() != null) {
+            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+            if (image != null)
+                return image;
+        }
 
         return overlayImage(object, getResourceLocator().getImage("full/obj16/Drohne"));
     }
 
-	/**
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	@Override
-	public String getText(Object object) {
+    @Override
+    public String getText(Object object) {
         String label = ((Drohne)object).getName();
         return label == null || label.length() == 0 ?
             getString("_UI_Drohne_type") :
             getString("_UI_Drohne_type") + " " + label;
     }
 
-	/**
+    /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	@Override
-	public void notifyChanged(Notification notification) {
+    @Override
+    public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
         switch (notification.getFeatureID(Drohne.class)) {
@@ -314,28 +301,33 @@ public class DrohneItemProvider
             case Shr5Package.DROHNE__PROGRAM_SLOT_COUNT:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5Package.DROHNE__STRORED_PROGRAMM:
+            case Shr5Package.DROHNE__STORED_PROGRAMS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
         super.notifyChanged(notification);
     }
 
-	/**
+    /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
      * that can be created under this object.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    @Override
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add
             (createChildParameter
-                (Shr5Package.Literals.DROHNE__STRORED_PROGRAMM,
+                (Shr5Package.Literals.DROHNE__STORED_PROGRAMS,
                  Shr5Factory.eINSTANCE.createAutoSoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.DROHNE__STORED_PROGRAMS,
+                 Shr5Factory.eINSTANCE.createCommonProgram()));
     }
 
 }

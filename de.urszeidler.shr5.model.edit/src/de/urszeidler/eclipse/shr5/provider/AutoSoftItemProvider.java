@@ -67,6 +67,9 @@ public class AutoSoftItemProvider
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addRatingPropertyDescriptor(object);
+            addSkillPropertyDescriptor(object);
+            addWeaponPropertyDescriptor(object);
+            addModelPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -287,6 +290,72 @@ public class AutoSoftItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Skill feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSkillPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_AutoSoft_skill_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AutoSoft_skill_feature", "_UI_AutoSoft_type"),
+                 Shr5Package.Literals.AUTO_SOFT__SKILL,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Weapon feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWeaponPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_AutoSoft_weapon_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AutoSoft_weapon_feature", "_UI_AutoSoft_type"),
+                 Shr5Package.Literals.AUTO_SOFT__WEAPON,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Model feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addModelPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_AutoSoft_model_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AutoSoft_model_feature", "_UI_AutoSoft_type"),
+                 Shr5Package.Literals.AUTO_SOFT__MODEL,
+                 true,
+                 false,
+                 true,
+                 null,
                  null,
                  null));
     }

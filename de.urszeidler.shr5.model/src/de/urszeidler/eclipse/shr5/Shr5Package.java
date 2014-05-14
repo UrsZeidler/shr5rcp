@@ -9669,22 +9669,22 @@ public interface Shr5Package extends EPackage {
     int DROHNE__PROGRAM_SLOT_COUNT = FAHRZEUG_FEATURE_COUNT + 5;
 
     /**
-     * The feature id for the '<em><b>Running Programms</b></em>' reference list.
+     * The feature id for the '<em><b>Running Programs</b></em>' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DROHNE__RUNNING_PROGRAMMS = FAHRZEUG_FEATURE_COUNT + 6;
+    int DROHNE__RUNNING_PROGRAMS = FAHRZEUG_FEATURE_COUNT + 6;
 
     /**
-     * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
+     * The feature id for the '<em><b>Stored Programs</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DROHNE__STRORED_PROGRAMM = FAHRZEUG_FEATURE_COUNT + 7;
+    int DROHNE__STORED_PROGRAMS = FAHRZEUG_FEATURE_COUNT + 7;
 
     /**
      * The number of structural features of the '<em>Drohne</em>' class.
@@ -15205,13 +15205,40 @@ public interface Shr5Package extends EPackage {
     int AUTO_SOFT__RATING = RIGGER_PROGRAM_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__SKILL = RIGGER_PROGRAM_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Weapon</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__WEAPON = RIGGER_PROGRAM_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Model</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__MODEL = RIGGER_PROGRAM_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Auto Soft</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int AUTO_SOFT_FEATURE_COUNT = RIGGER_PROGRAM_FEATURE_COUNT + 1;
+    int AUTO_SOFT_FEATURE_COUNT = RIGGER_PROGRAM_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Auto Soft</em>' class.
@@ -18844,26 +18871,26 @@ public interface Shr5Package extends EPackage {
     EAttribute getDrohne_ProgramSlotCount();
 
     /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Drohne#getRunningProgramms <em>Running Programms</em>}'.
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Drohne#getRunningPrograms <em>Running Programs</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Running Programms</em>'.
-     * @see de.urszeidler.eclipse.shr5.Drohne#getRunningProgramms()
+     * @return the meta object for the reference list '<em>Running Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drohne#getRunningPrograms()
      * @see #getDrohne()
      * @generated
      */
-    EReference getDrohne_RunningProgramms();
+    EReference getDrohne_RunningPrograms();
 
     /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Drohne#getStroredProgramm <em>Strored Programm</em>}'.
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Drohne#getStoredPrograms <em>Stored Programs</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Strored Programm</em>'.
-     * @see de.urszeidler.eclipse.shr5.Drohne#getStroredProgramm()
+     * @return the meta object for the containment reference list '<em>Stored Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drohne#getStoredPrograms()
      * @see #getDrohne()
      * @generated
      */
-    EReference getDrohne_StroredProgramm();
+    EReference getDrohne_StoredPrograms();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.FahrzeugModifikation <em>Fahrzeug Modifikation</em>}'.
@@ -20220,6 +20247,39 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getAutoSoft_Rating();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.AutoSoft#getSkill <em>Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5.AutoSoft#getSkill()
+     * @see #getAutoSoft()
+     * @generated
+     */
+    EReference getAutoSoft_Skill();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.AutoSoft#getWeapon <em>Weapon</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Weapon</em>'.
+     * @see de.urszeidler.eclipse.shr5.AutoSoft#getWeapon()
+     * @see #getAutoSoft()
+     * @generated
+     */
+    EReference getAutoSoft_Weapon();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.AutoSoft#getModel <em>Model</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Model</em>'.
+     * @see de.urszeidler.eclipse.shr5.AutoSoft#getModel()
+     * @see #getAutoSoft()
+     * @generated
+     */
+    EReference getAutoSoft_Model();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}'.
@@ -22702,20 +22762,20 @@ public interface Shr5Package extends EPackage {
         EAttribute DROHNE__PROGRAM_SLOT_COUNT = eINSTANCE.getDrohne_ProgramSlotCount();
 
         /**
-         * The meta object literal for the '<em><b>Running Programms</b></em>' reference list feature.
+         * The meta object literal for the '<em><b>Running Programs</b></em>' reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DROHNE__RUNNING_PROGRAMMS = eINSTANCE.getDrohne_RunningProgramms();
+        EReference DROHNE__RUNNING_PROGRAMS = eINSTANCE.getDrohne_RunningPrograms();
 
         /**
-         * The meta object literal for the '<em><b>Strored Programm</b></em>' containment reference list feature.
+         * The meta object literal for the '<em><b>Stored Programs</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference DROHNE__STRORED_PROGRAMM = eINSTANCE.getDrohne_StroredProgramm();
+        EReference DROHNE__STORED_PROGRAMS = eINSTANCE.getDrohne_StoredPrograms();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.FahrzeugModifikationImpl <em>Fahrzeug Modifikation</em>}' class.
@@ -23814,6 +23874,30 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute AUTO_SOFT__RATING = eINSTANCE.getAutoSoft_Rating();
+
+        /**
+         * The meta object literal for the '<em><b>Skill</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference AUTO_SOFT__SKILL = eINSTANCE.getAutoSoft_Skill();
+
+        /**
+         * The meta object literal for the '<em><b>Weapon</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference AUTO_SOFT__WEAPON = eINSTANCE.getAutoSoft_Weapon();
+
+        /**
+         * The meta object literal for the '<em><b>Model</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference AUTO_SOFT__MODEL = eINSTANCE.getAutoSoft_Model();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}' class.

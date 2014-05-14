@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.AbstaktWaffe;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
@@ -10,6 +11,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import de.urszeidler.eclipse.shr5.AutoSoft;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Drohne;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -34,6 +37,9 @@ import org.eclipse.emf.common.notify.Notification;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getRating <em>Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getSkill <em>Skill</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWeapon <em>Weapon</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getModel <em>Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -202,6 +208,34 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * @ordered
      */
     protected int rating = RATING_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getSkill() <em>Skill</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSkill()
+     * @generated
+     * @ordered
+     */
+    protected Fertigkeit skill;
+    /**
+     * The cached value of the '{@link #getWeapon() <em>Weapon</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWeapon()
+     * @generated
+     * @ordered
+     */
+    protected AbstaktWaffe weapon;
+    /**
+     * The cached value of the '{@link #getModel() <em>Model</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getModel()
+     * @generated
+     * @ordered
+     */
+    protected Drohne model;
 
     /**
      * <!-- begin-user-doc -->
@@ -445,6 +479,120 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    public Fertigkeit getSkill() {
+        if (skill != null && skill.eIsProxy()) {
+            InternalEObject oldSkill = (InternalEObject)skill;
+            skill = (Fertigkeit)eResolveProxy(oldSkill);
+            if (skill != oldSkill) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.AUTO_SOFT__SKILL, oldSkill, skill));
+            }
+        }
+        return skill;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Fertigkeit basicGetSkill() {
+        return skill;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSkill(Fertigkeit newSkill) {
+        Fertigkeit oldSkill = skill;
+        skill = newSkill;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__SKILL, oldSkill, skill));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public AbstaktWaffe getWeapon() {
+        if (weapon != null && weapon.eIsProxy()) {
+            InternalEObject oldWeapon = (InternalEObject)weapon;
+            weapon = (AbstaktWaffe)eResolveProxy(oldWeapon);
+            if (weapon != oldWeapon) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.AUTO_SOFT__WEAPON, oldWeapon, weapon));
+            }
+        }
+        return weapon;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public AbstaktWaffe basicGetWeapon() {
+        return weapon;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setWeapon(AbstaktWaffe newWeapon) {
+        AbstaktWaffe oldWeapon = weapon;
+        weapon = newWeapon;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__WEAPON, oldWeapon, weapon));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Drohne getModel() {
+        if (model != null && model.eIsProxy()) {
+            InternalEObject oldModel = (InternalEObject)model;
+            model = (Drohne)eResolveProxy(oldModel);
+            if (model != oldModel) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.AUTO_SOFT__MODEL, oldModel, model));
+            }
+        }
+        return model;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Drohne basicGetModel() {
+        return model;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setModel(Drohne newModel) {
+        Drohne oldModel = model;
+        model = newModel;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__MODEL, oldModel, model));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
@@ -469,6 +617,15 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
                 return basicGetSrcBook();
             case Shr5Package.AUTO_SOFT__RATING:
                 return getRating();
+            case Shr5Package.AUTO_SOFT__SKILL:
+                if (resolve) return getSkill();
+                return basicGetSkill();
+            case Shr5Package.AUTO_SOFT__WEAPON:
+                if (resolve) return getWeapon();
+                return basicGetWeapon();
+            case Shr5Package.AUTO_SOFT__MODEL:
+                if (resolve) return getModel();
+                return basicGetModel();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -507,6 +664,15 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
                 return;
             case Shr5Package.AUTO_SOFT__RATING:
                 setRating((Integer)newValue);
+                return;
+            case Shr5Package.AUTO_SOFT__SKILL:
+                setSkill((Fertigkeit)newValue);
+                return;
+            case Shr5Package.AUTO_SOFT__WEAPON:
+                setWeapon((AbstaktWaffe)newValue);
+                return;
+            case Shr5Package.AUTO_SOFT__MODEL:
+                setModel((Drohne)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -547,6 +713,15 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
             case Shr5Package.AUTO_SOFT__RATING:
                 setRating(RATING_EDEFAULT);
                 return;
+            case Shr5Package.AUTO_SOFT__SKILL:
+                setSkill((Fertigkeit)null);
+                return;
+            case Shr5Package.AUTO_SOFT__WEAPON:
+                setWeapon((AbstaktWaffe)null);
+                return;
+            case Shr5Package.AUTO_SOFT__MODEL:
+                setModel((Drohne)null);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -579,6 +754,12 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
                 return srcBook != null;
             case Shr5Package.AUTO_SOFT__RATING:
                 return rating != RATING_EDEFAULT;
+            case Shr5Package.AUTO_SOFT__SKILL:
+                return skill != null;
+            case Shr5Package.AUTO_SOFT__WEAPON:
+                return weapon != null;
+            case Shr5Package.AUTO_SOFT__MODEL:
+                return model != null;
         }
         return super.eIsSet(featureID);
     }

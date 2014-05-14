@@ -14,17 +14,11 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
-import de.urszeidler.eclipse.shr5.AutoSoft;
 import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.PassagierFahrzeug;
-import de.urszeidler.eclipse.shr5.Program;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.SkillSoft;
-import de.urszeidler.eclipse.shr5.Software;
-import de.urszeidler.eclipse.shr5.SoftwareAgent;
-import de.urszeidler.eclipse.shr5.Tutorsoft;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
@@ -130,7 +124,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
 
         if (object instanceof Drohne) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__PROGRAM_SLOT_COUNT, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__STRORED_PROGRAMM, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__STORED_PROGRAMS, grpGegenstand);
         } else if (object instanceof PassagierFahrzeug) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.PASSAGIER_FAHRZEUG__SITZE, grpGegenstand);
         }

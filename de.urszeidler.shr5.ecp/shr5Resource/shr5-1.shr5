@@ -6436,32 +6436,32 @@
 <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/simRig"/>
 </mods>
 </entries>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Browse" xmi:id="535f30c9-dabf-409f-a9b1-76441163855b" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Configurator" xmi:id="bbb95461-9cfe-4907-9b78-a47829b6cc3b" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Edit" xmi:id="cc304ee9-9cd8-4db9-a926-b511b63bafd4" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Encrypt" xmi:id="93ea1bd8-ab88-4dd8-8b49-edcb6550e156" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Signal Scrub" xmi:id="c606b7f1-10e8-4685-bacf-539dba0ba131" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Toolbox" xmi:id="e5c2e040-1c5a-452f-a7c4-ef2489b14287" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="defaultSoft" wertValue="80" name="Virtual Machine" xmi:id="e5ef0c40-214d-40fc-b6c1-07d0f5fb0f53" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Armor" xmi:id="e868d12b-366f-4a7d-989d-8984137c2c20" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" xmi:id="1381da94-fe3c-47f2-9ab2-07b8a0f934a3" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Decryption" xmi:id="d7e84725-cc5c-425e-b29a-161ee7549fd0" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" xmi:id="dd0fa65c-77b7-4fed-85ec-8ee1e67f73bd" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Defuse" xmi:id="f67009e1-7c18-462b-b990-69c290857963" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Demolition" xmi:id="8f3b46f9-3002-484a-ad42-73a858758348" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" xmi:id="a5a697ac-32b6-4941-aa9f-823ff48d31ab" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Blackout" xmi:id="9704d5a7-19d1-49f3-a749-d1555c083a8a" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Exploit" xmi:id="a87c203d-2d74-420f-8fce-cd29a51d393b" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Fork" xmi:id="f0298e6f-dc1c-498b-9f87-e4d552eeed06" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Guard" xmi:id="3f61e4fe-b1ac-499a-9816-705d57051a09" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Hammer" xmi:id="ede3b36b-bc1c-4680-9ada-1220f2312d95" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Lockdown" xmi:id="cb35e2a4-13a2-41fb-b076-ba81cd33ad49" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Mugger" xmi:id="9c8d8cdc-ae03-4251-b27f-76e7569871b9" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Shell" xmi:id="59b54eba-38f6-4180-b572-be9b62fe8338" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Sneak" xmi:id="ceddbea2-166a-4f3c-8588-de695fdff4e2" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Stealth" xmi:id="a89d9880-384f-4cc7-bf4d-e25b8994fa7a" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Track" xmi:id="3b5d21e7-15f7-4828-90db-2bc5aa4cdeda" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
-<entries xsi:type="shr5:CommonProgram" category="hackingSoft" verfuegbarkeit="6R" wertValue="250" name="Wrapper" xmi:id="27fd8bc3-adcc-43a7-9f6b-92bf4b3187b9" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Browse" xmi:id="535f30c9-dabf-409f-a9b1-76441163855b" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Configurator" xmi:id="bbb95461-9cfe-4907-9b78-a47829b6cc3b" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Edit" xmi:id="cc304ee9-9cd8-4db9-a926-b511b63bafd4" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Encrypt" xmi:id="93ea1bd8-ab88-4dd8-8b49-edcb6550e156" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Signal Scrub" xmi:id="c606b7f1-10e8-4685-bacf-539dba0ba131" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Toolbox" xmi:id="e5c2e040-1c5a-452f-a7c4-ef2489b14287" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="defaultProgram" wertValue="80" name="Virtual Machine" xmi:id="e5ef0c40-214d-40fc-b6c1-07d0f5fb0f53" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Armor" xmi:id="e868d12b-366f-4a7d-989d-8984137c2c20" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" xmi:id="1381da94-fe3c-47f2-9ab2-07b8a0f934a3" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Decryption" xmi:id="d7e84725-cc5c-425e-b29a-161ee7549fd0" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" xmi:id="dd0fa65c-77b7-4fed-85ec-8ee1e67f73bd" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Defuse" xmi:id="f67009e1-7c18-462b-b990-69c290857963" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Demolition" xmi:id="8f3b46f9-3002-484a-ad42-73a858758348" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" xmi:id="a5a697ac-32b6-4941-aa9f-823ff48d31ab" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Blackout" xmi:id="9704d5a7-19d1-49f3-a749-d1555c083a8a" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Exploit" xmi:id="a87c203d-2d74-420f-8fce-cd29a51d393b" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Fork" xmi:id="f0298e6f-dc1c-498b-9f87-e4d552eeed06" page="245" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Guard" xmi:id="3f61e4fe-b1ac-499a-9816-705d57051a09" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Hammer" xmi:id="ede3b36b-bc1c-4680-9ada-1220f2312d95" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Lockdown" xmi:id="cb35e2a4-13a2-41fb-b076-ba81cd33ad49" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Mugger" xmi:id="9c8d8cdc-ae03-4251-b27f-76e7569871b9" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Shell" xmi:id="59b54eba-38f6-4180-b572-be9b62fe8338" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Sneak" xmi:id="ceddbea2-166a-4f3c-8588-de695fdff4e2" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Stealth" xmi:id="a89d9880-384f-4cc7-bf4d-e25b8994fa7a" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Track" xmi:id="3b5d21e7-15f7-4828-90db-2bc5aa4cdeda" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
+<entries xsi:type="shr5:CommonProgram" category="hackingProgram" verfuegbarkeit="6R" wertValue="250" name="Wrapper" xmi:id="27fd8bc3-adcc-43a7-9f6b-92bf4b3187b9" page="246" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:Tutorsoft" wertValue="400" rating="1" name="Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
 <entries xsi:type="shr5:SoftwareAgent" wertValue="1000" rating="1" name="Agent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="//@entries.0/@entries.0/@entries.0"/>
 </entries>

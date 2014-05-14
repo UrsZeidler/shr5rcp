@@ -1304,4 +1304,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return result.toString();
     }
 
+	
+	
 } //FahrzeugImpl

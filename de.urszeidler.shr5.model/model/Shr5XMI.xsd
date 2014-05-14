@@ -948,19 +948,19 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Fahrzeug">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="runningProgramms" type="shr5:AutoSoft">
+          <xsd:element name="runningPrograms" type="shr5:RiggerProgram">
             <xsd:annotation>
               <xsd:documentation>The running programms are stored here.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="stroredProgramm" type="shr5:AutoSoft">
+          <xsd:element name="storedPrograms" type="shr5:RiggerProgram">
             <xsd:annotation>
               <xsd:documentation>The stored programs defines the programs to choose from when selecting the running programms.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:choice>
         <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
-        <xsd:attribute name="runningProgramms" type="xsd:string">
+        <xsd:attribute name="runningPrograms" type="xsd:string">
           <xsd:annotation>
             <xsd:documentation>The running programms are stored here.</xsd:documentation>
           </xsd:annotation>
@@ -1548,7 +1548,15 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:RiggerProgram">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="skill" type="shr5:Fertigkeit"/>
+          <xsd:element name="weapon" type="shr5:AbstaktWaffe"/>
+          <xsd:element name="model" type="shr5:Drohne"/>
+        </xsd:choice>
         <xsd:attribute name="rating" type="xsd:int" use="required"/>
+        <xsd:attribute name="skill" type="xsd:string"/>
+        <xsd:attribute name="weapon" type="xsd:string"/>
+        <xsd:attribute name="model" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

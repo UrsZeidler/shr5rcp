@@ -3162,7 +3162,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getDrohne_RunningProgramms() {
+    public EReference getDrohne_RunningPrograms() {
         return (EReference)drohneEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3171,7 +3171,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getDrohne_StroredProgramm() {
+    public EReference getDrohne_StoredPrograms() {
         return (EReference)drohneEClass.getEStructuralFeatures().get(2);
     }
 
@@ -4323,6 +4323,33 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getAutoSoft_Skill() {
+        return (EReference)autoSoftEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAutoSoft_Weapon() {
+        return (EReference)autoSoftEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getAutoSoft_Model() {
+        return (EReference)autoSoftEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getSoftware() {
         return softwareEClass;
     }
@@ -5014,8 +5041,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         drohneEClass = createEClass(DROHNE);
         createEAttribute(drohneEClass, DROHNE__PROGRAM_SLOT_COUNT);
-        createEReference(drohneEClass, DROHNE__RUNNING_PROGRAMMS);
-        createEReference(drohneEClass, DROHNE__STRORED_PROGRAMM);
+        createEReference(drohneEClass, DROHNE__RUNNING_PROGRAMS);
+        createEReference(drohneEClass, DROHNE__STORED_PROGRAMS);
 
         fahrzeugModifikationEClass = createEClass(FAHRZEUG_MODIFIKATION);
         createEReference(fahrzeugModifikationEClass, FAHRZEUG_MODIFIKATION__FUNKTION);
@@ -5178,6 +5205,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         autoSoftEClass = createEClass(AUTO_SOFT);
         createEAttribute(autoSoftEClass, AUTO_SOFT__RATING);
+        createEReference(autoSoftEClass, AUTO_SOFT__SKILL);
+        createEReference(autoSoftEClass, AUTO_SOFT__WEAPON);
+        createEReference(autoSoftEClass, AUTO_SOFT__MODEL);
 
         softwareEClass = createEClass(SOFTWARE);
 
@@ -5723,8 +5753,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(drohneEClass, Drohne.class, "Drohne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getDrohne_ProgramSlotCount(), ecorePackage.getEInt(), "programSlotCount", null, 0, 1, Drohne.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDrohne_RunningProgramms(), this.getAutoSoft(), null, "runningProgramms", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getDrohne_StroredProgramm(), this.getAutoSoft(), null, "stroredProgramm", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDrohne_RunningPrograms(), this.getRiggerProgram(), null, "runningPrograms", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getDrohne_StoredPrograms(), this.getRiggerProgram(), null, "storedPrograms", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(fahrzeugModifikationEClass, FahrzeugModifikation.class, "FahrzeugModifikation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getFahrzeugModifikation_Funktion(), this.getAbstraktGegenstand(), null, "funktion", null, 0, -1, FahrzeugModifikation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5887,6 +5917,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(autoSoftEClass, AutoSoft.class, "AutoSoft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getAutoSoft_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, AutoSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAutoSoft_Skill(), this.getFertigkeit(), null, "skill", null, 0, 1, AutoSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAutoSoft_Weapon(), this.getAbstaktWaffe(), null, "weapon", null, 0, 1, AutoSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getAutoSoft_Model(), this.getDrohne(), null, "model", null, 0, 1, AutoSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(softwareEClass, Software.class, "Software", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

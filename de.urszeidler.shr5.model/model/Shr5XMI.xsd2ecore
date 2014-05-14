@@ -485,9 +485,9 @@
     </nested>
     <nested inputs="shr5.ecore#//PassagierFahrzeug" outputs="Shr5XMI.xsd#//PassagierFahrzeug;XSDElementDeclaration=59"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60">
-      <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//Drohne/stroredProgramm" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Drohne/runningPrograms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Drohne/runningPrograms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//Drohne/storedPrograms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     </nested>
     <nested inputs="shr5.ecore#//MatrixAttributes/currentModus" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDElementDeclaration=60"/>
@@ -710,6 +710,12 @@
     <nested inputs="shr5.ecore#//RiggerCommandConsole" outputs="Shr5XMI.xsd#//RiggerCommandConsole;XSDElementDeclaration=98"/>
     <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99">
       <nested inputs="shr5.ecore#//AutoSoft/rating" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//AutoSoft/skill" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//AutoSoft/skill" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//AutoSoft/weapon" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//AutoSoft/weapon" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//AutoSoft/model" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//AutoSoft/model" outputs="Shr5XMI.xsd#//AutoSoft;XSDComplexTypeDefinition=99/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//AutoSoft" outputs="Shr5XMI.xsd#//AutoSoft;XSDElementDeclaration=99"/>
     <nested inputs="shr5.ecore#//Software" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100"/>

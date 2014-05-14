@@ -387,8 +387,8 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Drohne">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drohne/programSlotCount"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/runningProgramms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/stroredProgramm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/runningPrograms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/storedPrograms"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//FahrzeugModifikation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//FahrzeugModifikation/funktion"/>
@@ -541,6 +541,9 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//AutoSoft">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AutoSoft/rating"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/skill"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/weapon"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AutoSoft/model"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Software"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//MatrixProgram"/>
@@ -564,7 +567,7 @@
     <genClasses ecoreClass="shr5.ecore#//Datasoft">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Datasoft/skill"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//AbstractMatrixDevice">
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstractMatrixDevice">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstractMatrixDevice/deviceRating"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//ConsumerSoft">
