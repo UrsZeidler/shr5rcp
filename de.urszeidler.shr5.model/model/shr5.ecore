@@ -474,7 +474,7 @@
     <eLiterals name="permanent" value="3"/>
     <eLiterals name="speziell" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar #//Modifizierbar">
+  <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Anwendbar #//Modifizierbar #//FahrzeugZustand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handling" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="geschwindigkeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschleunigung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -484,6 +484,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fahrzeugTyp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modifizierungen" upperBound="-1"
         eType="#//FahrzeugModifikation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="panzer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug" eSuperTypes="#//PassagierFahrzeug">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handlingGelaende" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -836,5 +837,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="#//Fertigkeit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FahrzeugZustand" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
 </ecore:EPackage>

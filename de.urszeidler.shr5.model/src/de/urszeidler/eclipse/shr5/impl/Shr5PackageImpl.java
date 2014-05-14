@@ -758,6 +758,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass fahrzeugZustandEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3024,6 +3031,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFahrzeug_Panzer() {
+        return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(8);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4284,6 +4300,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getFahrzeugZustand() {
+        return fahrzeugZustandEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFahrzeugZustand_ZustandMax() {
+        return (EAttribute)fahrzeugZustandEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -4760,6 +4794,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(fahrzeugEClass, FAHRZEUG__SENSOR);
         createEAttribute(fahrzeugEClass, FAHRZEUG__FAHRZEUG_TYP);
         createEReference(fahrzeugEClass, FAHRZEUG__MODIFIZIERUNGEN);
+        createEAttribute(fahrzeugEClass, FAHRZEUG__PANZER);
 
         bodenfahrzeugEClass = createEClass(BODENFAHRZEUG);
         createEAttribute(bodenfahrzeugEClass, BODENFAHRZEUG__HANDLING_GELAENDE);
@@ -4948,6 +4983,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(skillSoftEClass, SKILL_SOFT__SKILL);
         createEAttribute(skillSoftEClass, SKILL_SOFT__RATING);
 
+        fahrzeugZustandEClass = createEClass(FAHRZEUG_ZUSTAND);
+        createEAttribute(fahrzeugZustandEClass, FAHRZEUG_ZUSTAND__ZUSTAND_MAX);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -5078,6 +5116,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fahrzeugEClass.getESuperTypes().add(this.getGeldWert());
         fahrzeugEClass.getESuperTypes().add(this.getAnwendbar());
         fahrzeugEClass.getESuperTypes().add(this.getModifizierbar());
+        fahrzeugEClass.getESuperTypes().add(this.getFahrzeugZustand());
         bodenfahrzeugEClass.getESuperTypes().add(this.getPassagierFahrzeug());
         passagierFahrzeugEClass.getESuperTypes().add(this.getFahrzeug());
         drohneEClass.getESuperTypes().add(this.getFahrzeug());
@@ -5431,6 +5470,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFahrzeug_Sensor(), ecorePackage.getEInt(), "sensor", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFahrzeug_FahrzeugTyp(), ecorePackage.getEString(), "fahrzeugTyp", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFahrzeug_Modifizierungen(), this.getFahrzeugModifikation(), null, "modifizierungen", null, 0, -1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getFahrzeug_Panzer(), ecorePackage.getEInt(), "panzer", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(bodenfahrzeugEClass, Bodenfahrzeug.class, "Bodenfahrzeug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getBodenfahrzeug_HandlingGelaende(), ecorePackage.getEInt(), "handlingGelaende", null, 0, 1, Bodenfahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5618,6 +5658,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(skillSoftEClass, SkillSoft.class, "SkillSoft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getSkillSoft_Skill(), this.getFertigkeit(), null, "skill", null, 1, 1, SkillSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSkillSoft_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SkillSoft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(fahrzeugZustandEClass, FahrzeugZustand.class, "FahrzeugZustand", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getFahrzeugZustand_ZustandMax(), ecorePackage.getEInt(), "zustandMax", null, 0, 1, FahrzeugZustand.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

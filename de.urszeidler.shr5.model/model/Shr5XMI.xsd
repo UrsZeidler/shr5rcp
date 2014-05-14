@@ -918,6 +918,7 @@
         <xsd:attribute name="pilot" type="xsd:int"/>
         <xsd:attribute name="sensor" type="xsd:int"/>
         <xsd:attribute name="fahrzeugTyp" type="xsd:string"/>
+        <xsd:attribute name="panzer" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1609,4 +1610,12 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="SkillSoft" type="shr5:SkillSoft"/>
+  <xsd:complexType abstract="true" name="FahrzeugZustand">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="FahrzeugZustand" type="shr5:FahrzeugZustand"/>
 </xsd:schema>

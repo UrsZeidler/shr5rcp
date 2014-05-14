@@ -666,6 +666,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseGeldWert(fahrzeug);
                 if (result == null) result = caseAnwendbar(fahrzeug);
                 if (result == null) result = caseModifizierbar(fahrzeug);
+                if (result == null) result = caseFahrzeugZustand(fahrzeug);
                 if (result == null) result = caseIdentifiable(fahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -680,6 +681,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseGeldWert(bodenfahrzeug);
                 if (result == null) result = caseAnwendbar(bodenfahrzeug);
                 if (result == null) result = caseModifizierbar(bodenfahrzeug);
+                if (result == null) result = caseFahrzeugZustand(bodenfahrzeug);
                 if (result == null) result = caseIdentifiable(bodenfahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -693,6 +695,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseGeldWert(passagierFahrzeug);
                 if (result == null) result = caseAnwendbar(passagierFahrzeug);
                 if (result == null) result = caseModifizierbar(passagierFahrzeug);
+                if (result == null) result = caseFahrzeugZustand(passagierFahrzeug);
                 if (result == null) result = caseIdentifiable(passagierFahrzeug);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -707,6 +710,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseGeldWert(drohne);
                 if (result == null) result = caseAnwendbar(drohne);
                 if (result == null) result = caseModifizierbar(drohne);
+                if (result == null) result = caseFahrzeugZustand(drohne);
                 if (result == null) result = caseMatixConditionMonitor(drohne);
                 if (result == null) result = caseIdentifiable(drohne);
                 if (result == null) result = defaultCase(theEObject);
@@ -1171,6 +1175,12 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(skillSoft);
                 if (result == null) result = caseQuelle(skillSoft);
                 if (result == null) result = caseIdentifiable(skillSoft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FAHRZEUG_ZUSTAND: {
+                FahrzeugZustand fahrzeugZustand = (FahrzeugZustand)theEObject;
+                T result = caseFahrzeugZustand(fahrzeugZustand);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2750,6 +2760,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseSkillSoft(SkillSoft object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Fahrzeug Zustand</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fahrzeug Zustand</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseFahrzeugZustand(FahrzeugZustand object) {
         return null;
     }
 

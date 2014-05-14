@@ -20,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getSensor <em>Sensor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getModifizierungen <em>Modifizierungen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getPanzer <em>Panzer</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Modifizierbar {
+public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Modifizierbar, FahrzeugZustand {
 	/**
      * Returns the value of the '<em><b>Handling</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -225,5 +226,31 @@ public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Mod
      * @generated
      */
 	EList<FahrzeugModifikation> getModifizierungen();
+
+    /**
+     * Returns the value of the '<em><b>Panzer</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Panzer</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Panzer</em>' attribute.
+     * @see #setPanzer(int)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getFahrzeug_Panzer()
+     * @model
+     * @generated
+     */
+    int getPanzer();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Fahrzeug#getPanzer <em>Panzer</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Panzer</em>' attribute.
+     * @see #getPanzer()
+     * @generated
+     */
+    void setPanzer(int value);
 
 } // Fahrzeug

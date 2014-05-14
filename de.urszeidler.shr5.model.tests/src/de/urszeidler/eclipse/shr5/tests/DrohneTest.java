@@ -142,4 +142,16 @@ public class DrohneTest extends FahrzeugTest {
         assertEquals(2, getFixture().getProgramSlotCount());
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax() <em>Zustand Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax()
+     * @generated not
+     */
+    public void testGetZustandMax() {
+        getFixture().setRumpf(5);
+        assertEquals(8,getFixture().getZustandMax());
+    }
+
 } //DrohneTest

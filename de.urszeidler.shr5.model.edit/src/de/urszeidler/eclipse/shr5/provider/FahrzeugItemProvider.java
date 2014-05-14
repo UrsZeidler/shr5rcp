@@ -70,6 +70,7 @@ public class FahrzeugItemProvider
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
             addFertigkeitPropertyDescriptor(object);
+            addZustandMaxPropertyDescriptor(object);
             addHandlingPropertyDescriptor(object);
             addGeschwindigkeitPropertyDescriptor(object);
             addBeschleunigungPropertyDescriptor(object);
@@ -77,6 +78,7 @@ public class FahrzeugItemProvider
             addPilotPropertyDescriptor(object);
             addSensorPropertyDescriptor(object);
             addFahrzeugTypPropertyDescriptor(object);
+            addPanzerPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -302,6 +304,28 @@ public class FahrzeugItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Zustand Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addZustandMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FahrzeugZustand_zustandMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_FahrzeugZustand_zustandMax_feature", "_UI_FahrzeugZustand_type"),
+                 Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Handling feature.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -456,6 +480,28 @@ public class FahrzeugItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Panzer feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addPanzerPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fahrzeug_panzer_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fahrzeug_panzer_feature", "_UI_Fahrzeug_type"),
+                 Shr5Package.Literals.FAHRZEUG__PANZER,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -520,6 +566,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__WERT:
             case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
             case Shr5Package.FAHRZEUG__WERT_VALUE:
+            case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
             case Shr5Package.FAHRZEUG__HANDLING:
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
             case Shr5Package.FAHRZEUG__BESCHLEUNIGUNG:
@@ -527,6 +574,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__PILOT:
             case Shr5Package.FAHRZEUG__SENSOR:
             case Shr5Package.FAHRZEUG__FAHRZEUG_TYP:
+            case Shr5Package.FAHRZEUG__PANZER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.FAHRZEUG__MODS:

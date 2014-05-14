@@ -460,6 +460,7 @@
       <nested inputs="shr5.ecore#//Fahrzeug/pilot" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=10"/>
       <nested inputs="shr5.ecore#//Fahrzeug/sensor" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=11"/>
       <nested inputs="shr5.ecore#//Fahrzeug/fahrzeugTyp" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=12"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/panzer" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=13"/>
       <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse"/>
@@ -735,5 +736,7 @@
       <nested inputs="shr5.ecore#//SkillSoft/skill" outputs="Shr5XMI.xsd#//SkillSoft;XSDComplexTypeDefinition=104/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//SkillSoft" outputs="Shr5XMI.xsd#//SkillSoft;XSDElementDeclaration=104"/>
+    <nested inputs="shr5.ecore#//FahrzeugZustand" outputs="Shr5XMI.xsd#//FahrzeugZustand;XSDComplexTypeDefinition=105"/>
+    <nested inputs="shr5.ecore#//FahrzeugZustand" outputs="Shr5XMI.xsd#//FahrzeugZustand;XSDElementDeclaration=105"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

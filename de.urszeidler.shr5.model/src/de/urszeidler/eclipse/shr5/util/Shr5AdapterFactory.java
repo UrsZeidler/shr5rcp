@@ -486,6 +486,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createSkillSoftAdapter();
             }
             @Override
+            public Adapter caseFahrzeugZustand(FahrzeugZustand object) {
+                return createFahrzeugZustandAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1972,6 +1976,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createSkillSoftAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.FahrzeugZustand <em>Fahrzeug Zustand</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.FahrzeugZustand
+     * @generated
+     */
+    public Adapter createFahrzeugZustandAdapter() {
         return null;
     }
 

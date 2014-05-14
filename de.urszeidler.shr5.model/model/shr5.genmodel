@@ -374,6 +374,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/sensor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/fahrzeugTyp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/modifizierungen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/panzer"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Bodenfahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/handlingGelaende"/>
@@ -549,6 +550,9 @@
     <genClasses ecoreClass="shr5.ecore#//SkillSoft">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//SkillSoft/skill"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SkillSoft/rating"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//FahrzeugZustand">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FahrzeugZustand/zustandMax"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

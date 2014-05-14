@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.Anwendbar;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
+import de.urszeidler.eclipse.shr5.FahrzeugZustand;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
@@ -47,6 +48,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
@@ -55,6 +57,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensor <em>Sensor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
  * </ul>
  * </p>
  *
@@ -242,6 +245,16 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     protected EList<AttributModifikatorWert> mods;
 
     /**
+     * The default value of the '{@link #getZustandMax() <em>Zustand Max</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getZustandMax()
+     * @generated
+     * @ordered
+     */
+    protected static final int ZUSTAND_MAX_EDEFAULT = 0;
+
+    /**
      * The default value of the '{@link #getHandling() <em>Handling</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -392,6 +405,26 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<FahrzeugModifikation> modifizierungen;
 
 	/**
+     * The default value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPanzer()
+     * @generated
+     * @ordered
+     */
+    protected static final int PANZER_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPanzer()
+     * @generated
+     * @ordered
+     */
+    protected int panzer = PANZER_EDEFAULT;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -660,6 +693,15 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getZustandMax() {
+        return 12 + (getRumpf()/2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -822,6 +864,27 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getPanzer() {
+        return panzer;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPanzer(int newPanzer) {
+        int oldPanzer = panzer;
+        panzer = newPanzer;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__PANZER, oldPanzer, panzer));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -880,6 +943,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return basicGetFertigkeit();
             case Shr5Package.FAHRZEUG__MODS:
                 return getMods();
+            case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
+                return getZustandMax();
             case Shr5Package.FAHRZEUG__HANDLING:
                 return getHandling();
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
@@ -896,6 +961,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return getFahrzeugTyp();
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 return getModifizierungen();
+            case Shr5Package.FAHRZEUG__PANZER:
+                return getPanzer();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -965,6 +1032,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 getModifizierungen().clear();
                 getModifizierungen().addAll((Collection<? extends FahrzeugModifikation>)newValue);
                 return;
+            case Shr5Package.FAHRZEUG__PANZER:
+                setPanzer((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -1031,6 +1101,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 getModifizierungen().clear();
                 return;
+            case Shr5Package.FAHRZEUG__PANZER:
+                setPanzer(PANZER_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -1065,6 +1138,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return fertigkeit != null;
             case Shr5Package.FAHRZEUG__MODS:
                 return mods != null && !mods.isEmpty();
+            case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
+                return getZustandMax() != ZUSTAND_MAX_EDEFAULT;
             case Shr5Package.FAHRZEUG__HANDLING:
                 return handling != HANDLING_EDEFAULT;
             case Shr5Package.FAHRZEUG__GESCHWINDIGKEIT:
@@ -1081,6 +1156,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return FAHRZEUG_TYP_EDEFAULT == null ? fahrzeugTyp != null : !FAHRZEUG_TYP_EDEFAULT.equals(fahrzeugTyp);
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 return modifizierungen != null && !modifizierungen.isEmpty();
+            case Shr5Package.FAHRZEUG__PANZER:
+                return panzer != PANZER_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -1122,6 +1199,12 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Modifizierbar.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.FAHRZEUG__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
+                default: return -1;
+            }
+        }
+        if (baseClass == FahrzeugZustand.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.FAHRZEUG__ZUSTAND_MAX: return Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX;
                 default: return -1;
             }
         }
@@ -1168,6 +1251,12 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 default: return -1;
             }
         }
+        if (baseClass == FahrzeugZustand.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX: return Shr5Package.FAHRZEUG__ZUSTAND_MAX;
+                default: return -1;
+            }
+        }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
@@ -1209,6 +1298,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         result.append(sensor);
         result.append(", fahrzeugTyp: ");
         result.append(fahrzeugTyp);
+        result.append(", panzer: ");
+        result.append(panzer);
         result.append(')');
         return result.toString();
     }

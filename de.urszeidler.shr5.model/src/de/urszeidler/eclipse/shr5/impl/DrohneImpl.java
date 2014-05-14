@@ -419,4 +419,13 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
         return result.toString();
     }
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getZustandMax() {
+        return 6 + (getRumpf()/2);
+    }
+
 } //DrohneImpl

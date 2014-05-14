@@ -17,6 +17,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * The following features are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax() <em>Zustand Max</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -71,6 +72,18 @@ public abstract class FahrzeugTest extends TestCase {
     public void testGetWert() {
         getFixture().setWertValue(new BigDecimal(10));        
         assertEquals(10,getFixture().getWert().intValue());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax() <em>Zustand Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax()
+     * @generated not
+     */
+    public void testGetZustandMax() {
+        getFixture().setRumpf(5);
+        assertEquals(14,getFixture().getZustandMax());
     }
 
     /**
