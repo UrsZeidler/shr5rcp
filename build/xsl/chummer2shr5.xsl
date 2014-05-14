@@ -2211,7 +2211,7 @@
 		<entries xsi:type="shr5:CommonProgram">
 			<xsl:choose>
 				<xsl:when test="category/text()='Hacking'">
-					<xsl:attribute name="category">
+					<xsl:attribute name="programType">
 					<xsl:value-of select="'hackingProgram'" />
 									</xsl:attribute>
 					<xsl:attribute name="verfuegbarkeit"><xsl:value-of
@@ -2220,7 +2220,7 @@
 						select="250" /></xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:attribute name="category">
+					<xsl:attribute name="programType">
 					<xsl:value-of select="'defaultProgram'" />
 									</xsl:attribute>
 
