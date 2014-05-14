@@ -171,33 +171,10 @@ public class GenerateShr5MarkdownReport extends AbstractAcceleoGenerator {
      *            This will be used to display progress information to the user.
      * @throws IOException
      *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * @generated not
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
-        /*
-         * TODO if you wish to change the generation as a whole, override this. The default behavior should
-         * be sufficient in most cases. If you want to change the content of this method, do NOT forget to
-         * change the "@generated" tag in the Javadoc of this method to "@generated NOT". Without this new tag,
-         * any compilation of the Acceleo module with the main template that has caused the creation of this
-         * class will revert your modifications. If you encounter a problem with an unresolved proxy during the
-         * generation, you can remove the comments in the following instructions to check for problems. Please
-         * note that those instructions may have a significant impact on the performances.
-         */
-
-        //org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(model);
-
-        /*
-         * If you want to check for potential errors in your models before the launch of the generation, you
-         * use the code below.
-         */
-
-        //if (model != null && model.eResource() != null) {
-        //    List<org.eclipse.emf.ecore.resource.Resource.Diagnostic> errors = model.eResource().getErrors();
-        //    for (org.eclipse.emf.ecore.resource.Resource.Diagnostic diagnostic : errors) {
-        //        System.err.println(diagnostic.toString());
-        //    }
-        //}
 
         super.doGenerate(monitor);
     }
@@ -206,17 +183,11 @@ public class GenerateShr5MarkdownReport extends AbstractAcceleoGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
         List<IAcceleoTextGenerationListener> listeners = super.getGenerationListeners();
-        /*
-         * TODO if you need to listen to generation event, add listeners to the list here. If you want to change
-         * the content of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method
-         * to "@generated NOT". Without this new tag, any compilation of the Acceleo module with the main template
-         * that has caused the creation of this class will revert your modifications.
-         */
         return listeners;
     }
     
