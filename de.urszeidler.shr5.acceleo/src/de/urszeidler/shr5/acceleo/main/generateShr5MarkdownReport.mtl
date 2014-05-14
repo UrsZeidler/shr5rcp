@@ -26,6 +26,8 @@ All you can buy.
 [printAllSubClassesAndTitel(anEPackage, 'AbstraktModifikatoren')/]
 All the things that can modify the character.
 
+[printAllSubClassesAndTitel(anEPackage, 'Software')/]
+All the software.
 
 # all classes
 
