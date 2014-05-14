@@ -97,14 +97,15 @@ public class TutorsoftImpl extends BasicProgramImpl implements Tutorsoft {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setRating(int newRating) {
         int oldRating = rating;
         rating = newRating;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__RATING, oldRating, rating));
-    }
+        eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldRating, rating));
+    }    }
 
     /**
      * <!-- begin-user-doc -->

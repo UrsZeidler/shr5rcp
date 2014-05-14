@@ -122,7 +122,10 @@ public class SoftwarePage extends AbstractShr5Page<Software> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SKILL_SOFT__SKILL, grpGegenstand);
         } else if (object instanceof AutoSoft) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__RATING, grpGegenstand);
-        } else if (object instanceof ConsumerSoft) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__MODEL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__SKILL, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__MODEL, grpGegenstand);
+       } else if (object instanceof ConsumerSoft) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CONSUMER_SOFT__TYPE, grpGegenstand);
         } else if (object instanceof Datasoft) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DATASOFT__SKILL, grpGegenstand);

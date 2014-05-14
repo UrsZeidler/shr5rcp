@@ -244,6 +244,9 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * @generated not
      */
     public BigDecimal getWert() {
+        if(getWertValue()==null)
+            return new BigDecimal(0);
+            
         return getWertValue().multiply(new BigDecimal(getRating()));
     }
 
@@ -280,14 +283,15 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SOFTWARE_AGENT__WERT_VALUE, oldWertValue, wertValue));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+        } }
 
     /**
      * <!-- begin-user-doc -->
@@ -444,14 +448,15 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setRating(int newRating) {
         int oldRating = rating;
         rating = newRating;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SOFTWARE_AGENT__RATING, oldRating, rating));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldRating, rating));
+        }}
 
     /**
      * <!-- begin-user-doc -->

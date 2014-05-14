@@ -22,6 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -324,11 +325,11 @@ public class RiggerCommandConsoleItemProvider
      * This adds a property descriptor for the Running Programs feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected void addRunningProgramsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
+            (new ItemPropertyDescriptor//createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
                  getString("_UI_RiggerCommandConsole_runningPrograms_feature"),
@@ -339,7 +340,13 @@ public class RiggerCommandConsoleItemProvider
                  true,
                  null,
                  null,
-                 null));
+                 null){
+                @Override
+                public Collection<?> getChoiceOfValues(Object object) {
+                    return ((RiggerCommandConsole)(object)).getStoredPrograms();
+                }
+
+            });
     }
 
     /**
