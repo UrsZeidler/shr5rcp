@@ -3,7 +3,11 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
+import de.urszeidler.eclipse.shr5.CommonProgram;
+import de.urszeidler.eclipse.shr5.ConsumerSoft;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
@@ -157,5 +161,27 @@ public class RiggerCommandConsoleTest extends AbstraktGegenstandTest {
         getFixture().setDatenverarbeitungBasis(3);
         assertEquals(3, getFixture().getDatenverarbeitung());
     }
+
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung()
+     * @generated not
+     */
+    public void testGetPricePlusSoftware() {
+        getFixture().setWertValue(new BigDecimal(10));
+        
+        assertEquals(10, getFixture().getWert().intValue());
+        
+        CommonProgram program = Shr5Factory.eINSTANCE.createCommonProgram();
+        getFixture().getStoredPrograms().add(program);
+
+        assertEquals(10, getFixture().getWert().intValue());
+        program.setWertValue(new BigDecimal(1));
+        assertEquals(11, getFixture().getWert().intValue());
+}
 
 } // RiggerCommandConsoleTest

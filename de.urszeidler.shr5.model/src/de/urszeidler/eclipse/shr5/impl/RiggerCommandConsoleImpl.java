@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.RiggerProgram;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
+import java.math.BigDecimal;
 import java.util.Collection;
 
 /**
@@ -743,6 +744,17 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        BigDecimal calcListenWert = ShadowrunTools.calcListenWert(getStoredPrograms());
+        return getWertValue().add(calcListenWert);
+    }
+
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

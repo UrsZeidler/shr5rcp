@@ -16,12 +16,13 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public class CommlinkTest extends AbstraktGegenstandTest {
@@ -29,6 +30,7 @@ public class CommlinkTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -39,6 +41,7 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      * Constructs a new Commlink test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public CommlinkTest(String name) {
@@ -49,6 +52,7 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      * Returns the fixture for this Commlink test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -72,6 +76,7 @@ public class CommlinkTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -84,6 +89,7 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
      * @generated not
      */
@@ -126,6 +132,7 @@ public class CommlinkTest extends AbstraktGegenstandTest {
     public void testGetDatenverarbeitung() {
         assertEquals(2, getFixture().getDatenverarbeitung());
     }
+
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
@@ -136,15 +143,15 @@ public class CommlinkTest extends AbstraktGegenstandTest {
      */
     public void testGetPricePlusSoftware() {
         getFixture().setWertValue(new BigDecimal(10));
-        
+
         assertEquals(10, getFixture().getWert().intValue());
-        
+
         ConsumerSoft program = Shr5Factory.eINSTANCE.createConsumerSoft();
         getFixture().getStoredPrograms().add(program);
 
         assertEquals(10, getFixture().getWert().intValue());
         program.setWertValue(new BigDecimal(1));
         assertEquals(11, getFixture().getWert().intValue());
-}
+    }
 
 } // ComlinkTest

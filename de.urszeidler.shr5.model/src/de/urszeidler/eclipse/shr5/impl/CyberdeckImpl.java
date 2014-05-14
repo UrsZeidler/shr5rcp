@@ -3,7 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import java.math.BigDecimal;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -14,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
@@ -936,6 +939,17 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public BigDecimal getWert() {
+        BigDecimal calcListenWert = ShadowrunTools.calcListenWert(getStoredPrograms());
+        return getWertValue().add(calcListenWert);
+    }
+
+    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
