@@ -196,6 +196,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.AUTO_SOFT: return createAutoSoft();
             case Shr5Package.TUTORSOFT: return createTutorsoft();
             case Shr5Package.SKILL_SOFT: return createSkillSoft();
+            case Shr5Package.PERSONAL_AREA_NETWORK: return createPersonalAreaNetwork();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -913,6 +914,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public SkillSoft createSkillSoft() {
         SkillSoftImpl skillSoft = new SkillSoftImpl();
         return skillSoft;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonalAreaNetwork createPersonalAreaNetwork() {
+        PersonalAreaNetworkImpl personalAreaNetwork = new PersonalAreaNetworkImpl();
+        return personalAreaNetwork;
     }
 
     /**

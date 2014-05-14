@@ -693,6 +693,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="datenverarbeitung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentModus" eType="#//InterfaceModus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pan" eType="#//PersonalAreaNetwork"
+        containment="true" eOpposite="#//PersonalAreaNetwork/master"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActiveMatixDevice" abstract="true" interface="true"
       eSuperTypes="#//MatrixDevice">
@@ -840,6 +842,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FahrzeugZustand" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustandMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonalAreaNetwork">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slaves" upperBound="-1"
+        eType="#//MatrixDevice"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="master" lowerBound="1"
+        eType="#//MatrixDevice" eOpposite="#//MatrixDevice/pan"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="slaveMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
 </ecore:EPackage>

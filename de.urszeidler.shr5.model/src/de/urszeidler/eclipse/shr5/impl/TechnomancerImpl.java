@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.ResonanzPersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Technomancer;
@@ -35,6 +36,7 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getCurrentModus <em>Current Modus</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getResonanz <em>Resonanz</em>}</li>
@@ -106,6 +108,16 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      * @ordered
      */
     protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getPan() <em>Pan</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPan()
+     * @generated
+     * @ordered
+     */
+    protected PersonalAreaNetwork pan;
 
     /**
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
@@ -272,6 +284,49 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonalAreaNetwork getPan() {
+        return pan;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetPan(PersonalAreaNetwork newPan, NotificationChain msgs) {
+        PersonalAreaNetwork oldPan = pan;
+        pan = newPan;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.TECHNOMANCER__PAN, oldPan, newPan);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPan(PersonalAreaNetwork newPan) {
+        if (newPan != pan) {
+            NotificationChain msgs = null;
+            if (pan != null)
+                msgs = ((InternalEObject)pan).eInverseRemove(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            if (newPan != null)
+                msgs = ((InternalEObject)newPan).eInverseAdd(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            msgs = basicSetPan(newPan, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TECHNOMANCER__PAN, newPan, newPan));
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated not
@@ -327,12 +382,30 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.TECHNOMANCER__PAN:
+                if (pan != null)
+                    msgs = ((InternalEObject)pan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.TECHNOMANCER__PAN, null, msgs);
+                return basicSetPan((PersonalAreaNetwork)otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.TECHNOMANCER__PAN:
+                return basicSetPan(null, msgs);
             case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
                 return ((InternalEList<?>)getComplexForms()).basicRemove(otherEnd, msgs);
             case Shr5Package.TECHNOMANCER__ECHOS:
@@ -359,6 +432,8 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
                 return getDatenverarbeitung();
             case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
                 return getCurrentModus();
+            case Shr5Package.TECHNOMANCER__PAN:
+                return getPan();
             case Shr5Package.TECHNOMANCER__ANGRIFF:
                 return getAngriff();
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
@@ -387,6 +462,9 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
             case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
                 setCurrentModus((InterfaceModus)newValue);
                 return;
+            case Shr5Package.TECHNOMANCER__PAN:
+                setPan((PersonalAreaNetwork)newValue);
+                return;
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 setResonanzBasis((Integer)newValue);
                 return;
@@ -412,6 +490,9 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
         switch (featureID) {
             case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
                 setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
+            case Shr5Package.TECHNOMANCER__PAN:
+                setPan((PersonalAreaNetwork)null);
                 return;
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 setResonanzBasis(RESONANZ_BASIS_EDEFAULT);
@@ -444,6 +525,8 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.TECHNOMANCER__CURRENT_MODUS:
                 return currentModus != CURRENT_MODUS_EDEFAULT;
+            case Shr5Package.TECHNOMANCER__PAN:
+                return pan != null;
             case Shr5Package.TECHNOMANCER__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.TECHNOMANCER__SCHLEICHER:
@@ -479,6 +562,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
                 case Shr5Package.TECHNOMANCER__FIREWALL: return Shr5Package.MATRIX_DEVICE__FIREWALL;
                 case Shr5Package.TECHNOMANCER__DATENVERARBEITUNG: return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
                 case Shr5Package.TECHNOMANCER__CURRENT_MODUS: return Shr5Package.MATRIX_DEVICE__CURRENT_MODUS;
+                case Shr5Package.TECHNOMANCER__PAN: return Shr5Package.MATRIX_DEVICE__PAN;
                 default: return -1;
             }
         }
@@ -518,6 +602,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
                 case Shr5Package.MATRIX_DEVICE__FIREWALL: return Shr5Package.TECHNOMANCER__FIREWALL;
                 case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG: return Shr5Package.TECHNOMANCER__DATENVERARBEITUNG;
                 case Shr5Package.MATRIX_DEVICE__CURRENT_MODUS: return Shr5Package.TECHNOMANCER__CURRENT_MODUS;
+                case Shr5Package.MATRIX_DEVICE__PAN: return Shr5Package.TECHNOMANCER__PAN;
                 default: return -1;
             }
         }

@@ -484,10 +484,11 @@
     <nested inputs="shr5.ecore#//PassagierFahrzeug" outputs="Shr5XMI.xsd#//PassagierFahrzeug;XSDElementDeclaration=59"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60">
       <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//Drohne/stroredProgramm" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Drohne/runningProgramms" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Drohne/stroredProgramm" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//MatrixDevice/pan" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDElementDeclaration=60"/>
     <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61">
       <nested inputs="shr5.ecore#//FahrzeugModifikation/funktion" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle=1"/>
@@ -500,10 +501,11 @@
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDElementDeclaration=61"/>
     <nested inputs="shr5.ecore#//Technomancer" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62">
-      <nested inputs="shr5.ecore#//Technomancer/complexForms" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//Technomancer/echos" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Technomancer/complexForms" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Technomancer/echos" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//MatrixDevice/pan" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//ResonanzPersona/resonanzBasis" outputs="Shr5XMI.xsd#//Technomancer;XSDComplexTypeDefinition=62/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Technomancer" outputs="Shr5XMI.xsd#//Technomancer;XSDElementDeclaration=62"/>
     <nested inputs="shr5.ecore#//ResonanzPersona" outputs="Shr5XMI.xsd#//ResonanzPersona;XSDComplexTypeDefinition=63">
@@ -656,6 +658,7 @@
     <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDElementDeclaration=89"/>
     <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90">
       <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//MatrixDevice/pan" outputs="Shr5XMI.xsd#//MatrixDevice;XSDComplexTypeDefinition=90/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//MatrixDevice" outputs="Shr5XMI.xsd#//MatrixDevice;XSDElementDeclaration=90"/>
     <nested inputs="shr5.ecore#//ActiveMatixDevice" outputs="Shr5XMI.xsd#//ActiveMatixDevice;XSDComplexTypeDefinition=91"/>
@@ -663,10 +666,11 @@
     <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92">
       <nested inputs="shr5.ecore#//Commlink/deviceRating" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Commlink/runningProgramms" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse=2"/>
-      <nested inputs="shr5.ecore#//Commlink/runningProgramms" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle"/>
-      <nested inputs="shr5.ecore#//Commlink/stroredProgramm" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Commlink/runningProgramms" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//Commlink/stroredProgramm" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//MatrixDevice/currentModus" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//MatrixDevice/pan" outputs="Shr5XMI.xsd#//Commlink;XSDComplexTypeDefinition=92/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Commlink" outputs="Shr5XMI.xsd#//Commlink;XSDElementDeclaration=92"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDComplexTypeDefinition=93"/>
     <nested inputs="shr5.ecore#//MatixConditionMonitor" outputs="Shr5XMI.xsd#//MatixConditionMonitor;XSDElementDeclaration=93"/>
@@ -738,5 +742,12 @@
     <nested inputs="shr5.ecore#//SkillSoft" outputs="Shr5XMI.xsd#//SkillSoft;XSDElementDeclaration=104"/>
     <nested inputs="shr5.ecore#//FahrzeugZustand" outputs="Shr5XMI.xsd#//FahrzeugZustand;XSDComplexTypeDefinition=105"/>
     <nested inputs="shr5.ecore#//FahrzeugZustand" outputs="Shr5XMI.xsd#//FahrzeugZustand;XSDElementDeclaration=105"/>
+    <nested inputs="shr5.ecore#//PersonalAreaNetwork" outputs="Shr5XMI.xsd#//PersonalAreaNetwork;XSDComplexTypeDefinition=106">
+      <nested inputs="shr5.ecore#//PersonalAreaNetwork/slaves" outputs="Shr5XMI.xsd#//PersonalAreaNetwork;XSDComplexTypeDefinition=106/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//PersonalAreaNetwork/slaves" outputs="Shr5XMI.xsd#//PersonalAreaNetwork;XSDComplexTypeDefinition=106/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="shr5.ecore#//PersonalAreaNetwork/master" outputs="Shr5XMI.xsd#//PersonalAreaNetwork;XSDComplexTypeDefinition=106/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//PersonalAreaNetwork/master" outputs="Shr5XMI.xsd#//PersonalAreaNetwork;XSDComplexTypeDefinition=106/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//PersonalAreaNetwork" outputs="Shr5XMI.xsd#//PersonalAreaNetwork;XSDElementDeclaration=106"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

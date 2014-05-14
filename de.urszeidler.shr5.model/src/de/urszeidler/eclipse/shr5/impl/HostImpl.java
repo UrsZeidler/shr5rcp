@@ -4,13 +4,16 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Host;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
@@ -25,6 +28,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getCurrentModus <em>Current Modus</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
@@ -95,6 +99,16 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * @ordered
      */
     protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getPan() <em>Pan</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPan()
+     * @generated
+     * @ordered
+     */
+    protected PersonalAreaNetwork pan;
 
     /**
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
@@ -265,6 +279,49 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    public PersonalAreaNetwork getPan() {
+        return pan;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetPan(PersonalAreaNetwork newPan, NotificationChain msgs) {
+        PersonalAreaNetwork oldPan = pan;
+        pan = newPan;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__PAN, oldPan, newPan);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPan(PersonalAreaNetwork newPan) {
+        if (newPan != pan) {
+            NotificationChain msgs = null;
+            if (pan != null)
+                msgs = ((InternalEObject)pan).eInverseRemove(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            if (newPan != null)
+                msgs = ((InternalEObject)newPan).eInverseAdd(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            msgs = basicSetPan(newPan, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__PAN, newPan, newPan));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getAngriff() {
         // TODO: implement this method to return the 'Angriff' attribute
         // Ensure that you remove @generated or mark it @generated NOT
@@ -351,6 +408,36 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * @generated
      */
     @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.HOST__PAN:
+                if (pan != null)
+                    msgs = ((InternalEObject)pan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.HOST__PAN, null, msgs);
+                return basicSetPan((PersonalAreaNetwork)otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.HOST__PAN:
+                return basicSetPan(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
@@ -363,6 +450,8 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return getDatenverarbeitung();
             case Shr5Package.HOST__CURRENT_MODUS:
                 return getCurrentModus();
+            case Shr5Package.HOST__PAN:
+                return getPan();
             case Shr5Package.HOST__ANGRIFF:
                 return getAngriff();
             case Shr5Package.HOST__SCHLEICHER:
@@ -388,6 +477,9 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
             case Shr5Package.HOST__CURRENT_MODUS:
                 setCurrentModus((InterfaceModus)newValue);
                 return;
+            case Shr5Package.HOST__PAN:
+                setPan((PersonalAreaNetwork)newValue);
+                return;
             case Shr5Package.HOST__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
                 return;
@@ -411,6 +503,9 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         switch (featureID) {
             case Shr5Package.HOST__CURRENT_MODUS:
                 setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
+            case Shr5Package.HOST__PAN:
+                setPan((PersonalAreaNetwork)null);
                 return;
             case Shr5Package.HOST__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
@@ -443,6 +538,8 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.HOST__CURRENT_MODUS:
                 return currentModus != CURRENT_MODUS_EDEFAULT;
+            case Shr5Package.HOST__PAN:
+                return pan != null;
             case Shr5Package.HOST__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.HOST__SCHLEICHER:

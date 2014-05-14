@@ -944,6 +944,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Fahrzeug">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
           <xsd:element name="runningProgramms" type="shr5:AutoSoft">
             <xsd:annotation>
               <xsd:documentation>The running programms are stored here.</xsd:documentation>
@@ -993,6 +994,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:KoerperPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
           <xsd:element name="complexForms" type="shr5:PersonaKomplexForm"/>
           <xsd:element name="echos" type="shr5:Echo"/>
         </xsd:choice>
@@ -1373,6 +1375,9 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:MatixConditionMonitor">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
+        </xsd:choice>
         <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1402,6 +1407,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:AbstraktGegenstand">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
           <xsd:element name="runningProgramms" type="shr5:MatrixPrograms">
             <xsd:annotation>
               <xsd:documentation>The running programms are stored here.</xsd:documentation>
@@ -1618,4 +1624,16 @@
     <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
   </xsd:complexType>
   <xsd:element name="FahrzeugZustand" type="shr5:FahrzeugZustand"/>
+  <xsd:complexType name="PersonalAreaNetwork">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="slaves" type="shr5:MatrixDevice"/>
+      <xsd:element name="master" type="shr5:MatrixDevice"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="slaves" type="xsd:string"/>
+    <xsd:attribute name="master" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="PersonalAreaNetwork" type="shr5:PersonalAreaNetwork"/>
 </xsd:schema>

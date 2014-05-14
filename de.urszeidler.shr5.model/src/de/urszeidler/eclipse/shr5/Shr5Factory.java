@@ -580,6 +580,15 @@ public interface Shr5Factory extends EFactory {
     SkillSoft createSkillSoft();
 
     /**
+     * Returns a new object of class '<em>Personal Area Network</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Personal Area Network</em>'.
+     * @generated
+     */
+    PersonalAreaNetwork createPersonalAreaNetwork();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

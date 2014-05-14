@@ -19,6 +19,7 @@ import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
 import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.MatrixPrograms;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
@@ -34,6 +35,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getCurrentModus <em>Current Modus</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getDeviceRating <em>Device Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getRunningProgramms <em>Running Programms</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getStroredProgramm <em>Strored Programm</em>}</li>
@@ -102,6 +104,16 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * @ordered
      */
     protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getPan() <em>Pan</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPan()
+     * @generated
+     * @ordered
+     */
+    protected PersonalAreaNetwork pan;
 
     /**
      * The default value of the '{@link #getDeviceRating() <em>Device Rating</em>}' attribute.
@@ -228,6 +240,49 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    public PersonalAreaNetwork getPan() {
+        return pan;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetPan(PersonalAreaNetwork newPan, NotificationChain msgs) {
+        PersonalAreaNetwork oldPan = pan;
+        pan = newPan;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.COMMLINK__PAN, oldPan, newPan);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPan(PersonalAreaNetwork newPan) {
+        if (newPan != pan) {
+            NotificationChain msgs = null;
+            if (pan != null)
+                msgs = ((InternalEObject)pan).eInverseRemove(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            if (newPan != null)
+                msgs = ((InternalEObject)newPan).eInverseAdd(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            msgs = basicSetPan(newPan, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.COMMLINK__PAN, newPan, newPan));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public int getDeviceRating() {
         return deviceRating;
     }
@@ -274,8 +329,26 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * @generated
      */
     @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.COMMLINK__PAN:
+                if (pan != null)
+                    msgs = ((InternalEObject)pan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.COMMLINK__PAN, null, msgs);
+                return basicSetPan((PersonalAreaNetwork)otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.COMMLINK__PAN:
+                return basicSetPan(null, msgs);
             case Shr5Package.COMMLINK__STRORED_PROGRAMM:
                 return ((InternalEList<?>)getStroredProgramm()).basicRemove(otherEnd, msgs);
         }
@@ -300,6 +373,8 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 return getDatenverarbeitung();
             case Shr5Package.COMMLINK__CURRENT_MODUS:
                 return getCurrentModus();
+            case Shr5Package.COMMLINK__PAN:
+                return getPan();
             case Shr5Package.COMMLINK__DEVICE_RATING:
                 return getDeviceRating();
             case Shr5Package.COMMLINK__RUNNING_PROGRAMMS:
@@ -321,6 +396,9 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
         switch (featureID) {
             case Shr5Package.COMMLINK__CURRENT_MODUS:
                 setCurrentModus((InterfaceModus)newValue);
+                return;
+            case Shr5Package.COMMLINK__PAN:
+                setPan((PersonalAreaNetwork)newValue);
                 return;
             case Shr5Package.COMMLINK__DEVICE_RATING:
                 setDeviceRating((Integer)newValue);
@@ -347,6 +425,9 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
         switch (featureID) {
             case Shr5Package.COMMLINK__CURRENT_MODUS:
                 setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
+            case Shr5Package.COMMLINK__PAN:
+                setPan((PersonalAreaNetwork)null);
                 return;
             case Shr5Package.COMMLINK__DEVICE_RATING:
                 setDeviceRating(DEVICE_RATING_EDEFAULT);
@@ -379,6 +460,8 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.COMMLINK__CURRENT_MODUS:
                 return currentModus != CURRENT_MODUS_EDEFAULT;
+            case Shr5Package.COMMLINK__PAN:
+                return pan != null;
             case Shr5Package.COMMLINK__DEVICE_RATING:
                 return deviceRating != DEVICE_RATING_EDEFAULT;
             case Shr5Package.COMMLINK__RUNNING_PROGRAMMS:
@@ -408,6 +491,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 case Shr5Package.COMMLINK__FIREWALL: return Shr5Package.MATRIX_DEVICE__FIREWALL;
                 case Shr5Package.COMMLINK__DATENVERARBEITUNG: return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
                 case Shr5Package.COMMLINK__CURRENT_MODUS: return Shr5Package.MATRIX_DEVICE__CURRENT_MODUS;
+                case Shr5Package.COMMLINK__PAN: return Shr5Package.MATRIX_DEVICE__PAN;
                 default: return -1;
             }
         }
@@ -433,6 +517,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
                 case Shr5Package.MATRIX_DEVICE__FIREWALL: return Shr5Package.COMMLINK__FIREWALL;
                 case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG: return Shr5Package.COMMLINK__DATENVERARBEITUNG;
                 case Shr5Package.MATRIX_DEVICE__CURRENT_MODUS: return Shr5Package.COMMLINK__CURRENT_MODUS;
+                case Shr5Package.MATRIX_DEVICE__PAN: return Shr5Package.COMMLINK__PAN;
                 default: return -1;
             }
         }

@@ -765,6 +765,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass personalAreaNetworkEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3916,6 +3923,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getMatrixDevice_Pan() {
+        return (EReference)matrixDeviceEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -4314,6 +4330,42 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EAttribute getFahrzeugZustand_ZustandMax() {
         return (EAttribute)fahrzeugZustandEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getPersonalAreaNetwork() {
+        return personalAreaNetworkEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonalAreaNetwork_Slaves() {
+        return (EReference)personalAreaNetworkEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getPersonalAreaNetwork_Master() {
+        return (EReference)personalAreaNetworkEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getPersonalAreaNetwork_SlaveMax() {
+        return (EAttribute)personalAreaNetworkEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -4925,6 +4977,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__FIREWALL);
         createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__DATENVERARBEITUNG);
         createEAttribute(matrixDeviceEClass, MATRIX_DEVICE__CURRENT_MODUS);
+        createEReference(matrixDeviceEClass, MATRIX_DEVICE__PAN);
 
         activeMatixDeviceEClass = createEClass(ACTIVE_MATIX_DEVICE);
         createEAttribute(activeMatixDeviceEClass, ACTIVE_MATIX_DEVICE__ANGRIFF);
@@ -4985,6 +5038,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         fahrzeugZustandEClass = createEClass(FAHRZEUG_ZUSTAND);
         createEAttribute(fahrzeugZustandEClass, FAHRZEUG_ZUSTAND__ZUSTAND_MAX);
+
+        personalAreaNetworkEClass = createEClass(PERSONAL_AREA_NETWORK);
+        createEReference(personalAreaNetworkEClass, PERSONAL_AREA_NETWORK__SLAVES);
+        createEReference(personalAreaNetworkEClass, PERSONAL_AREA_NETWORK__MASTER);
+        createEAttribute(personalAreaNetworkEClass, PERSONAL_AREA_NETWORK__SLAVE_MAX);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -5601,6 +5659,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getMatrixDevice_Firewall(), ecorePackage.getEInt(), "firewall", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getMatrixDevice_Datenverarbeitung(), ecorePackage.getEInt(), "datenverarbeitung", null, 0, 1, MatrixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getMatrixDevice_CurrentModus(), this.getInterfaceModus(), "currentModus", null, 0, 1, MatrixDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getMatrixDevice_Pan(), this.getPersonalAreaNetwork(), this.getPersonalAreaNetwork_Master(), "pan", null, 0, 1, MatrixDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(activeMatixDeviceEClass, ActiveMatixDevice.class, "ActiveMatixDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getActiveMatixDevice_Angriff(), ecorePackage.getEInt(), "angriff", null, 0, 1, ActiveMatixDevice.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5661,6 +5720,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(fahrzeugZustandEClass, FahrzeugZustand.class, "FahrzeugZustand", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getFahrzeugZustand_ZustandMax(), ecorePackage.getEInt(), "zustandMax", null, 0, 1, FahrzeugZustand.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(personalAreaNetworkEClass, PersonalAreaNetwork.class, "PersonalAreaNetwork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getPersonalAreaNetwork_Slaves(), this.getMatrixDevice(), null, "slaves", null, 0, -1, PersonalAreaNetwork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPersonalAreaNetwork_Master(), this.getMatrixDevice(), this.getMatrixDevice_Pan(), "master", null, 1, 1, PersonalAreaNetwork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getPersonalAreaNetwork_SlaveMax(), ecorePackage.getEInt(), "slaveMax", null, 0, 1, PersonalAreaNetwork.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

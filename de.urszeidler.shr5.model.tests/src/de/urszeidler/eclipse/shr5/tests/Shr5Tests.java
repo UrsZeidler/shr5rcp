@@ -55,7 +55,9 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(AutoSoftTest.class);   
         suite.addTestSuite(SkillSoftTest.class);   
         suite.addTestSuite(TutorsoftTest.class);   
-        suite.addTestSuite(SoftwareAgentTest.class);   
+        suite.addTestSuite(SoftwareAgentTest.class);
+        suite.addTestSuite(PersonalAreaNetworkTest.class);
+        
         //suite.addTestSuite(HostTest.class);    
         
         

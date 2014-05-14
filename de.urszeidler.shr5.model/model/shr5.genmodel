@@ -496,6 +496,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/firewall"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/datenverarbeitung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/currentModus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//MatrixDevice/pan"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//ActiveMatixDevice">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ActiveMatixDevice/angriff"/>
@@ -553,6 +554,11 @@
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//FahrzeugZustand">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FahrzeugZustand/zustandMax"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//PersonalAreaNetwork">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/slaves"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/master"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonalAreaNetwork/slaveMax"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

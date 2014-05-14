@@ -1497,6 +1497,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonalAreaNetwork} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PersonalAreaNetworkItemProvider personalAreaNetworkItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonalAreaNetwork}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPersonalAreaNetworkAdapter() {
+        if (personalAreaNetworkItemProvider == null) {
+            personalAreaNetworkItemProvider = new PersonalAreaNetworkItemProvider(this);
+        }
+
+        return personalAreaNetworkItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1657,6 +1680,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (autoSoftItemProvider != null) autoSoftItemProvider.dispose();
         if (tutorsoftItemProvider != null) tutorsoftItemProvider.dispose();
         if (skillSoftItemProvider != null) skillSoftItemProvider.dispose();
+        if (personalAreaNetworkItemProvider != null) personalAreaNetworkItemProvider.dispose();
     }
 
 }

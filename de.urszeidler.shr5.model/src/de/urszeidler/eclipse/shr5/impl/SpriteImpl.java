@@ -3,6 +3,7 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -11,6 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -28,6 +30,7 @@ import de.urszeidler.eclipse.shr5.Sprite;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getCurrentModus <em>Current Modus</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getSchleicher <em>Schleicher</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getResonanz <em>Resonanz</em>}</li>
@@ -109,6 +112,16 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * @ordered
      */
     protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getPan() <em>Pan</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPan()
+     * @generated
+     * @ordered
+     */
+    protected PersonalAreaNetwork pan;
 
     /**
      * The default value of the '{@link #getAngriff() <em>Angriff</em>}' attribute.
@@ -486,6 +499,49 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PersonalAreaNetwork getPan() {
+        return pan;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetPan(PersonalAreaNetwork newPan, NotificationChain msgs) {
+        PersonalAreaNetwork oldPan = pan;
+        pan = newPan;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.SPRITE__PAN, oldPan, newPan);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setPan(PersonalAreaNetwork newPan) {
+        if (newPan != pan) {
+            NotificationChain msgs = null;
+            if (pan != null)
+                msgs = ((InternalEObject)pan).eInverseRemove(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            if (newPan != null)
+                msgs = ((InternalEObject)newPan).eInverseAdd(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
+            msgs = basicSetPan(newPan, msgs);
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SPRITE__PAN, newPan, newPan));
+    }
+
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated not
@@ -786,6 +842,36 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.SPRITE__PAN:
+                if (pan != null)
+                    msgs = ((InternalEObject)pan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.SPRITE__PAN, null, msgs);
+                return basicSetPan((PersonalAreaNetwork)otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.SPRITE__PAN:
+                return basicSetPan(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -802,6 +888,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
                 return getDatenverarbeitung();
             case Shr5Package.SPRITE__CURRENT_MODUS:
                 return getCurrentModus();
+            case Shr5Package.SPRITE__PAN:
+                return getPan();
             case Shr5Package.SPRITE__ANGRIFF:
                 return getAngriff();
             case Shr5Package.SPRITE__SCHLEICHER:
@@ -849,6 +937,9 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
         switch (featureID) {
             case Shr5Package.SPRITE__CURRENT_MODUS:
                 setCurrentModus((InterfaceModus)newValue);
+                return;
+            case Shr5Package.SPRITE__PAN:
+                setPan((PersonalAreaNetwork)newValue);
                 return;
             case Shr5Package.SPRITE__RESONANZ_BASIS:
                 setResonanzBasis((Integer)newValue);
@@ -903,6 +994,9 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
         switch (featureID) {
             case Shr5Package.SPRITE__CURRENT_MODUS:
                 setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
+            case Shr5Package.SPRITE__PAN:
+                setPan((PersonalAreaNetwork)null);
                 return;
             case Shr5Package.SPRITE__RESONANZ_BASIS:
                 setResonanzBasis(RESONANZ_BASIS_EDEFAULT);
@@ -965,6 +1059,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.SPRITE__CURRENT_MODUS:
                 return currentModus != CURRENT_MODUS_EDEFAULT;
+            case Shr5Package.SPRITE__PAN:
+                return pan != null;
             case Shr5Package.SPRITE__ANGRIFF:
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.SPRITE__SCHLEICHER:

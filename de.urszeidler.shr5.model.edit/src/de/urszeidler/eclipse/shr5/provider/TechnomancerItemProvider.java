@@ -284,6 +284,7 @@ public class TechnomancerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
             childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS);
             childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__ECHOS);
         }
@@ -358,6 +359,7 @@ public class TechnomancerItemProvider
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.TECHNOMANCER__PAN:
             case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
             case Shr5Package.TECHNOMANCER__ECHOS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -376,6 +378,11 @@ public class TechnomancerItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.MATRIX_DEVICE__PAN,
+                 Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
 
         newChildDescriptors.add
             (createChildParameter

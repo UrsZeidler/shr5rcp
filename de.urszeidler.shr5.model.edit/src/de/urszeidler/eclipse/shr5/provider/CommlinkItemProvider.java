@@ -243,6 +243,7 @@ public class CommlinkItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
             childrenFeatures.add(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM);
         }
         return childrenFeatures;
@@ -313,6 +314,7 @@ public class CommlinkItemProvider
             case Shr5Package.COMMLINK__DEVICE_RATING:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.COMMLINK__PAN:
             case Shr5Package.COMMLINK__STRORED_PROGRAMM:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -331,6 +333,12 @@ public class CommlinkItemProvider
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
+        newChildDescriptors.add
+        (createChildParameter
+            (Shr5Package.Literals.MATRIX_DEVICE__PAN,
+             Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
+
+        
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
