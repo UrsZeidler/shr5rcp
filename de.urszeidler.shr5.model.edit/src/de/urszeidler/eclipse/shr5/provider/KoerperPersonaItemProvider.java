@@ -82,7 +82,7 @@ public class KoerperPersonaItemProvider
                  getString("_UI_Panzerung_panzer_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_Panzerung_panzer_feature", "_UI_Panzerung_type"),
                  Shr5Package.Literals.PANZERUNG__PANZER,
-                 true,
+                 false,
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,

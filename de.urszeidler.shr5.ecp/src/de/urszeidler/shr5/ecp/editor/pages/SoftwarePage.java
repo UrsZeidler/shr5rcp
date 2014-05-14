@@ -15,7 +15,9 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.AutoSoft;
-import de.urszeidler.eclipse.shr5.Program;
+import de.urszeidler.eclipse.shr5.CommonProgram;
+import de.urszeidler.eclipse.shr5.ConsumerSoft;
+import de.urszeidler.eclipse.shr5.Datasoft;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SkillSoft;
 import de.urszeidler.eclipse.shr5.Software;
@@ -113,25 +115,25 @@ public class SoftwarePage extends AbstractShr5Page<Software> {
 
         createFormBuilder(managedForm);
 
+        grpGegenstand.setText(labelProvider.getText(object.eClass()));
+
         if (object instanceof SkillSoft) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.SKILL_SOFT));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SKILL_SOFT__RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SKILL_SOFT__SKILL, grpGegenstand);
         } else if (object instanceof AutoSoft) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.AUTO_SOFT));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__RATING, grpGegenstand);
-        }else if (object instanceof Program) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.PROGRAM));
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.PROGRAM__CATEGORY, grpGegenstand);
-        }else if (object instanceof Tutorsoft) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.TUTORSOFT));
+        } else if (object instanceof ConsumerSoft) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CONSUMER_SOFT__TYPE, grpGegenstand);
+        } else if (object instanceof Datasoft) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.DATASOFT__SKILL, grpGegenstand);
+        } else if (object instanceof Tutorsoft) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.TUTORSOFT__RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.TUTORSOFT__SKILL, grpGegenstand);
-        }else if (object instanceof SoftwareAgent) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.SOFTWARE_AGENT));
+        } else if (object instanceof SoftwareAgent) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.SOFTWARE_AGENT__RATING, grpGegenstand);
+        } else if (object instanceof CommonProgram) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMON_PROGRAM__PROGRAM_TYPE, grpGegenstand);
         }
-
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);

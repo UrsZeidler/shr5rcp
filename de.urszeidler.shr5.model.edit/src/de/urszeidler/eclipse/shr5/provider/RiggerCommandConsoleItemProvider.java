@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,6 +23,7 @@ import org.eclipse.swt.graphics.Image;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
@@ -32,7 +34,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
  * @generated
  */
 public class RiggerCommandConsoleItemProvider
-    extends CommlinkItemProvider
+    extends AbstraktGegenstandItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,
@@ -60,13 +62,152 @@ public class RiggerCommandConsoleItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addMatrixZustandMaxPropertyDescriptor(object);
+            addGeraetestufePropertyDescriptor(object);
+            addFirewallPropertyDescriptor(object);
+            addDatenverarbeitungPropertyDescriptor(object);
+            addCurrentModusPropertyDescriptor(object);
+            addDeviceRatingPropertyDescriptor(object);
             addRauschunterdrueckungPropertyDescriptor(object);
             addZugriffPropertyDescriptor(object);
             addDatenverarbeitungBasisPropertyDescriptor(object);
             addFirewallBasisPropertyDescriptor(object);
             addZugriffBasisPropertyDescriptor(object);
+            addRunningProgramsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Matrix Zustand Max feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMatrixZustandMaxPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatixConditionMonitor_matrixZustandMax_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatixConditionMonitor_matrixZustandMax_feature", "_UI_MatixConditionMonitor_type"),
+                 Shr5Package.Literals.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Geraetestufe feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addGeraetestufePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatrixAttributes_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_geraetestufe_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Firewall feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addFirewallPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatrixAttributes_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_firewall_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Datenverarbeitung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDatenverarbeitungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatrixAttributes_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_datenverarbeitung_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Current Modus feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCurrentModusPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MatrixAttributes_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_currentModus_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Device Rating feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDeviceRatingPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_AbstractMatrixDevice_deviceRating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AbstractMatrixDevice_deviceRating_feature", "_UI_AbstractMatrixDevice_type"),
+                 Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
@@ -180,6 +321,59 @@ public class RiggerCommandConsoleItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Running Programs feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addRunningProgramsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_RiggerCommandConsole_runningPrograms_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_RiggerCommandConsole_runningPrograms_feature", "_UI_RiggerCommandConsole_type"),
+                 Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
+            childrenFeatures.add(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS);
+        }
+        return childrenFeatures;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
+    }
+
+    /**
      * This returns RiggerCommandConsole.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -223,12 +417,22 @@ public class RiggerCommandConsoleItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(RiggerCommandConsole.class)) {
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__MATRIX_ZUSTAND_MAX:
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__GERAETESTUFE:
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__FIREWALL:
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG:
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__CURRENT_MODUS:
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__DEVICE_RATING:
             case Shr5Package.RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG:
             case Shr5Package.RIGGER_COMMAND_CONSOLE__ZUGRIFF:
             case Shr5Package.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS:
             case Shr5Package.RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS:
             case Shr5Package.RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__PAN:
+            case Shr5Package.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
         super.notifyChanged(notification);
@@ -244,6 +448,21 @@ public class RiggerCommandConsoleItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.MATRIX_DEVICE__PAN,
+                 Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS,
+                 Shr5Factory.eINSTANCE.createAutoSoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS,
+                 Shr5Factory.eINSTANCE.createCommonProgram()));
     }
 
 }

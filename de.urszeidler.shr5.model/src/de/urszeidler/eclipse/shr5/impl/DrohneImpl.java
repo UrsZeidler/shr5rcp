@@ -3,7 +3,6 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -13,13 +12,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import de.urszeidler.eclipse.shr5.AutoSoft;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
 import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
-import de.urszeidler.eclipse.shr5.MatrixDevice;
-import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
+import de.urszeidler.eclipse.shr5.MatrixAttributes;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 
@@ -35,7 +32,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getFirewall <em>Firewall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getCurrentModus <em>Current Modus</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getProgramSlotCount <em>Program Slot Count</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getRunningProgramms <em>Running Programms</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getStroredProgramm <em>Strored Programm</em>}</li>
@@ -99,15 +95,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * @ordered
      */
     protected InterfaceModus currentModus = CURRENT_MODUS_EDEFAULT;
-    /**
-     * The cached value of the '{@link #getPan() <em>Pan</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getPan()
-     * @generated
-     * @ordered
-     */
-    protected PersonalAreaNetwork pan;
     /**
      * The default value of the '{@link #getProgramSlotCount() <em>Program Slot Count</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -181,7 +168,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * @generated not
      */
     public int getFirewall() {
-        return getGeraetestufe() + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_DEVICE__FIREWALL, getMods());
+        return getGeraetestufe() + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL, getMods());
     }
 
     /**
@@ -191,7 +178,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * @generated not
      */
     public int getDatenverarbeitung() {
-        return getGeraetestufe() + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG, getMods());
+        return getGeraetestufe() + ShadowrunTools.getModificatorValue(Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG, getMods());
     }
 
     /**
@@ -213,49 +200,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.DROHNE__CURRENT_MODUS, oldCurrentModus, currentModus));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public PersonalAreaNetwork getPan() {
-        return pan;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetPan(PersonalAreaNetwork newPan, NotificationChain msgs) {
-        PersonalAreaNetwork oldPan = pan;
-        pan = newPan;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.DROHNE__PAN, oldPan, newPan);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setPan(PersonalAreaNetwork newPan) {
-        if (newPan != pan) {
-            NotificationChain msgs = null;
-            if (pan != null)
-                msgs = ((InternalEObject)pan).eInverseRemove(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
-            if (newPan != null)
-                msgs = ((InternalEObject)newPan).eInverseAdd(this, Shr5Package.PERSONAL_AREA_NETWORK__MASTER, PersonalAreaNetwork.class, msgs);
-            msgs = basicSetPan(newPan, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.DROHNE__PAN, newPan, newPan));
     }
 
     /**
@@ -298,26 +242,8 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * @generated
      */
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-        switch (featureID) {
-            case Shr5Package.DROHNE__PAN:
-                if (pan != null)
-                    msgs = ((InternalEObject)pan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Shr5Package.DROHNE__PAN, null, msgs);
-                return basicSetPan((PersonalAreaNetwork)otherEnd, msgs);
-        }
-        return super.eInverseAdd(otherEnd, featureID, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case Shr5Package.DROHNE__PAN:
-                return basicSetPan(null, msgs);
             case Shr5Package.DROHNE__STRORED_PROGRAMM:
                 return ((InternalEList<?>)getStroredProgramm()).basicRemove(otherEnd, msgs);
         }
@@ -342,8 +268,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
                 return getDatenverarbeitung();
             case Shr5Package.DROHNE__CURRENT_MODUS:
                 return getCurrentModus();
-            case Shr5Package.DROHNE__PAN:
-                return getPan();
             case Shr5Package.DROHNE__PROGRAM_SLOT_COUNT:
                 return getProgramSlotCount();
             case Shr5Package.DROHNE__RUNNING_PROGRAMMS:
@@ -365,9 +289,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
         switch (featureID) {
             case Shr5Package.DROHNE__CURRENT_MODUS:
                 setCurrentModus((InterfaceModus)newValue);
-                return;
-            case Shr5Package.DROHNE__PAN:
-                setPan((PersonalAreaNetwork)newValue);
                 return;
             case Shr5Package.DROHNE__RUNNING_PROGRAMMS:
                 getRunningProgramms().clear();
@@ -391,9 +312,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
         switch (featureID) {
             case Shr5Package.DROHNE__CURRENT_MODUS:
                 setCurrentModus(CURRENT_MODUS_EDEFAULT);
-                return;
-            case Shr5Package.DROHNE__PAN:
-                setPan((PersonalAreaNetwork)null);
                 return;
             case Shr5Package.DROHNE__RUNNING_PROGRAMMS:
                 getRunningProgramms().clear();
@@ -423,8 +341,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
                 return getDatenverarbeitung() != DATENVERARBEITUNG_EDEFAULT;
             case Shr5Package.DROHNE__CURRENT_MODUS:
                 return currentModus != CURRENT_MODUS_EDEFAULT;
-            case Shr5Package.DROHNE__PAN:
-                return pan != null;
             case Shr5Package.DROHNE__PROGRAM_SLOT_COUNT:
                 return getProgramSlotCount() != PROGRAM_SLOT_COUNT_EDEFAULT;
             case Shr5Package.DROHNE__RUNNING_PROGRAMMS:
@@ -448,13 +364,12 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
                 default: return -1;
             }
         }
-        if (baseClass == MatrixDevice.class) {
+        if (baseClass == MatrixAttributes.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.DROHNE__GERAETESTUFE: return Shr5Package.MATRIX_DEVICE__GERAETESTUFE;
-                case Shr5Package.DROHNE__FIREWALL: return Shr5Package.MATRIX_DEVICE__FIREWALL;
-                case Shr5Package.DROHNE__DATENVERARBEITUNG: return Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG;
-                case Shr5Package.DROHNE__CURRENT_MODUS: return Shr5Package.MATRIX_DEVICE__CURRENT_MODUS;
-                case Shr5Package.DROHNE__PAN: return Shr5Package.MATRIX_DEVICE__PAN;
+                case Shr5Package.DROHNE__GERAETESTUFE: return Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE;
+                case Shr5Package.DROHNE__FIREWALL: return Shr5Package.MATRIX_ATTRIBUTES__FIREWALL;
+                case Shr5Package.DROHNE__DATENVERARBEITUNG: return Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
+                case Shr5Package.DROHNE__CURRENT_MODUS: return Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS;
                 default: return -1;
             }
         }
@@ -474,13 +389,12 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
                 default: return -1;
             }
         }
-        if (baseClass == MatrixDevice.class) {
+        if (baseClass == MatrixAttributes.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATRIX_DEVICE__GERAETESTUFE: return Shr5Package.DROHNE__GERAETESTUFE;
-                case Shr5Package.MATRIX_DEVICE__FIREWALL: return Shr5Package.DROHNE__FIREWALL;
-                case Shr5Package.MATRIX_DEVICE__DATENVERARBEITUNG: return Shr5Package.DROHNE__DATENVERARBEITUNG;
-                case Shr5Package.MATRIX_DEVICE__CURRENT_MODUS: return Shr5Package.DROHNE__CURRENT_MODUS;
-                case Shr5Package.MATRIX_DEVICE__PAN: return Shr5Package.DROHNE__PAN;
+                case Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE: return Shr5Package.DROHNE__GERAETESTUFE;
+                case Shr5Package.MATRIX_ATTRIBUTES__FIREWALL: return Shr5Package.DROHNE__FIREWALL;
+                case Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG: return Shr5Package.DROHNE__DATENVERARBEITUNG;
+                case Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS: return Shr5Package.DROHNE__CURRENT_MODUS;
                 default: return -1;
             }
         }

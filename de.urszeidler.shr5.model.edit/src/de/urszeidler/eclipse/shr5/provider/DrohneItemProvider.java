@@ -105,9 +105,9 @@ public class DrohneItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_geraetestufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_geraetestufe_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__GERAETESTUFE,
+                 getString("_UI_MatrixAttributes_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_geraetestufe_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE,
                  false,
                  false,
                  false,
@@ -127,9 +127,9 @@ public class DrohneItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_firewall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_firewall_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__FIREWALL,
+                 getString("_UI_MatrixAttributes_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_firewall_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,
                  false,
                  false,
                  false,
@@ -149,9 +149,9 @@ public class DrohneItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_datenverarbeitung_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_datenverarbeitung_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG,
+                 getString("_UI_MatrixAttributes_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_datenverarbeitung_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,
                  false,
                  false,
                  false,
@@ -171,9 +171,9 @@ public class DrohneItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_currentModus_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_currentModus_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__CURRENT_MODUS,
+                 getString("_UI_MatrixAttributes_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_currentModus_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,
                  true,
                  false,
                  false,
@@ -244,7 +244,6 @@ public class DrohneItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
             childrenFeatures.add(Shr5Package.Literals.DROHNE__STRORED_PROGRAMM);
         }
         return childrenFeatures;
@@ -315,7 +314,6 @@ public class DrohneItemProvider
             case Shr5Package.DROHNE__PROGRAM_SLOT_COUNT:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5Package.DROHNE__PAN:
             case Shr5Package.DROHNE__STRORED_PROGRAMM:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -333,11 +331,6 @@ public class DrohneItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.MATRIX_DEVICE__PAN,
-                 Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
 
         newChildDescriptors.add
             (createChildParameter

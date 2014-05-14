@@ -14,9 +14,9 @@ import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
  * The following features are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
  * </ul>
@@ -77,10 +77,10 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe()
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
      * @generated
      */
     public void testGetGeraetestufe() {
@@ -90,10 +90,10 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall()
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
      * @generated
      */
     public void testGetFirewall() {
@@ -103,10 +103,10 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
     }
 
     /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung()
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
      * @generated
      */
     public void testGetDatenverarbeitung() {

@@ -494,7 +494,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="PassagierFahrzeug" eSuperTypes="#//Fahrzeug">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sitze" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Drohne" eSuperTypes="#//Fahrzeug #//MatrixDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="Drohne" eSuperTypes="#//Fahrzeug #//MatrixAttributes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="programSlotCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="runningProgramms" upperBound="-1"
@@ -681,7 +681,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spezialisierung" eSuperTypes="#//Beschreibbar #//Quelle #//Erlernbar"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MatrixDevice" abstract="true" interface="true"
+  <eClassifiers xsi:type="ecore:EClass" name="MatrixAttributes" abstract="true" interface="true"
       eSuperTypes="#//MatixConditionMonitor">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Defines the interface for all passive matix devices."/>
@@ -693,11 +693,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="datenverarbeitung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentModus" eType="#//InterfaceModus"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pan" eType="#//PersonalAreaNetwork"
-        containment="true" eOpposite="#//PersonalAreaNetwork/master"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActiveMatixDevice" abstract="true" interface="true"
-      eSuperTypes="#//MatrixDevice">
+      eSuperTypes="#//MatrixAttributes">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="All active Matrix defice are defined thou this interface."/>
     </eAnnotations>
@@ -706,20 +704,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="schleicher" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Commlink" eSuperTypes="#//AbstraktGegenstand #//MatrixDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="Commlink" eSuperTypes="#//AbstractMatrixDevice">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This defines the complink."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceRating" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="runningProgramms" upperBound="-1"
-        eType="#//MatrixPrograms">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The running programms are stored here."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stroredProgramm" upperBound="-1"
-        eType="#//MatrixPrograms" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storedPrograms" upperBound="-1"
+        eType="#//BasicProgram" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The stored programs defines the programs to choose from when selecting the running programms."/>
       </eAnnotations>
@@ -730,7 +720,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="matrixZustandMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//Commlink #//ActiveMatixDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck" eSuperTypes="#//AbstractMatrixDevice #//MatrixDevice #//ActiveMatixDevice">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This defines the cyberdeck."/>
     </eAnnotations>
@@ -753,21 +743,21 @@
         <details key="documentation" value="Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher."/>
       </eAnnotations>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//MatrixPrograms">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" lowerBound="1"
-        eType="#//ProgramType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storedPrograms" upperBound="-1"
+        eType="#//MatrixProgram" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runningPrograms" upperBound="-1"
+        eType="#//MatrixProgram"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InterfaceModus">
     <eLiterals name="augmentedReality"/>
     <eLiterals name="coldSim" value="1"/>
     <eLiterals name="hotSim" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SoftwareAgent" eSuperTypes="#//MatrixPrograms">
+  <eClassifiers xsi:type="ecore:EClass" name="SoftwareAgent" eSuperTypes="#//MatrixProgram">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Host" eSuperTypes="#//ActiveMatixDevice #//Beschreibbar">
+  <eClassifiers xsi:type="ecore:EClass" name="Host" eSuperTypes="#//Beschreibbar #//MatrixDevice #//ActiveMatixDevice">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This defines a host."/>
     </eAnnotations>
@@ -797,7 +787,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="simRig" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="riggerInterface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RiggerCommandConsole" eSuperTypes="#//Commlink">
+  <eClassifiers xsi:type="ecore:EClass" name="RiggerCommandConsole" eSuperTypes="#//AbstractMatrixDevice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rauschunterdrueckung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zugriff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -811,8 +801,12 @@
         <details key="documentation" value="This value is for the zugriff feature, the rauchunter. is calculated as deviceRating-zugriffBasis."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storedPrograms" upperBound="-1"
+        eType="#//RiggerProgram" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runningPrograms" upperBound="-1"
+        eType="#//RiggerProgram"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AutoSoft" eSuperTypes="#//Software">
+  <eClassifiers xsi:type="ecore:EClass" name="AutoSoft" eSuperTypes="#//RiggerProgram">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Defines the software for drones."/>
     </eAnnotations>
@@ -823,14 +817,12 @@
       eSuperTypes="#//GeldWert #//Beschreibbar #//Quelle"/>
   <eClassifiers xsi:type="ecore:EEnum" name="ProgramType">
     <eLiterals name="defaultSoft" literal="defaultSoft"/>
-    <eLiterals name="hackingSoft" value="1" literal="hackingSoft"/>
-    <eLiterals name="dataSoft" value="2"/>
-    <eLiterals name="mapSoft" value="3"/>
-    <eLiterals name="shopSoft" value="4"/>
+    <eLiterals name="dataSoft" value="1"/>
+    <eLiterals name="shopSoft" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MatrixPrograms" abstract="true" interface="true"
+  <eClassifiers xsi:type="ecore:EClass" name="MatrixProgram" abstract="true" interface="true"
       eSuperTypes="#//Software"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Tutorsoft" eSuperTypes="#//MatrixPrograms">
+  <eClassifiers xsi:type="ecore:EClass" name="Tutorsoft" eSuperTypes="#//BasicProgram">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="#//Fertigkeit"/>
@@ -851,5 +843,31 @@
         eType="#//MatrixDevice" eOpposite="#//MatrixDevice/pan"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="slaveMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicProgram" abstract="true" eSuperTypes="#//Software"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Datasoft" eSuperTypes="#//BasicProgram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="#//Wissensfertigkeit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractMatrixDevice" abstract="true"
+      interface="true" eSuperTypes="#//AbstraktGegenstand #//MatrixDevice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceRating" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumerSoft" eSuperTypes="#//BasicProgram">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ProgramType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RiggerProgram" abstract="true" interface="true"
+      eSuperTypes="#//Software"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MatrixDevice" abstract="true" interface="true"
+      eSuperTypes="#//MatrixAttributes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pan" eType="#//PersonalAreaNetwork"
+        containment="true" eOpposite="#//PersonalAreaNetwork/master"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommonProgram" eSuperTypes="#//MatrixProgram #//RiggerProgram">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="programType" eType="#//MatrixProgramType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MatrixProgramType">
+    <eLiterals name="defaultProgram"/>
+    <eLiterals name="hackingProgram" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

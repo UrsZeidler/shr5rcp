@@ -4,33 +4,17 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
-
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Tutorsoft;
-import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Tutorsoft</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are tested:
- * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
- * </ul>
- * </p>
  * @generated
  */
-public class TutorsoftTest extends TestCase {
-
-    /**
-     * The fixture for this Tutorsoft test case.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected Tutorsoft fixture = null;
+public class TutorsoftTest extends BasicProgramTest {
 
     /**
      * <!-- begin-user-doc -->
@@ -52,23 +36,14 @@ public class TutorsoftTest extends TestCase {
     }
 
     /**
-     * Sets the fixture for this Tutorsoft test case.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void setFixture(Tutorsoft fixture) {
-        this.fixture = fixture;
-    }
-
-    /**
      * Returns the fixture for this Tutorsoft test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     protected Tutorsoft getFixture() {
-        return fixture;
+        return (Tutorsoft)fixture;
     }
 
     /**

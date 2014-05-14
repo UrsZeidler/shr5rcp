@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
-import de.urszeidler.eclipse.shr5.Program;
+import de.urszeidler.eclipse.shr5.CommonProgram;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Program</b></em>'.
+ * A test case for the model object '<em><b>Common Program</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are tested:
@@ -22,15 +22,15 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * </p>
  * @generated
  */
-public class ProgramTest extends TestCase {
+public class CommonProgramTest extends TestCase {
 
     /**
-     * The fixture for this Program test case.
+     * The fixture for this Common Program test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected Program fixture = null;
+    protected CommonProgram fixture = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -38,36 +38,36 @@ public class ProgramTest extends TestCase {
      * @generated
      */
     public static void main(String[] args) {
-        TestRunner.run(ProgramTest.class);
+        TestRunner.run(CommonProgramTest.class);
     }
 
     /**
-     * Constructs a new Program test case with the given name.
+     * Constructs a new Common Program test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public ProgramTest(String name) {
+    public CommonProgramTest(String name) {
         super(name);
     }
 
     /**
-     * Sets the fixture for this Program test case.
+     * Sets the fixture for this Common Program test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void setFixture(Program fixture) {
+    protected void setFixture(CommonProgram fixture) {
         this.fixture = fixture;
     }
 
     /**
-     * Returns the fixture for this Program test case.
+     * Returns the fixture for this Common Program test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected Program getFixture() {
+    protected CommonProgram getFixture() {
         return fixture;
     }
 
@@ -79,7 +79,7 @@ public class ProgramTest extends TestCase {
      */
     @Override
     protected void setUp() throws Exception {
-        setFixture(Shr5Factory.eINSTANCE.createProgram());
+        setFixture(Shr5Factory.eINSTANCE.createCommonProgram());
     }
 
     /**
@@ -101,8 +101,9 @@ public class ProgramTest extends TestCase {
      * @generated not
      */
     public void testGetWert() {
-        getFixture().setWertValue(new BigDecimal(10));        
+        getFixture().setWertValue(new BigDecimal(10));   
+
         assertEquals(10,getFixture().getWert().intValue());
     }
 
-} //ProgramTest
+} //CommonProgramTest

@@ -24,7 +24,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface AutoSoft extends Software {
+public interface AutoSoft extends RiggerProgram {
 
     /**
      * Returns the value of the '<em><b>Rating</b></em>' attribute.

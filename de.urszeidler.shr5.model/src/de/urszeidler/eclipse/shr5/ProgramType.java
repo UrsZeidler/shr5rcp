@@ -30,16 +30,6 @@ public enum ProgramType implements Enumerator {
     DEFAULT_SOFT(0, "defaultSoft", "defaultSoft"),
 
     /**
-     * The '<em><b>Hacking Soft</b></em>' literal object.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #HACKING_SOFT_VALUE
-     * @generated
-     * @ordered
-     */
-    HACKING_SOFT(1, "hackingSoft", "hackingSoft"),
-
-    /**
      * The '<em><b>Data Soft</b></em>' literal object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -47,17 +37,7 @@ public enum ProgramType implements Enumerator {
      * @generated
      * @ordered
      */
-    DATA_SOFT(2, "dataSoft", "dataSoft"),
-
-    /**
-     * The '<em><b>Map Soft</b></em>' literal object.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #MAP_SOFT_VALUE
-     * @generated
-     * @ordered
-     */
-    MAP_SOFT(3, "mapSoft", "mapSoft"),
+    DATA_SOFT(1, "dataSoft", "dataSoft"),
 
     /**
      * The '<em><b>Shop Soft</b></em>' literal object.
@@ -67,7 +47,7 @@ public enum ProgramType implements Enumerator {
      * @generated
      * @ordered
      */
-    SHOP_SOFT(4, "shopSoft", "shopSoft");
+    SHOP_SOFT(2, "shopSoft", "shopSoft");
 
     /**
      * The '<em><b>Default Soft</b></em>' literal value.
@@ -85,21 +65,6 @@ public enum ProgramType implements Enumerator {
     public static final int DEFAULT_SOFT_VALUE = 0;
 
     /**
-     * The '<em><b>Hacking Soft</b></em>' literal value.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Hacking Soft</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @see #HACKING_SOFT
-     * @model name="hackingSoft"
-     * @generated
-     * @ordered
-     */
-    public static final int HACKING_SOFT_VALUE = 1;
-
-    /**
      * The '<em><b>Data Soft</b></em>' literal value.
      * <!-- begin-user-doc -->
      * <p>
@@ -112,22 +77,7 @@ public enum ProgramType implements Enumerator {
      * @generated
      * @ordered
      */
-    public static final int DATA_SOFT_VALUE = 2;
-
-    /**
-     * The '<em><b>Map Soft</b></em>' literal value.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Map Soft</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @see #MAP_SOFT
-     * @model name="mapSoft"
-     * @generated
-     * @ordered
-     */
-    public static final int MAP_SOFT_VALUE = 3;
+    public static final int DATA_SOFT_VALUE = 1;
 
     /**
      * The '<em><b>Shop Soft</b></em>' literal value.
@@ -142,7 +92,7 @@ public enum ProgramType implements Enumerator {
      * @generated
      * @ordered
      */
-    public static final int SHOP_SOFT_VALUE = 4;
+    public static final int SHOP_SOFT_VALUE = 2;
 
     /**
      * An array of all the '<em><b>Program Type</b></em>' enumerators.
@@ -153,9 +103,7 @@ public enum ProgramType implements Enumerator {
     private static final ProgramType[] VALUES_ARRAY =
         new ProgramType[] {
             DEFAULT_SOFT,
-            HACKING_SOFT,
             DATA_SOFT,
-            MAP_SOFT,
             SHOP_SOFT,
         };
 
@@ -208,9 +156,7 @@ public enum ProgramType implements Enumerator {
     public static ProgramType get(int value) {
         switch (value) {
             case DEFAULT_SOFT_VALUE: return DEFAULT_SOFT;
-            case HACKING_SOFT_VALUE: return HACKING_SOFT;
             case DATA_SOFT_VALUE: return DATA_SOFT;
-            case MAP_SOFT_VALUE: return MAP_SOFT;
             case SHOP_SOFT_VALUE: return SHOP_SOFT;
         }
         return null;

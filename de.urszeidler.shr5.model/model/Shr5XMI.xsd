@@ -115,10 +115,14 @@
   <xsd:simpleType name="ProgramType">
     <xsd:restriction base="xsd:NCName">
       <xsd:enumeration value="defaultSoft"/>
-      <xsd:enumeration value="hackingSoft"/>
       <xsd:enumeration value="dataSoft"/>
-      <xsd:enumeration value="mapSoft"/>
       <xsd:enumeration value="shopSoft"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MatrixProgramType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="defaultProgram"/>
+      <xsd:enumeration value="hackingProgram"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
@@ -944,7 +948,6 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Fahrzeug">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
           <xsd:element name="runningProgramms" type="shr5:AutoSoft">
             <xsd:annotation>
               <xsd:documentation>The running programms are stored here.</xsd:documentation>
@@ -994,7 +997,6 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:KoerperPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
           <xsd:element name="complexForms" type="shr5:PersonaKomplexForm"/>
           <xsd:element name="echos" type="shr5:Echo"/>
         </xsd:choice>
@@ -1369,20 +1371,17 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Spezialisierung" type="shr5:Spezialisierung"/>
-  <xsd:complexType abstract="true" name="MatrixDevice">
+  <xsd:complexType abstract="true" name="MatrixAttributes">
     <xsd:annotation>
       <xsd:documentation>Defines the interface for all passive matix devices.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5:MatixConditionMonitor">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
-        </xsd:choice>
         <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="MatrixDevice" type="shr5:MatrixDevice">
+  <xsd:element name="MatrixAttributes" type="shr5:MatrixAttributes">
     <xsd:annotation>
       <xsd:documentation>Defines the interface for all passive matix devices.</xsd:documentation>
     </xsd:annotation>
@@ -1392,7 +1391,7 @@
       <xsd:documentation>All active Matrix defice are defined thou this interface.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:MatrixDevice"/>
+      <xsd:extension base="shr5:MatrixAttributes"/>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="ActiveMatixDevice" type="shr5:ActiveMatixDevice">
@@ -1405,27 +1404,14 @@
       <xsd:documentation>This defines the complink.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:AbstraktGegenstand">
+      <xsd:extension base="shr5:AbstractMatrixDevice">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
-          <xsd:element name="runningProgramms" type="shr5:MatrixPrograms">
-            <xsd:annotation>
-              <xsd:documentation>The running programms are stored here.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="stroredProgramm" type="shr5:MatrixPrograms">
+          <xsd:element name="storedPrograms" type="shr5:BasicProgram">
             <xsd:annotation>
               <xsd:documentation>The stored programs defines the programs to choose from when selecting the running programms.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:choice>
-        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
-        <xsd:attribute name="deviceRating" type="xsd:int" use="required"/>
-        <xsd:attribute name="runningProgramms" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>The running programms are stored here.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1447,13 +1433,15 @@
       <xsd:documentation>This defines the cyberdeck.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:Commlink">
+      <xsd:extension base="shr5:AbstractMatrixDevice">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="configuration" type="ecore:EAttribute">
             <xsd:annotation>
               <xsd:documentation>Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="storedPrograms" type="shr5:MatrixProgram"/>
+          <xsd:element name="runningPrograms" type="shr5:MatrixProgram"/>
         </xsd:choice>
         <xsd:attribute name="programSlots" type="xsd:int">
           <xsd:annotation>
@@ -1469,6 +1457,7 @@
             <xsd:documentation>Contains the value attribues for the matrix attributes. Index 0 firewall,1datenverarbeitung, 2 angriff and 3 schleicher.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="runningPrograms" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1477,17 +1466,9 @@
       <xsd:documentation>This defines the cyberdeck.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:complexType name="Program">
-    <xsd:complexContent>
-      <xsd:extension base="shr5:MatrixPrograms">
-        <xsd:attribute name="category" type="shr5:ProgramType" use="required"/>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="Program" type="shr5:Program"/>
   <xsd:complexType name="SoftwareAgent">
     <xsd:complexContent>
-      <xsd:extension base="shr5:MatrixPrograms">
+      <xsd:extension base="shr5:MatrixProgram">
         <xsd:attribute name="rating" type="xsd:int" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1498,10 +1479,11 @@
       <xsd:documentation>This defines a host.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:ActiveMatixDevice">
-        <xsd:attribute name="beschreibung" type="xsd:string"/>
-        <xsd:attribute name="image" type="xsd:string"/>
-        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
+        </xsd:choice>
+        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1543,7 +1525,11 @@
   </xsd:element>
   <xsd:complexType name="RiggerCommandConsole">
     <xsd:complexContent>
-      <xsd:extension base="shr5:Commlink">
+      <xsd:extension base="shr5:AbstractMatrixDevice">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="storedPrograms" type="shr5:RiggerProgram"/>
+          <xsd:element name="runningPrograms" type="shr5:RiggerProgram"/>
+        </xsd:choice>
         <xsd:attribute name="datenverarbeitungBasis" type="xsd:int" use="required"/>
         <xsd:attribute name="firewallBasis" type="xsd:int" use="required"/>
         <xsd:attribute name="zugriffBasis" type="xsd:int">
@@ -1551,6 +1537,7 @@
             <xsd:documentation>This value is for the zugriff feature, the rauchunter. is calculated as deviceRating-zugriffBasis.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="runningPrograms" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1560,7 +1547,7 @@
       <xsd:documentation>Defines the software for drones.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:Software">
+      <xsd:extension base="shr5:RiggerProgram">
         <xsd:attribute name="rating" type="xsd:int" use="required"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -1586,15 +1573,15 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Software" type="shr5:Software"/>
-  <xsd:complexType abstract="true" name="MatrixPrograms">
+  <xsd:complexType abstract="true" name="MatrixProgram">
     <xsd:complexContent>
       <xsd:extension base="shr5:Software"/>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="MatrixPrograms" type="shr5:MatrixPrograms"/>
+  <xsd:element name="MatrixProgram" type="shr5:MatrixProgram"/>
   <xsd:complexType name="Tutorsoft">
     <xsd:complexContent>
-      <xsd:extension base="shr5:MatrixPrograms">
+      <xsd:extension base="shr5:BasicProgram">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="skill" type="shr5:Fertigkeit"/>
         </xsd:choice>
@@ -1636,4 +1623,65 @@
     <xsd:attribute name="master" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="PersonalAreaNetwork" type="shr5:PersonalAreaNetwork"/>
+  <xsd:complexType abstract="true" name="BasicProgram">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Software"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BasicProgram" type="shr5:BasicProgram"/>
+  <xsd:complexType name="Datasoft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:BasicProgram">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="skill" type="shr5:Wissensfertigkeit"/>
+        </xsd:choice>
+        <xsd:attribute name="skill" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Datasoft" type="shr5:Datasoft"/>
+  <xsd:complexType abstract="true" name="AbstractMatrixDevice">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktGegenstand">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
+        </xsd:choice>
+        <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
+        <xsd:attribute name="deviceRating" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstractMatrixDevice" type="shr5:AbstractMatrixDevice"/>
+  <xsd:complexType name="ConsumerSoft">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:BasicProgram">
+        <xsd:attribute name="type" type="shr5:ProgramType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ConsumerSoft" type="shr5:ConsumerSoft"/>
+  <xsd:complexType abstract="true" name="RiggerProgram">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Software"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RiggerProgram" type="shr5:RiggerProgram"/>
+  <xsd:complexType abstract="true" name="MatrixDevice">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MatrixAttributes">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MatrixDevice" type="shr5:MatrixDevice"/>
+  <xsd:complexType name="CommonProgram">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MatrixProgram">
+        <xsd:attribute name="programType" type="shr5:MatrixProgramType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CommonProgram" type="shr5:CommonProgram"/>
 </xsd:schema>

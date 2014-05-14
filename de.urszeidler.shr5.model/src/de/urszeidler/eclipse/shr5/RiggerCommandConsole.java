@@ -3,6 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +19,8 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getDatenverarbeitungBasis <em>Datenverarbeitung Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getFirewallBasis <em>Firewall Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriffBasis <em>Zugriff Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getStoredPrograms <em>Stored Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRunningPrograms <em>Running Programs</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,7 +28,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface RiggerCommandConsole extends Commlink {
+public interface RiggerCommandConsole extends AbstractMatrixDevice {
     /**
      * Returns the value of the '<em><b>Rauschunterdrueckung</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -131,5 +135,37 @@ public interface RiggerCommandConsole extends Commlink {
      * @generated
      */
     void setZugriffBasis(int value);
+
+    /**
+     * Returns the value of the '<em><b>Stored Programs</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.RiggerProgram}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Stored Programs</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Stored Programs</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getRiggerCommandConsole_StoredPrograms()
+     * @model containment="true"
+     * @generated
+     */
+    EList<RiggerProgram> getStoredPrograms();
+
+    /**
+     * Returns the value of the '<em><b>Running Programs</b></em>' reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.RiggerProgram}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Running Programs</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Running Programs</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getRiggerCommandConsole_RunningPrograms()
+     * @model
+     * @generated
+     */
+    EList<RiggerProgram> getRunningPrograms();
 
 } // RiggerCommandConsole

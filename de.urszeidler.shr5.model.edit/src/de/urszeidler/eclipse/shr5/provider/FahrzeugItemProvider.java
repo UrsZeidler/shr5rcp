@@ -229,7 +229,7 @@ public class FahrzeugItemProvider
                  getString("_UI_GeldWert_wert_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_GeldWert_wert_feature", "_UI_GeldWert_type"),
                  Shr5Package.Literals.GELD_WERT__WERT,
-                 true,
+                 false,
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

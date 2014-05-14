@@ -156,19 +156,22 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE2, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE3, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE4, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__PROGRAM_SLOTS, composite_Additional);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__CONFIGURATION, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS, composite_Additional);
         } else if (object instanceof RiggerCommandConsole) {
             grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE));
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, composite_Additional);            
         } else if (object instanceof Commlink) {
             grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.COMMLINK));
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__DEVICE_RATING, grpGegenstand);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM, composite_Additional);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);

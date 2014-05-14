@@ -9660,22 +9660,13 @@ public interface Shr5Package extends EPackage {
     int DROHNE__CURRENT_MODUS = FAHRZEUG_FEATURE_COUNT + 4;
 
     /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int DROHNE__PAN = FAHRZEUG_FEATURE_COUNT + 5;
-
-    /**
      * The feature id for the '<em><b>Program Slot Count</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DROHNE__PROGRAM_SLOT_COUNT = FAHRZEUG_FEATURE_COUNT + 6;
+    int DROHNE__PROGRAM_SLOT_COUNT = FAHRZEUG_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Running Programms</b></em>' reference list.
@@ -9684,7 +9675,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int DROHNE__RUNNING_PROGRAMMS = FAHRZEUG_FEATURE_COUNT + 7;
+    int DROHNE__RUNNING_PROGRAMMS = FAHRZEUG_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
@@ -9693,7 +9684,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int DROHNE__STRORED_PROGRAMM = FAHRZEUG_FEATURE_COUNT + 8;
+    int DROHNE__STRORED_PROGRAMM = FAHRZEUG_FEATURE_COUNT + 7;
 
     /**
      * The number of structural features of the '<em>Drohne</em>' class.
@@ -9702,7 +9693,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int DROHNE_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 9;
+	int DROHNE_FEATURE_COUNT = FAHRZEUG_FEATURE_COUNT + 8;
 
     /**
      * The number of operations of the '<em>Drohne</em>' class.
@@ -10227,22 +10218,13 @@ public interface Shr5Package extends EPackage {
     int TECHNOMANCER__CURRENT_MODUS = KOERPER_PERSONA_FEATURE_COUNT + 4;
 
     /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TECHNOMANCER__PAN = KOERPER_PERSONA_FEATURE_COUNT + 5;
-
-    /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__ANGRIFF = KOERPER_PERSONA_FEATURE_COUNT + 6;
+	int TECHNOMANCER__ANGRIFF = KOERPER_PERSONA_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
@@ -10251,7 +10233,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__SCHLEICHER = KOERPER_PERSONA_FEATURE_COUNT + 7;
+	int TECHNOMANCER__SCHLEICHER = KOERPER_PERSONA_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Resonanz</b></em>' attribute.
@@ -10260,7 +10242,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__RESONANZ = KOERPER_PERSONA_FEATURE_COUNT + 8;
+	int TECHNOMANCER__RESONANZ = KOERPER_PERSONA_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Resonanz Basis</b></em>' attribute.
@@ -10269,7 +10251,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__RESONANZ_BASIS = KOERPER_PERSONA_FEATURE_COUNT + 9;
+	int TECHNOMANCER__RESONANZ_BASIS = KOERPER_PERSONA_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Complex Forms</b></em>' containment reference list.
@@ -10278,7 +10260,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__COMPLEX_FORMS = KOERPER_PERSONA_FEATURE_COUNT + 10;
+	int TECHNOMANCER__COMPLEX_FORMS = KOERPER_PERSONA_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Echos</b></em>' containment reference list.
@@ -10287,7 +10269,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER__ECHOS = KOERPER_PERSONA_FEATURE_COUNT + 11;
+	int TECHNOMANCER__ECHOS = KOERPER_PERSONA_FEATURE_COUNT + 10;
 
     /**
      * The number of structural features of the '<em>Technomancer</em>' class.
@@ -10296,7 +10278,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int TECHNOMANCER_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 12;
+	int TECHNOMANCER_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 11;
 
     /**
      * The number of operations of the '<em>Technomancer</em>' class.
@@ -10345,14 +10327,14 @@ public interface Shr5Package extends EPackage {
     int MATIX_CONDITION_MONITOR_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}' class.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes <em>Matrix Attributes</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixDevice()
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixAttributes()
      * @generated
      */
-    int MATRIX_DEVICE = 90;
+    int MATRIX_ATTRIBUTES = 90;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -10361,7 +10343,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE__MATRIX_ZUSTAND_MAX = MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
+    int MATRIX_ATTRIBUTES__MATRIX_ZUSTAND_MAX = MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -10370,7 +10352,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE__GERAETESTUFE = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 0;
+    int MATRIX_ATTRIBUTES__GERAETESTUFE = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -10379,7 +10361,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE__FIREWALL = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 1;
+    int MATRIX_ATTRIBUTES__FIREWALL = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -10388,7 +10370,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE__DATENVERARBEITUNG = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 2;
+    int MATRIX_ATTRIBUTES__DATENVERARBEITUNG = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Current Modus</b></em>' attribute.
@@ -10397,34 +10379,45 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE__CURRENT_MODUS = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 3;
+    int MATRIX_ATTRIBUTES__CURRENT_MODUS = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 3;
 
     /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
+     * The number of structural features of the '<em>Matrix Attributes</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE__PAN = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 4;
+    int MATRIX_ATTRIBUTES_FEATURE_COUNT = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 4;
 
     /**
-     * The number of structural features of the '<em>Matrix Device</em>' class.
+     * The number of operations of the '<em>Matrix Attributes</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MATRIX_DEVICE_FEATURE_COUNT = MATIX_CONDITION_MONITOR_FEATURE_COUNT + 5;
+    int MATRIX_ATTRIBUTES_OPERATION_COUNT = MATIX_CONDITION_MONITOR_OPERATION_COUNT + 0;
 
     /**
-     * The number of operations of the '<em>Matrix Device</em>' class.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatrixDevice
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixDevice()
      * @generated
-     * @ordered
      */
-    int MATRIX_DEVICE_OPERATION_COUNT = MATIX_CONDITION_MONITOR_OPERATION_COUNT + 0;
+    int MATRIX_DEVICE = 111;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl <em>Common Program</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.CommonProgramImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCommonProgram()
+     * @generated
+     */
+    int COMMON_PROGRAM = 112;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
@@ -10443,7 +10436,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__MATRIX_ZUSTAND_MAX = MATRIX_DEVICE__MATRIX_ZUSTAND_MAX;
+    int ACTIVE_MATIX_DEVICE__MATRIX_ZUSTAND_MAX = MATRIX_ATTRIBUTES__MATRIX_ZUSTAND_MAX;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -10452,7 +10445,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__GERAETESTUFE = MATRIX_DEVICE__GERAETESTUFE;
+    int ACTIVE_MATIX_DEVICE__GERAETESTUFE = MATRIX_ATTRIBUTES__GERAETESTUFE;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -10461,7 +10454,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__FIREWALL = MATRIX_DEVICE__FIREWALL;
+    int ACTIVE_MATIX_DEVICE__FIREWALL = MATRIX_ATTRIBUTES__FIREWALL;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -10470,7 +10463,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__DATENVERARBEITUNG = MATRIX_DEVICE__DATENVERARBEITUNG;
+    int ACTIVE_MATIX_DEVICE__DATENVERARBEITUNG = MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
 
     /**
      * The feature id for the '<em><b>Current Modus</b></em>' attribute.
@@ -10479,16 +10472,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__CURRENT_MODUS = MATRIX_DEVICE__CURRENT_MODUS;
-
-    /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ACTIVE_MATIX_DEVICE__PAN = MATRIX_DEVICE__PAN;
+    int ACTIVE_MATIX_DEVICE__CURRENT_MODUS = MATRIX_ATTRIBUTES__CURRENT_MODUS;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
@@ -10497,7 +10481,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__ANGRIFF = MATRIX_DEVICE_FEATURE_COUNT + 0;
+    int ACTIVE_MATIX_DEVICE__ANGRIFF = MATRIX_ATTRIBUTES_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
@@ -10506,7 +10490,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE__SCHLEICHER = MATRIX_DEVICE_FEATURE_COUNT + 1;
+    int ACTIVE_MATIX_DEVICE__SCHLEICHER = MATRIX_ATTRIBUTES_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Active Matix Device</em>' class.
@@ -10515,7 +10499,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE_FEATURE_COUNT = MATRIX_DEVICE_FEATURE_COUNT + 2;
+    int ACTIVE_MATIX_DEVICE_FEATURE_COUNT = MATRIX_ATTRIBUTES_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Active Matix Device</em>' class.
@@ -10524,7 +10508,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ACTIVE_MATIX_DEVICE_OPERATION_COUNT = MATRIX_DEVICE_OPERATION_COUNT + 0;
+    int ACTIVE_MATIX_DEVICE_OPERATION_COUNT = MATRIX_ATTRIBUTES_OPERATION_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -10570,15 +10554,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int RESONANZ_PERSONA__CURRENT_MODUS = ACTIVE_MATIX_DEVICE__CURRENT_MODUS;
-
-    /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RESONANZ_PERSONA__PAN = ACTIVE_MATIX_DEVICE__PAN;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
@@ -10813,15 +10788,6 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SPRITE__CURRENT_MODUS = RESONANZ_PERSONA__CURRENT_MODUS;
-
-    /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SPRITE__PAN = RESONANZ_PERSONA__PAN;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
@@ -13562,6 +13528,196 @@ public interface Shr5Package extends EPackage {
     int SPEZIALISIERUNG_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AbstractMatrixDevice <em>Abstract Matrix Device</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.AbstractMatrixDevice
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstractMatrixDevice()
+     * @generated
+     */
+    int ABSTRACT_MATRIX_DEVICE = 108;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__WERT = ABSTRAKT_GEGENSTAND__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__NAME = ABSTRAKT_GEGENSTAND__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__MODS = ABSTRAKT_GEGENSTAND__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__MATRIX_ZUSTAND_MAX = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__GERAETESTUFE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__FIREWALL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__DATENVERARBEITUNG = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Current Modus</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__CURRENT_MODUS = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Pan</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__PAN = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Device Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__DEVICE_RATING = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 6;
+
+    /**
+     * The number of structural features of the '<em>Abstract Matrix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 7;
+
+    /**
+     * The number of operations of the '<em>Abstract Matrix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl <em>Commlink</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -13578,7 +13734,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+    int COMMLINK__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13587,7 +13743,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__PAGE = ABSTRAKT_GEGENSTAND__PAGE;
+    int COMMLINK__PAGE = ABSTRACT_MATRIX_DEVICE__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -13596,7 +13752,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__SRC_BOOK = ABSTRAKT_GEGENSTAND__SRC_BOOK;
+    int COMMLINK__SRC_BOOK = ABSTRACT_MATRIX_DEVICE__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -13605,7 +13761,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__WERT = ABSTRAKT_GEGENSTAND__WERT;
+    int COMMLINK__WERT = ABSTRACT_MATRIX_DEVICE__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -13614,7 +13770,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__VERFUEGBARKEIT = ABSTRAKT_GEGENSTAND__VERFUEGBARKEIT;
+    int COMMLINK__VERFUEGBARKEIT = ABSTRACT_MATRIX_DEVICE__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -13623,7 +13779,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__WERT_VALUE = ABSTRAKT_GEGENSTAND__WERT_VALUE;
+    int COMMLINK__WERT_VALUE = ABSTRACT_MATRIX_DEVICE__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -13632,7 +13788,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__BESCHREIBUNG = ABSTRAKT_GEGENSTAND__BESCHREIBUNG;
+    int COMMLINK__BESCHREIBUNG = ABSTRACT_MATRIX_DEVICE__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -13641,7 +13797,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__IMAGE = ABSTRAKT_GEGENSTAND__IMAGE;
+    int COMMLINK__IMAGE = ABSTRACT_MATRIX_DEVICE__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13650,7 +13806,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__NAME = ABSTRAKT_GEGENSTAND__NAME;
+    int COMMLINK__NAME = ABSTRACT_MATRIX_DEVICE__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -13659,7 +13815,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__MODS = ABSTRAKT_GEGENSTAND__MODS;
+    int COMMLINK__MODS = ABSTRACT_MATRIX_DEVICE__MODS;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -13668,7 +13824,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__FERTIGKEIT = ABSTRAKT_GEGENSTAND__FERTIGKEIT;
+    int COMMLINK__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -13677,7 +13833,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__MATRIX_ZUSTAND_MAX = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 0;
+    int COMMLINK__MATRIX_ZUSTAND_MAX = ABSTRACT_MATRIX_DEVICE__MATRIX_ZUSTAND_MAX;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -13686,7 +13842,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__GERAETESTUFE = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 1;
+    int COMMLINK__GERAETESTUFE = ABSTRACT_MATRIX_DEVICE__GERAETESTUFE;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -13695,7 +13851,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__FIREWALL = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 2;
+    int COMMLINK__FIREWALL = ABSTRACT_MATRIX_DEVICE__FIREWALL;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -13704,7 +13860,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__DATENVERARBEITUNG = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 3;
+    int COMMLINK__DATENVERARBEITUNG = ABSTRACT_MATRIX_DEVICE__DATENVERARBEITUNG;
 
     /**
      * The feature id for the '<em><b>Current Modus</b></em>' attribute.
@@ -13713,7 +13869,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__CURRENT_MODUS = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 4;
+    int COMMLINK__CURRENT_MODUS = ABSTRACT_MATRIX_DEVICE__CURRENT_MODUS;
 
     /**
      * The feature id for the '<em><b>Pan</b></em>' containment reference.
@@ -13722,7 +13878,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__PAN = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 5;
+    int COMMLINK__PAN = ABSTRACT_MATRIX_DEVICE__PAN;
 
     /**
      * The feature id for the '<em><b>Device Rating</b></em>' attribute.
@@ -13731,25 +13887,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK__DEVICE_RATING = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 6;
+    int COMMLINK__DEVICE_RATING = ABSTRACT_MATRIX_DEVICE__DEVICE_RATING;
 
     /**
-     * The feature id for the '<em><b>Running Programms</b></em>' reference list.
+     * The feature id for the '<em><b>Stored Programs</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int COMMLINK__RUNNING_PROGRAMMS = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 7;
-
-    /**
-     * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int COMMLINK__STRORED_PROGRAMM = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 8;
+    int COMMLINK__STORED_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Commlink</em>' class.
@@ -13758,7 +13905,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK_FEATURE_COUNT = ABSTRAKT_GEGENSTAND_FEATURE_COUNT + 9;
+    int COMMLINK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Commlink</em>' class.
@@ -13767,7 +13914,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int COMMLINK_OPERATION_COUNT = ABSTRAKT_GEGENSTAND_OPERATION_COUNT + 0;
+    int COMMLINK_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl <em>Cyberdeck</em>}' class.
@@ -13786,7 +13933,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PARENT_ID = COMMLINK__PARENT_ID;
+    int CYBERDECK__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13795,7 +13942,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PAGE = COMMLINK__PAGE;
+    int CYBERDECK__PAGE = ABSTRACT_MATRIX_DEVICE__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -13804,7 +13951,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__SRC_BOOK = COMMLINK__SRC_BOOK;
+    int CYBERDECK__SRC_BOOK = ABSTRACT_MATRIX_DEVICE__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -13813,7 +13960,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__WERT = COMMLINK__WERT;
+    int CYBERDECK__WERT = ABSTRACT_MATRIX_DEVICE__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -13822,7 +13969,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__VERFUEGBARKEIT = COMMLINK__VERFUEGBARKEIT;
+    int CYBERDECK__VERFUEGBARKEIT = ABSTRACT_MATRIX_DEVICE__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -13831,7 +13978,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__WERT_VALUE = COMMLINK__WERT_VALUE;
+    int CYBERDECK__WERT_VALUE = ABSTRACT_MATRIX_DEVICE__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -13840,7 +13987,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__BESCHREIBUNG = COMMLINK__BESCHREIBUNG;
+    int CYBERDECK__BESCHREIBUNG = ABSTRACT_MATRIX_DEVICE__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -13849,7 +13996,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__IMAGE = COMMLINK__IMAGE;
+    int CYBERDECK__IMAGE = ABSTRACT_MATRIX_DEVICE__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13858,7 +14005,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__NAME = COMMLINK__NAME;
+    int CYBERDECK__NAME = ABSTRACT_MATRIX_DEVICE__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -13867,7 +14014,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__MODS = COMMLINK__MODS;
+    int CYBERDECK__MODS = ABSTRACT_MATRIX_DEVICE__MODS;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -13876,7 +14023,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__FERTIGKEIT = COMMLINK__FERTIGKEIT;
+    int CYBERDECK__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -13885,7 +14032,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__MATRIX_ZUSTAND_MAX = COMMLINK__MATRIX_ZUSTAND_MAX;
+    int CYBERDECK__MATRIX_ZUSTAND_MAX = ABSTRACT_MATRIX_DEVICE__MATRIX_ZUSTAND_MAX;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -13894,7 +14041,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__GERAETESTUFE = COMMLINK__GERAETESTUFE;
+    int CYBERDECK__GERAETESTUFE = ABSTRACT_MATRIX_DEVICE__GERAETESTUFE;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -13903,7 +14050,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__FIREWALL = COMMLINK__FIREWALL;
+    int CYBERDECK__FIREWALL = ABSTRACT_MATRIX_DEVICE__FIREWALL;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -13912,7 +14059,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__DATENVERARBEITUNG = COMMLINK__DATENVERARBEITUNG;
+    int CYBERDECK__DATENVERARBEITUNG = ABSTRACT_MATRIX_DEVICE__DATENVERARBEITUNG;
 
     /**
      * The feature id for the '<em><b>Current Modus</b></em>' attribute.
@@ -13921,7 +14068,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__CURRENT_MODUS = COMMLINK__CURRENT_MODUS;
+    int CYBERDECK__CURRENT_MODUS = ABSTRACT_MATRIX_DEVICE__CURRENT_MODUS;
 
     /**
      * The feature id for the '<em><b>Pan</b></em>' containment reference.
@@ -13930,7 +14077,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PAN = COMMLINK__PAN;
+    int CYBERDECK__PAN = ABSTRACT_MATRIX_DEVICE__PAN;
 
     /**
      * The feature id for the '<em><b>Device Rating</b></em>' attribute.
@@ -13939,25 +14086,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__DEVICE_RATING = COMMLINK__DEVICE_RATING;
-
-    /**
-     * The feature id for the '<em><b>Running Programms</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CYBERDECK__RUNNING_PROGRAMMS = COMMLINK__RUNNING_PROGRAMMS;
-
-    /**
-     * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CYBERDECK__STRORED_PROGRAMM = COMMLINK__STRORED_PROGRAMM;
+    int CYBERDECK__DEVICE_RATING = ABSTRACT_MATRIX_DEVICE__DEVICE_RATING;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' attribute.
@@ -13966,7 +14095,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ANGRIFF = COMMLINK_FEATURE_COUNT + 0;
+    int CYBERDECK__ANGRIFF = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Schleicher</b></em>' attribute.
@@ -13975,7 +14104,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__SCHLEICHER = COMMLINK_FEATURE_COUNT + 1;
+    int CYBERDECK__SCHLEICHER = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Program Slots</b></em>' attribute.
@@ -13984,7 +14113,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__PROGRAM_SLOTS = COMMLINK_FEATURE_COUNT + 2;
+    int CYBERDECK__PROGRAM_SLOTS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Attribute1</b></em>' attribute.
@@ -13993,7 +14122,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE1 = COMMLINK_FEATURE_COUNT + 3;
+    int CYBERDECK__ATTRIBUTE1 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Attribute2</b></em>' attribute.
@@ -14002,7 +14131,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE2 = COMMLINK_FEATURE_COUNT + 4;
+    int CYBERDECK__ATTRIBUTE2 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Attribute3</b></em>' attribute.
@@ -14011,7 +14140,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE3 = COMMLINK_FEATURE_COUNT + 5;
+    int CYBERDECK__ATTRIBUTE3 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Attribute4</b></em>' attribute.
@@ -14020,7 +14149,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__ATTRIBUTE4 = COMMLINK_FEATURE_COUNT + 6;
+    int CYBERDECK__ATTRIBUTE4 = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Configuration</b></em>' reference list.
@@ -14029,7 +14158,25 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK__CONFIGURATION = COMMLINK_FEATURE_COUNT + 7;
+    int CYBERDECK__CONFIGURATION = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Stored Programs</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__STORED_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Running Programs</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__RUNNING_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 9;
 
     /**
      * The number of structural features of the '<em>Cyberdeck</em>' class.
@@ -14038,7 +14185,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK_FEATURE_COUNT = COMMLINK_FEATURE_COUNT + 8;
+    int CYBERDECK_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 10;
 
     /**
      * The number of operations of the '<em>Cyberdeck</em>' class.
@@ -14047,17 +14194,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CYBERDECK_OPERATION_COUNT = COMMLINK_OPERATION_COUNT + 0;
-
-    /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl <em>Program</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.impl.ProgramImpl
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgram()
-     * @generated
-     */
-    int PROGRAM = 95;
+    int CYBERDECK_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Software <em>Software</em>}' class.
@@ -14067,7 +14204,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSoftware()
      * @generated
      */
-    int SOFTWARE = 101;
+    int SOFTWARE = 100;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -14169,14 +14306,24 @@ public interface Shr5Package extends EPackage {
     int SOFTWARE_OPERATION_COUNT = GELD_WERT_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}' class.
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl <em>Basic Program</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.MatrixPrograms
-     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixPrograms()
+     * @see de.urszeidler.eclipse.shr5.impl.BasicProgramImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBasicProgram()
      * @generated
      */
-    int MATRIX_PROGRAMS = 102;
+    int BASIC_PROGRAM = 106;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgram <em>Matrix Program</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatrixProgram
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgram()
+     * @generated
+     */
+    int MATRIX_PROGRAM = 101;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -14185,7 +14332,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__WERT = SOFTWARE__WERT;
+    int MATRIX_PROGRAM__WERT = SOFTWARE__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -14194,7 +14341,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
+    int MATRIX_PROGRAM__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -14203,7 +14350,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__WERT_VALUE = SOFTWARE__WERT_VALUE;
+    int MATRIX_PROGRAM__WERT_VALUE = SOFTWARE__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -14212,7 +14359,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+    int MATRIX_PROGRAM__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -14221,7 +14368,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__IMAGE = SOFTWARE__IMAGE;
+    int MATRIX_PROGRAM__IMAGE = SOFTWARE__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14230,7 +14377,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__NAME = SOFTWARE__NAME;
+    int MATRIX_PROGRAM__NAME = SOFTWARE__NAME;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -14239,7 +14386,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__PARENT_ID = SOFTWARE__PARENT_ID;
+    int MATRIX_PROGRAM__PARENT_ID = SOFTWARE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -14248,7 +14395,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__PAGE = SOFTWARE__PAGE;
+    int MATRIX_PROGRAM__PAGE = SOFTWARE__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -14257,133 +14404,25 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS__SRC_BOOK = SOFTWARE__SRC_BOOK;
+    int MATRIX_PROGRAM__SRC_BOOK = SOFTWARE__SRC_BOOK;
 
     /**
-     * The number of structural features of the '<em>Matrix Programs</em>' class.
+     * The number of structural features of the '<em>Matrix Program</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 0;
+    int MATRIX_PROGRAM_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 0;
 
     /**
-     * The number of operations of the '<em>Matrix Programs</em>' class.
+     * The number of operations of the '<em>Matrix Program</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MATRIX_PROGRAMS_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
-
-    /**
-     * The feature id for the '<em><b>Wert</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__WERT = MATRIX_PROGRAMS__WERT;
-
-    /**
-     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__VERFUEGBARKEIT = MATRIX_PROGRAMS__VERFUEGBARKEIT;
-
-    /**
-     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
-
-    /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__BESCHREIBUNG = MATRIX_PROGRAMS__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__IMAGE = MATRIX_PROGRAMS__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__NAME = MATRIX_PROGRAMS__NAME;
-
-    /**
-     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__PARENT_ID = MATRIX_PROGRAMS__PARENT_ID;
-
-    /**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__PAGE = MATRIX_PROGRAMS__PAGE;
-
-    /**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__SRC_BOOK = MATRIX_PROGRAMS__SRC_BOOK;
-
-    /**
-     * The feature id for the '<em><b>Category</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM__CATEGORY = MATRIX_PROGRAMS_FEATURE_COUNT + 0;
-
-    /**
-     * The number of structural features of the '<em>Program</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM_FEATURE_COUNT = MATRIX_PROGRAMS_FEATURE_COUNT + 1;
-
-    /**
-     * The number of operations of the '<em>Program</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PROGRAM_OPERATION_COUNT = MATRIX_PROGRAMS_OPERATION_COUNT + 0;
+    int MATRIX_PROGRAM_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
@@ -14393,7 +14432,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSoftwareAgent()
      * @generated
      */
-    int SOFTWARE_AGENT = 96;
+    int SOFTWARE_AGENT = 95;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -14402,7 +14441,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__WERT = MATRIX_PROGRAMS__WERT;
+    int SOFTWARE_AGENT__WERT = MATRIX_PROGRAM__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -14411,7 +14450,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__VERFUEGBARKEIT = MATRIX_PROGRAMS__VERFUEGBARKEIT;
+    int SOFTWARE_AGENT__VERFUEGBARKEIT = MATRIX_PROGRAM__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -14420,7 +14459,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
+    int SOFTWARE_AGENT__WERT_VALUE = MATRIX_PROGRAM__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -14429,7 +14468,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__BESCHREIBUNG = MATRIX_PROGRAMS__BESCHREIBUNG;
+    int SOFTWARE_AGENT__BESCHREIBUNG = MATRIX_PROGRAM__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -14438,7 +14477,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__IMAGE = MATRIX_PROGRAMS__IMAGE;
+    int SOFTWARE_AGENT__IMAGE = MATRIX_PROGRAM__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14447,7 +14486,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__NAME = MATRIX_PROGRAMS__NAME;
+    int SOFTWARE_AGENT__NAME = MATRIX_PROGRAM__NAME;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -14456,7 +14495,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__PARENT_ID = MATRIX_PROGRAMS__PARENT_ID;
+    int SOFTWARE_AGENT__PARENT_ID = MATRIX_PROGRAM__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -14465,7 +14504,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__PAGE = MATRIX_PROGRAMS__PAGE;
+    int SOFTWARE_AGENT__PAGE = MATRIX_PROGRAM__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -14474,7 +14513,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__SRC_BOOK = MATRIX_PROGRAMS__SRC_BOOK;
+    int SOFTWARE_AGENT__SRC_BOOK = MATRIX_PROGRAM__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -14483,7 +14522,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT__RATING = MATRIX_PROGRAMS_FEATURE_COUNT + 0;
+    int SOFTWARE_AGENT__RATING = MATRIX_PROGRAM_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Software Agent</em>' class.
@@ -14492,7 +14531,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT_FEATURE_COUNT = MATRIX_PROGRAMS_FEATURE_COUNT + 1;
+    int SOFTWARE_AGENT_FEATURE_COUNT = MATRIX_PROGRAM_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Software Agent</em>' class.
@@ -14501,7 +14540,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_AGENT_OPERATION_COUNT = MATRIX_PROGRAMS_OPERATION_COUNT + 0;
+    int SOFTWARE_AGENT_OPERATION_COUNT = MATRIX_PROGRAM_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.HostImpl <em>Host</em>}' class.
@@ -14511,79 +14550,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getHost()
      * @generated
      */
-    int HOST = 97;
-
-    /**
-     * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__MATRIX_ZUSTAND_MAX = ACTIVE_MATIX_DEVICE__MATRIX_ZUSTAND_MAX;
-
-    /**
-     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__GERAETESTUFE = ACTIVE_MATIX_DEVICE__GERAETESTUFE;
-
-    /**
-     * The feature id for the '<em><b>Firewall</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__FIREWALL = ACTIVE_MATIX_DEVICE__FIREWALL;
-
-    /**
-     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__DATENVERARBEITUNG = ACTIVE_MATIX_DEVICE__DATENVERARBEITUNG;
-
-    /**
-     * The feature id for the '<em><b>Current Modus</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__CURRENT_MODUS = ACTIVE_MATIX_DEVICE__CURRENT_MODUS;
-
-    /**
-     * The feature id for the '<em><b>Pan</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__PAN = ACTIVE_MATIX_DEVICE__PAN;
-
-    /**
-     * The feature id for the '<em><b>Angriff</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__ANGRIFF = ACTIVE_MATIX_DEVICE__ANGRIFF;
-
-    /**
-     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int HOST__SCHLEICHER = ACTIVE_MATIX_DEVICE__SCHLEICHER;
+    int HOST = 96;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -14592,7 +14559,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int HOST__BESCHREIBUNG = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 0;
+    int HOST__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -14601,7 +14568,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int HOST__IMAGE = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 1;
+    int HOST__IMAGE = BESCHREIBBAR__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14610,7 +14577,79 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int HOST__NAME = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 2;
+    int HOST__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__MATRIX_ZUSTAND_MAX = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__GERAETESTUFE = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__FIREWALL = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__DATENVERARBEITUNG = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Current Modus</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__CURRENT_MODUS = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Pan</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__PAN = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__SCHLEICHER = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of structural features of the '<em>Host</em>' class.
@@ -14619,7 +14658,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int HOST_FEATURE_COUNT = ACTIVE_MATIX_DEVICE_FEATURE_COUNT + 3;
+    int HOST_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The number of operations of the '<em>Host</em>' class.
@@ -14628,7 +14667,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int HOST_OPERATION_COUNT = ACTIVE_MATIX_DEVICE_OPERATION_COUNT + 0;
+    int HOST_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren <em>Cyberware Modifikatioren</em>}' class.
@@ -14638,7 +14677,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCyberwareModifikatioren()
      * @generated
      */
-    int CYBERWARE_MODIFIKATIOREN = 98;
+    int CYBERWARE_MODIFIKATIOREN = 97;
 
     /**
      * The feature id for the '<em><b>Direct Neural Interface</b></em>' attribute.
@@ -14711,7 +14750,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getRiggerCommandConsole()
      * @generated
      */
-    int RIGGER_COMMAND_CONSOLE = 99;
+    int RIGGER_COMMAND_CONSOLE = 98;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -14720,7 +14759,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__PARENT_ID = COMMLINK__PARENT_ID;
+    int RIGGER_COMMAND_CONSOLE__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -14729,7 +14768,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__PAGE = COMMLINK__PAGE;
+    int RIGGER_COMMAND_CONSOLE__PAGE = ABSTRACT_MATRIX_DEVICE__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -14738,7 +14777,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__SRC_BOOK = COMMLINK__SRC_BOOK;
+    int RIGGER_COMMAND_CONSOLE__SRC_BOOK = ABSTRACT_MATRIX_DEVICE__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -14747,7 +14786,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__WERT = COMMLINK__WERT;
+    int RIGGER_COMMAND_CONSOLE__WERT = ABSTRACT_MATRIX_DEVICE__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -14756,7 +14795,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__VERFUEGBARKEIT = COMMLINK__VERFUEGBARKEIT;
+    int RIGGER_COMMAND_CONSOLE__VERFUEGBARKEIT = ABSTRACT_MATRIX_DEVICE__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -14765,7 +14804,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__WERT_VALUE = COMMLINK__WERT_VALUE;
+    int RIGGER_COMMAND_CONSOLE__WERT_VALUE = ABSTRACT_MATRIX_DEVICE__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -14774,7 +14813,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__BESCHREIBUNG = COMMLINK__BESCHREIBUNG;
+    int RIGGER_COMMAND_CONSOLE__BESCHREIBUNG = ABSTRACT_MATRIX_DEVICE__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -14783,7 +14822,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__IMAGE = COMMLINK__IMAGE;
+    int RIGGER_COMMAND_CONSOLE__IMAGE = ABSTRACT_MATRIX_DEVICE__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14792,7 +14831,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__NAME = COMMLINK__NAME;
+    int RIGGER_COMMAND_CONSOLE__NAME = ABSTRACT_MATRIX_DEVICE__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -14801,7 +14840,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__MODS = COMMLINK__MODS;
+    int RIGGER_COMMAND_CONSOLE__MODS = ABSTRACT_MATRIX_DEVICE__MODS;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -14810,7 +14849,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__FERTIGKEIT = COMMLINK__FERTIGKEIT;
+    int RIGGER_COMMAND_CONSOLE__FERTIGKEIT = ABSTRACT_MATRIX_DEVICE__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
@@ -14819,7 +14858,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__MATRIX_ZUSTAND_MAX = COMMLINK__MATRIX_ZUSTAND_MAX;
+    int RIGGER_COMMAND_CONSOLE__MATRIX_ZUSTAND_MAX = ABSTRACT_MATRIX_DEVICE__MATRIX_ZUSTAND_MAX;
 
     /**
      * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
@@ -14828,7 +14867,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__GERAETESTUFE = COMMLINK__GERAETESTUFE;
+    int RIGGER_COMMAND_CONSOLE__GERAETESTUFE = ABSTRACT_MATRIX_DEVICE__GERAETESTUFE;
 
     /**
      * The feature id for the '<em><b>Firewall</b></em>' attribute.
@@ -14837,7 +14876,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__FIREWALL = COMMLINK__FIREWALL;
+    int RIGGER_COMMAND_CONSOLE__FIREWALL = ABSTRACT_MATRIX_DEVICE__FIREWALL;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
@@ -14846,7 +14885,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG = COMMLINK__DATENVERARBEITUNG;
+    int RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG = ABSTRACT_MATRIX_DEVICE__DATENVERARBEITUNG;
 
     /**
      * The feature id for the '<em><b>Current Modus</b></em>' attribute.
@@ -14855,7 +14894,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__CURRENT_MODUS = COMMLINK__CURRENT_MODUS;
+    int RIGGER_COMMAND_CONSOLE__CURRENT_MODUS = ABSTRACT_MATRIX_DEVICE__CURRENT_MODUS;
 
     /**
      * The feature id for the '<em><b>Pan</b></em>' containment reference.
@@ -14864,7 +14903,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__PAN = COMMLINK__PAN;
+    int RIGGER_COMMAND_CONSOLE__PAN = ABSTRACT_MATRIX_DEVICE__PAN;
 
     /**
      * The feature id for the '<em><b>Device Rating</b></em>' attribute.
@@ -14873,25 +14912,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__DEVICE_RATING = COMMLINK__DEVICE_RATING;
-
-    /**
-     * The feature id for the '<em><b>Running Programms</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMMS = COMMLINK__RUNNING_PROGRAMMS;
-
-    /**
-     * The feature id for the '<em><b>Strored Programm</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int RIGGER_COMMAND_CONSOLE__STRORED_PROGRAMM = COMMLINK__STRORED_PROGRAMM;
+    int RIGGER_COMMAND_CONSOLE__DEVICE_RATING = ABSTRACT_MATRIX_DEVICE__DEVICE_RATING;
 
     /**
      * The feature id for the '<em><b>Rauschunterdrueckung</b></em>' attribute.
@@ -14900,7 +14921,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG = COMMLINK_FEATURE_COUNT + 0;
+    int RIGGER_COMMAND_CONSOLE__RAUSCHUNTERDRUECKUNG = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Zugriff</b></em>' attribute.
@@ -14909,7 +14930,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__ZUGRIFF = COMMLINK_FEATURE_COUNT + 1;
+    int RIGGER_COMMAND_CONSOLE__ZUGRIFF = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung Basis</b></em>' attribute.
@@ -14918,7 +14939,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS = COMMLINK_FEATURE_COUNT + 2;
+    int RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Firewall Basis</b></em>' attribute.
@@ -14927,7 +14948,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS = COMMLINK_FEATURE_COUNT + 3;
+    int RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Zugriff Basis</b></em>' attribute.
@@ -14936,7 +14957,25 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS = COMMLINK_FEATURE_COUNT + 4;
+    int RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Stored Programs</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Running Programs</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Rigger Command Console</em>' class.
@@ -14945,7 +14984,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE_FEATURE_COUNT = COMMLINK_FEATURE_COUNT + 5;
+    int RIGGER_COMMAND_CONSOLE_FEATURE_COUNT = ABSTRACT_MATRIX_DEVICE_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Rigger Command Console</em>' class.
@@ -14954,7 +14993,116 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int RIGGER_COMMAND_CONSOLE_OPERATION_COUNT = COMMLINK_OPERATION_COUNT + 0;
+    int RIGGER_COMMAND_CONSOLE_OPERATION_COUNT = ABSTRACT_MATRIX_DEVICE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.RiggerProgram <em>Rigger Program</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.RiggerProgram
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getRiggerProgram()
+     * @generated
+     */
+    int RIGGER_PROGRAM = 110;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__WERT = SOFTWARE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__WERT_VALUE = SOFTWARE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__IMAGE = SOFTWARE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__NAME = SOFTWARE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__PAGE = SOFTWARE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__SRC_BOOK = SOFTWARE__SRC_BOOK;
+
+    /**
+     * The number of structural features of the '<em>Rigger Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Rigger Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl <em>Auto Soft</em>}' class.
@@ -14964,7 +15112,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAutoSoft()
      * @generated
      */
-    int AUTO_SOFT = 100;
+    int AUTO_SOFT = 99;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -14973,7 +15121,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__WERT = SOFTWARE__WERT;
+    int AUTO_SOFT__WERT = RIGGER_PROGRAM__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -14982,7 +15130,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
+    int AUTO_SOFT__VERFUEGBARKEIT = RIGGER_PROGRAM__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -14991,7 +15139,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__WERT_VALUE = SOFTWARE__WERT_VALUE;
+    int AUTO_SOFT__WERT_VALUE = RIGGER_PROGRAM__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -15000,7 +15148,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+    int AUTO_SOFT__BESCHREIBUNG = RIGGER_PROGRAM__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -15009,7 +15157,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__IMAGE = SOFTWARE__IMAGE;
+    int AUTO_SOFT__IMAGE = RIGGER_PROGRAM__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15018,7 +15166,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__NAME = SOFTWARE__NAME;
+    int AUTO_SOFT__NAME = RIGGER_PROGRAM__NAME;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -15027,7 +15175,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__PARENT_ID = SOFTWARE__PARENT_ID;
+    int AUTO_SOFT__PARENT_ID = RIGGER_PROGRAM__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -15036,7 +15184,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__PAGE = SOFTWARE__PAGE;
+    int AUTO_SOFT__PAGE = RIGGER_PROGRAM__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -15045,7 +15193,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__SRC_BOOK = SOFTWARE__SRC_BOOK;
+    int AUTO_SOFT__SRC_BOOK = RIGGER_PROGRAM__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -15054,7 +15202,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT__RATING = SOFTWARE_FEATURE_COUNT + 0;
+    int AUTO_SOFT__RATING = RIGGER_PROGRAM_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Auto Soft</em>' class.
@@ -15063,7 +15211,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 1;
+    int AUTO_SOFT_FEATURE_COUNT = RIGGER_PROGRAM_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Auto Soft</em>' class.
@@ -15072,7 +15220,106 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int AUTO_SOFT_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
+    int AUTO_SOFT_OPERATION_COUNT = RIGGER_PROGRAM_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__WERT = SOFTWARE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__VERFUEGBARKEIT = SOFTWARE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__WERT_VALUE = SOFTWARE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__BESCHREIBUNG = SOFTWARE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__IMAGE = SOFTWARE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__NAME = SOFTWARE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__PAGE = SOFTWARE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__SRC_BOOK = SOFTWARE__SRC_BOOK;
+
+    /**
+     * The number of structural features of the '<em>Basic Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM_FEATURE_COUNT = SOFTWARE_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Basic Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM_OPERATION_COUNT = SOFTWARE_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl <em>Tutorsoft</em>}' class.
@@ -15082,7 +15329,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getTutorsoft()
      * @generated
      */
-    int TUTORSOFT = 103;
+    int TUTORSOFT = 102;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -15091,7 +15338,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__WERT = MATRIX_PROGRAMS__WERT;
+    int TUTORSOFT__WERT = BASIC_PROGRAM__WERT;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -15100,7 +15347,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__VERFUEGBARKEIT = MATRIX_PROGRAMS__VERFUEGBARKEIT;
+    int TUTORSOFT__VERFUEGBARKEIT = BASIC_PROGRAM__VERFUEGBARKEIT;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -15109,7 +15356,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__WERT_VALUE = MATRIX_PROGRAMS__WERT_VALUE;
+    int TUTORSOFT__WERT_VALUE = BASIC_PROGRAM__WERT_VALUE;
 
     /**
      * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -15118,7 +15365,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__BESCHREIBUNG = MATRIX_PROGRAMS__BESCHREIBUNG;
+    int TUTORSOFT__BESCHREIBUNG = BASIC_PROGRAM__BESCHREIBUNG;
 
     /**
      * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -15127,7 +15374,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__IMAGE = MATRIX_PROGRAMS__IMAGE;
+    int TUTORSOFT__IMAGE = BASIC_PROGRAM__IMAGE;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15136,7 +15383,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__NAME = MATRIX_PROGRAMS__NAME;
+    int TUTORSOFT__NAME = BASIC_PROGRAM__NAME;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -15145,7 +15392,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__PARENT_ID = MATRIX_PROGRAMS__PARENT_ID;
+    int TUTORSOFT__PARENT_ID = BASIC_PROGRAM__PARENT_ID;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -15154,7 +15401,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__PAGE = MATRIX_PROGRAMS__PAGE;
+    int TUTORSOFT__PAGE = BASIC_PROGRAM__PAGE;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -15163,7 +15410,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__SRC_BOOK = MATRIX_PROGRAMS__SRC_BOOK;
+    int TUTORSOFT__SRC_BOOK = BASIC_PROGRAM__SRC_BOOK;
 
     /**
      * The feature id for the '<em><b>Rating</b></em>' attribute.
@@ -15172,7 +15419,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__RATING = MATRIX_PROGRAMS_FEATURE_COUNT + 0;
+    int TUTORSOFT__RATING = BASIC_PROGRAM_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Skill</b></em>' reference.
@@ -15181,7 +15428,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT__SKILL = MATRIX_PROGRAMS_FEATURE_COUNT + 1;
+    int TUTORSOFT__SKILL = BASIC_PROGRAM_FEATURE_COUNT + 1;
 
     /**
      * The number of structural features of the '<em>Tutorsoft</em>' class.
@@ -15190,7 +15437,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT_FEATURE_COUNT = MATRIX_PROGRAMS_FEATURE_COUNT + 2;
+    int TUTORSOFT_FEATURE_COUNT = BASIC_PROGRAM_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Tutorsoft</em>' class.
@@ -15199,7 +15446,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int TUTORSOFT_OPERATION_COUNT = MATRIX_PROGRAMS_OPERATION_COUNT + 0;
+    int TUTORSOFT_OPERATION_COUNT = BASIC_PROGRAM_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl <em>Skill Soft</em>}' class.
@@ -15209,7 +15456,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSkillSoft()
      * @generated
      */
-    int SKILL_SOFT = 104;
+    int SKILL_SOFT = 103;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -15336,7 +15583,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFahrzeugZustand()
      * @generated
      */
-    int FAHRZEUG_ZUSTAND = 105;
+    int FAHRZEUG_ZUSTAND = 104;
 
     /**
      * The feature id for the '<em><b>Zustand Max</b></em>' attribute.
@@ -15373,7 +15620,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPersonalAreaNetwork()
      * @generated
      */
-    int PERSONAL_AREA_NETWORK = 106;
+    int PERSONAL_AREA_NETWORK = 105;
 
     /**
      * The feature id for the '<em><b>Slaves</b></em>' reference list.
@@ -15421,6 +15668,422 @@ public interface Shr5Package extends EPackage {
     int PERSONAL_AREA_NETWORK_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.DatasoftImpl <em>Datasoft</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.DatasoftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDatasoft()
+     * @generated
+     */
+    int DATASOFT = 107;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__WERT = BASIC_PROGRAM__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__VERFUEGBARKEIT = BASIC_PROGRAM__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__WERT_VALUE = BASIC_PROGRAM__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__BESCHREIBUNG = BASIC_PROGRAM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__IMAGE = BASIC_PROGRAM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__NAME = BASIC_PROGRAM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__PARENT_ID = BASIC_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__PAGE = BASIC_PROGRAM__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__SRC_BOOK = BASIC_PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Skill</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__SKILL = BASIC_PROGRAM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Datasoft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT_FEATURE_COUNT = BASIC_PROGRAM_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Datasoft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT_OPERATION_COUNT = BASIC_PROGRAM_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ConsumerSoftImpl <em>Consumer Soft</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ConsumerSoftImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getConsumerSoft()
+     * @generated
+     */
+    int CONSUMER_SOFT = 109;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__WERT = BASIC_PROGRAM__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__VERFUEGBARKEIT = BASIC_PROGRAM__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__WERT_VALUE = BASIC_PROGRAM__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__BESCHREIBUNG = BASIC_PROGRAM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__IMAGE = BASIC_PROGRAM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__NAME = BASIC_PROGRAM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__PARENT_ID = BASIC_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__PAGE = BASIC_PROGRAM__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__SRC_BOOK = BASIC_PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__TYPE = BASIC_PROGRAM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Consumer Soft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT_FEATURE_COUNT = BASIC_PROGRAM_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Consumer Soft</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT_OPERATION_COUNT = BASIC_PROGRAM_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__MATRIX_ZUSTAND_MAX = MATRIX_ATTRIBUTES__MATRIX_ZUSTAND_MAX;
+
+    /**
+     * The feature id for the '<em><b>Geraetestufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__GERAETESTUFE = MATRIX_ATTRIBUTES__GERAETESTUFE;
+
+    /**
+     * The feature id for the '<em><b>Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__FIREWALL = MATRIX_ATTRIBUTES__FIREWALL;
+
+    /**
+     * The feature id for the '<em><b>Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__DATENVERARBEITUNG = MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
+
+    /**
+     * The feature id for the '<em><b>Current Modus</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__CURRENT_MODUS = MATRIX_ATTRIBUTES__CURRENT_MODUS;
+
+    /**
+     * The feature id for the '<em><b>Pan</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE__PAN = MATRIX_ATTRIBUTES_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Matrix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE_FEATURE_COUNT = MATRIX_ATTRIBUTES_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Matrix Device</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_DEVICE_OPERATION_COUNT = MATRIX_ATTRIBUTES_OPERATION_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__WERT = MATRIX_PROGRAM__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__VERFUEGBARKEIT = MATRIX_PROGRAM__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__WERT_VALUE = MATRIX_PROGRAM__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__BESCHREIBUNG = MATRIX_PROGRAM__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__IMAGE = MATRIX_PROGRAM__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__NAME = MATRIX_PROGRAM__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__PARENT_ID = MATRIX_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__PAGE = MATRIX_PROGRAM__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__SRC_BOOK = MATRIX_PROGRAM__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Program Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__PROGRAM_TYPE = MATRIX_PROGRAM_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Common Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM_FEATURE_COUNT = MATRIX_PROGRAM_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Common Program</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM_OPERATION_COUNT = MATRIX_PROGRAM_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15428,7 +16091,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 107;
+	int FEUER_MODUS = 113;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -15438,7 +16101,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 108;
+	int SCHADENS_TYP = 114;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -15448,7 +16111,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 109;
+	int MAGAZIN_TYP = 115;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -15458,7 +16121,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 110;
+	int FEUWERWAFFEN_ERWEITERUNG = 116;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -15468,7 +16131,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 111;
+	int MODIFIKATOR_TYPE = 117;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -15478,7 +16141,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 112;
+	int SMARTGUN_TYPE = 118;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -15488,7 +16151,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 113;
+	int ZAUBER_ART = 119;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -15498,7 +16161,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 114;
+	int ZAUBER_REICHWEITE = 120;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -15508,7 +16171,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 115;
+	int ZAUBER_DAUER = 121;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -15518,7 +16181,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 116;
+	int MAGISCHE_TRADITION = 122;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -15528,7 +16191,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 117;
+	int CRITTER_HANDLUNG = 123;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -15538,7 +16201,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 118;
+	int CRITTER_REICHWEITE = 124;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -15548,7 +16211,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 119;
+	int CRITTER_DAUER = 125;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -15558,7 +16221,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 120;
+	int RESONANZ_ZIEL = 126;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -15568,7 +16231,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 121;
+    int INTERFACE_MODUS = 127;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -15578,7 +16241,17 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 122;
+    int PROGRAM_TYPE = 128;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatrixProgramType
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
+     * @generated
+     */
+    int MATRIX_PROGRAM_TYPE = 129;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -15588,7 +16261,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 123;
+	int SHR_DATE = 130;
 
 
 	/**
@@ -15599,7 +16272,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 124;
+	int MODIFICATION_MANAGER = 131;
 
 
 	/**
@@ -19077,6 +19750,60 @@ public interface Shr5Package extends EPackage {
     EClass getSpezialisierung();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixAttributes <em>Matrix Attributes</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Matrix Attributes</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes
+     * @generated
+     */
+    EClass getMatrixAttributes();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe <em>Geraetestufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Geraetestufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
+     * @see #getMatrixAttributes()
+     * @generated
+     */
+    EAttribute getMatrixAttributes_Geraetestufe();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall <em>Firewall</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Firewall</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
+     * @see #getMatrixAttributes()
+     * @generated
+     */
+    EAttribute getMatrixAttributes_Firewall();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung <em>Datenverarbeitung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Datenverarbeitung</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
+     * @see #getMatrixAttributes()
+     * @generated
+     */
+    EAttribute getMatrixAttributes_Datenverarbeitung();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getCurrentModus <em>Current Modus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Current Modus</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getCurrentModus()
+     * @see #getMatrixAttributes()
+     * @generated
+     */
+    EAttribute getMatrixAttributes_CurrentModus();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -19085,50 +19812,6 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EClass getMatrixDevice();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe <em>Geraetestufe</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Geraetestufe</em>'.
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe()
-     * @see #getMatrixDevice()
-     * @generated
-     */
-    EAttribute getMatrixDevice_Geraetestufe();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall <em>Firewall</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Firewall</em>'.
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall()
-     * @see #getMatrixDevice()
-     * @generated
-     */
-    EAttribute getMatrixDevice_Firewall();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung <em>Datenverarbeitung</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Datenverarbeitung</em>'.
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung()
-     * @see #getMatrixDevice()
-     * @generated
-     */
-    EAttribute getMatrixDevice_Datenverarbeitung();
-
-    /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getCurrentModus <em>Current Modus</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Current Modus</em>'.
-     * @see de.urszeidler.eclipse.shr5.MatrixDevice#getCurrentModus()
-     * @see #getMatrixDevice()
-     * @generated
-     */
-    EAttribute getMatrixDevice_CurrentModus();
 
     /**
      * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.MatrixDevice#getPan <em>Pan</em>}'.
@@ -19140,6 +19823,27 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EReference getMatrixDevice_Pan();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.CommonProgram <em>Common Program</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Common Program</em>'.
+     * @see de.urszeidler.eclipse.shr5.CommonProgram
+     * @generated
+     */
+    EClass getCommonProgram();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.CommonProgram#getProgramType <em>Program Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Program Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.CommonProgram#getProgramType()
+     * @see #getCommonProgram()
+     * @generated
+     */
+    EAttribute getCommonProgram_ProgramType();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
@@ -19184,37 +19888,15 @@ public interface Shr5Package extends EPackage {
     EClass getCommlink();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Commlink#getDeviceRating <em>Device Rating</em>}'.
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Commlink#getStoredPrograms <em>Stored Programs</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Device Rating</em>'.
-     * @see de.urszeidler.eclipse.shr5.Commlink#getDeviceRating()
+     * @return the meta object for the containment reference list '<em>Stored Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.Commlink#getStoredPrograms()
      * @see #getCommlink()
      * @generated
      */
-    EAttribute getCommlink_DeviceRating();
-
-    /**
-     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Commlink#getRunningProgramms <em>Running Programms</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Running Programms</em>'.
-     * @see de.urszeidler.eclipse.shr5.Commlink#getRunningProgramms()
-     * @see #getCommlink()
-     * @generated
-     */
-    EReference getCommlink_RunningProgramms();
-
-    /**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Commlink#getStroredProgramm <em>Strored Programm</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Strored Programm</em>'.
-     * @see de.urszeidler.eclipse.shr5.Commlink#getStroredProgramm()
-     * @see #getCommlink()
-     * @generated
-     */
-    EReference getCommlink_StroredProgramm();
+    EReference getCommlink_StoredPrograms();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}'.
@@ -19314,25 +19996,26 @@ public interface Shr5Package extends EPackage {
     EReference getCyberdeck_Configuration();
 
     /**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Program <em>Program</em>}'.
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getStoredPrograms <em>Stored Programs</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Program</em>'.
-     * @see de.urszeidler.eclipse.shr5.Program
+     * @return the meta object for the containment reference list '<em>Stored Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getStoredPrograms()
+     * @see #getCyberdeck()
      * @generated
      */
-    EClass getProgram();
+    EReference getCyberdeck_StoredPrograms();
 
     /**
-     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Program#getCategory <em>Category</em>}'.
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningPrograms <em>Running Programs</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Category</em>'.
-     * @see de.urszeidler.eclipse.shr5.Program#getCategory()
-     * @see #getProgram()
+     * @return the meta object for the reference list '<em>Running Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.Cyberdeck#getRunningPrograms()
+     * @see #getCyberdeck()
      * @generated
      */
-    EAttribute getProgram_Category();
+    EReference getCyberdeck_RunningPrograms();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.SoftwareAgent <em>Software Agent</em>}'.
@@ -19496,6 +20179,28 @@ public interface Shr5Package extends EPackage {
     EAttribute getRiggerCommandConsole_ZugriffBasis();
 
     /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getStoredPrograms <em>Stored Programs</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Stored Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.RiggerCommandConsole#getStoredPrograms()
+     * @see #getRiggerCommandConsole()
+     * @generated
+     */
+    EReference getRiggerCommandConsole_StoredPrograms();
+
+    /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRunningPrograms <em>Running Programs</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Running Programs</em>'.
+     * @see de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRunningPrograms()
+     * @see #getRiggerCommandConsole()
+     * @generated
+     */
+    EReference getRiggerCommandConsole_RunningPrograms();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AutoSoft <em>Auto Soft</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -19527,14 +20232,14 @@ public interface Shr5Package extends EPackage {
     EClass getSoftware();
 
     /**
-     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}'.
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MatrixProgram <em>Matrix Program</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Matrix Programs</em>'.
-     * @see de.urszeidler.eclipse.shr5.MatrixPrograms
+     * @return the meta object for class '<em>Matrix Program</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixProgram
      * @generated
      */
-    EClass getMatrixPrograms();
+    EClass getMatrixProgram();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Tutorsoft <em>Tutorsoft</em>}'.
@@ -19663,6 +20368,89 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getPersonalAreaNetwork_SlaveMax();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.BasicProgram <em>Basic Program</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Basic Program</em>'.
+     * @see de.urszeidler.eclipse.shr5.BasicProgram
+     * @generated
+     */
+    EClass getBasicProgram();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Datasoft <em>Datasoft</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Datasoft</em>'.
+     * @see de.urszeidler.eclipse.shr5.Datasoft
+     * @generated
+     */
+    EClass getDatasoft();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.Datasoft#getSkill <em>Skill</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Skill</em>'.
+     * @see de.urszeidler.eclipse.shr5.Datasoft#getSkill()
+     * @see #getDatasoft()
+     * @generated
+     */
+    EReference getDatasoft_Skill();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AbstractMatrixDevice <em>Abstract Matrix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Abstract Matrix Device</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbstractMatrixDevice
+     * @generated
+     */
+    EClass getAbstractMatrixDevice();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.AbstractMatrixDevice#getDeviceRating <em>Device Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Device Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbstractMatrixDevice#getDeviceRating()
+     * @see #getAbstractMatrixDevice()
+     * @generated
+     */
+    EAttribute getAbstractMatrixDevice_DeviceRating();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ConsumerSoft <em>Consumer Soft</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Consumer Soft</em>'.
+     * @see de.urszeidler.eclipse.shr5.ConsumerSoft
+     * @generated
+     */
+    EClass getConsumerSoft();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.ConsumerSoft#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.ConsumerSoft#getType()
+     * @see #getConsumerSoft()
+     * @generated
+     */
+    EAttribute getConsumerSoft_Type();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.RiggerProgram <em>Rigger Program</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Rigger Program</em>'.
+     * @see de.urszeidler.eclipse.shr5.RiggerProgram
+     * @generated
+     */
+    EClass getRiggerProgram();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}'.
@@ -19823,6 +20611,16 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EEnum getProgramType();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Matrix Program Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.MatrixProgramType
+     * @generated
+     */
+    EEnum getMatrixProgramType();
 
     /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
@@ -22642,6 +23440,48 @@ public interface Shr5Package extends EPackage {
         EClass SPEZIALISIERUNG = eINSTANCE.getSpezialisierung();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes <em>Matrix Attributes</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.MatrixAttributes
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixAttributes()
+         * @generated
+         */
+        EClass MATRIX_ATTRIBUTES = eINSTANCE.getMatrixAttributes();
+
+        /**
+         * The meta object literal for the '<em><b>Geraetestufe</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_ATTRIBUTES__GERAETESTUFE = eINSTANCE.getMatrixAttributes_Geraetestufe();
+
+        /**
+         * The meta object literal for the '<em><b>Firewall</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_ATTRIBUTES__FIREWALL = eINSTANCE.getMatrixAttributes_Firewall();
+
+        /**
+         * The meta object literal for the '<em><b>Datenverarbeitung</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_ATTRIBUTES__DATENVERARBEITUNG = eINSTANCE.getMatrixAttributes_Datenverarbeitung();
+
+        /**
+         * The meta object literal for the '<em><b>Current Modus</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MATRIX_ATTRIBUTES__CURRENT_MODUS = eINSTANCE.getMatrixAttributes_CurrentModus();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -22652,44 +23492,30 @@ public interface Shr5Package extends EPackage {
         EClass MATRIX_DEVICE = eINSTANCE.getMatrixDevice();
 
         /**
-         * The meta object literal for the '<em><b>Geraetestufe</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MATRIX_DEVICE__GERAETESTUFE = eINSTANCE.getMatrixDevice_Geraetestufe();
-
-        /**
-         * The meta object literal for the '<em><b>Firewall</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MATRIX_DEVICE__FIREWALL = eINSTANCE.getMatrixDevice_Firewall();
-
-        /**
-         * The meta object literal for the '<em><b>Datenverarbeitung</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MATRIX_DEVICE__DATENVERARBEITUNG = eINSTANCE.getMatrixDevice_Datenverarbeitung();
-
-        /**
-         * The meta object literal for the '<em><b>Current Modus</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute MATRIX_DEVICE__CURRENT_MODUS = eINSTANCE.getMatrixDevice_CurrentModus();
-
-        /**
          * The meta object literal for the '<em><b>Pan</b></em>' containment reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
         EReference MATRIX_DEVICE__PAN = eINSTANCE.getMatrixDevice_Pan();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CommonProgramImpl <em>Common Program</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.CommonProgramImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCommonProgram()
+         * @generated
+         */
+        EClass COMMON_PROGRAM = eINSTANCE.getCommonProgram();
+
+        /**
+         * The meta object literal for the '<em><b>Program Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute COMMON_PROGRAM__PROGRAM_TYPE = eINSTANCE.getCommonProgram_ProgramType();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
@@ -22728,28 +23554,12 @@ public interface Shr5Package extends EPackage {
         EClass COMMLINK = eINSTANCE.getCommlink();
 
         /**
-         * The meta object literal for the '<em><b>Device Rating</b></em>' attribute feature.
+         * The meta object literal for the '<em><b>Stored Programs</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute COMMLINK__DEVICE_RATING = eINSTANCE.getCommlink_DeviceRating();
-
-        /**
-         * The meta object literal for the '<em><b>Running Programms</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference COMMLINK__RUNNING_PROGRAMMS = eINSTANCE.getCommlink_RunningProgramms();
-
-        /**
-         * The meta object literal for the '<em><b>Strored Programm</b></em>' containment reference list feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference COMMLINK__STRORED_PROGRAMM = eINSTANCE.getCommlink_StroredProgramm();
+        EReference COMMLINK__STORED_PROGRAMS = eINSTANCE.getCommlink_StoredPrograms();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor <em>Matix Condition Monitor</em>}' class.
@@ -22828,22 +23638,20 @@ public interface Shr5Package extends EPackage {
         EReference CYBERDECK__CONFIGURATION = eINSTANCE.getCyberdeck_Configuration();
 
         /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl <em>Program</em>}' class.
+         * The meta object literal for the '<em><b>Stored Programs</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.impl.ProgramImpl
-         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgram()
          * @generated
          */
-        EClass PROGRAM = eINSTANCE.getProgram();
+        EReference CYBERDECK__STORED_PROGRAMS = eINSTANCE.getCyberdeck_StoredPrograms();
 
         /**
-         * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+         * The meta object literal for the '<em><b>Running Programs</b></em>' reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PROGRAM__CATEGORY = eINSTANCE.getProgram_Category();
+        EReference CYBERDECK__RUNNING_PROGRAMS = eINSTANCE.getCyberdeck_RunningPrograms();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl <em>Software Agent</em>}' class.
@@ -22974,6 +23782,22 @@ public interface Shr5Package extends EPackage {
         EAttribute RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS = eINSTANCE.getRiggerCommandConsole_ZugriffBasis();
 
         /**
+         * The meta object literal for the '<em><b>Stored Programs</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS = eINSTANCE.getRiggerCommandConsole_StoredPrograms();
+
+        /**
+         * The meta object literal for the '<em><b>Running Programs</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS = eINSTANCE.getRiggerCommandConsole_RunningPrograms();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl <em>Auto Soft</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -23002,14 +23826,14 @@ public interface Shr5Package extends EPackage {
         EClass SOFTWARE = eINSTANCE.getSoftware();
 
         /**
-         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}' class.
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixProgram <em>Matrix Program</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see de.urszeidler.eclipse.shr5.MatrixPrograms
-         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixPrograms()
+         * @see de.urszeidler.eclipse.shr5.MatrixProgram
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgram()
          * @generated
          */
-        EClass MATRIX_PROGRAMS = eINSTANCE.getMatrixPrograms();
+        EClass MATRIX_PROGRAM = eINSTANCE.getMatrixProgram();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl <em>Tutorsoft</em>}' class.
@@ -23114,6 +23938,80 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute PERSONAL_AREA_NETWORK__SLAVE_MAX = eINSTANCE.getPersonalAreaNetwork_SlaveMax();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl <em>Basic Program</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.BasicProgramImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBasicProgram()
+         * @generated
+         */
+        EClass BASIC_PROGRAM = eINSTANCE.getBasicProgram();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.DatasoftImpl <em>Datasoft</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.DatasoftImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDatasoft()
+         * @generated
+         */
+        EClass DATASOFT = eINSTANCE.getDatasoft();
+
+        /**
+         * The meta object literal for the '<em><b>Skill</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference DATASOFT__SKILL = eINSTANCE.getDatasoft_Skill();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.AbstractMatrixDevice <em>Abstract Matrix Device</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.AbstractMatrixDevice
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstractMatrixDevice()
+         * @generated
+         */
+        EClass ABSTRACT_MATRIX_DEVICE = eINSTANCE.getAbstractMatrixDevice();
+
+        /**
+         * The meta object literal for the '<em><b>Device Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute ABSTRACT_MATRIX_DEVICE__DEVICE_RATING = eINSTANCE.getAbstractMatrixDevice_DeviceRating();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ConsumerSoftImpl <em>Consumer Soft</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.ConsumerSoftImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getConsumerSoft()
+         * @generated
+         */
+        EClass CONSUMER_SOFT = eINSTANCE.getConsumerSoft();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute CONSUMER_SOFT__TYPE = eINSTANCE.getConsumerSoft_Type();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.RiggerProgram <em>Rigger Program</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.RiggerProgram
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getRiggerProgram()
+         * @generated
+         */
+        EClass RIGGER_PROGRAM = eINSTANCE.getRiggerProgram();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
@@ -23274,6 +24172,16 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EEnum PROGRAM_TYPE = eINSTANCE.getProgramType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.MatrixProgramType
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
+         * @generated
+         */
+        EEnum MATRIX_PROGRAM_TYPE = eINSTANCE.getMatrixProgramType();
 
         /**
          * The meta object literal for the '<em>Shr Date</em>' data type.

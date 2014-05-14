@@ -82,7 +82,7 @@ public class MagischePersonaItemProvider
                  getString("_UI_BaseMagischePersona_magie_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_BaseMagischePersona_magie_feature", "_UI_BaseMagischePersona_type"),
                  Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE,
-                 true,
+                 false,
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,

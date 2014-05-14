@@ -18,5 +18,5 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Host extends ActiveMatixDevice, Beschreibbar {
+public interface Host extends Beschreibbar, MatrixDevice, ActiveMatixDevice {
 } // Host

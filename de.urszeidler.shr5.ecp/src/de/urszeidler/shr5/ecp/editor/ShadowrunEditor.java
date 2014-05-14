@@ -27,6 +27,7 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Commlink;
@@ -164,7 +165,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             } else if (Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS.equals(e.getFeature())
                     || Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN.equals(e.getFeature())
                     || Shr5Package.Literals.KI_ADEPT__KIKRAFT.equals(e.getFeature())
-                    || Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM.equals(e.getFeature())
+                    || Shr5Package.Literals.COMMLINK__STORED_PROGRAMS.equals(e.getFeature())
+                    || Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS.equals(e.getFeature())
+                    || Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {
@@ -405,7 +408,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             }
 
             @Override
-            public Object caseCommlink(Commlink object) {
+            public Object caseAbstractMatrixDevice(AbstractMatrixDevice object) {
                 try {
                     addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.COMMLINK), object,
                             editingDomain, manager));

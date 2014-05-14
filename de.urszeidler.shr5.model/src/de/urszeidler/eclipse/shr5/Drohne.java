@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Drohne extends Fahrzeug, MatrixDevice {
+public interface Drohne extends Fahrzeug, MatrixAttributes {
 
     /**
      * Returns the value of the '<em><b>Program Slot Count</b></em>' attribute.

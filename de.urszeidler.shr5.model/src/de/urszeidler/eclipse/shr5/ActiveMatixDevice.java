@@ -25,7 +25,7 @@ package de.urszeidler.eclipse.shr5;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface ActiveMatixDevice extends MatrixDevice {
+public interface ActiveMatixDevice extends MatrixAttributes {
     /**
      * Returns the value of the '<em><b>Angriff</b></em>' attribute.
      * <!-- begin-user-doc -->

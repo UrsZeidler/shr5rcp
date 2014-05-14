@@ -4,11 +4,15 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
+import de.urszeidler.eclipse.shr5.CommonProgram;
+import de.urszeidler.eclipse.shr5.Shr5Package;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -20,20 +24,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.Image;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Program;
-import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.Program} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.CommonProgram} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProgramItemProvider
+public class CommonProgramItemProvider
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -47,7 +45,7 @@ public class ProgramItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public ProgramItemProvider(AdapterFactory adapterFactory) {
+    public CommonProgramItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -71,7 +69,7 @@ public class ProgramItemProvider
             addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
-            addCategoryPropertyDescriptor(object);
+            addProgramTypePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -90,7 +88,7 @@ public class ProgramItemProvider
                  getString("_UI_GeldWert_wert_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_GeldWert_wert_feature", "_UI_GeldWert_type"),
                  Shr5Package.Literals.GELD_WERT__WERT,
-                 true,
+                 false,
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -275,19 +273,19 @@ public class ProgramItemProvider
     }
 
     /**
-     * This adds a property descriptor for the Category feature.
+     * This adds a property descriptor for the Program Type feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addCategoryPropertyDescriptor(Object object) {
+    protected void addProgramTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Program_category_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Program_category_feature", "_UI_Program_type"),
-                 Shr5Package.Literals.PROGRAM__CATEGORY,
+                 getString("_UI_CommonProgram_programType_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_CommonProgram_programType_feature", "_UI_CommonProgram_type"),
+                 Shr5Package.Literals.COMMON_PROGRAM__PROGRAM_TYPE,
                  true,
                  false,
                  false,
@@ -297,21 +295,14 @@ public class ProgramItemProvider
     }
 
     /**
-     * This returns Program.gif.
+     * This returns CommonProgram.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated not
+     * @generated
      */
     @Override
     public Object getImage(Object object) {
-        Beschreibbar beschreibbar = (Beschreibbar) object;
-        if (beschreibbar.getImage() != null) {
-            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
-            if (image != null)
-                return image;
-        }
-
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Program"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/CommonProgram"));
     }
 
     /**
@@ -322,10 +313,10 @@ public class ProgramItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((Program)object).getName();
+        String label = ((CommonProgram)object).getName();
         return label == null || label.length() == 0 ?
-            getString("_UI_Program_type") :
-            getString("_UI_Program_type") + " " + label;
+            getString("_UI_CommonProgram_type") :
+            getString("_UI_CommonProgram_type") + " " + label;
     }
 
     /**
@@ -339,16 +330,16 @@ public class ProgramItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(Program.class)) {
-            case Shr5Package.PROGRAM__WERT:
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
-            case Shr5Package.PROGRAM__WERT_VALUE:
-            case Shr5Package.PROGRAM__BESCHREIBUNG:
-            case Shr5Package.PROGRAM__IMAGE:
-            case Shr5Package.PROGRAM__NAME:
-            case Shr5Package.PROGRAM__PARENT_ID:
-            case Shr5Package.PROGRAM__PAGE:
-            case Shr5Package.PROGRAM__CATEGORY:
+        switch (notification.getFeatureID(CommonProgram.class)) {
+            case Shr5Package.COMMON_PROGRAM__WERT:
+            case Shr5Package.COMMON_PROGRAM__VERFUEGBARKEIT:
+            case Shr5Package.COMMON_PROGRAM__WERT_VALUE:
+            case Shr5Package.COMMON_PROGRAM__BESCHREIBUNG:
+            case Shr5Package.COMMON_PROGRAM__IMAGE:
+            case Shr5Package.COMMON_PROGRAM__NAME:
+            case Shr5Package.COMMON_PROGRAM__PARENT_ID:
+            case Shr5Package.COMMON_PROGRAM__PAGE:
+            case Shr5Package.COMMON_PROGRAM__PROGRAM_TYPE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

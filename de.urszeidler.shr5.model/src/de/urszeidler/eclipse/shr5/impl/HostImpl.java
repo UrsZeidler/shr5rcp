@@ -3,16 +3,18 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Host;
 import de.urszeidler.eclipse.shr5.InterfaceModus;
+import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
+import de.urszeidler.eclipse.shr5.MatrixAttributes;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
 import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 
@@ -23,6 +25,9 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getFirewall <em>Firewall</em>}</li>
@@ -31,15 +36,72 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getSchleicher <em>Schleicher</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getImage <em>Image</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class HostImpl extends MinimalEObjectImpl.Container implements Host {
+    /**
+     * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
+    protected static final String BESCHREIBUNG_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBeschreibung()
+     * @generated
+     * @ordered
+     */
+    protected String beschreibung = BESCHREIBUNG_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
+    protected static final String IMAGE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImage()
+     * @generated
+     * @ordered
+     */
+    protected String image = IMAGE_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected String name = NAME_EDEFAULT;
+
     /**
      * The default value of the '{@link #getMatrixZustandMax() <em>Matrix Zustand Max</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -129,66 +191,6 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * @ordered
      */
     protected static final int SCHLEICHER_EDEFAULT = 0;
-
-    /**
-     * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getBeschreibung()
-     * @generated
-     * @ordered
-     */
-    protected static final String BESCHREIBUNG_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getBeschreibung()
-     * @generated
-     * @ordered
-     */
-    protected String beschreibung = BESCHREIBUNG_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getImage()
-     * @generated
-     * @ordered
-     */
-    protected static final String IMAGE_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getImage()
-     * @generated
-     * @ordered
-     */
-    protected String image = IMAGE_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected static final String NAME_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected String name = NAME_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -440,6 +442,12 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case Shr5Package.HOST__BESCHREIBUNG:
+                return getBeschreibung();
+            case Shr5Package.HOST__IMAGE:
+                return getImage();
+            case Shr5Package.HOST__NAME:
+                return getName();
             case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
                 return getMatrixZustandMax();
             case Shr5Package.HOST__GERAETESTUFE:
@@ -456,12 +464,6 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return getAngriff();
             case Shr5Package.HOST__SCHLEICHER:
                 return getSchleicher();
-            case Shr5Package.HOST__BESCHREIBUNG:
-                return getBeschreibung();
-            case Shr5Package.HOST__IMAGE:
-                return getImage();
-            case Shr5Package.HOST__NAME:
-                return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -474,12 +476,6 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.HOST__CURRENT_MODUS:
-                setCurrentModus((InterfaceModus)newValue);
-                return;
-            case Shr5Package.HOST__PAN:
-                setPan((PersonalAreaNetwork)newValue);
-                return;
             case Shr5Package.HOST__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
                 return;
@@ -488,6 +484,12 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return;
             case Shr5Package.HOST__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5Package.HOST__CURRENT_MODUS:
+                setCurrentModus((InterfaceModus)newValue);
+                return;
+            case Shr5Package.HOST__PAN:
+                setPan((PersonalAreaNetwork)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -501,12 +503,6 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.HOST__CURRENT_MODUS:
-                setCurrentModus(CURRENT_MODUS_EDEFAULT);
-                return;
-            case Shr5Package.HOST__PAN:
-                setPan((PersonalAreaNetwork)null);
-                return;
             case Shr5Package.HOST__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
                 return;
@@ -515,6 +511,12 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return;
             case Shr5Package.HOST__NAME:
                 setName(NAME_EDEFAULT);
+                return;
+            case Shr5Package.HOST__CURRENT_MODUS:
+                setCurrentModus(CURRENT_MODUS_EDEFAULT);
+                return;
+            case Shr5Package.HOST__PAN:
+                setPan((PersonalAreaNetwork)null);
                 return;
         }
         super.eUnset(featureID);
@@ -528,6 +530,12 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case Shr5Package.HOST__BESCHREIBUNG:
+                return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
+            case Shr5Package.HOST__IMAGE:
+                return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
+            case Shr5Package.HOST__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
                 return getMatrixZustandMax() != MATRIX_ZUSTAND_MAX_EDEFAULT;
             case Shr5Package.HOST__GERAETESTUFE:
@@ -544,12 +552,6 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.HOST__SCHLEICHER:
                 return getSchleicher() != SCHLEICHER_EDEFAULT;
-            case Shr5Package.HOST__BESCHREIBUNG:
-                return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
-            case Shr5Package.HOST__IMAGE:
-                return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
-            case Shr5Package.HOST__NAME:
-                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -561,11 +563,31 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-        if (baseClass == Beschreibbar.class) {
+        if (baseClass == MatixConditionMonitor.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.HOST__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
-                case Shr5Package.HOST__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
-                case Shr5Package.HOST__NAME: return Shr5Package.BESCHREIBBAR__NAME;
+                case Shr5Package.HOST__MATRIX_ZUSTAND_MAX: return Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixAttributes.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.HOST__GERAETESTUFE: return Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE;
+                case Shr5Package.HOST__FIREWALL: return Shr5Package.MATRIX_ATTRIBUTES__FIREWALL;
+                case Shr5Package.HOST__DATENVERARBEITUNG: return Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
+                case Shr5Package.HOST__CURRENT_MODUS: return Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS;
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixDevice.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.HOST__PAN: return Shr5Package.MATRIX_DEVICE__PAN;
+                default: return -1;
+            }
+        }
+        if (baseClass == ActiveMatixDevice.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.HOST__ANGRIFF: return Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF;
+                case Shr5Package.HOST__SCHLEICHER: return Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER;
                 default: return -1;
             }
         }
@@ -579,11 +601,31 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-        if (baseClass == Beschreibbar.class) {
+        if (baseClass == MatixConditionMonitor.class) {
             switch (baseFeatureID) {
-                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.HOST__BESCHREIBUNG;
-                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.HOST__IMAGE;
-                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.HOST__NAME;
+                case Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX: return Shr5Package.HOST__MATRIX_ZUSTAND_MAX;
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixAttributes.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE: return Shr5Package.HOST__GERAETESTUFE;
+                case Shr5Package.MATRIX_ATTRIBUTES__FIREWALL: return Shr5Package.HOST__FIREWALL;
+                case Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG: return Shr5Package.HOST__DATENVERARBEITUNG;
+                case Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS: return Shr5Package.HOST__CURRENT_MODUS;
+                default: return -1;
+            }
+        }
+        if (baseClass == MatrixDevice.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.MATRIX_DEVICE__PAN: return Shr5Package.HOST__PAN;
+                default: return -1;
+            }
+        }
+        if (baseClass == ActiveMatixDevice.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.ACTIVE_MATIX_DEVICE__ANGRIFF: return Shr5Package.HOST__ANGRIFF;
+                case Shr5Package.ACTIVE_MATIX_DEVICE__SCHLEICHER: return Shr5Package.HOST__SCHLEICHER;
                 default: return -1;
             }
         }
@@ -600,14 +642,14 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (currentModus: ");
-        result.append(currentModus);
-        result.append(", beschreibung: ");
+        result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", currentModus: ");
+        result.append(currentModus);
         result.append(')');
         return result.toString();
     }

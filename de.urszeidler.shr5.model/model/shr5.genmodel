@@ -89,10 +89,12 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//ProgramType">
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/defaultSoft"/>
-      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/hackingSoft"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/dataSoft"/>
-      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/mapSoft"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//ProgramType/shopSoft"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//MatrixProgramType">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MatrixProgramType/defaultProgram"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MatrixProgramType/hackingProgram"/>
     </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
@@ -128,7 +130,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Gegenstand/stufe"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//GeldWert">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wert"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wert"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/verfuegbarkeit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GeldWert/wertValue"/>
     </genClasses>
@@ -148,9 +150,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Modifizierbar/mods"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//KoerperlicheAttribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/konstitution"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/geschicklichkeit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/reaktion"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/konstitution"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/geschicklichkeit"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/reaktion"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KoerperlicheAttribute/staerke"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//SpezielleAttribute">
@@ -199,7 +201,7 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeit">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/fertigkeit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/spezialisierungen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeit/spezialisierungen"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//PersonaFertigkeitsGruppe">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonaFertigkeitsGruppe/gruppe"/>
@@ -230,11 +232,11 @@
     <genClasses ecoreClass="shr5.ecore#//KiKraft">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//KiKraft/kraftpunkte"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//MagischePersona">
+    <genClasses image="false" ecoreClass="shr5.ecore#//MagischePersona">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//MagischePersona/mentor"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//BaseMagischePersona">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magie"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magie"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//BaseMagischePersona/initationen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magieBasis"/>
     </genClasses>
@@ -336,7 +338,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ChrakterLimits/sozial"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Panzerung">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Panzerung/panzer"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Panzerung/panzer"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//AspektMagier">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//AspektMagier/aspekt"/>
@@ -463,7 +465,7 @@
     <genClasses image="false" ecoreClass="shr5.ecore#//ModifikatorAttribute"/>
     <genClasses ecoreClass="shr5.ecore#//GebundenerGeist">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//GebundenerGeist/dienste"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//GebundenerGeist/geist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//GebundenerGeist/geist"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//StufenPersona">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//StufenPersona/stufe"/>
@@ -491,21 +493,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CredstickTransaction/description"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Spezialisierung"/>
-    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixDevice">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/geraetestufe"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/firewall"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/datenverarbeitung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixDevice/currentModus"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//MatrixDevice/pan"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixAttributes">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixAttributes/geraetestufe"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixAttributes/firewall"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixAttributes/datenverarbeitung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatrixAttributes/currentModus"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//ActiveMatixDevice">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ActiveMatixDevice/angriff"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ActiveMatixDevice/schleicher"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Commlink">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Commlink/deviceRating"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/runningProgramms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/stroredProgramm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Commlink/storedPrograms"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//MatixConditionMonitor">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MatixConditionMonitor/matrixZustandMax"/>
@@ -517,9 +516,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/attribute3"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Cyberdeck/attribute4"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/configuration"/>
-    </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//Program">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Program/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/storedPrograms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Cyberdeck/runningPrograms"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//SoftwareAgent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SoftwareAgent/rating"/>
@@ -538,12 +536,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/datenverarbeitungBasis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/firewallBasis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//RiggerCommandConsole/zugriffBasis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//RiggerCommandConsole/storedPrograms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//RiggerCommandConsole/runningPrograms"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//AutoSoft">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AutoSoft/rating"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//Software"/>
-    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixPrograms"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixProgram"/>
     <genClasses ecoreClass="shr5.ecore#//Tutorsoft">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Tutorsoft/rating"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Tutorsoft/skill"/>
@@ -559,6 +559,23 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/slaves"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference shr5.ecore#//PersonalAreaNetwork/master"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//PersonalAreaNetwork/slaveMax"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//BasicProgram"/>
+    <genClasses ecoreClass="shr5.ecore#//Datasoft">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Datasoft/skill"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//AbstractMatrixDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstractMatrixDevice/deviceRating"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//ConsumerSoft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//ConsumerSoft/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//RiggerProgram"/>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MatrixDevice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//MatrixDevice/pan"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//CommonProgram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CommonProgram/programType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -426,8 +426,8 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createSpezialisierungAdapter();
             }
             @Override
-            public Adapter caseMatrixDevice(MatrixDevice object) {
-                return createMatrixDeviceAdapter();
+            public Adapter caseMatrixAttributes(MatrixAttributes object) {
+                return createMatrixAttributesAdapter();
             }
             @Override
             public Adapter caseActiveMatixDevice(ActiveMatixDevice object) {
@@ -444,10 +444,6 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseCyberdeck(Cyberdeck object) {
                 return createCyberdeckAdapter();
-            }
-            @Override
-            public Adapter caseProgram(Program object) {
-                return createProgramAdapter();
             }
             @Override
             public Adapter caseSoftwareAgent(SoftwareAgent object) {
@@ -474,8 +470,8 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createSoftwareAdapter();
             }
             @Override
-            public Adapter caseMatrixPrograms(MatrixPrograms object) {
-                return createMatrixProgramsAdapter();
+            public Adapter caseMatrixProgram(MatrixProgram object) {
+                return createMatrixProgramAdapter();
             }
             @Override
             public Adapter caseTutorsoft(Tutorsoft object) {
@@ -492,6 +488,34 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter casePersonalAreaNetwork(PersonalAreaNetwork object) {
                 return createPersonalAreaNetworkAdapter();
+            }
+            @Override
+            public Adapter caseBasicProgram(BasicProgram object) {
+                return createBasicProgramAdapter();
+            }
+            @Override
+            public Adapter caseDatasoft(Datasoft object) {
+                return createDatasoftAdapter();
+            }
+            @Override
+            public Adapter caseAbstractMatrixDevice(AbstractMatrixDevice object) {
+                return createAbstractMatrixDeviceAdapter();
+            }
+            @Override
+            public Adapter caseConsumerSoft(ConsumerSoft object) {
+                return createConsumerSoftAdapter();
+            }
+            @Override
+            public Adapter caseRiggerProgram(RiggerProgram object) {
+                return createRiggerProgramAdapter();
+            }
+            @Override
+            public Adapter caseMatrixDevice(MatrixDevice object) {
+                return createMatrixDeviceAdapter();
+            }
+            @Override
+            public Adapter caseCommonProgram(CommonProgram object) {
+                return createCommonProgramAdapter();
             }
             @Override
             public Adapter defaultCase(EObject object) {
@@ -1774,6 +1798,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatrixAttributes <em>Matrix Attributes</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes
+     * @generated
+     */
+    public Adapter createMatrixAttributesAdapter() {
+        return null;
+    }
+
+    /**
      * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatrixDevice <em>Matrix Device</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -1784,6 +1822,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createMatrixDeviceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.CommonProgram <em>Common Program</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.CommonProgram
+     * @generated
+     */
+    public Adapter createCommonProgramAdapter() {
         return null;
     }
 
@@ -1840,20 +1892,6 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCyberdeckAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Program <em>Program</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5.Program
-     * @generated
-     */
-    public Adapter createProgramAdapter() {
         return null;
     }
 
@@ -1942,16 +1980,16 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatrixPrograms <em>Matrix Programs</em>}'.
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MatrixProgram <em>Matrix Program</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see de.urszeidler.eclipse.shr5.MatrixPrograms
+     * @see de.urszeidler.eclipse.shr5.MatrixProgram
      * @generated
      */
-    public Adapter createMatrixProgramsAdapter() {
+    public Adapter createMatrixProgramAdapter() {
         return null;
     }
 
@@ -2008,6 +2046,76 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createPersonalAreaNetworkAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.BasicProgram <em>Basic Program</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.BasicProgram
+     * @generated
+     */
+    public Adapter createBasicProgramAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Datasoft <em>Datasoft</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Datasoft
+     * @generated
+     */
+    public Adapter createDatasoftAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.AbstractMatrixDevice <em>Abstract Matrix Device</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.AbstractMatrixDevice
+     * @generated
+     */
+    public Adapter createAbstractMatrixDeviceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.ConsumerSoft <em>Consumer Soft</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.ConsumerSoft
+     * @generated
+     */
+    public Adapter createConsumerSoftAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.RiggerProgram <em>Rigger Program</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.RiggerProgram
+     * @generated
+     */
+    public Adapter createRiggerProgramAdapter() {
         return null;
     }
 

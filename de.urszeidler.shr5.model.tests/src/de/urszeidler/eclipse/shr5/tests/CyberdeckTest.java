@@ -14,13 +14,17 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <p>
  * The following features are tested:
  * <ul>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff() <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher() <em>Schleicher</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class CyberdeckTest extends CommlinkTest {
+public class CyberdeckTest extends AbstraktGegenstandTest {
 
     /**
      * <!-- begin-user-doc -->
@@ -79,6 +83,28 @@ public class CyberdeckTest extends CommlinkTest {
     @Override
     protected void tearDown() throws Exception {
         setFixture(null);
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
+     * @generated not
+     */
+    public void testGetMatrixZustandMax() {
+        assertEquals(9, getFixture().getMatrixZustandMax());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
+     * @generated not
+     */
+    public void testGetGeraetestufe() {
+        assertEquals(2, getFixture().getGeraetestufe());
     }
 
     /**

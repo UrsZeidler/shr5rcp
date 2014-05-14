@@ -66,10 +66,10 @@ public class CommlinkItemProvider
             addDatenverarbeitungPropertyDescriptor(object);
             addCurrentModusPropertyDescriptor(object);
             addDeviceRatingPropertyDescriptor(object);
-            addRunningProgrammsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
+
 
     /**
      * This adds a property descriptor for the Matrix Zustand Max feature.
@@ -104,9 +104,9 @@ public class CommlinkItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_geraetestufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_geraetestufe_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__GERAETESTUFE,
+                 getString("_UI_MatrixAttributes_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_geraetestufe_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE,
                  false,
                  false,
                  false,
@@ -126,9 +126,9 @@ public class CommlinkItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_firewall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_firewall_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__FIREWALL,
+                 getString("_UI_MatrixAttributes_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_firewall_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,
                  false,
                  false,
                  false,
@@ -148,9 +148,9 @@ public class CommlinkItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_datenverarbeitung_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_datenverarbeitung_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG,
+                 getString("_UI_MatrixAttributes_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_datenverarbeitung_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,
                  false,
                  false,
                  false,
@@ -170,9 +170,9 @@ public class CommlinkItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_currentModus_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_currentModus_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__CURRENT_MODUS,
+                 getString("_UI_MatrixAttributes_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_currentModus_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,
                  true,
                  false,
                  false,
@@ -192,43 +192,15 @@ public class CommlinkItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Commlink_deviceRating_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Commlink_deviceRating_feature", "_UI_Commlink_type"),
-                 Shr5Package.Literals.COMMLINK__DEVICE_RATING,
+                 getString("_UI_AbstractMatrixDevice_deviceRating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_AbstractMatrixDevice_deviceRating_feature", "_UI_AbstractMatrixDevice_type"),
+                 Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING,
                  true,
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
-    }
-
-    /**
-     * This adds a property descriptor for the Running Programms feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated not
-     */
-    protected void addRunningProgrammsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (new ItemPropertyDescriptor//createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Commlink_runningProgramms_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Commlink_runningProgramms_feature", "_UI_Commlink_type"),
-                 Shr5Package.Literals.COMMLINK__RUNNING_PROGRAMMS,
-                 true,
-                 false,
-                 true,
-                 null,
-                 null,
-                 null){
-                @Override
-                public Collection<?> getChoiceOfValues(Object object) {
-                    return ((Commlink)(object)).getStroredProgramm();
-                }
-                
-            });
     }
 
     /**
@@ -244,7 +216,7 @@ public class CommlinkItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
-            childrenFeatures.add(Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM);
+            childrenFeatures.add(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS);
         }
         return childrenFeatures;
     }
@@ -315,7 +287,7 @@ public class CommlinkItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.COMMLINK__PAN:
-            case Shr5Package.COMMLINK__STRORED_PROGRAMM:
+            case Shr5Package.COMMLINK__STORED_PROGRAMS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -327,32 +299,31 @@ public class CommlinkItemProvider
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated not
+     * @generated
      */
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add
-        (createChildParameter
-            (Shr5Package.Literals.MATRIX_DEVICE__PAN,
-             Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
+            (createChildParameter
+                (Shr5Package.Literals.MATRIX_DEVICE__PAN,
+                 Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
 
-        
         newChildDescriptors.add
             (createChildParameter
-                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
-                 Shr5Factory.eINSTANCE.createProgram()));
+                (Shr5Package.Literals.COMMLINK__STORED_PROGRAMS,
+                 Shr5Factory.eINSTANCE.createTutorsoft()));
 
-//        newChildDescriptors.add
-//            (createChildParameter
-//                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
-//                 Shr5Factory.eINSTANCE.createSoftwareAgent()));
-//
-//        newChildDescriptors.add
-//            (createChildParameter
-//                (Shr5Package.Literals.COMMLINK__STRORED_PROGRAMM,
-//                 Shr5Factory.eINSTANCE.createAutoSoft()));
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.COMMLINK__STORED_PROGRAMS,
+                 Shr5Factory.eINSTANCE.createDatasoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.COMMLINK__STORED_PROGRAMS,
+                 Shr5Factory.eINSTANCE.createConsumerSoft()));
     }
 
 }

@@ -21,7 +21,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Tutorsoft extends MatrixPrograms {
+public interface Tutorsoft extends BasicProgram {
     /**
      * Returns the value of the '<em><b>Rating</b></em>' attribute.
      * <!-- begin-user-doc -->

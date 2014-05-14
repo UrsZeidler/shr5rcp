@@ -64,6 +64,9 @@ public class HostItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
             addMatrixZustandMaxPropertyDescriptor(object);
             addGeraetestufePropertyDescriptor(object);
             addFirewallPropertyDescriptor(object);
@@ -71,9 +74,6 @@ public class HostItemProvider
             addCurrentModusPropertyDescriptor(object);
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
-            addBeschreibungPropertyDescriptor(object);
-            addImagePropertyDescriptor(object);
-            addNamePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -111,9 +111,9 @@ public class HostItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_geraetestufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_geraetestufe_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__GERAETESTUFE,
+                 getString("_UI_MatrixAttributes_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_geraetestufe_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE,
                  false,
                  false,
                  false,
@@ -133,9 +133,9 @@ public class HostItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_firewall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_firewall_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__FIREWALL,
+                 getString("_UI_MatrixAttributes_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_firewall_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,
                  false,
                  false,
                  false,
@@ -155,9 +155,9 @@ public class HostItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_datenverarbeitung_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_datenverarbeitung_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG,
+                 getString("_UI_MatrixAttributes_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_datenverarbeitung_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,
                  false,
                  false,
                  false,
@@ -177,9 +177,9 @@ public class HostItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_currentModus_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_currentModus_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__CURRENT_MODUS,
+                 getString("_UI_MatrixAttributes_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_currentModus_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,
                  true,
                  false,
                  false,
@@ -372,6 +372,9 @@ public class HostItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(Host.class)) {
+            case Shr5Package.HOST__BESCHREIBUNG:
+            case Shr5Package.HOST__IMAGE:
+            case Shr5Package.HOST__NAME:
             case Shr5Package.HOST__MATRIX_ZUSTAND_MAX:
             case Shr5Package.HOST__GERAETESTUFE:
             case Shr5Package.HOST__FIREWALL:
@@ -379,9 +382,6 @@ public class HostItemProvider
             case Shr5Package.HOST__CURRENT_MODUS:
             case Shr5Package.HOST__ANGRIFF:
             case Shr5Package.HOST__SCHLEICHER:
-            case Shr5Package.HOST__BESCHREIBUNG:
-            case Shr5Package.HOST__IMAGE:
-            case Shr5Package.HOST__NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.HOST__PAN:

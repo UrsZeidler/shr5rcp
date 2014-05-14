@@ -2208,11 +2208,11 @@
 		</entries>
 	</xsl:template>
 	<xsl:template match="//program">
-		<entries xsi:type="shr5:Program">
+		<entries xsi:type="shr5:CommonProgram">
 			<xsl:choose>
 				<xsl:when test="category/text()='Hacking'">
 					<xsl:attribute name="category">
-					<xsl:value-of select="'hackingSoft'" />
+					<xsl:value-of select="'hackingProgram'" />
 									</xsl:attribute>
 					<xsl:attribute name="verfuegbarkeit"><xsl:value-of
 						select="'6R'" /></xsl:attribute>
@@ -2221,7 +2221,7 @@
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:attribute name="category">
-					<xsl:value-of select="'defaultSoft'" />
+					<xsl:value-of select="'defaultProgram'" />
 									</xsl:attribute>
 
 					<xsl:attribute name="wertValue"><xsl:value-of
@@ -2273,7 +2273,7 @@
 			<xsl:when test="category/text()='Software'">
 				<xsl:choose>
 					<xsl:when test="name/text()='Datasoft'">
-						<entries xsi:type="shr5:Program">
+						<entries xsi:type="shr5:Datasoft">
 							<xsl:attribute name="category">
 								<xsl:value-of select="'dataSoft'" />
 									</xsl:attribute>
@@ -2286,7 +2286,7 @@
 						</entries>
 					</xsl:when>
 					<xsl:when test="name/text()='Mapsoft'">
-						<entries xsi:type="shr5:Program">
+						<entries xsi:type="shr5:ConsumerSoft">
 							<xsl:attribute name="category">
 								<xsl:value-of select="'mapSoft'" />
 									</xsl:attribute>
@@ -2299,7 +2299,7 @@
 						</entries>
 					</xsl:when>
 					<xsl:when test="name/text()='Shopsoft'">
-						<entries xsi:type="shr5:Program">
+						<entries xsi:type="shr5:ConsumerSoft">
 							<xsl:attribute name="category">
 								<xsl:value-of select="'shopSoft'" />
 									</xsl:attribute>

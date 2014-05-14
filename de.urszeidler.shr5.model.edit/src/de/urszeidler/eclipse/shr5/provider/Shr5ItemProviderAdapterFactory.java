@@ -1336,29 +1336,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Program} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected ProgramItemProvider programItemProvider;
-
-    /**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Program}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createProgramAdapter() {
-        if (programItemProvider == null) {
-            programItemProvider = new ProgramItemProvider(this);
-        }
-
-        return programItemProvider;
-    }
-
-    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SoftwareAgent} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1520,6 +1497,75 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Datasoft} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DatasoftItemProvider datasoftItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Datasoft}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDatasoftAdapter() {
+        if (datasoftItemProvider == null) {
+            datasoftItemProvider = new DatasoftItemProvider(this);
+        }
+
+        return datasoftItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ConsumerSoft} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ConsumerSoftItemProvider consumerSoftItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ConsumerSoft}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createConsumerSoftAdapter() {
+        if (consumerSoftItemProvider == null) {
+            consumerSoftItemProvider = new ConsumerSoftItemProvider(this);
+        }
+
+        return consumerSoftItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CommonProgram} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CommonProgramItemProvider commonProgramItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CommonProgram}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createCommonProgramAdapter() {
+        if (commonProgramItemProvider == null) {
+            commonProgramItemProvider = new CommonProgramItemProvider(this);
+        }
+
+        return commonProgramItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1673,7 +1719,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (spezialisierungItemProvider != null) spezialisierungItemProvider.dispose();
         if (commlinkItemProvider != null) commlinkItemProvider.dispose();
         if (cyberdeckItemProvider != null) cyberdeckItemProvider.dispose();
-        if (programItemProvider != null) programItemProvider.dispose();
         if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();
         if (hostItemProvider != null) hostItemProvider.dispose();
         if (riggerCommandConsoleItemProvider != null) riggerCommandConsoleItemProvider.dispose();
@@ -1681,6 +1726,9 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (tutorsoftItemProvider != null) tutorsoftItemProvider.dispose();
         if (skillSoftItemProvider != null) skillSoftItemProvider.dispose();
         if (personalAreaNetworkItemProvider != null) personalAreaNetworkItemProvider.dispose();
+        if (datasoftItemProvider != null) datasoftItemProvider.dispose();
+        if (consumerSoftItemProvider != null) consumerSoftItemProvider.dispose();
+        if (commonProgramItemProvider != null) commonProgramItemProvider.dispose();
     }
 
 }

@@ -5,11 +5,9 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -21,9 +19,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Sprite;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -143,9 +139,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_geraetestufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_geraetestufe_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__GERAETESTUFE,
+                 getString("_UI_MatrixAttributes_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_geraetestufe_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE,
                  false,
                  false,
                  false,
@@ -209,9 +205,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_datenverarbeitung_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_datenverarbeitung_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG,
+                 getString("_UI_MatrixAttributes_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_datenverarbeitung_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,
                  false,
                  false,
                  false,
@@ -231,9 +227,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_currentModus_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_currentModus_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__CURRENT_MODUS,
+                 getString("_UI_MatrixAttributes_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_currentModus_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,
                  true,
                  false,
                  false,
@@ -253,9 +249,9 @@ public class SpriteItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_firewall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_firewall_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__FIREWALL,
+                 getString("_UI_MatrixAttributes_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_firewall_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,
                  false,
                  false,
                  false,
@@ -551,36 +547,6 @@ public class SpriteItemProvider
     }
 
 	/**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
-        }
-        return childrenFeatures;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
-
-        return super.getChildFeature(object, child);
-    }
-
-    /**
      * This returns Sprite.gif.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -646,9 +612,6 @@ public class SpriteItemProvider
             case Shr5Package.SPRITE__INITATIVE_MOD:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5Package.SPRITE__PAN:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
         }
         super.notifyChanged(notification);
     }
@@ -663,11 +626,6 @@ public class SpriteItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.MATRIX_DEVICE__PAN,
-                 Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
     }
 
 	/**

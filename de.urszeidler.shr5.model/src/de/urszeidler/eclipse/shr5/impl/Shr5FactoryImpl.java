@@ -4,14 +4,12 @@ package de.urszeidler.eclipse.shr5.impl;
 
 import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.AutoSoft;
@@ -63,7 +61,6 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
-import de.urszeidler.eclipse.shr5.Program;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ResonanzZiel;
@@ -189,7 +186,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.SPEZIALISIERUNG: return createSpezialisierung();
             case Shr5Package.COMMLINK: return createCommlink();
             case Shr5Package.CYBERDECK: return createCyberdeck();
-            case Shr5Package.PROGRAM: return createProgram();
             case Shr5Package.SOFTWARE_AGENT: return createSoftwareAgent();
             case Shr5Package.HOST: return createHost();
             case Shr5Package.RIGGER_COMMAND_CONSOLE: return createRiggerCommandConsole();
@@ -197,6 +193,9 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.TUTORSOFT: return createTutorsoft();
             case Shr5Package.SKILL_SOFT: return createSkillSoft();
             case Shr5Package.PERSONAL_AREA_NETWORK: return createPersonalAreaNetwork();
+            case Shr5Package.DATASOFT: return createDatasoft();
+            case Shr5Package.CONSUMER_SOFT: return createConsumerSoft();
+            case Shr5Package.COMMON_PROGRAM: return createCommonProgram();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -242,6 +241,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createInterfaceModusFromString(eDataType, initialValue);
             case Shr5Package.PROGRAM_TYPE:
                 return createProgramTypeFromString(eDataType, initialValue);
+            case Shr5Package.MATRIX_PROGRAM_TYPE:
+                return createMatrixProgramTypeFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -289,6 +290,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertInterfaceModusToString(eDataType, instanceValue);
             case Shr5Package.PROGRAM_TYPE:
                 return convertProgramTypeToString(eDataType, instanceValue);
+            case Shr5Package.MATRIX_PROGRAM_TYPE:
+                return convertMatrixProgramTypeToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -851,16 +854,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Program createProgram() {
-        ProgramImpl program = new ProgramImpl();
-        return program;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public SoftwareAgent createSoftwareAgent() {
         SoftwareAgentImpl softwareAgent = new SoftwareAgentImpl();
         return softwareAgent;
@@ -924,6 +917,36 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public PersonalAreaNetwork createPersonalAreaNetwork() {
         PersonalAreaNetworkImpl personalAreaNetwork = new PersonalAreaNetworkImpl();
         return personalAreaNetwork;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Datasoft createDatasoft() {
+        DatasoftImpl datasoft = new DatasoftImpl();
+        return datasoft;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ConsumerSoft createConsumerSoft() {
+        ConsumerSoftImpl consumerSoft = new ConsumerSoftImpl();
+        return consumerSoft;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CommonProgram createCommonProgram() {
+        CommonProgramImpl commonProgram = new CommonProgramImpl();
+        return commonProgram;
     }
 
     /**
@@ -1243,6 +1266,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertProgramTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MatrixProgramType createMatrixProgramTypeFromString(EDataType eDataType, String initialValue) {
+        MatrixProgramType result = MatrixProgramType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertMatrixProgramTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

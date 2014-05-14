@@ -511,11 +511,6 @@ public class ShrListItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                 Shr5Factory.eINSTANCE.createProgram()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createSoftwareAgent()));
 
         newChildDescriptors.add
@@ -547,6 +542,21 @@ public class ShrListItemProvider
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createDatasoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createConsumerSoft()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createCommonProgram()));
     }
 
 	/**

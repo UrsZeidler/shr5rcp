@@ -3,43 +3,45 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.BasicProgram;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import java.math.BigDecimal;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import de.urszeidler.eclipse.shr5.Identifiable;
-import de.urszeidler.eclipse.shr5.Program;
-import de.urszeidler.eclipse.shr5.ProgramType;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 
+import java.math.BigDecimal;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Program</b></em>'.
+ * An implementation of the model object '<em><b>Basic Program</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getWert <em>Wert</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getWertValue <em>Wert Value</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getBeschreibung <em>Beschreibung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getImage <em>Image</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getParentId <em>Parent Id</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getPage <em>Page</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getSrcBook <em>Src Book</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.ProgramImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.BasicProgramImpl#getSrcBook <em>Src Book</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ProgramImpl extends MinimalEObjectImpl.Container implements Program {
+public abstract class BasicProgramImpl extends MinimalEObjectImpl.Container implements BasicProgram {
     /**
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -201,31 +203,11 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     protected SourceBook srcBook;
 
     /**
-     * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getCategory()
-     * @generated
-     * @ordered
-     */
-    protected static final ProgramType CATEGORY_EDEFAULT = ProgramType.DEFAULT_SOFT;
-
-    /**
-     * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getCategory()
-     * @generated
-     * @ordered
-     */
-    protected ProgramType category = CATEGORY_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected ProgramImpl() {
+    protected BasicProgramImpl() {
         super();
     }
 
@@ -236,7 +218,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
      */
     @Override
     protected EClass eStaticClass() {
-        return Shr5Package.Literals.PROGRAM;
+        return Shr5Package.Literals.BASIC_PROGRAM;
     }
 
     /**
@@ -266,7 +248,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__VERFUEGBARKEIT, oldVerfuegbarkeit, verfuegbarkeit));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__VERFUEGBARKEIT, oldVerfuegbarkeit, verfuegbarkeit));
     }
 
     /**
@@ -287,7 +269,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__WERT_VALUE, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__WERT_VALUE, oldWertValue, wertValue));
     }
 
     /**
@@ -308,7 +290,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__BESCHREIBUNG, oldBeschreibung, beschreibung));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__BESCHREIBUNG, oldBeschreibung, beschreibung));
     }
 
     /**
@@ -329,7 +311,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__IMAGE, oldImage, image));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__IMAGE, oldImage, image));
     }
 
     /**
@@ -350,7 +332,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__NAME, oldName, name));
     }
 
     /**
@@ -371,7 +353,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         String oldParentId = parentId;
         parentId = newParentId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__PARENT_ID, oldParentId, parentId));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__PARENT_ID, oldParentId, parentId));
     }
 
     /**
@@ -392,7 +374,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__PAGE, oldPage, page));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__PAGE, oldPage, page));
     }
 
     /**
@@ -406,7 +388,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
             if (srcBook != oldSrcBook) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.PROGRAM__SRC_BOOK, oldSrcBook, srcBook));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, Shr5Package.BASIC_PROGRAM__SRC_BOOK, oldSrcBook, srcBook));
             }
         }
         return srcBook;
@@ -430,28 +412,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__SRC_BOOK, oldSrcBook, srcBook));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public ProgramType getCategory() {
-        return category;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCategory(ProgramType newCategory) {
-        ProgramType oldCategory = category;
-        category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.PROGRAM__CATEGORY, oldCategory, category));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__SRC_BOOK, oldSrcBook, srcBook));
     }
 
     /**
@@ -462,27 +423,25 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__WERT:
+            case Shr5Package.BASIC_PROGRAM__WERT:
                 return getWert();
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+            case Shr5Package.BASIC_PROGRAM__VERFUEGBARKEIT:
                 return getVerfuegbarkeit();
-            case Shr5Package.PROGRAM__WERT_VALUE:
+            case Shr5Package.BASIC_PROGRAM__WERT_VALUE:
                 return getWertValue();
-            case Shr5Package.PROGRAM__BESCHREIBUNG:
+            case Shr5Package.BASIC_PROGRAM__BESCHREIBUNG:
                 return getBeschreibung();
-            case Shr5Package.PROGRAM__IMAGE:
+            case Shr5Package.BASIC_PROGRAM__IMAGE:
                 return getImage();
-            case Shr5Package.PROGRAM__NAME:
+            case Shr5Package.BASIC_PROGRAM__NAME:
                 return getName();
-            case Shr5Package.PROGRAM__PARENT_ID:
+            case Shr5Package.BASIC_PROGRAM__PARENT_ID:
                 return getParentId();
-            case Shr5Package.PROGRAM__PAGE:
+            case Shr5Package.BASIC_PROGRAM__PAGE:
                 return getPage();
-            case Shr5Package.PROGRAM__SRC_BOOK:
+            case Shr5Package.BASIC_PROGRAM__SRC_BOOK:
                 if (resolve) return getSrcBook();
                 return basicGetSrcBook();
-            case Shr5Package.PROGRAM__CATEGORY:
-                return getCategory();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -495,32 +454,29 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+            case Shr5Package.BASIC_PROGRAM__VERFUEGBARKEIT:
                 setVerfuegbarkeit((String)newValue);
                 return;
-            case Shr5Package.PROGRAM__WERT_VALUE:
+            case Shr5Package.BASIC_PROGRAM__WERT_VALUE:
                 setWertValue((BigDecimal)newValue);
                 return;
-            case Shr5Package.PROGRAM__BESCHREIBUNG:
+            case Shr5Package.BASIC_PROGRAM__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
                 return;
-            case Shr5Package.PROGRAM__IMAGE:
+            case Shr5Package.BASIC_PROGRAM__IMAGE:
                 setImage((String)newValue);
                 return;
-            case Shr5Package.PROGRAM__NAME:
+            case Shr5Package.BASIC_PROGRAM__NAME:
                 setName((String)newValue);
                 return;
-            case Shr5Package.PROGRAM__PARENT_ID:
+            case Shr5Package.BASIC_PROGRAM__PARENT_ID:
                 setParentId((String)newValue);
                 return;
-            case Shr5Package.PROGRAM__PAGE:
+            case Shr5Package.BASIC_PROGRAM__PAGE:
                 setPage((String)newValue);
                 return;
-            case Shr5Package.PROGRAM__SRC_BOOK:
+            case Shr5Package.BASIC_PROGRAM__SRC_BOOK:
                 setSrcBook((SourceBook)newValue);
-                return;
-            case Shr5Package.PROGRAM__CATEGORY:
-                setCategory((ProgramType)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -534,32 +490,29 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+            case Shr5Package.BASIC_PROGRAM__VERFUEGBARKEIT:
                 setVerfuegbarkeit(VERFUEGBARKEIT_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__WERT_VALUE:
+            case Shr5Package.BASIC_PROGRAM__WERT_VALUE:
                 setWertValue(WERT_VALUE_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__BESCHREIBUNG:
+            case Shr5Package.BASIC_PROGRAM__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__IMAGE:
+            case Shr5Package.BASIC_PROGRAM__IMAGE:
                 setImage(IMAGE_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__NAME:
+            case Shr5Package.BASIC_PROGRAM__NAME:
                 setName(NAME_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__PARENT_ID:
+            case Shr5Package.BASIC_PROGRAM__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__PAGE:
+            case Shr5Package.BASIC_PROGRAM__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
-            case Shr5Package.PROGRAM__SRC_BOOK:
+            case Shr5Package.BASIC_PROGRAM__SRC_BOOK:
                 setSrcBook((SourceBook)null);
-                return;
-            case Shr5Package.PROGRAM__CATEGORY:
-                setCategory(CATEGORY_EDEFAULT);
                 return;
         }
         super.eUnset(featureID);
@@ -573,26 +526,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case Shr5Package.PROGRAM__WERT:
+            case Shr5Package.BASIC_PROGRAM__WERT:
                 return WERT_EDEFAULT == null ? getWert() != null : !WERT_EDEFAULT.equals(getWert());
-            case Shr5Package.PROGRAM__VERFUEGBARKEIT:
+            case Shr5Package.BASIC_PROGRAM__VERFUEGBARKEIT:
                 return VERFUEGBARKEIT_EDEFAULT == null ? verfuegbarkeit != null : !VERFUEGBARKEIT_EDEFAULT.equals(verfuegbarkeit);
-            case Shr5Package.PROGRAM__WERT_VALUE:
+            case Shr5Package.BASIC_PROGRAM__WERT_VALUE:
                 return WERT_VALUE_EDEFAULT == null ? wertValue != null : !WERT_VALUE_EDEFAULT.equals(wertValue);
-            case Shr5Package.PROGRAM__BESCHREIBUNG:
+            case Shr5Package.BASIC_PROGRAM__BESCHREIBUNG:
                 return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
-            case Shr5Package.PROGRAM__IMAGE:
+            case Shr5Package.BASIC_PROGRAM__IMAGE:
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
-            case Shr5Package.PROGRAM__NAME:
+            case Shr5Package.BASIC_PROGRAM__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case Shr5Package.PROGRAM__PARENT_ID:
+            case Shr5Package.BASIC_PROGRAM__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
-            case Shr5Package.PROGRAM__PAGE:
+            case Shr5Package.BASIC_PROGRAM__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
-            case Shr5Package.PROGRAM__SRC_BOOK:
+            case Shr5Package.BASIC_PROGRAM__SRC_BOOK:
                 return srcBook != null;
-            case Shr5Package.PROGRAM__CATEGORY:
-                return category != CATEGORY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -606,22 +557,22 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Beschreibbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.PROGRAM__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
-                case Shr5Package.PROGRAM__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
-                case Shr5Package.PROGRAM__NAME: return Shr5Package.BESCHREIBBAR__NAME;
+                case Shr5Package.BASIC_PROGRAM__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+                case Shr5Package.BASIC_PROGRAM__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
+                case Shr5Package.BASIC_PROGRAM__NAME: return Shr5Package.BESCHREIBBAR__NAME;
                 default: return -1;
             }
         }
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.PROGRAM__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.BASIC_PROGRAM__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
                 default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.PROGRAM__PAGE: return Shr5Package.QUELLE__PAGE;
-                case Shr5Package.PROGRAM__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
+                case Shr5Package.BASIC_PROGRAM__PAGE: return Shr5Package.QUELLE__PAGE;
+                case Shr5Package.BASIC_PROGRAM__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
                 default: return -1;
             }
         }
@@ -637,22 +588,22 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Beschreibbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.PROGRAM__BESCHREIBUNG;
-                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.PROGRAM__IMAGE;
-                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.PROGRAM__NAME;
+                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.BASIC_PROGRAM__BESCHREIBUNG;
+                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.BASIC_PROGRAM__IMAGE;
+                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.BASIC_PROGRAM__NAME;
                 default: return -1;
             }
         }
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
-                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.PROGRAM__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.BASIC_PROGRAM__PARENT_ID;
                 default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
-                case Shr5Package.QUELLE__PAGE: return Shr5Package.PROGRAM__PAGE;
-                case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.PROGRAM__SRC_BOOK;
+                case Shr5Package.QUELLE__PAGE: return Shr5Package.BASIC_PROGRAM__PAGE;
+                case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.BASIC_PROGRAM__SRC_BOOK;
                 default: return -1;
             }
         }
@@ -683,10 +634,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         result.append(parentId);
         result.append(", page: ");
         result.append(page);
-        result.append(", category: ");
-        result.append(category);
         result.append(')');
         return result.toString();
     }
 
-} //ProgramImpl
+} //BasicProgramImpl

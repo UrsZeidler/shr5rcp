@@ -129,9 +129,9 @@ public class TechnomancerItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_geraetestufe_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_geraetestufe_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__GERAETESTUFE,
+                 getString("_UI_MatrixAttributes_geraetestufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_geraetestufe_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__GERAETESTUFE,
                  false,
                  false,
                  false,
@@ -195,9 +195,9 @@ public class TechnomancerItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_datenverarbeitung_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_datenverarbeitung_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__DATENVERARBEITUNG,
+                 getString("_UI_MatrixAttributes_datenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_datenverarbeitung_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__DATENVERARBEITUNG,
                  false,
                  false,
                  false,
@@ -217,9 +217,9 @@ public class TechnomancerItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_currentModus_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_currentModus_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__CURRENT_MODUS,
+                 getString("_UI_MatrixAttributes_currentModus_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_currentModus_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__CURRENT_MODUS,
                  true,
                  false,
                  false,
@@ -239,9 +239,9 @@ public class TechnomancerItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_MatrixDevice_firewall_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixDevice_firewall_feature", "_UI_MatrixDevice_type"),
-                 Shr5Package.Literals.MATRIX_DEVICE__FIREWALL,
+                 getString("_UI_MatrixAttributes_firewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MatrixAttributes_firewall_feature", "_UI_MatrixAttributes_type"),
+                 Shr5Package.Literals.MATRIX_ATTRIBUTES__FIREWALL,
                  false,
                  false,
                  false,
@@ -284,7 +284,6 @@ public class TechnomancerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.MATRIX_DEVICE__PAN);
             childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS);
             childrenFeatures.add(Shr5Package.Literals.TECHNOMANCER__ECHOS);
         }
@@ -359,7 +358,6 @@ public class TechnomancerItemProvider
             case Shr5Package.TECHNOMANCER__RESONANZ_BASIS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
-            case Shr5Package.TECHNOMANCER__PAN:
             case Shr5Package.TECHNOMANCER__COMPLEX_FORMS:
             case Shr5Package.TECHNOMANCER__ECHOS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -378,11 +376,6 @@ public class TechnomancerItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.MATRIX_DEVICE__PAN,
-                 Shr5Factory.eINSTANCE.createPersonalAreaNetwork()));
 
         newChildDescriptors.add
             (createChildParameter

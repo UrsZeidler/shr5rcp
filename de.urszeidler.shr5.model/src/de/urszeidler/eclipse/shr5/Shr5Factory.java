@@ -517,15 +517,6 @@ public interface Shr5Factory extends EFactory {
     Cyberdeck createCyberdeck();
 
     /**
-     * Returns a new object of class '<em>Program</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Program</em>'.
-     * @generated
-     */
-    Program createProgram();
-
-    /**
      * Returns a new object of class '<em>Software Agent</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -587,6 +578,33 @@ public interface Shr5Factory extends EFactory {
      * @generated
      */
     PersonalAreaNetwork createPersonalAreaNetwork();
+
+    /**
+     * Returns a new object of class '<em>Datasoft</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Datasoft</em>'.
+     * @generated
+     */
+    Datasoft createDatasoft();
+
+    /**
+     * Returns a new object of class '<em>Consumer Soft</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Consumer Soft</em>'.
+     * @generated
+     */
+    ConsumerSoft createConsumerSoft();
+
+    /**
+     * Returns a new object of class '<em>Common Program</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Common Program</em>'.
+     * @generated
+     */
+    CommonProgram createCommonProgram();
 
     /**
      * Returns the package supported by this factory.

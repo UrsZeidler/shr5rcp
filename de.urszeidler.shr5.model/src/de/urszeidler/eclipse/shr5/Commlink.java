@@ -18,9 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getDeviceRating <em>Device Rating</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getRunningProgramms <em>Running Programms</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getStroredProgramm <em>Strored Programm</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Commlink#getStoredPrograms <em>Stored Programs</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,69 +26,20 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Commlink extends AbstraktGegenstand, MatrixDevice {
+public interface Commlink extends AbstractMatrixDevice {
 
     /**
-     * Returns the value of the '<em><b>Device Rating</b></em>' attribute.
+     * Returns the value of the '<em><b>Stored Programs</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.BasicProgram}.
      * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Device Rating</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Device Rating</em>' attribute.
-     * @see #setDeviceRating(int)
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_DeviceRating()
-     * @model required="true"
-     * @generated
-     */
-    int getDeviceRating();
-
-    /**
-     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.Commlink#getDeviceRating <em>Device Rating</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Device Rating</em>' attribute.
-     * @see #getDeviceRating()
-     * @generated
-     */
-    void setDeviceRating(int value);
-
-    /**
-     * Returns the value of the '<em><b>Running Programms</b></em>' reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.MatrixPrograms}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Running Programms</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * The running programms are stored here.
-     * <!-- end-model-doc -->
-     * @return the value of the '<em>Running Programms</em>' reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_RunningProgramms()
-     * @model
-     * @generated
-     */
-    EList<MatrixPrograms> getRunningProgramms();
-
-    /**
-     * Returns the value of the '<em><b>Strored Programm</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5.MatrixPrograms}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Strored Programm</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
      * The stored programs defines the programs to choose from when selecting the running programms.
      * <!-- end-model-doc -->
-     * @return the value of the '<em>Strored Programm</em>' containment reference list.
-     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_StroredProgramm()
+     * @return the value of the '<em>Stored Programs</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getCommlink_StoredPrograms()
      * @model containment="true"
      * @generated
      */
-    EList<MatrixPrograms> getStroredProgramm();
+    EList<BasicProgram> getStoredPrograms();
 } // Comlink

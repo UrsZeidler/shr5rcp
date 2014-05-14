@@ -704,7 +704,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 Drohne drohne = (Drohne)theEObject;
                 T result = caseDrohne(drohne);
                 if (result == null) result = caseFahrzeug(drohne);
-                if (result == null) result = caseMatrixDevice(drohne);
+                if (result == null) result = caseMatrixAttributes(drohne);
                 if (result == null) result = caseBeschreibbar(drohne);
                 if (result == null) result = caseQuelle(drohne);
                 if (result == null) result = caseGeldWert(drohne);
@@ -740,7 +740,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseSpezielleAttribute(technomancer);
                 if (result == null) result = caseGeistigeAttribute(technomancer);
                 if (result == null) result = caseChrakterLimits(technomancer);
-                if (result == null) result = caseMatrixDevice(technomancer);
+                if (result == null) result = caseMatrixAttributes(technomancer);
                 if (result == null) result = caseModifikatorAttribute(technomancer);
                 if (result == null) result = caseMatixConditionMonitor(technomancer);
                 if (result == null) result = defaultCase(theEObject);
@@ -750,7 +750,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 ResonanzPersona resonanzPersona = (ResonanzPersona)theEObject;
                 T result = caseResonanzPersona(resonanzPersona);
                 if (result == null) result = caseActiveMatixDevice(resonanzPersona);
-                if (result == null) result = caseMatrixDevice(resonanzPersona);
+                if (result == null) result = caseMatrixAttributes(resonanzPersona);
                 if (result == null) result = caseMatixConditionMonitor(resonanzPersona);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -779,7 +779,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseQuelle(sprite);
                 if (result == null) result = caseActiveMatixDevice(sprite);
                 if (result == null) result = caseIdentifiable(sprite);
-                if (result == null) result = caseMatrixDevice(sprite);
+                if (result == null) result = caseMatrixAttributes(sprite);
                 if (result == null) result = caseMatixConditionMonitor(sprite);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1013,17 +1013,17 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5Package.MATRIX_DEVICE: {
-                MatrixDevice matrixDevice = (MatrixDevice)theEObject;
-                T result = caseMatrixDevice(matrixDevice);
-                if (result == null) result = caseMatixConditionMonitor(matrixDevice);
+            case Shr5Package.MATRIX_ATTRIBUTES: {
+                MatrixAttributes matrixAttributes = (MatrixAttributes)theEObject;
+                T result = caseMatrixAttributes(matrixAttributes);
+                if (result == null) result = caseMatixConditionMonitor(matrixAttributes);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.ACTIVE_MATIX_DEVICE: {
                 ActiveMatixDevice activeMatixDevice = (ActiveMatixDevice)theEObject;
                 T result = caseActiveMatixDevice(activeMatixDevice);
-                if (result == null) result = caseMatrixDevice(activeMatixDevice);
+                if (result == null) result = caseMatrixAttributes(activeMatixDevice);
                 if (result == null) result = caseMatixConditionMonitor(activeMatixDevice);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1031,6 +1031,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.COMMLINK: {
                 Commlink commlink = (Commlink)theEObject;
                 T result = caseCommlink(commlink);
+                if (result == null) result = caseAbstractMatrixDevice(commlink);
                 if (result == null) result = caseAbstraktGegenstand(commlink);
                 if (result == null) result = caseMatrixDevice(commlink);
                 if (result == null) result = caseQuelle(commlink);
@@ -1038,8 +1039,9 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(commlink);
                 if (result == null) result = caseModifizierbar(commlink);
                 if (result == null) result = caseAnwendbar(commlink);
-                if (result == null) result = caseMatixConditionMonitor(commlink);
+                if (result == null) result = caseMatrixAttributes(commlink);
                 if (result == null) result = caseIdentifiable(commlink);
+                if (result == null) result = caseMatixConditionMonitor(commlink);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -1052,7 +1054,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.CYBERDECK: {
                 Cyberdeck cyberdeck = (Cyberdeck)theEObject;
                 T result = caseCyberdeck(cyberdeck);
-                if (result == null) result = caseCommlink(cyberdeck);
+                if (result == null) result = caseAbstractMatrixDevice(cyberdeck);
                 if (result == null) result = caseActiveMatixDevice(cyberdeck);
                 if (result == null) result = caseAbstraktGegenstand(cyberdeck);
                 if (result == null) result = caseMatrixDevice(cyberdeck);
@@ -1061,27 +1063,16 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(cyberdeck);
                 if (result == null) result = caseModifizierbar(cyberdeck);
                 if (result == null) result = caseAnwendbar(cyberdeck);
-                if (result == null) result = caseMatixConditionMonitor(cyberdeck);
+                if (result == null) result = caseMatrixAttributes(cyberdeck);
                 if (result == null) result = caseIdentifiable(cyberdeck);
-                if (result == null) result = defaultCase(theEObject);
-                return result;
-            }
-            case Shr5Package.PROGRAM: {
-                Program program = (Program)theEObject;
-                T result = caseProgram(program);
-                if (result == null) result = caseMatrixPrograms(program);
-                if (result == null) result = caseSoftware(program);
-                if (result == null) result = caseGeldWert(program);
-                if (result == null) result = caseBeschreibbar(program);
-                if (result == null) result = caseQuelle(program);
-                if (result == null) result = caseIdentifiable(program);
+                if (result == null) result = caseMatixConditionMonitor(cyberdeck);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.SOFTWARE_AGENT: {
                 SoftwareAgent softwareAgent = (SoftwareAgent)theEObject;
                 T result = caseSoftwareAgent(softwareAgent);
-                if (result == null) result = caseMatrixPrograms(softwareAgent);
+                if (result == null) result = caseMatrixProgram(softwareAgent);
                 if (result == null) result = caseSoftware(softwareAgent);
                 if (result == null) result = caseGeldWert(softwareAgent);
                 if (result == null) result = caseBeschreibbar(softwareAgent);
@@ -1093,9 +1084,10 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.HOST: {
                 Host host = (Host)theEObject;
                 T result = caseHost(host);
-                if (result == null) result = caseActiveMatixDevice(host);
                 if (result == null) result = caseBeschreibbar(host);
                 if (result == null) result = caseMatrixDevice(host);
+                if (result == null) result = caseActiveMatixDevice(host);
+                if (result == null) result = caseMatrixAttributes(host);
                 if (result == null) result = caseMatixConditionMonitor(host);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1110,7 +1102,7 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.RIGGER_COMMAND_CONSOLE: {
                 RiggerCommandConsole riggerCommandConsole = (RiggerCommandConsole)theEObject;
                 T result = caseRiggerCommandConsole(riggerCommandConsole);
-                if (result == null) result = caseCommlink(riggerCommandConsole);
+                if (result == null) result = caseAbstractMatrixDevice(riggerCommandConsole);
                 if (result == null) result = caseAbstraktGegenstand(riggerCommandConsole);
                 if (result == null) result = caseMatrixDevice(riggerCommandConsole);
                 if (result == null) result = caseQuelle(riggerCommandConsole);
@@ -1118,14 +1110,16 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(riggerCommandConsole);
                 if (result == null) result = caseModifizierbar(riggerCommandConsole);
                 if (result == null) result = caseAnwendbar(riggerCommandConsole);
-                if (result == null) result = caseMatixConditionMonitor(riggerCommandConsole);
+                if (result == null) result = caseMatrixAttributes(riggerCommandConsole);
                 if (result == null) result = caseIdentifiable(riggerCommandConsole);
+                if (result == null) result = caseMatixConditionMonitor(riggerCommandConsole);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.AUTO_SOFT: {
                 AutoSoft autoSoft = (AutoSoft)theEObject;
                 T result = caseAutoSoft(autoSoft);
+                if (result == null) result = caseRiggerProgram(autoSoft);
                 if (result == null) result = caseSoftware(autoSoft);
                 if (result == null) result = caseGeldWert(autoSoft);
                 if (result == null) result = caseBeschreibbar(autoSoft);
@@ -1144,21 +1138,21 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case Shr5Package.MATRIX_PROGRAMS: {
-                MatrixPrograms matrixPrograms = (MatrixPrograms)theEObject;
-                T result = caseMatrixPrograms(matrixPrograms);
-                if (result == null) result = caseSoftware(matrixPrograms);
-                if (result == null) result = caseGeldWert(matrixPrograms);
-                if (result == null) result = caseBeschreibbar(matrixPrograms);
-                if (result == null) result = caseQuelle(matrixPrograms);
-                if (result == null) result = caseIdentifiable(matrixPrograms);
+            case Shr5Package.MATRIX_PROGRAM: {
+                MatrixProgram matrixProgram = (MatrixProgram)theEObject;
+                T result = caseMatrixProgram(matrixProgram);
+                if (result == null) result = caseSoftware(matrixProgram);
+                if (result == null) result = caseGeldWert(matrixProgram);
+                if (result == null) result = caseBeschreibbar(matrixProgram);
+                if (result == null) result = caseQuelle(matrixProgram);
+                if (result == null) result = caseIdentifiable(matrixProgram);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case Shr5Package.TUTORSOFT: {
                 Tutorsoft tutorsoft = (Tutorsoft)theEObject;
                 T result = caseTutorsoft(tutorsoft);
-                if (result == null) result = caseMatrixPrograms(tutorsoft);
+                if (result == null) result = caseBasicProgram(tutorsoft);
                 if (result == null) result = caseSoftware(tutorsoft);
                 if (result == null) result = caseGeldWert(tutorsoft);
                 if (result == null) result = caseBeschreibbar(tutorsoft);
@@ -1187,6 +1181,89 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.PERSONAL_AREA_NETWORK: {
                 PersonalAreaNetwork personalAreaNetwork = (PersonalAreaNetwork)theEObject;
                 T result = casePersonalAreaNetwork(personalAreaNetwork);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.BASIC_PROGRAM: {
+                BasicProgram basicProgram = (BasicProgram)theEObject;
+                T result = caseBasicProgram(basicProgram);
+                if (result == null) result = caseSoftware(basicProgram);
+                if (result == null) result = caseGeldWert(basicProgram);
+                if (result == null) result = caseBeschreibbar(basicProgram);
+                if (result == null) result = caseQuelle(basicProgram);
+                if (result == null) result = caseIdentifiable(basicProgram);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.DATASOFT: {
+                Datasoft datasoft = (Datasoft)theEObject;
+                T result = caseDatasoft(datasoft);
+                if (result == null) result = caseBasicProgram(datasoft);
+                if (result == null) result = caseSoftware(datasoft);
+                if (result == null) result = caseGeldWert(datasoft);
+                if (result == null) result = caseBeschreibbar(datasoft);
+                if (result == null) result = caseQuelle(datasoft);
+                if (result == null) result = caseIdentifiable(datasoft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTRACT_MATRIX_DEVICE: {
+                AbstractMatrixDevice abstractMatrixDevice = (AbstractMatrixDevice)theEObject;
+                T result = caseAbstractMatrixDevice(abstractMatrixDevice);
+                if (result == null) result = caseAbstraktGegenstand(abstractMatrixDevice);
+                if (result == null) result = caseMatrixDevice(abstractMatrixDevice);
+                if (result == null) result = caseQuelle(abstractMatrixDevice);
+                if (result == null) result = caseGeldWert(abstractMatrixDevice);
+                if (result == null) result = caseBeschreibbar(abstractMatrixDevice);
+                if (result == null) result = caseModifizierbar(abstractMatrixDevice);
+                if (result == null) result = caseAnwendbar(abstractMatrixDevice);
+                if (result == null) result = caseMatrixAttributes(abstractMatrixDevice);
+                if (result == null) result = caseIdentifiable(abstractMatrixDevice);
+                if (result == null) result = caseMatixConditionMonitor(abstractMatrixDevice);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.CONSUMER_SOFT: {
+                ConsumerSoft consumerSoft = (ConsumerSoft)theEObject;
+                T result = caseConsumerSoft(consumerSoft);
+                if (result == null) result = caseBasicProgram(consumerSoft);
+                if (result == null) result = caseSoftware(consumerSoft);
+                if (result == null) result = caseGeldWert(consumerSoft);
+                if (result == null) result = caseBeschreibbar(consumerSoft);
+                if (result == null) result = caseQuelle(consumerSoft);
+                if (result == null) result = caseIdentifiable(consumerSoft);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.RIGGER_PROGRAM: {
+                RiggerProgram riggerProgram = (RiggerProgram)theEObject;
+                T result = caseRiggerProgram(riggerProgram);
+                if (result == null) result = caseSoftware(riggerProgram);
+                if (result == null) result = caseGeldWert(riggerProgram);
+                if (result == null) result = caseBeschreibbar(riggerProgram);
+                if (result == null) result = caseQuelle(riggerProgram);
+                if (result == null) result = caseIdentifiable(riggerProgram);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MATRIX_DEVICE: {
+                MatrixDevice matrixDevice = (MatrixDevice)theEObject;
+                T result = caseMatrixDevice(matrixDevice);
+                if (result == null) result = caseMatrixAttributes(matrixDevice);
+                if (result == null) result = caseMatixConditionMonitor(matrixDevice);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.COMMON_PROGRAM: {
+                CommonProgram commonProgram = (CommonProgram)theEObject;
+                T result = caseCommonProgram(commonProgram);
+                if (result == null) result = caseMatrixProgram(commonProgram);
+                if (result == null) result = caseRiggerProgram(commonProgram);
+                if (result == null) result = caseSoftware(commonProgram);
+                if (result == null) result = caseGeldWert(commonProgram);
+                if (result == null) result = caseBeschreibbar(commonProgram);
+                if (result == null) result = caseQuelle(commonProgram);
+                if (result == null) result = caseIdentifiable(commonProgram);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2545,6 +2622,21 @@ public class Shr5Switch<T> extends Switch<T> {
     }
 
     /**
+     * Returns the result of interpreting the object as an instance of '<em>Matrix Attributes</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Matrix Attributes</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMatrixAttributes(MatrixAttributes object) {
+        return null;
+    }
+
+    /**
      * Returns the result of interpreting the object as an instance of '<em>Matrix Device</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
@@ -2556,6 +2648,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseMatrixDevice(MatrixDevice object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Common Program</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Common Program</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseCommonProgram(CommonProgram object) {
         return null;
     }
 
@@ -2616,21 +2723,6 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseCyberdeck(Cyberdeck object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Program</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Program</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseProgram(Program object) {
         return null;
     }
 
@@ -2725,17 +2817,17 @@ public class Shr5Switch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Matrix Programs</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Matrix Program</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Matrix Programs</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Matrix Program</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseMatrixPrograms(MatrixPrograms object) {
+    public T caseMatrixProgram(MatrixProgram object) {
         return null;
     }
 
@@ -2796,6 +2888,81 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T casePersonalAreaNetwork(PersonalAreaNetwork object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Basic Program</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Basic Program</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseBasicProgram(BasicProgram object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Datasoft</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Datasoft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseDatasoft(Datasoft object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Abstract Matrix Device</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstract Matrix Device</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseAbstractMatrixDevice(AbstractMatrixDevice object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Consumer Soft</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Consumer Soft</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseConsumerSoft(ConsumerSoft object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Rigger Program</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Rigger Program</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseRiggerProgram(RiggerProgram object) {
         return null;
     }
 

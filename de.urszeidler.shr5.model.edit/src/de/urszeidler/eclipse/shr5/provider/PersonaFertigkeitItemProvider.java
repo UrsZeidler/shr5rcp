@@ -97,7 +97,7 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
                  Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN,
                  true,
                  false,
-                 false,
+                 true,
                  null,
                  null,
                  null));
@@ -181,7 +181,6 @@ public class PersonaFertigkeitItemProvider extends ItemProviderAdapter implement
 
         switch (notification.getFeatureID(PersonaFertigkeit.class)) {
             case Shr5Package.PERSONA_FERTIGKEIT__STUFE:
-            case Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

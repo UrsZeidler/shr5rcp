@@ -4,10 +4,9 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
-
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Commlink;
-import de.urszeidler.eclipse.shr5.Program;
+import de.urszeidler.eclipse.shr5.ConsumerSoft;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
@@ -18,9 +17,9 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * The following features are tested:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixDevice#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -140,8 +139,8 @@ public class CommlinkTest extends AbstraktGegenstandTest {
         
         assertEquals(10, getFixture().getWert().intValue());
         
-        Program program = Shr5Factory.eINSTANCE.createProgram();
-        getFixture().getStroredProgramm().add(program);
+        ConsumerSoft program = Shr5Factory.eINSTANCE.createConsumerSoft();
+        getFixture().getStoredPrograms().add(program);
 
         assertEquals(10, getFixture().getWert().intValue());
         program.setWertValue(new BigDecimal(1));
