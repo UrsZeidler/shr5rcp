@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
@@ -112,6 +113,11 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
             @Override
             public Integer caseSoftware(Software object) {
+                return RET;
+            }
+
+            @Override
+            public Integer caseVertrag(Vertrag object) {
                 return RET;
             }
 

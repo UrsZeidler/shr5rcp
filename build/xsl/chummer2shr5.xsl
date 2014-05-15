@@ -247,6 +247,17 @@
 	<xsl:template mode="lifestyle" match="lifestyles">
 		<entries xsi:type="shr5:ShrList" name="lifestyles">
 			<xsl:apply-templates mode="lifestyle" />
+			<entries xsi:type="shr5:LifestyleOption" 
+				name="Special Work Area" wertValue="1000" />
+			<entries xsi:type="shr5:PercentLifestyleOption" 
+				name="Extra Secure" wertValue="20" />
+			<entries xsi:type="shr5:PercentLifestyleOption" 
+				name="Obscure/Difficult to Find" wertValue="10" />
+			<entries xsi:type="shr5:PercentLifestyleOption" 
+				name="Cramped" wertValue="-10" />			
+			<entries xsi:type="shr5:PercentLifestyleOption" 
+				name="Dangerous Area" wertValue="-20" />
+
 		</entries>
 	</xsl:template>
 	<xsl:template

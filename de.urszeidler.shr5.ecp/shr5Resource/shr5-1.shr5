@@ -2571,6 +2571,11 @@
 <entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Middle" xmi:id="25e7fe19-0dc2-4d2b-b134-035259ea321a" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="5000"/>
 <entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="High" xmi:id="141d339c-d514-44e6-aab4-94768e68cac3" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="10000"/>
 <entries xsi:type="shr5:Lifestyle" verfuegbarkeit="" name="Luxury" xmi:id="43141722-bea8-496f-bdd6-4e4e858e1269" page="95" srcBook="//@entries.0/@entries.0/@entries.0" wertValue="100000"/>
+<entries xsi:type="shr5:LifestyleOption" name="Special Work Area" wertValue="1000"/>
+<entries xsi:type="shr5:PercentLifestyleOption" name="Extra Secure" wertValue="20"/>
+<entries xsi:type="shr5:PercentLifestyleOption" name="Obscure/Difficult to Find" wertValue="10"/>
+<entries xsi:type="shr5:PercentLifestyleOption" name="Cramped" wertValue="-10"/>
+<entries xsi:type="shr5:PercentLifestyleOption" name="Dangerous Area" wertValue="-20"/>
 </entries>
 <entries xsi:type="shr5:ShrList" name="generators">
 <entries xsi:type="shr5mngt:Shr5System" name="The basic character generator system." karmaToResourceFactor="2000" karmaToMagicFactor="5" karmaPoints="25" characterAdvancements="//@entries.0/@entries.16/@entries.2" charismaToConnectionFactor="3" maxKarmaToResources="10" skillMax="6" numberOfSpecalism="1" maxResourceToKeep="5000" knowlegeSkillFactor="2" maxKarmaToKeep="7" numberOfMaxAttributes="1" boundSprititServiceCost="1" karmaToConnectionFactor="2" srcBook="//@entries.0/@entries.0/@entries.0">

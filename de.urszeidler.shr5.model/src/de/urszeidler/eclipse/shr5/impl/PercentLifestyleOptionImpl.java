@@ -18,13 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public class PercentLifestyleOptionImpl extends LifestyleOptionImpl implements PercentLifestyleOption {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected PercentLifestyleOptionImpl() {
@@ -34,6 +35,7 @@ public class PercentLifestyleOptionImpl extends LifestyleOptionImpl implements P
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -44,6 +46,7 @@ public class PercentLifestyleOptionImpl extends LifestyleOptionImpl implements P
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public BigDecimal getWert() {
@@ -51,12 +54,12 @@ public class PercentLifestyleOptionImpl extends LifestyleOptionImpl implements P
         if (owner instanceof Lifestyle) {
             Lifestyle ls = (Lifestyle)owner;
             BigDecimal wertValue2 = ls.getWertValue();
-            if(wertValue2!=null){
+            if (wertValue2 != null && getWertValue() != null) {
                 return wertValue2.multiply(getWertValue()).divide(new BigDecimal(100));
             }
         }
-        
+
         return new BigDecimal(0);
     }
 
-} //PercentLifestyleOptionImpl
+} // PercentLifestyleOptionImpl

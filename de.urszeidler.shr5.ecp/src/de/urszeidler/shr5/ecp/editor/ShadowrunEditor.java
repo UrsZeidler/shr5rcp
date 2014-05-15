@@ -30,7 +30,6 @@ import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
-import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -52,6 +51,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -82,6 +82,7 @@ import de.urszeidler.shr5.ecp.editor.pages.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.AbstraktPersonaPage;
 import de.urszeidler.shr5.ecp.editor.pages.BeschreibbarContainterPage;
 import de.urszeidler.shr5.ecp.editor.pages.CharacterAdvancementPage;
+import de.urszeidler.shr5.ecp.editor.pages.ContractPage;
 import de.urszeidler.shr5.ecp.editor.pages.DefaultEmfFormsPage;
 import de.urszeidler.shr5.ecp.editor.pages.FernkampfwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
@@ -168,6 +169,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     || Shr5Package.Literals.COMMLINK__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS.equals(e.getFeature())
+                    || Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(e.getFeature())
+                    || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {
@@ -372,6 +375,17 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 }
                 return null;
 
+            }
+            
+            @Override
+            public Object caseVertrag(Vertrag object) {
+                try {
+                    addPage(new ContractPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating ContractPage", e);//$NON-NLS-1$
+                }
+                return null;
             }
             
             @Override
