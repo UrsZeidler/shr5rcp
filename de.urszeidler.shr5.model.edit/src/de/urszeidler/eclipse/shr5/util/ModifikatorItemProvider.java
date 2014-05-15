@@ -67,12 +67,7 @@ public class ModifikatorItemProvider extends ReflectiveItemProvider implements I
         }
 
         if (object instanceof EClass) {
-            EClass ec = (EClass)object;
-            String key = "_UI_" + ec.getName() + "_type";
-            try {
-                return getString(key);
-            } catch (Exception e) {
-            }
+           return getClassName((EClass)object);
         }
 
         EObject eObject = (EObject)object;
@@ -87,8 +82,6 @@ public class ModifikatorItemProvider extends ReflectiveItemProvider implements I
         }
 
         return super.getText(eObject);
-        // return "";
-
     }
 
     /**
@@ -96,6 +89,16 @@ public class ModifikatorItemProvider extends ReflectiveItemProvider implements I
      */
     protected ResourceLocator getResourceLocator() {
         return Shr5EditPlugin.INSTANCE;
+    }
+
+    protected String getClassName(EClass object) {
+        EClass ec = (EClass)object;
+        String key = "_UI_" + ec.getName() + "_type";
+        try {
+            return getString(key);
+        } catch (Exception e) {
+            return ec.getName();
+        }
     }
 
 }

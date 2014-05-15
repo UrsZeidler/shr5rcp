@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.provider.Shr5ItemProviderAdapterFactory;
 
 /**
@@ -23,6 +24,7 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
 	 * The singleton reflective instance.
 	 */
 	protected ModifikatorItemProvider reflectiveItemProviderAdapter;
+    protected IdentifiableItemProvider identifiabletemProviderAdapter;
 
 	/**
 		 */
@@ -34,6 +36,15 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
 		return reflectiveItemProviderAdapter;
 	}
 
+	@Override
+	public Adapter createIdentifiableAdapter() {
+        if (identifiabletemProviderAdapter == null) {
+            identifiabletemProviderAdapter = new IdentifiableItemProvider(this);
+        }
+
+        return identifiabletemProviderAdapter;
+	}
+	
 	/**
 	 * Returns whether this factory is applicable for the type of the object.
 	 * <!-- begin-user-doc --> This implementation returns <code>true</code> if
@@ -73,6 +84,9 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
         if (target instanceof EClass) {
             return createModifikatorItemProvider();
         }
+        if (target instanceof Identifiable) {
+            return createIdentifiableAdapter();            
+        }       
 
 		return modelSwitch.doSwitch((EObject) target);
 	}
