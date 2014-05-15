@@ -50,7 +50,9 @@
 				<entries xsi:type="shr5:ShrList" name="Sourcebooks">
 					<entries xsi:type="shr5:SourceBook" name="Core rule book"
 						image="/shr5Resource/images/SR5_Cover_CRBook.jpg" startShrTime="2072-12-13T17:51:44.000+0100"
-						endShrTime="2075-12-13T17:51:44.000+0100" />
+						endShrTime="2075-12-13T17:51:44.000+0100" >
+						<localizations local="de" name="Shadowrun 5 Grundregelwerk"/>
+						</entries>
 				</entries>
 				<xsl:for-each select="$ranges">
 					<xsl:apply-templates select="node()" />
@@ -1552,29 +1554,8 @@
 
 
 		<xsl:if test="number(page/text())">
-			<xsl:choose>
-				<xsl:when test="$do_localization='true'">
-					<xsl:variable name="loc_page">
-						<xsl:call-template name="findLocalizedPage">
-							<xsl:with-param name="aid" select="$aid" />
-						</xsl:call-template>
-					</xsl:variable>
-					<xsl:choose>
-						<xsl:when test="$loc_page=''">
 							<xsl:attribute name="page"><xsl:value-of
 								select="number(page/text())" /></xsl:attribute>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:attribute name="page"><xsl:value-of
-								select="$loc_page" /></xsl:attribute>
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="page"><xsl:value-of
-						select="number(page/text())" /></xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
 		</xsl:if>
 		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
 
@@ -1603,16 +1584,14 @@
 				</localizations>
 			</xsl:when>
 		</xsl:choose>
-
-
 	</xsl:template>
 	<xsl:template name="gegenstand-basis">
 		<xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" /></xsl:attribute>
-		<xsl:call-template name="beschreibbar" />
-		<xsl:call-template name="quelle" />
 		<xsl:if test="number(cost/text())">
 			<xsl:attribute name="wertValue"><xsl:value-of select="number(cost/text())" /></xsl:attribute>
 		</xsl:if>
+		<xsl:call-template name="beschreibbar" />
+		<xsl:call-template name="quelle" />
 	</xsl:template>
 	<xsl:template name="skill-options">
 		<xsl:if test="number(skills/qty/text())">
