@@ -82,6 +82,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 SourceBook sourceBook = (SourceBook)theEObject;
                 T result = caseSourceBook(sourceBook);
                 if (result == null) result = caseBeschreibbar(sourceBook);
+                if (result == null) result = caseIdentifiable(sourceBook);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }

@@ -104,9 +104,11 @@
     </nested>
     <nested inputs="shr5.ecore#//Quelle" outputs="Shr5XMI.xsd#//Quelle;XSDElementDeclaration=1"/>
     <nested inputs="shr5.ecore#//SourceBook" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2">
-      <nested inputs="shr5.ecore#//SourceBook/startShrTime" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse"/>
-      <nested inputs="shr5.ecore#//SourceBook/endShrTime" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//SourceBook/startShrTime" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//SourceBook/endShrTime" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse=2"/>
     </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//SourceBook" outputs="Shr5XMI.xsd#//SourceBook;XSDElementDeclaration=2"/>
     <nested inputs="shr5.ecore#//AbstraktPersona" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3">
       <nested inputs="shr5.ecore#//AbstraktPersona/konstitutionBasis" outputs="Shr5XMI.xsd#//AbstraktPersona;XSDComplexTypeDefinition=3/XSDAttributeUse=1"/>

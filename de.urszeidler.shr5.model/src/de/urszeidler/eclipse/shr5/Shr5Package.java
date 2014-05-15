@@ -1101,13 +1101,31 @@ public interface Shr5Package extends EPackage {
 	int SOURCE_BOOK__NAME = BESCHREIBBAR__NAME;
 
     /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOURCE_BOOK__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOURCE_BOOK__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Start Shr Time</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SOURCE_BOOK__START_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int SOURCE_BOOK__START_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>End Shr Time</b></em>' attribute.
@@ -1116,7 +1134,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SOURCE_BOOK__END_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int SOURCE_BOOK__END_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Source Book</em>' class.
@@ -1125,7 +1143,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SOURCE_BOOK_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int SOURCE_BOOK_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Source Book</em>' class.

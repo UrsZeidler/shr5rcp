@@ -21,7 +21,7 @@ import java.util.Date;
  * @model
  * @generated
  */
-public interface SourceBook extends Beschreibbar {
+public interface SourceBook extends Beschreibbar, Identifiable {
 	/**
      * Returns the value of the '<em><b>Start Shr Time</b></em>' attribute.
      * <!-- begin-user-doc -->

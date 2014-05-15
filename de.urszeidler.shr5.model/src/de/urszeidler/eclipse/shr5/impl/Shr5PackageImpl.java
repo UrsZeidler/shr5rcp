@@ -5444,6 +5444,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         // Add supertypes to classes
         quelleEClass.getESuperTypes().add(this.getIdentifiable());
         sourceBookEClass.getESuperTypes().add(this.getBeschreibbar());
+        sourceBookEClass.getESuperTypes().add(this.getIdentifiable());
         abstraktPersonaEClass.getESuperTypes().add(this.getBeschreibbar());
         abstraktPersonaEClass.getESuperTypes().add(this.getKoerperlicheAttribute());
         abstraktPersonaEClass.getESuperTypes().add(this.getSpezielleAttribute());
