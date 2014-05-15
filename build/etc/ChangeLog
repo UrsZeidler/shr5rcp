@@ -4,6 +4,7 @@
 
 2014-05-18 Version 0.1.6-rc
 
+* added lifestyle options
 * added commlinks, cyberdecks and other marix related stuff like software
 * added advancements for specialism
 * added definable constrains for the generator system
@@ -15,6 +16,7 @@
 	* import the critter powers
 	* import commlinks
 	* import programs and some software
+	* import simple lifestyle options
 
 
 2014-04-27 Version 0.1.5
