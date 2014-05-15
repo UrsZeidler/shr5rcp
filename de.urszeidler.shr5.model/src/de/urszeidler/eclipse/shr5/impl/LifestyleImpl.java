@@ -27,11 +27,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl#getOptions <em>Options</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl#isOwned <em>Owned</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl#getOptions <em>Options</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl#isOwned <em>Owned</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
@@ -39,7 +39,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getOptions()
      * @generated
      * @ordered
@@ -49,7 +48,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * The default value of the '{@link #isOwned() <em>Owned</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #isOwned()
      * @generated
      * @ordered
@@ -59,7 +57,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * The cached value of the '{@link #isOwned() <em>Owned</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #isOwned()
      * @generated
      * @ordered
@@ -69,7 +66,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected LifestyleImpl() {
@@ -79,7 +75,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -90,7 +85,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<LifestyleOption> getOptions() {
@@ -103,7 +97,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public boolean isOwned() {
@@ -113,7 +106,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setOwned(boolean newOwned) {
@@ -126,7 +118,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -141,7 +132,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -158,7 +148,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -179,7 +168,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -198,7 +186,6 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -229,13 +216,11 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (owned: ");

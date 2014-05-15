@@ -4,6 +4,7 @@
 package de.urszeidler.eclipse.shr5Management.provider;
 
 
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import java.util.Collection;
 import java.util.List;
 
@@ -239,6 +240,7 @@ public class CharacterGeneratorSystemItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
             childrenFeatures.add(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
@@ -292,6 +294,7 @@ public class CharacterGeneratorSystemItemProvider
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS:
@@ -311,6 +314,11 @@ public class CharacterGeneratorSystemItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter

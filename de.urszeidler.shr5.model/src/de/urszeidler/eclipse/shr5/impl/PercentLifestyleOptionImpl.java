@@ -18,14 +18,13 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class PercentLifestyleOptionImpl extends LifestyleOptionImpl implements PercentLifestyleOption {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PercentLifestyleOptionImpl() {
@@ -35,7 +34,6 @@ public class PercentLifestyleOptionImpl extends LifestyleOptionImpl implements P
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

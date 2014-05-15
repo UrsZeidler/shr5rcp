@@ -289,13 +289,22 @@ public interface Shr5managementPackage extends EPackage {
     int CHARACTER_GENERATOR_SYSTEM__PARENT_ID = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM__PAGE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 1;
+	int CHARACTER_GENERATOR_SYSTEM__PAGE = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
 
 	/**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -304,7 +313,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM__SRC_BOOK = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 2;
+	int CHARACTER_GENERATOR_SYSTEM__SRC_BOOK = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
 
 	/**
      * The feature id for the '<em><b>Instructions</b></em>' map.
@@ -313,7 +322,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 3;
+	int CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
 
 	/**
      * The feature id for the '<em><b>Lifestyle To Start Money</b></em>' containment reference list.
@@ -322,7 +331,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 4;
+    int CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Character Advancements</b></em>' reference.
@@ -331,7 +340,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 5;
+	int CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Additional Constrains</b></em>' containment reference list.
@@ -340,7 +349,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 6;
+    int CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of structural features of the '<em>Character Generator System</em>' class.
@@ -349,7 +358,7 @@ public interface Shr5managementPackage extends EPackage {
      * @generated
      * @ordered
      */
-	int CHARACTER_GENERATOR_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 7;
+	int CHARACTER_GENERATOR_SYSTEM_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 8;
 
 	/**
      * The number of operations of the '<em>Character Generator System</em>' class.
@@ -405,6 +414,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int PRIORITY_SYSTEM__PARENT_ID = CHARACTER_GENERATOR_SYSTEM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PRIORITY_SYSTEM__LOCALIZATIONS = CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -897,6 +915,15 @@ public interface Shr5managementPackage extends EPackage {
     int FREE_STYLE__PARENT_ID = CHARACTER_GENERATOR_SYSTEM__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FREE_STYLE__LOCALIZATIONS = CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1059,6 +1086,15 @@ public interface Shr5managementPackage extends EPackage {
      * @ordered
      */
     int SHR5_SYSTEM__PARENT_ID = PRIORITY_SYSTEM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__LOCALIZATIONS = PRIORITY_SYSTEM__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.

@@ -993,13 +993,22 @@ public interface Shr5Package extends EPackage {
     int IDENTIFIABLE__PARENT_ID = 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int IDENTIFIABLE__LOCALIZATIONS = 1;
+
+    /**
      * The number of structural features of the '<em>Identifiable</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int IDENTIFIABLE_FEATURE_COUNT = 1;
+    int IDENTIFIABLE_FEATURE_COUNT = 2;
 
     /**
      * The number of operations of the '<em>Identifiable</em>' class.
@@ -1018,6 +1027,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int QUELLE__PARENT_ID = IDENTIFIABLE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QUELLE__LOCALIZATIONS = IDENTIFIABLE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -1434,6 +1452,15 @@ public interface Shr5Package extends EPackage {
     int ABSTRAKT_GEGENSTAND__PARENT_ID = QUELLE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_GEGENSTAND__LOCALIZATIONS = QUELLE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1549,6 +1576,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int GEGENSTAND__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEGENSTAND__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -2037,6 +2073,15 @@ public interface Shr5Package extends EPackage {
     int ABSTAKT_WAFFE__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_WAFFE__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2188,6 +2233,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID = ABSTAKT_WAFFE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTAKT_FERN_KAMPFWAFFE__LOCALIZATIONS = ABSTAKT_WAFFE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -2352,6 +2406,15 @@ public interface Shr5Package extends EPackage {
     int NAHKAMPFWAFFE__PARENT_ID = ABSTAKT_WAFFE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NAHKAMPFWAFFE__LOCALIZATIONS = ABSTAKT_WAFFE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2512,6 +2575,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int FEUERWAFFE__PARENT_ID = ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FEUERWAFFE__LOCALIZATIONS = ABSTAKT_FERN_KAMPFWAFFE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -2739,6 +2811,15 @@ public interface Shr5Package extends EPackage {
     int WURFWAFFE__PARENT_ID = ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WURFWAFFE__LOCALIZATIONS = ABSTAKT_FERN_KAMPFWAFFE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2955,6 +3036,15 @@ public interface Shr5Package extends EPackage {
     int PROJEKTILWAFFE__PARENT_ID = ABSTAKT_FERN_KAMPFWAFFE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PROJEKTILWAFFE__LOCALIZATIONS = ABSTAKT_FERN_KAMPFWAFFE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3144,13 +3234,22 @@ public interface Shr5Package extends EPackage {
     int FERTIGKEITS_GRUPPE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEITS_GRUPPE__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FERTIGKEITS_GRUPPE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -3159,7 +3258,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FERTIGKEITS_GRUPPE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Fertigkeiten</b></em>' containment reference list.
@@ -3168,7 +3267,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE__FERTIGKEITEN = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FERTIGKEITS_GRUPPE__FERTIGKEITEN = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Fertigkeits Gruppe</em>' class.
@@ -3177,7 +3276,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEITS_GRUPPE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FERTIGKEITS_GRUPPE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Fertigkeits Gruppe</em>' class.
@@ -3225,13 +3324,22 @@ public interface Shr5Package extends EPackage {
     int FERTIGKEIT__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERTIGKEIT__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FERTIGKEIT__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -3240,7 +3348,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FERTIGKEIT__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
@@ -3249,7 +3357,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FERTIGKEIT__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Ausweichen</b></em>' attribute.
@@ -3258,7 +3366,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__AUSWEICHEN = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FERTIGKEIT__AUSWEICHEN = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Attribut</b></em>' reference.
@@ -3267,7 +3375,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__ATTRIBUT = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int FERTIGKEIT__ATTRIBUT = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Spezialisierungen</b></em>' containment reference list.
@@ -3276,7 +3384,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEIT__SPEZIALISIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FERTIGKEIT__SPEZIALISIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of structural features of the '<em>Fertigkeit</em>' class.
@@ -3285,7 +3393,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FERTIGKEIT_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int FERTIGKEIT_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The number of operations of the '<em>Fertigkeit</em>' class.
@@ -3468,13 +3576,22 @@ public interface Shr5Package extends EPackage {
     int ABSTRAKT_MODIFIKATOREN__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ABSTRAKT_MODIFIKATOREN__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int ABSTRAKT_MODIFIKATOREN__PAGE = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -3483,7 +3600,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_MODIFIKATOREN__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int ABSTRAKT_MODIFIKATOREN__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Abstrakt Modifikatoren</em>' class.
@@ -3492,7 +3609,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int ABSTRAKT_MODIFIKATOREN_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Abstrakt Modifikatoren</em>' class.
@@ -3547,6 +3664,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int KOERPERMODS__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOERPERMODS__LOCALIZATIONS = ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -3628,6 +3754,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CYBERWARE__PARENT_ID = KOERPERMODS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERWARE__LOCALIZATIONS = KOERPERMODS__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -3754,6 +3889,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int BIO_WARE__PARENT_ID = KOERPERMODS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BIO_WARE__LOCALIZATIONS = KOERPERMODS__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -4683,6 +4827,15 @@ public interface Shr5Package extends EPackage {
     int MAGISCHE_MODS__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_MODS__LOCALIZATIONS = ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4762,6 +4915,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int KI_KRAFT__PARENT_ID = MAGISCHE_MODS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_KRAFT__LOCALIZATIONS = MAGISCHE_MODS__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -5430,13 +5592,22 @@ public interface Shr5Package extends EPackage {
     int SPEZIES__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIES__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPEZIES__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int SPEZIES__PAGE = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -5445,7 +5616,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int SPEZIES__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Konstitution Min</b></em>' attribute.
@@ -5454,7 +5625,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__KONSTITUTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int SPEZIES__KONSTITUTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Geschicklichkeit Min</b></em>' attribute.
@@ -5463,7 +5634,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__GESCHICKLICHKEIT_MIN = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int SPEZIES__GESCHICKLICHKEIT_MIN = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Reaktion Min</b></em>' attribute.
@@ -5472,7 +5643,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__REAKTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int SPEZIES__REAKTION_MIN = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Staerke Min</b></em>' attribute.
@@ -5481,7 +5652,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__STAERKE_MIN = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int SPEZIES__STAERKE_MIN = BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Charisma Min</b></em>' attribute.
@@ -5490,7 +5661,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__CHARISMA_MIN = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int SPEZIES__CHARISMA_MIN = BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Willenskraft Min</b></em>' attribute.
@@ -5499,7 +5670,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__WILLENSKRAFT_MIN = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int SPEZIES__WILLENSKRAFT_MIN = BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Intuition Min</b></em>' attribute.
@@ -5508,7 +5679,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__INTUITION_MIN = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int SPEZIES__INTUITION_MIN = BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Logik Min</b></em>' attribute.
@@ -5517,7 +5688,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__LOGIK_MIN = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int SPEZIES__LOGIK_MIN = BESCHREIBBAR_FEATURE_COUNT + 12;
 
     /**
      * The feature id for the '<em><b>Edge Min</b></em>' attribute.
@@ -5526,7 +5697,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__EDGE_MIN = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int SPEZIES__EDGE_MIN = BESCHREIBBAR_FEATURE_COUNT + 13;
 
     /**
      * The feature id for the '<em><b>Magie Min</b></em>' attribute.
@@ -5535,7 +5706,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__MAGIE_MIN = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int SPEZIES__MAGIE_MIN = BESCHREIBBAR_FEATURE_COUNT + 14;
 
     /**
      * The feature id for the '<em><b>Resonanz Min</b></em>' attribute.
@@ -5544,7 +5715,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__RESONANZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int SPEZIES__RESONANZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 15;
 
     /**
      * The feature id for the '<em><b>Essenz Min</b></em>' attribute.
@@ -5553,7 +5724,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__ESSENZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 15;
+	int SPEZIES__ESSENZ_MIN = BESCHREIBBAR_FEATURE_COUNT + 16;
 
     /**
      * The feature id for the '<em><b>Konstitution Max</b></em>' attribute.
@@ -5562,7 +5733,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__KONSTITUTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 16;
+	int SPEZIES__KONSTITUTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 17;
 
     /**
      * The feature id for the '<em><b>Geschicklichkeit Max</b></em>' attribute.
@@ -5571,7 +5742,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__GESCHICKLICHKEIT_MAX = BESCHREIBBAR_FEATURE_COUNT + 17;
+	int SPEZIES__GESCHICKLICHKEIT_MAX = BESCHREIBBAR_FEATURE_COUNT + 18;
 
     /**
      * The feature id for the '<em><b>Reaktion Max</b></em>' attribute.
@@ -5580,7 +5751,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__REAKTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 18;
+	int SPEZIES__REAKTION_MAX = BESCHREIBBAR_FEATURE_COUNT + 19;
 
     /**
      * The feature id for the '<em><b>Staerke Max</b></em>' attribute.
@@ -5589,7 +5760,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__STAERKE_MAX = BESCHREIBBAR_FEATURE_COUNT + 19;
+	int SPEZIES__STAERKE_MAX = BESCHREIBBAR_FEATURE_COUNT + 20;
 
     /**
      * The feature id for the '<em><b>Charisma Max</b></em>' attribute.
@@ -5598,7 +5769,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__CHARISMA_MAX = BESCHREIBBAR_FEATURE_COUNT + 20;
+	int SPEZIES__CHARISMA_MAX = BESCHREIBBAR_FEATURE_COUNT + 21;
 
     /**
      * The feature id for the '<em><b>Willenskraft Max</b></em>' attribute.
@@ -5607,7 +5778,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__WILLENSKRAFT_MAX = BESCHREIBBAR_FEATURE_COUNT + 21;
+	int SPEZIES__WILLENSKRAFT_MAX = BESCHREIBBAR_FEATURE_COUNT + 22;
 
     /**
      * The feature id for the '<em><b>Intuition Max</b></em>' attribute.
@@ -5616,7 +5787,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__INTUITION_MAX = BESCHREIBBAR_FEATURE_COUNT + 22;
+	int SPEZIES__INTUITION_MAX = BESCHREIBBAR_FEATURE_COUNT + 23;
 
     /**
      * The feature id for the '<em><b>Logik Max</b></em>' attribute.
@@ -5625,7 +5796,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__LOGIK_MAX = BESCHREIBBAR_FEATURE_COUNT + 23;
+	int SPEZIES__LOGIK_MAX = BESCHREIBBAR_FEATURE_COUNT + 24;
 
     /**
      * The feature id for the '<em><b>Edge Max</b></em>' attribute.
@@ -5634,7 +5805,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__EDGE_MAX = BESCHREIBBAR_FEATURE_COUNT + 24;
+	int SPEZIES__EDGE_MAX = BESCHREIBBAR_FEATURE_COUNT + 25;
 
     /**
      * The feature id for the '<em><b>Magie Max</b></em>' attribute.
@@ -5643,7 +5814,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__MAGIE_MAX = BESCHREIBBAR_FEATURE_COUNT + 25;
+	int SPEZIES__MAGIE_MAX = BESCHREIBBAR_FEATURE_COUNT + 26;
 
     /**
      * The feature id for the '<em><b>Resonanz Max</b></em>' attribute.
@@ -5652,7 +5823,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__RESONANZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 26;
+	int SPEZIES__RESONANZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 27;
 
     /**
      * The feature id for the '<em><b>Essenz Max</b></em>' attribute.
@@ -5661,7 +5832,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__ESSENZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 27;
+	int SPEZIES__ESSENZ_MAX = BESCHREIBBAR_FEATURE_COUNT + 28;
 
     /**
      * The feature id for the '<em><b>Laufen</b></em>' attribute.
@@ -5670,7 +5841,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__LAUFEN = BESCHREIBBAR_FEATURE_COUNT + 28;
+	int SPEZIES__LAUFEN = BESCHREIBBAR_FEATURE_COUNT + 29;
 
     /**
      * The feature id for the '<em><b>Rennen</b></em>' attribute.
@@ -5679,7 +5850,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__RENNEN = BESCHREIBBAR_FEATURE_COUNT + 29;
+	int SPEZIES__RENNEN = BESCHREIBBAR_FEATURE_COUNT + 30;
 
     /**
      * The feature id for the '<em><b>Sprinten</b></em>' attribute.
@@ -5688,7 +5859,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES__SPRINTEN = BESCHREIBBAR_FEATURE_COUNT + 30;
+	int SPEZIES__SPRINTEN = BESCHREIBBAR_FEATURE_COUNT + 31;
 
     /**
      * The feature id for the '<em><b>Angriff</b></em>' containment reference.
@@ -5697,7 +5868,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SPEZIES__ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 31;
+    int SPEZIES__ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 32;
 
     /**
      * The number of structural features of the '<em>Spezies</em>' class.
@@ -5706,7 +5877,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPEZIES_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 32;
+	int SPEZIES_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 33;
 
     /**
      * The number of operations of the '<em>Spezies</em>' class.
@@ -6222,6 +6393,15 @@ public interface Shr5Package extends EPackage {
     int KLEIDUNG__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KLEIDUNG__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6384,6 +6564,15 @@ public interface Shr5Package extends EPackage {
     int FERNKAMPFWAFFE_MODIFIKATOR__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FERNKAMPFWAFFE_MODIFIKATOR__LOCALIZATIONS = ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6499,6 +6688,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int PERSONA_EIGENSCHAFT__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA_EIGENSCHAFT__LOCALIZATIONS = ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -7716,13 +7914,22 @@ public interface Shr5Package extends EPackage {
     int ZAUBER__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ZAUBER__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int ZAUBER__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int ZAUBER__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -7731,7 +7938,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int ZAUBER__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Art</b></em>' attribute.
@@ -7740,7 +7947,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__ART = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int ZAUBER__ART = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Reichweite</b></em>' attribute.
@@ -7749,7 +7956,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__REICHWEITE = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int ZAUBER__REICHWEITE = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Schaden</b></em>' attribute.
@@ -7758,7 +7965,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__SCHADEN = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int ZAUBER__SCHADEN = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Dauer</b></em>' attribute.
@@ -7767,7 +7974,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__DAUER = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int ZAUBER__DAUER = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Entzug</b></em>' attribute.
@@ -7776,7 +7983,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__ENTZUG = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int ZAUBER__ENTZUG = BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Kategorie</b></em>' attribute.
@@ -7785,7 +7992,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 8;
+	int ZAUBER__KATEGORIE = BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Merkmale</b></em>' attribute.
@@ -7794,7 +8001,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER__MERKMALE = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int ZAUBER__MERKMALE = BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
      * The number of structural features of the '<em>Zauber</em>' class.
@@ -7803,7 +8010,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int ZAUBER_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int ZAUBER_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
      * The number of operations of the '<em>Zauber</em>' class.
@@ -8490,6 +8697,15 @@ public interface Shr5Package extends EPackage {
     int SCHUTZGEIST__PARENT_ID = MAGISCHE_MODS__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SCHUTZGEIST__LOCALIZATIONS = MAGISCHE_MODS__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8616,13 +8832,22 @@ public interface Shr5Package extends EPackage {
     int META_MAGIE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int META_MAGIE__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int META_MAGIE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int META_MAGIE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -8631,7 +8856,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int META_MAGIE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int META_MAGIE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Meta Magie</em>' class.
@@ -8640,7 +8865,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int META_MAGIE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int META_MAGIE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Meta Magie</em>' class.
@@ -8695,6 +8920,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CRITTER_KRAFT__PARENT_ID = MAGISCHE_MODS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CRITTER_KRAFT__LOCALIZATIONS = MAGISCHE_MODS__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -8805,13 +9039,22 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FAHRZEUG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -8820,7 +9063,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FAHRZEUG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -8829,7 +9072,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FAHRZEUG__WERT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -8838,7 +9081,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FAHRZEUG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -8847,7 +9090,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
+    int FAHRZEUG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
@@ -8856,7 +9099,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FAHRZEUG__FERTIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -8865,7 +9108,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__MODS = BESCHREIBBAR_FEATURE_COUNT + 7;
+    int FAHRZEUG__MODS = BESCHREIBBAR_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Zustand Max</b></em>' attribute.
@@ -8874,7 +9117,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__ZUSTAND_MAX = BESCHREIBBAR_FEATURE_COUNT + 8;
+    int FAHRZEUG__ZUSTAND_MAX = BESCHREIBBAR_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Handling</b></em>' attribute.
@@ -8883,7 +9126,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 9;
+	int FAHRZEUG__HANDLING = BESCHREIBBAR_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Geschwindigkeit</b></em>' attribute.
@@ -8892,7 +9135,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 10;
+	int FAHRZEUG__GESCHWINDIGKEIT = BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Beschleunigung</b></em>' attribute.
@@ -8901,7 +9144,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 11;
+	int FAHRZEUG__BESCHLEUNIGUNG = BESCHREIBBAR_FEATURE_COUNT + 12;
 
     /**
      * The feature id for the '<em><b>Rumpf</b></em>' attribute.
@@ -8910,7 +9153,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 12;
+	int FAHRZEUG__RUMPF = BESCHREIBBAR_FEATURE_COUNT + 13;
 
     /**
      * The feature id for the '<em><b>Pilot</b></em>' attribute.
@@ -8919,7 +9162,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 13;
+	int FAHRZEUG__PILOT = BESCHREIBBAR_FEATURE_COUNT + 14;
 
     /**
      * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -8928,7 +9171,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 14;
+	int FAHRZEUG__SENSOR = BESCHREIBBAR_FEATURE_COUNT + 15;
 
     /**
      * The feature id for the '<em><b>Fahrzeug Typ</b></em>' attribute.
@@ -8937,7 +9180,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 15;
+	int FAHRZEUG__FAHRZEUG_TYP = BESCHREIBBAR_FEATURE_COUNT + 16;
 
     /**
      * The feature id for the '<em><b>Modifizierungen</b></em>' containment reference list.
@@ -8946,7 +9189,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 16;
+	int FAHRZEUG__MODIFIZIERUNGEN = BESCHREIBBAR_FEATURE_COUNT + 17;
 
     /**
      * The feature id for the '<em><b>Panzer</b></em>' attribute.
@@ -8955,7 +9198,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 17;
+    int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 18;
 
     /**
      * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
@@ -8964,7 +9207,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 18;
+    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 19;
 
     /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
@@ -8973,7 +9216,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 19;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 20;
 
     /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -9019,6 +9262,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int PASSAGIER_FAHRZEUG__PARENT_ID = FAHRZEUG__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__LOCALIZATIONS = FAHRZEUG__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -9244,6 +9496,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int BODENFAHRZEUG__PARENT_ID = PASSAGIER_FAHRZEUG__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__LOCALIZATIONS = PASSAGIER_FAHRZEUG__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -9487,6 +9748,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int DROHNE__PARENT_ID = FAHRZEUG__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__LOCALIZATIONS = FAHRZEUG__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -9777,13 +10047,22 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG_MODIFIKATION__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG_MODIFIKATION__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int FAHRZEUG_MODIFIKATION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -9792,7 +10071,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int FAHRZEUG_MODIFIKATION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -9801,7 +10080,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int FAHRZEUG_MODIFIKATION__WERT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -9810,7 +10089,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -9819,7 +10098,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FAHRZEUG_MODIFIKATION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
+    int FAHRZEUG_MODIFIKATION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Fahrzeug Modifikation</em>' class.
@@ -9828,7 +10107,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Fahrzeug Modifikation</em>' class.
@@ -10646,6 +10925,15 @@ public interface Shr5Package extends EPackage {
     int KOMPLEXE_FORM__PARENT_ID = QUELLE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOMPLEXE_FORM__LOCALIZATIONS = QUELLE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10889,13 +11177,22 @@ public interface Shr5Package extends EPackage {
     int SPRITE__PARENT_ID = RESONANZ_PERSONA_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPRITE__LOCALIZATIONS = RESONANZ_PERSONA_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SPRITE__PAGE = RESONANZ_PERSONA_FEATURE_COUNT + 4;
+	int SPRITE__PAGE = RESONANZ_PERSONA_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -10904,7 +11201,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__SRC_BOOK = RESONANZ_PERSONA_FEATURE_COUNT + 5;
+	int SPRITE__SRC_BOOK = RESONANZ_PERSONA_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Stufe</b></em>' attribute.
@@ -10913,7 +11210,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__STUFE = RESONANZ_PERSONA_FEATURE_COUNT + 6;
+	int SPRITE__STUFE = RESONANZ_PERSONA_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Angriff Mod</b></em>' attribute.
@@ -10922,7 +11219,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__ANGRIFF_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 7;
+	int SPRITE__ANGRIFF_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Schleicher Mod</b></em>' attribute.
@@ -10931,7 +11228,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__SCHLEICHER_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 8;
+	int SPRITE__SCHLEICHER_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Datenverarbeitung Mod</b></em>' attribute.
@@ -10940,7 +11237,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__DATENVERARBEITUNG_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 9;
+	int SPRITE__DATENVERARBEITUNG_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 10;
 
     /**
      * The feature id for the '<em><b>Firewall Mod</b></em>' attribute.
@@ -10949,7 +11246,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__FIREWALL_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 10;
+	int SPRITE__FIREWALL_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 11;
 
     /**
      * The feature id for the '<em><b>Initative Mod</b></em>' attribute.
@@ -10958,7 +11255,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE__INITATIVE_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 11;
+	int SPRITE__INITATIVE_MOD = RESONANZ_PERSONA_FEATURE_COUNT + 12;
 
     /**
      * The number of structural features of the '<em>Sprite</em>' class.
@@ -10967,7 +11264,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int SPRITE_FEATURE_COUNT = RESONANZ_PERSONA_FEATURE_COUNT + 12;
+	int SPRITE_FEATURE_COUNT = RESONANZ_PERSONA_FEATURE_COUNT + 13;
 
     /**
      * The number of operations of the '<em>Sprite</em>' class.
@@ -11022,6 +11319,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int ECHO__PARENT_ID = ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ECHO__LOCALIZATIONS = ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11096,13 +11402,22 @@ public interface Shr5Package extends EPackage {
     int VERTRAG__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int VERTRAG__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int VERTRAG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int VERTRAG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -11111,7 +11426,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int VERTRAG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int VERTRAG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -11120,7 +11435,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int VERTRAG__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int VERTRAG__WERT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -11129,7 +11444,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int VERTRAG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int VERTRAG__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -11138,7 +11453,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int VERTRAG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
+    int VERTRAG__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Vertrag</em>' class.
@@ -11147,7 +11462,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+	int VERTRAG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Vertrag</em>' class.
@@ -11193,6 +11508,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int INTERVALL_VERTRAG__PARENT_ID = VERTRAG__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int INTERVALL_VERTRAG__LOCALIZATIONS = VERTRAG__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11301,6 +11625,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int LIFESTYLE__PARENT_ID = INTERVALL_VERTRAG__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__LOCALIZATIONS = INTERVALL_VERTRAG__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11429,6 +11762,15 @@ public interface Shr5Package extends EPackage {
     int WISSENSFERTIGKEIT__PARENT_ID = FERTIGKEIT__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WISSENSFERTIGKEIT__LOCALIZATIONS = FERTIGKEIT__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11535,6 +11877,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SPRACHFERTIGKEIT__PARENT_ID = WISSENSFERTIGKEIT__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPRACHFERTIGKEIT__LOCALIZATIONS = WISSENSFERTIGKEIT__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -11697,6 +12048,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CRITTER__PARENT_ID = SPEZIES__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CRITTER__LOCALIZATIONS = SPEZIES__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12032,6 +12392,15 @@ public interface Shr5Package extends EPackage {
     int FAKEABLE__PARENT_ID = VERTRAG__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAKEABLE__LOCALIZATIONS = VERTRAG__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12147,6 +12516,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SIN__PARENT_ID = FAKEABLE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SIN__LOCALIZATIONS = FAKEABLE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12266,6 +12644,15 @@ public interface Shr5Package extends EPackage {
     int LIZENZ__PARENT_ID = FAKEABLE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIZENZ__LOCALIZATIONS = FAKEABLE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12372,6 +12759,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CREDSTICK__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CREDSTICK__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12552,6 +12948,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MUNITION__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUNITION__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -12759,6 +13164,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int STUFEN_PERSONA__PARENT_ID = QUELLE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int STUFEN_PERSONA__LOCALIZATIONS = QUELLE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13020,6 +13434,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int GEIST__PARENT_ID = STUFEN_PERSONA__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int GEIST__LOCALIZATIONS = STUFEN_PERSONA__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13537,13 +13960,22 @@ public interface Shr5Package extends EPackage {
     int SPEZIALISIERUNG__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SPEZIALISIERUNG__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SPEZIALISIERUNG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+    int SPEZIALISIERUNG__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -13552,7 +13984,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SPEZIALISIERUNG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+    int SPEZIALISIERUNG__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Spezialisierung</em>' class.
@@ -13561,7 +13993,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SPEZIALISIERUNG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 3;
+    int SPEZIALISIERUNG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Spezialisierung</em>' class.
@@ -13590,6 +14022,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int ABSTRACT_MATRIX_DEVICE__PARENT_ID = ABSTRAKT_GEGENSTAND__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRACT_MATRIX_DEVICE__LOCALIZATIONS = ABSTRAKT_GEGENSTAND__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13780,6 +14221,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int COMMLINK__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMLINK__LOCALIZATIONS = ABSTRACT_MATRIX_DEVICE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -13979,6 +14429,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CYBERDECK__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CYBERDECK__LOCALIZATIONS = ABSTRACT_MATRIX_DEVICE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -14315,13 +14774,22 @@ public interface Shr5Package extends EPackage {
     int SOFTWARE__PARENT_ID = GELD_WERT_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE__LOCALIZATIONS = GELD_WERT_FEATURE_COUNT + 4;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SOFTWARE__PAGE = GELD_WERT_FEATURE_COUNT + 4;
+    int SOFTWARE__PAGE = GELD_WERT_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -14330,7 +14798,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE__SRC_BOOK = GELD_WERT_FEATURE_COUNT + 5;
+    int SOFTWARE__SRC_BOOK = GELD_WERT_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Software</em>' class.
@@ -14339,7 +14807,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SOFTWARE_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 6;
+    int SOFTWARE_FEATURE_COUNT = GELD_WERT_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Software</em>' class.
@@ -14432,6 +14900,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MATRIX_PROGRAM__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MATRIX_PROGRAM__LOCALIZATIONS = SOFTWARE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -14541,6 +15018,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SOFTWARE_AGENT__PARENT_ID = MATRIX_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOFTWARE_AGENT__LOCALIZATIONS = MATRIX_PROGRAM__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -14805,6 +15291,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int RIGGER_COMMAND_CONSOLE__PARENT_ID = ABSTRACT_MATRIX_DEVICE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_COMMAND_CONSOLE__LOCALIZATIONS = ABSTRACT_MATRIX_DEVICE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -15114,6 +15609,15 @@ public interface Shr5Package extends EPackage {
     int RIGGER_PROGRAM__PARENT_ID = SOFTWARE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int RIGGER_PROGRAM__LOCALIZATIONS = SOFTWARE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15221,6 +15725,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int AUTO_SOFT__PARENT_ID = RIGGER_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AUTO_SOFT__LOCALIZATIONS = RIGGER_PROGRAM__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -15358,6 +15871,15 @@ public interface Shr5Package extends EPackage {
     int BASIC_PROGRAM__PARENT_ID = SOFTWARE__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASIC_PROGRAM__LOCALIZATIONS = SOFTWARE__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15465,6 +15987,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int TUTORSOFT__PARENT_ID = BASIC_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TUTORSOFT__LOCALIZATIONS = BASIC_PROGRAM__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -15592,6 +16123,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int SKILL_SOFT__PARENT_ID = SOFTWARE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SKILL_SOFT__LOCALIZATIONS = SOFTWARE__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -15813,6 +16353,15 @@ public interface Shr5Package extends EPackage {
     int DATASOFT__PARENT_ID = BASIC_PROGRAM__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DATASOFT__LOCALIZATIONS = BASIC_PROGRAM__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -15929,6 +16478,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int CONSUMER_SOFT__PARENT_ID = BASIC_PROGRAM__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CONSUMER_SOFT__LOCALIZATIONS = BASIC_PROGRAM__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -16111,6 +16669,15 @@ public interface Shr5Package extends EPackage {
     int COMMON_PROGRAM__PARENT_ID = MATRIX_PROGRAM__PARENT_ID;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int COMMON_PROGRAM__LOCALIZATIONS = MATRIX_PROGRAM__LOCALIZATIONS;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -16200,6 +16767,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int WEAPON_MOUNT__PARENT_ID = FAHRZEUG_MODIFIKATION__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__LOCALIZATIONS = FAHRZEUG_MODIFIKATION__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -16320,13 +16896,22 @@ public interface Shr5Package extends EPackage {
     int LIFESTYLE_OPTION__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int LIFESTYLE_OPTION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+    int LIFESTYLE_OPTION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Src Book</b></em>' reference.
@@ -16335,7 +16920,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFESTYLE_OPTION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+    int LIFESTYLE_OPTION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -16344,7 +16929,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFESTYLE_OPTION__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
+    int LIFESTYLE_OPTION__WERT = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
@@ -16353,7 +16938,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFESTYLE_OPTION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+    int LIFESTYLE_OPTION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Wert Value</b></em>' attribute.
@@ -16362,7 +16947,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFESTYLE_OPTION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
+    int LIFESTYLE_OPTION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Lifestyle Option</em>' class.
@@ -16371,7 +16956,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int LIFESTYLE_OPTION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+    int LIFESTYLE_OPTION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Lifestyle Option</em>' class.
@@ -16427,6 +17012,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int PERCENT_LIFESTYLE_OPTION__PARENT_ID = LIFESTYLE_OPTION__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__LOCALIZATIONS = LIFESTYLE_OPTION__LOCALIZATIONS;
 
     /**
      * The feature id for the '<em><b>Page</b></em>' attribute.
@@ -16492,6 +17086,61 @@ public interface Shr5Package extends EPackage {
     int PERCENT_LIFESTYLE_OPTION_OPERATION_COUNT = LIFESTYLE_OPTION_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LocalizationImpl <em>Localization</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.LocalizationImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLocalization()
+     * @generated
+     */
+    int LOCALIZATION = 116;
+
+    /**
+     * The feature id for the '<em><b>Local</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOCALIZATION__LOCAL = 0;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOCALIZATION__NAME = 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOCALIZATION__PAGE = 2;
+
+    /**
+     * The number of structural features of the '<em>Localization</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOCALIZATION_FEATURE_COUNT = 3;
+
+    /**
+     * The number of operations of the '<em>Localization</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LOCALIZATION_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16499,7 +17148,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 116;
+	int FEUER_MODUS = 117;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -16509,7 +17158,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 117;
+	int SCHADENS_TYP = 118;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -16519,7 +17168,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 118;
+	int MAGAZIN_TYP = 119;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -16529,7 +17178,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 119;
+	int FEUWERWAFFEN_ERWEITERUNG = 120;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -16539,7 +17188,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 120;
+	int MODIFIKATOR_TYPE = 121;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -16549,7 +17198,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 121;
+	int SMARTGUN_TYPE = 122;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -16559,7 +17208,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 122;
+	int ZAUBER_ART = 123;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -16569,7 +17218,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 123;
+	int ZAUBER_REICHWEITE = 124;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -16579,7 +17228,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 124;
+	int ZAUBER_DAUER = 125;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -16589,7 +17238,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 125;
+	int MAGISCHE_TRADITION = 126;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -16599,7 +17248,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 126;
+	int CRITTER_HANDLUNG = 127;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -16609,7 +17258,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 127;
+	int CRITTER_REICHWEITE = 128;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -16619,7 +17268,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 128;
+	int CRITTER_DAUER = 129;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -16629,7 +17278,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 129;
+	int RESONANZ_ZIEL = 130;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -16639,7 +17288,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 130;
+    int INTERFACE_MODUS = 131;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -16649,7 +17298,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 131;
+    int PROGRAM_TYPE = 132;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -16659,7 +17308,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 132;
+    int MATRIX_PROGRAM_TYPE = 133;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -16669,7 +17318,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 133;
+	int SHR_DATE = 134;
 
 
 	/**
@@ -16680,7 +17329,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 134;
+	int MODIFICATION_MANAGER = 135;
 
 
 	/**
@@ -20127,6 +20776,17 @@ public interface Shr5Package extends EPackage {
     EAttribute getIdentifiable_ParentId();
 
     /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Identifiable#getLocalizations <em>Localizations</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Localizations</em>'.
+     * @see de.urszeidler.eclipse.shr5.Identifiable#getLocalizations()
+     * @see #getIdentifiable()
+     * @generated
+     */
+    EReference getIdentifiable_Localizations();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.CredstickTransaction <em>Credstick Transaction</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -20315,6 +20975,49 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EClass getPercentLifestyleOption();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Localization <em>Localization</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Localization</em>'.
+     * @see de.urszeidler.eclipse.shr5.Localization
+     * @generated
+     */
+    EClass getLocalization();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Localization#getLocal <em>Local</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Local</em>'.
+     * @see de.urszeidler.eclipse.shr5.Localization#getLocal()
+     * @see #getLocalization()
+     * @generated
+     */
+    EAttribute getLocalization_Local();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Localization#getName <em>Name</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Name</em>'.
+     * @see de.urszeidler.eclipse.shr5.Localization#getName()
+     * @see #getLocalization()
+     * @generated
+     */
+    EAttribute getLocalization_Name();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Localization#getPage <em>Page</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Page</em>'.
+     * @see de.urszeidler.eclipse.shr5.Localization#getPage()
+     * @see #getLocalization()
+     * @generated
+     */
+    EAttribute getLocalization_Page();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
@@ -23916,6 +24619,14 @@ public interface Shr5Package extends EPackage {
         EAttribute IDENTIFIABLE__PARENT_ID = eINSTANCE.getIdentifiable_ParentId();
 
         /**
+         * The meta object literal for the '<em><b>Localizations</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference IDENTIFIABLE__LOCALIZATIONS = eINSTANCE.getIdentifiable_Localizations();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.CredstickTransactionImpl <em>Credstick Transaction</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -24074,6 +24785,40 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass PERCENT_LIFESTYLE_OPTION = eINSTANCE.getPercentLifestyleOption();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.LocalizationImpl <em>Localization</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.LocalizationImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLocalization()
+         * @generated
+         */
+        EClass LOCALIZATION = eINSTANCE.getLocalization();
+
+        /**
+         * The meta object literal for the '<em><b>Local</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LOCALIZATION__LOCAL = eINSTANCE.getLocalization_Local();
+
+        /**
+         * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LOCALIZATION__NAME = eINSTANCE.getLocalization_Name();
+
+        /**
+         * The meta object literal for the '<em><b>Page</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LOCALIZATION__PAGE = eINSTANCE.getLocalization_Page();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.

@@ -750,6 +750,9 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * @generated not
      */
     public BigDecimal getWert() {
+        if(getWertValue()==null)
+            return new BigDecimal(0);
+
         BigDecimal calcListenWert = ShadowrunTools.calcListenWert(getStoredPrograms());
         return getWertValue().add(calcListenWert);
     }

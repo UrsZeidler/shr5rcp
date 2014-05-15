@@ -303,6 +303,7 @@ public class FertigkeitItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN);
         }
         return childrenFeatures;
@@ -373,6 +374,7 @@ public class FertigkeitItemProvider
             case Shr5Package.FERTIGKEIT__AUSWEICHEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.FERTIGKEIT__LOCALIZATIONS:
             case Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -390,6 +392,11 @@ public class FertigkeitItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter

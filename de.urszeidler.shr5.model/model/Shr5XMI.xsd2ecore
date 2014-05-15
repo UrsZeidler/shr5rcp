@@ -206,24 +206,26 @@
     <nested inputs="shr5.ecore#//Projektilwaffe" outputs="Shr5XMI.xsd#//Projektilwaffe;XSDComplexTypeDefinition=18"/>
     <nested inputs="shr5.ecore#//Projektilwaffe" outputs="Shr5XMI.xsd#//Projektilwaffe;XSDElementDeclaration=18"/>
     <nested inputs="shr5.ecore#//FertigkeitsGruppe" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19">
-      <nested inputs="shr5.ecore#//FertigkeitsGruppe/fertigkeiten" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="shr5.ecore#//FertigkeitsGruppe/fertigkeiten" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//FertigkeitsGruppe" outputs="Shr5XMI.xsd#//FertigkeitsGruppe;XSDElementDeclaration=19"/>
     <nested inputs="shr5.ecore#//Fertigkeit" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20">
       <nested inputs="shr5.ecore#//Fertigkeit/kategorie" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDAttributeUse=3"/>
       <nested inputs="shr5.ecore#//Fertigkeit/ausweichen" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDAttributeUse=4"/>
       <nested inputs="shr5.ecore#//Fertigkeit/attribut" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDAttributeUse=5"/>
-      <nested inputs="shr5.ecore#//Fertigkeit/attribut" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-      <nested inputs="shr5.ecore#//Fertigkeit/spezialisierungen" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Fertigkeit/attribut" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Fertigkeit/spezialisierungen" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fertigkeit;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Fertigkeit" outputs="Shr5XMI.xsd#//Fertigkeit;XSDElementDeclaration=20"/>
     <nested inputs="shr5.ecore#//PersonaFertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21">
       <nested inputs="shr5.ecore#//PersonaFertigkeit/fertigkeit" outputs="Shr5XMI.xsd#//PersonaFertigkeit;XSDComplexTypeDefinition=21/XSDAttributeUse"/>
@@ -257,9 +259,10 @@
     <nested inputs="shr5.ecore#//AbstraktModifikatoren" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26"/>
     <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDComplexTypeDefinition=26/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     <nested inputs="shr5.ecore#//AbstraktModifikatoren" outputs="Shr5XMI.xsd#//AbstraktModifikatoren;XSDElementDeclaration=26"/>
     <nested inputs="shr5.ecore#//GeistigeAttribute" outputs="Shr5XMI.xsd#//GeistigeAttribute;XSDComplexTypeDefinition=27"/>
     <nested inputs="shr5.ecore#//GeistigeAttribute" outputs="Shr5XMI.xsd#//GeistigeAttribute;XSDElementDeclaration=27"/>
@@ -334,13 +337,14 @@
       <nested inputs="shr5.ecore#//Spezies/laufen" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=27"/>
       <nested inputs="shr5.ecore#//Spezies/rennen" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=28"/>
       <nested inputs="shr5.ecore#//Spezies/sprinten" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=29"/>
-      <nested inputs="shr5.ecore#//Spezies/angriff" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5.ecore#//Spezies/angriff" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezies;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle=2"/>
     <nested inputs="shr5.ecore#//Spezies" outputs="Shr5XMI.xsd#//Spezies;XSDElementDeclaration=36"/>
     <nested inputs="shr5.ecore#//GegenstandStufen" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37">
       <nested inputs="shr5.ecore#//GegenstandStufen/computer" outputs="Shr5XMI.xsd#//GegenstandStufen;XSDComplexTypeDefinition=37/XSDAttributeUse"/>
@@ -412,9 +416,10 @@
       <nested inputs="shr5.ecore#//Zauber/merkmale" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDAttributeUse=9"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Zauber;XSDComplexTypeDefinition=48/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Zauber" outputs="Shr5XMI.xsd#//Zauber;XSDElementDeclaration=48"/>
     <nested inputs="shr5.ecore#//ChrakterLimits" outputs="Shr5XMI.xsd#//ChrakterLimits;XSDComplexTypeDefinition=49"/>
     <nested inputs="shr5.ecore#//ChrakterLimits" outputs="Shr5XMI.xsd#//ChrakterLimits;XSDElementDeclaration=49"/>
@@ -443,9 +448,10 @@
     <nested inputs="shr5.ecore#//Initation" outputs="Shr5XMI.xsd#//Initation;XSDElementDeclaration=54"/>
     <nested inputs="shr5.ecore#//MetaMagie" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//MetaMagie;XSDComplexTypeDefinition=55/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//MetaMagie" outputs="Shr5XMI.xsd#//MetaMagie;XSDElementDeclaration=55"/>
     <nested inputs="shr5.ecore#//CritterKraft" outputs="Shr5XMI.xsd#//CritterKraft;XSDComplexTypeDefinition=56">
       <nested inputs="shr5.ecore#//CritterKraft/art" outputs="Shr5XMI.xsd#//CritterKraft;XSDComplexTypeDefinition=56/XSDAttributeUse"/>
@@ -463,17 +469,18 @@
       <nested inputs="shr5.ecore#//Fahrzeug/sensor" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=11"/>
       <nested inputs="shr5.ecore#//Fahrzeug/fahrzeugTyp" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=12"/>
       <nested inputs="shr5.ecore#//Fahrzeug/panzer" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=13"/>
-      <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="shr5.ecore#//Fahrzeug/modifizierungen" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=4"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDAttributeUse=5"/>
-    <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Fahrzeug;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     <nested inputs="shr5.ecore#//Fahrzeug" outputs="Shr5XMI.xsd#//Fahrzeug;XSDElementDeclaration=57"/>
     <nested inputs="shr5.ecore#//Bodenfahrzeug" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58">
       <nested inputs="shr5.ecore#//Bodenfahrzeug/handlingGelaende" outputs="Shr5XMI.xsd#//Bodenfahrzeug;XSDComplexTypeDefinition=58/XSDAttributeUse"/>
@@ -493,9 +500,10 @@
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDElementDeclaration=60"/>
     <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDElementDeclaration=61"/>
@@ -537,17 +545,19 @@
     <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDAttributeUse=5"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Sprite;XSDComplexTypeDefinition=66/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Sprite" outputs="Shr5XMI.xsd#//Sprite;XSDElementDeclaration=66"/>
     <nested inputs="shr5.ecore#//Echo" outputs="Shr5XMI.xsd#//Echo;XSDComplexTypeDefinition=67"/>
     <nested inputs="shr5.ecore#//Echo" outputs="Shr5XMI.xsd#//Echo;XSDElementDeclaration=67"/>
     <nested inputs="shr5.ecore#//Vertrag" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Vertrag" outputs="Shr5XMI.xsd#//Vertrag;XSDElementDeclaration=68"/>
@@ -643,6 +653,7 @@
     <nested inputs="shr5.ecore#//Geist" outputs="Shr5XMI.xsd#//Geist;XSDElementDeclaration=86"/>
     <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=87">
       <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=87/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Identifiable;XSDComplexTypeDefinition=87/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable" outputs="Shr5XMI.xsd#//Identifiable;XSDElementDeclaration=87"/>
     <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDComplexTypeDefinition=88">
@@ -653,9 +664,10 @@
     <nested inputs="shr5.ecore#//CredstickTransaction" outputs="Shr5XMI.xsd#//CredstickTransaction;XSDElementDeclaration=88"/>
     <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Spezialisierung;XSDComplexTypeDefinition=89/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Spezialisierung" outputs="Shr5XMI.xsd#//Spezialisierung;XSDElementDeclaration=89"/>
     <nested inputs="shr5.ecore#//MatrixAttributes" outputs="Shr5XMI.xsd#//MatrixAttributes;XSDComplexTypeDefinition=90">
       <nested inputs="shr5.ecore#//MatrixAttributes/currentModus" outputs="Shr5XMI.xsd#//MatrixAttributes;XSDComplexTypeDefinition=90/XSDAttributeUse"/>
@@ -724,9 +736,10 @@
     <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDAttributeUse=2"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDAttributeUse=5"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Software;XSDComplexTypeDefinition=100/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//Software" outputs="Shr5XMI.xsd#//Software;XSDElementDeclaration=100"/>
     <nested inputs="shr5.ecore#//MatrixProgram" outputs="Shr5XMI.xsd#//MatrixProgram;XSDComplexTypeDefinition=101"/>
     <nested inputs="shr5.ecore#//MatrixProgram" outputs="Shr5XMI.xsd#//MatrixProgram;XSDElementDeclaration=101"/>
@@ -784,13 +797,20 @@
     <nested inputs="shr5.ecore#//WeaponMount" outputs="Shr5XMI.xsd#//WeaponMount;XSDElementDeclaration=113"/>
     <nested inputs="shr5.ecore#//LifestyleOption" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDParticle/XSDModelGroup/XSDParticle=1"/>
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//LifestyleOption" outputs="Shr5XMI.xsd#//LifestyleOption;XSDElementDeclaration=114"/>
     <nested inputs="shr5.ecore#//PercentLifestyleOption" outputs="Shr5XMI.xsd#//PercentLifestyleOption;XSDComplexTypeDefinition=115"/>
     <nested inputs="shr5.ecore#//PercentLifestyleOption" outputs="Shr5XMI.xsd#//PercentLifestyleOption;XSDElementDeclaration=115"/>
+    <nested inputs="shr5.ecore#//Localization" outputs="Shr5XMI.xsd#//Localization;XSDComplexTypeDefinition=116">
+      <nested inputs="shr5.ecore#//Localization/local" outputs="Shr5XMI.xsd#//Localization;XSDComplexTypeDefinition=116/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Localization/name" outputs="Shr5XMI.xsd#//Localization;XSDComplexTypeDefinition=116/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Localization/page" outputs="Shr5XMI.xsd#//Localization;XSDComplexTypeDefinition=116/XSDAttributeUse=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Localization" outputs="Shr5XMI.xsd#//Localization;XSDElementDeclaration=116"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

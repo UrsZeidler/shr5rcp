@@ -39,15 +39,15 @@
     <nested inputs="shr5Management.ecore#//ManagedCharacter" outputs="Shr5managementXMI.xsd#//ManagedCharacter;XSDElementDeclaration"/>
     <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1">
       <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/instructions"
-          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"
           outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/lifestyleToStartMoney"
+          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=3"/>
       <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"
           outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse=3"/>
       <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/characterAdvancements"
-          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=3"/>
-      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/additionalConstrains"
           outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=4"/>
+      <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem/additionalConstrains"
+          outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=5"/>
     </nested>
     <nested inputs="shr5Management.ecore#//CharacterGeneratorSystem" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDElementDeclaration=1"/>
     <nested inputs="shr5Management.ecore#//PrioritySystem" outputs="Shr5managementXMI.xsd#//PrioritySystem;XSDComplexTypeDefinition=2">
@@ -276,9 +276,11 @@
   </nested>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/parentId"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse"/>
+  <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Identifiable/localizations"
+      outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/page" outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse=1"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
       outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDAttributeUse=2"/>
   <nested inputs="../../de.urszeidler.shr5.model/model/shr5.ecore#//Quelle/srcBook"
-      outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"/>
+      outputs="Shr5managementXMI.xsd#//CharacterGeneratorSystem;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"/>
 </xsd2ecore:XSD2EcoreMappingRoot>

@@ -217,6 +217,7 @@ public class FertigkeitsGruppeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN);
         }
         return childrenFeatures;
@@ -285,6 +286,7 @@ public class FertigkeitsGruppeItemProvider
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS:
             case Shr5Package.FERTIGKEITS_GRUPPE__FERTIGKEITEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -302,6 +304,11 @@ public class FertigkeitsGruppeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter

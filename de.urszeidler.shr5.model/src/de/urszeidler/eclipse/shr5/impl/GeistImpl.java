@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.GeistigeAttribute;
 import de.urszeidler.eclipse.shr5.KoerperlicheAttribute;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.ModifikatorAttribute;
 import de.urszeidler.eclipse.shr5.Panzerung;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -40,6 +41,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getInitative <em>Initative</em>}</li>
@@ -109,6 +111,16 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -735,6 +747,18 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.GEIST__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public String getPage() {
         return page;
     }
@@ -1075,6 +1099,8 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.GEIST__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5Package.GEIST__POWERS:
                 return ((InternalEList<?>)getPowers()).basicRemove(otherEnd, msgs);
             case Shr5Package.GEIST__OPTIONAL_POWERS:
@@ -1093,6 +1119,8 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
         switch (featureID) {
             case Shr5Package.GEIST__PARENT_ID:
                 return getParentId();
+            case Shr5Package.GEIST__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.GEIST__PAGE:
                 return getPage();
             case Shr5Package.GEIST__SRC_BOOK:
@@ -1198,6 +1226,10 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
             case Shr5Package.GEIST__PARENT_ID:
                 setParentId((String)newValue);
                 return;
+            case Shr5Package.GEIST__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
+                return;
             case Shr5Package.GEIST__PAGE:
                 setPage((String)newValue);
                 return;
@@ -1274,6 +1306,9 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
             case Shr5Package.GEIST__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.GEIST__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.GEIST__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -1345,6 +1380,8 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
         switch (featureID) {
             case Shr5Package.GEIST__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.GEIST__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.GEIST__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.GEIST__SRC_BOOK:

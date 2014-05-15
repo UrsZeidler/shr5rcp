@@ -5,16 +5,22 @@ package de.urszeidler.eclipse.shr5.impl;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Quelle;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SoftwareAgent;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import java.math.BigDecimal;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +36,7 @@ import java.math.BigDecimal;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getRating <em>Rating</em>}</li>
@@ -168,6 +175,16 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -382,6 +399,18 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public String getPage() {
         return page;
     }
@@ -464,6 +493,20 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * @generated
      */
     @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.SOFTWARE_AGENT__WERT:
@@ -480,6 +523,8 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
                 return getName();
             case Shr5Package.SOFTWARE_AGENT__PARENT_ID:
                 return getParentId();
+            case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.SOFTWARE_AGENT__PAGE:
                 return getPage();
             case Shr5Package.SOFTWARE_AGENT__SRC_BOOK:
@@ -496,6 +541,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
@@ -516,6 +562,10 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
                 return;
             case Shr5Package.SOFTWARE_AGENT__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.SOFTWARE_AGENT__PAGE:
                 setPage((String)newValue);
@@ -556,6 +606,9 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
             case Shr5Package.SOFTWARE_AGENT__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.SOFTWARE_AGENT__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -591,6 +644,8 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.SOFTWARE_AGENT__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.SOFTWARE_AGENT__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.SOFTWARE_AGENT__SRC_BOOK:
@@ -619,6 +674,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.SOFTWARE_AGENT__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -650,6 +706,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.SOFTWARE_AGENT__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS;
                 default: return -1;
             }
         }

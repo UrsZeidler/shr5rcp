@@ -394,6 +394,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="fertigkeiten" type="shr5:Fertigkeit"/>
         </xsd:choice>
@@ -408,6 +409,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="attribut" type="ecore:EAttribute"/>
           <xsd:element name="spezialisierungen" type="shr5:Spezialisierung"/>
@@ -500,6 +502,7 @@
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -606,6 +609,7 @@
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="angriff" type="shr5:Nahkampfwaffe"/>
         </xsd:choice>
@@ -782,6 +786,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -872,6 +877,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -896,6 +902,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
           <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
@@ -973,6 +980,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -1042,6 +1050,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:ResonanzPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="beschreibung" type="xsd:string"/>
@@ -1070,6 +1079,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -1337,6 +1347,7 @@
   </xsd:element>
   <xsd:complexType abstract="true" name="Identifiable">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="localizations" type="shr5:Localization"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
@@ -1366,6 +1377,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -1573,6 +1585,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:GeldWert">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="beschreibung" type="xsd:string"/>
@@ -1710,6 +1723,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
@@ -1742,4 +1756,15 @@
       <xsd:documentation>The werValue ist interpreted as percent value so the wert is wertContainer * wertValue/100.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType name="Localization">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="local" type="xsd:string" use="required"/>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="page" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="Localization" type="shr5:Localization"/>
 </xsd:schema>

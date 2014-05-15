@@ -197,6 +197,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.WEAPON_MOUNT: return createWeaponMount();
             case Shr5Package.LIFESTYLE_OPTION: return createLifestyleOption();
             case Shr5Package.PERCENT_LIFESTYLE_OPTION: return createPercentLifestyleOption();
+            case Shr5Package.LOCALIZATION: return createLocalization();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -968,6 +969,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public PercentLifestyleOption createPercentLifestyleOption() {
         PercentLifestyleOptionImpl percentLifestyleOption = new PercentLifestyleOptionImpl();
         return percentLifestyleOption;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Localization createLocalization() {
+        LocalizationImpl localization = new LocalizationImpl();
+        return localization;
     }
 
     /**

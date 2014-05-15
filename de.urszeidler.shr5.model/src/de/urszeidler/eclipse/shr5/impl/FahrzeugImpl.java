@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.FahrzeugZustand;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -41,6 +42,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWert <em>Wert</em>}</li>
@@ -144,6 +146,16 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -494,6 +506,18 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         parentId = newParentId;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.FAHRZEUG__LOCALIZATIONS);
+        }
+        return localizations;
     }
 
     /**
@@ -923,6 +947,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.FAHRZEUG__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5Package.FAHRZEUG__MODS:
                 return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
@@ -947,6 +973,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return getName();
             case Shr5Package.FAHRZEUG__PARENT_ID:
                 return getParentId();
+            case Shr5Package.FAHRZEUG__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.FAHRZEUG__PAGE:
                 return getPage();
             case Shr5Package.FAHRZEUG__SRC_BOOK:
@@ -1009,6 +1037,10 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.FAHRZEUG__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.FAHRZEUG__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.FAHRZEUG__PAGE:
                 setPage((String)newValue);
@@ -1081,6 +1113,9 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.FAHRZEUG__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.FAHRZEUG__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -1146,6 +1181,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.FAHRZEUG__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.FAHRZEUG__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.FAHRZEUG__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.FAHRZEUG__SRC_BOOK:
@@ -1196,6 +1233,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.FAHRZEUG__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.FAHRZEUG__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -1245,6 +1283,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.FAHRZEUG__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.FAHRZEUG__LOCALIZATIONS;
                 default: return -1;
             }
         }

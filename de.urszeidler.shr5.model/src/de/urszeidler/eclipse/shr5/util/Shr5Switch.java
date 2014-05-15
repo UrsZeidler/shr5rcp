@@ -1299,6 +1299,12 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.LOCALIZATION: {
+                Localization localization = (Localization)theEObject;
+                T result = caseLocalization(localization);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2740,6 +2746,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T casePercentLifestyleOption(PercentLifestyleOption object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Localization</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Localization</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLocalization(Localization object) {
         return null;
     }
 

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -40,6 +41,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getInstructions <em>Instructions</em>}</li>
@@ -131,6 +133,16 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -261,6 +273,18 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
         parentId = newParentId;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS);
+        }
+        return localizations;
     }
 
     /**
@@ -446,6 +470,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS:
                 return ((InternalEList<?>)getInstructions()).basicRemove(otherEnd, msgs);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY:
@@ -472,6 +498,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return getName();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
                 return getParentId();
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 return getPage();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__SRC_BOOK:
@@ -511,6 +539,10 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 setPage((String)newValue);
@@ -556,6 +588,9 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -594,6 +629,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__SRC_BOOK:
@@ -620,6 +657,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -643,6 +681,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS;
                 default: return -1;
             }
         }

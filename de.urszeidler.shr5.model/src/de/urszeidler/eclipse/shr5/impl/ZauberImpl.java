@@ -3,12 +3,17 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -16,6 +21,7 @@ import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.ZauberArt;
 import de.urszeidler.eclipse.shr5.ZauberDauer;
 import de.urszeidler.eclipse.shr5.ZauberReichweite;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +34,7 @@ import de.urszeidler.eclipse.shr5.ZauberReichweite;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getArt <em>Art</em>}</li>
@@ -122,6 +129,16 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -352,6 +369,18 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
         parentId = newParentId;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ZAUBER__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.ZAUBER__LOCALIZATIONS);
+        }
+        return localizations;
     }
 
     /**
@@ -604,6 +633,20 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.ZAUBER__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -618,6 +661,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
                 return getName();
             case Shr5Package.ZAUBER__PARENT_ID:
                 return getParentId();
+            case Shr5Package.ZAUBER__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.ZAUBER__PAGE:
                 return getPage();
             case Shr5Package.ZAUBER__SRC_BOOK:
@@ -646,7 +691,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5Package.ZAUBER__BESCHREIBUNG:
@@ -660,6 +706,10 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
                 return;
             case Shr5Package.ZAUBER__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.ZAUBER__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.ZAUBER__PAGE:
                 setPage((String)newValue);
@@ -712,6 +762,9 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
             case Shr5Package.ZAUBER__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.ZAUBER__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.ZAUBER__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -759,6 +812,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.ZAUBER__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.ZAUBER__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.ZAUBER__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.ZAUBER__SRC_BOOK:
@@ -791,6 +846,7 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.ZAUBER__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.ZAUBER__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -814,6 +870,7 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.ZAUBER__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.ZAUBER__LOCALIZATIONS;
                 default: return -1;
             }
         }

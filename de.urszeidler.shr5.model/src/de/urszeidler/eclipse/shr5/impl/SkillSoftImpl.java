@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5.impl;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SkillSoft;
@@ -13,13 +14,18 @@ import de.urszeidler.eclipse.shr5.SkillSoft;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import java.math.BigDecimal;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +41,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SkillSoftImpl#getSkill <em>Skill</em>}</li>
@@ -174,6 +181,16 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -394,6 +411,18 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SKILL_SOFT__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public String getPage() {
         return page;
     }
@@ -513,6 +542,20 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
      * @generated
      */
     @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.SKILL_SOFT__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.SKILL_SOFT__WERT:
@@ -529,6 +572,8 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
                 return getName();
             case Shr5Package.SKILL_SOFT__PARENT_ID:
                 return getParentId();
+            case Shr5Package.SKILL_SOFT__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.SKILL_SOFT__PAGE:
                 return getPage();
             case Shr5Package.SKILL_SOFT__SRC_BOOK:
@@ -548,6 +593,7 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
@@ -568,6 +614,10 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
                 return;
             case Shr5Package.SKILL_SOFT__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.SKILL_SOFT__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.SKILL_SOFT__PAGE:
                 setPage((String)newValue);
@@ -611,6 +661,9 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
             case Shr5Package.SKILL_SOFT__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.SKILL_SOFT__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.SKILL_SOFT__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -649,6 +702,8 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.SKILL_SOFT__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.SKILL_SOFT__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.SKILL_SOFT__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.SKILL_SOFT__SRC_BOOK:
@@ -679,6 +734,7 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.SKILL_SOFT__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.SKILL_SOFT__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -710,6 +766,7 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.SKILL_SOFT__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.SKILL_SOFT__LOCALIZATIONS;
                 default: return -1;
             }
         }

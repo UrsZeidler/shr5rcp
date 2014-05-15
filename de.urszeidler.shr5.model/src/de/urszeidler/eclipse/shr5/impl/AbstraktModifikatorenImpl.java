@@ -11,12 +11,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -34,6 +36,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getSrcBook <em>Src Book</em>}</li>
  * </ul>
@@ -131,6 +134,16 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -279,6 +292,18 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -361,6 +386,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
         switch (featureID) {
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__MODS:
                 return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -383,6 +410,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
                 return getMods();
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PARENT_ID:
                 return getParentId();
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PAGE:
                 return getPage();
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__SRC_BOOK:
@@ -417,6 +446,10 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PARENT_ID:
                 setParentId((String)newValue);
                 return;
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
+                return;
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PAGE:
                 setPage((String)newValue);
                 return;
@@ -450,6 +483,9 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -478,6 +514,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
                 return mods != null && !mods.isEmpty();
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__SRC_BOOK:
@@ -502,6 +540,7 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.ABSTRAKT_MODIFIKATOREN__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -531,6 +570,7 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.ABSTRAKT_MODIFIKATOREN__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS;
                 default: return -1;
             }
         }

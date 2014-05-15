@@ -106,6 +106,7 @@
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
           <xsd:element name="instructions" type="shr5mngt:GeneratorStateToEStringMapEntry"/>
           <xsd:element name="lifestyleToStartMoney" type="shr5mngt:LifestyleToStartMoney"/>

@@ -6060,6 +6060,34 @@
       <element xmi:type="ecore:EClass" href="shr5.ecore#//Quelle"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IoUbctJCEeOyE6vYBgaPjQ" x="180" y="200"/>
     </children>
+    <children xmi:type="notation:Node" xmi:id="_rW6eQNwCEeOWc7COK4FEZA" type="1001">
+      <children xmi:type="notation:Node" xmi:id="_rXGEcNwCEeOWc7COK4FEZA" type="4001"/>
+      <children xmi:type="notation:Node" xmi:id="_rXGEcdwCEeOWc7COK4FEZA" type="5001">
+        <children xmi:type="notation:Node" xmi:id="_w8ZgENwCEeOWc7COK4FEZA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Localization/local"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_w8aHINwCEeOWc7COK4FEZA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_zizhoNwCEeOWc7COK4FEZA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Localization/name"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_zizhodwCEeOWc7COK4FEZA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_2H-0INwCEeOWc7COK4FEZA" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5.ecore#//Localization/page"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2H-0IdwCEeOWc7COK4FEZA"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_rXGEctwCEeOWc7COK4FEZA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_rXGEc9wCEeOWc7COK4FEZA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_rXGEdNwCEeOWc7COK4FEZA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_rXGrgNwCEeOWc7COK4FEZA" type="5002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_rXGrgdwCEeOWc7COK4FEZA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_rXGrgtwCEeOWc7COK4FEZA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_rXGrg9wCEeOWc7COK4FEZA"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_rW6eQdwCEeOWc7COK4FEZA" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <element xmi:type="ecore:EClass" href="shr5.ecore#//Localization"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rW6eQtwCEeOWc7COK4FEZA" x="430" y="40"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_QxQI4dIrEeOMTv7GFd0lug"/>
     <element xmi:type="ecore:EPackage" href="shr5.ecore#/"/>
     <edges xmi:type="notation:Edge" xmi:id="_O_3KINIzEeOyE6vYBgaPjQ" type="3003" source="_IoUbcNJCEeOyE6vYBgaPjQ" target="_VHctENIrEeOMTv7GFd0lug">
@@ -6068,6 +6096,19 @@
       <element xsi:nil="true"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_O_3KI9IzEeOyE6vYBgaPjQ" points="[3, -9, -52, 129]$[-11, -106, -66, 32]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PACwUNIzEeOyE6vYBgaPjQ" id="(0.543859649122807,0.1836734693877551)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_t1ININwCEeOWc7COK4FEZA" type="3002" source="_VHctENIrEeOMTv7GFd0lug" target="_rW6eQNwCEeOWc7COK4FEZA">
+      <children xmi:type="notation:Node" xmi:id="_t1I0MNwCEeOWc7COK4FEZA" type="4011">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_t1I0MdwCEeOWc7COK4FEZA" x="-36" y="-7"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_t1I0MtwCEeOWc7COK4FEZA" type="4012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_t1I0M9wCEeOWc7COK4FEZA" x="10" y="10"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_t1INIdwCEeOWc7COK4FEZA" lineColor="4210752"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_t1INItwCEeOWc7COK4FEZA" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+      <element xmi:type="ecore:EReference" href="shr5.ecore#//Identifiable/localizations"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_t1INI9wCEeOWc7COK4FEZA" points="[24, -2, -166, -6]$[184, -16, -6, -20]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t1MekNwCEeOWc7COK4FEZA" id="(0.8235294117647058,0.4489795918367347)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_TJq6wNuMEeO1xd9J8EtIDA" type="EcoreTools" name="Software" measurementUnit="Pixel">

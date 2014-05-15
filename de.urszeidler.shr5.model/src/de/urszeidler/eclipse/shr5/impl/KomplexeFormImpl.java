@@ -3,17 +3,23 @@
 package de.urszeidler.eclipse.shr5.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.ResonanzZiel;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.ZauberDauer;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +29,7 @@ import de.urszeidler.eclipse.shr5.ZauberDauer;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getBeschreibung <em>Beschreibung</em>}</li>
@@ -56,6 +63,16 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -249,6 +266,18 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -434,6 +463,20 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -442,6 +485,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
         switch (featureID) {
             case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
                 return getParentId();
+            case Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 return getPage();
             case Shr5Package.KOMPLEXE_FORM__SRC_BOOK:
@@ -468,11 +513,16 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 setPage((String)newValue);
@@ -513,6 +563,9 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
             case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -551,6 +604,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
         switch (featureID) {
             case Shr5Package.KOMPLEXE_FORM__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.KOMPLEXE_FORM__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.KOMPLEXE_FORM__SRC_BOOK:

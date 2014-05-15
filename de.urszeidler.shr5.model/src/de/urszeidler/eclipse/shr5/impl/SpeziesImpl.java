@@ -11,11 +11,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Modifizierbar;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Quelle;
@@ -35,6 +37,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getKonstitutionMin <em>Konstitution Min</em>}</li>
@@ -160,6 +163,16 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -858,6 +871,18 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SPEZIES__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1550,6 +1575,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
         switch (featureID) {
             case Shr5Package.SPEZIES__MODS:
                 return ((InternalEList<?>)getMods()).basicRemove(otherEnd, msgs);
+            case Shr5Package.SPEZIES__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5Package.SPEZIES__ANGRIFF:
                 return basicSetAngriff(null, msgs);
         }
@@ -1574,6 +1601,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return getMods();
             case Shr5Package.SPEZIES__PARENT_ID:
                 return getParentId();
+            case Shr5Package.SPEZIES__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.SPEZIES__PAGE:
                 return getPage();
             case Shr5Package.SPEZIES__SRC_BOOK:
@@ -1663,6 +1692,10 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return;
             case Shr5Package.SPEZIES__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.SPEZIES__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.SPEZIES__PAGE:
                 setPage((String)newValue);
@@ -1781,6 +1814,9 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
             case Shr5Package.SPEZIES__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.SPEZIES__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.SPEZIES__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -1893,6 +1929,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
                 return mods != null && !mods.isEmpty();
             case Shr5Package.SPEZIES__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.SPEZIES__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.SPEZIES__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.SPEZIES__SRC_BOOK:
@@ -1973,6 +2011,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.SPEZIES__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.SPEZIES__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -2002,6 +2041,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.SPEZIES__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.SPEZIES__LOCALIZATIONS;
                 default: return -1;
             }
         }

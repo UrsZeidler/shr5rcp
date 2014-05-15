@@ -1066,6 +1066,7 @@ public class GeistItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.GEIST__POWERS);
             childrenFeatures.add(Shr5Package.Literals.GEIST__OPTIONAL_POWERS);
         }
@@ -1164,6 +1165,7 @@ public class GeistItemProvider
             case Shr5Package.GEIST__LOGIK_BASIS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.GEIST__LOCALIZATIONS:
             case Shr5Package.GEIST__POWERS:
             case Shr5Package.GEIST__OPTIONAL_POWERS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -1182,6 +1184,11 @@ public class GeistItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter

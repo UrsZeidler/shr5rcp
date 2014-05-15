@@ -247,16 +247,16 @@
 	<xsl:template mode="lifestyle" match="lifestyles">
 		<entries xsi:type="shr5:ShrList" name="lifestyles">
 			<xsl:apply-templates mode="lifestyle" />
-			<entries xsi:type="shr5:LifestyleOption" 
-				name="Special Work Area" wertValue="1000" />
-			<entries xsi:type="shr5:PercentLifestyleOption" 
-				name="Extra Secure" wertValue="20" />
-			<entries xsi:type="shr5:PercentLifestyleOption" 
-				name="Obscure/Difficult to Find" wertValue="10" />
-			<entries xsi:type="shr5:PercentLifestyleOption" 
-				name="Cramped" wertValue="-10" />			
-			<entries xsi:type="shr5:PercentLifestyleOption" 
-				name="Dangerous Area" wertValue="-20" />
+			<entries xsi:type="shr5:LifestyleOption" name="Special Work Area"
+				wertValue="1000" />
+			<entries xsi:type="shr5:PercentLifestyleOption" name="Extra Secure"
+				wertValue="20" />
+			<entries xsi:type="shr5:PercentLifestyleOption" name="Obscure/Difficult to Find"
+				wertValue="10" />
+			<entries xsi:type="shr5:PercentLifestyleOption" name="Cramped"
+				wertValue="-10" />
+			<entries xsi:type="shr5:PercentLifestyleOption" name="Dangerous Area"
+				wertValue="-20" />
 
 		</entries>
 	</xsl:template>
@@ -1549,6 +1549,8 @@
 		<xsl:if test="$aid!=''">
 			<xsl:attribute name="xmi:id"><xsl:value-of select="$aid" /></xsl:attribute>
 		</xsl:if>
+
+
 		<xsl:if test="number(page/text())">
 			<xsl:choose>
 				<xsl:when test="$do_localization='true'">
@@ -1575,6 +1577,34 @@
 			</xsl:choose>
 		</xsl:if>
 		<xsl:attribute name="srcBook">//@entries.0/@entries.0/@entries.0</xsl:attribute>
+
+		<xsl:variable name="aid1" select="id/text()" />
+		<xsl:variable name="loc_name">
+			<xsl:call-template name="findLocalizedName">
+				<xsl:with-param name="aid" select="$aid1" />
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:choose>
+			<xsl:when test="not ($loc_name='')">
+				<localizations local="de">
+					<xsl:attribute name="name"><xsl:value-of
+						select="$loc_name" /></xsl:attribute>
+					<xsl:variable name="loc_page">
+						<xsl:call-template name="findLocalizedPage">
+							<xsl:with-param name="aid" select="$aid1" />
+						</xsl:call-template>
+					</xsl:variable>
+					<xsl:choose>
+						<xsl:when test="$loc_page=''">
+							<xsl:attribute name="page"><xsl:value-of
+								select="number(page/text())" /></xsl:attribute>
+						</xsl:when>
+					</xsl:choose>
+				</localizations>
+			</xsl:when>
+		</xsl:choose>
+
+
 	</xsl:template>
 	<xsl:template name="gegenstand-basis">
 		<xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" /></xsl:attribute>
@@ -2285,7 +2315,7 @@
 				<xsl:choose>
 					<xsl:when test="name/text()='Datasoft'">
 						<entries xsi:type="shr5:Datasoft">
-							<xsl:attribute name="category">
+							<xsl:attribute name="type">
 								<xsl:value-of select="'dataSoft'" />
 									</xsl:attribute>
 							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
@@ -2298,7 +2328,7 @@
 					</xsl:when>
 					<xsl:when test="name/text()='Mapsoft'">
 						<entries xsi:type="shr5:ConsumerSoft">
-							<xsl:attribute name="category">
+							<xsl:attribute name="type">
 								<xsl:value-of select="'mapSoft'" />
 									</xsl:attribute>
 							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
@@ -2311,7 +2341,7 @@
 					</xsl:when>
 					<xsl:when test="name/text()='Shopsoft'">
 						<entries xsi:type="shr5:ConsumerSoft">
-							<xsl:attribute name="category">
+							<xsl:attribute name="type">
 								<xsl:value-of select="'shopSoft'" />
 									</xsl:attribute>
 							<xsl:attribute name="verfuegbarkeit"><xsl:value-of
@@ -2324,7 +2354,7 @@
 					</xsl:when>
 
 					<xsl:otherwise>
-						<xsl:attribute name="category">
+						<xsl:attribute name="type">
 					<xsl:value-of select="'defaultSoft'" />
 									</xsl:attribute>
 

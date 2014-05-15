@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.SourceBook;
@@ -32,6 +33,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitsGruppeImpl#getFertigkeiten <em>Fertigkeiten</em>}</li>
@@ -120,6 +122,16 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
 
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
@@ -220,6 +232,18 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
         parentId = newParentId;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS);
+        }
+        return localizations;
     }
 
     /**
@@ -343,6 +367,8 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
             case Shr5Package.FERTIGKEITS_GRUPPE__FERTIGKEITEN:
                 return ((InternalEList<?>)getFertigkeiten()).basicRemove(otherEnd, msgs);
         }
@@ -365,6 +391,8 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
                 return getName();
             case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
                 return getParentId();
+            case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 return getPage();
             case Shr5Package.FERTIGKEITS_GRUPPE__SRC_BOOK:
@@ -396,6 +424,10 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
                 return;
             case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
                 setParentId((String)newValue);
+                return;
+            case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 setPage((String)newValue);
@@ -431,6 +463,9 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
                 setParentId(PARENT_ID_EDEFAULT);
                 return;
+            case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 setPage(PAGE_EDEFAULT);
                 return;
@@ -460,6 +495,8 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID:
                 return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.FERTIGKEITS_GRUPPE__PAGE:
                 return PAGE_EDEFAULT == null ? page != null : !PAGE_EDEFAULT.equals(page);
             case Shr5Package.FERTIGKEITS_GRUPPE__SRC_BOOK:
@@ -480,6 +517,7 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
                 default: return -1;
             }
         }
@@ -503,6 +541,7 @@ public class FertigkeitsGruppeImpl extends MinimalEObjectImpl.Container implemen
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
                 case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.FERTIGKEITS_GRUPPE__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.FERTIGKEITS_GRUPPE__LOCALIZATIONS;
                 default: return -1;
             }
         }

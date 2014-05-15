@@ -536,6 +536,7 @@ public class FahrzeugItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
             childrenFeatures.add(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN);
         }
@@ -601,6 +602,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__WEAPON_MOUNTS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.FAHRZEUG__LOCALIZATIONS:
             case Shr5Package.FAHRZEUG__MODS:
             case Shr5Package.FAHRZEUG__MODIFIZIERUNGEN:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -619,6 +621,11 @@ public class FahrzeugItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter

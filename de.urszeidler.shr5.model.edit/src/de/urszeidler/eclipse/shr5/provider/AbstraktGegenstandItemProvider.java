@@ -306,6 +306,7 @@ public class AbstraktGegenstandItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
         }
         return childrenFeatures;
@@ -360,6 +361,7 @@ public class AbstraktGegenstandItemProvider
             case Shr5Package.ABSTRAKT_GEGENSTAND__NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
+            case Shr5Package.ABSTRAKT_GEGENSTAND__LOCALIZATIONS:
             case Shr5Package.ABSTRAKT_GEGENSTAND__MODS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
@@ -377,6 +379,11 @@ public class AbstraktGegenstandItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
 
         newChildDescriptors.add
             (createChildParameter

@@ -698,6 +698,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass localizationEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -3921,6 +3928,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getIdentifiable_Localizations() {
+        return (EReference)identifiableEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getCredstickTransaction() {
         return credstickTransactionEClass;
     }
@@ -4076,6 +4092,42 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EClass getPercentLifestyleOption() {
         return percentLifestyleOptionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLocalization() {
+        return localizationEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLocalization_Local() {
+        return (EAttribute)localizationEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLocalization_Name() {
+        return (EAttribute)localizationEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLocalization_Page() {
+        return (EAttribute)localizationEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -5225,6 +5277,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         identifiableEClass = createEClass(IDENTIFIABLE);
         createEAttribute(identifiableEClass, IDENTIFIABLE__PARENT_ID);
+        createEReference(identifiableEClass, IDENTIFIABLE__LOCALIZATIONS);
 
         credstickTransactionEClass = createEClass(CREDSTICK_TRANSACTION);
         createEAttribute(credstickTransactionEClass, CREDSTICK_TRANSACTION__AMOUNT);
@@ -5331,6 +5384,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         lifestyleOptionEClass = createEClass(LIFESTYLE_OPTION);
 
         percentLifestyleOptionEClass = createEClass(PERCENT_LIFESTYLE_OPTION);
+
+        localizationEClass = createEClass(LOCALIZATION);
+        createEAttribute(localizationEClass, LOCALIZATION__LOCAL);
+        createEAttribute(localizationEClass, LOCALIZATION__NAME);
+        createEAttribute(localizationEClass, LOCALIZATION__PAGE);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -5951,6 +6009,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(identifiableEClass, Identifiable.class, "Identifiable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getIdentifiable_ParentId(), ecorePackage.getEString(), "parentId", null, 0, 1, Identifiable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getIdentifiable_Localizations(), this.getLocalization(), null, "localizations", null, 0, -1, Identifiable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(credstickTransactionEClass, CredstickTransaction.class, "CredstickTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCredstickTransaction_Amount(), ecorePackage.getEBigDecimal(), "amount", null, 1, 1, CredstickTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6057,6 +6116,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(lifestyleOptionEClass, LifestyleOption.class, "LifestyleOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(percentLifestyleOptionEClass, PercentLifestyleOption.class, "PercentLifestyleOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(localizationEClass, Localization.class, "Localization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getLocalization_Local(), ecorePackage.getEString(), "local", null, 1, 1, Localization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLocalization_Name(), ecorePackage.getEString(), "name", null, 1, 1, Localization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLocalization_Page(), ecorePackage.getEInt(), "page", null, 0, 1, Localization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

@@ -215,6 +215,7 @@ public class AbstraktModifikatorenItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.MODIFIZIERBAR__MODS);
+            childrenFeatures.add(Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS);
         }
         return childrenFeatures;
     }
@@ -266,6 +267,7 @@ public class AbstraktModifikatorenItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.ABSTRAKT_MODIFIKATOREN__MODS:
+            case Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -287,6 +289,11 @@ public class AbstraktModifikatorenItemProvider
             (createChildParameter
                 (Shr5Package.Literals.MODIFIZIERBAR__MODS,
                  Shr5Factory.eINSTANCE.createAttributModifikatorWert()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.IDENTIFIABLE__LOCALIZATIONS,
+                 Shr5Factory.eINSTANCE.createLocalization()));
     }
 
 	/**

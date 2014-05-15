@@ -1612,6 +1612,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Localization} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LocalizationItemProvider localizationItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Localization}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLocalizationAdapter() {
+        if (localizationItemProvider == null) {
+            localizationItemProvider = new LocalizationItemProvider(this);
+        }
+
+        return localizationItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1777,6 +1800,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (weaponMountItemProvider != null) weaponMountItemProvider.dispose();
         if (lifestyleOptionItemProvider != null) lifestyleOptionItemProvider.dispose();
         if (percentLifestyleOptionItemProvider != null) percentLifestyleOptionItemProvider.dispose();
+        if (localizationItemProvider != null) localizationItemProvider.dispose();
     }
 
 }
