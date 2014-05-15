@@ -170,7 +170,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     || Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(e.getFeature())
-                    || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
+                    || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())                    
+                    || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR.equals(e.getFeature())) {

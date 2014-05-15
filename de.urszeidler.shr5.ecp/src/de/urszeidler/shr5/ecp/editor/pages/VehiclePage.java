@@ -119,12 +119,13 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__RUMPF, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__PANZER, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__SENSOR, grpGegenstand);
-        emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX, grpGegenstand);
+        //emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN, grpGegenstand);
 
         if (object instanceof Drohne) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__PROGRAM_SLOT_COUNT, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__STORED_PROGRAMS, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.DROHNE__RUNNING_PROGRAMS, grpGegenstand);
         } else if (object instanceof PassagierFahrzeug) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.PASSAGIER_FAHRZEUG__SITZE, grpGegenstand);
         }
@@ -132,7 +133,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__HANDLING_GELAENDE, grpGegenstand);
         }
-
+        
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);
