@@ -2,8 +2,11 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
+import java.math.BigDecimal;
+
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.LifestyleOption;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
 /**
@@ -65,5 +68,48 @@ public class LifestyleTest extends IntervallVertragTest {
 	protected void tearDown() throws Exception {
         setFixture(null);
     }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWertPlusOption() {
+        getFixture().setWertValue(new BigDecimal(100));
+
+        assertEquals(100, getFixture().getWert().intValue());
+        LifestyleOption lifestyleOption = Shr5Factory.eINSTANCE.createLifestyleOption();
+        lifestyleOption.setWertValue(new BigDecimal(10));
+        
+       getFixture().getOptions().add(lifestyleOption);
+        
+       assertEquals(110, getFixture().getWert().intValue());
+        
+    }
+    
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
+     * @generated not
+     */
+    public void testGetWertPlusPercentOption() {
+        getFixture().setWertValue(new BigDecimal(200));
+
+        assertEquals(200, getFixture().getWert().intValue());
+        LifestyleOption lifestyleOption = Shr5Factory.eINSTANCE.createPercentLifestyleOption();
+        lifestyleOption.setWertValue(new BigDecimal(5));
+        
+       getFixture().getOptions().add(lifestyleOption);
+        
+       assertEquals(210, getFixture().getWert().intValue());
+        
+    }
+
 
 } //LifestyleTest

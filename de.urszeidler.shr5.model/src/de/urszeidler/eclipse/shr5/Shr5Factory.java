@@ -328,15 +328,6 @@ public interface Shr5Factory extends EFactory {
 	Drohne createDrohne();
 
 	/**
-     * Returns a new object of class '<em>Fahrzeug Modifikation</em>'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return a new object of class '<em>Fahrzeug Modifikation</em>'.
-     * @generated
-     */
-	FahrzeugModifikation createFahrzeugModifikation();
-
-	/**
      * Returns a new object of class '<em>Technomancer</em>'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -605,6 +596,33 @@ public interface Shr5Factory extends EFactory {
      * @generated
      */
     CommonProgram createCommonProgram();
+
+    /**
+     * Returns a new object of class '<em>Weapon Mount</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Weapon Mount</em>'.
+     * @generated
+     */
+    WeaponMount createWeaponMount();
+
+    /**
+     * Returns a new object of class '<em>Lifestyle Option</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Lifestyle Option</em>'.
+     * @generated
+     */
+    LifestyleOption createLifestyleOption();
+
+    /**
+     * Returns a new object of class '<em>Percent Lifestyle Option</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Percent Lifestyle Option</em>'.
+     * @generated
+     */
+    PercentLifestyleOption createPercentLifestyleOption();
 
     /**
      * Returns the package supported by this factory.

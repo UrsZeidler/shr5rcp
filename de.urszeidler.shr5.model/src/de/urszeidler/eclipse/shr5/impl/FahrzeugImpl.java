@@ -58,6 +58,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
  * </ul>
  * </p>
  *
@@ -423,6 +424,16 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * @ordered
      */
     protected int panzer = PANZER_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getWeaponMounts() <em>Weapon Mounts</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWeaponMounts()
+     * @generated
+     * @ordered
+     */
+    protected static final int WEAPON_MOUNTS_EDEFAULT = 0;
 
     /**
      * <!-- begin-user-doc -->
@@ -883,6 +894,15 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getWeaponMounts() {
+        return getRumpf()/3;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -963,6 +983,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return getModifizierungen();
             case Shr5Package.FAHRZEUG__PANZER:
                 return getPanzer();
+            case Shr5Package.FAHRZEUG__WEAPON_MOUNTS:
+                return getWeaponMounts();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -1158,6 +1180,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
                 return modifizierungen != null && !modifizierungen.isEmpty();
             case Shr5Package.FAHRZEUG__PANZER:
                 return panzer != PANZER_EDEFAULT;
+            case Shr5Package.FAHRZEUG__WEAPON_MOUNTS:
+                return getWeaponMounts() != WEAPON_MOUNTS_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

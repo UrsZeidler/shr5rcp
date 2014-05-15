@@ -377,6 +377,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/fahrzeugTyp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Fahrzeug/modifizierungen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/panzer"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fahrzeug/weaponMounts"/>
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Bodenfahrzeug">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Bodenfahrzeug/handlingGelaende"/>
@@ -390,9 +391,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/runningPrograms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Drohne/storedPrograms"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//FahrzeugModifikation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//FahrzeugModifikation/funktion"/>
-    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//FahrzeugModifikation"/>
     <genClasses ecoreClass="shr5.ecore#//Technomancer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Technomancer/complexForms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Technomancer/echos"/>
@@ -420,7 +419,10 @@
     </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Echo"/>
     <genClasses ecoreClass="shr5.ecore#//Vertrag"/>
-    <genClasses ecoreClass="shr5.ecore#//Lifestyle"/>
+    <genClasses ecoreClass="shr5.ecore#//Lifestyle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//Lifestyle/options"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Lifestyle/owned"/>
+    </genClasses>
     <genClasses ecoreClass="shr5.ecore#//Wissensfertigkeit"/>
     <genClasses ecoreClass="shr5.ecore#//Sprachfertigkeit"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//PersonaZustand">
@@ -580,5 +582,10 @@
     <genClasses ecoreClass="shr5.ecore#//CommonProgram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CommonProgram/programType"/>
     </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//WeaponMount">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//WeaponMount/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//LifestyleOption"/>
+    <genClasses ecoreClass="shr5.ecore#//PercentLifestyleOption"/>
   </genPackages>
 </genmodel:GenModel>

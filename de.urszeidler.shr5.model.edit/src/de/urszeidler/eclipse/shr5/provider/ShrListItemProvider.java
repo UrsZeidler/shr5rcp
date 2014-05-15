@@ -406,11 +406,6 @@ public class ShrListItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
-                 Shr5Factory.eINSTANCE.createFahrzeugModifikation()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createTechnomancer()));
 
         newChildDescriptors.add
@@ -557,6 +552,21 @@ public class ShrListItemProvider
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createCommonProgram()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createWeaponMount()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createLifestyleOption()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createPercentLifestyleOption()));
     }
 
 	/**

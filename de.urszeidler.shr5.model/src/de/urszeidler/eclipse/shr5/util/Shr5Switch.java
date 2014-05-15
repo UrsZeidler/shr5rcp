@@ -1267,6 +1267,38 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.WEAPON_MOUNT: {
+                WeaponMount weaponMount = (WeaponMount)theEObject;
+                T result = caseWeaponMount(weaponMount);
+                if (result == null) result = caseFahrzeugModifikation(weaponMount);
+                if (result == null) result = caseBeschreibbar(weaponMount);
+                if (result == null) result = caseQuelle(weaponMount);
+                if (result == null) result = caseGeldWert(weaponMount);
+                if (result == null) result = caseIdentifiable(weaponMount);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.LIFESTYLE_OPTION: {
+                LifestyleOption lifestyleOption = (LifestyleOption)theEObject;
+                T result = caseLifestyleOption(lifestyleOption);
+                if (result == null) result = caseBeschreibbar(lifestyleOption);
+                if (result == null) result = caseQuelle(lifestyleOption);
+                if (result == null) result = caseGeldWert(lifestyleOption);
+                if (result == null) result = caseIdentifiable(lifestyleOption);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.PERCENT_LIFESTYLE_OPTION: {
+                PercentLifestyleOption percentLifestyleOption = (PercentLifestyleOption)theEObject;
+                T result = casePercentLifestyleOption(percentLifestyleOption);
+                if (result == null) result = caseLifestyleOption(percentLifestyleOption);
+                if (result == null) result = caseBeschreibbar(percentLifestyleOption);
+                if (result == null) result = caseQuelle(percentLifestyleOption);
+                if (result == null) result = caseGeldWert(percentLifestyleOption);
+                if (result == null) result = caseIdentifiable(percentLifestyleOption);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2663,6 +2695,51 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseCommonProgram(CommonProgram object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Weapon Mount</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Weapon Mount</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseWeaponMount(WeaponMount object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Lifestyle Option</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Lifestyle Option</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLifestyleOption(LifestyleOption object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Percent Lifestyle Option</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Percent Lifestyle Option</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePercentLifestyleOption(PercentLifestyleOption object) {
         return null;
     }
 

@@ -677,6 +677,27 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass weaponMountEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass lifestyleOptionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass percentLifestyleOptionEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -3096,6 +3117,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFahrzeug_WeaponMounts() {
+        return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -3182,15 +3212,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
 	public EClass getFahrzeugModifikation() {
         return fahrzeugModifikationEClass;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public EReference getFahrzeugModifikation_Funktion() {
-        return (EReference)fahrzeugModifikationEClass.getEStructuralFeatures().get(0);
     }
 
 	/**
@@ -3401,6 +3422,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getLifestyle_Options() {
+        return (EReference)lifestyleEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getLifestyle_Owned() {
+        return (EAttribute)lifestyleEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4001,6 +4040,42 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      */
     public EAttribute getCommonProgram_ProgramType() {
         return (EAttribute)commonProgramEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getWeaponMount() {
+        return weaponMountEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getWeaponMount_Weapon() {
+        return (EReference)weaponMountEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getLifestyleOption() {
+        return lifestyleOptionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getPercentLifestyleOption() {
+        return percentLifestyleOptionEClass;
     }
 
     /**
@@ -5031,6 +5106,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(fahrzeugEClass, FAHRZEUG__FAHRZEUG_TYP);
         createEReference(fahrzeugEClass, FAHRZEUG__MODIFIZIERUNGEN);
         createEAttribute(fahrzeugEClass, FAHRZEUG__PANZER);
+        createEAttribute(fahrzeugEClass, FAHRZEUG__WEAPON_MOUNTS);
 
         bodenfahrzeugEClass = createEClass(BODENFAHRZEUG);
         createEAttribute(bodenfahrzeugEClass, BODENFAHRZEUG__HANDLING_GELAENDE);
@@ -5045,7 +5121,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(drohneEClass, DROHNE__STORED_PROGRAMS);
 
         fahrzeugModifikationEClass = createEClass(FAHRZEUG_MODIFIKATION);
-        createEReference(fahrzeugModifikationEClass, FAHRZEUG_MODIFIKATION__FUNKTION);
 
         technomancerEClass = createEClass(TECHNOMANCER);
         createEReference(technomancerEClass, TECHNOMANCER__COMPLEX_FORMS);
@@ -5077,6 +5152,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         vertragEClass = createEClass(VERTRAG);
 
         lifestyleEClass = createEClass(LIFESTYLE);
+        createEReference(lifestyleEClass, LIFESTYLE__OPTIONS);
+        createEAttribute(lifestyleEClass, LIFESTYLE__OWNED);
 
         wissensfertigkeitEClass = createEClass(WISSENSFERTIGKEIT);
 
@@ -5247,6 +5324,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         commonProgramEClass = createEClass(COMMON_PROGRAM);
         createEAttribute(commonProgramEClass, COMMON_PROGRAM__PROGRAM_TYPE);
+
+        weaponMountEClass = createEClass(WEAPON_MOUNT);
+        createEReference(weaponMountEClass, WEAPON_MOUNT__WEAPON);
+
+        lifestyleOptionEClass = createEClass(LIFESTYLE_OPTION);
+
+        percentLifestyleOptionEClass = createEClass(PERCENT_LIFESTYLE_OPTION);
 
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
@@ -5452,6 +5536,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         matrixDeviceEClass.getESuperTypes().add(this.getMatrixAttributes());
         commonProgramEClass.getESuperTypes().add(this.getMatrixProgram());
         commonProgramEClass.getESuperTypes().add(this.getRiggerProgram());
+        weaponMountEClass.getESuperTypes().add(this.getFahrzeugModifikation());
+        lifestyleOptionEClass.getESuperTypes().add(this.getBeschreibbar());
+        lifestyleOptionEClass.getESuperTypes().add(this.getQuelle());
+        lifestyleOptionEClass.getESuperTypes().add(this.getGeldWert());
+        percentLifestyleOptionEClass.getESuperTypes().add(this.getLifestyleOption());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5743,6 +5832,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getFahrzeug_FahrzeugTyp(), ecorePackage.getEString(), "fahrzeugTyp", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getFahrzeug_Modifizierungen(), this.getFahrzeugModifikation(), null, "modifizierungen", null, 0, -1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFahrzeug_Panzer(), ecorePackage.getEInt(), "panzer", null, 0, 1, Fahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getFahrzeug_WeaponMounts(), ecorePackage.getEInt(), "weaponMounts", null, 0, 1, Fahrzeug.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(bodenfahrzeugEClass, Bodenfahrzeug.class, "Bodenfahrzeug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getBodenfahrzeug_HandlingGelaende(), ecorePackage.getEInt(), "handlingGelaende", null, 0, 1, Bodenfahrzeug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5756,8 +5846,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getDrohne_RunningPrograms(), this.getRiggerProgram(), null, "runningPrograms", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getDrohne_StoredPrograms(), this.getRiggerProgram(), null, "storedPrograms", null, 0, -1, Drohne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(fahrzeugModifikationEClass, FahrzeugModifikation.class, "FahrzeugModifikation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getFahrzeugModifikation_Funktion(), this.getAbstraktGegenstand(), null, "funktion", null, 0, -1, FahrzeugModifikation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(fahrzeugModifikationEClass, FahrzeugModifikation.class, "FahrzeugModifikation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(technomancerEClass, Technomancer.class, "Technomancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getTechnomancer_ComplexForms(), this.getPersonaKomplexForm(), null, "complexForms", null, 0, -1, Technomancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5789,6 +5878,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(vertragEClass, Vertrag.class, "Vertrag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(lifestyleEClass, Lifestyle.class, "Lifestyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getLifestyle_Options(), this.getLifestyleOption(), null, "options", null, 0, -1, Lifestyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getLifestyle_Owned(), ecorePackage.getEBoolean(), "owned", null, 0, 1, Lifestyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(wissensfertigkeitEClass, Wissensfertigkeit.class, "Wissensfertigkeit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5959,6 +6050,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         initEClass(commonProgramEClass, CommonProgram.class, "CommonProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCommonProgram_ProgramType(), this.getMatrixProgramType(), "programType", null, 0, 1, CommonProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(weaponMountEClass, WeaponMount.class, "WeaponMount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getWeaponMount_Weapon(), this.getAbstaktWaffe(), null, "weapon", null, 1, 1, WeaponMount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(lifestyleOptionEClass, LifestyleOption.class, "LifestyleOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(percentLifestyleOptionEClass, PercentLifestyleOption.class, "PercentLifestyleOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

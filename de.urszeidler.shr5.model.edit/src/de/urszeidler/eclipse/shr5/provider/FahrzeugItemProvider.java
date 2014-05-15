@@ -79,6 +79,7 @@ public class FahrzeugItemProvider
             addSensorPropertyDescriptor(object);
             addFahrzeugTypPropertyDescriptor(object);
             addPanzerPropertyDescriptor(object);
+            addWeaponMountsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -502,6 +503,28 @@ public class FahrzeugItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Weapon Mounts feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWeaponMountsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fahrzeug_weaponMounts_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fahrzeug_weaponMounts_feature", "_UI_Fahrzeug_type"),
+                 Shr5Package.Literals.FAHRZEUG__WEAPON_MOUNTS,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -575,6 +598,7 @@ public class FahrzeugItemProvider
             case Shr5Package.FAHRZEUG__SENSOR:
             case Shr5Package.FAHRZEUG__FAHRZEUG_TYP:
             case Shr5Package.FAHRZEUG__PANZER:
+            case Shr5Package.FAHRZEUG__WEAPON_MOUNTS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.FAHRZEUG__MODS:
@@ -604,7 +628,7 @@ public class FahrzeugItemProvider
         newChildDescriptors.add
             (createChildParameter
                 (Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN,
-                 Shr5Factory.eINSTANCE.createFahrzeugModifikation()));
+                 Shr5Factory.eINSTANCE.createWeaponMount()));
     }
 
 	/**

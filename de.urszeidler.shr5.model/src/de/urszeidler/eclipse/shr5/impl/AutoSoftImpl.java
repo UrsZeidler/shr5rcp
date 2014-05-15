@@ -27,22 +27,22 @@ import org.eclipse.emf.common.notify.Notification;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWert <em>Wert</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWertValue <em>Wert Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getBeschreibung <em>Beschreibung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getImage <em>Image</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getName <em>Name</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getParentId <em>Parent Id</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getPage <em>Page</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getSrcBook <em>Src Book</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getRating <em>Rating</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getSkill <em>Skill</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWeapon <em>Weapon</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getModel <em>Model</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getRating <em>Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getSkill <em>Skill</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWeapon <em>Weapon</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getModel <em>Model</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSoft {
@@ -50,7 +50,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWert()
      * @generated
      * @ordered
@@ -60,7 +59,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -70,7 +68,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -80,7 +77,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -90,7 +86,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -100,7 +95,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -110,7 +104,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -120,7 +113,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -130,7 +122,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -140,7 +131,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -150,7 +140,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -160,7 +149,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -170,7 +158,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -180,7 +167,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -190,7 +176,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -200,7 +185,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSrcBook()
      * @generated
      * @ordered
@@ -210,7 +194,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The default value of the '{@link #getRating() <em>Rating</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRating()
      * @generated
      * @ordered
@@ -220,7 +203,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getRating() <em>Rating</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRating()
      * @generated
      * @ordered
@@ -231,7 +213,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getSkill() <em>Skill</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSkill()
      * @generated
      * @ordered
@@ -241,7 +222,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getWeapon() <em>Weapon</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWeapon()
      * @generated
      * @ordered
@@ -251,7 +231,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * The cached value of the '{@link #getModel() <em>Model</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getModel()
      * @generated
      * @ordered
@@ -261,7 +240,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AutoSoftImpl() {
@@ -271,7 +249,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -295,7 +272,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getVerfuegbarkeit() {
@@ -305,7 +281,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
@@ -318,7 +293,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BigDecimal getWertValue() {
@@ -343,7 +317,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getBeschreibung() {
@@ -353,7 +326,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setBeschreibung(String newBeschreibung) {
@@ -366,7 +338,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getImage() {
@@ -376,7 +347,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setImage(String newImage) {
@@ -389,7 +359,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
@@ -399,7 +368,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setName(String newName) {
@@ -412,7 +380,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getParentId() {
@@ -422,7 +389,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setParentId(String newParentId) {
@@ -435,7 +401,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getPage() {
@@ -445,7 +410,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPage(String newPage) {
@@ -458,7 +422,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook getSrcBook() {
@@ -476,7 +439,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook basicGetSrcBook() {
@@ -486,7 +448,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSrcBook(SourceBook newSrcBook) {
@@ -499,7 +460,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getRating() {
@@ -524,7 +484,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Fertigkeit getSkill() {
@@ -542,7 +501,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Fertigkeit basicGetSkill() {
@@ -552,7 +510,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSkill(Fertigkeit newSkill) {
@@ -565,7 +522,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstaktWaffe getWeapon() {
@@ -583,7 +539,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public AbstaktWaffe basicGetWeapon() {
@@ -593,7 +548,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setWeapon(AbstaktWaffe newWeapon) {
@@ -606,7 +560,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Drohne getModel() {
@@ -624,7 +577,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Drohne basicGetModel() {
@@ -634,7 +586,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setModel(Drohne newModel) {
@@ -647,7 +598,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -670,22 +620,18 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
             case Shr5Package.AUTO_SOFT__PAGE:
                 return getPage();
             case Shr5Package.AUTO_SOFT__SRC_BOOK:
-                if (resolve)
-                    return getSrcBook();
+                if (resolve) return getSrcBook();
                 return basicGetSrcBook();
             case Shr5Package.AUTO_SOFT__RATING:
                 return getRating();
             case Shr5Package.AUTO_SOFT__SKILL:
-                if (resolve)
-                    return getSkill();
+                if (resolve) return getSkill();
                 return basicGetSkill();
             case Shr5Package.AUTO_SOFT__WEAPON:
-                if (resolve)
-                    return getWeapon();
+                if (resolve) return getWeapon();
                 return basicGetWeapon();
             case Shr5Package.AUTO_SOFT__MODEL:
-                if (resolve)
-                    return getModel();
+                if (resolve) return getModel();
                 return basicGetModel();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -694,7 +640,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -743,7 +688,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -792,7 +736,6 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -831,39 +774,29 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Beschreibbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.AUTO_SOFT__BESCHREIBUNG:
-                    return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
-                case Shr5Package.AUTO_SOFT__IMAGE:
-                    return Shr5Package.BESCHREIBBAR__IMAGE;
-                case Shr5Package.AUTO_SOFT__NAME:
-                    return Shr5Package.BESCHREIBBAR__NAME;
-                default:
-                    return -1;
+                case Shr5Package.AUTO_SOFT__BESCHREIBUNG: return Shr5Package.BESCHREIBBAR__BESCHREIBUNG;
+                case Shr5Package.AUTO_SOFT__IMAGE: return Shr5Package.BESCHREIBBAR__IMAGE;
+                case Shr5Package.AUTO_SOFT__NAME: return Shr5Package.BESCHREIBBAR__NAME;
+                default: return -1;
             }
         }
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.AUTO_SOFT__PARENT_ID:
-                    return Shr5Package.IDENTIFIABLE__PARENT_ID;
-                default:
-                    return -1;
+                case Shr5Package.AUTO_SOFT__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.AUTO_SOFT__PAGE:
-                    return Shr5Package.QUELLE__PAGE;
-                case Shr5Package.AUTO_SOFT__SRC_BOOK:
-                    return Shr5Package.QUELLE__SRC_BOOK;
-                default:
-                    return -1;
+                case Shr5Package.AUTO_SOFT__PAGE: return Shr5Package.QUELLE__PAGE;
+                case Shr5Package.AUTO_SOFT__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -872,39 +805,29 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Beschreibbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG:
-                    return Shr5Package.AUTO_SOFT__BESCHREIBUNG;
-                case Shr5Package.BESCHREIBBAR__IMAGE:
-                    return Shr5Package.AUTO_SOFT__IMAGE;
-                case Shr5Package.BESCHREIBBAR__NAME:
-                    return Shr5Package.AUTO_SOFT__NAME;
-                default:
-                    return -1;
+                case Shr5Package.BESCHREIBBAR__BESCHREIBUNG: return Shr5Package.AUTO_SOFT__BESCHREIBUNG;
+                case Shr5Package.BESCHREIBBAR__IMAGE: return Shr5Package.AUTO_SOFT__IMAGE;
+                case Shr5Package.BESCHREIBBAR__NAME: return Shr5Package.AUTO_SOFT__NAME;
+                default: return -1;
             }
         }
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
-                case Shr5Package.IDENTIFIABLE__PARENT_ID:
-                    return Shr5Package.AUTO_SOFT__PARENT_ID;
-                default:
-                    return -1;
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.AUTO_SOFT__PARENT_ID;
+                default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
-                case Shr5Package.QUELLE__PAGE:
-                    return Shr5Package.AUTO_SOFT__PAGE;
-                case Shr5Package.QUELLE__SRC_BOOK:
-                    return Shr5Package.AUTO_SOFT__SRC_BOOK;
-                default:
-                    return -1;
+                case Shr5Package.QUELLE__PAGE: return Shr5Package.AUTO_SOFT__PAGE;
+                case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.AUTO_SOFT__SRC_BOOK;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -913,13 +836,11 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (verfuegbarkeit: ");

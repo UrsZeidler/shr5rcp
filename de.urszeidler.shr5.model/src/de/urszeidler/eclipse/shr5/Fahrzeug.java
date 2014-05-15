@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getModifizierungen <em>Modifizierungen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getPanzer <em>Panzer</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts <em>Weapon Mounts</em>}</li>
  * </ul>
  * </p>
  *
@@ -252,5 +253,20 @@ public interface Fahrzeug extends Beschreibbar, Quelle, GeldWert, Anwendbar, Mod
      * @generated
      */
     void setPanzer(int value);
+
+    /**
+     * Returns the value of the '<em><b>Weapon Mounts</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Weapon Mounts</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Weapon Mounts</em>' attribute.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getFahrzeug_WeaponMounts()
+     * @model transient="true" changeable="false" volatile="true"
+     * @generated
+     */
+    int getWeaponMounts();
 
 } // Fahrzeug

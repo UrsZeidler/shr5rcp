@@ -491,9 +491,7 @@
     </nested>
     <nested inputs="shr5.ecore#//MatrixAttributes/currentModus" outputs="Shr5XMI.xsd#//Drohne;XSDComplexTypeDefinition=60/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Drohne" outputs="Shr5XMI.xsd#//Drohne;XSDElementDeclaration=60"/>
-    <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61">
-      <nested inputs="shr5.ecore#//FahrzeugModifikation/funktion" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-    </nested>
+    <nested inputs="shr5.ecore#//FahrzeugModifikation" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61"/>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=1"/>
     <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//FahrzeugModifikation;XSDComplexTypeDefinition=61/XSDAttributeUse=2"/>
@@ -553,7 +551,10 @@
     <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=3"/>
     <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Vertrag;XSDComplexTypeDefinition=68/XSDAttributeUse=4"/>
     <nested inputs="shr5.ecore#//Vertrag" outputs="Shr5XMI.xsd#//Vertrag;XSDElementDeclaration=68"/>
-    <nested inputs="shr5.ecore#//Lifestyle" outputs="Shr5XMI.xsd#//Lifestyle;XSDComplexTypeDefinition=69"/>
+    <nested inputs="shr5.ecore#//Lifestyle" outputs="Shr5XMI.xsd#//Lifestyle;XSDComplexTypeDefinition=69">
+      <nested inputs="shr5.ecore#//Lifestyle/owned" outputs="Shr5XMI.xsd#//Lifestyle;XSDComplexTypeDefinition=69/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Lifestyle/options" outputs="Shr5XMI.xsd#//Lifestyle;XSDComplexTypeDefinition=69/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
     <nested inputs="shr5.ecore#//Lifestyle" outputs="Shr5XMI.xsd#//Lifestyle;XSDElementDeclaration=69"/>
     <nested inputs="shr5.ecore#//Wissensfertigkeit" outputs="Shr5XMI.xsd#//Wissensfertigkeit;XSDComplexTypeDefinition=70"/>
     <nested inputs="shr5.ecore#//Wissensfertigkeit" outputs="Shr5XMI.xsd#//Wissensfertigkeit;XSDElementDeclaration=70"/>
@@ -777,5 +778,19 @@
       <nested inputs="shr5.ecore#//CommonProgram/programType" outputs="Shr5XMI.xsd#//CommonProgram;XSDComplexTypeDefinition=112/XSDAttributeUse"/>
     </nested>
     <nested inputs="shr5.ecore#//CommonProgram" outputs="Shr5XMI.xsd#//CommonProgram;XSDElementDeclaration=112"/>
+    <nested inputs="shr5.ecore#//WeaponMount" outputs="Shr5XMI.xsd#//WeaponMount;XSDComplexTypeDefinition=113">
+      <nested inputs="shr5.ecore#//WeaponMount/weapon" outputs="Shr5XMI.xsd#//WeaponMount;XSDComplexTypeDefinition=113/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//WeaponMount" outputs="Shr5XMI.xsd#//WeaponMount;XSDElementDeclaration=113"/>
+    <nested inputs="shr5.ecore#//LifestyleOption" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114"/>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//LifestyleOption;XSDComplexTypeDefinition=114/XSDAttributeUse=4"/>
+    <nested inputs="shr5.ecore#//LifestyleOption" outputs="Shr5XMI.xsd#//LifestyleOption;XSDElementDeclaration=114"/>
+    <nested inputs="shr5.ecore#//PercentLifestyleOption" outputs="Shr5XMI.xsd#//PercentLifestyleOption;XSDComplexTypeDefinition=115"/>
+    <nested inputs="shr5.ecore#//PercentLifestyleOption" outputs="Shr5XMI.xsd#//PercentLifestyleOption;XSDElementDeclaration=115"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

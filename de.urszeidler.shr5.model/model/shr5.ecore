@@ -485,6 +485,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="modifizierungen" upperBound="-1"
         eType="#//FahrzeugModifikation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="panzer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weaponMounts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug" eSuperTypes="#//PassagierFahrzeug">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handlingGelaende" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -510,10 +512,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FahrzeugModifikation" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="funktion" upperBound="-1"
-        eType="#//AbstraktGegenstand" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FahrzeugModifikation" abstract="true"
+      eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert"/>
   <eClassifiers xsi:type="ecore:EClass" name="Technomancer" eSuperTypes="#//KoerperPersona #//ResonanzPersona">
     <eStructuralFeatures xsi:type="ecore:EReference" name="complexForms" upperBound="-1"
         eType="#//PersonaKomplexForm" containment="true"/>
@@ -552,7 +552,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Echo" eSuperTypes="#//AbstraktModifikatoren"/>
   <eClassifiers xsi:type="ecore:EClass" name="Vertrag" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Lifestyle" eSuperTypes="#//IntervallVertrag"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lifestyle" eSuperTypes="#//IntervallVertrag">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="options" upperBound="-1"
+        eType="#//LifestyleOption" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owned" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Wissensfertigkeit" eSuperTypes="#//Fertigkeit"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sprachfertigkeit" eSuperTypes="#//Wissensfertigkeit"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonaZustand" abstract="true" interface="true">
@@ -872,5 +876,15 @@
   <eClassifiers xsi:type="ecore:EEnum" name="MatrixProgramType">
     <eLiterals name="defaultProgram"/>
     <eLiterals name="hackingProgram" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WeaponMount" eSuperTypes="#//FahrzeugModifikation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" lowerBound="1"
+        eType="#//AbstaktWaffe" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifestyleOption" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PercentLifestyleOption" eSuperTypes="#//LifestyleOption">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The werValue ist interpreted as percent value so the wert is wertContainer * wertValue/100."/>
+    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

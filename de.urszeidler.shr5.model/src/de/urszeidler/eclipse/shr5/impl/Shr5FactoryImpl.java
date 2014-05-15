@@ -27,7 +27,6 @@ import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.Echo;
-import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
@@ -165,7 +164,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.BODENFAHRZEUG: return createBodenfahrzeug();
             case Shr5Package.PASSAGIER_FAHRZEUG: return createPassagierFahrzeug();
             case Shr5Package.DROHNE: return createDrohne();
-            case Shr5Package.FAHRZEUG_MODIFIKATION: return createFahrzeugModifikation();
             case Shr5Package.TECHNOMANCER: return createTechnomancer();
             case Shr5Package.KOMPLEXE_FORM: return createKomplexeForm();
             case Shr5Package.PERSONA_KOMPLEX_FORM: return createPersonaKomplexForm();
@@ -196,6 +194,9 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.DATASOFT: return createDatasoft();
             case Shr5Package.CONSUMER_SOFT: return createConsumerSoft();
             case Shr5Package.COMMON_PROGRAM: return createCommonProgram();
+            case Shr5Package.WEAPON_MOUNT: return createWeaponMount();
+            case Shr5Package.LIFESTYLE_OPTION: return createLifestyleOption();
+            case Shr5Package.PERCENT_LIFESTYLE_OPTION: return createPercentLifestyleOption();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -644,16 +645,6 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FahrzeugModifikation createFahrzeugModifikation() {
-        FahrzeugModifikationImpl fahrzeugModifikation = new FahrzeugModifikationImpl();
-        return fahrzeugModifikation;
-    }
-
-	/**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
 	public Technomancer createTechnomancer() {
         TechnomancerImpl technomancer = new TechnomancerImpl();
         return technomancer;
@@ -947,6 +938,36 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public CommonProgram createCommonProgram() {
         CommonProgramImpl commonProgram = new CommonProgramImpl();
         return commonProgram;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public WeaponMount createWeaponMount() {
+        WeaponMountImpl weaponMount = new WeaponMountImpl();
+        return weaponMount;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LifestyleOption createLifestyleOption() {
+        LifestyleOptionImpl lifestyleOption = new LifestyleOptionImpl();
+        return lifestyleOption;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public PercentLifestyleOption createPercentLifestyleOption() {
+        PercentLifestyleOptionImpl percentLifestyleOption = new PercentLifestyleOptionImpl();
+        return percentLifestyleOption;
     }
 
     /**

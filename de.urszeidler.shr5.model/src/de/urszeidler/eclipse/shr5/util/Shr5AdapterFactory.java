@@ -518,6 +518,18 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createCommonProgramAdapter();
             }
             @Override
+            public Adapter caseWeaponMount(WeaponMount object) {
+                return createWeaponMountAdapter();
+            }
+            @Override
+            public Adapter caseLifestyleOption(LifestyleOption object) {
+                return createLifestyleOptionAdapter();
+            }
+            @Override
+            public Adapter casePercentLifestyleOption(PercentLifestyleOption object) {
+                return createPercentLifestyleOptionAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1836,6 +1848,48 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCommonProgramAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.WeaponMount <em>Weapon Mount</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.WeaponMount
+     * @generated
+     */
+    public Adapter createWeaponMountAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.LifestyleOption <em>Lifestyle Option</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.LifestyleOption
+     * @generated
+     */
+    public Adapter createLifestyleOptionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.PercentLifestyleOption <em>Percent Lifestyle Option</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.PercentLifestyleOption
+     * @generated
+     */
+    public Adapter createPercentLifestyleOptionAdapter() {
         return null;
     }
 

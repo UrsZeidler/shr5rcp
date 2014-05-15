@@ -18,6 +18,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax() <em>Zustand Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts() <em>Weapon Mounts</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -87,6 +88,20 @@ public abstract class FahrzeugTest extends TestCase {
     }
 
     /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts() <em>Weapon Mounts</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts()
+     * @generated not
+     */
+    public void testGetWeaponMounts() {
+        getFixture().setRumpf(5);
+        assertEquals(1,getFixture().getWeaponMounts());        
+        getFixture().setRumpf(6);
+        assertEquals(2,getFixture().getWeaponMounts());        
+    }
+
+    /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -97,7 +112,7 @@ public abstract class FahrzeugTest extends TestCase {
         getFixture().setWertValue(new BigDecimal(10));        
         assertEquals(10,getFixture().getWert().intValue());
         
-        FahrzeugModifikation mod = Shr5Factory.eINSTANCE.createFahrzeugModifikation();
+        FahrzeugModifikation mod = Shr5Factory.eINSTANCE.createWeaponMount();
         mod.setWertValue(new BigDecimal(11));
         getFixture().getModifizierungen().add(mod);
         assertEquals(21,getFixture().getWert().intValue());

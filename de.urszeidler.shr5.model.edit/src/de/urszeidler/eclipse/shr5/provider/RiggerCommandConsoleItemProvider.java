@@ -6,7 +6,6 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -20,9 +19,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Image;
-
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Drohne;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;

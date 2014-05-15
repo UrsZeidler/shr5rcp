@@ -30,17 +30,17 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getFirewall <em>Firewall</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getCurrentModus <em>Current Modus</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getProgramSlotCount <em>Program Slot Count</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getRunningPrograms <em>Running Programs</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getStoredPrograms <em>Stored Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getFirewall <em>Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getDatenverarbeitung <em>Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getCurrentModus <em>Current Modus</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getProgramSlotCount <em>Program Slot Count</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getRunningPrograms <em>Running Programs</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getStoredPrograms <em>Stored Programs</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class DrohneImpl extends FahrzeugImpl implements Drohne {
@@ -48,7 +48,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The default value of the '{@link #getMatrixZustandMax() <em>Matrix Zustand Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getMatrixZustandMax()
      * @generated
      * @ordered
@@ -58,7 +57,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The default value of the '{@link #getGeraetestufe() <em>Geraetestufe</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeraetestufe()
      * @generated
      * @ordered
@@ -68,7 +66,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The default value of the '{@link #getFirewall() <em>Firewall</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFirewall()
      * @generated
      * @ordered
@@ -78,7 +75,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The default value of the '{@link #getDatenverarbeitung() <em>Datenverarbeitung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDatenverarbeitung()
      * @generated
      * @ordered
@@ -88,7 +84,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The default value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCurrentModus()
      * @generated
      * @ordered
@@ -98,7 +93,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The cached value of the '{@link #getCurrentModus() <em>Current Modus</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getCurrentModus()
      * @generated
      * @ordered
@@ -108,7 +102,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The default value of the '{@link #getProgramSlotCount() <em>Program Slot Count</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getProgramSlotCount()
      * @generated
      * @ordered
@@ -118,7 +111,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The cached value of the '{@link #getRunningPrograms() <em>Running Programs</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRunningPrograms()
      * @generated
      * @ordered
@@ -128,7 +120,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * The cached value of the '{@link #getStoredPrograms() <em>Stored Programs</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getStoredPrograms()
      * @generated
      * @ordered
@@ -138,7 +129,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected DrohneImpl() {
@@ -148,7 +138,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -200,7 +189,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public InterfaceModus getCurrentModus() {
@@ -210,7 +198,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setCurrentModus(InterfaceModus newCurrentModus) {
@@ -234,7 +221,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<RiggerProgram> getRunningPrograms() {
@@ -247,7 +233,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<RiggerProgram> getStoredPrograms() {
@@ -260,7 +245,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -275,7 +259,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -304,7 +287,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -329,7 +311,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -351,7 +332,6 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -380,31 +360,23 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.DROHNE__MATRIX_ZUSTAND_MAX:
-                    return Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
-                default:
-                    return -1;
+                case Shr5Package.DROHNE__MATRIX_ZUSTAND_MAX: return Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX;
+                default: return -1;
             }
         }
         if (baseClass == MatrixAttributes.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.DROHNE__GERAETESTUFE:
-                    return Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE;
-                case Shr5Package.DROHNE__FIREWALL:
-                    return Shr5Package.MATRIX_ATTRIBUTES__FIREWALL;
-                case Shr5Package.DROHNE__DATENVERARBEITUNG:
-                    return Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
-                case Shr5Package.DROHNE__CURRENT_MODUS:
-                    return Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS;
-                default:
-                    return -1;
+                case Shr5Package.DROHNE__GERAETESTUFE: return Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE;
+                case Shr5Package.DROHNE__FIREWALL: return Shr5Package.MATRIX_ATTRIBUTES__FIREWALL;
+                case Shr5Package.DROHNE__DATENVERARBEITUNG: return Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG;
+                case Shr5Package.DROHNE__CURRENT_MODUS: return Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -413,31 +385,23 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == MatixConditionMonitor.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX:
-                    return Shr5Package.DROHNE__MATRIX_ZUSTAND_MAX;
-                default:
-                    return -1;
+                case Shr5Package.MATIX_CONDITION_MONITOR__MATRIX_ZUSTAND_MAX: return Shr5Package.DROHNE__MATRIX_ZUSTAND_MAX;
+                default: return -1;
             }
         }
         if (baseClass == MatrixAttributes.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE:
-                    return Shr5Package.DROHNE__GERAETESTUFE;
-                case Shr5Package.MATRIX_ATTRIBUTES__FIREWALL:
-                    return Shr5Package.DROHNE__FIREWALL;
-                case Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG:
-                    return Shr5Package.DROHNE__DATENVERARBEITUNG;
-                case Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS:
-                    return Shr5Package.DROHNE__CURRENT_MODUS;
-                default:
-                    return -1;
+                case Shr5Package.MATRIX_ATTRIBUTES__GERAETESTUFE: return Shr5Package.DROHNE__GERAETESTUFE;
+                case Shr5Package.MATRIX_ATTRIBUTES__FIREWALL: return Shr5Package.DROHNE__FIREWALL;
+                case Shr5Package.MATRIX_ATTRIBUTES__DATENVERARBEITUNG: return Shr5Package.DROHNE__DATENVERARBEITUNG;
+                case Shr5Package.MATRIX_ATTRIBUTES__CURRENT_MODUS: return Shr5Package.DROHNE__CURRENT_MODUS;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -446,13 +410,11 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (currentModus: ");

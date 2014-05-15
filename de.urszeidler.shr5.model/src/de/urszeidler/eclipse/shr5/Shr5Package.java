@@ -8958,13 +8958,22 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG__PANZER = BESCHREIBBAR_FEATURE_COUNT + 17;
 
     /**
+     * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FAHRZEUG__WEAPON_MOUNTS = BESCHREIBBAR_FEATURE_COUNT + 18;
+
+    /**
      * The number of structural features of the '<em>Fahrzeug</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 18;
+	int FAHRZEUG_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 19;
 
     /**
      * The number of operations of the '<em>Fahrzeug</em>' class.
@@ -9163,6 +9172,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int PASSAGIER_FAHRZEUG__PANZER = FAHRZEUG__PANZER;
+
+    /**
+     * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PASSAGIER_FAHRZEUG__WEAPON_MOUNTS = FAHRZEUG__WEAPON_MOUNTS;
 
     /**
      * The feature id for the '<em><b>Sitze</b></em>' attribute.
@@ -9379,6 +9397,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int BODENFAHRZEUG__PANZER = PASSAGIER_FAHRZEUG__PANZER;
+
+    /**
+     * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BODENFAHRZEUG__WEAPON_MOUNTS = PASSAGIER_FAHRZEUG__WEAPON_MOUNTS;
 
     /**
      * The feature id for the '<em><b>Sitze</b></em>' attribute.
@@ -9615,6 +9642,15 @@ public interface Shr5Package extends EPackage {
     int DROHNE__PANZER = FAHRZEUG__PANZER;
 
     /**
+     * The feature id for the '<em><b>Weapon Mounts</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DROHNE__WEAPON_MOUNTS = FAHRZEUG__WEAPON_MOUNTS;
+
+    /**
      * The feature id for the '<em><b>Matrix Zustand Max</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9786,22 +9822,13 @@ public interface Shr5Package extends EPackage {
     int FAHRZEUG_MODIFIKATION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
-     * The feature id for the '<em><b>Funktion</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-	int FAHRZEUG_MODIFIKATION__FUNKTION = BESCHREIBBAR_FEATURE_COUNT + 6;
-
-    /**
      * The number of structural features of the '<em>Fahrzeug Modifikation</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
+	int FAHRZEUG_MODIFIKATION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of operations of the '<em>Fahrzeug Modifikation</em>' class.
@@ -11330,13 +11357,31 @@ public interface Shr5Package extends EPackage {
 	int LIFESTYLE__FAELLIGKEITS_INTERVALL = INTERVALL_VERTRAG__FAELLIGKEITS_INTERVALL;
 
     /**
+     * The feature id for the '<em><b>Options</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__OPTIONS = INTERVALL_VERTRAG_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Owned</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE__OWNED = INTERVALL_VERTRAG_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Lifestyle</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int LIFESTYLE_FEATURE_COUNT = INTERVALL_VERTRAG_FEATURE_COUNT + 0;
+	int LIFESTYLE_FEATURE_COUNT = INTERVALL_VERTRAG_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Lifestyle</em>' class.
@@ -16111,6 +16156,342 @@ public interface Shr5Package extends EPackage {
     int COMMON_PROGRAM_OPERATION_COUNT = MATRIX_PROGRAM_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WeaponMountImpl <em>Weapon Mount</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.WeaponMountImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWeaponMount()
+     * @generated
+     */
+    int WEAPON_MOUNT = 113;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__BESCHREIBUNG = FAHRZEUG_MODIFIKATION__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__IMAGE = FAHRZEUG_MODIFIKATION__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__NAME = FAHRZEUG_MODIFIKATION__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__PARENT_ID = FAHRZEUG_MODIFIKATION__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__PAGE = FAHRZEUG_MODIFIKATION__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__SRC_BOOK = FAHRZEUG_MODIFIKATION__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__WERT = FAHRZEUG_MODIFIKATION__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__VERFUEGBARKEIT = FAHRZEUG_MODIFIKATION__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__WERT_VALUE = FAHRZEUG_MODIFIKATION__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Weapon</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT__WEAPON = FAHRZEUG_MODIFIKATION_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Weapon Mount</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT_FEATURE_COUNT = FAHRZEUG_MODIFIKATION_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Weapon Mount</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WEAPON_MOUNT_OPERATION_COUNT = FAHRZEUG_MODIFIKATION_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.LifestyleOptionImpl <em>Lifestyle Option</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.LifestyleOptionImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLifestyleOption()
+     * @generated
+     */
+    int LIFESTYLE_OPTION = 114;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__PAGE = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__WERT = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The number of structural features of the '<em>Lifestyle Option</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The number of operations of the '<em>Lifestyle Option</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LIFESTYLE_OPTION_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.PercentLifestyleOptionImpl <em>Percent Lifestyle Option</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.PercentLifestyleOptionImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPercentLifestyleOption()
+     * @generated
+     */
+    int PERCENT_LIFESTYLE_OPTION = 115;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__BESCHREIBUNG = LIFESTYLE_OPTION__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__IMAGE = LIFESTYLE_OPTION__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__NAME = LIFESTYLE_OPTION__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__PARENT_ID = LIFESTYLE_OPTION__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__PAGE = LIFESTYLE_OPTION__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__SRC_BOOK = LIFESTYLE_OPTION__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__WERT = LIFESTYLE_OPTION__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__VERFUEGBARKEIT = LIFESTYLE_OPTION__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION__WERT_VALUE = LIFESTYLE_OPTION__WERT_VALUE;
+
+    /**
+     * The number of structural features of the '<em>Percent Lifestyle Option</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION_FEATURE_COUNT = LIFESTYLE_OPTION_FEATURE_COUNT + 0;
+
+    /**
+     * The number of operations of the '<em>Percent Lifestyle Option</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERCENT_LIFESTYLE_OPTION_OPERATION_COUNT = LIFESTYLE_OPTION_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16118,7 +16499,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 113;
+	int FEUER_MODUS = 116;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -16128,7 +16509,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 114;
+	int SCHADENS_TYP = 117;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -16138,7 +16519,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 115;
+	int MAGAZIN_TYP = 118;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -16148,7 +16529,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 116;
+	int FEUWERWAFFEN_ERWEITERUNG = 119;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -16158,7 +16539,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 117;
+	int MODIFIKATOR_TYPE = 120;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -16168,7 +16549,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 118;
+	int SMARTGUN_TYPE = 121;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -16178,7 +16559,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 119;
+	int ZAUBER_ART = 122;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -16188,7 +16569,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 120;
+	int ZAUBER_REICHWEITE = 123;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -16198,7 +16579,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 121;
+	int ZAUBER_DAUER = 124;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -16208,7 +16589,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 122;
+	int MAGISCHE_TRADITION = 125;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -16218,7 +16599,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 123;
+	int CRITTER_HANDLUNG = 126;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -16228,7 +16609,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 124;
+	int CRITTER_REICHWEITE = 127;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -16238,7 +16619,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 125;
+	int CRITTER_DAUER = 128;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -16248,7 +16629,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 126;
+	int RESONANZ_ZIEL = 129;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -16258,7 +16639,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 127;
+    int INTERFACE_MODUS = 130;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -16268,7 +16649,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 128;
+    int PROGRAM_TYPE = 131;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -16278,7 +16659,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 129;
+    int MATRIX_PROGRAM_TYPE = 132;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -16288,7 +16669,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 130;
+	int SHR_DATE = 133;
 
 
 	/**
@@ -16299,7 +16680,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 131;
+	int MODIFICATION_MANAGER = 134;
 
 
 	/**
@@ -18797,6 +19178,17 @@ public interface Shr5Package extends EPackage {
     EAttribute getFahrzeug_Panzer();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts <em>Weapon Mounts</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Weapon Mounts</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts()
+     * @see #getFahrzeug()
+     * @generated
+     */
+    EAttribute getFahrzeug_WeaponMounts();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug <em>Bodenfahrzeug</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18901,17 +19293,6 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
 	EClass getFahrzeugModifikation();
-
-	/**
-     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.FahrzeugModifikation#getFunktion <em>Funktion</em>}'.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Funktion</em>'.
-     * @see de.urszeidler.eclipse.shr5.FahrzeugModifikation#getFunktion()
-     * @see #getFahrzeugModifikation()
-     * @generated
-     */
-	EReference getFahrzeugModifikation_Funktion();
 
 	/**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Technomancer <em>Technomancer</em>}'.
@@ -19159,6 +19540,28 @@ public interface Shr5Package extends EPackage {
 	EClass getLifestyle();
 
 	/**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.Lifestyle#getOptions <em>Options</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Options</em>'.
+     * @see de.urszeidler.eclipse.shr5.Lifestyle#getOptions()
+     * @see #getLifestyle()
+     * @generated
+     */
+    EReference getLifestyle_Options();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Lifestyle#isOwned <em>Owned</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Owned</em>'.
+     * @see de.urszeidler.eclipse.shr5.Lifestyle#isOwned()
+     * @see #getLifestyle()
+     * @generated
+     */
+    EAttribute getLifestyle_Owned();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Wissensfertigkeit <em>Wissensfertigkeit</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -19871,6 +20274,47 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getCommonProgram_ProgramType();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.WeaponMount <em>Weapon Mount</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Weapon Mount</em>'.
+     * @see de.urszeidler.eclipse.shr5.WeaponMount
+     * @generated
+     */
+    EClass getWeaponMount();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.WeaponMount#getWeapon <em>Weapon</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Weapon</em>'.
+     * @see de.urszeidler.eclipse.shr5.WeaponMount#getWeapon()
+     * @see #getWeaponMount()
+     * @generated
+     */
+    EReference getWeaponMount_Weapon();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.LifestyleOption <em>Lifestyle Option</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Lifestyle Option</em>'.
+     * @see de.urszeidler.eclipse.shr5.LifestyleOption
+     * @generated
+     */
+    EClass getLifestyleOption();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.PercentLifestyleOption <em>Percent Lifestyle Option</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Percent Lifestyle Option</em>'.
+     * @see de.urszeidler.eclipse.shr5.PercentLifestyleOption
+     * @generated
+     */
+    EClass getPercentLifestyleOption();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
@@ -22700,6 +23144,14 @@ public interface Shr5Package extends EPackage {
         EAttribute FAHRZEUG__PANZER = eINSTANCE.getFahrzeug_Panzer();
 
         /**
+         * The meta object literal for the '<em><b>Weapon Mounts</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FAHRZEUG__WEAPON_MOUNTS = eINSTANCE.getFahrzeug_WeaponMounts();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl <em>Bodenfahrzeug</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -22786,14 +23238,6 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
 		EClass FAHRZEUG_MODIFIKATION = eINSTANCE.getFahrzeugModifikation();
-
-		/**
-         * The meta object literal for the '<em><b>Funktion</b></em>' containment reference list feature.
-         * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-         * @generated
-         */
-		EReference FAHRZEUG_MODIFIKATION__FUNKTION = eINSTANCE.getFahrzeugModifikation_Funktion();
 
 		/**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl <em>Technomancer</em>}' class.
@@ -22996,6 +23440,22 @@ public interface Shr5Package extends EPackage {
 		EClass LIFESTYLE = eINSTANCE.getLifestyle();
 
 		/**
+         * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference LIFESTYLE__OPTIONS = eINSTANCE.getLifestyle_Options();
+
+        /**
+         * The meta object literal for the '<em><b>Owned</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute LIFESTYLE__OWNED = eINSTANCE.getLifestyle_Owned();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.WissensfertigkeitImpl <em>Wissensfertigkeit</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -23576,6 +24036,44 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute COMMON_PROGRAM__PROGRAM_TYPE = eINSTANCE.getCommonProgram_ProgramType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.WeaponMountImpl <em>Weapon Mount</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.WeaponMountImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWeaponMount()
+         * @generated
+         */
+        EClass WEAPON_MOUNT = eINSTANCE.getWeaponMount();
+
+        /**
+         * The meta object literal for the '<em><b>Weapon</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference WEAPON_MOUNT__WEAPON = eINSTANCE.getWeaponMount_Weapon();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.LifestyleOptionImpl <em>Lifestyle Option</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.LifestyleOptionImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getLifestyleOption()
+         * @generated
+         */
+        EClass LIFESTYLE_OPTION = eINSTANCE.getLifestyleOption();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.PercentLifestyleOptionImpl <em>Percent Lifestyle Option</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.PercentLifestyleOptionImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getPercentLifestyleOption()
+         * @generated
+         */
+        EClass PERCENT_LIFESTYLE_OPTION = eINSTANCE.getPercentLifestyleOption();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.

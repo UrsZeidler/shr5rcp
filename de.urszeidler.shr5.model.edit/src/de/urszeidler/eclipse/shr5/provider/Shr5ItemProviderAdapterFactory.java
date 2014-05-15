@@ -853,29 +853,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
 	/**
-     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FahrzeugModifikation} instances.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	protected FahrzeugModifikationItemProvider fahrzeugModifikationItemProvider;
-
-	/**
-     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FahrzeugModifikation}.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	@Override
-	public Adapter createFahrzeugModifikationAdapter() {
-        if (fahrzeugModifikationItemProvider == null) {
-            fahrzeugModifikationItemProvider = new FahrzeugModifikationItemProvider(this);
-        }
-
-        return fahrzeugModifikationItemProvider;
-    }
-
-	/**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Technomancer} instances.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1566,6 +1543,75 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.WeaponMount} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected WeaponMountItemProvider weaponMountItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.WeaponMount}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createWeaponMountAdapter() {
+        if (weaponMountItemProvider == null) {
+            weaponMountItemProvider = new WeaponMountItemProvider(this);
+        }
+
+        return weaponMountItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.LifestyleOption} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LifestyleOptionItemProvider lifestyleOptionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.LifestyleOption}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createLifestyleOptionAdapter() {
+        if (lifestyleOptionItemProvider == null) {
+            lifestyleOptionItemProvider = new LifestyleOptionItemProvider(this);
+        }
+
+        return lifestyleOptionItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PercentLifestyleOption} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PercentLifestyleOptionItemProvider percentLifestyleOptionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PercentLifestyleOption}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createPercentLifestyleOptionAdapter() {
+        if (percentLifestyleOptionItemProvider == null) {
+            percentLifestyleOptionItemProvider = new PercentLifestyleOptionItemProvider(this);
+        }
+
+        return percentLifestyleOptionItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1698,7 +1744,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (bodenfahrzeugItemProvider != null) bodenfahrzeugItemProvider.dispose();
         if (passagierFahrzeugItemProvider != null) passagierFahrzeugItemProvider.dispose();
         if (drohneItemProvider != null) drohneItemProvider.dispose();
-        if (fahrzeugModifikationItemProvider != null) fahrzeugModifikationItemProvider.dispose();
         if (technomancerItemProvider != null) technomancerItemProvider.dispose();
         if (komplexeFormItemProvider != null) komplexeFormItemProvider.dispose();
         if (personaKomplexFormItemProvider != null) personaKomplexFormItemProvider.dispose();
@@ -1729,6 +1774,9 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (datasoftItemProvider != null) datasoftItemProvider.dispose();
         if (consumerSoftItemProvider != null) consumerSoftItemProvider.dispose();
         if (commonProgramItemProvider != null) commonProgramItemProvider.dispose();
+        if (weaponMountItemProvider != null) weaponMountItemProvider.dispose();
+        if (lifestyleOptionItemProvider != null) lifestyleOptionItemProvider.dispose();
+        if (percentLifestyleOptionItemProvider != null) percentLifestyleOptionItemProvider.dispose();
     }
 
 }

@@ -969,12 +969,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Drohne" type="shr5:Drohne"/>
-  <xsd:complexType name="FahrzeugModifikation">
+  <xsd:complexType abstract="true" name="FahrzeugModifikation">
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
-          <xsd:element name="funktion" type="shr5:AbstraktGegenstand"/>
         </xsd:choice>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
@@ -1092,7 +1091,12 @@
   <xsd:element name="Vertrag" type="shr5:Vertrag"/>
   <xsd:complexType name="Lifestyle">
     <xsd:complexContent>
-      <xsd:extension base="shr5:IntervallVertrag"/>
+      <xsd:extension base="shr5:IntervallVertrag">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="options" type="shr5:LifestyleOption"/>
+        </xsd:choice>
+        <xsd:attribute name="owned" type="xsd:boolean"/>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Lifestyle" type="shr5:Lifestyle"/>
@@ -1692,4 +1696,50 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="CommonProgram" type="shr5:CommonProgram"/>
+  <xsd:complexType name="WeaponMount">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:FahrzeugModifikation">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="weapon" type="shr5:AbstaktWaffe"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="WeaponMount" type="shr5:WeaponMount"/>
+  <xsd:complexType name="LifestyleOption">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LifestyleOption" type="shr5:LifestyleOption"/>
+  <xsd:complexType name="PercentLifestyleOption">
+    <xsd:annotation>
+      <xsd:documentation>The werValue ist interpreted as percent value so the wert is wertContainer * wertValue/100.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:LifestyleOption"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PercentLifestyleOption" type="shr5:PercentLifestyleOption">
+    <xsd:annotation>
+      <xsd:documentation>The werValue ist interpreted as percent value so the wert is wertContainer * wertValue/100.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>
