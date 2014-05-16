@@ -4,10 +4,14 @@ package de.urszeidler.eclipse.shr5.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Locale;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -19,7 +23,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
+import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5.util.Shr5AdapterFactory;
 
 /**
@@ -56,11 +65,15 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      */
 	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
+    private String iso3Country;
+    private boolean doLocalize;
+   //private ModifikatorItemProvider reflectiveItemProviderAdapter = ;
+
 	/**
      * This constructs an instance.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	public Shr5ItemProviderAdapterFactory() {
         supportedTypes.add(IEditingDomainItemProvider.class);
@@ -68,6 +81,13 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         supportedTypes.add(ITreeItemContentProvider.class);
         supportedTypes.add(IItemLabelProvider.class);
         supportedTypes.add(IItemPropertySource.class);
+        
+        
+        Locale default1 = Locale.getDefault();
+        iso3Country = default1.getLanguage();// default1.getISO3Country();
+        if (iso3Country.equals("de"))
+            doLocalize = true;
+
     }
 
 	/**
@@ -1803,4 +1823,37 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (localizationItemProvider != null) localizationItemProvider.dispose();
     }
 
+    @Override
+    public Adapter createAdapter(Notifier target) {
+        
+        
+        Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
+        if (doLocalize)
+            if (target instanceof Identifiable) {
+                return new AdapterItemProviderDelegator((ItemProviderAdapter)doSwitch) {
+                    @Override
+                    public String getText(Object object) {
+                        if (object instanceof Identifiable) {
+                            Identifiable id = (Identifiable)object;
+
+                            EObject eObject = (EObject)object;
+                            EClass eClass = eObject.eClass();
+                            //EStructuralFeature feature = getLabelFeature(eClass);
+
+                            String className =ModifikatorItemProvider.getEClassName(eClass);
+                            EList<Localization> localizations = id.getLocalizations();
+                            for (Localization localization : localizations) {
+                                if (iso3Country.equals(localization.getLocal())) {
+                                    return className + " " + localization.getName();
+                                }
+                            }
+                        }
+                        return super.getText(object);
+                    }
+                };
+            }
+        return doSwitch;
+
+    }
+	
 }

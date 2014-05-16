@@ -39,6 +39,8 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
         iso3Country = default1.getLanguage();// default1.getISO3Country();
         if (iso3Country.equals("de"))
             doLocalize = true;
+        
+        doLocalize = false;
     }
 
     /**
@@ -91,32 +93,32 @@ public class ExtendedShadowrunAdapterFactory extends Shr5ItemProviderAdapterFact
             return createModifikatorItemProvider();
         }
 
-        Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
-        if (doLocalize)
-            if (target instanceof Identifiable) {
-                return new AdapterItemProviderDelegator((ItemProviderAdapter)doSwitch) {
-                    @Override
-                    public String getText(Object object) {
-                        if (object instanceof Identifiable) {
-                            Identifiable id = (Identifiable)object;
-
-                            EObject eObject = (EObject)object;
-                            EClass eClass = eObject.eClass();
-                            // EStructuralFeature feature = getLabelFeature(eClass);
-
-                            String className = getClassName(eClass);
-                            EList<Localization> localizations = id.getLocalizations();
-                            for (Localization localization : localizations) {
-                                if (iso3Country.equals(localization.getLocal())) {
-                                    return className + " " + localization.getName();
-                                }
-                            }
-                        }
-                        return super.getText(object);
-                    }
-                };
-            }
-        return doSwitch;
+//        Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
+//        if (doLocalize)
+//            if (target instanceof Identifiable) {
+//                return new AdapterItemProviderDelegator((ItemProviderAdapter)doSwitch) {
+//                    @Override
+//                    public String getText(Object object) {
+//                        if (object instanceof Identifiable) {
+//                            Identifiable id = (Identifiable)object;
+//
+//                            EObject eObject = (EObject)object;
+//                            EClass eClass = eObject.eClass();
+//                            // EStructuralFeature feature = getLabelFeature(eClass);
+//
+//                            String className = getClassName(eClass);
+//                            EList<Localization> localizations = id.getLocalizations();
+//                            for (Localization localization : localizations) {
+//                                if (iso3Country.equals(localization.getLocal())) {
+//                                    return className + " " + localization.getName();
+//                                }
+//                            }
+//                        }
+//                        return super.getText(object);
+//                    }
+//                };
+//            }
+        return super.createAdapter(target);//doSwitch;
     }
 
     protected String getClassName(EClass object) {
