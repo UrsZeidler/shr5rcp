@@ -166,7 +166,8 @@ public class TreeTableWidget extends Composite {
             public void widgetSelected(SelectionEvent e) {
                 if (manager != null) {
                     manager.handleAdd(e1, object);
-                    treeViewer.refresh(true);
+                    
+                    //treeViewer.refresh(true);
                 }
             }
         });
