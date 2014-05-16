@@ -3175,8 +3175,23 @@
       <entries xsi:type="shr5:KiKraft" xmi:id="08156065-8df1-4363-9194-36d271c50e1b" name="Attribute Boost" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-25">
         <localizations xmi:id="_BqIm0N0CEeOvVYoRsPZlnA" local="de" name="Attributsschub"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" xmi:id="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" name="Combat Sense" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
-        <localizations xmi:id="_BqIm0d0CEeOvVYoRsPZlnA" local="de" name="Kampfsinn"/>
+      <entries xsi:type="shr5:KiKraft" xmi:id="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" name="Combat Sense 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
+        <mods xmi:id="_Hh3eIN0hEeOyU4dHL4W7Ow" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+        </mods>
+        <localizations xmi:id="_BqIm0d0CEeOvVYoRsPZlnA" local="de" name="Kampfsinn 1"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" parentId="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" name="Combat Sense 2" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_Hh3eIN0hEeOyU4dHL4W7Ow" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+        </mods>
+        <localizations xmi:id="_BqIm0d0CEeOvVYoRsPZlnA" local="de" name="Kampfsinn 2"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" parentId="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" name="Combat Sense 3" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-150">
+        <mods xmi:id="_Hh3eIN0hEeOyU4dHL4W7Ow" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+        </mods>
+        <localizations xmi:id="_BqIm0d0CEeOvVYoRsPZlnA" local="de" name="Kampfsinn 3"/>
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="8cbdb29a-aec0-491c-ade2-3800602ca101" name="Critical Strike" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
         <localizations xmi:id="_BqIm0t0CEeOvVYoRsPZlnA" local="de" name="Kritischer Schlag"/>
@@ -3203,7 +3218,7 @@
         <mods xmi:id="_BqJ08d0CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
         </mods>
-        <mods xmi:id="_BqJ08t0CEeOvVYoRsPZlnA">
+        <mods xmi:id="_BqJ08t0CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
         <localizations xmi:id="_BqJ0890CEeOvVYoRsPZlnA" local="de" name="Gesteigerte Reflexe 1"/>
@@ -3212,7 +3227,7 @@
         <mods xmi:id="_BqJ09N0CEeOvVYoRsPZlnA" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
         </mods>
-        <mods xmi:id="_BqKcAN0CEeOvVYoRsPZlnA">
+        <mods xmi:id="_BqKcAN0CEeOvVYoRsPZlnA" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
         <localizations xmi:id="_BqKcAd0CEeOvVYoRsPZlnA" local="de" name="Gesteigerte Reflexe 2"/>
@@ -3221,7 +3236,7 @@
         <mods xmi:id="_BqKcAt0CEeOvVYoRsPZlnA" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
         </mods>
-        <mods xmi:id="_BqKcA90CEeOvVYoRsPZlnA">
+        <mods xmi:id="_BqKcA90CEeOvVYoRsPZlnA" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
         <localizations xmi:id="_BqKcBN0CEeOvVYoRsPZlnA" local="de" name="Gesteigerte Reflexe 3"/>
@@ -3241,8 +3256,8 @@
       <entries xsi:type="shr5:KiKraft" xmi:id="c572c25b-16be-4da0-a99e-d192383b5ca2" name="Missile Parry" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-25">
         <localizations xmi:id="_BqLDE90CEeOvVYoRsPZlnA" local="de" name="Geschossparade"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" xmi:id="07129b0d-c725-470d-8f24-649c65429a93" name="Mystic Armor" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
-        <mods xmi:id="_BqLqIN0CEeOvVYoRsPZlnA">
+      <entries xsi:type="shr5:KiKraft" xmi:id="07129b0d-c725-470d-8f24-649c65429a93" name="Mystic Armor 1" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
+        <mods xmi:id="_BqLqIN0CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
         </mods>
         <localizations xmi:id="_BqLqId0CEeOvVYoRsPZlnA" local="de" name="Mystischer Panzer"/>
