@@ -11433,168 +11433,100 @@
       <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1"/>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_4uQO8N0XEeOr2LH4Zw5PzA" name="software">
-      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO8d0XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 1" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="1">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-      </entries>
-      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO8t0XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 2" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="2">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-      </entries>
-      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO890XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 3" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="3">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-      </entries>
-      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9N0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 4" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="4">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-      </entries>
-      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9d0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 5" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="5">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-      </entries>
-      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9t0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 6" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="6">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-      </entries>
-      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO990XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 1 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="1">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
-      </entries>
-      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-N0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 2 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="2">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
-      </entries>
-      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-d0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 3 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="3">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
-      </entries>
-      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-t0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 4 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="4">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO-90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Wrapper" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO8d0XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 1" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1"/>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO8t0XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 2" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="2"/>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO890XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 3" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="3"/>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9N0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 4" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="4"/>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9d0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 5" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="5"/>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9t0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 6" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="6"/>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO990XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 1 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1" skill="449c91bb-3647-4493-bd5d-058c336598e0"/>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-N0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 2 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="2" skill="449c91bb-3647-4493-bd5d-058c336598e0"/>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-d0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 3 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="3" skill="449c91bb-3647-4493-bd5d-058c336598e0"/>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-t0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 4 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="4" skill="449c91bb-3647-4493-bd5d-058c336598e0"/>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO-90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Wrapper" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQO_N0XEeOr2LH4Zw5PzA" local="de" name="Verwandlung"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO_d0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Track" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO_d0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Track" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQO_t0XEeOr2LH4Zw5PzA" local="de" name="Aufspüren"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO_90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Stealth" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO_90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Stealth" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPAN0XEeOr2LH4Zw5PzA" local="de" name="Tarnkappe"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPAd0XEeOr2LH4Zw5PzA" wertValue="80" name="Browse" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPAd0XEeOr2LH4Zw5PzA" wertValue="80" name="Browse" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPAt0XEeOr2LH4Zw5PzA" local="de" name="Schmöker"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPA90XEeOr2LH4Zw5PzA" wertValue="80" name="Configurator" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPA90XEeOr2LH4Zw5PzA" wertValue="80" name="Configurator" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPBN0XEeOr2LH4Zw5PzA" local="de" name="Konfigurator"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPBd0XEeOr2LH4Zw5PzA" wertValue="80" name="Edit" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPBd0XEeOr2LH4Zw5PzA" wertValue="80" name="Edit" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPBt0XEeOr2LH4Zw5PzA" local="de" name="Editieren"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPB90XEeOr2LH4Zw5PzA" wertValue="80" name="Encrypt" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPB90XEeOr2LH4Zw5PzA" wertValue="80" name="Encrypt" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPCN0XEeOr2LH4Zw5PzA" local="de" name="Verschlüsselung"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPCd0XEeOr2LH4Zw5PzA" wertValue="80" name="Signal Scrub" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPCd0XEeOr2LH4Zw5PzA" wertValue="80" name="Signal Scrub" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPCt0XEeOr2LH4Zw5PzA" local="de" name="Signalreiniger"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPC90XEeOr2LH4Zw5PzA" wertValue="80" name="Toolbox" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPC90XEeOr2LH4Zw5PzA" wertValue="80" name="Toolbox" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPDN0XEeOr2LH4Zw5PzA" local="de" name="Toolbox"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPDd0XEeOr2LH4Zw5PzA" wertValue="80" name="Virtual Machine" page="245">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPDd0XEeOr2LH4Zw5PzA" wertValue="80" name="Virtual Machine" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_4uQPDt0XEeOr2LH4Zw5PzA" local="de" name="Virtuelle Maschine"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPD90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Armor" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPD90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Armor" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPEN0XEeOr2LH4Zw5PzA" local="de" name="Panzerung"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPEd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPEd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPEt0XEeOr2LH4Zw5PzA" local="de" name="Biofeedback-Filter"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPE90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Decryption" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPE90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Decryption" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPFN0XEeOr2LH4Zw5PzA" local="de" name="Entschlüsselung"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPFd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPFd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPFt0XEeOr2LH4Zw5PzA" local="de" name="Babymonitor"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPF90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Defuse" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPF90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Defuse" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPGN0XEeOr2LH4Zw5PzA" local="de" name="Splitterschutz"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPGd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Demolition" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPGd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Demolition" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPGt0XEeOr2LH4Zw5PzA" local="de" name="Superbombe"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPG90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPG90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPHN0XEeOr2LH4Zw5PzA" local="de" name="Biofeedback"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPHd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Blackout" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPHd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Blackout" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPHt0XEeOr2LH4Zw5PzA" local="de" name="Blackout"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPH90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Exploit" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPH90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Exploit" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPIN0XEeOr2LH4Zw5PzA" local="de" name="Ausnutzen"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPId0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Fork" page="245" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPId0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Fork" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPIt0XEeOr2LH4Zw5PzA" local="de" name="Gabel"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPI90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Guard" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPI90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Guard" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPJN0XEeOr2LH4Zw5PzA" local="de" name="Schild"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPJd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Hammer" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPJd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Hammer" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPJt0XEeOr2LH4Zw5PzA" local="de" name="Hammer"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPJ90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Lockdown" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPJ90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Lockdown" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPKN0XEeOr2LH4Zw5PzA" local="de" name="Fessel"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPKd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Mugger" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPKd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Mugger" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPKt0XEeOr2LH4Zw5PzA" local="de" name="Überfall"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPK90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Shell" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPK90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Shell" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPLN0XEeOr2LH4Zw5PzA" local="de" name="Schutzschirm"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPLd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Sneak" page="246" programType="hackingProgram">
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPLd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Sneak" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
         <localizations xmi:id="_4uQPLt0XEeOr2LH4Zw5PzA" local="de" name="Irreführung"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPL90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 6" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="6">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-      </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 5" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="5">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-      </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMd0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 4" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="4">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-      </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMt0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 3" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="3">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-      </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPM90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 2" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="2">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-      </entries>
-      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPNN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 1" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="1">
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPL90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 6" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="6" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 5" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="5" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMd0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 4" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="4" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMt0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 3" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="3" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPM90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 2" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="2" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPNN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 1" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
@@ -12039,7 +11971,7 @@
         </generatorSrc>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_XDf7oN0DEeOF8uJDTAKQmg" chracterSource="_G_vkIN0DEeOF8uJDTAKQmg" choosenLifestyle="_OOjlIN0MEeOQ4-2yeaetCA" nativeLanguage="542bb99d-db7c-476e-8c97-6c63744a97fc">
-        <persona xsi:type="shr5:MudanPersona" xmi:id="_XDf7od0DEeOF8uJDTAKQmg" name="Moto" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="1" reaktionBasis="2" staerkeBasis="3" charismaBasis="1" willenskraftBasis="6" intuitionBasis="6" logikBasis="5" spezies="70f618bf-7e17-4e32-b2c2-70f57a0c1895">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_XDf7od0DEeOF8uJDTAKQmg" name="Moto" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="2" reaktionBasis="2" staerkeBasis="3" charismaBasis="1" willenskraftBasis="6" intuitionBasis="6" logikBasis="5" spezies="70f618bf-7e17-4e32-b2c2-70f57a0c1895">
           <fertigkeiten xmi:id="_YrxrkN0EEeOF8uJDTAKQmg" stufe="4" fertigkeit="9a5d492b-3384-46c5-b7d1-b180beec0ddc"/>
           <fertigkeiten xmi:id="_anH98N0EEeOF8uJDTAKQmg" stufe="2" fertigkeit="6300e6d5-c552-4ec2-8b2f-de2567132e36"/>
           <fertigkeiten xmi:id="_a6-HAN0EEeOF8uJDTAKQmg" stufe="1" fertigkeit="7d311e97-bd29-4ffd-a500-a301ced17852"/>
@@ -12080,6 +12012,24 @@
             </mods>
             <localizations xmi:id="_Mpesct0GEeOF8uJDTAKQmg" local="de" name="Smartlink"/>
           </koerperMods>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_NFnz4N0cEeOUhMDMrBujfQ" name="Muscle augmentation 1" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="31000">
+            <mods xmi:id="_NFnz4d0cEeOUhMDMrBujfQ" wert="-20">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_gKpkAN0cEeOUhMDMrBujfQ" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+            </mods>
+            <localizations xmi:id="_NFnz4t0cEeOUhMDMrBujfQ" local="de" name="Muskelverstärkung"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_Ciog0N0dEeOUhMDMrBujfQ" name="Muscle toner 1" parentId="88d6c54c-0eed-4c2a-9e97-9fd811dffd8d" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="32000">
+            <mods xmi:id="_CipH4N0dEeOUhMDMrBujfQ" wert="-20">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_KHyUUN0dEeOUhMDMrBujfQ" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+            </mods>
+            <localizations xmi:id="_CipH4d0dEeOUhMDMrBujfQ" local="de" name="Muskelstraffung"/>
+          </koerperMods>
           <eigenschaften xmi:id="_nU40kN0FEeOF8uJDTAKQmg" name="Analytical Mind" parentId="f764a28e-a0a5-4f32-af1a-a1e7850b46cb" page="72" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="5">
             <localizations xmi:id="_nU40kd0FEeOF8uJDTAKQmg" local="de" name="Analytischer Geist"/>
           </eigenschaften>
@@ -12087,6 +12037,9 @@
             <localizations xmi:id="_nVlYId0FEeOF8uJDTAKQmg" local="de" name="Rennpilot"/>
           </eigenschaften>
         </persona>
+        <changes xsi:type="shr5mngt:AttributeChange" xmi:id="_C28SAN0fEeOH5IqcHcne2w" changeApplied="true" dateApplied="2014-05-16T19:25:23.404+0200" from="1" to="2">
+          <attibute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/geschicklichkeitBasis"/>
+        </changes>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_88IbEN0LEeOQ4-2yeaetCA" parentId="0846ddf0-943e-4cfe-92a2-f7c672797962" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" wertValue="10" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1">
           <localizations xmi:id="_88IbEd0LEeOQ4-2yeaetCA" local="de" name="Messer"/>
         </inventar>
@@ -12098,21 +12051,59 @@
           <localizations xmi:id="_C8Ub4N0MEeOQ4-2yeaetCA" local="de" name="Kampfmesser"/>
         </inventar>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_FMXy8N0MEeOQ4-2yeaetCA" parentId="_B0Z9IN0CEeOvVYoRsPZlnA" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="9F" wertValue="400" name="Ammo: Explosive Rounds 50" kategorie="Ammunition"/>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_iBHBQN0aEeOUhMDMrBujfQ" parentId="53d5bd35-60de-417c-9dd9-af0f0b83d696" page="439" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2500" name="Erika Elite" deviceRating="4">
+          <localizations xmi:id="_iBHBQd0aEeOUhMDMrBujfQ" local="de" name="Erika Elite"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iBwhgN0aEeOUhMDMrBujfQ" parentId="49afc1d1-a100-42c9-be16-721fc657cdce" page="441" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="450" name="Tag Eraser" kategorie="Communications">
+          <localizations xmi:id="_iBwhgd0aEeOUhMDMrBujfQ" local="de" name="RFID-Löscher"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iCT7IN0aEeOUhMDMrBujfQ" parentId="ebf789a5-d71b-4985-9787-6995dcc444e7" page="441" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating" name="White Noise Generator" kategorie="Communications">
+          <localizations xmi:id="_iCT7Id0aEeOUhMDMrBujfQ" local="de" name="White-Noise-Generator"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_iC5J8N0aEeOUhMDMrBujfQ" parentId="fd839c3a-db9e-40b9-9c87-1fd8f8c40316" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="450" name="Armor Clothing" ruestung="6">
+          <localizations xmi:id="_iC5J8d0aEeOUhMDMrBujfQ" local="de" name="Panzerkleidung"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_iDXEAN0aEeOUhMDMrBujfQ" parentId="f69ba6e4-c3c7-4d64-8831-467e3b3b6051" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
+          <localizations xmi:id="_iDXEAd0aEeOUhMDMrBujfQ" local="de" name="Panzerjacke"/>
+        </inventar>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_iD9g8N0aEeOUhMDMrBujfQ" parentId="f3016c85-eb8d-4b6a-84c7-f89e777af9a3" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="14R" wertValue="2000" name="Full Body Armor" ruestung="15">
+          <localizations xmi:id="_iD9g8d0aEeOUhMDMrBujfQ" local="de" name="Ganzkörperpanzerung"/>
+        </inventar>
+        <inventar xsi:type="shr5:RiggerCommandConsole" xmi:id="_iEgTgN0aEeOUhMDMrBujfQ" parentId="_By0BsN0CEeOvVYoRsPZlnA" page="265" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="1400" name="Build from crab." deviceRating="1" datenverarbeitungBasis="3" firewallBasis="2">
+          <mods xmi:id="_iEgTgd0aEeOUhMDMrBujfQ" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+          </mods>
+        </inventar>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_iFDtIN0aEeOUhMDMrBujfQ" parentId="_BywXUd0CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000"/>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iFoU4N0aEeOUhMDMrBujfQ" parentId="c0d3905f-69a2-4263-b008-760b8e216419" page="447" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8F" name="Keycard Copier" kategorie="B&amp;E Gear">
+          <localizations xmi:id="_iFoU4d0aEeOUhMDMrBujfQ" local="de" name="Magschlosskarten-Kopierer"/>
+        </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iGURYN0aEeOUhMDMrBujfQ" parentId="c6e0bdf3-712d-48f8-ba72-89467cdebdc9" page="435" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="100" name="Grenade: Flash-Bang" kategorie="Ammunition">
+          <localizations xmi:id="_iGURYd0aEeOUhMDMrBujfQ" local="de" name="Granate: Schock"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_iG7VYN0aEeOUhMDMrBujfQ" parentId="68ded2d1-af35-4b53-b44c-9264ba1f4f62" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="100" proAnzahl="10" armorMod="1">
+          <localizations xmi:id="_iG7VYd0aEeOUhMDMrBujfQ" local="de" name="Munition: Gelmunition"/>
+        </inventar>
+        <inventar xsi:type="shr5:Munition" xmi:id="_iHn48N0aEeOUhMDMrBujfQ" parentId="7bcb23dd-c2df-4b50-b095-ba62c131ee86" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="100" proAnzahl="10" armorMod="-4">
+          <localizations xmi:id="_iHn48d0aEeOUhMDMrBujfQ" local="de" name="Munition: APDS"/>
+        </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_OOjlIN0MEeOQ4-2yeaetCA" name="Middle" parentId="25e7fe19-0dc2-4d2b-b134-035259ea321a" page="95" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000">
           <localizations xmi:id="_OOjlId0MEeOQ4-2yeaetCA" local="de" name="Mittelschicht"/>
         </contracts>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_jGx6wN0YEeOr2LH4Zw5PzA" name="Shiawase Kanmushi" parentId="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" fahrzeugTyp="Drone: Micro">
-          <storedPrograms xsi:type="shr5:CommonProgram" xmi:id="_n2ZEgN0YEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Hammer" parentId="_4uQPJd0XEeOr2LH4Zw5PzA" page="246" programType="hackingProgram">
-            <localizations xmi:id="_n2ZEgd0YEeOr2LH4Zw5PzA" local="de" name="Hammer"/>
-            <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-          </storedPrograms>
-          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_n2a5sN0YEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 6" parentId="_4uQPL90XEeOr2LH4Zw5PzA" page="446" rating="6">
-            <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
-            <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
-          </storedPrograms>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_HpIA4N0aEeOUhMDMrBujfQ" name="Steel Lynx Combat Drone" parentId="693a7423-0f31-4066-931c-84fd1261d4d5" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="25000" fahrzeugTyp="Drone: Large">
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_KA0RAN0aEeOUhMDMrBujfQ" wertValue="500" name="Clearsight 6" parentId="_4uQPL90XEeOr2LH4Zw5PzA" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="6" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
         </vehicels>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_jHSREN0YEeOr2LH4Zw5PzA" name="Horizon Flying Eye" parentId="1c17e7c0-8909-4e90-a96f-56c4dd62004f" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2000" fahrzeugTyp="Drone: Mini"/>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_jH240N0YEeOr2LH4Zw5PzA" name="MCT Fly-Spy" parentId="49cc79e7-89c5-4a97-9405-11eb817bf97e" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2000" fahrzeugTyp="Drone: Mini"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_Hpw6EN0aEeOUhMDMrBujfQ" name="Aztechnology Crawler" parentId="c83126b4-1b74-471e-9578-83b0ab451190" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4" wertValue="4000" fahrzeugTyp="Drone: Small">
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_LIj8MN0aEeOUhMDMrBujfQ" wertValue="500" name="Clearsight 6" parentId="_4uQPL90XEeOr2LH4Zw5PzA" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="6" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+        </vehicels>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_HqVh0N0aEeOUhMDMrBujfQ" name="Shiawase Kanmushi" parentId="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" fahrzeugTyp="Drone: Micro">
+          <storedPrograms xsi:type="shr5:CommonProgram" xmi:id="_MpjN0N0aEeOUhMDMrBujfQ" wertValue="80" name="Encrypt" parentId="_4uQPB90XEeOr2LH4Zw5PzA" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
+            <localizations xmi:id="_MpjN0d0aEeOUhMDMrBujfQ" local="de" name="Verschlüsselung"/>
+          </storedPrograms>
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_Mpkb8N0aEeOUhMDMrBujfQ" wertValue="500" name="Clearsight 5" parentId="_4uQPMN0XEeOr2LH4Zw5PzA" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="5" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+        </vehicels>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_Hq5igN0aEeOUhMDMrBujfQ" name="Sikorsky-Bell Microskimmer" parentId="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1000" fahrzeugTyp="Drone: Micro"/>
+        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_7rjmMN0aEeOUhMDMrBujfQ" name="Hyundai Shin-Hyung" parentId="c1bbef8e-60c9-4b1b-b259-132d13cf1671" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="28500" fahrzeugTyp="Car"/>
       </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_XDf7oN0DEeOF8uJDTAKQmg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
