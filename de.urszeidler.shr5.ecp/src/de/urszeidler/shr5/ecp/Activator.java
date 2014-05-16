@@ -65,7 +65,7 @@ public class Activator extends AbstractUIPlugin {
     public void createECPWorkspace() throws ECPProjectWithNameExistsException {
         ECPProvider provider = ECPUtil.getECPProviderRegistry().getProvider("org.eclipse.emf.ecp.workspace.provider");
         ECPProperties ecpProperties = ECPUtil.createProperties();
-        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.shr5");
+        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-base.shr5");
         ECPProject ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
         if (ecpProject == null) {
             logInfo("creating ECP project....");
@@ -74,7 +74,7 @@ public class Activator extends AbstractUIPlugin {
         }
         
         ecpProperties = ECPUtil.createProperties();
-        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1-de.shr5");
+        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.shr5");
         ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-de");
         if (ecpProject == null) {
             logInfo("creating ECP project.... de");
