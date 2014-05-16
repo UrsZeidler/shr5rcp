@@ -4023,46 +4023,46 @@
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsAPEt0CEeOvVYoRsPZlnA" name="vehicles">
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="6870dd42-87e9-48c7-95b0-b94449c95dea" name="Dodge Scoot" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Bike"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="4c04de8e-c735-44c9-b35d-93f18b0add8b" name="Harley-Davidson Scorpion" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Bike"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="a9fd5990-51e4-4e0b-a4b5-7784b6d0deeb" name="Yamaha Growler" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Bike"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="d4c2af8e-4db9-43cc-a0d9-679b8ca6ef91" name="Suzuki Mirage" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Bike"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="3db4720f-4641-4f4d-80b9-660b84eb0dc8" name="Chrysler-Nissan Jackrabbit" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="231881dc-7fd9-41e2-9ecd-03dc70d63d0d" name="Honda Spirit" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="c1bbef8e-60c9-4b1b-b259-132d13cf1671" name="Hyundai Shin-Hyung" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="b2de2477-452a-47ff-b7a7-6830c08b76a9" name="Eurocar Westwind 3000" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="9a9c16e6-4fff-435e-8eee-a32f6220424a" name="Ford Americar" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="02fc6400-5631-406f-aebb-6efb290479eb" name="Saeder-Krupp-Bentley Concordat" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="09d21219-5157-4a4c-bd2d-4ec15337c96a" name="Mitsubishi Nightsky" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Car"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="2c8d285e-7edb-49d1-af8f-c7173af5fb3f" name="Toyota Gopher" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Truck"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="2120de02-1f5e-4a5f-925c-e0be13fe1b6c" name="GMC Bulldog Step-Van" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Truck"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="6baef4f7-933b-469f-b130-fb221c017439" name="Rover Model 2072" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Truck"/>
-      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="8dfc94cb-85fd-4f25-b5fc-6bcd57f3a9a3" name="Ares Roadmaster" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Truck"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="4a01ee57-3dfb-4dcb-bfa5-871603012462" name="Samuvani Criscraft Otter" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Boat or Sub"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="de9aebfe-d0a4-47f6-b813-240c2046ffef" name="Yongkang Gala Trinity" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Boat or Sub"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="d342dad7-8a92-4666-9f4e-f8365ca2a72d" name="Morgan Cutlass" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Boat or Sub"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="68ed8c10-ff1d-40d5-8fd5-0e0d4be1fc16" name="Proteus Lamprey" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Boat or Sub"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="0a474b0d-8931-4903-ac9e-8661a7e44d72" name="Vulkan Electronaut" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Boat or Sub"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="31257efa-0bef-496a-8b34-7d2a1d59cc45" name="Artemis Industries Nightwing" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Winged Plane"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="ec814df7-2d04-4265-ac85-bf693b3aae59" name="Cessna C750" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Winged Plane"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="6870dd42-87e9-48c7-95b0-b94449c95dea" name="Dodge Scoot" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="3000" fahrzeugTyp="Bike"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="4c04de8e-c735-44c9-b35d-93f18b0add8b" name="Harley-Davidson Scorpion" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="12000" fahrzeugTyp="Bike"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="a9fd5990-51e4-4e0b-a4b5-7784b6d0deeb" name="Yamaha Growler" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000" fahrzeugTyp="Bike"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="d4c2af8e-4db9-43cc-a0d9-679b8ca6ef91" name="Suzuki Mirage" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="8500" fahrzeugTyp="Bike"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="3db4720f-4641-4f4d-80b9-660b84eb0dc8" name="Chrysler-Nissan Jackrabbit" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="10000" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="231881dc-7fd9-41e2-9ecd-03dc70d63d0d" name="Honda Spirit" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="12000" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="c1bbef8e-60c9-4b1b-b259-132d13cf1671" name="Hyundai Shin-Hyung" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="28500" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="b2de2477-452a-47ff-b7a7-6830c08b76a9" name="Eurocar Westwind 3000" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="13" wertValue="110000" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="9a9c16e6-4fff-435e-8eee-a32f6220424a" name="Ford Americar" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="16000" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="02fc6400-5631-406f-aebb-6efb290479eb" name="Saeder-Krupp-Bentley Concordat" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="65000" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="09d21219-5157-4a4c-bd2d-4ec15337c96a" name="Mitsubishi Nightsky" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="320000" fahrzeugTyp="Car"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="2c8d285e-7edb-49d1-af8f-c7173af5fb3f" name="Toyota Gopher" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="25000" fahrzeugTyp="Truck"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="2120de02-1f5e-4a5f-925c-e0be13fe1b6c" name="GMC Bulldog Step-Van" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="35000" fahrzeugTyp="Truck"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="6baef4f7-933b-469f-b130-fb221c017439" name="Rover Model 2072" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="68000" fahrzeugTyp="Truck"/>
+      <entries xsi:type="shr5:Bodenfahrzeug" xmi:id="8dfc94cb-85fd-4f25-b5fc-6bcd57f3a9a3" name="Ares Roadmaster" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="52000" fahrzeugTyp="Truck"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="4a01ee57-3dfb-4dcb-bfa5-871603012462" name="Samuvani Criscraft Otter" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="21000" fahrzeugTyp="Boat or Sub"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="de9aebfe-d0a4-47f6-b813-240c2046ffef" name="Yongkang Gala Trinity" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="37000" fahrzeugTyp="Boat or Sub"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="d342dad7-8a92-4666-9f4e-f8365ca2a72d" name="Morgan Cutlass" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="14R" wertValue="96000" fahrzeugTyp="Boat or Sub"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="68ed8c10-ff1d-40d5-8fd5-0e0d4be1fc16" name="Proteus Lamprey" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="14000" fahrzeugTyp="Boat or Sub"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="0a474b0d-8931-4903-ac9e-8661a7e44d72" name="Vulkan Electronaut" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10" wertValue="108000" fahrzeugTyp="Boat or Sub"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="31257efa-0bef-496a-8b34-7d2a1d59cc45" name="Artemis Industries Nightwing" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="20000" fahrzeugTyp="Winged Plane"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="ec814df7-2d04-4265-ac85-bf693b3aae59" name="Cessna C750" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12" wertValue="146000" fahrzeugTyp="Winged Plane"/>
       <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="16722101-c649-4e0e-9c50-06921808232c" name="Renault-Fiat Fokker Tundra-9" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Winged Plane"/>
       <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="03f6bce0-d961-4aa1-ace1-d617ab65c414" name="Ares Dragon" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Rotorcraft"/>
       <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="04a4e577-8fdb-4347-970c-76be7e0346a1" name="Nissan Hound" page="464" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Rotorcraft"/>
       <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="e766f323-56d7-4ada-afd4-df2567347b10" name="Northrup Wasp" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Rotorcraft"/>
       <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="408d98be-3e26-43f8-ab66-71bec26da002" name="Ares Venture" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="VTOL/VSTOL"/>
       <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="2921cc99-d625-4a13-b43f-09b011040303" name="GMC Banshee" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="VTOL/VSTOL"/>
-      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="2f8eac50-2794-4364-89b9-ae7b51b00a9e" name="Federated Boeing Commuter" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="VTOL/VSTOL"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="9305ccd7-d1e1-4c09-8827-ba0a19a46716" name="Shiawase Kanmushi" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Micro"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" name="Sikorsky-Bell Microskimmer" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Micro"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="1c17e7c0-8909-4e90-a96f-56c4dd62004f" name="Horizon Flying Eye" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Mini"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="49cc79e7-89c5-4a97-9405-11eb817bf97e" name="MCT Fly-Spy" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Mini"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="c83126b4-1b74-471e-9578-83b0ab451190" name="Aztechnology Crawler" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Small"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="4128d715-8bbd-4d08-92e8-71ff705763f4" name="Lockheed Optic-X2" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Small"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="a0e3a887-999e-4aeb-bdde-928af7c7e60e" name="Ares Duelist" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Medium"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="6ceca942-38bf-4042-8179-36836d6daffc" name="GM-Nissan Doberman" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Medium"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="b5f6f209-3601-4108-a7e3-b6b274dc7e5e" name="MCT-Nissan Roto-Drone" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Medium"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="01b548bc-6a75-4fae-af7c-008244c16904" name="Cyberspace Designs Dalmatian" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Large"/>
-      <entries xsi:type="shr5:Drohne" xmi:id="693a7423-0f31-4066-931c-84fd1261d4d5" name="Steel Lynx Combat Drone" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Large"/>
+      <entries xsi:type="shr5:PassagierFahrzeug" xmi:id="2f8eac50-2794-4364-89b9-ae7b51b00a9e" name="Federated Boeing Commuter" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="1000" fahrzeugTyp="VTOL/VSTOL"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="9305ccd7-d1e1-4c09-8827-ba0a19a46716" name="Shiawase Kanmushi" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" fahrzeugTyp="Drone: Micro"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" name="Sikorsky-Bell Microskimmer" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1000" fahrzeugTyp="Drone: Micro"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="1c17e7c0-8909-4e90-a96f-56c4dd62004f" name="Horizon Flying Eye" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2000" fahrzeugTyp="Drone: Mini"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="49cc79e7-89c5-4a97-9405-11eb817bf97e" name="MCT Fly-Spy" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2000" fahrzeugTyp="Drone: Mini"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="c83126b4-1b74-471e-9578-83b0ab451190" name="Aztechnology Crawler" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4" wertValue="4000" fahrzeugTyp="Drone: Small"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="4128d715-8bbd-4d08-92e8-71ff705763f4" name="Lockheed Optic-X2" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10" wertValue="21000" fahrzeugTyp="Drone: Small"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="a0e3a887-999e-4aeb-bdde-928af7c7e60e" name="Ares Duelist" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="4500" fahrzeugTyp="Drone: Medium"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="6ceca942-38bf-4042-8179-36836d6daffc" name="GM-Nissan Doberman" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="5000" fahrzeugTyp="Drone: Medium"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="b5f6f209-3601-4108-a7e3-b6b274dc7e5e" name="MCT-Nissan Roto-Drone" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="5000" fahrzeugTyp="Drone: Medium"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="01b548bc-6a75-4fae-af7c-008244c16904" name="Cyberspace Designs Dalmatian" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="10000" fahrzeugTyp="Drone: Large"/>
+      <entries xsi:type="shr5:Drohne" xmi:id="693a7423-0f31-4066-931c-84fd1261d4d5" name="Steel Lynx Combat Drone" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="25000" fahrzeugTyp="Drone: Large"/>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsNDYN0CEeOvVYoRsPZlnA" name="lifestyles">
       <entries xsi:type="shr5:Lifestyle" xmi:id="bf7be148-f387-4214-aa61-37237d3393fd" name="Street" page="95" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="">
@@ -11429,86 +11429,172 @@
         <configuration href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute3"/>
         <configuration href="http://urszeidler.de/shr5/1.0#//Cyberdeck/attribute4"/>
       </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="535f30c9-dabf-409f-a9b1-76441163855b" wertValue="80" name="Browse" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdEN0CEeOvVYoRsPZlnA" local="de" name="Schmöker"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="bbb95461-9cfe-4907-9b78-a47829b6cc3b" wertValue="80" name="Configurator" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdEd0CEeOvVYoRsPZlnA" local="de" name="Konfigurator"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="cc304ee9-9cd8-4db9-a926-b511b63bafd4" wertValue="80" name="Edit" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdEt0CEeOvVYoRsPZlnA" local="de" name="Editieren"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="93ea1bd8-ab88-4dd8-8b49-edcb6550e156" wertValue="80" name="Encrypt" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdE90CEeOvVYoRsPZlnA" local="de" name="Verschlüsselung"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="c606b7f1-10e8-4685-bacf-539dba0ba131" wertValue="80" name="Signal Scrub" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdFN0CEeOvVYoRsPZlnA" local="de" name="Signalreiniger"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="e5c2e040-1c5a-452f-a7c4-ef2489b14287" wertValue="80" name="Toolbox" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdFd0CEeOvVYoRsPZlnA" local="de" name="Toolbox"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="e5ef0c40-214d-40fc-b6c1-07d0f5fb0f53" wertValue="80" name="Virtual Machine" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-        <localizations xmi:id="_BzBdFt0CEeOvVYoRsPZlnA" local="de" name="Virtuelle Maschine"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="e868d12b-366f-4a7d-989d-8984137c2c20" verfuegbarkeit="6R" wertValue="250" name="Armor" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEIN0CEeOvVYoRsPZlnA" local="de" name="Panzerung"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="1381da94-fe3c-47f2-9ab2-07b8a0f934a3" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEId0CEeOvVYoRsPZlnA" local="de" name="Biofeedback-Filter"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="d7e84725-cc5c-425e-b29a-161ee7549fd0" verfuegbarkeit="6R" wertValue="250" name="Decryption" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEIt0CEeOvVYoRsPZlnA" local="de" name="Entschlüsselung"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="dd0fa65c-77b7-4fed-85ec-8ee1e67f73bd" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEI90CEeOvVYoRsPZlnA" local="de" name="Babymonitor"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="f67009e1-7c18-462b-b990-69c290857963" verfuegbarkeit="6R" wertValue="250" name="Defuse" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEJN0CEeOvVYoRsPZlnA" local="de" name="Splitterschutz"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="8f3b46f9-3002-484a-ad42-73a858758348" verfuegbarkeit="6R" wertValue="250" name="Demolition" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEJd0CEeOvVYoRsPZlnA" local="de" name="Superbombe"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="a5a697ac-32b6-4941-aa9f-823ff48d31ab" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCEJt0CEeOvVYoRsPZlnA" local="de" name="Biofeedback"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="9704d5a7-19d1-49f3-a749-d1555c083a8a" verfuegbarkeit="6R" wertValue="250" name="Blackout" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrMN0CEeOvVYoRsPZlnA" local="de" name="Blackout"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="a87c203d-2d74-420f-8fce-cd29a51d393b" verfuegbarkeit="6R" wertValue="250" name="Exploit" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrMd0CEeOvVYoRsPZlnA" local="de" name="Ausnutzen"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="f0298e6f-dc1c-498b-9f87-e4d552eeed06" verfuegbarkeit="6R" wertValue="250" name="Fork" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrMt0CEeOvVYoRsPZlnA" local="de" name="Gabel"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="3f61e4fe-b1ac-499a-9816-705d57051a09" verfuegbarkeit="6R" wertValue="250" name="Guard" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrM90CEeOvVYoRsPZlnA" local="de" name="Schild"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="ede3b36b-bc1c-4680-9ada-1220f2312d95" verfuegbarkeit="6R" wertValue="250" name="Hammer" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrNN0CEeOvVYoRsPZlnA" local="de" name="Hammer"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="cb35e2a4-13a2-41fb-b076-ba81cd33ad49" verfuegbarkeit="6R" wertValue="250" name="Lockdown" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrNd0CEeOvVYoRsPZlnA" local="de" name="Fessel"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="9c8d8cdc-ae03-4251-b27f-76e7569871b9" verfuegbarkeit="6R" wertValue="250" name="Mugger" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzCrNt0CEeOvVYoRsPZlnA" local="de" name="Überfall"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="59b54eba-38f6-4180-b572-be9b62fe8338" verfuegbarkeit="6R" wertValue="250" name="Shell" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzDSQN0CEeOvVYoRsPZlnA" local="de" name="Schutzschirm"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="ceddbea2-166a-4f3c-8588-de695fdff4e2" verfuegbarkeit="6R" wertValue="250" name="Sneak" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzDSQd0CEeOvVYoRsPZlnA" local="de" name="Irreführung"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="a89d9880-384f-4cc7-bf4d-e25b8994fa7a" verfuegbarkeit="6R" wertValue="250" name="Stealth" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzDSQt0CEeOvVYoRsPZlnA" local="de" name="Tarnkappe"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="3b5d21e7-15f7-4828-90db-2bc5aa4cdeda" verfuegbarkeit="6R" wertValue="250" name="Track" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzDSQ90CEeOvVYoRsPZlnA" local="de" name="Aufspüren"/>
-      </entries>
-      <entries xsi:type="shr5:CommonProgram" xmi:id="27fd8bc3-adcc-43a7-9f6b-92bf4b3187b9" verfuegbarkeit="6R" wertValue="250" name="Wrapper" page="246" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" programType="hackingProgram">
-        <localizations xmi:id="_BzDSRN0CEeOvVYoRsPZlnA" local="de" name="Verwandlung"/>
-      </entries>
       <entries xsi:type="shr5:Tutorsoft" xmi:id="e6e300e6-880d-42aa-b58b-00d656608c16" wertValue="400" name="Tutorsoft" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1"/>
       <entries xsi:type="shr5:SoftwareAgent" xmi:id="b0bca016-ee1f-430e-b568-a670f0386c8b" wertValue="1000" name="Agent" page="442" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1"/>
+    </entries>
+    <entries xsi:type="shr5:ShrList" xmi:id="_4uQO8N0XEeOr2LH4Zw5PzA" name="software">
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO8d0XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 1" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="1">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO8t0XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 2" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="2">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO890XEeOr2LH4Zw5PzA" wertValue="1000" name="Agent 3" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="3">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9N0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 4" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="4">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9d0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 5" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="5">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:SoftwareAgent" xmi:id="_4uQO9t0XEeOr2LH4Zw5PzA" wertValue="2000" name="Agent 6" parentId="b0bca016-ee1f-430e-b568-a670f0386c8b" page="442" rating="6">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO990XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 1 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="1">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
+      </entries>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-N0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 2 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="2">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
+      </entries>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-d0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 3 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="3">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
+      </entries>
+      <entries xsi:type="shr5:Tutorsoft" xmi:id="_4uQO-t0XEeOr2LH4Zw5PzA" wertValue="400" name="Tutorsoft 4 Locksmith" parentId="e6e300e6-880d-42aa-b58b-00d656608c16" page="442" rating="4">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#449c91bb-3647-4493-bd5d-058c336598e0"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO-90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Wrapper" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQO_N0XEeOr2LH4Zw5PzA" local="de" name="Verwandlung"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO_d0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Track" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQO_t0XEeOr2LH4Zw5PzA" local="de" name="Aufspüren"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQO_90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Stealth" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPAN0XEeOr2LH4Zw5PzA" local="de" name="Tarnkappe"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPAd0XEeOr2LH4Zw5PzA" wertValue="80" name="Browse" page="245">
+        <localizations xmi:id="_4uQPAt0XEeOr2LH4Zw5PzA" local="de" name="Schmöker"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPA90XEeOr2LH4Zw5PzA" wertValue="80" name="Configurator" page="245">
+        <localizations xmi:id="_4uQPBN0XEeOr2LH4Zw5PzA" local="de" name="Konfigurator"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPBd0XEeOr2LH4Zw5PzA" wertValue="80" name="Edit" page="245">
+        <localizations xmi:id="_4uQPBt0XEeOr2LH4Zw5PzA" local="de" name="Editieren"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPB90XEeOr2LH4Zw5PzA" wertValue="80" name="Encrypt" page="245">
+        <localizations xmi:id="_4uQPCN0XEeOr2LH4Zw5PzA" local="de" name="Verschlüsselung"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPCd0XEeOr2LH4Zw5PzA" wertValue="80" name="Signal Scrub" page="245">
+        <localizations xmi:id="_4uQPCt0XEeOr2LH4Zw5PzA" local="de" name="Signalreiniger"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPC90XEeOr2LH4Zw5PzA" wertValue="80" name="Toolbox" page="245">
+        <localizations xmi:id="_4uQPDN0XEeOr2LH4Zw5PzA" local="de" name="Toolbox"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPDd0XEeOr2LH4Zw5PzA" wertValue="80" name="Virtual Machine" page="245">
+        <localizations xmi:id="_4uQPDt0XEeOr2LH4Zw5PzA" local="de" name="Virtuelle Maschine"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPD90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Armor" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPEN0XEeOr2LH4Zw5PzA" local="de" name="Panzerung"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPEd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Biofeedback Filter" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPEt0XEeOr2LH4Zw5PzA" local="de" name="Biofeedback-Filter"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPE90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Decryption" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPFN0XEeOr2LH4Zw5PzA" local="de" name="Entschlüsselung"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPFd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Baby Monitor" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPFt0XEeOr2LH4Zw5PzA" local="de" name="Babymonitor"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPF90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Defuse" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPGN0XEeOr2LH4Zw5PzA" local="de" name="Splitterschutz"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPGd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Demolition" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPGt0XEeOr2LH4Zw5PzA" local="de" name="Superbombe"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPG90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Biofeedback" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPHN0XEeOr2LH4Zw5PzA" local="de" name="Biofeedback"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPHd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Blackout" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPHt0XEeOr2LH4Zw5PzA" local="de" name="Blackout"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPH90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Exploit" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPIN0XEeOr2LH4Zw5PzA" local="de" name="Ausnutzen"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPId0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Fork" page="245" programType="hackingProgram">
+        <localizations xmi:id="_4uQPIt0XEeOr2LH4Zw5PzA" local="de" name="Gabel"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPI90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Guard" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPJN0XEeOr2LH4Zw5PzA" local="de" name="Schild"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPJd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Hammer" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPJt0XEeOr2LH4Zw5PzA" local="de" name="Hammer"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPJ90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Lockdown" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPKN0XEeOr2LH4Zw5PzA" local="de" name="Fessel"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPKd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Mugger" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPKt0XEeOr2LH4Zw5PzA" local="de" name="Überfall"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPK90XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Shell" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPLN0XEeOr2LH4Zw5PzA" local="de" name="Schutzschirm"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:CommonProgram" xmi:id="_4uQPLd0XEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Sneak" page="246" programType="hackingProgram">
+        <localizations xmi:id="_4uQPLt0XEeOr2LH4Zw5PzA" local="de" name="Irreführung"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPL90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 6" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="6">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 5" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="5">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMd0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 4" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="4">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMt0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 3" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="3">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPM90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 2" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="2">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+      </entries>
+      <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPNN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 1" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" rating="1">
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
@@ -12015,9 +12101,18 @@
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_OOjlIN0MEeOQ4-2yeaetCA" name="Middle" parentId="25e7fe19-0dc2-4d2b-b134-035259ea321a" page="95" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000">
           <localizations xmi:id="_OOjlId0MEeOQ4-2yeaetCA" local="de" name="Mittelschicht"/>
         </contracts>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_LUUBkN0MEeOQ4-2yeaetCA" name="MCT-Nissan Roto-Drone" parentId="b5f6f209-3601-4108-a7e3-b6b274dc7e5e" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Medium"/>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_LU8TsN0MEeOQ4-2yeaetCA" name="Ares Duelist" parentId="a0e3a887-999e-4aeb-bdde-928af7c7e60e" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Medium"/>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_LVoQMN0MEeOQ4-2yeaetCA" name="GM-Nissan Doberman" parentId="6ceca942-38bf-4042-8179-36836d6daffc" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" fahrzeugTyp="Drone: Medium"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_jGx6wN0YEeOr2LH4Zw5PzA" name="Shiawase Kanmushi" parentId="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" fahrzeugTyp="Drone: Micro">
+          <storedPrograms xsi:type="shr5:CommonProgram" xmi:id="_n2ZEgN0YEeOr2LH4Zw5PzA" verfuegbarkeit="6R" wertValue="250" name="Hammer" parentId="_4uQPJd0XEeOr2LH4Zw5PzA" page="246" programType="hackingProgram">
+            <localizations xmi:id="_n2ZEgd0YEeOr2LH4Zw5PzA" local="de" name="Hammer"/>
+            <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+          </storedPrograms>
+          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_n2a5sN0YEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 6" parentId="_4uQPL90XEeOr2LH4Zw5PzA" page="446" rating="6">
+            <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+            <skill href="#132783c1-780e-4021-875c-c8763e729e2d"/>
+          </storedPrograms>
+        </vehicels>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_jHSREN0YEeOr2LH4Zw5PzA" name="Horizon Flying Eye" parentId="1c17e7c0-8909-4e90-a96f-56c4dd62004f" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2000" fahrzeugTyp="Drone: Mini"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_jH240N0YEeOr2LH4Zw5PzA" name="MCT Fly-Spy" parentId="49cc79e7-89c5-4a97-9405-11eb817bf97e" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2000" fahrzeugTyp="Drone: Mini"/>
       </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_XDf7oN0DEeOF8uJDTAKQmg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
