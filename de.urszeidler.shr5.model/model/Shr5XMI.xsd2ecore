@@ -137,12 +137,14 @@
     </nested>
     <nested inputs="shr5.ecore#//GeldWert" outputs="Shr5XMI.xsd#//GeldWert;XSDElementDeclaration=5"/>
     <nested inputs="shr5.ecore#//Reichweite" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6">
-      <nested inputs="shr5.ecore#//Reichweite/min" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse"/>
-      <nested inputs="shr5.ecore#//Reichweite/kurz" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=1"/>
-      <nested inputs="shr5.ecore#//Reichweite/mittel" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=2"/>
-      <nested inputs="shr5.ecore#//Reichweite/weit" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=3"/>
-      <nested inputs="shr5.ecore#//Reichweite/extrem" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//Reichweite/min" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Reichweite/kurz" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Reichweite/mittel" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Reichweite/weit" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//Reichweite/extrem" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse=5"/>
     </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Reichweite;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Reichweite" outputs="Shr5XMI.xsd#//Reichweite;XSDElementDeclaration=6"/>
     <nested inputs="shr5.ecore#//AttributModifikatorWert" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7">
       <nested inputs="shr5.ecore#//AttributModifikatorWert/wert" outputs="Shr5XMI.xsd#//AttributModifikatorWert;XSDComplexTypeDefinition=7/XSDAttributeUse=1"/>

@@ -23,7 +23,7 @@ package de.urszeidler.eclipse.shr5;
  * @model
  * @generated
  */
-public interface Reichweite extends Beschreibbar {
+public interface Reichweite extends Beschreibbar, Identifiable {
 	/**
      * Returns the value of the '<em><b>Min</b></em>' attribute.
      * <!-- begin-user-doc -->

@@ -2,13 +2,21 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Localization;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,6 +28,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getMin <em>Min</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getKurz <em>Kurz</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ReichweiteImpl#getMittel <em>Mittel</em>}</li>
@@ -92,6 +102,36 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
 	protected String name = NAME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected static final String PARENT_ID_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParentId()
+     * @generated
+     * @ordered
+     */
+    protected String parentId = PARENT_ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLocalizations()
+     * @generated
+     * @ordered
+     */
+    protected EList<Localization> localizations;
+
+    /**
      * The default value of the '{@link #getMin() <em>Min</em>}' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -232,6 +272,39 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getParentId() {
+        return parentId;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setParentId(String newParentId) {
+        String oldParentId = parentId;
+        parentId = newParentId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.REICHWEITE__PARENT_ID, oldParentId, parentId));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Localization> getLocalizations() {
+        if (localizations == null) {
+            localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.REICHWEITE__LOCALIZATIONS);
+        }
+        return localizations;
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -380,6 +453,20 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case Shr5Package.REICHWEITE__LOCALIZATIONS:
+                return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -392,6 +479,10 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
                 return getImage();
             case Shr5Package.REICHWEITE__NAME:
                 return getName();
+            case Shr5Package.REICHWEITE__PARENT_ID:
+                return getParentId();
+            case Shr5Package.REICHWEITE__LOCALIZATIONS:
+                return getLocalizations();
             case Shr5Package.REICHWEITE__MIN:
                 return getMin();
             case Shr5Package.REICHWEITE__KURZ:
@@ -411,7 +502,8 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
 	 * <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5Package.REICHWEITE__BESCHREIBUNG:
@@ -422,6 +514,13 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
                 return;
             case Shr5Package.REICHWEITE__NAME:
                 setName((String)newValue);
+                return;
+            case Shr5Package.REICHWEITE__PARENT_ID:
+                setParentId((String)newValue);
+                return;
+            case Shr5Package.REICHWEITE__LOCALIZATIONS:
+                getLocalizations().clear();
+                getLocalizations().addAll((Collection<? extends Localization>)newValue);
                 return;
             case Shr5Package.REICHWEITE__MIN:
                 setMin((Integer)newValue);
@@ -459,6 +558,12 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
             case Shr5Package.REICHWEITE__NAME:
                 setName(NAME_EDEFAULT);
                 return;
+            case Shr5Package.REICHWEITE__PARENT_ID:
+                setParentId(PARENT_ID_EDEFAULT);
+                return;
+            case Shr5Package.REICHWEITE__LOCALIZATIONS:
+                getLocalizations().clear();
+                return;
             case Shr5Package.REICHWEITE__MIN:
                 setMin(MIN_EDEFAULT);
                 return;
@@ -492,6 +597,10 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
                 return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
             case Shr5Package.REICHWEITE__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case Shr5Package.REICHWEITE__PARENT_ID:
+                return PARENT_ID_EDEFAULT == null ? parentId != null : !PARENT_ID_EDEFAULT.equals(parentId);
+            case Shr5Package.REICHWEITE__LOCALIZATIONS:
+                return localizations != null && !localizations.isEmpty();
             case Shr5Package.REICHWEITE__MIN:
                 return min != MIN_EDEFAULT;
             case Shr5Package.REICHWEITE__KURZ:
@@ -508,6 +617,40 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.REICHWEITE__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.REICHWEITE__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
+                default: return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == Identifiable.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.REICHWEITE__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.REICHWEITE__LOCALIZATIONS;
+                default: return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -522,6 +665,8 @@ public class ReichweiteImpl extends MinimalEObjectImpl.Container implements Reic
         result.append(image);
         result.append(", name: ");
         result.append(name);
+        result.append(", parentId: ");
+        result.append(parentId);
         result.append(", min: ");
         result.append(min);
         result.append(", kurz: ");

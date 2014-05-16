@@ -82,7 +82,7 @@
     <eLiterals name="SM" value="2"/>
     <eLiterals name="AM" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Reichweite" eSuperTypes="#//Beschreibbar">
+  <eClassifiers xsi:type="ecore:EClass" name="Reichweite" eSuperTypes="#//Beschreibbar #//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kurz" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mittel" lowerBound="1"

@@ -5452,6 +5452,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         abstraktPersonaEClass.getESuperTypes().add(this.getChrakterLimits());
         gegenstandEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         reichweiteEClass.getESuperTypes().add(this.getBeschreibbar());
+        reichweiteEClass.getESuperTypes().add(this.getIdentifiable());
         koerperlicheAttributeEClass.getESuperTypes().add(this.getModifikatorAttribute());
         spezielleAttributeEClass.getESuperTypes().add(this.getModifikatorAttribute());
         abstraktGegenstandEClass.getESuperTypes().add(this.getQuelle());

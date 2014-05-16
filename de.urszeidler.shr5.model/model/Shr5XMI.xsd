@@ -236,6 +236,10 @@
   <xsd:complexType name="Reichweite">
     <xsd:complexContent>
       <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="min" type="xsd:int" use="required"/>
         <xsd:attribute name="kurz" type="xsd:int" use="required"/>
         <xsd:attribute name="mittel" type="xsd:int" use="required"/>

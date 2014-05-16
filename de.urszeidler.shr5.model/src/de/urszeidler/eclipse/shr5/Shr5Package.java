@@ -1803,13 +1803,31 @@ public interface Shr5Package extends EPackage {
 	int REICHWEITE__NAME = BESCHREIBBAR__NAME;
 
     /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int REICHWEITE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int REICHWEITE__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Min</b></em>' attribute.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int REICHWEITE__MIN = BESCHREIBBAR_FEATURE_COUNT + 0;
+	int REICHWEITE__MIN = BESCHREIBBAR_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Kurz</b></em>' attribute.
@@ -1818,7 +1836,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int REICHWEITE__KURZ = BESCHREIBBAR_FEATURE_COUNT + 1;
+	int REICHWEITE__KURZ = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Mittel</b></em>' attribute.
@@ -1827,7 +1845,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int REICHWEITE__MITTEL = BESCHREIBBAR_FEATURE_COUNT + 2;
+	int REICHWEITE__MITTEL = BESCHREIBBAR_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Weit</b></em>' attribute.
@@ -1836,7 +1854,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int REICHWEITE__WEIT = BESCHREIBBAR_FEATURE_COUNT + 3;
+	int REICHWEITE__WEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Extrem</b></em>' attribute.
@@ -1845,7 +1863,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int REICHWEITE__EXTREM = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int REICHWEITE__EXTREM = BESCHREIBBAR_FEATURE_COUNT + 6;
 
     /**
      * The number of structural features of the '<em>Reichweite</em>' class.
@@ -1854,7 +1872,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int REICHWEITE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
+	int REICHWEITE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
      * The number of operations of the '<em>Reichweite</em>' class.

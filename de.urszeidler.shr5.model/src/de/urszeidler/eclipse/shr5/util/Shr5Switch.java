@@ -121,6 +121,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 Reichweite reichweite = (Reichweite)theEObject;
                 T result = caseReichweite(reichweite);
                 if (result == null) result = caseBeschreibbar(reichweite);
+                if (result == null) result = caseIdentifiable(reichweite);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
