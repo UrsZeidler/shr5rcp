@@ -1326,7 +1326,7 @@ public class PersonaPrinter extends BasicPrinter {
                 printFernkampWaffeDetail(fw);
 
                 grid.add(new TextPrint(itemDelegator.getText(fw), attributeFont), 2);
-                grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+                grid.add(new TextPrint(printString(fw.getSchadenscode()), attributeFont));
                 grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
                 grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
                 if (fw instanceof Feuerwaffe) {
@@ -1383,7 +1383,7 @@ public class PersonaPrinter extends BasicPrinter {
                 grid1.add(new LinePrint(SWT.HORIZONTAL), GridPrint.REMAINDER);
 
                 grid1.add(new TextPrint(toName(fw), attributeFont), 2);
-                grid1.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+                grid1.add(new TextPrint(printString(fw.getSchadenscode()), attributeFont));
                 grid1.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
                 grid1.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
                 grid1.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
@@ -1418,7 +1418,7 @@ public class PersonaPrinter extends BasicPrinter {
         } else
             innerGrid.add(new EmptyPrint(), GridPrint.REMAINDER);
 
-        innerGrid.add(new TextPrint(fernkampfwaffe.getSchadenscode(), attributeFont));
+        innerGrid.add(new TextPrint(printString(fernkampfwaffe.getSchadenscode()), attributeFont));
         innerGrid.add(new TextPrint(fernkampfwaffe.getPraezision() + EMPTY, attributeFont));
         innerGrid.add(new TextPrint(fernkampfwaffe.getDurchschlagsKraft() + EMPTY, attributeFont));
         if (fernkampfwaffe instanceof Feuerwaffe) {
@@ -1483,11 +1483,11 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(Messages.Printer_muni, italicFontData));
         grid.add(new TextPrint(Messages.Printer_addons, italicFontData), 2);
 
-        grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
-        grid.add(new TextPrint(fw.getPraezision() + EMPTY, attributeFont));
-        grid.add(new TextPrint(fw.getDurchschlagsKraft() + EMPTY, attributeFont));
-        grid.add(new TextPrint(fw.getModie().toString(), attributeFont));
-        grid.add(new TextPrint(fw.getRueckstoss() + EMPTY, attributeFont));
+        grid.add(new TextPrint(printString(fw.getSchadenscode()), attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
+        grid.add(new TextPrint( fw.getModie().toString(), attributeFont));
+        grid.add(new TextPrint(printInteger(fw.getRueckstoss()), attributeFont));
         grid.add(new TextPrint(fw.getKapazitaet() + fw.getMunitionstyp().getLiteral(), attributeFont));
         grid.add(new TextPrint(toFWAddon(fw.getEinbau()), attributeFont), 2);
 
@@ -1558,7 +1558,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(EMPTY, italicFontData));
         grid.add(new TextPrint(Messages.Printer_addons, italicFontData), 2);
 
-        grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+        grid.add(new TextPrint(printString(fw.getSchadenscode()), attributeFont));
         grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
         grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
         grid.add(new TextPrint(EMPTY, attributeFont));
@@ -1631,7 +1631,7 @@ public class PersonaPrinter extends BasicPrinter {
 
                 grid.add(new TextPrint(itemDelegator.getText(fw), attributeFont), 2);
                 grid.add(new TextPrint(printInteger(fw.getReichweite()), attributeFont));
-                grid.add(new TextPrint(fw.getSchadenscode(), attributeFont));
+                grid.add(new TextPrint(printString(fw.getSchadenscode()), attributeFont));
                 grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
                 grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
             }
@@ -1864,7 +1864,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         String simpleName = toSimpleName(pfertigkeit.getFertigkeit());
         if (!pfertigkeit.getSpezialisierungen().isEmpty())
-            simpleName = simpleName + ONE_SPACE + pfertigkeit.getSpezialisierungen().toString();
+            simpleName = simpleName + ONE_SPACE + toName(pfertigkeit.getSpezialisierungen());//.toString();
         return simpleName;
     }
 

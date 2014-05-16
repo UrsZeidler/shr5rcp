@@ -357,7 +357,7 @@ public class ShadowrunTools {
             return -1;
 
         Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
-        if (fertigkeit != null) {
+        if (fertigkeit != null && fertigkeit.getAttribut()!=null) {
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
             Integer fertigkeitValue = personaFertigkeit.getStufe();
             if (fertigkeitValue == 0)
