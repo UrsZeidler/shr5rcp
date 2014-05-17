@@ -130,16 +130,24 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
 		public void notifyChanged(Notification notification) {
 		    super.notifyChanged(notification);
 		    
+		    Object notifier = notification.getNotifier();
+		    if(notifier==CharacterGeneratorImpl.this)
+		        return;
 			if (notification.getEventType() == Notification.REMOVING_ADAPTER)
 				return;
 			Object feature = notification.getFeature();
-			if (Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA.equals(feature)) {
-				if (getCharacter().getPersona() != null)
-					if (!getCharacter().getPersona().eAdapters().contains(adapter))
-						getCharacter().getPersona().eAdapters().add(adapter);
-				return;
-			}
-
+			
+//			if (Shr5managementPackage.Literals.MANAGED_CHARACTER__PERSONA.equals(feature)) {
+//				if (getCharacter().getPersona() != null)
+//					if (!getCharacter().getPersona().eAdapters().contains(adapter))
+//						getCharacter().getPersona().eAdapters().add(adapter);
+//				return;
+//			}
+			if(Shr5managementPackage.Literals.MANAGED_CHARACTER__CHRACTER_SOURCE.equals(feature)
+			   || Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC.equals(feature)
+			        )
+			    return;
+			
 			EList<EAttribute> eAllAttributes = eClass().getEAllAttributes();
 			for (EAttribute attribute : eAllAttributes) {
 				if (attribute != null)
