@@ -27,7 +27,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
-import org.eclipse.swt.widgets.Label;
 
 /**
  * Manages {@link Gegenstand} and {@link Kleidung}, {@link Credstick} and {@link Munition}.
@@ -130,20 +129,17 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
 
         createFormBuilder(managedForm);
 
+        grpGegenstand.setText(labelProvider.getText(object.eClass()));
         if (object instanceof Gegenstand) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.GEGENSTAND));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEGENSTAND__KATEGORIE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.GEGENSTAND__STUFE, grpGegenstand);
         } else if (object instanceof Kleidung) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.KLEIDUNG));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KLEIDUNG__RUESTUNG, grpGegenstand);
         } else if (object instanceof Credstick) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.CREDSTICK));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__MAX_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__CURRENT_VALUE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, grpGegenstand);
         } else if (object instanceof Munition) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.MUNITION));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__ANZAHL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MENGE__PRO_ANZAHL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__TYPE, grpGegenstand);
@@ -151,7 +147,6 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__DAMAGE_TYPE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MUNITION__ARMOR_MOD, grpGegenstand);
         } else if (object instanceof Cyberdeck) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.CYBERDECK));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE1, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE2, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__ATTRIBUTE3, grpGegenstand);
@@ -162,14 +157,12 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS, composite_Additional);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CYBERDECK__RUNNING_PROGRAMS, composite_Additional);
         } else if (object instanceof RiggerCommandConsole) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS, composite_Additional);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, composite_Additional);            
         } else if (object instanceof Commlink) {
-            grpGegenstand.setText(labelProvider.getText(Shr5Package.Literals.COMMLINK));
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
         }

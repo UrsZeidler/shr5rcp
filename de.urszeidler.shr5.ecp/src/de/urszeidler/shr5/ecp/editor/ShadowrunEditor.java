@@ -226,22 +226,9 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     return objectList;
                 }
 
-                //
-                //
-                //
-                //
-                //
-                // PersonaZauber personaFertigkeit = Shr5Factory.eINSTANCE.createPersonaZauber();
-                // ReferenceValueDialog dialog = new ReferenceValueDialog(getSite().getShell(), personaFertigkeit,
-                // Shr5Package.Literals.PERSONA_ZAUBER__FORMEL, Shr5Package.Literals.PERSONA_ZAUBER__STUFE, objectsOfType.toArray());
-                //
-                // if (dialog.open() == Dialog.OK)
-                // return personaFertigkeit;
-                // else
-                // return null;
-
             } else if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS.equals(e.getFeature())
-                    || Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())) {
+                    || Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER.equals(e.getFeature())
+                    || Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG.equals(e.getFeature())) {
                 EClass eClass = (EClass)e.getFeature().getEType();// .eClass();
                 EObject eObject = eClass.getEPackage().getEFactoryInstance().create(eClass); // Shr5managementFactory.eINSTANCE.createConnection();
                 GenericEObjectDialog dialog = new GenericEObjectDialog(getSite().getShell(), eObject, itemDelegator, this, this);
@@ -251,11 +238,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 else
                     return null;
             }
-            // else
-            // if (Shr5managementPackage.Literals.MANAGED_CHARACTER__CHANGES.equals(e.getFeature())) {
-            // Collection<EClass> filteredEClasses = provideNewClassTypes(object, e.getFeature());
-            //
-            // }
 
             return defaultCreationDialog(e, object);
         }
@@ -282,23 +264,6 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             }
 
             return null;
-
-            // final SelectionComposite<TreeViewer> helper = CompositeFactory.getSelectModelClassComposite(Collections.EMPTY_SET,
-            // Collections.EMPTY_SET,
-            // filteredEClasses);
-            //
-            //            SelectModelElementWizard w = new SelectModelElementWizard(EMPTY, EMPTY, EMPTY, Messages.ShadowrunEditor_dlg_select_object_type); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-            // w.setCompositeProvider(helper);
-            // final WizardDialog wd = new WizardDialog(getSite().getShell(), w);
-            //
-            // final int wizardResult = wd.open();
-            // if (wizardResult == Window.OK) {
-            // Object[] selection = helper.getSelection();
-            // EClass eClass = (EClass)selection[0];
-            // return eClass.getEPackage().getEFactoryInstance().create(eClass);
-            // // return Shr5Factory.eINSTANCE.create(eClass);
-            // }
-            // return null;
         }
     };
 
