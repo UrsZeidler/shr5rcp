@@ -5,12 +5,12 @@ package de.urszeidler.eclipse.shr5.impl;
 
 import java.math.BigDecimal;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->

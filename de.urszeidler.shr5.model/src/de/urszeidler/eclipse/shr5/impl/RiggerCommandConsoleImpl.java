@@ -3,11 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.InterfaceModus;
-import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
-import de.urszeidler.eclipse.shr5.MatrixAttributes;
-import de.urszeidler.eclipse.shr5.MatrixDevice;
-import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
+import java.math.BigDecimal;
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -19,13 +16,15 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import de.urszeidler.eclipse.shr5.InterfaceModus;
+import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
+import de.urszeidler.eclipse.shr5.MatrixAttributes;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.RiggerProgram;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
-
-import java.math.BigDecimal;
-import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->

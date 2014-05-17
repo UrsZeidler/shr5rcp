@@ -3,10 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.MatrixDevice;
-import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
-import de.urszeidler.eclipse.shr5.Shr5Package;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -16,6 +14,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import de.urszeidler.eclipse.shr5.MatrixDevice;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 
 /**
  * <!-- begin-user-doc -->
