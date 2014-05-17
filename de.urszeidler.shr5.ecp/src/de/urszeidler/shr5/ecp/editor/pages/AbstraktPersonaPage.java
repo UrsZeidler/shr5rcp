@@ -5,6 +5,9 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.ChangeEvent;
+import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -55,6 +58,14 @@ import de.urszeidler.shr5.ecp.editor.widgets.PersonaUIToolkit;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.ui.forms.events.IExpansionListener;
+import org.eclipse.ui.forms.events.ExpansionEvent;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.swt.widgets.Button;
+
 public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private AbstraktPersona object = Shr5Factory.eINSTANCE.createMysticAdept();
     private ManagedCharacter character;
@@ -63,6 +74,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private DataBindingContext m_bindingContext;
     private Composite compositeEigenschaften;
     private Composite compositeWares;
+    
+    private WritableValue filter = new WritableValue("", String.class);
 
     private ReferenceManager karmaBaseManager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
 
@@ -114,6 +127,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             return null;
         }
     };
+    private Text text;
 
     /**
      * Create the form page.
@@ -152,10 +166,11 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
      */
     @Override
     protected void createFormContent(IManagedForm managedForm) {
+
         FormToolkit toolkit = managedForm.getToolkit();
-        ScrolledForm form = managedForm.getForm();
+        final ScrolledForm form = managedForm.getForm();
         form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
-        Composite body = form.getBody();
+        final Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         body.setLayout(new GridLayout(1, false));
@@ -241,14 +256,47 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         toolkit.paintBordersFor(compositelimits);
         sctnLimits.setClient(compositelimits);
 
-        Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
+        final Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
         composite_1.setLayout(new FillLayout(SWT.HORIZONTAL));
-        GridData gd_composite_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
-        gd_composite_1.heightHint = 200;
+        final GridData gd_composite_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+        gd_composite_1.heightHint = 350;
         composite_1.setLayoutData(gd_composite_1);
         managedForm.getToolkit().paintBordersFor(composite_1);
 
         Section sctnSkill = managedForm.getToolkit().createSection(composite_1, Section.TWISTIE | Section.TITLE_BAR);
+        sctnSkill.addExpansionListener(new IExpansionListener() {
+            public void expansionStateChanged(ExpansionEvent e) {
+                if(e.getState()){
+                    gd_composite_1.heightHint = 350;
+                    form.reflow(true);
+                    //body.layout(true);
+                }else{
+                    gd_composite_1.heightHint = 30;
+                   // body.layout(true); 
+                    form.reflow(true);
+                }                    
+            }
+            public void expansionStateChanging(ExpansionEvent e) {
+            }
+        });
+        Composite composite_2 = managedForm.getToolkit().createComposite(sctnSkill, SWT.NONE);
+        sctnSkill.setDescriptionControl(composite_2);
+        composite_2.setLayout(new GridLayout(3, false));
+        
+        Label lblFilter = managedForm.getToolkit().createLabel(composite_2,Messages.AbstraktPersonaPage_lblFilter_text, SWT.NONE);
+        lblFilter.setLayoutData(new GridData(SWT.CENTER, SWT.TOP, false, false, 1, 1));
+        managedForm.getToolkit().adapt(lblFilter, true, true);
+        
+        text = managedForm.getToolkit().createText(composite_2, "",SWT.BORDER);
+        text.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        Button button = managedForm.getToolkit().createButton(composite_2, "c", SWT.PUSH);
+        button.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                filter.setValue("");
+            }
+        });
+
         managedForm.getToolkit().paintBordersFor(sctnSkill);
         sctnSkill.setText(Messages.AbstraktPersonaPage_Fertigkeiten);
         sctnSkill.setExpanded(true);
@@ -259,6 +307,16 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         } else {
             personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, character, toolkit, editingDomain);
         }
+        filter.addChangeListener(new IChangeListener() {           
+            @Override
+            public void handleChange(ChangeEvent event) {
+                personaFertigkeitenWidget.setStringFilter((String)filter.getValue());
+                
+            }
+        });
+//      GridData gd_composite_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+//      gd_composite_1.heightHint = 200;
+
         // final PersonaFertigkeitenWidget = p;
 
         sctnSkill.setClient(personaFertigkeitenWidget);
@@ -411,14 +469,16 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
     }
 
-    protected DataBindingContext initDataBindings() {
-        DataBindingContext bindingContext = new DataBindingContext();
-        //
-        return bindingContext;
-    }
-
     @Override
     protected EditingDomain getEditingDomain() {
         return editingDomain;
+    }
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        IObservableValue observeTextTextObserveWidget = WidgetProperties.text(SWT.Modify).observeDelayed(500, text);
+        bindingContext.bindValue(observeTextTextObserveWidget, filter, null, null);
+        //
+        return bindingContext;
     }
 }

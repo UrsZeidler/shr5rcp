@@ -123,6 +123,8 @@ public class Messages extends NLS {
 
     public static String AttributModifikatorWertWidget_mod_attribute;
     public static String AttributModifikatorWertWidget_mod_rating;
+    public static String AbstraktPersonaPage_lblFilter_text;
+    public static String AbstraktPersonaPage_text_text;
 
     static {
         // initialize resource bundle

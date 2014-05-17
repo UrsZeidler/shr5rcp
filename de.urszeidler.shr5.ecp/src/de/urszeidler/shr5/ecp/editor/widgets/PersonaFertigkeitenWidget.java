@@ -27,6 +27,7 @@ import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ColumnPixelData;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ITreeContentProvider;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.Viewer;
@@ -187,6 +188,7 @@ public class PersonaFertigkeitenWidget extends Composite {
     private IObservableList personaFertigkeitsGruppen;
     private boolean karmaMode = false;
     private boolean filterOnlyPersona;
+    private String stringFilter;
 
     /**
      * Create the composite.
@@ -223,7 +225,7 @@ public class PersonaFertigkeitenWidget extends Composite {
 
         CharacterGenerator chracterSource = character2.getChracterSource();
         if (chracterSource instanceof Shr5KarmaGenerator) {
-            //Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
+            // Shr5KarmaGenerator skg = (Shr5KarmaGenerator)chracterSource;
             karmaMode = true;
         }
 
@@ -314,9 +316,21 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         };
 
-        treeViewer.setFilters(new ViewerFilter[]{ filter, filterOnlyPersonaFilter
+        ViewerFilter nameFilter = new ViewerFilter() {
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+                if (element instanceof Fertigkeit)
+                    if (stringFilter != null && !stringFilter.isEmpty()) {
+                        LabelProvider labelProvider = AdapterFactoryUtil.getInstance().getLabelProvider();
+                        String name = labelProvider.getText(element);
+                        if (!name.contains(stringFilter))
+                            return false;
+                    }
+                return true;
+            }
+        };
 
-        });
+        treeViewer.setFilters(new ViewerFilter[]{ filter, filterOnlyPersonaFilter, nameFilter});
         final Tree tree = treeViewer.getTree();
         tree.setHeaderVisible(true);
         tree.setLinesVisible(true);
@@ -421,7 +435,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                     Fertigkeit fertigkeit = (Fertigkeit)element;
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
                     if (personaFertigkeit != null) {
-                        
+
                         Command command = AddCommand.create(editingDomain, personaFertigkeit,
                                 Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, value);
                         editingDomain.getCommandStack().execute(command);
@@ -615,5 +629,11 @@ public class PersonaFertigkeitenWidget extends Composite {
             FertigkeitsGruppe fg = (FertigkeitsGruppe)element;
             ShadowrunEditingTools.changeFertigkeitsGruppeByAdvacement(character, fg, (Integer)value);
         }
+    }
+
+    public void setStringFilter(String stringFilter) {
+        this.stringFilter = stringFilter;
+        treeViewer.refresh();
+        treeViewer.expandToLevel(2);
     }
 }
