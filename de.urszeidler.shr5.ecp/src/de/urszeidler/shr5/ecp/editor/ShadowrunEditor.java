@@ -294,7 +294,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseSpezies(Spezies object) {
                 try {
-                    addPage(new SpeziesPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_species, object, editingDomain, manager));
+                    addPage(new SpeziesPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating SpeziesPage", e);//$NON-NLS-1$
                 }
@@ -304,7 +304,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFertigkeitsGruppe(FertigkeitsGruppe object) {
                 try {
-                    addPage(new FertigkeitPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_skill_group, object, editingDomain, manager));
+                    addPage(new FertigkeitPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
@@ -314,7 +314,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFertigkeit(Fertigkeit object) {
                 try {
-                    addPage(new FertigkeitPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_skill, object, editingDomain, manager));
+                    addPage(new FertigkeitPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
@@ -324,7 +324,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseReichweite(Reichweite object) {
                 try {
-                    addPage(new ReichweitePage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_range, object, editingDomain, manager));
+                    addPage(new ReichweitePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ReichweitePage", e);//$NON-NLS-1$
                 }
@@ -409,7 +409,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseGegenstand(Gegenstand object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_item, object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
@@ -419,7 +419,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseKleidung(Kleidung object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_armor, object, editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
@@ -429,7 +429,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseNahkampfwaffe(Nahkampfwaffe object) {
                 try {
-                    addPage(new NahkampwaffePage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_meeleweapon, object, editingDomain,
+                    addPage(new NahkampwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
                             manager));
                 } catch (PartInitException e) {
                     logError("error creating NahkampwaffePage", e);//$NON-NLS-1$
@@ -440,7 +440,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseFeuerwaffe(Feuerwaffe object) {
                 try {
-                    addPage(new FeuerwaffePage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_fireweapon, object, editingDomain, manager));
+                    addPage(new FeuerwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FeuerwaffePage", e);//$NON-NLS-1$
                 }
@@ -462,7 +462,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseAbstraktPersona(AbstraktPersona object) {
                 try {
-                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_persona, object, editingDomain,
+                    addPage(new AbstraktPersonaPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
                             manager));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
@@ -473,7 +473,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseProjektilwaffe(Projektilwaffe object) {
                 try {
-                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_projectileweapon, object,
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
                             editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating FernkampfwaffePage", e);//$NON-NLS-1$
@@ -484,7 +484,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseWurfwaffe(Wurfwaffe object) {
                 try {
-                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, Messages.ShadowrunEditor_page_throwingweapon, object, editingDomain,
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
                             manager));
                 } catch (PartInitException e) {
                     logError("error creating FernkampfwaffePage", e);//$NON-NLS-1$
