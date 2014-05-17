@@ -44,7 +44,10 @@
         <localizations xmi:id="_BmPlUd0CEeOvVYoRsPZlnA" local="de" name="Mensch"/>
         <angriff xmi:id="_BmPlUN0CEeOvVYoRsPZlnA" name="unarmed" schadenscode="(STR)P"/>
       </entries>
-      <entries xsi:type="shr5:Spezies" xmi:id="cf34895a-35cc-4be8-812b-5c715952a93f" name="Elf" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="3" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="6" charismaMax="8" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+      <entries xsi:type="shr5:Spezies" xmi:id="cf34895a-35cc-4be8-812b-5c715952a93f" image="/shr5Resource/images/elf.png" name="Elf" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" konstitutionMin="1" geschicklichkeitMin="2" reaktionMin="1" staerkeMin="1" charismaMin="3" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="6" geschicklichkeitMax="7" reaktionMax="6" staerkeMax="6" charismaMax="8" willenskraftMax="6" intuitionMax="6" logikMax="6" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+        <mods xmi:id="_vNWoYN2DEeOclqlLvReNwg">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/restlichtverstaerkung"/>
+        </mods>
         <localizations xmi:id="_BmQMYd0CEeOvVYoRsPZlnA" local="de" name="Elf"/>
         <angriff xmi:id="_BmQMYN0CEeOvVYoRsPZlnA" name="unarmed" schadenscode="(STR)P"/>
       </entries>
@@ -52,11 +55,11 @@
         <localizations xmi:id="_BmQzcd0CEeOvVYoRsPZlnA" local="de" name="Zwerg"/>
         <angriff xmi:id="_BmQzcN0CEeOvVYoRsPZlnA" name="unarmed" schadenscode="(STR)P"/>
       </entries>
-      <entries xsi:type="shr5:Spezies" xmi:id="67472729-321e-4e00-96ab-8914a9e276a3" name="Ork" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" konstitutionMin="4" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="3" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="9" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="8" charismaMax="5" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
+      <entries xsi:type="shr5:Spezies" xmi:id="67472729-321e-4e00-96ab-8914a9e276a3" image="/shr5Resource/images/orc.png" name="Ork" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" konstitutionMin="4" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="3" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="9" geschicklichkeitMax="6" reaktionMax="6" staerkeMax="8" charismaMax="5" willenskraftMax="6" intuitionMax="6" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="2">
         <localizations xmi:id="_BmQzc90CEeOvVYoRsPZlnA" local="de" name="Ork"/>
         <angriff xmi:id="_BmQzct0CEeOvVYoRsPZlnA" name="unarmed" schadenscode="(STR)P"/>
       </entries>
-      <entries xsi:type="shr5:Spezies" xmi:id="4824c829-52c1-4a6f-b6b0-9d47269028b6" name="Troll" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" konstitutionMin="5" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="10" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="10" charismaMax="4" willenskraftMax="6" intuitionMax="5" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
+      <entries xsi:type="shr5:Spezies" xmi:id="4824c829-52c1-4a6f-b6b0-9d47269028b6" image="/shr5Resource/images/rob.png" name="Troll" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" konstitutionMin="5" geschicklichkeitMin="1" reaktionMin="1" staerkeMin="5" charismaMin="1" willenskraftMin="1" intuitionMin="1" logikMin="1" edgeMin="1" resonanzMin="1" konstitutionMax="10" geschicklichkeitMax="5" reaktionMax="6" staerkeMax="10" charismaMax="4" willenskraftMax="6" intuitionMax="5" logikMax="5" edgeMax="6" resonanzMax="6" essenzMax="6" laufen="2" rennen="4" sprinten="1">
         <mods xmi:id="_BmdAsN0CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
         </mods>
@@ -2212,22 +2215,22 @@
       <entries xsi:type="shr5:Gegenstand" xmi:id="400d9169-d162-4afe-9087-325d6117f679" page="424" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="25" name="Throwing: Throwing Knife" kategorie="Ammunition">
         <localizations xmi:id="_BokgkN0CEeOvVYoRsPZlnA" local="de" name="Wurfwaffe: Wurfmesser"/>
       </entries>
-      <entries xsi:type="shr5:Munition" xmi:id="1474be5e-ba93-4b61-afde-28b57c7e72e3" page="423" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating" name="Ammo: Arrow" anzahl="1" proAnzahl="1">
+      <entries xsi:type="shr5:Munition" xmi:id="1474be5e-ba93-4b61-afde-28b57c7e72e3" page="423" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating" name="Arrow" anzahl="1" proAnzahl="1">
         <localizations xmi:id="_BolHoN0CEeOvVYoRsPZlnA" local="de" name="Munition: Pfeil"/>
       </entries>
-      <entries xsi:type="shr5:Munition" xmi:id="d9a78b03-0a07-407b-b89b-ec36ba198420" page="424" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating+2)R" name="Ammo: Injection Arrow" anzahl="1" proAnzahl="1">
+      <entries xsi:type="shr5:Munition" xmi:id="d9a78b03-0a07-407b-b89b-ec36ba198420" page="424" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating+2)R" name="Injection Arrow" anzahl="1" proAnzahl="1">
         <localizations xmi:id="_BolHod0CEeOvVYoRsPZlnA" local="de" name="Munition: Injektionspfeil"/>
       </entries>
-      <entries xsi:type="shr5:Munition" xmi:id="a97be7a2-7318-4c81-9e9a-9f34fbcce77b" page="423" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="5" name="Ammo: Bolt" anzahl="1" proAnzahl="1">
+      <entries xsi:type="shr5:Munition" xmi:id="a97be7a2-7318-4c81-9e9a-9f34fbcce77b" page="423" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="5" name="Bolt" anzahl="1" proAnzahl="1">
         <localizations xmi:id="_BolusN0CEeOvVYoRsPZlnA" local="de" name="Munition: Bolzen"/>
       </entries>
-      <entries xsi:type="shr5:Munition" xmi:id="c45e867e-fecd-42d9-bd38-b7342e1a5591" page="424" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="50" name="Ammo: Injection Bolt" anzahl="1" proAnzahl="1">
+      <entries xsi:type="shr5:Munition" xmi:id="c45e867e-fecd-42d9-bd38-b7342e1a5591" page="424" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="50" name="Injection Bolt" anzahl="1" proAnzahl="1">
         <localizations xmi:id="_Bolusd0CEeOvVYoRsPZlnA" local="de" name="Munition: Injektionsbolzen"/>
       </entries>
-      <entries xsi:type="shr5:Munition" xmi:id="7bcb23dd-c2df-4b50-b095-ba62c131ee86" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+      <entries xsi:type="shr5:Munition" xmi:id="7bcb23dd-c2df-4b50-b095-ba62c131ee86" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="120" name="APDS" anzahl="10" proAnzahl="10" armorMod="-4">
         <localizations xmi:id="_Bolust0CEeOvVYoRsPZlnA" local="de" name="Munition: APDS"/>
       </entries>
-      <entries xsi:type="shr5:Munition" xmi:id="e9b91961-66e7-41ef-b29f-9c490e34c806" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="400" name="Ammo: Assault Cannon" anzahl="10" proAnzahl="10">
+      <entries xsi:type="shr5:Munition" xmi:id="e9b91961-66e7-41ef-b29f-9c490e34c806" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="400" name="Assault Cannon" anzahl="10" proAnzahl="10">
         <localizations xmi:id="_BomVwN0CEeOvVYoRsPZlnA" local="de" name="Munition: Sturmkanonenmunition"/>
       </entries>
       <entries xsi:type="shr5:Munition" xmi:id="774393f0-40a0-4332-9d7d-9d749750b10b" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="9F" wertValue="80" name="Ammo: Explosive Rounds" anzahl="10" proAnzahl="10" damageMod="1" armorMod="-1">
@@ -3125,17 +3128,17 @@
         </mods>
         <localizations xmi:id="_BqDuUd0CEeOvVYoRsPZlnA" local="de" name="Interner Lufttank"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" name="Muscle Replacement" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating*5)R">
-        <mods xmi:id="_BqDuUt0CEeOvVYoRsPZlnA">
+      <entries xsi:type="shr5:Cyberware" xmi:id="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" name="Muscle Replacement 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="25000">
+        <mods xmi:id="_BqDuUt0CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
         </mods>
-        <mods xmi:id="_BqDuU90CEeOvVYoRsPZlnA">
+        <mods xmi:id="_BqDuU90CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
         </mods>
-        <mods xmi:id="_BqDuVN0CEeOvVYoRsPZlnA">
+        <mods xmi:id="_BqDuVN0CEeOvVYoRsPZlnA" wert="-100">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
-        <localizations xmi:id="_BqDuVd0CEeOvVYoRsPZlnA" local="de" name="Kunstmuskeln"/>
+        <localizations xmi:id="_BqDuVd0CEeOvVYoRsPZlnA" local="de" name="Kunstmuskeln 1"/>
       </entries>
       <entries xsi:type="shr5:Cyberware" xmi:id="ac91cc72-44ca-44f0-a108-0f98d3ae95f1" name="Reaction Enhancers" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating*5)R">
         <mods xmi:id="_BqEVYN0CEeOvVYoRsPZlnA">
@@ -3181,13 +3184,13 @@
         </mods>
         <localizations xmi:id="_BqIm0d0CEeOvVYoRsPZlnA" local="de" name="Kampfsinn 1"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" parentId="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" name="Combat Sense 2" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+      <entries xsi:type="shr5:KiKraft" xmi:id="_luZQEN2CEeOclqlLvReNwg" name="Combat Sense 2" parentId="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
         <mods xmi:id="_Hh3eIN0hEeOyU4dHL4W7Ow" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
         </mods>
         <localizations xmi:id="_BqIm0d0CEeOvVYoRsPZlnA" local="de" name="Kampfsinn 2"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" parentId="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" name="Combat Sense 3" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-150">
+      <entries xsi:type="shr5:KiKraft" xmi:id="_luZQEd2CEeOclqlLvReNwg" name="Combat Sense 3" parentId="8400e5e3-7e9e-4e25-b3ba-e2c326edda1a" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-150">
         <mods xmi:id="_Hh3eIN0hEeOyU4dHL4W7Ow" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
         </mods>
@@ -3215,31 +3218,31 @@
         <localizations xmi:id="_BqJ08N0CEeOvVYoRsPZlnA" local="de" name="Erhöhtes Potenzial"/>
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="a76f7321-c213-47ca-b4fb-4fe10aed8fff" name="Improved Reflexes 1" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-150">
-        <mods xmi:id="_BqJ08d0CEeOvVYoRsPZlnA" wert="1">
+        <mods xmi:id="_luaeMN2CEeOclqlLvReNwg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
         </mods>
-        <mods xmi:id="_BqJ08t0CEeOvVYoRsPZlnA" wert="1">
+        <mods xmi:id="_luaeMd2CEeOclqlLvReNwg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
         <localizations xmi:id="_BqJ0890CEeOvVYoRsPZlnA" local="de" name="Gesteigerte Reflexe 1"/>
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="495f2c47-2353-4694-b0a1-3c8c72674d22" name="Improved Reflexes 2" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-250">
-        <mods xmi:id="_BqJ09N0CEeOvVYoRsPZlnA" wert="2">
+        <mods xmi:id="_lubFQN2CEeOclqlLvReNwg" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
         </mods>
-        <mods xmi:id="_BqKcAN0CEeOvVYoRsPZlnA" wert="2">
+        <mods xmi:id="_lubFQd2CEeOclqlLvReNwg" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
-        <localizations xmi:id="_BqKcAd0CEeOvVYoRsPZlnA" local="de" name="Gesteigerte Reflexe 2"/>
+        <localizations xmi:id="_lubFQt2CEeOclqlLvReNwg" local="de" name="Gesteigerte Reflexe 2"/>
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="83aec042-8616-4a49-8893-9374d9da805e" name="Improved Reflexes 3" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-350">
-        <mods xmi:id="_BqKcAt0CEeOvVYoRsPZlnA" wert="3">
+        <mods xmi:id="_lubFQ92CEeOclqlLvReNwg" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
         </mods>
-        <mods xmi:id="_BqKcA90CEeOvVYoRsPZlnA" wert="3">
+        <mods xmi:id="_lubFRN2CEeOclqlLvReNwg" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
-        <localizations xmi:id="_BqKcBN0CEeOvVYoRsPZlnA" local="de" name="Gesteigerte Reflexe 3"/>
+        <localizations xmi:id="_lubFRd2CEeOclqlLvReNwg" local="de" name="Gesteigerte Reflexe 3"/>
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="cd3a6637-7988-4808-a783-7e1db3d7e98b" name="Improved Sense" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-25">
         <localizations xmi:id="_BqKcBd0CEeOvVYoRsPZlnA" local="de" name="Geschäfter Sinn"/>
@@ -3256,11 +3259,29 @@
       <entries xsi:type="shr5:KiKraft" xmi:id="c572c25b-16be-4da0-a99e-d192383b5ca2" name="Missile Parry" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-25">
         <localizations xmi:id="_BqLDE90CEeOvVYoRsPZlnA" local="de" name="Geschossparade"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" xmi:id="07129b0d-c725-470d-8f24-649c65429a93" name="Mystic Armor 1" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
-        <mods xmi:id="_BqLqIN0CEeOvVYoRsPZlnA" wert="1">
+      <entries xsi:type="shr5:KiKraft" xmi:id="_lucTYN2CEeOclqlLvReNwg" name="Mystic Armor 1" parentId="07129b0d-c725-470d-8f24-649c65429a93" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
+        <mods xmi:id="_lucTYd2CEeOclqlLvReNwg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
         </mods>
-        <localizations xmi:id="_BqLqId0CEeOvVYoRsPZlnA" local="de" name="Mystischer Panzer"/>
+        <localizations xmi:id="_lucTYt2CEeOclqlLvReNwg" local="de" name="Mystischer Panzer 1"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_lucTY92CEeOclqlLvReNwg" name="Mystic Armor 2" parentId="07129b0d-c725-470d-8f24-649c65429a93" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_lucTZN2CEeOclqlLvReNwg" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+        </mods>
+        <localizations xmi:id="_lucTZd2CEeOclqlLvReNwg" local="de" name="Mystischer Panzer 2"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_lucTZt2CEeOclqlLvReNwg" name="Mystic Armor 3" parentId="07129b0d-c725-470d-8f24-649c65429a93" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-150">
+        <mods xmi:id="_lucTZ92CEeOclqlLvReNwg" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+        </mods>
+        <localizations xmi:id="_luc6cN2CEeOclqlLvReNwg" local="de" name="Mystischer Panzer 3"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_luc6cd2CEeOclqlLvReNwg" name="Mystic Armor 4" parentId="07129b0d-c725-470d-8f24-649c65429a93" page="310" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-200">
+        <mods xmi:id="_luc6ct2CEeOclqlLvReNwg" wert="4">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+        </mods>
+        <localizations xmi:id="_luc6c92CEeOclqlLvReNwg" local="de" name="Mystischer Panzer 4"/>
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="287116e2-5b51-4480-81eb-43b815c10378" name="Natural Immunity" page="311" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-25">
         <localizations xmi:id="_BqLqIt0CEeOvVYoRsPZlnA" local="de" name="Natürliche Immunität"/>
@@ -3282,6 +3303,30 @@
       </entries>
       <entries xsi:type="shr5:KiKraft" xmi:id="286812a0-f887-43d3-9e00-7c7a7820ab08" name="Wall Running" page="311" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-50">
         <localizations xmi:id="_BqNfUN0CEeOvVYoRsPZlnA" local="de" name="Wandlaufen"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_3tzb8N2CEeOclqlLvReNwg" name="Improved Body Attribute 1 " page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_93vOoN2CEeOclqlLvReNwg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
+        </mods>
+        <localizations xmi:id="_3tzb8d2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_4OcD0N2CEeOclqlLvReNwg" name="Improved Agi Attribute" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_IsGJEN2DEeOclqlLvReNwg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <localizations xmi:id="_4OcD0d2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_4zRPMN2CEeOclqlLvReNwg" name="Improved Rea Attribute" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_Kdi4kN2DEeOclqlLvReNwg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </mods>
+        <localizations xmi:id="_4zRPMd2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_5R7hIN2CEeOclqlLvReNwg" name="Improved Str Attribute" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_L_41EN2DEeOclqlLvReNwg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <localizations xmi:id="_5R7hId2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BqNfUd0CEeOvVYoRsPZlnA" name="armors">
@@ -4116,6 +4161,7 @@
         <lifestyleToStartMoney xmi:id="_BtQMQt0CEeOvVYoRsPZlnA" numberOfW="4" moneyFactor="100" lifeStyles="25e7fe19-0dc2-4d2b-b134-035259ea321a"/>
         <lifestyleToStartMoney xmi:id="_BtQMQ90CEeOvVYoRsPZlnA" numberOfW="5" moneyFactor="500" lifeStyles="141d339c-d514-44e6-aab4-94768e68cac3"/>
         <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="43141722-bea8-496f-bdd6-4e4e858e1269"/>
+        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" source="3fc49185-8737-4501-8c7b-6d54f7846fac" targets="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54 88d6c54c-0eed-4c2a-9e97-9fd811dffd8d"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="7"/>
