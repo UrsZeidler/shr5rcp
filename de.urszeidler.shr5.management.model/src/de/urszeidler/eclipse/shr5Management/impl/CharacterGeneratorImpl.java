@@ -224,8 +224,8 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
 		}
 		if (newCharacter != null) {
 			newCharacter.eAdapters().add(adapter);
-			if (newCharacter.getPersona() != null)
-				newCharacter.getPersona().eAdapters().add(adapter);
+//			if (newCharacter.getPersona() != null)
+//				newCharacter.getPersona().eAdapters().add(adapter);
 		}
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
