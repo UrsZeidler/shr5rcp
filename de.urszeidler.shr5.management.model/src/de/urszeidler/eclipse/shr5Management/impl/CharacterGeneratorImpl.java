@@ -129,6 +129,8 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
 //		}
 
 		public void notifyChanged(Notification notification) {
+		    super.notifyChanged(notification);
+		    
 			if (notification.getEventType() == Notification.REMOVING_ADAPTER)
 				return;
 			Object feature = notification.getFeature();
