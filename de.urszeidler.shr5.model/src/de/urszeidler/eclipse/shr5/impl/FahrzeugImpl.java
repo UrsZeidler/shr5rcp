@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -38,99 +39,106 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschreibung <em>Beschreibung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getImage <em>Image</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getParentId <em>Parent Id</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getLocalizations <em>Localizations</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPage <em>Page</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSrcBook <em>Src Book</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWert <em>Wert</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getRumpf <em>Rumpf</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPilot <em>Pilot</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensor <em>Sensor</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getImage <em>Image</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getName <em>Name</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getParentId <em>Parent Id</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getLocalizations <em>Localizations</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPage <em>Page</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSrcBook <em>Src Book</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWert <em>Wert</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getRumpf <em>Rumpf</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPilot <em>Pilot</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensor <em>Sensor</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implements Fahrzeug {
-	/**
+    /**
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
      */
-	protected static final String BESCHREIBUNG_EDEFAULT = null;
+    protected static final String BESCHREIBUNG_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
      */
-	protected String beschreibung = BESCHREIBUNG_EDEFAULT;
+    protected String beschreibung = BESCHREIBUNG_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getImage()
      * @generated
      * @ordered
      */
-	protected static final String IMAGE_EDEFAULT = null;
+    protected static final String IMAGE_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getImage()
      * @generated
      * @ordered
      */
-	protected String image = IMAGE_EDEFAULT;
+    protected String image = IMAGE_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getName()
      * @generated
      * @ordered
      */
-	protected static final String NAME_EDEFAULT = null;
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getName()
      * @generated
      * @ordered
      */
-	protected String name = NAME_EDEFAULT;
+    protected String name = NAME_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -141,6 +149,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -151,6 +160,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getLocalizations()
      * @generated
      * @ordered
@@ -160,67 +170,74 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getPage()
      * @generated
      * @ordered
      */
-	protected static final String PAGE_EDEFAULT = null;
+    protected static final String PAGE_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getPage()
      * @generated
      * @ordered
      */
-	protected String page = PAGE_EDEFAULT;
+    protected String page = PAGE_EDEFAULT;
 
-	/**
+    /**
      * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getSrcBook()
      * @generated
      * @ordered
      */
-	protected SourceBook srcBook;
+    protected SourceBook srcBook;
 
-	/**
+    /**
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getWert()
      * @generated
      * @ordered
      */
-	protected static final BigDecimal WERT_EDEFAULT = null;
+    protected static final BigDecimal WERT_EDEFAULT = null;
 
-	/**
+    /**
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
      */
-	protected static final String VERFUEGBARKEIT_EDEFAULT = null;
+    protected static final String VERFUEGBARKEIT_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
      */
-	protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
+    protected String verfuegbarkeit = VERFUEGBARKEIT_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -231,6 +248,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -240,17 +258,19 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * The cached value of the '{@link #getFertigkeit() <em>Fertigkeit</em>}' reference.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getFertigkeit()
      * @generated
      * @ordered
      */
-	protected Fertigkeit fertigkeit;
+    protected Fertigkeit fertigkeit;
 
-	/**
+    /**
      * The cached value of the '{@link #getMods() <em>Mods</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getMods()
      * @generated
      * @ordered
@@ -261,6 +281,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getZustandMax() <em>Zustand Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getZustandMax()
      * @generated
      * @ordered
@@ -270,157 +291,173 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * The default value of the '{@link #getHandling() <em>Handling</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getHandling()
      * @generated
      * @ordered
      */
-	protected static final int HANDLING_EDEFAULT = 0;
+    protected static final int HANDLING_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getHandling() <em>Handling</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getHandling()
      * @generated
      * @ordered
      */
-	protected int handling = HANDLING_EDEFAULT;
+    protected int handling = HANDLING_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getGeschwindigkeit() <em>Geschwindigkeit</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getGeschwindigkeit()
      * @generated
      * @ordered
      */
-	protected static final int GESCHWINDIGKEIT_EDEFAULT = 0;
+    protected static final int GESCHWINDIGKEIT_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getGeschwindigkeit() <em>Geschwindigkeit</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getGeschwindigkeit()
      * @generated
      * @ordered
      */
-	protected int geschwindigkeit = GESCHWINDIGKEIT_EDEFAULT;
+    protected int geschwindigkeit = GESCHWINDIGKEIT_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getBeschleunigung() <em>Beschleunigung</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getBeschleunigung()
      * @generated
      * @ordered
      */
-	protected static final int BESCHLEUNIGUNG_EDEFAULT = 0;
+    protected static final int BESCHLEUNIGUNG_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getBeschleunigung() <em>Beschleunigung</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getBeschleunigung()
      * @generated
      * @ordered
      */
-	protected int beschleunigung = BESCHLEUNIGUNG_EDEFAULT;
+    protected int beschleunigung = BESCHLEUNIGUNG_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getRumpf() <em>Rumpf</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getRumpf()
      * @generated
      * @ordered
      */
-	protected static final int RUMPF_EDEFAULT = 0;
+    protected static final int RUMPF_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getRumpf() <em>Rumpf</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getRumpf()
      * @generated
      * @ordered
      */
-	protected int rumpf = RUMPF_EDEFAULT;
+    protected int rumpf = RUMPF_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getPilot() <em>Pilot</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getPilot()
      * @generated
      * @ordered
      */
-	protected static final int PILOT_EDEFAULT = 0;
+    protected static final int PILOT_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getPilot() <em>Pilot</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getPilot()
      * @generated
      * @ordered
      */
-	protected int pilot = PILOT_EDEFAULT;
+    protected int pilot = PILOT_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getSensor() <em>Sensor</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getSensor()
      * @generated
      * @ordered
      */
-	protected static final int SENSOR_EDEFAULT = 0;
+    protected static final int SENSOR_EDEFAULT = 0;
 
-	/**
+    /**
      * The cached value of the '{@link #getSensor() <em>Sensor</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getSensor()
      * @generated
      * @ordered
      */
-	protected int sensor = SENSOR_EDEFAULT;
+    protected int sensor = SENSOR_EDEFAULT;
 
-	/**
+    /**
      * The default value of the '{@link #getFahrzeugTyp() <em>Fahrzeug Typ</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getFahrzeugTyp()
      * @generated
      * @ordered
      */
-	protected static final String FAHRZEUG_TYP_EDEFAULT = null;
+    protected static final String FAHRZEUG_TYP_EDEFAULT = null;
 
-	/**
+    /**
      * The cached value of the '{@link #getFahrzeugTyp() <em>Fahrzeug Typ</em>}' attribute.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getFahrzeugTyp()
      * @generated
      * @ordered
      */
-	protected String fahrzeugTyp = FAHRZEUG_TYP_EDEFAULT;
+    protected String fahrzeugTyp = FAHRZEUG_TYP_EDEFAULT;
 
-	/**
+    /**
      * The cached value of the '{@link #getModifizierungen() <em>Modifizierungen</em>}' containment reference list.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @see #getModifizierungen()
      * @generated
      * @ordered
      */
-	protected EList<FahrzeugModifikation> modifizierungen;
+    protected EList<FahrzeugModifikation> modifizierungen;
 
-	/**
+    /**
      * The default value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getPanzer()
      * @generated
      * @ordered
@@ -431,16 +468,20 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getPanzer()
      * @generated
      * @ordered
      */
     protected int panzer = PANZER_EDEFAULT;
 
+    private EContentAdapter eContentAdapter;
+
     /**
      * The default value of the '{@link #getWeaponMounts() <em>Weapon Mounts</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getWeaponMounts()
      * @generated
      * @ordered
@@ -449,47 +490,66 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
+     * <!-- end-user-doc -->
+     * 
+     * @generated not
      */
-	protected FahrzeugImpl() {
+    protected FahrzeugImpl() {
         super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(feature) || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(feature))
+                    FahrzeugImpl.this.eNotify(new ENotificationImpl(FahrzeugImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	protected EClass eStaticClass() {
+    @Override
+    protected EClass eStaticClass() {
         return Shr5Package.Literals.FAHRZEUG;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getName() {
+    public String getName() {
         return name;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setName(String newName) {
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__NAME, oldName, name));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getParentId() {
@@ -499,6 +559,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setParentId(String newParentId) {
@@ -511,6 +572,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<Localization> getLocalizations() {
@@ -522,73 +584,80 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getBeschreibung() {
+    public String getBeschreibung() {
         return beschreibung;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__BESCHREIBUNG, oldBeschreibung, beschreibung));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getImage() {
+    public String getImage() {
         return image;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setImage(String newImage) {
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__IMAGE, oldImage, image));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getPage() {
+    public String getPage() {
         return page;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setPage(String newPage) {
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__PAGE, oldPage, page));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public SourceBook getSrcBook() {
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -600,64 +669,70 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return srcBook;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public SourceBook basicGetSrcBook() {
+    public SourceBook basicGetSrcBook() {
         return srcBook;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__SRC_BOOK, oldSrcBook, srcBook));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated not
      */
-	public BigDecimal getWert() {
+    public BigDecimal getWert() {
         if (getWertValue() == null)
             return null;
 
         BigDecimal listenWert = ShadowrunTools.calcListenWert(getModifizierungen());
-       return getWertValue().add(listenWert);
+        return getWertValue().add(listenWert);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getVerfuegbarkeit() {
+    public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setVerfuegbarkeit(String newVerfuegbarkeit) {
+    public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__VERFUEGBARKEIT, oldVerfuegbarkeit, verfuegbarkeit));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public BigDecimal getWertValue() {
@@ -667,22 +742,25 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
-        if (eNotificationRequired()){
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__WERT_VALUE, oldWertValue, wertValue));
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__WERT, oldWertValue, wertValue));
-        } }
+        }
+    }
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public Fertigkeit getFertigkeit() {
+    public Fertigkeit getFertigkeit() {
         if (fertigkeit != null && fertigkeit.eIsProxy()) {
             InternalEObject oldFertigkeit = (InternalEObject)fertigkeit;
             fertigkeit = (Fertigkeit)eResolveProxy(oldFertigkeit);
@@ -694,35 +772,39 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return fertigkeit;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public Fertigkeit basicGetFertigkeit() {
+    public Fertigkeit basicGetFertigkeit() {
         return fertigkeit;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setFertigkeit(Fertigkeit newFertigkeit) {
+    public void setFertigkeit(Fertigkeit newFertigkeit) {
         Fertigkeit oldFertigkeit = fertigkeit;
         fertigkeit = newFertigkeit;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__FERTIGKEIT, oldFertigkeit, fertigkeit));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
-            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
+            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS,
+                    Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
         }
         return mods;
     }
@@ -730,174 +812,192 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getZustandMax() {
-        return 12 + (getRumpf()/2);
+        return 12 + (getRumpf() / 2);
     }
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getHandling() {
+    public int getHandling() {
         return handling;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setHandling(int newHandling) {
+    public void setHandling(int newHandling) {
         int oldHandling = handling;
         handling = newHandling;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__HANDLING, oldHandling, handling));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getGeschwindigkeit() {
+    public int getGeschwindigkeit() {
         return geschwindigkeit;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setGeschwindigkeit(int newGeschwindigkeit) {
+    public void setGeschwindigkeit(int newGeschwindigkeit) {
         int oldGeschwindigkeit = geschwindigkeit;
         geschwindigkeit = newGeschwindigkeit;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__GESCHWINDIGKEIT, oldGeschwindigkeit, geschwindigkeit));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getBeschleunigung() {
+    public int getBeschleunigung() {
         return beschleunigung;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setBeschleunigung(int newBeschleunigung) {
+    public void setBeschleunigung(int newBeschleunigung) {
         int oldBeschleunigung = beschleunigung;
         beschleunigung = newBeschleunigung;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__BESCHLEUNIGUNG, oldBeschleunigung, beschleunigung));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getRumpf() {
+    public int getRumpf() {
         return rumpf;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setRumpf(int newRumpf) {
+    public void setRumpf(int newRumpf) {
         int oldRumpf = rumpf;
         rumpf = newRumpf;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__RUMPF, oldRumpf, rumpf));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getPilot() {
+    public int getPilot() {
         return pilot;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setPilot(int newPilot) {
+    public void setPilot(int newPilot) {
         int oldPilot = pilot;
         pilot = newPilot;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__PILOT, oldPilot, pilot));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public int getSensor() {
+    public int getSensor() {
         return sensor;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setSensor(int newSensor) {
+    public void setSensor(int newSensor) {
         int oldSensor = sensor;
         sensor = newSensor;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__SENSOR, oldSensor, sensor));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public String getFahrzeugTyp() {
+    public String getFahrzeugTyp() {
         return fahrzeugTyp;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setFahrzeugTyp(String newFahrzeugTyp) {
+    public void setFahrzeugTyp(String newFahrzeugTyp) {
         String oldFahrzeugTyp = fahrzeugTyp;
         fahrzeugTyp = newFahrzeugTyp;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__FAHRZEUG_TYP, oldFahrzeugTyp, fahrzeugTyp));
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public EList<FahrzeugModifikation> getModifizierungen() {
+    public EList<FahrzeugModifikation> getModifizierungen() {
         if (modifizierungen == null) {
-            modifizierungen = new EObjectContainmentEList<FahrzeugModifikation>(FahrzeugModifikation.class, this, Shr5Package.FAHRZEUG__MODIFIZIERUNGEN);
+            modifizierungen = new EObjectContainmentEList<FahrzeugModifikation>(FahrzeugModifikation.class, this,
+                    Shr5Package.FAHRZEUG__MODIFIZIERUNGEN);
         }
         return modifizierungen;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getPanzer() {
@@ -907,6 +1007,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setPanzer(int newPanzer) {
@@ -919,15 +1020,17 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getWeaponMounts() {
-        return getRumpf()/3;
+        return getRumpf() / 3;
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -942,11 +1045,12 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
 
     /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case Shr5Package.FAHRZEUG__LOCALIZATIONS:
                 return ((InternalEList<?>)getLocalizations()).basicRemove(otherEnd, msgs);
@@ -958,13 +1062,14 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5Package.FAHRZEUG__BESCHREIBUNG:
                 return getBeschreibung();
@@ -979,7 +1084,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__PAGE:
                 return getPage();
             case Shr5Package.FAHRZEUG__SRC_BOOK:
-                if (resolve) return getSrcBook();
+                if (resolve)
+                    return getSrcBook();
                 return basicGetSrcBook();
             case Shr5Package.FAHRZEUG__WERT:
                 return getWert();
@@ -988,7 +1094,8 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__WERT_VALUE:
                 return getWertValue();
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
-                if (resolve) return getFertigkeit();
+                if (resolve)
+                    return getFertigkeit();
                 return basicGetFertigkeit();
             case Shr5Package.FAHRZEUG__MODS:
                 return getMods();
@@ -1018,14 +1125,15 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return super.eGet(featureID, resolve, coreType);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5Package.FAHRZEUG__BESCHREIBUNG:
                 setBeschreibung((String)newValue);
@@ -1094,13 +1202,14 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         super.eSet(featureID, newValue);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public void eUnset(int featureID) {
+    @Override
+    public void eUnset(int featureID) {
         switch (featureID) {
             case Shr5Package.FAHRZEUG__BESCHREIBUNG:
                 setBeschreibung(BESCHREIBUNG_EDEFAULT);
@@ -1166,13 +1275,14 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         super.eUnset(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean eIsSet(int featureID) {
+    @Override
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
             case Shr5Package.FAHRZEUG__BESCHREIBUNG:
                 return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
@@ -1224,114 +1334,150 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return super.eIsSet(featureID);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
-                case Shr5Package.FAHRZEUG__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
-                default: return -1;
+                case Shr5Package.FAHRZEUG__PARENT_ID:
+                    return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.FAHRZEUG__LOCALIZATIONS:
+                    return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
+                default:
+                    return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__PAGE: return Shr5Package.QUELLE__PAGE;
-                case Shr5Package.FAHRZEUG__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
-                default: return -1;
+                case Shr5Package.FAHRZEUG__PAGE:
+                    return Shr5Package.QUELLE__PAGE;
+                case Shr5Package.FAHRZEUG__SRC_BOOK:
+                    return Shr5Package.QUELLE__SRC_BOOK;
+                default:
+                    return -1;
             }
         }
         if (baseClass == GeldWert.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__WERT: return Shr5Package.GELD_WERT__WERT;
-                case Shr5Package.FAHRZEUG__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-                case Shr5Package.FAHRZEUG__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
-                default: return -1;
+                case Shr5Package.FAHRZEUG__WERT:
+                    return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
+                    return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.FAHRZEUG__WERT_VALUE:
+                    return Shr5Package.GELD_WERT__WERT_VALUE;
+                default:
+                    return -1;
             }
         }
         if (baseClass == Anwendbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__FERTIGKEIT: return Shr5Package.ANWENDBAR__FERTIGKEIT;
-                default: return -1;
+                case Shr5Package.FAHRZEUG__FERTIGKEIT:
+                    return Shr5Package.ANWENDBAR__FERTIGKEIT;
+                default:
+                    return -1;
             }
         }
         if (baseClass == Modifizierbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
-                default: return -1;
+                case Shr5Package.FAHRZEUG__MODS:
+                    return Shr5Package.MODIFIZIERBAR__MODS;
+                default:
+                    return -1;
             }
         }
         if (baseClass == FahrzeugZustand.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__ZUSTAND_MAX: return Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX;
-                default: return -1;
+                case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
+                    return Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX;
+                default:
+                    return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
-                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.FAHRZEUG__PARENT_ID;
-                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.FAHRZEUG__LOCALIZATIONS;
-                default: return -1;
+                case Shr5Package.IDENTIFIABLE__PARENT_ID:
+                    return Shr5Package.FAHRZEUG__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS:
+                    return Shr5Package.FAHRZEUG__LOCALIZATIONS;
+                default:
+                    return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
-                case Shr5Package.QUELLE__PAGE: return Shr5Package.FAHRZEUG__PAGE;
-                case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.FAHRZEUG__SRC_BOOK;
-                default: return -1;
+                case Shr5Package.QUELLE__PAGE:
+                    return Shr5Package.FAHRZEUG__PAGE;
+                case Shr5Package.QUELLE__SRC_BOOK:
+                    return Shr5Package.FAHRZEUG__SRC_BOOK;
+                default:
+                    return -1;
             }
         }
         if (baseClass == GeldWert.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GELD_WERT__WERT: return Shr5Package.FAHRZEUG__WERT;
-                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.FAHRZEUG__VERFUEGBARKEIT;
-                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.FAHRZEUG__WERT_VALUE;
-                default: return -1;
+                case Shr5Package.GELD_WERT__WERT:
+                    return Shr5Package.FAHRZEUG__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT:
+                    return Shr5Package.FAHRZEUG__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE:
+                    return Shr5Package.FAHRZEUG__WERT_VALUE;
+                default:
+                    return -1;
             }
         }
         if (baseClass == Anwendbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ANWENDBAR__FERTIGKEIT: return Shr5Package.FAHRZEUG__FERTIGKEIT;
-                default: return -1;
+                case Shr5Package.ANWENDBAR__FERTIGKEIT:
+                    return Shr5Package.FAHRZEUG__FERTIGKEIT;
+                default:
+                    return -1;
             }
         }
         if (baseClass == Modifizierbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MODIFIZIERBAR__MODS: return Shr5Package.FAHRZEUG__MODS;
-                default: return -1;
+                case Shr5Package.MODIFIZIERBAR__MODS:
+                    return Shr5Package.FAHRZEUG__MODS;
+                default:
+                    return -1;
             }
         }
         if (baseClass == FahrzeugZustand.class) {
             switch (baseFeatureID) {
-                case Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX: return Shr5Package.FAHRZEUG__ZUSTAND_MAX;
-                default: return -1;
+                case Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX:
+                    return Shr5Package.FAHRZEUG__ZUSTAND_MAX;
+                default:
+                    return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public String toString() {
-        if (eIsProxy()) return super.toString();
+    @Override
+    public String toString() {
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (beschreibung: ");
@@ -1368,6 +1514,4 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         return result.toString();
     }
 
-	
-	
-} //FahrzeugImpl
+} // FahrzeugImpl

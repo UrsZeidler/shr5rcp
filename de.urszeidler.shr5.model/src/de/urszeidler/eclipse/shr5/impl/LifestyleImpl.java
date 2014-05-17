@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -61,14 +62,30 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * @ordered
      */
     protected boolean owned = OWNED_EDEFAULT;
+    private EContentAdapter eContentAdapter;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected LifestyleImpl() {
         super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(feature))
+                    LifestyleImpl.this
+                            .eNotify(new ENotificationImpl(LifestyleImpl.this, Notification.SET, Shr5Package.Literals.GELD_WERT__WERT, 1, 2));
+
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
     /**

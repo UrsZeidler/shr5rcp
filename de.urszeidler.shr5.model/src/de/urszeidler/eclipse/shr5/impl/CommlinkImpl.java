@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -136,14 +137,30 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * @ordered
      */
     protected EList<BasicProgram> storedPrograms;
+    private EContentAdapter eContentAdapter;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected CommlinkImpl() {
         super();
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.COMMLINK__STORED_PROGRAMS.equals(feature))
+                    CommlinkImpl.this
+                            .eNotify(new ENotificationImpl(CommlinkImpl.this, Notification.SET, Shr5Package.COMMLINK__WERT, 1, 2));
+
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
     /**

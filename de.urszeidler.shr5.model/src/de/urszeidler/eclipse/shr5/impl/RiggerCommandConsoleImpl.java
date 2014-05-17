@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -243,13 +244,31 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      */
     protected EList<RiggerProgram> runningPrograms;
 
+    private EContentAdapter eContentAdapter;
+
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     protected RiggerCommandConsoleImpl() {
         super();
+        
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS.equals(feature))
+                    RiggerCommandConsoleImpl.this
+                            .eNotify(new ENotificationImpl(RiggerCommandConsoleImpl.this, Notification.SET, Shr5Package.RIGGER_COMMAND_CONSOLE__WERT, 1, 2));
+
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
+
     }
 
     /**
