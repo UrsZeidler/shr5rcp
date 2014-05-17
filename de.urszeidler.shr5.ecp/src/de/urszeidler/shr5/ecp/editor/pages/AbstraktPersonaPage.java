@@ -75,7 +75,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private Composite compositeEigenschaften;
     private Composite compositeWares;
     
-    private WritableValue filter = new WritableValue("", String.class);
+    private WritableValue filter = new WritableValue("", String.class); //$NON-NLS-1$
 
     private ReferenceManager karmaBaseManager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
 
@@ -89,7 +89,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
                 return provideTransformedObject(object, transformer, displayName, zauber);
             } else if (Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN.equals(e.getFeature())) {
                 Transformer<EObject, EObject> transformer = ShadowrunEditingTools.copyTransformer();
-                String displayName = "Select quallities ...";
+                String displayName = Messages.AbstraktPersonaPage_dlg_select_quallities;
                 EClass quallity = Shr5Package.Literals.PERSONA_EIGENSCHAFT;
 
                 return provideTransformedObject(object, transformer, displayName, quallity);
@@ -343,7 +343,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
                 personaFertigkeitenWidget.setFilterOnlyPersona(filterOnlyPersonaSkillsToolItem.getSelection());
             }
         });
-        filterOnlyPersonaSkillsToolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif"));
+        filterOnlyPersonaSkillsToolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif")); //$NON-NLS-1$ //$NON-NLS-2$
 
         if (object instanceof KoerperPersona) {
             Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
@@ -365,7 +365,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             if(character!=null)
                 mananger2 = karmaBaseManager;
             
-            TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften, "Edges/Flaws", SWT.NONE, object,
+            TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften, Messages.AbstraktPersonaPage_sct_quallities, SWT.NONE, object,
                     Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit, mananger2, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
@@ -376,7 +376,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.adapt(compositeWares);
             toolkit.paintBordersFor(compositeWares);
 
-            TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(compositeWares, "Wares", SWT.NONE, object,
+            TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(compositeWares, Messages.AbstraktPersonaPage_sct_Augmentation, SWT.NONE, object,
                     Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, toolkit, mananger, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetInventar);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
@@ -416,7 +416,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
             
-            treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, "bound spirits", SWT.NONE, object,
+            treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_sct_bound_spririts, SWT.NONE, object,
                     Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
@@ -435,7 +435,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             if(character!=null)
                 mananger2 = karmaBaseManager;
 
-            TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, "Complex forms", SWT.NONE, object,
+            TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_sct_complex_forms, SWT.NONE, object,
                     Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger2, editingDomain);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);

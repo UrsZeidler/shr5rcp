@@ -7,6 +7,7 @@ public class Messages extends NLS {
     public static String AbstraktPersonaPage_Attribute;
     public static String AbstraktPersonaPage_Body;
     public static String AbstraktPersonaPage_Body_Attributes;
+    public static String AbstraktPersonaPage_dlg_select_quallities;
     public static String AbstraktPersonaPage_EdgesFlaws_CyberBioware;
     public static String AbstraktPersonaPage_Fertigkeiten;
     public static String AbstraktPersonaPage_KiPowers;
@@ -81,8 +82,13 @@ public class Messages extends NLS {
     public static String PersonaFertigkeitenWidget_knowlege_skill;
     public static String PersonaFertigkeitenWidget_language_skill;
     public static String PersonaFertigkeitenWidget_not_valid;
+    public static String PersonaFertigkeitenWidget_select_specialism;
     public static String PersonaFertigkeitenWidget_ungrouped_skills;
     public static String PersonaFertigkeitenWidget_value;
+    public static String AbstraktPersonaPage_sct_Augmentation;
+    public static String AbstraktPersonaPage_sct_bound_spririts;
+    public static String AbstraktPersonaPage_sct_complex_forms;
+    public static String AbstraktPersonaPage_sct_quallities;
     public static String AbstraktPersonaPage_sctnSkill_text;
     public static String PersonaFertigkeitenWidget_trclmnNewColumn_text;
     public static String PersonaFertigkeitenWidget_trclmnSpecs_text;

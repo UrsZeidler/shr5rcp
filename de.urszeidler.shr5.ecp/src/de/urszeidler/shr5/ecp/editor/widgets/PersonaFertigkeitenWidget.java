@@ -385,7 +385,7 @@ public class PersonaFertigkeitenWidget extends Composite {
                         protected Object openDialogBox(Control cellEditorWindow) {
                             FeatureEditorDialog featureEditorDialog = new FeatureEditorDialog(getShell(), AdapterFactoryUtil.getInstance()
                                     .getLabelProvider(), personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN,
-                                    "Select specialism", fertigkeit.getSpezialisierungen());
+                                    Messages.PersonaFertigkeitenWidget_select_specialism, fertigkeit.getSpezialisierungen());
                             int result = featureEditorDialog.open();
                             if (result == Window.OK) {
                                 EList<?> list = featureEditorDialog.getResult();
