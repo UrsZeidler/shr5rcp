@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -26,12 +27,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getMaxValue <em>Max Value</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getTransactionlog <em>Transactionlog</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getCurrentValue <em>Current Value</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getMaxValue <em>Max Value</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getTransactionlog <em>Transactionlog</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
@@ -39,6 +40,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * The default value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getMaxValue()
      * @generated
      * @ordered
@@ -49,6 +51,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * The cached value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getMaxValue()
      * @generated
      * @ordered
@@ -59,6 +62,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * The cached value of the '{@link #getTransactionlog() <em>Transactionlog</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getTransactionlog()
      * @generated
      * @ordered
@@ -69,24 +73,47 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * The default value of the '{@link #getCurrentValue() <em>Current Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see #getCurrentValue()
      * @generated
      * @ordered
      */
     protected static final BigDecimal CURRENT_VALUE_EDEFAULT = null;
 
+    private EContentAdapter eContentAdapter;
+
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated not
      */
     protected CredstickImpl() {
         super();
+
+        eContentAdapter = new EContentAdapter() {
+            @Override
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                Object feature = notification.getFeature();
+                if (!Shr5Package.Literals.CREDSTICK__CURRENT_VALUE.equals(feature)
+                        && !Shr5Package.Literals.CREDSTICK__MAX_VALUE.equals(feature)
+                        && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DESCRIPTION.equals(feature)
+                        && !Shr5Package.Literals.CREDSTICK_TRANSACTION__DATE.equals(feature))
+                    CredstickImpl.this
+                            .eNotify(new ENotificationImpl(CredstickImpl.this, Notification.SET, Shr5Package.CREDSTICK__CURRENT_VALUE, 1, 2));
+
+            }
+
+        };
+        eContentAdapter.setTarget(this);
+        this.eAdapters().add(eContentAdapter);
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -97,6 +124,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getMaxValue() {
@@ -106,6 +134,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setMaxValue(int newMaxValue) {
@@ -118,11 +147,13 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EList<CredstickTransaction> getTransactionlog() {
         if (transactionlog == null) {
-            transactionlog = new EObjectContainmentEList<CredstickTransaction>(CredstickTransaction.class, this, Shr5Package.CREDSTICK__TRANSACTIONLOG);
+            transactionlog = new EObjectContainmentEList<CredstickTransaction>(CredstickTransaction.class, this,
+                    Shr5Package.CREDSTICK__TRANSACTIONLOG);
         }
         return transactionlog;
     }
@@ -130,13 +161,15 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public BigDecimal getCurrentValue() {
         EList<CredstickTransaction> transactionlog2 = getTransactionlog();
         BigDecimal value = new BigDecimal(0);
         for (CredstickTransaction credstickTransaction : transactionlog2) {
-            value = value.add(credstickTransaction.getAmount());
+            if (credstickTransaction.getAmount() != null)
+                value = value.add(credstickTransaction.getAmount());
         }
         return value;
     }
@@ -144,6 +177,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -158,6 +192,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -176,6 +211,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -196,6 +232,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -214,6 +251,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -232,11 +270,13 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (maxValue: ");
@@ -245,4 +285,4 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
         return result.toString();
     }
 
-} //CredstickImpl
+} // CredstickImpl
