@@ -170,7 +170,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     || Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5Package.Literals.CYBERDECK__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5Package.Literals.LIFESTYLE__OPTIONS.equals(e.getFeature())
-                    || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())                    
+                    || Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN.equals(e.getFeature())
                     || Shr5Package.Literals.DROHNE__STORED_PROGRAMS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS.equals(e.getFeature())
                     || Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS.equals(e.getFeature())
@@ -369,37 +369,34 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseSoftware(Software object) {
                 try {
-                    addPage(new SoftwarePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new SoftwarePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating SoftwarePage", e);//$NON-NLS-1$
                 }
                 return null;
 
             }
-            
+
             @Override
             public Object caseVertrag(Vertrag object) {
                 try {
-                    addPage(new ContractPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new ContractPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating ContractPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseFahrzeug(Fahrzeug object) {
                 try {
-                    addPage(new VehiclePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new VehiclePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating VehiclePage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseCredstick(Credstick object) {
                 try {
@@ -742,6 +739,10 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                         XMLResource xmlRes = (XMLResource)eo.eResource();
                         String id = xmlRes.getID(eo);
                         if (copy instanceof Identifiable) {
+                            String parentId = ((Identifiable)eo).getParentId();
+                            if (parentId != null && !parentId.isEmpty())
+                                id = parentId;
+
                             Identifiable iden = (Identifiable)copy;
                             iden.setParentId(id);
                         }
