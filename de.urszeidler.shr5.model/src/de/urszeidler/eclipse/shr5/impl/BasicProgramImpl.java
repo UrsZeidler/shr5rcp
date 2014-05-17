@@ -280,14 +280,15 @@ public abstract class BasicProgramImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.BASIC_PROGRAM__WERT_VALUE, oldWertValue, wertValue));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+}}
 
     /**
      * <!-- begin-user-doc -->
