@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
@@ -115,17 +116,17 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
      */
 	protected static final String CURRENT_INSTRUCTION_EDEFAULT = null;
 
-	private Adapter adapter = new Adapter() {
+	private Adapter adapter = new EContentAdapter() {
 
-		private Notifier myTarger;
-
-		public Notifier getTarget() {
-			return myTarger;
-		}
-
-		public boolean isAdapterForType(Object type) {
-			return false;
-		}
+//		private Notifier myTarger;
+//
+//		public Notifier getTarget() {
+//			return myTarger;
+//		}
+//
+//		public boolean isAdapterForType(Object type) {
+//			return false;
+//		}
 
 		public void notifyChanged(Notification notification) {
 			if (notification.getEventType() == Notification.REMOVING_ADAPTER)
@@ -146,12 +147,12 @@ public abstract class CharacterGeneratorImpl extends MinimalEObjectImpl.Containe
 			}
 
 		}
-
-		public void setTarget(Notifier newTarget) {
-			myTarger = newTarget;
-			// myTarger.eAdapters().add(this);
-
-		}
+//
+//		public void setTarget(Notifier newTarget) {
+//			myTarger = newTarget;
+//			// myTarger.eAdapters().add(this);
+//
+//		}
 
 	};
 
