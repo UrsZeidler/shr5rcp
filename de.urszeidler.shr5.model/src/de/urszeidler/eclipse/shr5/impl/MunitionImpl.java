@@ -176,14 +176,15 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setAnzahl(int newAnzahl) {
         int oldAnzahl = anzahl;
         anzahl = newAnzahl;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MUNITION__ANZAHL, oldAnzahl, anzahl));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MUNITION__WERT, oldAnzahl, anzahl));
+        }}
 
     /**
      * <!-- begin-user-doc -->
@@ -197,14 +198,15 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setProAnzahl(int newProAnzahl) {
         int oldProAnzahl = proAnzahl;
         proAnzahl = newProAnzahl;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MUNITION__PRO_ANZAHL, oldProAnzahl, proAnzahl));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.MUNITION__WERT, oldProAnzahl, proAnzahl));
+        }}
 
     /**
      * <!-- begin-user-doc -->
@@ -283,7 +285,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
             return null;
 
         BigDecimal bigDecimal = new BigDecimal(getAnzahl());
-        BigDecimal factor = bigDecimal.divide(new BigDecimal(getProAnzahl()));
+        BigDecimal factor = bigDecimal.divide(new BigDecimal(getProAnzahl()),BigDecimal.ROUND_HALF_EVEN);
 
         return getWertValue().multiply(factor).setScale(1);
     }

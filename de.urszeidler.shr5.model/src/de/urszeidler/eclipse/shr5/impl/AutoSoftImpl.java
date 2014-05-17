@@ -326,7 +326,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
         wertValue = newWertValue;
         if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__WERT, oldWertValue, wertValue));
         }
     }
 
@@ -505,7 +505,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
         rating = newRating;
         if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__RATING, oldRating, rating));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldRating, rating));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.AUTO_SOFT__WERT, oldRating, rating));
         }
     }
 

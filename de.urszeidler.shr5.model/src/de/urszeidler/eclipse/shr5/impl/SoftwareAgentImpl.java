@@ -307,7 +307,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
         wertValue = newWertValue;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SOFTWARE_AGENT__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SOFTWARE_AGENT__WERT, oldWertValue, wertValue));
         } }
 
     /**

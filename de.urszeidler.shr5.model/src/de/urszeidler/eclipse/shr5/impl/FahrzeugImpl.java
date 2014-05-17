@@ -674,7 +674,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
         wertValue = newWertValue;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG__WERT, oldWertValue, wertValue));
         } }
 
     /**

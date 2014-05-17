@@ -175,14 +175,15 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__WERT_VALUE, oldWertValue, wertValue));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.CYBERWARE__WERT, oldWertValue, wertValue));
+        }}
 
     /**
      * <!-- begin-user-doc -->

@@ -437,7 +437,7 @@ public abstract class FahrzeugModifikationImpl extends MinimalEObjectImpl.Contai
         wertValue = newWertValue;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG_MODIFIKATION__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.FAHRZEUG_MODIFIKATION__WERT, oldWertValue, wertValue));
 }}
 
     /**

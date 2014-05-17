@@ -439,7 +439,7 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
         wertValue = newWertValue;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.VERTRAG__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.VERTRAG__WERT, oldWertValue, wertValue));
         }}
 
     /**

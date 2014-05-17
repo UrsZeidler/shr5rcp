@@ -245,10 +245,18 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	/**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
 	protected AbstraktGegenstandImpl() {
         super();
+        
+//        adapter = new EContentAdapter() {
+//            public void notifyChanged(Notification notification) {
+//              super.notifyChanged(notification);
+//              System.out
+//                  .println("Notfication received from the data model. Data model has changed!!!");
+//            }
+//          };  
     }
 
 	/**
@@ -402,7 +410,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
         wertValue = newWertValue;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_GEGENSTAND__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.ABSTRAKT_GEGENSTAND__WERT, oldWertValue, wertValue));
         }}
 
     /**

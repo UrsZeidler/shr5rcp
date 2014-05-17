@@ -313,14 +313,15 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SKILL_SOFT__WERT_VALUE, oldWertValue, wertValue));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SKILL_SOFT__WERT, oldWertValue, wertValue));
+        }}
 
     /**
      * <!-- begin-user-doc -->
@@ -527,14 +528,16 @@ public class SkillSoftImpl extends MinimalEObjectImpl.Container implements Skill
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public void setRating(int newRating) {
         int oldRating = rating;
         rating = newRating;
-        if (eNotificationRequired())
+        if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SKILL_SOFT__RATING, oldRating, rating));
-    }
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SKILL_SOFT__WERT, new BigDecimal(1), new BigDecimal(2)));
+
+        }}
 
     /**
      * <!-- begin-user-doc -->

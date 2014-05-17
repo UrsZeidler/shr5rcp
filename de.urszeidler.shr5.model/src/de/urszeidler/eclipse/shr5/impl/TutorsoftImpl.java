@@ -104,7 +104,7 @@ public class TutorsoftImpl extends BasicProgramImpl implements Tutorsoft {
         rating = newRating;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__RATING, oldRating, rating));
-        eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldRating, rating));
+        eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.TUTORSOFT__WERT, oldRating, rating));
     }    }
 
     /**

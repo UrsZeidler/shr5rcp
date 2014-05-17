@@ -309,7 +309,7 @@ public class CommonProgramImpl extends MinimalEObjectImpl.Container implements C
         wertValue = newWertValue;
         if (eNotificationRequired()){
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.COMMON_PROGRAM__WERT_VALUE, oldWertValue, wertValue));
-            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.GELD_WERT__WERT, oldWertValue, wertValue));
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.COMMON_PROGRAM__WERT, oldWertValue, wertValue));
         }}
 
     /**
