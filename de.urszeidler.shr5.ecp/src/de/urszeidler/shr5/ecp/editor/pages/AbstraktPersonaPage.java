@@ -269,11 +269,9 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
                 if(e.getState()){
                     gd_composite_1.heightHint = 350;
                     form.reflow(true);
-                    //body.layout(true);
-                }else{
+                 }else{
                     gd_composite_1.heightHint = 30;
-                   // body.layout(true); 
-                    form.reflow(true);
+                     form.reflow(true);
                 }                    
             }
             public void expansionStateChanging(ExpansionEvent e) {
@@ -284,12 +282,14 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         composite_2.setLayout(new GridLayout(3, false));
         
         Label lblFilter = managedForm.getToolkit().createLabel(composite_2,Messages.AbstraktPersonaPage_lblFilter_text, SWT.NONE);
-        lblFilter.setLayoutData(new GridData(SWT.CENTER, SWT.TOP, false, false, 1, 1));
+        lblFilter.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().adapt(lblFilter, true, true);
         
         text = managedForm.getToolkit().createText(composite_2, "",SWT.BORDER);
         text.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        Button button = managedForm.getToolkit().createButton(composite_2, "c", SWT.PUSH);
+        Button button = managedForm.getToolkit().createButton(composite_2, "", SWT.PUSH);
+        button.setToolTipText(Messages.AbstraktPersonaPage_button_toolTipText);
+        button.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/clear.gif"));
         button.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -345,11 +345,12 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         });
         filterOnlyPersonaSkillsToolItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/toList.gif")); //$NON-NLS-1$ //$NON-NLS-2$
 
+        int height = 200;
         if (object instanceof KoerperPersona) {
             Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
             grpFertigkeitGruppe.setLayout(new GridLayout(2, true));
-            GridData gd_grpFertigkeitGruppe = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
-            gd_grpFertigkeitGruppe.heightHint = 150;
+            final GridData gd_grpFertigkeitGruppe = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+            gd_grpFertigkeitGruppe.heightHint = height;
             grpFertigkeitGruppe.setLayoutData(gd_grpFertigkeitGruppe);
             toolkit.adapt(grpFertigkeitGruppe);
             toolkit.paintBordersFor(grpFertigkeitGruppe);
@@ -388,7 +389,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             grpKikrfte.setLayout(new FillLayout(SWT.HORIZONTAL));
 
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1);
-            layoutData.minimumHeight = 150;
+            layoutData.minimumHeight = height;
             grpKikrfte.setLayoutData(layoutData);
             toolkit.adapt(grpKikrfte);
             toolkit.paintBordersFor(grpKikrfte);
@@ -402,7 +403,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             Composite grpKikrfte = new Composite(body, SWT.NONE);
             grpKikrfte.setLayout(new FillLayout(SWT.HORIZONTAL));
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1);
-            layoutData.minimumHeight = 150;
+            layoutData.minimumHeight = height;
             grpKikrfte.setLayoutData(layoutData);
             toolkit.adapt(grpKikrfte);
             toolkit.paintBordersFor(grpKikrfte);
@@ -426,7 +427,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             Composite grpKikrfte = new Composite(body, SWT.NONE);
             grpKikrfte.setLayout(new FillLayout(SWT.HORIZONTAL));
             GridData layoutData = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
-            layoutData.minimumHeight = 150;
+            layoutData.minimumHeight = height;
             grpKikrfte.setLayoutData(layoutData);
             toolkit.adapt(grpKikrfte);
             toolkit.paintBordersFor(grpKikrfte);
