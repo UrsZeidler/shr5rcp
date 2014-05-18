@@ -337,7 +337,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         ArrayList<Identifiable[]> arrayList = new ArrayList<Identifiable[]>();
         for (Identifiable identifiable : list) {
             for (QuellenConstrain quellenConstrain : additionalConstrains) {
-                if (quellenConstrain.getSource().equals(identifiable)) {
+                if (quellenConstrain.getSource()!=null &&  quellenConstrain.getSource().equals(identifiable)) {
                     if (quellenConstrain.getConstrainType() == QuellenConstrainType.NOT_TOGETHER) {
                         EList<Quelle> targets = quellenConstrain.getTargets();
                         for (Quelle quelle : targets) {
