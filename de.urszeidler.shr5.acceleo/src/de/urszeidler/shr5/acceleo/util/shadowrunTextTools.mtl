@@ -13,3 +13,7 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(de.urszeidler.eclipse.shr5.ZauberArt)', Sequence{arg0})
 /]
 
+[query public createNumberList(count : Integer) : OrderedSet(String)
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'createNumberList(java.lang.Integer)', Sequence{count})
+/]
+

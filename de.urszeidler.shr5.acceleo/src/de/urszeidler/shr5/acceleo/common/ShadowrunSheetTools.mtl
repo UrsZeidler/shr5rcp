@@ -49,19 +49,19 @@ pe->collect(pfg| pfg.karmaKosten    )->sum()
 
 
 
-[query public vehicleHanding (aFahrzeug : Fahrzeug) : String = 
-aFahrzeug.geschwindigkeit.toString()
- /]
-[query public vehicleHanding (aFahrzeug : Bodenfahrzeug) : String = 
+[query public vehicleHandling (aFahrzeug : Bodenfahrzeug) : String = 
 aFahrzeug.handling+'/'+aFahrzeug.handlingGelaende
  /]
-[query public vehicleSpeed (aFahrzeug : Fahrzeug) : String = 
+[query public vehicleHandling (aFahrzeug : Fahrzeug) : String = 
 aFahrzeug.geschwindigkeit.toString()
  /]
-[query public vehicleSpeed (aFahrzeug : Bodenfahrzeug) : String = 
+[query public vehicleSpeed(aFahrzeug : Fahrzeug) : String = 
+aFahrzeug.geschwindigkeit.toString()
+ /]
+[query public vehicleSpeed(aFahrzeug : Bodenfahrzeug) : String = 
 aFahrzeug.geschwindigkeit+'/'+aFahrzeug.geschwindigkeitGelaende
  /]
-[query public vehicleBody (aFahrzeug : Fahrzeug) : String = 
+[query public vehicleBody(aFahrzeug : Fahrzeug) : String = 
 aFahrzeug.rumpf.toString()
  /]
 

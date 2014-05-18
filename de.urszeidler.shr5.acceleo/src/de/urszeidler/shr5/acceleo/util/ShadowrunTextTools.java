@@ -3,6 +3,9 @@
  */
 package de.urszeidler.shr5.acceleo.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -16,11 +19,11 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
  * @author urs
- *
  */
 public class ShadowrunTextTools {
 
     private static Zauber zauber = Shr5Factory.eINSTANCE.createZauber();
+
     /**
      * Returns the localized feature name.
      * 
@@ -57,6 +60,7 @@ public class ShadowrunTextTools {
         return text2;
 
     }
+
     /**
      * To name for the enum literals.
      * 
@@ -68,11 +72,26 @@ public class ShadowrunTextTools {
             return "";
 
         String text2 = literal.toString();
-        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(zauber, Shr5Package.Literals.ZAUBER__ART);
+        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator()
+                .getPropertyDescriptor(zauber, Shr5Package.Literals.ZAUBER__ART);
         if (propertyDescriptor != null)
             text2 = propertyDescriptor.getLabelProvider(zauber).getText(literal);
 
         return text2;
 
+    }
+
+    /**
+     * Creates a list of string with the numbers from 1 to count.
+     * 
+     * @param count
+     * @return
+     */
+    public static List<String> createNumberList(Integer count) {
+        ArrayList<String> list = new ArrayList<String>(count);
+        for (int i = 1; i < count + 1; i++) {
+            list.add(i + "");
+        }
+        return list;
     }
 }

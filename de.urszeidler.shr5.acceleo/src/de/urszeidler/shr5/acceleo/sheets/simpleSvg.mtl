@@ -9,6 +9,7 @@
 [import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
 [import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
 [import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
 
 
@@ -92,7 +93,7 @@
 [printItems(aManagedCharacter)/]
 [printConditionMonitor(aManagedCharacter,0,-00)/]
 [if (not (aManagedCharacter.vehicels->isEmpty()))]
-[printVehicle(aManagedCharacter.vehicels->at(1),0,0)/]
+[printVehicle(aManagedCharacter.vehicels->at(1),-10,-10)/]
 [/if]
 [printContacts(aManagedCharacter)/]
 [printNotes(aManagedCharacter)/]
@@ -395,6 +396,7 @@ y : Integer = base + (n*size);
        id="path-Line-end-[y/][x/][d/]" />
 [/template]
 
+
 [**
  * 
  * ichschreibhiermalwas
@@ -428,6 +430,9 @@ y : Integer = base + (n*size);
 [/template]
 
 
+[comment][query public vehicleSpeed(vehicle : Fahrzeug) : String = self.geschwindigkeit.toString() /]
+[query public vehicleSpeed(vehicle : Bodenfahrzeug) : String = self.geschwindigkeit.toString()+'/'+self.geschwindigkeitGelaende.toString() /][/comment]
+
 
 [template public printVehicle (vehicle : Fahrzeug,x:Integer,y:Integer)
  {column : Sequence(Integer) = Sequence{200,300} ;} ]
@@ -448,7 +453,7 @@ y : Integer = base + (n*size);
 [printTextSpan(column->at(1), -310,'Type : '+ vehicle.name)/]
 [printTextSpan(column->at(1), -300,'Speed : '+ vehicle.vehicleSpeed())/]
 [printTextSpan(column->at(2), -300,'Accel : '+ vehicle.beschleunigung)/]
-[printTextSpan(column->at(1), -290,'Handling : '+ vehicle.vehicleHanding())/]
+[printTextSpan(column->at(1), -290,'Handling : '+ vehicle.vehicleHandling())/]
 [printTextSpan(column->at(2), -290,'Pilot : '+ vehicle.pilot)/]
 [printTextSpan(column->at(1), -280,'Sensor : '+ vehicle.sensor)/]
 [printTextSpan(column->at(2), -280,'Body/Rumpf : '+ vehicle.vehicleBody())/]

@@ -1,0 +1,161 @@
+[comment encoding = UTF-8 /]
+[module generateSvgVehicleSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+[template public generateSvgVehicleSheetManagedCharacter(aManagedCharacter : ManagedCharacter)]
+	
+	[comment @main /]
+	[aManagedCharacter.printSimpleVehiclePage()/]
+	
+[/template]
+
+
+[**
+ * Prints the first page.
+*/]
+[template public printSimpleVehiclePage(aManagedCharacter : ManagedCharacter)]
+[file (aManagedCharacter.persona.name+'-vehicle-simple.svg', false, 'UTF-8')]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg3632"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Vehicles-1.svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="78.888096"
+     inkscape:cy="904.36861"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1211"
+     inkscape:window-height="679"
+     inkscape:window-x="107"
+     inkscape:window-y="109"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-20,-20)">
+[for (vehicle : Fahrzeug | aManagedCharacter.vehicels)]
+[let xpos : Integer = (i-1).mod(3)]
+[let ypos : Integer = (i-1).div(3)]
+[printVehicleBox(vehicle, xpos, ypos)/]
+[/let][/let]
+[/for]
+
+
+  </g>
+</svg>
+[/file]
+[/template]
+
+
+
+[template public printVehicleBox (vehicle : Fahrzeug,x:Integer,y:Integer)
+ {column : Sequence(Integer) = Sequence{25,130} ;
+	textSize: Integer = 10 ;
+} ]
+    <g
+       id="gVehicle-[y/][x/]"
+       transform="translate([15 + 260 * x/] ,[15 +170 * y/])">
+      <path
+         id="path4051-[y/][x/]"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 270.36429,26.263971 -249.300003,0 0,143.624999 249.300003,0 0,-143.624999 z m -249.300003,0 z m 0.9,0.975 247.425003,0 0,141.674999 -247.425003,0 0,-141.674999 z"
+         inkscape:connector-curvature="0" />
+      <text
+         id="text4053-[y/][x/]"
+         x="120"
+         y="45"
+         style="font-size:15px">
+        <tspan
+           id="tspan4055-[y/][x/]"
+           sodipodi:role="line"
+           y="45"
+           x="120"
+           style="font-size:13.72499943px;font-variant:normal;font-weight:bold;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Francis;-inkscape-font-specification:FrancisBold">VEHICLE</tspan>
+      </text>
+
+[printTextSpan1(column->at(1), 55,'Type : '+ vehicle.getText(),textSize)/]
+[printTextSpan1(column->at(1), 70,'Speed : '+ vehicle.vehicleSpeed(),textSize)/]
+[printTextSpan1(column->at(2), 70,'Accel : '+ vehicle.beschleunigung,textSize)/]
+[printTextSpan1(column->at(1), 85,'Handling : '+ vehicle.vehicleHandling(),textSize)/]
+[printTextSpan1(column->at(2), 85,'Pilot : '+ vehicle.pilot,textSize)/]
+[printTextSpan1(column->at(1), 100,'Sensor : '+ vehicle.sensor,textSize)/]
+[printTextSpan1(column->at(2), 100,'Body/Armor : '+ vehicle.vehicleBody()+'/'+vehicle.panzer,textSize)/]
+
+[for (it : String | vehicle.zustandMax.createNumberList())]
+[let xpos : Integer = (i-1).mod(17)]
+[let ypos : Integer = (i-1).div(17)]
+   <rect
+         y="[140 + ypos*12/]"
+         x="[25 +  xpos*12  /]"
+         height="12"
+         width="12"
+         id="rect-monitorbox-[it/]"
+         style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+[printTextSpan1((25 +  xpos*12), 146+ ypos*12,it,6)/]
+[/let][/let]
+[/for]
+</g>
+[/template]
+
+
+
+
+
+[template private printTextSpan1(x:Integer,y:Integer,text:String,textSize:Integer)]
+<text
+       style="font-size:12px"
+       y="[y/]"
+       x="[x/]"
+       id="textEdg-[y/][x/]"
+       transform="scale(1,1)"><tspan
+         style="font-size:[textSize/]px;font-variant:normal;font-weight:bold;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Francis;-inkscape-font-specification:FrancisBold"
+         x="[x/]"
+         y="[y/]"
+         sodipodi:role="line"
+         id="tspanEdg-[y/][x/]">[text/]</tspan></text>
+[/template]
+
+

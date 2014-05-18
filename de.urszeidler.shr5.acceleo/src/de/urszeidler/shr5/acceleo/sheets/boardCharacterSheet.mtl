@@ -184,15 +184,6 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 [/for]
 [/template]
 
-[template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
-['Vehicles'.titelText()/]
-[for (pfg : Fahrzeug | sg)]
-[printTextPlusSpace(pfg.name   ,empty)/] [pfg.wert/]
-[/for]
-
-[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(sg->asSequence()) /]
-[/template]
-
 
 [template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit),empty :String)]
 ['Active Skills'.titelText()/]
@@ -227,15 +218,6 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 [/for]
 [/template]
 
-[template public printGear(gears : Sequence(AbstraktGegenstand), empty :String)? (not gears->isEmpty())]
-['Gear'.titelText()/]
-[for (ag : AbstraktGegenstand | gears)]
-[printTextPlusSpace(ag.name,empty)/][ag.wert/]
-[/for]
-
-[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
-[/template]
-
 [template public printContracts(gears : Sequence(Vertrag),empty :String)? (not gears->isEmpty())]
 ['Contracts'.titelText()/]
 [for (ag : Vertrag | gears)]
@@ -245,3 +227,51 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 [printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
 [/template]
 
+[template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
+['Vehicles'.titelText()/]
+[for (pfg : Fahrzeug | sg)]
+[printVehicle(pfg, empty)/]
+[/for]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(sg->asSequence()) /]
+[/template]
+
+[template private printVehicle(vehicle : Fahrzeug,empty :String)]
+[printTextPlusSpace(vehicle.getText()  ,empty)/] [vehicle.wertValue /]
+[printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/template]
+
+[template private printVehicle(vehicle : Drohne,empty :String)]
+[printTextPlusSpace(vehicle.getText()  ,empty)/] [vehicle.wertValue /]
+[printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/]
+[printGeldwertCollection(vehicle.storedPrograms, vehicle.wert,empty, '- ')/][/template]
+
+[template public printGear(gears : Sequence(AbstraktGegenstand), empty :String)? (not gears->isEmpty())]
+['Gear'.titelText()/]
+[for (ag : AbstraktGegenstand | gears)]
+[printGegenstand(ag, empty)/]
+[/for]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
+[/template]
+
+[template private printGegenstand(gegenstand : AbstraktGegenstand,empty :String)]
+[printTextPlusSpace(gegenstand.getText(),empty)/] [gegenstand.wert/]
+[/template]
+
+[template private printGegenstand(comlink : Commlink,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
+[printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/template]
+
+[template private printGegenstand(comlink : RiggerCommandConsole,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
+[printGeldwertCollection(comlink.storedPrograms,comlink.wert, empty, '- ')/][/template]
+
+[template private printGegenstand(comlink : Cyberdeck,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
+[printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/template]
+
+[template private printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())]
+[for (gw : GeldWert | col)]
+[printTextPlusSpace(prefix+gw.getText()  ,empty)/] [gw.wert/]
+[/for]
+[printTextPlusSpace('sum :', empty)/] [wert/][/template]
