@@ -37,10 +37,10 @@
 <repository location="http://download.eclipse.org/ecp/releases/releases_12"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.visualization.feature.feature.group" version="0.9.9.201405131345"/>
-<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201405131345"/>
-<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201405131345"/>
-<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201405131345"/>
+<unit id="org.eclipse.nebula.visualization.feature.feature.group" version="0.9.9.201405151353"/>
+<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201405151353"/>
+<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201405151353"/>
+<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201405151353"/>
 <repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
