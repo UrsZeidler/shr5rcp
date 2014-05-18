@@ -3967,12 +3967,6 @@
         </mods>
         <localizations xmi:id="_Br79od0CEeOvVYoRsPZlnA" local="de" name="Hochleistungsgelenke"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="3fc49185-8737-4501-8c7b-6d54f7846fac" name="Muscle augmentation" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="">
-        <mods xmi:id="_Br79ot0CEeOvVYoRsPZlnA">
-          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-        </mods>
-        <localizations xmi:id="_Br79o90CEeOvVYoRsPZlnA" local="de" name="Muskelverstärkung"/>
-      </entries>
       <entries xsi:type="shr5:BioWare" xmi:id="88d6c54c-0eed-4c2a-9e97-9fd811dffd8d" name="Muscle toner" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="">
         <mods xmi:id="_Br8ksN0CEeOvVYoRsPZlnA">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
@@ -4039,12 +4033,6 @@
         </mods>
         <localizations xmi:id="_Br-Z5d0CEeOvVYoRsPZlnA" local="de" name="Luftröhrenfilter"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="63b0b849-cfa6-48d2-a34c-ec58a36acf21" name="Cerebral booster" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="">
-        <mods xmi:id="_Br_A8N0CEeOvVYoRsPZlnA">
-          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-        </mods>
-        <localizations xmi:id="_Br_A8d0CEeOvVYoRsPZlnA" local="de" name="Zerebralbooster"/>
-      </entries>
       <entries xsi:type="shr5:BioWare" xmi:id="20cf44b6-6b57-4091-91b2-bc0210710c56" name="Damage compensators" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="">
         <mods xmi:id="_Br_A8t0CEeOvVYoRsPZlnA">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
@@ -4080,6 +4068,108 @@
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
         <localizations xmi:id="_BsAPEd0CEeOvVYoRsPZlnA" local="de" name="Synapsenbeschleuniger"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_ciQ_YN6NEeOU1t7mwJMedA" name="Cerebral booster 1" parentId="63b0b849-cfa6-48d2-a34c-ec58a36acf21" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="31500">
+        <mods xmi:id="_TG0GsN6PEeO-HcYx5lqBsQ" wert="-20">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG0Gsd6PEeO-HcYx5lqBsQ" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </mods>
+        <localizations xmi:id="_TG0Gst6PEeO-HcYx5lqBsQ" local="de" name="Zerebralbooster 1"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TG0twN6PEeO-HcYx5lqBsQ" name="Cerebral booster 2" parentId="63b0b849-cfa6-48d2-a34c-ec58a36acf21" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12" wertValue="63000">
+        <mods xmi:id="_TG0twd6PEeO-HcYx5lqBsQ" wert="-40">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG0twt6PEeO-HcYx5lqBsQ" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </mods>
+        <localizations xmi:id="_TG0tw96PEeO-HcYx5lqBsQ" local="de" name="Zerebralbooster 2"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TG1U0N6PEeO-HcYx5lqBsQ" name="Cerebral booster 3" parentId="63b0b849-cfa6-48d2-a34c-ec58a36acf21" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="18" wertValue="94500">
+        <mods xmi:id="_TG1U0d6PEeO-HcYx5lqBsQ" wert="-60">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG1U0t6PEeO-HcYx5lqBsQ" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </mods>
+        <localizations xmi:id="_TG1U096PEeO-HcYx5lqBsQ" local="de" name="Zerebralbooster 3"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TG1U1N6PEeO-HcYx5lqBsQ" name="Muscle augmentation 1" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="31000">
+        <mods xmi:id="_TG1U1d6PEeO-HcYx5lqBsQ" wert="-20">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG1U1t6PEeO-HcYx5lqBsQ" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_TG174N6PEeO-HcYx5lqBsQ" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <localizations xmi:id="_TG174d6PEeO-HcYx5lqBsQ" local="de" name="Muskelverstärkung 1"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TG174t6PEeO-HcYx5lqBsQ" name="Muscle augmentation 2" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="62000">
+        <mods xmi:id="_TG17496PEeO-HcYx5lqBsQ" wert="-40">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG175N6PEeO-HcYx5lqBsQ" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_TG175d6PEeO-HcYx5lqBsQ" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <localizations xmi:id="_TG175t6PEeO-HcYx5lqBsQ" local="de" name="Muskelverstärkung 2"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TG2i8N6PEeO-HcYx5lqBsQ" name="Muscle augmentation 3" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="15R" wertValue="93000">
+        <mods xmi:id="_TG2i8d6PEeO-HcYx5lqBsQ" wert="-60">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG2i8t6PEeO-HcYx5lqBsQ" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_TG2i896PEeO-HcYx5lqBsQ" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <localizations xmi:id="_TG2i9N6PEeO-HcYx5lqBsQ" local="de" name="Muskelverstärkung 3"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TG2i9d6PEeO-HcYx5lqBsQ" name="Muscle augmentation 4" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="20R" wertValue="124000">
+        <mods xmi:id="_TG2i9t6PEeO-HcYx5lqBsQ" wert="-80">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TG3KAN6PEeO-HcYx5lqBsQ" wert="4">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_TG3KAd6PEeO-HcYx5lqBsQ" wert="4">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <localizations xmi:id="_TG3KAt6PEeO-HcYx5lqBsQ" local="de" name="Muskelverstärkung 2"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_TvOBIN6oEeO15ZgHuQ7HHg" name="Orthoskin 1" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="6000">
+        <mods xmi:id="_TvOBId6oEeO15ZgHuQ7HHg" wert="-25">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TvOBIt6oEeO15ZgHuQ7HHg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+        </mods>
+        <localizations xmi:id="_TvOBI96oEeO15ZgHuQ7HHg" local="de" name="Orthoskin 1"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_ex5EYN6oEeO15ZgHuQ7HHg" name="Orthoskin 2" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="18R" wertValue="12000">
+        <mods xmi:id="_ex5EYd6oEeO15ZgHuQ7HHg" wert="-50">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_ex5EYt6oEeO15ZgHuQ7HHg" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+        </mods>
+        <localizations xmi:id="_ex5EY96oEeO15ZgHuQ7HHg" local="de" name="Orthoskin 2"/>
+      </entries>
+      <entries xsi:type="shr5:BioWare" xmi:id="_gKmjwN6oEeO15ZgHuQ7HHg" name="Orthoskin 3" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12R" wertValue="18000">
+        <mods xmi:id="_gKmjwd6oEeO15ZgHuQ7HHg" wert="-75">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_gKmjwt6oEeO15ZgHuQ7HHg" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+        </mods>
+        <localizations xmi:id="_gKmjw96oEeO15ZgHuQ7HHg" local="de" name="Orthoskin 3"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsAPEt0CEeOvVYoRsPZlnA" name="vehicles">
@@ -4161,7 +4251,7 @@
         <lifestyleToStartMoney xmi:id="_BtQMQt0CEeOvVYoRsPZlnA" numberOfW="4" moneyFactor="100" lifeStyles="25e7fe19-0dc2-4d2b-b134-035259ea321a"/>
         <lifestyleToStartMoney xmi:id="_BtQMQ90CEeOvVYoRsPZlnA" numberOfW="5" moneyFactor="500" lifeStyles="141d339c-d514-44e6-aab4-94768e68cac3"/>
         <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="43141722-bea8-496f-bdd6-4e4e858e1269"/>
-        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" source="3fc49185-8737-4501-8c7b-6d54f7846fac" targets="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54 88d6c54c-0eed-4c2a-9e97-9fd811dffd8d"/>
+        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" targets="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54 88d6c54c-0eed-4c2a-9e97-9fd811dffd8d"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="7"/>
@@ -11917,58 +12007,6 @@
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_B02CA90CEeOvVYoRsPZlnA" name="Yamaha Growler" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000" fahrzeugTyp="Bike"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_L8N0CEeOvVYoRsPZlnA" character="_B0nYgt0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Kyra" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0d0CEeOvVYoRsPZlnA" metaType="_Bs3xwd0CEeOvVYoRsPZlnA" magic="_BtAUod0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="2" startResources="1640"/>
       </members>
-      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B02CBN0CEeOvVYoRsPZlnA" chracterSource="_B09WxN0CEeOvVYoRsPZlnA" choosenLifestyle="_B08vtt0CEeOvVYoRsPZlnA" nativeLanguage="3f3fec5f-d653-4a64-9830-3bee369a8548">
-        <persona xsi:type="shr5:AspektMagier" xmi:id="_B06TcN0CEeOvVYoRsPZlnA" name="Trojan" edgeBasis="3" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="5" staerkeBasis="2" charismaBasis="6" willenskraftBasis="6" intuitionBasis="5" logikBasis="5" spezies="cf34895a-35cc-4be8-812b-5c715952a93f" magieBasis="6">
-          <fertigkeiten xmi:id="_B06Tcd0CEeOvVYoRsPZlnA" stufe="6" fertigkeit="082628b4-b58e-4bf2-8d01-81a7bff27722"/>
-          <fertigkeiten xmi:id="_B06Tct0CEeOvVYoRsPZlnA" stufe="5" fertigkeit="8f9c9f42-41e4-4e4e-bfbd-ec96febd1900"/>
-          <fertigkeiten xmi:id="_B06Tc90CEeOvVYoRsPZlnA" stufe="4" fertigkeit="e7e387c4-5cf4-4fe1-a98a-63b2034ea0a2"/>
-          <fertigkeiten xmi:id="_B066gN0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="132783c1-780e-4021-875c-c8763e729e2d"/>
-          <fertigkeiten xmi:id="_B066gd0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="e944f9cd-d7f2-4291-9edf-06a405ee335c"/>
-          <fertigkeiten xmi:id="_B066gt0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="6eadf912-7ad8-4bff-b59a-a983d6199aad"/>
-          <fertigkeiten xmi:id="_B066g90CEeOvVYoRsPZlnA" stufe="1" fertigkeit="961e8f0c-3adb-4565-a3a6-bf91da22cf45"/>
-          <fertigkeiten xmi:id="_B066hN0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="659ff775-c985-4e7d-bbb9-8be088b9104c"/>
-          <fertigkeiten xmi:id="_B066hd0CEeOvVYoRsPZlnA" stufe="6" fertigkeit="_BnaC-d0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_B066ht0CEeOvVYoRsPZlnA" stufe="4" fertigkeit="_BngJl90CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_B066h90CEeOvVYoRsPZlnA" stufe="5" fertigkeit="_BnlCHN0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_B066iN0CEeOvVYoRsPZlnA" stufe="2" fertigkeit="_BnN1tN0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_B07hkN0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="_BnT8WN0CEeOvVYoRsPZlnA"/>
-          <fertigkeitsGruppen xmi:id="_B07hkd0CEeOvVYoRsPZlnA" stufe="1" gruppe="_BmnYwt0CEeOvVYoRsPZlnA"/>
-          <fertigkeitsGruppen xmi:id="_B07hkt0CEeOvVYoRsPZlnA" stufe="1" gruppe="_Bmxw1d0CEeOvVYoRsPZlnA"/>
-          <eigenschaften xmi:id="_B07hk90CEeOvVYoRsPZlnA" name="Will to Live" page="77" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="3"/>
-          <eigenschaften xmi:id="_B07hlN0CEeOvVYoRsPZlnA" name="Bilingual" page="72" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="5"/>
-          <zauber xmi:id="_B07hld0CEeOvVYoRsPZlnA" stufe="1" formel="cea056ea-6170-4a89-972a-7dd5224fc54c"/>
-          <zauber xmi:id="_B07hlt0CEeOvVYoRsPZlnA" stufe="1" formel="27fe02d1-c4df-4b32-adb3-c473750a55c1"/>
-          <zauber xmi:id="_B08IoN0CEeOvVYoRsPZlnA" stufe="1" formel="23159a16-2731-416c-a2a7-3839f496e010"/>
-          <zauber xmi:id="_B08Iod0CEeOvVYoRsPZlnA" stufe="1" formel="62776a7b-d817-4c95-b434-31155e1e4497"/>
-        </persona>
-        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_B08Iot0CEeOvVYoRsPZlnA" page="426" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="350" name="Fichetti Security 600" schadenscode="7P" praezision="6" reichweite="_BlWNcd0CEeOvVYoRsPZlnA" munitionstyp="Streifen" kapazitaet="30">
-          <modie>HM</modie>
-          <erweiterung>Lauf</erweiterung>
-          <erweiterung>Oben</erweiterung>
-          <einbau xmi:id="_B08Io90CEeOvVYoRsPZlnA" name="Laser Sight" page="432" srcBook="_BlSjEN0CEeOvVYoRsPZlnA"/>
-        </inventar>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08IpN0CEeOvVYoRsPZlnA" page="439" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1000" name="Renraku Sensei" kategorie="Commlink"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08Ipd0CEeOvVYoRsPZlnA" wertValue="8000" name="Spell foci" stufe="2"/>
-        <inventar xsi:type="shr5:Kleidung" xmi:id="_B08Ipt0CEeOvVYoRsPZlnA" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4" wertValue="900" name="Lined Coat" ruestung="9"/>
-        <inventar xsi:type="shr5:Credstick" xmi:id="_B08Ip90CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08IqN0CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1150" name="Contacts" kategorie="Optical &amp; Imaging Devices">
-          <mods xmi:id="_B08vsN0CEeOvVYoRsPZlnA" wert="1">
-            <attribut href="http://urszeidler.de/shr5/1.0#//Sichtverhaeltnisse/infrarot"/>
-          </mods>
-        </inventar>
-        <inventar xsi:type="shr5:Munition" xmi:id="_B08vsd0CEeOvVYoRsPZlnA" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="200" name="Ammo: Regular Ammo" anzahl="100" proAnzahl="10" type="_BlWNcd0CEeOvVYoRsPZlnA"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08vst0CEeOvVYoRsPZlnA" page="441" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="100" name="Micro-Transceiver" kategorie="Communications"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08vs90CEeOvVYoRsPZlnA" page="450" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating" name="Medkit" kategorie="Biotech"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08vtN0CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" wertValue="500" name="Tool Kit" kategorie="Tools"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_B08vtd0CEeOvVYoRsPZlnA" page="441" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating*3)F" wertValue="5000" name="Jammer, Area" kategorie="Communications" stufe="6"/>
-        <contracts xsi:type="shr5:Lifestyle" xmi:id="_B08vtt0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="2000"/>
-        <contracts xsi:type="shr5:Sin" xmi:id="_B08vt90CEeOvVYoRsPZlnA" name="Daniel Silverbane" wertValue="5000" stufe="2" gefaelscht="true"/>
-        <contracts xsi:type="shr5:Lizenz" xmi:id="_B09WwN0CEeOvVYoRsPZlnA" name="Adjunct professor of magical theory to carry spell foci" wertValue="800" gefaelscht="true" lizenzTraeger="_B08vt90CEeOvVYoRsPZlnA"/>
-        <connections xmi:id="_B09Wwd0CEeOvVYoRsPZlnA" influence="2" loyality="2"/>
-        <connections xmi:id="_B09Wwt0CEeOvVYoRsPZlnA" influence="4" loyality="2"/>
-        <connections xmi:id="_B09Ww90CEeOvVYoRsPZlnA" influence="4" loyality="4"/>
-        <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_B09WxN0CEeOvVYoRsPZlnA" character="_B02CBN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Trojan" resourcen="_BtMh490CEeOvVYoRsPZlnA" skills="_BtGbQt0CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs2joN0CEeOvVYoRsPZlnA" magic="_BtFNId0CEeOvVYoRsPZlnA" karmaToResource="10" startKarma="7" startResources="980"/>
-      </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4N0CEeOvVYoRsPZlnA" character="_B0O-Ad0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Example James" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbRN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtCw4N0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA"/>
@@ -12046,143 +12084,111 @@
           <selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </generatorSrc>
       </members>
-      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_XDf7oN0DEeOF8uJDTAKQmg" chracterSource="_G_vkIN0DEeOF8uJDTAKQmg" choosenLifestyle="_OOjlIN0MEeOQ4-2yeaetCA" nativeLanguage="542bb99d-db7c-476e-8c97-6c63744a97fc">
-        <persona xsi:type="shr5:MudanPersona" xmi:id="_XDf7od0DEeOF8uJDTAKQmg" name="Moto" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="2" reaktionBasis="2" staerkeBasis="3" charismaBasis="1" willenskraftBasis="6" intuitionBasis="6" logikBasis="5" spezies="70f618bf-7e17-4e32-b2c2-70f57a0c1895">
-          <fertigkeiten xmi:id="_YrxrkN0EEeOF8uJDTAKQmg" stufe="4" fertigkeit="9a5d492b-3384-46c5-b7d1-b180beec0ddc"/>
-          <fertigkeiten xmi:id="_anH98N0EEeOF8uJDTAKQmg" stufe="2" fertigkeit="6300e6d5-c552-4ec2-8b2f-de2567132e36"/>
-          <fertigkeiten xmi:id="_a6-HAN0EEeOF8uJDTAKQmg" stufe="1" fertigkeit="7d311e97-bd29-4ffd-a500-a301ced17852"/>
-          <fertigkeiten xmi:id="_dNsXkN0EEeOF8uJDTAKQmg" stufe="6" fertigkeit="87e641e8-7683-4d70-9e39-cdea468f2311" spezialisierungen="_Bmutgt0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_mps_AN0EEeOF8uJDTAKQmg" stufe="6" fertigkeit="28560489-2105-4ec1-9eb5-867e7248c910" spezialisierungen="_Bm-lIt0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_rIamAN0EEeOF8uJDTAKQmg" stufe="6" fertigkeit="494966f7-7121-4fc6-8250-6d4ea1e620b0" spezialisierungen="_Bm_MOt0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_upaAgN0EEeOF8uJDTAKQmg" stufe="6" fertigkeit="6eadf912-7ad8-4bff-b59a-a983d6199aad" spezialisierungen="_BnAaUt0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_Dt0OcN0FEeOF8uJDTAKQmg" stufe="1" fertigkeit="253d9422-7785-4d0b-a1ab-b303893a3286"/>
-          <fertigkeiten xmi:id="_JveO4N0FEeOF8uJDTAKQmg" stufe="4" fertigkeit="_BnTVQN0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_Sg194N0FEeOF8uJDTAKQmg" stufe="4" fertigkeit="_BnneUN0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_S8di4N0FEeOF8uJDTAKQmg" stufe="4" fertigkeit="_BnneWd0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_VS6c4N0FEeOF8uJDTAKQmg" stufe="1" fertigkeit="3f3fec5f-d653-4a64-9830-3bee369a8548"/>
-          <fertigkeiten xmi:id="_XOWO0N0FEeOF8uJDTAKQmg" stufe="1" fertigkeit="fe61fd9a-7de0-4617-8bbc-a05cee3ebfed"/>
-          <fertigkeiten xmi:id="_anVj4N0FEeOF8uJDTAKQmg" stufe="1" fertigkeit="_BnoscN0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_dQKnUN0FEeOF8uJDTAKQmg" stufe="3" fertigkeit="_Bnil2t0CEeOvVYoRsPZlnA"/>
-          <fertigkeiten xmi:id="_g8-3UN0FEeOF8uJDTAKQmg" stufe="4" fertigkeit="_BnVxi90CEeOvVYoRsPZlnA"/>
-          <fertigkeitsGruppen xmi:id="_RzpWIN0EEeOF8uJDTAKQmg" stufe="5" gruppe="_Bmwist0CEeOvVYoRsPZlnA"/>
-          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_EGc7cN0GEeOF8uJDTAKQmg" name="Control Rig 2" parentId="_By0oxN0CEeOvVYoRsPZlnA" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="97000">
-            <mods xmi:id="_EGc7cd0GEeOF8uJDTAKQmg" wert="-200">
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_OTABIN6JEeOU1t7mwJMedA" chracterSource="_G_vkIN0DEeOF8uJDTAKQmg" choosenLifestyle="_AhwM4N6LEeOU1t7mwJMedA" nativeLanguage="3f3fec5f-d653-4a64-9830-3bee369a8548" sex="male">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_OTABId6JEeOU1t7mwJMedA" name="Moto" edgeBasis="2" konstitutionBasis="3" geschicklichkeitBasis="4" reaktionBasis="5" staerkeBasis="3" charismaBasis="1" willenskraftBasis="3" intuitionBasis="4" logikBasis="4" spezies="70f618bf-7e17-4e32-b2c2-70f57a0c1895">
+          <fertigkeiten xmi:id="_pfUBcN6JEeOU1t7mwJMedA" stufe="4" fertigkeit="87e641e8-7683-4d70-9e39-cdea468f2311"/>
+          <fertigkeiten xmi:id="_uy9sYN6JEeOU1t7mwJMedA" stufe="5" fertigkeit="24f9aad8-4106-4f1c-859b-8641ad387a3a"/>
+          <fertigkeiten xmi:id="_xd3MYN6JEeOU1t7mwJMedA" stufe="4" fertigkeit="c28cb807-174d-4645-9a9d-791eb1bed2b4"/>
+          <fertigkeiten xmi:id="_yBLU0N6JEeOU1t7mwJMedA" stufe="4" fertigkeit="a54bb1c7-9920-4276-ad18-311e390ca96c"/>
+          <fertigkeiten xmi:id="_0mWnUN6JEeOU1t7mwJMedA" stufe="5" fertigkeit="28560489-2105-4ec1-9eb5-867e7248c910"/>
+          <fertigkeiten xmi:id="_18kMUN6JEeOU1t7mwJMedA" stufe="3" fertigkeit="494966f7-7121-4fc6-8250-6d4ea1e620b0"/>
+          <fertigkeiten xmi:id="_24OjUN6JEeOU1t7mwJMedA" stufe="3" fertigkeit="253d9422-7785-4d0b-a1ab-b303893a3286"/>
+          <fertigkeiten xmi:id="_3jQdUN6JEeOU1t7mwJMedA" stufe="4" fertigkeit="6eadf912-7ad8-4bff-b59a-a983d6199aad"/>
+          <fertigkeiten xmi:id="_6_5jUN6JEeOU1t7mwJMedA" stufe="2" fertigkeit="132783c1-780e-4021-875c-c8763e729e2d"/>
+          <fertigkeiten xmi:id="__bF8QN6JEeOU1t7mwJMedA" stufe="1" fertigkeit="fbf14392-ee78-4bae-9426-6db422fe2ecf"/>
+          <fertigkeiten xmi:id="_AmVAUN6KEeOU1t7mwJMedA" stufe="1" fertigkeit="c385ecde-f451-4352-a5ef-2c3a244e23d3"/>
+          <fertigkeitsGruppen xmi:id="_q4QxYN6JEeOU1t7mwJMedA" stufe="5" gruppe="_Bmwist0CEeOvVYoRsPZlnA"/>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_jOegEN6KEeOU1t7mwJMedA" name="Control Rig 2" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="97000">
+            <mods xmi:id="_jOegEd6KEeOU1t7mwJMedA" wert="-200">
               <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
             </mods>
-            <mods xmi:id="_EGc7ct0GEeOF8uJDTAKQmg" wert="1">
+            <mods xmi:id="_jOegEt6KEeOU1t7mwJMedA" wert="1">
               <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
             </mods>
-            <mods xmi:id="_EGc7c90GEeOF8uJDTAKQmg" wert="2">
+            <mods xmi:id="_jOegE96KEeOU1t7mwJMedA" wert="2">
               <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
             </mods>
           </koerperMods>
-          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_MoQkcN0GEeOF8uJDTAKQmg" name="Datajack" parentId="e669d46a-2b72-4c44-85cb-96e2c66cc17a" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="1000">
-            <mods xmi:id="_MoQkcd0GEeOF8uJDTAKQmg" wert="-10">
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_jQkx0N6KEeOU1t7mwJMedA" name="Cerebral booster 1" parentId="63b0b849-cfa6-48d2-a34c-ec58a36acf21" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="31500">
+            <mods xmi:id="_jQkx0d6KEeOU1t7mwJMedA" wert="-20">
               <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
             </mods>
-            <localizations xmi:id="_MoQkct0GEeOF8uJDTAKQmg" local="de" name="Datenbuchse"/>
+            <mods xmi:id="_1nhegN6LEeOU1t7mwJMedA" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+            </mods>
+            <localizations xmi:id="_jQkx0t6KEeOU1t7mwJMedA" local="de" name="Zerebralbooster"/>
           </koerperMods>
-          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_MpescN0GEeOF8uJDTAKQmg" name="Smartlink" parentId="72f48207-04a0-4019-a92d-0d5d8361bf3f" page="453" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="4000">
-            <mods xmi:id="_Mpescd0GEeOF8uJDTAKQmg" wert="-20">
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_jRpI0N6KEeOU1t7mwJMedA" name="Muscle augmentation 2" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="62000">
+            <mods xmi:id="_jRpI0d6KEeOU1t7mwJMedA" wert="-40">
               <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
             </mods>
-            <localizations xmi:id="_Mpesct0GEeOF8uJDTAKQmg" local="de" name="Smartlink"/>
-          </koerperMods>
-          <koerperMods xsi:type="shr5:BioWare" xmi:id="_NFnz4N0cEeOUhMDMrBujfQ" name="Muscle augmentation 1" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="31000">
-            <mods xmi:id="_NFnz4d0cEeOUhMDMrBujfQ" wert="-20">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-            </mods>
-            <mods xmi:id="_gKpkAN0cEeOUhMDMrBujfQ" wert="1">
+            <mods xmi:id="_PQ994N6MEeOU1t7mwJMedA" wert="2">
               <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
             </mods>
-            <localizations xmi:id="_NFnz4t0cEeOUhMDMrBujfQ" local="de" name="Muskelverstärkung"/>
-          </koerperMods>
-          <koerperMods xsi:type="shr5:BioWare" xmi:id="_Ciog0N0dEeOUhMDMrBujfQ" name="Muscle toner 1" parentId="88d6c54c-0eed-4c2a-9e97-9fd811dffd8d" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="32000">
-            <mods xmi:id="_CipH4N0dEeOUhMDMrBujfQ" wert="-20">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-            </mods>
-            <mods xmi:id="_KHyUUN0dEeOUhMDMrBujfQ" wert="1">
+            <mods xmi:id="_RBfgUN6MEeOU1t7mwJMedA" wert="2">
               <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
             </mods>
-            <localizations xmi:id="_CipH4d0dEeOUhMDMrBujfQ" local="de" name="Muskelstraffung"/>
+            <localizations xmi:id="_jRpI0t6KEeOU1t7mwJMedA" local="de" name="Muskelverstärkung 2"/>
           </koerperMods>
-          <eigenschaften xmi:id="_nU40kN0FEeOF8uJDTAKQmg" name="Analytical Mind" parentId="f764a28e-a0a5-4f32-af1a-a1e7850b46cb" page="72" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="5">
-            <localizations xmi:id="_nU40kd0FEeOF8uJDTAKQmg" local="de" name="Analytischer Geist"/>
-          </eigenschaften>
-          <eigenschaften xmi:id="_nVlYIN0FEeOF8uJDTAKQmg" name="Juryrigger" parentId="ef9285ac-0c94-41b0-972f-007a2ab8eab0" page="75" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="10">
-            <localizations xmi:id="_nVlYId0FEeOF8uJDTAKQmg" local="de" name="Rennpilot"/>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_jS0NgN6KEeOU1t7mwJMedA" name="Orthoskin 3" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12R" wertValue="18000">
+            <mods xmi:id="_jS0Ngd6KEeOU1t7mwJMedA" wert="-75">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_nsX80N6MEeOU1t7mwJMedA" wert="3">
+              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
+            </mods>
+            <localizations xmi:id="_jS0Ngt6KEeOU1t7mwJMedA" local="de" name="Orthoskin 3"/>
+          </koerperMods>
+          <eigenschaften xmi:id="_OaZFwN6NEeOU1t7mwJMedA" name="Gearhead" parentId="bcc8f678-5f18-43ec-a093-a0dedbc2ff76" page="74" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="11">
+            <localizations xmi:id="_OaZFwd6NEeOU1t7mwJMedA" local="de" name="Technisches Improvisationstalent"/>
           </eigenschaften>
         </persona>
-        <changes xsi:type="shr5mngt:AttributeChange" xmi:id="_C28SAN0fEeOH5IqcHcne2w" changeApplied="true" dateApplied="2014-05-16T19:25:23.404+0200" from="1" to="2">
-          <attibute href="http://urszeidler.de/shr5/1.0#//AbstraktPersona/geschicklichkeitBasis"/>
-        </changes>
-        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_88IbEN0LEeOQ4-2yeaetCA" parentId="0846ddf0-943e-4cfe-92a2-f7c672797962" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" wertValue="10" name="Knife" schadenscode="(STR+1)P" praezision="5" durchschlagsKraft="-1">
-          <localizations xmi:id="_88IbEd0LEeOQ4-2yeaetCA" local="de" name="Messer"/>
+        <inventar xsi:type="shr5:Commlink" xmi:id="_7dr2EN6KEeOU1t7mwJMedA" parentId="0969e4ff-01d9-448e-b45d-073bdcdcf541" page="439" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10" wertValue="3000" name="Hermes Ikon" deviceRating="5">
+          <localizations xmi:id="_7dr2Ed6KEeOU1t7mwJMedA" local="de" name="Hermes Ikon"/>
         </inventar>
-        <inventar xsi:type="shr5:Projektilwaffe" xmi:id="_-yyasN0LEeOQ4-2yeaetCA" parentId="86c46c29-52b6-45f1-8816-cb006ef6c6a8" page="423" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5" wertValue="500" name="Bow (Rating 5)" schadenscode="7P" praezision="6" durchschlagsKraft="-2" reichweite="_BlYCod0CEeOvVYoRsPZlnA">
-          <localizations xmi:id="_-yyasd0LEeOQ4-2yeaetCA" local="de" name="Bogen (Stufe 5)"/>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_7eQd0N6KEeOU1t7mwJMedA" parentId="fd839c3a-db9e-40b9-9c87-1fd8f8c40316" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="450" name="Armor Clothing" ruestung="6">
+          <localizations xmi:id="_7eQd0d6KEeOU1t7mwJMedA" local="de" name="Panzerkleidung"/>
         </inventar>
-        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_C7mqMN0MEeOQ4-2yeaetCA" parentId="5c737420-5d43-4ba7-9a31-d19af265d8e5" page="112" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" name="Unarmed Attack" schadenscode="(STR/2)S" praezision="4"/>
-        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_C8T00N0MEeOQ4-2yeaetCA" parentId="b9792786-b3e8-41a3-94ef-92d7b5c71871" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4" wertValue="300" name="Combat Knife" schadenscode="(STR+2)P" praezision="6" durchschlagsKraft="-3">
-          <localizations xmi:id="_C8Ub4N0MEeOQ4-2yeaetCA" local="de" name="Kampfmesser"/>
+        <inventar xsi:type="shr5:Kleidung" xmi:id="_7eypUN6KEeOU1t7mwJMedA" parentId="347de12d-261a-46d1-8eb3-8732f1f73877" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1500" name="Actioneer Business Clothes" ruestung="8">
+          <localizations xmi:id="_7eypUd6KEeOU1t7mwJMedA" local="de" name="Actioneer Geschäftskleidung"/>
         </inventar>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_FMXy8N0MEeOQ4-2yeaetCA" parentId="_B0Z9IN0CEeOvVYoRsPZlnA" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="9F" wertValue="400" name="Ammo: Explosive Rounds 50" kategorie="Ammunition"/>
-        <inventar xsi:type="shr5:Commlink" xmi:id="_iBHBQN0aEeOUhMDMrBujfQ" parentId="53d5bd35-60de-417c-9dd9-af0f0b83d696" page="439" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="2500" name="Erika Elite" deviceRating="4">
-          <localizations xmi:id="_iBHBQd0aEeOUhMDMrBujfQ" local="de" name="Erika Elite"/>
-        </inventar>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iBwhgN0aEeOUhMDMrBujfQ" parentId="49afc1d1-a100-42c9-be16-721fc657cdce" page="441" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="450" name="Tag Eraser" kategorie="Communications">
-          <localizations xmi:id="_iBwhgd0aEeOUhMDMrBujfQ" local="de" name="RFID-Löscher"/>
-        </inventar>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iCT7IN0aEeOUhMDMrBujfQ" parentId="ebf789a5-d71b-4985-9787-6995dcc444e7" page="441" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating" name="White Noise Generator" kategorie="Communications">
-          <localizations xmi:id="_iCT7Id0aEeOUhMDMrBujfQ" local="de" name="White-Noise-Generator"/>
-        </inventar>
-        <inventar xsi:type="shr5:Kleidung" xmi:id="_iC5J8N0aEeOUhMDMrBujfQ" parentId="fd839c3a-db9e-40b9-9c87-1fd8f8c40316" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="450" name="Armor Clothing" ruestung="6">
-          <localizations xmi:id="_iC5J8d0aEeOUhMDMrBujfQ" local="de" name="Panzerkleidung"/>
-        </inventar>
-        <inventar xsi:type="shr5:Kleidung" xmi:id="_iDXEAN0aEeOUhMDMrBujfQ" parentId="f69ba6e4-c3c7-4d64-8831-467e3b3b6051" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2" wertValue="1000" name="Armor Jacket" ruestung="12">
-          <localizations xmi:id="_iDXEAd0aEeOUhMDMrBujfQ" local="de" name="Panzerjacke"/>
-        </inventar>
-        <inventar xsi:type="shr5:Kleidung" xmi:id="_iD9g8N0aEeOUhMDMrBujfQ" parentId="f3016c85-eb8d-4b6a-84c7-f89e777af9a3" page="437" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="14R" wertValue="2000" name="Full Body Armor" ruestung="15">
-          <localizations xmi:id="_iD9g8d0aEeOUhMDMrBujfQ" local="de" name="Ganzkörperpanzerung"/>
-        </inventar>
-        <inventar xsi:type="shr5:RiggerCommandConsole" xmi:id="_iEgTgN0aEeOUhMDMrBujfQ" parentId="_By0BsN0CEeOvVYoRsPZlnA" page="265" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="1400" name="Build from crab." deviceRating="1" datenverarbeitungBasis="3" firewallBasis="2">
-          <mods xmi:id="_iEgTgd0aEeOUhMDMrBujfQ" wert="1">
+        <inventar xsi:type="shr5:RiggerCommandConsole" xmi:id="_7fS_oN6KEeOU1t7mwJMedA" parentId="_-SkKwN6FEeOu7tNcVaerMg" page="265" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="16000" name="Essy Motors DroneMaster" deviceRating="3" datenverarbeitungBasis="4" firewallBasis="4">
+          <mods xmi:id="_7fS_od6KEeOU1t7mwJMedA" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
           </mods>
         </inventar>
-        <inventar xsi:type="shr5:Credstick" xmi:id="_iFDtIN0aEeOUhMDMrBujfQ" parentId="_BywXUd0CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0" wertValue="20" name="Silver" maxValue="20000"/>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iFoU4N0aEeOUhMDMrBujfQ" parentId="c0d3905f-69a2-4263-b008-760b8e216419" page="447" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8F" name="Keycard Copier" kategorie="B&amp;E Gear">
-          <localizations xmi:id="_iFoU4d0aEeOUhMDMrBujfQ" local="de" name="Magschlosskarten-Kopierer"/>
+        <inventar xsi:type="shr5:Credstick" xmi:id="_7ft2YN6KEeOU1t7mwJMedA" parentId="_BywXUt0CEeOvVYoRsPZlnA" page="443" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5" wertValue="20" name="Gold" maxValue="100000"/>
+        <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_7gIGEN6KEeOU1t7mwJMedA" parentId="9809adf2-d402-4285-984c-8f62d69e001b" page="422" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="9R" wertValue="1000" name="Katana" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3">
+          <localizations xmi:id="_7gIGEd6KEeOU1t7mwJMedA" local="de" name="Katana"/>
         </inventar>
-        <inventar xsi:type="shr5:Gegenstand" xmi:id="_iGURYN0aEeOUhMDMrBujfQ" parentId="c6e0bdf3-712d-48f8-ba72-89467cdebdc9" page="435" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6R" wertValue="100" name="Grenade: Flash-Bang" kategorie="Ammunition">
-          <localizations xmi:id="_iGURYd0aEeOUhMDMrBujfQ" local="de" name="Granate: Schock"/>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_7gujAN6KEeOU1t7mwJMedA" parentId="983d5bd8-e222-4841-9cb6-6f582b99f573" page="427" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="400" name="Ruger Super Warhawk" schadenscode="9P" praezision="5" durchschlagsKraft="-2" reichweite="_BlWNct0CEeOvVYoRsPZlnA" munitionstyp="Trommel" kapazitaet="6">
+          <localizations xmi:id="_7gujAd6KEeOU1t7mwJMedA" local="de" name="Ruger Super Warhawk"/>
+          <modie>EM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
         </inventar>
-        <inventar xsi:type="shr5:Munition" xmi:id="_iG7VYN0aEeOUhMDMrBujfQ" parentId="68ded2d1-af35-4b53-b44c-9264ba1f4f62" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="25" name="Ammo: Gel Rounds" anzahl="100" proAnzahl="10" armorMod="1">
-          <localizations xmi:id="_iG7VYd0aEeOUhMDMrBujfQ" local="de" name="Munition: Gelmunition"/>
+        <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_7hPgYN6KEeOU1t7mwJMedA" parentId="18cfaf8e-4b42-463e-833b-6c529dffcb1b" page="426" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_BlWNct0CEeOvVYoRsPZlnA" munitionstyp="Streifen" kapazitaet="15">
+          <localizations xmi:id="_7hPgYd6KEeOU1t7mwJMedA" local="de" name="Ares Predator V"/>
+          <modie>HM</modie>
+          <erweiterung>Lauf</erweiterung>
+          <erweiterung>Oben</erweiterung>
+          <einbau xmi:id="_7hPgYt6KEeOU1t7mwJMedA" name="Smartgun System, Internal" page="433" srcBook="_BlSjEN0CEeOvVYoRsPZlnA"/>
         </inventar>
-        <inventar xsi:type="shr5:Munition" xmi:id="_iHn48N0aEeOUhMDMrBujfQ" parentId="7bcb23dd-c2df-4b50-b095-ba62c131ee86" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="120" name="Ammo: APDS" anzahl="100" proAnzahl="10" armorMod="-4">
-          <localizations xmi:id="_iHn48d0aEeOUhMDMrBujfQ" local="de" name="Munition: APDS"/>
+        <inventar xsi:type="shr5:Munition" xmi:id="_7hvPoN6KEeOU1t7mwJMedA" parentId="7bcb23dd-c2df-4b50-b095-ba62c131ee86" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="120" name="APDS" anzahl="10" proAnzahl="10" armorMod="-4">
+          <localizations xmi:id="_7hvPod6KEeOU1t7mwJMedA" local="de" name="Munition: APDS"/>
         </inventar>
-        <contracts xsi:type="shr5:Lifestyle" xmi:id="_OOjlIN0MEeOQ4-2yeaetCA" name="Middle" parentId="25e7fe19-0dc2-4d2b-b134-035259ea321a" page="95" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000">
-          <localizations xmi:id="_OOjlId0MEeOQ4-2yeaetCA" local="de" name="Mittelschicht"/>
+        <inventar xsi:type="shr5:Munition" xmi:id="_7iTQUN6KEeOU1t7mwJMedA" parentId="2d7a4fea-b539-4d85-9e48-70c571f76ff0" page="434" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="2R" wertValue="20" name="Ammo: Regular Ammo" anzahl="10" proAnzahl="10">
+          <localizations xmi:id="_7iTQUd6KEeOU1t7mwJMedA" local="de" name="Munition: Standardmunition"/>
+        </inventar>
+        <contracts xsi:type="shr5:Lifestyle" xmi:id="_AhwM4N6LEeOU1t7mwJMedA" name="Middle" parentId="25e7fe19-0dc2-4d2b-b134-035259ea321a" page="95" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000">
+          <localizations xmi:id="_AhwM4d6LEeOU1t7mwJMedA" local="de" name="Mittelschicht"/>
         </contracts>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_HpIA4N0aEeOUhMDMrBujfQ" name="Steel Lynx Combat Drone" parentId="693a7423-0f31-4066-931c-84fd1261d4d5" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="25000" fahrzeugTyp="Drone: Large">
-          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_KA0RAN0aEeOUhMDMrBujfQ" wertValue="500" name="Clearsight 6" parentId="_4uQPL90XEeOr2LH4Zw5PzA" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="6" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
-        </vehicels>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_Hpw6EN0aEeOUhMDMrBujfQ" name="Aztechnology Crawler" parentId="c83126b4-1b74-471e-9578-83b0ab451190" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4" wertValue="4000" fahrzeugTyp="Drone: Small">
-          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_LIj8MN0aEeOUhMDMrBujfQ" wertValue="500" name="Clearsight 6" parentId="_4uQPL90XEeOr2LH4Zw5PzA" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="6" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
-        </vehicels>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_HqVh0N0aEeOUhMDMrBujfQ" name="Shiawase Kanmushi" parentId="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" fahrzeugTyp="Drone: Micro">
-          <storedPrograms xsi:type="shr5:CommonProgram" xmi:id="_MpjN0N0aEeOUhMDMrBujfQ" wertValue="80" name="Encrypt" parentId="_4uQPB90XEeOr2LH4Zw5PzA" page="245" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
-            <localizations xmi:id="_MpjN0d0aEeOUhMDMrBujfQ" local="de" name="Verschlüsselung"/>
-          </storedPrograms>
-          <storedPrograms xsi:type="shr5:AutoSoft" xmi:id="_Mpkb8N0aEeOUhMDMrBujfQ" wertValue="500" name="Clearsight 5" parentId="_4uQPMN0XEeOr2LH4Zw5PzA" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="5" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
-        </vehicels>
-        <vehicels xsi:type="shr5:Drohne" xmi:id="_Hq5igN0aEeOUhMDMrBujfQ" name="Sikorsky-Bell Microskimmer" parentId="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1000" fahrzeugTyp="Drone: Micro"/>
-        <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_7rjmMN0aEeOUhMDMrBujfQ" name="Hyundai Shin-Hyung" parentId="c1bbef8e-60c9-4b1b-b259-132d13cf1671" page="463" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="28500" fahrzeugTyp="Car"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_Eof_0N6LEeOU1t7mwJMedA" name="Sikorsky-Bell Microskimmer" parentId="bbac6be6-7628-4d8e-9581-ffbc96cf24cf" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="1000" handling="3" geschwindigkeit="3" beschleunigung="1" pilot="3" sensor="3" fahrzeugTyp="Drone: Micro"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_EpHq4N6LEeOU1t7mwJMedA" name="GM-Nissan Doberman" parentId="6ceca942-38bf-4042-8179-36836d6daffc" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="5000" handling="5" geschwindigkeit="3" beschleunigung="1" rumpf="4" pilot="3" sensor="3" fahrzeugTyp="Drone: Medium" panzer="4"/>
+        <vehicels xsi:type="shr5:Drohne" xmi:id="_EppPUN6LEeOU1t7mwJMedA" name="Shiawase Kanmushi" parentId="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" handling="4" geschwindigkeit="2" beschleunigung="1" pilot="3" sensor="3" fahrzeugTyp="Drone: Micro"/>
       </members>
     </groups>
-    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_XDf7oN0DEeOF8uJDTAKQmg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
+    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_OTABIN6JEeOU1t7mwJMedA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
     <grunts xmi:id="_B1VKMN0CEeOvVYoRsPZlnA" name="Thugs">
       <members xmi:id="_B1WYUN0CEeOvVYoRsPZlnA" count="7" nsc="_B1JkAN0CEeOvVYoRsPZlnA"/>
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
