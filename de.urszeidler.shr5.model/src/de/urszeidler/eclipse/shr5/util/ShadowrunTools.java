@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.GeldWert;
@@ -35,12 +36,14 @@ import de.urszeidler.eclipse.shr5.Spezies;
  */
 public class ShadowrunTools {
 
+    private static final String EMPTY = "";
     private static Map<EAttribute, EAttribute> base2SpeciesMin;
     private static Map<EAttribute, EAttribute> base2SpeciesMax;
     private static Map<EAttribute, EAttribute> base2Calced;
 
     private static List<EAttribute> orderedAttibutes;
     private static List<EAttribute> orderedBasedAttibutes;
+    private static List<EAttribute> orderedCalcedAttibutes;
 
     // the static initaliser
     static {
@@ -100,6 +103,12 @@ public class ShadowrunTools {
         orderedBasedAttibutes.remove(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
         orderedBasedAttibutes.remove(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS);
         orderedBasedAttibutes.remove(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
+
+        orderedCalcedAttibutes = new ArrayList<EAttribute>(orderedAttibutes);
+//        orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ);
+//        orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
+        
+
     }
 
     /**
@@ -174,6 +183,46 @@ public class ShadowrunTools {
         return base2SpeciesMax.get(attribute);
     }
 
+    /**
+     * Collects all fertigkeiten and groups in a list.
+     * @param persona
+     * @return 
+     */
+    public static ArrayList<Beschreibbar> fertigkeitsGruppenToFertigkeiten(AbstraktPersona persona) {
+        ArrayList<Beschreibbar> list = new ArrayList<Beschreibbar>();
+        EList<PersonaFertigkeitsGruppe> fertigkeitsGruppen = persona.getFertigkeitsGruppen();
+        for (PersonaFertigkeitsGruppe personaFertigkeitsGruppe : fertigkeitsGruppen) {
+            FertigkeitsGruppe fertigkeitsGruppe = personaFertigkeitsGruppe.getGruppe();
+            list.add(fertigkeitsGruppe);
+            EList<Fertigkeit> fertigkeiten = fertigkeitsGruppe.getFertigkeiten();
+            for (Fertigkeit fertigkeit : fertigkeiten) {
+                list.add(fertigkeit);
+            }            
+        }
+        return list;
+    }
+    
+    
+    /**
+     * Returns the values of the attribute, if the calculated value is not equals it will return as (val).
+     * @param eAttribute
+     * @param persona
+     * @return
+     */
+    public static String attributeValue(AbstraktPersona persona,EAttribute eAttribute) {
+        EAttribute base2Calced = ShadowrunTools.base2Calced(eAttribute);
+        if (base2Calced == null)
+            return EMPTY;
+
+        Integer value = (Integer)persona.eGet(eAttribute);
+        Integer calc = (Integer)persona.eGet(base2Calced);
+        String a = EMPTY;
+        if (value != calc)
+            a = "(" + calc + ")";
+
+        return value.toString()+a;
+    }
+    
     /**
      * Filters the skillgoups only having skill with the given attribute.
      * 
@@ -292,7 +341,7 @@ public class ShadowrunTools {
      */
     public static String calcListenWertToString(List<Object> list) {
         BigDecimal summ = calcListenWert(list);
-        return summ.longValue() + "";
+        return summ.longValue() + EMPTY;
     }
 
     /**
