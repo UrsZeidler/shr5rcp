@@ -4,6 +4,9 @@
  */]
 [module ShadowrunTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
 
+
+
+
 [**
  * The documentation of the query
  */]
@@ -49,6 +52,25 @@
 [query public base2SpeciesMax(arg0 : EAttribute) : EAttribute
 	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'base2SpeciesMax(org.eclipse.emf.ecore.EAttribute)', Sequence{arg0})
 /]
+
+[**
+ * Returns the attribute value when altered than with the altered value.
+ * @param persona
+ * @param arg1
+ */]
+[query public attributeValue(persona : AbstraktPersona, attribute : EAttribute) : Sequence(OclAny)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'attributeValue(de.urszeidler.eclipse.shr5.AbstraktPersona,org.eclipse.emf.ecore.EAttribute)', Sequence{persona, attribute})
+/]
+
+
+[**
+ * Collects all fertigkeiten and groups in a list.
+ * @param persona
+ */]
+[query public fertigkeitsGruppenToFertigkeiten(persona : AbstraktPersona) : Sequence(Beschreibbar)
+	= invoke('de.urszeidler.eclipse.shr5.util.ShadowrunTools', 'fertigkeitsGruppenToFertigkeiten(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{persona})
+/]
+
 
 [**
  * The documentation of the query

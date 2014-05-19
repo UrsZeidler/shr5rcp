@@ -44,10 +44,11 @@ pe->collect(pfg| pfg.karmaKosten    )->sum()
 { rest : Integer = emtpty.size() -  text.size() ;
 }]
 [if (rest>0)]
-[text.concat(emtpty.substring(text.size()))  /][else]
+[text.concat(emtpty.substring(text.size()))/][else]
 [text/][/if][/template]
 
-
+[template public quallityType(qua : PersonaEigenschaft) ]
+[if (qua.karmaKosten<0)]N[else]P[/if][/template]
 
 [query public vehicleHandling (aFahrzeug : Bodenfahrzeug) : String = 
 aFahrzeug.handling+'/'+aFahrzeug.handlingGelaende

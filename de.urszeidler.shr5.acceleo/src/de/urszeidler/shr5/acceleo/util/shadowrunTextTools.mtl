@@ -17,3 +17,15 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'createNumberList(java.lang.Integer)', Sequence{count})
 /]
 
+[query public toLocalizedInitative(persona : AbstraktPersona) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedInitative(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{persona})
+/]
+
+[query public escapeXML(text : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'escapeXML(java.lang.String)', Sequence{text.toString()})
+/]
+
+[query public localizedString(text : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'localizedString(java.lang.String)', Sequence{text.toString()})
+/]
+
