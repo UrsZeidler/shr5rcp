@@ -12,6 +12,9 @@
 [query public zauberArtToName(arg0 : ZauberArt) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(de.urszeidler.eclipse.shr5.ZauberArt)', Sequence{arg0})
 /]
+[query public sexToName(sex : Sex) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'sexToName(de.urszeidler.eclipse.shr5Management.Sex)', Sequence{sex})
+/]
 
 [query public createNumberList(count : Integer) : OrderedSet(String)
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'createNumberList(java.lang.Integer)', Sequence{count})
@@ -19,6 +22,10 @@
 
 [query public toLocalizedInitative(persona : AbstraktPersona) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedInitative(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{persona})
+/]
+
+[query public toLocalizedAstralInitative(persona : AstraleProjektion) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedAstralInitative(de.urszeidler.eclipse.shr5.AstraleProjektion)', Sequence{persona})
 /]
 
 [query public escapeXML(text : OclAny) : String
