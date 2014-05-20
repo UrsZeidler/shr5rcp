@@ -83,42 +83,106 @@ empty40 : String = '........................................' ; } ]  [comment]30
      inkscape:groupmode="layer"
      id="layer1">
 
+[printPersonalDataBlock(aManagedCharacter, empty, 25, 25)/]
+[printAttributeBlock(aManagedCharacter, empty,25,155)/]
+[printSkillBlock(aManagedCharacter, empty40,25,335)/]
+[let pos : Integer = 395+ (aManagedCharacter.persona.fertigkeitsGruppenToFertigkeiten()->size()+aManagedCharacter.persona.fertigkeiten->size())*12   ]
+[printQuallitiesBlock(aManagedCharacter, empty40,25,pos)/]
+[let pos1 : Integer = 60 + pos + (persona.oclAsType(KoerperPersona).eigenschaften->size()*12)]
+[printLifestyleBlock(aManagedCharacter, empty40,25,pos1)/]
+[let pos2 : Integer = 82+ pos1 + (aManagedCharacter.inventar->selectByType(Credstick)->size()*12) ]
+[printNotesBlock(25,pos2, 1050-pos2 )/]
+[/let]
+[/let][/let]
 
-[printAttributeBlock(aManagedCharacter, empty)/]
-[printSkillBlock(aManagedCharacter, empty40)/]
 
-[printQuallitiesBlock(aManagedCharacter, empty40)/]
+
   </g>
 </svg>
 [/file]
 [/template]
 
-[template public printQuallitiesBlock (aManagedCharacter : ManagedCharacter,empty :String) 
+[template public printNotesBlock (x:Integer,y:Integer,size : Integer)]
+    <g
+       	id="g-notes-1"
+		transform="translate([x/],[y/])">
+[printLeftSideUp('notes'.localizedString())/]
+[printBotton(x, size)/]
+
+	</g>
+[/template]
+
+
+[template public printLifestyleBlock (aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer) 
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
     <g
-       id="g-skills"
-transform="translate(25,640)"
->
-      <path
-         inkscape:connector-curvature="0"
-         id="path-left-upper"
-         d="M 0,70 0,10 10,0 l 325,0 0,70"
-         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <rect
-         y="0"
-         x="200"
-         height="25"
-         width="135"
-         id="rect-kat"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text-kat"
-         y="20"
-         x="330"
-         style="font-size:18px;font-style:normal;font-weight:bold;text-anchor:end;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold;font-stretch:normal;font-variant:normal"
-         xml:space="preserve">['Quallities'.localizedString()/]</text>
+       	id="g-Lifestyle"
+		transform="translate([x/],[y/])">
+[printLeftSideUp('Lifestyle'.localizedString())/]
 
+[printSvgFullLine(aManagedCharacter.choosenLifestyle.getText(), empty,10,(40+1*12))/]
+[printSvgLineValue(aManagedCharacter.choosenLifestyle.wert,255,(40+1*12))/]
+
+[for (cred : Credstick | aManagedCharacter.inventar->selectByType(Credstick))]
+[printSvgFullLine(cred.getText(), empty,10,(40+(1+i)*12))/]
+[printSvgLineValue(cred.currentValue,255,(40+(1+i)*12))/]
+[/for]
+
+[let pos : Integer = aManagedCharacter.inventar->selectByType(Credstick)->size() +2 ]
+[printBotton(x, ((25+(pos*12))))/]
+[/let]
+	</g>
+[/template]
+
+[**
+ * Print the basic character data.
+*/]
+[template public printPersonalDataBlock (aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       	id="g-PersonalData"
+		transform="translate([x/],[y/])">
+[printLeftSideUp('PersonalData'.localizedString())/]
+
+
+[printSvgLine('Name'.localizedString(), empty,10,(40+1*12))/]
+[printSvgLineValue(persona.name,135,(40+1*12))/]
+
+[printSvgLine('Metatype'.localizedString(), empty,10,(40+2*12))/]
+[printSvgLineValue(persona.spezies.getText(),135,(40+2*12))/]
+
+[printSvgLine('Lang'.localizedString(), empty,10,(40+3*12))/]
+[printSvgLineValue(aManagedCharacter.nativeLanguage.getText(),135,(40+3*12))/]
+
+[printSvgLine('Sex'.localizedString(), empty,10,(40+4*12))/]
+[printSvgLineValue(sexToName(aManagedCharacter.sex),135,(40+4*12))/]
+
+[printSvgLine('Streetcred'.localizedString(), empty,10,(40+5*12))/]
+[printSvgLineValue(aManagedCharacter.streetCred,135,(40+5*12))/]
+[printSvgLine('Notority'.localizedString(), empty,170,(40+5*12))/]
+[printSvgLineValue(aManagedCharacter.notoriety,295,(40+5*12))/]
+
+[printSvgLine('CurrentKarma'.localizedString(), empty,10,(40+6*12))/]
+[printSvgLineValue(aManagedCharacter.currentKarma,135,(40+6*12))/]
+[printSvgLine('KarmaGaint'.localizedString(), empty,170,(40+6*12))/]
+[printSvgLineValue(aManagedCharacter.karmaGaint,295,(40+6*12))/]
+
+[printBotton(x, ((25+(6*12))))/]
+</g>
+[/template]
+
+
+
+
+
+[template public printQuallitiesBlock (aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       id="g-Quallities"
+transform="translate([x/],[y/])"
+>
+
+[printLeftSideUp('Quallities'.localizedString())/]
 [for (pe : PersonaEigenschaft | persona.oclAsType(KoerperPersona).eigenschaften)]
 [printSvgFullLine(pe.getText(), empty,10,(40+(i)*12))/]
 [printSvgLineValue(pe.karmaKosten,255,(40+(i)*12))/]
@@ -126,37 +190,19 @@ transform="translate(25,640)"
 [printSvgLineValue(pe.quallityType() ,300,(40+(i)*12))/]
 [/for]
 
+[printBotton(x, ((persona.oclAsType(KoerperPersona).eigenschaften->size()*12)+25))/]
 </g>
 [/template]
 
 
-[template public printSkillBlock(aManagedCharacter : ManagedCharacter,empty :String)
+[template public printSkillBlock(aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer)
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
     <g
        id="g-skills"
-transform="translate(25,240)"
+transform="translate([x/],[y/])"
 >
-      <path
-         inkscape:connector-curvature="0"
-         id="path-left-upper"
-         d="M 0,70 0,10 10,0 l 325,0 0,70"
-         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <rect
-         y="0"
-         x="200"
-         height="25"
-         width="135"
-         id="rect-kat"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text-kat"
-         y="20"
-         x="330"
-         style="font-size:18px;font-style:normal;font-weight:bold;text-anchor:end;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold;font-stretch:normal;font-variant:normal"
-         xml:space="preserve">['Skills'.localizedString()/]</text>
+[printLeftSideUp('Skills'.localizedString())/]
 
-[comment][/comment]
 [let count : Integer = persona.fertigkeitsGruppenToFertigkeiten()->size()]
 [for (b : Beschreibbar | persona.fertigkeitsGruppenToFertigkeiten())]
 [if (b.oclIsKindOf(FertigkeitsGruppe))]
@@ -174,8 +220,6 @@ transform="translate(25,240)"
 [/if]
 [/for]
 
-
-
 [for (pfg : PersonaFertigkeit | persona.fertigkeiten)]
 [let name : String = pfg.fertigkeit.getText()]
 [let attributeName : String = pfg.fertigkeit.attribut.getText()]
@@ -186,12 +230,8 @@ transform="translate(25,240)"
 [/let][/let]
 [/for]
 
+[printBotton(x, (((count+ persona.fertigkeiten->size())*12)+25))/]
 
-  <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 0,[((count+ persona.fertigkeiten->size())*12)+20/] 0,30 335,0 0,-30"
-       id="path-botton"
-       inkscape:connector-curvature="0" />
 [/let]
 </g>
 [/template]
@@ -200,31 +240,13 @@ transform="translate(25,240)"
 [**
  * print the attributes the persona, uses the localized text.
 */]
-[template public printAttributeBlock(aManagedCharacter : ManagedCharacter,empty :String)
+[template public printAttributeBlock(aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer)
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
     <g
        id="g-attributes"
-transform="translate(25,40)"
+transform="translate([x/],[y/])"
 >
-      <path
-         inkscape:connector-curvature="0"
-         id="path-left-upper"
-         d="M 0,70 0,10 10,0 l 325,0 0,70"
-         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <rect
-         y="0"
-         x="200"
-         height="25"
-         width="135"
-         id="rect-kat"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text-kat"
-         y="20"
-         x="330"
-         style="font-size:18px;font-style:normal;font-weight:bold;text-anchor:end;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold;font-stretch:normal;font-variant:normal"
-         xml:space="preserve">['Attributes'.localizedString()/]</text>
+[printLeftSideUp('Attributes'.localizedString())/]
 [for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
 [let attributeName : String = getText(base2Calced(ea))]
 [printSvgLine(attributeName, empty,10,(40+i*12))/]
@@ -251,31 +273,57 @@ transform="translate(25,40)"
 [printSvgLineValue((persona.willenskraft + persona.logik).toString(),290,(40+6*12))/]
 
 
-[comment][printTextPlusSpace('Lifting/Carrying', empty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
-[printTextPlusSpace('Movement', empty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /][/comment]
+[printSvgLine('Lifting/Carrying'.localizedString(), empty,170,(40+7*12))/] 
+[printSvgLineValue((persona.liftCarry()),290,(40+7*12))/]
+
+[printSvgLine('Movment'.localizedString(), empty,170,(40+8*12))/] 
+[printSvgLineValue((persona.movement()),290,(40+8*12))/]
 
 
 [if(persona.oclIsKindOf(AstraleProjektion))]
 [let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
-
-[comment][printTextPlusSpace('Astral Ini', empty)/] [ap.astraleInitative/]+[ap.astraleInitativWuerfel/]d6[/comment]
+[printSvgLine('Astral_Ini'.localizedString(), empty,170,(40+9*12))/]
+[printSvgLineValue(ap.toLocalizedAstralInitative(),290,(40+9*12))/]
 [/let][/if]
-[comment][if (aManagedCharacter.hasMatrixInitative())]
-[printTextPlusSpace('Matrix Ini cold', empty)/] [aManagedCharacter.getMatrixInitative()/]+3d6
-[printTextPlusSpace('Matrix Ini hot', empty)/] [aManagedCharacter.getMatrixInitative()/]+4d6
-[/if][/comment]
-[comment][printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/][/comment]
 
-
-   <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 0,150 0,30 335,0 0,-30"
-       id="path-botton"
-       inkscape:connector-curvature="0" />
-
+[printBotton(x, (10*12)+25)/]
 </g>
 [/template]
 
+
+[template private printBotton(x:Integer,y:Integer)]
+   <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 0,[y/] 0,[x/] 335,0 0,-[x/]"
+       id="path-botton-[x/]-[y/]"
+       inkscape:connector-curvature="0" />
+
+[/template]
+
+[**
+ * Print the upper left frame part.
+*/]
+[template private printLeftSideUp(titel : String)]
+      <path
+         inkscape:connector-curvature="0"
+         id="path-left-upper"
+         d="M 0,70 0,10 10,0 l 325,0 0,70"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         y="0"
+         x="200"
+         height="25"
+         width="135"
+         id="rect-kat"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text-kat"
+         y="20"
+         x="330"
+         style="font-size:18px;font-style:normal;font-weight:bold;text-anchor:end;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold;font-stretch:normal;font-variant:normal"
+         xml:space="preserve">[titel/]</text>
+[/template]
 
 [template private printSvgFullLine(arg : OclAny,empty :String,x:Integer,y:Integer)]
    <text
