@@ -9,11 +9,17 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toName(java.lang.Object, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1, arg2})
 /]
 
-[query public zauberArtToName(arg0 : ZauberArt) : String
-	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(de.urszeidler.eclipse.shr5.ZauberArt)', Sequence{arg0})
+[query public zauberArtToName(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(java.lang.Object)', Sequence{arg0})
 /]
-[query public sexToName(sex : Sex) : String
-	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'sexToName(de.urszeidler.eclipse.shr5Management.Sex)', Sequence{sex})
+[query public sexToName(sex : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'sexToName(java.lang.Object)', Sequence{sex})
+/]
+[query public fwModusToName(object : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'fwModusToName(java.lang.Object)', Sequence{object})
+/]
+[query public fwMagazinToName(object : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'fwMagazinToName(java.lang.Object)', Sequence{object})
 /]
 
 [query public createNumberList(count : Integer) : OrderedSet(String)

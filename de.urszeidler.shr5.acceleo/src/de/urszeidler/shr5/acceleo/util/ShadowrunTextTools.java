@@ -15,6 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Zauber;
@@ -34,6 +35,7 @@ public class ShadowrunTextTools {
     private static final String EMPTY = "";
     private static Zauber zauber = Shr5Factory.eINSTANCE.createZauber();
     private static NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
+    private static Feuerwaffe fiereweapon = Shr5Factory.eINSTANCE.createFeuerwaffe();
 
     /**
      * Returns the localized feature name.
@@ -78,31 +80,24 @@ public class ShadowrunTextTools {
      * @param literal
      * @return the localized name
      */
-    public static String zauberArtToName(ZauberArt literal) {
-        if (literal == null)
-            return EMPTY;
-
-        String text2 = literal.toString();
-        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator()
-                .getPropertyDescriptor(zauber, Shr5Package.Literals.ZAUBER__ART);
-        if (propertyDescriptor != null)
-            text2 = propertyDescriptor.getLabelProvider(zauber).getText(literal);
-
-        return text2;
-
+    public static String zauberArtToName(Object literal) {        
+        return toName(literal, zauber, Shr5Package.Literals.ZAUBER__ART);
     }
 
     
-    public static String sexToName(Sex literal) {
-        String text2 = literal.toString();
-        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator()
-                .getPropertyDescriptor(character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX);
-        if (propertyDescriptor != null)
-            text2 = propertyDescriptor.getLabelProvider(zauber).getText(literal);
-
-        return text2;
-       
+    public static String sexToName(Object literal) {
+        return toName(literal, character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX);       
     }
+    
+    public static String fwModusToName(Object literal) {
+        return toName(literal, fiereweapon, Shr5Package.Literals.FEUERWAFFE__MODIE);       
+    }
+    public static String fwMagazinToName(Object literal) {
+        return toName(literal, fiereweapon, Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP);       
+    }
+
+    
+    
     /**
      * Creates a list of string with the numbers from 1 to count.
      * 
