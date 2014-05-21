@@ -14,8 +14,274 @@
 	
 	[comment @main /]
 	[aManagedCharacter.printNewCharacterSheetPageOne()/]
+	[aManagedCharacter.printNewCharacterSheetPageTwo()/]
 	
 [/template]
+
+
+[template public printNewCharacterSheetPageTwo(aManagedCharacter : ManagedCharacter)  
+{
+kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
+empty : String = '....................' ;
+empty40 : String = '........................................' ; 
+column : Sequence(Integer) = Sequence{25,400} ;
+size : Integer = 12; }
+]  [comment]30[/comment]
+[file ('characterSheet-'+aManagedCharacter.persona.name+'-page2.svg', false, 'UTF-8')]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Zeichnung-1.svg">
+  <defs
+     id="defs4">
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="70.952328"
+     inkscape:cy="1001.4987"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1320"
+     inkscape:window-height="660"
+     inkscape:window-x="0"
+     inkscape:window-y="174"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="['characterSheet-'+aManagedCharacter.persona.name+'-page2.svg'.escapeXML()/]">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Shadowrun5 character sheet [aManagedCharacter.persona.name.escapeXML()/] page 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+
+
+[if (not aManagedCharacter.inventar->selectByKind(Cyberdeck)->isEmpty())]
+[printCyberdeckBlock(aManagedCharacter, empty,column->at(1), 25,size)/]
+[let pos : Integer =95+  aManagedCharacter.inventar->selectByKind(Cyberdeck)->size()*40 +  12* aManagedCharacter.inventar->selectByKind(Cyberdeck)->collect(d| d.storedPrograms)->flatten()->size()   ]
+[switchRigger(aManagedCharacter, empty, column->at(1), pos,size)/]	
+[/let]
+[else]
+[switchRigger(aManagedCharacter, empty, column->at(1), 25,size)/]	
+
+[/if]
+
+[comment][printFirearmsDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
+[let pos : Integer = 75+(aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe)->size()*65)]
+[printMeleeDataBlock(aManagedCharacter, empty, column->at(1), pos,size)/]
+[let pos1 : Integer = pos + 75+(aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->size()*65)]
+
+
+[/let][/let][/comment]
+
+[comment]right side[/comment]
+[printGearsBlock(aManagedCharacter, empty40, column->at(2), 25, size)/]
+
+
+  </g>
+</svg>
+[/file]
+[/template]
+
+
+
+[**
+ * print the attributes the persona, uses the localized text.
+*/]
+[template public printRiggerConsoleBlock(aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer,size : Integer)
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       id="g-cyberdecks"
+transform="translate([x/],[y/])"
+>
+[printLeftSideUp('RiggerCosole'.localizedString())/]
+
+[for (it : RiggerCommandConsole | aManagedCharacter.inventar->selectByKind(RiggerCommandConsole))]
+[printRiggerConsoleDetail(it, empty, 10, 45, size)/]
+[/for]
+
+
+[printBotton(x, (11*12)+27)/]
+</g>
+[/template]
+
+
+[template public printRiggerConsoleDetail(deck : RiggerCommandConsole,empty :String,x:Integer,y:Integer,size : Integer)
+{empty40 : String = '........................................' ;empty40_1 : String = '                                        ' ; }
+ ]
+    <g
+       id="g-cyberdecks"
+transform="translate([x/],[y/])"
+>
+
+[printSvgFullLine(deck.getText(), empty40_1,0,0)/]
+
+[printSvgLine('AttributeArray'.localizedString(), empty,0,(1)*size)/]
+[printSvgLineValue(deck.zugriffBasis,125,(1*12),size)/]
+
+[printSvgLine('programslots'.localizedString(), empty,185,(1)*size)/]
+[printSvgLineValue(deck.datenverarbeitungBasis.toString(),305,(1*12),size)/]
+
+[printSvgLine('devicerating'.localizedString(), empty,0,(2)*size)/]
+[printSvgLineValue(deck.deviceRating.toString(),125,(2)*12,size)/]
+
+[printSvgFullLine('StoredPrograms'.localizedString(), empty40_1,0,(3)*size)/]
+
+[for (prg : RiggerProgram | deck.storedPrograms)]
+[printSvgFullLine(prg.getText(), empty40,0,(3+i)*size)/]
+[/for]
+[let pos : Integer = 4*size+  deck.storedPrograms->size()*size]
+[printOneMonitorSmall('Matrix', deck.matrixZustandMax, 260, 30, 3)/]
+[/let]
+
+
+</g>
+[/template]
+
+
+[**
+ * print the attributes the persona, uses the localized text.
+*/]
+[template public printCyberdeckBlock(aManagedCharacter : ManagedCharacter,empty :String,x:Integer,y:Integer,size : Integer)
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       id="g-cyberdecks"
+transform="translate([x/],[y/])"
+>
+[printLeftSideUp('Cyberdecks'.localizedString())/]
+
+[for (it : Cyberdeck | aManagedCharacter.inventar->selectByKind(Cyberdeck))]
+[printCyberdeckDetail(it, empty, 10, 45, size)/]
+[/for]
+
+
+[printBotton(x, (11*12)+27)/]
+</g>
+[/template]
+
+
+[template public printCyberdeckDetail(deck : Cyberdeck,empty :String,x:Integer,y:Integer,size : Integer)
+{empty40 : String = '........................................' ;empty40_1 : String = '                                        ' ; }
+ ]
+    <g
+       id="g-cyberdecks"
+transform="translate([x/],[y/])"
+>
+
+[printSvgFullLine(deck.getText(), empty40_1,0,0)/]
+
+[printSvgLine('AttributeArray'.localizedString(), empty,0,(1)*size)/]
+[printSvgLineValue(deck.cyberDeckAttributes(),125,(1*12),size)/]
+
+[printSvgLine('programslots'.localizedString(), empty,185,(1)*size)/]
+[printSvgLineValue(deck.programSlots.toString(),305,(1*12),size)/]
+
+[printSvgLine('devicerating'.localizedString(), empty,0,(2)*size)/]
+[printSvgLineValue(deck.deviceRating.toString(),125,(2)*12,size)/]
+
+[printSvgFullLine('StoredPrograms'.localizedString(), empty40_1,0,(3)*size)/]
+
+[for (prg : MatrixProgram | deck.storedPrograms)]
+[printSvgFullLine(prg.getText(), empty40,0,(3+i)*size)/]
+[/for]
+[let pos : Integer = 4*size+  deck.storedPrograms->size()*size]
+[printOneMonitorSmall('Matrix', deck.matrixZustandMax, 260, 30, 3)/]
+[/let]
+
+
+</g>
+[/template]
+
+
+[**
+ * Print the ki powers if
+*/]
+[template private switchRigger(aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ;
+ }]
+[if (not aManagedCharacter.inventar->selectByKind(RiggerCommandConsole)->isEmpty())]
+[printRiggerConsoleBlock(aManagedCharacter, empty,x, y,size)/]
+[else]
+[comment][switchKiAdpept(aManagedCharacter,empty, x,y,size)/][/comment]
+[/if]
+
+
+[/template]
+
+
+
+[template public printFirearmsDataBlock(aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       id="g-firearms"
+transform="translate([x/],[y/])"
+>
+
+[printLeftSideUp('Firearmes'.localizedString())/]
+
+[for (rw : AbstaktFernKampfwaffe | aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe))]
+[printFerkampfWaffeDetail(rw, 0, (40)+((i-1)*65))/]
+[/for]
+
+[printBotton(30, 15+(aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe)->size()*65))/]
+
+	</g>
+[/template]
+
+[template public printMeleeDataBlock(aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       id="g-melee"
+transform="translate([x/],[y/])"
+>
+
+[printLeftSideUp('Meele'.localizedString())/]
+
+[for (rw : Nahkampfwaffe | aManagedCharacter.inventar->selectByKind(Nahkampfwaffe))]
+[printNahkampfWaffeDetail(rw, 0, (40)+((i-1)*45))/]
+[/for]
+
+[printBotton(30, 15+(aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->size()*45))/]
+
+	</g>
+[/template]
+
 
 
 [template public printNewCharacterSheetPageOne(aManagedCharacter : ManagedCharacter)  
@@ -26,7 +292,7 @@ empty40 : String = '........................................' ;
 column : Sequence(Integer) = Sequence{25,400} ;
 size : Integer = 12; }
 ]  [comment]30[/comment]
-[file ('characterSheet-'+aManagedCharacter.persona.name+'page1.svg', false, 'UTF-8')]
+[file ('characterSheet-'+aManagedCharacter.persona.name+'-page1.svg', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -178,7 +444,7 @@ x:Integer,y:Integer,size :Integer)
 x:Integer,y:Integer,size :Integer) 
 ]
     <g
-       	id="g-Spells"
+       	id="g-Gears"
 		transform="translate([x/],[y/])">
 [printRightSideUp('Gears'.localizedString())/]
 

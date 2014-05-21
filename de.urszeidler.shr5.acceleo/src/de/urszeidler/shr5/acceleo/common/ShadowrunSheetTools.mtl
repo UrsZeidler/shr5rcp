@@ -5,8 +5,9 @@
 [module ShadowrunSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 
+
 [**
- * The documentation of the query
+ * Get the text from the item descriptor.
  */]
 [query public getText(anOclAny: OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'getObjectText(java.lang.Object)', Sequence{anOclAny})
@@ -52,6 +53,10 @@ pe->collect(pfg| pfg.karmaKosten    )->sum()
 
 [query public liftCarry(persona : AbstraktPersona) : String = 
 (persona.staerke  * 15)+'/'+(persona.staerke  * 10)/]
+
+
+[query public cyberDeckAttributes(deck : Cyberdeck) : String = 
+deck.attribute1+'|'+deck.attribute2+'|'+deck.attribute3+'|'+deck.attribute4 /]
 
 [query public movement(persona : AbstraktPersona) : String = 
 	(persona.geschicklichkeit * persona.spezies.laufen)
