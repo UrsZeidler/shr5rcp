@@ -88,15 +88,15 @@ size : Integer = 12; }
      inkscape:groupmode="layer"
      id="layer1">
 
-[printPersonalDataBlock(aManagedCharacter, empty, 25, 25,size)/]
-[printAttributeBlock(aManagedCharacter, empty,25,155,size)/]
-[printSkillBlock(aManagedCharacter, empty40,25,335,size)/]
+[printPersonalDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
+[printAttributeBlock(aManagedCharacter, empty,column->at(1),155,size)/]
+[printSkillBlock(aManagedCharacter, empty40,column->at(1),335,size)/]
 [let pos : Integer = 395+ (aManagedCharacter.persona.fertigkeitsGruppenToFertigkeiten()->size()+aManagedCharacter.persona.fertigkeiten->size())*12   ]
-[printQuallitiesBlock(aManagedCharacter, empty40,25,pos,size)/]
+[printQuallitiesBlock(aManagedCharacter, empty40,column->at(1),pos,size)/]
 [let pos1 : Integer = 60 + pos + (persona.oclAsType(KoerperPersona).eigenschaften->size()*12)]
-[printLifestyleBlock(aManagedCharacter, empty40,25,pos1,size)/]
+[printLifestyleBlock(aManagedCharacter, empty40,column->at(1),pos1,size)/]
 [let pos2 : Integer = 82+ pos1 + (aManagedCharacter.inventar->selectByType(Credstick)->size()*12) ]
-[printNotesBlock(25,pos2, 1050-pos2 )/]
+[printNotesBlock(column->at(1),pos2, 1050-pos2 )/]
 [/let]
 [/let][/let]
 
@@ -110,10 +110,10 @@ size : Integer = 12; }
 
 [if (not aManagedCharacter.persona.oclAsType(KoerperPersona).koerperMods->isEmpty() )]
 [printWaresBlock(aManagedCharacter, empty40, column->at(2),pos1,size)/]
-[let pos2 : Integer = pos1+ 5+ aManagedCharacter.persona.oclAsType(KoerperPersona).koerperMods->size() * 12]
-[switchContent1(aManagedCharacter,empty40, column->at(2),pos2,size)/]
+[let pos2 : Integer = pos1+ 55+ aManagedCharacter.persona.oclAsType(KoerperPersona).koerperMods->size() * 12]
+[switchKiAdpept(aManagedCharacter,empty40, column->at(2),pos2,size)/]
 [/let][else]
-[switchContent1(aManagedCharacter,empty40, column->at(2),pos1,size)/]
+[switchKiAdpept(aManagedCharacter,empty40, column->at(2),pos1,size)/]
 [/if]
 [/let][/let]
 
@@ -125,13 +125,31 @@ size : Integer = 12; }
 [**
  * Print the ki powers if
 */]
-[template private switchContent1(aManagedCharacter : ManagedCharacter,empty :String,
+[template private switchTechnomacer(aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ;
+ }]
+[if (persona.oclIsKindOf(Technomancer))]
+[printComplexFormsPowerBlock(aManagedCharacter.persona.oclAsType(Technomancer),empty, x,y,size)/]
+[let pos : Integer =y+ 55+ aManagedCharacter.persona.oclAsType(Technomancer).complexForms->size()*12 ]
+[printGearsBlock(aManagedCharacter,empty, x,pos,size)/][/let]
+[else]
+[switchKiAdpept(aManagedCharacter,empty, x,y,size)/]
+[/if]
+
+
+[/template]
+
+[**
+ * Print the ki powers if
+*/]
+[template private switchKiAdpept(aManagedCharacter : ManagedCharacter,empty :String,
 x:Integer,y:Integer,size :Integer) 
 {persona : AbstraktPersona = aManagedCharacter.persona ;
  }]
 [if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
 [printKiPowerBlock(aManagedCharacter.persona.oclAsType(KiAdept),empty, x,y,size)/]
-[let pos : Integer =y+ 105+ aManagedCharacter.persona.oclAsType(KiAdept)->size()*12 ]
+[let pos : Integer =y+ 55+ aManagedCharacter.persona.oclAsType(KiAdept).kikraft->size()*12 ]
 [switchContent2(aManagedCharacter,empty, x,pos,size)/]
 [/let]
 [else]
@@ -145,11 +163,57 @@ x:Integer,y:Integer,size :Integer)
  }]
 [if (persona.oclIsKindOf(Zauberer))]
 [printSpellPowerBlock(persona.oclAsType(Zauberer),empty, x,y,size)/]
+[let pos : Integer =y+ 55+ aManagedCharacter.persona.oclAsType(Zauberer).zauber->size()*12 ]
+[printGearsBlock(aManagedCharacter,empty, x,pos,size)/][/let]
 [else]
-
+[printGearsBlock(aManagedCharacter,empty, x,y,size)/]
 [/if]
 [/template]
 
+[**
+ * Print the gears and cut the rest
+*/]
+[template public printGearsBlock (aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+]
+    <g
+       	id="g-Spells"
+		transform="translate([x/],[y/])">
+[printRightSideUp('Gears'.localizedString())/]
+
+[for (k : AbstraktGegenstand | aManagedCharacter.inventar)]
+[let ypos : Integer = (20+(1+i)*size) ]
+[if (ypos+y<1050)]
+[printSvgFullLine(k.getText(), empty,10,ypos)/]
+[printSvgLineValue((k.wert),255,ypos,size)/]
+[/if][/let]
+[/for]
+[let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
+[let pos : Integer = (1040-y).min(ypos+y) ]
+[printBotton(30, pos)/]
+[/let][/let]
+	</g>
+[/template]
+
+
+[template public printComplexFormsPowerBlock (caster: Technomancer,empty :String,
+x:Integer,y:Integer,size :Integer) 
+]
+    <g
+       	id="g-complexForms"
+		transform="translate([x/],[y/])">
+[printRightSideUp('ComplexForms'.localizedString())/]
+
+[for (k : PersonaKomplexForm | caster.complexForms)]
+[printSvgFullLine(k.form.getText(), empty,10,(20+(1+i)*12))/]
+[printSvgLineValue((k.form.schwund),255,(20+(1+i)*12),size)/]
+[/for]
+
+[let pos : Integer = caster.complexForms->size() ]
+[printBotton(30, ((15+(pos*12))))/]
+[/let]
+	</g>
+[/template]
 
 [template public printSpellPowerBlock (caster: Zauberer,empty :String,
 x:Integer,y:Integer,size :Integer) 
@@ -222,7 +286,7 @@ x:Integer,y:Integer,size :Integer)
 
 [for (k : KiKraft | adept.kikraft)]
 [printSvgFullLine(k.getText(), empty,10,(20+(1+i)*12))/]
-[printSvgLineValue((k.kraftpunkte),255,(20+(1+i)*12),size)/]
+[printSvgLineValue((k.kraftpunkte/100),255,(20+(1+i)*12),size)/]
 [/for]
 
 [let pos : Integer = adept.kikraft->size() ]
