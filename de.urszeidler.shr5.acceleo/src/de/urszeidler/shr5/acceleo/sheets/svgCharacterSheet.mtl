@@ -88,35 +88,54 @@ size : Integer = 12; }
      inkscape:groupmode="layer"
      id="layer1">
 
-
-[if (not aManagedCharacter.inventar->selectByKind(Cyberdeck)->isEmpty())]
-[printCyberdeckBlock(aManagedCharacter, empty,column->at(1), 25,size)/]
-[let pos : Integer =95+  aManagedCharacter.inventar->selectByKind(Cyberdeck)->size()*40 +  12* aManagedCharacter.inventar->selectByKind(Cyberdeck)->collect(d| d.storedPrograms)->flatten()->size()   ]
-[switchRigger(aManagedCharacter, empty, column->at(1), pos,size)/]	
-[/let]
-[else]
-[switchRigger(aManagedCharacter, empty, column->at(1), 25,size)/]	
-
-[/if]
-
-[comment][printFirearmsDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
+[printFirearmsDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
 [let pos : Integer = 75+(aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe)->size()*65)]
 [printMeleeDataBlock(aManagedCharacter, empty, column->at(1), pos,size)/]
-[let pos1 : Integer = pos + 75+(aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->size()*65)]
-
-
-[/let][/let][/comment]
-
+[let pos1 : Integer = pos + 55+(aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->size()*45)]
+[if (not aManagedCharacter.inventar->selectByKind(Cyberdeck)->isEmpty())]
+[printCyberdeckBlock(aManagedCharacter, empty,column->at(1), pos1,size)/]
+[let pos2 : Integer =pos1+ (100+    13* aManagedCharacter.inventar->selectByKind(Cyberdeck)->any(true).storedPrograms->size()).max(135 + aManagedCharacter.inventar->selectByKind(Cyberdeck)->any(true).matrixZustandMax.div(3)*20)   ]
+[switchRigger(aManagedCharacter, empty, column->at(1), pos2,size)/]	
+[/let]
+[else]
+[switchRigger(aManagedCharacter, empty, column->at(1), pos1,size)/]	
+[/if]
+[/let][/let]
 [comment]right side[/comment]
 [printGearsBlock(aManagedCharacter, empty40, column->at(2), 25, size)/]
-
+[let pos : Integer = 100+ (aManagedCharacter.inventar->size()*12)]
+[printLicenseBlock(aManagedCharacter, empty40, column->at(2), pos, size)/]
+[/let]
 
   </g>
 </svg>
 [/file]
 [/template]
 
+[**
+ * Print the gears and cut the rest
+*/]
+[template public printLicenseBlock (aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+]
+    <g
+       	id="g-License"
+		transform="translate([x/],[y/])">
+[printRightSideUp('_UI_Vertrag_type'.localizedString())/]
 
+[for (k : Vertrag | aManagedCharacter.contracts)]
+[let ypos : Integer = (20+(1+i)*size) ]
+[if (ypos+y<1050)]
+[printSvgFullLine(k.getText(), empty,10,ypos)/]
+[printSvgLineValue((k.wert),255,ypos,size)/]
+[/if][/let]
+[/for]
+[let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
+[let pos : Integer = (1046-y).min(ypos+y) ]
+[printBotton(30, pos)/]
+[/let][/let]
+	</g>
+[/template]
 
 [**
  * print the attributes the persona, uses the localized text.
@@ -127,11 +146,13 @@ size : Integer = 12; }
        id="g-cyberdecks"
 transform="translate([x/],[y/])"
 >
-[printLeftSideUp('RiggerCosole'.localizedString())/]
+[printLeftSideUp('_UI_RiggerCommandConsole_type'.localizedString())/]
 
-[for (it : RiggerCommandConsole | aManagedCharacter.inventar->selectByKind(RiggerCommandConsole))]
-[printRiggerConsoleDetail(it, empty, 10, 45, size)/]
-[/for]
+[comment][for (it : RiggerCommandConsole | aManagedCharacter.inventar->selectByKind(RiggerCommandConsole))][/comment]
+[let it : RiggerCommandConsole = aManagedCharacter.inventar->selectByKind(RiggerCommandConsole)->any(true)]
+[printRiggerConsoleDetail(it, empty, 10, 45  , size)/]
+[/let]
+[comment][/for][/comment]
 
 
 [printBotton(x, (11*12)+27)/]
@@ -149,19 +170,22 @@ transform="translate([x/],[y/])"
 
 [printSvgFullLine(deck.getText(), empty40_1,0,0)/]
 
-[printSvgLine('AttributeArray'.localizedString(), empty,0,(1)*size)/]
+[printSvgLine('_UI_RiggerCommandConsole_zugriffBasis_feature'.localizedString(), empty,0,(1)*size)/]
 [printSvgLineValue(deck.zugriffBasis,125,(1*12),size)/]
 
-[printSvgLine('programslots'.localizedString(), empty,185,(1)*size)/]
+[printSvgLine('_UI_RiggerCommandConsole_datenverarbeitungBasis_feature'.localizedString(), empty,185,(1)*size)/]
 [printSvgLineValue(deck.datenverarbeitungBasis.toString(),305,(1*12),size)/]
 
-[printSvgLine('devicerating'.localizedString(), empty,0,(2)*size)/]
+[printSvgLine('_UI_MatrixDevice_geraetestufe_feature'.localizedString(), empty,0,(2)*size)/]
 [printSvgLineValue(deck.deviceRating.toString(),125,(2)*12,size)/]
 
-[printSvgFullLine('StoredPrograms'.localizedString(), empty40_1,0,(3)*size)/]
+[printSvgLine('_UI_RiggerCommandConsole_rauschunterdrueckung_feature'.localizedString(), empty,0,(3)*size)/]
+[printSvgLineValue(deck.rauschunterdrueckung.toString(),125,(3)*12,size)/]
+
+[printSvgFullLine('_UI_RiggerCommandConsole_storedPrograms_feature'.localizedString(), empty40_1,0,(4)*size)/]
 
 [for (prg : RiggerProgram | deck.storedPrograms)]
-[printSvgFullLine(prg.getText(), empty40,0,(3+i)*size)/]
+[printSvgFullLine(prg.getText(), empty40,0,(4+i)*size)/]
 [/for]
 [let pos : Integer = 4*size+  deck.storedPrograms->size()*size]
 [printOneMonitorSmall('Matrix', deck.matrixZustandMax, 260, 30, 3)/]
@@ -181,14 +205,16 @@ transform="translate([x/],[y/])"
        id="g-cyberdecks"
 transform="translate([x/],[y/])"
 >
-[printLeftSideUp('Cyberdecks'.localizedString())/]
+[printLeftSideUp('_UI_Cyberdeck_type'.localizedString())/]
 
-[for (it : Cyberdeck | aManagedCharacter.inventar->selectByKind(Cyberdeck))]
-[printCyberdeckDetail(it, empty, 10, 45, size)/]
-[/for]
+[comment][for (it : Cyberdeck | aManagedCharacter.inventar->selectByKind(Cyberdeck))][/comment]
+[let it : Cyberdeck =  aManagedCharacter.inventar->selectByKind(Cyberdeck)->any(true)]
+[printCyberdeckDetail(it, empty, 10,55, size)/]
+[comment][/for][/comment]
 
 
-[printBotton(x, (11*12)+27)/]
+[printBotton(x, (20+(it.matrixZustandMax.div(3)*20)).max(40+(it.storedPrograms->size()*13))  +27)/]
+[/let]
 </g>
 [/template]
 
@@ -252,7 +278,7 @@ x:Integer,y:Integer,size :Integer)
 transform="translate([x/],[y/])"
 >
 
-[printLeftSideUp('Firearmes'.localizedString())/]
+[printLeftSideUp('_UI_AbstaktFernKampfwaffe_type'.localizedString())/]
 
 [for (rw : AbstaktFernKampfwaffe | aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe))]
 [printFerkampfWaffeDetail(rw, 0, (40)+((i-1)*65))/]
@@ -488,7 +514,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-Spells"
 		transform="translate([x/],[y/])">
-[printRightSideUp('Spells'.localizedString())/]
+[printRightSideUp('_UI_Zauber_type'.localizedString())/]
 
 [for (k : PersonaZauber | caster.zauber)]
 [printSvgFullLine(k.formel.getText(), empty,10,(20+(1+i)*12))/]
@@ -898,7 +924,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-Lifestyle"
 		transform="translate([x/],[y/])">
-[printLeftSideUp('Lifestyle'.localizedString())/]
+[printLeftSideUp('_UI_Lizenz_type'.localizedString())/]
 
 [printSvgFullLine(aManagedCharacter.choosenLifestyle.getText(), empty,10,(40+1*12))/]
 [printSvgLineValue(aManagedCharacter.choosenLifestyle.wert,255,(40+1*12),size)/]
@@ -1036,9 +1062,9 @@ transform="translate([x/],[y/])"
 [/let]
 [/for]
 [let lastPos : Integer = 42+ (persona.getOrderedAttibutesForPersona()->size()+1)*12]
-[printSvgLineValue('PhysicalLimit'.localizedString().concat( persona.koerperlich.toString()),10,lastPos,size)/]
-[printSvgLineValue('MentalLimit'.localizedString().concat( persona.geistig.toString()),110,lastPos,size)/]
-[printSvgLineValue('SocialLimit'.localizedString().concat( persona.sozial.toString()),210,lastPos,size)/]
+[printSvgLineValue('_UI_ChrakterLimits_koerperlich_feature'.localizedString().concat(' : '+ persona.koerperlich.toString()),10,lastPos,size)/]
+[printSvgLineValue('_UI_ChrakterLimits_geistig_feature'.localizedString().concat(' : '+ persona.geistig.toString()),110,lastPos,size)/]
+[printSvgLineValue('_UI_ChrakterLimits_sozial_feature'.localizedString().concat(' : '+ persona.sozial.toString()),210,lastPos,size)/]
 
 [/let]
 

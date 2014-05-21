@@ -23,6 +23,7 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.ZauberArt;
+import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Sex;
@@ -63,7 +64,8 @@ public class ShadowrunTextTools {
      * @param eobject
      * @param feature
      * @return
-     */    /**
+     */
+    /**
      * Print all the modifications active on this persona.
      * 
      * @param persona
@@ -101,24 +103,22 @@ public class ShadowrunTextTools {
      * @param literal
      * @return the localized name
      */
-    public static String zauberArtToName(Object literal) {        
+    public static String zauberArtToName(Object literal) {
         return toName(literal, zauber, Shr5Package.Literals.ZAUBER__ART);
     }
 
-    
     public static String sexToName(Object literal) {
-        return toName(literal, character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX);       
-    }
-    
-    public static String fwModusToName(Object literal) {
-        return toName(literal, fiereweapon, Shr5Package.Literals.FEUERWAFFE__MODIE);       
-    }
-    public static String fwMagazinToName(Object literal) {
-        return toName(literal, fiereweapon, Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP);       
+        return toName(literal, character, Shr5managementPackage.Literals.MANAGED_CHARACTER__SEX);
     }
 
-    
-    
+    public static String fwModusToName(Object literal) {
+        return toName(literal, fiereweapon, Shr5Package.Literals.FEUERWAFFE__MODIE);
+    }
+
+    public static String fwMagazinToName(Object literal) {
+        return toName(literal, fiereweapon, Shr5Package.Literals.FEUERWAFFE__MUNITIONSTYP);
+    }
+
     /**
      * Creates a list of string with the numbers from 1 to count.
      * 
@@ -141,10 +141,15 @@ public class ShadowrunTextTools {
      */
     public static String localizedString(String string) {
         try {
-            String loc = Shr5ManagementEditPlugin.INSTANCE.getString("_PR_" + string, true);
+            String loc = Shr5EditPlugin.INSTANCE.getString(string, true);
             return loc;
         } catch (Exception e) {
-            return string;
+            try {
+                String loc = Shr5ManagementEditPlugin.INSTANCE.getString(string, true);
+                return loc;
+            } catch (Exception e2) {
+                return string;
+            }
         }
     }
 
