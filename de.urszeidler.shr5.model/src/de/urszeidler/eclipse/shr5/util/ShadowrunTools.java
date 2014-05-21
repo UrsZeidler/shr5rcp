@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -105,9 +106,8 @@ public class ShadowrunTools {
         orderedBasedAttibutes.remove(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__EDGE_BASIS);
 
         orderedCalcedAttibutes = new ArrayList<EAttribute>(orderedAttibutes);
-//        orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ);
-//        orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
-        
+        // orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ);
+        // orderedAttibutes.add(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__AUSWEICHEN);
 
     }
 
@@ -129,7 +129,7 @@ public class ShadowrunTools {
         List<EAttribute> attributes = orderedAttibutes;
         return filterAttributesForPersona(persona, attributes);
     }
-    
+
     /**
      * The ordered list of the base attributes (without edge and resonance or magic), filtered by the persona.
      * 
@@ -140,7 +140,6 @@ public class ShadowrunTools {
         return filterAttributesForPersona(persona, attributes);
     }
 
-    
     private static List<EAttribute> filterAttributesForPersona(AbstraktPersona persona, List<EAttribute> attributes) {
         EList<EAttribute> eAllAttributes = persona.eClass().getEAllAttributes();
 
@@ -184,9 +183,35 @@ public class ShadowrunTools {
     }
 
     /**
+     * Create the permutation of the given list of integer, all unique combinations are stored in the target set.
+     * Can be used to get all valid cyberdeck combinations.
+     * 
+     * @param prefix
+     * @param src
+     * @param target
+     */
+    public static void permutation(List<Integer> prefix, List<Integer> src, Set<List<Integer>> target) {
+        int n = src.size();
+        if (n == 0) {
+            target.add(prefix);
+        } else {
+            for (int i = 0; i < n; i++) {
+                List<Integer> list = new ArrayList<Integer>(n);
+                list.addAll(src.subList(0, i));
+                list.addAll(src.subList(i + 1, n));
+                Integer remove = src.get(i);
+                ArrayList<Integer> prefix2 = new ArrayList<Integer>(prefix);
+                prefix2.add(remove);
+                permutation(prefix2, list, target);
+            }
+        }
+    }
+
+    /**
      * Collects all fertigkeiten and groups in a list.
+     * 
      * @param persona
-     * @return 
+     * @return
      */
     public static ArrayList<Beschreibbar> fertigkeitsGruppenToFertigkeiten(AbstraktPersona persona) {
         ArrayList<Beschreibbar> list = new ArrayList<Beschreibbar>();
@@ -197,19 +222,19 @@ public class ShadowrunTools {
             EList<Fertigkeit> fertigkeiten = fertigkeitsGruppe.getFertigkeiten();
             for (Fertigkeit fertigkeit : fertigkeiten) {
                 list.add(fertigkeit);
-            }            
+            }
         }
         return list;
     }
-    
-    
+
     /**
      * Returns the values of the attribute, if the calculated value is not equals it will return as (val).
+     * 
      * @param eAttribute
      * @param persona
      * @return
      */
-    public static String attributeValue(AbstraktPersona persona,EAttribute eAttribute) {
+    public static String attributeValue(AbstraktPersona persona, EAttribute eAttribute) {
         EAttribute base2Calced = ShadowrunTools.base2Calced(eAttribute);
         if (base2Calced == null)
             return EMPTY;
@@ -220,9 +245,9 @@ public class ShadowrunTools {
         if (value != calc)
             a = "(" + calc + ")";
 
-        return value.toString()+a;
+        return value.toString() + a;
     }
-    
+
     /**
      * Filters the skillgoups only having skill with the given attribute.
      * 
@@ -406,7 +431,7 @@ public class ShadowrunTools {
             return -1;
 
         Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
-        if (fertigkeit != null && fertigkeit.getAttribut()!=null) {
+        if (fertigkeit != null && fertigkeit.getAttribut() != null) {
             Integer value = (Integer)persona.eGet(fertigkeit.getAttribut());
             Integer fertigkeitValue = personaFertigkeit.getStufe();
             if (fertigkeitValue == 0)
