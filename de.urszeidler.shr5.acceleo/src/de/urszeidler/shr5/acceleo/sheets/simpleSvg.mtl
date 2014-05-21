@@ -96,7 +96,9 @@ size : Integer = 12; }
 [let pos1 : Integer = 60 + pos + (persona.oclAsType(KoerperPersona).eigenschaften->size()*12)]
 [printLifestyleBlock(aManagedCharacter, empty40,column->at(1),pos1,size)/]
 [let pos2 : Integer = 82+ pos1 + (aManagedCharacter.inventar->selectByType(Credstick)->size()*12) ]
-[printNotesBlock(column->at(1),pos2, 1050-pos2 )/]
+[printActiveModsBlock(aManagedCharacter, empty40,column->at(1),pos2,size,1050-pos2)/]
+
+[comment][printNotesBlock(column->at(1),pos2+100, 1050-pos2 )/][/comment]
 [/let]
 [/let][/let]
 
@@ -189,7 +191,7 @@ x:Integer,y:Integer,size :Integer)
 [/if][/let]
 [/for]
 [let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
-[let pos : Integer = (1040-y).min(ypos+y) ]
+[let pos : Integer = (1046-y).min(ypos+y) ]
 [printBotton(30, pos)/]
 [/let][/let]
 	</g>
@@ -599,6 +601,28 @@ transform="translate([x/],[y/])"
 [printLeftSideUp('notes'.localizedString())/]
 [printBotton(x, size)/]
 
+	</g>
+[/template]
+
+
+[template public printActiveModsBlock (aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer, botton : Integer) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+    <g
+       	id="g-modificators"
+		transform="translate([x/],[y/])">
+[printLeftSideUp('Modifications'.localizedString())/]
+
+
+[for (cred : Sequence(OclAny) | persona.getModList())]
+[printSvgFullLine(cred->at(1).getText(), empty,10,(40+(1+i)*12))/]
+[printSvgLineValue(cred->at(2),255,(40+(1+i)*12),size)/]
+[/for]
+
+[let pos : Integer = persona.getModList()->size() +2 ]
+[printBotton(x, botton)/]
+[comment][printBotton(x, ((15+(pos*12))))/][/comment]
+[/let]
 	</g>
 [/template]
 

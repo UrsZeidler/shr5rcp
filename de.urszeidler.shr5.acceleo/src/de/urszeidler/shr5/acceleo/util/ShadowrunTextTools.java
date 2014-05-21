@@ -7,6 +7,8 @@ import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
@@ -16,6 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Zauber;
@@ -60,7 +63,25 @@ public class ShadowrunTextTools {
      * @param eobject
      * @param feature
      * @return
+     */    /**
+     * Print all the modifications active on this persona.
+     * 
+     * @param persona
+     * @return
      */
+    public static List<List<Object>> getModList(AbstraktPersona persona) {
+        ModSetter modManager = persona.getModManager();
+        Set<Entry<EAttribute, Integer>> set = modManager.getModificatorMap().entrySet();
+        ArrayList<List<Object>> list = new ArrayList<List<Object>>(set.size());
+        for (Entry<EAttribute, Integer> entry : set) {
+            ArrayList<Object> arrayList = new ArrayList<Object>(2);
+            arrayList.add(entry.getKey());
+            arrayList.add(entry.getValue());
+            list.add(arrayList);
+        }
+        return list;
+    }
+
     public static String toName(Object literal, EObject eobject, EAttribute feature) {
         if (literal == null)
             return EMPTY;

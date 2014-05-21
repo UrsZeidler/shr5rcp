@@ -30,6 +30,17 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedInitative(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{persona})
 /]
 
+[**
+ * Return the mod list, each mod is an array with (0)the eattribute and (1) the value.
+*/]
+[query public getModList(persona : AbstraktPersona) : Sequence(Sequence(OclAny))
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'getModList(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{persona})
+/]
+
+
+
+
+
 [query public toLocalizedAstralInitative(persona : AstraleProjektion) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedAstralInitative(de.urszeidler.eclipse.shr5.AstraleProjektion)', Sequence{persona})
 /]
