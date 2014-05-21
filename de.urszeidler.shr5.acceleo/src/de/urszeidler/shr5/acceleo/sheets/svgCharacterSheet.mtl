@@ -89,8 +89,8 @@ size : Integer = 12; }
 
 [printPersonalDataBlock(aManagedCharacter, empty, column->at(1), 25,size)/]
 [printAttributeBlock(aManagedCharacter, empty,column->at(1),155,size)/]
-[printSkillBlock(aManagedCharacter, empty40,column->at(1),335,size)/]
-[let pos : Integer = 395+ (aManagedCharacter.persona.fertigkeitsGruppenToFertigkeiten()->size()+aManagedCharacter.persona.fertigkeiten->size())*12   ]
+[printSkillBlock(aManagedCharacter, empty40,column->at(1),349,size)/]
+[let pos : Integer = 407+ (aManagedCharacter.persona.fertigkeitsGruppenToFertigkeiten()->size()+aManagedCharacter.persona.fertigkeiten->size())*12   ]
 [printQuallitiesBlock(aManagedCharacter, empty40,column->at(1),pos,size)/]
 [let pos1 : Integer = 60 + pos + (persona.oclAsType(KoerperPersona).eigenschaften->size()*12)]
 [printLifestyleBlock(aManagedCharacter, empty40,column->at(1),pos1,size)/]
@@ -769,6 +769,13 @@ transform="translate([x/],[y/])"
 [printSvgLineValue(persona.attributeValue(ea),135,(40+i*12),size)/]
 [/let]
 [/for]
+[let lastPos : Integer = 42+ (persona.getOrderedAttibutesForPersona()->size()+1)*12]
+[printSvgLineValue('PhysicalLimit'.localizedString().concat( persona.koerperlich.toString()),10,lastPos,size)/]
+[printSvgLineValue('MentalLimit'.localizedString().concat( persona.geistig.toString()),110,lastPos,size)/]
+[printSvgLineValue('SocialLimit'.localizedString().concat( persona.sozial.toString()),210,lastPos,size)/]
+
+[/let]
+
 [comment]the second column[/comment]
 [printSvgLine('Essence'.localizedString(), empty,170,(40+1*12))/]
 [printSvgLineValue((persona.essenz/100).toString(),290,(40+1*12),size)/]
@@ -802,7 +809,7 @@ transform="translate([x/],[y/])"
 [printSvgLineValue(ap.toLocalizedAstralInitative(),290,(40+9*12),size)/]
 [/let][/if]
 
-[printBotton(x, (10*12)+25)/]
+[printBotton(x, (11*12)+27)/]
 </g>
 [/template]
 
