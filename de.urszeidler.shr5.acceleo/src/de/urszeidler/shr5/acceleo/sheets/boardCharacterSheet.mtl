@@ -30,7 +30,7 @@
  * 
 */]
 [template public printBoardCharacterReport(aManagedCharacter : ManagedCharacter)
-{ empty :String =  '.........................' ;
+{ empty :String =  '..............................' ;
   empty1 :String =  '....................' ;
 }]
 [printBasicCharacterData(aManagedCharacter)/]
@@ -74,9 +74,9 @@
 [/template]
 
 [template public printComplexForms (pcf : OrderedSet(PersonaKomplexForm)) ? (not pcf->isEmpty()) ]
-['Complex Forms'.titelText()/]
+['_UI_Technomancer_complexForms_feature'.localizedString().titelText()/]
 [for (it : PersonaKomplexForm | pcf)]
-[it.form.name/]
+[it.form.getText()/]
 [/for]
 [/template]
 
@@ -84,18 +84,18 @@
 {persona : AbstraktPersona = aManagedCharacter.persona ; }]
 ['Attributes'.titelText()/]
 [printAttributes(persona,empty)/]
-[printTextPlusSpace('Essence', empty)/] [   (persona.essenz)/100  /]
-[printTextPlusSpace('Initiative', empty)/] [persona.initative/]+[persona.initativWuerfel/]d6
+[printTextPlusSpace('_UI_SpezielleAttribute_essenz_feature'.localizedString(), empty)/] [   (persona.essenz)/100  /]
+[printTextPlusSpace('_UI_SpezielleAttribute_initative_feature'.localizedString(), empty)/] [persona.toLocalizedInitative()/]
 [if(persona.oclIsKindOf(AstraleProjektion))]
 [let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
-[printTextPlusSpace('Astral Ini', empty)/] [ap.astraleInitative/]+[ap.astraleInitativWuerfel/]d6
+[printTextPlusSpace('_UI_AstraleProjektion_astraleInitative_feature'.localizedString(), empty)/] [ap.toLocalizedAstralInitative()/]
 [/let][/if]
 [if (aManagedCharacter.hasMatrixInitative())]
 [printTextPlusSpace('Matrix Ini cold', empty)/] [aManagedCharacter.getMatrixInitative()/]+3d6
 [printTextPlusSpace('Matrix Ini hot', empty)/] [aManagedCharacter.getMatrixInitative()/]+4d6
 [/if]
 [printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
-[printTextPlusSpace('Armor', empty)/] [persona.oclAsType(KoerperPersona).panzer/]
+[printTextPlusSpace('_UI_Panzerung_panzer_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).panzer/]
 [printTextPlusSpace('Composure', empty)/] [persona.willenskraft + persona.charisma  /]
 [printTextPlusSpace('Judge Intentions', empty)/] [persona.intuition + persona.charisma  /]
 [printTextPlusSpace('Memory', empty)/] [persona.willenskraft + persona.logik  /]
@@ -103,7 +103,7 @@
 [printTextPlusSpace('Movement', empty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
 
 Limits
-Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclAsType(KoerperPersona).geistig/] / Social [persona.oclAsType(KoerperPersona).sozial/]
+['_UI_ChrakterLimits_koerperlich_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).koerperlich/] / ['_UI_ChrakterLimits_geistig_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).geistig/] / ['_UI_ChrakterLimits_sozial_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).sozial/]
 [/template]
 
 [**
@@ -120,9 +120,9 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
  * Print the qualities
 */]
 [template public printQualities(gears : OrderedSet(PersonaEigenschaft),empty :String) ? (not gears->isEmpty())]
-['Qualities'.titelText()/]
+['_UI_KoerperPersona_eigenschaften_feature'.localizedString().titelText()/]
 [for (ag : PersonaEigenschaft | gears)]
-[printTextPlusSpace(ag.name,empty)/][ag.karmaKosten/]
+[printTextPlusSpace(ag.getText(),empty)/][ag.karmaKosten/]
 [/for]
 
 [printTextPlusSpace('sum :', empty)/][sumQuallitiyKarma(gears)/]
@@ -132,9 +132,9 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
  * Print the kipowers
 */]
 [template public printKiPowers(gears : OrderedSet(KiKraft)) ? (not gears->isEmpty())]
-['KiPowers'.titelText()/]
+['_UI_KiAdept_kikraft_feature'.localizedString().titelText()/]
 [for (ag : KiKraft | gears)]
-[ag.name  /]
+[ag.getText()  /]
 [/for]
 [/template]
 
@@ -144,9 +144,9 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 */]
 [template public printAugmentations(gears : OrderedSet(Koerpermods),empty :String) ? (not gears->isEmpty())
 ]
-['Augmentations'.titelText()/]
+['_UI_KoerperPersona_koerperMods_feature'.localizedString().titelText()/]
 [for (ag : Koerpermods | gears)]
-[printTextPlusSpace(ag.name,empty)/][ag.oclAsType(GeldWert).wert/]
+[printTextPlusSpace(ag.getText(),empty)/][ag.oclAsType(GeldWert).wert/]
 [/for]
 
 [printTextPlusSpace('sum :', empty)/][calcListenWertToString(gears->asSequence())/]
@@ -155,8 +155,8 @@ Physical [persona.oclAsType(KoerperPersona).koerperlich/] / Mental [persona.oclA
 [template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
 ['Basic Data'.titelText()/]
 [let persona : AbstraktPersona = aManagedCharacter.persona]
-Name 		: [persona.name /]  Sex : [toLocalizedSexString(aManagedCharacter.sex, 'en')/]
-Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
+['_UI_Beschreibbar_name_feature'.localizedString()/] 		: [persona.name /]  ['_UI_ManagedCharacter_sex_feature'.localizedString()/] : [aManagedCharacter.sex.sexToName()/]
+['_UI_AbstractPersona_spezies_feature'.localizedString()/] 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 
 [if (not (persona.beschreibung.size()=0 ) )]
 [persona.beschreibung.tagText('quote')/]
@@ -178,18 +178,18 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 
 
 [template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe),empty :String)]
-['Skill Groups'.titelText()/]
+['_UI_AbstractPersona_fertigkeitsGruppen_feature'.localizedString().titelText()/]
 [for (pfg : PersonaFertigkeitsGruppe | sg)]
-[printTextPlusSpace(pfg.gruppe.name, empty)/] [pfg.stufe/]
+[printTextPlusSpace(pfg.gruppe.getText(), empty)/] [pfg.stufe/]
 [/for]
 [/template]
 
 
 [template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit),empty :String)]
-['Active Skills'.titelText()/]
+['_UI_AbstractPersona_fertigkeiten_feature'.localizedString().titelText()/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[printTextPlusSpace(pfg.fertigkeit.name,empty)/] [pfg.stufe/]
+[printTextPlusSpace(pfg.fertigkeit.getText(),empty)/] [pfg.stufe/]
 [/if]
 [/for]
 [/template]
@@ -198,37 +198,37 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 ['Knowledge Skills'.titelText()/]
 [for (pfg : PersonaFertigkeit | sg)]
 [if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
-[printTextPlusSpace(pfg.fertigkeit.name,empty )/] [pfg.stufe/]
+[printTextPlusSpace(pfg.fertigkeit.getText(),empty )/] [pfg.stufe/]
 [/if]
 [/for]
 [/template]
 
 
 [template public printConnections(c : OrderedSet(Connection),empty :String)? (not c->isEmpty())]
-['Connections'.titelText()/]
+['_UI_AbstractPersona_fertigkeiten_feature'.localizedString().titelText()/]
 [for (connection : Connection | c)]
-[printTextPlusSpace(connection.character.persona.name,empty)/]  [connection.influence/]/[connection.loyality/]
+[printTextPlusSpace(connection.getText(),empty)/]  [connection.influence/]/[connection.loyality/]
 [/for]
 [/template]
 
 [template public printSpells(z : Zauberer,loc : String,empty :String) ? (not z.zauber->isEmpty())]
-['Spells'.titelText()/]
+['_UI_Zauberer_zauber_feature'.localizedString().titelText()/]
 [for (pz : PersonaZauber | z.zauber)]
-[printTextPlusSpace(pz.formel.name, empty)/]
+[printTextPlusSpace(pz.formel.getText(), empty)/]
 [/for]
 [/template]
 
 [template public printContracts(gears : Sequence(Vertrag),empty :String)? (not gears->isEmpty())]
-['Contracts'.titelText()/]
+['_UI_ManagedCharacter_contracts_feature'.localizedString().titelText()/]
 [for (ag : Vertrag | gears)]
-[printTextPlusSpace(ag.name,empty)/] [ag.wert/]
+[printTextPlusSpace(ag.getText(),empty)/] [ag.wert/]
 [/for]
 
 [printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
 [/template]
 
 [template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
-['Vehicles'.titelText()/]
+['_UI_ManagedCharacter_vehicels_feature'.localizedString().titelText()/]
 [for (pfg : Fahrzeug | sg)]
 [printVehicle(pfg, empty)/]
 [/for]
@@ -238,15 +238,17 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 
 [template private printVehicle(vehicle : Fahrzeug,empty :String)]
 [printTextPlusSpace(vehicle.getText()  ,empty)/] [vehicle.wertValue /]
-[printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/template]
+[if (not vehicle.modifizierungen->isEmpty())][printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/if][/template]
 
 [template private printVehicle(vehicle : Drohne,empty :String)]
 [printTextPlusSpace(vehicle.getText()  ,empty)/] [vehicle.wertValue /]
-[printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/]
-[printGeldwertCollection(vehicle.storedPrograms, vehicle.wert,empty, '- ')/][/template]
+[if (not vehicle.modifizierungen->isEmpty())]
+[printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/if]
+[if (not vehicle.storedPrograms->isEmpty())]
+[printGeldwertCollection(vehicle.storedPrograms, vehicle.wert,empty, '- ')/][/if][/template]
 
 [template public printGear(gears : Sequence(AbstraktGegenstand), empty :String)? (not gears->isEmpty())]
-['Gear'.titelText()/]
+['_UI_ManagedCharacter_inventar_feature'.localizedString().titelText()/]
 [for (ag : AbstraktGegenstand | gears)]
 [printGegenstand(ag, empty)/]
 [/for]
@@ -268,7 +270,7 @@ Metatype 	: [persona.spezies.name/] Type : [getText(  persona.eClass())/]
 
 [template private printGegenstand(comlink : Cyberdeck,empty :String)]
 [printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
-[printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/template]
+[if (not comlink.storedPrograms->isEmpty())][printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/if][/template]
 
 [template private printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())]
 [for (gw : GeldWert | col)]

@@ -30,6 +30,10 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedInitative(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{persona})
 /]
 
+[query public toLocalizedInitative(initative: Integer , initativWuerfel: Integer) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'toLocalizedInitative(java.lang.Integer,java.lang.Integer)', Sequence{initative,initativWuerfel})
+/]
+
 [**
  * Return the mod list, each mod is an array with (0)the eattribute and (1) the value.
 */]

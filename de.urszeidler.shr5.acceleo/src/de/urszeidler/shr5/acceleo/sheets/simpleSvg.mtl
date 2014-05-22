@@ -361,7 +361,7 @@ y : Integer = base + (n*size);
 [printLineEnd(350,732,365)/]
 [printTextSpan(373, -734, 'Edge: '.concat(persona.edgeBasis.toString()))/]
 [printLineEnd(405,732,475)/]
-[printTextSpan(481, -734, 'Initiative: '.concat(printInitative(persona)))/]
+[printTextSpan(481, -734, 'Initiative: '.concat(toLocalizedInitative(persona)))/]
 [printLineEnd(520,732,575)/]
 
 [printTextSpan(202, -723, 'Agility: '.concat(printAbility(persona)))/]
@@ -378,7 +378,7 @@ y : Integer = base + (n*size);
 [printTextSpan(289, -712, 'Intuition: '.concat(printIntuition(persona)))/]
 [printLineEnd(315,710,365)/]
 [printTextSpan(373, -712, 'Essence: '.concat(printEssence(persona)))/]
-[printTextSpan(481, -712, 'Matrix Ini: '.concat(printInitative(persona)))/]
+[printTextSpan(481, -712, 'Matrix Ini: '.concat(toLocalizedInitative(persona)))/]
 
 [printTextSpan(202, -701, 'Strength: '.concat(printStrength(persona)))/]
 [printTextSpan(289, -701, 'Charisma: '.concat(printCharisma(persona)))/]

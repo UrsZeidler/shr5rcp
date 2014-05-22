@@ -115,10 +115,3 @@ aFahrzeug.rumpf.toString()
 
 [template public printStrength (persona : AbstraktPersona) ]
 [persona.staerkeBasis/][if(not (persona.staerkeBasis=persona.staerke))]([persona.staerke/])[/if][/template]
-
-
-[template public printInitative(persona : AbstraktPersona)]
-[persona.initative/]+[persona.initativWuerfel/]d6[/template]
-
-[template public printInitativeDE(persona : AbstraktPersona)]
-[persona.initative/]+[persona.initativWuerfel/]w6[/template]

@@ -168,6 +168,22 @@ public class ShadowrunTextTools {
         Object[] arr = new Object[]{ initative, initativWuerfel };
         return Shr5ManagementEditPlugin.INSTANCE.getString("_UI_Initative_Format_String", arr, true);
     }
+    
+    /**
+     * Looksup the initiative as localized string.
+     * @param initative 
+     * @param initativWuerfel 
+     * 
+     * @param persona
+     * @return
+     */
+    public static String toLocalizedInitative(Integer initative, Integer initativWuerfel) {
+        if(initative==null||initativWuerfel==null)
+            return EMPTY;
+        
+        Object[] arr = new Object[]{ initative, initativWuerfel };
+        return Shr5ManagementEditPlugin.INSTANCE.getString("_UI_Initative_Format_String", arr, true);
+    }
 
     /**
      * Looksup the initiative as localized string.
