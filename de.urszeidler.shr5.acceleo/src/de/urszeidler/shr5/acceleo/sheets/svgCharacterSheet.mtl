@@ -113,7 +113,61 @@ size : Integer = 12; }
 [/file]
 [/template]
 
+[**
+ * Print the gears and cut the rest
+*/]
+[template public printVehicleBlock (aManagedCharacter : ManagedCharacter,empty :String,
+x:Integer,y:Integer,size :Integer) 
+]
+    <g
+       	id="g-Vehicleblock"
+		transform="translate([x/],[y/])">
+[printLeftSideUp('_UI_ManagedCharacter_vehicels_feature'.localizedString())/]
 
+
+[for (it : Fahrzeug | aManagedCharacter.vehicels)]
+[printVehicleDetail(it, empty, 10,50+ 100 *(i-1) , size)/]
+[/for]
+
+[let ypos : Integer = (15+aManagedCharacter.vehicels->size()*size) ]
+[let pos : Integer = (1046-y).min(ypos+y) ]
+[printBotton(30, pos)/]
+[/let][/let]
+	</g>
+[/template]
+
+
+[template public printVehicleDetail(vehicle : Fahrzeug,empty :String,x:Integer,y:Integer,size : Integer)
+{empty40 : String = '........................................' ;empty40_1 : String = '                                        ' ; }
+ ]
+    <g
+       id="g-vehicle-detail"
+transform="translate([x/],[y/])"
+>
+
+[printSvgFullLine(vehicle.getText(), empty40_1,0,0)/]
+
+[printSvgLine('_UI_Fahrzeug_geschwindigkeit_feature'.localizedString(), empty,0,(1)*size)/]
+[printSvgLineValue(vehicle.vehicleSpeed(),125,(1*12),size)/]
+[printSvgLine('_UI_Fahrzeug_beschleunigung_feature'.localizedString(), empty,170,(1*size))/]
+[printSvgLineValue(vehicle.beschleunigung,290,(1*size),size)/]
+
+
+[printSvgLine('_UI_Fahrzeug_handling_feature'.localizedString(), empty,0,(2)*size)/]
+[printSvgLineValue(vehicle.vehicleHandling(),125,(2*12),size)/]
+[printSvgLine('_UI_Fahrzeug_pilot_feature'.localizedString(), empty,170,(2*size))/]
+[printSvgLineValue(vehicle.pilot,290,(2*size),size)/]
+
+
+[printSvgLine('_UI_Fahrzeug_sensor_feature'.localizedString(), empty,0,(3)*size)/]
+[printSvgLineValue(vehicle.sensor,125,(3*12),size)/]
+[printSvgLine('_UI_Fahrzeug_rumpf_feature'.localizedString(), empty,170,(3*size))/]
+[printSvgLineValue(vehicle.vehicleBody(),290,(3*size),size)/]
+
+[printOneMonitorSmall('_UI_FahrzeugZustand_type'.localizedString(),vehicle.zustandMax,0,5+(4*size),14)/]
+
+	</g>
+[/template]
 
 [**
  * Print the gears and cut the rest
@@ -264,8 +318,13 @@ x:Integer,y:Integer,size :Integer)
  }]
 [if (not aManagedCharacter.inventar->selectByKind(RiggerCommandConsole)->isEmpty())]
 [printRiggerConsoleBlock(aManagedCharacter, empty,x, y,size)/]
+[let it : RiggerCommandConsole = aManagedCharacter.inventar->selectByKind(RiggerCommandConsole)->any(true)]
+[let pos : Integer = 95+ (20+(it.matrixZustandMax.div(3)*20)).max(40+(it.storedPrograms->size()*13))  +27  ]
+[printVehicleBlock(aManagedCharacter, empty,x, pos+y,size)/][/let]
+[/let]
 [else]
 [comment][switchKiAdpept(aManagedCharacter,empty, x,y,size)/][/comment]
+[printVehicleBlock(aManagedCharacter, empty,x, y,size)/]
 [/if]
 
 
