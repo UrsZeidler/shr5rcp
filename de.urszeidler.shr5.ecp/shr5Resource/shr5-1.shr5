@@ -2891,11 +2891,32 @@
         </mods>
         <localizations xmi:id="_BptJAt0CEeOvVYoRsPZlnA" local="de" name="Kommlink"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" name="Control Rig" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="FixedValues(5R,10R,15R)">
-        <mods xmi:id="_BptwEN0CEeOvVYoRsPZlnA">
+      <entries xsi:type="shr5:Cyberware" xmi:id="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" name="Control Rig 1" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="43000">
+        <mods xmi:id="_BptwEN0CEeOvVYoRsPZlnA" wert="-100">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
-        <localizations xmi:id="_BptwEd0CEeOvVYoRsPZlnA" local="de" name="Riggerkontrolle"/>
+        <mods xmi:id="_dgRkEOHgEeOcvI1G0ud0MA" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+        </mods>
+        <localizations xmi:id="_BptwEd0CEeOvVYoRsPZlnA" local="de" name="Riggerkontrolle 1"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_hwmJwOHgEeOcvI1G0ud0MA" name="Control Rig 2" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="97000">
+        <mods xmi:id="_hwmJweHgEeOcvI1G0ud0MA" wert="-200">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_hwmJwuHgEeOcvI1G0ud0MA" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+        </mods>
+        <localizations xmi:id="_hwmJw-HgEeOcvI1G0ud0MA" local="de" name="Riggerkontrolle 2"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_iED4UOHgEeOcvI1G0ud0MA" name="Control Rig 3" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="43000">
+        <mods xmi:id="_iED4UeHgEeOcvI1G0ud0MA" wert="-300">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_iED4UuHgEeOcvI1G0ud0MA" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
+        </mods>
+        <localizations xmi:id="_iED4U-HgEeOcvI1G0ud0MA" local="de" name="Riggerkontrolle 3"/>
       </entries>
       <entries xsi:type="shr5:Cyberware" xmi:id="91599fd0-49ca-47d0-aef3-1adab2dcb8a2" name="Cortex Bomb, Kink" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12F" wertValue="10000">
         <mods xmi:id="_BptwEt0CEeOvVYoRsPZlnA">
@@ -3015,6 +3036,9 @@
         <mods xmi:id="_Bp4II90CEeOvVYoRsPZlnA" wert="-20">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
+        <mods xmi:id="_gWrl8OHfEeOcvI1G0ud0MA">
+          <attribut href="http://urszeidler.de/shr5/1.0#//FernkampfwaffenModifikatoren/smartgun"/>
+        </mods>
         <localizations xmi:id="_Bp4IJN0CEeOvVYoRsPZlnA" local="de" name="Smartlink"/>
       </entries>
       <entries xsi:type="shr5:Cyberware" xmi:id="7366713d-a9fd-438c-8e4a-445c011f987d" name="Thermographic Vision" page="453" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4" wertValue="1500">
@@ -3128,18 +3152,6 @@
         </mods>
         <localizations xmi:id="_BqDuUd0CEeOvVYoRsPZlnA" local="de" name="Interner Lufttank"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" name="Muscle Replacement 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="25000">
-        <mods xmi:id="_BqDuUt0CEeOvVYoRsPZlnA" wert="1">
-          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
-        </mods>
-        <mods xmi:id="_BqDuU90CEeOvVYoRsPZlnA" wert="1">
-          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
-        </mods>
-        <mods xmi:id="_BqDuVN0CEeOvVYoRsPZlnA" wert="-100">
-          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-        </mods>
-        <localizations xmi:id="_BqDuVd0CEeOvVYoRsPZlnA" local="de" name="Kunstmuskeln 1"/>
-      </entries>
       <entries xsi:type="shr5:Cyberware" xmi:id="ac91cc72-44ca-44f0-a108-0f98d3ae95f1" name="Reaction Enhancers" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating*5)R">
         <mods xmi:id="_BqEVYN0CEeOvVYoRsPZlnA">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
@@ -3161,11 +3173,89 @@
         </mods>
         <localizations xmi:id="_BqE8cd0CEeOvVYoRsPZlnA" local="de" name="Schmuggelbehälter"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="38c0e48d-8095-42af-b119-3c433d481ecd" name="Wired Reflexes" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="FixedValues(8R,12R,20R)">
-        <mods xmi:id="_BqE8ct0CEeOvVYoRsPZlnA">
+      <entries xsi:type="shr5:Cyberware" xmi:id="38c0e48d-8095-42af-b119-3c433d481ecd" name="Wired Reflexes 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="39000">
+        <mods xmi:id="_6hqjkOHIEeOFLfhRjX-mFg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </mods>
+        <mods xmi:id="_BqE8ct0CEeOvVYoRsPZlnA" wert="-200">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
-        <localizations xmi:id="_BqE8c90CEeOvVYoRsPZlnA" local="de" name="Reflexbooster"/>
+        <mods xmi:id="_8LmV0OHIEeOFLfhRjX-mFg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+        </mods>
+        <localizations xmi:id="_BqE8c90CEeOvVYoRsPZlnA" local="de" name="Reflexbooster 1"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_R86rEOHfEeOcvI1G0ud0MA" name="Wired Reflexes 2" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12R" wertValue="149000">
+        <mods xmi:id="_R86rEeHfEeOcvI1G0ud0MA" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </mods>
+        <mods xmi:id="_R86rEuHfEeOcvI1G0ud0MA" wert="-300">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_R86rE-HfEeOcvI1G0ud0MA" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+        </mods>
+        <localizations xmi:id="_R86rFOHfEeOcvI1G0ud0MA" local="de" name="Reflexbooster 2"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_TABt4OHfEeOcvI1G0ud0MA" name="Wired Reflexes 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="20R" wertValue="217">
+        <mods xmi:id="_TABt4eHfEeOcvI1G0ud0MA" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </mods>
+        <mods xmi:id="_TABt4uHfEeOcvI1G0ud0MA" wert="-500">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <mods xmi:id="_TABt4-HfEeOcvI1G0ud0MA" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+        </mods>
+        <localizations xmi:id="_TABt5OHfEeOcvI1G0ud0MA" local="de" name="Reflexbooster 3"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" name="Muscle Replacement 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="25000">
+        <mods xmi:id="_BqDuUt0CEeOvVYoRsPZlnA" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_BqDuU90CEeOvVYoRsPZlnA" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <mods xmi:id="_BqDuVN0CEeOvVYoRsPZlnA" wert="-100">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <localizations xmi:id="_BqDuVd0CEeOvVYoRsPZlnA" local="de" name="Kunstmuskeln 1"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_qMcKIOHfEeOcvI1G0ud0MA" name="Muscle Replacement 2" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="50000">
+        <mods xmi:id="_qMcKIeHfEeOcvI1G0ud0MA" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_qMcKIuHfEeOcvI1G0ud0MA" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <mods xmi:id="_qMcKI-HfEeOcvI1G0ud0MA" wert="-200">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <localizations xmi:id="_qMcKJOHfEeOcvI1G0ud0MA" local="de" name="Kunstmuskeln 2"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_s3IOwOHfEeOcvI1G0ud0MA" name="Muscle Replacement 3" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="75000">
+        <mods xmi:id="_s3IOweHfEeOcvI1G0ud0MA" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_s3IOwuHfEeOcvI1G0ud0MA" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <mods xmi:id="_s3IOw-HfEeOcvI1G0ud0MA" wert="-300">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <localizations xmi:id="_s3IOxOHfEeOcvI1G0ud0MA" local="de" name="Kunstmuskeln 3"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_tDsEEOHfEeOcvI1G0ud0MA" name="Muscle Replacement 4" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="100000">
+        <mods xmi:id="_tDsEEeHfEeOcvI1G0ud0MA" wert="4">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+        </mods>
+        <mods xmi:id="_tDsEEuHfEeOcvI1G0ud0MA" wert="4">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </mods>
+        <mods xmi:id="_tDsEE-HfEeOcvI1G0ud0MA" wert="-400">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <localizations xmi:id="_tDsEFOHfEeOcvI1G0ud0MA" local="de" name="Kunstmuskeln 4"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BqE8dN0CEeOvVYoRsPZlnA" name="powers">
@@ -12187,8 +12277,45 @@
         <vehicels xsi:type="shr5:Drohne" xmi:id="_EpHq4N6LEeOU1t7mwJMedA" name="GM-Nissan Doberman" parentId="6ceca942-38bf-4042-8179-36836d6daffc" page="466" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="5000" handling="5" geschwindigkeit="3" beschleunigung="1" rumpf="4" pilot="3" sensor="3" fahrzeugTyp="Drone: Medium" panzer="4"/>
         <vehicels xsi:type="shr5:Drohne" xmi:id="_EppPUN6LEeOU1t7mwJMedA" name="Shiawase Kanmushi" parentId="9305ccd7-d1e1-4c09-8827-ba0a19a46716" page="465" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8" wertValue="1000" handling="4" geschwindigkeit="2" beschleunigung="1" pilot="3" sensor="3" fahrzeugTyp="Drone: Micro"/>
       </members>
+      <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_6Q5OkOHGEeOFLfhRjX-mFg" chracterSource="_t4mcMOHGEeOFLfhRjX-mFg">
+        <persona xsi:type="shr5:MudanPersona" xmi:id="_6Q5OkeHGEeOFLfhRjX-mFg" name="Orc merc" edgeBasis="5" konstitutionBasis="6" geschicklichkeitBasis="6" reaktionBasis="5" staerkeBasis="5" charismaBasis="2" willenskraftBasis="4" intuitionBasis="5" logikBasis="4" spezies="67472729-321e-4e00-96ab-8914a9e276a3">
+          <fertigkeiten xmi:id="_bNJ0QOHHEeOFLfhRjX-mFg" stufe="2" fertigkeit="961e8f0c-3adb-4565-a3a6-bf91da22cf45"/>
+          <fertigkeiten xmi:id="_flrTsOHHEeOFLfhRjX-mFg" stufe="4" fertigkeit="fdaa958a-7097-4280-bf26-995298fec618"/>
+          <fertigkeiten xmi:id="_jfVs4OHHEeOFLfhRjX-mFg" stufe="5" fertigkeit="a54bb1c7-9920-4276-ad18-311e390ca96c"/>
+          <fertigkeiten xmi:id="_j5aZwOHHEeOFLfhRjX-mFg" stufe="3" fertigkeit="24f9aad8-4106-4f1c-859b-8641ad387a3a"/>
+          <fertigkeiten xmi:id="_nKhlMOHHEeOFLfhRjX-mFg" stufe="3" fertigkeit="659ff775-c985-4e7d-bbb9-8be088b9104c"/>
+          <fertigkeiten xmi:id="_poomYOHHEeOFLfhRjX-mFg" fertigkeit="eb617b99-6024-45f4-9cf4-7a01ac3070d5"/>
+          <fertigkeiten xmi:id="_rt1YUOHHEeOFLfhRjX-mFg" stufe="2" fertigkeit="c385ecde-f451-4352-a5ef-2c3a244e23d3"/>
+          <fertigkeiten xmi:id="_tBAQYOHHEeOFLfhRjX-mFg" stufe="3" fertigkeit="132783c1-780e-4021-875c-c8763e729e2d"/>
+          <koerperMods xsi:type="shr5:BioWare" xmi:id="_9K1asOHHEeOFLfhRjX-mFg" name="Muscle augmentation 2" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="62000">
+            <mods xmi:id="_9K2BwOHHEeOFLfhRjX-mFg" wert="-40">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_9K2BweHHEeOFLfhRjX-mFg" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
+            </mods>
+            <mods xmi:id="_9K2BwuHHEeOFLfhRjX-mFg" wert="2">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+            </mods>
+            <localizations xmi:id="_9K2Bw-HHEeOFLfhRjX-mFg" local="de" name="Muskelverstärkung 2"/>
+          </koerperMods>
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_LZ66IOHJEeOFLfhRjX-mFg" name="Wired Reflexes 1" parentId="38c0e48d-8095-42af-b119-3c433d481ecd" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="8R" wertValue="39000">
+            <mods xmi:id="_LZ66IeHJEeOFLfhRjX-mFg" wert="-200">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+            </mods>
+            <mods xmi:id="_LZ66IuHJEeOFLfhRjX-mFg" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+            </mods>
+            <mods xmi:id="_LZ66I-HJEeOFLfhRjX-mFg" wert="1">
+              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
+            </mods>
+            <localizations xmi:id="_LZ66JOHJEeOFLfhRjX-mFg" local="de" name="Reflexbooster 1"/>
+          </koerperMods>
+        </persona>
+      </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_OTABIN6JEeOU1t7mwJMedA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
+    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_t4mcMOHGEeOFLfhRjX-mFg" character="_6Q5OkOHGEeOFLfhRjX-mFg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Orc merc" resourcen="_BtMh4d0CEeOvVYoRsPZlnA" skills="_BtGbQ90CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3KsN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
     <grunts xmi:id="_B1VKMN0CEeOvVYoRsPZlnA" name="Thugs">
       <members xmi:id="_B1WYUN0CEeOvVYoRsPZlnA" count="7" nsc="_B1JkAN0CEeOvVYoRsPZlnA"/>
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
