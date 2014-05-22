@@ -121,7 +121,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-License"
 		transform="translate([x/],[y/])">
-[printRightSideUp('_UI_Vertrag_type'.localizedString())/]
+[printRightSideUp('_UI_ManagedCharacter_contracts_feature'.localizedString())/]
 
 [for (k : Vertrag | aManagedCharacter.contracts)]
 [let ypos : Integer = (20+(1+i)*size) ]
@@ -472,7 +472,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-Gears"
 		transform="translate([x/],[y/])">
-[printRightSideUp('Gears'.localizedString())/]
+[printRightSideUp('_UI_ManagedCharacter_inventar_feature'.localizedString())/]
 
 [for (k : AbstraktGegenstand | aManagedCharacter.inventar)]
 [let ypos : Integer = (20+(1+i)*size) ]
@@ -495,7 +495,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-complexForms"
 		transform="translate([x/],[y/])">
-[printRightSideUp('ComplexForms'.localizedString())/]
+[printRightSideUp('_UI_Technomancer_complexForms_feature'.localizedString())/]
 
 [for (k : PersonaKomplexForm | caster.complexForms)]
 [printSvgFullLine(k.form.getText(), empty,10,(20+(1+i)*12))/]
@@ -514,7 +514,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-Spells"
 		transform="translate([x/],[y/])">
-[printRightSideUp('_UI_Zauber_type'.localizedString())/]
+[printRightSideUp('_UI_Zauberer_zauber_feature'.localizedString())/]
 
 [for (k : PersonaZauber | caster.zauber)]
 [printSvgFullLine(k.formel.getText(), empty,10,(20+(1+i)*12))/]
@@ -534,7 +534,7 @@ x:Integer,y:Integer,size :Integer)
     <g
        	id="g-Augmentation"
 		transform="translate([x/],[y/])">
-[printRightSideUp('Connection'.localizedString())/]
+[printRightSideUp('_UI_ManagedCharacter_connections_feature'.localizedString())/]
 
 [for (c : Connection | aManagedCharacter.connections)]
 [printSvgFullLine(c.character.persona.name, empty,10,(20+(1+i)*12))/]
@@ -556,7 +556,7 @@ kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
     <g
        	id="g-Augmentation"
 		transform="translate([x/],[y/])">
-[printRightSideUp('Augmentation'.localizedString())/]
+[printRightSideUp('_UI_KoerperPersona_koerperMods_feature'.localizedString())/]
 
 [for (k : Koerpermods | kp.koerperMods)]
 [printSvgFullLine(k.getText(), empty,10,(20+(1+i)*12))/]
@@ -573,9 +573,9 @@ kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
 x:Integer,y:Integer,size :Integer) 
 ]
     <g
-       	id="g-KiPOwer"
+       	id="g-KiPower"
 		transform="translate([x/],[y/])">
-[printRightSideUp('KiPower'.localizedString())/]
+[printRightSideUp('_UI_KiAdept_kikraft_feature'.localizedString())/]
 
 [for (k : KiKraft | adept.kikraft)]
 [printSvgFullLine(k.getText(), empty,10,(20+(1+i)*12))/]
@@ -604,8 +604,8 @@ transform="translate([x/],[y/])"
 [printRightSideUp('Condition'.localizedString())/]
 
 [let pos : Integer = 105+  (kp.zustandGeistigMax.max(kp.zustandKoerperlichMax).div(3)*50 )]
-[printOneMonitor('mental',persona.oclAsType(KoerperPersona).zustandGeistigMax,15,40,3)/]
-[printOneMonitor('physical',persona.oclAsType(KoerperPersona).zustandKoerperlichMax,170,40,3)/]
+[printOneMonitor('_UI_KoerperPersona_zustandGeistig_feature',persona.oclAsType(KoerperPersona).zustandGeistigMax,15,40,3)/]
+[printOneMonitor('_UI_KoerperPersona_zustandKoerperlich_feature'.localizedString(),persona.oclAsType(KoerperPersona).zustandKoerperlichMax,170,40,3)/]
 
 [printOneMonitorSmall('overflow',persona.oclAsType(KoerperPersona).zustandGrenze,15,pos,14)/]
 
@@ -680,7 +680,7 @@ transform="translate([x/],[y/])"
 >
 
 [printRightSideUp('Combat'.localizedString())/]
-[printSvgFullLine('Defending', empty,10,(40+1*12))/]
+[printSvgFullLine('_UI_SpezielleAttribute_ausweichen_feature'.localizedString(), empty,10,(40+1*12))/]
 [printSvgLineValue(persona.ausweichen,255,(40+1*12),size)/]
 
 [let rw : Kleidung = aManagedCharacter.inventar->selectByKind(Kleidung)->any(true)]
@@ -952,26 +952,26 @@ empty :String,x:Integer,y:Integer,size : Integer)
 [printLeftSideUp('PersonalData'.localizedString())/]
 
 
-[printSvgLine('Name'.localizedString(), empty,10,(40+1*12))/]
+[printSvgLine('_UI_Beschreibbar_name_feature'.localizedString(), empty,10,(40+1*12))/]
 [printSvgLineValue(persona.name,135,(40+1*12),size)/]
 
-[printSvgLine('Metatype'.localizedString(), empty,10,(40+2*12))/]
+[printSvgLine('_UI_AbstraktPersona_spezies_feature'.localizedString(), empty,10,(40+2*12))/]
 [printSvgLineValue(persona.spezies.getText(),135,(40+2*12),size)/]
 
-[printSvgLine('Lang'.localizedString(), empty,10,(40+3*12))/]
+[printSvgLine('_UI_ManagedCharacter_nativeLanguage_feature'.localizedString(), empty,10,(40+3*12))/]
 [printSvgLineValue(aManagedCharacter.nativeLanguage.getText(),135,(40+3*12),size)/]
 
-[printSvgLine('Sex'.localizedString(), empty,10,(40+4*12))/]
+[printSvgLine('_UI_ManagedCharacter_sex_feature'.localizedString(), empty,10,(40+4*12))/]
 [printSvgLineValue(sexToName(aManagedCharacter.sex),135,(40+4*12),size)/]
 
-[printSvgLine('Streetcred'.localizedString(), empty,10,(40+5*12))/]
+[printSvgLine('_UI_ManagedCharacter_streetCred_feature'.localizedString(), empty,10,(40+5*12))/]
 [printSvgLineValue(aManagedCharacter.streetCred,135,(40+5*12),size)/]
-[printSvgLine('Notority'.localizedString(), empty,170,(40+5*12))/]
+[printSvgLine('_UI_ManagedCharacter_notoriety_feature'.localizedString(), empty,170,(40+5*12))/]
 [printSvgLineValue(aManagedCharacter.notoriety,295,(40+5*12),size)/]
 
-[printSvgLine('CurrentKarma'.localizedString(), empty,10,(40+6*12))/]
+[printSvgLine('_UI_ManagedCharacter_currentKarma_feature'.localizedString(), empty,10,(40+6*12))/]
 [printSvgLineValue(aManagedCharacter.currentKarma,135,(40+6*12),size)/]
-[printSvgLine('KarmaGaint'.localizedString(), empty,170,(40+6*12))/]
+[printSvgLine('_UI_ManagedCharacter_karmaGaint_feature'.localizedString(), empty,170,(40+6*12))/]
 [printSvgLineValue(aManagedCharacter.karmaGaint,295,(40+6*12),size)/]
 
 [printBotton(x, ((25+(6*12))))/]
@@ -990,7 +990,7 @@ x:Integer,y:Integer,size : Integer)
 transform="translate([x/],[y/])"
 >
 
-[printLeftSideUp('Quallities'.localizedString())/]
+[printLeftSideUp('_UI_KoerperPersona_eigenschaften_feature'.localizedString())/]
 [for (pe : PersonaEigenschaft | persona.oclAsType(KoerperPersona).eigenschaften)]
 [printSvgFullLine(pe.getText(), empty,10,(40+(i)*12))/]
 [printSvgLineValue(pe.karmaKosten,255,(40+(i)*12),size)/]
@@ -1009,7 +1009,7 @@ x:Integer,y:Integer,size : Integer)
        id="g-skills"
 transform="translate([x/],[y/])"
 >
-[printLeftSideUp('Skills'.localizedString())/]
+[printLeftSideUp('_UI_AbstraktPersona_fertigkeiten_feature'.localizedString())/]
 
 [let count : Integer = persona.fertigkeitsGruppenToFertigkeiten()->size()]
 [for (b : Beschreibbar | persona.fertigkeitsGruppenToFertigkeiten())]
@@ -1069,14 +1069,14 @@ transform="translate([x/],[y/])"
 [/let]
 
 [comment]the second column[/comment]
-[printSvgLine('Essence'.localizedString(), empty,170,(40+1*12))/]
+[printSvgLine('_UI_SpezielleAttribute_essenz_feature'.localizedString(), empty,170,(40+1*12))/]
 [printSvgLineValue((persona.essenz/100).toString(),290,(40+1*12),size)/]
 
-[printSvgLine('Initiative'.localizedString(), empty,170,(40+2*12))/]
+[printSvgLine('_UI_SpezielleAttribute_initative_feature'.localizedString(), empty,170,(40+2*12))/]
 [printSvgLineValue(persona.toLocalizedInitative(),290,(40+2*12),size)/]
 
 
-[printSvgLine('Armor'.localizedString(), empty,170,(40+3*12))/]
+[printSvgLine('_UI_Panzerung_panzer_feature'.localizedString(), empty,170,(40+3*12))/]
 [printSvgLineValue(persona.oclAsType(KoerperPersona).panzer.toString(),290,(40+3*12),size)/]
 
 
@@ -1097,7 +1097,7 @@ transform="translate([x/],[y/])"
 
 [if(persona.oclIsKindOf(AstraleProjektion))]
 [let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
-[printSvgLine('Astral_Ini'.localizedString(), empty,170,(40+9*12))/]
+[printSvgLine('_UI_AstraleProjektion_astraleInitative_feature'.localizedString(), empty,170,(40+9*12))/]
 [printSvgLineValue(ap.toLocalizedAstralInitative(),290,(40+9*12),size)/]
 [/let][/if]
 
