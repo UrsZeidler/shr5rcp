@@ -46,16 +46,17 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -65,6 +66,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -75,6 +77,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Shr5System getShr5Generator() {
@@ -327,7 +330,10 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
                 if (id.getParentId() != null && eResource != null)
                     id = (Identifiable)eResource.getEObject(id.getParentId());
 
-                list.add(id);
+                if (id != null)
+                    list.add(id);
+                else
+                    list.add((Identifiable)o);
             }
         }
 
@@ -337,13 +343,13 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         ArrayList<Identifiable[]> arrayList = new ArrayList<Identifiable[]>();
         for (Identifiable identifiable : list) {
             for (QuellenConstrain quellenConstrain : additionalConstrains) {
-                if (quellenConstrain.getSource()!=null &&  quellenConstrain.getSource().equals(identifiable)) {
+                if (quellenConstrain.getSource() != null && quellenConstrain.getSource().equals(identifiable)) {
                     if (quellenConstrain.getConstrainType() == QuellenConstrainType.NOT_TOGETHER) {
                         EList<Quelle> targets = quellenConstrain.getTargets();
                         for (Quelle quelle : targets) {
                             if (list.contains(quelle)) {
-                                Identifiable[] id = new Identifiable[]{source,tar }; 
-                                arrayList.add(id);                                
+                                Identifiable[] id = new Identifiable[]{ source, tar };
+                                arrayList.add(id);
                             }
                         }
                     } else if (quellenConstrain.getConstrainType() == QuellenConstrainType.NEED_ONE_OF) {
@@ -369,13 +375,15 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                if (resolve) return getShr5Generator();
+                if (resolve)
+                    return getShr5Generator();
                 return basicGetShr5Generator();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -384,6 +392,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -398,6 +407,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
