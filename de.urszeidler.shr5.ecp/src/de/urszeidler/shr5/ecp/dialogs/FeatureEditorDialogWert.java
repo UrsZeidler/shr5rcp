@@ -3,7 +3,6 @@
  */
 package de.urszeidler.shr5.ecp.dialogs;
 
-import java.io.ObjectInputStream.GetField;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;

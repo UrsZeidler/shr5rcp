@@ -2900,7 +2900,7 @@
         </mods>
         <localizations xmi:id="_BptwEd0CEeOvVYoRsPZlnA" local="de" name="Riggerkontrolle 1"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_hwmJwOHgEeOcvI1G0ud0MA" name="Control Rig 2" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="97000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_hwmJwOHgEeOcvI1G0ud0MA" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" name="Control Rig 2" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="97000">
         <mods xmi:id="_hwmJweHgEeOcvI1G0ud0MA" wert="-200">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -2909,7 +2909,7 @@
         </mods>
         <localizations xmi:id="_hwmJw-HgEeOcvI1G0ud0MA" local="de" name="Riggerkontrolle 2"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_iED4UOHgEeOcvI1G0ud0MA" name="Control Rig 3" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="43000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_iED4UOHgEeOcvI1G0ud0MA" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" name="Control Rig 3" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="43000">
         <mods xmi:id="_iED4UeHgEeOcvI1G0ud0MA" wert="-300">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -3194,7 +3194,7 @@
         </mods>
         <localizations xmi:id="_BqE8c90CEeOvVYoRsPZlnA" local="de" name="Reflexbooster 1"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_R86rEOHfEeOcvI1G0ud0MA" name="Wired Reflexes 2" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12R" wertValue="149000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_R86rEOHfEeOcvI1G0ud0MA" name="Wired Reflexes 2" parentId="38c0e48d-8095-42af-b119-3c433d481ecd" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12R" wertValue="149000">
         <mods xmi:id="_R86rEeHfEeOcvI1G0ud0MA" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
@@ -3206,7 +3206,7 @@
         </mods>
         <localizations xmi:id="_R86rFOHfEeOcvI1G0ud0MA" local="de" name="Reflexbooster 2"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_TABt4OHfEeOcvI1G0ud0MA" name="Wired Reflexes 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="20R" wertValue="217">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_TABt4OHfEeOcvI1G0ud0MA" name="Wired Reflexes 3" parentId="38c0e48d-8095-42af-b119-3c433d481ecd" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="20R" wertValue="217">
         <mods xmi:id="_TABt4eHfEeOcvI1G0ud0MA" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
@@ -3230,7 +3230,7 @@
         </mods>
         <localizations xmi:id="_BqDuVd0CEeOvVYoRsPZlnA" local="de" name="Kunstmuskeln 1"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_qMcKIOHfEeOcvI1G0ud0MA" name="Muscle Replacement 2" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="50000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_qMcKIOHfEeOcvI1G0ud0MA" name="Muscle Replacement 2" parentId="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="50000">
         <mods xmi:id="_qMcKIeHfEeOcvI1G0ud0MA" wert="2">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
         </mods>
@@ -3242,7 +3242,7 @@
         </mods>
         <localizations xmi:id="_qMcKJOHfEeOcvI1G0ud0MA" local="de" name="Kunstmuskeln 2"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_s3IOwOHfEeOcvI1G0ud0MA" name="Muscle Replacement 3" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="75000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_s3IOwOHfEeOcvI1G0ud0MA" name="Muscle Replacement 3" parentId="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="75000">
         <mods xmi:id="_s3IOweHfEeOcvI1G0ud0MA" wert="3">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
         </mods>
@@ -3254,7 +3254,7 @@
         </mods>
         <localizations xmi:id="_s3IOxOHfEeOcvI1G0ud0MA" local="de" name="Kunstmuskeln 3"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_tDsEEOHfEeOcvI1G0ud0MA" name="Muscle Replacement 4" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="100000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_tDsEEOHfEeOcvI1G0ud0MA" name="Muscle Replacement 4" parentId="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="100000">
         <mods xmi:id="_tDsEEeHfEeOcvI1G0ud0MA" wert="4">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
         </mods>
@@ -4183,7 +4183,7 @@
         </mods>
         <localizations xmi:id="_TG1U096PEeO-HcYx5lqBsQ" local="de" name="Zerebralbooster 3"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="_TG1U1N6PEeO-HcYx5lqBsQ" name="Muscle augmentation 1" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="31000">
+      <entries xsi:type="shr5:BioWare" xmi:id="3fc49185-8737-4501-8c7b-6d54f7846fac" name="Muscle augmentation 1" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="31000">
         <mods xmi:id="_TG1U1d6PEeO-HcYx5lqBsQ" wert="-20">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4219,7 +4219,7 @@
         </mods>
         <localizations xmi:id="_TG3KAt6PEeO-HcYx5lqBsQ" local="de" name="Muskelverstärkung 4"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="_TvOBIN6oEeO15ZgHuQ7HHg" name="Orthoskin 1" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="6000">
+      <entries xsi:type="shr5:BioWare" xmi:id="bea62f20-88b3-41e3-9cbc-9cd99a42210c" name="Orthoskin 1" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="6000">
         <mods xmi:id="_TvOBId6oEeO15ZgHuQ7HHg" wert="-25">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4255,7 +4255,7 @@
         </mods>
         <localizations xmi:id="_eiiAYuHiEeOcvI1G0ud0MA" local="de" name="Muskelstraffung 1"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="_e7sHQOHiEeOcvI1G0ud0MA" name="Muscle toner 2" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="64000">
+      <entries xsi:type="shr5:BioWare" xmi:id="_e7sHQOHiEeOcvI1G0ud0MA" name="Muscle toner 2" page="459" parentId="_eiiAYOHiEeOcvI1G0ud0MA" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="64000">
         <mods xmi:id="_e7sHQeHiEeOcvI1G0ud0MA" wert="-40">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4264,7 +4264,7 @@
         </mods>
         <localizations xmi:id="_e7sHQuHiEeOcvI1G0ud0MA" local="de" name="Muskelstraffung 2"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="88d6c54c-0eed-4c2a-9e97-9fd811dffd8d" name="Muscle toner 3" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="15R" wertValue="96000">
+      <entries xsi:type="shr5:BioWare" name="Muscle toner 3"  parentId="_eiiAYOHiEeOcvI1G0ud0MA" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="15R" wertValue="96000">
         <mods xmi:id="_Br8ksN0CEeOvVYoRsPZlnA" wert="-60">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4353,7 +4353,7 @@
         <lifestyleToStartMoney xmi:id="_BtQMQt0CEeOvVYoRsPZlnA" numberOfW="4" moneyFactor="100" lifeStyles="25e7fe19-0dc2-4d2b-b134-035259ea321a"/>
         <lifestyleToStartMoney xmi:id="_BtQMQ90CEeOvVYoRsPZlnA" numberOfW="5" moneyFactor="500" lifeStyles="141d339c-d514-44e6-aab4-94768e68cac3"/>
         <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="43141722-bea8-496f-bdd6-4e4e858e1269"/>
-        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" targets="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54 88d6c54c-0eed-4c2a-9e97-9fd811dffd8d"/>
+        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" source="_qMcKIOHfEeOcvI1G0ud0MA" targets="_eiiAYOHiEeOcvI1G0ud0MA _TG1U1N6PEeO-HcYx5lqBsQ"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="7"/>
@@ -4488,6 +4488,89 @@
         </priorities>
         <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_BtdAkN0CEeOvVYoRsPZlnA" cost="30">
           <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+      </entries>
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campain." page="354" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1">
+        <instructions xmi:id="_djpB4eJ0EeOht_G61YAQvg" value="Select the categories and the group."/>
+        <instructions xmi:id="_djpB4uJ0EeOht_G61YAQvg" key="readyForCreation" value="All has been set, you can create the character now."/>
+        <instructions xmi:id="_djpB4-J0EeOht_G61YAQvg" key="personaCreated" value="The character is created spend all the values."/>
+        <instructions xmi:id="_djpB5OJ0EeOht_G61YAQvg" key="commited" value="The character is finshed and commited."/>
+        <lifestyleToStartMoney xmi:id="_djpB5eJ0EeOht_G61YAQvg" numberOfW="1" moneyFactor="30" lifeStyles="bf7be148-f387-4214-aa61-37237d3393fd"/>
+        <lifestyleToStartMoney xmi:id="_djpB5uJ0EeOht_G61YAQvg" numberOfW="2" moneyFactor="40" lifeStyles="4ba8e64b-55dd-409e-bdf3-add174da0113"/>
+        <lifestyleToStartMoney xmi:id="_djpB5-J0EeOht_G61YAQvg" numberOfW="3" moneyFactor="60" lifeStyles="f2009ab2-65bb-4ed9-a0ce-fbbf77bdf1db"/>
+        <lifestyleToStartMoney xmi:id="_djpB6OJ0EeOht_G61YAQvg" numberOfW="4" moneyFactor="100" lifeStyles="25e7fe19-0dc2-4d2b-b134-035259ea321a"/>
+        <lifestyleToStartMoney xmi:id="_djpB6eJ0EeOht_G61YAQvg" numberOfW="5" moneyFactor="500" lifeStyles="141d339c-d514-44e6-aab4-94768e68cac3"/>
+        <lifestyleToStartMoney xmi:id="_djpB6uJ0EeOht_G61YAQvg" numberOfW="6" moneyFactor="1000" lifeStyles="43141722-bea8-496f-bdd6-4e4e858e1269"/>
+        <additionalConstrains xmi:id="_djpB6-J0EeOht_G61YAQvg" source="_qMcKIOHfEeOcvI1G0ud0MA" targets="_eiiAYOHiEeOcvI1G0ud0MA _TG1U1N6PEeO-HcYx5lqBsQ"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8eJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="7"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8uJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8-J0EeOht_G61YAQvg" categorieName="A" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB9OJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="67472729-321e-4e00-96ab-8914a9e276a3" specialPoints="4"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB9eJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="4824c829-52c1-4a6f-b6b0-9d47269028b6"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB9uJ0EeOht_G61YAQvg" categorieName="B" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="5"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB9-J0EeOht_G61YAQvg" categorieName="B" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB-OJ0EeOht_G61YAQvg" categorieName="B" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB-eJ0EeOht_G61YAQvg" categorieName="B" choosableTypes="67472729-321e-4e00-96ab-8914a9e276a3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB-uJ0EeOht_G61YAQvg" categorieName="C" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="3"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB--J0EeOht_G61YAQvg" categorieName="C" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB_OJ0EeOht_G61YAQvg" categorieName="D" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB_OJ0EeOht_G61YAQvg" categorieName="E" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpB_uJ0EeOht_G61YAQvg" categorieName="A" attibutePoints="20"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpB_-J0EeOht_G61YAQvg" categorieName="B" attibutePoints="16"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpCAOJ0EeOht_G61YAQvg" categorieName="C" attibutePoints="14"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpCAeJ0EeOht_G61YAQvg" categorieName="D" attibutePoints="12"/>
+        <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpCAeJ0EeOht_G61YAQvg" categorieName="E" attibutePoints="12"/>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCBeJ0EeOht_G61YAQvg" categorieName="A" skillValue="4" skillNumber="2" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="4" spellPoints="7">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCBuJ0EeOht_G61YAQvg" categorieName="A" skillValue="4" skillNumber="2" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="4" spellPoints="7">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_djpCB-J0EeOht_G61YAQvg" categorieName="A" skillValue="4" skillNumber="2" selectableSkills="3528f23d-1c21-4056-9994-ce0ff13f9d63 dcb5a6fc-06a5-4872-936d-955a8033840c 39a4866c-0a36-493e-be16-4265e9cbb329" selectableSkillGroups="_Bm2pU90CEeOvVYoRsPZlnA" resonanz="4" complexForms="2">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_djpCCOJ0EeOht_G61YAQvg" categorieName="A" skillValue="4" skillNumber="1" selectableSkills="5ebbd04b-a61a-4562-88c7-395a8db1ef28 579ecc0c-ffc9-4f2d-ac84-23e21002bd16 a02f9bbe-e8f3-490c-b190-1adad3fc0dc3 c385ecde-f451-4352-a5ef-2c3a244e23d3 8c0ca3b6-6df2-47f8-8486-645a9cee89ec e540c341-096a-48c8-9781-d8c3e50e4a0b 5cf88193-2f56-4065-b983-54d5ded4f646 132783c1-780e-4021-875c-c8763e729e2d" magic="6">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCCeJ0EeOht_G61YAQvg" categorieName="A" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="5" spellPoints="10">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCCuJ0EeOht_G61YAQvg" categorieName="B" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="3" spellPoints="5">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Magier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCC-J0EeOht_G61YAQvg" categorieName="B" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="3" spellPoints="5">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MysticAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Technomancer" xmi:id="_djpCDOJ0EeOht_G61YAQvg" categorieName="B" selectableSkills="3528f23d-1c21-4056-9994-ce0ff13f9d63 dcb5a6fc-06a5-4872-936d-955a8033840c 39a4866c-0a36-493e-be16-4265e9cbb329" selectableSkillGroups="_Bm2pU90CEeOvVYoRsPZlnA" resonanz="3" complexForms="1">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//Technomancer"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_djpCDeJ0EeOht_G61YAQvg" categorieName="B" skillValue="2" skillNumber="1" selectableSkills="5ebbd04b-a61a-4562-88c7-395a8db1ef28 579ecc0c-ffc9-4f2d-ac84-23e21002bd16 a02f9bbe-e8f3-490c-b190-1adad3fc0dc3 c385ecde-f451-4352-a5ef-2c3a244e23d3 8c0ca3b6-6df2-47f8-8486-645a9cee89ec e540c341-096a-48c8-9781-d8c3e50e4a0b 5cf88193-2f56-4065-b983-54d5ded4f646 132783c1-780e-4021-875c-c8763e729e2d" magic="4">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCDuJ0EeOht_G61YAQvg" categorieName="B" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="3" spellPoints="6">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Adept" xmi:id="_djpCD-J0EeOht_G61YAQvg" categorieName="C" selectableSkills="5ebbd04b-a61a-4562-88c7-395a8db1ef28 579ecc0c-ffc9-4f2d-ac84-23e21002bd16 a02f9bbe-e8f3-490c-b190-1adad3fc0dc3 c385ecde-f451-4352-a5ef-2c3a244e23d3 8c0ca3b6-6df2-47f8-8486-645a9cee89ec e540c341-096a-48c8-9781-d8c3e50e4a0b 5cf88193-2f56-4065-b983-54d5ded4f646 132783c1-780e-4021-875c-c8763e729e2d" magic="2">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Spellcaster" xmi:id="_djpCEOJ0EeOht_G61YAQvg" categorieName="C" selectableSkills="bfefba18-d889-436e-b70f-582add2bfb01 0c5aee60-5bd9-4333-8be6-90d7e36017b8 79ae54da-5c22-4f51-9177-c2fd055995ef 082628b4-b58e-4bf2-8d01-81a7bff27722 8f9c9f42-41e4-4e4e-bfbd-ec96febd1900" magic="2" spellPoints="4">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//AspektMagier"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_djpCEuJ0EeOht_G61YAQvg" categorieName="A" skillPoints="36" groupPoints="5"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_djpCE-J0EeOht_G61YAQvg" categorieName="B" skillPoints="28" groupPoints="2"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_djpCFOJ0EeOht_G61YAQvg" categorieName="C" skillPoints="22"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_djpCFeJ0EeOht_G61YAQvg" categorieName="D" skillPoints="18"/>
+        <priorities xsi:type="shr5mngt:Skill" xmi:id="_djpCFeJ0EeOht_G61YAQvg" categorieName="E" skillPoints="18"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_djpCF-J0EeOht_G61YAQvg" categorieName="A" resource="275000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_djpCGOJ0EeOht_G61YAQvg" categorieName="B" resource="140000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_djpCGeJ0EeOht_G61YAQvg" categorieName="C" resource="50000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_djpCGuJ0EeOht_G61YAQvg" categorieName="D" resource="6000"/>
+        <priorities xsi:type="shr5mngt:Resourcen" xmi:id="_djpCGuJ0EeOht_G61YAQvg" categorieName="E" resource="6000"/>
+        <priorities xsi:type="shr5mngt:Mudan" xmi:id="_djpCG-J0EeOht_G61YAQvg" categorieName="D">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
+        </priorities>
+        <priorities xsi:type="shr5mngt:Mudan" xmi:id="_djpCG-J0EeOht_G61YAQvg" categorieName="E">
+          <selectableTypes href="http://urszeidler.de/shr5/1.0#//MudanPersona"/>
         </priorities>
       </entries>
     </entries>
@@ -12211,35 +12294,17 @@
               <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/controlRig"/>
             </mods>
           </koerperMods>
-          <koerperMods xsi:type="shr5:BioWare" xmi:id="_jQkx0N6KEeOU1t7mwJMedA" name="Cerebral booster 1" parentId="63b0b849-cfa6-48d2-a34c-ec58a36acf21" page="460" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="6" wertValue="31500">
-            <mods xmi:id="_jQkx0d6KEeOU1t7mwJMedA" wert="-20">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-            </mods>
-            <mods xmi:id="_1nhegN6LEeOU1t7mwJMedA" wert="1">
-              <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
-            </mods>
-            <localizations xmi:id="_jQkx0t6KEeOU1t7mwJMedA" local="de" name="Zerebralbooster"/>
-          </koerperMods>
-          <koerperMods xsi:type="shr5:BioWare" xmi:id="_jRpI0N6KEeOU1t7mwJMedA" name="Muscle augmentation 2" parentId="3fc49185-8737-4501-8c7b-6d54f7846fac" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="62000">
-            <mods xmi:id="_jRpI0d6KEeOU1t7mwJMedA" wert="-40">
-              <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
-            </mods>
-            <mods xmi:id="_PQ994N6MEeOU1t7mwJMedA" wert="2">
+          <koerperMods xsi:type="shr5:Cyberware" xmi:id="_SmSjgOJ0EeOht_G61YAQvg" name="Muscle Replacement 1" parentId="f92a3ba5-0d0a-4d5a-b8ce-1ef1b7e8cc54" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="25000">
+            <mods xmi:id="_SmSjgeJ0EeOht_G61YAQvg" wert="1">
               <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
             </mods>
-            <mods xmi:id="_RBfgUN6MEeOU1t7mwJMedA" wert="2">
+            <mods xmi:id="_SmSjguJ0EeOht_G61YAQvg" wert="1">
               <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
             </mods>
-            <localizations xmi:id="_jRpI0t6KEeOU1t7mwJMedA" local="de" name="Muskelverstärkung 2"/>
-          </koerperMods>
-          <koerperMods xsi:type="shr5:BioWare" xmi:id="_jS0NgN6KEeOU1t7mwJMedA" name="Orthoskin 3" parentId="bea62f20-88b3-41e3-9cbc-9cd99a42210c" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="12R" wertValue="18000">
-            <mods xmi:id="_jS0Ngd6KEeOU1t7mwJMedA" wert="-75">
+            <mods xmi:id="_SmSjg-J0EeOht_G61YAQvg" wert="-100">
               <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
             </mods>
-            <mods xmi:id="_nsX80N6MEeOU1t7mwJMedA" wert="3">
-              <attribut href="http://urszeidler.de/shr5/1.0#//Panzerung/panzer"/>
-            </mods>
-            <localizations xmi:id="_jS0Ngt6KEeOU1t7mwJMedA" local="de" name="Orthoskin 3"/>
+            <localizations xmi:id="_SmSjhOJ0EeOht_G61YAQvg" local="de" name="Kunstmuskeln 1"/>
           </koerperMods>
           <eigenschaften xmi:id="_OaZFwN6NEeOU1t7mwJMedA" name="Gearhead" parentId="bcc8f678-5f18-43ec-a093-a0dedbc2ff76" page="74" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="11">
             <localizations xmi:id="_OaZFwd6NEeOU1t7mwJMedA" local="de" name="Technisches Improvisationstalent"/>
@@ -12469,6 +12534,7 @@
       </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_OTABIN6JEeOU1t7mwJMedA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
+    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_mfg7QOJ1EeOcv4XBYqxZsQ" generator="_kwlUQOJ1EeOcv4XBYqxZsQ" state="readyForCreation" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="xxxx" resourcen="_djpCGOJ0EeOht_G61YAQvg" skills="_djpCFeJ0EeOht_G61YAQvg" attribute="_djpB_uJ0EeOht_G61YAQvg" metaType="_djpB-uJ0EeOht_G61YAQvg" magic="_djpCG-J0EeOht_G61YAQvg"/>
     <grunts xmi:id="_B1VKMN0CEeOvVYoRsPZlnA" name="Thugs">
       <members xmi:id="_B1WYUN0CEeOvVYoRsPZlnA" count="7" nsc="_B1JkAN0CEeOvVYoRsPZlnA"/>
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
