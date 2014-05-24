@@ -1142,12 +1142,12 @@ transform="translate([x/],[y/])"
 [printSvgLineValue(persona.oclAsType(KoerperPersona).panzer.toString(),290,(40+3*12),size)/]
 
 
-[printSvgLine('Composure'.localizedString(), empty,170,(40+4*12))/]
-[printSvgLineValue((persona.willenskraft + persona.charisma ).toString(),290,(40+4*12),size)/]
-[printSvgLine('Judge_Intentions'.localizedString(), empty,170,(40+5*12))/]
-[printSvgLineValue((persona.intuition + persona.charisma).toString(),290,(40+5*12),size)/]
-[printSvgLine('Memory'.localizedString(), empty,170,(40+6*12))/]
-[printSvgLineValue((persona.willenskraft + persona.logik).toString(),290,(40+6*12),size)/]
+[printSvgLine('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString(), empty,170,(40+4*12))/]
+[printSvgLineValue((persona.oclAsType(KoerperPersona).selbstbeherrschung ).toString(),290,(40+4*12),size)/]
+[printSvgLine('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString(), empty,170,(40+5*12))/]
+[printSvgLineValue((persona.oclAsType(KoerperPersona).menschenkenntnis).toString(),290,(40+5*12),size)/]
+[printSvgLine('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString(), empty,170,(40+6*12))/]
+[printSvgLineValue((persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString(),290,(40+6*12),size)/]
 
 
 [printSvgLine('Lifting/Carrying'.localizedString(), empty,170,(40+7*12))/] 

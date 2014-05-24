@@ -97,8 +97,8 @@
 [printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
 [printTextPlusSpace('_UI_Panzerung_panzer_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).panzer/]
 [printTextPlusSpace('Composure', empty)/] [persona.willenskraft + persona.charisma  /]
-[printTextPlusSpace('Judge Intentions', empty)/] [persona.intuition + persona.charisma  /]
-[printTextPlusSpace('Memory', empty)/] [persona.willenskraft + persona.logik  /]
+[printTextPlusSpace('_UI_BerechneteAttribute_menschenkenntnis_feature', empty)/] [persona.oclAsType(KoerperPersona).menschenkenntnis/]
+[printTextPlusSpace('_UI_BerechneteAttribute_errinerungsvermoegen_feature', empty)/] [(persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString() /]
 [printTextPlusSpace('Lifting/Carrying', empty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
 [printTextPlusSpace('Movement', empty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
 
