@@ -23,7 +23,7 @@ persona.fertigkeitsGruppen ->collect(pfg| pfg.stufe    )->sum()
 /]
 
 [query public sumActiveSkills(persona : AbstraktPersona) : Integer = 
-persona.fertigkeiten->select(pf | not pf.fertigkeit.oclIsTypeOf(Wissensfertigkeit)) ->collect(pfg| pfg.stufe    )->sum() 
+persona.fertigkeiten->select(pf | not pf.fertigkeit.oclIsKindOf(Wissensfertigkeit)) ->collect(pfg| pfg.stufe    )->sum() 
 /]
 
 [query public sumKnowSkills(persona : AbstraktPersona) : Integer = 
