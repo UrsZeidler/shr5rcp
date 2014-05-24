@@ -816,5 +816,7 @@
       <nested inputs="shr5.ecore#//Localization/page" outputs="Shr5XMI.xsd#//Localization;XSDComplexTypeDefinition=116/XSDAttributeUse=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Localization" outputs="Shr5XMI.xsd#//Localization;XSDElementDeclaration=116"/>
+    <nested inputs="shr5.ecore#//BerechneteAttribute" outputs="Shr5XMI.xsd#//BerechneteAttribute;XSDComplexTypeDefinition=117"/>
+    <nested inputs="shr5.ecore#//BerechneteAttribute" outputs="Shr5XMI.xsd#//BerechneteAttribute;XSDElementDeclaration=117"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

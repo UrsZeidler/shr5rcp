@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface KoerperPersona extends AbstraktPersona, Panzerung, PersonaZustand {
+public interface KoerperPersona extends AbstraktPersona, Panzerung, PersonaZustand, BerechneteAttribute {
 	/**
      * Returns the value of the '<em><b>Koerper Mods</b></em>' containment reference list.
      * The list contents are of type {@link de.urszeidler.eclipse.shr5.Koerpermods}.

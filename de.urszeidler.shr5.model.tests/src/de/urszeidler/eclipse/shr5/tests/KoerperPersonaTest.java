@@ -19,6 +19,9 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandKoerperlichMax() <em>Zustand Koerperlich Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGeistigMax() <em>Zustand Geistig Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGrenze() <em>Zustand Grenze</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getErrinerungsvermoegen() <em>Errinerungsvermoegen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getMenschenkenntnis() <em>Menschenkenntnis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getSelbstbeherrschung() <em>Selbstbeherrschung</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -119,6 +122,48 @@ public abstract class KoerperPersonaTest extends AbstraktPersonaTest {
         assertEquals("should be 5", 5, getFixture().getZustandGrenze());
         
 
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getErrinerungsvermoegen() <em>Errinerungsvermoegen</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getErrinerungsvermoegen()
+     * @generated not
+     */
+    public void testGetErrinerungsvermoegen() {
+        getFixture().setWillenskraftBasis(4);
+        getFixture().setLogikBasis(3);
+        
+        assertEquals(7, getFixture().getErrinerungsvermoegen());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getMenschenkenntnis() <em>Menschenkenntnis</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getMenschenkenntnis()
+     * @generated not
+     */
+    public void testGetMenschenkenntnis() {
+        getFixture().setIntuitionBasis(5);
+        getFixture().setCharismaBasis(4);
+        
+        assertEquals(9, getFixture().getMenschenkenntnis());
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getSelbstbeherrschung() <em>Selbstbeherrschung</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getSelbstbeherrschung()
+     * @generated not
+     */
+    public void testGetSelbstbeherrschung() {
+        getFixture().setWillenskraftBasis(4);
+        getFixture().setCharismaBasis(2);
+        
+        assertEquals(6, getFixture().getSelbstbeherrschung());
     }
 
     public void testBioWare() {

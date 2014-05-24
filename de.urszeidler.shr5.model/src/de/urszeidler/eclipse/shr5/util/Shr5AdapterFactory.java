@@ -534,6 +534,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createLocalizationAdapter();
             }
             @Override
+            public Adapter caseBerechneteAttribute(BerechneteAttribute object) {
+                return createBerechneteAttributeAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1908,6 +1912,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createLocalizationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute <em>Berechnete Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute
+     * @generated
+     */
+    public Adapter createBerechneteAttributeAdapter() {
         return null;
     }
 

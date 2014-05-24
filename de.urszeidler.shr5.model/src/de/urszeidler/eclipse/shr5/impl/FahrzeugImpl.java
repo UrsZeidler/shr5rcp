@@ -39,32 +39,32 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschreibung <em>Beschreibung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getImage <em>Image</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getName <em>Name</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getParentId <em>Parent Id</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getLocalizations <em>Localizations</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPage <em>Page</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSrcBook <em>Src Book</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWert <em>Wert</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getRumpf <em>Rumpf</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPilot <em>Pilot</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensor <em>Sensor</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getParentId <em>Parent Id</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getLocalizations <em>Localizations</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSrcBook <em>Src Book</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWert <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWertValue <em>Wert Value</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFertigkeit <em>Fertigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getMods <em>Mods</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getZustandMax <em>Zustand Max</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getHandling <em>Handling</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschleunigung <em>Beschleunigung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getRumpf <em>Rumpf</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPilot <em>Pilot</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensor <em>Sensor</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getFahrzeugTyp <em>Fahrzeug Typ</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getModifizierungen <em>Modifizierungen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getPanzer <em>Panzer</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implements Fahrzeug {
@@ -72,7 +72,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -83,7 +82,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschreibung()
      * @generated
      * @ordered
@@ -94,7 +92,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -105,7 +102,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getImage() <em>Image</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getImage()
      * @generated
      * @ordered
@@ -116,7 +112,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -127,7 +122,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -138,7 +132,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -149,7 +142,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getParentId() <em>Parent Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getParentId()
      * @generated
      * @ordered
@@ -160,7 +152,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getLocalizations() <em>Localizations</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getLocalizations()
      * @generated
      * @ordered
@@ -171,7 +162,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -182,7 +172,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getPage() <em>Page</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPage()
      * @generated
      * @ordered
@@ -193,7 +182,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getSrcBook() <em>Src Book</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSrcBook()
      * @generated
      * @ordered
@@ -204,7 +192,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWert()
      * @generated
      * @ordered
@@ -215,7 +202,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -226,7 +212,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getVerfuegbarkeit() <em>Verfuegbarkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getVerfuegbarkeit()
      * @generated
      * @ordered
@@ -237,7 +222,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -248,7 +232,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getWertValue() <em>Wert Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWertValue()
      * @generated
      * @ordered
@@ -259,7 +242,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getFertigkeit() <em>Fertigkeit</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFertigkeit()
      * @generated
      * @ordered
@@ -270,7 +252,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getMods() <em>Mods</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getMods()
      * @generated
      * @ordered
@@ -281,7 +262,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getZustandMax() <em>Zustand Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getZustandMax()
      * @generated
      * @ordered
@@ -292,7 +272,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getHandling() <em>Handling</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getHandling()
      * @generated
      * @ordered
@@ -303,7 +282,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getHandling() <em>Handling</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getHandling()
      * @generated
      * @ordered
@@ -314,7 +292,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getGeschwindigkeit() <em>Geschwindigkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeschwindigkeit()
      * @generated
      * @ordered
@@ -325,7 +302,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getGeschwindigkeit() <em>Geschwindigkeit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getGeschwindigkeit()
      * @generated
      * @ordered
@@ -336,7 +312,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getBeschleunigung() <em>Beschleunigung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschleunigung()
      * @generated
      * @ordered
@@ -347,7 +322,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getBeschleunigung() <em>Beschleunigung</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getBeschleunigung()
      * @generated
      * @ordered
@@ -358,7 +332,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getRumpf() <em>Rumpf</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRumpf()
      * @generated
      * @ordered
@@ -369,7 +342,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getRumpf() <em>Rumpf</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getRumpf()
      * @generated
      * @ordered
@@ -380,7 +352,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getPilot() <em>Pilot</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPilot()
      * @generated
      * @ordered
@@ -391,7 +362,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getPilot() <em>Pilot</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPilot()
      * @generated
      * @ordered
@@ -402,7 +372,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getSensor() <em>Sensor</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSensor()
      * @generated
      * @ordered
@@ -413,7 +382,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getSensor() <em>Sensor</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getSensor()
      * @generated
      * @ordered
@@ -424,7 +392,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getFahrzeugTyp() <em>Fahrzeug Typ</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFahrzeugTyp()
      * @generated
      * @ordered
@@ -435,7 +402,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getFahrzeugTyp() <em>Fahrzeug Typ</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getFahrzeugTyp()
      * @generated
      * @ordered
@@ -446,7 +412,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getModifizierungen() <em>Modifizierungen</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getModifizierungen()
      * @generated
      * @ordered
@@ -457,7 +422,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPanzer()
      * @generated
      * @ordered
@@ -468,7 +432,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The cached value of the '{@link #getPanzer() <em>Panzer</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPanzer()
      * @generated
      * @ordered
@@ -481,7 +444,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * The default value of the '{@link #getWeaponMounts() <em>Weapon Mounts</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getWeaponMounts()
      * @generated
      * @ordered
@@ -515,7 +477,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -526,7 +487,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
@@ -536,7 +496,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setName(String newName) {
@@ -549,7 +508,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getParentId() {
@@ -559,7 +517,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setParentId(String newParentId) {
@@ -572,7 +529,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<Localization> getLocalizations() {
@@ -585,7 +541,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getBeschreibung() {
@@ -595,7 +550,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setBeschreibung(String newBeschreibung) {
@@ -608,7 +562,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getImage() {
@@ -618,7 +571,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setImage(String newImage) {
@@ -631,7 +583,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getPage() {
@@ -641,7 +592,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPage(String newPage) {
@@ -654,7 +604,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook getSrcBook() {
@@ -672,7 +621,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SourceBook basicGetSrcBook() {
@@ -682,7 +630,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSrcBook(SourceBook newSrcBook) {
@@ -709,7 +656,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getVerfuegbarkeit() {
@@ -719,7 +665,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
@@ -732,7 +677,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public BigDecimal getWertValue() {
@@ -757,7 +701,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Fertigkeit getFertigkeit() {
@@ -775,7 +718,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Fertigkeit basicGetFertigkeit() {
@@ -785,7 +727,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setFertigkeit(Fertigkeit newFertigkeit) {
@@ -798,13 +739,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
-            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS,
-                    Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
+            mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
         }
         return mods;
     }
@@ -822,7 +761,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getHandling() {
@@ -832,7 +770,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setHandling(int newHandling) {
@@ -845,7 +782,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getGeschwindigkeit() {
@@ -855,7 +791,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setGeschwindigkeit(int newGeschwindigkeit) {
@@ -868,7 +803,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getBeschleunigung() {
@@ -878,7 +812,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setBeschleunigung(int newBeschleunigung) {
@@ -891,7 +824,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getRumpf() {
@@ -901,7 +833,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setRumpf(int newRumpf) {
@@ -914,7 +845,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getPilot() {
@@ -924,7 +854,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPilot(int newPilot) {
@@ -937,7 +866,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getSensor() {
@@ -947,7 +875,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setSensor(int newSensor) {
@@ -960,7 +887,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getFahrzeugTyp() {
@@ -970,7 +896,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setFahrzeugTyp(String newFahrzeugTyp) {
@@ -983,13 +908,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<FahrzeugModifikation> getModifizierungen() {
         if (modifizierungen == null) {
-            modifizierungen = new EObjectContainmentEList<FahrzeugModifikation>(FahrzeugModifikation.class, this,
-                    Shr5Package.FAHRZEUG__MODIFIZIERUNGEN);
+            modifizierungen = new EObjectContainmentEList<FahrzeugModifikation>(FahrzeugModifikation.class, this, Shr5Package.FAHRZEUG__MODIFIZIERUNGEN);
         }
         return modifizierungen;
     }
@@ -997,7 +920,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getPanzer() {
@@ -1007,7 +929,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPanzer(int newPanzer) {
@@ -1030,7 +951,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1046,7 +966,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1065,7 +984,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1084,8 +1002,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__PAGE:
                 return getPage();
             case Shr5Package.FAHRZEUG__SRC_BOOK:
-                if (resolve)
-                    return getSrcBook();
+                if (resolve) return getSrcBook();
                 return basicGetSrcBook();
             case Shr5Package.FAHRZEUG__WERT:
                 return getWert();
@@ -1094,8 +1011,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
             case Shr5Package.FAHRZEUG__WERT_VALUE:
                 return getWertValue();
             case Shr5Package.FAHRZEUG__FERTIGKEIT:
-                if (resolve)
-                    return getFertigkeit();
+                if (resolve) return getFertigkeit();
                 return basicGetFertigkeit();
             case Shr5Package.FAHRZEUG__MODS:
                 return getMods();
@@ -1128,7 +1044,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1205,7 +1120,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1278,7 +1192,6 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1337,65 +1250,48 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == Identifiable.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__PARENT_ID:
-                    return Shr5Package.IDENTIFIABLE__PARENT_ID;
-                case Shr5Package.FAHRZEUG__LOCALIZATIONS:
-                    return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG__PARENT_ID: return Shr5Package.IDENTIFIABLE__PARENT_ID;
+                case Shr5Package.FAHRZEUG__LOCALIZATIONS: return Shr5Package.IDENTIFIABLE__LOCALIZATIONS;
+                default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__PAGE:
-                    return Shr5Package.QUELLE__PAGE;
-                case Shr5Package.FAHRZEUG__SRC_BOOK:
-                    return Shr5Package.QUELLE__SRC_BOOK;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG__PAGE: return Shr5Package.QUELLE__PAGE;
+                case Shr5Package.FAHRZEUG__SRC_BOOK: return Shr5Package.QUELLE__SRC_BOOK;
+                default: return -1;
             }
         }
         if (baseClass == GeldWert.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__WERT:
-                    return Shr5Package.GELD_WERT__WERT;
-                case Shr5Package.FAHRZEUG__VERFUEGBARKEIT:
-                    return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
-                case Shr5Package.FAHRZEUG__WERT_VALUE:
-                    return Shr5Package.GELD_WERT__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG__WERT: return Shr5Package.GELD_WERT__WERT;
+                case Shr5Package.FAHRZEUG__VERFUEGBARKEIT: return Shr5Package.GELD_WERT__VERFUEGBARKEIT;
+                case Shr5Package.FAHRZEUG__WERT_VALUE: return Shr5Package.GELD_WERT__WERT_VALUE;
+                default: return -1;
             }
         }
         if (baseClass == Anwendbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__FERTIGKEIT:
-                    return Shr5Package.ANWENDBAR__FERTIGKEIT;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG__FERTIGKEIT: return Shr5Package.ANWENDBAR__FERTIGKEIT;
+                default: return -1;
             }
         }
         if (baseClass == Modifizierbar.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__MODS:
-                    return Shr5Package.MODIFIZIERBAR__MODS;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
+                default: return -1;
             }
         }
         if (baseClass == FahrzeugZustand.class) {
             switch (derivedFeatureID) {
-                case Shr5Package.FAHRZEUG__ZUSTAND_MAX:
-                    return Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG__ZUSTAND_MAX: return Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX;
+                default: return -1;
             }
         }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
@@ -1404,65 +1300,48 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == Identifiable.class) {
             switch (baseFeatureID) {
-                case Shr5Package.IDENTIFIABLE__PARENT_ID:
-                    return Shr5Package.FAHRZEUG__PARENT_ID;
-                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS:
-                    return Shr5Package.FAHRZEUG__LOCALIZATIONS;
-                default:
-                    return -1;
+                case Shr5Package.IDENTIFIABLE__PARENT_ID: return Shr5Package.FAHRZEUG__PARENT_ID;
+                case Shr5Package.IDENTIFIABLE__LOCALIZATIONS: return Shr5Package.FAHRZEUG__LOCALIZATIONS;
+                default: return -1;
             }
         }
         if (baseClass == Quelle.class) {
             switch (baseFeatureID) {
-                case Shr5Package.QUELLE__PAGE:
-                    return Shr5Package.FAHRZEUG__PAGE;
-                case Shr5Package.QUELLE__SRC_BOOK:
-                    return Shr5Package.FAHRZEUG__SRC_BOOK;
-                default:
-                    return -1;
+                case Shr5Package.QUELLE__PAGE: return Shr5Package.FAHRZEUG__PAGE;
+                case Shr5Package.QUELLE__SRC_BOOK: return Shr5Package.FAHRZEUG__SRC_BOOK;
+                default: return -1;
             }
         }
         if (baseClass == GeldWert.class) {
             switch (baseFeatureID) {
-                case Shr5Package.GELD_WERT__WERT:
-                    return Shr5Package.FAHRZEUG__WERT;
-                case Shr5Package.GELD_WERT__VERFUEGBARKEIT:
-                    return Shr5Package.FAHRZEUG__VERFUEGBARKEIT;
-                case Shr5Package.GELD_WERT__WERT_VALUE:
-                    return Shr5Package.FAHRZEUG__WERT_VALUE;
-                default:
-                    return -1;
+                case Shr5Package.GELD_WERT__WERT: return Shr5Package.FAHRZEUG__WERT;
+                case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.FAHRZEUG__VERFUEGBARKEIT;
+                case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.FAHRZEUG__WERT_VALUE;
+                default: return -1;
             }
         }
         if (baseClass == Anwendbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.ANWENDBAR__FERTIGKEIT:
-                    return Shr5Package.FAHRZEUG__FERTIGKEIT;
-                default:
-                    return -1;
+                case Shr5Package.ANWENDBAR__FERTIGKEIT: return Shr5Package.FAHRZEUG__FERTIGKEIT;
+                default: return -1;
             }
         }
         if (baseClass == Modifizierbar.class) {
             switch (baseFeatureID) {
-                case Shr5Package.MODIFIZIERBAR__MODS:
-                    return Shr5Package.FAHRZEUG__MODS;
-                default:
-                    return -1;
+                case Shr5Package.MODIFIZIERBAR__MODS: return Shr5Package.FAHRZEUG__MODS;
+                default: return -1;
             }
         }
         if (baseClass == FahrzeugZustand.class) {
             switch (baseFeatureID) {
-                case Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX:
-                    return Shr5Package.FAHRZEUG__ZUSTAND_MAX;
-                default:
-                    return -1;
+                case Shr5Package.FAHRZEUG_ZUSTAND__ZUSTAND_MAX: return Shr5Package.FAHRZEUG__ZUSTAND_MAX;
+                default: return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
@@ -1471,13 +1350,11 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (beschreibung: ");

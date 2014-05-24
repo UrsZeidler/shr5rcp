@@ -593,5 +593,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Localization/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Localization/page"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//BerechneteAttribute">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BerechneteAttribute/errinerungsvermoegen"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BerechneteAttribute/menschenkenntnis"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BerechneteAttribute/selbstbeherrschung"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

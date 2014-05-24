@@ -1775,4 +1775,19 @@
     <xsd:attribute name="page" type="xsd:int"/>
   </xsd:complexType>
   <xsd:element name="Localization" type="shr5:Localization"/>
+  <xsd:complexType abstract="true" name="BerechneteAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Contains the calculatetd derived attributes like composure. Attribute only testst for example.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="BerechneteAttribute" type="shr5:BerechneteAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Contains the calculatetd derived attributes like composure. Attribute only testst for example.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

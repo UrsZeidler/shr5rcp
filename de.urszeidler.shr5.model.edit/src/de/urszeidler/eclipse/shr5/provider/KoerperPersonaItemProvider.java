@@ -62,6 +62,9 @@ public class KoerperPersonaItemProvider
             addZustandKoerperlichMaxPropertyDescriptor(object);
             addZustandGeistigMaxPropertyDescriptor(object);
             addZustandGrenzePropertyDescriptor(object);
+            addErrinerungsvermoegenPropertyDescriptor(object);
+            addMenschenkenntnisPropertyDescriptor(object);
+            addSelbstbeherrschungPropertyDescriptor(object);
             addZustandKoerperlichPropertyDescriptor(object);
             addZustandGeistigPropertyDescriptor(object);
         }
@@ -148,6 +151,72 @@ public class KoerperPersonaItemProvider
                  getString("_UI_PersonaZustand_zustandGrenze_feature"),
                  getString("_UI_PropertyDescriptor_description", "_UI_PersonaZustand_zustandGrenze_feature", "_UI_PersonaZustand_type"),
                  Shr5Package.Literals.PERSONA_ZUSTAND__ZUSTAND_GRENZE,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Errinerungsvermoegen feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addErrinerungsvermoegenPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_BerechneteAttribute_errinerungsvermoegen_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_BerechneteAttribute_errinerungsvermoegen_feature", "_UI_BerechneteAttribute_type"),
+                 Shr5Package.Literals.BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Menschenkenntnis feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addMenschenkenntnisPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_BerechneteAttribute_menschenkenntnis_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_BerechneteAttribute_menschenkenntnis_feature", "_UI_BerechneteAttribute_type"),
+                 Shr5Package.Literals.BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Selbstbeherrschung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addSelbstbeherrschungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_BerechneteAttribute_selbstbeherrschung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_BerechneteAttribute_selbstbeherrschung_feature", "_UI_BerechneteAttribute_type"),
+                 Shr5Package.Literals.BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG,
                  false,
                  false,
                  false,
@@ -261,6 +330,9 @@ public class KoerperPersonaItemProvider
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX:
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX:
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE:
+            case Shr5Package.KOERPER_PERSONA__ERRINERUNGSVERMOEGEN:
+            case Shr5Package.KOERPER_PERSONA__MENSCHENKENNTNIS:
+            case Shr5Package.KOERPER_PERSONA__SELBSTBEHERRSCHUNG:
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH:
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

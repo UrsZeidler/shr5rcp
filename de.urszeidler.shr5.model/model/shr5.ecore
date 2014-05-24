@@ -230,7 +230,7 @@
         changeable="false" volatile="true" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MudanPersona" eSuperTypes="#//KoerperPersona"/>
-  <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona" abstract="true" eSuperTypes="#//AbstraktPersona #//Panzerung #//PersonaZustand">
+  <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona" abstract="true" eSuperTypes="#//AbstraktPersona #//Panzerung #//PersonaZustand #//BerechneteAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="koerperMods" upperBound="-1"
         eType="#//Koerpermods" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eigenschaften" upperBound="-1"
@@ -893,5 +893,32 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="local" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="page" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BerechneteAttribute" abstract="true"
+      interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Contains the calculatetd derived attributes like composure. Attribute only testst for example."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errinerungsvermoegen" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The memory."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="menschenkenntnis" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Judge Intentions."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selbstbeherrschung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Composure."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

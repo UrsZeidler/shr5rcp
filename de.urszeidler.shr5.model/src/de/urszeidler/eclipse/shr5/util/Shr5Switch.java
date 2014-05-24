@@ -351,6 +351,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(mudanPersona);
                 if (result == null) result = casePanzerung(mudanPersona);
                 if (result == null) result = casePersonaZustand(mudanPersona);
+                if (result == null) result = caseBerechneteAttribute(mudanPersona);
                 if (result == null) result = caseBeschreibbar(mudanPersona);
                 if (result == null) result = caseKoerperlicheAttribute(mudanPersona);
                 if (result == null) result = caseSpezielleAttribute(mudanPersona);
@@ -366,6 +367,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(koerperPersona);
                 if (result == null) result = casePanzerung(koerperPersona);
                 if (result == null) result = casePersonaZustand(koerperPersona);
+                if (result == null) result = caseBerechneteAttribute(koerperPersona);
                 if (result == null) result = caseBeschreibbar(koerperPersona);
                 if (result == null) result = caseKoerperlicheAttribute(koerperPersona);
                 if (result == null) result = caseSpezielleAttribute(koerperPersona);
@@ -407,6 +409,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(magischePersona);
                 if (result == null) result = casePanzerung(magischePersona);
                 if (result == null) result = casePersonaZustand(magischePersona);
+                if (result == null) result = caseBerechneteAttribute(magischePersona);
                 if (result == null) result = caseBeschreibbar(magischePersona);
                 if (result == null) result = caseKoerperlicheAttribute(magischePersona);
                 if (result == null) result = caseSpezielleAttribute(magischePersona);
@@ -462,6 +465,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(kiAdept);
                 if (result == null) result = casePanzerung(kiAdept);
                 if (result == null) result = casePersonaZustand(kiAdept);
+                if (result == null) result = caseBerechneteAttribute(kiAdept);
                 if (result == null) result = caseBeschreibbar(kiAdept);
                 if (result == null) result = caseKoerperlicheAttribute(kiAdept);
                 if (result == null) result = caseSpezielleAttribute(kiAdept);
@@ -531,6 +535,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(magier);
                 if (result == null) result = casePanzerung(magier);
                 if (result == null) result = casePersonaZustand(magier);
+                if (result == null) result = caseBerechneteAttribute(magier);
                 if (result == null) result = caseBeschreibbar(magier);
                 if (result == null) result = caseKoerperlicheAttribute(magier);
                 if (result == null) result = caseSpezielleAttribute(magier);
@@ -557,6 +562,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(mysticAdept);
                 if (result == null) result = casePanzerung(mysticAdept);
                 if (result == null) result = casePersonaZustand(mysticAdept);
+                if (result == null) result = caseBerechneteAttribute(mysticAdept);
                 if (result == null) result = caseBeschreibbar(mysticAdept);
                 if (result == null) result = caseKoerperlicheAttribute(mysticAdept);
                 if (result == null) result = caseSpezielleAttribute(mysticAdept);
@@ -604,6 +610,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(aspektMagier);
                 if (result == null) result = casePanzerung(aspektMagier);
                 if (result == null) result = casePersonaZustand(aspektMagier);
+                if (result == null) result = caseBerechneteAttribute(aspektMagier);
                 if (result == null) result = caseBeschreibbar(aspektMagier);
                 if (result == null) result = caseKoerperlicheAttribute(aspektMagier);
                 if (result == null) result = caseSpezielleAttribute(aspektMagier);
@@ -736,6 +743,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseAbstraktPersona(technomancer);
                 if (result == null) result = casePanzerung(technomancer);
                 if (result == null) result = casePersonaZustand(technomancer);
+                if (result == null) result = caseBerechneteAttribute(technomancer);
                 if (result == null) result = caseActiveMatixDevice(technomancer);
                 if (result == null) result = caseBeschreibbar(technomancer);
                 if (result == null) result = caseKoerperlicheAttribute(technomancer);
@@ -1304,6 +1312,12 @@ public class Shr5Switch<T> extends Switch<T> {
             case Shr5Package.LOCALIZATION: {
                 Localization localization = (Localization)theEObject;
                 T result = caseLocalization(localization);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.BERECHNETE_ATTRIBUTE: {
+                BerechneteAttribute berechneteAttribute = (BerechneteAttribute)theEObject;
+                T result = caseBerechneteAttribute(berechneteAttribute);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -2763,6 +2777,21 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseLocalization(Localization object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Berechnete Attribute</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Berechnete Attribute</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseBerechneteAttribute(BerechneteAttribute object) {
         return null;
     }
 

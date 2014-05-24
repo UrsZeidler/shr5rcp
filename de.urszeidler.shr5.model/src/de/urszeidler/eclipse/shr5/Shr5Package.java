@@ -4386,13 +4386,40 @@ public interface Shr5Package extends EPackage {
     int KOERPER_PERSONA__ZUSTAND_GRENZE = ABSTRAKT_PERSONA_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOERPER_PERSONA__ERRINERUNGSVERMOEGEN = ABSTRAKT_PERSONA_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOERPER_PERSONA__MENSCHENKENNTNIS = ABSTRAKT_PERSONA_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KOERPER_PERSONA__SELBSTBEHERRSCHUNG = ABSTRAKT_PERSONA_FEATURE_COUNT + 6;
+
+    /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int KOERPER_PERSONA__KOERPER_MODS = ABSTRAKT_PERSONA_FEATURE_COUNT + 4;
+	int KOERPER_PERSONA__KOERPER_MODS = ABSTRAKT_PERSONA_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Eigenschaften</b></em>' containment reference list.
@@ -4401,7 +4428,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPER_PERSONA__EIGENSCHAFTEN = ABSTRAKT_PERSONA_FEATURE_COUNT + 5;
+	int KOERPER_PERSONA__EIGENSCHAFTEN = ABSTRAKT_PERSONA_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Zustand Koerperlich</b></em>' attribute.
@@ -4410,7 +4437,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int KOERPER_PERSONA__ZUSTAND_KOERPERLICH = ABSTRAKT_PERSONA_FEATURE_COUNT + 6;
+    int KOERPER_PERSONA__ZUSTAND_KOERPERLICH = ABSTRAKT_PERSONA_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Zustand Geistig</b></em>' attribute.
@@ -4419,7 +4446,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int KOERPER_PERSONA__ZUSTAND_GEISTIG = ABSTRAKT_PERSONA_FEATURE_COUNT + 7;
+    int KOERPER_PERSONA__ZUSTAND_GEISTIG = ABSTRAKT_PERSONA_FEATURE_COUNT + 10;
 
     /**
      * The number of structural features of the '<em>Koerper Persona</em>' class.
@@ -4428,7 +4455,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int KOERPER_PERSONA_FEATURE_COUNT = ABSTRAKT_PERSONA_FEATURE_COUNT + 8;
+	int KOERPER_PERSONA_FEATURE_COUNT = ABSTRAKT_PERSONA_FEATURE_COUNT + 11;
 
     /**
      * The number of operations of the '<em>Koerper Persona</em>' class.
@@ -4762,6 +4789,33 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MUDAN_PERSONA__ZUSTAND_GRENZE = KOERPER_PERSONA__ZUSTAND_GRENZE;
+
+    /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUDAN_PERSONA__ERRINERUNGSVERMOEGEN = KOERPER_PERSONA__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUDAN_PERSONA__MENSCHENKENNTNIS = KOERPER_PERSONA__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MUDAN_PERSONA__SELBSTBEHERRSCHUNG = KOERPER_PERSONA__SELBSTBEHERRSCHUNG;
 
     /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
@@ -5329,6 +5383,33 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MAGISCHE_PERSONA__ZUSTAND_GRENZE = KOERPER_PERSONA__ZUSTAND_GRENZE;
+
+    /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_PERSONA__ERRINERUNGSVERMOEGEN = KOERPER_PERSONA__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_PERSONA__MENSCHENKENNTNIS = KOERPER_PERSONA__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_PERSONA__SELBSTBEHERRSCHUNG = KOERPER_PERSONA__SELBSTBEHERRSCHUNG;
 
     /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
@@ -6321,6 +6402,33 @@ public interface Shr5Package extends EPackage {
     int KI_ADEPT__ZUSTAND_GRENZE = MAGISCHE_PERSONA__ZUSTAND_GRENZE;
 
     /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_ADEPT__ERRINERUNGSVERMOEGEN = MAGISCHE_PERSONA__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_ADEPT__MENSCHENKENNTNIS = MAGISCHE_PERSONA__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_ADEPT__SELBSTBEHERRSCHUNG = MAGISCHE_PERSONA__SELBSTBEHERRSCHUNG;
+
+    /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7140,6 +7248,33 @@ public interface Shr5Package extends EPackage {
     int MAGIER__ZUSTAND_GRENZE = MAGISCHE_PERSONA__ZUSTAND_GRENZE;
 
     /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__ERRINERUNGSVERMOEGEN = MAGISCHE_PERSONA__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__MENSCHENKENNTNIS = MAGISCHE_PERSONA__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__SELBSTBEHERRSCHUNG = MAGISCHE_PERSONA__SELBSTBEHERRSCHUNG;
+
+    /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7732,6 +7867,33 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MYSTIC_ADEPT__ZUSTAND_GRENZE = KI_ADEPT__ZUSTAND_GRENZE;
+
+    /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__ERRINERUNGSVERMOEGEN = KI_ADEPT__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__MENSCHENKENNTNIS = KI_ADEPT__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__SELBSTBEHERRSCHUNG = KI_ADEPT__SELBSTBEHERRSCHUNG;
 
     /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
@@ -8452,6 +8614,33 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int ASPEKT_MAGIER__ZUSTAND_GRENZE = MAGISCHE_PERSONA__ZUSTAND_GRENZE;
+
+    /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__ERRINERUNGSVERMOEGEN = MAGISCHE_PERSONA__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__MENSCHENKENNTNIS = MAGISCHE_PERSONA__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__SELBSTBEHERRSCHUNG = MAGISCHE_PERSONA__SELBSTBEHERRSCHUNG;
 
     /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
@@ -10477,6 +10666,33 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int TECHNOMANCER__ZUSTAND_GRENZE = KOERPER_PERSONA__ZUSTAND_GRENZE;
+
+    /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TECHNOMANCER__ERRINERUNGSVERMOEGEN = KOERPER_PERSONA__ERRINERUNGSVERMOEGEN;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TECHNOMANCER__MENSCHENKENNTNIS = KOERPER_PERSONA__MENSCHENKENNTNIS;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TECHNOMANCER__SELBSTBEHERRSCHUNG = KOERPER_PERSONA__SELBSTBEHERRSCHUNG;
 
     /**
      * The feature id for the '<em><b>Koerper Mods</b></em>' containment reference list.
@@ -17177,6 +17393,61 @@ public interface Shr5Package extends EPackage {
     int LOCALIZATION_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute <em>Berechnete Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBerechneteAttribute()
+     * @generated
+     */
+    int BERECHNETE_ATTRIBUTE = 117;
+
+    /**
+     * The feature id for the '<em><b>Errinerungsvermoegen</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN = 0;
+
+    /**
+     * The feature id for the '<em><b>Menschenkenntnis</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS = 1;
+
+    /**
+     * The feature id for the '<em><b>Selbstbeherrschung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG = 2;
+
+    /**
+     * The number of structural features of the '<em>Berechnete Attribute</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BERECHNETE_ATTRIBUTE_FEATURE_COUNT = 3;
+
+    /**
+     * The number of operations of the '<em>Berechnete Attribute</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BERECHNETE_ATTRIBUTE_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17184,7 +17455,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 117;
+	int FEUER_MODUS = 118;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -17194,7 +17465,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 118;
+	int SCHADENS_TYP = 119;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -17204,7 +17475,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 119;
+	int MAGAZIN_TYP = 120;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -17214,7 +17485,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 120;
+	int FEUWERWAFFEN_ERWEITERUNG = 121;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -17224,7 +17495,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 121;
+	int MODIFIKATOR_TYPE = 122;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -17234,7 +17505,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 122;
+	int SMARTGUN_TYPE = 123;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -17244,7 +17515,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 123;
+	int ZAUBER_ART = 124;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -17254,7 +17525,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 124;
+	int ZAUBER_REICHWEITE = 125;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -17264,7 +17535,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 125;
+	int ZAUBER_DAUER = 126;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -17274,7 +17545,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 126;
+	int MAGISCHE_TRADITION = 127;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -17284,7 +17555,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 127;
+	int CRITTER_HANDLUNG = 128;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -17294,7 +17565,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 128;
+	int CRITTER_REICHWEITE = 129;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -17304,7 +17575,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 129;
+	int CRITTER_DAUER = 130;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -17314,7 +17585,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 130;
+	int RESONANZ_ZIEL = 131;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -17324,7 +17595,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 131;
+    int INTERFACE_MODUS = 132;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -17334,7 +17605,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 132;
+    int PROGRAM_TYPE = 133;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -17344,7 +17615,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 133;
+    int MATRIX_PROGRAM_TYPE = 134;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -17354,7 +17625,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 134;
+	int SHR_DATE = 135;
 
 
 	/**
@@ -17365,7 +17636,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 135;
+	int MODIFICATION_MANAGER = 136;
 
 
 	/**
@@ -21054,6 +21325,49 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EAttribute getLocalization_Page();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute <em>Berechnete Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Berechnete Attribute</em>'.
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute
+     * @generated
+     */
+    EClass getBerechneteAttribute();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getErrinerungsvermoegen <em>Errinerungsvermoegen</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Errinerungsvermoegen</em>'.
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getErrinerungsvermoegen()
+     * @see #getBerechneteAttribute()
+     * @generated
+     */
+    EAttribute getBerechneteAttribute_Errinerungsvermoegen();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getMenschenkenntnis <em>Menschenkenntnis</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Menschenkenntnis</em>'.
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getMenschenkenntnis()
+     * @see #getBerechneteAttribute()
+     * @generated
+     */
+    EAttribute getBerechneteAttribute_Menschenkenntnis();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute#getSelbstbeherrschung <em>Selbstbeherrschung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Selbstbeherrschung</em>'.
+     * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getSelbstbeherrschung()
+     * @see #getBerechneteAttribute()
+     * @generated
+     */
+    EAttribute getBerechneteAttribute_Selbstbeherrschung();
 
     /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
@@ -24855,6 +25169,40 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute LOCALIZATION__PAGE = eINSTANCE.getLocalization_Page();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.BerechneteAttribute <em>Berechnete Attribute</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.BerechneteAttribute
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getBerechneteAttribute()
+         * @generated
+         */
+        EClass BERECHNETE_ATTRIBUTE = eINSTANCE.getBerechneteAttribute();
+
+        /**
+         * The meta object literal for the '<em><b>Errinerungsvermoegen</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN = eINSTANCE.getBerechneteAttribute_Errinerungsvermoegen();
+
+        /**
+         * The meta object literal for the '<em><b>Menschenkenntnis</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS = eINSTANCE.getBerechneteAttribute_Menschenkenntnis();
+
+        /**
+         * The meta object literal for the '<em><b>Selbstbeherrschung</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG = eINSTANCE.getBerechneteAttribute_Selbstbeherrschung();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.

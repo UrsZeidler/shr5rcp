@@ -80,4 +80,23 @@ public class ShadowrunToolsTest extends TestCase {
         
         //ShadowrunTools.permutation("", "1234");
     }
+    
+    public void testPermutation1() {
+
+        ArrayList<Integer> prefix = new ArrayList<Integer>();
+        ArrayList<Integer> src = new ArrayList<Integer>();
+        Set<List<Integer>> target = new HashSet<List<Integer>>();
+       
+        src.add(1);
+        src.add(2);
+        src.add(2);
+        src.add(4);
+        
+        ShadowrunTools.permutation(prefix, src, target);
+        Assert.assertEquals(12, target.size());
+        System.out.println(target.size() +"  "+target);
+        
+        //ShadowrunTools.permutation("", "1234");
+    }
+
 }

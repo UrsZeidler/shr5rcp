@@ -705,6 +705,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass berechneteAttributeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -4135,6 +4142,42 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getBerechneteAttribute() {
+        return berechneteAttributeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getBerechneteAttribute_Errinerungsvermoegen() {
+        return (EAttribute)berechneteAttributeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getBerechneteAttribute_Menschenkenntnis() {
+        return (EAttribute)berechneteAttributeEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getBerechneteAttribute_Selbstbeherrschung() {
+        return (EAttribute)berechneteAttributeEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5390,6 +5433,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(localizationEClass, LOCALIZATION__NAME);
         createEAttribute(localizationEClass, LOCALIZATION__PAGE);
 
+        berechneteAttributeEClass = createEClass(BERECHNETE_ATTRIBUTE);
+        createEAttribute(berechneteAttributeEClass, BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN);
+        createEAttribute(berechneteAttributeEClass, BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS);
+        createEAttribute(berechneteAttributeEClass, BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -5486,6 +5534,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         koerperPersonaEClass.getESuperTypes().add(this.getAbstraktPersona());
         koerperPersonaEClass.getESuperTypes().add(this.getPanzerung());
         koerperPersonaEClass.getESuperTypes().add(this.getPersonaZustand());
+        koerperPersonaEClass.getESuperTypes().add(this.getBerechneteAttribute());
         magischeModsEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         kiKraftEClass.getESuperTypes().add(this.getMagischeMods());
         kiKraftEClass.getESuperTypes().add(this.getErlernbar());
@@ -6123,6 +6172,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getLocalization_Local(), ecorePackage.getEString(), "local", null, 1, 1, Localization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getLocalization_Name(), ecorePackage.getEString(), "name", null, 1, 1, Localization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getLocalization_Page(), ecorePackage.getEInt(), "page", null, 0, 1, Localization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(berechneteAttributeEClass, BerechneteAttribute.class, "BerechneteAttribute", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getBerechneteAttribute_Errinerungsvermoegen(), ecorePackage.getEInt(), "errinerungsvermoegen", null, 1, 1, BerechneteAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getBerechneteAttribute_Menschenkenntnis(), ecorePackage.getEInt(), "menschenkenntnis", null, 1, 1, BerechneteAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+        initEAttribute(getBerechneteAttribute_Selbstbeherrschung(), ecorePackage.getEInt(), "selbstbeherrschung", null, 1, 1, BerechneteAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

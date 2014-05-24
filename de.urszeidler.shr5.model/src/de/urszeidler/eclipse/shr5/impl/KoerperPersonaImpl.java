@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.BerechneteAttribute;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,6 +32,9 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlichMax <em>Zustand Koerperlich Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGeistigMax <em>Zustand Geistig Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGrenze <em>Zustand Grenze</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getErrinerungsvermoegen <em>Errinerungsvermoegen</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getMenschenkenntnis <em>Menschenkenntnis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getSelbstbeherrschung <em>Selbstbeherrschung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getKoerperMods <em>Koerper Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getEigenschaften <em>Eigenschaften</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlich <em>Zustand Koerperlich</em>}</li>
@@ -80,6 +84,36 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * @ordered
      */
     protected static final int ZUSTAND_GRENZE_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getErrinerungsvermoegen() <em>Errinerungsvermoegen</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getErrinerungsvermoegen()
+     * @generated
+     * @ordered
+     */
+    protected static final int ERRINERUNGSVERMOEGEN_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getMenschenkenntnis() <em>Menschenkenntnis</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMenschenkenntnis()
+     * @generated
+     * @ordered
+     */
+    protected static final int MENSCHENKENNTNIS_EDEFAULT = 0;
+
+    /**
+     * The default value of the '{@link #getSelbstbeherrschung() <em>Selbstbeherrschung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSelbstbeherrschung()
+     * @generated
+     * @ordered
+     */
+    protected static final int SELBSTBEHERRSCHUNG_EDEFAULT = 0;
 
     /**
      * The cached value of the '{@link #getKoerperMods() <em>Koerper Mods</em>}' containment reference list.
@@ -206,6 +240,33 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getErrinerungsvermoegen() {
+        return getWillenskraft()+getLogik()+ getModManager().getmodWert(Shr5Package.Literals.BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN) ;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getMenschenkenntnis() {
+        return getIntuition()+getCharisma()+ getModManager().getmodWert(Shr5Package.Literals.BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS) ;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated not
+     */
+    public int getSelbstbeherrschung() {
+        return getWillenskraft()+getCharisma()+ getModManager().getmodWert(Shr5Package.Literals.BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG) ;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     public EList<Koerpermods> getKoerperMods() {
@@ -301,6 +362,12 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
                 return getZustandGeistigMax();
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE:
                 return getZustandGrenze();
+            case Shr5Package.KOERPER_PERSONA__ERRINERUNGSVERMOEGEN:
+                return getErrinerungsvermoegen();
+            case Shr5Package.KOERPER_PERSONA__MENSCHENKENNTNIS:
+                return getMenschenkenntnis();
+            case Shr5Package.KOERPER_PERSONA__SELBSTBEHERRSCHUNG:
+                return getSelbstbeherrschung();
             case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
                 return getKoerperMods();
             case Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN:
@@ -380,6 +447,12 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
                 return getZustandGeistigMax() != ZUSTAND_GEISTIG_MAX_EDEFAULT;
             case Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE:
                 return getZustandGrenze() != ZUSTAND_GRENZE_EDEFAULT;
+            case Shr5Package.KOERPER_PERSONA__ERRINERUNGSVERMOEGEN:
+                return getErrinerungsvermoegen() != ERRINERUNGSVERMOEGEN_EDEFAULT;
+            case Shr5Package.KOERPER_PERSONA__MENSCHENKENNTNIS:
+                return getMenschenkenntnis() != MENSCHENKENNTNIS_EDEFAULT;
+            case Shr5Package.KOERPER_PERSONA__SELBSTBEHERRSCHUNG:
+                return getSelbstbeherrschung() != SELBSTBEHERRSCHUNG_EDEFAULT;
             case Shr5Package.KOERPER_PERSONA__KOERPER_MODS:
                 return koerperMods != null && !koerperMods.isEmpty();
             case Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN:
@@ -413,6 +486,14 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
                 default: return -1;
             }
         }
+        if (baseClass == BerechneteAttribute.class) {
+            switch (derivedFeatureID) {
+                case Shr5Package.KOERPER_PERSONA__ERRINERUNGSVERMOEGEN: return Shr5Package.BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN;
+                case Shr5Package.KOERPER_PERSONA__MENSCHENKENNTNIS: return Shr5Package.BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS;
+                case Shr5Package.KOERPER_PERSONA__SELBSTBEHERRSCHUNG: return Shr5Package.BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG;
+                default: return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -434,6 +515,14 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
                 case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_KOERPERLICH_MAX: return Shr5Package.KOERPER_PERSONA__ZUSTAND_KOERPERLICH_MAX;
                 case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GEISTIG_MAX: return Shr5Package.KOERPER_PERSONA__ZUSTAND_GEISTIG_MAX;
                 case Shr5Package.PERSONA_ZUSTAND__ZUSTAND_GRENZE: return Shr5Package.KOERPER_PERSONA__ZUSTAND_GRENZE;
+                default: return -1;
+            }
+        }
+        if (baseClass == BerechneteAttribute.class) {
+            switch (baseFeatureID) {
+                case Shr5Package.BERECHNETE_ATTRIBUTE__ERRINERUNGSVERMOEGEN: return Shr5Package.KOERPER_PERSONA__ERRINERUNGSVERMOEGEN;
+                case Shr5Package.BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS: return Shr5Package.KOERPER_PERSONA__MENSCHENKENNTNIS;
+                case Shr5Package.BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG: return Shr5Package.KOERPER_PERSONA__SELBSTBEHERRSCHUNG;
                 default: return -1;
             }
         }
