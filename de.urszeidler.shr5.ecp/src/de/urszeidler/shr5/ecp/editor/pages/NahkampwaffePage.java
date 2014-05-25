@@ -13,6 +13,7 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
+import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -120,6 +121,10 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADENSCODE, grpFernkampfwaffe);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__SCHADES_TYP, grpFernkampfwaffe);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
+        
+        if (object instanceof Fokus) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpFernkampfwaffe);            
+        }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
