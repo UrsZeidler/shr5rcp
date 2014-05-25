@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Fokus;
+import de.urszeidler.eclipse.shr5.FokusBinding;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.KiAdept;
 import de.urszeidler.eclipse.shr5.KiKraft;
@@ -24,6 +26,7 @@ import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
 import de.urszeidler.eclipse.shr5.PersonaZauber;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.Steigerbar;
 import de.urszeidler.eclipse.shr5.Technomancer;
@@ -315,6 +318,19 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
                 }
                 return object;
             }
+            
+            @Override
+            public Object caseFokus(Fokus object) {
+                if (getCharacter().getPersona() instanceof BaseMagischePersona) {
+                    BaseMagischePersona bm = (BaseMagischePersona)getCharacter().getPersona();
+                    FokusBinding fokusBinding = Shr5Factory.eINSTANCE.createFokusBinding();
+                    fokusBinding.setFokus(object);
+                    EList<FokusBinding> list = bm.getBoundFoki();
+                    addOrRemoveEntry(fokusBinding, list);
+                    
+                }
+                return object;
+            }
         };
         shr5Switch.doSwitch(getChangeable());
 
@@ -361,6 +377,10 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
             @Override
             public Integer casePersonaKomplexForm(PersonaKomplexForm object) {
                 return getKarmaCostAdd(object);
+            }
+            @Override
+            public Integer caseFokus(Fokus object) {
+                 return object.getBindungskosten()*-1;
             }
         };
 

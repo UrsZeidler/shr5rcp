@@ -11,6 +11,7 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.MysticAdept;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
@@ -29,6 +30,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Persona Change</b></em>'.
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class PersonaChangeTest extends PersonaValueChangeTest {
@@ -36,6 +38,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -46,6 +49,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * Constructs a new Persona Change test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public PersonaChangeTest(String name) {
@@ -56,6 +60,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * Returns the fixture for this Persona Change test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -66,6 +71,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -77,6 +83,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -156,6 +163,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         getFixture().applyChanges();
         assertEquals(value + 1, personaFertigkeit.getStufe());
     }
+
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
      * <!-- begin-user-doc -->
@@ -174,6 +182,26 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
 
         getFixture().applyChanges();
         assertEquals(true, personaFertigkeit.getSpezialisierungen().contains(spezialisierung));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost() <em>Karma Cost</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
+     * @generated not
+     */
+    public void testGetKarmaCost_FokusBinding() {
+        MagieFokus magieFokus = Shr5Factory.eINSTANCE.createMagieFokus();
+        magieFokus.setBindungsFaktor(2);
+        magieFokus.setStufe(2);
+
+        getFixture().setChangeable(magieFokus);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-4, getFixture().getKarmaCost());
+
     }
 
     /**
@@ -263,6 +291,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         assertEquals(true, getFixture().isChangeApplied());
         assertNotNull(getFixture().getDateApplied());
     }
+
     /**
      * @see de.urszeidler.eclipse.shr5Management.Changes#getKarmaCost()
      * @generated not
@@ -275,7 +304,7 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
         playerCharacter.getChanges().add(getFixture());
         assertEquals(-7, getFixture().getKarmaCost());
         assertEquals(getFixture().getFrom(), 0);
-        assertEquals(getFixture().getTo(),  1);
+        assertEquals(getFixture().getTo(), 1);
 
         getFixture().applyChanges();
         assertEquals(true, personaFertigkeit.getSpezialisierungen().contains(spezialisierung));
@@ -384,6 +413,38 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
      * @generated not
      */
+    public void testApplyChanges_BindFokus() {
+        PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
+        getFixture().setCharacter(playerCharacter);
+
+        MagieFokus magieFokus = Shr5Factory.eINSTANCE.createMagieFokus();
+        magieFokus.setBindungsFaktor(2);
+        magieFokus.setStufe(2);
+
+        getFixture().setChangeable(magieFokus);
+
+        playerCharacter.getChanges().add(getFixture());
+        assertEquals(-4, getFixture().getKarmaCost());
+        assertEquals(getFixture().getTo(), 1);
+        getFixture().applyChanges();
+
+        assertEquals(true, getFixture().isChangeApplied());
+        assertNotNull(getFixture().getDateApplied());
+
+        AbstraktPersona persona = playerCharacter.getPersona();
+        // assertTrue(ShadowrunManagmentTools.hasEigenschaft(playerCharacter, value));
+        if (persona instanceof MysticAdept) {
+            MysticAdept ma = (MysticAdept)persona;
+            assertEquals(1, ma.getBoundFoki().size());
+            assertTrue(ma.getBoundFoki().get(0).getFokus().equals(magieFokus));
+        } else
+            fail();
+    }
+
+    /**
+     * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
+     * @generated not
+     */
     public void testApplyChanges_InitationAdd() {
         PlayerCharacter playerCharacter = PriorityCategorieTest.createMysticAdeptCharacter();
         getFixture().setCharacter(playerCharacter);
@@ -438,7 +499,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
             fail();
     }
 
-    
     /**
      * @see de.urszeidler.eclipse.shr5Management.Changes#applyChanges()
      * @generated not
