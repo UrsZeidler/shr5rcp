@@ -169,12 +169,12 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
         }else if (object instanceof Fokus) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpGegenstand);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpGegenstand);
             if (object instanceof QiFokus) {               
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpWert);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpGegenstand);
             }else if (object instanceof MagieFokus) {
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpWert);
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpGegenstand);
             }
         }
 
