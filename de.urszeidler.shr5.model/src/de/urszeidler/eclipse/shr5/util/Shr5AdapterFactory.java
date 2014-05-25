@@ -538,6 +538,34 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createBerechneteAttributeAdapter();
             }
             @Override
+            public Adapter caseMagischeStufe(MagischeStufe object) {
+                return createMagischeStufeAdapter();
+            }
+            @Override
+            public Adapter caseFokus(Fokus object) {
+                return createFokusAdapter();
+            }
+            @Override
+            public Adapter caseAbstraktFokus(AbstraktFokus object) {
+                return createAbstraktFokusAdapter();
+            }
+            @Override
+            public Adapter caseQiFokus(QiFokus object) {
+                return createQiFokusAdapter();
+            }
+            @Override
+            public Adapter caseWaffenFokus(WaffenFokus object) {
+                return createWaffenFokusAdapter();
+            }
+            @Override
+            public Adapter caseMagieFokus(MagieFokus object) {
+                return createMagieFokusAdapter();
+            }
+            @Override
+            public Adapter caseFokusBinding(FokusBinding object) {
+                return createFokusBindingAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -1926,6 +1954,104 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createBerechneteAttributeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MagischeStufe <em>Magische Stufe</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MagischeStufe
+     * @generated
+     */
+    public Adapter createMagischeStufeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Fokus <em>Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Fokus
+     * @generated
+     */
+    public Adapter createFokusAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.AbstraktFokus <em>Abstrakt Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.AbstraktFokus
+     * @generated
+     */
+    public Adapter createAbstraktFokusAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.QiFokus <em>Qi Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.QiFokus
+     * @generated
+     */
+    public Adapter createQiFokusAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.WaffenFokus <em>Waffen Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.WaffenFokus
+     * @generated
+     */
+    public Adapter createWaffenFokusAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.MagieFokus <em>Magie Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.MagieFokus
+     * @generated
+     */
+    public Adapter createMagieFokusAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.FokusBinding <em>Fokus Binding</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.FokusBinding
+     * @generated
+     */
+    public Adapter createFokusBindingAdapter() {
         return null;
     }
 

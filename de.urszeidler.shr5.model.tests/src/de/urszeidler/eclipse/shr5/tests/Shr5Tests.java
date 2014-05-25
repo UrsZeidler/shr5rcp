@@ -59,9 +59,11 @@ public class Shr5Tests extends TestSuite {
         suite.addTestSuite(CommonProgramTest.class);
         suite.addTestSuite(LifestyleTest.class);
         suite.addTestSuite(LifestyleOptionTest.class);
-        suite.addTestSuite(PercentLifestyleOptionTest.class);
-        
+        suite.addTestSuite(PercentLifestyleOptionTest.class);        
         suite.addTestSuite(PersonalAreaNetworkTest.class);
+        suite.addTestSuite(QiFokusTest.class);
+        suite.addTestSuite(WaffenFokusTest.class);
+        suite.addTestSuite(MagieFokusTest.class);        
         
         //suite.addTestSuite(HostTest.class);    
         

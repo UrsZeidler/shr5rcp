@@ -969,6 +969,11 @@ public class SpeziesItemProvider
             (createChildParameter
                 (Shr5Package.Literals.SPEZIES__ANGRIFF,
                  Shr5Factory.eINSTANCE.createNahkampfwaffe()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SPEZIES__ANGRIFF,
+                 Shr5Factory.eINSTANCE.createWaffenFokus()));
     }
 
 	/**

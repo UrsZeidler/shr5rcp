@@ -147,6 +147,7 @@ public class MagischePersonaItemProvider
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__INITATIONEN);
+            childrenFeatures.add(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__BOUND_FOKI);
         }
         return childrenFeatures;
     }
@@ -212,6 +213,7 @@ public class MagischePersonaItemProvider
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
+            case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -233,6 +235,11 @@ public class MagischePersonaItemProvider
             (createChildParameter
                 (Shr5Package.Literals.BASE_MAGISCHE_PERSONA__INITATIONEN,
                  Shr5Factory.eINSTANCE.createInitation()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.BASE_MAGISCHE_PERSONA__BOUND_FOKI,
+                 Shr5Factory.eINSTANCE.createFokusBinding()));
     }
 
 }

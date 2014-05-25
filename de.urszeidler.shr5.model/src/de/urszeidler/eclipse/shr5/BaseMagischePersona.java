@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getMagie <em>Magie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getInitationen <em>Initationen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getMagieBasis <em>Magie Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getBoundFoki <em>Bound Foki</em>}</li>
  * </ul>
  * </p>
  *
@@ -80,5 +81,21 @@ public interface BaseMagischePersona extends EObject {
      * @generated
      */
 	void setMagieBasis(int value);
+
+    /**
+     * Returns the value of the '<em><b>Bound Foki</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5.FokusBinding}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Bound Foki</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Bound Foki</em>' containment reference list.
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getBaseMagischePersona_BoundFoki()
+     * @model containment="true" required="true"
+     * @generated
+     */
+    EList<FokusBinding> getBoundFoki();
 
 } // BaseMagischePersona

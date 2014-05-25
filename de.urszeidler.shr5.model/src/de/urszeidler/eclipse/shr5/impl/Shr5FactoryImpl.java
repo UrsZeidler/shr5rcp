@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -209,6 +210,10 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.LIFESTYLE_OPTION: return createLifestyleOption();
             case Shr5Package.PERCENT_LIFESTYLE_OPTION: return createPercentLifestyleOption();
             case Shr5Package.LOCALIZATION: return createLocalization();
+            case Shr5Package.QI_FOKUS: return createQiFokus();
+            case Shr5Package.WAFFEN_FOKUS: return createWaffenFokus();
+            case Shr5Package.MAGIE_FOKUS: return createMagieFokus();
+            case Shr5Package.FOKUS_BINDING: return createFokusBinding();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -990,6 +995,46 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Localization createLocalization() {
         LocalizationImpl localization = new LocalizationImpl();
         return localization;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public QiFokus createQiFokus() {
+        QiFokusImpl qiFokus = new QiFokusImpl();
+        return qiFokus;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public WaffenFokus createWaffenFokus() {
+        WaffenFokusImpl waffenFokus = new WaffenFokusImpl();
+        return waffenFokus;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public MagieFokus createMagieFokus() {
+        MagieFokusImpl magieFokus = new MagieFokusImpl();
+        return magieFokus;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public FokusBinding createFokusBinding() {
+        FokusBindingImpl fokusBinding = new FokusBindingImpl();
+        return fokusBinding;
     }
 
     /**

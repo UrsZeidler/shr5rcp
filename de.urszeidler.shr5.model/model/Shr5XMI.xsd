@@ -564,6 +564,7 @@
       <xsd:extension base="shr5:KoerperPersona">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="initationen" type="shr5:Initation"/>
+          <xsd:element name="boundFoki" type="shr5:FokusBinding"/>
           <xsd:element name="mentor" type="shr5:Schutzgeist"/>
         </xsd:choice>
         <xsd:attribute name="magieBasis" type="xsd:int" use="required"/>
@@ -575,6 +576,7 @@
   <xsd:complexType abstract="true" name="BaseMagischePersona">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element name="initationen" type="shr5:Initation"/>
+      <xsd:element name="boundFoki" type="shr5:FokusBinding"/>
       <xsd:element ref="xmi:Extension"/>
     </xsd:choice>
     <xsd:attribute ref="xmi:id"/>
@@ -1788,6 +1790,110 @@
   <xsd:element name="BerechneteAttribute" type="shr5:BerechneteAttribute">
     <xsd:annotation>
       <xsd:documentation>Contains the calculatetd derived attributes like composure. Attribute only testst for example.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="MagischeStufe">
+    <xsd:annotation>
+      <xsd:documentation>This is the basic magical rating class.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="stufe" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="MagischeStufe" type="shr5:MagischeStufe">
+    <xsd:annotation>
+      <xsd:documentation>This is the basic magical rating class.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="Fokus">
+    <xsd:annotation>
+      <xsd:documentation>The fokus has binding costs.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:MagischeStufe">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Fokus" type="shr5:Fokus">
+    <xsd:annotation>
+      <xsd:documentation>The fokus has binding costs.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="AbstraktFokus">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fokus">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbstraktFokus" type="shr5:AbstraktFokus"/>
+  <xsd:complexType name="QiFokus">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktFokus">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="power" type="shr5:KiKraft"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="QiFokus" type="shr5:QiFokus"/>
+  <xsd:complexType name="WaffenFokus">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Nahkampfwaffe">
+        <xsd:attribute name="stufe" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="WaffenFokus" type="shr5:WaffenFokus"/>
+  <xsd:complexType name="MagieFokus">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:AbstraktFokus">
+        <xsd:attribute name="bindungsFaktor" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MagieFokus" type="shr5:MagieFokus"/>
+  <xsd:complexType name="FokusBinding">
+    <xsd:annotation>
+      <xsd:documentation>This represent an binding to a fokus.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="fokus" type="shr5:Fokus"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="active" type="xsd:boolean"/>
+    <xsd:attribute name="fokus" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="FokusBinding" type="shr5:FokusBinding">
+    <xsd:annotation>
+      <xsd:documentation>This represent an binding to a fokus.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
 </xsd:schema>

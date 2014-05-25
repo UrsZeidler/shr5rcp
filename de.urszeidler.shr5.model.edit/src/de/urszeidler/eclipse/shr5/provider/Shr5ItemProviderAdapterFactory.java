@@ -1655,6 +1655,94 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.QiFokus} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected QiFokusItemProvider qiFokusItemProvider;
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.QiFokus}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createQiFokusAdapter() {
+        if (qiFokusItemProvider == null) {
+            qiFokusItemProvider = new QiFokusItemProvider(this);
+        }
+
+        return qiFokusItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.WaffenFokus} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected WaffenFokusItemProvider waffenFokusItemProvider;
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.WaffenFokus}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createWaffenFokusAdapter() {
+        if (waffenFokusItemProvider == null) {
+            waffenFokusItemProvider = new WaffenFokusItemProvider(this);
+        }
+
+        return waffenFokusItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MagieFokus} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected MagieFokusItemProvider magieFokusItemProvider;
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MagieFokus}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createMagieFokusAdapter() {
+        if (magieFokusItemProvider == null) {
+            magieFokusItemProvider = new MagieFokusItemProvider(this);
+        }
+
+        return magieFokusItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FokusBinding} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected FokusBindingItemProvider fokusBindingItemProvider;
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FokusBinding}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createFokusBindingAdapter() {
+        if (fokusBindingItemProvider == null) {
+            fokusBindingItemProvider = new FokusBindingItemProvider(this);
+        }
+
+        return fokusBindingItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1821,6 +1909,10 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (lifestyleOptionItemProvider != null) lifestyleOptionItemProvider.dispose();
         if (percentLifestyleOptionItemProvider != null) percentLifestyleOptionItemProvider.dispose();
         if (localizationItemProvider != null) localizationItemProvider.dispose();
+        if (qiFokusItemProvider != null) qiFokusItemProvider.dispose();
+        if (waffenFokusItemProvider != null) waffenFokusItemProvider.dispose();
+        if (magieFokusItemProvider != null) magieFokusItemProvider.dispose();
+        if (fokusBindingItemProvider != null) fokusBindingItemProvider.dispose();
     }
 
     @Override

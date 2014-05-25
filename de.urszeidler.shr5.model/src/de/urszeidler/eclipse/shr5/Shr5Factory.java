@@ -634,6 +634,42 @@ public interface Shr5Factory extends EFactory {
     Localization createLocalization();
 
     /**
+     * Returns a new object of class '<em>Qi Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Qi Fokus</em>'.
+     * @generated
+     */
+    QiFokus createQiFokus();
+
+    /**
+     * Returns a new object of class '<em>Waffen Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Waffen Fokus</em>'.
+     * @generated
+     */
+    WaffenFokus createWaffenFokus();
+
+    /**
+     * Returns a new object of class '<em>Magie Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Magie Fokus</em>'.
+     * @generated
+     */
+    MagieFokus createMagieFokus();
+
+    /**
+     * Returns a new object of class '<em>Fokus Binding</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Fokus Binding</em>'.
+     * @generated
+     */
+    FokusBinding createFokusBinding();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

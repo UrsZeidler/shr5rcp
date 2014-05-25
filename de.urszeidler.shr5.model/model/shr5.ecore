@@ -253,6 +253,8 @@
         eType="#//Initation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="magieBasis" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundFoki" lowerBound="1"
+        upperBound="-1" eType="#//FokusBinding" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FernkampfwaffenModifikatoren" abstract="true"
       interface="true" eSuperTypes="#//ModifikatorAttribute">
@@ -920,5 +922,41 @@
         <details key="documentation" value="The Composure."/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MagischeStufe" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the basic magical rating class."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fokus" abstract="true" interface="true"
+      eSuperTypes="#//MagischeStufe #//Beschreibbar #//Quelle #//GeldWert">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The fokus has binding costs."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bindungskosten" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" changeable="false"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The memory."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstraktFokus" abstract="true" eSuperTypes="#//Fokus #//AbstraktModifikatoren"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QiFokus" eSuperTypes="#//AbstraktFokus">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="power" lowerBound="1" eType="#//KiKraft"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WaffenFokus" eSuperTypes="#//Nahkampfwaffe #//Fokus"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MagieFokus" eSuperTypes="#//AbstraktFokus">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bindungsFaktor" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FokusBinding">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This represent an binding to a fokus."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fokus" lowerBound="1" eType="#//Fokus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
 </ecore:EPackage>

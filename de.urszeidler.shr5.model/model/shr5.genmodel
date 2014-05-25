@@ -239,6 +239,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magie"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//BaseMagischePersona/initationen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BaseMagischePersona/magieBasis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//BaseMagischePersona/boundFoki"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//FernkampfwaffenModifikatoren">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FernkampfwaffenModifikatoren/smartgun"/>
@@ -597,6 +598,24 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BerechneteAttribute/errinerungsvermoegen"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BerechneteAttribute/menschenkenntnis"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//BerechneteAttribute/selbstbeherrschung"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//MagischeStufe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MagischeStufe/stufe"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Fokus">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Fokus/bindungskosten"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktFokus"/>
+    <genClasses ecoreClass="shr5.ecore#//QiFokus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shr5.ecore#//QiFokus/power"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//WaffenFokus"/>
+    <genClasses ecoreClass="shr5.ecore#//MagieFokus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//MagieFokus/bindungsFaktor"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//FokusBinding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//FokusBinding/fokus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FokusBinding/active"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

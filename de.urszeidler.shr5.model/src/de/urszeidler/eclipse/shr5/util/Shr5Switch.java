@@ -1321,6 +1321,90 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.MAGISCHE_STUFE: {
+                MagischeStufe magischeStufe = (MagischeStufe)theEObject;
+                T result = caseMagischeStufe(magischeStufe);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FOKUS: {
+                Fokus fokus = (Fokus)theEObject;
+                T result = caseFokus(fokus);
+                if (result == null) result = caseMagischeStufe(fokus);
+                if (result == null) result = caseBeschreibbar(fokus);
+                if (result == null) result = caseQuelle(fokus);
+                if (result == null) result = caseGeldWert(fokus);
+                if (result == null) result = caseIdentifiable(fokus);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.ABSTRAKT_FOKUS: {
+                AbstraktFokus abstraktFokus = (AbstraktFokus)theEObject;
+                T result = caseAbstraktFokus(abstraktFokus);
+                if (result == null) result = caseFokus(abstraktFokus);
+                if (result == null) result = caseAbstraktModifikatoren(abstraktFokus);
+                if (result == null) result = caseMagischeStufe(abstraktFokus);
+                if (result == null) result = caseBeschreibbar(abstraktFokus);
+                if (result == null) result = caseQuelle(abstraktFokus);
+                if (result == null) result = caseGeldWert(abstraktFokus);
+                if (result == null) result = caseModifizierbar(abstraktFokus);
+                if (result == null) result = caseIdentifiable(abstraktFokus);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.QI_FOKUS: {
+                QiFokus qiFokus = (QiFokus)theEObject;
+                T result = caseQiFokus(qiFokus);
+                if (result == null) result = caseAbstraktFokus(qiFokus);
+                if (result == null) result = caseFokus(qiFokus);
+                if (result == null) result = caseAbstraktModifikatoren(qiFokus);
+                if (result == null) result = caseMagischeStufe(qiFokus);
+                if (result == null) result = caseBeschreibbar(qiFokus);
+                if (result == null) result = caseQuelle(qiFokus);
+                if (result == null) result = caseGeldWert(qiFokus);
+                if (result == null) result = caseModifizierbar(qiFokus);
+                if (result == null) result = caseIdentifiable(qiFokus);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.WAFFEN_FOKUS: {
+                WaffenFokus waffenFokus = (WaffenFokus)theEObject;
+                T result = caseWaffenFokus(waffenFokus);
+                if (result == null) result = caseNahkampfwaffe(waffenFokus);
+                if (result == null) result = caseFokus(waffenFokus);
+                if (result == null) result = caseAbstaktWaffe(waffenFokus);
+                if (result == null) result = caseMagischeStufe(waffenFokus);
+                if (result == null) result = caseAbstraktGegenstand(waffenFokus);
+                if (result == null) result = caseQuelle(waffenFokus);
+                if (result == null) result = caseGeldWert(waffenFokus);
+                if (result == null) result = caseBeschreibbar(waffenFokus);
+                if (result == null) result = caseModifizierbar(waffenFokus);
+                if (result == null) result = caseAnwendbar(waffenFokus);
+                if (result == null) result = caseIdentifiable(waffenFokus);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.MAGIE_FOKUS: {
+                MagieFokus magieFokus = (MagieFokus)theEObject;
+                T result = caseMagieFokus(magieFokus);
+                if (result == null) result = caseAbstraktFokus(magieFokus);
+                if (result == null) result = caseFokus(magieFokus);
+                if (result == null) result = caseAbstraktModifikatoren(magieFokus);
+                if (result == null) result = caseMagischeStufe(magieFokus);
+                if (result == null) result = caseBeschreibbar(magieFokus);
+                if (result == null) result = caseQuelle(magieFokus);
+                if (result == null) result = caseGeldWert(magieFokus);
+                if (result == null) result = caseModifizierbar(magieFokus);
+                if (result == null) result = caseIdentifiable(magieFokus);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.FOKUS_BINDING: {
+                FokusBinding fokusBinding = (FokusBinding)theEObject;
+                T result = caseFokusBinding(fokusBinding);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2792,6 +2876,111 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseBerechneteAttribute(BerechneteAttribute object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Magische Stufe</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Magische Stufe</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMagischeStufe(MagischeStufe object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fokus</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseFokus(Fokus object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Abstrakt Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Abstrakt Fokus</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseAbstraktFokus(AbstraktFokus object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Qi Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Qi Fokus</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseQiFokus(QiFokus object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Waffen Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Waffen Fokus</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseWaffenFokus(WaffenFokus object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Magie Fokus</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Magie Fokus</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseMagieFokus(MagieFokus object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Fokus Binding</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Fokus Binding</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseFokusBinding(FokusBinding object) {
         return null;
     }
 

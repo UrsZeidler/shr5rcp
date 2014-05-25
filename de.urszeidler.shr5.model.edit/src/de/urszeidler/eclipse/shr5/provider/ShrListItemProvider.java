@@ -572,6 +572,26 @@ public class ShrListItemProvider
             (createChildParameter
                 (Shr5Package.Literals.SHR_LIST__ENTRIES,
                  Shr5Factory.eINSTANCE.createLocalization()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createQiFokus()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createWaffenFokus()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createMagieFokus()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5Package.Literals.SHR_LIST__ENTRIES,
+                 Shr5Factory.eINSTANCE.createFokusBinding()));
     }
 
 	/**

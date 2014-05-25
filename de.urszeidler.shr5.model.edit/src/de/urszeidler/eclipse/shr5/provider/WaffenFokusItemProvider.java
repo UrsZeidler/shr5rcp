@@ -4,9 +4,8 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.WeaponMount;
+import de.urszeidler.eclipse.shr5.WaffenFokus;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,24 +13,24 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.WeaponMount} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.WaffenFokus} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class WeaponMountItemProvider
-    extends FahrzeugModifikationItemProvider
+public class WaffenFokusItemProvider
+    extends NahkampfwaffeItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,
@@ -44,7 +43,7 @@ public class WeaponMountItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public WeaponMountItemProvider(AdapterFactory adapterFactory) {
+    public WaffenFokusItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -59,49 +58,65 @@ public class WeaponMountItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addStufePropertyDescriptor(object);
+            addBindungskostenPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * This adds a property descriptor for the Stufe feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.WEAPON_MOUNT__WEAPON);
-        }
-        return childrenFeatures;
+    protected void addStufePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_MagischeStufe_stufe_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_MagischeStufe_stufe_feature", "_UI_MagischeStufe_type"),
+                 Shr5Package.Literals.MAGISCHE_STUFE__STUFE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
+     * This adds a property descriptor for the Bindungskosten feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
-
-        return super.getChildFeature(object, child);
+    protected void addBindungskostenPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Fokus_bindungskosten_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Fokus_bindungskosten_feature", "_UI_Fokus_type"),
+                 Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN,
+                 false,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
-     * This returns WeaponMount.gif.
+     * This returns WaffenFokus.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/WeaponMount"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/WaffenFokus"));
     }
 
     /**
@@ -112,10 +127,10 @@ public class WeaponMountItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((WeaponMount)object).getName();
+        String label = ((WaffenFokus)object).getName();
         return label == null || label.length() == 0 ?
-            getString("_UI_WeaponMount_type") :
-            getString("_UI_WeaponMount_type") + " " + label;
+            getString("_UI_WaffenFokus_type") :
+            getString("_UI_WaffenFokus_type") + " " + label;
     }
 
     /**
@@ -129,9 +144,10 @@ public class WeaponMountItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(WeaponMount.class)) {
-            case Shr5Package.WEAPON_MOUNT__WEAPON:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+        switch (notification.getFeatureID(WaffenFokus.class)) {
+            case Shr5Package.WAFFEN_FOKUS__STUFE:
+            case Shr5Package.WAFFEN_FOKUS__BINDUNGSKOSTEN:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
         super.notifyChanged(notification);
@@ -147,31 +163,6 @@ public class WeaponMountItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createNahkampfwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createFeuerwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createWurfwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createProjektilwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createWaffenFokus()));
     }
 
 }

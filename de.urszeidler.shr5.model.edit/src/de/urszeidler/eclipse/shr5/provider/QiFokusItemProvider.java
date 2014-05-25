@@ -4,10 +4,10 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
+import de.urszeidler.eclipse.shr5.QiFokus;
+
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.WeaponMount;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -15,7 +15,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -25,13 +24,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.WeaponMount} object.
+ * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.QiFokus} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class WeaponMountItemProvider
-    extends FahrzeugModifikationItemProvider
+public class QiFokusItemProvider
+    extends AbstraktFokusItemProvider
     implements
         IEditingDomainItemProvider,
         IStructuredItemContentProvider,
@@ -44,7 +43,7 @@ public class WeaponMountItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public WeaponMountItemProvider(AdapterFactory adapterFactory) {
+    public QiFokusItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -75,7 +74,7 @@ public class WeaponMountItemProvider
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures.add(Shr5Package.Literals.WEAPON_MOUNT__WEAPON);
+            childrenFeatures.add(Shr5Package.Literals.QI_FOKUS__POWER);
         }
         return childrenFeatures;
     }
@@ -94,14 +93,14 @@ public class WeaponMountItemProvider
     }
 
     /**
-     * This returns WeaponMount.gif.
+     * This returns QiFokus.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/WeaponMount"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/QiFokus"));
     }
 
     /**
@@ -112,10 +111,10 @@ public class WeaponMountItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((WeaponMount)object).getName();
+        String label = ((QiFokus)object).getName();
         return label == null || label.length() == 0 ?
-            getString("_UI_WeaponMount_type") :
-            getString("_UI_WeaponMount_type") + " " + label;
+            getString("_UI_QiFokus_type") :
+            getString("_UI_QiFokus_type") + " " + label;
     }
 
     /**
@@ -129,8 +128,8 @@ public class WeaponMountItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(WeaponMount.class)) {
-            case Shr5Package.WEAPON_MOUNT__WEAPON:
+        switch (notification.getFeatureID(QiFokus.class)) {
+            case Shr5Package.QI_FOKUS__POWER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -150,28 +149,8 @@ public class WeaponMountItemProvider
 
         newChildDescriptors.add
             (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createNahkampfwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createFeuerwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createWurfwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createProjektilwaffe()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (Shr5Package.Literals.WEAPON_MOUNT__WEAPON,
-                 Shr5Factory.eINSTANCE.createWaffenFokus()));
+                (Shr5Package.Literals.QI_FOKUS__POWER,
+                 Shr5Factory.eINSTANCE.createKiKraft()));
     }
 
 }

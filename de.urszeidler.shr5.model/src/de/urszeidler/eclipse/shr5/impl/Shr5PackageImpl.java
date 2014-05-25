@@ -712,6 +712,55 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass magischeStufeEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass fokusEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass abstraktFokusEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass qiFokusEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass waffenFokusEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass magieFokusEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass fokusBindingEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -2077,6 +2126,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getBaseMagischePersona_BoundFoki() {
+        return (EReference)baseMagischePersonaEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -4178,6 +4236,123 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getMagischeStufe() {
+        return magischeStufeEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMagischeStufe_Stufe() {
+        return (EAttribute)magischeStufeEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getFokus() {
+        return fokusEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFokus_Bindungskosten() {
+        return (EAttribute)fokusEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getAbstraktFokus() {
+        return abstraktFokusEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getQiFokus() {
+        return qiFokusEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getQiFokus_Power() {
+        return (EReference)qiFokusEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getWaffenFokus() {
+        return waffenFokusEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getMagieFokus() {
+        return magieFokusEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getMagieFokus_BindungsFaktor() {
+        return (EAttribute)magieFokusEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getFokusBinding() {
+        return fokusBindingEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getFokusBinding_Fokus() {
+        return (EReference)fokusBindingEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getFokusBinding_Active() {
+        return (EAttribute)fokusBindingEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5060,6 +5235,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(baseMagischePersonaEClass, BASE_MAGISCHE_PERSONA__MAGIE);
         createEReference(baseMagischePersonaEClass, BASE_MAGISCHE_PERSONA__INITATIONEN);
         createEAttribute(baseMagischePersonaEClass, BASE_MAGISCHE_PERSONA__MAGIE_BASIS);
+        createEReference(baseMagischePersonaEClass, BASE_MAGISCHE_PERSONA__BOUND_FOKI);
 
         fernkampfwaffenModifikatorenEClass = createEClass(FERNKAMPFWAFFEN_MODIFIKATOREN);
         createEAttribute(fernkampfwaffenModifikatorenEClass, FERNKAMPFWAFFEN_MODIFIKATOREN__SMARTGUN);
@@ -5438,6 +5614,26 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(berechneteAttributeEClass, BERECHNETE_ATTRIBUTE__MENSCHENKENNTNIS);
         createEAttribute(berechneteAttributeEClass, BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG);
 
+        magischeStufeEClass = createEClass(MAGISCHE_STUFE);
+        createEAttribute(magischeStufeEClass, MAGISCHE_STUFE__STUFE);
+
+        fokusEClass = createEClass(FOKUS);
+        createEAttribute(fokusEClass, FOKUS__BINDUNGSKOSTEN);
+
+        abstraktFokusEClass = createEClass(ABSTRAKT_FOKUS);
+
+        qiFokusEClass = createEClass(QI_FOKUS);
+        createEReference(qiFokusEClass, QI_FOKUS__POWER);
+
+        waffenFokusEClass = createEClass(WAFFEN_FOKUS);
+
+        magieFokusEClass = createEClass(MAGIE_FOKUS);
+        createEAttribute(magieFokusEClass, MAGIE_FOKUS__BINDUNGS_FAKTOR);
+
+        fokusBindingEClass = createEClass(FOKUS_BINDING);
+        createEReference(fokusBindingEClass, FOKUS_BINDING__FOKUS);
+        createEAttribute(fokusBindingEClass, FOKUS_BINDING__ACTIVE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -5650,6 +5846,16 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         lifestyleOptionEClass.getESuperTypes().add(this.getQuelle());
         lifestyleOptionEClass.getESuperTypes().add(this.getGeldWert());
         percentLifestyleOptionEClass.getESuperTypes().add(this.getLifestyleOption());
+        fokusEClass.getESuperTypes().add(this.getMagischeStufe());
+        fokusEClass.getESuperTypes().add(this.getBeschreibbar());
+        fokusEClass.getESuperTypes().add(this.getQuelle());
+        fokusEClass.getESuperTypes().add(this.getGeldWert());
+        abstraktFokusEClass.getESuperTypes().add(this.getFokus());
+        abstraktFokusEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
+        qiFokusEClass.getESuperTypes().add(this.getAbstraktFokus());
+        waffenFokusEClass.getESuperTypes().add(this.getNahkampfwaffe());
+        waffenFokusEClass.getESuperTypes().add(this.getFokus());
+        magieFokusEClass.getESuperTypes().add(this.getAbstraktFokus());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5800,6 +6006,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getBaseMagischePersona_Magie(), ecorePackage.getEInt(), "magie", null, 1, 1, BaseMagischePersona.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getBaseMagischePersona_Initationen(), this.getInitation(), null, "initationen", null, 0, -1, BaseMagischePersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getBaseMagischePersona_MagieBasis(), ecorePackage.getEInt(), "magieBasis", null, 1, 1, BaseMagischePersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getBaseMagischePersona_BoundFoki(), this.getFokusBinding(), null, "boundFoki", null, 1, -1, BaseMagischePersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(fernkampfwaffenModifikatorenEClass, FernkampfwaffenModifikatoren.class, "FernkampfwaffenModifikatoren", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getFernkampfwaffenModifikatoren_Smartgun(), this.getSmartgunType(), "smartgun", null, 0, 1, FernkampfwaffenModifikatoren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6177,6 +6384,26 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getBerechneteAttribute_Errinerungsvermoegen(), ecorePackage.getEInt(), "errinerungsvermoegen", null, 1, 1, BerechneteAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getBerechneteAttribute_Menschenkenntnis(), ecorePackage.getEInt(), "menschenkenntnis", null, 1, 1, BerechneteAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
         initEAttribute(getBerechneteAttribute_Selbstbeherrschung(), ecorePackage.getEInt(), "selbstbeherrschung", null, 1, 1, BerechneteAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+        initEClass(magischeStufeEClass, MagischeStufe.class, "MagischeStufe", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMagischeStufe_Stufe(), ecorePackage.getEInt(), "stufe", null, 0, 1, MagischeStufe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(fokusEClass, Fokus.class, "Fokus", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getFokus_Bindungskosten(), ecorePackage.getEInt(), "bindungskosten", null, 1, 1, Fokus.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+        initEClass(abstraktFokusEClass, AbstraktFokus.class, "AbstraktFokus", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(qiFokusEClass, QiFokus.class, "QiFokus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getQiFokus_Power(), this.getKiKraft(), null, "power", null, 1, 1, QiFokus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(waffenFokusEClass, WaffenFokus.class, "WaffenFokus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(magieFokusEClass, MagieFokus.class, "MagieFokus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getMagieFokus_BindungsFaktor(), ecorePackage.getEInt(), "bindungsFaktor", null, 1, 1, MagieFokus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(fokusBindingEClass, FokusBinding.class, "FokusBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getFokusBinding_Fokus(), this.getFokus(), null, "fokus", null, 1, 1, FokusBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getFokusBinding_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, FokusBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

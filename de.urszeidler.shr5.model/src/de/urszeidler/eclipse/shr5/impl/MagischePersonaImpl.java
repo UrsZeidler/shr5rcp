@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
+import de.urszeidler.eclipse.shr5.FokusBinding;
 import de.urszeidler.eclipse.shr5.Initation;
 import de.urszeidler.eclipse.shr5.MagischePersona;
 import de.urszeidler.eclipse.shr5.Schutzgeist;
@@ -29,6 +30,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getMagie <em>Magie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getInitationen <em>Initationen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getMagieBasis <em>Magie Basis</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getBoundFoki <em>Bound Foki</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getMentor <em>Mentor</em>}</li>
  * </ul>
  * </p>
@@ -76,6 +78,16 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	protected int magieBasis = MAGIE_BASIS_EDEFAULT;
 
 	/**
+     * The cached value of the '{@link #getBoundFoki() <em>Bound Foki</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBoundFoki()
+     * @generated
+     * @ordered
+     */
+    protected EList<FokusBinding> boundFoki;
+
+    /**
      * The cached value of the '{@link #getMentor() <em>Mentor</em>}' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +162,18 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 
 	/**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<FokusBinding> getBoundFoki() {
+        if (boundFoki == null) {
+            boundFoki = new EObjectContainmentEList<FokusBinding>(FokusBinding.class, this, Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI);
+        }
+        return boundFoki;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -196,6 +220,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
         switch (featureID) {
             case Shr5Package.MAGISCHE_PERSONA__INITATIONEN:
                 return ((InternalEList<?>)getInitationen()).basicRemove(otherEnd, msgs);
+            case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI:
+                return ((InternalEList<?>)getBoundFoki()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -214,6 +240,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
                 return getInitationen();
             case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
                 return getMagieBasis();
+            case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI:
+                return getBoundFoki();
             case Shr5Package.MAGISCHE_PERSONA__MENTOR:
                 if (resolve) return getMentor();
                 return basicGetMentor();
@@ -237,6 +265,10 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
             case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
                 setMagieBasis((Integer)newValue);
                 return;
+            case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI:
+                getBoundFoki().clear();
+                getBoundFoki().addAll((Collection<? extends FokusBinding>)newValue);
+                return;
             case Shr5Package.MAGISCHE_PERSONA__MENTOR:
                 setMentor((Schutzgeist)newValue);
                 return;
@@ -257,6 +289,9 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
                 return;
             case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
                 setMagieBasis(MAGIE_BASIS_EDEFAULT);
+                return;
+            case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI:
+                getBoundFoki().clear();
                 return;
             case Shr5Package.MAGISCHE_PERSONA__MENTOR:
                 setMentor((Schutzgeist)null);
@@ -279,6 +314,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
                 return initationen != null && !initationen.isEmpty();
             case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS:
                 return magieBasis != MAGIE_BASIS_EDEFAULT;
+            case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI:
+                return boundFoki != null && !boundFoki.isEmpty();
             case Shr5Package.MAGISCHE_PERSONA__MENTOR:
                 return mentor != null;
         }
@@ -297,6 +334,7 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
                 case Shr5Package.MAGISCHE_PERSONA__MAGIE: return Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE;
                 case Shr5Package.MAGISCHE_PERSONA__INITATIONEN: return Shr5Package.BASE_MAGISCHE_PERSONA__INITATIONEN;
                 case Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS: return Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE_BASIS;
+                case Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI: return Shr5Package.BASE_MAGISCHE_PERSONA__BOUND_FOKI;
                 default: return -1;
             }
         }
@@ -315,6 +353,7 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
                 case Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE: return Shr5Package.MAGISCHE_PERSONA__MAGIE;
                 case Shr5Package.BASE_MAGISCHE_PERSONA__INITATIONEN: return Shr5Package.MAGISCHE_PERSONA__INITATIONEN;
                 case Shr5Package.BASE_MAGISCHE_PERSONA__MAGIE_BASIS: return Shr5Package.MAGISCHE_PERSONA__MAGIE_BASIS;
+                case Shr5Package.BASE_MAGISCHE_PERSONA__BOUND_FOKI: return Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI;
                 default: return -1;
             }
         }

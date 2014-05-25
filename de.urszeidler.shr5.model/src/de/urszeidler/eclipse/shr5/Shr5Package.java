@@ -5475,13 +5475,22 @@ public interface Shr5Package extends EPackage {
 	int MAGISCHE_PERSONA__MAGIE_BASIS = KOERPER_PERSONA_FEATURE_COUNT + 2;
 
     /**
+     * The feature id for the '<em><b>Bound Foki</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_PERSONA__BOUND_FOKI = KOERPER_PERSONA_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int MAGISCHE_PERSONA__MENTOR = KOERPER_PERSONA_FEATURE_COUNT + 3;
+	int MAGISCHE_PERSONA__MENTOR = KOERPER_PERSONA_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Magische Persona</em>' class.
@@ -5490,7 +5499,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-	int MAGISCHE_PERSONA_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 4;
+	int MAGISCHE_PERSONA_FEATURE_COUNT = KOERPER_PERSONA_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Magische Persona</em>' class.
@@ -5529,13 +5538,22 @@ public interface Shr5Package extends EPackage {
 	int BASE_MAGISCHE_PERSONA__MAGIE_BASIS = 2;
 
     /**
+     * The feature id for the '<em><b>Bound Foki</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BASE_MAGISCHE_PERSONA__BOUND_FOKI = 3;
+
+    /**
      * The number of structural features of the '<em>Base Magische Persona</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int BASE_MAGISCHE_PERSONA_FEATURE_COUNT = 3;
+	int BASE_MAGISCHE_PERSONA_FEATURE_COUNT = 4;
 
     /**
      * The number of operations of the '<em>Base Magische Persona</em>' class.
@@ -6492,6 +6510,15 @@ public interface Shr5Package extends EPackage {
 	int KI_ADEPT__MAGIE_BASIS = MAGISCHE_PERSONA__MAGIE_BASIS;
 
     /**
+     * The feature id for the '<em><b>Bound Foki</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int KI_ADEPT__BOUND_FOKI = MAGISCHE_PERSONA__BOUND_FOKI;
+
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7338,6 +7365,15 @@ public interface Shr5Package extends EPackage {
 	int MAGIER__MAGIE_BASIS = MAGISCHE_PERSONA__MAGIE_BASIS;
 
     /**
+     * The feature id for the '<em><b>Bound Foki</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIER__BOUND_FOKI = MAGISCHE_PERSONA__BOUND_FOKI;
+
+    /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7957,6 +7993,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int MYSTIC_ADEPT__MAGIE_BASIS = KI_ADEPT__MAGIE_BASIS;
+
+    /**
+     * The feature id for the '<em><b>Bound Foki</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MYSTIC_ADEPT__BOUND_FOKI = KI_ADEPT__BOUND_FOKI;
 
     /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
@@ -8704,6 +8749,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
 	int ASPEKT_MAGIER__MAGIE_BASIS = MAGISCHE_PERSONA__MAGIE_BASIS;
+
+    /**
+     * The feature id for the '<em><b>Bound Foki</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ASPEKT_MAGIER__BOUND_FOKI = MAGISCHE_PERSONA__BOUND_FOKI;
 
     /**
      * The feature id for the '<em><b>Mentor</b></em>' reference.
@@ -17448,6 +17502,877 @@ public interface Shr5Package extends EPackage {
     int BERECHNETE_ATTRIBUTE_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeStufe <em>Magische Stufe</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.MagischeStufe
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeStufe()
+     * @generated
+     */
+    int MAGISCHE_STUFE = 118;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_STUFE__STUFE = 0;
+
+    /**
+     * The number of structural features of the '<em>Magische Stufe</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_STUFE_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Magische Stufe</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGISCHE_STUFE_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.Fokus <em>Fokus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Fokus
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFokus()
+     * @generated
+     */
+    int FOKUS = 119;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__STUFE = MAGISCHE_STUFE__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__BESCHREIBUNG = MAGISCHE_STUFE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__IMAGE = MAGISCHE_STUFE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__NAME = MAGISCHE_STUFE_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__PARENT_ID = MAGISCHE_STUFE_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__LOCALIZATIONS = MAGISCHE_STUFE_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__PAGE = MAGISCHE_STUFE_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__SRC_BOOK = MAGISCHE_STUFE_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__WERT = MAGISCHE_STUFE_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__VERFUEGBARKEIT = MAGISCHE_STUFE_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__WERT_VALUE = MAGISCHE_STUFE_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS__BINDUNGSKOSTEN = MAGISCHE_STUFE_FEATURE_COUNT + 10;
+
+    /**
+     * The number of structural features of the '<em>Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS_FEATURE_COUNT = MAGISCHE_STUFE_FEATURE_COUNT + 11;
+
+    /**
+     * The number of operations of the '<em>Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS_OPERATION_COUNT = MAGISCHE_STUFE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl <em>Abstrakt Fokus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstraktFokus()
+     * @generated
+     */
+    int ABSTRAKT_FOKUS = 120;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__STUFE = FOKUS__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__BESCHREIBUNG = FOKUS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__IMAGE = FOKUS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__NAME = FOKUS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__PARENT_ID = FOKUS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__LOCALIZATIONS = FOKUS__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__PAGE = FOKUS__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__SRC_BOOK = FOKUS__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__WERT = FOKUS__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__VERFUEGBARKEIT = FOKUS__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__WERT_VALUE = FOKUS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__BINDUNGSKOSTEN = FOKUS__BINDUNGSKOSTEN;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__MODS = FOKUS_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Abstrakt Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS_FEATURE_COUNT = FOKUS_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Abstrakt Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS_OPERATION_COUNT = FOKUS_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.QiFokusImpl <em>Qi Fokus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.QiFokusImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getQiFokus()
+     * @generated
+     */
+    int QI_FOKUS = 121;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__STUFE = ABSTRAKT_FOKUS__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__BESCHREIBUNG = ABSTRAKT_FOKUS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__IMAGE = ABSTRAKT_FOKUS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__NAME = ABSTRAKT_FOKUS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__PARENT_ID = ABSTRAKT_FOKUS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__LOCALIZATIONS = ABSTRAKT_FOKUS__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__PAGE = ABSTRAKT_FOKUS__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__SRC_BOOK = ABSTRAKT_FOKUS__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__WERT = ABSTRAKT_FOKUS__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__VERFUEGBARKEIT = ABSTRAKT_FOKUS__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__WERT_VALUE = ABSTRAKT_FOKUS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__BINDUNGSKOSTEN = ABSTRAKT_FOKUS__BINDUNGSKOSTEN;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__MODS = ABSTRAKT_FOKUS__MODS;
+
+    /**
+     * The feature id for the '<em><b>Power</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__POWER = ABSTRAKT_FOKUS_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Qi Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS_FEATURE_COUNT = ABSTRAKT_FOKUS_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Qi Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS_OPERATION_COUNT = ABSTRAKT_FOKUS_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.WaffenFokusImpl <em>Waffen Fokus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.WaffenFokusImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWaffenFokus()
+     * @generated
+     */
+    int WAFFEN_FOKUS = 122;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__PARENT_ID = NAHKAMPFWAFFE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__LOCALIZATIONS = NAHKAMPFWAFFE__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__PAGE = NAHKAMPFWAFFE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__SRC_BOOK = NAHKAMPFWAFFE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__WERT = NAHKAMPFWAFFE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__VERFUEGBARKEIT = NAHKAMPFWAFFE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__WERT_VALUE = NAHKAMPFWAFFE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__BESCHREIBUNG = NAHKAMPFWAFFE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__IMAGE = NAHKAMPFWAFFE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__NAME = NAHKAMPFWAFFE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__MODS = NAHKAMPFWAFFE__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__FERTIGKEIT = NAHKAMPFWAFFE__FERTIGKEIT;
+
+    /**
+     * The feature id for the '<em><b>Schadenscode</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__SCHADENSCODE = NAHKAMPFWAFFE__SCHADENSCODE;
+
+    /**
+     * The feature id for the '<em><b>Schades Typ</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__SCHADES_TYP = NAHKAMPFWAFFE__SCHADES_TYP;
+
+    /**
+     * The feature id for the '<em><b>Praezision</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__PRAEZISION = NAHKAMPFWAFFE__PRAEZISION;
+
+    /**
+     * The feature id for the '<em><b>Durchschlags Kraft</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__DURCHSCHLAGS_KRAFT = NAHKAMPFWAFFE__DURCHSCHLAGS_KRAFT;
+
+    /**
+     * The feature id for the '<em><b>Reichweite</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__REICHWEITE = NAHKAMPFWAFFE__REICHWEITE;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__STUFE = NAHKAMPFWAFFE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS__BINDUNGSKOSTEN = NAHKAMPFWAFFE_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Waffen Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS_FEATURE_COUNT = NAHKAMPFWAFFE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of operations of the '<em>Waffen Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int WAFFEN_FOKUS_OPERATION_COUNT = NAHKAMPFWAFFE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.MagieFokusImpl <em>Magie Fokus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.MagieFokusImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagieFokus()
+     * @generated
+     */
+    int MAGIE_FOKUS = 123;
+
+    /**
+     * The feature id for the '<em><b>Stufe</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__STUFE = ABSTRAKT_FOKUS__STUFE;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__BESCHREIBUNG = ABSTRAKT_FOKUS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__IMAGE = ABSTRAKT_FOKUS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__NAME = ABSTRAKT_FOKUS__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__PARENT_ID = ABSTRAKT_FOKUS__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__LOCALIZATIONS = ABSTRAKT_FOKUS__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__PAGE = ABSTRAKT_FOKUS__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__SRC_BOOK = ABSTRAKT_FOKUS__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__WERT = ABSTRAKT_FOKUS__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__VERFUEGBARKEIT = ABSTRAKT_FOKUS__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__WERT_VALUE = ABSTRAKT_FOKUS__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__BINDUNGSKOSTEN = ABSTRAKT_FOKUS__BINDUNGSKOSTEN;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__MODS = ABSTRAKT_FOKUS__MODS;
+
+    /**
+     * The feature id for the '<em><b>Bindungs Faktor</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__BINDUNGS_FAKTOR = ABSTRAKT_FOKUS_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Magie Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS_FEATURE_COUNT = ABSTRAKT_FOKUS_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Magie Fokus</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS_OPERATION_COUNT = ABSTRAKT_FOKUS_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.FokusBindingImpl <em>Fokus Binding</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.FokusBindingImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFokusBinding()
+     * @generated
+     */
+    int FOKUS_BINDING = 124;
+
+    /**
+     * The feature id for the '<em><b>Fokus</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS_BINDING__FOKUS = 0;
+
+    /**
+     * The feature id for the '<em><b>Active</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS_BINDING__ACTIVE = 1;
+
+    /**
+     * The number of structural features of the '<em>Fokus Binding</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS_BINDING_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Fokus Binding</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int FOKUS_BINDING_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17455,7 +18380,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 118;
+	int FEUER_MODUS = 125;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -17465,7 +18390,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 119;
+	int SCHADENS_TYP = 126;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -17475,7 +18400,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 120;
+	int MAGAZIN_TYP = 127;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -17485,7 +18410,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 121;
+	int FEUWERWAFFEN_ERWEITERUNG = 128;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -17495,7 +18420,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 122;
+	int MODIFIKATOR_TYPE = 129;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -17505,7 +18430,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 123;
+	int SMARTGUN_TYPE = 130;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -17515,7 +18440,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 124;
+	int ZAUBER_ART = 131;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -17525,7 +18450,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 125;
+	int ZAUBER_REICHWEITE = 132;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -17535,7 +18460,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 126;
+	int ZAUBER_DAUER = 133;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -17545,7 +18470,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 127;
+	int MAGISCHE_TRADITION = 134;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -17555,7 +18480,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 128;
+	int CRITTER_HANDLUNG = 135;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -17565,7 +18490,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 129;
+	int CRITTER_REICHWEITE = 136;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -17575,7 +18500,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 130;
+	int CRITTER_DAUER = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -17585,7 +18510,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 131;
+	int RESONANZ_ZIEL = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -17595,7 +18520,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 132;
+    int INTERFACE_MODUS = 139;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -17605,7 +18530,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 133;
+    int PROGRAM_TYPE = 140;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -17615,7 +18540,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 134;
+    int MATRIX_PROGRAM_TYPE = 141;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -17625,7 +18550,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 135;
+	int SHR_DATE = 142;
 
 
 	/**
@@ -17636,7 +18561,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 136;
+	int MODIFICATION_MANAGER = 143;
 
 
 	/**
@@ -18871,6 +19796,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getBaseMagischePersona_MagieBasis();
 
 	/**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.eclipse.shr5.BaseMagischePersona#getBoundFoki <em>Bound Foki</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Bound Foki</em>'.
+     * @see de.urszeidler.eclipse.shr5.BaseMagischePersona#getBoundFoki()
+     * @see #getBaseMagischePersona()
+     * @generated
+     */
+    EReference getBaseMagischePersona_BoundFoki();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren <em>Fernkampfwaffen Modifikatoren</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21370,6 +22306,142 @@ public interface Shr5Package extends EPackage {
     EAttribute getBerechneteAttribute_Selbstbeherrschung();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MagischeStufe <em>Magische Stufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Magische Stufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.MagischeStufe
+     * @generated
+     */
+    EClass getMagischeStufe();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MagischeStufe#getStufe <em>Stufe</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Stufe</em>'.
+     * @see de.urszeidler.eclipse.shr5.MagischeStufe#getStufe()
+     * @see #getMagischeStufe()
+     * @generated
+     */
+    EAttribute getMagischeStufe_Stufe();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Fokus <em>Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Fokus</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fokus
+     * @generated
+     */
+    EClass getFokus();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Fokus#getBindungskosten <em>Bindungskosten</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Bindungskosten</em>'.
+     * @see de.urszeidler.eclipse.shr5.Fokus#getBindungskosten()
+     * @see #getFokus()
+     * @generated
+     */
+    EAttribute getFokus_Bindungskosten();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AbstraktFokus <em>Abstrakt Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Abstrakt Fokus</em>'.
+     * @see de.urszeidler.eclipse.shr5.AbstraktFokus
+     * @generated
+     */
+    EClass getAbstraktFokus();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.QiFokus <em>Qi Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Qi Fokus</em>'.
+     * @see de.urszeidler.eclipse.shr5.QiFokus
+     * @generated
+     */
+    EClass getQiFokus();
+
+    /**
+     * Returns the meta object for the containment reference '{@link de.urszeidler.eclipse.shr5.QiFokus#getPower <em>Power</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Power</em>'.
+     * @see de.urszeidler.eclipse.shr5.QiFokus#getPower()
+     * @see #getQiFokus()
+     * @generated
+     */
+    EReference getQiFokus_Power();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.WaffenFokus <em>Waffen Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Waffen Fokus</em>'.
+     * @see de.urszeidler.eclipse.shr5.WaffenFokus
+     * @generated
+     */
+    EClass getWaffenFokus();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.MagieFokus <em>Magie Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Magie Fokus</em>'.
+     * @see de.urszeidler.eclipse.shr5.MagieFokus
+     * @generated
+     */
+    EClass getMagieFokus();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.MagieFokus#getBindungsFaktor <em>Bindungs Faktor</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Bindungs Faktor</em>'.
+     * @see de.urszeidler.eclipse.shr5.MagieFokus#getBindungsFaktor()
+     * @see #getMagieFokus()
+     * @generated
+     */
+    EAttribute getMagieFokus_BindungsFaktor();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.FokusBinding <em>Fokus Binding</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Fokus Binding</em>'.
+     * @see de.urszeidler.eclipse.shr5.FokusBinding
+     * @generated
+     */
+    EClass getFokusBinding();
+
+    /**
+     * Returns the meta object for the reference '{@link de.urszeidler.eclipse.shr5.FokusBinding#getFokus <em>Fokus</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Fokus</em>'.
+     * @see de.urszeidler.eclipse.shr5.FokusBinding#getFokus()
+     * @see #getFokusBinding()
+     * @generated
+     */
+    EReference getFokusBinding_Fokus();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.FokusBinding#isActive <em>Active</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Active</em>'.
+     * @see de.urszeidler.eclipse.shr5.FokusBinding#isActive()
+     * @see #getFokusBinding()
+     * @generated
+     */
+    EAttribute getFokusBinding_Active();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -23213,6 +24285,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute BASE_MAGISCHE_PERSONA__MAGIE_BASIS = eINSTANCE.getBaseMagischePersona_MagieBasis();
 
 		/**
+         * The meta object literal for the '<em><b>Bound Foki</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference BASE_MAGISCHE_PERSONA__BOUND_FOKI = eINSTANCE.getBaseMagischePersona_BoundFoki();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren <em>Fernkampfwaffen Modifikatoren</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25203,6 +26283,124 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EAttribute BERECHNETE_ATTRIBUTE__SELBSTBEHERRSCHUNG = eINSTANCE.getBerechneteAttribute_Selbstbeherrschung();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.MagischeStufe <em>Magische Stufe</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.MagischeStufe
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeStufe()
+         * @generated
+         */
+        EClass MAGISCHE_STUFE = eINSTANCE.getMagischeStufe();
+
+        /**
+         * The meta object literal for the '<em><b>Stufe</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MAGISCHE_STUFE__STUFE = eINSTANCE.getMagischeStufe_Stufe();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.Fokus <em>Fokus</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.Fokus
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFokus()
+         * @generated
+         */
+        EClass FOKUS = eINSTANCE.getFokus();
+
+        /**
+         * The meta object literal for the '<em><b>Bindungskosten</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FOKUS__BINDUNGSKOSTEN = eINSTANCE.getFokus_Bindungskosten();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl <em>Abstrakt Fokus</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAbstraktFokus()
+         * @generated
+         */
+        EClass ABSTRAKT_FOKUS = eINSTANCE.getAbstraktFokus();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.QiFokusImpl <em>Qi Fokus</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.QiFokusImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getQiFokus()
+         * @generated
+         */
+        EClass QI_FOKUS = eINSTANCE.getQiFokus();
+
+        /**
+         * The meta object literal for the '<em><b>Power</b></em>' containment reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference QI_FOKUS__POWER = eINSTANCE.getQiFokus_Power();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.WaffenFokusImpl <em>Waffen Fokus</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.WaffenFokusImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getWaffenFokus()
+         * @generated
+         */
+        EClass WAFFEN_FOKUS = eINSTANCE.getWaffenFokus();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.MagieFokusImpl <em>Magie Fokus</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.MagieFokusImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagieFokus()
+         * @generated
+         */
+        EClass MAGIE_FOKUS = eINSTANCE.getMagieFokus();
+
+        /**
+         * The meta object literal for the '<em><b>Bindungs Faktor</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute MAGIE_FOKUS__BINDUNGS_FAKTOR = eINSTANCE.getMagieFokus_BindungsFaktor();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.FokusBindingImpl <em>Fokus Binding</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.FokusBindingImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFokusBinding()
+         * @generated
+         */
+        EClass FOKUS_BINDING = eINSTANCE.getFokusBinding();
+
+        /**
+         * The meta object literal for the '<em><b>Fokus</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference FOKUS_BINDING__FOKUS = eINSTANCE.getFokusBinding_Fokus();
+
+        /**
+         * The meta object literal for the '<em><b>Active</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute FOKUS_BINDING__ACTIVE = eINSTANCE.getFokusBinding_Active();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
