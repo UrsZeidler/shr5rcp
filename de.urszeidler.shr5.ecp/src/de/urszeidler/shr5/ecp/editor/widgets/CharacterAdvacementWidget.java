@@ -42,13 +42,22 @@ import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.commons.functors.Transformer;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.Fokus;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
 import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
+import de.urszeidler.eclipse.shr5.WaffenFokus;
+import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
 import de.urszeidler.eclipse.shr5Management.Changes;
@@ -105,21 +114,9 @@ public class CharacterAdvacementWidget extends Composite {
                 } else if (Shr5Package.Literals.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN.equals(currentOperation.feature)) {
                     Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(),
                             Shr5Package.Literals.FERTIGKEITS_GRUPPE);
-                    Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe> transformer = ShadowrunEditingTools.fertigkeitsGruppe2PersonafertigkeitsGruppeTransformer(character);
-                    
-//                            
-//                            new Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe>() {
-//                        @Override
-//                        public PersonaFertigkeitsGruppe transform(FertigkeitsGruppe input) {
-//                            PersonaFertigkeitsGruppe gruppe = ShadowrunTools.findGruppe(input, character.getPersona());
-//                            if (gruppe == null) {
-//                                gruppe = Shr5Factory.eINSTANCE.createPersonaFertigkeitsGruppe();
-//                                gruppe.setGruppe(input);
-//                            }
-//                            return gruppe;
-//                        }
-//
-//                    };
+                    Transformer<FertigkeitsGruppe, PersonaFertigkeitsGruppe> transformer = ShadowrunEditingTools
+                            .fertigkeitsGruppe2PersonafertigkeitsGruppeTransformer(character);
+
                     handleSingleReference(transformer, e, list, getShell());
                     updateToolbars();
                     return;
@@ -131,26 +128,44 @@ public class CharacterAdvacementWidget extends Composite {
                     handleSingleReference(transformer, e, list, getShell());
                     updateToolbars();
                     return;
-                }
-                else if (Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN.equals(currentOperation.feature)) {
-                     
+                } else if (Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN.equals(currentOperation.feature)) {
+
                     EList<PersonaFertigkeit> fertigkeiten = character.getPersona().getFertigkeiten();
                     ArrayList<Spezialisierung> arrayList = new ArrayList<Spezialisierung>();
                     for (PersonaFertigkeit personaFertigkeit : fertigkeiten) {
                         Fertigkeit fertigkeit = personaFertigkeit.getFertigkeit();
-                        if(fertigkeit!=null){
+                        if (fertigkeit != null) {
                             arrayList.addAll(fertigkeit.getSpezialisierungen());
                         }
                     }
-                    
-                   // Transformer<Fertigkeit, PersonaFertigkeit> transformer = ShadowrunEditingTools.fertigkeit2PersonafertigkeitTransformer(character);
+
+                    // Transformer<Fertigkeit, PersonaFertigkeit> transformer =
+                    // ShadowrunEditingTools.fertigkeit2PersonafertigkeitTransformer(character);
                     handleSingleReference(e, arrayList, getShell());
                     updateToolbars();
                     return;
                 }
 
-            }
+                else if (Shr5Package.Literals.FOKUS_BINDING__FOKUS.equals(currentOperation.feature)) {
+                    EList<AbstraktGegenstand> inventar = character.getInventar();
+                    ArrayList<Fokus> list = new ArrayList<Fokus>();
+                    for (AbstraktGegenstand abstraktGegenstand : inventar) {
+                        if (abstraktGegenstand instanceof WaffenFokus)
+                            list.add((Fokus)abstraktGegenstand);
 
+                        if (abstraktGegenstand instanceof QiFokus) {
+                            if (character.getPersona() instanceof KiAdept)
+                                list.add((Fokus)abstraktGegenstand);
+
+                        } else if (abstraktGegenstand instanceof MagieFokus)
+                            if (character.getPersona() instanceof Zauberer)
+                                list.add((Fokus)abstraktGegenstand);
+                    }
+                    handleSingleReference(e, list, getShell());
+                    updateToolbars();
+                    return;
+                }
+            }
             if (currentOperation.feature != null) {
                 Collection<EObject> list = ItemPropertyDescriptor.getReachableObjectsOfType(character.getPersona(),
                         currentOperation.feature.getEType());
@@ -520,8 +535,7 @@ public class CharacterAdvacementWidget extends Composite {
 
     private void updateToolbars() {
         boolean enabled = currentChange != null && !currentChange.isChangeApplied();
-        boolean canSpend = currentChange == null ? false : 0 <= currentChange.getKarmaCost()
-                + character.getCurrentKarma();
+        boolean canSpend = currentChange == null ? false : 0 <= currentChange.getKarmaCost() + character.getCurrentKarma();
 
         boolean changeableSelected = false;
         if (currentChange instanceof PersonaChange) {
@@ -586,6 +600,14 @@ public class CharacterAdvacementWidget extends Composite {
         op.add = false;
         op.feature = Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN;
         selectableChanges.add(op);
+
+        if (character.getPersona() instanceof BaseMagischePersona) {
+            op = new ChangeOperation();
+            op.type = Shr5managementPackage.Literals.PERSONA_CHANGE;
+            op.add = true;
+            op.feature = Shr5Package.Literals.FOKUS_BINDING__FOKUS;
+            selectableChanges.add(op);
+        }
 
     }
 
