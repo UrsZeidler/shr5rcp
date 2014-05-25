@@ -2900,7 +2900,7 @@
         </mods>
         <localizations xmi:id="_BptwEd0CEeOvVYoRsPZlnA" local="de" name="Riggerkontrolle 1"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_hwmJwOHgEeOcvI1G0ud0MA" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" name="Control Rig 2" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="97000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_hwmJwOHgEeOcvI1G0ud0MA" name="Control Rig 2" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="97000">
         <mods xmi:id="_hwmJweHgEeOcvI1G0ud0MA" wert="-200">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -2909,7 +2909,7 @@
         </mods>
         <localizations xmi:id="_hwmJw-HgEeOcvI1G0ud0MA" local="de" name="Riggerkontrolle 2"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="_iED4UOHgEeOcvI1G0ud0MA" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" name="Control Rig 3" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="43000">
+      <entries xsi:type="shr5:Cyberware" xmi:id="_iED4UOHgEeOcvI1G0ud0MA" name="Control Rig 3" parentId="e5fef29b-8a5d-4633-a3f4-977b8ca8bfab" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="43000">
         <mods xmi:id="_iED4UeHgEeOcvI1G0ud0MA" wert="-300">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4255,7 +4255,7 @@
         </mods>
         <localizations xmi:id="_eiiAYuHiEeOcvI1G0ud0MA" local="de" name="Muskelstraffung 1"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" xmi:id="_e7sHQOHiEeOcvI1G0ud0MA" name="Muscle toner 2" page="459" parentId="_eiiAYOHiEeOcvI1G0ud0MA" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="64000">
+      <entries xsi:type="shr5:BioWare" xmi:id="_e7sHQOHiEeOcvI1G0ud0MA" name="Muscle toner 2" parentId="_eiiAYOHiEeOcvI1G0ud0MA" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="64000">
         <mods xmi:id="_e7sHQeHiEeOcvI1G0ud0MA" wert="-40">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4264,7 +4264,7 @@
         </mods>
         <localizations xmi:id="_e7sHQuHiEeOcvI1G0ud0MA" local="de" name="Muskelstraffung 2"/>
       </entries>
-      <entries xsi:type="shr5:BioWare" name="Muscle toner 3"  parentId="_eiiAYOHiEeOcvI1G0ud0MA" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="15R" wertValue="96000">
+      <entries xsi:type="shr5:BioWare" xmi:id="_It8_wOQREeOhxLDnSc6_eQ" name="Muscle toner 3" parentId="_eiiAYOHiEeOcvI1G0ud0MA" page="459" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="15R" wertValue="96000">
         <mods xmi:id="_Br8ksN0CEeOvVYoRsPZlnA" wert="-60">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
@@ -4353,7 +4353,7 @@
         <lifestyleToStartMoney xmi:id="_BtQMQt0CEeOvVYoRsPZlnA" numberOfW="4" moneyFactor="100" lifeStyles="25e7fe19-0dc2-4d2b-b134-035259ea321a"/>
         <lifestyleToStartMoney xmi:id="_BtQMQ90CEeOvVYoRsPZlnA" numberOfW="5" moneyFactor="500" lifeStyles="141d339c-d514-44e6-aab4-94768e68cac3"/>
         <lifestyleToStartMoney xmi:id="_BtQMRN0CEeOvVYoRsPZlnA" numberOfW="6" moneyFactor="1000" lifeStyles="43141722-bea8-496f-bdd6-4e4e858e1269"/>
-        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" source="_qMcKIOHfEeOcvI1G0ud0MA" targets="_eiiAYOHiEeOcvI1G0ud0MA _TG1U1N6PEeO-HcYx5lqBsQ"/>
+        <additionalConstrains xmi:id="_7AbnUN2jEeO66bIqzwiwnA" source="_qMcKIOHfEeOcvI1G0ud0MA" targets="_eiiAYOHiEeOcvI1G0ud0MA"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18N0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="9"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bsv18d0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="8"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_BswdAN0CEeOvVYoRsPZlnA" categorieName="A" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="7"/>
@@ -4501,7 +4501,7 @@
         <lifestyleToStartMoney xmi:id="_djpB6OJ0EeOht_G61YAQvg" numberOfW="4" moneyFactor="100" lifeStyles="25e7fe19-0dc2-4d2b-b134-035259ea321a"/>
         <lifestyleToStartMoney xmi:id="_djpB6eJ0EeOht_G61YAQvg" numberOfW="5" moneyFactor="500" lifeStyles="141d339c-d514-44e6-aab4-94768e68cac3"/>
         <lifestyleToStartMoney xmi:id="_djpB6uJ0EeOht_G61YAQvg" numberOfW="6" moneyFactor="1000" lifeStyles="43141722-bea8-496f-bdd6-4e4e858e1269"/>
-        <additionalConstrains xmi:id="_djpB6-J0EeOht_G61YAQvg" source="_qMcKIOHfEeOcvI1G0ud0MA" targets="_eiiAYOHiEeOcvI1G0ud0MA _TG1U1N6PEeO-HcYx5lqBsQ"/>
+        <additionalConstrains xmi:id="_djpB6-J0EeOht_G61YAQvg" source="_qMcKIOHfEeOcvI1G0ud0MA" targets="_eiiAYOHiEeOcvI1G0ud0MA"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8eJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="7"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8uJ0EeOht_G61YAQvg" categorieName="A" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f" specialPoints="6"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB8-J0EeOht_G61YAQvg" categorieName="A" choosableTypes="70f618bf-7e17-4e32-b2c2-70f57a0c1895" specialPoints="4"/>
@@ -11878,6 +11878,38 @@
       <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPMt0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 3" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="3" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
       <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPM90XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 2" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="2" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
       <entries xsi:type="shr5:AutoSoft" xmi:id="_4uQPNN0XEeOr2LH4Zw5PzA" wertValue="500" name="Clearsight 1" parentId="_FQGKcN0OEeOi36bbLfd2XQ" page="446" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" rating="1" skill="132783c1-780e-4021-875c-c8763e729e2d"/>
+    </entries>
+    <entries xsi:type="shr5:ShrList" xmi:id="_Oz-i0OQREeOhxLDnSc6_eQ" beschreibung="Some foki test." name="Foki">
+      <entries xsi:type="shr5:WaffenFokus" xmi:id="_Oz-i0eQREeOhxLDnSc6_eQ" verfuegbarkeit="9R" wertValue="7000" name="Knife 3" schadenscode="STR+1P" praezision="4" durchschlagsKraft="-2" stufe="3"/>
+      <entries xsi:type="shr5:QiFokus" xmi:id="_Oz-i0uQREeOhxLDnSc6_eQ" verfuegbarkeit="3R" wertValue="3000" name="Qi fokus 1">
+        <power xmi:id="_Oz-i0-QREeOhxLDnSc6_eQ" name="Danger Sense 1" page="309" kraftpunkte="-25">
+          <localizations xmi:id="_Oz-i1OQREeOhxLDnSc6_eQ" local="de" name="Gefahrensinn"/>
+          <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        </power>
+      </entries>
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_bcYNwOQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="4R" wertValue="9000" name="Metamagic Focus Focus 1" bindungsFaktor="3">
+        <localizations xmi:id="_lQE8cOQREeOhxLDnSc6_eQ" local="de" name="Metamagie Fokus 1" page="318"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_Oz-i1eQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="3R" wertValue="5000" name="Enchanting Focus 1" bindungsFaktor="3">
+        <localizations xmi:id="_vu5rwOQREeOhxLDnSc6_eQ" local="de" name="Verzauberungs Fokus 1" page="318"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_h0N5kOQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="3R" wertValue="18000" name="Power Focus Focus 1" bindungsFaktor="6">
+        <localizations xmi:id="_qqtZIOQREeOhxLDnSc6_eQ" local="de" name="Kraft Fokus 1" page="318"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+        <mods xmi:id="_iztLMOQSEeOhxLDnSc6_eQ" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie"/>
+        </mods>
+      </entries>
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_7w_koOQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="3R" wertValue="4000" name="Spirit Focus 1" bindungsFaktor="2">
+        <localizations xmi:id="_7w_koeQREeOhxLDnSc6_eQ" local="de" name="Geister Fokus 1" page="318"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_L3sicOQSEeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="4R" wertValue="4000" name="Spell Focus 1" bindungsFaktor="3">
+        <localizations xmi:id="_L3siceQSEeOhxLDnSc6_eQ" local="de" name="Zauber Fokus 1" page="318"/>
+        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
+      </entries>
     </entries>
   </entries>
   <entries xsi:type="shr5mngt:PlayerManagement" xmi:id="_BzL1IN0CEeOvVYoRsPZlnA" name="my player">
