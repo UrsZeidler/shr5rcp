@@ -166,11 +166,8 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      */
     public void testGetKarmaCost_SkillSpecialism() {
         PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
-        int value = personaFertigkeit.getStufe();
         Spezialisierung spezialisierung = personaFertigkeit.getFertigkeit().getSpezialisierungen().get(0);
         getFixture().setChangeable(spezialisierung);
-        // getFixture().setFrom(2);
-        // getFixture().setTo(3);
 
         playerCharacter.getChanges().add(getFixture());
         assertEquals(-7, getFixture().getKarmaCost());
@@ -272,7 +269,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      */
     public void testApplyChanges_SkillSpecalism_Add() {
         PersonaFertigkeit personaFertigkeit = playerCharacter.getPersona().getFertigkeiten().get(0);
-        int value = personaFertigkeit.getStufe();
         Spezialisierung spezialisierung = personaFertigkeit.getFertigkeit().getSpezialisierungen().get(0);
         getFixture().setChangeable(spezialisierung);
 
