@@ -15,7 +15,7 @@
     </input>
     <ownedModuleElement xsi:type="mtl:Query" name="getOrderedAttibutes" visibility="Public" type="/3/Sequence(EAttribute)">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="214" endPosition="251" value="&#xA;The documentation of the query&#xA;&#xA;"/>
+        <body startPosition="217" endPosition="254" value="&#xA;The documentation of the query&#xA;&#xA;"/>
       </documentation>
       <parameter name="anOclAny">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
@@ -36,7 +36,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="getOrderedAttibutesForPersona" visibility="Public" type="/3/Sequence(EAttribute)">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="433" endPosition="485" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="436" endPosition="488" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -67,7 +67,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="getOrderedBasedAttibutesForPersona" visibility="Public" type="/3/Sequence(EAttribute)">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="728" endPosition="780" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="731" endPosition="783" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -98,7 +98,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="base2Calced" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="1033" endPosition="1085" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="1036" endPosition="1088" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -130,7 +130,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="base2SpeciesMin" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="1278" endPosition="1330" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="1281" endPosition="1333" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -162,7 +162,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="base2SpeciesMax" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="1531" endPosition="1583" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="1534" endPosition="1586" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -192,9 +192,83 @@
       </expression>
       <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
     </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="attributeValue" visibility="Public" type="/3/Sequence(OclAny)">
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="1787" endPosition="1896" value="&#xA;Returns the attribute value when altered than with the altered value.&#xA;@param persona&#xA;@param arg1&#xA;&#xA;"/>
+        <parametersDocumentation name="persona">
+          <body value=""/>
+        </parametersDocumentation>
+        <parametersDocumentation name="arg1">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+      <parameter name="attribute">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/23">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="attributeValue(de.urszeidler.eclipse.shr5.AbstraktPersona,org.eclipse.emf.ecore.EAttribute)">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(OclAny)" kind="Sequence">
+          <part xsi:type="ocl.ecore:CollectionItem">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            <item xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/attributeValue/persona">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            </item>
+          </part>
+          <part xsi:type="ocl.ecore:CollectionItem">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+            <item xsi:type="ocl.ecore:VariableExp" name="attribute" referredVariable="/0/attributeValue/attribute">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+            </item>
+          </part>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="fertigkeitsGruppenToFertigkeiten" visibility="Public" type="/3/Sequence(Beschreibbar)">
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="2191" endPosition="2263" value="&#xA;Collects all fertigkeiten and groups in a list.&#xA;@param persona&#xA;&#xA;"/>
+        <parametersDocumentation name="persona">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="persona">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/26">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </source>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="fertigkeitsGruppenToFertigkeiten(de.urszeidler.eclipse.shr5.AbstraktPersona)">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(AbstraktPersona)" kind="Sequence">
+          <part xsi:type="ocl.ecore:CollectionItem">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            <item xsi:type="ocl.ecore:VariableExp" name="persona" referredVariable="/0/fertigkeitsGruppenToFertigkeiten/persona">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+            </item>
+          </part>
+        </argument>
+      </expression>
+    </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="filterSkillGroups" visibility="Public" type="/3/Sequence(OclAny)">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="1784" endPosition="1851" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="2532" endPosition="2599" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -208,7 +282,7 @@
       <parameter name="arg1" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/23">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/29">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -232,7 +306,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="getEssencesValue" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="2109" endPosition="2161" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="2857" endPosition="2909" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -242,7 +316,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/26">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/32">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktModifikatoren"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -264,7 +338,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="getModificatorValue" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="2388" endPosition="2455" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="3136" endPosition="3203" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -280,7 +354,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/29">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/35">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktModifikatoren"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -308,7 +382,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="createPersona" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="2747" endPosition="2829" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
+        <body startPosition="3495" endPosition="3577" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -330,7 +404,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/32">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/38">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Spezies"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -364,7 +438,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcListenWertToString" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="3105" endPosition="3157" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="3853" endPosition="3905" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -372,7 +446,7 @@
       <parameter name="arg0" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/35"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/41"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -389,7 +463,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcListenWert" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="3356" endPosition="3408" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="4104" endPosition="4156" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -397,7 +471,7 @@
       <parameter name="arg0" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/38"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/44"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -414,7 +488,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="findFertigkeitValue" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="3589" endPosition="3656" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="4337" endPosition="4404" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -430,7 +504,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/41">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/47">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -458,7 +532,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="fertigkeitDicePoolValue" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="3955" endPosition="4022" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="4703" endPosition="4770" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -474,7 +548,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/44">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/50">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeit"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -502,7 +576,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="findGruppe" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="4346" endPosition="4413" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="5094" endPosition="5161" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -518,7 +592,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/47">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/53">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -546,7 +620,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="findFertigkeitValue" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="4711" endPosition="4778" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="5459" endPosition="5526" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -562,7 +636,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/50">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/56">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -590,7 +664,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="findFertigkeit" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="5063" endPosition="5130" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="5811" endPosition="5878" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -606,7 +680,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/53">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/59">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -634,7 +708,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcRaceMaximum" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="5415" endPosition="5482" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="6163" endPosition="6230" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -650,7 +724,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/56">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/62">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -678,7 +752,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="hasFertigkeitUnderGroup" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="5754" endPosition="5821" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
+        <body startPosition="6502" endPosition="6569" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -694,7 +768,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/59">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/65">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -722,7 +796,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcKarmaCosts" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="6128" endPosition="6210" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
+        <body startPosition="6876" endPosition="6958" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -744,7 +818,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/62">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/68">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -778,7 +852,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="essenzToFloat" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="6418" endPosition="6500" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
+        <body startPosition="7166" endPosition="7248" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;@param arg1&#xA;@param arg2&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -794,7 +868,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/65">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/71">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
@@ -816,7 +890,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcEssenceSum" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="6659" endPosition="6711" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="7407" endPosition="7459" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -824,7 +898,7 @@
       <parameter name="arg0" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/68"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/74"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -841,7 +915,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="calcKiPowerSum" visibility="Public">
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="6895" endPosition="6947" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
+        <body startPosition="7643" endPosition="7695" value="&#xA;The documentation of the query&#xA;@param arg0&#xA;&#xA;"/>
         <parametersDocumentation name="arg0">
           <body value=""/>
         </parametersDocumentation>
@@ -849,7 +923,7 @@
       <parameter name="arg0" eType="/3/Sequence(OclAny)"/>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/71"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="/3/Sequence(OclAny)" referredVariable="/77"/>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="de.urszeidler.eclipse.shr5.util.ShadowrunTools">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
@@ -940,6 +1014,27 @@
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
         <eParameters name="arg0">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="attributeValue" eType="/3/Sequence(OclAny)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/attributeValue"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+        </eParameters>
+        <eParameters name="attribute">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="fertigkeitsGruppenToFertigkeiten" eType="/3/Sequence(Beschreibbar)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/fertigkeitsGruppenToFertigkeiten"/>
+        <eParameters name="persona">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
         </eParameters>
       </eOperations>
       <eOperations name="filterSkillGroups" eType="/3/Sequence(OclAny)">
@@ -1223,6 +1318,9 @@
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
       <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Beschreibbar)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Beschreibbar"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclVoid)" instanceClassName="java.util.List">
       <elementType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
     </eClassifiers>
@@ -1233,9 +1331,6 @@
       <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktModifikatoren"/>
     </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Sequence(OclAny))" instanceClassName="java.util.List" elementType="/3/Sequence(OclAny)"/>
-    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Beschreibbar)" instanceClassName="java.util.List">
-      <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Beschreibbar"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Integer)" instanceClassName="java.util.List">
       <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
     </eClassifiers>
@@ -1290,6 +1385,24 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -1438,23 +1551,23 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/getOrderedAttibutes">
-      <details key="start" value="254"/>
-      <details key="end" value="428"/>
-      <details key="line" value="10"/>
+      <details key="start" value="257"/>
+      <details key="end" value="431"/>
+      <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/getOrderedAttibutes/%">
-      <details key="start" value="211"/>
-      <details key="end" value="253"/>
+      <details key="start" value="214"/>
+      <details key="end" value="256"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/getOrderedAttibutes/anOclAny">
-      <details key="start" value="288"/>
-      <details key="end" value="304"/>
-      <details key="line" value="10"/>
+      <details key="start" value="291"/>
+      <details key="end" value="307"/>
+      <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/getOrderedAttibutes/%.1">
-      <details key="start" value="332"/>
-      <details key="end" value="425"/>
+      <details key="start" value="335"/>
+      <details key="end" value="428"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/getOrderedAttibutes/%.1/self">
@@ -1463,28 +1576,28 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/getOrderedAttibutes/%.1/%">
-      <details key="start" value="339"/>
-      <details key="end" value="387"/>
+      <details key="start" value="342"/>
+      <details key="end" value="390"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/getOrderedAttibutes/%.1/%.1">
-      <details key="start" value="389"/>
-      <details key="end" value="412"/>
+      <details key="start" value="392"/>
+      <details key="end" value="415"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/getOrderedAttibutes/%.1/%.2">
-      <details key="start" value="414"/>
-      <details key="end" value="424"/>
+      <details key="start" value="417"/>
+      <details key="end" value="427"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/getOrderedAttibutesForPersona">
-      <details key="start" value="488"/>
-      <details key="end" value="724"/>
-      <details key="line" value="18"/>
+      <details key="start" value="491"/>
+      <details key="end" value="727"/>
+      <details key="line" value="21"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/getOrderedAttibutesForPersona/%">
-      <details key="start" value="430"/>
-      <details key="end" value="487"/>
+      <details key="start" value="433"/>
+      <details key="end" value="490"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/getOrderedAttibutesForPersona/%/arg0">
@@ -1493,13 +1606,13 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/getOrderedAttibutesForPersona/arg0">
-      <details key="start" value="532"/>
-      <details key="end" value="554"/>
-      <details key="line" value="18"/>
+      <details key="start" value="535"/>
+      <details key="end" value="557"/>
+      <details key="line" value="21"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/getOrderedAttibutesForPersona/%.1">
-      <details key="start" value="582"/>
-      <details key="end" value="721"/>
+      <details key="start" value="585"/>
+      <details key="end" value="724"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/getOrderedAttibutesForPersona/%.1/self">
@@ -1508,33 +1621,33 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/getOrderedAttibutesForPersona/%.1/%">
-      <details key="start" value="589"/>
-      <details key="end" value="637"/>
+      <details key="start" value="592"/>
+      <details key="end" value="640"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/getOrderedAttibutesForPersona/%.1/%.1">
-      <details key="start" value="639"/>
-      <details key="end" value="704"/>
+      <details key="start" value="642"/>
+      <details key="end" value="707"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/getOrderedAttibutesForPersona/%.1/%.2">
-      <details key="start" value="706"/>
-      <details key="end" value="720"/>
+      <details key="start" value="709"/>
+      <details key="end" value="723"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/getOrderedAttibutesForPersona/%.1/%.2/%/arg0">
-      <details key="start" value="715"/>
-      <details key="end" value="719"/>
+      <details key="start" value="718"/>
+      <details key="end" value="722"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/getOrderedBasedAttibutesForPersona">
-      <details key="start" value="783"/>
-      <details key="end" value="1028"/>
-      <details key="line" value="25"/>
+      <details key="start" value="786"/>
+      <details key="end" value="1031"/>
+      <details key="line" value="28"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/getOrderedBasedAttibutesForPersona/%">
-      <details key="start" value="725"/>
-      <details key="end" value="782"/>
+      <details key="start" value="728"/>
+      <details key="end" value="785"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/getOrderedBasedAttibutesForPersona/%/arg0">
@@ -1543,13 +1656,13 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/getOrderedBasedAttibutesForPersona/arg0">
-      <details key="start" value="832"/>
-      <details key="end" value="854"/>
-      <details key="line" value="25"/>
+      <details key="start" value="835"/>
+      <details key="end" value="857"/>
+      <details key="line" value="28"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/getOrderedBasedAttibutesForPersona/%.1">
-      <details key="start" value="882"/>
-      <details key="end" value="1025"/>
+      <details key="start" value="885"/>
+      <details key="end" value="1028"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/getOrderedBasedAttibutesForPersona/%.1/self">
@@ -1558,33 +1671,33 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/getOrderedBasedAttibutesForPersona/%.1/%">
-      <details key="start" value="889"/>
-      <details key="end" value="937"/>
+      <details key="start" value="892"/>
+      <details key="end" value="940"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/getOrderedBasedAttibutesForPersona/%.1/%.1">
-      <details key="start" value="939"/>
-      <details key="end" value="1008"/>
+      <details key="start" value="942"/>
+      <details key="end" value="1011"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.27" references="/0/getOrderedBasedAttibutesForPersona/%.1/%.2">
-      <details key="start" value="1010"/>
-      <details key="end" value="1024"/>
+      <details key="start" value="1013"/>
+      <details key="end" value="1027"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.28" references="/0/getOrderedBasedAttibutesForPersona/%.1/%.2/%/arg0">
-      <details key="start" value="1019"/>
-      <details key="end" value="1023"/>
+      <details key="start" value="1022"/>
+      <details key="end" value="1026"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.29" references="/0/base2Calced">
-      <details key="start" value="1088"/>
-      <details key="end" value="1273"/>
-      <details key="line" value="33"/>
+      <details key="start" value="1091"/>
+      <details key="end" value="1276"/>
+      <details key="line" value="36"/>
     </eAnnotations>
     <eAnnotations source="positions.30" references="/0/base2Calced/%">
-      <details key="start" value="1030"/>
-      <details key="end" value="1087"/>
+      <details key="start" value="1033"/>
+      <details key="end" value="1090"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/base2Calced/%/arg0">
@@ -1593,13 +1706,13 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/base2Calced/arg0">
-      <details key="start" value="1114"/>
-      <details key="end" value="1131"/>
-      <details key="line" value="33"/>
+      <details key="start" value="1117"/>
+      <details key="end" value="1134"/>
+      <details key="line" value="36"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/base2Calced/%.1">
-      <details key="start" value="1149"/>
-      <details key="end" value="1270"/>
+      <details key="start" value="1152"/>
+      <details key="end" value="1273"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.34" references="/0/base2Calced/%.1/self">
@@ -1608,33 +1721,33 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.35" references="/0/base2Calced/%.1/%">
-      <details key="start" value="1156"/>
-      <details key="end" value="1204"/>
+      <details key="start" value="1159"/>
+      <details key="end" value="1207"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.36" references="/0/base2Calced/%.1/%.1">
-      <details key="start" value="1206"/>
-      <details key="end" value="1253"/>
+      <details key="start" value="1209"/>
+      <details key="end" value="1256"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.37" references="/0/base2Calced/%.1/%.2">
-      <details key="start" value="1255"/>
-      <details key="end" value="1269"/>
+      <details key="start" value="1258"/>
+      <details key="end" value="1272"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/base2Calced/%.1/%.2/%/arg0">
-      <details key="start" value="1264"/>
-      <details key="end" value="1268"/>
+      <details key="start" value="1267"/>
+      <details key="end" value="1271"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/base2SpeciesMin">
-      <details key="start" value="1333"/>
-      <details key="end" value="1526"/>
-      <details key="line" value="41"/>
+      <details key="start" value="1336"/>
+      <details key="end" value="1529"/>
+      <details key="line" value="44"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/base2SpeciesMin/%">
-      <details key="start" value="1275"/>
-      <details key="end" value="1332"/>
+      <details key="start" value="1278"/>
+      <details key="end" value="1335"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.41" references="/0/base2SpeciesMin/%/arg0">
@@ -1643,13 +1756,13 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.42" references="/0/base2SpeciesMin/arg0">
-      <details key="start" value="1363"/>
-      <details key="end" value="1380"/>
-      <details key="line" value="41"/>
+      <details key="start" value="1366"/>
+      <details key="end" value="1383"/>
+      <details key="line" value="44"/>
     </eAnnotations>
     <eAnnotations source="positions.43" references="/0/base2SpeciesMin/%.1">
-      <details key="start" value="1398"/>
-      <details key="end" value="1523"/>
+      <details key="start" value="1401"/>
+      <details key="end" value="1526"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.44" references="/0/base2SpeciesMin/%.1/self">
@@ -1658,33 +1771,33 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.45" references="/0/base2SpeciesMin/%.1/%">
-      <details key="start" value="1405"/>
-      <details key="end" value="1453"/>
+      <details key="start" value="1408"/>
+      <details key="end" value="1456"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.46" references="/0/base2SpeciesMin/%.1/%.1">
-      <details key="start" value="1455"/>
-      <details key="end" value="1506"/>
+      <details key="start" value="1458"/>
+      <details key="end" value="1509"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.47" references="/0/base2SpeciesMin/%.1/%.2">
-      <details key="start" value="1508"/>
-      <details key="end" value="1522"/>
+      <details key="start" value="1511"/>
+      <details key="end" value="1525"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.48" references="/0/base2SpeciesMin/%.1/%.2/%/arg0">
-      <details key="start" value="1517"/>
-      <details key="end" value="1521"/>
+      <details key="start" value="1520"/>
+      <details key="end" value="1524"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.49" references="/0/base2SpeciesMax">
-      <details key="start" value="1586"/>
-      <details key="end" value="1779"/>
-      <details key="line" value="49"/>
+      <details key="start" value="1589"/>
+      <details key="end" value="1782"/>
+      <details key="line" value="52"/>
     </eAnnotations>
     <eAnnotations source="positions.50" references="/0/base2SpeciesMax/%">
-      <details key="start" value="1528"/>
-      <details key="end" value="1585"/>
+      <details key="start" value="1531"/>
+      <details key="end" value="1588"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.51" references="/0/base2SpeciesMax/%/arg0">
@@ -1693,13 +1806,13 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.52" references="/0/base2SpeciesMax/arg0">
-      <details key="start" value="1616"/>
-      <details key="end" value="1633"/>
-      <details key="line" value="49"/>
+      <details key="start" value="1619"/>
+      <details key="end" value="1636"/>
+      <details key="line" value="52"/>
     </eAnnotations>
     <eAnnotations source="positions.53" references="/0/base2SpeciesMax/%.1">
-      <details key="start" value="1651"/>
-      <details key="end" value="1776"/>
+      <details key="start" value="1654"/>
+      <details key="end" value="1779"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.54" references="/0/base2SpeciesMax/%.1/self">
@@ -1708,1078 +1821,1193 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.55" references="/0/base2SpeciesMax/%.1/%">
-      <details key="start" value="1658"/>
-      <details key="end" value="1706"/>
+      <details key="start" value="1661"/>
+      <details key="end" value="1709"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.56" references="/0/base2SpeciesMax/%.1/%.1">
-      <details key="start" value="1708"/>
-      <details key="end" value="1759"/>
+      <details key="start" value="1711"/>
+      <details key="end" value="1762"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.57" references="/0/base2SpeciesMax/%.1/%.2">
-      <details key="start" value="1761"/>
-      <details key="end" value="1775"/>
+      <details key="start" value="1764"/>
+      <details key="end" value="1778"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.58" references="/0/base2SpeciesMax/%.1/%.2/%/arg0">
-      <details key="start" value="1770"/>
-      <details key="end" value="1774"/>
+      <details key="start" value="1773"/>
+      <details key="end" value="1777"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/filterSkillGroups">
-      <details key="start" value="1854"/>
-      <details key="end" value="2104"/>
-      <details key="line" value="58"/>
+    <eAnnotations source="positions.59" references="/0/attributeValue">
+      <details key="start" value="1899"/>
+      <details key="end" value="2185"/>
+      <details key="line" value="61"/>
     </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/filterSkillGroups/%">
-      <details key="start" value="1781"/>
-      <details key="end" value="1853"/>
+    <eAnnotations source="positions.60" references="/0/attributeValue/%">
+      <details key="start" value="1784"/>
+      <details key="end" value="1898"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/filterSkillGroups/%/arg0">
+    <eAnnotations source="positions.61" references="/0/attributeValue/%/persona">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/filterSkillGroups/%/arg1">
+    <eAnnotations source="positions.62" references="/0/attributeValue/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/filterSkillGroups/arg0">
-      <details key="start" value="1886"/>
-      <details key="end" value="1903"/>
-      <details key="line" value="58"/>
+    <eAnnotations source="positions.63" references="/0/attributeValue/persona">
+      <details key="start" value="1928"/>
+      <details key="end" value="1953"/>
+      <details key="line" value="61"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/filterSkillGroups/arg1">
-      <details key="start" value="1905"/>
-      <details key="end" value="1928"/>
-      <details key="line" value="58"/>
+    <eAnnotations source="positions.64" references="/0/attributeValue/attribute">
+      <details key="start" value="1955"/>
+      <details key="end" value="1977"/>
+      <details key="line" value="61"/>
     </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/filterSkillGroups/%.1">
-      <details key="start" value="1952"/>
-      <details key="end" value="2101"/>
+    <eAnnotations source="positions.65" references="/0/attributeValue/%.1">
+      <details key="start" value="2001"/>
+      <details key="end" value="2182"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/filterSkillGroups/%.1/self">
+    <eAnnotations source="positions.66" references="/0/attributeValue/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/filterSkillGroups/%.1/%">
-      <details key="start" value="1959"/>
-      <details key="end" value="2007"/>
+    <eAnnotations source="positions.67" references="/0/attributeValue/%.1/%">
+      <details key="start" value="2008"/>
+      <details key="end" value="2056"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/filterSkillGroups/%.1/%.1">
-      <details key="start" value="2009"/>
-      <details key="end" value="2078"/>
+    <eAnnotations source="positions.68" references="/0/attributeValue/%.1/%.1">
+      <details key="start" value="2058"/>
+      <details key="end" value="2151"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/filterSkillGroups/%.1/%.2">
-      <details key="start" value="2080"/>
-      <details key="end" value="2100"/>
+    <eAnnotations source="positions.69" references="/0/attributeValue/%.1/%.2">
+      <details key="start" value="2153"/>
+      <details key="end" value="2181"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/filterSkillGroups/%.1/%.2/%/arg0">
-      <details key="start" value="2089"/>
-      <details key="end" value="2093"/>
+    <eAnnotations source="positions.70" references="/0/attributeValue/%.1/%.2/%/persona">
+      <details key="start" value="2162"/>
+      <details key="end" value="2169"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/filterSkillGroups/%.1/%.2/%.1/arg1">
-      <details key="start" value="2095"/>
-      <details key="end" value="2099"/>
+    <eAnnotations source="positions.71" references="/0/attributeValue/%.1/%.2/%.1/attribute">
+      <details key="start" value="2171"/>
+      <details key="end" value="2180"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/getEssencesValue">
-      <details key="start" value="2164"/>
-      <details key="end" value="2383"/>
-      <details key="line" value="66"/>
+    <eAnnotations source="positions.72" references="/0/fertigkeitsGruppenToFertigkeiten">
+      <details key="start" value="2266"/>
+      <details key="end" value="2526"/>
+      <details key="line" value="70"/>
     </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/getEssencesValue/%">
-      <details key="start" value="2106"/>
-      <details key="end" value="2163"/>
+    <eAnnotations source="positions.73" references="/0/fertigkeitsGruppenToFertigkeiten/%">
+      <details key="start" value="2188"/>
+      <details key="end" value="2265"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/getEssencesValue/%/arg0">
+    <eAnnotations source="positions.74" references="/0/fertigkeitsGruppenToFertigkeiten/%/persona">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/getEssencesValue/arg0">
-      <details key="start" value="2195"/>
-      <details key="end" value="2223"/>
-      <details key="line" value="66"/>
+    <eAnnotations source="positions.75" references="/0/fertigkeitsGruppenToFertigkeiten/persona">
+      <details key="start" value="2313"/>
+      <details key="end" value="2338"/>
+      <details key="line" value="70"/>
     </eAnnotations>
-    <eAnnotations source="positions.76" references="/0/getEssencesValue/%.1">
-      <details key="start" value="2238"/>
-      <details key="end" value="2380"/>
+    <eAnnotations source="positions.76" references="/0/fertigkeitsGruppenToFertigkeiten/%.1">
+      <details key="start" value="2368"/>
+      <details key="end" value="2523"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.77" references="/0/getEssencesValue/%.1/self">
+    <eAnnotations source="positions.77" references="/0/fertigkeitsGruppenToFertigkeiten/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.78" references="/0/getEssencesValue/%.1/%">
-      <details key="start" value="2245"/>
-      <details key="end" value="2293"/>
+    <eAnnotations source="positions.78" references="/0/fertigkeitsGruppenToFertigkeiten/%.1/%">
+      <details key="start" value="2375"/>
+      <details key="end" value="2423"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.79" references="/0/getEssencesValue/%.1/%.1">
-      <details key="start" value="2295"/>
-      <details key="end" value="2363"/>
+    <eAnnotations source="positions.79" references="/0/fertigkeitsGruppenToFertigkeiten/%.1/%.1">
+      <details key="start" value="2425"/>
+      <details key="end" value="2503"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.80" references="/0/getEssencesValue/%.1/%.2">
-      <details key="start" value="2365"/>
-      <details key="end" value="2379"/>
+    <eAnnotations source="positions.80" references="/0/fertigkeitsGruppenToFertigkeiten/%.1/%.2">
+      <details key="start" value="2505"/>
+      <details key="end" value="2522"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.81" references="/0/getEssencesValue/%.1/%.2/%/arg0">
-      <details key="start" value="2374"/>
-      <details key="end" value="2378"/>
+    <eAnnotations source="positions.81" references="/0/fertigkeitsGruppenToFertigkeiten/%.1/%.2/%/persona">
+      <details key="start" value="2514"/>
+      <details key="end" value="2521"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.82" references="/0/getModificatorValue">
-      <details key="start" value="2458"/>
-      <details key="end" value="2742"/>
-      <details key="line" value="75"/>
+    <eAnnotations source="positions.82" references="/0/filterSkillGroups">
+      <details key="start" value="2602"/>
+      <details key="end" value="2852"/>
+      <details key="line" value="80"/>
     </eAnnotations>
-    <eAnnotations source="positions.83" references="/0/getModificatorValue/%">
-      <details key="start" value="2385"/>
-      <details key="end" value="2457"/>
+    <eAnnotations source="positions.83" references="/0/filterSkillGroups/%">
+      <details key="start" value="2529"/>
+      <details key="end" value="2601"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.84" references="/0/getModificatorValue/%/arg0">
+    <eAnnotations source="positions.84" references="/0/filterSkillGroups/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.85" references="/0/getModificatorValue/%/arg1">
+    <eAnnotations source="positions.85" references="/0/filterSkillGroups/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.86" references="/0/getModificatorValue/arg0">
-      <details key="start" value="2492"/>
-      <details key="end" value="2520"/>
-      <details key="line" value="75"/>
+    <eAnnotations source="positions.86" references="/0/filterSkillGroups/arg0">
+      <details key="start" value="2634"/>
+      <details key="end" value="2651"/>
+      <details key="line" value="80"/>
     </eAnnotations>
-    <eAnnotations source="positions.87" references="/0/getModificatorValue/arg1">
-      <details key="start" value="2522"/>
-      <details key="end" value="2539"/>
-      <details key="line" value="75"/>
+    <eAnnotations source="positions.87" references="/0/filterSkillGroups/arg1">
+      <details key="start" value="2653"/>
+      <details key="end" value="2676"/>
+      <details key="line" value="80"/>
     </eAnnotations>
-    <eAnnotations source="positions.88" references="/0/getModificatorValue/%.1">
-      <details key="start" value="2554"/>
-      <details key="end" value="2739"/>
+    <eAnnotations source="positions.88" references="/0/filterSkillGroups/%.1">
+      <details key="start" value="2700"/>
+      <details key="end" value="2849"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.89" references="/0/getModificatorValue/%.1/self">
+    <eAnnotations source="positions.89" references="/0/filterSkillGroups/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.90" references="/0/getModificatorValue/%.1/%">
-      <details key="start" value="2561"/>
-      <details key="end" value="2609"/>
+    <eAnnotations source="positions.90" references="/0/filterSkillGroups/%.1/%">
+      <details key="start" value="2707"/>
+      <details key="end" value="2755"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.91" references="/0/getModificatorValue/%.1/%.1">
-      <details key="start" value="2611"/>
-      <details key="end" value="2716"/>
+    <eAnnotations source="positions.91" references="/0/filterSkillGroups/%.1/%.1">
+      <details key="start" value="2757"/>
+      <details key="end" value="2826"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.92" references="/0/getModificatorValue/%.1/%.2">
-      <details key="start" value="2718"/>
-      <details key="end" value="2738"/>
+    <eAnnotations source="positions.92" references="/0/filterSkillGroups/%.1/%.2">
+      <details key="start" value="2828"/>
+      <details key="end" value="2848"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.93" references="/0/getModificatorValue/%.1/%.2/%/arg0">
-      <details key="start" value="2727"/>
-      <details key="end" value="2731"/>
+    <eAnnotations source="positions.93" references="/0/filterSkillGroups/%.1/%.2/%/arg0">
+      <details key="start" value="2837"/>
+      <details key="end" value="2841"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.94" references="/0/getModificatorValue/%.1/%.2/%.1/arg1">
-      <details key="start" value="2733"/>
-      <details key="end" value="2737"/>
+    <eAnnotations source="positions.94" references="/0/filterSkillGroups/%.1/%.2/%.1/arg1">
+      <details key="start" value="2843"/>
+      <details key="end" value="2847"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.95" references="/0/createPersona">
-      <details key="start" value="2832"/>
-      <details key="end" value="3100"/>
-      <details key="line" value="85"/>
+    <eAnnotations source="positions.95" references="/0/getEssencesValue">
+      <details key="start" value="2912"/>
+      <details key="end" value="3131"/>
+      <details key="line" value="88"/>
     </eAnnotations>
-    <eAnnotations source="positions.96" references="/0/createPersona/%">
-      <details key="start" value="2744"/>
-      <details key="end" value="2831"/>
+    <eAnnotations source="positions.96" references="/0/getEssencesValue/%">
+      <details key="start" value="2854"/>
+      <details key="end" value="2911"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.97" references="/0/createPersona/%/arg0">
+    <eAnnotations source="positions.97" references="/0/getEssencesValue/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.98" references="/0/createPersona/%/arg1">
+    <eAnnotations source="positions.98" references="/0/getEssencesValue/arg0">
+      <details key="start" value="2943"/>
+      <details key="end" value="2971"/>
+      <details key="line" value="88"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/getEssencesValue/%.1">
+      <details key="start" value="2986"/>
+      <details key="end" value="3128"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/getEssencesValue/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.99" references="/0/createPersona/%/arg2">
+    <eAnnotations source="positions.101" references="/0/getEssencesValue/%.1/%">
+      <details key="start" value="2993"/>
+      <details key="end" value="3041"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/getEssencesValue/%.1/%.1">
+      <details key="start" value="3043"/>
+      <details key="end" value="3111"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/getEssencesValue/%.1/%.2">
+      <details key="start" value="3113"/>
+      <details key="end" value="3127"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/getEssencesValue/%.1/%.2/%/arg0">
+      <details key="start" value="3122"/>
+      <details key="end" value="3126"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/getModificatorValue">
+      <details key="start" value="3206"/>
+      <details key="end" value="3490"/>
+      <details key="line" value="97"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/getModificatorValue/%">
+      <details key="start" value="3133"/>
+      <details key="end" value="3205"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/getModificatorValue/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.100" references="/0/createPersona/arg0">
-      <details key="start" value="2860"/>
-      <details key="end" value="2874"/>
-      <details key="line" value="85"/>
-    </eAnnotations>
-    <eAnnotations source="positions.101" references="/0/createPersona/arg1">
-      <details key="start" value="2876"/>
-      <details key="end" value="2889"/>
-      <details key="line" value="85"/>
-    </eAnnotations>
-    <eAnnotations source="positions.102" references="/0/createPersona/arg2">
-      <details key="start" value="2891"/>
-      <details key="end" value="2905"/>
-      <details key="line" value="85"/>
-    </eAnnotations>
-    <eAnnotations source="positions.103" references="/0/createPersona/%.1">
-      <details key="start" value="2928"/>
-      <details key="end" value="3097"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.104" references="/0/createPersona/%.1/self">
+    <eAnnotations source="positions.108" references="/0/getModificatorValue/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.105" references="/0/createPersona/%.1/%">
-      <details key="start" value="2935"/>
-      <details key="end" value="2983"/>
+    <eAnnotations source="positions.109" references="/0/getModificatorValue/arg0">
+      <details key="start" value="3240"/>
+      <details key="end" value="3268"/>
+      <details key="line" value="97"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/getModificatorValue/arg1">
+      <details key="start" value="3270"/>
+      <details key="end" value="3287"/>
+      <details key="line" value="97"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/getModificatorValue/%.1">
+      <details key="start" value="3302"/>
+      <details key="end" value="3487"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.106" references="/0/createPersona/%.1/%.1">
-      <details key="start" value="2985"/>
-      <details key="end" value="3068"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.107" references="/0/createPersona/%.1/%.2">
-      <details key="start" value="3070"/>
-      <details key="end" value="3096"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.108" references="/0/createPersona/%.1/%.2/%/arg0">
-      <details key="start" value="3079"/>
-      <details key="end" value="3083"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.109" references="/0/createPersona/%.1/%.2/%.1/arg1">
-      <details key="start" value="3085"/>
-      <details key="end" value="3089"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.110" references="/0/createPersona/%.1/%.2/%.2/arg2">
-      <details key="start" value="3091"/>
-      <details key="end" value="3095"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.111" references="/0/calcListenWertToString">
-      <details key="start" value="3160"/>
-      <details key="end" value="3351"/>
-      <details key="line" value="93"/>
-    </eAnnotations>
-    <eAnnotations source="positions.112" references="/0/calcListenWertToString/%">
-      <details key="start" value="3102"/>
-      <details key="end" value="3159"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.113" references="/0/calcListenWertToString/%/arg0">
+    <eAnnotations source="positions.112" references="/0/getModificatorValue/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.114" references="/0/calcListenWertToString/arg0">
-      <details key="start" value="3197"/>
-      <details key="end" value="3220"/>
-      <details key="line" value="93"/>
-    </eAnnotations>
-    <eAnnotations source="positions.115" references="/0/calcListenWertToString/%.1">
-      <details key="start" value="3234"/>
-      <details key="end" value="3348"/>
+    <eAnnotations source="positions.113" references="/0/getModificatorValue/%.1/%">
+      <details key="start" value="3309"/>
+      <details key="end" value="3357"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.116" references="/0/calcListenWertToString/%.1/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
+    <eAnnotations source="positions.114" references="/0/getModificatorValue/%.1/%.1">
+      <details key="start" value="3359"/>
+      <details key="end" value="3464"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.117" references="/0/calcListenWertToString/%.1/%">
-      <details key="start" value="3241"/>
-      <details key="end" value="3289"/>
+    <eAnnotations source="positions.115" references="/0/getModificatorValue/%.1/%.2">
+      <details key="start" value="3466"/>
+      <details key="end" value="3486"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.118" references="/0/calcListenWertToString/%.1/%.1">
-      <details key="start" value="3291"/>
-      <details key="end" value="3331"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.119" references="/0/calcListenWertToString/%.1/%.2">
-      <details key="start" value="3333"/>
-      <details key="end" value="3347"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.120" references="/0/calcListenWertToString/%.1/%.2/%/arg0">
-      <details key="start" value="3342"/>
-      <details key="end" value="3346"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.121" references="/0/calcListenWert">
-      <details key="start" value="3411"/>
-      <details key="end" value="3584"/>
-      <details key="line" value="101"/>
-    </eAnnotations>
-    <eAnnotations source="positions.122" references="/0/calcListenWert/%">
-      <details key="start" value="3353"/>
-      <details key="end" value="3410"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.123" references="/0/calcListenWert/%/arg0">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.124" references="/0/calcListenWert/arg0">
-      <details key="start" value="3440"/>
-      <details key="end" value="3463"/>
-      <details key="line" value="101"/>
-    </eAnnotations>
-    <eAnnotations source="positions.125" references="/0/calcListenWert/%.1">
+    <eAnnotations source="positions.116" references="/0/getModificatorValue/%.1/%.2/%/arg0">
       <details key="start" value="3475"/>
-      <details key="end" value="3581"/>
+      <details key="end" value="3479"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.126" references="/0/calcListenWert/%.1/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
+    <eAnnotations source="positions.117" references="/0/getModificatorValue/%.1/%.2/%.1/arg1">
+      <details key="start" value="3481"/>
+      <details key="end" value="3485"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.127" references="/0/calcListenWert/%.1/%">
-      <details key="start" value="3482"/>
-      <details key="end" value="3530"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.118" references="/0/createPersona">
+      <details key="start" value="3580"/>
+      <details key="end" value="3848"/>
+      <details key="line" value="107"/>
     </eAnnotations>
-    <eAnnotations source="positions.128" references="/0/calcListenWert/%.1/%.1">
-      <details key="start" value="3532"/>
-      <details key="end" value="3564"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.129" references="/0/calcListenWert/%.1/%.2">
-      <details key="start" value="3566"/>
-      <details key="end" value="3580"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.130" references="/0/calcListenWert/%.1/%.2/%/arg0">
-      <details key="start" value="3575"/>
+    <eAnnotations source="positions.119" references="/0/createPersona/%">
+      <details key="start" value="3492"/>
       <details key="end" value="3579"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.131" references="/0/findFertigkeitValue">
-      <details key="start" value="3659"/>
-      <details key="end" value="3950"/>
-      <details key="line" value="110"/>
-    </eAnnotations>
-    <eAnnotations source="positions.132" references="/0/findFertigkeitValue/%">
-      <details key="start" value="3586"/>
-      <details key="end" value="3658"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.133" references="/0/findFertigkeitValue/%/arg0">
+    <eAnnotations source="positions.120" references="/0/createPersona/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.134" references="/0/findFertigkeitValue/%/arg1">
+    <eAnnotations source="positions.121" references="/0/createPersona/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.135" references="/0/findFertigkeitValue/arg0">
-      <details key="start" value="3693"/>
-      <details key="end" value="3717"/>
-      <details key="line" value="110"/>
-    </eAnnotations>
-    <eAnnotations source="positions.136" references="/0/findFertigkeitValue/arg1">
-      <details key="start" value="3719"/>
-      <details key="end" value="3741"/>
-      <details key="line" value="110"/>
-    </eAnnotations>
-    <eAnnotations source="positions.137" references="/0/findFertigkeitValue/%.1">
-      <details key="start" value="3756"/>
-      <details key="end" value="3947"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.138" references="/0/findFertigkeitValue/%.1/self">
+    <eAnnotations source="positions.122" references="/0/createPersona/%/arg2">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.139" references="/0/findFertigkeitValue/%.1/%">
-      <details key="start" value="3763"/>
-      <details key="end" value="3811"/>
+    <eAnnotations source="positions.123" references="/0/createPersona/arg0">
+      <details key="start" value="3608"/>
+      <details key="end" value="3622"/>
+      <details key="line" value="107"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/createPersona/arg1">
+      <details key="start" value="3624"/>
+      <details key="end" value="3637"/>
+      <details key="line" value="107"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/createPersona/arg2">
+      <details key="start" value="3639"/>
+      <details key="end" value="3653"/>
+      <details key="line" value="107"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/createPersona/%.1">
+      <details key="start" value="3676"/>
+      <details key="end" value="3845"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.140" references="/0/findFertigkeitValue/%.1/%.1">
-      <details key="start" value="3813"/>
-      <details key="end" value="3924"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.141" references="/0/findFertigkeitValue/%.1/%.2">
-      <details key="start" value="3926"/>
-      <details key="end" value="3946"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.142" references="/0/findFertigkeitValue/%.1/%.2/%/arg0">
-      <details key="start" value="3935"/>
-      <details key="end" value="3939"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.143" references="/0/findFertigkeitValue/%.1/%.2/%.1/arg1">
-      <details key="start" value="3941"/>
-      <details key="end" value="3945"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.144" references="/0/fertigkeitDicePoolValue">
-      <details key="start" value="4025"/>
-      <details key="end" value="4341"/>
-      <details key="line" value="119"/>
-    </eAnnotations>
-    <eAnnotations source="positions.145" references="/0/fertigkeitDicePoolValue/%">
-      <details key="start" value="3952"/>
-      <details key="end" value="4024"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.146" references="/0/fertigkeitDicePoolValue/%/arg0">
+    <eAnnotations source="positions.127" references="/0/createPersona/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.147" references="/0/fertigkeitDicePoolValue/%/arg1">
+    <eAnnotations source="positions.128" references="/0/createPersona/%.1/%">
+      <details key="start" value="3683"/>
+      <details key="end" value="3731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/createPersona/%.1/%.1">
+      <details key="start" value="3733"/>
+      <details key="end" value="3816"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/createPersona/%.1/%.2">
+      <details key="start" value="3818"/>
+      <details key="end" value="3844"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/createPersona/%.1/%.2/%/arg0">
+      <details key="start" value="3827"/>
+      <details key="end" value="3831"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/createPersona/%.1/%.2/%.1/arg1">
+      <details key="start" value="3833"/>
+      <details key="end" value="3837"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/createPersona/%.1/%.2/%.2/arg2">
+      <details key="start" value="3839"/>
+      <details key="end" value="3843"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/calcListenWertToString">
+      <details key="start" value="3908"/>
+      <details key="end" value="4099"/>
+      <details key="line" value="115"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/calcListenWertToString/%">
+      <details key="start" value="3850"/>
+      <details key="end" value="3907"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/calcListenWertToString/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.148" references="/0/fertigkeitDicePoolValue/arg0">
-      <details key="start" value="4063"/>
-      <details key="end" value="4087"/>
-      <details key="line" value="119"/>
+    <eAnnotations source="positions.137" references="/0/calcListenWertToString/arg0">
+      <details key="start" value="3945"/>
+      <details key="end" value="3968"/>
+      <details key="line" value="115"/>
     </eAnnotations>
-    <eAnnotations source="positions.149" references="/0/fertigkeitDicePoolValue/arg1">
-      <details key="start" value="4089"/>
-      <details key="end" value="4111"/>
-      <details key="line" value="119"/>
-    </eAnnotations>
-    <eAnnotations source="positions.150" references="/0/fertigkeitDicePoolValue/%.1">
-      <details key="start" value="4143"/>
-      <details key="end" value="4338"/>
+    <eAnnotations source="positions.138" references="/0/calcListenWertToString/%.1">
+      <details key="start" value="3982"/>
+      <details key="end" value="4096"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.151" references="/0/fertigkeitDicePoolValue/%.1/self">
+    <eAnnotations source="positions.139" references="/0/calcListenWertToString/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.152" references="/0/fertigkeitDicePoolValue/%.1/%">
-      <details key="start" value="4150"/>
-      <details key="end" value="4198"/>
+    <eAnnotations source="positions.140" references="/0/calcListenWertToString/%.1/%">
+      <details key="start" value="3989"/>
+      <details key="end" value="4037"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.153" references="/0/fertigkeitDicePoolValue/%.1/%.1">
-      <details key="start" value="4200"/>
-      <details key="end" value="4315"/>
+    <eAnnotations source="positions.141" references="/0/calcListenWertToString/%.1/%.1">
+      <details key="start" value="4039"/>
+      <details key="end" value="4079"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.154" references="/0/fertigkeitDicePoolValue/%.1/%.2">
-      <details key="start" value="4317"/>
-      <details key="end" value="4337"/>
+    <eAnnotations source="positions.142" references="/0/calcListenWertToString/%.1/%.2">
+      <details key="start" value="4081"/>
+      <details key="end" value="4095"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.155" references="/0/fertigkeitDicePoolValue/%.1/%.2/%/arg0">
-      <details key="start" value="4326"/>
-      <details key="end" value="4330"/>
+    <eAnnotations source="positions.143" references="/0/calcListenWertToString/%.1/%.2/%/arg0">
+      <details key="start" value="4090"/>
+      <details key="end" value="4094"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.156" references="/0/fertigkeitDicePoolValue/%.1/%.2/%.1/arg1">
-      <details key="start" value="4332"/>
-      <details key="end" value="4336"/>
+    <eAnnotations source="positions.144" references="/0/calcListenWert">
+      <details key="start" value="4159"/>
+      <details key="end" value="4332"/>
+      <details key="line" value="123"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/calcListenWert/%">
+      <details key="start" value="4101"/>
+      <details key="end" value="4158"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.157" references="/0/findGruppe">
-      <details key="start" value="4416"/>
-      <details key="end" value="4706"/>
-      <details key="line" value="128"/>
-    </eAnnotations>
-    <eAnnotations source="positions.158" references="/0/findGruppe/%">
-      <details key="start" value="4343"/>
-      <details key="end" value="4415"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.159" references="/0/findGruppe/%/arg0">
+    <eAnnotations source="positions.146" references="/0/calcListenWert/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.160" references="/0/findGruppe/%/arg1">
+    <eAnnotations source="positions.147" references="/0/calcListenWert/arg0">
+      <details key="start" value="4188"/>
+      <details key="end" value="4211"/>
+      <details key="line" value="123"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/calcListenWert/%.1">
+      <details key="start" value="4223"/>
+      <details key="end" value="4329"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/calcListenWert/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.161" references="/0/findGruppe/arg0">
+    <eAnnotations source="positions.150" references="/0/calcListenWert/%.1/%">
+      <details key="start" value="4230"/>
+      <details key="end" value="4278"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/calcListenWert/%.1/%.1">
+      <details key="start" value="4280"/>
+      <details key="end" value="4312"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/calcListenWert/%.1/%.2">
+      <details key="start" value="4314"/>
+      <details key="end" value="4328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/calcListenWert/%.1/%.2/%/arg0">
+      <details key="start" value="4323"/>
+      <details key="end" value="4327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/findFertigkeitValue">
+      <details key="start" value="4407"/>
+      <details key="end" value="4698"/>
+      <details key="line" value="132"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/findFertigkeitValue/%">
+      <details key="start" value="4334"/>
+      <details key="end" value="4406"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/findFertigkeitValue/%/arg0">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/findFertigkeitValue/%/arg1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/findFertigkeitValue/arg0">
       <details key="start" value="4441"/>
       <details key="end" value="4465"/>
-      <details key="line" value="128"/>
+      <details key="line" value="132"/>
     </eAnnotations>
-    <eAnnotations source="positions.162" references="/0/findGruppe/arg1">
+    <eAnnotations source="positions.159" references="/0/findFertigkeitValue/arg1">
       <details key="start" value="4467"/>
       <details key="end" value="4489"/>
-      <details key="line" value="128"/>
+      <details key="line" value="132"/>
     </eAnnotations>
-    <eAnnotations source="positions.163" references="/0/findGruppe/%.1">
-      <details key="start" value="4521"/>
-      <details key="end" value="4703"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.164" references="/0/findGruppe/%.1/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.165" references="/0/findGruppe/%.1/%">
-      <details key="start" value="4528"/>
-      <details key="end" value="4576"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.166" references="/0/findGruppe/%.1/%.1">
-      <details key="start" value="4578"/>
-      <details key="end" value="4680"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.167" references="/0/findGruppe/%.1/%.2">
-      <details key="start" value="4682"/>
-      <details key="end" value="4702"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.168" references="/0/findGruppe/%.1/%.2/%/arg0">
-      <details key="start" value="4691"/>
+    <eAnnotations source="positions.160" references="/0/findFertigkeitValue/%.1">
+      <details key="start" value="4504"/>
       <details key="end" value="4695"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.169" references="/0/findGruppe/%.1/%.2/%.1/arg1">
-      <details key="start" value="4697"/>
-      <details key="end" value="4701"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.170" references="/0/findFertigkeitValue.1">
-      <details key="start" value="4781"/>
-      <details key="end" value="5058"/>
-      <details key="line" value="137"/>
-    </eAnnotations>
-    <eAnnotations source="positions.171" references="/0/findFertigkeitValue.1/%">
-      <details key="start" value="4708"/>
-      <details key="end" value="4780"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.172" references="/0/findFertigkeitValue.1/%/arg0">
+    <eAnnotations source="positions.161" references="/0/findFertigkeitValue/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.173" references="/0/findFertigkeitValue.1/%/arg1">
+    <eAnnotations source="positions.162" references="/0/findFertigkeitValue/%.1/%">
+      <details key="start" value="4511"/>
+      <details key="end" value="4559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/findFertigkeitValue/%.1/%.1">
+      <details key="start" value="4561"/>
+      <details key="end" value="4672"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/findFertigkeitValue/%.1/%.2">
+      <details key="start" value="4674"/>
+      <details key="end" value="4694"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/findFertigkeitValue/%.1/%.2/%/arg0">
+      <details key="start" value="4683"/>
+      <details key="end" value="4687"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/findFertigkeitValue/%.1/%.2/%.1/arg1">
+      <details key="start" value="4689"/>
+      <details key="end" value="4693"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/fertigkeitDicePoolValue">
+      <details key="start" value="4773"/>
+      <details key="end" value="5089"/>
+      <details key="line" value="141"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/fertigkeitDicePoolValue/%">
+      <details key="start" value="4700"/>
+      <details key="end" value="4772"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/fertigkeitDicePoolValue/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.174" references="/0/findFertigkeitValue.1/arg0">
-      <details key="start" value="4815"/>
-      <details key="end" value="4832"/>
-      <details key="line" value="137"/>
-    </eAnnotations>
-    <eAnnotations source="positions.175" references="/0/findFertigkeitValue.1/arg1">
-      <details key="start" value="4834"/>
-      <details key="end" value="4856"/>
-      <details key="line" value="137"/>
-    </eAnnotations>
-    <eAnnotations source="positions.176" references="/0/findFertigkeitValue.1/%.1">
-      <details key="start" value="4871"/>
-      <details key="end" value="5055"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.177" references="/0/findFertigkeitValue.1/%.1/self">
+    <eAnnotations source="positions.170" references="/0/fertigkeitDicePoolValue/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.178" references="/0/findFertigkeitValue.1/%.1/%">
-      <details key="start" value="4878"/>
-      <details key="end" value="4926"/>
+    <eAnnotations source="positions.171" references="/0/fertigkeitDicePoolValue/arg0">
+      <details key="start" value="4811"/>
+      <details key="end" value="4835"/>
+      <details key="line" value="141"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/fertigkeitDicePoolValue/arg1">
+      <details key="start" value="4837"/>
+      <details key="end" value="4859"/>
+      <details key="line" value="141"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/fertigkeitDicePoolValue/%.1">
+      <details key="start" value="4891"/>
+      <details key="end" value="5086"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.179" references="/0/findFertigkeitValue.1/%.1/%.1">
-      <details key="start" value="4928"/>
-      <details key="end" value="5032"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.180" references="/0/findFertigkeitValue.1/%.1/%.2">
-      <details key="start" value="5034"/>
-      <details key="end" value="5054"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.181" references="/0/findFertigkeitValue.1/%.1/%.2/%/arg0">
-      <details key="start" value="5043"/>
-      <details key="end" value="5047"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.182" references="/0/findFertigkeitValue.1/%.1/%.2/%.1/arg1">
-      <details key="start" value="5049"/>
-      <details key="end" value="5053"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.183" references="/0/findFertigkeit">
-      <details key="start" value="5133"/>
-      <details key="end" value="5410"/>
-      <details key="line" value="146"/>
-    </eAnnotations>
-    <eAnnotations source="positions.184" references="/0/findFertigkeit/%">
-      <details key="start" value="5060"/>
-      <details key="end" value="5132"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.185" references="/0/findFertigkeit/%/arg0">
+    <eAnnotations source="positions.174" references="/0/fertigkeitDicePoolValue/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.186" references="/0/findFertigkeit/%/arg1">
+    <eAnnotations source="positions.175" references="/0/fertigkeitDicePoolValue/%.1/%">
+      <details key="start" value="4898"/>
+      <details key="end" value="4946"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/fertigkeitDicePoolValue/%.1/%.1">
+      <details key="start" value="4948"/>
+      <details key="end" value="5063"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/fertigkeitDicePoolValue/%.1/%.2">
+      <details key="start" value="5065"/>
+      <details key="end" value="5085"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/fertigkeitDicePoolValue/%.1/%.2/%/arg0">
+      <details key="start" value="5074"/>
+      <details key="end" value="5078"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/fertigkeitDicePoolValue/%.1/%.2/%.1/arg1">
+      <details key="start" value="5080"/>
+      <details key="end" value="5084"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/findGruppe">
+      <details key="start" value="5164"/>
+      <details key="end" value="5454"/>
+      <details key="line" value="150"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/findGruppe/%">
+      <details key="start" value="5091"/>
+      <details key="end" value="5163"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/findGruppe/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.187" references="/0/findFertigkeit/arg0">
-      <details key="start" value="5162"/>
-      <details key="end" value="5179"/>
-      <details key="line" value="146"/>
-    </eAnnotations>
-    <eAnnotations source="positions.188" references="/0/findFertigkeit/arg1">
-      <details key="start" value="5181"/>
-      <details key="end" value="5203"/>
-      <details key="line" value="146"/>
-    </eAnnotations>
-    <eAnnotations source="positions.189" references="/0/findFertigkeit/%.1">
-      <details key="start" value="5228"/>
-      <details key="end" value="5407"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.190" references="/0/findFertigkeit/%.1/self">
+    <eAnnotations source="positions.183" references="/0/findGruppe/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.191" references="/0/findFertigkeit/%.1/%">
-      <details key="start" value="5235"/>
-      <details key="end" value="5283"/>
+    <eAnnotations source="positions.184" references="/0/findGruppe/arg0">
+      <details key="start" value="5189"/>
+      <details key="end" value="5213"/>
+      <details key="line" value="150"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/findGruppe/arg1">
+      <details key="start" value="5215"/>
+      <details key="end" value="5237"/>
+      <details key="line" value="150"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/findGruppe/%.1">
+      <details key="start" value="5269"/>
+      <details key="end" value="5451"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.192" references="/0/findFertigkeit/%.1/%.1">
-      <details key="start" value="5285"/>
-      <details key="end" value="5384"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.193" references="/0/findFertigkeit/%.1/%.2">
-      <details key="start" value="5386"/>
-      <details key="end" value="5406"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.194" references="/0/findFertigkeit/%.1/%.2/%/arg0">
-      <details key="start" value="5395"/>
-      <details key="end" value="5399"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.195" references="/0/findFertigkeit/%.1/%.2/%.1/arg1">
-      <details key="start" value="5401"/>
-      <details key="end" value="5405"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.196" references="/0/calcRaceMaximum">
-      <details key="start" value="5485"/>
-      <details key="end" value="5749"/>
-      <details key="line" value="155"/>
-    </eAnnotations>
-    <eAnnotations source="positions.197" references="/0/calcRaceMaximum/%">
-      <details key="start" value="5412"/>
-      <details key="end" value="5484"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.198" references="/0/calcRaceMaximum/%/arg0">
+    <eAnnotations source="positions.187" references="/0/findGruppe/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.199" references="/0/calcRaceMaximum/%/arg1">
+    <eAnnotations source="positions.188" references="/0/findGruppe/%.1/%">
+      <details key="start" value="5276"/>
+      <details key="end" value="5324"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/findGruppe/%.1/%.1">
+      <details key="start" value="5326"/>
+      <details key="end" value="5428"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/findGruppe/%.1/%.2">
+      <details key="start" value="5430"/>
+      <details key="end" value="5450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/findGruppe/%.1/%.2/%/arg0">
+      <details key="start" value="5439"/>
+      <details key="end" value="5443"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/findGruppe/%.1/%.2/%.1/arg1">
+      <details key="start" value="5445"/>
+      <details key="end" value="5449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/findFertigkeitValue.1">
+      <details key="start" value="5529"/>
+      <details key="end" value="5806"/>
+      <details key="line" value="159"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/findFertigkeitValue.1/%">
+      <details key="start" value="5456"/>
+      <details key="end" value="5528"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/findFertigkeitValue.1/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.200" references="/0/calcRaceMaximum/arg0">
-      <details key="start" value="5515"/>
-      <details key="end" value="5537"/>
-      <details key="line" value="155"/>
-    </eAnnotations>
-    <eAnnotations source="positions.201" references="/0/calcRaceMaximum/arg1">
-      <details key="start" value="5539"/>
-      <details key="end" value="5556"/>
-      <details key="line" value="155"/>
-    </eAnnotations>
-    <eAnnotations source="positions.202" references="/0/calcRaceMaximum/%.1">
-      <details key="start" value="5571"/>
-      <details key="end" value="5746"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.203" references="/0/calcRaceMaximum/%.1/self">
+    <eAnnotations source="positions.196" references="/0/findFertigkeitValue.1/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.204" references="/0/calcRaceMaximum/%.1/%">
-      <details key="start" value="5578"/>
-      <details key="end" value="5626"/>
+    <eAnnotations source="positions.197" references="/0/findFertigkeitValue.1/arg0">
+      <details key="start" value="5563"/>
+      <details key="end" value="5580"/>
+      <details key="line" value="159"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/findFertigkeitValue.1/arg1">
+      <details key="start" value="5582"/>
+      <details key="end" value="5604"/>
+      <details key="line" value="159"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/findFertigkeitValue.1/%.1">
+      <details key="start" value="5619"/>
+      <details key="end" value="5803"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.205" references="/0/calcRaceMaximum/%.1/%.1">
-      <details key="start" value="5628"/>
-      <details key="end" value="5723"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.206" references="/0/calcRaceMaximum/%.1/%.2">
-      <details key="start" value="5725"/>
-      <details key="end" value="5745"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.207" references="/0/calcRaceMaximum/%.1/%.2/%/arg0">
-      <details key="start" value="5734"/>
-      <details key="end" value="5738"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.208" references="/0/calcRaceMaximum/%.1/%.2/%.1/arg1">
-      <details key="start" value="5740"/>
-      <details key="end" value="5744"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.209" references="/0/hasFertigkeitUnderGroup">
-      <details key="start" value="5824"/>
-      <details key="end" value="6123"/>
-      <details key="line" value="164"/>
-    </eAnnotations>
-    <eAnnotations source="positions.210" references="/0/hasFertigkeitUnderGroup/%">
-      <details key="start" value="5751"/>
-      <details key="end" value="5823"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.211" references="/0/hasFertigkeitUnderGroup/%/arg0">
+    <eAnnotations source="positions.200" references="/0/findFertigkeitValue.1/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.212" references="/0/hasFertigkeitUnderGroup/%/arg1">
+    <eAnnotations source="positions.201" references="/0/findFertigkeitValue.1/%.1/%">
+      <details key="start" value="5626"/>
+      <details key="end" value="5674"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/findFertigkeitValue.1/%.1/%.1">
+      <details key="start" value="5676"/>
+      <details key="end" value="5780"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/findFertigkeitValue.1/%.1/%.2">
+      <details key="start" value="5782"/>
+      <details key="end" value="5802"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/findFertigkeitValue.1/%.1/%.2/%/arg0">
+      <details key="start" value="5791"/>
+      <details key="end" value="5795"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/findFertigkeitValue.1/%.1/%.2/%.1/arg1">
+      <details key="start" value="5797"/>
+      <details key="end" value="5801"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/findFertigkeit">
+      <details key="start" value="5881"/>
+      <details key="end" value="6158"/>
+      <details key="line" value="168"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/findFertigkeit/%">
+      <details key="start" value="5808"/>
+      <details key="end" value="5880"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/findFertigkeit/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.213" references="/0/hasFertigkeitUnderGroup/arg0">
-      <details key="start" value="5862"/>
-      <details key="end" value="5886"/>
-      <details key="line" value="164"/>
-    </eAnnotations>
-    <eAnnotations source="positions.214" references="/0/hasFertigkeitUnderGroup/arg1">
-      <details key="start" value="5888"/>
-      <details key="end" value="5910"/>
-      <details key="line" value="164"/>
-    </eAnnotations>
-    <eAnnotations source="positions.215" references="/0/hasFertigkeitUnderGroup/%.1">
-      <details key="start" value="5925"/>
-      <details key="end" value="6120"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.216" references="/0/hasFertigkeitUnderGroup/%.1/self">
+    <eAnnotations source="positions.209" references="/0/findFertigkeit/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.217" references="/0/hasFertigkeitUnderGroup/%.1/%">
-      <details key="start" value="5932"/>
-      <details key="end" value="5980"/>
+    <eAnnotations source="positions.210" references="/0/findFertigkeit/arg0">
+      <details key="start" value="5910"/>
+      <details key="end" value="5927"/>
+      <details key="line" value="168"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/findFertigkeit/arg1">
+      <details key="start" value="5929"/>
+      <details key="end" value="5951"/>
+      <details key="line" value="168"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/findFertigkeit/%.1">
+      <details key="start" value="5976"/>
+      <details key="end" value="6155"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.218" references="/0/hasFertigkeitUnderGroup/%.1/%.1">
-      <details key="start" value="5982"/>
-      <details key="end" value="6097"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.219" references="/0/hasFertigkeitUnderGroup/%.1/%.2">
-      <details key="start" value="6099"/>
-      <details key="end" value="6119"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.220" references="/0/hasFertigkeitUnderGroup/%.1/%.2/%/arg0">
-      <details key="start" value="6108"/>
-      <details key="end" value="6112"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.221" references="/0/hasFertigkeitUnderGroup/%.1/%.2/%.1/arg1">
-      <details key="start" value="6114"/>
-      <details key="end" value="6118"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.222" references="/0/calcKarmaCosts">
-      <details key="start" value="6213"/>
-      <details key="end" value="6414"/>
-      <details key="line" value="174"/>
-    </eAnnotations>
-    <eAnnotations source="positions.223" references="/0/calcKarmaCosts/%">
-      <details key="start" value="6125"/>
-      <details key="end" value="6212"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.224" references="/0/calcKarmaCosts/%/arg0">
+    <eAnnotations source="positions.213" references="/0/findFertigkeit/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.225" references="/0/calcKarmaCosts/%/arg1">
+    <eAnnotations source="positions.214" references="/0/findFertigkeit/%.1/%">
+      <details key="start" value="5983"/>
+      <details key="end" value="6031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/findFertigkeit/%.1/%.1">
+      <details key="start" value="6033"/>
+      <details key="end" value="6132"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/findFertigkeit/%.1/%.2">
+      <details key="start" value="6134"/>
+      <details key="end" value="6154"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/findFertigkeit/%.1/%.2/%/arg0">
+      <details key="start" value="6143"/>
+      <details key="end" value="6147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.218" references="/0/findFertigkeit/%.1/%.2/%.1/arg1">
+      <details key="start" value="6149"/>
+      <details key="end" value="6153"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.219" references="/0/calcRaceMaximum">
+      <details key="start" value="6233"/>
+      <details key="end" value="6497"/>
+      <details key="line" value="177"/>
+    </eAnnotations>
+    <eAnnotations source="positions.220" references="/0/calcRaceMaximum/%">
+      <details key="start" value="6160"/>
+      <details key="end" value="6232"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/calcRaceMaximum/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.226" references="/0/calcKarmaCosts/%/arg2">
+    <eAnnotations source="positions.222" references="/0/calcRaceMaximum/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.227" references="/0/calcKarmaCosts/arg0">
-      <details key="start" value="6242"/>
-      <details key="end" value="6256"/>
-      <details key="line" value="174"/>
+    <eAnnotations source="positions.223" references="/0/calcRaceMaximum/arg0">
+      <details key="start" value="6263"/>
+      <details key="end" value="6285"/>
+      <details key="line" value="177"/>
     </eAnnotations>
-    <eAnnotations source="positions.228" references="/0/calcKarmaCosts/arg1">
-      <details key="start" value="6258"/>
-      <details key="end" value="6272"/>
-      <details key="line" value="174"/>
+    <eAnnotations source="positions.224" references="/0/calcRaceMaximum/arg1">
+      <details key="start" value="6287"/>
+      <details key="end" value="6304"/>
+      <details key="line" value="177"/>
     </eAnnotations>
-    <eAnnotations source="positions.229" references="/0/calcKarmaCosts/arg2">
-      <details key="start" value="6274"/>
-      <details key="end" value="6288"/>
-      <details key="line" value="174"/>
-    </eAnnotations>
-    <eAnnotations source="positions.230" references="/0/calcKarmaCosts/%.1">
-      <details key="start" value="6303"/>
-      <details key="end" value="6411"/>
+    <eAnnotations source="positions.225" references="/0/calcRaceMaximum/%.1">
+      <details key="start" value="6319"/>
+      <details key="end" value="6494"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.231" references="/0/calcKarmaCosts/%.1/self">
+    <eAnnotations source="positions.226" references="/0/calcRaceMaximum/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.232" references="/0/calcKarmaCosts/%.1/%">
-      <details key="start" value="6310"/>
-      <details key="end" value="6358"/>
+    <eAnnotations source="positions.227" references="/0/calcRaceMaximum/%.1/%">
+      <details key="start" value="6326"/>
+      <details key="end" value="6374"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.233" references="/0/calcKarmaCosts/%.1/%.1">
-      <details key="start" value="6360"/>
-      <details key="end" value="6382"/>
+    <eAnnotations source="positions.228" references="/0/calcRaceMaximum/%.1/%.1">
+      <details key="start" value="6376"/>
+      <details key="end" value="6471"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.234" references="/0/calcKarmaCosts/%.1/%.2">
-      <details key="start" value="6384"/>
-      <details key="end" value="6410"/>
+    <eAnnotations source="positions.229" references="/0/calcRaceMaximum/%.1/%.2">
+      <details key="start" value="6473"/>
+      <details key="end" value="6493"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.235" references="/0/calcKarmaCosts/%.1/%.2/%/arg0">
-      <details key="start" value="6393"/>
-      <details key="end" value="6397"/>
+    <eAnnotations source="positions.230" references="/0/calcRaceMaximum/%.1/%.2/%/arg0">
+      <details key="start" value="6482"/>
+      <details key="end" value="6486"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.236" references="/0/calcKarmaCosts/%.1/%.2/%.1/arg1">
-      <details key="start" value="6399"/>
-      <details key="end" value="6403"/>
+    <eAnnotations source="positions.231" references="/0/calcRaceMaximum/%.1/%.2/%.1/arg1">
+      <details key="start" value="6488"/>
+      <details key="end" value="6492"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.237" references="/0/calcKarmaCosts/%.1/%.2/%.2/arg2">
-      <details key="start" value="6405"/>
-      <details key="end" value="6409"/>
+    <eAnnotations source="positions.232" references="/0/hasFertigkeitUnderGroup">
+      <details key="start" value="6572"/>
+      <details key="end" value="6871"/>
+      <details key="line" value="186"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/hasFertigkeitUnderGroup/%">
+      <details key="start" value="6499"/>
+      <details key="end" value="6571"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.238" references="/0/essenzToFloat">
-      <details key="start" value="6503"/>
-      <details key="end" value="6654"/>
-      <details key="line" value="183"/>
-    </eAnnotations>
-    <eAnnotations source="positions.239" references="/0/essenzToFloat/%">
-      <details key="start" value="6415"/>
-      <details key="end" value="6502"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.240" references="/0/essenzToFloat/%/arg0">
+    <eAnnotations source="positions.234" references="/0/hasFertigkeitUnderGroup/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.241" references="/0/essenzToFloat/%/arg1">
+    <eAnnotations source="positions.235" references="/0/hasFertigkeitUnderGroup/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.242" references="/0/essenzToFloat/%/arg2">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.243" references="/0/essenzToFloat/arg0">
-      <details key="start" value="6531"/>
-      <details key="end" value="6545"/>
-      <details key="line" value="183"/>
-    </eAnnotations>
-    <eAnnotations source="positions.244" references="/0/essenzToFloat/%.1">
-      <details key="start" value="6559"/>
-      <details key="end" value="6651"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.245" references="/0/essenzToFloat/%.1/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.246" references="/0/essenzToFloat/%.1/%">
-      <details key="start" value="6566"/>
-      <details key="end" value="6614"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.247" references="/0/essenzToFloat/%.1/%.1">
-      <details key="start" value="6616"/>
+    <eAnnotations source="positions.236" references="/0/hasFertigkeitUnderGroup/arg0">
+      <details key="start" value="6610"/>
       <details key="end" value="6634"/>
-      <details key="line" value="0"/>
+      <details key="line" value="186"/>
     </eAnnotations>
-    <eAnnotations source="positions.248" references="/0/essenzToFloat/%.1/%.2">
+    <eAnnotations source="positions.237" references="/0/hasFertigkeitUnderGroup/arg1">
       <details key="start" value="6636"/>
-      <details key="end" value="6650"/>
+      <details key="end" value="6658"/>
+      <details key="line" value="186"/>
+    </eAnnotations>
+    <eAnnotations source="positions.238" references="/0/hasFertigkeitUnderGroup/%.1">
+      <details key="start" value="6673"/>
+      <details key="end" value="6868"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.249" references="/0/essenzToFloat/%.1/%.2/%/arg0">
-      <details key="start" value="6645"/>
-      <details key="end" value="6649"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.250" references="/0/calcEssenceSum">
-      <details key="start" value="6714"/>
-      <details key="end" value="6890"/>
-      <details key="line" value="191"/>
-    </eAnnotations>
-    <eAnnotations source="positions.251" references="/0/calcEssenceSum/%">
-      <details key="start" value="6656"/>
-      <details key="end" value="6713"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.252" references="/0/calcEssenceSum/%/arg0">
+    <eAnnotations source="positions.239" references="/0/hasFertigkeitUnderGroup/%.1/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.253" references="/0/calcEssenceSum/arg0">
-      <details key="start" value="6743"/>
-      <details key="end" value="6766"/>
-      <details key="line" value="191"/>
-    </eAnnotations>
-    <eAnnotations source="positions.254" references="/0/calcEssenceSum/%.1">
-      <details key="start" value="6781"/>
-      <details key="end" value="6887"/>
+    <eAnnotations source="positions.240" references="/0/hasFertigkeitUnderGroup/%.1/%">
+      <details key="start" value="6680"/>
+      <details key="end" value="6728"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.255" references="/0/calcEssenceSum/%.1/self">
+    <eAnnotations source="positions.241" references="/0/hasFertigkeitUnderGroup/%.1/%.1">
+      <details key="start" value="6730"/>
+      <details key="end" value="6845"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.242" references="/0/hasFertigkeitUnderGroup/%.1/%.2">
+      <details key="start" value="6847"/>
+      <details key="end" value="6867"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.243" references="/0/hasFertigkeitUnderGroup/%.1/%.2/%/arg0">
+      <details key="start" value="6856"/>
+      <details key="end" value="6860"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.244" references="/0/hasFertigkeitUnderGroup/%.1/%.2/%.1/arg1">
+      <details key="start" value="6862"/>
+      <details key="end" value="6866"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.245" references="/0/calcKarmaCosts">
+      <details key="start" value="6961"/>
+      <details key="end" value="7162"/>
+      <details key="line" value="196"/>
+    </eAnnotations>
+    <eAnnotations source="positions.246" references="/0/calcKarmaCosts/%">
+      <details key="start" value="6873"/>
+      <details key="end" value="6960"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.247" references="/0/calcKarmaCosts/%/arg0">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.256" references="/0/calcEssenceSum/%.1/%">
-      <details key="start" value="6788"/>
-      <details key="end" value="6836"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.257" references="/0/calcEssenceSum/%.1/%.1">
-      <details key="start" value="6838"/>
-      <details key="end" value="6870"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.258" references="/0/calcEssenceSum/%.1/%.2">
-      <details key="start" value="6872"/>
-      <details key="end" value="6886"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.259" references="/0/calcEssenceSum/%.1/%.2/%/arg0">
-      <details key="start" value="6881"/>
-      <details key="end" value="6885"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.260" references="/0/calcKiPowerSum">
-      <details key="start" value="6950"/>
-      <details key="end" value="7126"/>
-      <details key="line" value="199"/>
-    </eAnnotations>
-    <eAnnotations source="positions.261" references="/0/calcKiPowerSum/%">
-      <details key="start" value="6892"/>
-      <details key="end" value="6949"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.262" references="/0/calcKiPowerSum/%/arg0">
+    <eAnnotations source="positions.248" references="/0/calcKarmaCosts/%/arg1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.263" references="/0/calcKiPowerSum/arg0">
-      <details key="start" value="6979"/>
-      <details key="end" value="7002"/>
-      <details key="line" value="199"/>
-    </eAnnotations>
-    <eAnnotations source="positions.264" references="/0/calcKiPowerSum/%.1">
-      <details key="start" value="7017"/>
-      <details key="end" value="7123"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.265" references="/0/calcKiPowerSum/%.1/self">
+    <eAnnotations source="positions.249" references="/0/calcKarmaCosts/%/arg2">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.266" references="/0/calcKiPowerSum/%.1/%">
-      <details key="start" value="7024"/>
-      <details key="end" value="7072"/>
+    <eAnnotations source="positions.250" references="/0/calcKarmaCosts/arg0">
+      <details key="start" value="6990"/>
+      <details key="end" value="7004"/>
+      <details key="line" value="196"/>
+    </eAnnotations>
+    <eAnnotations source="positions.251" references="/0/calcKarmaCosts/arg1">
+      <details key="start" value="7006"/>
+      <details key="end" value="7020"/>
+      <details key="line" value="196"/>
+    </eAnnotations>
+    <eAnnotations source="positions.252" references="/0/calcKarmaCosts/arg2">
+      <details key="start" value="7022"/>
+      <details key="end" value="7036"/>
+      <details key="line" value="196"/>
+    </eAnnotations>
+    <eAnnotations source="positions.253" references="/0/calcKarmaCosts/%.1">
+      <details key="start" value="7051"/>
+      <details key="end" value="7159"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.267" references="/0/calcKiPowerSum/%.1/%.1">
-      <details key="start" value="7074"/>
+    <eAnnotations source="positions.254" references="/0/calcKarmaCosts/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.255" references="/0/calcKarmaCosts/%.1/%">
+      <details key="start" value="7058"/>
       <details key="end" value="7106"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.268" references="/0/calcKiPowerSum/%.1/%.2">
+    <eAnnotations source="positions.256" references="/0/calcKarmaCosts/%.1/%.1">
       <details key="start" value="7108"/>
-      <details key="end" value="7122"/>
+      <details key="end" value="7130"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.269" references="/0/calcKiPowerSum/%.1/%.2/%/arg0">
-      <details key="start" value="7117"/>
-      <details key="end" value="7121"/>
+    <eAnnotations source="positions.257" references="/0/calcKarmaCosts/%.1/%.2">
+      <details key="start" value="7132"/>
+      <details key="end" value="7158"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.258" references="/0/calcKarmaCosts/%.1/%.2/%/arg0">
+      <details key="start" value="7141"/>
+      <details key="end" value="7145"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.259" references="/0/calcKarmaCosts/%.1/%.2/%.1/arg1">
+      <details key="start" value="7147"/>
+      <details key="end" value="7151"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.260" references="/0/calcKarmaCosts/%.1/%.2/%.2/arg2">
+      <details key="start" value="7153"/>
+      <details key="end" value="7157"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.261" references="/0/essenzToFloat">
+      <details key="start" value="7251"/>
+      <details key="end" value="7402"/>
+      <details key="line" value="205"/>
+    </eAnnotations>
+    <eAnnotations source="positions.262" references="/0/essenzToFloat/%">
+      <details key="start" value="7163"/>
+      <details key="end" value="7250"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.263" references="/0/essenzToFloat/%/arg0">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.264" references="/0/essenzToFloat/%/arg1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.265" references="/0/essenzToFloat/%/arg2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.266" references="/0/essenzToFloat/arg0">
+      <details key="start" value="7279"/>
+      <details key="end" value="7293"/>
+      <details key="line" value="205"/>
+    </eAnnotations>
+    <eAnnotations source="positions.267" references="/0/essenzToFloat/%.1">
+      <details key="start" value="7307"/>
+      <details key="end" value="7399"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.268" references="/0/essenzToFloat/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.269" references="/0/essenzToFloat/%.1/%">
+      <details key="start" value="7314"/>
+      <details key="end" value="7362"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.270" references="/0/essenzToFloat/%.1/%.1">
+      <details key="start" value="7364"/>
+      <details key="end" value="7382"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.271" references="/0/essenzToFloat/%.1/%.2">
+      <details key="start" value="7384"/>
+      <details key="end" value="7398"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.272" references="/0/essenzToFloat/%.1/%.2/%/arg0">
+      <details key="start" value="7393"/>
+      <details key="end" value="7397"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.273" references="/0/calcEssenceSum">
+      <details key="start" value="7462"/>
+      <details key="end" value="7638"/>
+      <details key="line" value="213"/>
+    </eAnnotations>
+    <eAnnotations source="positions.274" references="/0/calcEssenceSum/%">
+      <details key="start" value="7404"/>
+      <details key="end" value="7461"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.275" references="/0/calcEssenceSum/%/arg0">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.276" references="/0/calcEssenceSum/arg0">
+      <details key="start" value="7491"/>
+      <details key="end" value="7514"/>
+      <details key="line" value="213"/>
+    </eAnnotations>
+    <eAnnotations source="positions.277" references="/0/calcEssenceSum/%.1">
+      <details key="start" value="7529"/>
+      <details key="end" value="7635"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.278" references="/0/calcEssenceSum/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.279" references="/0/calcEssenceSum/%.1/%">
+      <details key="start" value="7536"/>
+      <details key="end" value="7584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.280" references="/0/calcEssenceSum/%.1/%.1">
+      <details key="start" value="7586"/>
+      <details key="end" value="7618"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.281" references="/0/calcEssenceSum/%.1/%.2">
+      <details key="start" value="7620"/>
+      <details key="end" value="7634"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.282" references="/0/calcEssenceSum/%.1/%.2/%/arg0">
+      <details key="start" value="7629"/>
+      <details key="end" value="7633"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.283" references="/0/calcKiPowerSum">
+      <details key="start" value="7698"/>
+      <details key="end" value="7874"/>
+      <details key="line" value="221"/>
+    </eAnnotations>
+    <eAnnotations source="positions.284" references="/0/calcKiPowerSum/%">
+      <details key="start" value="7640"/>
+      <details key="end" value="7697"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.285" references="/0/calcKiPowerSum/%/arg0">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.286" references="/0/calcKiPowerSum/arg0">
+      <details key="start" value="7727"/>
+      <details key="end" value="7750"/>
+      <details key="line" value="221"/>
+    </eAnnotations>
+    <eAnnotations source="positions.287" references="/0/calcKiPowerSum/%.1">
+      <details key="start" value="7765"/>
+      <details key="end" value="7871"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.288" references="/0/calcKiPowerSum/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.289" references="/0/calcKiPowerSum/%.1/%">
+      <details key="start" value="7772"/>
+      <details key="end" value="7820"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.290" references="/0/calcKiPowerSum/%.1/%.1">
+      <details key="start" value="7822"/>
+      <details key="end" value="7854"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.291" references="/0/calcKiPowerSum/%.1/%.2">
+      <details key="start" value="7856"/>
+      <details key="end" value="7870"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.292" references="/0/calcKiPowerSum/%.1/%.2/%/arg0">
+      <details key="start" value="7865"/>
+      <details key="end" value="7869"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>
