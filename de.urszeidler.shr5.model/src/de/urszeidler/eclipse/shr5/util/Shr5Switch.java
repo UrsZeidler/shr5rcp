@@ -1334,6 +1334,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(fokus);
                 if (result == null) result = caseQuelle(fokus);
                 if (result == null) result = caseGeldWert(fokus);
+                if (result == null) result = caseErlernbar(fokus);
                 if (result == null) result = caseIdentifiable(fokus);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
@@ -1347,6 +1348,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(abstraktFokus);
                 if (result == null) result = caseQuelle(abstraktFokus);
                 if (result == null) result = caseGeldWert(abstraktFokus);
+                if (result == null) result = caseErlernbar(abstraktFokus);
                 if (result == null) result = caseModifizierbar(abstraktFokus);
                 if (result == null) result = caseIdentifiable(abstraktFokus);
                 if (result == null) result = defaultCase(theEObject);
@@ -1362,6 +1364,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(qiFokus);
                 if (result == null) result = caseQuelle(qiFokus);
                 if (result == null) result = caseGeldWert(qiFokus);
+                if (result == null) result = caseErlernbar(qiFokus);
                 if (result == null) result = caseModifizierbar(qiFokus);
                 if (result == null) result = caseIdentifiable(qiFokus);
                 if (result == null) result = defaultCase(theEObject);
@@ -1374,6 +1377,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseFokus(waffenFokus);
                 if (result == null) result = caseAbstaktWaffe(waffenFokus);
                 if (result == null) result = caseMagischeStufe(waffenFokus);
+                if (result == null) result = caseErlernbar(waffenFokus);
                 if (result == null) result = caseAbstraktGegenstand(waffenFokus);
                 if (result == null) result = caseQuelle(waffenFokus);
                 if (result == null) result = caseGeldWert(waffenFokus);
@@ -1394,6 +1398,7 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = caseBeschreibbar(magieFokus);
                 if (result == null) result = caseQuelle(magieFokus);
                 if (result == null) result = caseGeldWert(magieFokus);
+                if (result == null) result = caseErlernbar(magieFokus);
                 if (result == null) result = caseModifizierbar(magieFokus);
                 if (result == null) result = caseIdentifiable(magieFokus);
                 if (result == null) result = defaultCase(theEObject);

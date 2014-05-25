@@ -3,6 +3,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.Erlernbar;
 import java.math.BigDecimal;
 
 import de.urszeidler.eclipse.shr5.Fokus;
@@ -183,6 +184,11 @@ public class WaffenFokusImpl extends NahkampfwaffeImpl implements WaffenFokus {
                 default: return -1;
             }
         }
+        if (baseClass == Erlernbar.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
         if (baseClass == Fokus.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.WAFFEN_FOKUS__BINDUNGSKOSTEN: return Shr5Package.FOKUS__BINDUNGSKOSTEN;
@@ -202,6 +208,11 @@ public class WaffenFokusImpl extends NahkampfwaffeImpl implements WaffenFokus {
         if (baseClass == MagischeStufe.class) {
             switch (baseFeatureID) {
                 case Shr5Package.MAGISCHE_STUFE__STUFE: return Shr5Package.WAFFEN_FOKUS__STUFE;
+                default: return -1;
+            }
+        }
+        if (baseClass == Erlernbar.class) {
+            switch (baseFeatureID) {
                 default: return -1;
             }
         }

@@ -4,8 +4,6 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
-
-import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import junit.textui.TestRunner;

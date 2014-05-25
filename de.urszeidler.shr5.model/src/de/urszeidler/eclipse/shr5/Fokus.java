@@ -24,7 +24,7 @@ package de.urszeidler.eclipse.shr5;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface Fokus extends MagischeStufe, Beschreibbar, Quelle, GeldWert {
+public interface Fokus extends MagischeStufe, Beschreibbar, Quelle, GeldWert, Erlernbar {
     /**
      * Returns the value of the '<em><b>Bindungskosten</b></em>' attribute.
      * <!-- begin-user-doc -->

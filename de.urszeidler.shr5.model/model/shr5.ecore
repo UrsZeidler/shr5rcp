@@ -930,7 +930,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stufe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fokus" abstract="true" interface="true"
-      eSuperTypes="#//MagischeStufe #//Beschreibbar #//Quelle #//GeldWert">
+      eSuperTypes="#//MagischeStufe #//Beschreibbar #//Quelle #//GeldWert #//Erlernbar">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The fokus has binding costs."/>
     </eAnnotations>

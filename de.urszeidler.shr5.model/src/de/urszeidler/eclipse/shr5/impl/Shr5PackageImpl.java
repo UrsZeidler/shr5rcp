@@ -5850,6 +5850,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         fokusEClass.getESuperTypes().add(this.getBeschreibbar());
         fokusEClass.getESuperTypes().add(this.getQuelle());
         fokusEClass.getESuperTypes().add(this.getGeldWert());
+        fokusEClass.getESuperTypes().add(this.getErlernbar());
         abstraktFokusEClass.getESuperTypes().add(this.getFokus());
         abstraktFokusEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
         qiFokusEClass.getESuperTypes().add(this.getAbstraktFokus());

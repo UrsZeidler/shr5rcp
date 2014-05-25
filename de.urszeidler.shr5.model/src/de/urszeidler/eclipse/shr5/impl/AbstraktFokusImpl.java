@@ -7,6 +7,7 @@ import de.urszeidler.eclipse.shr5.AbstraktFokus;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.GeldWert;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
@@ -778,6 +779,11 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
                 default: return -1;
             }
         }
+        if (baseClass == Erlernbar.class) {
+            switch (derivedFeatureID) {
+                default: return -1;
+            }
+        }
         if (baseClass == Modifizierbar.class) {
             switch (derivedFeatureID) {
                 case Shr5Package.ABSTRAKT_FOKUS__MODS: return Shr5Package.MODIFIZIERBAR__MODS;
@@ -826,6 +832,11 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
                 case Shr5Package.GELD_WERT__WERT: return Shr5Package.ABSTRAKT_FOKUS__WERT;
                 case Shr5Package.GELD_WERT__VERFUEGBARKEIT: return Shr5Package.ABSTRAKT_FOKUS__VERFUEGBARKEIT;
                 case Shr5Package.GELD_WERT__WERT_VALUE: return Shr5Package.ABSTRAKT_FOKUS__WERT_VALUE;
+                default: return -1;
+            }
+        }
+        if (baseClass == Erlernbar.class) {
+            switch (baseFeatureID) {
                 default: return -1;
             }
         }

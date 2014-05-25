@@ -3,12 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import java.math.BigDecimal;
-
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -22,10 +19,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.impl.QiFokusImpl#getPower <em>Power</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.QiFokusImpl#getPower <em>Power</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
@@ -33,7 +30,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
      * The cached value of the '{@link #getPower() <em>Power</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getPower()
      * @generated
      * @ordered
@@ -43,7 +39,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected QiFokusImpl() {
@@ -53,7 +48,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -64,7 +58,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public KiKraft getPower() {
@@ -74,7 +67,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public NotificationChain basicSetPower(KiKraft newPower, NotificationChain msgs) {
@@ -82,10 +74,7 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
         power = newPower;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__POWER, oldPower, newPower);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+            if (msgs == null) msgs = notification; else msgs.add(notification);
         }
         return msgs;
     }
@@ -93,7 +82,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPower(KiKraft newPower) {
@@ -104,16 +92,15 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
             if (newPower != null)
                 msgs = ((InternalEObject)newPower).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Shr5Package.QI_FOKUS__POWER, null, msgs);
             msgs = basicSetPower(newPower, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
+            if (msgs != null) msgs.dispatch();
+        }
+        else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.QI_FOKUS__POWER, newPower, newPower));
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -128,7 +115,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -143,7 +129,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -159,7 +144,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -175,7 +159,6 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
