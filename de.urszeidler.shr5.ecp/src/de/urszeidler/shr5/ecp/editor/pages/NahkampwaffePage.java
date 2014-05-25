@@ -123,7 +123,8 @@ public class NahkampwaffePage extends AbstractShr5Page<Nahkampfwaffe> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTAKT_WAFFE__DURCHSCHLAGS_KRAFT, grpFernkampfwaffe);
         
         if (object instanceof Fokus) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpFernkampfwaffe);            
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpFernkampfwaffe); 
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpFernkampfwaffe);
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

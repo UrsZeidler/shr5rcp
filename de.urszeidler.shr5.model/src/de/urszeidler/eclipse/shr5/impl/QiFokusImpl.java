@@ -190,21 +190,22 @@ public class QiFokusImpl extends AbstraktFokusImpl implements QiFokus {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getBindungskosten() {
-        return getStufe()*2;
-     }
+        return getStufe() * 2;
+    }
 
-    
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated not
      */
     public int getStufe() {
-        if(getPower()!=null){
-            return (int)Math.ceil((4 *getPower().getKraftpunkte())/100D );
+        if (getPower() != null) {
+            return (int)Math.ceil((4 * Math.abs(getPower().getKraftpunkte()) / 100D));
         }
         return stufe;
     }

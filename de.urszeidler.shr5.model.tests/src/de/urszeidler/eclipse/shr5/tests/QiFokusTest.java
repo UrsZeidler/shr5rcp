@@ -103,4 +103,20 @@ public class QiFokusTest extends AbstraktFokusTest {
         assertEquals(1, getFixture().getStufe());  
     }
 
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5.Fokus#getBindungskosten() <em>Bindungskosten</em>}' feature getter.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.Fokus#getBindungskosten()
+     * @generated not
+     */
+    public void testGetBindungskosten1() {
+        KiKraft kiKraft= Shr5Factory.eINSTANCE.createKiKraft();
+        kiKraft.setKraftpunkte(-25);
+        
+        getFixture().setPower(kiKraft);
+        assertEquals(2, getFixture().getBindungskosten());  
+        assertEquals(1, getFixture().getStufe());  
+    }
+
 } //QiFokusTest

@@ -17,9 +17,12 @@ import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.BioWare;
 import de.urszeidler.eclipse.shr5.Cyberware;
 import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
+import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.KiKraft;
 import de.urszeidler.eclipse.shr5.Koerpermods;
+import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -143,6 +146,14 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         } else if (object instanceof KiKraft) {
             grpWert.setText(Messages.ObjectPage_powwerPoint);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE, grpWert);
+        }else if (object instanceof Fokus) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpWert);
+            if (object instanceof QiFokus) {               
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpWert);
+            }else if (object instanceof MagieFokus) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpWert);
+            }
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
