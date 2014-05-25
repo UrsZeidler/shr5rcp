@@ -65,16 +65,17 @@ public class AbstraktFokusItemProvider
             super.getPropertyDescriptors(object);
 
             addStufePropertyDescriptor(object);
-            addBeschreibungPropertyDescriptor(object);
-            addImagePropertyDescriptor(object);
-            addNamePropertyDescriptor(object);
+            addBindungskostenPropertyDescriptor(object);
             addParentIdPropertyDescriptor(object);
             addPagePropertyDescriptor(object);
             addSrcBookPropertyDescriptor(object);
             addWertPropertyDescriptor(object);
             addVerfuegbarkeitPropertyDescriptor(object);
             addWertValuePropertyDescriptor(object);
-            addBindungskostenPropertyDescriptor(object);
+            addBeschreibungPropertyDescriptor(object);
+            addImagePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
+            addFertigkeitPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -163,6 +164,28 @@ public class AbstraktFokusItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Fertigkeit feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addFertigkeitPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Anwendbar_fertigkeit_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Anwendbar_fertigkeit_feature", "_UI_Anwendbar_type"),
+                 Shr5Package.Literals.ANWENDBAR__FERTIGKEIT,
+                 true,
+                 false,
+                 true,
+                 null,
                  null,
                  null));
     }
@@ -379,15 +402,15 @@ public class AbstraktFokusItemProvider
 
         switch (notification.getFeatureID(AbstraktFokus.class)) {
             case Shr5Package.ABSTRAKT_FOKUS__STUFE:
-            case Shr5Package.ABSTRAKT_FOKUS__BESCHREIBUNG:
-            case Shr5Package.ABSTRAKT_FOKUS__IMAGE:
-            case Shr5Package.ABSTRAKT_FOKUS__NAME:
+            case Shr5Package.ABSTRAKT_FOKUS__BINDUNGSKOSTEN:
             case Shr5Package.ABSTRAKT_FOKUS__PARENT_ID:
             case Shr5Package.ABSTRAKT_FOKUS__PAGE:
             case Shr5Package.ABSTRAKT_FOKUS__WERT:
             case Shr5Package.ABSTRAKT_FOKUS__VERFUEGBARKEIT:
             case Shr5Package.ABSTRAKT_FOKUS__WERT_VALUE:
-            case Shr5Package.ABSTRAKT_FOKUS__BINDUNGSKOSTEN:
+            case Shr5Package.ABSTRAKT_FOKUS__BESCHREIBUNG:
+            case Shr5Package.ABSTRAKT_FOKUS__IMAGE:
+            case Shr5Package.ABSTRAKT_FOKUS__NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.ABSTRAKT_FOKUS__LOCALIZATIONS:

@@ -14,5 +14,5 @@ package de.urszeidler.eclipse.shr5;
  * @model abstract="true"
  * @generated
  */
-public interface AbstraktFokus extends Fokus, AbstraktModifikatoren {
+public interface AbstraktFokus extends Fokus, AbstraktGegenstand {
 } // AbstraktFokus

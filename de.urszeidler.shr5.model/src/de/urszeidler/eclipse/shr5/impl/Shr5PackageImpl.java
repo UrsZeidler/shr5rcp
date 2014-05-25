@@ -5847,12 +5847,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         lifestyleOptionEClass.getESuperTypes().add(this.getGeldWert());
         percentLifestyleOptionEClass.getESuperTypes().add(this.getLifestyleOption());
         fokusEClass.getESuperTypes().add(this.getMagischeStufe());
-        fokusEClass.getESuperTypes().add(this.getBeschreibbar());
-        fokusEClass.getESuperTypes().add(this.getQuelle());
-        fokusEClass.getESuperTypes().add(this.getGeldWert());
         fokusEClass.getESuperTypes().add(this.getErlernbar());
         abstraktFokusEClass.getESuperTypes().add(this.getFokus());
-        abstraktFokusEClass.getESuperTypes().add(this.getAbstraktModifikatoren());
+        abstraktFokusEClass.getESuperTypes().add(this.getAbstraktGegenstand());
         qiFokusEClass.getESuperTypes().add(this.getAbstraktFokus());
         waffenFokusEClass.getESuperTypes().add(this.getNahkampfwaffe());
         waffenFokusEClass.getESuperTypes().add(this.getFokus());

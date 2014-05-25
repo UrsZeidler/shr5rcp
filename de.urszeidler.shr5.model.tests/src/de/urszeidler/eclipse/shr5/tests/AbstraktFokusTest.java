@@ -14,8 +14,8 @@ import junit.framework.TestCase;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fokus#getBindungskosten() <em>Bindungskosten</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  * </ul>
  * </p>
  * @generated

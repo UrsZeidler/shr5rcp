@@ -146,14 +146,6 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         } else if (object instanceof KiKraft) {
             grpWert.setText(Messages.ObjectPage_powwerPoint);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.KI_KRAFT__KRAFTPUNKTE, grpWert);
-        }else if (object instanceof Fokus) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpWert);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpWert);
-            if (object instanceof QiFokus) {               
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpWert);
-            }else if (object instanceof MagieFokus) {
-                emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpWert);
-            }
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);

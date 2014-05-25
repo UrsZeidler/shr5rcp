@@ -4,16 +4,12 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
-import de.urszeidler.eclipse.shr5.Cyberdeck;
-import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.FokusBinding;
 import de.urszeidler.eclipse.shr5.Shr5Package;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -33,7 +29,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.FokusBinding} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class FokusBindingItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider,
@@ -42,7 +37,6 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public FokusBindingItemProvider(AdapterFactory adapterFactory) {
@@ -53,7 +47,6 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * This returns the property descriptors for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -109,21 +102,28 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * This adds a property descriptor for the Active feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void addActivePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(), getString("_UI_FokusBinding_active_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_FokusBinding_active_feature", "_UI_FokusBinding_type"),
-                Shr5Package.Literals.FOKUS_BINDING__ACTIVE, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FokusBinding_active_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_FokusBinding_active_feature", "_UI_FokusBinding_type"),
+                 Shr5Package.Literals.FOKUS_BINDING__ACTIVE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
      * This returns FokusBinding.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -135,7 +135,6 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -149,7 +148,6 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -169,7 +167,6 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * that can be created under this object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -181,7 +178,6 @@ public class FokusBindingItemProvider extends ItemProviderAdapter implements IEd
      * Return the resource locator for this item provider's resources.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

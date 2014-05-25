@@ -14,7 +14,6 @@ import junit.framework.TestCase;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fokus#getBindungskosten() <em>Bindungskosten</em>}</li>
  * </ul>
  * </p>
@@ -58,19 +57,6 @@ public abstract class FokusTest extends TestCase {
      */
     protected Fokus getFixture() {
         return fixture;
-    }
-
-    /**
-     * Tests the '{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}' feature getter.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
-     * @generated
-     */
-    public void testGetWert() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
     /**

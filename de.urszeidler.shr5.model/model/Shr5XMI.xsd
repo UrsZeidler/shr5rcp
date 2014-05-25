@@ -1813,14 +1813,23 @@
       <xsd:documentation>The fokus has binding costs.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="shr5:MagischeStufe">
+      <xsd:extension base="shr5:MagischeStufe"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Fokus" type="shr5:Fokus">
+    <xsd:annotation>
+      <xsd:documentation>The fokus has binding costs.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="AbstraktFokus">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Fokus">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="localizations" type="shr5:Localization"/>
           <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+          <xsd:element name="fertigkeit" type="shr5:Fertigkeit"/>
         </xsd:choice>
-        <xsd:attribute name="beschreibung" type="xsd:string"/>
-        <xsd:attribute name="image" type="xsd:string"/>
-        <xsd:attribute name="name" type="xsd:string" use="required"/>
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="page" type="xsd:string"/>
         <xsd:attribute name="srcBook" type="xsd:string"/>
@@ -1834,20 +1843,10 @@
             <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:element name="Fokus" type="shr5:Fokus">
-    <xsd:annotation>
-      <xsd:documentation>The fokus has binding costs.</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:complexType abstract="true" name="AbstraktFokus">
-    <xsd:complexContent>
-      <xsd:extension base="shr5:Fokus">
-        <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
-        </xsd:choice>
+        <xsd:attribute name="beschreibung" type="xsd:string"/>
+        <xsd:attribute name="image" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="fertigkeit" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

@@ -17558,103 +17558,13 @@ public interface Shr5Package extends EPackage {
     int FOKUS__STUFE = MAGISCHE_STUFE__STUFE;
 
     /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__BESCHREIBUNG = MAGISCHE_STUFE_FEATURE_COUNT + 0;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__IMAGE = MAGISCHE_STUFE_FEATURE_COUNT + 1;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__NAME = MAGISCHE_STUFE_FEATURE_COUNT + 2;
-
-    /**
-     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__PARENT_ID = MAGISCHE_STUFE_FEATURE_COUNT + 3;
-
-    /**
-     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__LOCALIZATIONS = MAGISCHE_STUFE_FEATURE_COUNT + 4;
-
-    /**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__PAGE = MAGISCHE_STUFE_FEATURE_COUNT + 5;
-
-    /**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__SRC_BOOK = MAGISCHE_STUFE_FEATURE_COUNT + 6;
-
-    /**
-     * The feature id for the '<em><b>Wert</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__WERT = MAGISCHE_STUFE_FEATURE_COUNT + 7;
-
-    /**
-     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__VERFUEGBARKEIT = MAGISCHE_STUFE_FEATURE_COUNT + 8;
-
-    /**
-     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int FOKUS__WERT_VALUE = MAGISCHE_STUFE_FEATURE_COUNT + 9;
-
-    /**
      * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int FOKUS__BINDUNGSKOSTEN = MAGISCHE_STUFE_FEATURE_COUNT + 10;
+    int FOKUS__BINDUNGSKOSTEN = MAGISCHE_STUFE_FEATURE_COUNT + 0;
 
     /**
      * The number of structural features of the '<em>Fokus</em>' class.
@@ -17663,7 +17573,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int FOKUS_FEATURE_COUNT = MAGISCHE_STUFE_FEATURE_COUNT + 11;
+    int FOKUS_FEATURE_COUNT = MAGISCHE_STUFE_FEATURE_COUNT + 1;
 
     /**
      * The number of operations of the '<em>Fokus</em>' class.
@@ -17694,96 +17604,6 @@ public interface Shr5Package extends EPackage {
     int ABSTRAKT_FOKUS__STUFE = FOKUS__STUFE;
 
     /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__BESCHREIBUNG = FOKUS__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__IMAGE = FOKUS__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__NAME = FOKUS__NAME;
-
-    /**
-     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__PARENT_ID = FOKUS__PARENT_ID;
-
-    /**
-     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__LOCALIZATIONS = FOKUS__LOCALIZATIONS;
-
-    /**
-     * The feature id for the '<em><b>Page</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__PAGE = FOKUS__PAGE;
-
-    /**
-     * The feature id for the '<em><b>Src Book</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__SRC_BOOK = FOKUS__SRC_BOOK;
-
-    /**
-     * The feature id for the '<em><b>Wert</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__WERT = FOKUS__WERT;
-
-    /**
-     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__VERFUEGBARKEIT = FOKUS__VERFUEGBARKEIT;
-
-    /**
-     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ABSTRAKT_FOKUS__WERT_VALUE = FOKUS__WERT_VALUE;
-
-    /**
      * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -17793,13 +17613,112 @@ public interface Shr5Package extends EPackage {
     int ABSTRAKT_FOKUS__BINDUNGSKOSTEN = FOKUS__BINDUNGSKOSTEN;
 
     /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__PARENT_ID = FOKUS_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__LOCALIZATIONS = FOKUS_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__PAGE = FOKUS_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__SRC_BOOK = FOKUS_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__WERT = FOKUS_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__VERFUEGBARKEIT = FOKUS_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__WERT_VALUE = FOKUS_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__BESCHREIBUNG = FOKUS_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__IMAGE = FOKUS_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__NAME = FOKUS_FEATURE_COUNT + 9;
+
+    /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ABSTRAKT_FOKUS__MODS = FOKUS_FEATURE_COUNT + 0;
+    int ABSTRAKT_FOKUS__MODS = FOKUS_FEATURE_COUNT + 10;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ABSTRAKT_FOKUS__FERTIGKEIT = FOKUS_FEATURE_COUNT + 11;
 
     /**
      * The number of structural features of the '<em>Abstrakt Fokus</em>' class.
@@ -17808,7 +17727,7 @@ public interface Shr5Package extends EPackage {
      * @generated
      * @ordered
      */
-    int ABSTRAKT_FOKUS_FEATURE_COUNT = FOKUS_FEATURE_COUNT + 1;
+    int ABSTRAKT_FOKUS_FEATURE_COUNT = FOKUS_FEATURE_COUNT + 12;
 
     /**
      * The number of operations of the '<em>Abstrakt Fokus</em>' class.
@@ -17839,31 +17758,13 @@ public interface Shr5Package extends EPackage {
     int QI_FOKUS__STUFE = ABSTRAKT_FOKUS__STUFE;
 
     /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int QI_FOKUS__BESCHREIBUNG = ABSTRAKT_FOKUS__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int QI_FOKUS__IMAGE = ABSTRAKT_FOKUS__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int QI_FOKUS__NAME = ABSTRAKT_FOKUS__NAME;
+    int QI_FOKUS__BINDUNGSKOSTEN = ABSTRAKT_FOKUS__BINDUNGSKOSTEN;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -17929,13 +17830,31 @@ public interface Shr5Package extends EPackage {
     int QI_FOKUS__WERT_VALUE = ABSTRAKT_FOKUS__WERT_VALUE;
 
     /**
-     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int QI_FOKUS__BINDUNGSKOSTEN = ABSTRAKT_FOKUS__BINDUNGSKOSTEN;
+    int QI_FOKUS__BESCHREIBUNG = ABSTRAKT_FOKUS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__IMAGE = ABSTRAKT_FOKUS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__NAME = ABSTRAKT_FOKUS__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -17945,6 +17864,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int QI_FOKUS__MODS = ABSTRAKT_FOKUS__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int QI_FOKUS__FERTIGKEIT = ABSTRAKT_FOKUS__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Power</b></em>' containment reference.
@@ -18192,31 +18120,13 @@ public interface Shr5Package extends EPackage {
     int MAGIE_FOKUS__STUFE = ABSTRAKT_FOKUS__STUFE;
 
     /**
-     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MAGIE_FOKUS__BESCHREIBUNG = ABSTRAKT_FOKUS__BESCHREIBUNG;
-
-    /**
-     * The feature id for the '<em><b>Image</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MAGIE_FOKUS__IMAGE = ABSTRAKT_FOKUS__IMAGE;
-
-    /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int MAGIE_FOKUS__NAME = ABSTRAKT_FOKUS__NAME;
+    int MAGIE_FOKUS__BINDUNGSKOSTEN = ABSTRAKT_FOKUS__BINDUNGSKOSTEN;
 
     /**
      * The feature id for the '<em><b>Parent Id</b></em>' attribute.
@@ -18282,13 +18192,31 @@ public interface Shr5Package extends EPackage {
     int MAGIE_FOKUS__WERT_VALUE = ABSTRAKT_FOKUS__WERT_VALUE;
 
     /**
-     * The feature id for the '<em><b>Bindungskosten</b></em>' attribute.
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int MAGIE_FOKUS__BINDUNGSKOSTEN = ABSTRAKT_FOKUS__BINDUNGSKOSTEN;
+    int MAGIE_FOKUS__BESCHREIBUNG = ABSTRAKT_FOKUS__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__IMAGE = ABSTRAKT_FOKUS__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__NAME = ABSTRAKT_FOKUS__NAME;
 
     /**
      * The feature id for the '<em><b>Mods</b></em>' containment reference list.
@@ -18298,6 +18226,15 @@ public interface Shr5Package extends EPackage {
      * @ordered
      */
     int MAGIE_FOKUS__MODS = ABSTRAKT_FOKUS__MODS;
+
+    /**
+     * The feature id for the '<em><b>Fertigkeit</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int MAGIE_FOKUS__FERTIGKEIT = ABSTRAKT_FOKUS__FERTIGKEIT;
 
     /**
      * The feature id for the '<em><b>Bindungs Faktor</b></em>' attribute.

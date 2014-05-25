@@ -30,7 +30,6 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Persona Change</b></em>'.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class PersonaChangeTest extends PersonaValueChangeTest {
@@ -38,7 +37,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -49,7 +47,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * Constructs a new Persona Change test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public PersonaChangeTest(String name) {
@@ -60,7 +57,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
      * Returns the fixture for this Persona Change test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -71,7 +67,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -83,7 +78,6 @@ public class PersonaChangeTest extends PersonaValueChangeTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */

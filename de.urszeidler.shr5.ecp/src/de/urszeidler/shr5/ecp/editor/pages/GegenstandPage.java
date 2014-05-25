@@ -18,9 +18,12 @@ import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.Commlink;
 import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
+import de.urszeidler.eclipse.shr5.Fokus;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.Munition;
+import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -165,6 +168,14 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         } else if (object instanceof Commlink) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
+        }else if (object instanceof Fokus) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpWert);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpWert);
+            if (object instanceof QiFokus) {               
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpWert);
+            }else if (object instanceof MagieFokus) {
+                emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpWert);
+            }
         }
 
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);

@@ -825,19 +825,21 @@
     </nested>
     <nested inputs="shr5.ecore#//MagischeStufe" outputs="Shr5XMI.xsd#//MagischeStufe;XSDElementDeclaration=118"/>
     <nested inputs="shr5.ecore#//Fokus" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119"/>
-    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse"/>
-    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=1"/>
-    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=2"/>
-    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=3"/>
-    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDParticle/XSDModelGroup/XSDParticle"/>
-    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=4"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=5"/>
-    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDParticle/XSDModelGroup/XSDParticle=1"/>
-    <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=6"/>
-    <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Fokus;XSDComplexTypeDefinition=119/XSDAttributeUse=7"/>
     <nested inputs="shr5.ecore#//Fokus" outputs="Shr5XMI.xsd#//Fokus;XSDElementDeclaration=119"/>
     <nested inputs="shr5.ecore#//AbstraktFokus" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120"/>
-    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=4"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=5"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=6"/>
+    <nested inputs="shr5.ecore#//Beschreibbar/name" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=7"/>
+    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDAttributeUse=8"/>
+    <nested inputs="shr5.ecore#//Anwendbar/fertigkeit" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDComplexTypeDefinition=120/XSDParticle/XSDModelGroup/XSDParticle=3"/>
     <nested inputs="shr5.ecore#//AbstraktFokus" outputs="Shr5XMI.xsd#//AbstraktFokus;XSDElementDeclaration=120"/>
     <nested inputs="shr5.ecore#//QiFokus" outputs="Shr5XMI.xsd#//QiFokus;XSDComplexTypeDefinition=121">
       <nested inputs="shr5.ecore#//QiFokus/power" outputs="Shr5XMI.xsd#//QiFokus;XSDComplexTypeDefinition=121/XSDParticle/XSDModelGroup/XSDParticle"/>

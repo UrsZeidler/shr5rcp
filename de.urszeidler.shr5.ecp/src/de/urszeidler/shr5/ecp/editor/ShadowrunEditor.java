@@ -28,6 +28,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
+import de.urszeidler.eclipse.shr5.AbstraktFokus;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
@@ -376,7 +377,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseMunition(Munition object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.MUNITION), object,
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
                             editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
@@ -387,14 +388,24 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseAbstractMatrixDevice(AbstractMatrixDevice object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(Shr5Package.Literals.COMMLINK), object,
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
                             editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-
+            
+            @Override
+            public Object caseAbstraktFokus(AbstraktFokus object) {
+                try {
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating GegenstandPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
             // @Override
             // public Object caseCyberdeck(Cyberdeck object) {
             // try {
