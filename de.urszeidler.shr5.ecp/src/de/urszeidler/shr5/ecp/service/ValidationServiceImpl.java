@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.ui.services.IServiceLocator;
 
 /**
+ * Keeps track of the validation results. And notify a target.
+ * 
  * @author urs
  */
 public class ValidationServiceImpl implements ValidationService {
@@ -32,7 +34,7 @@ public class ValidationServiceImpl implements ValidationService {
     @Override
     public void updateValidation(EObject eobject) {
         Diagnostic diagnostic = validationResults.get(eobject);
-        if(diagnostic!=null)
+        if (diagnostic != null)
             updateTarget(diagnostic);
     }
 
