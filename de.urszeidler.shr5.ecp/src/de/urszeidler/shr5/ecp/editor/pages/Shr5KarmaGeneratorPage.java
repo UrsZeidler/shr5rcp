@@ -382,6 +382,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
         // grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
         diagnosticComposite.setDiagnostic(validate);
         diagnosticComposite.update();
+        validationService.updateValidation(object, validate);
 
     }
 

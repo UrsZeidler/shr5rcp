@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
+import de.urszeidler.shr5.ecp.service.ValidationService;
 
 /**
  * The basic page for the generators.
@@ -80,6 +81,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
 
     private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif");
     protected Map<Object, Object> context;
+    protected ValidationService validationService;
 
     public AbstractGeneratorPage(String id, String title) {
         super(id, title);
@@ -161,6 +163,13 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
 
     }
 
+    @Override
+    public void initialize(FormEditor editor) {
+        super.initialize(editor);
+        validationService = (ValidationService) editor.getSite().getService(ValidationService.class);
+    }
+
+    
     /**
      * Create the managed character.
      * 

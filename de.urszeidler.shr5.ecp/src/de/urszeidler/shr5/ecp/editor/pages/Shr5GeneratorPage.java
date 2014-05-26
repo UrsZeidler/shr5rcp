@@ -69,6 +69,7 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
+import de.urszeidler.shr5.ecp.service.ValidationService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
@@ -155,8 +156,11 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         this.object = object;
         this.editingDomain = editingDomain;
         context = createValidationContext();
+        
+        
     }
 
+    
     /**
      * Create contents of the form.
      * 
@@ -485,8 +489,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
                 newSet.add(diagnostic.getCode());
 
             newChangeset.add(diagnostic.getMessage());
-            Shr5Generator object3 = object;
-            updateGeneratorState(diagnostic, object3);
+            updateGeneratorState(diagnostic, object);
         }
 
         if (newChangeset.equals(changeSet))
@@ -513,6 +516,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         diagnosticComposite.setDiagnostic(validate);
         diagnosticComposite.update();
+        
+        validationService.updateValidation(object, validate);
     }
 
     /**

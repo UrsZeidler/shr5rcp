@@ -186,6 +186,23 @@
             class="de.urszeidler.shr5.ecp.preferences.PreferenceInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="de.urszeidler.shr5.ecp.views.GeneratorValidationView"
+            id="de.urszeidler.shr5.ecp.GeneratorValidationView"
+            name="Character building validation">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.services">
+      <serviceFactory
+            factoryClass="de.urszeidler.shr5.ecp.service.UIServiceFactory">
+         <service
+               serviceClass="de.urszeidler.shr5.ecp.service.ValidationService">
+         </service>
+      </serviceFactory>
+   </extension>
 
 
 </plugin>
