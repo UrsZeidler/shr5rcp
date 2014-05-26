@@ -79,6 +79,10 @@
                   label="%command.import"
                   style="push">
             </command>
+            <command
+                  commandId="org.eclipse.ui.newWizard"
+                  style="push">
+            </command>
             <separator
                   name="de.urszeidler.shr5.product.separator1">
             </separator>
