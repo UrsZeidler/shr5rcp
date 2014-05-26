@@ -203,6 +203,25 @@
          </service>
       </serviceFactory>
    </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <primaryWizard
+            id="de.urszeidler.shr5.ecp.primaryWizard1">
+      </primaryWizard>
+      <wizard
+            canFinishEarly="false"
+            category="de.urszeidler.shr5.ecp.character"
+            class="de.urszeidler.shr5.ecp.wizards.NewShr5GeneratorWizard"
+            finalPerspective="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
+            hasPages="true"
+            id="de.urszeidler.shr5.ecp.newShr5GeneratorWizard"
+            name="new shr5 Generator">
+      </wizard>
+      <category
+            id="de.urszeidler.shr5.ecp.character"
+            name="shr5 character">
+      </category>
+   </extension>
 
 
 </plugin>

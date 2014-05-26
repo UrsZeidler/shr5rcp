@@ -29,6 +29,7 @@ import org.eclipse.emf.ecp.core.ECPProvider;
 import org.eclipse.emf.ecp.core.exceptions.ECPProjectWithNameExistsException;
 import org.eclipse.emf.ecp.core.util.ECPProperties;
 import org.eclipse.emf.ecp.core.util.ECPUtil;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
@@ -62,6 +63,14 @@ public class Activator extends AbstractUIPlugin {
 
     }
 
+    public EditingDomain getEdtingDomain() {
+        ECPProject project = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
+        if (project == null)
+            return null;
+        EditingDomain editingDomain = project.getEditingDomain();
+        return editingDomain;
+    }
+
     public void createECPWorkspace() throws ECPProjectWithNameExistsException {
         ECPProvider provider = ECPUtil.getECPProviderRegistry().getProvider("org.eclipse.emf.ecp.workspace.provider");
         ECPProperties ecpProperties = ECPUtil.createProperties();
@@ -72,15 +81,15 @@ public class Activator extends AbstractUIPlugin {
             ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME, ecpProperties);
             project.open();
         }
-        
-//        ecpProperties = ECPUtil.createProperties();
-//        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.shr5");
-//        ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-de");
-//        if (ecpProject == null) {
-//            logInfo("creating ECP project.... de");
-//            ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-de", ecpProperties);
-//            project.open();
-//        }
+
+        // ecpProperties = ECPUtil.createProperties();
+        // ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.shr5");
+        // ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-de");
+        // if (ecpProject == null) {
+        // logInfo("creating ECP project.... de");
+        // ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-de", ecpProperties);
+        // project.open();
+        // }
     }
 
     public void createDefaultWorkspace() {
