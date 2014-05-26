@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.product.application;
 
+import org.eclipse.jface.action.ICoolBarManager;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.application.ActionBarAdvisor;
@@ -20,6 +21,9 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
      */
     public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
         super(configurer);
+        ICoolBarManager coolBarManager = configurer.getCoolBarManager();
+        coolBarManager.getItems();
+        configurer.getWindowConfigurer();
     }
 
     /** {@inheritDoc} */

@@ -59,6 +59,11 @@
             id="de.urszeidler.shr5.product.application.ShadowrunPerspective"
             name="Main shadowrun">
       </perspective>
+      <perspective
+            class="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
+            id="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
+            name="Character building">
+      </perspective>
    </extension>
 
 
@@ -104,6 +109,10 @@
             </command>
             <command
                   commandId="org.eclipse.ui.window.preferences"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.perspectives.showPerspective"
                   style="push">
             </command>
          </menu>
