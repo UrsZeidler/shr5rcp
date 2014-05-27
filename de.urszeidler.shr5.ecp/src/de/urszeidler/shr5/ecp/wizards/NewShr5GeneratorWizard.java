@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.MessageDialogWithToggle;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -25,7 +24,6 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
-import org.eclipse.ui.internal.ide.IDEWorkbenchMessages;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;

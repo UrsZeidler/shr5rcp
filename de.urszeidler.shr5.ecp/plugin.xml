@@ -255,7 +255,7 @@
            name="Open character wizard Category">
      </category>
      <command
-           categoryId="de.urszeidler.shr5.ecp.commands.category"
+           categoryId="de.urszeidler.shr5.ecp.commands.openWizard"
            id="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
            name="Open generator wizard">
      </command>

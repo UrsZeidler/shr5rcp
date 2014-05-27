@@ -10,7 +10,6 @@ import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyle;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
-import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
 /**

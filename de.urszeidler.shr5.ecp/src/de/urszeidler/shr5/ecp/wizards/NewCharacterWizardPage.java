@@ -46,9 +46,9 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
      * @wbp.parser.constructor
      */
     public NewCharacterWizardPage() {
-        super("wizardPage");
+        super("Character Wizard");
         setTitle("Character creation setup");
-        setDescription("Wizard Page description");
+        setDescription("A new character generator");
     }
 
     public NewCharacterWizardPage(List<EObject> container, List<EObject> systems2, List<EObject> groups2, WritableValue selectedContainer2,
