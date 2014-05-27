@@ -73,14 +73,11 @@
             allPopups="false"
             locationURI="menu:org.eclipse.ui.main.menu">
          <menu
+               id="project.menu.id"
                label="%menu.label">
             <command
                   commandId="org.eclipse.ui.file.import"
                   label="%command.import"
-                  style="push">
-            </command>
-            <command
-                  commandId="org.eclipse.ui.newWizard"
                   style="push">
             </command>
             <separator
