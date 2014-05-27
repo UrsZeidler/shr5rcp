@@ -205,23 +205,77 @@
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">
-      <primaryWizard
-            id="de.urszeidler.shr5.ecp.primaryWizard1">
-      </primaryWizard>
       <wizard
             canFinishEarly="false"
             category="de.urszeidler.shr5.ecp.character"
             class="de.urszeidler.shr5.ecp.wizards.NewShr5GeneratorWizard"
-            finalPerspective="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
             hasPages="true"
-            id="de.urszeidler.shr5.ecp.newShr5GeneratorWizard"
+            id="de.urszeidler.shr5.ecp.wizards.NewShr5GeneratorWizard"
             name="new shr5 Generator">
       </wizard>
       <category
             id="de.urszeidler.shr5.ecp.character"
             name="shr5 character">
       </category>
+      <wizard
+            category="de.urszeidler.shr5.ecp.character"
+            class="de.urszeidler.shr5.ecp.wizards.NewShr5KarmaGeneratorWizard"
+            id="de.urszeidler.shr5.ecp.wizards.NewShr5KarmaGeneratorWizard"
+            name="Shr5 Karmagenerator">
+      </wizard>
+      <wizard
+            category="de.urszeidler.shr5.ecp.character"
+            class="de.urszeidler.shr5.ecp.wizards.NewFreeStyleGeneratorWizard"
+            id="de.urszeidler.shr5.ecp.wizards.NewFreeStyleGeneratorWizard"
+            name="Freestyle Generator">
+      </wizard>
    </extension>
+
+  <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
+         <menu
+               id="de.urszeidler.shr5.ecp.menus.sampleMenu"
+               label="Create Menu"
+               mnemonic="M">
+            <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+
+
+ </extension>
+  <extension
+        point="org.eclipse.ui.commands">
+     <category
+           id="de.urszeidler.shr5.ecp.commands.openWizard"
+           name="Open character wizard Category">
+     </category>
+     <command
+           categoryId="de.urszeidler.shr5.ecp.commands.category"
+           id="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
+           name="Open generator wizard">
+     </command>
+  </extension>
+  <extension
+        point="org.eclipse.ui.handlers">
+     <handler
+           class="de.urszeidler.shr5.ecp.handlers.Shr5CommandHandler"
+           commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand">
+     </handler>
+  </extension>
+  <extension
+        point="org.eclipse.ui.bindings">
+     <key
+           commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
+           contextId="org.eclipse.ui.contexts.window"
+           schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+           sequence="M1+6">
+     </key>
+  </extension>
 
 
 </plugin>

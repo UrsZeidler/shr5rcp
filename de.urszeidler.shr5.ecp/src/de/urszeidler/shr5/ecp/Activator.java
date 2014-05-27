@@ -64,11 +64,19 @@ public class Activator extends AbstractUIPlugin {
     }
 
     public EditingDomain getEdtingDomain() {
-        ECPProject project = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
+        ECPProject project = getDefaultEcpProject();
         if (project == null)
             return null;
-        EditingDomain editingDomain = project.getEditingDomain();
+       EditingDomain editingDomain = project.getEditingDomain();
         return editingDomain;
+    }
+
+    /**
+     * @return
+     */
+    public ECPProject getDefaultEcpProject() {
+        ECPProject project = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
+         return project;
     }
 
     public void createECPWorkspace() throws ECPProjectWithNameExistsException {

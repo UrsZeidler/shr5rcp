@@ -54,13 +54,21 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
      */
     @Override
     public void openModelElement(Object element, ECPProject ecpProject) {
+        openEditor(element, ecpProject);
+
+    }
+
+    /**
+     * @param element
+     * @param ecpProject
+     */
+    public static void openEditor(Object element, ECPProject ecpProject) {
         EObjectEditorInput eObjectEditorInput = new EObjectEditorInput((EObject)element, ecpProject.getEditingDomain());
         try {
             PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().openEditor(eObjectEditorInput, ShadowrunEditor.id, true);
         } catch (PartInitException e) {
             Activator.logError("Error open editor " + ShadowrunEditor.id + "for object :" + element, e);
         }
-
     }
 
     @Override
