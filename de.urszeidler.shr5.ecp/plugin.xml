@@ -190,6 +190,7 @@
          point="org.eclipse.ui.views">
       <view
             class="de.urszeidler.shr5.ecp.views.GeneratorValidationView"
+            icon="images/valadapter_obj.gif"
             id="de.urszeidler.shr5.ecp.GeneratorValidationView"
             name="%generatorValidation.view.name">
       </view>
