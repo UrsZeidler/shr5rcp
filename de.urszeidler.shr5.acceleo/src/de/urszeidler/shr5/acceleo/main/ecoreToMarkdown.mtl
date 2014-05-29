@@ -15,12 +15,12 @@
 [**
  * Prints all concret subclasses.
 */]
-[template public printAllEClasses(anEPackage : EPackage)]
+[template public printAllEClasses(anEPackage : EPackage,basePath : String)]
 [allEclassesAsLink(anEPackage)/]
 
 [for (it : EClass | anEPackage.eClassifiers->selectByType(EClass)
 )]
-[printEClass(it.oclAsType(EClass))/][/for]
+[printEClass(it.oclAsType(EClass),basePath)/][/for]
 
 # all enums
 
@@ -136,7 +136,7 @@ instanceTypeName | instanceClassName | serializable | doc
 [**
  * Links to a type if it is not an ecore type.
 */]
-[template private printAttributeLink(attribute : EAttribute)]
+[template protected printAttributeLink(attribute : EAttribute)]
 [if (not (attribute.eType.ePackage.name='ecore'))]
 [printEClassLink(attribute.eType)/][else]
 [attribute.eType.name/][/if]
@@ -145,13 +145,14 @@ instanceTypeName | instanceClassName | serializable | doc
 [**
  * Print the eclass.
 */]
-[template public printEClass(anEclass : EClass)]
+[template public printEClass(anEclass : EClass,basePath : String)]
 
 ## [anEclass.name/]
 
-abstract | interface 
-----|----
-[anEclass.abstract/]|[anEclass.interface/]
+[comment]icon|abstract | interface 
+---|----|----
+[anEclass.printKind(basePath)/]|[anEclass.abstract/]|[anEclass.interface/][/comment]
+[printEClassKind(anEclass, basePath)/]
 
 [toDocumentation(anEclass.eAnnotations)/]
 
@@ -200,9 +201,29 @@ name | doc
 [/template]
 
 
+[template private printEClassKind(eClass : EClass, basePath : String)]
+ kind  |
+---|
+[if (eClass.interface)]
+Interface|
+[elseif (eClass.abstract)]
+Abstract|	
+[else]
+[eClass.printKind(basePath)/] Concrete|
+[/if]
+[/template]
+
+[template public printKind(eClass : EClass, basePath : String) post (trim())]
+[eClass.name.imageStart()/]([basePath/]/icons/full/obj16/[eClass.name/].gif)[/template]
+
+[query public imageStart(name : String) : String = '!['+name+']'/]
+
+
+
+
 [template public linkToTop(anEPackage : EPackage)]
 [ '[' /]_back to top_[ ']' /]([anEPackage.name.toLower()/]-model#concret-classes-in-the-model-[anEPackage.name.toLower()/])
 [/template]
 
-[template private cardinality(feature : EStructuralFeature)]
+[template protected cardinality(feature : EStructuralFeature)]
 [feature.lowerBound/]-[if (feature.upperBound=-1)]*[else][feature.upperBound/][/if][/template]

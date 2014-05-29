@@ -9,7 +9,9 @@
  * The documentation of the template generateElement.
  * @param anEPackage
  */]
-[template public generateElement(anEPackage : EPackage)]
+[template public generateElement(anEPackage : EPackage){
+basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.model.edit' ;
+}]
 [comment @main/]
 [file (anEPackage.name+'-model.md', false, 'UTF-8')]
 # concret classes in the model [anEPackage.name/]
@@ -33,7 +35,7 @@ All the software.
 
 The complete list of all EClasses in this package.
 
-[printAllEClasses(anEPackage)/]
+[printAllEClasses(anEPackage,basePath)/]
 
 [/file]
 [/template]

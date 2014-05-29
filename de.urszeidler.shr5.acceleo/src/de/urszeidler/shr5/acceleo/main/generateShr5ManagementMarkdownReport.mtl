@@ -2,14 +2,15 @@
 [**
  * The documentation of the module generateEcoreReport.
  */]
-[module generateShr5ManagementMarkdownReport('http://www.eclipse.org/emf/2002/Ecore')]
-[import de::urszeidler::shr5::acceleo::main::ecoreToMarkdown /]
+[module generateShr5ManagementMarkdownReport('http://www.eclipse.org/emf/2002/Ecore') extends de::urszeidler::shr5::acceleo::main::ecoreToMarkdown ]
 
 [**
  * The documentation of the template generateElement.
  * @param anEPackage
  */]
-[template public generateElement(anEPackage : EPackage)]
+[template public generateElement(anEPackage : EPackage) {
+basePath : String = 'https://raw.githubusercontent.com/UrsZeidler/shr5rcp/master/de.urszeidler.shr5.management.model.edit' ;
+}]
 [comment @main/]
 [file (anEPackage.name+'-model.md', false, 'UTF-8')]
 # concret classes in the model [anEPackage.name/]
@@ -30,7 +31,8 @@ The character generators.
 
 The complete list of all EClasses in this package.
 
-[printAllEClasses(anEPackage)/]
+[printAllEClasses(anEPackage,basePath)/]
 
 [/file]
 [/template]
+
