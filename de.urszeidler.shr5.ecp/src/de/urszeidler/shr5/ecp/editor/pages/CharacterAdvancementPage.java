@@ -109,7 +109,7 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
     protected void createFormContent(IManagedForm managedForm) {
         final FormToolkit toolkit = managedForm.getToolkit();
         ScrolledForm form = managedForm.getForm();
-        form.setText("Character advacements");
+        form.setText(Messages.CharacterAdvancementPage_titel);
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
@@ -145,28 +145,28 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
         TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
         TableColumn tblclmnName = tableViewerColumn.getColumn();
         tblclmnName.setWidth(300);
-        tblclmnName.setText("name");
+        tblclmnName.setText(Messages.CharacterAdvancementPage_column_name);
         
         TableViewerColumn tableViewerColumn_1 = new TableViewerColumn(tableViewer, SWT.NONE);
         TableColumn tblclmNDate = tableViewerColumn_1.getColumn();
         tblclmNDate.setResizable(false);
         tblclmNDate.setAlignment(SWT.CENTER);
         tblclmNDate.setWidth(90);
-        tblclmNDate.setText("date");
+        tblclmNDate.setText(Messages.CharacterAdvancementPage_column_date);
         
         TableViewerColumn tableViewerColumn_2 = new TableViewerColumn(tableViewer, SWT.NONE);
         TableColumn tblclmnDateApplied = tableViewerColumn_2.getColumn();
         tblclmnDateApplied.setResizable(false);
         tblclmnDateApplied.setAlignment(SWT.CENTER);
         tblclmnDateApplied.setWidth(95);
-        tblclmnDateApplied.setText("date applied");
+        tblclmnDateApplied.setText(Messages.CharacterAdvancementPage_column_date_applied);
         
         TableViewerColumn tableViewerColumn_3 = new TableViewerColumn(tableViewer, SWT.NONE);
         TableColumn tblclmnKarma = tableViewerColumn_3.getColumn();
         tblclmnKarma.setResizable(false);
         tblclmnKarma.setAlignment(SWT.RIGHT);
         tblclmnKarma.setWidth(90);
-        tblclmnKarma.setText("karma cost");
+        tblclmnKarma.setText(Messages.CharacterAdvancementPage_column_karma_cost);
 
 //        Composite composite = new Composite(managedForm.getForm().getBody(), SWT.NONE);
 //        composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -182,7 +182,7 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
         Group grpSummary = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpSummary.setLayout(new GridLayout(1, false));
         grpSummary.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        grpSummary.setText("Summary");
+        grpSummary.setText(Messages.CharacterAdvancementPage_bttn_summary);
         managedForm.getToolkit().adapt(grpSummary);
         managedForm.getToolkit().paintBordersFor(grpSummary);
         
@@ -193,14 +193,14 @@ public class CharacterAdvancementPage extends AbstractShr5Page<ManagedCharacter>
         managedForm.getToolkit().adapt(composite_2);
         managedForm.getToolkit().paintBordersFor(composite_2);
         
-        managedForm.getToolkit().createLabel(composite_2, "karma gaint :", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite_2, Messages.CharacterAdvancementPage_bttn_karma_gaint, SWT.NONE);
         
-        lblKarmagaintvalue = managedForm.getToolkit().createLabel(composite_2, "karma_gaint_value", SWT.NONE);
+        lblKarmagaintvalue = managedForm.getToolkit().createLabel(composite_2, "karma_gaint_value", SWT.NONE); //$NON-NLS-1$
         lblKarmagaintvalue.setAlignment(SWT.RIGHT);
         
-        managedForm.getToolkit().createLabel(composite_2, "karma spend :", SWT.NONE);
+        managedForm.getToolkit().createLabel(composite_2, Messages.CharacterAdvancementPage_bttn_karma_spend, SWT.NONE);
         
-        lblKarmaspendvalue = managedForm.getToolkit().createLabel(composite_2, "karma_spend_value", SWT.NONE);
+        lblKarmaspendvalue = managedForm.getToolkit().createLabel(composite_2, "karma_spend_value", SWT.NONE); //$NON-NLS-1$
         lblKarmaspendvalue.setAlignment(SWT.RIGHT);
         
         Composite composite = new Composite(grpSummary, SWT.NONE);

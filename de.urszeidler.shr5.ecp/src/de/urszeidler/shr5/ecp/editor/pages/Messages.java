@@ -121,6 +121,30 @@ public class Messages extends NLS {
     public static String AttributModifikatorWertWidget_mod_rating;
     public static String AbstraktPersonaPage_lblFilter_text;
     public static String AbstraktPersonaPage_button_toolTipText;
+    public static String CharacterAdvacementWidget_advacment_type;
+
+    public static String CharacterAdvacementWidget_cancel;
+    public static String CharacterAdvacementWidget_commit;
+    public static String CharacterAdvacementWidget_inst_commit;
+    public static String CharacterAdvacementWidget_inst_not_enought_karma;
+    public static String CharacterAdvacementWidget_inst_select_advacment_type;
+    public static String CharacterAdvacementWidget_inst_select_type;
+    public static String CharacterAdvacementWidget_instruction;
+    public static String CharacterAdvacementWidget_lbl_at;
+    public static String CharacterAdvacementWidget_lbl_from;
+    public static String CharacterAdvacementWidget_lbl_karma_cost;
+    public static String CharacterAdvacementWidget_lbl_to;
+    public static String CharacterAdvacementWidget_type_remove;
+    public static String CharacterAdvacementWidget_xxx;
+
+    public static String CharacterAdvancementPage_bttn_karma_gaint;
+    public static String CharacterAdvancementPage_bttn_karma_spend;
+    public static String CharacterAdvancementPage_bttn_summary;
+    public static String CharacterAdvancementPage_column_date;
+    public static String CharacterAdvancementPage_column_date_applied;
+    public static String CharacterAdvancementPage_column_karma_cost;
+    public static String CharacterAdvancementPage_column_name;
+    public static String CharacterAdvancementPage_titel;
 
     static {
         // initialize resource bundle

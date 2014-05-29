@@ -56,7 +56,6 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
 import de.urszeidler.eclipse.shr5.WaffenFokus;
-import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.AttributeChange;
@@ -73,6 +72,7 @@ import de.urszeidler.emf.commons.ui.util.DefaultReferenceManager;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
+import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class CharacterAdvacementWidget extends Composite {
@@ -241,7 +241,7 @@ public class CharacterAdvacementWidget extends Composite {
         toolkit.adapt(composite);
         toolkit.paintBordersFor(composite);
 
-        Label lblAdvacement = toolkit.createLabel(composite, "advacement type", SWT.NONE);
+        Label lblAdvacement = toolkit.createLabel(composite, Messages.CharacterAdvacementWidget_advacment_type, SWT.NONE);
         lblAdvacement.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 
         ComboViewer comboViewer = new ComboViewer(composite, SWT.NONE);
@@ -252,9 +252,9 @@ public class CharacterAdvacementWidget extends Composite {
                 String typeName = AdapterFactoryUtil.getInstance().getLabelProvider().getText(element2.type);
                 if (element2.feature != null) {
                     String featureName = AdapterFactoryUtil.getInstance().getLabelProvider().getText(element2.feature);
-                    typeName = typeName + " " + featureName;
+                    typeName = typeName + " " + featureName; //$NON-NLS-1$
                     if (!element2.add)
-                        typeName = "remove " + typeName;
+                        typeName = Messages.CharacterAdvacementWidget_type_remove + typeName;
                 }
                 return typeName;
             }
@@ -288,7 +288,7 @@ public class CharacterAdvacementWidget extends Composite {
                 commitChange();
             }
         });
-        tltmCommit.setText("commit");
+        tltmCommit.setText(Messages.CharacterAdvacementWidget_commit);
 
         tltmCancel = new ToolItem(toolBar, SWT.NONE);
         tltmCancel.addSelectionListener(new SelectionAdapter() {
@@ -297,10 +297,10 @@ public class CharacterAdvacementWidget extends Composite {
                 cancelChange();
             }
         });
-        tltmCancel.setText("cancel");
+        tltmCancel.setText(Messages.CharacterAdvacementWidget_cancel);
         new Label(composite, SWT.NONE);
 
-        lblInstruction = toolkit.createLabel(composite, "Instruction", SWT.NONE);
+        lblInstruction = toolkit.createLabel(composite, Messages.CharacterAdvacementWidget_instruction, SWT.NONE);
         lblInstruction.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
         new Label(composite, SWT.NONE);
 
@@ -359,7 +359,7 @@ public class CharacterAdvacementWidget extends Composite {
 
         Label lblAt = new Label(composite_date, SWT.NONE);
         toolkit.adapt(lblAt, true, true);
-        lblAt.setText("at");
+        lblAt.setText(Messages.CharacterAdvacementWidget_lbl_at);
 
         CDateTime datewidget = new CDateTime(composite_date, CDT.DROP_DOWN);
         datewidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 5, 1));
@@ -371,31 +371,31 @@ public class CharacterAdvacementWidget extends Composite {
 
         Label lblDate = new Label(composite_descr, SWT.NONE);
         toolkit.adapt(lblDate, true, true);
-        lblDate.setText("from");
+        lblDate.setText(Messages.CharacterAdvacementWidget_lbl_from);
 
         Label lblXxx = new Label(composite_descr, SWT.NONE);
         GridData gd_lblXxx = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblXxx.widthHint = 20;
         lblXxx.setLayoutData(gd_lblXxx);
         toolkit.adapt(lblXxx, true, true);
-        lblXxx.setText("xxx");
+        lblXxx.setText(Messages.CharacterAdvacementWidget_xxx);
 
         Label lblTo = new Label(composite_descr, SWT.NONE);
         toolkit.adapt(lblTo, true, true);
-        lblTo.setText("to");
+        lblTo.setText(Messages.CharacterAdvacementWidget_lbl_to);
 
         Label lblXxx_1 = new Label(composite_descr, SWT.NONE);
         GridData gd_lblXxx_1 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblXxx_1.widthHint = 20;
         lblXxx_1.setLayoutData(gd_lblXxx_1);
         toolkit.adapt(lblXxx_1, true, true);
-        lblXxx_1.setText("xxx");
+        lblXxx_1.setText(Messages.CharacterAdvacementWidget_xxx);
 
         Label lblKarmaCost = new Label(composite_descr, SWT.NONE);
         toolkit.adapt(lblKarmaCost, true, true);
-        lblKarmaCost.setText("Karma Cost");
+        lblKarmaCost.setText(Messages.CharacterAdvacementWidget_lbl_karma_cost);
 
-        Label lblKc = toolkit.createLabel(composite_descr, "New Label", SWT.NONE);
+        Label lblKc = toolkit.createLabel(composite_descr, "New Label", SWT.NONE); //$NON-NLS-1$
         GridData gd_lblKc = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblKc.widthHint = 20;
         gd_lblKc.minimumWidth = 20;
@@ -460,7 +460,7 @@ public class CharacterAdvacementWidget extends Composite {
 
         Label lblAt = new Label(composite_date, SWT.NONE);
         toolkit.adapt(lblAt, true, true);
-        lblAt.setText("at");
+        lblAt.setText(Messages.CharacterAdvacementWidget_lbl_at);
 
         CDateTime datewidget = new CDateTime(composite_date, CDT.DROP_DOWN);
         datewidget.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 5, 1));
@@ -552,13 +552,13 @@ public class CharacterAdvacementWidget extends Composite {
         boolean commitEnabled = enabled && canSpend && changeableSelected;
         tltmCommit.setEnabled(commitEnabled);
         if (!enabled && !canSpend) {
-            lblInstruction.setText("Select advancement type.");
+            lblInstruction.setText(Messages.CharacterAdvacementWidget_inst_select_advacment_type);
         } else if (!changeableSelected) {
-            lblInstruction.setText("Select a type to change.");
+            lblInstruction.setText(Messages.CharacterAdvacementWidget_inst_select_type);
         } else if (enabled && !canSpend) {
-            lblInstruction.setText("Not enought karma.");
+            lblInstruction.setText(Messages.CharacterAdvacementWidget_inst_not_enought_karma);
         } else if (commitEnabled) {
-            lblInstruction.setText("You can commit your change.");
+            lblInstruction.setText(Messages.CharacterAdvacementWidget_inst_commit);
         }
     }
 
