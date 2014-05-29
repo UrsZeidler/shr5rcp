@@ -49,10 +49,7 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
      * @wbp.parser.constructor
      */
     public NewCharacterWizardPage() {
-        super("Character Wizard");
-        setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/magnifying_glass.png"));
-        setTitle("Character creation setup");
-        setDescription("A new character generator");
+        super("Character Wizard"); //$NON-NLS-1$
     }
 
     /**
@@ -101,11 +98,11 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
 
         Label lblSelectcontainer = new Label(container, SWT.NONE);
         lblSelectcontainer.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-        lblSelectcontainer.setText("selectContainer");
+        lblSelectcontainer.setText(Messages.NewCharacterWizardPage_select_container);
 
         comboViewer = new ComboViewer(container, SWT.READ_ONLY);
         combo = comboViewer.getCombo();
-        combo.setToolTipText("The container is the object where the generator will be stored.");
+        combo.setToolTipText(Messages.NewCharacterWizardPage_select_container_description);
         combo.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         setControl(container);
@@ -113,20 +110,20 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
 
         Label lblSelectsystem = new Label(container, SWT.NONE);
         lblSelectsystem.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-        lblSelectsystem.setText("SelectSystem");
+        lblSelectsystem.setText(Messages.NewCharacterWizardPage_select_system);
 
         comboViewer1 = new ComboViewer(container, SWT.READ_ONLY);
         combo_1 = comboViewer1.getCombo();
-        combo_1.setToolTipText("The system to generate the character with.");
+        combo_1.setToolTipText(Messages.NewCharacterWizardPage_select_system_description);
         combo_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         Label lblSelectgroup = new Label(container, SWT.NONE);
         lblSelectgroup.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-        lblSelectgroup.setText("SelectGroup");
+        lblSelectgroup.setText(Messages.NewCharacterWizardPage_select_group);
 
         comboViewer2 = new ComboViewer(container, SWT.READ_ONLY);
         combo_2 = comboViewer2.getCombo();
-        combo_2.setToolTipText("The group is the object where the character will be stored.");
+        combo_2.setToolTipText(Messages.NewCharacterWizardPage_select_group_description);
         combo_2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         comboViewer.setLabelProvider(AdapterFactoryUtil.getInstance().getLabelProvider());
@@ -177,9 +174,9 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
 
         if (!isAllSet()) {
             if (selectedContainer.getValue() == null)
-                setErrorMessage("You need to select at least a container.");
+                setErrorMessage(Messages.NewCharacterWizardPage_select_container_error);
             else
-                setErrorMessage("Select a system and a group.");
+                setErrorMessage(Messages.NewCharacterWizardPage_select_group_error);
         } else
             setErrorMessage(null);
     }

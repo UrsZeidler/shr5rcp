@@ -46,9 +46,9 @@ public class NewFreeStyleGeneratorWizard extends NewShr5GeneratorWizard {
 
     @Override
     public void addPages() {
-        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, "FreestyleGenerator",
-                "Create a freestyle Generator", "Creates a freestyle generator object for creating a character without rules",
-                ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/FreestyleGenerator32.png")));
+        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, Messages.NewFreeStyleGeneratorWizard_name,
+                Messages.NewFreeStyleGeneratorWizard_titel, Messages.NewFreeStyleGeneratorWizard_description,
+                ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/FreestyleGenerator32.png"))); //$NON-NLS-1$ //$NON-NLS-2$
     }
 
 }

@@ -42,7 +42,7 @@ import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
  */
 public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
-    private static final String SWITCH_PERSPECTIVE = "SWITCH_PERSPECTIVE";
+    private static final String SWITCH_PERSPECTIVE = "SWITCH_PERSPECTIVE"; //$NON-NLS-1$
     protected List<EObject> container;
     protected List<EObject> systems;
     protected List<EObject> groups;
@@ -95,9 +95,9 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
     @Override
     public void addPages() {
-        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, "Shr5Generator",
-                "Create a shr5 Generator", "Creates a sh5 generator object for creating a character after the core rules", 
-                ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/CoreGenerator32.png")));
+        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, Messages.NewShr5GeneratorWizard_name,
+                Messages.NewShr5GeneratorWizard_titel, Messages.NewShr5GeneratorWizard_description, 
+                ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/CoreGenerator32.png"))); //$NON-NLS-1$ //$NON-NLS-2$
      }
 
     /*
@@ -116,9 +116,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
         edtingDomain.getCommandStack().execute(command);
 
         switchPerspective();
-
         ECPAttributModifikatorWertOpener.openEditor(generator, Activator.getDefault().getDefaultEcpProject());
-
         return true;
     }
 
@@ -146,8 +144,8 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
         if (MessageDialogWithToggle.NEVER.equals(value)) {
             return;
         }
-        MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, getShell(), "Switch Perspective",
-                "The prefered perspective is the character building perspectice. You want to switch ?", "don't ask again", false, store,
+        MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, getShell(), Messages.NewShr5GeneratorWizard_switch_perspective_titel,
+                Messages.NewShr5GeneratorWizard_switch_perspective_message, Messages.NewShr5GeneratorWizard_switch_perspective_not_again_message, false, store,
                 SWITCH_PERSPECTIVE, SWT.NONE);
 
         doSwitch = open.getReturnCode() == 2;
@@ -160,7 +158,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
      */
     private void doSwitch() {
         try {
-            PlatformUI.getWorkbench().showPerspective("de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective",
+            PlatformUI.getWorkbench().showPerspective("de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective", //$NON-NLS-1$
                     PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
             e.printStackTrace();
