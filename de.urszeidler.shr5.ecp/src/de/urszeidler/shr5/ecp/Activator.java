@@ -31,8 +31,11 @@ import org.eclipse.emf.ecp.core.util.ECPProperties;
 import org.eclipse.emf.ecp.core.util.ECPUtil;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.wb.swt.ResourceManager;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
+
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -218,6 +221,8 @@ public class Activator extends AbstractUIPlugin {
      * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
      */
     public void stop(BundleContext context) throws Exception {
+        AdapterFactoryUtil.dispose();
+        ResourceManager.dispose();
         plugin = null;
         super.stop(context);
     }

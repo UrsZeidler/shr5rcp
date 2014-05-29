@@ -163,7 +163,7 @@
             class="de.urszeidler.shr5.ecp.editor.ShadowrunEditor"
             default="false"
             id="de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"
-            name="Shr5">
+            name="%editor.name">
       </editor>
    </extension>
    <extension
@@ -177,7 +177,7 @@
       <page
             class="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
             id="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
-            name="Print Preferences">
+            name="%print.preferences.page.name">
       </page>
    </extension>
    <extension
@@ -191,7 +191,7 @@
       <view
             class="de.urszeidler.shr5.ecp.views.GeneratorValidationView"
             id="de.urszeidler.shr5.ecp.GeneratorValidationView"
-            name="Character building validation">
+            name="%generatorValidation.view.name">
       </view>
    </extension>
    <extension
@@ -205,29 +205,44 @@
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">
+      <category
+            id="de.urszeidler.shr5.ecp.character"
+            name="%characterGenerator.category.name">
+      </category>
       <wizard
             canFinishEarly="false"
             category="de.urszeidler.shr5.ecp.character"
             class="de.urszeidler.shr5.ecp.wizards.NewShr5GeneratorWizard"
+            descriptionImage="images/CoreGenerator64.png"
             hasPages="true"
+            icon="images/CoreGenerator16.gif"
             id="de.urszeidler.shr5.ecp.wizards.NewShr5GeneratorWizard"
-            name="new shr5 Generator">
+            name="%corerule.wizard.name">
+         <description>
+            %corerule.wizard.description
+         </description>
       </wizard>
-      <category
-            id="de.urszeidler.shr5.ecp.character"
-            name="shr5 character">
-      </category>
       <wizard
             category="de.urszeidler.shr5.ecp.character"
             class="de.urszeidler.shr5.ecp.wizards.NewShr5KarmaGeneratorWizard"
+            descriptionImage="images/KarmaGenerator64.png"
+            icon="images/KarmaGenerator16.gif"
             id="de.urszeidler.shr5.ecp.wizards.NewShr5KarmaGeneratorWizard"
-            name="Shr5 Karmagenerator">
+            name="%karma.wizard.name">
+         <description>
+            %karma.wizard.description
+         </description>
       </wizard>
       <wizard
             category="de.urszeidler.shr5.ecp.character"
             class="de.urszeidler.shr5.ecp.wizards.NewFreeStyleGeneratorWizard"
+            descriptionImage="images/FreestyleGenerator64.png"
+            icon="images/FreestyleGenerator16.gif"
             id="de.urszeidler.shr5.ecp.wizards.NewFreeStyleGeneratorWizard"
-            name="Freestyle Generator">
+            name="%freestyle.wizard.name">
+         <description>
+            %freestyle.wizard.description
+         </description>
       </wizard>
    </extension>
 
@@ -237,7 +252,7 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
          <menu
                id="de.urszeidler.shr5.ecp.menus.sampleMenu"
-               label="Create Menu"
+               label="%create.menu.label"
                mnemonic="M">
             <command
                   commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
@@ -252,12 +267,12 @@
         point="org.eclipse.ui.commands">
      <category
            id="de.urszeidler.shr5.ecp.commands.openWizard"
-           name="Open character wizard Category">
+           name="%openCharacterWizard.category.name">
      </category>
      <command
            categoryId="de.urszeidler.shr5.ecp.commands.openWizard"
            id="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
-           name="Open generator wizard">
+           name="%openCharacterWizard.command.name">
      </command>
   </extension>
   <extension

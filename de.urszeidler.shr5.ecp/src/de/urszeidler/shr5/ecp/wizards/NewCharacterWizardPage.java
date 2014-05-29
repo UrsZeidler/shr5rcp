@@ -9,6 +9,7 @@ import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.jface.wizard.WizardPage;
@@ -20,6 +21,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+
+import org.eclipse.wb.swt.ResourceManager;
 
 public class NewCharacterWizardPage extends WizardPage implements IValueChangeListener {
     private DataBindingContext m_bindingContext;
@@ -47,24 +50,44 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
      */
     public NewCharacterWizardPage() {
         super("Character Wizard");
+        setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/magnifying_glass.png"));
         setTitle("Character creation setup");
         setDescription("A new character generator");
     }
 
+    /**
+     * 
+     * @param container
+     * @param systems2
+     * @param groups2
+     * @param selectedContainer2
+     * @param selectedSystem2
+     * @param selectedGroup2
+     * @param pageName
+     * @param title
+     * @param description
+     * @param imageDescriptor can be null
+     */
     public NewCharacterWizardPage(List<EObject> container, List<EObject> systems2, List<EObject> groups2, WritableValue selectedContainer2,
-            WritableValue selectedSystem2, WritableValue selectedGroup2) {
-        this();
+            WritableValue selectedSystem2, WritableValue selectedGroup2, String pageName, String title, String description, ImageDescriptor imageDescriptor) {
+        super(pageName);
         this.container = container;
         this.systems = systems2;
         this.groups = groups2;
         this.selectedContainer = selectedContainer2;
         this.selectedSystem = selectedSystem2;
         this.selectedGroup = selectedGroup2;
-        
+
         selectedContainer.addValueChangeListener(this);
         selectedGroup.addValueChangeListener(this);
         selectedSystem.addValueChangeListener(this);
-        
+
+        setTitle(title);
+        setDescription(description);
+        //ImageDescriptor imageDescriptor = ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/magnifying_glass.png");
+        if (imageDescriptor != null)
+            setImageDescriptor(imageDescriptor);
+
         updatePageState();
     }
 
@@ -124,9 +147,6 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
         m_bindingContext = initDataBindings();
     }
 
-    
-    
- 
     private boolean isAllSet() {
         return selectedContainer.getValue() != null && selectedGroup.getValue() != null && selectedSystem.getValue() != null;
     }
@@ -149,19 +169,18 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
 
     @Override
     public void handleValueChange(ValueChangeEvent event) {
-       updatePageState();
+        updatePageState();
     }
 
     private void updatePageState() {
         setPageComplete(isAllSet());
-           
-           if(! isAllSet()){
-               if(selectedContainer.getValue()==null)               
-                   setErrorMessage("You need to select at least a container.");
-               else
-                   setErrorMessage("Select a system and a group.");
-            }
-           else
-               setErrorMessage(null);
+
+        if (!isAllSet()) {
+            if (selectedContainer.getValue() == null)
+                setErrorMessage("You need to select at least a container.");
+            else
+                setErrorMessage("Select a system and a group.");
+        } else
+            setErrorMessage(null);
     }
 }

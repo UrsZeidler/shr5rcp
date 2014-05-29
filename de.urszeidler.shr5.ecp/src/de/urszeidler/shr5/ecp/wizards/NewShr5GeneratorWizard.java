@@ -24,6 +24,7 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem;
@@ -46,9 +47,9 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
     protected List<EObject> systems;
     protected List<EObject> groups;
 
-    private WritableValue selectedContainer = new WritableValue();
-    private WritableValue selectedSystem = new WritableValue();
-    private WritableValue selectedGroup = new WritableValue();
+    protected WritableValue selectedContainer = new WritableValue();
+    protected WritableValue selectedSystem = new WritableValue();
+    protected WritableValue selectedGroup = new WritableValue();
 
     /**
      * 
@@ -94,9 +95,10 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
     @Override
     public void addPages() {
-        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup));
-        super.addPages();
-    }
+        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, "Shr5Generator",
+                "Create a shr5 Generator", "Creates a sh5 generator object for creating a character after the core rules", 
+                ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/CoreGenerator32.png")));
+     }
 
     /*
      * (non-Javadoc)
@@ -147,7 +149,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
         MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, getShell(), "Switch Perspective",
                 "The prefered perspective is the character building perspectice. You want to switch ?", "don't ask again", false, store,
                 SWITCH_PERSPECTIVE, SWT.NONE);
-        
+
         doSwitch = open.getReturnCode() == 2;
         if (doSwitch)
             doSwitch();
