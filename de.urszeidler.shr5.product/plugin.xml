@@ -6,7 +6,7 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="de.urszeidler.shr5.product.app"
-            name="RCP schadowrun">
+            name="%product.name">
          <property
                name="windowImages"
                value="icons/shrImage_6_16.png,icons/shrImage_6_32.png,icons/shrImage_6_48.png,icons/shrImage_6_64.png,icons/shrImage_6_128.png">
@@ -57,12 +57,13 @@
             class="de.urszeidler.shr5.product.application.ShadowrunPerspective"
             icon="icons/shadowrunPerspektive_16.png"
             id="de.urszeidler.shr5.product.application.ShadowrunPerspective"
-            name="Main shadowrun">
+            name="%resource.perspective.name">
       </perspective>
       <perspective
             class="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
-            id="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
-            name="Character building">
+            icon="icons/GeneratorPerspective16.png"
+            id="de.urszeidler.shr5.product.applicati%generator.perspective.nameterPerspective"
+            name="%generator.perspective.name">
       </perspective>
    </extension>
 
