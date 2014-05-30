@@ -343,6 +343,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         diagnosticComposite.setDiagnostic(validate);
         diagnosticComposite.update();
 
+        validationService.updateValidation(object, validate);
     }
 
     @Override
