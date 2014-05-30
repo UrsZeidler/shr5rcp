@@ -62,7 +62,7 @@
       <perspective
             class="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
             icon="icons/GeneratorPerspective16.png"
-            id="de.urszeidler.shr5.product.applicati%generator.perspective.nameterPerspective"
+            id="de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective"
             name="%generator.perspective.name">
       </perspective>
    </extension>
