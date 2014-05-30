@@ -26,7 +26,6 @@ import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.dialogs.InputDialog;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -72,7 +71,6 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
-import de.urszeidler.shr5.dice.W6Dice;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.AttributeGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
@@ -126,9 +124,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private ControlDecoration controlDecorationKarma;
     private Label lblConnectionPoints;
     private ControlDecoration controlDecorationConnections;
-    private DiagnosticComposite diagnosticComposite;
-    private Group grpValidation;
-    private Composite composite_2;
+//    private DiagnosticComposite diagnosticComposite;
+//    private Group grpValidation;
+//    private Composite composite_2;
 
     private HashSet<String> changeSet;
     private boolean optionWidgetsCreated = false;
@@ -388,27 +386,6 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         controlDecorationMetaTyp = new ControlDecoration(grpMetatyp, SWT.RIGHT | SWT.TOP);
         new Label(composite_3, SWT.NONE);
 
-        grpValidation = new Group(managedForm.getForm().getBody(), SWT.NONE);
-        grpValidation.setLayout(new FillLayout(SWT.HORIZONTAL));
-        GridData gd_grpValidation = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
-        gd_grpValidation.heightHint = 150;
-        grpValidation.setLayoutData(gd_grpValidation);
-        grpValidation.setText(Messages.GeneratorPage_Validation);
-        managedForm.getToolkit().adapt(grpValidation);
-        managedForm.getToolkit().paintBordersFor(grpValidation);
-
-        diagnosticComposite = new DiagnosticComposite(grpValidation, SWT.NONE);
-        diagnosticComposite.setSeverityMask(Diagnostic.ERROR | Diagnostic.INFO | Diagnostic.WARNING);
-        diagnosticComposite.setShowRootDiagnostic(false);
-        diagnosticComposite.initialize(null);
-        managedForm.getToolkit().adapt(diagnosticComposite);
-        managedForm.getToolkit().paintBordersFor(diagnosticComposite);
-
-        composite_2 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
-        composite_2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        managedForm.getToolkit().adapt(composite_2);
-        managedForm.getToolkit().paintBordersFor(composite_2);
-
         m_bindingContext = initDataBindings();
         // ----------
         ownBinding(m_bindingContext);
@@ -543,8 +520,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
         grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
 
-        diagnosticComposite.setDiagnostic(validate);
-        diagnosticComposite.update();
+//        diagnosticComposite.setDiagnostic(validate);
+//        diagnosticComposite.update();
 
         validationService.updateValidation(object, validate);
     }
