@@ -14,7 +14,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EValidator.SubstitutionLabelProvider;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+import org.eclipse.jface.dialogs.IInputValidator;
+import org.eclipse.jface.dialogs.InputDialog;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.dialogs.MessageDialogWithToggle;
 import org.eclipse.jface.fieldassist.ControlDecoration;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.forms.editor.FormEditor;
@@ -26,11 +32,14 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
+import de.urszeidler.eclipse.shr5Management.LifestyleToStartMoney;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.dice.IniDice;
+import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.service.ValidationService;
 
@@ -45,6 +54,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     public static final String PERSONA_ADVANCEMENT = "persona.advancement";
     public static final String PERSONA_INVENTAR = "persona.inventar";
     public static final String PERSONA = "persona";
+    private static final String RESET_CHARACTER_CHOISE = "RESET_CHARACTER_CHOISE";
 
     /**
      * Provides the lables for the validation chain.
@@ -82,6 +92,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif");
     protected Map<Object, Object> context;
     protected ValidationService validationService;
+    protected IPreferenceStore store;
 
     public AbstractGeneratorPage(String id, String title) {
         super(id, title);
@@ -166,10 +177,10 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     @Override
     public void initialize(FormEditor editor) {
         super.initialize(editor);
-        validationService = (ValidationService) editor.getSite().getService(ValidationService.class);
+        validationService = (ValidationService)editor.getSite().getService(ValidationService.class);
+        store = Activator.getDefault().getPreferenceStore();
     }
 
-    
     /**
      * Create the managed character.
      * 
@@ -202,6 +213,12 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      * Clears the character from the generator.
      */
     protected void resetCharacter(CharacterGenerator object) {
+        boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), "reset generator",
+                "This will reset the generator and destroy the character. You are shure you want to do this ?");
+
+        if (!openConfirm)
+            return;
+
         if (object.getSelectedGroup() != null)
             object.getSelectedGroup().getMembers().remove(object.getCharacter());
 
@@ -275,6 +292,48 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
                     generator.setState(GeneratorState.READY_FOR_CREATION);
             }
         }
+    }
+
+    /**
+     * Creates the lifestyle to money dialog.
+     * 
+     * @param calcResourcesLeft
+     * @param lifestyleToMoney
+     * @return
+     */
+    protected InputDialog createLifestyle2MoneyDialog(final int calcResourcesLeft, LifestyleToStartMoney lifestyleToMoney) {
+        final int numberOfW = lifestyleToMoney.getNumberOfW();
+        final int moneyFactor = lifestyleToMoney.getMoneyFactor();
+    
+        IniDice iniDice = new IniDice();
+        int ini = iniDice.ini(0, numberOfW);
+        int money = moneyFactor * ini;
+        int m = money + calcResourcesLeft;
+    
+        String dialogMessage = String.format(
+                "You can throw %1$d dices multiply it with %2$d and add  %3$d, or use the start money. It will be tranferd to your first credstick.",
+                numberOfW, moneyFactor, calcResourcesLeft);
+        IInputValidator validator = new IInputValidator() {
+            @Override
+            public String isValid(String newText) {
+                try {
+                    int max = calcResourcesLeft + (6 * numberOfW * moneyFactor);
+                    int value = Integer.parseInt(newText);
+                    if (value > max)
+                        return String.format("%1$d is more than the calculated maximum of %2$d. ", value, max);
+                    if (value < 0)
+                        return "Is less than 0.";
+    
+                } catch (Exception e) {
+                    return "[" + newText + "] is not a valid number";
+                }
+    
+                // TODO Auto-generated method stub
+                return null;
+            }
+        };
+        InputDialog inputDialog = new InputDialog(getSite().getShell(), "Start money", dialogMessage, m + "", validator);
+        return inputDialog;
     }
 
 }

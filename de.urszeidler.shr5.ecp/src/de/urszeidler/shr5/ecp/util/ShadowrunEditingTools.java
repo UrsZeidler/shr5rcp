@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
@@ -56,17 +57,33 @@ public class ShadowrunEditingTools {
     public static LifestyleToStartMoney getLifestyleToMoney(Lifestyle choosenLifestyle, EList<LifestyleToStartMoney> lifestyleToStartMoney) {
         for (LifestyleToStartMoney lstsm : lifestyleToStartMoney) {
             EList<Lifestyle> lifeStyles = lstsm.getLifeStyles();
+
             for (Lifestyle lifestyle : lifeStyles) {
-                if (lifestyle.getName().equals(choosenLifestyle.getName())) {
+                String id = getId(lifestyle);
+                if(id!=null && id.equals(choosenLifestyle.getParentId()))
                     return lstsm;
-                }
+                if (lifestyle.getName().equals(choosenLifestyle.getName()))
+                    return lstsm;
             }
         }
         return null;
     }
 
-    
-    
+    /**
+     * Get the id from the object or null.
+     * 
+     * @param eObject
+     * @return
+     */
+    public static String getId(EObject eObject) {
+        if (eObject.eResource() instanceof XMLResource) {
+            XMLResource xmlRes = (XMLResource)eObject.eResource();
+            String id = xmlRes.getID(eObject);
+            return id;
+        }
+        return null;
+    }
+
     /**
      * Creates a transformer to make a copy of the input objects.
      * 
@@ -80,10 +97,10 @@ public class ShadowrunEditingTools {
                 EObject copy = EcoreUtil.copy(input);
                 return copy;
             }
-         };
-         return transformer;
+        };
+        return transformer;
     }
-    
+
     /**
      * Creates a transformer to make a {@link Zauber} object to a {@link PersonaZauber} object referencing the spell.
      * 
@@ -160,7 +177,7 @@ public class ShadowrunEditingTools {
 
         Integer eGet = (Integer)spezies.eGet(speciesMin);
         if (value < eGet)
-            value= eGet;
+            value = eGet;
 
         AttributeChange attributeChange = ShadowrunManagmentTools.findCharacterAdvacements(character, attribute);
         if (attributeChange == null) {
@@ -170,16 +187,14 @@ public class ShadowrunEditingTools {
             attributeChange.setFrom((Integer)eGet);
             attributeChange.setTo(value);
             attributeChange.applyChanges();
-            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
-                    attribute, eGet, value));
-        }else if(eGet==value){
+            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
+        } else if (eGet == value) {
             character.getChanges().remove(attributeChange);
             persona.eSet(attribute, eGet);
-        }else{
+        } else {
             attributeChange.setTo((Integer)value);
             attributeChange.applyChanges();
-            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET,
-                    attribute, eGet, value));
+            persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
         }
 
     }

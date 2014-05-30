@@ -3,6 +3,7 @@
  */
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -20,9 +21,12 @@ import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.Diagnostician;
+import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.dialogs.InputDialog;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -45,7 +49,11 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
+import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.CredstickTransaction;
 import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Adept;
@@ -64,6 +72,7 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.dice.W6Dice;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.AttributeGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
@@ -156,11 +165,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         this.object = object;
         this.editingDomain = editingDomain;
         context = createValidationContext();
-        
-        
+
     }
 
-    
     /**
      * Create contents of the form.
      * 
@@ -174,7 +181,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
-        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(),object));
+        form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
         form.getToolBarManager().update(true);
 
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
@@ -446,26 +453,44 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
+        final int calcResourcesLeft = ShadowrunManagmentTools.calcResourcesLeft(object);
+        int startMoney = calcResourcesLeft;
+        Credstick credstick = ShadowrunManagmentTools.findFirstCedstick(object.getCharacter().getInventar());
+
         Lifestyle choosenLifestyle = object.getCharacter().getChoosenLifestyle();
         Shr5System shr5System = object.getShr5Generator();
         EList<LifestyleToStartMoney> lifestyleToStartMoney = shr5System.getLifestyleToStartMoney();
         LifestyleToStartMoney lifestyleToMoney = ShadowrunEditingTools.getLifestyleToMoney(choosenLifestyle, lifestyleToStartMoney);
-       
+
+        if (lifestyleToMoney != null) {
+            InputDialog inputDialog = createLifestyle2MoneyDialog(calcResourcesLeft, lifestyleToMoney);
+            int open = inputDialog.open();
+            if (open != InputDialog.OK)
+                return;
+
+            String value = inputDialog.getValue();
+            startMoney = Integer.parseInt(value);
+        }
 
         CompoundCommand command = new CompoundCommand();
         command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE,
                 GeneratorState.COMMITED));
         command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_KARMA,
                 ShadowrunManagmentTools.calcKarmaLeft(object)));
-        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES,
-                ShadowrunManagmentTools.calcResourcesLeft(object)));
+        command.append(SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.SHR5_GENERATOR__START_RESOURCES, startMoney));
         command.append(SetCommand.create(getEditingDomain(), object.getCharacter(), Shr5managementPackage.Literals.MANAGED_CHARACTER__GENERATOR_SRC,
                 object));
+
+        if (credstick != null) {
+            CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
+            transaction.setAmount(new BigDecimal(startMoney));
+            transaction.setDescription(String.format("Inital transaction of %1$d.", startMoney));
+            command.append(AddCommand.create(getEditingDomain(), credstick, Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, transaction));
+        }
 
         getEditingDomain().getCommandStack().execute(command);
         validateChange();
     }
-
 
     /**
      * Validates the changes and update the gui.
@@ -520,7 +545,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         diagnosticComposite.setDiagnostic(validate);
         diagnosticComposite.update();
-        
+
         validationService.updateValidation(object, validate);
     }
 
@@ -591,7 +616,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         if (resourceGeneratorOption != null)
             resourceGeneratorOption.dispose();
         resourceGeneratorOption = new ResourceGeneratorOption(grpResourcen, SWT.NONE, object.getResourcen(), object.getCharacter(), getManagedForm()
-                .getToolkit(), editingDomain,Literals.SHR5_GENERATOR__RESOURCE_SPEND);
+                .getToolkit(), editingDomain, Literals.SHR5_GENERATOR__RESOURCE_SPEND);
         resourceGeneratorOption.layout();
 
         if (metaTypGeneratorOption != null)

@@ -15,12 +15,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.Cyberdeck;
 import de.urszeidler.eclipse.shr5.Erlernbar;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -59,6 +61,25 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * @author urs
  */
 public class ShadowrunManagmentTools {
+
+    /**
+     * Finds the first credstick in the list.
+     * 
+     * @param eList
+     * @return
+     */
+    public static Credstick findFirstCedstick(List<AbstraktGegenstand> eList) {
+        EClass eClass = Shr5Package.Literals.CREDSTICK;
+        return (Credstick)getFirstItemOfType(eList, eClass);
+    }
+
+    private static EObject getFirstItemOfType(List<? extends EObject> eList, EClass eClass) {
+        for (EObject abstraktGegenstand : eList) {
+            if (eClass.equals(abstraktGegenstand.eClass()))
+                return abstraktGegenstand;
+        }
+        return null;
+    }
 
     /**
      * Checks if the character has a matrix initiative.
