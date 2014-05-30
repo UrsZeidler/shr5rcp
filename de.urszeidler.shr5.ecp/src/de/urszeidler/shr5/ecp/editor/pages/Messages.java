@@ -4,6 +4,15 @@ import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
     private static final String BUNDLE_NAME = "de.urszeidler.shr5.ecp.editor.pages.messages"; //$NON-NLS-1$
+    public static String AbstractGeneratorPage_dlg_commit_message;
+    public static String AbstractGeneratorPage_dlg_commit_titel;
+    public static String AbstractGeneratorPage_dlg_lifestyle_less;
+    public static String AbstractGeneratorPage_dlg_lifestyle_message;
+    public static String AbstractGeneratorPage_dlg_lifestyle_no_number;
+    public static String AbstractGeneratorPage_dlg_lifestyle_titel;
+    public static String AbstractGeneratorPage_dlg_lifestyle_to_much;
+    public static String AbstractGeneratorPage_dlg_reset_message;
+    public static String AbstractGeneratorPage_dlg_reset_titel;
     public static String AbstraktPersonaPage_Attribute;
     public static String AbstraktPersonaPage_Body;
     public static String AbstraktPersonaPage_Body_Attributes;
@@ -114,6 +123,7 @@ public class Messages extends NLS {
     public static String ShadowrunEditor_page_projectileweapon;
     public static String ShadowrunEditor_page_shr5_generator;
     public static String ShadowrunEditor_shr5_generator_sheet;
+    public static String Shr5GeneratorPage_initial_transaction_message0;
     public static String Shr5KarmaGeneratorPage_grpResources_text;
     public static String AbstraktPersonaPage_filterOnlyPersonaSkillsToolItem_toolTipText;
 

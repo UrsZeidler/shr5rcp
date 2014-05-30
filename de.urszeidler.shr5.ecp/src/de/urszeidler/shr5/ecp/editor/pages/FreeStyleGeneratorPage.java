@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -260,10 +259,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
      * Commit the character.
      */
     protected void commitCharacter() {
-        boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), "commit character",
-                "This will commit the character. You are shure you want to do this ?");
-
-        if (!openConfirm)
+        if (!openDefaultCommitMessageDialog())
             return;
         
         object.setState(GeneratorState.COMMITED);

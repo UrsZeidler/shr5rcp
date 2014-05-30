@@ -484,7 +484,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         if (credstick != null) {
             CredstickTransaction transaction = Shr5Factory.eINSTANCE.createCredstickTransaction();
             transaction.setAmount(new BigDecimal(startMoney));
-            transaction.setDescription(String.format("Inital transaction of %1$d.", startMoney));
+            transaction.setDescription(String.format(Messages.Shr5GeneratorPage_initial_transaction_message0, startMoney));
             command.append(AddCommand.create(getEditingDomain(), credstick, Shr5Package.Literals.CREDSTICK__TRANSACTIONLOG, transaction));
         }
 

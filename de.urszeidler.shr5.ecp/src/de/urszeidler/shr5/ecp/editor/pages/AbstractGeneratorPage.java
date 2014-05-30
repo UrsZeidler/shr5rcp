@@ -17,10 +17,8 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.dialogs.MessageDialogWithToggle;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.forms.editor.FormEditor;
@@ -50,11 +48,10 @@ import de.urszeidler.shr5.ecp.service.ValidationService;
  */
 public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGenerator> implements Adapter {
 
-    public static final String PERSONA_PRINTER = "persona.printer";
-    public static final String PERSONA_ADVANCEMENT = "persona.advancement";
-    public static final String PERSONA_INVENTAR = "persona.inventar";
-    public static final String PERSONA = "persona";
-    private static final String RESET_CHARACTER_CHOISE = "RESET_CHARACTER_CHOISE";
+    public static final String PERSONA_PRINTER = "persona.printer"; //$NON-NLS-1$
+    public static final String PERSONA_ADVANCEMENT = "persona.advancement"; //$NON-NLS-1$
+    public static final String PERSONA_INVENTAR = "persona.inventar"; //$NON-NLS-1$
+    public static final String PERSONA = "persona"; //$NON-NLS-1$
 
     /**
      * Provides the lables for the validation chain.
@@ -89,7 +86,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         }
     }
 
-    private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif");
+    private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif"); //$NON-NLS-1$ //$NON-NLS-2$
     protected Map<Object, Object> context;
     protected ValidationService validationService;
     protected IPreferenceStore store;
@@ -121,7 +118,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
             decoration.setShowHover(true);
             // decoration.showHoverText(textToShow);
         } else if (decoration.getImage() != null) {
-            decoration.setDescriptionText("");
+            decoration.setDescriptionText(""); //$NON-NLS-1$
             decoration.setImage(null);
         }
     }
@@ -213,8 +210,8 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
      * Clears the character from the generator.
      */
     protected void resetCharacter(CharacterGenerator object) {
-        boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), "reset generator",
-                "This will reset the generator and destroy the character. You are shure you want to do this ?");
+        boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_reset_titel,
+                Messages.AbstractGeneratorPage_dlg_reset_message);
 
         if (!openConfirm)
             return;
@@ -304,14 +301,14 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     protected InputDialog createLifestyle2MoneyDialog(final int calcResourcesLeft, LifestyleToStartMoney lifestyleToMoney) {
         final int numberOfW = lifestyleToMoney.getNumberOfW();
         final int moneyFactor = lifestyleToMoney.getMoneyFactor();
-    
+
         IniDice iniDice = new IniDice();
         int ini = iniDice.ini(0, numberOfW);
         int money = moneyFactor * ini;
         int m = money + calcResourcesLeft;
-    
+
         String dialogMessage = String.format(
-                "You can throw %1$d dices multiply it with %2$d and add  %3$d, or use the start money. It will be tranferd to your first credstick.",
+                Messages.AbstractGeneratorPage_dlg_lifestyle_message,
                 numberOfW, moneyFactor, calcResourcesLeft);
         IInputValidator validator = new IInputValidator() {
             @Override
@@ -320,20 +317,24 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
                     int max = calcResourcesLeft + (6 * numberOfW * moneyFactor);
                     int value = Integer.parseInt(newText);
                     if (value > max)
-                        return String.format("%1$d is more than the calculated maximum of %2$d. ", value, max);
+                        return String.format(Messages.AbstractGeneratorPage_dlg_lifestyle_to_much, value, max);
                     if (value < 0)
-                        return "Is less than 0.";
-    
+                        return Messages.AbstractGeneratorPage_dlg_lifestyle_less;
+
                 } catch (Exception e) {
-                    return "[" + newText + "] is not a valid number";
+                    return String.format(Messages.AbstractGeneratorPage_dlg_lifestyle_no_number, newText);
                 }
-    
-                // TODO Auto-generated method stub
                 return null;
             }
         };
-        InputDialog inputDialog = new InputDialog(getSite().getShell(), "Start money", dialogMessage, m + "", validator);
+        InputDialog inputDialog = new InputDialog(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_lifestyle_titel, dialogMessage, m + "", validator); //$NON-NLS-1$
         return inputDialog;
+    }
+
+    protected boolean openDefaultCommitMessageDialog() {
+        boolean openConfirm = MessageDialog.openConfirm(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_commit_titel,
+                Messages.AbstractGeneratorPage_dlg_commit_message);
+        return openConfirm;
     }
 
 }
