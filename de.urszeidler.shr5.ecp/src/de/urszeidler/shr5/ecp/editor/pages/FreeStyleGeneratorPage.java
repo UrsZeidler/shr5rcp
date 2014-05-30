@@ -35,6 +35,7 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
@@ -110,6 +111,8 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
 
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
         tltmChoose.setText(Messages.GeneratorPage_Step_One);
+        tltmChoose.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_1.png")); //$NON-NLS-1$ //$NON-NLS-2$
+
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
@@ -120,6 +123,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
+        tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_2.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
         tltmCommit.addSelectionListener(new SelectionAdapter() {
@@ -129,6 +133,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
+        tltmCommit.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_3.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
@@ -138,6 +143,8 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
             }
         });
         restItem.setText(Messages.GeneratorPage_reset);
+        restItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_4.png")); //$NON-NLS-1$ //$NON-NLS-2$
+
 
         Group grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));

@@ -42,6 +42,7 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Lifestyle;
@@ -69,7 +70,6 @@ import de.urszeidler.shr5.ecp.editor.widgets.MagicGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.MetaTypGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.ResourceGeneratorOption;
 import de.urszeidler.shr5.ecp.editor.widgets.SkillGeneratorOption;
-import de.urszeidler.shr5.ecp.service.ValidationService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
@@ -185,6 +185,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
 
         tltmChoose = new ToolItem(toolBar, SWT.NONE);
         tltmChoose.setText(Messages.GeneratorPage_Step_One);
+        tltmChoose.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_1.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
@@ -195,6 +196,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmNewItem.setText(Messages.GeneratorPage_Step_Two);
+        tltmNewItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_2.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         tltmCommit = new ToolItem(toolBar, SWT.NONE);
         tltmCommit.addSelectionListener(new SelectionAdapter() {
@@ -204,6 +206,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         });
         tltmCommit.setText(Messages.GeneratorPage_Step_Three);
+        tltmCommit.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_3.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         restItem = new ToolItem(toolBar, SWT.NONE);
         restItem.addSelectionListener(new SelectionAdapter() {
@@ -213,6 +216,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
             }
         });
         restItem.setText(Messages.GeneratorPage_reset);
+        restItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_4.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
         grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));
