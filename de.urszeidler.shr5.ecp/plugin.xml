@@ -253,11 +253,29 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
          <menu
                id="de.urszeidler.shr5.ecp.menus.sampleMenu"
-               label="%create.menu.label"
+               label="%character.menu.label"
                mnemonic="M">
             <command
                   commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
                   mnemonic="S">
+            </command>
+            <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+                  label="%open.Generator.Object.command"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+                     value="1">
+               </parameter>
+            </command>
+           <command
+                 commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+                 label="%open.ManagedCharacter.Object.command"
+                 style="push">
+               <parameter
+                     name="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+                     value="2">
+               </parameter>
             </command>
          </menu>
       </menuContribution>
@@ -275,12 +293,26 @@
            id="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
            name="%openCharacterWizard.command.name">
      </command>
+     <command
+           categoryId="de.urszeidler.shr5.ecp.commands.openWizard"
+           id="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+           name="open object">
+        <commandParameter
+              id="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+              name="type"
+              optional="true">
+        </commandParameter>
+     </command>
   </extension>
   <extension
         point="org.eclipse.ui.handlers">
      <handler
            class="de.urszeidler.shr5.ecp.handlers.Shr5CommandHandler"
            commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand">
+     </handler>
+     <handler
+           class="de.urszeidler.shr5.ecp.handlers.OpenObjectHandler"
+           commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand">
      </handler>
   </extension>
   <extension

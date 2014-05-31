@@ -3,11 +3,15 @@
  */
 package de.urszeidler.shr5.ecp.util;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -21,6 +25,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 
+import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
@@ -373,7 +378,26 @@ public class ShadowrunEditingTools {
     }
 
     /**
+     * Find all objects matching the predicate.
+     * 
+     * @param editingDomain
+     * @param predicate
+     * @return
+     */
+    public static List<EObject> findAllObjects(EditingDomain editingDomain, Predicate<Object> predicate) {
+        ArrayList<EObject> list = new ArrayList<EObject>();
+        TreeIterator<Notifier> allContents = editingDomain.getResourceSet().getAllContents();
+        while (allContents.hasNext()) {
+            Notifier obj = allContents.next();
+            if (predicate.evaluate(obj))
+                list.add((EObject)obj);
+        }
+        return list;
+    }
+
+    /**
      * Open the editor for the first object in the selection.
+     * 
      * @param selection
      */
     public static void openEditorForFirstSelection(ISelection selection) {
@@ -382,9 +406,13 @@ public class ShadowrunEditingTools {
             Object firstElement = is.getFirstElement();
             if (firstElement instanceof EObject) {
                 EObject eo = (EObject)firstElement;
-                ECPAttributModifikatorWertOpener.openEditor(eo, Activator.getDefault().getDefaultEcpProject());
+                openEObject(eo);
             }
         }
+    }
+
+    public static void openEObject(EObject eo) {
+        ECPAttributModifikatorWertOpener.openEditor(eo, Activator.getDefault().getDefaultEcpProject());
     }
 
 }
