@@ -5,7 +5,6 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
@@ -14,8 +13,6 @@ import org.eclipse.ui.forms.editor.FormPage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
-import de.urszeidler.shr5.ecp.Activator;
-import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 

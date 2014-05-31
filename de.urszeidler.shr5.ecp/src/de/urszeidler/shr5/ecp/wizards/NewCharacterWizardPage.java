@@ -22,8 +22,6 @@ import org.eclipse.swt.widgets.Label;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
-import org.eclipse.wb.swt.ResourceManager;
-
 public class NewCharacterWizardPage extends WizardPage implements IValueChangeListener {
     private DataBindingContext m_bindingContext;
 
