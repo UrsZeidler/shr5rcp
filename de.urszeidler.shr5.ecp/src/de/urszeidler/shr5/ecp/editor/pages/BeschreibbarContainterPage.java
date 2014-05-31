@@ -92,7 +92,7 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
         TreeTableWidget treeTableWidget = new TreeTableWidget(managedForm.getForm().getBody(), titel, SWT.NONE, object,
-                eReference, toolkit, mananger, editingDomain);
+                eReference, toolkit, mananger, editingDomain,this);
         treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);

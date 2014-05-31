@@ -12,6 +12,7 @@ import org.eclipse.jface.databinding.viewers.IViewerObservableList;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
 import org.eclipse.jface.layout.TreeColumnLayout;
+import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
@@ -46,6 +47,8 @@ public class TreeTableWidget extends Composite {
     private EditingDomain editingDomain;
     private String titel;
     private ISelectionChangedListener selectionChangeListener;
+    private IDoubleClickListener dblListener;
+
 
     /**
      * Create the composite.
@@ -68,7 +71,7 @@ public class TreeTableWidget extends Composite {
     }
 
     public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
-            ReferenceManager mananger, EditingDomain editingDomain) {
+            ReferenceManager mananger, EditingDomain editingDomain, IDoubleClickListener dblListner) {
         super(parent, style);
         this.toolkit = toolkit;
         this.object = object;
@@ -76,6 +79,8 @@ public class TreeTableWidget extends Composite {
         this.manager = mananger;
         this.editingDomain = editingDomain;
         this.titel = titel;
+        this.dblListener = dblListner;
+
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
         createWidgets();
@@ -83,7 +88,7 @@ public class TreeTableWidget extends Composite {
     }
 
     public TreeTableWidget(Composite parent, String titel, int style, EObject object, EReference modifizierbarMods, FormToolkit toolkit,
-            ReferenceManager mananger, EditingDomain editingDomain, ISelectionChangedListener selectionChangeListener) {
+            ReferenceManager mananger, EditingDomain editingDomain, ISelectionChangedListener selectionChangeListener, IDoubleClickListener dblListner) {
         super(parent, style);
         this.toolkit = toolkit;
         this.object = object;
@@ -92,6 +97,8 @@ public class TreeTableWidget extends Composite {
         this.editingDomain = editingDomain;
         this.titel = titel;
         this.selectionChangeListener = selectionChangeListener;
+        this.dblListener = dblListner;
+
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
         createWidgets();
@@ -116,6 +123,8 @@ public class TreeTableWidget extends Composite {
         final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER);
         if (selectionChangeListener != null)
             treeViewer.addSelectionChangedListener(selectionChangeListener);
+        if(dblListener!=null)
+            treeViewer.addDoubleClickListener(dblListener);
         Tree tree = treeViewer.getTree();
         tree.setLinesVisible(true);
         toolkit.paintBordersFor(tree);

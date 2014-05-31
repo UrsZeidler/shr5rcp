@@ -2,6 +2,9 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -22,12 +25,13 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 /**
  * This is a basic generic page to display eObjects in an form with an
  * emfformbilder.
  */
-public class ManagedCharacterPage extends FormPage {
+public class ManagedCharacterPage extends FormPage implements IDoubleClickListener {
     private DataBindingContext m_bindingContext;
 
     protected ManagedCharacter object;
@@ -129,7 +133,7 @@ public class ManagedCharacterPage extends FormPage {
         managedForm.getToolkit().paintBordersFor(composite);
 
         TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(composite, "Inventar", SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR, toolkit, mananger, editingDomain,this);
         managedForm.getToolkit().adapt(treeTableWidgetInventar);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
 
@@ -139,17 +143,17 @@ public class ManagedCharacterPage extends FormPage {
         composite_1.setLayout(new FillLayout(SWT.VERTICAL));
 
         TreeTableWidget treeTableWidgetConnections = new TreeTableWidget(composite_1, "Connections", SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONNECTIONS, toolkit, mananger, editingDomain,this);
         managedForm.getToolkit().adapt(treeTableWidgetConnections);
         managedForm.getToolkit().paintBordersFor(treeTableWidgetConnections);
 
         TreeTableWidget treeTableWidget_1 = new TreeTableWidget(composite_1, "Contracts", SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS, toolkit, mananger, editingDomain,this);
         managedForm.getToolkit().adapt(treeTableWidget_1);
         managedForm.getToolkit().paintBordersFor(treeTableWidget_1);
 
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite_1, "Vehicles", SWT.NONE, object,
-                Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain);
+                Shr5managementPackage.Literals.MANAGED_CHARACTER__VEHICELS, toolkit, mananger, editingDomain,this);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
 
@@ -173,5 +177,11 @@ public class ManagedCharacterPage extends FormPage {
         DataBindingContext bindingContext = new DataBindingContext();
         //
         return bindingContext;
+    }
+
+    @Override
+    public void doubleClick(DoubleClickEvent event) {
+        ISelection selection = event.getSelection();
+        ShadowrunEditingTools.openEditorForFirstSelection(selection);
     }
 }

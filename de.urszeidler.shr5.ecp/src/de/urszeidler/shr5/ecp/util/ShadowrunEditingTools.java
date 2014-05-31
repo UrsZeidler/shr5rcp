@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 
 import de.urszeidler.commons.functors.Transformer;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -41,6 +43,8 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PersonaChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
+import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
 
 /**
  * A collection of tool functions.
@@ -60,7 +64,7 @@ public class ShadowrunEditingTools {
 
             for (Lifestyle lifestyle : lifeStyles) {
                 String id = getId(lifestyle);
-                if(id!=null && id.equals(choosenLifestyle.getParentId()))
+                if (id != null && id.equals(choosenLifestyle.getParentId()))
                     return lstsm;
                 if (lifestyle.getName().equals(choosenLifestyle.getName()))
                     return lstsm;
@@ -366,6 +370,21 @@ public class ShadowrunEditingTools {
 
         }
         return filteredEClasses;
+    }
+
+    /**
+     * Open the editor for the first object in the selection.
+     * @param selection
+     */
+    public static void openEditorForFirstSelection(ISelection selection) {
+        if (selection instanceof IStructuredSelection) {
+            IStructuredSelection is = (IStructuredSelection)selection;
+            Object firstElement = is.getFirstElement();
+            if (firstElement instanceof EObject) {
+                EObject eo = (EObject)firstElement;
+                ECPAttributModifikatorWertOpener.openEditor(eo, Activator.getDefault().getDefaultEcpProject());
+            }
+        }
     }
 
 }

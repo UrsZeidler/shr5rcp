@@ -90,7 +90,7 @@ public class ModifizierbarPage extends AbstractShr5Page<Modifizierbar> {
 		m_bindingContext = initDataBindings();
 
 		TreeTableWidget treeTableWidget = new TreeTableWidget(grpModifikationen,Messages.ObjectPage_modifications, SWT.NONE, object,
-				Shr5Package.Literals.MODIFIZIERBAR__MODS, toolkit, mananger, editingDomain);
+				Shr5Package.Literals.MODIFIZIERBAR__MODS, toolkit, mananger, editingDomain,this);
 		treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		managedForm.getToolkit().adapt(treeTableWidget);
 		managedForm.getToolkit().paintBordersFor(treeTableWidget);

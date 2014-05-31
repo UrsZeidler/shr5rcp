@@ -16,6 +16,7 @@ import de.urszeidler.emf.commons.ui.util.EmfFormBuilder;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
+import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 
 /**
@@ -77,15 +78,9 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
 	@Override
 	public void doubleClick(DoubleClickEvent event){
 	    ISelection selection = event.getSelection();
-	    if (selection instanceof IStructuredSelection) {
-            IStructuredSelection is = (IStructuredSelection)selection;
-            Object firstElement = is.getFirstElement();
-            if (firstElement instanceof EObject) {
-                EObject eo = (EObject)firstElement;
-                ECPAttributModifikatorWertOpener.openEditor(eo, Activator.getDefault().getDefaultEcpProject());                
-            }
-        }
+	    ShadowrunEditingTools.openEditorForFirstSelection(selection);
 	}
+
 	
 	protected abstract EditingDomain getEditingDomain();
 }

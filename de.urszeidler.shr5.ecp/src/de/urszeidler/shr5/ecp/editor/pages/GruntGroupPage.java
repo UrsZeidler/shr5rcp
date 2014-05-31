@@ -132,7 +132,7 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
             }
         };
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite_grunt_groups, "Grunts Members", SWT.NONE, object,
-                Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS, toolkit, mananger, editingDomain,selectionChange);
+                Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS, toolkit, mananger, editingDomain,selectionChange,this);
         treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
         managedForm.getToolkit().adapt(treeTableWidget);
