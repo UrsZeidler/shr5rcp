@@ -30,12 +30,14 @@ import org.eclipse.emf.ecp.core.exceptions.ECPProjectWithNameExistsException;
 import org.eclipse.emf.ecp.core.util.ECPProperties;
 import org.eclipse.emf.ecp.core.util.ECPUtil;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.wb.swt.ResourceManager;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -45,10 +47,12 @@ public class Activator extends AbstractUIPlugin {
     // The plug-in ID
     public static final String PLUGIN_ID = "de.urszeidler.shr5.ecp"; //$NON-NLS-1$
 
-    private static final String DEFAUL_PROJECT_NAME = "shr5Resources";
+    public static final String DEFAUL_PROJECT_NAME = "shr5Resources";
 
     // The shared instance
     private static Activator plugin;
+
+    private IPreferenceStore store;
 
     /**
      * The constructor
@@ -63,6 +67,7 @@ public class Activator extends AbstractUIPlugin {
     public void start(BundleContext context) throws Exception {
         super.start(context);
         plugin = this;
+        store = getPreferenceStore();
 
     }
 
@@ -78,15 +83,17 @@ public class Activator extends AbstractUIPlugin {
      * @return
      */
     public ECPProject getDefaultEcpProject() {
-        ECPProject project = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
+        String projectName = store.getString(PreferenceConstants.DEFAUL_PROJECT_NAME);
+        ECPProject project = ECPUtil.getECPProjectManager().getProject(projectName);
          return project;
     }
 
     public void createECPWorkspace() throws ECPProjectWithNameExistsException {
+        String projectName = store.getString(PreferenceConstants.DEFAUL_PROJECT_NAME);
         ECPProvider provider = ECPUtil.getECPProviderRegistry().getProvider("org.eclipse.emf.ecp.workspace.provider");
         ECPProperties ecpProperties = ECPUtil.createProperties();
         ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.shr5");
-        ECPProject ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME);
+        ECPProject ecpProject = ECPUtil.getECPProjectManager().getProject(projectName);
         if (ecpProject == null) {
             logInfo("creating ECP project....");
             ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME, ecpProperties);
@@ -211,7 +218,6 @@ public class Activator extends AbstractUIPlugin {
             e.printStackTrace();
             ILog log = Activator.getDefault().getLog();
             log.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage()));
-
         }
         return null;
     }

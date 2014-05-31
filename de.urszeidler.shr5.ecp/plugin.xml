@@ -179,6 +179,11 @@
             id="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
             name="%print.preferences.page.name">
       </page>
+      <page
+            class="de.urszeidler.shr5.ecp.preferences.Sr5MainPreferences"
+            id="de.urszeidler.shr5.ecp.preferences.basic.page"
+            name="%main.preferences.page.name">
+      </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
