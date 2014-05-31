@@ -1,8 +1,12 @@
-2014-06-22 Version 0.1.7-rc
+2014-06-22 Version 0.1.7
 
 
 2014-06-15 Version 0.1.7-rc
 
+* added wizard for character generator creation
+* added a character building perspective with a linked validation view
+* added double click behavior in all the composite widgets
+* added commit and reset dialogs
 
 2014-05-25 Version 0.1.6
 
