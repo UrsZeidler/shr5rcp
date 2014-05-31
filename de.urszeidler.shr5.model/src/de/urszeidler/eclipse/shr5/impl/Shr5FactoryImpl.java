@@ -2,14 +2,15 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
-import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import de.urszeidler.eclipse.shr5.AspektMagier;
 import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
 import de.urszeidler.eclipse.shr5.AutoSoft;
@@ -36,6 +37,7 @@ import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.FeuerModus;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
 import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
+import de.urszeidler.eclipse.shr5.FokusBinding;
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Gegenstand;
 import de.urszeidler.eclipse.shr5.Geist;
@@ -51,6 +53,7 @@ import de.urszeidler.eclipse.shr5.LifestyleOption;
 import de.urszeidler.eclipse.shr5.Lizenz;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.MagazinTyp;
+import de.urszeidler.eclipse.shr5.MagieFokus;
 import de.urszeidler.eclipse.shr5.Magier;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
 import de.urszeidler.eclipse.shr5.MatrixProgramType;
@@ -70,6 +73,7 @@ import de.urszeidler.eclipse.shr5.PersonaZauber;
 import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
 import de.urszeidler.eclipse.shr5.ProgramType;
 import de.urszeidler.eclipse.shr5.Projektilwaffe;
+import de.urszeidler.eclipse.shr5.QiFokus;
 import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ResonanzZiel;
 import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
@@ -90,6 +94,7 @@ import de.urszeidler.eclipse.shr5.Sprite;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Tutorsoft;
 import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.WaffenFokus;
 import de.urszeidler.eclipse.shr5.WeaponMount;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;

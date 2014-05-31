@@ -4,7 +4,6 @@
 package de.urszeidler.eclipse.shr5.provider;
 
 
-import de.urszeidler.eclipse.shr5.Shr5Factory;
 import java.util.Collection;
 import java.util.List;
 
@@ -23,6 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
 

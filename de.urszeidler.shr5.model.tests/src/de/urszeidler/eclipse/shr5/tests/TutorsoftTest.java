@@ -4,9 +4,10 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
+
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Tutorsoft;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

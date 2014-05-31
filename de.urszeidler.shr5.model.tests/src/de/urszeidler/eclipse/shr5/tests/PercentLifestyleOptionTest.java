@@ -5,10 +5,10 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import java.math.BigDecimal;
 
+import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5.Lifestyle;
 import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
-import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

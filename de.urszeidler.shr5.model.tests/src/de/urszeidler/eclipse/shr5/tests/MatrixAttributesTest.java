@@ -3,9 +3,8 @@
  */
 package de.urszeidler.eclipse.shr5.tests;
 
-import de.urszeidler.eclipse.shr5.MatrixAttributes;
-
 import junit.framework.TestCase;
+import de.urszeidler.eclipse.shr5.MatrixAttributes;
 
 /**
  * <!-- begin-user-doc -->
