@@ -97,8 +97,8 @@
 [printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
 [printTextPlusSpace('_UI_Panzerung_panzer_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).panzer/]
 [printTextPlusSpace('Composure', empty)/] [persona.willenskraft + persona.charisma  /]
-[printTextPlusSpace('_UI_BerechneteAttribute_menschenkenntnis_feature', empty)/] [persona.oclAsType(KoerperPersona).menschenkenntnis/]
-[printTextPlusSpace('_UI_BerechneteAttribute_errinerungsvermoegen_feature', empty)/] [(persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString() /]
+[printTextPlusSpace('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).menschenkenntnis/]
+[printTextPlusSpace('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString(), empty)/] [(persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString() /]
 [printTextPlusSpace('Lifting/Carrying', empty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
 [printTextPlusSpace('Movement', empty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
 
@@ -272,8 +272,9 @@ Limits
 [printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue /]
 [if (not comlink.storedPrograms->isEmpty())][printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/if][/template]
 
-[template private printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())]
-[for (gw : GeldWert | col)]
+[template private printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())
+post(trim())
+][for (gw : GeldWert | col)]
 [printTextPlusSpace(prefix+gw.getText()  ,empty)/] [gw.wert/]
 [/for]
 [printTextPlusSpace('sum :', empty)/] [wert/][/template]
