@@ -377,7 +377,7 @@ transform="translate([x/],[y/])"
 kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
 empty : String = '....................' ;
 empty40 : String = '........................................' ; 
-column : Sequence(Integer) = Sequence{25,400} ;
+column : Sequence(Integer) = Sequence{45,420} ;
 size : Integer = 12; }
 ]  [comment]30[/comment]
 [file ('characterSheet-'+aManagedCharacter.persona.name+'-page1.svg', false, 'UTF-8')]
@@ -544,8 +544,8 @@ x:Integer,y:Integer,size :Integer)
 [/if][/let]
 [/for]
 [let ypos : Integer = (15+aManagedCharacter.inventar->size()*size) ]
-[let pos : Integer = (1046-y).min(ypos+y) ]
-[printBotton(30, pos)/]
+[let pos : Integer = (1050-y).min(ypos+y) ]
+[printBotton(25, pos)/]
 [/let][/let]
 	</g>
 [/template]
@@ -1171,7 +1171,7 @@ transform="translate([x/],[y/])"
 [template private printBotton(x:Integer,y:Integer)]
    <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 0,[y/] 0,[x/] 335,0 0,-[x/]"
+       d="m 0,[y/] 0,[25/] 335,0 0,-[25/]"
        id="path-botton-[x/]-[y/]"
        inkscape:connector-curvature="0" />
 
