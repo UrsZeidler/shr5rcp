@@ -24,7 +24,7 @@
 kp : KoerperPersona =  aManagedCharacter.persona.oclAsType(KoerperPersona);
 empty : String = '....................' ;
 empty40 : String = '........................................' ; 
-column : Sequence(Integer) = Sequence{25,400} ;
+column : Sequence(Integer) = Sequence{45,420} ;
 size : Integer = 12; }
 ]  [comment]30[/comment]
 [file ('characterSheet-'+aManagedCharacter.persona.name+'-page2.svg', false, 'UTF-8')]
