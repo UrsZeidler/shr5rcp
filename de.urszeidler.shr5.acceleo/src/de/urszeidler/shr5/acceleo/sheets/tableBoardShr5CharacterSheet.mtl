@@ -1,0 +1,31 @@
+[comment encoding = UTF-8 /]
+[module tableBoardShr5CharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+[template public tableBoardShr5CharacterSheet(aManagedCharacter : ManagedCharacter)]
+	
+	[comment @main /]
+[file ('table-'+aManagedCharacter.persona.name+'-BB.txt', false, 'UTF-8')]
+[printBoardCharacterReport(aManagedCharacter)/]
+[/file]
+	
+[/template]
+
+[template public printBoardCharacterReport (aManagedCharacter : ManagedCharacter) ]
+
+[printBasicCharacterData(aManagedCharacter)/]
+
+[/template]
+
+[template public printBasicCharacterData (aManagedCharacter : ManagedCharacter) ]
+
+
+[/template]
