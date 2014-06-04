@@ -15,5 +15,18 @@
 [query public endTag(txt : String,) : String = '[/'+ self + ']' /]
 
 [query public cellText(txt : String) : String = self.tagText('td') /]
-[query public tableRow(row : Sequence(String)) : String = self->collect(e| e.cellText()).tagText('tr') /]
+[query public tableRow(row : Sequence(OclAny)) : String = (self->collect(e| (e.toString()).cellText())+'').tagText('tr') /]
+
+[query public table(txt : String) : String = self.tagText('table')  /]
+[query public tableHeading(txt : String) : String = self.tagText('th')  /]
+
+
+[**
+ * Prints a row in the table
+*/]
+[template public printRow(row : Sequence(String))]
+[startTag('tr')/][for (it : String | row)]
+[startTag('td')/][it/][endTag('td')/][/for][endTag('tr')/]
+[/template]
+
 

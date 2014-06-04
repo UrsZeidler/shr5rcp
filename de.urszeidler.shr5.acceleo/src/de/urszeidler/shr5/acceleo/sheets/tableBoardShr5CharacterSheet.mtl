@@ -22,10 +22,79 @@
 [template public printBoardCharacterReport (aManagedCharacter : ManagedCharacter) ]
 
 [printBasicCharacterData(aManagedCharacter)/]
+[printPersonaBasic(aManagedCharacter)/]
+
+[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen)/]
+
+[printActiveSkills(aManagedCharacter.persona.fertigkeiten)/]
+
+[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
+
 
 [/template]
 
+[template public printPersonaBasic (aManagedCharacter : ManagedCharacter)
+{persona : AbstraktPersona = aManagedCharacter.persona ; } ]
+
+
+
+['Attributes'.titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Attribute'.localizedString(),'value'.localizedString()})/]
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+[let attributeName : String = getText(base2Calced(ea))]
+[printRow(Sequence{attributeName,persona.attributeValue(ea)+''} )/]
+[/let]
+[/for]
+[printRow(Sequence{'_UI_ChrakterLimits_koerperlich_feature'.localizedString(),
+persona.koerperlich.toString()} )/]
+[printRow(Sequence{'_UI_ChrakterLimits_geistig_feature'.localizedString(),
+persona.geistig.toString()})/]
+[printRow(Sequence{'_UI_ChrakterLimits_sozial_feature'.localizedString(),
+ persona.sozial.toString()})/]
+['table'.endTag()/]
+
+
+[/template]
+
+[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit)) ? (not sg->isEmpty())]
+['_UI_AbstractPersona_fertigkeiten_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),'value'.localizedString()})/]
+[for (pfg : PersonaFertigkeit | sg)]
+[if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
+[printRow(Sequence{pfg.fertigkeit.getText(), pfg.stufe.toString()})/]
+[/if]
+[/for]
+['table'.endTag()/]
+[/template]
+
+[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit)) ? (not sg->isEmpty())]
+['Knowledge Skills'.titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),'value'.localizedString()})/]
+[for (pfg : PersonaFertigkeit | sg)]
+[if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
+[printRow(Sequence{pfg.fertigkeit.getText(), pfg.stufe.toString()})/]
+[/if]
+[/for]
+['table'.endTag()/]
+[/template]
+
+[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe)) ? (not sg->isEmpty())]
+['_UI_AbstractPersona_fertigkeitsGruppen_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),'value'.localizedString()})/]
+[for (pfg : PersonaFertigkeitsGruppe | sg)]
+[printRow(Sequence{pfg.gruppe.getText(), pfg.stufe.toString()})/]
+[/for]
+['table'.endTag()/]
+[/template]
+
+
 [template public printBasicCharacterData (aManagedCharacter : ManagedCharacter) ]
+['Basic Data'.titelText()/]
+['table'.startTag()/]
 
-
+['table'.endTag()/]
 [/template]

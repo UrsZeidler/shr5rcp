@@ -39,6 +39,7 @@ import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet;
 import de.urszeidler.shr5.acceleo.sheets.SimpleSvg;
 import de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet;
+import de.urszeidler.shr5.acceleo.sheets.TableBoardShr5CharacterSheet;
 import de.urszeidler.shr5.ecp.Activator;
 
 public class ModelToTextExportDialog extends TitleAreaDialog {
@@ -71,6 +72,7 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
 
         HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
         hashMap.put("BB Character Sheet", new BoardCharacterSheet());
+        hashMap.put("BB Table Character Sheet", new TableBoardShr5CharacterSheet());
         hashMap.put("simple svg->pdf", new SimpleSvg());
         hashMap.put("simple vehicle->pdf", new GenerateSvgVehicleSheet());
         hashMap.put("characterSheet->pdf", new SvgCharacterSheet());
