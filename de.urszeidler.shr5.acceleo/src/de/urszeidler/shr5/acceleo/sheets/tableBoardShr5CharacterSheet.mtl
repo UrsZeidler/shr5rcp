@@ -30,6 +30,8 @@
 
 [printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
 
+[printGear(aManagedCharacter.inventar->asSequence())/]
+
 
 [/template]
 
@@ -91,6 +93,16 @@ persona.geistig.toString()})/]
 ['table'.endTag()/]
 [/template]
 
+[template public printGear(gears : Sequence(AbstraktGegenstand))? (not gears->isEmpty())]
+['_UI_ManagedCharacter_inventar_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),'value'.localizedString(),'avail'.localizedString()})/]
+[for (ag : AbstraktGegenstand | gears)]
+[printRow(Sequence{ag.getText(), ag.wertValue.toString(),ag.verfuegbarkeit})/]
+[/for]
+[printRow(Sequence{'sum'.localizedString(),'',calcListenWertToString(gears)})/]
+['table'.endTag()/]
+[/template]
 
 [template public printBasicCharacterData (aManagedCharacter : ManagedCharacter) ]
 ['Basic Data'.titelText()/]
