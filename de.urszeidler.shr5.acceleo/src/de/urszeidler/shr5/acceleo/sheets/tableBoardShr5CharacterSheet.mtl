@@ -32,6 +32,8 @@
 
 [printGear(aManagedCharacter.inventar->asSequence())/]
 
+[printContracts(aManagedCharacter.contracts->asSequence())/]
+
 
 [/template]
 
@@ -101,6 +103,18 @@ persona.geistig.toString()})/]
 [printRow(Sequence{ag.getText(), ag.wertValue.toString(),ag.verfuegbarkeit})/]
 [/for]
 [printRow(Sequence{'sum'.localizedString(),'',calcListenWertToString(gears)})/]
+['table'.endTag()/]
+[/template]
+
+
+[template public printContracts(gears : Sequence(Vertrag))? (not gears->isEmpty())]
+['_UI_ManagedCharacter_contracts_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),'value'.localizedString()})/]
+[for (ag : Vertrag | gears)]
+[printRow(Sequence{ag.getText(), ag.wertValue.toString()})/]
+[/for]
+[printRow(Sequence{'sum'.localizedString(),calcListenWertToString(gears)})/]
 ['table'.endTag()/]
 [/template]
 
