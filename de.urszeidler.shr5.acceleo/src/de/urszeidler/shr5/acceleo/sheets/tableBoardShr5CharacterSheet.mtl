@@ -43,7 +43,20 @@
 [/let]
 [/if]
 
+[printVehicles(aManagedCharacter.vehicels)/]
 
+[/template]
+
+
+[template public printVehicles(sg : OrderedSet(Fahrzeug))? (not sg->isEmpty())]
+['_UI_ManagedCharacter_vehicels_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{''.localizedString(),'Cost'.localizedString()})/]
+[for (pfg : Fahrzeug | sg)]
+[printRow(Sequence{pfg.getText(), pfg.wert+'' } )/]
+[/for]
+[printRow(Sequence{'sum'.localizedString(),'',calcListenWertToString(sg->asSequence())})/]
+['table'.endTag()/]
 [/template]
 
 
