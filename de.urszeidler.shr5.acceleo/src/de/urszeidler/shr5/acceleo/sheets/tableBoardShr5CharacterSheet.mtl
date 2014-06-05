@@ -35,6 +35,43 @@
 [printContracts(aManagedCharacter.contracts->asSequence())/]
 
 
+[if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
+[let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
+[printQualities(kp.eigenschaften)/]
+
+[printAugmentations(kp.koerperMods)/]
+[/let]
+[/if]
+
+
+[/template]
+
+
+[template public printAugmentations(gears : OrderedSet(Koerpermods)) ? (not gears->isEmpty())
+]
+['_UI_KoerperPersona_koerperMods_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{''.localizedString(),'Ess'.localizedString(),'Cost'.localizedString()})/]
+[for (ag : Koerpermods | gears)]
+[printRow(Sequence{ag.getText(),(ag.getEssencesValue()/100)+'', ag.oclAsType(GeldWert).wert+'' } )/]
+[/for]
+[printRow(Sequence{'sum'.localizedString(),'',calcListenWertToString(gears->asSequence())})/]
+['table'.endTag()/]
+[/template]
+
+
+[**
+ * Print the qualities
+*/]
+[template public printQualities(gears : OrderedSet(PersonaEigenschaft)) ? (not gears->isEmpty())]
+['_UI_KoerperPersona_eigenschaften_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{''.localizedString(),'Karma Cost'.localizedString()})/]
+[for (ag : PersonaEigenschaft | gears)]
+[printRow(Sequence{ag.getText(),ag.karmaKosten+''} )/]
+[/for]
+[printRow(Sequence{'sum'.localizedString(),'',sumQuallitiyKarma(gears)+''})/]
+['table'.endTag()/]
 [/template]
 
 [template public printPersonaBasic (aManagedCharacter : ManagedCharacter)
