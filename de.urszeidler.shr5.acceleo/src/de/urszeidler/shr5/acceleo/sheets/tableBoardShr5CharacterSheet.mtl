@@ -45,6 +45,53 @@
 
 [printVehicles(aManagedCharacter.vehicels)/]
 
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+[let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
+[printSpells(z)/]
+[/let]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
+[printKiPowers( aManagedCharacter.persona.oclAsType(KiAdept).kikraft)/]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(Technomancer))]
+[printComplexForms( aManagedCharacter.persona.oclAsType(Technomancer).complexForms )/]
+[/if]
+
+[/template]
+
+
+[template public printComplexForms (pcf : OrderedSet(PersonaKomplexForm)) ? (not pcf->isEmpty()) ]
+['_UI_Technomancer_complexForms_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),''.localizedString()})/]
+[for (it : PersonaKomplexForm | pcf)]
+[printRow(Sequence{it.form.getText(),''})/]
+[/for]
+['table'.endTag()/]
+[/template]
+
+[**
+ * Print the kipowers
+*/]
+[template public printKiPowers(gears : OrderedSet(KiKraft)) ? (not gears->isEmpty())]
+['_UI_KiAdept_kikraft_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),''.localizedString()})/]
+[for (ag : KiKraft | gears)]
+[printRow(Sequence{ag.getText(),''})/]
+[/for]
+['table'.endTag()/]
+[/template]
+
+
+[template public printSpells(z : Zauberer) ? (not z.zauber->isEmpty())]
+['_UI_Zauberer_zauber_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),''.localizedString()})/]
+[for (pz : PersonaZauber | z.zauber)]
+[printRow(Sequence{pz.formel.getText(), '' } )/]
+[/for]
+['table'.endTag()/]
 [/template]
 
 
