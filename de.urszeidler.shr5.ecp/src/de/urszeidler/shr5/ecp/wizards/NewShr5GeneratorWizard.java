@@ -42,6 +42,7 @@ import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
  */
 public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
+    private static final String CHARACTER_PERSPECTIVE = "de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective";
     private static final String SWITCH_PERSPECTIVE = "SWITCH_PERSPECTIVE"; //$NON-NLS-1$
     protected List<EObject> container;
     protected List<EObject> systems;
@@ -50,6 +51,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
     protected WritableValue selectedContainer = new WritableValue();
     protected WritableValue selectedSystem = new WritableValue();
     protected WritableValue selectedGroup = new WritableValue();
+    private String perspectivenId;
 
     /**
      * 
@@ -74,8 +76,8 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
             Notifier obj = allContents.next();
             filterObjects(obj);
         }
+        perspectivenId = workbench.getActiveWorkbenchWindow().getActivePage().getPerspective().getId();
 
-        System.out.println(container);
     }
 
     /**
@@ -95,10 +97,10 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
 
     @Override
     public void addPages() {
-        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, Messages.NewShr5GeneratorWizard_name,
-                Messages.NewShr5GeneratorWizard_titel, Messages.NewShr5GeneratorWizard_description, 
+        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup,
+                Messages.NewShr5GeneratorWizard_name, Messages.NewShr5GeneratorWizard_titel, Messages.NewShr5GeneratorWizard_description,
                 ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/CoreGenerator32.png"))); //$NON-NLS-1$ //$NON-NLS-2$
-     }
+    }
 
     /*
      * (non-Javadoc)
@@ -134,6 +136,9 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
      * 
      */
     private void switchPerspective() {
+        if (CHARACTER_PERSPECTIVE.equals(perspectivenId))
+            return;
+
         boolean doSwitch = false;
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         String value = store.getString(SWITCH_PERSPECTIVE);
@@ -144,9 +149,9 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
         if (MessageDialogWithToggle.NEVER.equals(value)) {
             return;
         }
-        MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, getShell(), Messages.NewShr5GeneratorWizard_switch_perspective_titel,
-                Messages.NewShr5GeneratorWizard_switch_perspective_message, Messages.NewShr5GeneratorWizard_switch_perspective_not_again_message, false, store,
-                SWITCH_PERSPECTIVE, SWT.NONE);
+        MessageDialogWithToggle open = MessageDialogWithToggle.open(MessageDialogWithToggle.QUESTION_WITH_CANCEL, getShell(),
+                Messages.NewShr5GeneratorWizard_switch_perspective_titel, Messages.NewShr5GeneratorWizard_switch_perspective_message,
+                Messages.NewShr5GeneratorWizard_switch_perspective_not_again_message, false, store, SWITCH_PERSPECTIVE, SWT.NONE);
 
         doSwitch = open.getReturnCode() == 2;
         if (doSwitch)
@@ -158,8 +163,7 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
      */
     private void doSwitch() {
         try {
-            PlatformUI.getWorkbench().showPerspective("de.urszeidler.shr5.product.application.ShadowrunCharacterPerspective", //$NON-NLS-1$
-                    PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+            PlatformUI.getWorkbench().showPerspective(CHARACTER_PERSPECTIVE, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
         } catch (WorkbenchException e) {
             e.printStackTrace();
         }
