@@ -4,6 +4,7 @@
 package de.urszeidler.shr5.ecp.service;
 
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * @author urs
@@ -11,5 +12,5 @@ import org.eclipse.emf.common.util.Diagnostic;
  */
 public interface ValidationTarget {
 
-    void setValidation(Diagnostic diagnostic);
+    void setValidation(EObject object, Diagnostic diagnostic);
 }

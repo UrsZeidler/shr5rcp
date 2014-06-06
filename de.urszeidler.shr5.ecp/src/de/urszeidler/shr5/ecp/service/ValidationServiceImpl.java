@@ -35,17 +35,17 @@ public class ValidationServiceImpl implements ValidationService {
     public void updateValidation(EObject eobject) {
         Diagnostic diagnostic = validationResults.get(eobject);
         if (diagnostic != null)
-            updateTarget(diagnostic);
+            updateTarget(eobject, diagnostic);
     }
 
     @Override
     public void updateValidation(EObject eobject, Diagnostic diagnostic) {
         validationResults.put(eobject, diagnostic);
-        updateTarget(diagnostic);
+        updateTarget(eobject, diagnostic);
     }
 
-    private void updateTarget(Diagnostic diagnostic) {
+    private void updateTarget(EObject eobject, Diagnostic diagnostic) {
         if (target != null)
-            target.setValidation(diagnostic);
+            target.setValidation(eobject, diagnostic);
     }
 }
