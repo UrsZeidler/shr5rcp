@@ -22,6 +22,7 @@
 [template public printBoardCharacterReport (aManagedCharacter : ManagedCharacter) ]
 
 [printBasicCharacterData(aManagedCharacter)/]
+
 [printPersonaBasic(aManagedCharacter)/]
 
 [printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen)/]
@@ -36,29 +37,30 @@
 
 [printContracts(aManagedCharacter.contracts->asSequence())/]
 
-
 [if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
 [let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
 [printQualities(kp.eigenschaften)/]
 
 [printAugmentations(kp.koerperMods)/]
+
 [/let]
 [/if]
-
 [printVehicles(aManagedCharacter.vehicels)/]
 
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
 [let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
 [printSpells(z)/]
+
 [/let]
 [/if]
 [if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
 [printKiPowers( aManagedCharacter.persona.oclAsType(KiAdept).kikraft)/]
+
 [/if]
 [if (aManagedCharacter.persona.oclIsKindOf(Technomancer))]
 [printComplexForms( aManagedCharacter.persona.oclAsType(Technomancer).complexForms )/]
-[/if]
 
+[/if]
 [printAdvacements(aManagedCharacter.changes)/]
 [/template]
 
@@ -164,9 +166,6 @@
 
 [template public printPersonaBasic (aManagedCharacter : ManagedCharacter)
 {persona : AbstraktPersona = aManagedCharacter.persona ; } ]
-
-
-
 ['Attributes'.titelText()/]
 ['table'.startTag()/]
 [printRow(Sequence{'Attribute'.localizedString(),'value'.localizedString()})/]
