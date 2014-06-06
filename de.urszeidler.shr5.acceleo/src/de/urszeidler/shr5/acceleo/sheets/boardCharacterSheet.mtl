@@ -110,7 +110,7 @@ Limits
  * Print the qualities
 */]
 [template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { empty :String = '                                             ' ;}]
-['Karma'.titelText()/]
+['_UI_ManagedCharacter_changes_feature'.titelText()/]
 [for (ag : Changes | gears)]
 [ printTextPlusSpace(ag.date.getText()+' '+  getText(ag),empty)  /] [ag.karmaCost/]
 [/for]
