@@ -205,7 +205,7 @@ Limits
 
 
 [template public printConnections(c : OrderedSet(Connection),empty :String)? (not c->isEmpty())]
-['_UI_AbstractPersona_fertigkeiten_feature'.localizedString().titelText()/]
+['_UI_ManagedCharacter_connetions_feature'.localizedString().titelText()/]
 [for (connection : Connection | c)]
 [printTextPlusSpace(connection.getText(),empty)/]  [connection.influence/]/[connection.loyality/]
 [/for]

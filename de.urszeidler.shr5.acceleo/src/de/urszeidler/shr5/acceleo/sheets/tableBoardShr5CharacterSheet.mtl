@@ -30,6 +30,8 @@
 
 [printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten)/]
 
+[printConnections(aManagedCharacter.connections)/]
+
 [printGear(aManagedCharacter.inventar->asSequence())/]
 
 [printContracts(aManagedCharacter.contracts->asSequence())/]
@@ -57,6 +59,32 @@
 [printComplexForms( aManagedCharacter.persona.oclAsType(Technomancer).complexForms )/]
 [/if]
 
+[printAdvacements(aManagedCharacter.changes)/]
+[/template]
+
+
+[**
+ * Print the qualities
+*/]
+[template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty())]
+['_UI_ManagedCharacter_connetions_feature'.titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString().italicText(),'date'.italicText(),'Karma Cost'.localizedString().italicText()})/]
+[for (ag : Changes | gears)]
+[printRow(Sequence{ag.getText(),ag.date.getText(),ag.karmaCost.toString()})/]
+[/for]
+['table'.endTag()/]
+[/template]
+
+
+[template public printConnections(c : OrderedSet(Connection))? (not c->isEmpty())]
+['_UI_ManagedCharacter_connetions_feature'.localizedString().titelText()/]
+['table'.startTag()/]
+[printRow(Sequence{'Name'.localizedString(),'inf'.localizedString(),'loy'.localizedString()})/]
+[for (connection : Connection | c)]
+[printRow(Sequence{connection.getText(),connection.influence.toString(), connection.loyality.toString()}) /]
+[/for]
+['table'.endTag()/]
 [/template]
 
 
