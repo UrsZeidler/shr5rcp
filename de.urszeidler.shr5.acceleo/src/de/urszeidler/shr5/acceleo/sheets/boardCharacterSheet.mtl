@@ -96,11 +96,11 @@
 [/if]
 [printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]
 [printTextPlusSpace('_UI_Panzerung_panzer_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).panzer/]
-[printTextPlusSpace('Composure', empty)/] [persona.willenskraft + persona.charisma  /]
+[printTextPlusSpace('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).selbstbeherrschung.toString()/]
 [printTextPlusSpace('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).menschenkenntnis/]
 [printTextPlusSpace('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString(), empty)/] [(persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString() /]
-[printTextPlusSpace('Lifting/Carrying', empty)/] [persona.staerke  * 15 /]/[persona.staerke  * 10/]
-[printTextPlusSpace('Movement', empty)/] [persona.geschicklichkeit * persona.spezies.laufen /]/[persona.geschicklichkeit * persona.spezies.rennen /]/[persona.spezies.sprinten /]
+[printTextPlusSpace('Lifting/Carrying', empty)/] [persona.liftCarry()/]
+[printTextPlusSpace('Movement', empty)/] [persona.movement()/]
 
 Limits
 ['_UI_ChrakterLimits_koerperlich_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).koerperlich/] / ['_UI_ChrakterLimits_geistig_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).geistig/] / ['_UI_ChrakterLimits_sozial_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).sozial/]
