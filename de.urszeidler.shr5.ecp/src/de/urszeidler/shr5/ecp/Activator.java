@@ -31,6 +31,12 @@ import org.eclipse.emf.ecp.core.util.ECPProperties;
 import org.eclipse.emf.ecp.core.util.ECPUtil;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.ui.IEditorReference;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.internal.registry.EditorRegistry;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.wb.swt.ResourceManager;
 import org.osgi.framework.Bundle;
@@ -69,13 +75,37 @@ public class Activator extends AbstractUIPlugin {
         plugin = this;
         store = getPreferenceStore();
 
+        cleanOldEditors();
+    }
+
+    /**
+     * Cleans the old editorref. A patch for https://bugs.eclipse.org/bugs/show_bug.cgi?id=386648 .
+     */
+    private void cleanOldEditors() {
+        try {
+            IWorkbench wb = PlatformUI.getWorkbench();
+            IWorkbenchWindow win = wb.getActiveWorkbenchWindow();
+            IWorkbenchPage page = win.getActivePage();
+
+            // IWorkbenchPage activePage = workbenchWindow.getActivePage();
+            IEditorReference[] refs = page.getEditorReferences();
+            for (IEditorReference ref : refs) {
+                String editorId = ref.getId();
+                if (EditorRegistry.EMPTY_EDITOR_ID.equals(editorId)) {
+                    page.closeEditors(new IEditorReference[]{ ref }, false);
+                    System.out.println("closing :" + editorId);
+                }
+            }
+        } catch (Exception e) {
+            logError("Error closing editors", e);
+        }
     }
 
     public EditingDomain getEdtingDomain() {
         ECPProject project = getDefaultEcpProject();
         if (project == null)
             return null;
-       EditingDomain editingDomain = project.getEditingDomain();
+        EditingDomain editingDomain = project.getEditingDomain();
         return editingDomain;
     }
 
@@ -85,7 +115,7 @@ public class Activator extends AbstractUIPlugin {
     public ECPProject getDefaultEcpProject() {
         String projectName = store.getString(PreferenceConstants.DEFAUL_PROJECT_NAME);
         ECPProject project = ECPUtil.getECPProjectManager().getProject(projectName);
-         return project;
+        return project;
     }
 
     public void createECPWorkspace() throws ECPProjectWithNameExistsException {
