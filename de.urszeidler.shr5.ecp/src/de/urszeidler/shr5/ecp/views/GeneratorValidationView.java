@@ -130,7 +130,7 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
         formToolkit.paintBordersFor(composite);
                     
        lblNewLabel = formToolkit.createLabel(composite, "New Label", SWT.NONE);
-       lblNewLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
+       lblNewLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         diagnosticComposite = new DiagnosticComposite(container, SWT.NONE);
         diagnosticComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -175,7 +175,7 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
     public void setValidation(EObject eobject, final Diagnostic diagnostic) {
         if (eobject instanceof Beschreibbar) {
             Beschreibbar beschreibbar = (Beschreibbar)eobject;
-            object.setValue(beschreibbar);
+            object.setValue(beschreibbar.getName());
         } else if (eobject instanceof CharacterGenerator) {
             CharacterGenerator cg = (CharacterGenerator)eobject;
             object.setValue(cg.getCharacterName());
@@ -196,7 +196,7 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
         DataBindingContext bindingContext = new DataBindingContext();
         //
         IObservableValue observeTextLblNewLabelObserveWidget = WidgetProperties.text().observe(lblNewLabel);
-        bindingContext.bindValue(observeTextLblNewLabelObserveWidget, object, null, null);
+        bindingContext.bindValue(observeTextLblNewLabelObserveWidget, object, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), null);
         //
         return bindingContext;
     }
