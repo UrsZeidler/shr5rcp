@@ -377,8 +377,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseMunition(Munition object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
@@ -388,24 +387,23 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseAbstractMatrixDevice(AbstractMatrixDevice object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
-            
+
             @Override
             public Object caseAbstraktFokus(AbstraktFokus object) {
                 try {
-                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new GegenstandPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating GegenstandPage", e);//$NON-NLS-1$
                 }
                 return null;
             }
+
             // @Override
             // public Object caseCyberdeck(Cyberdeck object) {
             // try {
@@ -440,8 +438,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseNahkampfwaffe(Nahkampfwaffe object) {
                 try {
-                    addPage(new NahkampwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
-                            manager));
+                    addPage(new NahkampwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
                     logError("error creating NahkampwaffePage", e);//$NON-NLS-1$
                 }
@@ -484,8 +481,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             @Override
             public Object caseProjektilwaffe(Projektilwaffe object) {
                 try {
-                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager));
+                    addPage(new FernkampfwaffePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain,
+                            manager));
                 } catch (PartInitException e) {
                     logError("error creating FernkampfwaffePage", e);//$NON-NLS-1$
                 }
@@ -710,19 +707,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             for (Object object : list) {
                 if (object instanceof EObject) {
                     EObject eo = (EObject)object;
-                    EObject copy = EcoreUtil.copy(eo);
-                    if (eo.eResource() instanceof XMLResource) {
-                        XMLResource xmlRes = (XMLResource)eo.eResource();
-                        String id = xmlRes.getID(eo);
-                        if (copy instanceof Identifiable) {
-                            String parentId = ((Identifiable)eo).getParentId();
-                            if (parentId != null && !parentId.isEmpty())
-                                id = parentId;
-
-                            Identifiable iden = (Identifiable)copy;
-                            iden.setParentId(id);
-                        }
-                    }
+                    EObject copy = copyWithParentId(eo);
                     objectList.add(copy);
                 }
             }
@@ -730,6 +715,30 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
             return objectList;
         }
         return null;
+    }
+
+    /**
+     * Creates a copy of the eobject, when it is an {@link Identifiable} the parent id will be set to the id of the org object when the org object has
+     * no parentId set. So the copied object has the org id as parentId or the parentId.
+     * 
+     * @param eo the org {@link EObject}
+     * @return the copy
+     */
+    private EObject copyWithParentId(EObject eo) {
+        EObject copy = EcoreUtil.copy(eo);
+        if (eo.eResource() instanceof XMLResource) {
+            XMLResource xmlRes = (XMLResource)eo.eResource();
+            String id = xmlRes.getID(eo);
+            if (copy instanceof Identifiable) {
+                String parentId = ((Identifiable)eo).getParentId();
+                if (parentId != null && !parentId.isEmpty())
+                    id = parentId;
+
+                Identifiable iden = (Identifiable)copy;
+                iden.setParentId(id);
+            }
+        }
+        return copy;
     }
 
 }
