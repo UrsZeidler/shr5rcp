@@ -59,6 +59,12 @@ public class OpenObjectHandler extends AbstractHandler {
         return null;
     }
 
+    /**
+     * The worker method.
+     * 
+     * @param parameter
+     * @param shell
+     */
     private void executeAction(String parameter, Shell shell) {
         try {
             int parseInt = Integer.parseInt(parameter);
