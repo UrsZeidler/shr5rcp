@@ -2946,6 +2946,9 @@
         <mods xmi:id="_BpvlQN0CEeOvVYoRsPZlnA" wert="-10">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
+        <mods xmi:id="_JsEpsO4pEeO8y42W7HID7Q" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//CyberwareModifikatioren/universalDataConnector"/>
+        </mods>
         <localizations xmi:id="_BpwMUN0CEeOvVYoRsPZlnA" local="de" name="Datenbuchse"/>
       </entries>
       <entries xsi:type="shr5:Cyberware" xmi:id="3339a98e-9f7b-49ce-8d9d-b4ae935f0cca" name="Data Lock" page="452" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating*2">
@@ -3161,14 +3164,32 @@
         </mods>
         <localizations xmi:id="_BqDuUd0CEeOvVYoRsPZlnA" local="de" name="Interner Lufttank"/>
       </entries>
-      <entries xsi:type="shr5:Cyberware" xmi:id="ac91cc72-44ca-44f0-a108-0f98d3ae95f1" name="Reaction Enhancers" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="(Rating*5)R">
-        <mods xmi:id="_BqEVYN0CEeOvVYoRsPZlnA">
+      <entries xsi:type="shr5:Cyberware" xmi:id="ac91cc72-44ca-44f0-a108-0f98d3ae95f1" name="Reaction Enhancers 1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="5R" wertValue="13000">
+        <mods xmi:id="_BqEVYN0CEeOvVYoRsPZlnA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
-        <mods xmi:id="_BqEVYd0CEeOvVYoRsPZlnA">
+        <mods xmi:id="_BqEVYd0CEeOvVYoRsPZlnA" wert="-30">
           <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
         </mods>
-        <localizations xmi:id="_BqEVYt0CEeOvVYoRsPZlnA" local="de" name="Reaktionsverbesserung"/>
+        <localizations xmi:id="_BqEVYt0CEeOvVYoRsPZlnA" local="de" name="Reaktionsverbesserung 1" page="461"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_l2yZsO4uEeO0s-zqCESwyQ" name="Reaction Enhancers 2" parentId="ac91cc72-44ca-44f0-a108-0f98d3ae95f1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="10R" wertValue="26000">
+        <mods xmi:id="_BqEVYN0CEeOvVYoRsPZlnA" wert="2">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </mods>
+        <mods xmi:id="_BqEVYd0CEeOvVYoRsPZlnA" wert="-60">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <localizations xmi:id="_BqEVYt0CEeOvVYoRsPZlnA" local="de" name="Reaktionsverbesserung 2" page="461"/>
+      </entries>
+      <entries xsi:type="shr5:Cyberware" xmi:id="_l2yZse4uEeO0s-zqCESwyQ" name="Reaction Enhancers 3" parentId="ac91cc72-44ca-44f0-a108-0f98d3ae95f1" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="15R" wertValue="39000">
+        <mods xmi:id="_BqEVYN0CEeOvVYoRsPZlnA" wert="3">
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+        </mods>
+        <mods xmi:id="_BqEVYd0CEeOvVYoRsPZlnA" wert="-90">
+          <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz"/>
+        </mods>
+        <localizations xmi:id="_BqEVYt0CEeOvVYoRsPZlnA" local="de" name="Reaktionsverbesserung 3" page="461"/>
       </entries>
       <entries xsi:type="shr5:Cyberware" xmi:id="a7dd2b69-8090-4699-9543-79cea753d753" name="Skillwires" page="455" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="Rating*4">
         <mods xmi:id="_BqEVY90CEeOvVYoRsPZlnA">
@@ -11882,33 +11903,27 @@
     <entries xsi:type="shr5:ShrList" xmi:id="_Oz-i0OQREeOhxLDnSc6_eQ" beschreibung="Some foki test." name="Foki">
       <entries xsi:type="shr5:WaffenFokus" xmi:id="_Oz-i0eQREeOhxLDnSc6_eQ" verfuegbarkeit="9R" wertValue="7000" name="Knife 3" schadenscode="STR+1P" praezision="4" durchschlagsKraft="-2" stufe="3"/>
       <entries xsi:type="shr5:QiFokus" xmi:id="_Oz-i0uQREeOhxLDnSc6_eQ" verfuegbarkeit="3R" wertValue="3000" name="Qi fokus 1">
-        <power xmi:id="_Oz-i0-QREeOhxLDnSc6_eQ" name="Danger Sense 1" page="309" kraftpunkte="-25">
+        <power xmi:id="_Oz-i0-QREeOhxLDnSc6_eQ" name="Danger Sense 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-25">
           <localizations xmi:id="_Oz-i1OQREeOhxLDnSc6_eQ" local="de" name="Gefahrensinn"/>
-          <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
         </power>
       </entries>
-      <entries xsi:type="shr5:MagieFokus" xmi:id="_bcYNwOQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="4R" wertValue="9000" name="Metamagic Focus Focus 1" bindungsFaktor="3">
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_bcYNwOQREeOhxLDnSc6_eQ" stufe="1" page="318" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="9000" name="Metamagic Focus Focus 1" bindungsFaktor="3">
         <localizations xmi:id="_lQE8cOQREeOhxLDnSc6_eQ" local="de" name="Metamagie Fokus 1" page="318"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:MagieFokus" xmi:id="_Oz-i1eQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="3R" wertValue="5000" name="Enchanting Focus 1" bindungsFaktor="3">
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_Oz-i1eQREeOhxLDnSc6_eQ" stufe="1" page="318" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="3R" wertValue="5000" name="Enchanting Focus 1" bindungsFaktor="3">
         <localizations xmi:id="_vu5rwOQREeOhxLDnSc6_eQ" local="de" name="Verzauberungs Fokus 1" page="318"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:MagieFokus" xmi:id="_h0N5kOQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="3R" wertValue="18000" name="Power Focus Focus 1" bindungsFaktor="6">
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_h0N5kOQREeOhxLDnSc6_eQ" stufe="1" page="318" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="3R" wertValue="18000" name="Power Focus Focus 1" bindungsFaktor="6">
         <localizations xmi:id="_qqtZIOQREeOhxLDnSc6_eQ" local="de" name="Kraft Fokus 1" page="318"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
         <mods xmi:id="_iztLMOQSEeOhxLDnSc6_eQ" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//BaseMagischePersona/magie"/>
         </mods>
       </entries>
-      <entries xsi:type="shr5:MagieFokus" xmi:id="_7w_koOQREeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="3R" wertValue="4000" name="Spirit Focus 1" bindungsFaktor="2">
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_7w_koOQREeOhxLDnSc6_eQ" stufe="1" page="318" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="3R" wertValue="4000" name="Spirit Focus 1" bindungsFaktor="2">
         <localizations xmi:id="_7w_koeQREeOhxLDnSc6_eQ" local="de" name="Geister Fokus 1" page="318"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
-      <entries xsi:type="shr5:MagieFokus" xmi:id="_L3sicOQSEeOhxLDnSc6_eQ" stufe="1" page="318" verfuegbarkeit="4R" wertValue="4000" name="Spell Focus 1" bindungsFaktor="3">
+      <entries xsi:type="shr5:MagieFokus" xmi:id="_L3sicOQSEeOhxLDnSc6_eQ" stufe="1" page="318" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="4R" wertValue="4000" name="Spell Focus 1" bindungsFaktor="3">
         <localizations xmi:id="_L3siceQSEeOhxLDnSc6_eQ" local="de" name="Zauber Fokus 1" page="318"/>
-        <srcBook href="#_BlSjEN0CEeOvVYoRsPZlnA"/>
       </entries>
     </entries>
   </entries>
