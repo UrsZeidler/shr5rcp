@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+    <page id="root" content="intro/root.xhtml"/>
+<!--     <page id="characterediting" content="intro/concept1.xhtml"/> -->
+<!--     <page id="resources" content="intro/basicGui.xhtml"/> -->
+<!--     <page id="configureLocalStore" content="intro/configureLocalStore.xhtml"/> -->
+</introContent>

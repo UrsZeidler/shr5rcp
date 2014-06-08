@@ -1,0 +1,20 @@
+img {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+.page-style {
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  text-align: center;
+  background-attachment: fixed;
+  background-image: url(rootBCK.png);
+}
+body > div.page-style {
+  padding-left: 30%;
+}
+#content {
+  text-align: left;
+  width: 40em;
+}

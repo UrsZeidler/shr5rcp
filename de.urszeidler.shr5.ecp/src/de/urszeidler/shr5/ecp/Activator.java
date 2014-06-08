@@ -85,6 +85,8 @@ public class Activator extends AbstractUIPlugin {
         try {
             IWorkbench wb = PlatformUI.getWorkbench();
             IWorkbenchWindow win = wb.getActiveWorkbenchWindow();
+            if (win == null)
+                return;
             IWorkbenchPage page = win.getActivePage();
 
             // IWorkbenchPage activePage = workbenchWindow.getActivePage();

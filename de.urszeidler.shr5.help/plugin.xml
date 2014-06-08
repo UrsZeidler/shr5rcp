@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="de.urszeidler.shr5.help.intro"
+            label="1">
+      </intro>
+      <introProductBinding
+            introId="de.urszeidler.shr5.help.intro"
+            productId="de.urszeidler.shr5.product.shr5">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="introContent.xml"
+            id="de.urszeidler.shr5.help.intro.config"
+            introId="de.urszeidler.shr5.help.intro">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+
+  <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
+         <menu
+               id="de.urszeidler.shr5.ecp.menus.sampleMenu"
+               label="help">
+            <command
+                  commandId="org.eclipse.ui.help.quickStartAction"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.help.tipsAndTricksAction"
+                  style="push">
+            </command>
+            </menu>
+      </menuContribution>
+   </extension>
+
+
+</plugin>
