@@ -5,8 +5,7 @@
          point="org.eclipse.ui.intro">
       <intro
             class="org.eclipse.ui.intro.config.CustomizableIntroPart"
-            id="de.urszeidler.shr5.help.intro"
-            label="1">
+            id="de.urszeidler.shr5.help.intro">
       </intro>
       <introProductBinding
             introId="de.urszeidler.shr5.help.intro"
