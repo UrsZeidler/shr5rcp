@@ -3428,25 +3428,49 @@
         <mods xmi:id="_93vOoN2CEeOclqlLvReNwg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/konstitution"/>
         </mods>
-        <localizations xmi:id="_3tzb8d2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+        <localizations xmi:id="_3tzb8d2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut Konstitution 1"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" xmi:id="_4OcD0N2CEeOclqlLvReNwg" name="Improved Agi Attribute" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+      <entries xsi:type="shr5:KiKraft" xmi:id="_4OcD0N2CEeOclqlLvReNwg" name="Improved Agi Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
         <mods xmi:id="_IsGJEN2DEeOclqlLvReNwg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
         </mods>
-        <localizations xmi:id="_4OcD0d2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+        <localizations xmi:id="_4OcD0d2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut Geshicklichkeit 1"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" xmi:id="_4zRPMN2CEeOclqlLvReNwg" name="Improved Rea Attribute" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+      <entries xsi:type="shr5:KiKraft" xmi:id="_4zRPMN2CEeOclqlLvReNwg" name="Improved Rea Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
         <mods xmi:id="_Kdi4kN2DEeOclqlLvReNwg" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
         </mods>
-        <localizations xmi:id="_4zRPMd2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+        <localizations xmi:id="_4zRPMd2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut Reaktion 1"/>
       </entries>
-      <entries xsi:type="shr5:KiKraft" xmi:id="_5R7hIN2CEeOclqlLvReNwg" name="Improved Str Attribute" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
-        <mods xmi:id="_L_41EN2DEeOclqlLvReNwg" wert="1">
+      <entries xsi:type="shr5:KiKraft" xmi:id="_k7rCIPGYEeOCH7UFlCA-YA" name="Improved Str Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_L9kJUPGZEeOCH7UFlCA-YA" wert="1">
           <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/staerke"/>
         </mods>
-        <localizations xmi:id="_5R7hId2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut"/>
+        <localizations xmi:id="_k7rCIvGYEeOCH7UFlCA-YA" local="de" name="Gesteigertes Körperliches Attribut Stärke 1"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_5R7hIN2CEeOclqlLvReNwg" name="Improved Cha Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_L_41EN2DEeOclqlLvReNwg" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/charisma"/>
+        </mods>
+        <localizations xmi:id="_5R7hId2CEeOclqlLvReNwg" local="de" name="Gesteigertes Körperliches Attribut Charisma 1"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_J1W8IPGYEeOCH7UFlCA-YA" name="Improved Wil Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_mZK64PGYEeOCH7UFlCA-YA" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/willenskraft"/>
+        </mods>
+        <localizations xmi:id="_J1XjMfGYEeOCH7UFlCA-YA" local="de" name="Gesteigertes Körperliches Attribut Willenskraft 1"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_WsDhwPGYEeOCH7UFlCA-YA" name="Improved Int Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_WsDhwfGYEeOCH7UFlCA-YA" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </mods>
+        <localizations xmi:id="_WsDhwvGYEeOCH7UFlCA-YA" local="de" name="Gesteigertes Körperliches Attribut Intuition 1"/>
+      </entries>
+      <entries xsi:type="shr5:KiKraft" xmi:id="_1Ci_EPGYEeOCH7UFlCA-YA" name="Improved Log Attribute 1" page="309" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" kraftpunkte="-100">
+        <mods xmi:id="_47YR0PGYEeOCH7UFlCA-YA" wert="1">
+          <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/logik"/>
+        </mods>
+        <localizations xmi:id="_1Ci_EvGYEeOCH7UFlCA-YA" local="de" name="Gesteigertes Körperliches Attribut Logik 1"/>
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BqNfUd0CEeOvVYoRsPZlnA" name="armors">
