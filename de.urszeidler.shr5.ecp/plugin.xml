@@ -257,7 +257,7 @@
       <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu?after=project.menu.id">
          <menu
-               id="de.urszeidler.shr5.ecp.menus.sampleMenu"
+               id="de.urszeidler.shr5.ecp.menus.characterMenu"
                label="%character.menu.label"
                mnemonic="M">
             <command
@@ -319,15 +319,6 @@
            class="de.urszeidler.shr5.ecp.handlers.OpenObjectHandler"
            commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand">
      </handler>
-  </extension>
-  <extension
-        point="org.eclipse.ui.bindings">
-     <key
-           commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
-           contextId="org.eclipse.ui.contexts.window"
-           schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
-           sequence="M1+6">
-     </key>
   </extension>
 
 
