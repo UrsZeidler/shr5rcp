@@ -4079,6 +4079,18 @@
       <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="2682b906-ab8c-496a-9281-4ada42b5b71c" name="Thermographic Vision" page="66" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
         <localizations xmi:id="_Br6IcN0CEeOvVYoRsPZlnA" local="de" name="Infrarotsicht"/>
       </entries>
+      <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="_RQvY4PH2EeOyhsxuzTclMQ" name="Exceptional Attribute Strength" page="72" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="14">
+        <mods xmi:id="_StFbEPH2EeOyhsxuzTclMQ">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Spezies/staerkeMax"/>
+        </mods>
+        <localizations xmi:id="_RQvY4fH2EeOyhsxuzTclMQ" local="de" name="Außergewöhnliches Attribut Stärke"/>
+      </entries>
+      <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="_lnJRUPH2EeOyhsxuzTclMQ" name="Exceptional Attribute Body" page="72" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" karmaKosten="14">
+        <mods xmi:id="_oFC3IPH2EeOyhsxuzTclMQ">
+          <attribut href="http://urszeidler.de/shr5/1.0#//Spezies/konstitutionMax"/>
+        </mods>
+        <localizations xmi:id="_lnJRUfH2EeOyhsxuzTclMQ" local="de" name="Außergewöhnliches Attribut Konstitution"/>
+      </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_Br6Icd0CEeOvVYoRsPZlnA" name="biowares">
       <entries xsi:type="shr5:BioWare" xmi:id="b4c38ac9-ba87-49e0-b313-bc2a7bebd470" name="Essence Hole" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="0">
