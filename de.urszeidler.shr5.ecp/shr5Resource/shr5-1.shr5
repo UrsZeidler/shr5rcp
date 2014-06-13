@@ -12279,11 +12279,7 @@
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0-k4N0CEeOvVYoRsPZlnA" character="_B0O-Ad0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Example James" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbRN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwN0CEeOvVYoRsPZlnA" magic="_BtCw4N0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B0_zAd0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Test-Aspekt-1" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwt0CEeOvVYoRsPZlnA" magic="_BtFNId0CEeOvVYoRsPZlnA"/>
-    <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_B1AaEN0CEeOvVYoRsPZlnA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" characterName="Test-Aspekt-1" resourcen="_BtMh4N0CEeOvVYoRsPZlnA" skills="_BtGbQN0CEeOvVYoRsPZlnA" attribute="_Bs4Y0t0CEeOvVYoRsPZlnA" metaType="_Bs3xwt0CEeOvVYoRsPZlnA" magic="_BtFNId0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5KarmaGenerator" xmi:id="_B1BoMN0CEeOvVYoRsPZlnA" generator="_Btbyct0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_BzNDQN0CEeOvVYoRsPZlnA" metaType="_BtcZgN0CEeOvVYoRsPZlnA" characterConcept="_BtdAkN0CEeOvVYoRsPZlnA"/>
-    <generators xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_snAOwPGbEeO9WPjc44gAjw" character="_yiwbgPGbEeO9WPjc44gAjw" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="trestt" selectedSpecies="75cb9933-0e78-42ad-a446-32ccbcf19219">
-      <selectedType href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
-    </generators>
   </entries>
   <entries xsi:type="shr5mngt:GamemasterManagement" xmi:id="_B1HHwN0CEeOvVYoRsPZlnA" name="my game stuff">
     <groups xmi:id="_B1HHwd0CEeOvVYoRsPZlnA" name="non player group">
@@ -12618,12 +12614,12 @@
         <vehicels xsi:type="shr5:Bodenfahrzeug" xmi:id="_vSjZQOHoEeOcvI1G0ud0MA" name="Yamaha Growler" parentId="a9fd5990-51e4-4e0b-a4b5-7784b6d0deeb" page="462" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" verfuegbarkeit="" wertValue="5000" fahrzeugTyp="Bike"/>
         <generatorSrc xsi:type="shr5mngt:Shr5Generator" xmi:id="_t4mcMOHGEeOFLfhRjX-mFg" character="_6Q5OkOHGEeOFLfhRjX-mFg" generator="_BssLkN0CEeOvVYoRsPZlnA" state="commited" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Orc merc" resourcen="_BtMh4d0CEeOvVYoRsPZlnA" skills="_BtGbQ90CEeOvVYoRsPZlnA" attribute="_Bs4Y0N0CEeOvVYoRsPZlnA" metaType="_Bs3KsN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA" karmaToResource="10" startResources="1350"/>
       </members>
-      <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_yiwbgPGbEeO9WPjc44gAjw" chracterSource="_snAOwPGbEeO9WPjc44gAjw">
-        <persona xsi:type="shr5:KiAdept" xmi:id="_yiwbgfGbEeO9WPjc44gAjw" name="trestt" edgeBasis="4" konstitutionBasis="6" geschicklichkeitBasis="5" reaktionBasis="4" staerkeBasis="5" charismaBasis="3" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="75cb9933-0e78-42ad-a446-32ccbcf19219"/>
-      </members>
     </groups>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_G_vkIN0DEeOF8uJDTAKQmg" character="_OTABIN6JEeOU1t7mwJMedA" generator="_BssLkN0CEeOvVYoRsPZlnA" state="personaCreated" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Moto" resourcen="_BtL60N0CEeOvVYoRsPZlnA" skills="_BtGbQd0CEeOvVYoRsPZlnA" attribute="_Bs4Y090CEeOvVYoRsPZlnA" metaType="_Bs3KtN0CEeOvVYoRsPZlnA" magic="_BtNwAN0CEeOvVYoRsPZlnA"/>
     <generators xsi:type="shr5mngt:Shr5Generator" xmi:id="_mfg7QOJ1EeOcv4XBYqxZsQ" generator="_kwlUQOJ1EeOcv4XBYqxZsQ" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="xxxx" resourcen="_djpCGOJ0EeOht_G61YAQvg" skills="_djpCFeJ0EeOht_G61YAQvg" attribute="_djpB_uJ0EeOht_G61YAQvg" metaType="_djpB-uJ0EeOht_G61YAQvg" magic="_djpCG-J0EeOht_G61YAQvg"/>
+    <generators xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_snAOwPGbEeO9WPjc44gAjw" generator="_BtTPkN0CEeOvVYoRsPZlnA" state="readyForCreation" selectedGroup="_B1HHwd0CEeOvVYoRsPZlnA" characterName="Freestyle-test" selectedSpecies="75cb9933-0e78-42ad-a446-32ccbcf19219">
+      <selectedType href="http://urszeidler.de/shr5/1.0#//KiAdept"/>
+    </generators>
     <grunts xmi:id="_B1VKMN0CEeOvVYoRsPZlnA" name="Thugs">
       <members xmi:id="_B1WYUN0CEeOvVYoRsPZlnA" count="7" nsc="_B1JkAN0CEeOvVYoRsPZlnA"/>
       <leader xmi:id="_B1WYUd0CEeOvVYoRsPZlnA" count="1" nsc="_B1NOYN0CEeOvVYoRsPZlnA"/>
