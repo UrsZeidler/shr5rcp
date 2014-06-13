@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
@@ -172,6 +173,10 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
             @Override
             public Integer caseCharacterGroup(CharacterGroup object) {
+                return RET;
+            }
+            @Override
+            public Integer casePlayerManagement(PlayerManagement object) {
                 return RET;
             }
         };

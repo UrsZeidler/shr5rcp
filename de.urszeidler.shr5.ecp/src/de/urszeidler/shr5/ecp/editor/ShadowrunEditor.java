@@ -60,9 +60,11 @@ import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.FreeStyleGenerator;
+import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -460,7 +462,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 try {
                     // addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
                     addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
-                            editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES, Messages.ShadowrunEditor_entries));
+                            editingDomain, manager, Shr5Package.Literals.SHR_LIST__ENTRIES));
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
@@ -618,6 +620,33 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     logError("error creating BeschreibbarContainterPage", e);//$NON-NLS-1$
                 }
                 return super.caseCharacterGroup(object);
+            }
+
+            @Override
+            public Object caseGamemasterManagement(GamemasterManagement object) {
+                try {
+                    // addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
+                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager, Shr5managementPackage.Literals.PLAYER_MANAGEMENT__ENTRIES,
+                            Shr5managementPackage.Literals.PLAYER_MANAGEMENT__GENERATORS, Shr5managementPackage.Literals.PLAYER_MANAGEMENT__GROUPS,
+                            Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT__GRUNTS));
+                } catch (PartInitException e) {
+                    logError("error creating FertigkeitPage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+
+            @Override
+            public Object casePlayerManagement(PlayerManagement object) {
+                try {
+                    // addPage(new GenericBasicBeschreibbarPage(ShadowrunEditor.this, EMPTY, EMPTY, object, editingDomain, manager));
+                    addPage(new BeschreibbarContainterPage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object,
+                            editingDomain, manager, Shr5managementPackage.Literals.PLAYER_MANAGEMENT__ENTRIES,
+                            Shr5managementPackage.Literals.PLAYER_MANAGEMENT__GENERATORS, Shr5managementPackage.Literals.PLAYER_MANAGEMENT__GROUPS));
+                } catch (PartInitException e) {
+                    logError("error creating FertigkeitPage", e);//$NON-NLS-1$
+                }
+                return null;
             }
 
             @Override
