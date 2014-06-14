@@ -194,11 +194,16 @@
    <extension
          point="org.eclipse.ui.views">
       <view
+            category="de.urszeidler.shr5.ecp.category.views"
             class="de.urszeidler.shr5.ecp.views.GeneratorValidationView"
             icon="images/valadapter_obj.gif"
             id="de.urszeidler.shr5.ecp.GeneratorValidationView"
             name="%generatorValidation.view.name">
       </view>
+      <category
+            id="de.urszeidler.shr5.ecp.category.views"
+            name="%shadowrun.views.category">
+      </category>
    </extension>
    <extension
          point="org.eclipse.ui.services">
