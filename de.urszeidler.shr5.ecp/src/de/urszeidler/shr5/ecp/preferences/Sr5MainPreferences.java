@@ -28,7 +28,7 @@ public class Sr5MainPreferences extends FieldEditorPreferencePage implements IWo
             StringFieldEditor stringFieldEditor = new StringFieldEditor(PreferenceConstants.DEFAUL_PROJECT_NAME, "main project name", -1, StringFieldEditor.VALIDATE_ON_KEY_STROKE, getFieldEditorParent());
             stringFieldEditor.setEmptyStringAllowed(false);
             addField(stringFieldEditor);
-            stringFieldEditor.setEnabled(false, getFieldEditorParent());
+            //stringFieldEditor.setEnabled(false, getFieldEditorParent());
         }
     }
 
