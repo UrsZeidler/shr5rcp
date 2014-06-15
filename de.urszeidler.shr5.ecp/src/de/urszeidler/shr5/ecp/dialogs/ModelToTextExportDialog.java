@@ -88,6 +88,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);
         hashMap.putAll(hashMap1);
         transformerMap.put(Shr5managementPackage.Literals.CHARACTER_GROUP, hashMap);
+        transformerMap.put(Shr5managementPackage.Literals.PLAYER_MANAGEMENT, hashMap);
+        transformerMap.put(Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT, hashMap);
 
 
         dialogSettings = Activator.getDefault().getDialogSettings();
