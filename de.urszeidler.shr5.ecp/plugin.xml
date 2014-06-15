@@ -175,6 +175,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            category="de.urszeidler.shr5.ecp.preferences.basic.page"
             class="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
             id="de.urszeidler.shr5.ecp.preferences.PrintPreferencePage"
             name="%print.preferences.page.name">

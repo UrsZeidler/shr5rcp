@@ -95,7 +95,6 @@ public class Activator extends AbstractUIPlugin {
                 String editorId = ref.getId();
                 if (EditorRegistry.EMPTY_EDITOR_ID.equals(editorId)) {
                     page.closeEditors(new IEditorReference[]{ ref }, false);
-                    System.out.println("closing :" + editorId);
                 }
             }
         } catch (Exception e) {
