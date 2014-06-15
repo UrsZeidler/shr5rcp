@@ -34,7 +34,7 @@ public class LocalisationPreferencePage extends FieldEditorPreferencePage implem
     public LocalisationPreferencePage() {
         super(GRID);
         setPreferenceStore(Shr5EditPlugin.getPlugin().getPreferenceStore());
-        setDescription("Controlls the localization of the resources");
+        setDescription(Messages.LocalisationPreferencePage_description);
     }
 
     /**
@@ -44,9 +44,9 @@ public class LocalisationPreferencePage extends FieldEditorPreferencePage implem
      * restore itself.
      */
     public void createFieldEditors() {
-        addField(new BooleanFieldEditor(PreferenceConstants.RESOURCE_LOCALIZAION_ENABLED, "Localize resources", BooleanFieldEditor.DEFAULT,
+        addField(new BooleanFieldEditor(PreferenceConstants.RESOURCE_LOCALIZAION_ENABLED, Messages.LocalisationPreferencePage_localize, BooleanFieldEditor.DEFAULT,
                 getFieldEditorParent()));
-        addField(new BooleanFieldEditor(PreferenceConstants.AUTOMATIC_CHOOSEN_LOCALISATION, "choose local automatic", BooleanFieldEditor.DEFAULT,
+        addField(new BooleanFieldEditor(PreferenceConstants.AUTOMATIC_CHOOSEN_LOCALISATION, Messages.LocalisationPreferencePage_auto_localize, BooleanFieldEditor.DEFAULT,
                 getFieldEditorParent()) {
             @Override
             protected void valueChanged(boolean oldValue, boolean newValue) {
@@ -65,21 +65,21 @@ public class LocalisationPreferencePage extends FieldEditorPreferencePage implem
             entryNamesAndValues[i] = new String[]{ string, string };
         }
 
-        choosenLoc = new ComboFieldEditor(PreferenceConstants.CHOOSEN_LOCALISATION, "active localization", entryNamesAndValues,
+        choosenLoc = new ComboFieldEditor(PreferenceConstants.CHOOSEN_LOCALISATION, Messages.LocalisationPreferencePage_active_loc, entryNamesAndValues,
                 getFieldEditorParent());
         addField(choosenLoc);
 
-        availableLoc = new PathEditor(PreferenceConstants.AVAILABLE_LOCALISATION, "avilable localization", "Select directory:",
+        availableLoc = new PathEditor(PreferenceConstants.AVAILABLE_LOCALISATION, Messages.LocalisationPreferencePage_avail_loc, "", //$NON-NLS-2$
                 getFieldEditorParent()) {
             @Override
             protected String getNewInputObject() {
-                InputDialog inputDialog = new InputDialog(getShell(), "Enter a new localization code", null, null, null);
+                InputDialog inputDialog = new InputDialog(getShell(), Messages.LocalisationPreferencePage_dlg_new_loc_code, null, null, null);
 
                 int open = inputDialog.open();
                 if (open == InputDialog.OK) {
                     return inputDialog.getValue().toLowerCase().trim();
                 }
-                return super.getNewInputObject();
+                return null;
             }
         };
         addField(availableLoc);
