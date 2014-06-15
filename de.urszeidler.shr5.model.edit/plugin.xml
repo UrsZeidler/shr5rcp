@@ -30,7 +30,7 @@
             category="de.urszeidler.shr5.ecp.preferences.basic.page"
             class="de.urszeidler.shr5.model.edit.preferences.LocalisationPreferencePage"
             id="de.urszeidler.shr5.model.edit.preferences.LocalisationPreferencePage"
-            name="Localisation Preferences">
+            name="%localization.page.name">
       </page>
    </extension>
 
