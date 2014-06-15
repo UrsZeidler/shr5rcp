@@ -12,7 +12,7 @@
 
 [template public tableBoardShr5CharacterSheet(aManagedCharacter : ManagedCharacter)]
 	
-	[comment @main /]
+[comment @main /]
 [file ('table-'+aManagedCharacter.persona.name+'-BB.txt', false, 'UTF-8')]
 [printBoardCharacterReport(aManagedCharacter)/]
 [/file]
