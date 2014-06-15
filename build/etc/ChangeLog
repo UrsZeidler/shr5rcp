@@ -3,11 +3,14 @@
 
 2014-06-15 Version 0.1.7-rc
 
+* added preferences to control the localization of the resources
 * added wizard for character generator creation
 * added a character building perspective with a linked validation view
 * added double click behavior in all the composite widgets
 * added commit and reset dialogs
-
+* resource
+	* some reordering
+	
 2014-05-25 Version 0.1.6
 
 * added nice character sheet in m2t
