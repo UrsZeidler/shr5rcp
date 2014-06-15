@@ -325,7 +325,6 @@
       </entries>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_hcX9sPMtEeOUu_gj5H6UdA" name="Skills">
-      <entries xsi:type="shr5:Localization" xmi:id="_oFp-0PMtEeOUu_gj5H6UdA" local="de" name="Fertigkeiten"/>
       <entries xsi:type="shr5:ShrList" xmi:id="_BmdAs90CEeOvVYoRsPZlnA" name="skillgroups">
         <entries xsi:type="shr5:FertigkeitsGruppe" xmi:id="_Bmfc8N0CEeOvVYoRsPZlnA" name="Acting" srcBook="_BlSjEN0CEeOvVYoRsPZlnA">
           <fertigkeiten xmi:id="3a2be401-36e3-4800-919b-b6368d792ac8" name="Con" page="138" srcBook="_BlSjEN0CEeOvVYoRsPZlnA" ausweichen="true">
