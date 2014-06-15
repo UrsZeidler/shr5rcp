@@ -24,12 +24,16 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
 
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.util.AdapterItemProviderDelegator;
 import de.urszeidler.eclipse.shr5.util.ModifikatorItemProvider;
 import de.urszeidler.eclipse.shr5.util.Shr5AdapterFactory;
+import de.urszeidler.shr5.model.edit.preferences.PreferenceConstants;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -38,74 +42,105 @@ import de.urszeidler.eclipse.shr5.util.Shr5AdapterFactory;
  * Note that most of the adapters are shared among multiple instances.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
-	/**
+    /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected ComposedAdapterFactory parentAdapterFactory;
+    protected ComposedAdapterFactory parentAdapterFactory;
 
-	/**
+    /**
      * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected IChangeNotifier changeNotifier = new ChangeNotifier();
+    protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
-	/**
+    /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected Collection<Object> supportedTypes = new ArrayList<Object>();
+    protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     private String iso3Country;
     private boolean doLocalize;
-   //private ModifikatorItemProvider reflectiveItemProviderAdapter = ;
 
-	/**
+    // private ModifikatorItemProvider reflectiveItemProviderAdapter = ;
+
+    /**
      * This constructs an instance.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated not
      */
-	public Shr5ItemProviderAdapterFactory() {
+    public Shr5ItemProviderAdapterFactory() {
         supportedTypes.add(IEditingDomainItemProvider.class);
         supportedTypes.add(IStructuredItemContentProvider.class);
         supportedTypes.add(ITreeItemContentProvider.class);
         supportedTypes.add(IItemLabelProvider.class);
         supportedTypes.add(IItemPropertySource.class);
-        
-        
-        Locale default1 = Locale.getDefault();
-        iso3Country = default1.getLanguage();// default1.getISO3Country();
-        if (iso3Country.equals("de"))
-            doLocalize = true;
+
+        configureFactory();
+        IPreferenceStore store = Shr5EditPlugin.getPlugin().getPreferenceStore();// .getEclipsePreferences().get("localization", "de1");
+        store.addPropertyChangeListener(new IPropertyChangeListener() {
+            
+            @Override
+            public void propertyChange(PropertyChangeEvent event) {
+               configureFactory();                
+            }
+        });
 
     }
 
-	/**
+    /**
+     * Configures the factory by the preferences.
+     */
+    private void configureFactory() {
+        IPreferenceStore store = Shr5EditPlugin.getPlugin().getPreferenceStore();// .getEclipsePreferences().get("localization", "de1");
+
+        if (store.getBoolean(PreferenceConstants.AUTOMATIC_CHOOSEN_LOCALISATION)) {
+            Locale default1 = Locale.getDefault();
+            iso3Country = default1.getLanguage();// default1.getISO3Country();
+            if (iso3Country.equals("de"))
+                doLocalize = true;
+
+        }else{
+            iso3Country = store.getString(PreferenceConstants.CHOOSEN_LOCALISATION);
+        }
+
+        doLocalize = store.getBoolean(PreferenceConstants.RESOURCE_LOCALIZAION_ENABLED);
+    }
+
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SourceBook} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected SourceBookItemProvider sourceBookItemProvider;
+    protected SourceBookItemProvider sourceBookItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SourceBook}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createSourceBookAdapter() {
+    @Override
+    public Adapter createSourceBookAdapter() {
         if (sourceBookItemProvider == null) {
             sourceBookItemProvider = new SourceBookItemProvider(this);
         }
@@ -113,22 +148,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return sourceBookItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Gegenstand} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected GegenstandItemProvider gegenstandItemProvider;
+    protected GegenstandItemProvider gegenstandItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Gegenstand}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createGegenstandAdapter() {
+    @Override
+    public Adapter createGegenstandAdapter() {
         if (gegenstandItemProvider == null) {
             gegenstandItemProvider = new GegenstandItemProvider(this);
         }
@@ -136,22 +173,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return gegenstandItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Reichweite} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected ReichweiteItemProvider reichweiteItemProvider;
+    protected ReichweiteItemProvider reichweiteItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Reichweite}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createReichweiteAdapter() {
+    @Override
+    public Adapter createReichweiteAdapter() {
         if (reichweiteItemProvider == null) {
             reichweiteItemProvider = new ReichweiteItemProvider(this);
         }
@@ -159,22 +198,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return reichweiteItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected AttributModifikatorWertItemProvider attributModifikatorWertItemProvider;
+    protected AttributModifikatorWertItemProvider attributModifikatorWertItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createAttributModifikatorWertAdapter() {
+    @Override
+    public Adapter createAttributModifikatorWertAdapter() {
         if (attributModifikatorWertItemProvider == null) {
             attributModifikatorWertItemProvider = new AttributModifikatorWertItemProvider(this);
         }
@@ -182,22 +223,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return attributModifikatorWertItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected NahkampfwaffeItemProvider nahkampfwaffeItemProvider;
+    protected NahkampfwaffeItemProvider nahkampfwaffeItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createNahkampfwaffeAdapter() {
+    @Override
+    public Adapter createNahkampfwaffeAdapter() {
         if (nahkampfwaffeItemProvider == null) {
             nahkampfwaffeItemProvider = new NahkampfwaffeItemProvider(this);
         }
@@ -205,22 +248,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return nahkampfwaffeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Feuerwaffe} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected FeuerwaffeItemProvider feuerwaffeItemProvider;
+    protected FeuerwaffeItemProvider feuerwaffeItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Feuerwaffe}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createFeuerwaffeAdapter() {
+    @Override
+    public Adapter createFeuerwaffeAdapter() {
         if (feuerwaffeItemProvider == null) {
             feuerwaffeItemProvider = new FeuerwaffeItemProvider(this);
         }
@@ -228,22 +273,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return feuerwaffeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wurfwaffe} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected WurfwaffeItemProvider wurfwaffeItemProvider;
+    protected WurfwaffeItemProvider wurfwaffeItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wurfwaffe}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createWurfwaffeAdapter() {
+    @Override
+    public Adapter createWurfwaffeAdapter() {
         if (wurfwaffeItemProvider == null) {
             wurfwaffeItemProvider = new WurfwaffeItemProvider(this);
         }
@@ -251,22 +298,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return wurfwaffeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ShrList} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected ShrListItemProvider shrListItemProvider;
+    protected ShrListItemProvider shrListItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ShrList}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createShrListAdapter() {
+    @Override
+    public Adapter createShrListAdapter() {
         if (shrListItemProvider == null) {
             shrListItemProvider = new ShrListItemProvider(this);
         }
@@ -274,22 +323,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return shrListItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Projektilwaffe} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected ProjektilwaffeItemProvider projektilwaffeItemProvider;
+    protected ProjektilwaffeItemProvider projektilwaffeItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Projektilwaffe}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createProjektilwaffeAdapter() {
+    @Override
+    public Adapter createProjektilwaffeAdapter() {
         if (projektilwaffeItemProvider == null) {
             projektilwaffeItemProvider = new ProjektilwaffeItemProvider(this);
         }
@@ -297,22 +348,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return projektilwaffeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected FertigkeitsGruppeItemProvider fertigkeitsGruppeItemProvider;
+    protected FertigkeitsGruppeItemProvider fertigkeitsGruppeItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createFertigkeitsGruppeAdapter() {
+    @Override
+    public Adapter createFertigkeitsGruppeAdapter() {
         if (fertigkeitsGruppeItemProvider == null) {
             fertigkeitsGruppeItemProvider = new FertigkeitsGruppeItemProvider(this);
         }
@@ -320,22 +373,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return fertigkeitsGruppeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Fertigkeit} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected FertigkeitItemProvider fertigkeitItemProvider;
+    protected FertigkeitItemProvider fertigkeitItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Fertigkeit}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createFertigkeitAdapter() {
+    @Override
+    public Adapter createFertigkeitAdapter() {
         if (fertigkeitItemProvider == null) {
             fertigkeitItemProvider = new FertigkeitItemProvider(this);
         }
@@ -343,22 +398,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return fertigkeitItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PersonaFertigkeitItemProvider personaFertigkeitItemProvider;
+    protected PersonaFertigkeitItemProvider personaFertigkeitItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createPersonaFertigkeitAdapter() {
+    @Override
+    public Adapter createPersonaFertigkeitAdapter() {
         if (personaFertigkeitItemProvider == null) {
             personaFertigkeitItemProvider = new PersonaFertigkeitItemProvider(this);
         }
@@ -366,22 +423,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return personaFertigkeitItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PersonaFertigkeitsGruppeItemProvider personaFertigkeitsGruppeItemProvider;
+    protected PersonaFertigkeitsGruppeItemProvider personaFertigkeitsGruppeItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createPersonaFertigkeitsGruppeAdapter() {
+    @Override
+    public Adapter createPersonaFertigkeitsGruppeAdapter() {
         if (personaFertigkeitsGruppeItemProvider == null) {
             personaFertigkeitsGruppeItemProvider = new PersonaFertigkeitsGruppeItemProvider(this);
         }
@@ -389,22 +448,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return personaFertigkeitsGruppeItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberware} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected CyberwareItemProvider cyberwareItemProvider;
+    protected CyberwareItemProvider cyberwareItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberware}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createCyberwareAdapter() {
+    @Override
+    public Adapter createCyberwareAdapter() {
         if (cyberwareItemProvider == null) {
             cyberwareItemProvider = new CyberwareItemProvider(this);
         }
@@ -412,22 +473,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return cyberwareItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.BioWare} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected BioWareItemProvider bioWareItemProvider;
+    protected BioWareItemProvider bioWareItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.BioWare}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createBioWareAdapter() {
+    @Override
+    public Adapter createBioWareAdapter() {
         if (bioWareItemProvider == null) {
             bioWareItemProvider = new BioWareItemProvider(this);
         }
@@ -435,22 +498,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return bioWareItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MudanPersona} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected MudanPersonaItemProvider mudanPersonaItemProvider;
+    protected MudanPersonaItemProvider mudanPersonaItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MudanPersona}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createMudanPersonaAdapter() {
+    @Override
+    public Adapter createMudanPersonaAdapter() {
         if (mudanPersonaItemProvider == null) {
             mudanPersonaItemProvider = new MudanPersonaItemProvider(this);
         }
@@ -458,22 +523,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return mudanPersonaItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiKraft} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected KiKraftItemProvider kiKraftItemProvider;
+    protected KiKraftItemProvider kiKraftItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiKraft}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createKiKraftAdapter() {
+    @Override
+    public Adapter createKiKraftAdapter() {
         if (kiKraftItemProvider == null) {
             kiKraftItemProvider = new KiKraftItemProvider(this);
         }
@@ -481,22 +548,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return kiKraftItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Spezies} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected SpeziesItemProvider speziesItemProvider;
+    protected SpeziesItemProvider speziesItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Spezies}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createSpeziesAdapter() {
+    @Override
+    public Adapter createSpeziesAdapter() {
         if (speziesItemProvider == null) {
             speziesItemProvider = new SpeziesItemProvider(this);
         }
@@ -504,22 +573,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return speziesItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiAdept} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected KiAdeptItemProvider kiAdeptItemProvider;
+    protected KiAdeptItemProvider kiAdeptItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiAdept}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createKiAdeptAdapter() {
+    @Override
+    public Adapter createKiAdeptAdapter() {
         if (kiAdeptItemProvider == null) {
             kiAdeptItemProvider = new KiAdeptItemProvider(this);
         }
@@ -527,22 +598,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return kiAdeptItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Kleidung} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected KleidungItemProvider kleidungItemProvider;
+    protected KleidungItemProvider kleidungItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Kleidung}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createKleidungAdapter() {
+    @Override
+    public Adapter createKleidungAdapter() {
         if (kleidungItemProvider == null) {
             kleidungItemProvider = new KleidungItemProvider(this);
         }
@@ -550,22 +623,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return kleidungItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected FernkampfwaffeModifikatorItemProvider fernkampfwaffeModifikatorItemProvider;
+    protected FernkampfwaffeModifikatorItemProvider fernkampfwaffeModifikatorItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createFernkampfwaffeModifikatorAdapter() {
+    @Override
+    public Adapter createFernkampfwaffeModifikatorAdapter() {
         if (fernkampfwaffeModifikatorItemProvider == null) {
             fernkampfwaffeModifikatorItemProvider = new FernkampfwaffeModifikatorItemProvider(this);
         }
@@ -573,22 +648,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return fernkampfwaffeModifikatorItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PersonaEigenschaftItemProvider personaEigenschaftItemProvider;
+    protected PersonaEigenschaftItemProvider personaEigenschaftItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createPersonaEigenschaftAdapter() {
+    @Override
+    public Adapter createPersonaEigenschaftAdapter() {
         if (personaEigenschaftItemProvider == null) {
             personaEigenschaftItemProvider = new PersonaEigenschaftItemProvider(this);
         }
@@ -596,22 +673,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return personaEigenschaftItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Magier} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected MagierItemProvider magierItemProvider;
+    protected MagierItemProvider magierItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Magier}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createMagierAdapter() {
+    @Override
+    public Adapter createMagierAdapter() {
         if (magierItemProvider == null) {
             magierItemProvider = new MagierItemProvider(this);
         }
@@ -619,22 +698,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return magierItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MysticAdept} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected MysticAdeptItemProvider mysticAdeptItemProvider;
+    protected MysticAdeptItemProvider mysticAdeptItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MysticAdept}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createMysticAdeptAdapter() {
+    @Override
+    public Adapter createMysticAdeptAdapter() {
         if (mysticAdeptItemProvider == null) {
             mysticAdeptItemProvider = new MysticAdeptItemProvider(this);
         }
@@ -642,22 +723,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return mysticAdeptItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaZauber} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PersonaZauberItemProvider personaZauberItemProvider;
+    protected PersonaZauberItemProvider personaZauberItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaZauber}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createPersonaZauberAdapter() {
+    @Override
+    public Adapter createPersonaZauberAdapter() {
         if (personaZauberItemProvider == null) {
             personaZauberItemProvider = new PersonaZauberItemProvider(this);
         }
@@ -665,22 +748,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return personaZauberItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Zauber} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected ZauberItemProvider zauberItemProvider;
+    protected ZauberItemProvider zauberItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Zauber}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createZauberAdapter() {
+    @Override
+    public Adapter createZauberAdapter() {
         if (zauberItemProvider == null) {
             zauberItemProvider = new ZauberItemProvider(this);
         }
@@ -688,22 +773,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return zauberItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AspektMagier} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected AspektMagierItemProvider aspektMagierItemProvider;
+    protected AspektMagierItemProvider aspektMagierItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AspektMagier}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createAspektMagierAdapter() {
+    @Override
+    public Adapter createAspektMagierAdapter() {
         if (aspektMagierItemProvider == null) {
             aspektMagierItemProvider = new AspektMagierItemProvider(this);
         }
@@ -711,22 +798,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return aspektMagierItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Schutzgeist} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected SchutzgeistItemProvider schutzgeistItemProvider;
+    protected SchutzgeistItemProvider schutzgeistItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Schutzgeist}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createSchutzgeistAdapter() {
+    @Override
+    public Adapter createSchutzgeistAdapter() {
         if (schutzgeistItemProvider == null) {
             schutzgeistItemProvider = new SchutzgeistItemProvider(this);
         }
@@ -734,22 +823,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return schutzgeistItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Initation} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected InitationItemProvider initationItemProvider;
+    protected InitationItemProvider initationItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Initation}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createInitationAdapter() {
+    @Override
+    public Adapter createInitationAdapter() {
         if (initationItemProvider == null) {
             initationItemProvider = new InitationItemProvider(this);
         }
@@ -757,22 +848,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return initationItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MetaMagie} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected MetaMagieItemProvider metaMagieItemProvider;
+    protected MetaMagieItemProvider metaMagieItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MetaMagie}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createMetaMagieAdapter() {
+    @Override
+    public Adapter createMetaMagieAdapter() {
         if (metaMagieItemProvider == null) {
             metaMagieItemProvider = new MetaMagieItemProvider(this);
         }
@@ -780,22 +873,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return metaMagieItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CritterKraft} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected CritterKraftItemProvider critterKraftItemProvider;
+    protected CritterKraftItemProvider critterKraftItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CritterKraft}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createCritterKraftAdapter() {
+    @Override
+    public Adapter createCritterKraftAdapter() {
         if (critterKraftItemProvider == null) {
             critterKraftItemProvider = new CritterKraftItemProvider(this);
         }
@@ -803,22 +898,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return critterKraftItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected BodenfahrzeugItemProvider bodenfahrzeugItemProvider;
+    protected BodenfahrzeugItemProvider bodenfahrzeugItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createBodenfahrzeugAdapter() {
+    @Override
+    public Adapter createBodenfahrzeugAdapter() {
         if (bodenfahrzeugItemProvider == null) {
             bodenfahrzeugItemProvider = new BodenfahrzeugItemProvider(this);
         }
@@ -826,22 +923,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return bodenfahrzeugItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PassagierFahrzeugItemProvider passagierFahrzeugItemProvider;
+    protected PassagierFahrzeugItemProvider passagierFahrzeugItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createPassagierFahrzeugAdapter() {
+    @Override
+    public Adapter createPassagierFahrzeugAdapter() {
         if (passagierFahrzeugItemProvider == null) {
             passagierFahrzeugItemProvider = new PassagierFahrzeugItemProvider(this);
         }
@@ -849,22 +948,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return passagierFahrzeugItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Drohne} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected DrohneItemProvider drohneItemProvider;
+    protected DrohneItemProvider drohneItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Drohne}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createDrohneAdapter() {
+    @Override
+    public Adapter createDrohneAdapter() {
         if (drohneItemProvider == null) {
             drohneItemProvider = new DrohneItemProvider(this);
         }
@@ -872,22 +973,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return drohneItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Technomancer} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected TechnomancerItemProvider technomancerItemProvider;
+    protected TechnomancerItemProvider technomancerItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Technomancer}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createTechnomancerAdapter() {
+    @Override
+    public Adapter createTechnomancerAdapter() {
         if (technomancerItemProvider == null) {
             technomancerItemProvider = new TechnomancerItemProvider(this);
         }
@@ -895,22 +998,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return technomancerItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KomplexeForm} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected KomplexeFormItemProvider komplexeFormItemProvider;
+    protected KomplexeFormItemProvider komplexeFormItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KomplexeForm}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createKomplexeFormAdapter() {
+    @Override
+    public Adapter createKomplexeFormAdapter() {
         if (komplexeFormItemProvider == null) {
             komplexeFormItemProvider = new KomplexeFormItemProvider(this);
         }
@@ -918,22 +1023,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return komplexeFormItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected PersonaKomplexFormItemProvider personaKomplexFormItemProvider;
+    protected PersonaKomplexFormItemProvider personaKomplexFormItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createPersonaKomplexFormAdapter() {
+    @Override
+    public Adapter createPersonaKomplexFormAdapter() {
         if (personaKomplexFormItemProvider == null) {
             personaKomplexFormItemProvider = new PersonaKomplexFormItemProvider(this);
         }
@@ -941,22 +1048,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return personaKomplexFormItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprite} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected SpriteItemProvider spriteItemProvider;
+    protected SpriteItemProvider spriteItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprite}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createSpriteAdapter() {
+    @Override
+    public Adapter createSpriteAdapter() {
         if (spriteItemProvider == null) {
             spriteItemProvider = new SpriteItemProvider(this);
         }
@@ -964,22 +1073,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return spriteItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Echo} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected EchoItemProvider echoItemProvider;
+    protected EchoItemProvider echoItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Echo}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createEchoAdapter() {
+    @Override
+    public Adapter createEchoAdapter() {
         if (echoItemProvider == null) {
             echoItemProvider = new EchoItemProvider(this);
         }
@@ -987,22 +1098,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return echoItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Vertrag} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected VertragItemProvider vertragItemProvider;
+    protected VertragItemProvider vertragItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Vertrag}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createVertragAdapter() {
+    @Override
+    public Adapter createVertragAdapter() {
         if (vertragItemProvider == null) {
             vertragItemProvider = new VertragItemProvider(this);
         }
@@ -1010,22 +1123,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return vertragItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lifestyle} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected LifestyleItemProvider lifestyleItemProvider;
+    protected LifestyleItemProvider lifestyleItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lifestyle}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createLifestyleAdapter() {
+    @Override
+    public Adapter createLifestyleAdapter() {
         if (lifestyleItemProvider == null) {
             lifestyleItemProvider = new LifestyleItemProvider(this);
         }
@@ -1033,22 +1148,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return lifestyleItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected WissensfertigkeitItemProvider wissensfertigkeitItemProvider;
+    protected WissensfertigkeitItemProvider wissensfertigkeitItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createWissensfertigkeitAdapter() {
+    @Override
+    public Adapter createWissensfertigkeitAdapter() {
         if (wissensfertigkeitItemProvider == null) {
             wissensfertigkeitItemProvider = new WissensfertigkeitItemProvider(this);
         }
@@ -1056,22 +1173,24 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return wissensfertigkeitItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit} instances.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	protected SprachfertigkeitItemProvider sprachfertigkeitItemProvider;
+    protected SprachfertigkeitItemProvider sprachfertigkeitItemProvider;
 
-	/**
+    /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter createSprachfertigkeitAdapter() {
+    @Override
+    public Adapter createSprachfertigkeitAdapter() {
         if (sprachfertigkeitItemProvider == null) {
             sprachfertigkeitItemProvider = new SprachfertigkeitItemProvider(this);
         }
@@ -1079,10 +1198,11 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return sprachfertigkeitItemProvider;
     }
 
-	/**
+    /**
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Critter} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CritterItemProvider critterItemProvider;
@@ -1091,6 +1211,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Critter}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1106,6 +1227,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sin} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SinItemProvider sinItemProvider;
@@ -1114,6 +1236,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sin}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1129,6 +1252,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lizenz} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected LizenzItemProvider lizenzItemProvider;
@@ -1137,6 +1261,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lizenz}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1152,6 +1277,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Credstick} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CredstickItemProvider credstickItemProvider;
@@ -1160,6 +1286,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Credstick}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1175,6 +1302,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Munition} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MunitionItemProvider munitionItemProvider;
@@ -1183,6 +1311,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Munition}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1198,6 +1327,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.GebundenerGeist} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected GebundenerGeistItemProvider gebundenerGeistItemProvider;
@@ -1206,6 +1336,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.GebundenerGeist}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1221,6 +1352,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Geist} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected GeistItemProvider geistItemProvider;
@@ -1229,6 +1361,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Geist}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1244,6 +1377,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CredstickTransaction} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CredstickTransactionItemProvider credstickTransactionItemProvider;
@@ -1252,6 +1386,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CredstickTransaction}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1267,6 +1402,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Spezialisierung} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SpezialisierungItemProvider spezialisierungItemProvider;
@@ -1275,6 +1411,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Spezialisierung}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1290,6 +1427,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Commlink} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CommlinkItemProvider commlinkItemProvider;
@@ -1298,6 +1436,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Commlink}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1313,6 +1452,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberdeck} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CyberdeckItemProvider cyberdeckItemProvider;
@@ -1321,6 +1461,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberdeck}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1336,6 +1477,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SoftwareAgent} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SoftwareAgentItemProvider softwareAgentItemProvider;
@@ -1344,6 +1486,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SoftwareAgent}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1359,6 +1502,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Host} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected HostItemProvider hostItemProvider;
@@ -1367,6 +1511,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Host}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1382,6 +1527,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.RiggerCommandConsole} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected RiggerCommandConsoleItemProvider riggerCommandConsoleItemProvider;
@@ -1390,6 +1536,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.RiggerCommandConsole}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1405,6 +1552,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AutoSoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected AutoSoftItemProvider autoSoftItemProvider;
@@ -1413,6 +1561,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AutoSoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1428,6 +1577,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Tutorsoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected TutorsoftItemProvider tutorsoftItemProvider;
@@ -1436,6 +1586,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Tutorsoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1451,6 +1602,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SkillSoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SkillSoftItemProvider skillSoftItemProvider;
@@ -1459,6 +1611,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SkillSoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1474,6 +1627,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonalAreaNetwork} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected PersonalAreaNetworkItemProvider personalAreaNetworkItemProvider;
@@ -1482,6 +1636,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonalAreaNetwork}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1497,6 +1652,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Datasoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected DatasoftItemProvider datasoftItemProvider;
@@ -1505,6 +1661,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Datasoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1520,6 +1677,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ConsumerSoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected ConsumerSoftItemProvider consumerSoftItemProvider;
@@ -1528,6 +1686,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ConsumerSoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1543,6 +1702,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CommonProgram} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected CommonProgramItemProvider commonProgramItemProvider;
@@ -1551,6 +1711,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CommonProgram}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1566,6 +1727,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.WeaponMount} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected WeaponMountItemProvider weaponMountItemProvider;
@@ -1574,6 +1736,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.WeaponMount}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1589,6 +1752,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.LifestyleOption} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected LifestyleOptionItemProvider lifestyleOptionItemProvider;
@@ -1597,6 +1761,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.LifestyleOption}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1612,6 +1777,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PercentLifestyleOption} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected PercentLifestyleOptionItemProvider percentLifestyleOptionItemProvider;
@@ -1620,6 +1786,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PercentLifestyleOption}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1635,6 +1802,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Localization} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected LocalizationItemProvider localizationItemProvider;
@@ -1643,6 +1811,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Localization}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1658,13 +1827,16 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.QiFokus} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected QiFokusItemProvider qiFokusItemProvider;
+
     /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.QiFokus}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1680,13 +1852,16 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.WaffenFokus} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected WaffenFokusItemProvider waffenFokusItemProvider;
+
     /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.WaffenFokus}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1702,13 +1877,16 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MagieFokus} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MagieFokusItemProvider magieFokusItemProvider;
+
     /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MagieFokus}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1724,13 +1902,16 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FokusBinding} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected FokusBindingItemProvider fokusBindingItemProvider;
+
     /**
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FokusBinding}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -1745,51 +1926,56 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public ComposeableAdapterFactory getRootAdapterFactory() {
+    public ComposeableAdapterFactory getRootAdapterFactory() {
         return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
     }
 
-	/**
+    /**
      * This sets the composed adapter factory that contains this factory.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public boolean isFactoryForType(Object type) {
+    @Override
+    public boolean isFactoryForType(Object type) {
         return supportedTypes.contains(type) || super.isFactoryForType(type);
     }
 
-	/**
+    /**
      * This implementation substitutes the factory itself as the key for the adapter.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Adapter adapt(Notifier notifier, Object type) {
+    @Override
+    public Adapter adapt(Notifier notifier, Object type) {
         return super.adapt(notifier, this);
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	@Override
-	public Object adapt(Object object, Object type) {
+    @Override
+    public Object adapt(Object object, Object type) {
         if (isFactoryForType(type)) {
             Object adapter = super.adapt(object, type);
             if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
@@ -1800,33 +1986,36 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return null;
     }
 
-	/**
+    /**
      * This adds a listener.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void addListener(INotifyChangedListener notifyChangedListener) {
+    public void addListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.addListener(notifyChangedListener);
     }
 
-	/**
+    /**
      * This removes a listener.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void removeListener(INotifyChangedListener notifyChangedListener) {
+    public void removeListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.removeListener(notifyChangedListener);
     }
 
-	/**
+    /**
      * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void fireNotifyChanged(Notification notification) {
+    public void fireNotifyChanged(Notification notification) {
         changeNotifier.fireNotifyChanged(notification);
 
         if (parentAdapterFactory != null) {
@@ -1834,91 +2023,163 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         }
     }
 
-	/**
-     * This disposes all of the item providers created by this factory. 
+    /**
+     * This disposes all of the item providers created by this factory.
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
-	public void dispose() {
-        if (sourceBookItemProvider != null) sourceBookItemProvider.dispose();
-        if (gegenstandItemProvider != null) gegenstandItemProvider.dispose();
-        if (reichweiteItemProvider != null) reichweiteItemProvider.dispose();
-        if (attributModifikatorWertItemProvider != null) attributModifikatorWertItemProvider.dispose();
-        if (nahkampfwaffeItemProvider != null) nahkampfwaffeItemProvider.dispose();
-        if (feuerwaffeItemProvider != null) feuerwaffeItemProvider.dispose();
-        if (wurfwaffeItemProvider != null) wurfwaffeItemProvider.dispose();
-        if (shrListItemProvider != null) shrListItemProvider.dispose();
-        if (projektilwaffeItemProvider != null) projektilwaffeItemProvider.dispose();
-        if (fertigkeitsGruppeItemProvider != null) fertigkeitsGruppeItemProvider.dispose();
-        if (fertigkeitItemProvider != null) fertigkeitItemProvider.dispose();
-        if (personaFertigkeitItemProvider != null) personaFertigkeitItemProvider.dispose();
-        if (personaFertigkeitsGruppeItemProvider != null) personaFertigkeitsGruppeItemProvider.dispose();
-        if (cyberwareItemProvider != null) cyberwareItemProvider.dispose();
-        if (bioWareItemProvider != null) bioWareItemProvider.dispose();
-        if (mudanPersonaItemProvider != null) mudanPersonaItemProvider.dispose();
-        if (kiKraftItemProvider != null) kiKraftItemProvider.dispose();
-        if (speziesItemProvider != null) speziesItemProvider.dispose();
-        if (kiAdeptItemProvider != null) kiAdeptItemProvider.dispose();
-        if (kleidungItemProvider != null) kleidungItemProvider.dispose();
-        if (fernkampfwaffeModifikatorItemProvider != null) fernkampfwaffeModifikatorItemProvider.dispose();
-        if (personaEigenschaftItemProvider != null) personaEigenschaftItemProvider.dispose();
-        if (magierItemProvider != null) magierItemProvider.dispose();
-        if (mysticAdeptItemProvider != null) mysticAdeptItemProvider.dispose();
-        if (personaZauberItemProvider != null) personaZauberItemProvider.dispose();
-        if (zauberItemProvider != null) zauberItemProvider.dispose();
-        if (aspektMagierItemProvider != null) aspektMagierItemProvider.dispose();
-        if (schutzgeistItemProvider != null) schutzgeistItemProvider.dispose();
-        if (initationItemProvider != null) initationItemProvider.dispose();
-        if (metaMagieItemProvider != null) metaMagieItemProvider.dispose();
-        if (critterKraftItemProvider != null) critterKraftItemProvider.dispose();
-        if (bodenfahrzeugItemProvider != null) bodenfahrzeugItemProvider.dispose();
-        if (passagierFahrzeugItemProvider != null) passagierFahrzeugItemProvider.dispose();
-        if (drohneItemProvider != null) drohneItemProvider.dispose();
-        if (technomancerItemProvider != null) technomancerItemProvider.dispose();
-        if (komplexeFormItemProvider != null) komplexeFormItemProvider.dispose();
-        if (personaKomplexFormItemProvider != null) personaKomplexFormItemProvider.dispose();
-        if (spriteItemProvider != null) spriteItemProvider.dispose();
-        if (echoItemProvider != null) echoItemProvider.dispose();
-        if (vertragItemProvider != null) vertragItemProvider.dispose();
-        if (lifestyleItemProvider != null) lifestyleItemProvider.dispose();
-        if (wissensfertigkeitItemProvider != null) wissensfertigkeitItemProvider.dispose();
-        if (sprachfertigkeitItemProvider != null) sprachfertigkeitItemProvider.dispose();
-        if (critterItemProvider != null) critterItemProvider.dispose();
-        if (sinItemProvider != null) sinItemProvider.dispose();
-        if (lizenzItemProvider != null) lizenzItemProvider.dispose();
-        if (credstickItemProvider != null) credstickItemProvider.dispose();
-        if (munitionItemProvider != null) munitionItemProvider.dispose();
-        if (gebundenerGeistItemProvider != null) gebundenerGeistItemProvider.dispose();
-        if (geistItemProvider != null) geistItemProvider.dispose();
-        if (credstickTransactionItemProvider != null) credstickTransactionItemProvider.dispose();
-        if (spezialisierungItemProvider != null) spezialisierungItemProvider.dispose();
-        if (commlinkItemProvider != null) commlinkItemProvider.dispose();
-        if (cyberdeckItemProvider != null) cyberdeckItemProvider.dispose();
-        if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();
-        if (hostItemProvider != null) hostItemProvider.dispose();
-        if (riggerCommandConsoleItemProvider != null) riggerCommandConsoleItemProvider.dispose();
-        if (autoSoftItemProvider != null) autoSoftItemProvider.dispose();
-        if (tutorsoftItemProvider != null) tutorsoftItemProvider.dispose();
-        if (skillSoftItemProvider != null) skillSoftItemProvider.dispose();
-        if (personalAreaNetworkItemProvider != null) personalAreaNetworkItemProvider.dispose();
-        if (datasoftItemProvider != null) datasoftItemProvider.dispose();
-        if (consumerSoftItemProvider != null) consumerSoftItemProvider.dispose();
-        if (commonProgramItemProvider != null) commonProgramItemProvider.dispose();
-        if (weaponMountItemProvider != null) weaponMountItemProvider.dispose();
-        if (lifestyleOptionItemProvider != null) lifestyleOptionItemProvider.dispose();
-        if (percentLifestyleOptionItemProvider != null) percentLifestyleOptionItemProvider.dispose();
-        if (localizationItemProvider != null) localizationItemProvider.dispose();
-        if (qiFokusItemProvider != null) qiFokusItemProvider.dispose();
-        if (waffenFokusItemProvider != null) waffenFokusItemProvider.dispose();
-        if (magieFokusItemProvider != null) magieFokusItemProvider.dispose();
-        if (fokusBindingItemProvider != null) fokusBindingItemProvider.dispose();
+    public void dispose() {
+        if (sourceBookItemProvider != null)
+            sourceBookItemProvider.dispose();
+        if (gegenstandItemProvider != null)
+            gegenstandItemProvider.dispose();
+        if (reichweiteItemProvider != null)
+            reichweiteItemProvider.dispose();
+        if (attributModifikatorWertItemProvider != null)
+            attributModifikatorWertItemProvider.dispose();
+        if (nahkampfwaffeItemProvider != null)
+            nahkampfwaffeItemProvider.dispose();
+        if (feuerwaffeItemProvider != null)
+            feuerwaffeItemProvider.dispose();
+        if (wurfwaffeItemProvider != null)
+            wurfwaffeItemProvider.dispose();
+        if (shrListItemProvider != null)
+            shrListItemProvider.dispose();
+        if (projektilwaffeItemProvider != null)
+            projektilwaffeItemProvider.dispose();
+        if (fertigkeitsGruppeItemProvider != null)
+            fertigkeitsGruppeItemProvider.dispose();
+        if (fertigkeitItemProvider != null)
+            fertigkeitItemProvider.dispose();
+        if (personaFertigkeitItemProvider != null)
+            personaFertigkeitItemProvider.dispose();
+        if (personaFertigkeitsGruppeItemProvider != null)
+            personaFertigkeitsGruppeItemProvider.dispose();
+        if (cyberwareItemProvider != null)
+            cyberwareItemProvider.dispose();
+        if (bioWareItemProvider != null)
+            bioWareItemProvider.dispose();
+        if (mudanPersonaItemProvider != null)
+            mudanPersonaItemProvider.dispose();
+        if (kiKraftItemProvider != null)
+            kiKraftItemProvider.dispose();
+        if (speziesItemProvider != null)
+            speziesItemProvider.dispose();
+        if (kiAdeptItemProvider != null)
+            kiAdeptItemProvider.dispose();
+        if (kleidungItemProvider != null)
+            kleidungItemProvider.dispose();
+        if (fernkampfwaffeModifikatorItemProvider != null)
+            fernkampfwaffeModifikatorItemProvider.dispose();
+        if (personaEigenschaftItemProvider != null)
+            personaEigenschaftItemProvider.dispose();
+        if (magierItemProvider != null)
+            magierItemProvider.dispose();
+        if (mysticAdeptItemProvider != null)
+            mysticAdeptItemProvider.dispose();
+        if (personaZauberItemProvider != null)
+            personaZauberItemProvider.dispose();
+        if (zauberItemProvider != null)
+            zauberItemProvider.dispose();
+        if (aspektMagierItemProvider != null)
+            aspektMagierItemProvider.dispose();
+        if (schutzgeistItemProvider != null)
+            schutzgeistItemProvider.dispose();
+        if (initationItemProvider != null)
+            initationItemProvider.dispose();
+        if (metaMagieItemProvider != null)
+            metaMagieItemProvider.dispose();
+        if (critterKraftItemProvider != null)
+            critterKraftItemProvider.dispose();
+        if (bodenfahrzeugItemProvider != null)
+            bodenfahrzeugItemProvider.dispose();
+        if (passagierFahrzeugItemProvider != null)
+            passagierFahrzeugItemProvider.dispose();
+        if (drohneItemProvider != null)
+            drohneItemProvider.dispose();
+        if (technomancerItemProvider != null)
+            technomancerItemProvider.dispose();
+        if (komplexeFormItemProvider != null)
+            komplexeFormItemProvider.dispose();
+        if (personaKomplexFormItemProvider != null)
+            personaKomplexFormItemProvider.dispose();
+        if (spriteItemProvider != null)
+            spriteItemProvider.dispose();
+        if (echoItemProvider != null)
+            echoItemProvider.dispose();
+        if (vertragItemProvider != null)
+            vertragItemProvider.dispose();
+        if (lifestyleItemProvider != null)
+            lifestyleItemProvider.dispose();
+        if (wissensfertigkeitItemProvider != null)
+            wissensfertigkeitItemProvider.dispose();
+        if (sprachfertigkeitItemProvider != null)
+            sprachfertigkeitItemProvider.dispose();
+        if (critterItemProvider != null)
+            critterItemProvider.dispose();
+        if (sinItemProvider != null)
+            sinItemProvider.dispose();
+        if (lizenzItemProvider != null)
+            lizenzItemProvider.dispose();
+        if (credstickItemProvider != null)
+            credstickItemProvider.dispose();
+        if (munitionItemProvider != null)
+            munitionItemProvider.dispose();
+        if (gebundenerGeistItemProvider != null)
+            gebundenerGeistItemProvider.dispose();
+        if (geistItemProvider != null)
+            geistItemProvider.dispose();
+        if (credstickTransactionItemProvider != null)
+            credstickTransactionItemProvider.dispose();
+        if (spezialisierungItemProvider != null)
+            spezialisierungItemProvider.dispose();
+        if (commlinkItemProvider != null)
+            commlinkItemProvider.dispose();
+        if (cyberdeckItemProvider != null)
+            cyberdeckItemProvider.dispose();
+        if (softwareAgentItemProvider != null)
+            softwareAgentItemProvider.dispose();
+        if (hostItemProvider != null)
+            hostItemProvider.dispose();
+        if (riggerCommandConsoleItemProvider != null)
+            riggerCommandConsoleItemProvider.dispose();
+        if (autoSoftItemProvider != null)
+            autoSoftItemProvider.dispose();
+        if (tutorsoftItemProvider != null)
+            tutorsoftItemProvider.dispose();
+        if (skillSoftItemProvider != null)
+            skillSoftItemProvider.dispose();
+        if (personalAreaNetworkItemProvider != null)
+            personalAreaNetworkItemProvider.dispose();
+        if (datasoftItemProvider != null)
+            datasoftItemProvider.dispose();
+        if (consumerSoftItemProvider != null)
+            consumerSoftItemProvider.dispose();
+        if (commonProgramItemProvider != null)
+            commonProgramItemProvider.dispose();
+        if (weaponMountItemProvider != null)
+            weaponMountItemProvider.dispose();
+        if (lifestyleOptionItemProvider != null)
+            lifestyleOptionItemProvider.dispose();
+        if (percentLifestyleOptionItemProvider != null)
+            percentLifestyleOptionItemProvider.dispose();
+        if (localizationItemProvider != null)
+            localizationItemProvider.dispose();
+        if (qiFokusItemProvider != null)
+            qiFokusItemProvider.dispose();
+        if (waffenFokusItemProvider != null)
+            waffenFokusItemProvider.dispose();
+        if (magieFokusItemProvider != null)
+            magieFokusItemProvider.dispose();
+        if (fokusBindingItemProvider != null)
+            fokusBindingItemProvider.dispose();
     }
 
     @Override
     public Adapter createAdapter(Notifier target) {
-        
-        
+
         Adapter doSwitch = modelSwitch.doSwitch((EObject)target);
         if (doLocalize)
             if (target instanceof Identifiable) {
@@ -1930,9 +2191,9 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
 
                             EObject eObject = (EObject)object;
                             EClass eClass = eObject.eClass();
-                            //EStructuralFeature feature = getLabelFeature(eClass);
+                            // EStructuralFeature feature = getLabelFeature(eClass);
 
-                            String className =ModifikatorItemProvider.getEClassName(eClass);
+                            String className = ModifikatorItemProvider.getEClassName(eClass);
                             EList<Localization> localizations = id.getLocalizations();
                             for (Localization localization : localizations) {
                                 if (iso3Country.equals(localization.getLocal())) {
@@ -1947,5 +2208,5 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         return doSwitch;
 
     }
-	
+
 }

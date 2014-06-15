@@ -2,8 +2,12 @@
  */
 package de.urszeidler.eclipse.shr5.provider;
 
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
+import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
 /**
  * This is the central singleton for the Shr5 edit plugin.
@@ -70,7 +74,10 @@ public final class Shr5EditPlugin extends EMFPlugin {
      * @generated
      */
 	public static class Implementation extends EclipsePlugin {
-		/**
+		private IEclipsePreferences eclipsePreferences;
+        private IPreferenceStore preferenceStore;
+
+        /**
          * Creates an instance.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -82,7 +89,24 @@ public final class Shr5EditPlugin extends EMFPlugin {
             // Remember the static instance.
             //
             plugin = this;
+            
+//           eclipsePreferences = InstanceScope.INSTANCE.getNode(getSymbolicName());
+//           AbstractPreferenceInitializer1 abstractPreferenceInitializer1 = new AbstractPreferenceInitializer1();
+//           abstractPreferenceInitializer1.initializeDefaultPreferences();
+		}
+
+//        public IEclipsePreferences getEclipsePreferences() {
+//            return eclipsePreferences;
+//        }
+        
+        public IPreferenceStore getPreferenceStore() {
+            // Create the preference store lazily.
+            if (preferenceStore == null) {
+                preferenceStore = new ScopedPreferenceStore(InstanceScope.INSTANCE ,getBundle().getSymbolicName());
+            }
+            return preferenceStore;
         }
+
 	}
 
 }
