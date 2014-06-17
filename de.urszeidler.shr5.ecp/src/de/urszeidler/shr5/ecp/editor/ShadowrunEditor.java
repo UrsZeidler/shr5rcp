@@ -633,7 +633,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
-                return null;
+                return this;
             }
 
             @Override
@@ -646,7 +646,7 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 } catch (PartInitException e) {
                     logError("error creating FertigkeitPage", e);//$NON-NLS-1$
                 }
-                return null;
+                return this;
             }
 
             @Override
