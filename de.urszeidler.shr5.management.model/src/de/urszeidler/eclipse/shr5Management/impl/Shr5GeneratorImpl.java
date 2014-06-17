@@ -1152,7 +1152,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         boolean hasSpendAllPoints = false;
         if (getMagic() instanceof Spellcaster) {
             Spellcaster sc = (Spellcaster)magic;
-            int diff = sc.calcSpellPointsSpend(getCharacter()) - sc.getSpellPoints();
+            int diff =  sc.getSpellPoints()- sc.calcSpellPointsSpend(getCharacter());
             if (sc.calcSpellPointsSpend(getCharacter()) == sc.getSpellPoints())
                 hasSpendAllPoints = true;
 
@@ -1160,7 +1160,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
                     new Object[]{ diff, diff < 0 ? ModelPlugin.INSTANCE.getString("_UI_Less") : ModelPlugin.INSTANCE.getString("_UI_More") });
         } else if (getMagic() instanceof Technomancer) {
             Technomancer tm = (Technomancer)magic;
-            int diff = tm.calcComplexFormsSpend(getCharacter()) - tm.getComplexForms();
+            int diff = tm.getComplexForms()-tm.calcComplexFormsSpend(getCharacter());
             if (tm.calcComplexFormsSpend(getCharacter()) == tm.getComplexForms())
                 hasSpendAllPoints = true;
 
