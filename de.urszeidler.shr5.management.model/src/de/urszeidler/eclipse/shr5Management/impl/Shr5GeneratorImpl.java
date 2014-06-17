@@ -853,8 +853,8 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl implements Shr5Gene
         int skillPoints = getSkills().getSkillPoints();
         int groupPoints = getSkills().getGroupPoints();
 
-        int skillLeft = getSkillPointSpend() - skillPoints;
-        int groupLeft = getSkills().calcGroupSpend(getCharacter()) - groupPoints;
+        int skillLeft = skillPoints - getSkillPointSpend();
+        int groupLeft = groupPoints - getSkills().calcGroupSpend(getCharacter());
         if (skillLeft != 0 || groupLeft != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
