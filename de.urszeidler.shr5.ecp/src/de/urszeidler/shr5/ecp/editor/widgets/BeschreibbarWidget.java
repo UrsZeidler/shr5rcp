@@ -19,6 +19,7 @@ import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -35,6 +36,8 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
+import org.eclipse.ui.forms.widgets.Section;
+
 public class BeschreibbarWidget extends Composite {
 
     private final FormToolkit toolkit;
@@ -45,6 +48,7 @@ public class BeschreibbarWidget extends Composite {
     private DataBindingContext m_bindingContext;
     private EditingDomain editingDomain;
     private Beschreibbar beschreibbar;
+    private Section sctnNewSection;
 
     /**
      * Create the composite.
@@ -85,7 +89,19 @@ public class BeschreibbarWidget extends Composite {
     }
 
     private void createWidgets(Composite parent1, int style) {
-        Composite parent = new Composite(parent1, style);
+        setLayout(new FillLayout(SWT.HORIZONTAL));
+        sctnNewSection = toolkit.createSection(this, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
+         
+        toolkit.paintBordersFor(sctnNewSection);
+        sctnNewSection.setText(Messages.BeschreibbarWidget_sctnNewSection_text);
+        sctnNewSection.setExpanded(true);
+        
+
+        
+        
+        Composite parent = new Composite(sctnNewSection, style);
+        sctnNewSection.setClient(parent);
+        
         toolkit.adapt(parent);
         toolkit.paintBordersFor(parent);
 
@@ -126,6 +142,7 @@ public class BeschreibbarWidget extends Composite {
         btnChange.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         toolkit.adapt(btnChange, true, true);
         btnChange.setText(Messages.BeschreibbarWidget_change_image);
+        
         btnChange.addSelectionListener(new SelectionAdapter() {
 
             @Override

@@ -176,8 +176,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(body, SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
-        gd_beschreibbarWidget.widthHint = 0;
-        gd_beschreibbarWidget.heightHint = 0;
+
+
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         toolkit.adapt(beschreibbarWidget);
         toolkit.paintBordersFor(beschreibbarWidget);

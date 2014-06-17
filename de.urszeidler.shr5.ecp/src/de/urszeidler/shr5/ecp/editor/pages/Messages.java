@@ -155,6 +155,7 @@ public class Messages extends NLS {
     public static String CharacterAdvancementPage_column_karma_cost;
     public static String CharacterAdvancementPage_column_name;
     public static String CharacterAdvancementPage_titel;
+    public static String BeschreibbarWidget_sctnNewSection_text;
 
     static {
         // initialize resource bundle
