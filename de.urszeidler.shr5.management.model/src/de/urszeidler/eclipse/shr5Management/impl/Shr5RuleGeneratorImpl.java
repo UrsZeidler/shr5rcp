@@ -389,9 +389,9 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
         if (managedCharacter.getChoosenLifestyle() == null) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
-                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN, EcorePlugin.INSTANCE.getString(
-                                "_UI_GenericInvariant_diagnostic",
-                                new Object[]{ "hasLifestyleChoosen", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN, ModelPlugin.INSTANCE.getString(
+                                "_UI_NoLivestyleChoosen",
+                                new Object[]{  EObjectValidator.getObjectLabel(managedCharacter, context) }), new Object[]{ this }));
             }
             return false;
         }
