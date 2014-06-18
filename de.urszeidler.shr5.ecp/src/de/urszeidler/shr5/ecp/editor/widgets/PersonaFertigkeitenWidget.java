@@ -25,6 +25,7 @@ import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ColumnPixelData;
+import org.eclipse.jface.viewers.ColumnWeightData;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -352,7 +353,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         });
         TreeColumn trclmnName = treeViewerNameColumn.getColumn();
-        tcl_composite.setColumnData(trclmnName, new ColumnPixelData(200, true, true));
+        tcl_composite.setColumnData(trclmnName, new ColumnWeightData(50,10, true));
         trclmnName.setText(Messages.PersonaFertigkeitenWidget_groups_skills);
 
         TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
@@ -504,7 +505,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         });
         TreeColumn trclmnValue = treeViewerValueColumn.getColumn();
-        tcl_composite.setColumnData(trclmnValue, new ColumnPixelData(70, true, true));
+        tcl_composite.setColumnData(trclmnValue, new ColumnPixelData(50, true, true));
         trclmnValue.setText(Messages.PersonaFertigkeitenWidget_value);
 
         TreeViewerColumn treeViewerTotalColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
@@ -537,7 +538,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         });
         TreeColumn trclmnTotalColumn = treeViewerTotalColumn.getColumn();
-        tcl_composite.setColumnData(trclmnTotalColumn, new ColumnPixelData(70, true, true));
+        tcl_composite.setColumnData(trclmnTotalColumn, new ColumnPixelData(120, true, true));
         trclmnTotalColumn.setText(Messages.PersonaFertigkeitenWidget_dice_pool);
 
         treeViewer.setContentProvider(new FertigkeitsContentProvider());
