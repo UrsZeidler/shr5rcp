@@ -323,6 +323,10 @@
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/diagnostics"/>
         <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasNoConstrainVoilation/context"/>
       </genOperations>
+      <genOperations ecoreOperation="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen">
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen/diagnostics"/>
+        <genParameters ecoreParameter="shr5Management.ecore#//Shr5RuleGenerator/hasLifestyleChoosen/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="shr5Management.ecore#//Shr5KarmaGenerator">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5Management.ecore#//Shr5KarmaGenerator/metaType"/>

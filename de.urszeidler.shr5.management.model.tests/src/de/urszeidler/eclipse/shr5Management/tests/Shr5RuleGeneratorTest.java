@@ -42,6 +42,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNotMoreSpecalism(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Not More Specalism</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoAttributesOverSpeciesAtt(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Attributes Over Species Att</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasNoConstrainVoilation(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has No Constrain Voilation</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasLifestyleChoosen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Lifestyle Choosen</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -289,6 +290,23 @@ public abstract class Shr5RuleGeneratorTest extends CharacterGeneratorTest {
         ((KoerperPersona)persona).getEigenschaften().add(eigenschaft1);
         
         assertEquals(false, getFixture().hasNoConstrainVoilation(diagnostics, context));
+    }
+
+    /**
+     * Tests the '{@link de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasLifestyleChoosen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Lifestyle Choosen</em>}' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5Management.Shr5RuleGenerator#hasLifestyleChoosen(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+     * @generated not
+     */
+    public void testHasLifestyleChoosen__DiagnosticChain_Map() {
+        PlayerCharacter character = PriorityCategorieTest.createMudanCharacter();
+        getFixture().setCharacter(character);
+        AbstraktPersona persona = character.getPersona();
+        
+        assertFalse(getFixture().hasLifestyleChoosen(diagnostics, context));
+        character.setChoosenLifestyle(Shr5Factory.eINSTANCE.createLifestyle());
+        assertTrue(getFixture().hasLifestyleChoosen(diagnostics, context));
     }
 
 } // Shr5RuleGeneratorTest

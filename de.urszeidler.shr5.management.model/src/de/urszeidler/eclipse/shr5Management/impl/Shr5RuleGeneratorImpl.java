@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 
@@ -46,16 +47,17 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getShr5Generator <em>Shr5 Generator</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl implements Shr5RuleGenerator {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Shr5RuleGeneratorImpl() {
@@ -65,6 +67,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -75,6 +78,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public Shr5System getShr5Generator() {
@@ -111,14 +115,11 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNotMoreMaxAttributes(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
+        if (!canValidate())
             return true;
+
         ManagedCharacter managedCharacter = getCharacter();
-        if (managedCharacter == null)
-            return true;
         AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return true;
 
         Spezies spezies = persona.getSpezies();
         if (spezies == null)
@@ -184,14 +185,11 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNoSkillsOverMax(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
+        if (!canValidate())
             return true;
+
         ManagedCharacter managedCharacter = getCharacter();
-        if (managedCharacter == null)
-            return true;
         AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return true;
 
         List<Fertigkeit> list = new ArrayList<Fertigkeit>();
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
@@ -219,14 +217,11 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNotMoreSpecalism(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
+        if (!canValidate())
             return true;
+
         ManagedCharacter managedCharacter = getCharacter();
-        if (managedCharacter == null)
-            return true;
         AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return true;
 
         List<Fertigkeit> list = new ArrayList<Fertigkeit>();
         EList<PersonaFertigkeit> fertigkeiten = persona.getFertigkeiten();
@@ -254,14 +249,11 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
      * @generated not
      */
     public boolean hasNoAttributesOverSpeciesAtt(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (!canValidate())
             return true;
+
         ManagedCharacter managedCharacter = getCharacter();
-        if (managedCharacter == null)
-            return true;
         AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return true;
 
         Spezies spezies = persona.getSpezies();
         if (spezies == null)
@@ -301,20 +293,34 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     }
 
     /**
+     * Checks if the generator the character and the persona are set.
+     * 
+     * @return true if validation can be done
+     */
+    protected boolean canValidate() {
+        if (getShr5Generator() == null || getState() == GeneratorState.COMMITED)
+            return false;
+        ManagedCharacter managedCharacter = getCharacter();
+        if (managedCharacter == null)
+            return false;
+        AbstraktPersona persona = managedCharacter.getPersona();
+        if (persona == null)
+            return false;
+        return true;
+    }
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated not
      */
     public boolean hasNoConstrainVoilation(DiagnosticChain diagnostics, Map<Object, Object> context) {
-        if (getShr5Generator() == null)
+        if (!canValidate())
             return true;
+
         ManagedCharacter managedCharacter = getCharacter();
-        if (managedCharacter == null)
-            return true;
-        AbstraktPersona persona = managedCharacter.getPersona();
-        if (persona == null)
-            return true;
+        // AbstraktPersona persona = managedCharacter.getPersona();
 
         EList<QuellenConstrain> additionalConstrains = getShr5Generator().getAdditionalConstrains();
 
@@ -372,13 +378,38 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
+     * @generated not
+     */
+    public boolean hasLifestyleChoosen(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        if (!canValidate())
+            return true;
+
+        ManagedCharacter managedCharacter = getCharacter();
+        if (managedCharacter.getChoosenLifestyle() == null) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
+                        Shr5managementValidator.SHR5_RULE_GENERATOR__HAS_LIFESTYLE_CHOOSEN, EcorePlugin.INSTANCE.getString(
+                                "_UI_GenericInvariant_diagnostic",
+                                new Object[]{ "hasLifestyleChoosen", EObjectValidator.getObjectLabel(this, context) }), new Object[]{ this }));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_RULE_GENERATOR__SHR5_GENERATOR:
-                if (resolve) return getShr5Generator();
+                if (resolve)
+                    return getShr5Generator();
                 return basicGetShr5Generator();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -387,6 +418,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -401,6 +433,7 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -419,6 +452,8 @@ public abstract class Shr5RuleGeneratorImpl extends CharacterGeneratorImpl imple
                 return hasNoAttributesOverSpeciesAtt((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
             case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_NO_CONSTRAIN_VOILATION__DIAGNOSTICCHAIN_MAP:
                 return hasNoConstrainVoilation((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+            case Shr5managementPackage.SHR5_RULE_GENERATOR___HAS_LIFESTYLE_CHOOSEN__DIAGNOSTICCHAIN_MAP:
+                return hasLifestyleChoosen((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
         }
         return super.eInvoke(operationID, arguments);
     }
