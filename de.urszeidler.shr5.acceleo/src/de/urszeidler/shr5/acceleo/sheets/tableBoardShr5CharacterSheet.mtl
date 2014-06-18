@@ -68,7 +68,7 @@
  * Print the Advacements
 */]
 [template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty())]
-['_UI_ManagedCharacter_changes_feature'.titelText()/]
+['_UI_ManagedCharacter_changes_feature'.localizedString().titelText()/]
 ['table'.startTag()/]
 [printRow(Sequence{'_UI_Beschreibbar_name_feature'.localizedString().italicText(),'date'.italicText(),'Karma Cost'.localizedString().italicText()})/]
 [for (ag : Changes | gears)]
