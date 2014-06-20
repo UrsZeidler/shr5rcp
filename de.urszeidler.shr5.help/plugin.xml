@@ -5,6 +5,7 @@
          point="org.eclipse.ui.intro">
       <intro
             class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="intro/sp-16.png"
             id="de.urszeidler.shr5.help.intro">
       </intro>
       <introProductBinding
