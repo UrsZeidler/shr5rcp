@@ -8,13 +8,11 @@ img {
   background-repeat: no-repeat;
   background-position: right top;
   text-align: center;
-  background-attachment: fixed;
-  background-image: url(rootBCK.png);
 }
 body > div.page-style {
-  padding-left: 30%;
+  padding-left: 10%;
 }
 #content {
   text-align: left;
-  width: 40em;
+padding-right: 10%;
 }
