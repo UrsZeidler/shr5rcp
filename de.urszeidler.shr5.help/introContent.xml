@@ -2,6 +2,7 @@
 <introContent>
     <page id="root" content="intro/root.xhtml"/>
     <page id="characterBuilding" content="intro/characterBuilding.xhtml"/>
+    <page id="modelResources" content="intro/modelResources.xhtml"/>
 <!--     <page id="resources" content="intro/basicGui.xhtml"/> -->
 <!--     <page id="configureLocalStore" content="intro/configureLocalStore.xhtml"/> -->
 </introContent>

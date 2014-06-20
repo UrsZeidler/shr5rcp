@@ -28,7 +28,7 @@
          </presentation>
       </config>
    </extension>
-
+<!--
   <extension
          point="org.eclipse.ui.menus">
       <menuContribution
@@ -47,6 +47,6 @@
             </menu>
       </menuContribution>
    </extension>
-
+-->
 
 </plugin>
