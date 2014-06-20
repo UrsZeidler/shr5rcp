@@ -119,6 +119,20 @@
             </command>
          </menu>
       </menuContribution>
+      <!--
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="de.urszeidler.shr5.product.toolbar2">
+            <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
+                  icon="icons/shadowrunPerspektive_16.png"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+      -->
    </extension>
 
 </plugin>
