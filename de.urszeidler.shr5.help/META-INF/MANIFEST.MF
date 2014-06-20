@@ -7,6 +7,7 @@ Bundle-Activator: de.urszeidler.shr5.help.Activator
 Bundle-Vendor: Urs Zeidler
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.ui.intro;bundle-version="3.4.200"
+ org.eclipse.ui.intro;bundle-version="3.4.200",
+ de.urszeidler.shr5.ecp;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
