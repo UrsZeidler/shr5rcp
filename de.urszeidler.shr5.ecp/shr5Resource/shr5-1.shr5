@@ -35,7 +35,7 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3Ktd0CEeOvVYoRsPZlnA" categorieName="C" choosableTypes="67472729-321e-4e00-96ab-8914a9e276a3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwN0CEeOvVYoRsPZlnA" categorieName="D" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwd0CEeOvVYoRsPZlnA" categorieName="D" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwt0CEeOvVYoRsPZlnA" categorieName="E" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_Bs3xwt0CEeOvVYoRsPZlnA" categorieName="E" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y0N0CEeOvVYoRsPZlnA" categorieName="A" attibutePoints="24"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y0d0CEeOvVYoRsPZlnA" categorieName="B" attibutePoints="20"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_Bs4Y0t0CEeOvVYoRsPZlnA" categorieName="C" attibutePoints="16"/>
@@ -178,8 +178,8 @@
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB-eJ0EeOht_G61YAQvg" categorieName="B" choosableTypes="67472729-321e-4e00-96ab-8914a9e276a3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB-uJ0EeOht_G61YAQvg" categorieName="C" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="3"/>
         <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB--J0EeOht_G61YAQvg" categorieName="C" choosableTypes="cf34895a-35cc-4be8-812b-5c715952a93f"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB_OJ0EeOht_G61YAQvg" categorieName="D" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602"/>
-        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB_OJ0EeOht_G61YAQvg" categorieName="E" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB_OJ0EeOht_G61YAQvg" categorieName="D" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="1"/>
+        <priorities xsi:type="shr5mngt:MetaType" xmi:id="_djpB_OJ0EeOht_G61YAQvg" categorieName="E" choosableTypes="e28e7075-f635-4c02-937c-e4fc61c51602" specialPoints="1"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpB_uJ0EeOht_G61YAQvg" categorieName="A" attibutePoints="20"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpB_-J0EeOht_G61YAQvg" categorieName="B" attibutePoints="16"/>
         <priorities xsi:type="shr5mngt:Attributes" xmi:id="_djpCAOJ0EeOht_G61YAQvg" categorieName="C" attibutePoints="14"/>
