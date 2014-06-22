@@ -28,7 +28,8 @@ public class Shr5CommandHandler extends AbstractHandler {
         IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
         NewWizardAction newWizardAction = new NewWizardAction(window);
         newWizardAction.setCategoryId("de.urszeidler.shr5.ecp.character");
-
+        newWizardAction.setWizardWindowTitle("Select generator object to create ...");
+        
         newWizardAction.run();
         return null;
     }
