@@ -53,7 +53,7 @@ public class OpenObjectHandler extends AbstractHandler {
             }
         };
         try { 
-             window.run(true, true, runnable);
+             window.run(true, false, runnable);
         } catch (InvocationTargetException e) {
             Activator.logError(e);
         } catch (InterruptedException e) {
@@ -82,7 +82,7 @@ public class OpenObjectHandler extends AbstractHandler {
                     openCharacter(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message, monitor);
                     break;
                 case 3://TODO : localize
-                    openBeschreibbar(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message, monitor);
+                    openBeschreibbar(shell, Messages.OpenObjectHandler_open_any_titel, Messages.OpenObjectHandler_open_any_message, monitor);
                     break;
 
                 default:
