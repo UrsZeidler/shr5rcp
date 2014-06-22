@@ -77,14 +77,6 @@
                id="project.menu.id"
                label="%menu.label">
             <command
-                  commandId="org.eclipse.ui.file.import"
-                  label="%command.import"
-                  style="push">
-            </command>
-            <separator
-                  name="de.urszeidler.shr5.product.separator1">
-            </separator>
-            <command
                   commandId="org.eclipse.emf.ecp.ui.workbench.saveProject"
                   label="%command.save"
                   style="push">
@@ -100,7 +92,12 @@
             </command>
          </menu>
          <menu
+               id="windows.menu.id"
                label="%menu.windows">
+            <separator
+                  name="de.urszeidler.shr5.product.separator3"
+                  visible="true">
+            </separator>
             <command
                   commandId="org.eclipse.ui.window.newWindow"
                   style="push">
@@ -113,6 +110,10 @@
                   commandId="org.eclipse.ui.window.preferences"
                   style="push">
             </command>
+            <separator
+                  name="de.urszeidler.shr5.product.separator2"
+                  visible="true">
+            </separator>
             <command
                   commandId="org.eclipse.ui.perspectives.showPerspective"
                   style="push">

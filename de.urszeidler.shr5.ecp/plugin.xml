@@ -270,6 +270,10 @@
                   commandId="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
                   mnemonic="S">
             </command>
+            <separator
+                  name="de.urszeidler.shr5.ecp.separator3"
+                  visible="true">
+            </separator>
             <command
                   commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
                   label="%open.Generator.Object.command"
@@ -301,6 +305,17 @@
                      value="3">
                </parameter>
             </command>
+            <separator
+                  name="de.urszeidler.shr5.ecp.separator2"
+                  visible="true">
+            </separator>
+                        <command
+                              commandId="org.eclipse.ui.file.import"
+                              label="%command.import"
+                              style="push"
+                              tooltip="%command.import.description">
+            </command>
+            
          </menu>
       </menuContribution>
 
@@ -309,11 +324,13 @@
   <extension
         point="org.eclipse.ui.commands">
      <category
+           description="%openCharacterWizard.category.description"
            id="de.urszeidler.shr5.ecp.commands.openWizard"
            name="%openCharacterWizard.category.name">
      </category>
      <command
            categoryId="de.urszeidler.shr5.ecp.commands.openWizard"
+           description="%openCharacterWizard.command.description"
            id="de.urszeidler.shr5.ecp.commands.openCharacterWizardCommand"
            name="%openCharacterWizard.command.name">
      </command>

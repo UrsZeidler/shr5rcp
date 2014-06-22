@@ -28,6 +28,35 @@
          </presentation>
       </config>
    </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:windows.menu.id">
+         <separator
+               name="de.urszeidler.shr5.help.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="de.urszeidler.shr5.help.IntroHandler"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.urszeidler.shr5.help.handlers.IntroHandler"
+            commandId="de.urszeidler.shr5.help.IntroHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="de.urszeidler.shr5.help.IntroHandler"
+            name="%show.Intro.command">
+      </command>
+   </extension>
 <!--
   <extension
          point="org.eclipse.ui.menus">

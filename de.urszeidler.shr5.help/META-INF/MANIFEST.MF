@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Shr5 Help
+Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: de.urszeidler.shr5.help;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.urszeidler.shr5.help.Activator
-Bundle-Vendor: Urs Zeidler
+Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.intro;bundle-version="3.4.200",
