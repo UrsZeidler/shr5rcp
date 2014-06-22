@@ -15,10 +15,14 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.ui.progress.IProgressService;
 
 import de.urszeidler.commons.functors.Predicate;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -45,11 +49,11 @@ public class OpenObjectHandler extends AbstractHandler {
         IRunnableWithProgress runnable = new IRunnableWithProgress() {
             @Override
             public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-                executeAction(parameter, shell);
+                executeAction(parameter, shell, monitor);
             }
         };
-        try {
-            window.run(true, false, runnable);
+        try { 
+             window.run(true, true, runnable);
         } catch (InvocationTargetException e) {
             Activator.logError(e);
         } catch (InterruptedException e) {
@@ -64,17 +68,21 @@ public class OpenObjectHandler extends AbstractHandler {
      * 
      * @param parameter
      * @param shell
+     * @param monitor 
      */
-    private void executeAction(String parameter, Shell shell) {
+    private void executeAction(String parameter, Shell shell, IProgressMonitor monitor) {
         try {
             int parseInt = Integer.parseInt(parameter);
 
             switch (parseInt) {
                 case 1:
-                    openGenerator(shell, Messages.OpenObjectHandler_open_Generator_titel, Messages.OpenObjectHandler_open_Generator_message);
+                    openGenerator(shell, Messages.OpenObjectHandler_open_Generator_titel, Messages.OpenObjectHandler_open_Generator_message, monitor);
                     break;
                 case 2:
-                    openCharacter(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message);
+                    openCharacter(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message, monitor);
+                    break;
+                case 3://TODO : localize
+                    openBeschreibbar(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message, monitor);
                     break;
 
                 default:
@@ -86,7 +94,23 @@ public class OpenObjectHandler extends AbstractHandler {
         }
     }
 
-    private void openCharacter(Shell shell, String titel, String message) {
+    private void openBeschreibbar(Shell shell, String titel, String message, IProgressMonitor monitor) {
+        monitor.beginTask("collection Objects ...", 1);
+        EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
+        Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
+            @Override
+            public boolean evaluate(Object input) {
+                if (input instanceof Beschreibbar) {
+                    return true;
+                }
+                return false;
+            }
+        });
+        monitor.done();
+        openOneObject(shell, filteredObject, titel, message);
+    }
+
+    private void openCharacter(Shell shell, String titel, String message, IProgressMonitor monitor) {
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override
@@ -100,7 +124,7 @@ public class OpenObjectHandler extends AbstractHandler {
         openOneObject(shell, filteredObject, titel, message);
     }
 
-    private void openGenerator(Shell shell, String titel, String message) {
+    private void openGenerator(Shell shell, String titel, String message, IProgressMonitor monitor) {
         EditingDomain editingDomain = Activator.getDefault().getEdtingDomain();
         Collection<EObject> filteredObject = ShadowrunEditingTools.findAllObjects(editingDomain, new Predicate<Object>() {
             @Override

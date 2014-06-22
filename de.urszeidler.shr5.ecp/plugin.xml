@@ -289,6 +289,19 @@
                </parameter>
             </command>
          </menu>
+         <menu
+               id="de.urszeidler.shr5.ecp.menus.extraMenu"
+               label="%extra.menu.label">
+            <command
+                  commandId="de.urszeidler.shr5.ecp.commands.openObjectCommand"
+                  label="%open.Any.Object.command"
+                  style="push">
+               <parameter
+                     name="de.urszeidler.shr5.ecp.commands.openObjectCommand.parameter.type"
+                     value="3">
+               </parameter>
+            </command>
+         </menu>
       </menuContribution>
 
 
