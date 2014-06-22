@@ -1,6 +1,15 @@
 img {
   vertical-align: middle;
 }
+
+.right-image {
+  vertical-align: right;
+ float: right;
+margin: 10px;
+margin-left: 10px;
+margin-bottom: 10px;
+}
+
 .page-style {
   margin-top: 20px;
   background-repeat: no-repeat;
