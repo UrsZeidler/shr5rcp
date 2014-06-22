@@ -1,43 +1,37 @@
 package de.urszeidler.shr5.ecp.views;
 
-import org.eclipse.core.databinding.observable.Observables;
+import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.common.ui.DiagnosticComposite;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.jface.action.IMenuManager;
-import org.eclipse.jface.action.IToolBarManager;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5Management.CharacterGenerator;
-import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.shr5.ecp.editor.ShadowrunEditor;
 import de.urszeidler.shr5.ecp.service.ValidationService;
 import de.urszeidler.shr5.ecp.service.ValidationTarget;
 
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.ui.forms.widgets.FormToolkit;
-import org.eclipse.swt.widgets.Display;
-
 public class GeneratorValidationView extends ViewPart implements ValidationTarget {
-    private DataBindingContext m_bindingContext;
+    protected DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.ecp.GeneratorValidationView"; //$NON-NLS-1$
 
@@ -156,14 +150,14 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
      * Initialize the toolbar.
      */
     private void initializeToolBar() {
-        IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
+       // IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
     }
 
     /**
      * Initialize the menu.
      */
     private void initializeMenu() {
-        IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
+       // IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
     }
 
     @Override
