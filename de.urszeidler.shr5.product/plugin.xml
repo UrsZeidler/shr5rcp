@@ -6,7 +6,7 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="de.urszeidler.shr5.product.app"
-            name="%product.name">
+            name="RCP schadowrun">
          <property
                name="windowImages"
                value="icons/shrImage_6_16.png,icons/shrImage_6_32.png,icons/shrImage_6_48.png,icons/shrImage_6_64.png,icons/shrImage_6_128.png">

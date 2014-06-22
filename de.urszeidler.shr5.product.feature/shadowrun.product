@@ -22,10 +22,13 @@ http://www.shadowruntabletop.com/
 
    <launcherArgs>
       <programArgs>-data shr_workspace/</programArgs>
-      <vmArgs>-Dorg.eclipse.swt.browser.DefaultType=mozilla
--XX:MaxPermSize=256m
+      <vmArgs>-XX:MaxPermSize=256m
 -Xms240m
 -Xmx768m</vmArgs>
+      <vmArgsLin>-Dorg.eclipse.swt.browser.DefaultType=mozilla
+-XX:MaxPermSize=256m
+-Xms240m
+-Xmx768m</vmArgsLin>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
