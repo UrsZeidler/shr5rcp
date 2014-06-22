@@ -1,13 +1,10 @@
-img {
-  vertical-align: middle;
-}
 
 .right-image {
-  vertical-align: right;
+ vertical-align: right;
  float: right;
-margin: 10px;
-margin-left: 10px;
-margin-bottom: 10px;
+ margin: 5px;
+ margin-left: 5px;
+ margin-bottom: 5px;
 }
 
 .page-style {
@@ -17,9 +14,9 @@ margin-bottom: 10px;
   text-align: center;
 }
 body > div.page-style {
-  padding-left: 10%;
+  padding-left: 5%;
 }
 #content {
   text-align: left;
-padding-right: 10%;
+padding-right: 5%;
 }
