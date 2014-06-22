@@ -6,6 +6,7 @@ package de.urszeidler.eclipse.shr5Management.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EAttribute;
@@ -17,6 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.Technomancer;
