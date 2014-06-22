@@ -14,132 +14,125 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.emf.commons.ui.binding.BindingToolkit;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
-
-
 public class AttributModifikatorWertWidget extends Composite {
 
-	public AttributModifikatorWertWidget(Composite parent, int style,
-			BindingToolkit bindingToolkit) {
-		super(parent, style);
-		GridLayout gridLayout = new GridLayout();
-		gridLayout.numColumns = 3;
-		this.setLayout(gridLayout);
+    public AttributModifikatorWertWidget(Composite parent, int style, BindingToolkit bindingToolkit) {
+        super(parent, style);
+        GridLayout gridLayout = new GridLayout();
+        gridLayout.numColumns = 3;
+        this.setLayout(gridLayout);
 
-		createContent(bindingToolkit);
-	}
+        createContent(bindingToolkit);
+    }
 
-	/**
-	 * @param toolkit
-	 * @param bindingToolkit
-	 */
-	protected void createContent(BindingToolkit bindingToolkit) {
+    /**
+     * @param toolkit
+     * @param bindingToolkit
+     */
+    protected void createContent(BindingToolkit bindingToolkit) {
 
-		createwertContent(bindingToolkit);
+        createwertContent(bindingToolkit);
 
-		createattributContent(bindingToolkit);
+        createattributContent(bindingToolkit);
 
-		createmodifiziertesContent(bindingToolkit);
+        createmodifiziertesContent(bindingToolkit);
 
-	}
+    }
 
-	/**
-	 * @param toolkit
-	 * @param bindingToolkit
-	 */
-	protected void createwertContent(BindingToolkit bindingToolkit) {
-		GridData gridData;
-		Label label;
+    /**
+     * @param toolkit
+     * @param bindingToolkit
+     */
+    protected void createwertContent(BindingToolkit bindingToolkit) {
+        GridData gridData;
+        Label label;
 
-		label = new Label(this, SWT.NONE);
-		label.setText(Messages.AttributModifikatorWertWidget_mod_rating);
+        label = new Label(this, SWT.NONE);
+        label.setText(Messages.AttributModifikatorWertWidget_mod_rating);
 
-		gridData = new GridData();
-		gridData.horizontalAlignment = GridData.FILL;
-		gridData.grabExcessHorizontalSpace = true;
-		gridData.verticalAlignment = GridData.CENTER;
-		gridData.horizontalSpan = 2;
+        gridData = new GridData();
+        gridData.horizontalAlignment = GridData.FILL;
+        gridData.grabExcessHorizontalSpace = true;
+        gridData.verticalAlignment = GridData.CENTER;
+        gridData.horizontalSpan = 2;
 
-		Text wertComp = new Text(this, SWT.SINGLE|SWT.BORDER); //toolkit.createText(this, "");
-		wertComp.setLayoutData(gridData);
-		bindingToolkit.bindTextFeature(wertComp, Shr5Package.eINSTANCE
-				.getAttributModifikatorWert_Wert());
+        Text wertComp = new Text(this, SWT.SINGLE | SWT.BORDER); // toolkit.createText(this, "");
+        wertComp.setLayoutData(gridData);
+        bindingToolkit.bindTextFeature(wertComp, Shr5Package.eINSTANCE.getAttributModifikatorWert_Wert());
 
-	}
+    }
 
-	/**
-	 * @param toolkit
-	 * @param bindingToolkit
-	 */
-	protected void createattributContent(BindingToolkit bindingToolkit) {
-		GridData gridData;
-		Label label;
+    /**
+     * @param toolkit
+     * @param bindingToolkit
+     */
+    protected void createattributContent(BindingToolkit bindingToolkit) {
+        GridData gridData;
+        Label label;
 
-		label = new Label(this, SWT.NONE);
-		label.setText(Messages.AttributModifikatorWertWidget_mod_attribute);
+        label = new Label(this, SWT.NONE);
+        label.setText(Messages.AttributModifikatorWertWidget_mod_attribute);
 
-		gridData = new GridData();
-		gridData.horizontalAlignment = GridData.FILL;
-		gridData.grabExcessHorizontalSpace = true;
-		gridData.verticalAlignment = GridData.CENTER;
-		gridData.horizontalSpan = 1;
+        gridData = new GridData();
+        gridData.horizontalAlignment = GridData.FILL;
+        gridData.grabExcessHorizontalSpace = true;
+        gridData.verticalAlignment = GridData.CENTER;
+        gridData.horizontalSpan = 1;
 
-		Text attributComp = new Text(this, SWT.BORDER);
-		attributComp.setLayoutData(gridData);
+        Text attributComp = new Text(this, SWT.BORDER);
+        attributComp.setLayoutData(gridData);
 
-		Button attributChooseBtn = new Button(this, SWT.PUSH);
-		attributChooseBtn.setText("..."); //$NON-NLS-1$
-		attributChooseBtn.addSelectionListener(new SelectionAdapter() {
+        Button attributChooseBtn = new Button(this, SWT.PUSH);
+        attributChooseBtn.setText("..."); //$NON-NLS-1$
+        attributChooseBtn.addSelectionListener(new SelectionAdapter() {
 
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				handleattributChooseBtnClick();
-			}
-		});
-		bindingToolkit.bindFeature(attributComp, Shr5Package.eINSTANCE
-				.getAttributModifikatorWert_Attribut());
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                handleattributChooseBtnClick();
+            }
+        });
+        bindingToolkit.bindFeature(attributComp, Shr5Package.eINSTANCE.getAttributModifikatorWert_Attribut());
 
-	}
+    }
 
-	/**
-	 * @param toolkit
-	 * @param bindingToolkit
-	 */
-	protected void createmodifiziertesContent(BindingToolkit bindingToolkit) {
-		GridData gridData;
-		Label label;
+    /**
+     * @param toolkit
+     * @param bindingToolkit
+     */
+    protected void createmodifiziertesContent(BindingToolkit bindingToolkit) {
+        GridData gridData;
+        Label label;
 
-		label = new Label(this, SWT.NONE);
-		label.setText("modifiziertes"); //$NON-NLS-1$
+        label = new Label(this, SWT.NONE);
+        label.setText("modifiziertes"); //$NON-NLS-1$
 
-		gridData = new GridData();
-		gridData.horizontalAlignment = GridData.FILL;
-		gridData.grabExcessHorizontalSpace = true;
-		gridData.verticalAlignment = GridData.CENTER;
-		gridData.horizontalSpan = 1;
+        gridData = new GridData();
+        gridData.horizontalAlignment = GridData.FILL;
+        gridData.grabExcessHorizontalSpace = true;
+        gridData.verticalAlignment = GridData.CENTER;
+        gridData.horizontalSpan = 1;
 
-		Text modifiziertesComp = new Text(this, SWT.BORDER | SWT.READ_ONLY);
-		modifiziertesComp.setLayoutData(gridData);
+        Text modifiziertesComp = new Text(this, SWT.BORDER | SWT.READ_ONLY);
+        modifiziertesComp.setLayoutData(gridData);
 
-		Button modifiziertesChooseBtn = new Button(this, SWT.PUSH);
-		modifiziertesChooseBtn.setText("..."); //$NON-NLS-1$
-		modifiziertesChooseBtn.addSelectionListener(new SelectionAdapter() {
+        Button modifiziertesChooseBtn = new Button(this, SWT.PUSH);
+        modifiziertesChooseBtn.setText("..."); //$NON-NLS-1$
+        modifiziertesChooseBtn.addSelectionListener(new SelectionAdapter() {
 
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				handlemodifiziertesChooseBtnClick();
-			}
-		});
-		
-		bindingToolkit.bindFeature(modifiziertesComp,
-				Shr5Package.eINSTANCE
-						.getAttributModifikatorWert_Modifiziertes());
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                handlemodifiziertesChooseBtnClick();
+            }
+        });
 
-	}
+        bindingToolkit.bindFeature(modifiziertesComp, Shr5Package.eINSTANCE.getAttributModifikatorWert_Modifiziertes());
 
-	protected void handleattributChooseBtnClick() {
-	}
+    }
 
-	protected void handlemodifiziertesChooseBtnClick() {
-	}
+    protected void handleattributChooseBtnClick() {
+    }
+
+    protected void handlemodifiziertesChooseBtnClick() {
+    }
 
 }

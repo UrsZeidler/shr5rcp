@@ -20,8 +20,6 @@ import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
-import org.eclipse.swt.widgets.Label;
-
 public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
     private Beschreibbar object;
     private EditingDomain editingDomain;

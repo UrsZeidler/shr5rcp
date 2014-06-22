@@ -30,13 +30,12 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ResourceListSelectionDialog;
 import org.eclipse.ui.dialogs.SelectionDialog;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.shr5.ecp.binding.PathToImageConverter;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
-
-import org.eclipse.ui.forms.widgets.Section;
 
 public class BeschreibbarWidget extends Composite {
 
@@ -75,7 +74,7 @@ public class BeschreibbarWidget extends Composite {
      * 
      * @param parent
      * @param style
-     * @param editingDomain 
+     * @param editingDomain
      */
     public BeschreibbarWidget(Composite parent, int style, Beschreibbar object, FormToolkit toolkit, EditingDomain editingDomain) {
         super(parent, style);
@@ -91,17 +90,14 @@ public class BeschreibbarWidget extends Composite {
     private void createWidgets(Composite parent1, int style) {
         setLayout(new FillLayout(SWT.HORIZONTAL));
         sctnNewSection = toolkit.createSection(this, Section.EXPANDED | Section.TWISTIE | Section.TITLE_BAR);
-         
+
         toolkit.paintBordersFor(sctnNewSection);
         sctnNewSection.setText(Messages.BeschreibbarWidget_sctnNewSection_text);
         sctnNewSection.setExpanded(true);
-        
 
-        
-        
         Composite parent = new Composite(sctnNewSection, style);
         sctnNewSection.setClient(parent);
-        
+
         toolkit.adapt(parent);
         toolkit.paintBordersFor(parent);
 
@@ -142,7 +138,7 @@ public class BeschreibbarWidget extends Composite {
         btnChange.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         toolkit.adapt(btnChange, true, true);
         btnChange.setText(Messages.BeschreibbarWidget_change_image);
-        
+
         btnChange.addSelectionListener(new SelectionAdapter() {
 
             @Override

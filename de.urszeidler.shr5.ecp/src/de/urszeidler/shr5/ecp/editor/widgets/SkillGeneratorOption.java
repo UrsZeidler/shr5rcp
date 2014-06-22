@@ -45,7 +45,6 @@ public class SkillGeneratorOption extends Composite {
 
     private int minSize = 40;
 
-
     /**
      * Create the composite.
      * 
@@ -88,7 +87,7 @@ public class SkillGeneratorOption extends Composite {
         GridLayout gridLayout = new GridLayout(3, false);
         gridLayout.horizontalSpacing = 10;
         setLayout(gridLayout);
-        
+
         toolkit.createLabel(this, Messages.GeneratorOption_skill_spend, SWT.NONE);
 
         lblspend = new Label(this, SWT.NONE);
@@ -104,7 +103,7 @@ public class SkillGeneratorOption extends Composite {
         lblleft.setLayoutData(gd_lblleft);
         toolkit.adapt(lblleft, true, true);
         lblleft.setText(EMPTY);
-        
+
         toolkit.createLabel(this, Messages.GeneratorOption_group_spend, SWT.NONE);
 
         lblgrpSpend = new Label(this, SWT.NONE);
@@ -120,15 +119,15 @@ public class SkillGeneratorOption extends Composite {
         lblgrpLeft.setLayoutData(gd_lblgrpLeft);
         toolkit.adapt(lblgrpLeft, true, true);
         lblgrpLeft.setText(EMPTY);
-        
-         toolkit.createLabel(this, Messages.GeneratorOption_kownlege_spend, SWT.NONE);
+
+        toolkit.createLabel(this, Messages.GeneratorOption_kownlege_spend, SWT.NONE);
 
         lblKnowlegPoints = toolkit.createLabel(this, Messages.GeneratorOption_spend_to_much, SWT.NONE);
         GridData gd_lblKnowlegPoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblKnowlegPoints.widthHint = minSize;
         lblKnowlegPoints.setLayoutData(gd_lblKnowlegPoints);
 
-        lblSpendKnowlegePoints = toolkit.createLabel(this, EMPTY, SWT.NONE); 
+        lblSpendKnowlegePoints = toolkit.createLabel(this, EMPTY, SWT.NONE);
         GridData gd_lblSpendKnowlegePoints = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gd_lblSpendKnowlegePoints.widthHint = minSize;
         lblSpendKnowlegePoints.setLayoutData(gd_lblSpendKnowlegePoints);
@@ -199,9 +198,9 @@ public class SkillGeneratorOption extends Composite {
                 Literals.SHR5_GENERATOR__KNOWNLEGE_POINT_SPEND);
 
         modelToTarget = new EMFUpdateValueStrategy();
-        bindValue =bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
+        bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-       //
+        //
         observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblSpendKnowlegePoints);
         objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
                 Literals.SHR5_GENERATOR__KARMA_SPEND);

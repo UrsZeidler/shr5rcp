@@ -331,7 +331,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         };
 
-        treeViewer.setFilters(new ViewerFilter[]{ filter, filterOnlyPersonaFilter, nameFilter});
+        treeViewer.setFilters(new ViewerFilter[]{ filter, filterOnlyPersonaFilter, nameFilter });
         final Tree tree = treeViewer.getTree();
         tree.setHeaderVisible(true);
         tree.setLinesVisible(true);
@@ -353,7 +353,7 @@ public class PersonaFertigkeitenWidget extends Composite {
             }
         });
         TreeColumn trclmnName = treeViewerNameColumn.getColumn();
-        tcl_composite.setColumnData(trclmnName, new ColumnWeightData(50,10, true));
+        tcl_composite.setColumnData(trclmnName, new ColumnWeightData(50, 10, true));
         trclmnName.setText(Messages.PersonaFertigkeitenWidget_groups_skills);
 
         TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewer, SWT.NONE);

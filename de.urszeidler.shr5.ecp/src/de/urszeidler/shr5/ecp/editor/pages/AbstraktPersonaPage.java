@@ -73,7 +73,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     private DataBindingContext m_bindingContext;
     private Composite compositeEigenschaften;
     private Composite compositeWares;
-    
+
     private WritableValue filter = new WritableValue("", String.class); //$NON-NLS-1$
 
     private ReferenceManager karmaBaseManager = new DefaultReferenceManager(AdapterFactoryUtil.getInstance().getItemDelegator()) {
@@ -108,8 +108,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             ShrList basicList = Shr5Factory.eINSTANCE.createShrList();
 
             FeatureEditorDialog dialog = new FeatureEditorDialogWert(getSite().getShell(), AdapterFactoryUtil.getInstance().getLabelProvider(),
-                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(
-                            objectsOfType));
+                    basicList, Shr5Package.Literals.SHR_LIST__ENTRIES, displayName, new ArrayList<EObject>(objectsOfType));
 
             int result = dialog.open();
             if (result == Window.OK) {
@@ -176,7 +175,6 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(body, SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
-
 
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         toolkit.adapt(beschreibbarWidget);
@@ -265,26 +263,27 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         Section sctnSkill = managedForm.getToolkit().createSection(composite_1, Section.TWISTIE | Section.TITLE_BAR);
         sctnSkill.addExpansionListener(new IExpansionListener() {
             public void expansionStateChanged(ExpansionEvent e) {
-                if(e.getState()){
+                if (e.getState()) {
                     gd_composite_1.heightHint = 350;
                     form.reflow(true);
-                 }else{
+                } else {
                     gd_composite_1.heightHint = 30;
-                     form.reflow(true);
-                }                    
+                    form.reflow(true);
+                }
             }
+
             public void expansionStateChanging(ExpansionEvent e) {
             }
         });
         Composite composite_2 = managedForm.getToolkit().createComposite(sctnSkill, SWT.NONE);
         sctnSkill.setDescriptionControl(composite_2);
         composite_2.setLayout(new GridLayout(3, false));
-        
-        Label lblFilter = managedForm.getToolkit().createLabel(composite_2,Messages.AbstraktPersonaPage_lblFilter_text, SWT.NONE);
+
+        Label lblFilter = managedForm.getToolkit().createLabel(composite_2, Messages.AbstraktPersonaPage_lblFilter_text, SWT.NONE);
         lblFilter.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
         managedForm.getToolkit().adapt(lblFilter, true, true);
-        
-        text = managedForm.getToolkit().createText(composite_2, "",SWT.BORDER);
+
+        text = managedForm.getToolkit().createText(composite_2, "", SWT.BORDER);
         text.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
         Button button = managedForm.getToolkit().createButton(composite_2, "", SWT.PUSH);
         button.setToolTipText(Messages.AbstraktPersonaPage_button_toolTipText);
@@ -306,15 +305,15 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         } else {
             personaFertigkeitenWidget = new PersonaFertigkeitenWidget(sctnSkill, SWT.NONE, character, toolkit, editingDomain);
         }
-        filter.addChangeListener(new IChangeListener() {           
+        filter.addChangeListener(new IChangeListener() {
             @Override
             public void handleChange(ChangeEvent event) {
                 personaFertigkeitenWidget.setStringFilter((String)filter.getValue());
-                
+
             }
         });
-//      GridData gd_composite_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
-//      gd_composite_1.heightHint = 200;
+        // GridData gd_composite_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+        // gd_composite_1.heightHint = 200;
 
         // final PersonaFertigkeitenWidget = p;
 
@@ -359,14 +358,13 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             compositeEigenschaften.setLayout(new FillLayout(SWT.HORIZONTAL));
             toolkit.adapt(compositeEigenschaften);
             toolkit.paintBordersFor(compositeEigenschaften);
-            
-            
+
             ReferenceManager mananger2 = mananger;
-            if(character!=null)
+            if (character != null)
                 mananger2 = karmaBaseManager;
-            
-            TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften, Messages.AbstraktPersonaPage_sct_quallities, SWT.NONE, object,
-                    Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit, mananger2, editingDomain,this);
+
+            TreeTableWidget treeTableWidgetEigenschaften = new TreeTableWidget(compositeEigenschaften, Messages.AbstraktPersonaPage_sct_quallities,
+                    SWT.NONE, object, Shr5Package.Literals.KOERPER_PERSONA__EIGENSCHAFTEN, toolkit, mananger2, editingDomain, this);
             managedForm.getToolkit().adapt(treeTableWidgetEigenschaften);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetEigenschaften);
 
@@ -376,8 +374,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.adapt(compositeWares);
             toolkit.paintBordersFor(compositeWares);
 
-            TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(compositeWares, Messages.AbstraktPersonaPage_sct_Augmentation, SWT.NONE, object,
-                    Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, toolkit, mananger, editingDomain,this);
+            TreeTableWidget treeTableWidgetInventar = new TreeTableWidget(compositeWares, Messages.AbstraktPersonaPage_sct_Augmentation, SWT.NONE,
+                    object, Shr5Package.Literals.KOERPER_PERSONA__KOERPER_MODS, toolkit, mananger, editingDomain, this);
             managedForm.getToolkit().adapt(treeTableWidgetInventar);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetInventar);
 
@@ -394,7 +392,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.paintBordersFor(grpKikrfte);
 
             TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_KiPowers, SWT.NONE, object,
-                    Shr5Package.Literals.KI_ADEPT__KIKRAFT, toolkit, mananger, editingDomain,this);
+                    Shr5Package.Literals.KI_ADEPT__KIKRAFT, toolkit, mananger, editingDomain, this);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
         }
@@ -408,16 +406,16 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.paintBordersFor(grpKikrfte);
 
             ReferenceManager mananger2 = mananger;
-            if(character!=null)
+            if (character != null)
                 mananger2 = karmaBaseManager;
-            
+
             TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_Spells, SWT.NONE, object,
-                    Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger2, editingDomain,this);
+                    Shr5Package.Literals.ZAUBERER__ZAUBER, toolkit, mananger2, editingDomain, this);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
-            
+
             treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_sct_bound_spririts, SWT.NONE, object,
-                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger, editingDomain,this);
+                    Shr5Package.Literals.ZAUBERER__GEBUNDENE_GEISTER, toolkit, mananger, editingDomain, this);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
 
@@ -432,11 +430,11 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
             toolkit.paintBordersFor(grpKikrfte);
 
             ReferenceManager mananger2 = mananger;
-            if(character!=null)
+            if (character != null)
                 mananger2 = karmaBaseManager;
 
-            TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_sct_complex_forms, SWT.NONE, object,
-                    Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger2, editingDomain,this);
+            TreeTableWidget treeTableWidgetKiPower = new TreeTableWidget(grpKikrfte, Messages.AbstraktPersonaPage_sct_complex_forms, SWT.NONE,
+                    object, Shr5Package.Literals.TECHNOMANCER__COMPLEX_FORMS, toolkit, mananger2, editingDomain, this);
             managedForm.getToolkit().adapt(treeTableWidgetKiPower);
             managedForm.getToolkit().paintBordersFor(treeTableWidgetKiPower);
         }
@@ -464,8 +462,8 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         }
         emfFormBuilder.buildinComposite(m_bindingContext, body, object);
 
-        //managedForm.getForm().pack();
-       managedForm.reflow(true);
+        // managedForm.getForm().pack();
+        managedForm.reflow(true);
 
     }
 
@@ -473,6 +471,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
     protected EditingDomain getEditingDomain() {
         return editingDomain;
     }
+
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //

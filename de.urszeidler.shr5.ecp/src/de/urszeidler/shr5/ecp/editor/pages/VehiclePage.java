@@ -78,7 +78,6 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
@@ -119,7 +118,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__RUMPF, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__PANZER, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__SENSOR, grpGegenstand);
-        //emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX, grpGegenstand);
+        // emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG_ZUSTAND__ZUSTAND_MAX, grpGegenstand);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.FAHRZEUG__MODIFIZIERUNGEN, grpGegenstand);
 
         if (object instanceof Drohne) {
@@ -133,7 +132,7 @@ public class VehiclePage extends AbstractShr5Page<Fahrzeug> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__GESCHWINDIGKEIT_GELAENDE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.BODENFAHRZEUG__HANDLING_GELAENDE, grpGegenstand);
         }
-        
+
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT_VALUE, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__VERFUEGBARKEIT, grpWert);
         emfFormBuilder.addTextEntry(Shr5Package.Literals.GELD_WERT__WERT, grpWert);

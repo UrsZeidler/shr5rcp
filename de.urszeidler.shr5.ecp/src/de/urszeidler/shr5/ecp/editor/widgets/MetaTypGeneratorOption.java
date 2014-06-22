@@ -26,114 +26,114 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage.Literals;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 
 public class MetaTypGeneratorOption extends Composite {
-	private static final String EMPTY = ""; //$NON-NLS-1$
+    private static final String EMPTY = ""; //$NON-NLS-1$
 
     private DataBindingContext m_bindingContext;
 
-	private FormToolkit toolkit;//= new FormToolkit(Display.getCurrent());
-	private MetaType object;
-	private ManagedCharacter context;
-	private EditingDomain editingDomain;
-	private Label lblspend;
-	private Label lblleft;
+    private FormToolkit toolkit;// = new FormToolkit(Display.getCurrent());
+    private MetaType object;
+    private ManagedCharacter context;
+    private EditingDomain editingDomain;
+    private Label lblspend;
+    private Label lblleft;
 
     private int minSize = 40;
 
-	/**
-	 * Create the composite.
-	 * 
-	 * @param parent
-	 * @param style
-	 */
-	public MetaTypGeneratorOption(Composite parent, int style) {
-		super(parent, style);
-		toolkit = new FormToolkit(Display.getCurrent());
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				toolkit.dispose();
-			}
-		});
-		createWidgets();
-	}
+    /**
+     * Create the composite.
+     * 
+     * @param parent
+     * @param style
+     */
+    public MetaTypGeneratorOption(Composite parent, int style) {
+        super(parent, style);
+        toolkit = new FormToolkit(Display.getCurrent());
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                toolkit.dispose();
+            }
+        });
+        createWidgets();
+    }
 
-	/**
-	 * The main contructor.
-	 * 
-	 * @param parent
-	 * @param style
-	 * @param object
-	 * @param context
-	 * @param toolkit
-	 * @param editingDomain
-	 */
-	public MetaTypGeneratorOption(Composite parent, int style, MetaType object, ManagedCharacter context,
-			FormToolkit toolkit, EditingDomain editingDomain) {
-		super(parent, style);
-		this.toolkit = toolkit;
-		this.object = object;
-		this.context = context;
-		this.editingDomain = editingDomain;
-		createWidgets();
-	}
+    /**
+     * The main contructor.
+     * 
+     * @param parent
+     * @param style
+     * @param object
+     * @param context
+     * @param toolkit
+     * @param editingDomain
+     */
+    public MetaTypGeneratorOption(Composite parent, int style, MetaType object, ManagedCharacter context, FormToolkit toolkit,
+            EditingDomain editingDomain) {
+        super(parent, style);
+        this.toolkit = toolkit;
+        this.object = object;
+        this.context = context;
+        this.editingDomain = editingDomain;
+        createWidgets();
+    }
 
-	private void createWidgets() {
-		toolkit.adapt(this);
-		toolkit.paintBordersFor(this);
-		GridLayout gridLayout = new GridLayout(3, false);
-		gridLayout.horizontalSpacing = 10;
-		setLayout(gridLayout);
-		
-		toolkit.createLabel(this, Messages.GeneratorOption_special_spend, SWT.NONE);
+    private void createWidgets() {
+        toolkit.adapt(this);
+        toolkit.paintBordersFor(this);
+        GridLayout gridLayout = new GridLayout(3, false);
+        gridLayout.horizontalSpacing = 10;
+        setLayout(gridLayout);
 
-		lblspend = new Label(this, SWT.NONE);
-		GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblspend.widthHint = minSize;
-		lblspend.setLayoutData(gd_lblspend);
-		toolkit.adapt(lblspend, true, true);
-		lblspend.setText(Messages.GeneratorOption_spend_to_much);
+        toolkit.createLabel(this, Messages.GeneratorOption_special_spend, SWT.NONE);
 
-		lblleft = new Label(this, SWT.NONE);
-		GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblleft.widthHint = minSize;
-		lblleft.setLayoutData(gd_lblleft);
-		toolkit.adapt(lblleft, true, true);
-		lblleft.setText(EMPTY);
-		m_bindingContext = initDataBindings();
-		internalBinding(m_bindingContext);
-	}
+        lblspend = new Label(this, SWT.NONE);
+        GridData gd_lblspend = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblspend.widthHint = minSize;
+        lblspend.setLayoutData(gd_lblspend);
+        toolkit.adapt(lblspend, true, true);
+        lblspend.setText(Messages.GeneratorOption_spend_to_much);
 
-	protected DataBindingContext initDataBindings() {
-		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		//
+        lblleft = new Label(this, SWT.NONE);
+        GridData gd_lblleft = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_lblleft.widthHint = minSize;
+        lblleft.setLayoutData(gd_lblleft);
+        toolkit.adapt(lblleft, true, true);
+        lblleft.setText(EMPTY);
+        m_bindingContext = initDataBindings();
+        internalBinding(m_bindingContext);
+    }
 
-		//
-		return bindingContext;
-	}
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        //
 
-	private void internalBinding(DataBindingContext bindingContext) {
-		IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
-		IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
+        //
+        return bindingContext;
+    }
 
-		EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-		Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
-				new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-		ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
-		//
-		IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
-		IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain,
-				context.getChracterSource(), Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
+    private void internalBinding(DataBindingContext bindingContext) {
+        IObservableValue observeTextLblspendObserveWidget = WidgetProperties.text().observe(lblspend);
+        IObservableValue objectAttibutePointsSpendObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
 
-		modelToTarget = new EMFUpdateValueStrategy();
-		modelToTarget.setConverter(new Converter(Integer.class, String.class) {
-			@Override
-			public Object convert(Object fromObject) {
-				int calcAttributesSpend = object.calcSpecialPointsSpend(context);
-				return (object.getSpecialPoints() - calcAttributesSpend + EMPTY);
-			}
-		});
-		bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
-				UpdateValueStrategy.POLICY_NEVER), modelToTarget);
-	}
+        EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
+        Binding bindValue = bindingContext.bindValue(observeTextLblspendObserveWidget, objectAttibutePointsSpendObserveValue,
+                new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+        ControlDecorationSupport.create(bindValue, SWT.TOP | SWT.LEFT);
+        //
+        IObservableValue observeTextLblleftObserveWidget = WidgetProperties.text().observe(lblleft);
+        IObservableValue objectAttibutePointsLeftObserveValue = EMFEditObservables.observeValue(editingDomain, context.getChracterSource(),
+                Literals.SHR5_GENERATOR__SPECIAL_POINT_SPEND);
+
+        modelToTarget = new EMFUpdateValueStrategy();
+        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+            @Override
+            public Object convert(Object fromObject) {
+                int calcAttributesSpend = object.calcSpecialPointsSpend(context);
+                return (object.getSpecialPoints() - calcAttributesSpend + EMPTY);
+            }
+        });
+        bindingContext.bindValue(observeTextLblleftObserveWidget, objectAttibutePointsLeftObserveValue, new UpdateValueStrategy(
+                UpdateValueStrategy.POLICY_NEVER), modelToTarget);
+    }
 }

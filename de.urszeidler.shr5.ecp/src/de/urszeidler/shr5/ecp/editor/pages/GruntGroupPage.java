@@ -32,7 +32,6 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
 
     private DataBindingContext m_bindingContext;
 
-
     private Composite detail;
     private Composite composite_detail;
 
@@ -89,7 +88,6 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
@@ -116,23 +114,23 @@ public class GruntGroupPage extends AbstractShr5Page<GruntGroup> {
         managedForm.getToolkit().adapt(composite_grunt_groups);
         managedForm.getToolkit().paintBordersFor(composite_grunt_groups);
 
-        ISelectionChangedListener selectionChange= new ISelectionChangedListener() {            
+        ISelectionChangedListener selectionChange = new ISelectionChangedListener() {
             @Override
             public void selectionChanged(SelectionChangedEvent event) {
-              Object element = ( (IStructuredSelection) event.getSelection()).getFirstElement();
-              if (element != null) {
-                  if (detail != null) {
-                      detail.dispose();
-                  }
-                  detail = createDetail(composite_detail, toolkit, (GruntMembers)element);
+                Object element = ((IStructuredSelection)event.getSelection()).getFirstElement();
+                if (element != null) {
+                    if (detail != null) {
+                        detail.dispose();
+                    }
+                    detail = createDetail(composite_detail, toolkit, (GruntMembers)element);
 
-                  composite_detail.getParent().layout(true, true);
-                  detail.layout(true, true);
-              }  
+                    composite_detail.getParent().layout(true, true);
+                    detail.layout(true, true);
+                }
             }
         };
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite_grunt_groups, "Grunts Members", SWT.NONE, object,
-                Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS, toolkit, mananger, editingDomain,selectionChange,this);
+                Shr5managementPackage.Literals.GRUNT_GROUP__MEMBERS, toolkit, mananger, editingDomain, selectionChange, this);
         treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
         managedForm.getToolkit().adapt(treeTableWidget);

@@ -75,7 +75,6 @@ public class ReichweitePage extends AbstractShr5Page<Reichweite> {
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);

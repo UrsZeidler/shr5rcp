@@ -49,7 +49,6 @@ public class TreeTableWidget extends Composite {
     private ISelectionChangedListener selectionChangeListener;
     private IDoubleClickListener dblListener;
 
-
     /**
      * Create the composite.
      * 
@@ -123,7 +122,7 @@ public class TreeTableWidget extends Composite {
         final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER);
         if (selectionChangeListener != null)
             treeViewer.addSelectionChangedListener(selectionChangeListener);
-        if(dblListener!=null)
+        if (dblListener != null)
             treeViewer.addDoubleClickListener(dblListener);
         Tree tree = treeViewer.getTree();
         tree.setLinesVisible(true);
@@ -175,8 +174,8 @@ public class TreeTableWidget extends Composite {
             public void widgetSelected(SelectionEvent e) {
                 if (manager != null) {
                     manager.handleAdd(e1, object);
-                    
-                    //treeViewer.refresh(true);
+
+                    // treeViewer.refresh(true);
                 }
             }
         });

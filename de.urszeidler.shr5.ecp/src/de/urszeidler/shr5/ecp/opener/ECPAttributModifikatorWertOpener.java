@@ -175,6 +175,7 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
             public Integer caseCharacterGroup(CharacterGroup object) {
                 return RET;
             }
+
             @Override
             public Integer casePlayerManagement(PlayerManagement object) {
                 return RET;

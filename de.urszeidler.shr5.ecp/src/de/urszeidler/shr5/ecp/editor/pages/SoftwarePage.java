@@ -82,7 +82,6 @@ public class SoftwarePage extends AbstractShr5Page<Software> {
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
@@ -125,7 +124,7 @@ public class SoftwarePage extends AbstractShr5Page<Software> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__MODEL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__SKILL, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.AUTO_SOFT__WEAPON, grpGegenstand);
-       } else if (object instanceof ConsumerSoft) {
+        } else if (object instanceof ConsumerSoft) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.CONSUMER_SOFT__TYPE, grpGegenstand);
         } else if (object instanceof Datasoft) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.DATASOFT__SKILL, grpGegenstand);

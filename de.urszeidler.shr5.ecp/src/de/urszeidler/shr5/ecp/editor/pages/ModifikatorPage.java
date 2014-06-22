@@ -88,7 +88,6 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
@@ -117,7 +116,6 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         managedForm.getToolkit().adapt(composite_add);
         managedForm.getToolkit().paintBordersFor(composite_add);
 
-        
         m_bindingContext = initDataBindings();
 
         createFormBuilder(managedForm);
@@ -149,7 +147,7 @@ public class ModifikatorPage extends AbstractShr5Page<AbstraktModifikatoren> {
         emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
-        
+
     }
 
     protected DataBindingContext initDataBindings() {

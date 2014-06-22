@@ -51,7 +51,6 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
     }
 
     /**
-     * 
      * @param container
      * @param systems2
      * @param groups2
@@ -64,7 +63,8 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
      * @param imageDescriptor can be null
      */
     public NewCharacterWizardPage(List<EObject> container, List<EObject> systems2, List<EObject> groups2, WritableValue selectedContainer2,
-            WritableValue selectedSystem2, WritableValue selectedGroup2, String pageName, String title, String description, ImageDescriptor imageDescriptor) {
+            WritableValue selectedSystem2, WritableValue selectedGroup2, String pageName, String title, String description,
+            ImageDescriptor imageDescriptor) {
         super(pageName);
         this.container = container;
         this.systems = systems2;
@@ -79,7 +79,7 @@ public class NewCharacterWizardPage extends WizardPage implements IValueChangeLi
 
         setTitle(title);
         setDescription(description);
-        //ImageDescriptor imageDescriptor = ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/magnifying_glass.png");
+        // ImageDescriptor imageDescriptor = ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/magnifying_glass.png");
         if (imageDescriptor != null)
             setImageDescriptor(imageDescriptor);
 

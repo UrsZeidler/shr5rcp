@@ -93,7 +93,6 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
         GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 
-
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
@@ -103,7 +102,7 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
         grpGegenstand.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().adapt(grpGegenstand);
         managedForm.getToolkit().paintBordersFor(grpGegenstand);
-        
+
         Composite composite_Additional = new Composite(managedForm.getForm().getBody(), SWT.NONE);
         composite_Additional.setLayout(new GridLayout(3, false));
         composite_Additional.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
@@ -164,16 +163,16 @@ public class GegenstandPage extends AbstractShr5Page<AbstraktGegenstand> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__DATENVERARBEITUNG_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__FIREWALL_BASIS, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS, composite_Additional);
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, composite_Additional);            
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS, composite_Additional);
         } else if (object instanceof Commlink) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.ABSTRACT_MATRIX_DEVICE__DEVICE_RATING, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.COMMLINK__STORED_PROGRAMS, composite_Additional);
-        }else if (object instanceof Fokus) {
+        } else if (object instanceof Fokus) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGISCHE_STUFE__STUFE, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.FOKUS__BINDUNGSKOSTEN, grpGegenstand);
-            if (object instanceof QiFokus) {               
+            if (object instanceof QiFokus) {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.QI_FOKUS__POWER, grpGegenstand);
-            }else if (object instanceof MagieFokus) {
+            } else if (object instanceof MagieFokus) {
                 emfFormBuilder.addTextEntry(Shr5Package.Literals.MAGIE_FOKUS__BINDUNGS_FAKTOR, grpGegenstand);
             }
         }

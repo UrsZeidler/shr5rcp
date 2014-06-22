@@ -11,7 +11,7 @@ public class ActionM2TDialog extends Action {
     private Shell shell;
     private EObject theObject;
 
-    public ActionM2TDialog(Shell shell,EObject object) {
+    public ActionM2TDialog(Shell shell, EObject object) {
         this.shell = shell;
         this.theObject = object;
         setToolTipText("Transform to text");

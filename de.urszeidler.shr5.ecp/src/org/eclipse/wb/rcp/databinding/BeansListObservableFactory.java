@@ -20,23 +20,25 @@ import org.eclipse.core.databinding.observable.Realm;
  * @author lobas_av
  */
 public class BeansListObservableFactory extends BeansObservableFactory {
-	private final String m_propertyName;
-	////////////////////////////////////////////////////////////////////////////
-	//
-	// Constructor
-	//
-	////////////////////////////////////////////////////////////////////////////
-	public BeansListObservableFactory(Class<?> beanClass, String propertyName) {
-		super(beanClass);
-		m_propertyName = propertyName;
-	}
-	////////////////////////////////////////////////////////////////////////////
-	//
-	// BeansObservableFactory
-	//
-	////////////////////////////////////////////////////////////////////////////
-	@Override
-	protected IObservable createBeanObservable(Object target) {
-		return BeansObservables.observeList(Realm.getDefault(), target, m_propertyName);
-	}
+    private final String m_propertyName;
+
+    // //////////////////////////////////////////////////////////////////////////
+    //
+    // Constructor
+    //
+    // //////////////////////////////////////////////////////////////////////////
+    public BeansListObservableFactory(Class<?> beanClass, String propertyName) {
+        super(beanClass);
+        m_propertyName = propertyName;
+    }
+
+    // //////////////////////////////////////////////////////////////////////////
+    //
+    // BeansObservableFactory
+    //
+    // //////////////////////////////////////////////////////////////////////////
+    @Override
+    protected IObservable createBeanObservable(Object target) {
+        return BeansObservables.observeList(Realm.getDefault(), target, m_propertyName);
+    }
 }

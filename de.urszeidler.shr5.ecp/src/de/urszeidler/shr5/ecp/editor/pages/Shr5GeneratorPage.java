@@ -123,9 +123,9 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     private ControlDecoration controlDecorationKarma;
     private Label lblConnectionPoints;
     private ControlDecoration controlDecorationConnections;
-//    private DiagnosticComposite diagnosticComposite;
-//    private Group grpValidation;
-//    private Composite composite_2;
+    // private DiagnosticComposite diagnosticComposite;
+    // private Group grpValidation;
+    // private Composite composite_2;
 
     private HashSet<String> changeSet;
     private boolean optionWidgetsCreated = false;
@@ -519,8 +519,8 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
         sctnCreate.setExpanded(object.getState() == GeneratorState.PERSONA_CREATED);
         grpAuswahl.setEnabled(object.getState() == GeneratorState.NEW || object.getState() == GeneratorState.READY_FOR_CREATION);
 
-//        diagnosticComposite.setDiagnostic(validate);
-//        diagnosticComposite.update();
+        // diagnosticComposite.setDiagnostic(validate);
+        // diagnosticComposite.update();
 
         validationService.updateValidation(object, validate);
     }

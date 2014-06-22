@@ -165,7 +165,7 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
                         choiceTableViewer.addFilter(shrListFilter);
                     else
                         choiceTableViewer.removeFilter(shrListFilter);
-                    
+
                     dialogSettings.put("Featuredialog.shrListFilter", filterShrList.getSelection());
                 }
             });

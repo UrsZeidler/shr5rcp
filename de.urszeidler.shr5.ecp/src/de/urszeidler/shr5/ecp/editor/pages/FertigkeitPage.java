@@ -23,114 +23,113 @@ import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 
 /**
  * Manages {@link Fertigkeit} and {@link FertigkeitsGruppe}.
+ * 
  * @author urs
- *
  */
 public class FertigkeitPage extends AbstractShr5Page<Beschreibbar> {
-	private Beschreibbar object;
-	private EditingDomain editingDomain;
+    private Beschreibbar object;
+    private EditingDomain editingDomain;
 
-	private DataBindingContext m_bindingContext;
+    private DataBindingContext m_bindingContext;
 
-	/**
-	 * Create the form page.
-	 * 
-	 * @param id
-	 * @param title
-	 */
-	public FertigkeitPage(String id, String title) {
-		super(id, title);
-	}
+    /**
+     * Create the form page.
+     * 
+     * @param id
+     * @param title
+     */
+    public FertigkeitPage(String id, String title) {
+        super(id, title);
+    }
 
-	/**
-	 * Create the form page.
-	 * 
-	 * @param editor
-	 * @param id
-	 * @param title
-	 * @wbp.parser.constructor
-	 * @wbp.eval.method.parameter id "Some id"
-	 * @wbp.eval.method.parameter title "Some title"
-	 */
-	public FertigkeitPage(FormEditor editor, String id, String title) {
-		super(editor, id, title);
-		this.object = Shr5Factory.eINSTANCE.createFertigkeit();
-	}
+    /**
+     * Create the form page.
+     * 
+     * @param editor
+     * @param id
+     * @param title
+     * @wbp.parser.constructor
+     * @wbp.eval.method.parameter id "Some id"
+     * @wbp.eval.method.parameter title "Some title"
+     */
+    public FertigkeitPage(FormEditor editor, String id, String title) {
+        super(editor, id, title);
+        this.object = Shr5Factory.eINSTANCE.createFertigkeit();
+    }
 
-	public FertigkeitPage(FormEditor editor, String id, String title, Beschreibbar object, EditingDomain editingDomain,
-			ReferenceManager manager) {
-		super(editor, id, title, manager);
-		this.object = object;
-		this.editingDomain = editingDomain;
+    public FertigkeitPage(FormEditor editor, String id, String title, Beschreibbar object, EditingDomain editingDomain, ReferenceManager manager) {
+        super(editor, id, title, manager);
+        this.object = object;
+        this.editingDomain = editingDomain;
 
-	}
+    }
 
-	/**
-	 * Create contents of the form.
-	 * 
-	 * @param managedForm
-	 */
-	@Override
-	protected void createFormContent(IManagedForm managedForm) {
-		FormToolkit toolkit = managedForm.getToolkit();
-		ScrolledForm form = managedForm.getForm();
-		form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
-		Composite body = form.getBody();
-		toolkit.decorateFormHeading(form.getForm());
-		toolkit.paintBordersFor(body);
-		managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
+    /**
+     * Create contents of the form.
+     * 
+     * @param managedForm
+     */
+    @Override
+    protected void createFormContent(IManagedForm managedForm) {
+        FormToolkit toolkit = managedForm.getToolkit();
+        ScrolledForm form = managedForm.getForm();
+        form.setText(AdapterFactoryUtil.getInstance().getLabelProvider().getText(object));
+        Composite body = form.getBody();
+        toolkit.decorateFormHeading(form.getForm());
+        toolkit.paintBordersFor(body);
+        managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
-		BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
-		GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
-		beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
-		managedForm.getToolkit().adapt(beschreibbarWidget);
-		managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
+        BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
+        GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
+        beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
+        managedForm.getToolkit().adapt(beschreibbarWidget);
+        managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
-		Group grpFertigkeit = new Group(managedForm.getForm().getBody(), SWT.NONE);
-		grpFertigkeit.setLayout(new GridLayout(3, false));
-		grpFertigkeit.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-		grpFertigkeit.setText(Messages.ObjectPage_skill);
-		managedForm.getToolkit().adapt(grpFertigkeit);
-		managedForm.getToolkit().paintBordersFor(grpFertigkeit);
+        Group grpFertigkeit = new Group(managedForm.getForm().getBody(), SWT.NONE);
+        grpFertigkeit.setLayout(new GridLayout(3, false));
+        grpFertigkeit.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        grpFertigkeit.setText(Messages.ObjectPage_skill);
+        managedForm.getToolkit().adapt(grpFertigkeit);
+        managedForm.getToolkit().paintBordersFor(grpFertigkeit);
 
-		Group grpQuelle = new Group(managedForm.getForm().getBody(), SWT.NONE);
-		grpQuelle.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-		grpQuelle.setText(Messages.ObjectPage_source);
-		managedForm.getToolkit().adapt(grpQuelle);
-		managedForm.getToolkit().paintBordersFor(grpQuelle);
-		grpQuelle.setLayout(new GridLayout(6, false));
+        Group grpQuelle = new Group(managedForm.getForm().getBody(), SWT.NONE);
+        grpQuelle.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        grpQuelle.setText(Messages.ObjectPage_source);
+        managedForm.getToolkit().adapt(grpQuelle);
+        managedForm.getToolkit().paintBordersFor(grpQuelle);
+        grpQuelle.setLayout(new GridLayout(6, false));
 
-		m_bindingContext = initDataBindings();
+        m_bindingContext = initDataBindings();
 
-		createFormBuilder(managedForm);
+        createFormBuilder(managedForm);
 
-		if (object instanceof Fertigkeit) {
-			grpFertigkeit.setText(Messages.ObjectPage_skill);
-			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__ATTRIBUT, grpFertigkeit);
-			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__KATEGORIE, grpFertigkeit);
-            emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
-            emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN, grpFertigkeit);
-		
-		} else if (object instanceof FertigkeitsGruppe) {
-			grpFertigkeit.setText(Messages.ObjectPage_skillgroup);
-			emfFormBuilder.addTextEntry( Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN, grpFertigkeit);
-		}
+        if (object instanceof Fertigkeit) {
+            grpFertigkeit.setText(Messages.ObjectPage_skill);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERTIGKEIT__ATTRIBUT, grpFertigkeit);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERTIGKEIT__KATEGORIE, grpFertigkeit);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERTIGKEIT__AUSWEICHEN, grpFertigkeit);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERTIGKEIT__SPEZIALISIERUNGEN, grpFertigkeit);
 
-		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
-		emfFormBuilder.addTextEntry( Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
+        } else if (object instanceof FertigkeitsGruppe) {
+            grpFertigkeit.setText(Messages.ObjectPage_skillgroup);
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN, grpFertigkeit);
+        }
 
-		emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);		
-		managedForm.reflow(true);
-	}
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__SRC_BOOK, grpQuelle);
+        emfFormBuilder.addTextEntry(Shr5Package.Literals.QUELLE__PAGE, grpQuelle);
 
-	protected DataBindingContext initDataBindings() {
-		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		return bindingContext;
-	}
+        emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        managedForm.reflow(true);
+    }
 
-	@Override
-	protected EditingDomain getEditingDomain() {
-		return editingDomain;
-	}
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        return bindingContext;
+    }
+
+    @Override
+    protected EditingDomain getEditingDomain() {
+        return editingDomain;
+    }
 }

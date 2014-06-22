@@ -15,11 +15,8 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
-import org.eclipse.ui.progress.IProgressService;
 
 import de.urszeidler.commons.functors.Predicate;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
@@ -52,8 +49,8 @@ public class OpenObjectHandler extends AbstractHandler {
                 executeAction(parameter, shell, monitor);
             }
         };
-        try { 
-             window.run(true, false, runnable);
+        try {
+            window.run(true, false, runnable);
         } catch (InvocationTargetException e) {
             Activator.logError(e);
         } catch (InterruptedException e) {
@@ -68,7 +65,7 @@ public class OpenObjectHandler extends AbstractHandler {
      * 
      * @param parameter
      * @param shell
-     * @param monitor 
+     * @param monitor
      */
     private void executeAction(String parameter, Shell shell, IProgressMonitor monitor) {
         try {
@@ -81,7 +78,7 @@ public class OpenObjectHandler extends AbstractHandler {
                 case 2:
                     openCharacter(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message, monitor);
                     break;
-                case 3://TODO : localize
+                case 3:// TODO : localize
                     openBeschreibbar(shell, Messages.OpenObjectHandler_open_any_titel, Messages.OpenObjectHandler_open_any_message, monitor);
                     break;
 

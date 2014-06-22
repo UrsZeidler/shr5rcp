@@ -78,7 +78,6 @@ public class PersonaUIToolkit {
     private boolean karmaMode = false;
     private ManagedCharacter character;
 
-
     public PersonaUIToolkit(DataBindingContext ctx, IObservableValue selection, EObject object, EditingDomain editingDomain, FormToolkit toolkit) {
         super();
         if (ctx == null)
@@ -91,7 +90,8 @@ public class PersonaUIToolkit {
         this.toolkit = toolkit;
     }
 
-    public PersonaUIToolkit(DataBindingContext ctx, IObservableValue selection, ManagedCharacter character, EditingDomain editingDomain, FormToolkit toolkit) {
+    public PersonaUIToolkit(DataBindingContext ctx, IObservableValue selection, ManagedCharacter character, EditingDomain editingDomain,
+            FormToolkit toolkit) {
         super();
         if (ctx == null)
             this.ctx = new DataBindingContext();
@@ -104,7 +104,8 @@ public class PersonaUIToolkit {
         this.editingDomain = editingDomain;
         this.toolkit = toolkit;
     }
-   //
+
+    //
     // private void createBodyIndexWidget(Composite client) {
     // // shadowrunPackage.eINSTANCE.getAbstaktPersona_EssenzBase(),,
     //
@@ -163,17 +164,17 @@ public class PersonaUIToolkit {
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
         EMFUpdateValueStrategy updateStrategie;
         if (karmaMode)
-            updateStrategie = new EMFUpdateValueStrategy(){
-            protected IStatus doSet(IObservableValue observableValue, Object value) {
-                ShadowrunManagmentTools.changeAttributeByAdvacement(character, basefeature,(Integer)value);// (Integer)value);                
-                return Status.OK_STATUS;
-            }
-            
-        };
+            updateStrategie = new EMFUpdateValueStrategy() {
+                protected IStatus doSet(IObservableValue observableValue, Object value) {
+                    ShadowrunManagmentTools.changeAttributeByAdvacement(character, basefeature, (Integer)value);// (Integer)value);
+                    return Status.OK_STATUS;
+                }
+
+            };
         else
             updateStrategie = new EMFUpdateValueStrategy();
-        
-        final IObservableValue feature = bindTextFeature(text, basefeature,new EMFUpdateValueStrategy(), updateStrategie);
+
+        final IObservableValue feature = bindTextFeature(text, basefeature, new EMFUpdateValueStrategy(), updateStrategie);
         ComputedValue computedValue = new ModificatedAttributeLabelValue(calcObserveValue, feature);
         Label label2 = getToolkit().createLabel(client, "");
         setDefaultLayout(label2);
@@ -376,7 +377,9 @@ public class PersonaUIToolkit {
         return observeValue;
 
     }
-    private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie,EMFUpdateValueStrategy targetToModel) {
+
+    private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie,
+            EMFUpdateValueStrategy targetToModel) {
         IObservableValue observeValue = createObservableValue(feature);
         ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
         Binding binding = ctx.bindValue(observeEditable, observeValue, targetToModel, updateStrategie);

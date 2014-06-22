@@ -307,9 +307,7 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
         int money = moneyFactor * ini;
         int m = money + calcResourcesLeft;
 
-        String dialogMessage = String.format(
-                Messages.AbstractGeneratorPage_dlg_lifestyle_message,
-                numberOfW, moneyFactor, calcResourcesLeft);
+        String dialogMessage = String.format(Messages.AbstractGeneratorPage_dlg_lifestyle_message, numberOfW, moneyFactor, calcResourcesLeft);
         IInputValidator validator = new IInputValidator() {
             @Override
             public String isValid(String newText) {
@@ -327,7 +325,8 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
                 return null;
             }
         };
-        InputDialog inputDialog = new InputDialog(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_lifestyle_titel, dialogMessage, m + "", validator); //$NON-NLS-1$
+        InputDialog inputDialog = new InputDialog(getSite().getShell(), Messages.AbstractGeneratorPage_dlg_lifestyle_titel, dialogMessage,
+                m + "", validator); //$NON-NLS-1$
         return inputDialog;
     }
 

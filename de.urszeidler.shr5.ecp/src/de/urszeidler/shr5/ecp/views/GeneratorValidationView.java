@@ -104,7 +104,7 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
 
         validationService = (ValidationService)site.getService(ValidationService.class);
         validationService.registerValidationTarget(this);
-        
+
         super.init(site);
     }
 
@@ -117,14 +117,14 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
     public void createPartControl(Composite parent) {
         Composite container = new Composite(parent, SWT.NONE);
         container.setLayout(new GridLayout(1, false));
-        
+
         Composite composite = formToolkit.createComposite(container, SWT.BORDER);
         composite.setLayout(new GridLayout(1, false));
         composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         formToolkit.paintBordersFor(composite);
-                    
-       lblNewLabel = formToolkit.createLabel(composite, "New Label", SWT.NONE);
-       lblNewLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+
+        lblNewLabel = formToolkit.createLabel(composite, "New Label", SWT.NONE);
+        lblNewLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
         diagnosticComposite = new DiagnosticComposite(container, SWT.NONE);
         diagnosticComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -150,14 +150,14 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
      * Initialize the toolbar.
      */
     private void initializeToolBar() {
-       // IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
+        // IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
     }
 
     /**
      * Initialize the menu.
      */
     private void initializeMenu() {
-       // IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
+        // IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
     }
 
     @Override
@@ -186,6 +186,7 @@ public class GeneratorValidationView extends ViewPart implements ValidationTarge
                 }
             });
     }
+
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //

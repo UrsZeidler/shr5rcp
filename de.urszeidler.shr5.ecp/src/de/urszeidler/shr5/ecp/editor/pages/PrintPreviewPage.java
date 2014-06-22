@@ -105,7 +105,7 @@ public class PrintPreviewPage extends FormPage {
         character.setPersona(Shr5Factory.eINSTANCE.createMudanPersona());
         this.print = print;
         store = Activator.getDefault().getPreferenceStore();
-        //store.addPropertyChangeListener(this);
+        // store.addPropertyChangeListener(this);
 
     }
 
@@ -125,8 +125,8 @@ public class PrintPreviewPage extends FormPage {
         toolkit.paintBordersFor(body);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
-        //Composite body2 = form.;
-        
+        // Composite body2 = form.;
+
         display = Display.getCurrent();
         shell = display.getActiveShell();
 
@@ -294,7 +294,7 @@ public class PrintPreviewPage extends FormPage {
     }
 
     private Control createScrollingPreview(Composite parent) {
-        scroll =  new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+        scroll = new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
         scroll.setExpandHorizontal(true);
         scroll.setExpandVertical(true);
 

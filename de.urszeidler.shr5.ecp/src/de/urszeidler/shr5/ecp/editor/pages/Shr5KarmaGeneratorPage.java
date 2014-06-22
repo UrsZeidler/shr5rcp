@@ -69,7 +69,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
     private ToolItem tltmChoose;
     private Section sctnChoose;
     private Section sctnCreate;
-//    private DiagnosticComposite diagnosticComposite;
+    // private DiagnosticComposite diagnosticComposite;
     private Label lblInstruction;
     private Spinner spinner;
     private Label lblPhasestate;
@@ -257,7 +257,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         resourcen = Shr5managementFactory.eINSTANCE.createResourcen();
         resourcen.setResource(0);
-        
+
         grpResources = new Group(composite_3, SWT.NONE);
         grpResources.setLayout(new GridLayout(3, false));
         grpResources.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 3, 1));
@@ -360,7 +360,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         if ((object.getCharacterConcept() == null || object.getMetaType() == null))
             object.setState(GeneratorState.NEW);
-        
+
         if (object.getState() == GeneratorState.PERSONA_CREATED)
             createOptionWidgets();
 
@@ -427,8 +427,8 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
         if (resourceGeneratorOption != null)
             resourceGeneratorOption.dispose();
-        resourceGeneratorOption = new ResourceGeneratorOption(grpResources, SWT.NONE, resourcen, object.getCharacter(), getManagedForm()
-                .getToolkit(), editingDomain,Literals.SHR5_KARMA_GENERATOR__RESOURCE_SPEND);
+        resourceGeneratorOption = new ResourceGeneratorOption(grpResources, SWT.NONE, resourcen, object.getCharacter(),
+                getManagedForm().getToolkit(), editingDomain, Literals.SHR5_KARMA_GENERATOR__RESOURCE_SPEND);
         resourceGeneratorOption.layout();
 
         optionWidgetsCreated = true;
@@ -436,7 +436,8 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
 
     private void ownBinding(DataBindingContext bindingContext) {
         IObservableValue observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblKarmaSpend);
-        IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.SHR5_KARMA_GENERATOR__KARMA_SPEND);
+        IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object,
+                Literals.SHR5_KARMA_GENERATOR__KARMA_SPEND);
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
         modelToTarget.setConverter(new Converter(Integer.class, String.class) {
             @Override

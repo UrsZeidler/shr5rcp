@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * @author urs
- *
  */
 public interface ValidationTarget {
 

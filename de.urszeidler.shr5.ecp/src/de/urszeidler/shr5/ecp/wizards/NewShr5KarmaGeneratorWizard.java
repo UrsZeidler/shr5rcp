@@ -26,9 +26,10 @@ public class NewShr5KarmaGeneratorWizard extends NewShr5GeneratorWizard {
 
     @Override
     public void addPages() {
-        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup, Messages.NewShr5KarmaGeneratorWizard_name,
-                Messages.NewShr5KarmaGeneratorWizard_titel, Messages.NewShr5KarmaGeneratorWizard_description,
-                ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/KarmaGenerator32.png"))); //$NON-NLS-1$ //$NON-NLS-2$
+        addPage(new NewCharacterWizardPage(container, systems, groups, selectedContainer, selectedSystem, selectedGroup,
+                Messages.NewShr5KarmaGeneratorWizard_name, Messages.NewShr5KarmaGeneratorWizard_titel,
+                Messages.NewShr5KarmaGeneratorWizard_description, ResourceManager.getPluginImageDescriptor(
+                        "de.urszeidler.shr5.ecp", "images/KarmaGenerator32.png"))); //$NON-NLS-1$ //$NON-NLS-2$
     }
 
 }

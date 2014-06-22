@@ -62,7 +62,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     private ToolItem tltmChoose;
     private Section sctnChoose;
     private Section sctnCreate;
-//    private DiagnosticComposite diagnosticComposite;
+    // private DiagnosticComposite diagnosticComposite;
     private Label lblInstruction;
 
     public FreeStyleGeneratorPage(FormEditor editor, String id, String title) {
@@ -112,7 +112,6 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         tltmChoose.setText(Messages.GeneratorPage_Step_One);
         tltmChoose.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_1.png")); //$NON-NLS-1$ //$NON-NLS-2$
 
-
         tltmNewItem = new ToolItem(toolBar, SWT.NONE);
         tltmNewItem.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -143,7 +142,6 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         });
         restItem.setText(Messages.GeneratorPage_reset);
         restItem.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/btn_4.png")); //$NON-NLS-1$ //$NON-NLS-2$
-
 
         Group grpOverview = new Group(managedForm.getForm().getBody(), SWT.NONE);
         grpOverview.setLayout(new GridLayout(1, false));
@@ -213,21 +211,21 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
         sctnCreate.setClient(composite_3);
         composite_3.setLayout(new GridLayout(3, false));
 
-//        Group grpValidation = new Group(managedForm.getForm().getBody(), SWT.NONE);
-//        grpValidation.setLayout(new FillLayout(SWT.HORIZONTAL));
-//        GridData gd_grpValidation = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
-//        gd_grpValidation.heightHint = 150;
-//        grpValidation.setLayoutData(gd_grpValidation);
-//        grpValidation.setText(Messages.GeneratorPage_Validation);
-//        managedForm.getToolkit().adapt(grpValidation);
-//        managedForm.getToolkit().paintBordersFor(grpValidation);
-//
-//        diagnosticComposite = new DiagnosticComposite(grpValidation, SWT.NONE);
-//        diagnosticComposite.setSeverityMask(Diagnostic.ERROR | Diagnostic.INFO | Diagnostic.WARNING);
-//        diagnosticComposite.setShowRootDiagnostic(false);
-//        diagnosticComposite.initialize(null);
-//        managedForm.getToolkit().adapt(diagnosticComposite);
-//        managedForm.getToolkit().paintBordersFor(diagnosticComposite);
+        // Group grpValidation = new Group(managedForm.getForm().getBody(), SWT.NONE);
+        // grpValidation.setLayout(new FillLayout(SWT.HORIZONTAL));
+        // GridData gd_grpValidation = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+        // gd_grpValidation.heightHint = 150;
+        // grpValidation.setLayoutData(gd_grpValidation);
+        // grpValidation.setText(Messages.GeneratorPage_Validation);
+        // managedForm.getToolkit().adapt(grpValidation);
+        // managedForm.getToolkit().paintBordersFor(grpValidation);
+        //
+        // diagnosticComposite = new DiagnosticComposite(grpValidation, SWT.NONE);
+        // diagnosticComposite.setSeverityMask(Diagnostic.ERROR | Diagnostic.INFO | Diagnostic.WARNING);
+        // diagnosticComposite.setShowRootDiagnostic(false);
+        // diagnosticComposite.initialize(null);
+        // managedForm.getToolkit().adapt(diagnosticComposite);
+        // managedForm.getToolkit().paintBordersFor(diagnosticComposite);
 
         m_bindingContext = initDataBindings();
         // --------------
@@ -260,7 +258,7 @@ public class FreeStyleGeneratorPage extends AbstractGeneratorPage {
     protected void commitCharacter() {
         if (!openDefaultCommitMessageDialog())
             return;
-        
+
         object.setState(GeneratorState.COMMITED);
 
         // SetCommand.create(getEditingDomain(), object, Shr5managementPackage.Literals.CHARACTER_GENERATOR__STATE, GeneratorState.COMMITED);

@@ -385,7 +385,6 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new BorderPrint(printFreeStyleGenerator(generator, character), border), GridPrint.REMAINDER);
         printGeneratorAttributesSkills(generator, grid, border, persona);
 
-
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
             grid.add(printGeneratorKoerperPersona(border, kp), GridPrint.REMAINDER);
@@ -399,7 +398,7 @@ public class PersonaPrinter extends BasicPrinter {
             printGeneratorKiPowers(grid, border, ka.getKikraft());
         }
         printResourcesForGenerator(grid, border, character, persona);
-        
+
         GridPrint characterConnections = printAllCharacterConnections(character);
         characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
         characterConnections.add(SWT.RIGHT, new TextPrint(Messages.PersonaPrinter_sum, attributeFont), 4);
@@ -408,12 +407,9 @@ public class PersonaPrinter extends BasicPrinter {
 
         grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
 
-
         GridPrint printCalculatedKarma = printCalculatedKarma(character);
         grid.add(createBandPrint(new BorderPrint(printCalculatedKarma, border)), GridPrint.REMAINDER);
         grid.add(new BorderPrint(printCharacterAdvancementsList(character), border), GridPrint.REMAINDER);
-
-
 
         return grid;
     }
@@ -498,7 +494,7 @@ public class PersonaPrinter extends BasicPrinter {
         AbstraktPersona persona = character.getPersona();
 
         grid.add(new BorderPrint(printShr5KarmaGenerator(generator, character), border), GridPrint.REMAINDER);
-        
+
         printGeneratorAttributesSkills(generator, grid, border, persona);
         if (persona instanceof KoerperPersona) {
             KoerperPersona kp = (KoerperPersona)persona;
@@ -515,7 +511,6 @@ public class PersonaPrinter extends BasicPrinter {
         printResourcesForGenerator(grid, border, character, persona);
 
         GridPrint printCalculatedKarma = printCalculatedKarma(character);
- 
 
         GridPrint characterConnections = printAllCharacterConnections(character);
         characterConnections.add(new LinePrint(), GridPrint.REMAINDER);
@@ -677,7 +672,7 @@ public class PersonaPrinter extends BasicPrinter {
                 new TextPrint(printInteger(generator.getConnectionSpend()
                         - ShadowrunManagmentTools.calcConnectionsPoints(character, generator.getShr5Generator())), attributeFont));
 
-        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);        
+        grid.add(createBandPrint(new BorderPrint(characterConnections, border)), GridPrint.REMAINDER);
         grid.add(new BorderPrint(printCalculatedKarma(character), border), GridPrint.REMAINDER);
 
         return grid;
@@ -1486,7 +1481,7 @@ public class PersonaPrinter extends BasicPrinter {
         grid.add(new TextPrint(printString(fw.getSchadenscode()), attributeFont));
         grid.add(new TextPrint(printInteger(fw.getPraezision()), attributeFont));
         grid.add(new TextPrint(printInteger(fw.getDurchschlagsKraft()), attributeFont));
-        grid.add(new TextPrint( fw.getModie().toString(), attributeFont));
+        grid.add(new TextPrint(fw.getModie().toString(), attributeFont));
         grid.add(new TextPrint(printInteger(fw.getRueckstoss()), attributeFont));
         grid.add(new TextPrint(fw.getKapazitaet() + fw.getMunitionstyp().getLiteral(), attributeFont));
         grid.add(new TextPrint(toFWAddon(fw.getEinbau()), attributeFont), 2);
@@ -1841,8 +1836,8 @@ public class PersonaPrinter extends BasicPrinter {
             Fertigkeit fertigkeit = pfertigkeit.getFertigkeit();
             if (fertigkeit == null)
                 continue;
-            
-            Integer value =ShadowrunTools.fertigkeitDicePoolValue(pfertigkeit, persona);
+
+            Integer value = ShadowrunTools.fertigkeitDicePoolValue(pfertigkeit, persona);
             Integer fertigkeitValue = pfertigkeit.getStufe();
 
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(toFertigkeitAndSpec(pfertigkeit), attributeFont), 2);
@@ -1864,7 +1859,7 @@ public class PersonaPrinter extends BasicPrinter {
 
         String simpleName = toSimpleName(pfertigkeit.getFertigkeit());
         if (!pfertigkeit.getSpezialisierungen().isEmpty())
-            simpleName = simpleName + ONE_SPACE + toName(pfertigkeit.getSpezialisierungen());//.toString();
+            simpleName = simpleName + ONE_SPACE + toName(pfertigkeit.getSpezialisierungen());// .toString();
         return simpleName;
     }
 
@@ -1961,8 +1956,8 @@ public class PersonaPrinter extends BasicPrinter {
         printeAttributes(persona, grid1, ShadowrunTools.getOrderedAttibutes(persona));
         // printeAttributes(persona, grid1, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE.getEAttributes());
         // printeAttributes(persona, grid1, Shr5Package.Literals.GEISTIGE_ATTRIBUTE.getEAttributes());
-//        grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 2);
-//        grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
+        // grid1.add(new TextPrint(Messages.Printer_edge, attributeFont), 2);
+        // grid1.add(new TextPrint(printInteger(persona.getEdgeBasis()), attributeFont), 1);
         grid1.add(new TextPrint(EMPTY, attributeFont), 1);
 
         grid.add(grid1);
