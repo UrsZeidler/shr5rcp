@@ -23,9 +23,9 @@
 		<module>../de.urszeidler.shr5.product</module>
 		<module>../de.urszeidler.shr5.product.feature</module>
 		<module>../de.urszeidler.shr5.ecp.feature</module>
-		<module>../de.urszeidler.shr5.product.site.feature</module>
+<!-- 		<module>../de.urszeidler.shr5.product.site.feature</module> -->
 		<module>../de.urszeidler.shr5.updatesite</module>
-		<module>../de.urszeidler.shr5.product.build</module>
+<!-- 		<module>../de.urszeidler.shr5.product.build</module> -->
 <!-- 		<module>../de.urszeidler.shr5.localization.feature</module> --> 
 
 
