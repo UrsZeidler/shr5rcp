@@ -5,7 +5,7 @@
 <repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20140531-0942"/>
+<unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20140623-0607"/>
 <repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
