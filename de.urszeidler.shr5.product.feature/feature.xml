@@ -125,6 +125,14 @@
          id="de.urszeidler.shr5.localization.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.rcp.feature"
+         version="0.0.0"/>
+
    <plugin
          id="javax.servlet"
          download-size="0"
