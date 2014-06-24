@@ -3,8 +3,12 @@
  */
 package de.urszeidler.shr5.product.application;
 
+import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.ICoolBarManager;
 import org.eclipse.jface.action.IMenuManager;
+import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.action.Separator;
+import org.eclipse.ui.IWorkbenchActionConstants;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
@@ -36,6 +40,13 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     @Override
     protected void fillMenuBar(IMenuManager menuBar) {
         // nothing todo
+        
+        MenuManager helpMenu = new MenuManager("&Help", IWorkbenchActionConstants.M_HELP);
+        helpMenu.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
+        helpMenu.add(new Separator());
+        //helpMenu.add(aboutAction);
+        menuBar.add(helpMenu);
+        
     }
 
 }
