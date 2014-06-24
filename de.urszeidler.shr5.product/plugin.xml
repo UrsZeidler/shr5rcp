@@ -119,6 +119,17 @@
                   style="push">
             </command>
          </menu>
+         <menu
+               label="%menu.update">
+            <command
+                  commandId="org.eclipse.equinox.p2.ui.sdk.install"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.equinox.p2.ui.sdk.update"
+                  style="push">
+            </command>
+         </menu>
       </menuContribution>
       <!--
       <menuContribution

@@ -40,18 +40,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     @Override
     protected void fillMenuBar(IMenuManager menuBar) {
         // nothing todo
-        MenuManager helpMenu1 = new MenuManager("&File", "project.menu.id");
-        menuBar.add(helpMenu1);
-        
-        MenuManager helpMenu2 = new MenuManager("&Window", "windows.menu.id");
-        menuBar.add(helpMenu2);
-        
-        MenuManager helpMenu = new MenuManager("&Help", IWorkbenchActionConstants.M_HELP);
-        helpMenu.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
-        helpMenu.add(new Separator());
-        menuBar.add(helpMenu);
-        
-       // menuBar.insertAfter("windows.menu.id", helpMenu);
+        // menuBar.insertAfter("windows.menu.id", helpMenu);
     }
 
 }
