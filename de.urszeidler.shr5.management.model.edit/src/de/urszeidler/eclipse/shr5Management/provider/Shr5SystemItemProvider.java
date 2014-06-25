@@ -69,6 +69,7 @@ public class Shr5SystemItemProvider
             addNumberOfSpecalismPropertyDescriptor(object);
             addKarmaToConnectionFactorPropertyDescriptor(object);
             addBoundSprititServiceCostPropertyDescriptor(object);
+            addApplicableGeneratorsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -333,6 +334,28 @@ public class Shr5SystemItemProvider
                  false,
                  false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Applicable Generators feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addApplicableGeneratorsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Shr5System_applicableGenerators_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Shr5System_applicableGenerators_feature", "_UI_Shr5System_type"),
+                 Shr5managementPackage.Literals.SHR5_SYSTEM__APPLICABLE_GENERATORS,
+                 true,
+                 false,
+                 true,
+                 null,
                  null,
                  null));
     }

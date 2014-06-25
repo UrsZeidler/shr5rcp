@@ -3,6 +3,9 @@
  */
 package de.urszeidler.eclipse.shr5Management;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +33,7 @@ package de.urszeidler.eclipse.shr5Management;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.Shr5System#getApplicableGenerators <em>Applicable Generators</em>}</li>
  * </ul>
  * </p>
  *
@@ -394,4 +398,20 @@ public interface Shr5System extends PrioritySystem {
      * @generated
      */
     void setBoundSprititServiceCost(int value);
+
+    /**
+     * Returns the value of the '<em><b>Applicable Generators</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.EClass}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Applicable Generators</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Applicable Generators</em>' reference list.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getShr5System_ApplicableGenerators()
+     * @model
+     * @generated
+     */
+    EList<EClass> getApplicableGenerators();
 } // Shr5System

@@ -233,6 +233,9 @@ This system defenition is also used for the karma generator.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="shr5mngt:PrioritySystem">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="applicableGenerators" type="ecore:EClass"/>
+        </xsd:choice>
         <xsd:attribute name="karmaToResourceFactor" type="xsd:int" use="required">
           <xsd:annotation>
             <xsd:documentation>The number of resources for one karma.
@@ -305,6 +308,7 @@ Used by the Shr5KarmaGenerator.</xsd:documentation>
             <xsd:documentation>THis is the cost for a service of a bound spirit at chracter creation.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="applicableGenerators" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

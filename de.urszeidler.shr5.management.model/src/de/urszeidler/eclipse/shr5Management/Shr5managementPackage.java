@@ -1277,13 +1277,22 @@ public interface Shr5managementPackage extends EPackage {
     int SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST = PRIORITY_SYSTEM_FEATURE_COUNT + 11;
 
     /**
+     * The feature id for the '<em><b>Applicable Generators</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHR5_SYSTEM__APPLICABLE_GENERATORS = PRIORITY_SYSTEM_FEATURE_COUNT + 12;
+
+    /**
      * The number of structural features of the '<em>Shr5 System</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 12;
+	int SHR5_SYSTEM_FEATURE_COUNT = PRIORITY_SYSTEM_FEATURE_COUNT + 13;
 
 	/**
      * The number of operations of the '<em>Shr5 System</em>' class.
@@ -5020,6 +5029,17 @@ public interface Shr5managementPackage extends EPackage {
     EAttribute getShr5System_BoundSprititServiceCost();
 
     /**
+     * Returns the meta object for the reference list '{@link de.urszeidler.eclipse.shr5Management.Shr5System#getApplicableGenerators <em>Applicable Generators</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Applicable Generators</em>'.
+     * @see de.urszeidler.eclipse.shr5Management.Shr5System#getApplicableGenerators()
+     * @see #getShr5System()
+     * @generated
+     */
+    EReference getShr5System_ApplicableGenerators();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5Management.MetaType <em>Meta Type</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7013,6 +7033,14 @@ public interface Shr5managementPackage extends EPackage {
          * @generated
          */
         EAttribute SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST = eINSTANCE.getShr5System_BoundSprititServiceCost();
+
+        /**
+         * The meta object literal for the '<em><b>Applicable Generators</b></em>' reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference SHR5_SYSTEM__APPLICABLE_GENERATORS = eINSTANCE.getShr5System_ApplicableGenerators();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl <em>Meta Type</em>}' class.

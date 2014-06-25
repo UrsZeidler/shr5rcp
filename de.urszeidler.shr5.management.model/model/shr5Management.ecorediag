@@ -189,6 +189,14 @@
           <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/maxKarmaToKeep"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_Mg2gtauJEeO5r_DEdnR4mg"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_8SOQUPylEeOCF4YpV2Ebjw" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/karmaToConnectionFactor"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_8SOQUfylEeOCF4YpV2Ebjw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_8SO3YPylEeOCF4YpV2Ebjw" type="2001">
+          <element xmi:type="ecore:EAttribute" href="shr5Management.ecore#//Shr5System/boundSprititServiceCost"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_8SO3YfylEeOCF4YpV2Ebjw"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_pOcNInU8EeOo3ey905tymg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_pOcNI3U8EeOo3ey905tymg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_pOcNJHU8EeOo3ey905tymg"/>

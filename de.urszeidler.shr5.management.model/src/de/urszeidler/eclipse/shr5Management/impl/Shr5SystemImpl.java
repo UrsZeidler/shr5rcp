@@ -4,11 +4,14 @@
 package de.urszeidler.eclipse.shr5Management.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +32,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getNumberOfSpecalism <em>Number Of Specalism</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKarmaToConnectionFactor <em>Karma To Connection Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getBoundSprititServiceCost <em>Bound Spritit Service Cost</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getApplicableGenerators <em>Applicable Generators</em>}</li>
  * </ul>
  * </p>
  *
@@ -258,6 +262,16 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * @ordered
      */
     protected int boundSprititServiceCost = BOUND_SPRITIT_SERVICE_COST_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getApplicableGenerators() <em>Applicable Generators</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getApplicableGenerators()
+     * @generated
+     * @ordered
+     */
+    protected EList<EClass> applicableGenerators;
 
     /**
      * <!-- begin-user-doc -->
@@ -532,6 +546,18 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<EClass> getApplicableGenerators() {
+        if (applicableGenerators == null) {
+            applicableGenerators = new EObjectResolvingEList<EClass>(EClass.class, this, Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS);
+        }
+        return applicableGenerators;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -562,6 +588,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return getKarmaToConnectionFactor();
             case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
                 return getBoundSprititServiceCost();
+            case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
+                return getApplicableGenerators();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -571,7 +599,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case Shr5managementPackage.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR:
@@ -609,6 +638,10 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return;
             case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
                 setBoundSprititServiceCost((Integer)newValue);
+                return;
+            case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
+                getApplicableGenerators().clear();
+                getApplicableGenerators().addAll((Collection<? extends EClass>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -658,6 +691,9 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
             case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
                 setBoundSprititServiceCost(BOUND_SPRITIT_SERVICE_COST_EDEFAULT);
                 return;
+            case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
+                getApplicableGenerators().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -694,6 +730,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
                 return karmaToConnectionFactor != KARMA_TO_CONNECTION_FACTOR_EDEFAULT;
             case Shr5managementPackage.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST:
                 return boundSprititServiceCost != BOUND_SPRITIT_SERVICE_COST_EDEFAULT;
+            case Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS:
+                return applicableGenerators != null && !applicableGenerators.isEmpty();
         }
         return super.eIsSet(featureID);
     }

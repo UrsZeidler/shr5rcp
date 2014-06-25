@@ -89,7 +89,9 @@ public class NewShr5GeneratorWizard extends Wizard implements INewWizard {
         if (obj instanceof PlayerManagement) {
             container.add((EObject)obj);
         } else if (obj instanceof Shr5System) {
-            systems.add((EObject)obj);
+            Shr5System t = (Shr5System)obj;
+            if (t.getApplicableGenerators().contains(Shr5managementPackage.Literals.SHR5_GENERATOR))
+                systems.add((EObject)obj);
         } else if (obj instanceof CharacterGroup) {
             groups.add((EObject)obj);
         }

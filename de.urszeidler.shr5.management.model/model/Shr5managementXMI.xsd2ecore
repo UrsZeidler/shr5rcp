@@ -90,6 +90,8 @@
       <nested inputs="shr5Management.ecore#//Shr5System/numberOfSpecalism" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=9"/>
       <nested inputs="shr5Management.ecore#//Shr5System/karmaToConnectionFactor" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=10"/>
       <nested inputs="shr5Management.ecore#//Shr5System/boundSprititServiceCost" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=11"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/applicableGenerators" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDAttributeUse=12"/>
+      <nested inputs="shr5Management.ecore#//Shr5System/applicableGenerators" outputs="Shr5managementXMI.xsd#//Shr5System;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5Management.ecore#//Shr5System" outputs="Shr5managementXMI.xsd#//Shr5System;XSDElementDeclaration=8"/>
     <nested inputs="shr5Management.ecore#//MetaType" outputs="Shr5managementXMI.xsd#//MetaType;XSDComplexTypeDefinition=9">
