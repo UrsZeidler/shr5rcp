@@ -3,9 +3,13 @@
 
 2014-07-13 Version 0.1.8-rc
 
+* added discriminator for the generator system
 
 2014-06-22 Version 0.1.7
 
+* added an intro at the start of the application, there is an issue for some linux users 
+* added an open any object action
+* added maven as build system, https://urszeidler.ci.cloudbees.com/job/shr5-maven/ is the jenkis instance building the tests
 
 2014-06-15 Version 0.1.7-rc
 
