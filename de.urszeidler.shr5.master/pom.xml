@@ -19,8 +19,10 @@
 		<module>../de.urszeidler.shr5.feature</module>
 		<module>../de.urszeidler.shr5.updatesite</module>
 		
-		<module>../de.urszeidler.shr5.model.tests</module>
-		<module>../de.urszeidler.shr5.management.model.tests</module>
+		
+		
+<!-- 		<module>../de.urszeidler.shr5.model.tests</module> -->
+<!-- 		<module>../de.urszeidler.shr5.management.model.tests</module> -->
 	</modules>
 
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
