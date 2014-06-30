@@ -20,9 +20,9 @@
 		<module>../de.urszeidler.shr5.help</module>
 		<module>../de.urszeidler.shr5.ecp</module>
 		<module>../de.urszeidler.shr5.acceleo</module>
+		<module>../de.urszeidler.shr5.product</module>
 		<module>../de.urszeidler.shr5.feature</module>
 		<module>../de.urszeidler.shr5.updatesite</module>
-		<module>../de.urszeidler.shr5.product</module>
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.product.site.feature</module> -->
