@@ -12,18 +12,20 @@
 
   <artifactId>de.urszeidler.shr5.updatesite</artifactId>
   <packaging>eclipse-repository</packaging>
-   <build>
-     <plugins>
-      <plugin>
-        <groupId>org.eclipse.tycho.extras</groupId>
-        <artifactId>tycho-p2-extras-plugin</artifactId>
-        <version>0.20.0</version>
-        <goals>
-        <goal>assemble-repository</goal>
-        </goals>
-      </plugin>
+  
+<!--    <build> -->
+<!--      <plugins> -->
+     
+<!--       <plugin> -->
+<!--         <groupId>org.eclipse.tycho.extras</groupId> -->
+<!--         <artifactId>tycho-p2-extras-plugin</artifactId> -->
+<!--         <version>0.20.0</version> -->
+<!--         <goals> -->
+<!--         <goal>assemble-repository</goal> -->
+<!--         </goals> -->
+<!--       </plugin> -->
 
-    </plugins>
-  </build>
+<!--     </plugins> -->
+<!--   </build> -->
   
 </project> 
