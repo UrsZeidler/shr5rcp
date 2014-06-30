@@ -13,10 +13,10 @@
 		<!-- <module>../build</module> -->
 		<module>../de.urszeidler.shr5.model</module>
 		<module>../de.urszeidler.shr5.model.tests</module>
-		<module>../de.urszeidler.shr5.model.edit</module>
+<!-- 		<module>../de.urszeidler.shr5.model.edit</module> -->
 		<module>../de.urszeidler.shr5.management.model</module>
 		<module>../de.urszeidler.shr5.management.model.tests</module>
-		<module>../de.urszeidler.shr5.management.model.edit</module>
+<!-- 		<module>../de.urszeidler.shr5.management.model.edit</module> -->
 <!-- 		<module>../de.urszeidler.shr5.help</module> -->
 <!-- 		<module>../de.urszeidler.shr5.ecp</module> -->
 <!-- 		<module>../de.urszeidler.shr5.acceleo</module> -->
