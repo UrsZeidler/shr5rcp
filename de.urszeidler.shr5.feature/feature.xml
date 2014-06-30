@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.feature"
       label="shr5 plugins Feature"
-      version="1.0.0.qualifier"
+      version="0.1.8.qualifier"
       provider-name="Urs Zeidler">
 
    <description url="http://www.example.com/description">
