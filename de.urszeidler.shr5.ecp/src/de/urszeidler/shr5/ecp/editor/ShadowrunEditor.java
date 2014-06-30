@@ -65,8 +65,10 @@ import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
+import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5managementItemProviderAdapterFactory;
@@ -92,6 +94,7 @@ import de.urszeidler.shr5.ecp.editor.pages.FertigkeitPage;
 import de.urszeidler.shr5.ecp.editor.pages.FeuerwaffePage;
 import de.urszeidler.shr5.ecp.editor.pages.FreeStyleGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.GegenstandPage;
+import de.urszeidler.shr5.ecp.editor.pages.GeneratorSystemPage;
 import de.urszeidler.shr5.ecp.editor.pages.GruntGroupPage;
 import de.urszeidler.shr5.ecp.editor.pages.ManagedCharacterPage;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
@@ -649,6 +652,17 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return this;
             }
 
+            @Override
+            public Object caseShr5System(Shr5System object) {
+                try {
+                    addPage(new GeneratorSystemPage(ShadowrunEditor.this, AbstractGeneratorPage.PERSONA, Messages.ShadowrunEditor_page_persona,
+                            object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating GeneratorSystemPage", e);//$NON-NLS-1$
+                }
+                return this;
+           }
+             
             @Override
             public Object caseCharacterGenerator(CharacterGenerator object) {
 

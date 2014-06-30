@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
+import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.util.Shr5managementSwitch;
 import de.urszeidler.emf.commons.ui.editor.EObjectEditorInput;
 import de.urszeidler.shr5.ecp.Activator;
@@ -178,6 +179,11 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
             @Override
             public Integer casePlayerManagement(PlayerManagement object) {
+                return RET;
+            }
+            
+            @Override
+            public Integer caseShr5System(Shr5System object) {
                 return RET;
             }
         };
