@@ -18,18 +18,18 @@
 		<module>../de.urszeidler.shr5.product</module>
 		<module>../de.urszeidler.shr5.feature</module>
 		<module>../de.urszeidler.shr5.updatesite</module>
+		<module>../de.urszeidler.shr5.model.tests</module>
+		<module>../de.urszeidler.shr5.management.model.tests</module>
 		
-		
-		
-<!-- 		<module>../de.urszeidler.shr5.model.tests</module> -->
-<!-- 		<module>../de.urszeidler.shr5.management.model.tests</module> -->
-	</modules>
-
 		<!-- <module>../de.urszeidler.shr5.product.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.ecp.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.product.site.feature</module> -->
 		<!-- <module>../de.urszeidler.shr5.product.build</module> -->
 		<!-- <module>../de.urszeidler.shr5.localization.feature</module> -->
+		
+		
+	</modules>
+
 
 	<properties>
 		<tycho.version>0.20.0</tycho.version>
