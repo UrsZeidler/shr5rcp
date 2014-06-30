@@ -10,6 +10,6 @@
     <version>0.1.8-SNAPSHOT</version>
   </parent>
 
-  <artifactId>de.urszeidler.shr5.feature</artifactId>
+  <artifactId>de.urszeidler.shr5.feature</artifactId> 
   <packaging>eclipse-feature</packaging>
 </project> 
