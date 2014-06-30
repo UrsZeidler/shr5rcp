@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.test.feature"
       label="all junit test Feature"
-      version="1.0.0.qualifier">
+      version="0.1.8.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -20,14 +20,14 @@
          id="de.urszeidler.shr5.management.model.tests"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.model.tests"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
 </feature>
