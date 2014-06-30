@@ -2,13 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: shr5 ecp forms
 Bundle-SymbolicName: de.urszeidler.shr5.ecp;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.8.qualifier
 Bundle-Activator: de.urszeidler.shr5.ecp.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecp.edit;bundle-version="1.2.1",
  org.eclipse.emf.ecp.edit.swt;bundle-version="1.2.1",
- de.urszeidler.shr5.model;bundle-version="1.0.0",
+ de.urszeidler.shr5.model,
  org.eclipse.emf.ecp.ui.view;bundle-version="1.2.1",
  org.eclipse.emf.ecp.view.model.provider.xmi;bundle-version="1.2.1",
  org.eclipse.emf.ecp.editor.e3;bundle-version="1.2.1",
@@ -41,9 +41,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.databinding;bundle-version="1.6.200",
  de.urszeidler.emf.commons.ui;bundle-version="1.0.0",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.6.0";resolution:=optional,
- de.urszeidler.shr5.model.edit;bundle-version="1.0.0",
+ de.urszeidler.shr5.model.edit,
  de.urszeidler.shr5.management.model;bundle-version="0.1.0",
- de.urszeidler.shr5.management.model.edit;bundle-version="1.0.0",
+ de.urszeidler.shr5.management.model.edit,
  org.eclipse.core.filesystem;bundle-version="1.4.0",
  org.eclipse.nebula.paperclips.core;bundle-version="2.0.0",
  org.eclipse.nebula.paperclips.widgets;bundle-version="2.0.0",
@@ -83,7 +83,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.view.validation;bundle-version="1.2.1",
  org.eclipse.emf.ecp.view.vertical.model;bundle-version="1.2.1",
  org.eclipse.emf.ecp.view.vertical.ui.swt;bundle-version="1.2.1",
- de.urszeidler.shr5.acceleo;bundle-version="1.0.0"
+ de.urszeidler.shr5.acceleo
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.dice,

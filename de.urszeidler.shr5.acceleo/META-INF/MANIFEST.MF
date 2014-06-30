@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Acceleo Module Runtime Plug-in
 Bundle-SymbolicName: de.urszeidler.shr5.acceleo
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.8.qualifier
 Bundle-Activator: de.urszeidler.shr5.acceleo.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime,
@@ -15,8 +15,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.acceleo.profiler;bundle-version="3.3.0";visibility:=reexport,
  org.eclipse.acceleo.engine;bundle-version="3.3.0";visibility:=reexport,
  com.google.guava,
- de.urszeidler.shr5.management.model.edit;bundle-version="1.0.0",
- de.urszeidler.shr5.model.edit;bundle-version="1.0.0",
+ de.urszeidler.shr5.management.model.edit,
+ de.urszeidler.shr5.model.edit,
  org.apache.batik.transcoder,
  org.apache.batik.util,
  org.apache.batik.pdf,

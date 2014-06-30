@@ -21,56 +21,56 @@
          id="de.urszeidler.shr5.acceleo"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.ecp"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.help"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.management.model"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.management.model.edit"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.model"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.model.edit"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
    <plugin
          id="de.urszeidler.shr5.product"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="0.1.8.qualifier"
          unpack="false"/>
 
 </feature>

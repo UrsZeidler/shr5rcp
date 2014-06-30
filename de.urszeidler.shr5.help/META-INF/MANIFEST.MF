@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: de.urszeidler.shr5.help;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.8.qualifier
 Bundle-Activator: de.urszeidler.shr5.help.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.intro;bundle-version="3.4.200",
- de.urszeidler.shr5.ecp;bundle-version="1.0.0"
+ de.urszeidler.shr5.ecp
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
