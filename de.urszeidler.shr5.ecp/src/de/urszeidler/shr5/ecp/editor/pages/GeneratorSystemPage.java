@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5System;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
+import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.swt.widgets.Label;
@@ -98,10 +99,10 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         Composite composite = managedForm.getToolkit().createComposite(sctnNewSection, SWT.NONE);
         managedForm.getToolkit().paintBordersFor(composite);
         sctnNewSection.setClient(composite);
-        composite.setLayout(new GridLayout(3, false));
+        composite.setLayout(new GridLayout(4, false));
         
         Group grpPrioritySytem = new Group(composite, SWT.NONE);
-        grpPrioritySytem.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpPrioritySytem.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpPrioritySytem.setText("Priority sytem");
         managedForm.getToolkit().adapt(grpPrioritySytem);
         managedForm.getToolkit().paintBordersFor(grpPrioritySytem);
@@ -109,14 +110,22 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         
         Group grpKarmapriority = new Group(composite, SWT.NONE);
         grpKarmapriority.setLayout(new GridLayout(3, false));
-        grpKarmapriority.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-        grpKarmapriority.setText("Karma/Priority");
+        grpKarmapriority.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+        grpKarmapriority.setText("Karma");
         managedForm.getToolkit().adapt(grpKarmapriority);
         managedForm.getToolkit().paintBordersFor(grpKarmapriority);
         
+        Group grpKarmafactors = new Group(composite, SWT.NONE);
+        grpKarmafactors.setLayout(new GridLayout(3, false));
+        grpKarmafactors.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
+        grpKarmafactors.setText("Karmafactors");
+        managedForm.getToolkit().adapt(grpKarmafactors);
+        managedForm.getToolkit().paintBordersFor(grpKarmafactors);
+
+        
         Group grpConstraint = new Group(composite, SWT.NONE);
         grpConstraint.setLayout(new GridLayout(3, false));
-        grpConstraint.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+        grpConstraint.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1));
         grpConstraint.setText("Constrains");
         managedForm.getToolkit().adapt(grpConstraint);
         managedForm.getToolkit().paintBordersFor(grpConstraint);
@@ -132,21 +141,48 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         managedForm.getToolkit().paintBordersFor(composite_1);
         composite_1.setLayout(new GridLayout(3, false));
 
+        Composite composite_2 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
+        composite_2.setLayout(new GridLayout(2, true));
+        composite_2.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(composite_2);
 
+        String refname = AdapterFactoryUtil.getInstance().getLabelProvider().getText(Shr5managementPackage.Literals.PRIORITY_SYSTEM__PRIORITIES);
+        TreeTableWidget treeTableWidget = new TreeTableWidget(composite_2, refname, SWT.NONE, object, Shr5managementPackage.Literals.PRIORITY_SYSTEM__PRIORITIES, toolkit, mananger, editingDomain,
+                this);
+        GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
+        layoutData.heightHint = 250;
+        layoutData.minimumHeight = 250;
+
+        treeTableWidget.setLayoutData(layoutData);
+        managedForm.getToolkit().adapt(treeTableWidget);
+        managedForm.getToolkit().paintBordersFor(treeTableWidget);
+        
+        refname = AdapterFactoryUtil.getInstance().getLabelProvider().getText(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
+        treeTableWidget = new TreeTableWidget(composite_2, refname, SWT.NONE, object, Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS, toolkit, mananger, editingDomain,
+                this);
+        treeTableWidget.setLayoutData(layoutData);
+        managedForm.getToolkit().adapt(treeTableWidget);
+        managedForm.getToolkit().paintBordersFor(treeTableWidget);
+        
+       
+        
         {
         m_bindingContext = initDataBindings();
         createFormBuilder(managedForm);
 
         sctnNewSection.setText(labelProvider.getText(object.eClass()));
         
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST, grpPrioritySytem);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__CHARISMA_TO_CONNECTION_FACTOR, grpPrioritySytem);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR, grpPrioritySytem);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR, grpPrioritySytem);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR, grpPrioritySytem);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KNOWLEGE_SKILL_FACTOR, grpPrioritySytem);
+        emfFormBuilder.addSeperatorEntry(grpPrioritySytem);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__BOUND_SPRITIT_SERVICE_COST, grpPrioritySytem);
+
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_CONNECTION_FACTOR, grpKarmafactors);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_RESOURCE_FACTOR, grpKarmafactors);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__KARMA_TO_MAGIC_FACTOR, grpKarmafactors);
         
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PRIORITY_SYSTEM__KARMA_POINTS, grpKarmapriority);
+        emfFormBuilder.addSeperatorEntry(grpKarmapriority);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_KEEP, grpKarmapriority);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_KARMA_TO_RESOURCES, grpKarmapriority);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__MAX_RESOURCE_TO_KEEP, grpKarmapriority);
@@ -155,9 +191,12 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_SPECALISM, grpConstraint);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__SKILL_MAX, grpConstraint);
         
+         
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__APPLICABLE_GENERATORS, composite_1);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PRIORITY_SYSTEM__PRIORITIES, composite_1);
-        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS, composite_1);
+//        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PRIORITY_SYSTEM__PRIORITIES, composite_1);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY, composite_1);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__CHARACTER_ADVANCEMENTS, composite_1);
+//        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS, composite_1);
 
         }
         
@@ -165,6 +204,7 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         
         
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
+        
         managedForm.reflow(true);
     }
     
