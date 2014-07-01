@@ -120,6 +120,18 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         grpConstraint.setText("Constrains");
         managedForm.getToolkit().adapt(grpConstraint);
         managedForm.getToolkit().paintBordersFor(grpConstraint);
+        
+        Section sctnNewSection_1 = managedForm.getToolkit().createSection(managedForm.getForm().getBody(), Section.TWISTIE | Section.TITLE_BAR);
+        sctnNewSection_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().paintBordersFor(sctnNewSection_1);
+        sctnNewSection_1.setText("New Section");
+        sctnNewSection_1.setExpanded(true);
+        
+        Composite composite_1 = managedForm.getToolkit().createComposite(sctnNewSection_1, SWT.NONE);
+        sctnNewSection_1.setClient(composite_1);
+        managedForm.getToolkit().paintBordersFor(composite_1);
+        composite_1.setLayout(new GridLayout(3, false));
+
 
         {
         m_bindingContext = initDataBindings();
@@ -142,12 +154,14 @@ public class GeneratorSystemPage extends AbstractShr5Page<Shr5System> {
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_MAX_ATTRIBUTES, grpConstraint);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__NUMBER_OF_SPECALISM, grpConstraint);
         emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__SKILL_MAX, grpConstraint);
+        
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.SHR5_SYSTEM__APPLICABLE_GENERATORS, composite_1);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.PRIORITY_SYSTEM__PRIORITIES, composite_1);
+        emfFormBuilder.addTextEntry(Shr5managementPackage.Literals.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS, composite_1);
+
         }
         
-        Composite composite_1 = managedForm.getToolkit().createComposite(managedForm.getForm().getBody(), SWT.NONE);
-        composite_1.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-        managedForm.getToolkit().paintBordersFor(composite_1);
-        
+         
         
         
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
