@@ -54,8 +54,11 @@ http://www.shadowruntabletop.com/
       </win>
    </launcher>
 
+   <intro introId="de.urszeidler.shr5.help.intro"/>
+
    <vm>
    </vm>
+
 
    <plugins>
    </plugins>
