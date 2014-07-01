@@ -64,5 +64,10 @@ http://www.shadowruntabletop.com/
       <feature id="de.urszeidler.shr5.product.feature" version="0.1.7.qualifier"/>
    </features>
 
+   <configurations>
+      <property name="org.eclipse.equinox.p2.ui.sdk.scheduler/autoUpdateInit" value="true" />
+      <property name="org.eclipse.equinox.p2.ui.sdk.scheduler/enabled" value="true" />
+      <property name="org.eclipse.equinox.p2.ui.sdk.scheduler/schedule" value="on-startup" />
+   </configurations>
 
 </product>
