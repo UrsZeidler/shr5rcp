@@ -36,10 +36,10 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     @Override
     public void preWindowOpen() {
         final IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
-        configurer.setInitialSize(new Point(800, 600));
+        configurer.setInitialSize(new Point(1024, 768));
         //configurer.setShowPerspectiveBar(true);
         configurer.setShowCoolBar(false);
-        configurer.setShowStatusLine(false);
+        configurer.setShowStatusLine(true);
         String version = Activator.getDefault().getBundle().getVersion().toString();
         configurer.setTitle("shr5rcp "+version);
         
