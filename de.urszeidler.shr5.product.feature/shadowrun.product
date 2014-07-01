@@ -61,7 +61,7 @@ http://www.shadowruntabletop.com/
    </plugins>
 
    <features>
-      <feature id="de.urszeidler.shr5.product.feature" version="0.1.7.qualifier"/>
+      <feature id="de.urszeidler.shr5.product.feature" version="0.1.8.qualifier"/>
    </features>
 
 
