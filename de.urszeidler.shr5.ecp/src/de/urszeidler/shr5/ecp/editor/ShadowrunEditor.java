@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.AbstraktFokus;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
@@ -52,6 +53,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.Wurfwaffe;
 import de.urszeidler.eclipse.shr5.Zauber;
@@ -65,7 +67,6 @@ import de.urszeidler.eclipse.shr5Management.GeneratorState;
 import de.urszeidler.eclipse.shr5Management.GruntGroup;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.PlayerManagement;
-import de.urszeidler.eclipse.shr5Management.PriorityCategorie;
 import de.urszeidler.eclipse.shr5Management.Shr5Generator;
 import de.urszeidler.eclipse.shr5Management.Shr5KarmaGenerator;
 import de.urszeidler.eclipse.shr5Management.Shr5System;
@@ -107,6 +108,7 @@ import de.urszeidler.shr5.ecp.editor.pages.Shr5GeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.Shr5KarmaGeneratorPage;
 import de.urszeidler.shr5.ecp.editor.pages.SoftwarePage;
 import de.urszeidler.shr5.ecp.editor.pages.SpeziesPage;
+import de.urszeidler.shr5.ecp.editor.pages.SubstancePage;
 import de.urszeidler.shr5.ecp.editor.pages.VehiclePage;
 import de.urszeidler.shr5.ecp.printer.PersonaPrinter;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -409,6 +411,26 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                 return null;
             }
 
+            @Override
+            public Object caseDrug(Drug object) {
+                try {
+                    addPage(new SubstancePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating SubstancePage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+
+            @Override
+            public Object caseToxin(Toxin object) {
+                try {
+                    addPage(new SubstancePage(ShadowrunEditor.this, EMPTY, labelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating SubstancePage", e);//$NON-NLS-1$
+                }
+                return null;
+            }
+
             // @Override
             // public Object caseCyberdeck(Cyberdeck object) {
             // try {
@@ -661,8 +683,8 @@ public class ShadowrunEditor extends BasicEditor<EObject> {
                     logError("error creating GeneratorSystemPage", e);//$NON-NLS-1$
                 }
                 return this;
-           }
-             
+            }
+
             @Override
             public Object caseCharacterGenerator(CharacterGenerator object) {
 

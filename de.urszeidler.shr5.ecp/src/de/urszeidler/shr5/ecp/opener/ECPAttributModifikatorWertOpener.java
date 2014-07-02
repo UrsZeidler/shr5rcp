@@ -13,6 +13,7 @@ import org.eclipse.ui.PlatformUI;
 import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
 import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.Drug;
 import de.urszeidler.eclipse.shr5.Fahrzeug;
 import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
@@ -21,6 +22,7 @@ import de.urszeidler.eclipse.shr5.Reichweite;
 import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.Software;
 import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Toxin;
 import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5.util.Shr5Switch;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
@@ -138,6 +140,16 @@ public class ECPAttributModifikatorWertOpener implements ECPModelElementOpener, 
 
             @Override
             public Integer caseFahrzeug(Fahrzeug object) {
+                return RET;
+            }
+            
+            @Override
+            public Integer caseToxin(Toxin object) {
+                return RET;
+            }
+            
+            @Override
+            public Integer caseDrug(Drug object) {
                 return RET;
             }
         };
