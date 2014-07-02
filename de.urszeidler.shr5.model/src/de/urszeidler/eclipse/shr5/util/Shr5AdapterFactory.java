@@ -566,6 +566,18 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createFokusBindingAdapter();
             }
             @Override
+            public Adapter caseSubstance(Substance object) {
+                return createSubstanceAdapter();
+            }
+            @Override
+            public Adapter caseToxin(Toxin object) {
+                return createToxinAdapter();
+            }
+            @Override
+            public Adapter caseDrug(Drug object) {
+                return createDrugAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2052,6 +2064,48 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createFokusBindingAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Substance <em>Substance</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Substance
+     * @generated
+     */
+    public Adapter createSubstanceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Toxin <em>Toxin</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Toxin
+     * @generated
+     */
+    public Adapter createToxinAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.Drug <em>Drug</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.Drug
+     * @generated
+     */
+    public Adapter createDrugAdapter() {
         return null;
     }
 

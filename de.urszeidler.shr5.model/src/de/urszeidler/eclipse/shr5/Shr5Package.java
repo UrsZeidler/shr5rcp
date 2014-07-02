@@ -18310,6 +18310,522 @@ public interface Shr5Package extends EPackage {
     int FOKUS_BINDING_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.SubstanceImpl <em>Substance</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.SubstanceImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstance()
+     * @generated
+     */
+    int SUBSTANCE = 125;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__BESCHREIBUNG = BESCHREIBBAR__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__IMAGE = BESCHREIBBAR__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__NAME = BESCHREIBBAR__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__PARENT_ID = BESCHREIBBAR_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__LOCALIZATIONS = BESCHREIBBAR_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__PAGE = BESCHREIBBAR_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__SRC_BOOK = BESCHREIBBAR_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__WERT = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__VERFUEGBARKEIT = BESCHREIBBAR_FEATURE_COUNT + 5;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__WERT_VALUE = BESCHREIBBAR_FEATURE_COUNT + 6;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__ANZAHL = BESCHREIBBAR_FEATURE_COUNT + 7;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__PRO_ANZAHL = BESCHREIBBAR_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Vector</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__VECTOR = BESCHREIBBAR_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Speed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE__SPEED = BESCHREIBBAR_FEATURE_COUNT + 10;
+
+    /**
+     * The number of structural features of the '<em>Substance</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 11;
+
+    /**
+     * The number of operations of the '<em>Substance</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUBSTANCE_OPERATION_COUNT = BESCHREIBBAR_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.ToxinImpl <em>Toxin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.ToxinImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getToxin()
+     * @generated
+     */
+    int TOXIN = 126;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__BESCHREIBUNG = SUBSTANCE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__IMAGE = SUBSTANCE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__NAME = SUBSTANCE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__PARENT_ID = SUBSTANCE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__LOCALIZATIONS = SUBSTANCE__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__PAGE = SUBSTANCE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__SRC_BOOK = SUBSTANCE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__WERT = SUBSTANCE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__VERFUEGBARKEIT = SUBSTANCE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__WERT_VALUE = SUBSTANCE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__ANZAHL = SUBSTANCE__ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__PRO_ANZAHL = SUBSTANCE__PRO_ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Vector</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__VECTOR = SUBSTANCE__VECTOR;
+
+    /**
+     * The feature id for the '<em><b>Speed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__SPEED = SUBSTANCE__SPEED;
+
+    /**
+     * The feature id for the '<em><b>Power</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__POWER = SUBSTANCE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Penetration</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__PENETRATION = SUBSTANCE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Effect</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN__EFFECT = SUBSTANCE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Toxin</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN_FEATURE_COUNT = SUBSTANCE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Toxin</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TOXIN_OPERATION_COUNT = SUBSTANCE_OPERATION_COUNT + 0;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.impl.DrugImpl <em>Drug</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.impl.DrugImpl
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDrug()
+     * @generated
+     */
+    int DRUG = 127;
+
+    /**
+     * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__BESCHREIBUNG = SUBSTANCE__BESCHREIBUNG;
+
+    /**
+     * The feature id for the '<em><b>Image</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__IMAGE = SUBSTANCE__IMAGE;
+
+    /**
+     * The feature id for the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__NAME = SUBSTANCE__NAME;
+
+    /**
+     * The feature id for the '<em><b>Parent Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__PARENT_ID = SUBSTANCE__PARENT_ID;
+
+    /**
+     * The feature id for the '<em><b>Localizations</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__LOCALIZATIONS = SUBSTANCE__LOCALIZATIONS;
+
+    /**
+     * The feature id for the '<em><b>Page</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__PAGE = SUBSTANCE__PAGE;
+
+    /**
+     * The feature id for the '<em><b>Src Book</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__SRC_BOOK = SUBSTANCE__SRC_BOOK;
+
+    /**
+     * The feature id for the '<em><b>Wert</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__WERT = SUBSTANCE__WERT;
+
+    /**
+     * The feature id for the '<em><b>Verfuegbarkeit</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__VERFUEGBARKEIT = SUBSTANCE__VERFUEGBARKEIT;
+
+    /**
+     * The feature id for the '<em><b>Wert Value</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__WERT_VALUE = SUBSTANCE__WERT_VALUE;
+
+    /**
+     * The feature id for the '<em><b>Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__ANZAHL = SUBSTANCE__ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Pro Anzahl</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__PRO_ANZAHL = SUBSTANCE__PRO_ANZAHL;
+
+    /**
+     * The feature id for the '<em><b>Vector</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__VECTOR = SUBSTANCE__VECTOR;
+
+    /**
+     * The feature id for the '<em><b>Speed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__SPEED = SUBSTANCE__SPEED;
+
+    /**
+     * The feature id for the '<em><b>Mods</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__MODS = SUBSTANCE_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Duration</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__DURATION = SUBSTANCE_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Addiction Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG__ADDICTION_TYPE = SUBSTANCE_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Drug</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG_FEATURE_COUNT = SUBSTANCE_FEATURE_COUNT + 3;
+
+    /**
+     * The number of operations of the '<em>Drug</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DRUG_OPERATION_COUNT = SUBSTANCE_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuerModus <em>Feuer Modus</em>}' enum.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18317,7 +18833,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuerModus()
      * @generated
      */
-	int FEUER_MODUS = 125;
+	int FEUER_MODUS = 128;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SchadensTyp <em>Schadens Typ</em>}' enum.
@@ -18327,7 +18843,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSchadensTyp()
      * @generated
      */
-	int SCHADENS_TYP = 126;
+	int SCHADENS_TYP = 129;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagazinTyp <em>Magazin Typ</em>}' enum.
@@ -18337,7 +18853,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagazinTyp()
      * @generated
      */
-	int MAGAZIN_TYP = 127;
+	int MAGAZIN_TYP = 130;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung <em>Feuwerwaffen Erweiterung</em>}' enum.
@@ -18347,7 +18863,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getFeuwerwaffenErweiterung()
      * @generated
      */
-	int FEUWERWAFFEN_ERWEITERUNG = 128;
+	int FEUWERWAFFEN_ERWEITERUNG = 131;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ModifikatorType <em>Modifikator Type</em>}' enum.
@@ -18357,7 +18873,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModifikatorType()
      * @generated
      */
-	int MODIFIKATOR_TYPE = 129;
+	int MODIFIKATOR_TYPE = 132;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SmartgunType <em>Smartgun Type</em>}' enum.
@@ -18367,7 +18883,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSmartgunType()
      * @generated
      */
-	int SMARTGUN_TYPE = 130;
+	int SMARTGUN_TYPE = 133;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberArt <em>Zauber Art</em>}' enum.
@@ -18377,7 +18893,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberArt()
      * @generated
      */
-	int ZAUBER_ART = 131;
+	int ZAUBER_ART = 134;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberReichweite <em>Zauber Reichweite</em>}' enum.
@@ -18387,7 +18903,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberReichweite()
      * @generated
      */
-	int ZAUBER_REICHWEITE = 132;
+	int ZAUBER_REICHWEITE = 135;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ZauberDauer <em>Zauber Dauer</em>}' enum.
@@ -18397,7 +18913,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getZauberDauer()
      * @generated
      */
-	int ZAUBER_DAUER = 133;
+	int ZAUBER_DAUER = 136;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MagischeTradition <em>Magische Tradition</em>}' enum.
@@ -18407,7 +18923,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMagischeTradition()
      * @generated
      */
-	int MAGISCHE_TRADITION = 134;
+	int MAGISCHE_TRADITION = 137;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterHandlung <em>Critter Handlung</em>}' enum.
@@ -18417,7 +18933,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterHandlung()
      * @generated
      */
-	int CRITTER_HANDLUNG = 135;
+	int CRITTER_HANDLUNG = 138;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterReichweite <em>Critter Reichweite</em>}' enum.
@@ -18427,7 +18943,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterReichweite()
      * @generated
      */
-	int CRITTER_REICHWEITE = 136;
+	int CRITTER_REICHWEITE = 139;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.CritterDauer <em>Critter Dauer</em>}' enum.
@@ -18437,7 +18953,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getCritterDauer()
      * @generated
      */
-	int CRITTER_DAUER = 137;
+	int CRITTER_DAUER = 140;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ResonanzZiel <em>Resonanz Ziel</em>}' enum.
@@ -18447,7 +18963,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getResonanzZiel()
      * @generated
      */
-	int RESONANZ_ZIEL = 138;
+	int RESONANZ_ZIEL = 141;
 
 	/**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.InterfaceModus <em>Interface Modus</em>}' enum.
@@ -18457,7 +18973,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getInterfaceModus()
      * @generated
      */
-    int INTERFACE_MODUS = 139;
+    int INTERFACE_MODUS = 142;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.ProgramType <em>Program Type</em>}' enum.
@@ -18467,7 +18983,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getProgramType()
      * @generated
      */
-    int PROGRAM_TYPE = 140;
+    int PROGRAM_TYPE = 143;
 
     /**
      * The meta object id for the '{@link de.urszeidler.eclipse.shr5.MatrixProgramType <em>Matrix Program Type</em>}' enum.
@@ -18477,7 +18993,37 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getMatrixProgramType()
      * @generated
      */
-    int MATRIX_PROGRAM_TYPE = 141;
+    int MATRIX_PROGRAM_TYPE = 144;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SubstanceVector
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
+     * @generated
+     */
+    int SUBSTANCE_VECTOR = 145;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.SubstanceEffect
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
+     * @generated
+     */
+    int SUBSTANCE_EFFECT = 146;
+
+    /**
+     * The meta object id for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.eclipse.shr5.AddictionType
+     * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
+     * @generated
+     */
+    int ADDICTION_TYPE = 147;
 
     /**
      * The meta object id for the '<em>Shr Date</em>' data type.
@@ -18487,7 +19033,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getShrDate()
      * @generated
      */
-	int SHR_DATE = 142;
+	int SHR_DATE = 148;
 
 
 	/**
@@ -18498,7 +19044,7 @@ public interface Shr5Package extends EPackage {
      * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getModificationManager()
      * @generated
      */
-	int MODIFICATION_MANAGER = 143;
+	int MODIFICATION_MANAGER = 149;
 
 
 	/**
@@ -22379,6 +22925,113 @@ public interface Shr5Package extends EPackage {
     EAttribute getFokusBinding_Active();
 
     /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Substance <em>Substance</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Substance</em>'.
+     * @see de.urszeidler.eclipse.shr5.Substance
+     * @generated
+     */
+    EClass getSubstance();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Substance#getVector <em>Vector</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Vector</em>'.
+     * @see de.urszeidler.eclipse.shr5.Substance#getVector()
+     * @see #getSubstance()
+     * @generated
+     */
+    EAttribute getSubstance_Vector();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Substance#getSpeed <em>Speed</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Speed</em>'.
+     * @see de.urszeidler.eclipse.shr5.Substance#getSpeed()
+     * @see #getSubstance()
+     * @generated
+     */
+    EAttribute getSubstance_Speed();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Toxin <em>Toxin</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Toxin</em>'.
+     * @see de.urszeidler.eclipse.shr5.Toxin
+     * @generated
+     */
+    EClass getToxin();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Toxin#getPower <em>Power</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Power</em>'.
+     * @see de.urszeidler.eclipse.shr5.Toxin#getPower()
+     * @see #getToxin()
+     * @generated
+     */
+    EAttribute getToxin_Power();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Toxin#getPenetration <em>Penetration</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Penetration</em>'.
+     * @see de.urszeidler.eclipse.shr5.Toxin#getPenetration()
+     * @see #getToxin()
+     * @generated
+     */
+    EAttribute getToxin_Penetration();
+
+    /**
+     * Returns the meta object for the attribute list '{@link de.urszeidler.eclipse.shr5.Toxin#getEffect <em>Effect</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Effect</em>'.
+     * @see de.urszeidler.eclipse.shr5.Toxin#getEffect()
+     * @see #getToxin()
+     * @generated
+     */
+    EAttribute getToxin_Effect();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.Drug <em>Drug</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Drug</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drug
+     * @generated
+     */
+    EClass getDrug();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Drug#getDuration <em>Duration</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Duration</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drug#getDuration()
+     * @see #getDrug()
+     * @generated
+     */
+    EAttribute getDrug_Duration();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Drug#getAddictionType <em>Addiction Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Addiction Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.Drug#getAddictionType()
+     * @see #getDrug()
+     * @generated
+     */
+    EAttribute getDrug_AddictionType();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -23187,6 +23840,36 @@ public interface Shr5Package extends EPackage {
      * @generated
      */
     EEnum getMatrixProgramType();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Substance Vector</em>'.
+     * @see de.urszeidler.eclipse.shr5.SubstanceVector
+     * @generated
+     */
+    EEnum getSubstanceVector();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Substance Effect</em>'.
+     * @see de.urszeidler.eclipse.shr5.SubstanceEffect
+     * @generated
+     */
+    EEnum getSubstanceEffect();
+
+    /**
+     * Returns the meta object for enum '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for enum '<em>Addiction Type</em>'.
+     * @see de.urszeidler.eclipse.shr5.AddictionType
+     * @generated
+     */
+    EEnum getAddictionType();
 
     /**
      * Returns the meta object for data type '{@link java.util.Date <em>Shr Date</em>}'.
@@ -26340,6 +27023,92 @@ public interface Shr5Package extends EPackage {
         EAttribute FOKUS_BINDING__ACTIVE = eINSTANCE.getFokusBinding_Active();
 
         /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.SubstanceImpl <em>Substance</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.SubstanceImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstance()
+         * @generated
+         */
+        EClass SUBSTANCE = eINSTANCE.getSubstance();
+
+        /**
+         * The meta object literal for the '<em><b>Vector</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SUBSTANCE__VECTOR = eINSTANCE.getSubstance_Vector();
+
+        /**
+         * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SUBSTANCE__SPEED = eINSTANCE.getSubstance_Speed();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.ToxinImpl <em>Toxin</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.ToxinImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getToxin()
+         * @generated
+         */
+        EClass TOXIN = eINSTANCE.getToxin();
+
+        /**
+         * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TOXIN__POWER = eINSTANCE.getToxin_Power();
+
+        /**
+         * The meta object literal for the '<em><b>Penetration</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TOXIN__PENETRATION = eINSTANCE.getToxin_Penetration();
+
+        /**
+         * The meta object literal for the '<em><b>Effect</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute TOXIN__EFFECT = eINSTANCE.getToxin_Effect();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.DrugImpl <em>Drug</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.impl.DrugImpl
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getDrug()
+         * @generated
+         */
+        EClass DRUG = eINSTANCE.getDrug();
+
+        /**
+         * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DRUG__DURATION = eINSTANCE.getDrug_Duration();
+
+        /**
+         * The meta object literal for the '<em><b>Addiction Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DRUG__ADDICTION_TYPE = eINSTANCE.getDrug_AddictionType();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.ActiveMatixDevice <em>Active Matix Device</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -27028,6 +27797,36 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EEnum MATRIX_PROGRAM_TYPE = eINSTANCE.getMatrixProgramType();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.SubstanceVector <em>Substance Vector</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.SubstanceVector
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceVector()
+         * @generated
+         */
+        EEnum SUBSTANCE_VECTOR = eINSTANCE.getSubstanceVector();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.SubstanceEffect <em>Substance Effect</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.SubstanceEffect
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getSubstanceEffect()
+         * @generated
+         */
+        EEnum SUBSTANCE_EFFECT = eINSTANCE.getSubstanceEffect();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.AddictionType <em>Addiction Type</em>}' enum.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.eclipse.shr5.AddictionType
+         * @see de.urszeidler.eclipse.shr5.impl.Shr5PackageImpl#getAddictionType()
+         * @generated
+         */
+        EEnum ADDICTION_TYPE = eINSTANCE.getAddictionType();
 
         /**
          * The meta object literal for the '<em>Shr Date</em>' data type.

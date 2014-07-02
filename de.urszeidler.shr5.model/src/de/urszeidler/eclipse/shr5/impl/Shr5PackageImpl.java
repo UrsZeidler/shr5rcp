@@ -761,6 +761,27 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass substanceEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass toxinEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass drugEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -1014,6 +1035,27 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     private EEnum matrixProgramTypeEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum substanceVectorEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum substanceEffectEEnum = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EEnum addictionTypeEEnum = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -4353,6 +4395,96 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getSubstance() {
+        return substanceEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSubstance_Vector() {
+        return (EAttribute)substanceEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSubstance_Speed() {
+        return (EAttribute)substanceEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getToxin() {
+        return toxinEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getToxin_Power() {
+        return (EAttribute)toxinEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getToxin_Penetration() {
+        return (EAttribute)toxinEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getToxin_Effect() {
+        return (EAttribute)toxinEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getDrug() {
+        return drugEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDrug_Duration() {
+        return (EAttribute)drugEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getDrug_AddictionType() {
+        return (EAttribute)drugEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5043,6 +5175,33 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getSubstanceVector() {
+        return substanceVectorEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getSubstanceEffect() {
+        return substanceEffectEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EEnum getAddictionType() {
+        return addictionTypeEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -5634,6 +5793,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEReference(fokusBindingEClass, FOKUS_BINDING__FOKUS);
         createEAttribute(fokusBindingEClass, FOKUS_BINDING__ACTIVE);
 
+        substanceEClass = createEClass(SUBSTANCE);
+        createEAttribute(substanceEClass, SUBSTANCE__VECTOR);
+        createEAttribute(substanceEClass, SUBSTANCE__SPEED);
+
+        toxinEClass = createEClass(TOXIN);
+        createEAttribute(toxinEClass, TOXIN__POWER);
+        createEAttribute(toxinEClass, TOXIN__PENETRATION);
+        createEAttribute(toxinEClass, TOXIN__EFFECT);
+
+        drugEClass = createEClass(DRUG);
+        createEAttribute(drugEClass, DRUG__DURATION);
+        createEAttribute(drugEClass, DRUG__ADDICTION_TYPE);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -5652,6 +5824,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         interfaceModusEEnum = createEEnum(INTERFACE_MODUS);
         programTypeEEnum = createEEnum(PROGRAM_TYPE);
         matrixProgramTypeEEnum = createEEnum(MATRIX_PROGRAM_TYPE);
+        substanceVectorEEnum = createEEnum(SUBSTANCE_VECTOR);
+        substanceEffectEEnum = createEEnum(SUBSTANCE_EFFECT);
+        addictionTypeEEnum = createEEnum(ADDICTION_TYPE);
 
         // Create data types
         shrDateEDataType = createEDataType(SHR_DATE);
@@ -5854,6 +6029,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         waffenFokusEClass.getESuperTypes().add(this.getNahkampfwaffe());
         waffenFokusEClass.getESuperTypes().add(this.getFokus());
         magieFokusEClass.getESuperTypes().add(this.getAbstraktFokus());
+        substanceEClass.getESuperTypes().add(this.getBeschreibbar());
+        substanceEClass.getESuperTypes().add(this.getQuelle());
+        substanceEClass.getESuperTypes().add(this.getGeldWert());
+        substanceEClass.getESuperTypes().add(this.getMenge());
+        toxinEClass.getESuperTypes().add(this.getSubstance());
+        drugEClass.getESuperTypes().add(this.getSubstance());
+        drugEClass.getESuperTypes().add(this.getModifizierbar());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -6403,6 +6585,19 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEReference(getFokusBinding_Fokus(), this.getFokus(), null, "fokus", null, 1, 1, FokusBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getFokusBinding_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, FokusBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+        initEClass(substanceEClass, Substance.class, "Substance", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSubstance_Vector(), this.getSubstanceVector(), "vector", null, 0, 1, Substance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSubstance_Speed(), ecorePackage.getEString(), "speed", null, 0, 1, Substance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(toxinEClass, Toxin.class, "Toxin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getToxin_Power(), ecorePackage.getEInt(), "power", null, 0, 1, Toxin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getToxin_Penetration(), ecorePackage.getEInt(), "penetration", null, 0, 1, Toxin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getToxin_Effect(), this.getSubstanceEffect(), "effect", null, 0, -1, Toxin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(drugEClass, Drug.class, "Drug", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getDrug_Duration(), ecorePackage.getEString(), "duration", null, 0, 1, Drug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDrug_AddictionType(), this.getAddictionType(), "addictionType", null, 0, 1, Drug.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");
         addEEnumLiteral(feuerModusEEnum, FeuerModus.EM);
@@ -6492,6 +6687,23 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEEnum(matrixProgramTypeEEnum, MatrixProgramType.class, "MatrixProgramType");
         addEEnumLiteral(matrixProgramTypeEEnum, MatrixProgramType.DEFAULT_PROGRAM);
         addEEnumLiteral(matrixProgramTypeEEnum, MatrixProgramType.HACKING_PROGRAM);
+
+        initEEnum(substanceVectorEEnum, SubstanceVector.class, "SubstanceVector");
+        addEEnumLiteral(substanceVectorEEnum, SubstanceVector.CONTACT);
+        addEEnumLiteral(substanceVectorEEnum, SubstanceVector.INHALATION);
+        addEEnumLiteral(substanceVectorEEnum, SubstanceVector.INGESTION);
+        addEEnumLiteral(substanceVectorEEnum, SubstanceVector.INJECTION);
+
+        initEEnum(substanceEffectEEnum, SubstanceEffect.class, "SubstanceEffect");
+        addEEnumLiteral(substanceEffectEEnum, SubstanceEffect.DISORIENTATION);
+        addEEnumLiteral(substanceEffectEEnum, SubstanceEffect.NAUSEA);
+        addEEnumLiteral(substanceEffectEEnum, SubstanceEffect.PARALYSIS);
+        addEEnumLiteral(substanceEffectEEnum, SubstanceEffect.STUN_DAMAGE);
+
+        initEEnum(addictionTypeEEnum, AddictionType.class, "AddictionType");
+        addEEnumLiteral(addictionTypeEEnum, AddictionType.PSYCHOLOGICAL);
+        addEEnumLiteral(addictionTypeEEnum, AddictionType.PHYSIOLOGICAL);
+        addEEnumLiteral(addictionTypeEEnum, AddictionType.BOTH);
 
         // Initialize data types
         initEDataType(shrDateEDataType, Date.class, "ShrDate", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

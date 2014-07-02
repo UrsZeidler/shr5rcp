@@ -2,6 +2,7 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.*;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
@@ -219,6 +220,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.WAFFEN_FOKUS: return createWaffenFokus();
             case Shr5Package.MAGIE_FOKUS: return createMagieFokus();
             case Shr5Package.FOKUS_BINDING: return createFokusBinding();
+            case Shr5Package.TOXIN: return createToxin();
+            case Shr5Package.DRUG: return createDrug();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -266,6 +269,12 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return createProgramTypeFromString(eDataType, initialValue);
             case Shr5Package.MATRIX_PROGRAM_TYPE:
                 return createMatrixProgramTypeFromString(eDataType, initialValue);
+            case Shr5Package.SUBSTANCE_VECTOR:
+                return createSubstanceVectorFromString(eDataType, initialValue);
+            case Shr5Package.SUBSTANCE_EFFECT:
+                return createSubstanceEffectFromString(eDataType, initialValue);
+            case Shr5Package.ADDICTION_TYPE:
+                return createAddictionTypeFromString(eDataType, initialValue);
             case Shr5Package.SHR_DATE:
                 return createShrDateFromString(eDataType, initialValue);
             default:
@@ -315,6 +324,12 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
                 return convertProgramTypeToString(eDataType, instanceValue);
             case Shr5Package.MATRIX_PROGRAM_TYPE:
                 return convertMatrixProgramTypeToString(eDataType, instanceValue);
+            case Shr5Package.SUBSTANCE_VECTOR:
+                return convertSubstanceVectorToString(eDataType, instanceValue);
+            case Shr5Package.SUBSTANCE_EFFECT:
+                return convertSubstanceEffectToString(eDataType, instanceValue);
+            case Shr5Package.ADDICTION_TYPE:
+                return convertAddictionTypeToString(eDataType, instanceValue);
             case Shr5Package.SHR_DATE:
                 return convertShrDateToString(eDataType, instanceValue);
             default:
@@ -1044,6 +1059,26 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Toxin createToxin() {
+        ToxinImpl toxin = new ToxinImpl();
+        return toxin;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Drug createDrug() {
+        DrugImpl drug = new DrugImpl();
+        return drug;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -1379,6 +1414,66 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * @generated
      */
     public String convertMatrixProgramTypeToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SubstanceVector createSubstanceVectorFromString(EDataType eDataType, String initialValue) {
+        SubstanceVector result = SubstanceVector.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertSubstanceVectorToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SubstanceEffect createSubstanceEffectFromString(EDataType eDataType, String initialValue) {
+        SubstanceEffect result = SubstanceEffect.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertSubstanceEffectToString(EDataType eDataType, Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public AddictionType createAddictionTypeFromString(EDataType eDataType, String initialValue) {
+        AddictionType result = AddictionType.get(initialValue);
+        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertAddictionTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

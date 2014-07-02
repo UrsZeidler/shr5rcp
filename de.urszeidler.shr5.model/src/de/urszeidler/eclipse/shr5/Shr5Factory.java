@@ -670,6 +670,24 @@ public interface Shr5Factory extends EFactory {
     FokusBinding createFokusBinding();
 
     /**
+     * Returns a new object of class '<em>Toxin</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Toxin</em>'.
+     * @generated
+     */
+    Toxin createToxin();
+
+    /**
+     * Returns a new object of class '<em>Drug</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Drug</em>'.
+     * @generated
+     */
+    Drug createDrug();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

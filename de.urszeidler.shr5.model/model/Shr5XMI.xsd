@@ -125,6 +125,29 @@
       <xsd:enumeration value="hackingProgram"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="SubstanceVector">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="contact"/>
+      <xsd:enumeration value="inhalation"/>
+      <xsd:enumeration value="ingestion"/>
+      <xsd:enumeration value="injection"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SubstanceEffect">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="disorientation"/>
+      <xsd:enumeration value="nausea"/>
+      <xsd:enumeration value="paralysis"/>
+      <xsd:enumeration value="stunDamage"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AddictionType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="psychological"/>
+      <xsd:enumeration value="physiological"/>
+      <xsd:enumeration value="both"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType abstract="true" name="Beschreibbar">
     <xsd:choice maxOccurs="unbounded" minOccurs="0">
       <xsd:element ref="xmi:Extension"/>
@@ -1895,4 +1918,64 @@
       <xsd:documentation>This represent an binding to a fokus.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:complexType abstract="true" name="Substance">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+        <xsd:attribute name="verfuegbarkeit" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The availability for the object.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="wertValue" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>This is the setable value, it is used to calculate the wert property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="anzahl" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>The current count of items.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="proAnzahl" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation>Defines the number of items for the cost, if the element is a GeldWert.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="vector" type="shr5:SubstanceVector"/>
+        <xsd:attribute name="speed" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Substance" type="shr5:Substance"/>
+  <xsd:complexType name="Toxin">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Substance">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="effect" type="shr5:SubstanceEffect"/>
+        </xsd:choice>
+        <xsd:attribute name="power" type="xsd:int"/>
+        <xsd:attribute name="penetration" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Toxin" type="shr5:Toxin"/>
+  <xsd:complexType name="Drug">
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Substance">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="mods" type="shr5:AttributModifikatorWert"/>
+        </xsd:choice>
+        <xsd:attribute name="duration" type="xsd:string"/>
+        <xsd:attribute name="addictionType" type="shr5:AddictionType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Drug" type="shr5:Drug"/>
 </xsd:schema>

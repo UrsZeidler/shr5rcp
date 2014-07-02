@@ -959,4 +959,35 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="fokus" lowerBound="1" eType="#//Fokus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Substance" abstract="true" eSuperTypes="#//Beschreibbar #//Quelle #//GeldWert #//Menge">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vector" eType="#//SubstanceVector"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SubstanceVector">
+    <eLiterals name="contact"/>
+    <eLiterals name="inhalation" value="1"/>
+    <eLiterals name="ingestion" value="2"/>
+    <eLiterals name="injection" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Toxin" eSuperTypes="#//Substance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="penetration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="effect" upperBound="-1"
+        eType="#//SubstanceEffect"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Drug" eSuperTypes="#//Substance #//Modifizierbar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addictionType" eType="#//AddictionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SubstanceEffect">
+    <eLiterals name="disorientation"/>
+    <eLiterals name="nausea" value="1"/>
+    <eLiterals name="paralysis" value="2"/>
+    <eLiterals name="stunDamage" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AddictionType">
+    <eLiterals name="psychological"/>
+    <eLiterals name="physiological" value="1"/>
+    <eLiterals name="both" value="2"/>
+  </eClassifiers>
 </ecore:EPackage>

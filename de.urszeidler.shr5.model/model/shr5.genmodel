@@ -96,6 +96,23 @@
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MatrixProgramType/defaultProgram"/>
       <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//MatrixProgramType/hackingProgram"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//SubstanceVector">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceVector/contact"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceVector/inhalation"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceVector/ingestion"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceVector/injection"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//SubstanceEffect">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceEffect/disorientation"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceEffect/nausea"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceEffect/paralysis"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//SubstanceEffect/stunDamage"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="shr5.ecore#//AddictionType">
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//AddictionType/psychological"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//AddictionType/physiological"/>
+      <genEnumLiterals ecoreEnumLiteral="shr5.ecore#//AddictionType/both"/>
+    </genEnums>
     <genDataTypes ecoreDataType="shr5.ecore#//ShrDate"/>
     <genDataTypes ecoreDataType="shr5.ecore#//ModificationManager"/>
     <genClasses image="false" ecoreClass="shr5.ecore#//Beschreibbar">
@@ -616,6 +633,19 @@
     <genClasses ecoreClass="shr5.ecore#//FokusBinding">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shr5.ecore#//FokusBinding/fokus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//FokusBinding/active"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shr5.ecore#//Substance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Substance/vector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Substance/speed"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Toxin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Toxin/power"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Toxin/penetration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Toxin/effect"/>
+    </genClasses>
+    <genClasses ecoreClass="shr5.ecore#//Drug">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drug/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Drug/addictionType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -42,7 +42,6 @@ import de.urszeidler.shr5.model.edit.preferences.PreferenceConstants;
  * Note that most of the adapters are shared among multiple instances.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
@@ -50,7 +49,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ComposedAdapterFactory parentAdapterFactory;
@@ -59,7 +57,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected IChangeNotifier changeNotifier = new ChangeNotifier();
@@ -68,7 +65,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
@@ -127,7 +123,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SourceBook} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SourceBookItemProvider sourceBookItemProvider;
@@ -136,7 +131,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SourceBook}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -152,7 +146,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Gegenstand} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GegenstandItemProvider gegenstandItemProvider;
@@ -161,7 +154,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Gegenstand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -177,7 +169,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Reichweite} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ReichweiteItemProvider reichweiteItemProvider;
@@ -186,7 +177,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Reichweite}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -202,7 +192,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AttributModifikatorWertItemProvider attributModifikatorWertItemProvider;
@@ -211,7 +200,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AttributModifikatorWert}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -227,7 +215,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected NahkampfwaffeItemProvider nahkampfwaffeItemProvider;
@@ -236,7 +223,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Nahkampfwaffe}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -252,7 +238,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Feuerwaffe} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected FeuerwaffeItemProvider feuerwaffeItemProvider;
@@ -261,7 +246,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Feuerwaffe}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -277,7 +261,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wurfwaffe} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected WurfwaffeItemProvider wurfwaffeItemProvider;
@@ -286,7 +269,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wurfwaffe}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -302,7 +284,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ShrList} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ShrListItemProvider shrListItemProvider;
@@ -311,7 +292,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ShrList}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -327,7 +307,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Projektilwaffe} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ProjektilwaffeItemProvider projektilwaffeItemProvider;
@@ -336,7 +315,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Projektilwaffe}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -352,7 +330,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected FertigkeitsGruppeItemProvider fertigkeitsGruppeItemProvider;
@@ -361,7 +338,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FertigkeitsGruppe}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -377,7 +353,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Fertigkeit} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected FertigkeitItemProvider fertigkeitItemProvider;
@@ -386,7 +361,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Fertigkeit}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -402,7 +376,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaFertigkeitItemProvider personaFertigkeitItemProvider;
@@ -411,7 +384,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeit}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -427,7 +399,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaFertigkeitsGruppeItemProvider personaFertigkeitsGruppeItemProvider;
@@ -436,7 +407,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -452,7 +422,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberware} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CyberwareItemProvider cyberwareItemProvider;
@@ -461,7 +430,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberware}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -477,7 +445,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.BioWare} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected BioWareItemProvider bioWareItemProvider;
@@ -486,7 +453,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.BioWare}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -502,7 +468,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MudanPersona} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MudanPersonaItemProvider mudanPersonaItemProvider;
@@ -511,7 +476,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MudanPersona}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -527,7 +491,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiKraft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected KiKraftItemProvider kiKraftItemProvider;
@@ -536,7 +499,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiKraft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -552,7 +514,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Spezies} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SpeziesItemProvider speziesItemProvider;
@@ -561,7 +522,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Spezies}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -577,7 +537,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KiAdept} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected KiAdeptItemProvider kiAdeptItemProvider;
@@ -586,7 +545,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KiAdept}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -602,7 +560,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Kleidung} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected KleidungItemProvider kleidungItemProvider;
@@ -611,7 +568,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Kleidung}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -627,7 +583,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected FernkampfwaffeModifikatorItemProvider fernkampfwaffeModifikatorItemProvider;
@@ -636,7 +591,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -652,7 +606,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaEigenschaftItemProvider personaEigenschaftItemProvider;
@@ -661,7 +614,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaEigenschaft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -677,7 +629,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Magier} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MagierItemProvider magierItemProvider;
@@ -686,7 +637,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Magier}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -702,7 +652,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MysticAdept} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MysticAdeptItemProvider mysticAdeptItemProvider;
@@ -711,7 +660,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MysticAdept}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -727,7 +675,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaZauber} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaZauberItemProvider personaZauberItemProvider;
@@ -736,7 +683,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaZauber}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -752,7 +698,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Zauber} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ZauberItemProvider zauberItemProvider;
@@ -761,7 +706,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Zauber}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -777,7 +721,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AspektMagier} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AspektMagierItemProvider aspektMagierItemProvider;
@@ -786,7 +729,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AspektMagier}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -802,7 +744,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Schutzgeist} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SchutzgeistItemProvider schutzgeistItemProvider;
@@ -811,7 +752,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Schutzgeist}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -827,7 +767,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Initation} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected InitationItemProvider initationItemProvider;
@@ -836,7 +775,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Initation}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -852,7 +790,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MetaMagie} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MetaMagieItemProvider metaMagieItemProvider;
@@ -861,7 +798,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MetaMagie}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -877,7 +813,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CritterKraft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CritterKraftItemProvider critterKraftItemProvider;
@@ -886,7 +821,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CritterKraft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -902,7 +836,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected BodenfahrzeugItemProvider bodenfahrzeugItemProvider;
@@ -911,7 +844,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Bodenfahrzeug}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -927,7 +859,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PassagierFahrzeugItemProvider passagierFahrzeugItemProvider;
@@ -936,7 +867,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PassagierFahrzeug}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -952,7 +882,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Drohne} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected DrohneItemProvider drohneItemProvider;
@@ -961,7 +890,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Drohne}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -977,7 +905,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Technomancer} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected TechnomancerItemProvider technomancerItemProvider;
@@ -986,7 +913,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Technomancer}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1002,7 +928,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.KomplexeForm} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected KomplexeFormItemProvider komplexeFormItemProvider;
@@ -1011,7 +936,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.KomplexeForm}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1027,7 +951,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonaKomplexFormItemProvider personaKomplexFormItemProvider;
@@ -1036,7 +959,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonaKomplexForm}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1052,7 +974,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprite} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SpriteItemProvider spriteItemProvider;
@@ -1061,7 +982,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprite}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1077,7 +997,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Echo} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected EchoItemProvider echoItemProvider;
@@ -1086,7 +1005,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Echo}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1102,7 +1020,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Vertrag} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected VertragItemProvider vertragItemProvider;
@@ -1111,7 +1028,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Vertrag}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1127,7 +1043,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lifestyle} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected LifestyleItemProvider lifestyleItemProvider;
@@ -1136,7 +1051,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lifestyle}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1152,7 +1066,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected WissensfertigkeitItemProvider wissensfertigkeitItemProvider;
@@ -1161,7 +1074,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Wissensfertigkeit}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1177,7 +1089,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SprachfertigkeitItemProvider sprachfertigkeitItemProvider;
@@ -1186,7 +1097,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sprachfertigkeit}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1202,7 +1112,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Critter} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CritterItemProvider critterItemProvider;
@@ -1211,7 +1120,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Critter}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1227,7 +1135,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Sin} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SinItemProvider sinItemProvider;
@@ -1236,7 +1143,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Sin}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1252,7 +1158,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Lizenz} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected LizenzItemProvider lizenzItemProvider;
@@ -1261,7 +1166,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Lizenz}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1277,7 +1181,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Credstick} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CredstickItemProvider credstickItemProvider;
@@ -1286,7 +1189,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Credstick}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1302,7 +1204,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Munition} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MunitionItemProvider munitionItemProvider;
@@ -1311,7 +1212,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Munition}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1327,7 +1227,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.GebundenerGeist} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GebundenerGeistItemProvider gebundenerGeistItemProvider;
@@ -1336,7 +1235,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.GebundenerGeist}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1352,7 +1250,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Geist} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected GeistItemProvider geistItemProvider;
@@ -1361,7 +1258,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Geist}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1377,7 +1273,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CredstickTransaction} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CredstickTransactionItemProvider credstickTransactionItemProvider;
@@ -1386,7 +1281,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CredstickTransaction}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1402,7 +1296,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Spezialisierung} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SpezialisierungItemProvider spezialisierungItemProvider;
@@ -1411,7 +1304,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Spezialisierung}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1427,7 +1319,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Commlink} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CommlinkItemProvider commlinkItemProvider;
@@ -1436,7 +1327,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Commlink}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1452,7 +1342,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Cyberdeck} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CyberdeckItemProvider cyberdeckItemProvider;
@@ -1461,7 +1350,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Cyberdeck}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1477,7 +1365,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SoftwareAgent} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SoftwareAgentItemProvider softwareAgentItemProvider;
@@ -1486,7 +1373,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SoftwareAgent}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1502,7 +1388,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Host} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected HostItemProvider hostItemProvider;
@@ -1511,7 +1396,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Host}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1527,7 +1411,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.RiggerCommandConsole} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected RiggerCommandConsoleItemProvider riggerCommandConsoleItemProvider;
@@ -1536,7 +1419,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.RiggerCommandConsole}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1552,7 +1434,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.AutoSoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected AutoSoftItemProvider autoSoftItemProvider;
@@ -1561,7 +1442,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.AutoSoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1577,7 +1457,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Tutorsoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected TutorsoftItemProvider tutorsoftItemProvider;
@@ -1586,7 +1465,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Tutorsoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1602,7 +1480,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SkillSoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SkillSoftItemProvider skillSoftItemProvider;
@@ -1611,7 +1488,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SkillSoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1627,7 +1503,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PersonalAreaNetwork} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PersonalAreaNetworkItemProvider personalAreaNetworkItemProvider;
@@ -1636,7 +1511,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PersonalAreaNetwork}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1652,7 +1526,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Datasoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected DatasoftItemProvider datasoftItemProvider;
@@ -1661,7 +1534,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Datasoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1677,7 +1549,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.ConsumerSoft} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ConsumerSoftItemProvider consumerSoftItemProvider;
@@ -1686,7 +1557,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.ConsumerSoft}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1702,7 +1572,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.CommonProgram} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CommonProgramItemProvider commonProgramItemProvider;
@@ -1711,7 +1580,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.CommonProgram}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1727,7 +1595,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.WeaponMount} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected WeaponMountItemProvider weaponMountItemProvider;
@@ -1736,7 +1603,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.WeaponMount}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1752,7 +1618,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.LifestyleOption} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected LifestyleOptionItemProvider lifestyleOptionItemProvider;
@@ -1761,7 +1626,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.LifestyleOption}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1777,7 +1641,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.PercentLifestyleOption} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected PercentLifestyleOptionItemProvider percentLifestyleOptionItemProvider;
@@ -1786,7 +1649,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.PercentLifestyleOption}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1802,7 +1664,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Localization} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected LocalizationItemProvider localizationItemProvider;
@@ -1811,7 +1672,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Localization}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1827,7 +1687,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.QiFokus} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected QiFokusItemProvider qiFokusItemProvider;
@@ -1836,7 +1695,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.QiFokus}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1852,7 +1710,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.WaffenFokus} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected WaffenFokusItemProvider waffenFokusItemProvider;
@@ -1861,7 +1718,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.WaffenFokus}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1877,7 +1733,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.MagieFokus} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MagieFokusItemProvider magieFokusItemProvider;
@@ -1886,7 +1741,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.MagieFokus}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1902,7 +1756,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.FokusBinding} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected FokusBindingItemProvider fokusBindingItemProvider;
@@ -1911,7 +1764,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.FokusBinding}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1924,10 +1776,55 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Toxin} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ToxinItemProvider toxinItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Toxin}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createToxinAdapter() {
+        if (toxinItemProvider == null) {
+            toxinItemProvider = new ToxinItemProvider(this);
+        }
+
+        return toxinItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.Drug} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DrugItemProvider drugItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.Drug}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDrugAdapter() {
+        if (drugItemProvider == null) {
+            drugItemProvider = new DrugItemProvider(this);
+        }
+
+        return drugItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ComposeableAdapterFactory getRootAdapterFactory() {
@@ -1938,7 +1835,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This sets the composed adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
@@ -1948,7 +1844,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1960,7 +1855,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This implementation substitutes the factory itself as the key for the adapter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1971,7 +1865,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1990,7 +1883,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This adds a listener.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void addListener(INotifyChangedListener notifyChangedListener) {
@@ -2001,7 +1893,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This removes a listener.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void removeListener(INotifyChangedListener notifyChangedListener) {
@@ -2012,7 +1903,6 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void fireNotifyChanged(Notification notification) {
@@ -2024,157 +1914,86 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
-     * This disposes all of the item providers created by this factory.
+     * This disposes all of the item providers created by this factory. 
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void dispose() {
-        if (sourceBookItemProvider != null)
-            sourceBookItemProvider.dispose();
-        if (gegenstandItemProvider != null)
-            gegenstandItemProvider.dispose();
-        if (reichweiteItemProvider != null)
-            reichweiteItemProvider.dispose();
-        if (attributModifikatorWertItemProvider != null)
-            attributModifikatorWertItemProvider.dispose();
-        if (nahkampfwaffeItemProvider != null)
-            nahkampfwaffeItemProvider.dispose();
-        if (feuerwaffeItemProvider != null)
-            feuerwaffeItemProvider.dispose();
-        if (wurfwaffeItemProvider != null)
-            wurfwaffeItemProvider.dispose();
-        if (shrListItemProvider != null)
-            shrListItemProvider.dispose();
-        if (projektilwaffeItemProvider != null)
-            projektilwaffeItemProvider.dispose();
-        if (fertigkeitsGruppeItemProvider != null)
-            fertigkeitsGruppeItemProvider.dispose();
-        if (fertigkeitItemProvider != null)
-            fertigkeitItemProvider.dispose();
-        if (personaFertigkeitItemProvider != null)
-            personaFertigkeitItemProvider.dispose();
-        if (personaFertigkeitsGruppeItemProvider != null)
-            personaFertigkeitsGruppeItemProvider.dispose();
-        if (cyberwareItemProvider != null)
-            cyberwareItemProvider.dispose();
-        if (bioWareItemProvider != null)
-            bioWareItemProvider.dispose();
-        if (mudanPersonaItemProvider != null)
-            mudanPersonaItemProvider.dispose();
-        if (kiKraftItemProvider != null)
-            kiKraftItemProvider.dispose();
-        if (speziesItemProvider != null)
-            speziesItemProvider.dispose();
-        if (kiAdeptItemProvider != null)
-            kiAdeptItemProvider.dispose();
-        if (kleidungItemProvider != null)
-            kleidungItemProvider.dispose();
-        if (fernkampfwaffeModifikatorItemProvider != null)
-            fernkampfwaffeModifikatorItemProvider.dispose();
-        if (personaEigenschaftItemProvider != null)
-            personaEigenschaftItemProvider.dispose();
-        if (magierItemProvider != null)
-            magierItemProvider.dispose();
-        if (mysticAdeptItemProvider != null)
-            mysticAdeptItemProvider.dispose();
-        if (personaZauberItemProvider != null)
-            personaZauberItemProvider.dispose();
-        if (zauberItemProvider != null)
-            zauberItemProvider.dispose();
-        if (aspektMagierItemProvider != null)
-            aspektMagierItemProvider.dispose();
-        if (schutzgeistItemProvider != null)
-            schutzgeistItemProvider.dispose();
-        if (initationItemProvider != null)
-            initationItemProvider.dispose();
-        if (metaMagieItemProvider != null)
-            metaMagieItemProvider.dispose();
-        if (critterKraftItemProvider != null)
-            critterKraftItemProvider.dispose();
-        if (bodenfahrzeugItemProvider != null)
-            bodenfahrzeugItemProvider.dispose();
-        if (passagierFahrzeugItemProvider != null)
-            passagierFahrzeugItemProvider.dispose();
-        if (drohneItemProvider != null)
-            drohneItemProvider.dispose();
-        if (technomancerItemProvider != null)
-            technomancerItemProvider.dispose();
-        if (komplexeFormItemProvider != null)
-            komplexeFormItemProvider.dispose();
-        if (personaKomplexFormItemProvider != null)
-            personaKomplexFormItemProvider.dispose();
-        if (spriteItemProvider != null)
-            spriteItemProvider.dispose();
-        if (echoItemProvider != null)
-            echoItemProvider.dispose();
-        if (vertragItemProvider != null)
-            vertragItemProvider.dispose();
-        if (lifestyleItemProvider != null)
-            lifestyleItemProvider.dispose();
-        if (wissensfertigkeitItemProvider != null)
-            wissensfertigkeitItemProvider.dispose();
-        if (sprachfertigkeitItemProvider != null)
-            sprachfertigkeitItemProvider.dispose();
-        if (critterItemProvider != null)
-            critterItemProvider.dispose();
-        if (sinItemProvider != null)
-            sinItemProvider.dispose();
-        if (lizenzItemProvider != null)
-            lizenzItemProvider.dispose();
-        if (credstickItemProvider != null)
-            credstickItemProvider.dispose();
-        if (munitionItemProvider != null)
-            munitionItemProvider.dispose();
-        if (gebundenerGeistItemProvider != null)
-            gebundenerGeistItemProvider.dispose();
-        if (geistItemProvider != null)
-            geistItemProvider.dispose();
-        if (credstickTransactionItemProvider != null)
-            credstickTransactionItemProvider.dispose();
-        if (spezialisierungItemProvider != null)
-            spezialisierungItemProvider.dispose();
-        if (commlinkItemProvider != null)
-            commlinkItemProvider.dispose();
-        if (cyberdeckItemProvider != null)
-            cyberdeckItemProvider.dispose();
-        if (softwareAgentItemProvider != null)
-            softwareAgentItemProvider.dispose();
-        if (hostItemProvider != null)
-            hostItemProvider.dispose();
-        if (riggerCommandConsoleItemProvider != null)
-            riggerCommandConsoleItemProvider.dispose();
-        if (autoSoftItemProvider != null)
-            autoSoftItemProvider.dispose();
-        if (tutorsoftItemProvider != null)
-            tutorsoftItemProvider.dispose();
-        if (skillSoftItemProvider != null)
-            skillSoftItemProvider.dispose();
-        if (personalAreaNetworkItemProvider != null)
-            personalAreaNetworkItemProvider.dispose();
-        if (datasoftItemProvider != null)
-            datasoftItemProvider.dispose();
-        if (consumerSoftItemProvider != null)
-            consumerSoftItemProvider.dispose();
-        if (commonProgramItemProvider != null)
-            commonProgramItemProvider.dispose();
-        if (weaponMountItemProvider != null)
-            weaponMountItemProvider.dispose();
-        if (lifestyleOptionItemProvider != null)
-            lifestyleOptionItemProvider.dispose();
-        if (percentLifestyleOptionItemProvider != null)
-            percentLifestyleOptionItemProvider.dispose();
-        if (localizationItemProvider != null)
-            localizationItemProvider.dispose();
-        if (qiFokusItemProvider != null)
-            qiFokusItemProvider.dispose();
-        if (waffenFokusItemProvider != null)
-            waffenFokusItemProvider.dispose();
-        if (magieFokusItemProvider != null)
-            magieFokusItemProvider.dispose();
-        if (fokusBindingItemProvider != null)
-            fokusBindingItemProvider.dispose();
+        if (sourceBookItemProvider != null) sourceBookItemProvider.dispose();
+        if (gegenstandItemProvider != null) gegenstandItemProvider.dispose();
+        if (reichweiteItemProvider != null) reichweiteItemProvider.dispose();
+        if (attributModifikatorWertItemProvider != null) attributModifikatorWertItemProvider.dispose();
+        if (nahkampfwaffeItemProvider != null) nahkampfwaffeItemProvider.dispose();
+        if (feuerwaffeItemProvider != null) feuerwaffeItemProvider.dispose();
+        if (wurfwaffeItemProvider != null) wurfwaffeItemProvider.dispose();
+        if (shrListItemProvider != null) shrListItemProvider.dispose();
+        if (projektilwaffeItemProvider != null) projektilwaffeItemProvider.dispose();
+        if (fertigkeitsGruppeItemProvider != null) fertigkeitsGruppeItemProvider.dispose();
+        if (fertigkeitItemProvider != null) fertigkeitItemProvider.dispose();
+        if (personaFertigkeitItemProvider != null) personaFertigkeitItemProvider.dispose();
+        if (personaFertigkeitsGruppeItemProvider != null) personaFertigkeitsGruppeItemProvider.dispose();
+        if (cyberwareItemProvider != null) cyberwareItemProvider.dispose();
+        if (bioWareItemProvider != null) bioWareItemProvider.dispose();
+        if (mudanPersonaItemProvider != null) mudanPersonaItemProvider.dispose();
+        if (kiKraftItemProvider != null) kiKraftItemProvider.dispose();
+        if (speziesItemProvider != null) speziesItemProvider.dispose();
+        if (kiAdeptItemProvider != null) kiAdeptItemProvider.dispose();
+        if (kleidungItemProvider != null) kleidungItemProvider.dispose();
+        if (fernkampfwaffeModifikatorItemProvider != null) fernkampfwaffeModifikatorItemProvider.dispose();
+        if (personaEigenschaftItemProvider != null) personaEigenschaftItemProvider.dispose();
+        if (magierItemProvider != null) magierItemProvider.dispose();
+        if (mysticAdeptItemProvider != null) mysticAdeptItemProvider.dispose();
+        if (personaZauberItemProvider != null) personaZauberItemProvider.dispose();
+        if (zauberItemProvider != null) zauberItemProvider.dispose();
+        if (aspektMagierItemProvider != null) aspektMagierItemProvider.dispose();
+        if (schutzgeistItemProvider != null) schutzgeistItemProvider.dispose();
+        if (initationItemProvider != null) initationItemProvider.dispose();
+        if (metaMagieItemProvider != null) metaMagieItemProvider.dispose();
+        if (critterKraftItemProvider != null) critterKraftItemProvider.dispose();
+        if (bodenfahrzeugItemProvider != null) bodenfahrzeugItemProvider.dispose();
+        if (passagierFahrzeugItemProvider != null) passagierFahrzeugItemProvider.dispose();
+        if (drohneItemProvider != null) drohneItemProvider.dispose();
+        if (technomancerItemProvider != null) technomancerItemProvider.dispose();
+        if (komplexeFormItemProvider != null) komplexeFormItemProvider.dispose();
+        if (personaKomplexFormItemProvider != null) personaKomplexFormItemProvider.dispose();
+        if (spriteItemProvider != null) spriteItemProvider.dispose();
+        if (echoItemProvider != null) echoItemProvider.dispose();
+        if (vertragItemProvider != null) vertragItemProvider.dispose();
+        if (lifestyleItemProvider != null) lifestyleItemProvider.dispose();
+        if (wissensfertigkeitItemProvider != null) wissensfertigkeitItemProvider.dispose();
+        if (sprachfertigkeitItemProvider != null) sprachfertigkeitItemProvider.dispose();
+        if (critterItemProvider != null) critterItemProvider.dispose();
+        if (sinItemProvider != null) sinItemProvider.dispose();
+        if (lizenzItemProvider != null) lizenzItemProvider.dispose();
+        if (credstickItemProvider != null) credstickItemProvider.dispose();
+        if (munitionItemProvider != null) munitionItemProvider.dispose();
+        if (gebundenerGeistItemProvider != null) gebundenerGeistItemProvider.dispose();
+        if (geistItemProvider != null) geistItemProvider.dispose();
+        if (credstickTransactionItemProvider != null) credstickTransactionItemProvider.dispose();
+        if (spezialisierungItemProvider != null) spezialisierungItemProvider.dispose();
+        if (commlinkItemProvider != null) commlinkItemProvider.dispose();
+        if (cyberdeckItemProvider != null) cyberdeckItemProvider.dispose();
+        if (softwareAgentItemProvider != null) softwareAgentItemProvider.dispose();
+        if (hostItemProvider != null) hostItemProvider.dispose();
+        if (riggerCommandConsoleItemProvider != null) riggerCommandConsoleItemProvider.dispose();
+        if (autoSoftItemProvider != null) autoSoftItemProvider.dispose();
+        if (tutorsoftItemProvider != null) tutorsoftItemProvider.dispose();
+        if (skillSoftItemProvider != null) skillSoftItemProvider.dispose();
+        if (personalAreaNetworkItemProvider != null) personalAreaNetworkItemProvider.dispose();
+        if (datasoftItemProvider != null) datasoftItemProvider.dispose();
+        if (consumerSoftItemProvider != null) consumerSoftItemProvider.dispose();
+        if (commonProgramItemProvider != null) commonProgramItemProvider.dispose();
+        if (weaponMountItemProvider != null) weaponMountItemProvider.dispose();
+        if (lifestyleOptionItemProvider != null) lifestyleOptionItemProvider.dispose();
+        if (percentLifestyleOptionItemProvider != null) percentLifestyleOptionItemProvider.dispose();
+        if (localizationItemProvider != null) localizationItemProvider.dispose();
+        if (qiFokusItemProvider != null) qiFokusItemProvider.dispose();
+        if (waffenFokusItemProvider != null) waffenFokusItemProvider.dispose();
+        if (magieFokusItemProvider != null) magieFokusItemProvider.dispose();
+        if (fokusBindingItemProvider != null) fokusBindingItemProvider.dispose();
+        if (toxinItemProvider != null) toxinItemProvider.dispose();
+        if (drugItemProvider != null) drugItemProvider.dispose();
     }
 
     @Override

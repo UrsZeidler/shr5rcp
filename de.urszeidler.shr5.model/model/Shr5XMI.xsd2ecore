@@ -91,6 +91,23 @@
       <nested inputs="shr5.ecore#//MatrixProgramType/defaultProgram" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=16/XSDEnumerationFacet"/>
       <nested inputs="shr5.ecore#//MatrixProgramType/hackingProgram" outputs="Shr5XMI.xsd#//MatrixProgramType;XSDSimpleTypeDefinition=16/XSDEnumerationFacet=1"/>
     </nested>
+    <nested inputs="shr5.ecore#//SubstanceVector" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17">
+      <nested inputs="shr5.ecore#//SubstanceVector/contact" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//SubstanceVector/inhalation" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//SubstanceVector/ingestion" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//SubstanceVector/injection" outputs="Shr5XMI.xsd#//SubstanceVector;XSDSimpleTypeDefinition=17/XSDEnumerationFacet=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//SubstanceEffect" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18">
+      <nested inputs="shr5.ecore#//SubstanceEffect/disorientation" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//SubstanceEffect/nausea" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//SubstanceEffect/paralysis" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=2"/>
+      <nested inputs="shr5.ecore#//SubstanceEffect/stunDamage" outputs="Shr5XMI.xsd#//SubstanceEffect;XSDSimpleTypeDefinition=18/XSDEnumerationFacet=3"/>
+    </nested>
+    <nested inputs="shr5.ecore#//AddictionType" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19">
+      <nested inputs="shr5.ecore#//AddictionType/psychological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet"/>
+      <nested inputs="shr5.ecore#//AddictionType/physiological" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=1"/>
+      <nested inputs="shr5.ecore#//AddictionType/both" outputs="Shr5XMI.xsd#//AddictionType;XSDSimpleTypeDefinition=19/XSDEnumerationFacet=2"/>
+    </nested>
     <nested inputs="shr5.ecore#//Beschreibbar" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition">
       <nested inputs="shr5.ecore#//Beschreibbar/beschreibung" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//Beschreibbar/image" outputs="Shr5XMI.xsd#//Beschreibbar;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
@@ -858,5 +875,31 @@
       <nested inputs="shr5.ecore#//FokusBinding/fokus" outputs="Shr5XMI.xsd#//FokusBinding;XSDComplexTypeDefinition=124/XSDParticle/XSDModelGroup/XSDParticle"/>
     </nested>
     <nested inputs="shr5.ecore#//FokusBinding" outputs="Shr5XMI.xsd#//FokusBinding;XSDElementDeclaration=124"/>
+    <nested inputs="shr5.ecore#//Substance" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125">
+      <nested inputs="shr5.ecore#//Substance/vector" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=7"/>
+      <nested inputs="shr5.ecore#//Substance/speed" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=8"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//GeldWert/verfuegbarkeit" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=3"/>
+    <nested inputs="shr5.ecore#//GeldWert/wertValue" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=4"/>
+    <nested inputs="shr5.ecore#//Menge/anzahl" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=5"/>
+    <nested inputs="shr5.ecore#//Menge/proAnzahl" outputs="Shr5XMI.xsd#//Substance;XSDComplexTypeDefinition=125/XSDAttributeUse=6"/>
+    <nested inputs="shr5.ecore#//Substance" outputs="Shr5XMI.xsd#//Substance;XSDElementDeclaration=125"/>
+    <nested inputs="shr5.ecore#//Toxin" outputs="Shr5XMI.xsd#//Toxin;XSDComplexTypeDefinition=126">
+      <nested inputs="shr5.ecore#//Toxin/power" outputs="Shr5XMI.xsd#//Toxin;XSDComplexTypeDefinition=126/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Toxin/penetration" outputs="Shr5XMI.xsd#//Toxin;XSDComplexTypeDefinition=126/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Toxin/effect" outputs="Shr5XMI.xsd#//Toxin;XSDComplexTypeDefinition=126/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Toxin" outputs="Shr5XMI.xsd#//Toxin;XSDElementDeclaration=126"/>
+    <nested inputs="shr5.ecore#//Drug" outputs="Shr5XMI.xsd#//Drug;XSDComplexTypeDefinition=127">
+      <nested inputs="shr5.ecore#//Drug/duration" outputs="Shr5XMI.xsd#//Drug;XSDComplexTypeDefinition=127/XSDAttributeUse"/>
+      <nested inputs="shr5.ecore#//Drug/addictionType" outputs="Shr5XMI.xsd#//Drug;XSDComplexTypeDefinition=127/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Modifizierbar/mods" outputs="Shr5XMI.xsd#//Drug;XSDComplexTypeDefinition=127/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Drug" outputs="Shr5XMI.xsd#//Drug;XSDElementDeclaration=127"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

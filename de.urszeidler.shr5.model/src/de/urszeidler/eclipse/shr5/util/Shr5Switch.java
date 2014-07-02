@@ -1409,6 +1409,42 @@ public class Shr5Switch<T> extends Switch<T> {
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
+            case Shr5Package.SUBSTANCE: {
+                Substance substance = (Substance)theEObject;
+                T result = caseSubstance(substance);
+                if (result == null) result = caseBeschreibbar(substance);
+                if (result == null) result = caseQuelle(substance);
+                if (result == null) result = caseGeldWert(substance);
+                if (result == null) result = caseMenge(substance);
+                if (result == null) result = caseIdentifiable(substance);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.TOXIN: {
+                Toxin toxin = (Toxin)theEObject;
+                T result = caseToxin(toxin);
+                if (result == null) result = caseSubstance(toxin);
+                if (result == null) result = caseBeschreibbar(toxin);
+                if (result == null) result = caseQuelle(toxin);
+                if (result == null) result = caseGeldWert(toxin);
+                if (result == null) result = caseMenge(toxin);
+                if (result == null) result = caseIdentifiable(toxin);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case Shr5Package.DRUG: {
+                Drug drug = (Drug)theEObject;
+                T result = caseDrug(drug);
+                if (result == null) result = caseSubstance(drug);
+                if (result == null) result = caseModifizierbar(drug);
+                if (result == null) result = caseBeschreibbar(drug);
+                if (result == null) result = caseQuelle(drug);
+                if (result == null) result = caseGeldWert(drug);
+                if (result == null) result = caseMenge(drug);
+                if (result == null) result = caseIdentifiable(drug);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
             default: return defaultCase(theEObject);
         }
     }
@@ -2985,6 +3021,51 @@ public class Shr5Switch<T> extends Switch<T> {
      * @generated
      */
     public T caseFokusBinding(FokusBinding object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Substance</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Substance</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSubstance(Substance object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Toxin</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Toxin</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseToxin(Toxin object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Drug</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Drug</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseDrug(Drug object) {
         return null;
     }
 

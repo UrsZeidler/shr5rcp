@@ -89,11 +89,7 @@ public final class Shr5EditPlugin extends EMFPlugin {
             // Remember the static instance.
             //
             plugin = this;
-            
-//           eclipsePreferences = InstanceScope.INSTANCE.getNode(getSymbolicName());
-//           AbstractPreferenceInitializer1 abstractPreferenceInitializer1 = new AbstractPreferenceInitializer1();
-//           abstractPreferenceInitializer1.initializeDefaultPreferences();
-		}
+        }
 
 //        public IEclipsePreferences getEclipsePreferences() {
 //            return eclipsePreferences;
