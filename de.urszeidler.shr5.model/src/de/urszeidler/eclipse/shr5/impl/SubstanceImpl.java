@@ -485,12 +485,19 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     public BigDecimal getWert() {
-        // TODO: implement this method to return the 'Wert' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        if (getProAnzahl() == 0)
+            return new BigDecimal(0);
+
+        if (getWertValue() == null)
+            return null;
+
+        BigDecimal bigDecimal = new BigDecimal(getAnzahl());
+        BigDecimal factor = bigDecimal.divide(new BigDecimal(getProAnzahl()),BigDecimal.ROUND_HALF_EVEN);
+
+        return getWertValue().multiply(factor).setScale(1);
     }
 
     /**
