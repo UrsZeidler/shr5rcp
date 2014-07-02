@@ -5,6 +5,7 @@
 
 * added discriminator for the generator system
 * added autoupdate for the rcp
+	* snapshot updatesite https://urszeidler.ci.cloudbees.com/job/shr5-maven/updatesite/
 
 2014-06-22 Version 0.1.7
 
