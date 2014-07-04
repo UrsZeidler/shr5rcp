@@ -192,17 +192,11 @@ public class TableBoardShr5CharacterSheet extends AbstractAcceleoGenerator {
      * If this generator needs to listen to text generation events, listeners can be returned from here.
      * 
      * @return List of listeners that are to be notified when text is generated through this launch.
-     * @generated
+     * @generated not
      */
     @Override
     public List<IAcceleoTextGenerationListener> getGenerationListeners() {
         List<IAcceleoTextGenerationListener> listeners = super.getGenerationListeners();
-        /*
-         * TODO if you need to listen to generation event, add listeners to the list here. If you want to change
-         * the content of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method
-         * to "@generated NOT". Without this new tag, any compilation of the Acceleo module with the main template
-         * that has caused the creation of this class will revert your modifications.
-         */
         return listeners;
     }
 
