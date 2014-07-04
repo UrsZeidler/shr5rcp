@@ -463,7 +463,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * @generated not
      */
     public int getAngriff() {
-        return getBaseFirewall() + getHostRating();
+        return getBaseAngriff() + getHostRating();
     }
 
     /**
