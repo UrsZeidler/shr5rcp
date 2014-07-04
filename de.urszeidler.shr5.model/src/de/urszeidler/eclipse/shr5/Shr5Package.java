@@ -15489,13 +15489,58 @@ public interface Shr5Package extends EPackage {
     int HOST__SCHLEICHER = BESCHREIBBAR_FEATURE_COUNT + 7;
 
     /**
+     * The feature id for the '<em><b>Host Rating</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__HOST_RATING = BESCHREIBBAR_FEATURE_COUNT + 8;
+
+    /**
+     * The feature id for the '<em><b>Base Firewall</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__BASE_FIREWALL = BESCHREIBBAR_FEATURE_COUNT + 9;
+
+    /**
+     * The feature id for the '<em><b>Base Datenverarbeitung</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__BASE_DATENVERARBEITUNG = BESCHREIBBAR_FEATURE_COUNT + 10;
+
+    /**
+     * The feature id for the '<em><b>Base Angriff</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__BASE_ANGRIFF = BESCHREIBBAR_FEATURE_COUNT + 11;
+
+    /**
+     * The feature id for the '<em><b>Base Schleicher</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int HOST__BASE_SCHLEICHER = BESCHREIBBAR_FEATURE_COUNT + 12;
+
+    /**
      * The number of structural features of the '<em>Host</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int HOST_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 8;
+    int HOST_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 13;
 
     /**
      * The number of operations of the '<em>Host</em>' class.
@@ -23235,6 +23280,61 @@ public interface Shr5Package extends EPackage {
     EClass getHost();
 
     /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Host#getHostRating <em>Host Rating</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Host Rating</em>'.
+     * @see de.urszeidler.eclipse.shr5.Host#getHostRating()
+     * @see #getHost()
+     * @generated
+     */
+    EAttribute getHost_HostRating();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Host#getBaseFirewall <em>Base Firewall</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Base Firewall</em>'.
+     * @see de.urszeidler.eclipse.shr5.Host#getBaseFirewall()
+     * @see #getHost()
+     * @generated
+     */
+    EAttribute getHost_BaseFirewall();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Host#getBaseDatenverarbeitung <em>Base Datenverarbeitung</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Base Datenverarbeitung</em>'.
+     * @see de.urszeidler.eclipse.shr5.Host#getBaseDatenverarbeitung()
+     * @see #getHost()
+     * @generated
+     */
+    EAttribute getHost_BaseDatenverarbeitung();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Host#getBaseAngriff <em>Base Angriff</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Base Angriff</em>'.
+     * @see de.urszeidler.eclipse.shr5.Host#getBaseAngriff()
+     * @see #getHost()
+     * @generated
+     */
+    EAttribute getHost_BaseAngriff();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.Host#getBaseSchleicher <em>Base Schleicher</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Base Schleicher</em>'.
+     * @see de.urszeidler.eclipse.shr5.Host#getBaseSchleicher()
+     * @see #getHost()
+     * @generated
+     */
+    EAttribute getHost_BaseSchleicher();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren <em>Cyberware Modifikatioren</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -27271,6 +27371,46 @@ public interface Shr5Package extends EPackage {
          * @generated
          */
         EClass HOST = eINSTANCE.getHost();
+
+        /**
+         * The meta object literal for the '<em><b>Host Rating</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HOST__HOST_RATING = eINSTANCE.getHost_HostRating();
+
+        /**
+         * The meta object literal for the '<em><b>Base Firewall</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HOST__BASE_FIREWALL = eINSTANCE.getHost_BaseFirewall();
+
+        /**
+         * The meta object literal for the '<em><b>Base Datenverarbeitung</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HOST__BASE_DATENVERARBEITUNG = eINSTANCE.getHost_BaseDatenverarbeitung();
+
+        /**
+         * The meta object literal for the '<em><b>Base Angriff</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HOST__BASE_ANGRIFF = eINSTANCE.getHost_BaseAngriff();
+
+        /**
+         * The meta object literal for the '<em><b>Base Schleicher</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute HOST__BASE_SCHLEICHER = eINSTANCE.getHost_BaseSchleicher();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren <em>Cyberware Modifikatioren</em>}' class.

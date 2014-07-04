@@ -37,6 +37,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getAngriff <em>Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getSchleicher <em>Schleicher</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getHostRating <em>Host Rating</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseFirewall <em>Base Firewall</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseDatenverarbeitung <em>Base Datenverarbeitung</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseAngriff <em>Base Angriff</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseSchleicher <em>Base Schleicher</em>}</li>
  * </ul>
  * </p>
  *
@@ -194,6 +199,106 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     protected static final int SCHLEICHER_EDEFAULT = 0;
 
     /**
+     * The default value of the '{@link #getHostRating() <em>Host Rating</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getHostRating()
+     * @generated
+     * @ordered
+     */
+    protected static final int HOST_RATING_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getHostRating() <em>Host Rating</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getHostRating()
+     * @generated
+     * @ordered
+     */
+    protected int hostRating = HOST_RATING_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBaseFirewall() <em>Base Firewall</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseFirewall()
+     * @generated
+     * @ordered
+     */
+    protected static final int BASE_FIREWALL_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getBaseFirewall() <em>Base Firewall</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseFirewall()
+     * @generated
+     * @ordered
+     */
+    protected int baseFirewall = BASE_FIREWALL_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBaseDatenverarbeitung() <em>Base Datenverarbeitung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseDatenverarbeitung()
+     * @generated
+     * @ordered
+     */
+    protected static final int BASE_DATENVERARBEITUNG_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getBaseDatenverarbeitung() <em>Base Datenverarbeitung</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseDatenverarbeitung()
+     * @generated
+     * @ordered
+     */
+    protected int baseDatenverarbeitung = BASE_DATENVERARBEITUNG_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBaseAngriff() <em>Base Angriff</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseAngriff()
+     * @generated
+     * @ordered
+     */
+    protected static final int BASE_ANGRIFF_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getBaseAngriff() <em>Base Angriff</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseAngriff()
+     * @generated
+     * @ordered
+     */
+    protected int baseAngriff = BASE_ANGRIFF_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getBaseSchleicher() <em>Base Schleicher</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseSchleicher()
+     * @generated
+     * @ordered
+     */
+    protected static final int BASE_SCHLEICHER_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getBaseSchleicher() <em>Base Schleicher</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getBaseSchleicher()
+     * @generated
+     * @ordered
+     */
+    protected int baseSchleicher = BASE_SCHLEICHER_EDEFAULT;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -347,6 +452,111 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    public int getHostRating() {
+        return hostRating;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHostRating(int newHostRating) {
+        int oldHostRating = hostRating;
+        hostRating = newHostRating;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__HOST_RATING, oldHostRating, hostRating));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getBaseFirewall() {
+        return baseFirewall;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBaseFirewall(int newBaseFirewall) {
+        int oldBaseFirewall = baseFirewall;
+        baseFirewall = newBaseFirewall;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__BASE_FIREWALL, oldBaseFirewall, baseFirewall));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getBaseDatenverarbeitung() {
+        return baseDatenverarbeitung;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBaseDatenverarbeitung(int newBaseDatenverarbeitung) {
+        int oldBaseDatenverarbeitung = baseDatenverarbeitung;
+        baseDatenverarbeitung = newBaseDatenverarbeitung;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__BASE_DATENVERARBEITUNG, oldBaseDatenverarbeitung, baseDatenverarbeitung));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getBaseAngriff() {
+        return baseAngriff;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBaseAngriff(int newBaseAngriff) {
+        int oldBaseAngriff = baseAngriff;
+        baseAngriff = newBaseAngriff;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__BASE_ANGRIFF, oldBaseAngriff, baseAngriff));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public int getBaseSchleicher() {
+        return baseSchleicher;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setBaseSchleicher(int newBaseSchleicher) {
+        int oldBaseSchleicher = baseSchleicher;
+        baseSchleicher = newBaseSchleicher;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.HOST__BASE_SCHLEICHER, oldBaseSchleicher, baseSchleicher));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -465,6 +675,16 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return getAngriff();
             case Shr5Package.HOST__SCHLEICHER:
                 return getSchleicher();
+            case Shr5Package.HOST__HOST_RATING:
+                return getHostRating();
+            case Shr5Package.HOST__BASE_FIREWALL:
+                return getBaseFirewall();
+            case Shr5Package.HOST__BASE_DATENVERARBEITUNG:
+                return getBaseDatenverarbeitung();
+            case Shr5Package.HOST__BASE_ANGRIFF:
+                return getBaseAngriff();
+            case Shr5Package.HOST__BASE_SCHLEICHER:
+                return getBaseSchleicher();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -492,6 +712,21 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
             case Shr5Package.HOST__PAN:
                 setPan((PersonalAreaNetwork)newValue);
                 return;
+            case Shr5Package.HOST__HOST_RATING:
+                setHostRating((Integer)newValue);
+                return;
+            case Shr5Package.HOST__BASE_FIREWALL:
+                setBaseFirewall((Integer)newValue);
+                return;
+            case Shr5Package.HOST__BASE_DATENVERARBEITUNG:
+                setBaseDatenverarbeitung((Integer)newValue);
+                return;
+            case Shr5Package.HOST__BASE_ANGRIFF:
+                setBaseAngriff((Integer)newValue);
+                return;
+            case Shr5Package.HOST__BASE_SCHLEICHER:
+                setBaseSchleicher((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -518,6 +753,21 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return;
             case Shr5Package.HOST__PAN:
                 setPan((PersonalAreaNetwork)null);
+                return;
+            case Shr5Package.HOST__HOST_RATING:
+                setHostRating(HOST_RATING_EDEFAULT);
+                return;
+            case Shr5Package.HOST__BASE_FIREWALL:
+                setBaseFirewall(BASE_FIREWALL_EDEFAULT);
+                return;
+            case Shr5Package.HOST__BASE_DATENVERARBEITUNG:
+                setBaseDatenverarbeitung(BASE_DATENVERARBEITUNG_EDEFAULT);
+                return;
+            case Shr5Package.HOST__BASE_ANGRIFF:
+                setBaseAngriff(BASE_ANGRIFF_EDEFAULT);
+                return;
+            case Shr5Package.HOST__BASE_SCHLEICHER:
+                setBaseSchleicher(BASE_SCHLEICHER_EDEFAULT);
                 return;
         }
         super.eUnset(featureID);
@@ -553,6 +803,16 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
                 return getAngriff() != ANGRIFF_EDEFAULT;
             case Shr5Package.HOST__SCHLEICHER:
                 return getSchleicher() != SCHLEICHER_EDEFAULT;
+            case Shr5Package.HOST__HOST_RATING:
+                return hostRating != HOST_RATING_EDEFAULT;
+            case Shr5Package.HOST__BASE_FIREWALL:
+                return baseFirewall != BASE_FIREWALL_EDEFAULT;
+            case Shr5Package.HOST__BASE_DATENVERARBEITUNG:
+                return baseDatenverarbeitung != BASE_DATENVERARBEITUNG_EDEFAULT;
+            case Shr5Package.HOST__BASE_ANGRIFF:
+                return baseAngriff != BASE_ANGRIFF_EDEFAULT;
+            case Shr5Package.HOST__BASE_SCHLEICHER:
+                return baseSchleicher != BASE_SCHLEICHER_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -651,6 +911,16 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
         result.append(name);
         result.append(", currentModus: ");
         result.append(currentModus);
+        result.append(", hostRating: ");
+        result.append(hostRating);
+        result.append(", baseFirewall: ");
+        result.append(baseFirewall);
+        result.append(", baseDatenverarbeitung: ");
+        result.append(baseDatenverarbeitung);
+        result.append(", baseAngriff: ");
+        result.append(baseAngriff);
+        result.append(", baseSchleicher: ");
+        result.append(baseSchleicher);
         result.append(')');
         return result.toString();
     }

@@ -15,10 +15,9 @@ import junit.framework.TestCase;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.GeldWert#getWert() <em>Wert</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public abstract class SubstanceTest extends TestCase {
@@ -27,7 +26,6 @@ public abstract class SubstanceTest extends TestCase {
      * The fixture for this Substance test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Substance fixture = null;
@@ -36,7 +34,6 @@ public abstract class SubstanceTest extends TestCase {
      * Constructs a new Substance test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public SubstanceTest(String name) {
@@ -47,7 +44,6 @@ public abstract class SubstanceTest extends TestCase {
      * Sets the fixture for this Substance test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void setFixture(Substance fixture) {
@@ -58,7 +54,6 @@ public abstract class SubstanceTest extends TestCase {
      * Returns the fixture for this Substance test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Substance getFixture() {

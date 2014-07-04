@@ -1533,6 +1533,11 @@
           <xsd:element name="pan" type="shr5:PersonalAreaNetwork"/>
         </xsd:choice>
         <xsd:attribute name="currentModus" type="shr5:InterfaceModus"/>
+        <xsd:attribute name="hostRating" type="xsd:int"/>
+        <xsd:attribute name="baseFirewall" type="xsd:int"/>
+        <xsd:attribute name="baseDatenverarbeitung" type="xsd:int"/>
+        <xsd:attribute name="baseAngriff" type="xsd:int"/>
+        <xsd:attribute name="baseSchleicher" type="xsd:int"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

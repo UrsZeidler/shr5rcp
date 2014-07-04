@@ -74,6 +74,11 @@ public class HostItemProvider
             addCurrentModusPropertyDescriptor(object);
             addAngriffPropertyDescriptor(object);
             addSchleicherPropertyDescriptor(object);
+            addHostRatingPropertyDescriptor(object);
+            addBaseFirewallPropertyDescriptor(object);
+            addBaseDatenverarbeitungPropertyDescriptor(object);
+            addBaseAngriffPropertyDescriptor(object);
+            addBaseSchleicherPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -233,6 +238,116 @@ public class HostItemProvider
     }
 
     /**
+     * This adds a property descriptor for the Host Rating feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addHostRatingPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Host_hostRating_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Host_hostRating_feature", "_UI_Host_type"),
+                 Shr5Package.Literals.HOST__HOST_RATING,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Base Firewall feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBaseFirewallPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Host_baseFirewall_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Host_baseFirewall_feature", "_UI_Host_type"),
+                 Shr5Package.Literals.HOST__BASE_FIREWALL,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Base Datenverarbeitung feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBaseDatenverarbeitungPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Host_baseDatenverarbeitung_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Host_baseDatenverarbeitung_feature", "_UI_Host_type"),
+                 Shr5Package.Literals.HOST__BASE_DATENVERARBEITUNG,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Base Angriff feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBaseAngriffPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Host_baseAngriff_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Host_baseAngriff_feature", "_UI_Host_type"),
+                 Shr5Package.Literals.HOST__BASE_ANGRIFF,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Base Schleicher feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addBaseSchleicherPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_Host_baseSchleicher_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_Host_baseSchleicher_feature", "_UI_Host_type"),
+                 Shr5Package.Literals.HOST__BASE_SCHLEICHER,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This adds a property descriptor for the Beschreibung feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -382,6 +497,11 @@ public class HostItemProvider
             case Shr5Package.HOST__CURRENT_MODUS:
             case Shr5Package.HOST__ANGRIFF:
             case Shr5Package.HOST__SCHLEICHER:
+            case Shr5Package.HOST__HOST_RATING:
+            case Shr5Package.HOST__BASE_FIREWALL:
+            case Shr5Package.HOST__BASE_DATENVERARBEITUNG:
+            case Shr5Package.HOST__BASE_ANGRIFF:
+            case Shr5Package.HOST__BASE_SCHLEICHER:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.HOST__PAN:

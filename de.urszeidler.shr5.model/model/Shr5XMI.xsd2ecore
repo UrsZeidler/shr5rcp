@@ -721,7 +721,13 @@
       <nested inputs="shr5.ecore#//SoftwareAgent/rating" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDComplexTypeDefinition=95/XSDAttributeUse"/>
     </nested>
     <nested inputs="shr5.ecore#//SoftwareAgent" outputs="Shr5XMI.xsd#//SoftwareAgent;XSDElementDeclaration=95"/>
-    <nested inputs="shr5.ecore#//Host" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96"/>
+    <nested inputs="shr5.ecore#//Host" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96">
+      <nested inputs="shr5.ecore#//Host/hostRating" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDAttributeUse=1"/>
+      <nested inputs="shr5.ecore#//Host/baseFirewall" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//Host/baseDatenverarbeitung" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDAttributeUse=3"/>
+      <nested inputs="shr5.ecore#//Host/baseAngriff" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDAttributeUse=4"/>
+      <nested inputs="shr5.ecore#//Host/baseSchleicher" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDAttributeUse=5"/>
+    </nested>
     <nested inputs="shr5.ecore#//MatrixAttributes/currentModus" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//MatrixDevice/pan" outputs="Shr5XMI.xsd#//Host;XSDComplexTypeDefinition=96/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Host" outputs="Shr5XMI.xsd#//Host;XSDElementDeclaration=96"/>

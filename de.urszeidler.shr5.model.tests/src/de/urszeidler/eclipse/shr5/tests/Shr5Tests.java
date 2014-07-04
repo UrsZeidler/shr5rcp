@@ -11,7 +11,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunToolsTest;
  * <!-- begin-user-doc -->
  * A test suite for the '<em><b>shr5</b></em>' package.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class Shr5Tests extends TestSuite {
@@ -19,7 +18,6 @@ public class Shr5Tests extends TestSuite {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -78,7 +76,6 @@ public class Shr5Tests extends TestSuite {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Shr5Tests(String name) {

@@ -543,7 +543,13 @@
     <genClasses ecoreClass="shr5.ecore#//SoftwareAgent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SoftwareAgent/rating"/>
     </genClasses>
-    <genClasses ecoreClass="shr5.ecore#//Host"/>
+    <genClasses ecoreClass="shr5.ecore#//Host">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Host/hostRating"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Host/baseFirewall"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Host/baseDatenverarbeitung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Host/baseAngriff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//Host/baseSchleicher"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//CyberwareModifikatioren">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/directNeuralInterface"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//CyberwareModifikatioren/universalDataConnector"/>

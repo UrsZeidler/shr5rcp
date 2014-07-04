@@ -4656,6 +4656,51 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getHost_HostRating() {
+        return (EAttribute)hostEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getHost_BaseFirewall() {
+        return (EAttribute)hostEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getHost_BaseDatenverarbeitung() {
+        return (EAttribute)hostEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getHost_BaseAngriff() {
+        return (EAttribute)hostEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getHost_BaseSchleicher() {
+        return (EAttribute)hostEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getCyberwareModifikatioren() {
         return cyberwareModifikatiorenEClass;
     }
@@ -5694,6 +5739,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         createEAttribute(softwareAgentEClass, SOFTWARE_AGENT__RATING);
 
         hostEClass = createEClass(HOST);
+        createEAttribute(hostEClass, HOST__HOST_RATING);
+        createEAttribute(hostEClass, HOST__BASE_FIREWALL);
+        createEAttribute(hostEClass, HOST__BASE_DATENVERARBEITUNG);
+        createEAttribute(hostEClass, HOST__BASE_ANGRIFF);
+        createEAttribute(hostEClass, HOST__BASE_SCHLEICHER);
 
         cyberwareModifikatiorenEClass = createEClass(CYBERWARE_MODIFIKATIOREN);
         createEAttribute(cyberwareModifikatiorenEClass, CYBERWARE_MODIFIKATIOREN__DIRECT_NEURAL_INTERFACE);
@@ -6486,6 +6536,11 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getSoftwareAgent_Rating(), ecorePackage.getEInt(), "rating", null, 1, 1, SoftwareAgent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(hostEClass, Host.class, "Host", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getHost_HostRating(), ecorePackage.getEInt(), "hostRating", null, 0, 1, Host.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getHost_BaseFirewall(), ecorePackage.getEInt(), "baseFirewall", null, 0, 1, Host.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getHost_BaseDatenverarbeitung(), ecorePackage.getEInt(), "baseDatenverarbeitung", null, 0, 1, Host.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getHost_BaseAngriff(), ecorePackage.getEInt(), "baseAngriff", null, 0, 1, Host.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getHost_BaseSchleicher(), ecorePackage.getEInt(), "baseSchleicher", null, 0, 1, Host.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(cyberwareModifikatiorenEClass, CyberwareModifikatioren.class, "CyberwareModifikatioren", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getCyberwareModifikatioren_DirectNeuralInterface(), ecorePackage.getEBoolean(), "directNeuralInterface", null, 0, 1, CyberwareModifikatioren.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
