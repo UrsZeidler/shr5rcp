@@ -78,7 +78,7 @@ public class OpenObjectHandler extends AbstractHandler {
                 case 2:
                     openCharacter(shell, Messages.OpenObjectHandler_open_character_titel, Messages.OpenObjectHandler_open_character_message, monitor);
                     break;
-                case 3:// TODO : localize
+                case 3:
                     openBeschreibbar(shell, Messages.OpenObjectHandler_open_any_titel, Messages.OpenObjectHandler_open_any_message, monitor);
                     break;
 
