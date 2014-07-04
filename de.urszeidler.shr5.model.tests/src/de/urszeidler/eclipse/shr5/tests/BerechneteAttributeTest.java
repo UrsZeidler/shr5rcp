@@ -65,12 +65,10 @@ public abstract class BerechneteAttributeTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getErrinerungsvermoegen()
-     * @generated
+     * @generated not
      */
     public void testGetErrinerungsvermoegen() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+         fail();
     }
 
     /**
@@ -78,12 +76,10 @@ public abstract class BerechneteAttributeTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getMenschenkenntnis()
-     * @generated
+     * @generated not
      */
     public void testGetMenschenkenntnis() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+         fail();
     }
 
     /**
@@ -91,11 +87,9 @@ public abstract class BerechneteAttributeTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.BerechneteAttribute#getSelbstbeherrschung()
-     * @generated
+     * @generated not
      */
     public void testGetSelbstbeherrschung() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

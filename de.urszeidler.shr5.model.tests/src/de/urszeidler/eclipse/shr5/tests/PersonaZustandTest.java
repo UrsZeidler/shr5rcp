@@ -65,11 +65,9 @@ public abstract class PersonaZustandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.PersonaZustand#getZustandKoerperlichMax()
-     * @generated
+     * @generated not
      */
     public void testGetZustandKoerperlichMax() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -78,11 +76,9 @@ public abstract class PersonaZustandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGeistigMax()
-     * @generated
+     * @generated not
      */
     public void testGetZustandGeistigMax() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -91,11 +87,9 @@ public abstract class PersonaZustandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.PersonaZustand#getZustandGrenze()
-     * @generated
+     * @generated not
      */
     public void testGetZustandGrenze() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

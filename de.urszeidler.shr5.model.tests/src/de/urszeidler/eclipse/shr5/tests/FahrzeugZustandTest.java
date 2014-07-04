@@ -63,11 +63,9 @@ public abstract class FahrzeugZustandTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.FahrzeugZustand#getZustandMax()
-     * @generated
+     * @generated not
      */
     public void testGetZustandMax() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

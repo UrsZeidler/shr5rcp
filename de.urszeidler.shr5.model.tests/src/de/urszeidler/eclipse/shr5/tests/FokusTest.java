@@ -63,11 +63,9 @@ public abstract class FokusTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Fokus#getBindungskosten()
-     * @generated
+     * @generated not
      */
     public void testGetBindungskosten() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

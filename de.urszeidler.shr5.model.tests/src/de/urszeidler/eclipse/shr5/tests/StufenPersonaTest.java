@@ -80,11 +80,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative()
-     * @generated
+     * @generated not
      */
     public void testGetInitative() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -93,11 +91,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel()
-     * @generated
+     * @generated not
      */
     public void testGetInitativWuerfel() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -106,11 +102,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getAusweichen()
-     * @generated
+     * @generated not
      */
     public void testGetAusweichen() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -119,11 +113,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getEssenz()
-     * @generated
+     * @generated not
      */
     public void testGetEssenz() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -132,11 +124,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge()
-     * @generated
+     * @generated not
      */
     public void testGetEdge() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -145,11 +135,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma()
-     * @generated
+     * @generated not
      */
     public void testGetCharisma() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -158,11 +146,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft()
-     * @generated
+     * @generated not
      */
     public void testGetWillenskraft() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -171,11 +157,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition()
-     * @generated
+     * @generated not
      */
     public void testGetIntuition() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -184,11 +168,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik()
-     * @generated
+     * @generated not
      */
     public void testGetLogik() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -197,11 +179,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution()
-     * @generated
+     * @generated not
      */
     public void testGetKonstitution() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -210,11 +190,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit()
-     * @generated
+     * @generated not
      */
     public void testGetGeschicklichkeit() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -223,11 +201,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion()
-     * @generated
+     * @generated not
      */
     public void testGetReaktion() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -236,11 +212,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke()
-     * @generated
+     * @generated not
      */
     public void testGetStaerke() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -249,11 +223,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.ChrakterLimits#getKoerperlich()
-     * @generated
+     * @generated not
      */
     public void testGetKoerperlich() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -262,11 +234,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.ChrakterLimits#getGeistig()
-     * @generated
+     * @generated not
      */
     public void testGetGeistig() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -275,11 +245,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.ChrakterLimits#getSozial()
-     * @generated
+     * @generated not
      */
     public void testGetSozial() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -288,11 +256,9 @@ public abstract class StufenPersonaTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.Panzerung#getPanzer()
-     * @generated
+     * @generated not
      */
     public void testGetPanzer() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 

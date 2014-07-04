@@ -12,12 +12,13 @@ import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
@@ -26,6 +27,7 @@ public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
      * Constructs a new Abstract Matrix Device test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public AbstractMatrixDeviceTest(String name) {
@@ -36,6 +38,7 @@ public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
      * Returns the fixture for this Abstract Matrix Device test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -47,12 +50,11 @@ public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
-     * @generated
+     * @generated not
      */
     public void testGetMatrixZustandMax() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -60,12 +62,11 @@ public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
-     * @generated
+     * @generated not
      */
     public void testGetGeraetestufe() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -73,12 +74,11 @@ public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
-     * @generated
+     * @generated not
      */
     public void testGetFirewall() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -86,13 +86,12 @@ public abstract class AbstractMatrixDeviceTest extends AbstraktGegenstandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
-     * @generated
+     * @generated not
      */
     public void testGetDatenverarbeitung() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
-} //AbstractMatrixDeviceTest
+} // AbstractMatrixDeviceTest

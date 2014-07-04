@@ -68,11 +68,9 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
-     * @generated
+     * @generated not
      */
     public void testGetMatrixZustandMax() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -81,11 +79,9 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
-     * @generated
+     * @generated not
      */
     public void testGetGeraetestufe() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -94,11 +90,9 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
-     * @generated
+     * @generated not
      */
     public void testGetFirewall() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -107,11 +101,9 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
-     * @generated
+     * @generated not
      */
     public void testGetDatenverarbeitung() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
         fail();
     }
 
@@ -120,12 +112,10 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getAngriff()
-     * @generated
+     * @generated not
      */
     public void testGetAngriff() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+         fail();
     }
 
     /**
@@ -133,12 +123,10 @@ public abstract class ActiveMatixDeviceTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.ActiveMatixDevice#getSchleicher()
-     * @generated
+     * @generated not
      */
     public void testGetSchleicher() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+         fail();
     }
 
 } //ActiveMatixDeviceTest

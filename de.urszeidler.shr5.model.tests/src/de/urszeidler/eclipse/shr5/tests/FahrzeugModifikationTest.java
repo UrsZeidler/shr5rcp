@@ -62,12 +62,10 @@ public abstract class FahrzeugModifikationTest extends TestCase {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see de.urszeidler.eclipse.shr5.GeldWert#getWert()
-     * @generated
+     * @generated not
      */
     public void testGetWert() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+         fail();
     }
 
 } //FahrzeugModifikationTest
